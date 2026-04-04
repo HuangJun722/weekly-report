@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>全球互联网动态情报站</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== CSS Variables ===== */
         :root {
-            --bg-page: #FAFAFA;
+            --bg-page: #FAFAF8;
             --bg-card: #FFFFFF;
             --bg-subtle: #F3F4F6;
             --text-primary: #111827;
@@ -19,26 +17,24 @@
             --accent: #1D4ED8;
             --accent-light: #EFF6FF;
             --border: #E5E7EB;
-            --level-a: #16A34A;
-            --level-a-bg: #F0FDF4;
-            --level-b: #2563EB;
-            --level-b-bg: #EFF6FF;
-            --level-c: #D97706;
-            --level-c-bg: #FFFBEB;
-            --level-d: #6B7280;
-            --level-d-bg: #F9FAFB;
+            --level-a: #16A34A; --level-a-bg: #F0FDF4;
+            --level-b: #2563EB; --level-b-bg: #EFF6FF;
+            --level-c: #D97706; --level-c-bg: #FFFBEB;
+            --level-d: #6B7280; --level-d-bg: #F9FAFB;
+            --type-funding: #7C3AED; --type-funding-bg: #F5F3FF;
+            --type-ma: #DC2626; --type-ma-bg: #FEF2F2;
+            --type-earnings: #059669; --type-earnings-bg: #ECFDF5;
+            --type-strategy: #D97706; --type-strategy-bg: #FFFBEB;
+            --type-other: #9CA3AF; --type-other-bg: #F9FAFB;
             --radius: 12px;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
             --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
             --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
             --font-serif: 'Noto Serif SC', Georgia, serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
-            --max-w: 860px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-w: 900px;
         }
-
-        /* ===== Reset & Base ===== */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-sans);
             background: var(--bg-page);
@@ -49,462 +45,175 @@
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         button { cursor: pointer; font-family: inherit; }
+        .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
-        /* ===== Layout ===== */
-        .container {
-            max-width: var(--max-w);
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ===== Header / Masthead ===== */
+        /* ===== Masthead ===== */
         .masthead {
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: sticky; top: 0; z-index: 100;
         }
-        .masthead-inner {
-            padding: 0 24px;
-            max-width: var(--max-w);
-            margin: 0 auto;
-        }
+        .masthead-inner { padding: 0 24px; max-width: var(--max-w); margin: 0 auto; }
         .masthead-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 0 16px;
-            gap: 16px;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 0 14px; gap: 16px;
         }
         .masthead-title {
             font-family: var(--font-serif);
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.3px;
-            flex-shrink: 0;
+            font-size: 20px; font-weight: 700;
+            color: var(--text-primary); flex-shrink: 0;
         }
-        .masthead-title span {
-            color: var(--text-secondary);
-            font-weight: 400;
-            font-size: 14px;
-            font-family: var(--font-sans);
-            margin-left: 10px;
-        }
-        .masthead-meta {
-            font-size: 13px;
-            color: var(--text-tertiary);
-            white-space: nowrap;
-        }
+        .masthead-meta { font-size: 13px; color: var(--text-tertiary); }
 
-        /* ===== Search & Filters Bar ===== */
+        /* ===== Toolbar ===== */
         .toolbar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0 16px;
-            flex-wrap: wrap;
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 0 14px; flex-wrap: wrap;
         }
-        .search-wrap {
-            position: relative;
-            flex: 1;
-            min-width: 200px;
-        }
+        .search-wrap { position: relative; flex: 1; min-width: 180px; }
         .search-icon {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-tertiary);
-            pointer-events: none;
-            font-size: 14px;
+            position: absolute; left: 11px; top: 50%;
+            transform: translateY(-50%); color: var(--text-tertiary); pointer-events: none; font-size: 14px;
         }
         .search-box {
-            width: 100%;
-            padding: 8px 12px 8px 36px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: var(--bg-page);
-            font-size: 14px;
-            color: var(--text-primary);
-            transition: border-color 0.15s, box-shadow 0.15s;
+            width: 100%; padding: 8px 12px 8px 34px;
+            border: 1px solid var(--border); border-radius: 8px;
+            background: var(--bg-page); font-size: 14px; color: var(--text-primary);
+            transition: border-color 0.15s;
         }
-        .search-box:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(29,78,216,0.08);
-        }
+        .search-box:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(29,78,216,0.08); }
         .search-box::placeholder { color: var(--text-tertiary); }
 
-        /* ===== Filter Chips ===== */
-        .filter-section {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .filter-label {
-            font-size: 12px;
-            font-weight: 500;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .filter-btn {
-            padding: 5px 14px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: var(--bg-card);
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            transition: all 0.15s;
-        }
-        .filter-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        .filter-btn.active {
-            background: var(--text-primary);
-            border-color: var(--text-primary);
-            color: #fff;
-        }
-        .filter-divider {
-            width: 1px;
-            height: 20px;
-            background: var(--border);
-            margin: 0 4px;
-        }
+        .filter-divider { width: 1px; height: 20px; background: var(--border); margin: 0 4px; flex-shrink: 0; }
 
-        /* ===== Main Content ===== */
+        .filter-section { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .filter-label { font-size: 12px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; }
+        .filter-btn {
+            padding: 5px 14px; border: 1px solid var(--border); border-radius: 20px;
+            background: var(--bg-card); font-size: 13px; font-weight: 500;
+            color: var(--text-secondary); transition: all 0.15s;
+        }
+        .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .filter-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #fff; }
+
+        /* ===== Main ===== */
         .main { padding: 40px 0 80px; }
 
-        /* ===== Section Headers ===== */
+        /* ===== Section ===== */
         .section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
+            display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
         }
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        .section-badge {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-tertiary);
-            background: var(--bg-subtle);
-            padding: 2px 10px;
-            border-radius: 12px;
-        }
-        .section-line {
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
+        .section-title { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--text-primary); }
+        .section-count { font-size: 12px; font-weight: 600; color: var(--text-tertiary); background: var(--bg-subtle); padding: 2px 10px; border-radius: 10px; }
+        .section-line { flex: 1; height: 1px; background: var(--border); }
 
-        /* ===== Top News — Large Cards ===== */
-        .top-news { margin-bottom: 56px; }
-        .top-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-md);
-            padding: 28px 32px;
-            margin-bottom: 16px;
-            position: relative;
-            overflow: hidden;
+        /* ===== Priority: Signal Cards ===== */
+        /* 高价值信号卡片：融资/并购/财报 */
+        .signal-cards { margin-bottom: 48px; }
+        .signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+        .signal-card {
+            background: var(--bg-card); border-radius: var(--radius);
+            box-shadow: var(--shadow-md); padding: 22px 24px;
+            position: relative; overflow: hidden;
             transition: box-shadow 0.2s, transform 0.2s;
         }
-        .top-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-1px);
-        }
-        .top-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-        }
-        .top-card.level-A::before { background: var(--level-a); }
-        .top-card.level-B::before { background: var(--level-b); }
-        .top-card.level-C::before { background: var(--level-c); }
-        .top-card.level-D::before { background: var(--level-d); }
+        .signal-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+        .signal-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
 
-        .top-card-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-        .top-card-number {
-            font-family: var(--font-serif);
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--text-tertiary);
-            line-height: 1;
-            min-width: 36px;
-        }
-        .top-card-title {
-            font-family: var(--font-serif);
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 1.4;
-            color: var(--text-primary);
-        }
-        .top-card-title a { color: inherit; }
-        .top-card-title a:hover { color: var(--accent); }
+        .signal-card.type-funding::before { background: var(--type-funding); }
+        .signal-card.type-ma::before { background: var(--type-ma); }
+        .signal-card.type-earnings::before { background: var(--type-earnings); }
+        .signal-card.type-strategy::before { background: var(--type-strategy); }
 
-        .top-card-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-            padding-left: 46px;
+        .signal-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .signal-type-tag {
+            font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 5px; text-transform: uppercase; letter-spacing: 0.5px;
         }
-        .meta-chip {
-            font-size: 12px;
-            font-weight: 500;
-            padding: 3px 10px;
-            border-radius: 6px;
-        }
-        .meta-chip.region {
-            background: var(--accent-light);
-            color: var(--accent);
-        }
-        .meta-chip.company {
-            background: var(--bg-subtle);
-            color: var(--text-secondary);
-        }
-        .meta-chip.level-a { background: var(--level-a-bg); color: var(--level-a); }
-        .meta-chip.level-b { background: var(--level-b-bg); color: var(--level-b); }
-        .meta-chip.level-c { background: var(--level-c-bg); color: var(--level-c); }
+        .type-funding .signal-type-tag { background: var(--type-funding-bg); color: var(--type-funding); }
+        .type-ma .signal-type-tag { background: var(--type-ma-bg); color: var(--type-ma); }
+        .type-earnings .signal-type-tag { background: var(--type-earnings-bg); color: var(--type-earnings); }
+        .type-strategy .signal-type-tag { background: var(--type-strategy-bg); color: var(--type-strategy); }
 
-        .top-card-body {
-            padding-left: 46px;
-            display: grid;
-            gap: 8px;
-        }
-        .card-field { font-size: 14px; }
-        .card-field-label {
-            font-weight: 600;
-            color: var(--text-secondary);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            margin-bottom: 2px;
-        }
-        .card-field-value { color: var(--text-primary); }
-        .card-source {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            margin-top: 4px;
-            padding-left: 46px;
-        }
-        .card-source a { color: var(--text-tertiary); }
-        .card-source a:hover { color: var(--accent); }
+        .signal-region-tag { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 8px; border-radius: 4px; }
 
-        /* ===== Week's Best — Medium Cards ===== */
-        .week-news { margin-bottom: 56px; }
-        .week-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+        .signal-title {
+            font-family: var(--font-serif); font-size: 15px; font-weight: 600;
+            line-height: 1.45; color: var(--text-primary); margin-bottom: 8px;
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
         }
-        .week-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            padding: 20px 22px;
-            position: relative;
-            overflow: hidden;
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-        .week-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-1px);
-        }
-        .week-card::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 2px;
-        }
-        .week-card.level-A::before { background: var(--level-a); }
-        .week-card.level-B::before { background: var(--level-b); }
-        .week-card.level-C::before { background: var(--level-c); }
-        .week-card.level-D::before { background: var(--level-d); }
+        .signal-title a { color: inherit; }
+        .signal-title a:hover { color: var(--accent); }
 
-        .week-card-title {
-            font-family: var(--font-serif);
-            font-size: 15px;
-            font-weight: 600;
-            line-height: 1.45;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .week-card-title a { color: inherit; }
-        .week-card-title a:hover { color: var(--accent); }
+        .signal-why { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px; }
+        .signal-source { font-size: 12px; color: var(--text-tertiary); }
 
-        .week-card-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 8px;
-        }
-
-        .week-card-insight {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* ===== All Events — Compact List ===== */
-        .all-events { }
-        .date-group { margin-bottom: 36px; }
+        /* ===== Full Feed ===== */
+        .feed { }
+        .date-group { margin-bottom: 32px; }
         .date-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 8px 0;
-            cursor: pointer;
-            user-select: none;
+            display: flex; align-items: center; gap: 10px; padding: 8px 0;
+            cursor: pointer; user-select: none;
         }
         .date-header:hover .date-label { color: var(--accent); }
-        .date-label {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-            transition: color 0.15s;
-        }
-        .date-count {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            background: var(--bg-subtle);
-            padding: 2px 8px;
-            border-radius: 10px;
-        }
+        .date-label { font-size: 15px; font-weight: 600; color: var(--text-primary); transition: color 0.15s; }
+        .date-count { font-size: 12px; color: var(--text-tertiary); background: var(--bg-subtle); padding: 2px 8px; border-radius: 10px; }
         .date-line { flex: 1; height: 1px; background: var(--border); }
-        .date-toggle-icon {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            transition: transform 0.2s;
-        }
-        .date-header.expanded .date-toggle-icon { transform: rotate(90deg); }
-
-        .date-items { padding: 12px 0 4px; }
+        .date-toggle { font-size: 12px; color: var(--text-tertiary); transition: transform 0.2s; }
+        .date-header.expanded .date-toggle { transform: rotate(90deg); }
+        .date-items { padding: 10px 0 4px; }
         .date-items.collapsed { display: none; }
 
-        .compact-item {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: start;
-            gap: 0 12px;
-            padding: 11px 0;
+        .feed-item {
+            display: grid; grid-template-columns: auto 1fr auto;
+            align-items: start; gap: 0 12px; padding: 10px 0;
             border-bottom: 1px solid var(--border);
-            transition: background 0.12s;
         }
-        .compact-item:last-child { border-bottom: none; }
-        .compact-item:hover { background: var(--bg-subtle); margin: 0 -8px; padding: 11px 8px; border-radius: 8px; }
+        .feed-item:last-child { border-bottom: none; }
+        .feed-item:hover { background: var(--bg-subtle); margin: 0 -8px; padding: 10px 8px; border-radius: 8px; }
 
-        .item-level-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            margin-top: 8px;
-            flex-shrink: 0;
-        }
-        .item-level-dot.level-A { background: var(--level-a); }
-        .item-level-dot.level-B { background: var(--level-b); }
-        .item-level-dot.level-C { background: var(--level-c); }
-        .item-level-dot.level-D { background: var(--level-d); }
+        .item-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+        .dot-funding { background: var(--type-funding); }
+        .dot-ma { background: var(--type-ma); }
+        .dot-earnings { background: var(--type-earnings); }
+        .dot-strategy { background: var(--type-strategy); }
+        .dot-other { background: var(--type-other); }
 
         .item-content { min-width: 0; }
         .item-title {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-primary);
-            line-height: 1.5;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 14px; font-weight: 500; color: var(--text-primary); line-height: 1.5;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .item-title a { color: inherit; }
         .item-title a:hover { color: var(--accent); }
-        .item-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
-            margin-top: 4px;
-        }
-        .item-tag {
-            font-size: 11px;
-            font-weight: 500;
-            padding: 1px 7px;
-            border-radius: 4px;
-            color: var(--text-secondary);
-            background: var(--bg-subtle);
-        }
-        .item-tag.region-tag {
-            color: var(--accent);
-            background: var(--accent-light);
-        }
+        .item-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+        .item-tag { font-size: 11px; font-weight: 500; padding: 1px 7px; border-radius: 4px; }
+        .tag-region { color: var(--accent); background: var(--accent-light); }
+        .tag-source { color: var(--text-secondary); background: var(--bg-subtle); }
+        .tag-funding { color: var(--type-funding); background: var(--type-funding-bg); }
+        .tag-ma { color: var(--type-ma); background: var(--type-ma-bg); }
+        .tag-earnings { color: var(--type-earnings); background: var(--type-earnings-bg); }
+        .tag-strategy { color: var(--type-strategy); background: var(--type-strategy-bg); }
+        .item-arrow { font-size: 12px; color: var(--text-tertiary); padding-top: 3px; opacity: 0; transition: opacity 0.15s; }
+        .feed-item:hover .item-arrow { opacity: 1; }
 
-        .item-arrow {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            padding-top: 4px;
-            opacity: 0;
-            transition: opacity 0.15s;
-        }
-        .compact-item:hover .item-arrow { opacity: 1; }
-
-        /* ===== Empty States ===== */
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-tertiary);
-            font-size: 15px;
-        }
+        /* ===== Empty State ===== */
+        .empty { text-align: center; padding: 60px 20px; color: var(--text-tertiary); font-size: 15px; }
 
         /* ===== Footer ===== */
         .footer {
-            text-align: center;
-            padding: 32px 0;
+            text-align: center; padding: 28px 0;
             border-top: 1px solid var(--border);
-            font-size: 13px;
-            color: var(--text-tertiary);
+            font-size: 13px; color: var(--text-tertiary);
         }
 
         /* ===== Responsive ===== */
         @media (max-width: 640px) {
             :root { --max-w: 100%; }
-            .masthead-top { padding: 16px 0 12px; }
-            .masthead-title { font-size: 18px; }
-            .masthead-title span { display: none; }
-            .toolbar { gap: 8px; }
-            .week-grid { grid-template-columns: 1fr; }
-            .top-card { padding: 20px 20px 20px 26px; }
-            .top-card-number { font-size: 24px; min-width: 28px; }
-            .top-card-title { font-size: 17px; }
-            .top-card-meta,
-            .top-card-body,
-            .card-source { padding-left: 34px; }
+            .masthead-top { padding: 14px 0 10px; }
+            .masthead-title { font-size: 17px; }
+            .signal-grid { grid-template-columns: 1fr; }
         }
-
         @media (max-width: 480px) {
             .filter-section .filter-label { display: none; }
         }
@@ -512,131 +221,76 @@
 </head>
 <body>
 
-<!-- ===== Masthead ===== -->
+<!-- Masthead -->
 <header class="masthead">
     <div class="masthead-inner">
         <div class="masthead-top">
-            <div class="masthead-title">
-                🌍 全球互联网动态情报站
-                <span>非中美 · AI 精选</span>
-            </div>
+            <div class="masthead-title">🌍 全球互联网动态情报站</div>
             <div class="masthead-meta">最后更新：{{ update_time }}</div>
         </div>
-
-        <!-- ===== Toolbar ===== -->
         <div class="toolbar">
             <div class="search-wrap">
                 <span class="search-icon">⌕</span>
-                <input
-                    type="text"
-                    class="search-box"
-                    id="searchBox"
-                    placeholder="搜索事件、公司、影响对象..."
-                    autocomplete="off"
-                >
+                <input type="text" class="search-box" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off">
             </div>
-
             <div class="filter-divider"></div>
-
-            <!-- Region filters -->
-            <div class="filter-section" id="regionFilters">
+            <div class="filter-section">
+                <span class="filter-label">类型</span>
+                <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
+                <button class="filter-btn" data-filter="type" data-value="funding">💰 融资</button>
+                <button class="filter-btn" data-filter="type" data-value="ma">🔴 并购</button>
+                <button class="filter-btn" data-filter="type" data-value="earnings">📊 财报</button>
+                <button class="filter-btn" data-filter="type" data-value="strategy">⚡ 战略</button>
+            </div>
+            <div class="filter-divider"></div>
+            <div class="filter-section">
                 <span class="filter-label">区域</span>
                 <button class="filter-btn active" data-filter="region" data-value="all">全部</button>
                 <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
                 <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
                 <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
-                <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
                 <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
+                <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
             </div>
         </div>
     </div>
 </header>
 
-<!-- ===== Main ===== -->
 <main class="main">
 <div class="container">
 
-    {# ===== 今日最重要 ===== #}
-    {% if top_events %}
-    <section class="top-news" id="topNewsSection">
+    {# ===== 高价值信号区 ===== #}
+    {% set signal_events = [] %}
+    {% for event in top_events %}
+        {% if event.event_types and event.event_types[0] != 'other' %}
+            {% set _ = signal_events.append(event) %}
+        {% endif %}
+    {% endfor %}
+
+    {% if signal_events %}
+    <section class="signal-cards" id="signalSection">
         <div class="section-header">
-            <h2 class="section-title">今日最重要</h2>
-            <span class="section-badge">{{ top_events|length }} 条</span>
+            <h2 class="section-title">💡 今日高价值信号</h2>
+            <span class="section-count">{{ signal_events|length }} 条</span>
             <div class="section-line"></div>
         </div>
-
-        {% for event in top_events[:3] %}
-        <article class="top-card level-{{ event.level }}"
-                 data-region="{{ event.region }}"
-                 data-companies="{{ event.companies|join(',') }}"
-                 data-text="{{ event.title }} {{ event.companies|join(' ') }} {{ event.region }} {{ event.why_important }} {{ event.impact_scope }}">
-            <div class="top-card-header">
-                <div class="top-card-number">{{ loop.index }}</div>
-                <h3 class="top-card-title">
-                    <a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
-                </h3>
-            </div>
-
-            <div class="top-card-meta">
-                <span class="meta-chip region">{{ event.region }}</span>
-                {% for company in event.companies[:2] %}
-                <span class="meta-chip company">{{ company }}</span>
-                {% endfor %}
-                {% if event.level %}
-                <span class="meta-chip level-{{ event.level|lower }}">信源 {{ event.level }}</span>
-                {% endif %}
-            </div>
-
-            <div class="top-card-body">
-                {% if event.why_important and event.why_important != '待分析' %}
-                <div class="card-field">
-                    <div class="card-field-label">为什么重要</div>
-                    <div class="card-field-value">{{ event.why_important }}</div>
-                </div>
-                {% endif %}
-                {% if event.impact_scope and event.impact_scope != '未知' %}
-                <div class="card-field">
-                    <div class="card-field-label">影响对象</div>
-                    <div class="card-field-value">{{ event.impact_scope }}</div>
-                </div>
-                {% endif %}
-            </div>
-
-            <div class="card-source">
-                来源：{{ event.source }} &nbsp;·&nbsp; <a href="{{ event.url }}" target="_blank" rel="noopener">查看原文 →</a>
-            </div>
-        </article>
-        {% endfor %}
-    </section>
-    {% endif %}
-
-    {# ===== 本周最重要 ===== #}
-    {% if top_events and top_events|length > 3 %}
-    <section class="week-news" id="weekNewsSection">
-        <div class="section-header">
-            <h2 class="section-title">本周最重要</h2>
-            <span class="section-badge">{{ (top_events[3:])|length }} 条</span>
-            <div class="section-line"></div>
-        </div>
-
-        <div class="week-grid">
-            {% for event in top_events[3:] %}
-            <article class="week-card level-{{ event.level }}"
+        <div class="signal-grid">
+            {% for event in signal_events[:8] %}
+            <article class="signal-card type-{{ event.event_types[0] }}"
+                     data-type="{{ event.event_types|join(',') }}"
                      data-region="{{ event.region }}"
-                     data-companies="{{ event.companies|join(',') }}"
-                     data-text="{{ event.title }} {{ event.companies|join(' ') }} {{ event.region }} {{ event.why_important }} {{ event.impact_scope }}">
-                <h3 class="week-card-title">
+                     data-text="{{ event.title }} {{ event.region }} {{ event.source }} {{ event.why_important }}">
+                <div class="signal-meta">
+                    <span class="signal-type-tag">{{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(event.event_types[0],'其他') }}</span>
+                    <span class="signal-region-tag">{{ event.region }}</span>
+                </div>
+                <h3 class="signal-title">
                     <a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
                 </h3>
-                <div class="week-card-meta">
-                    <span class="item-tag region-tag">{{ event.region }}</span>
-                    {% for company in event.companies[:2] %}
-                    <span class="item-tag">{{ company }}</span>
-                    {% endfor %}
-                </div>
                 {% if event.why_important and event.why_important != '待分析' %}
-                <div class="week-card-insight">{{ event.why_important }}</div>
+                <div class="signal-why">{{ event.why_important }}</div>
                 {% endif %}
+                <div class="signal-source">{{ event.source }}</div>
             </article>
             {% endfor %}
         </div>
@@ -644,46 +298,40 @@
     {% endif %}
 
     {# ===== 全部动态 ===== #}
-    <section class="all-events" id="allEventsSection">
+    <section class="feed" id="feedSection">
         <div class="section-header">
-            <h2 class="section-title">全部动态</h2>
+            <h2 class="section-title">📋 全部动态</h2>
+            <span class="section-count" id="visibleCount">{{ all_events[sorted_dates[0]]|length if sorted_dates and sorted_dates[0] in all_events else 0 }} 条</span>
             <div class="section-line"></div>
         </div>
 
         {% for date in sorted_dates %}
         <div class="date-group"
-             data-region-all="
-             {%- for event in all_events[date] -%}
-               {{ event.region }}
-             {%- endfor -%}"
-             data-text="
-             {%- for event in all_events[date] -%}
-               {{ event.title }} {{ event.companies|join(' ') }} {{ event.region }}
-             {%- endfor -%}">
-
-            <div class="date-header" onclick="toggleDateGroup(this)" data-group="{{ loop.index0 }}">
+             data-date="{{ date }}"
+             data-region-items="{{ all_events[date]|map(attribute='region')|join(' ') }}">
+            <div class="date-header" onclick="toggleDate(this)">
                 <span class="date-label">{{ date }}</span>
-                <span class="date-count">{{ all_events[date]|length }} 条</span>
+                <span class="date-count" id="count-{{ loop.index }}">{{ all_events[date]|length }} 条</span>
                 <div class="date-line"></div>
-                <span class="date-toggle-icon">‣</span>
+                <span class="date-toggle">‣</span>
             </div>
-
-            <div class="date-items {% if date != sorted_dates[0] %}collapsed{% endif %}" id="dateGroup{{ loop.index0 }}">
-                {% for event in all_events[date]|sort(attribute='score', reverse=True) %}
-                <div class="compact-item level-{{ event.level }}"
+            <div class="date-items {% if date != sorted_dates[0] %}collapsed{% endif %}">
+                {% for event in all_events[date] %}
+                <div class="feed-item"
+                     data-type="{{ event.event_types|join(',') if event.event_types else 'other' }}"
                      data-region="{{ event.region }}"
-                     data-companies="{{ event.companies|join(',') }}"
-                     data-text="{{ event.title }} {{ event.companies|join(' ') }} {{ event.region }} {{ event.why_important }}">
-                    <div class="item-level-dot level-{{ event.level }}"></div>
+                     data-text="{{ event.title }} {{ event.region }} {{ event.source }} {{ event.why_important }}">
+                    <div class="item-dot dot-{{ event.event_types[0] if event.event_types and event.event_types[0] != 'other' else 'other' }}"></div>
                     <div class="item-content">
                         <div class="item-title">
                             <a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
                         </div>
                         <div class="item-tags">
-                            <span class="item-tag region-tag">{{ event.region }}</span>
-                            {% for company in event.companies[:3] %}
-                            <span class="item-tag">{{ company }}</span>
-                            {% endfor %}
+                            <span class="item-tag tag-region">{{ event.region }}</span>
+                            <span class="item-tag tag-source">{{ event.source }}</span>
+                            {% if event.event_types and event.event_types[0] != 'other' %}
+                            <span class="item-tag tag-{{ event.event_types[0] }}">{{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(event.event_types[0],'') }}</span>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="item-arrow">→</div>
@@ -693,125 +341,94 @@
         </div>
         {% endfor %}
 
-        <div class="empty-state" id="emptyState" style="display:none">
-            没有找到符合条件的条目
+        <div class="empty" id="emptyState" style="display:none">
+            没有符合条件的条目
         </div>
     </section>
 
 </div>
 </main>
 
-<!-- ===== Footer ===== -->
 <footer class="footer">
     <div class="container">
-        全球互联网动态情报站 · 非中美地区 · AI 精选分级 · 每日自动更新
+        全球互联网动态情报站 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动
     </div>
 </footer>
 
-<!-- ===== Scripts ===== -->
 <script>
-    // Filter state
-    const state = { region: 'all', company: 'all', search: '' };
+    const state = { region: 'all', type: 'all', search: '' };
 
-    // Region filter buttons
-    document.querySelectorAll('#regionFilters .filter-btn').forEach(btn => {
+    function toggleDate(header) {
+        const group = header.parentElement;
+        const items = group.querySelector('.date-items');
+        header.classList.toggle('expanded');
+        items.classList.toggle('collapsed');
+    }
+
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
         btn.addEventListener('click', () => {
-            document.querySelectorAll('#regionFilters .filter-btn').forEach(b => b.classList.remove('active'));
+            const filter = btn.dataset.filter;
+            const value = btn.dataset.value;
+            document.querySelectorAll(`.filter-btn[data-filter="${filter}"]`).forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            state.region = btn.dataset.value;
+            state[filter] = value;
             applyFilters();
         });
     });
 
-    // Company filter buttons (dynamically generated)
-    document.querySelectorAll('[data-filter="company"]').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('[data-filter="company"]').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            state.company = btn.dataset.value;
-            applyFilters();
-        });
-    });
-
-    // Search
     document.getElementById('searchBox').addEventListener('input', e => {
         state.search = e.target.value.trim().toLowerCase();
         applyFilters();
     });
 
-    // Date group toggle
-    function toggleDateGroup(header) {
-        const groupId = header.dataset.group;
-        const content = document.getElementById('dateGroup' + groupId);
-        header.classList.toggle('expanded');
-        content.classList.toggle('collapsed');
-    }
-
-    // Core filter logic
     function applyFilters() {
-        const { region, company, search } = state;
-        let visibleCount = 0;
-        let anyDateHasContent = false;
+        const { region, type, search } = state;
+        let totalVisible = 0;
 
-        // Show/hide top and week cards
-        document.querySelectorAll('#topNewsSection article, #weekNewsSection article').forEach(card => {
-            const cardRegion = card.dataset.region;
-            const cardCompanies = card.dataset.companies.split(',').filter(Boolean);
-            const cardText = (card.dataset.text || '').toLowerCase();
-
-            const matchRegion = region === 'all' || cardRegion === region;
-            const matchCompany = company === 'all' || cardCompanies.includes(company);
-            const matchSearch = !search || cardText.includes(search);
-
-            card.style.display = (matchRegion && matchCompany && matchSearch) ? '' : 'none';
-            if (matchRegion && matchCompany && matchSearch) visibleCount++;
-        });
-
-        // Show/hide date groups and their items
         document.querySelectorAll('.date-group').forEach(group => {
-            const groupRegionAll = (group.dataset.regionAll || '').trim();
-            const groupText = (group.dataset.text || '').toLowerCase();
-            const matchRegion = region === 'all' || groupRegionAll.includes(region);
-            const matchSearch = !search || groupText.includes(search);
-            const matchCompany = company === 'all';
-
-            if (!matchRegion || (!matchSearch && matchCompany)) {
-                group.style.display = 'none';
-                return;
-            }
-
-            group.style.display = '';
-            anyDateHasContent = true;
-
             let groupVisible = 0;
-            group.querySelectorAll('.compact-item').forEach(item => {
-                const itemRegion = item.dataset.region;
-                const itemCompanies = item.dataset.companies.split(',').filter(Boolean);
+            group.querySelectorAll('.feed-item').forEach(item => {
+                const itemRegion = item.dataset.region || '';
+                const itemTypes = (item.dataset.type || '').split(',');
                 const itemText = (item.dataset.text || '').toLowerCase();
 
-                const mR = region === 'all' || itemRegion === region;
-                const mC = company === 'all' || itemCompanies.includes(company);
-                const mS = !search || itemText.includes(search);
+                const matchR = region === 'all' || itemRegion === region;
+                const matchT = type === 'all' || itemTypes.includes(type);
+                const matchS = !search || itemText.includes(search);
 
-                if (mR && mC && mS) {
+                if (matchR && matchT && matchS) {
                     item.style.display = '';
                     groupVisible++;
-                    visibleCount++;
+                    totalVisible++;
                 } else {
                     item.style.display = 'none';
                 }
             });
 
-            // Update date count
             const countEl = group.querySelector('.date-count');
             if (countEl) countEl.textContent = groupVisible + ' 条';
+            group.style.display = groupVisible > 0 ? '' : 'none';
         });
 
-        // Show empty state
-        const empty = document.getElementById('emptyState');
-        if (empty) {
-            empty.style.display = visibleCount === 0 ? 'block' : 'none';
+        // Signal section
+        document.querySelectorAll('#signalSection .signal-card').forEach(card => {
+            const cardRegion = card.dataset.region || '';
+            const cardTypes = (card.dataset.type || '').split(',');
+            const cardText = (card.dataset.text || '').toLowerCase();
+            const matchR = region === 'all' || cardRegion === region;
+            const matchT = type === 'all' || cardTypes.includes(type);
+            const matchS = !search || cardText.includes(search);
+            card.style.display = (matchR && matchT && matchS) ? '' : 'none';
+        });
+
+        const visibleSignal = document.querySelectorAll('#signalSection .signal-card:not([style*="none"])').length;
+        const signalSection = document.getElementById('signalSection');
+        if (signalSection) {
+            signalSection.style.display = visibleSignal > 0 ? '' : 'none';
         }
+
+        const empty = document.getElementById('emptyState');
+        if (empty) empty.style.display = totalVisible === 0 ? 'block' : 'none';
     }
 </script>
 </body>

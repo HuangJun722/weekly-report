@@ -1,116 +1,128 @@
 """
-全球互联网动态情报站 — 数据采集与 AI 分析
-专注非中美地区的互联网/科技公司动态
+全球互联网动态情报站 — 数据采集
+目标：融资 | 并购 | 财报披露 | 重大战略 — 发现 ICT 合作机会点
 """
 
-import json
-import os
-import time
-import re
+import json, os, time, re
 from datetime import datetime, timedelta
 
-# 加载 .env
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except ImportError:
     pass
 
-import warnings
-warnings.filterwarnings('ignore')
+import warnings; warnings.filterwarnings('ignore')
 import google.generativeai as genai
 import requests
 from bs4 import BeautifulSoup
 
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36',
-    'Accept': 'application/rss+xml, application/xml, text/xml, text/html, */*',
-    'Accept-Language': 'en-US,en;q=0.9',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/122.0 Safari/537.36',
+    'Referer': 'https://www.google.com/',
 }
 
+REQUEST_DELAY = 1.2  # 避免被封
+
 # ============================================================
-# 信源列表（RSS 优先，稳定可靠）
+# 信源：重点标注是否为融资专属源
 # ============================================================
 
-RSS_FEEDS = [
-    # 欧洲
-    {'name': 'TechCrunch',       'url': 'https://techcrunch.com/feed/',              'source': 'TechCrunch',        'region_hint': '欧洲',  'max': 15},
-    {'name': 'Tech.eu',         'url': 'https://tech.eu/feed/',                       'source': 'Tech.eu',          'region_hint': '欧洲',  'max': 12},
-    {'name': 'The Next Web',    'url': 'https://thenextweb.com/feed/',               'source': 'The Next Web',     'region_hint': '欧洲',  'max': 10},
-    {'name': 'Sifted',          'url': 'https://sifted.eu/feed/',                     'source': 'Sifted',           'region_hint': '欧洲',  'max': 10},
-    # 亚太 / 全球
-    {'name': 'Rest of World',   'url': 'https://restofworld.org/feed/',             'source': 'Rest of World',    'region_hint': '亚太',  'max': 15},
-    {'name': 'Techpoint Africa','url': 'https://techpoint.africa/feed/',             'source': 'Techpoint Africa', 'region_hint': '非洲',  'max': 10},
-    # 中东 / 非洲
-    {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                'source': 'WAMDA',            'region_hint': '中东',  'max': 15},
-    {'name': 'TechCabal',       'url': 'https://techcabal.com/feed',                 'source': 'TechCabal',         'region_hint': '非洲',  'max': 15},
-    # 拉美 / 综合
-    {'name': 'Bloomberg Tech',  'url': 'https://feeds.bloomberg.com/technology/news.rss', 'source': 'Bloomberg', 'region_hint': '拉美', 'max': 12},
-]
-
-HTML_SOURCES = [
-    # HTML 备用源（RSS 不可用时）
-    {'name': 'TechCrunch Startups','url': 'https://techcrunch.com/category/startups/', 'source': 'TechCrunch', 'region_hint': '欧洲',
-     'article_sel': 'article', 'title_sel': 'h2 a, .post-block__title__link', 'max': 10},
-    {'name': 'Tech in Asia',       'url': 'https://www.techinasia.com/',              'source': 'Tech in Asia',     'region_hint': '亚太',
-     'article_sel': '.stream-item, article', 'title_sel': 'h2 a, .title a', 'max': 10},
-    {'name': 'e27',                'url': 'https://e27.co/',                           'source': 'e27',              'region_hint': '亚太',
-     'article_sel': 'article, .post', 'title_sel': 'h2 a, h3 a', 'max': 10},
-    {'name': 'Disrupt Africa',     'url': 'https://disrupt-africa.com/',              'source': 'Disrupt Africa',    'region_hint': '非洲',
-     'article_sel': 'article', 'title_sel': 'h2 a, h3 a', 'max': 10},
-    {'name': 'Contxto',            'url': 'https://contxto.com/en/',                  'source': 'Contxto',           'region_hint': '拉美',
-     'article_sel': 'article', 'title_sel': 'h2 a, h3 a', 'max': 10},
-    {'name': 'LAVCA',              'url': 'https://lavca.org/',                       'source': 'LAVCA',            'region_hint': '拉美',
-     'article_sel': 'article, .post', 'title_sel': 'h2 a, h3 a', 'max': 10},
-    {'name': 'DealStreetAsia',     'url': 'https://www.dealstreetasia.com/',         'source': 'DealStreetAsia',   'region_hint': '亚太',
-     'article_sel': 'article', 'title_sel': 'h2 a, h3 a', 'max': 8},
-    {'name': 'Ventureburn',        'url': 'https://ventureburn.com/',                 'source': 'Ventureburn',       'region_hint': '非洲',
-     'article_sel': 'article', 'title_sel': 'h2 a, h3 a', 'max': 8},
-    {'name': 'MENAbytes',          'url': 'https://menabytes.com/',                    'source': 'MENAbytes',         'region_hint': '中东',
-     'article_sel': 'article', 'title_sel': 'h2 a, h3 a', 'max': 8},
-]
-
-# 黑名单：只有明确的中美公司/品牌才跳过（避免误杀）
-BLACKLIST_PATTERNS = [
-    # 中国（只列公司主体，不是提到就算）
-    r'\bByteDance\b', r'\bTikTok\b',
-    # 美国（只列明确的公司名称整体）
-    r'\bOpenAI\b', r'\bAnthropic\b', r'\bSpaceX\b',
-    r'\bPalantir\b', r'\bxAI\b',
+RSS_SOURCES = [
+    # --- 欧洲：融资专业源优先 ---
+    {'name': 'TechCrunch',       'url': 'https://techcrunch.com/feed/',                  'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
+    {'name': 'TechCrunch VC',   'url': 'https://techcrunch.com/category/venture/feed/',      'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
+    {'name': 'Tech.eu',          'url': 'https://tech.eu/feed/',                             'source': 'Tech.eu',       'region': '欧洲', 'priority': 3},
+    {'name': 'Sifted',           'url': 'https://sifted.eu/feed/',                           'source': 'Sifted',        'region': '欧洲', 'priority': 2},
+    {'name': 'EU-Startups',      'url': 'https://www.eu-startups.com/feed/',                 'source': 'EU-Startups',   'region': '欧洲', 'priority': 2},
+    # --- 亚太：融资专业源 ---
+    {'name': 'Tech in Asia',     'url': 'https://www.techinasia.com/feed/',                 'source': 'Tech in Asia',  'region': '亚太', 'priority': 3},
+    {'name': 'DealStreetAsia',  'url': 'https://www.dealstreetasia.com/feed/',             'source': 'DealStreetAsia', 'region': '亚太', 'priority': 3},
+    {'name': 'e27',              'url': 'https://e27.co/feed/',                             'source': 'e27',           'region': '亚太', 'priority': 2},
+    # --- 中东/非洲 ---
+    {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                    'source': 'WAMDA',         'region': '中东', 'priority': 3},
+    {'name': 'TechCabal',       'url': 'https://techcabal.com/feed',                    'source': 'TechCabal',     'region': '非洲', 'priority': 3},
+    {'name': 'Disrupt Africa',  'url': 'https://disrupt-africa.com/feed/',               'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2},
+    {'name': 'Techpoint',       'url': 'https://techpoint.africa/feed/',              'source': 'Techpoint',     'region': '非洲', 'priority': 2},
+    {'name': 'Ventureburn',     'url': 'https://ventureburn.com/feed/',               'source': 'Ventureburn',   'region': '非洲', 'priority': 2},
+    # --- 拉美 ---
+    {'name': 'Bloomberg LATAM', 'url': 'https://feeds.bloomberg.com/technology/news.rss', 'source': 'Bloomberg', 'region': '拉美', 'priority': 2},
+    {'name': 'LAVCA',           'url': 'https://lavca.org/feed/',                     'source': 'LAVCA',         'region': '拉美', 'priority': 3},
+    {'name': 'Contxto',         'url': 'https://contxto.com/en/feed/',               'source': 'Contxto',       'region': '拉美', 'priority': 2},
 ]
 
 # ============================================================
-# 工具函数
+# 关键词检测（宽松模式，宁多不漏）
 # ============================================================
 
-def fetch_with_retry(url, retries=3):
+def detect_event_types(title):
+    t = title.lower()
+    types = []
+    # 融资（最高优先）
+    if any(k in t for k in ['raises', 'raises $', 'secures $', 'closes $', 'raises £',
+                       'closes funding', 'series ', 'seed round', 'valued at', 'unicorn',
+                       'pre-series', 'investment of $', 'received $', 'attracts $',
+                       '$50m', '$100m', '$200m', '$500m', '$1b', 'bags $',
+                       'raises in', 'ltd raises', 'raises in', 'funding of', 'funding to']):
+        types.append('funding')
+    # 并购/收购
+    if any(k in t for k in ['acquires', 'acquired', 'acquisition', 'merger', 'merges',
+                       'takeover', 'takes control', 'stake in', 'buys', 'purchases']):
+        types.append('ma')
+    # 财报/IPO
+    if any(k in t for k in ['revenue', 'earnings', 'profit', 'quarterly results',
+                       'fiscal year', 'ipo ', 'listing', 'goes public',
+                       'files to go public', 'quarterly profit', 'quarterly loss',
+                       'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results']):
+        types.append('earnings')
+    # 战略/市场
+    if any(k in t for k in ['partners with', 'partnership', 'strategic',
+                       'joint venture', 'expands to', 'flagship store',
+                       'exits ', 'layoffs', 'shutdown', 'spins off',
+                       'disrupts', 'CEO says', 'CEO on', 'ceo on', 'expansion',
+                       'launches ', 'rolls out', 'deploys']):
+        types.append('strategy')
+    return types if types else ['other']
+
+# 中美公司（精确匹配）
+BLACKLIST = re.compile(
+    r'\b(' + '|'.join([
+        'OpenAI', 'Anthropic', 'xAI', 'SpaceX', 'Palantir', 'ByteDance', 'TikTok',
+        'ChatGPT', 'GPT-', 'Gemini ', 'Claude ', 'Perplexity', 'Character\\.AI',
+        'DeepMind', 'Waymo', 'Cruise',  # 自动驾驶（美）
+    ]) + r')\b',
+    re.IGNORECASE
+)
+
+def is_blacklisted(title):
+    return bool(BLACKLIST.search(title))
+
+# ============================================================
+# HTTP
+# ============================================================
+
+def fetch_url(url, retries=3):
     for i in range(retries):
         try:
-            r = requests.get(url, headers=HEADERS, timeout=15)
+            r = requests.get(url, headers=HEADERS, timeout=20)
+            if r.status_code in (403, 429):
+                time.sleep(5 * (i + 1)); continue
             r.raise_for_status()
             return r
         except Exception:
-            if i == retries - 1:
-                return None
+            if i == retries - 1: return None
             time.sleep(2 ** i)
-
-def is_blacklisted(title):
-    for p in BLACKLIST_PATTERNS:
-        if re.search(p, title, re.IGNORECASE):
-            return True
-    return False
+    return None
 
 # ============================================================
-# RSS 采集
+# 采集
 # ============================================================
 
-def fetch_rss_feed(cfg):
-    resp = fetch_with_retry(cfg['url'])
-    if not resp:
-        return []
+def fetch_rss(cfg):
+    resp = fetch_url(cfg['url'])
+    if not resp: return []
 
     text = resp.text.strip()
-    # 检查是否有效 RSS/XML
     if not any(text.startswith(x) or x in text[:300] for x in ['<?xml', '<rss', '<feed']):
         return []
 
@@ -121,171 +133,136 @@ def fetch_rss_feed(cfg):
 
     items = soup.select('item') or soup.select('entry')
     results = []
+    max_items = cfg.get('max', 8)  # 每个源最多保留这么多
 
-    for item in items[:cfg['max'] * 3]:
+    for item in items:
+        if len(results) >= max_items: break
         title_el = item.select_one('title')
-        link_el = item.select_one('link')
-        if not title_el:
-            continue
-
+        link_el  = item.select_one('link')
+        if not title_el: continue
         title = title_el.get_text(strip=True)
-        # link: 可能是子标签文本，也可能是 href 属性
+        if len(title) < 15 or is_blacklisted(title): continue
+
         link = ''
         if link_el:
             link = (link_el.get('href') or '').strip()
-            if not link:
-                link = link_el.get_text(strip=True)
-
-        if len(title) < 15 or is_blacklisted(title):
-            continue
-
-        # 如果没有 link，用guid
+            if not link: link = link_el.get_text(strip=True)
         if not link:
             guid_el = item.select_one('guid')
-            if guid_el:
-                link = guid_el.get_text(strip=True)
+            if guid_el: link = guid_el.get_text(strip=True)
+        if not link: continue
 
+        types = detect_event_types(title)
         results.append({
             'title': title,
             'url': link,
             'source': cfg['source'],
-            'region_hint': cfg['region_hint'],
+            'region': cfg['region'],
+            'priority': cfg.get('priority', 1),
+            'event_types': types,
         })
-        if len(results) >= cfg['max']:
-            break
 
     return results
 
 # ============================================================
-# HTML 采集
+# 智能过滤：控制每天总条数，优先保留高价值事件
 # ============================================================
 
-def fetch_html_source(cfg):
-    resp = fetch_with_retry(cfg['url'])
-    if not resp:
-        return []
+MAX_DAILY = 40      # 每天最多保留 40 条
+MAX_PER_REGION = 12  # 每个区域最多保留多少条
 
-    soup = BeautifulSoup(resp.text, 'html.parser')
-    results = []
-    seen = set()
+def smart_filter(items):
+    """
+    策略：
+    1. 所有融资/并购/财报事件全部保留
+    2. 其他事件按 priority 排序，每天最多 40 条
+    3. 每天至少覆盖所有区域
+    """
+    # 信号事件（全部保留）
+    signal = [it for it in items if it['event_types'][0] != 'other']
+    # 非信号事件（按 priority 排序，取剩余名额）
+    others = [it for it in items if it['event_types'][0] == 'other']
+    others.sort(key=lambda x: x.get('priority', 1), reverse=True)
 
-    for article in soup.select(cfg['article_sel'])[:cfg['max'] * 4]:
-        a = article.select_one(cfg['title_sel'])
-        if not a:
-            continue
-        title = a.get_text(strip=True)
-        url = a.get('href', '')
-        if not title or len(title) < 15 or title in seen or is_blacklisted(title):
-            continue
-        if not url:
-            continue
-        if not url.startswith('http'):
-            if url.startswith('/'):
-                base = '/'.join(cfg['url'].split('/')[:3])
-                url = base + url
-            else:
-                continue
-        seen.add(title)
-        results.append({
-            'title': title,
-            'url': url,
-            'source': cfg['source'],
-            'region_hint': cfg['region_hint'],
-        })
-        if len(results) >= cfg['max']:
-            break
+    # 优先确保每个区域至少有 2 条
+    by_region = {}
+    for it in items:
+        by_region.setdefault(it['region'], []).append(it)
 
-    return results
+    result = []
+    used_urls = set()
+
+    # 1. 全部信号事件
+    for it in signal:
+        if it['url'] not in used_urls:
+            result.append(it); used_urls.add(it['url'])
+
+    # 2. 非信号事件补足到 MAX_DAILY，每个区域最多 MAX_PER_REGION 条
+    regions = list(dict.fromkeys(it['region'] for it in items))  # 保持原始顺序
+    region_count = {}
+    for region in regions:
+        remaining = MAX_DAILY - len(result)
+        if remaining <= 0: break
+        region_others = [it for it in others if it['region'] == region and it['url'] not in used_urls]
+        # 每个区域最多补 MAX_PER_REGION - signal_count_for_this_region 条非信号
+        signal_in_region = sum(1 for it in result if it['region'] == region)
+        max_other_for_region = max(0, MAX_PER_REGION - signal_in_region)
+        for it in region_others[:max_other_for_region]:
+            if it['url'] not in used_urls:
+                result.append(it); used_urls.add(it['url'])
+                if len(result) >= MAX_DAILY: break
+
+    return result
 
 # ============================================================
-# Gemini AI 分析
+# Gemini 分析（可选）
 # ============================================================
 
 def configure_gemini():
-    api_key = os.environ.get('GEMINI_API_KEY')
-    if not api_key:
-        return False
-    genai.configure(api_key=api_key)
-    return True
+    key = os.environ.get('GEMINI_API_KEY')
+    if not key: return False
+    genai.configure(api_key=key); return True
 
 def analyze_events_gemini(items):
-    """
-    调用 Gemini 批量分析。
-    失败时返回 None（触发降级）。
-    """
     model = genai.GenerativeModel('gemini-2.0-flash-exp')
+    news = [{'title': it['title'], 'url': it['url'], 'source': it['source']} for it in items]
+    prompt = f"""分析以下科技新闻，返回JSON数组（不要markdown）：
 
-    news_list = [{'title': it['title'], 'url': it['url'], 'source': it['source']} for it in items]
-    news_json = json.dumps(news_list, ensure_ascii=False)
+{json.dumps(news, ensure_ascii=False)}
 
-    prompt = f"""分析以下新闻，筛选非中美互联网科技动态。只返回 JSON 数组（不要 markdown）：
+返回格式：
+[{{"url":"...","companies":["非中美公司"],"why_important":"中文25字","impact_scope":"谁受影响","score":1-10}}]
 
-{news_json}
-
-规则：
-- keep=true：非中美公司的融资/IPO/并购/重要产品发布/行业趋势/监管政策
-- is_china_us=true：新闻主体是美国或中国公司的
-- keep=false：新闻主体是美国公司（微软/苹果/谷歌/亚马逊/OpenAI等发布的产品/财报/裁员等）
-
-JSON格式：
-[{{"url":"...","keep":true/false,"is_china_us":true/false,"region":"欧洲|亚太|中东|拉美|非洲|未知","companies":["非中美公司"],"why_important":"中文25字以内","impact_scope":"中文20字以内","impact_range":"全球|区域|行业","score":1-10}}]"""
-
+规则：非中美公司融资/IPO/并购/新品→score≥7；美国/中国公司新闻→忽略。只返回JSON。"""
     try:
-        response = model.generate_content(prompt)
-        text = response.text.strip()
-        # 去掉 markdown 代码块
-        for marker in ['```json', '```']:
-            if marker in text:
-                parts = text.split(marker)
+        resp = model.generate_content(prompt)
+        text = resp.text.strip()
+        for m in ['```json', '```']:
+            if m in text:
+                parts = text.split(m)
                 for p in parts[1:]:
                     text = p.strip()
-                    if text.endswith('```'):
-                        text = text[:-3].strip()
+                    if text.endswith('```'): text = text[:-3].strip()
                     break
-        text = re.sub(r'^(json\s*)', '', text, flags=re.IGNORECASE).strip()
-        results = json.loads(text)
-        return {r['url']: r for r in results if isinstance(r, dict) and 'url' in r}
-    except Exception as e:
-        print(f"  [Gemini 分析失败: {e}] → 降级为保留全部模式")
+        return json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+    except Exception:
         return None
 
 def build_event(item, analysis=None):
-    """将原始条目构造为事件对象"""
-    score = 5
-    if analysis:
-        score = analysis.get('score', 5)
-
-    if score >= 8:
-        level = 'A'
-    elif score >= 6:
-        level = 'B'
-    elif score >= 4:
-        level = 'C'
-    else:
-        level = 'D'
-
-    why = '待分析'
-    impact = '未知'
-    companies = []
-    region = item.get('region_hint', '未知')
-
-    if analysis:
-        why = analysis.get('why_important', '待分析')
-        impact = analysis.get('impact_scope', '未知')
-        companies = analysis.get('companies', [])
-        region = analysis.get('region', region)
-
+    score = (analysis or {}).get('score', 5) if analysis else 5
+    level = 'A' if score >= 8 else 'B' if score >= 6 else 'C' if score >= 4 else 'D'
+    why = (analysis or {}).get('why_important', '待分析') if analysis else '待分析'
     return {
         'title': item['title'],
         'url': item['url'],
         'source': item['source'],
+        'region': item['region'],
+        'event_types': item['event_types'],
         'level': level,
         'score': score,
-        'region': region,
-        'companies': companies,
         'why_important': why,
-        'impact_scope': impact,
-        'impact_range': analysis.get('impact_range', '行业') if analysis else '行业',
+        'impact_scope': (analysis or {}).get('impact_scope', '未知') if analysis else '未知',
+        'companies': (analysis or {}).get('companies', []) if analysis else [],
         'date': datetime.now().isoformat(),
     }
 
@@ -293,124 +270,80 @@ def build_event(item, analysis=None):
 # 主函数
 # ============================================================
 
-def classify_level(score):
-    if score >= 8: return 'A'
-    if score >= 6: return 'B'
-    if score >= 4: return 'C'
-    return 'D'
-
 def main():
     today = datetime.now().strftime('%Y-%m-%d')
     print(f"\n🌍 全球互联网动态情报站")
-    print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-    print(f"   模式：RSS采集 {'+ Gemini分析' if configure_gemini() else '(无API，跳过AI分析)'}\n")
+    print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M')} | 目标：融资/并购/财报/战略\n")
 
-    # ---- 加载历史数据 ----
     os.makedirs('data', exist_ok=True)
     try:
         with open('data/events.json', 'r', encoding='utf-8') as f:
             all_events = json.load(f)
-        if isinstance(all_events, list):
-            all_events = {}
-    except Exception:
-        all_events = {}
+        if isinstance(all_events, list): all_events = {}
+    except: all_events = {}
 
-    # ---- Step 1: RSS 采集 ----
+    # 采集
     print("📡 采集 RSS 信源...")
-    all_items = []
-    for cfg in RSS_FEEDS:
-        items = fetch_rss_feed(cfg)
+    raw = []
+    for cfg in RSS_SOURCES:
+        items = fetch_rss(cfg)
         if items:
             print(f"  [{cfg['name']}] {len(items)} 条")
-            all_items.extend(items)
-        time.sleep(0.3)
+            raw.extend(items)
+        time.sleep(REQUEST_DELAY)
 
-    # ---- Step 2: HTML 采集（补充）----
-    print("\n📡 采集 HTML 信源（备用）...")
-    for cfg in HTML_SOURCES:
-        items = fetch_html_source(cfg)
-        if items:
-            print(f"  [{cfg['name']}] {len(items)} 条")
-            all_items.extend(items)
-        time.sleep(0.3)
+    # 按 URL 去重
+    seen, unique = set(), []
+    for it in raw:
+        if it['url'] and it['url'] not in seen:
+            seen.add(it['url']); unique.append(it)
 
-    # ---- Step 3: 去重 ----
-    seen_urls = set()
-    unique_items = []
-    for item in all_items:
-        if item['url'] and item['url'] not in seen_urls:
-            seen_urls.add(item['url'])
-            unique_items.append(item)
+    # 统计
+    types = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
+    for it in unique: types[it['event_types'][0]] += 1
+    regions = {}
+    for it in unique: regions[it['region']] = regions.get(it['region'],0) + 1
 
-    total = len(unique_items)
-    print(f"\n📊 合计：{total} 条（去重后）")
+    print(f"\n📊 采集：{len(unique)} 条（融资{types['funding']} | 并购{types['ma']} | 财报{types['earnings']} | 战略{types['strategy']} | 其他{types['other']}）")
+    print(f"   区域：{regions}")
 
-    if total == 0:
-        print("❌ 未采集到任何内容，检查网络连接")
-        return
+    # 智能过滤
+    filtered = smart_filter(unique)
+    types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
+    for it in filtered: types2[it['event_types'][0]] += 1
+    print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
 
-    # ---- Step 4: Gemini AI 分析 ----
+    # Gemini 分析
     use_gemini = configure_gemini()
     today_events = []
-
     if use_gemini:
-        print(f"\n🤖 正在调用 Gemini API 分析 {total} 条...")
-        batch_size = 8
-        for i in range(0, total, batch_size):
-            batch = unique_items[i:i + batch_size]
-            batch_num = i // batch_size + 1
-            total_batches = (total + batch_size - 1) // batch_size
-            print(f"  批次 {batch_num}/{total_batches} ...", end='', flush=True)
-
-            result_map = analyze_events_gemini(batch)
-
-            if result_map is None:
-                # Gemini 失败 → 降级：保留所有
-                print(" Gemini失败，保留全部")
-                for item in batch:
-                    today_events.append(build_event(item))
-            else:
-                kept = 0
-                for item in batch:
-                    r = result_map.get(item['url'], {})
-                    if not r.get('is_china_us', False):
-                        today_events.append(build_event(item, r))
-                        kept += 1
-                print(f" 保留 {kept}/{len(batch)} 条")
+        print(f"\n🤖 Gemini 分析...")
+        for i in range(0, len(filtered), 8):
+            batch = filtered[i:i+8]
+            results = analyze_events_gemini(batch) or []
+            for item in batch:
+                r = next((x for x in results if x.get('url') == item['url']), {})
+                today_events.append(build_event(item, r))
+            print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8}")
             time.sleep(0.5)
     else:
-        # 无 API → 直接保留所有（不过滤）
-        print("\n⚡ 无 Gemini API，直接保留全部采集内容")
-        for item in unique_items:
+        for item in filtered:
             today_events.append(build_event(item))
 
-    # ---- Step 5: 保存 ----
-    # 合并：今天的 + 历史的（不去掉旧日期的数据）
-    if today in all_events and all_events[today]:
-        # 今天已有数据 → 合并去重
-        existing_urls = {e['url'] for e in all_events[today]}
-        for e in today_events:
-            if e['url'] not in existing_urls:
-                all_events[today].append(e)
-    else:
-        all_events[today] = today_events
+    # 直接用过滤后的数据替换今日（不复写历史）
+    all_events[today] = today_events
 
-    # 清理 8 天前的数据
+    # 清理 7 天前
     cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     all_events = {k: v for k, v in all_events.items() if k >= cutoff}
 
     with open('data/events.json', 'w', encoding='utf-8') as f:
         json.dump(all_events, f, ensure_ascii=False, indent=2)
 
-    # 统计
-    region_stats = {}
+    final_regions = {}
     for e in all_events.get(today, []):
-        region_stats[e['region']] = region_stats.get(e['region'], 0) + 1
-
-    print(f"\n✅ 完成！{today} 共 {len(all_events.get(today, []))} 条事件")
-    if region_stats:
-        print(f"   区域：{region_stats}")
-    print(f"   总计 {sum(len(v) for v in all_events.values())} 条（{len(all_events)} 天）")
+        final_regions[e['region']] = final_regions.get(e['region'], 0) + 1
+    print(f"\n✅ {today} 完成：{len(all_events.get(today,[]))} 条 | 区域：{final_regions}")
 
 if __name__ == '__main__':
     main()
