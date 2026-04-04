@@ -1,25 +1,42 @@
-name: Update Weekly Report
+name: 全球互联网动态情报站
+
 on:
+  # 每天凌晨 2:00 UTC (= 上午 10:00 北京时间) 自动运行
   schedule:
     - cron: '0 2 * * *'
+  # 支持手动触发
   workflow_dispatch:
+    inputs:
+      mode:
+        description: '运行模式'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - html-only
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Fetch and analyze news
+        if: inputs.mode != 'html-only'
         run: python scripts/fetch_news.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -27,11 +44,45 @@ jobs:
       - name: Generate HTML
         run: python scripts/generate_html.py
 
+      - name: Verify output
+        run: |
+          if [ ! -f "docs/index.html" ]; then
+            echo "ERROR: docs/index.html 未生成"
+            exit 1
+          fi
+          SIZE=$(wc -c < docs/index.html)
+          echo "HTML 文件大小: $SIZE bytes"
+          if [ "$SIZE" -lt 5000 ]; then
+            echo "WARNING: HTML 文件过小，可能生成失败"
+            exit 1
+          fi
+
       - name: Commit and push
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ docs/
-          git commit -m "Update $(date +%Y-%m-%d)" || exit 0
-          git push
+          if git diff --staged --quiet; then
+            echo "没有变化，跳过提交"
+          else
+            COMMIT_MSG="Update $(date +%Y-%m-%d\ %H:%M)"
+            git commit -m "$COMMIT_MSG"
+            git push
+            echo "提交成功: $COMMIT_MSG"
+          fi
 
+  notify-failure:
+    needs: update
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: 创建告警 Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[自动告警] 情报站更新失败 — ${new Date().toISOString().slice(0,10)}`,
+              body: `工作流运行失败，请检查日志：https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+            })

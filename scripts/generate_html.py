@@ -1,94 +1,108 @@
+"""
+生成全球互联网动态情报站 HTML 页面
+"""
 import json
-from datetime import datetime
+import os
+from datetime import datetime, timedelta
 from jinja2 import Template
 
 def load_events():
     with open('data/events.json', 'r', encoding='utf-8') as f:
-        return json.load(f)
+        data = json.load(f)
+    if isinstance(data, list):
+        # 旧格式：扁平数组 → 按日期分组
+        grouped = {}
+        for event in data:
+            date = event.get('date', datetime.now().isoformat())[:10]
+            if date not in grouped:
+                grouped[date] = []
+            # 补充缺失字段（兼容旧数据）
+            event.setdefault('why_important', event.get('summary', '待分析')[:25])
+            event.setdefault('impact_scope', '未知')
+            event.setdefault('impact_range', '行业')
+            event.setdefault('companies', [])
+            event.setdefault('level', 'C')
+            event.setdefault('score', 5)
+            event.setdefault('region', '未知')
+            grouped[date].append(event)
+        return grouped
+    return data
 
-def generate_html(events):
-    template = Template('''
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全球互联网热点周报</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-               background: #f5f5f5; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; background: white;
-                     padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; margin-bottom: 10px; }
-        .update-time { color: #666; font-size: 14px; margin-bottom: 30px; }
-        .level-section { margin-bottom: 40px; }
-        .level-title { font-size: 20px; color: #333; margin-bottom: 15px;
-                       padding-bottom: 10px; border-bottom: 2px solid #eee; }
-        .event { padding: 15px; margin-bottom: 10px; background: #fafafa;
-                 border-radius: 4px; transition: background 0.2s; }
-        .event:hover { background: #f0f0f0; }
-        .event-title { font-size: 16px; color: #1a73e8; text-decoration: none;
-                       font-weight: 500; }
-        .event-title:hover { text-decoration: underline; }
-        .event-meta { font-size: 12px; color: #999; margin-top: 5px; }
-        .badge { display: inline-block; padding: 2px 8px; border-radius: 3px;
-                 font-size: 11px; margin-right: 8px; }
-        .badge-A { background: #e8f5e9; color: #2e7d32; }
-        .badge-B { background: #e3f2fd; color: #1565c0; }
-        .badge-C { background: #fff3e0; color: #e65100; }
-        .badge-D { background: #fce4ec; color: #c2185b; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🌐 全球互联网热点周报</h1>
-        <div class="update-time">最后更新：{{ update_time }}</div>
+def enrich_event(event):
+    """确保每条事件都有必要字段"""
+    event.setdefault('why_important', event.get('summary', '待分析')[:25])
+    event.setdefault('impact_scope', '未知')
+    event.setdefault('impact_range', '行业')
+    event.setdefault('companies', [])
+    event.setdefault('level', 'C')
+    event.setdefault('score', 5)
+    event.setdefault('region', '未知')
+    return event
 
-        {% for level in ['A', 'B', 'C', 'D'] %}
-        {% set level_events = events_by_level.get(level, []) %}
-        {% if level_events %}
-        <div class="level-section">
-            <div class="level-title">{{ level }} 级事件（{{ level_events|length }} 条）</div>
-            {% for event in level_events %}
-            <div class="event">
-                <a href="{{ event.url }}" target="_blank" class="event-title">{{ event.title }}</a>
-                <div class="event-meta">
-                    <span class="badge badge-{{ event.level }}">{{ event.level }}级</span>
-                    <span>{{ event.source }}</span>
-                    <span>重要性：{{ event.score }}/10</span>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-</body>
-</html>
-    ''')
+def get_top_events(events, max_count=10):
+    """获取按 score 排序的所有事件（去重）"""
+    seen = set()
+    result = []
+    dates = sorted(events.keys(), reverse=True)
+    for date in dates:
+        for event in events[date]:
+            enrich_event(event)
+            if event['url'] not in seen:
+                seen.add(event['url'])
+                result.append(event)
+    # 按 score 降序
+    result.sort(key=lambda x: x.get('score', 5), reverse=True)
+    return result
 
-    events_by_level = {'A': [], 'B': [], 'C': [], 'D': []}
-    for event in events:
-        events_by_level[event['level']].append(event)
+def get_all_companies(events):
+    """提取所有公司名"""
+    companies = set()
+    for date_events in events.values():
+        for e in date_events:
+            enrich_event(e)
+            for c in e.get('companies', []):
+                if c:
+                    companies.add(c)
+    return sorted(companies)
+
+def generate_html():
+    events = load_events()
+    all_top = get_top_events(events)
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    # 今日事件
+    today_events = events.get(today, [])
+    for e in today_events:
+        enrich_event(e)
+
+    # 本周最重要（本周所有去重事件）
+    week_events = [e for e in all_top if e.get('date', '').startswith(
+        (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')[:7]
+    )]
+    # 如果本周没有数据，用所有数据
+    if not week_events:
+        week_events = all_top[:15]
+
+    all_companies = get_all_companies(events)
+    sorted_dates = sorted(events.keys(), reverse=True)
+
+    template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
 
     html = template.render(
-        events_by_level=events_by_level,
-        update_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        top_events=today_events + week_events,  # 今日 + 本周
+        all_events=events,
+        sorted_dates=sorted_dates,
+        all_companies=all_companies,
+        update_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        today=today,
     )
-    return html
 
-def main():
-    events = load_events()
-    html = generate_html(events)
-
-    import os
     os.makedirs('docs', exist_ok=True)
     with open('docs/index.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
-    print(f"✓ HTML 生成完成")
+    total = sum(len(v) for v in events.values())
+    print(f"✓ 生成完成：{len(events)} 天数据，共 {total} 条事件")
 
 if __name__ == '__main__':
-    main()
-
+    generate_html()

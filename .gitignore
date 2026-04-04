@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# 环境变量（本地 API Key）
+.env
+.env.local
+
+# 数据文件（不提交 data/archive）
+data/archive/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 临时文件
+*.tmp
+*.log
