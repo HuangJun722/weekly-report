@@ -9,23 +9,27 @@
     <style>
         :root {
             --bg-page: #FAFAF8;
-            --bg-card: #FFFFFF;
-            --bg-subtle: #F3F4F6;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --bg-card-glass: rgba(255, 255, 255, 0.6);
+            --bg-subtle: rgba(255, 255, 255, 0.4);
             --text-primary: #111827;
             --text-secondary: #6B7280;
             --text-tertiary: #9CA3AF;
             --accent: #1D4ED8;
             --accent-light: #EFF6FF;
-            --border: #E5E7EB;
-            --level-a: #16A34A; --level-a-bg: #F0FDF4;
-            --level-b: #2563EB; --level-b-bg: #EFF6FF;
-            --level-c: #D97706; --level-c-bg: #FFFBEB;
-            --level-d: #6B7280; --level-d-bg: #F9FAFB;
-            --type-funding: #7C3AED; --type-funding-bg: #F5F3FF;
-            --type-ma: #DC2626; --type-ma-bg: #FEF2F2;
-            --type-earnings: #059669; --type-earnings-bg: #ECFDF5;
-            --type-strategy: #D97706; --type-strategy-bg: #FFFBEB;
-            --type-other: #9CA3AF; --type-other-bg: #F9FAFB;
+            --border: rgba(0, 0, 0, 0.08);
+            --border-2: rgba(0, 0, 0, 0.12);
+            --shadow: 0 26px 70px rgba(0, 0, 0, 0.08);
+            --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.05);
+            --level-a: #16A34A; --level-a-bg: rgba(22, 163, 74, 0.08);
+            --level-b: #2563EB; --level-b-bg: rgba(37, 99, 235, 0.08);
+            --level-c: #D97706; --level-c-bg: rgba(217, 119, 6, 0.08);
+            --level-d: #6B7280; --level-d-bg: rgba(107, 114, 128, 0.08);
+            --type-funding: #7C3AED; --type-funding-bg: rgba(124, 58, 237, 0.08);
+            --type-ma: #DC2626; --type-ma-bg: rgba(220, 38, 38, 0.08);
+            --type-earnings: #059669; --type-earnings-bg: rgba(5, 150, 105, 0.08);
+            --type-strategy: #D97706; --type-strategy-bg: rgba(217, 119, 6, 0.08);
+            --type-other: #9CA3AF; --type-other-bg: rgba(156, 163, 175, 0.08);
             --radius: 12px;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
             --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
@@ -49,8 +53,13 @@
             content: '';
             position: fixed;
             inset: 0;
-            background: rgba(248, 250, 248, 0.72);
-            backdrop-filter: blur(4px);
+            background-image:
+                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: linear-gradient(180deg, rgba(0,0,0,0.4), transparent 85%);
+            -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.4), transparent 85%);
+            pointer-events: none;
             z-index: -1;
         }
         a { color: var(--accent); text-decoration: none; }
@@ -61,6 +70,8 @@
         /* ===== Masthead ===== */
         .masthead {
             background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             position: sticky; top: 0; z-index: 100;
         }
@@ -89,7 +100,9 @@
         .search-box {
             width: 100%; padding: 8px 12px 8px 34px;
             border: 1px solid var(--border); border-radius: 8px;
-            background: var(--bg-page); font-size: 14px; color: var(--text-primary);
+            background: var(--bg-card-glass); font-size: 14px; color: var(--text-primary);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             transition: border-color 0.15s;
         }
         .search-box:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(29,78,216,0.08); }
@@ -101,11 +114,13 @@
         .filter-label { font-size: 12px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; }
         .filter-btn {
             padding: 5px 14px; border: 1px solid var(--border); border-radius: 20px;
-            background: var(--bg-card); font-size: 13px; font-weight: 500;
+            background: var(--bg-card-glass); backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            font-size: 13px; font-weight: 500;
             color: var(--text-secondary); transition: all 0.15s;
         }
         .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .filter-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #fff; }
+        .filter-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
 
         /* ===== Main ===== */
         .main { padding: 40px 0 80px; }
@@ -124,13 +139,18 @@
         .signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
         .signal-card {
-            background: var(--bg-card); border-radius: var(--radius);
-            box-shadow: var(--shadow-md); padding: 20px 22px;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            padding: 20px 22px;
             position: relative; overflow: hidden;
             transition: box-shadow 0.2s, transform 0.2s;
             display: flex; flex-direction: column; gap: 10px;
         }
-        .signal-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+        .signal-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: var(--border-2); }
         .signal-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
 
         .signal-card.type-funding::before { background: var(--type-funding); }
@@ -207,6 +227,12 @@
             display: grid; grid-template-columns: auto 1fr auto;
             align-items: start; gap: 0 12px; padding: 10px 0;
             border-bottom: 1px solid var(--border);
+            background: var(--bg-card);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 0;
+            transition: background 0.15s;
+        }
         }
         .feed-item:last-child { border-bottom: none; }
         .feed-item:hover { background: var(--bg-subtle); margin: 0 -8px; padding: 10px 8px; border-radius: 8px; }
