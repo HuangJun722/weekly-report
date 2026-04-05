@@ -1,262 +1,390 @@
 {
-  "2026-04-03": [
+  "2026-04-04": [
     {
-      "title": "Show HN: I built a frontpage for personal blogs",
-      "url": "https://text.blogosphere.app/",
-      "source": "Hacker News",
-      "level": "C",
-      "score": 5,
-      "summary": "Show HN: I built a frontpage for personal blogs",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:27.560646",
-      "why_important": "Show HN: I built a f",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "title": "Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled",
+      "url": "https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "A",
+      "score": 9,
+      "why_important": "法国 AI 独角兽 Mistral 获 $830M 融资，欧洲 AI 竞赛升温；金融科技 9fin 晋级独角兽",
+      "impact_scope": "欧洲 AI/金融科技行业",
+      "companies": [
+        "Mistral",
+        "9fin"
+      ],
+      "date": "2026-04-04T22:38:30.483211"
     },
     {
-      "title": "Big-Endian Testing with QEMU",
-      "url": "https://www.hanshq.net/big-endian-qemu.html",
-      "source": "Hacker News",
-      "level": "C",
-      "score": 5,
-      "summary": "Big-Endian Testing with QEMU",
-      "category": "其他",
+      "title": "Former Coatue partner raises huge $65M seed for enterprise AI agent startup",
+      "url": "https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 7,
+      "why_important": "前 Coatue 合伙人创办 AI Agent 初创，获 $65M 种子轮，企业 AI 自动化赛道持续火热",
+      "impact_scope": "企业 AI Agent 行业",
       "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:27.688170",
-      "why_important": "Big-Endian Testing w",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "date": "2026-04-04T22:38:30.483204"
     },
     {
-      "title": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini",
-      "url": "https://gist.github.com/greenstevester/fc49b4e60a4fef9effc79066c1033ae5",
-      "source": "Hacker News",
-      "level": "C",
-      "score": 5,
-      "summary": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:27.754830",
-      "why_important": "April 2026 TLDR Setu",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "title": "AI agent startup Genspark expands Series B to $385m",
+      "url": "https://www.techinasia.com/news/ai-agent-startup-genspark-expands-series-385m",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 7,
+      "why_important": "东南亚 AI Agent 独角兽 Genspark 将 B 轮扩至 $385M，亚太 AI 竞争加剧",
+      "impact_scope": "亚太 AI 行业",
+      "companies": [
+        "Genspark"
+      ],
+      "date": "2026-04-04T22:38:30.483231"
     },
     {
-      "title": "Show HN: ctx – an Agentic Development Environment (ADE)",
-      "url": "https://ctx.rs",
-      "source": "Hacker News",
-      "level": "C",
-      "score": 5,
-      "summary": "Show HN: ctx – an Agentic Development Environment (ADE)",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:27.872784",
-      "why_important": "Show HN: ctx – an Ag",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "title": "Cafeyn acquires Readly's non-Nordic operations to scale European press platform",
+      "url": "https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "ma"
+      ],
+      "level": "B",
+      "score": 7,
+      "why_important": "欧洲数字出版平台 Cafeyn 收购 Readly 非北欧业务，媒体整合加速",
+      "impact_scope": "欧洲数字媒体行业",
+      "companies": [
+        "Cafeyn",
+        "Readly"
+      ],
+      "date": "2026-04-04T22:38:30.483226"
     },
     {
-      "title": "Samsung Magician disk utility takes 18 steps and two reboots to uninstall",
-      "url": "https://chalmovsky.com/2026/03/29/samsung-magician.html",
-      "source": "Hacker News",
+      "title": "Wearable Robotics closes €5M Series A to scale development",
+      "url": "https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
       "level": "C",
-      "score": 5,
-      "summary": "Samsung Magician disk utility takes 18 steps and two reboots to uninstall",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:27.935047",
-      "why_important": "Samsung Magician dis",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "score": 6,
+      "why_important": "可穿戴机器人公司获 €5M A 轮，欧洲硬科技早期融资持续",
+      "impact_scope": "欧洲机器人行业",
+      "companies": [
+        "Wearable Robotics"
+      ],
+      "date": "2026-04-04T22:38:30.483216"
     },
     {
-      "title": "Google releases Gemma 4 open models",
-      "url": "https://deepmind.google/models/gemma/gemma-4/",
-      "source": "Hacker News",
+      "title": "Omniscient raises $4.1M to strengthen data-driven executive decision-making",
+      "url": "https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
       "level": "C",
-      "score": 5,
-      "summary": "Google releases Gemma 4 open models",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.055897",
-      "why_important": "Google releases Gemm",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "score": 6,
+      "why_important": "企业决策 AI 公司获 $4.1M 融资，B2B AI 数据赛道持续有资金流入",
+      "impact_scope": "欧洲 B2B AI 行业",
+      "companies": [
+        "Omniscient"
+      ],
+      "date": "2026-04-04T22:38:30.483221"
     },
     {
-      "title": "Show HN: Apfel – The free AI already on your Mac",
-      "url": "https://apfel.franzai.com",
-      "source": "Hacker News",
-      "level": "C",
-      "score": 5,
-      "summary": "Show HN: Apfel – The free AI already on your Mac",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.117586",
-      "why_important": "Show HN: Apfel – The",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "title": "AccuQuant Secures $20 Million To Advance AI Infrastructure",
+      "url": "https://ventureburn.com/accuquant-secures-20-million-to-advance-ai-infrastructure/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 7,
+      "why_important": "非洲 AI 基础设施公司获 $20M 融资，非洲 AI 生态持续获资本关注",
+      "impact_scope": "非洲 AI 基础设施行业",
+      "companies": [
+        "AccuQuant"
+      ],
+      "date": "2026-04-04T22:38:30.483294"
     },
     {
-      "title": "Decisions that eroded trust in Azure – by a former Azure Core engineer",
-      "url": "https://isolveproblems.substack.com/p/how-microsoft-vaporized-a-trillion",
-      "source": "Hacker News",
-      "level": "C",
-      "score": 5,
-      "summary": "Decisions that eroded trust in Azure – by a former Azure Core engineer",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.244240",
-      "why_important": "Decisions that erode",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "title": "Syneron Bio Raises $150M for Peptide Drug Platform",
+      "url": "https://ventureburn.com/syneron-bio-raises-150m-for-peptide-drug-platform/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 7,
+      "why_important": "非洲生物科技公司 Syneron Bio 获 $150M 融资，BioTech 成为非洲新兴投资热点",
+      "impact_scope": "非洲生物科技行业",
+      "companies": [
+        "Syneron Bio"
+      ],
+      "date": "2026-04-04T22:38:30.483303"
     },
     {
-      "title": "What Category Theory Teaches Us About DataFrames",
-      "url": "https://mchav.github.io/what-category-theory-teaches-us-about-dataframes/",
-      "source": "Hacker News",
+      "title": "Insight Health Raises $11M To Advance AI Clinical Infrastructure",
+      "url": "https://ventureburn.com/insight-health-raises-11m/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
       "level": "C",
-      "score": 5,
-      "summary": "What Category Theory Teaches Us About DataFrames",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.303963",
-      "why_important": "What Category Theory",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "score": 6,
+      "why_important": "非洲医疗 AI 公司获 $11M 融资，AI+医疗在非洲快速发展",
+      "impact_scope": "非洲医疗 AI 行业",
+      "companies": [
+        "Insight Health"
+      ],
+      "date": "2026-04-04T22:38:30.483289"
     },
     {
-      "title": "ESP32-S31: Dual-Core RISC-V SoC with Wi-Fi 6, Bluetooth 5.4, and Advanced HMI",
-      "url": "https://www.espressif.com/en/news/ESP32_S31_Release",
-      "source": "Hacker News",
+      "title": "EFEX raises $8 million to strengthen its treasury platform",
+      "url": "https://contxto.com/en/funding/efex-raises-8-million-to-strengthen-its-treasury-platform/",
+      "source": "Contxto",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
       "level": "C",
-      "score": 5,
-      "summary": "ESP32-S31: Dual-Core RISC-V SoC with Wi-Fi 6, Bluetooth 5.4, and Advanced HMI",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.427976",
-      "why_important": "ESP32-S31: Dual-Core",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "score": 6,
+      "why_important": "拉美金融科技公司 EFEX 获 $8M 融资， treasury management 赛道在拉美兴起",
+      "impact_scope": "拉美金融科技行业",
+      "companies": [
+        "EFEX"
+      ],
+      "date": "2026-04-04T22:38:30.483308"
     },
     {
-      "title": "Yeachan-Heo/oh-my-codex",
-      "url": "https://github.com/Yeachan-Heo/oh-my-codex",
-      "source": "GitHub Trending",
+      "title": "CarniStore attracts $12.2 million strategic investment to scale premium food operations",
+      "url": "http://wamda.com/2026/03/carnistore-attracts-12-2-million-strategic-investment-scale-premium-food-operations",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
       "level": "C",
-      "score": 5,
-      "summary": "Yeachan-Heo/oh-my-codex",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.491174",
-      "why_important": "Yeachan-Heo/oh-my-co",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "score": 6,
+      "why_important": "中东食品科技公司 CarniStore 获 $12.2M 战略投资，中东食品供应链数字化加速",
+      "impact_scope": "中东食品科技行业",
+      "companies": [
+        "CarniStore"
+      ],
+      "date": "2026-04-04T22:38:30.483250"
     },
     {
-      "title": "onyx-dot-app/onyx",
-      "url": "https://github.com/onyx-dot-app/onyx",
-      "source": "GitHub Trending",
-      "level": "C",
-      "score": 5,
-      "summary": "onyx-dot-app/onyx",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.606967",
-      "why_important": "onyx-dot-app/onyx",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "title": "WHOOP attracts Gulf sovereign funds and global athletes in $575M round",
+      "url": "http://wamda.com/2026/04/whoop-attracts-gulf-sovereign-funds-global-athletes-575m-round",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
+      "level": "A",
+      "score": 9,
+      "why_important": "健康可穿戴品牌 WHOOP 获 $575M 融资，海湾主权基金入局，健康科技赛道大额融资",
+      "impact_scope": "全球健康科技行业",
+      "companies": [
+        "WHOOP"
+      ],
+      "date": "2026-04-04T22:38:30.483382"
     },
     {
-      "title": "google-research/timesfm",
-      "url": "https://github.com/google-research/timesfm",
-      "source": "GitHub Trending",
+      "title": "Arabic.AI partners with Qistas to deliver sovereign Arabic legal AI",
+      "url": "http://wamda.com/2026/03/arabicai-partners-qistas-deliver-sovereign-arabic-legal-ai",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "strategy"
+      ],
       "level": "C",
-      "score": 5,
-      "summary": "google-research/timesfm",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.685038",
-      "why_important": "google-research/time",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "score": 6,
+      "why_important": "阿拉伯语 AI 法律平台 Arabic.AI 与 Qistas 合作，中东主权 AI 战略落地",
+      "impact_scope": "中东 AI 法律科技行业",
+      "companies": [
+        "Arabic.AI",
+        "Qistas"
+      ],
+      "date": "2026-04-04T22:38:30.483243"
     },
     {
-      "title": "siddharthvaddem/openscreen",
-      "url": "https://github.com/siddharthvaddem/openscreen",
-      "source": "GitHub Trending",
+      "title": "Mezza launches in the UAE with fresh seed backing",
+      "url": "http://wamda.com/2026/03/mezza-launches-uae-fresh-seed-backing",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "strategy"
+      ],
       "level": "C",
       "score": 5,
-      "summary": "siddharthvaddem/openscreen",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.789481",
-      "why_important": "siddharthvaddem/open",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "why_important": "食品科技创业公司 Mezza 获种子轮融资进入阿联酋市场",
+      "impact_scope": "中东食品科技",
+      "companies": [
+        "Mezza"
+      ],
+      "date": "2026-04-04T22:38:30.483236"
     },
     {
-      "title": "dmtrKovalenko/fff.nvim",
-      "url": "https://github.com/dmtrKovalenko/fff.nvim",
-      "source": "GitHub Trending",
+      "title": "estaie secures 7-figure pre-seed led by Plus VC",
+      "url": "http://wamda.com/2026/04/estaie-secures-7-figure-pre-seed-led-plus-vc",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
       "level": "C",
       "score": 5,
-      "summary": "dmtrKovalenko/fff.nvim",
-      "category": "其他",
-      "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.861842",
-      "why_important": "dmtrKovalenko/fff.nv",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "why_important": "活动科技预种子融资，中东早期创业生态持续活跃",
+      "impact_scope": "中东活动科技",
+      "companies": [
+        "estaie"
+      ],
+      "date": "2026-04-04T22:38:30.483388"
     },
     {
-      "title": "f/prompts.chat",
-      "url": "https://github.com/f/prompts.chat",
-      "source": "GitHub Trending",
+      "title": "ITIDA, Plug and Play support 61 Upper Egypt startups, unlock $3.7M in funding",
+      "url": "http://wamda.com/2026/03/itida-plug-play-support-61-upper-egypt-startups-unlock-3-7m-funding",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "strategy"
+      ],
       "level": "C",
       "score": 5,
-      "summary": "f/prompts.chat",
-      "category": "其他",
+      "why_important": "埃及 61 家创业公司获 $3.7M 资金支持，北非创业生态扶持计划推进",
+      "impact_scope": "北非创业生态",
       "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:28.977662",
-      "why_important": "f/prompts.chat",
-      "impact_scope": "未知",
-      "impact_range": "行业"
+      "date": "2026-04-04T22:38:30.483392"
     },
     {
-      "title": "sherlock-project/sherlock",
-      "url": "https://github.com/sherlock-project/sherlock",
-      "source": "GitHub Trending",
+      "title": "From Chaos to Control: How Verx Is Helping African Businesses Run Smarter, Faster, and More Profitably",
+      "url": "https://techpoint.africa/brandpress/from-chaos-to-control-how-verx-is-helping-african-businesses-run-smarter/",
+      "source": "Techpoint",
+      "region": "非洲",
+      "event_types": [
+        "strategy"
+      ],
       "level": "C",
       "score": 5,
-      "summary": "sherlock-project/sherlock",
-      "category": "其他",
+      "why_important": "非洲企业效率平台 Verx 获品牌报道，企业数字化赛道在非洲兴起",
+      "impact_scope": "非洲企业服务",
+      "companies": [
+        "Verx"
+      ],
+      "date": "2026-04-04T22:38:30.483289"
+    },
+    {
+      "title": "Nigerian Founder Launches ADT, a New AI Model for Cyber Defense",
+      "url": "https://techpoint.africa/brandpress/nigerian-founder-launches-adt-a-new-ai-model-for-cyber-defense/",
+      "source": "Techpoint",
+      "region": "非洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 6,
+      "why_important": "尼日利亚创始人推出网络防御 AI 模型 ADT，非洲 AI 安全赛道出现本土力量",
+      "impact_scope": "非洲 AI 网络安全",
+      "companies": [
+        "ADT"
+      ],
+      "date": "2026-04-04T22:38:30.483274"
+    },
+    {
+      "title": "UNDP launches timbuktoo financing initiative for African startups",
+      "url": "https://old.disruptafrica.com/2024/01/22/undp-launches-timbuktoo-financing-initiative-for-african-startups/",
+      "source": "Disrupt Africa",
+      "region": "非洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "联合国开发计划署推出 timbuktoo 融资倡议，为非洲创业公司提供资金支持",
+      "impact_scope": "非洲创业生态",
       "companies": [],
-      "region": "未知",
-      "date": "2026-04-03T14:26:29.048467",
-      "why_important": "sherlock-project/she",
+      "date": "2026-04-04T22:38:30.483258"
+    },
+    {
+      "title": "After fighting malware for decades, this cybersecurity veteran is now hacking drones",
+      "url": "https://techcrunch.com/2026/04/04/after-fighting-malware-for-decades-this-cybersecurity-veteran-is-now-hacking-drones/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 4,
+      "why_important": "待分析",
       "impact_scope": "未知",
-      "impact_range": "行业"
+      "companies": [],
+      "date": "2026-04-04T22:38:30.483313"
+    },
+    {
+      "title": "Peter Thiel's big bet on solar-powered cow collars",
+      "url": "https://techcrunch.com/2026/04/05/peter-thiels-big-bet-on-solar-powered-cow-collars/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 6,
+      "why_important": "PayPal 创始人 Thiel 投资太阳能奶牛项圈，农业科技赛道获顶级投资人关注",
+      "impact_scope": "农业科技行业",
+      "companies": [],
+      "date": "2026-04-05T00:00:00.000000"
+    },
+    {
+      "title": "Embattled startup Delve has 'parted ways' with Y Combinator",
+      "url": "https://techcrunch.com/2026/04/04/embattled-startup-delve-has-parted-ways-with-y-combinator/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "YC 加速器与 Delve 分手，YC 品牌信誉风波持续影响被投公司",
+      "impact_scope": "全球加速器生态",
+      "companies": [
+        "Delve"
+      ],
+      "date": "2026-04-04T22:38:30.483401"
     }
   ],
-  "2026-04-04": [
+  "2026-04-05": [
+    {
+      "title": "It’s not your imagination: AI seed startups are commanding higher valuations",
+      "url": "https://techcrunch.com/2026/03/31/its-not-your-imagination-ai-seed-startups-are-commanding-higher-valuations/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586652"
+    },
     {
       "title": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups",
       "url": "https://techcrunch.com/2026/03/31/exclusive-runway-launches-10m-fund-builders-program-to-support-early-stage-ai-startups/",
@@ -270,22 +398,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483182"
-    },
-    {
-      "title": "Former Coatue partner raises huge $65M seed for enterprise AI agent startup",
-      "url": "https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/",
-      "source": "TechCrunch",
-      "region": "欧洲",
-      "event_types": [
-        "funding"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483204"
+      "date": "2026-04-05T08:35:24.586687"
     },
     {
       "title": "Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled",
@@ -300,7 +413,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483211"
+      "date": "2026-04-05T08:35:24.586700"
     },
     {
       "title": "Wearable Robotics closes €5M Series A to scale development",
@@ -315,7 +428,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483216"
+      "date": "2026-04-05T08:35:24.586709"
     },
     {
       "title": "Omniscient raises $4.1M to strengthen data-driven executive decision-making",
@@ -330,7 +443,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483221"
+      "date": "2026-04-05T08:35:24.586718"
     },
     {
       "title": "Cafeyn acquires Readly’s non-Nordic operations to scale European press platform",
@@ -345,13 +458,13 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483226"
+      "date": "2026-04-05T08:35:24.586727"
     },
     {
-      "title": "AI agent startup Genspark expands Series B to $385m",
-      "url": "https://www.techinasia.com/news/ai-agent-startup-genspark-expands-series-385m",
-      "source": "Tech in Asia",
-      "region": "亚太",
+      "title": "PENEMUE raises over €1.7 million to combat online hate, digital violence, and disinformation with AI",
+      "url": "https://www.eu-startups.com/2026/04/penemue-raises-e1-7-million-to-combat-online-hate-digital-violence-and-disinformation-with-ai/",
+      "source": "EU-Startups",
+      "region": "欧洲",
       "event_types": [
         "funding"
       ],
@@ -360,7 +473,112 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483231"
+      "date": "2026-04-05T08:35:24.586735"
+    },
+    {
+      "title": "Italy’s Wearable Robotics closes €5 million Series A to scale neuromotor rehabilitation robotics and exoskeletons",
+      "url": "https://www.eu-startups.com/2026/04/italys-wearable-robotics-closes-e5-million-series-a-to-scale-neuromotor-rehabilitation-robotics-and-exoskeletons/",
+      "source": "EU-Startups",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586743"
+    },
+    {
+      "title": "Dutch startup Brilliance raises €6 million to tackle AR hardware’s key bottleneck with RGB laser chip technology",
+      "url": "https://www.eu-startups.com/2026/04/dutch-startup-brilliance-raises-e6-million-to-tackle-ar-hardwares-key-bottleneck-with-rgb-laser-chip-technology/",
+      "source": "EU-Startups",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586750"
+    },
+    {
+      "title": "Weekly funding round-up! All of the European startup funding rounds we tracked this week (Mar 30 – Apr 02)",
+      "url": "https://www.eu-startups.com/2026/04/weekly-funding-round-up-all-of-the-european-startup-funding-rounds-we-tracked-this-week-mar-30-apr-02/",
+      "source": "EU-Startups",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586759"
+    },
+    {
+      "title": "Paris-based Omniscient raises €3.5 million to bring AI-powered decision intelligence to the C-suite",
+      "url": "https://www.eu-startups.com/2026/04/paris-based-omniscient-raises-e3-5-million-to-bring-ai-powered-decision-intelligence-to-the-c-suite/",
+      "source": "EU-Startups",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586767"
+    },
+    {
+      "title": "Paris-based Generare raises €20 million to generate novel molecular data for drug development from microbial genomes",
+      "url": "https://www.eu-startups.com/2026/04/paris-based-generare-raises-e20-million-to-generate-novel-molecular-data-for-drug-development-from-microbial-genomes/",
+      "source": "EU-Startups",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586776"
+    },
+    {
+      "title": "Taiwan chip testing firm CHPT posts record $42.5m revenue",
+      "url": "https://www.techinasia.com/news/taiwan-chip-testing-firm-chpt-posts-record-42-5m-revenue",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586799"
+    },
+    {
+      "title": "WHOOP attracts Gulf sovereign funds and global athletes in $575M round",
+      "url": "http://wamda.com/2026/04/whoop-attracts-gulf-sovereign-funds-global-athletes-575m-round",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.586808"
     },
     {
       "title": "Mezza launches in the UAE with fresh seed backing",
@@ -375,7 +593,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483236"
+      "date": "2026-04-05T08:35:24.586816"
     },
     {
       "title": "Arabic.AI partners with Qistas to deliver sovereign Arabic legal AI",
@@ -390,7 +608,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483243"
+      "date": "2026-04-05T08:35:24.586824"
     },
     {
       "title": "CarniStore attracts $12.2 million strategic investment to scale premium food operations",
@@ -406,37 +624,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483250"
-    },
-    {
-      "title": "UNDP launches “timbuktoo” financing initiative for African startups",
-      "url": "https://old.disruptafrica.com/2024/01/22/undp-launches-timbuktoo-financing-initiative-for-african-startups/",
-      "source": "Disrupt Africa",
-      "region": "非洲",
-      "event_types": [
-        "strategy"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483258"
-    },
-    {
-      "title": "Third episode of new Disrupt Podcast series shines light on Africa’s ed-tech space",
-      "url": "https://old.disruptafrica.com/2024/01/20/third-episode-of-new-disrupt-podcast-series-shines-light-on-africas-ed-tech-space/",
-      "source": "Disrupt Africa",
-      "region": "非洲",
-      "event_types": [
-        "funding"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483266"
+      "date": "2026-04-05T08:35:24.586831"
     },
     {
       "title": "Nigerian Founder Launches ADT, a New AI Model for Cyber Defense",
@@ -451,7 +639,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483274"
+      "date": "2026-04-05T08:35:24.586839"
     },
     {
       "title": "From Chaos to Control: How Verx Is Helping African Businesses Run Smarter, Faster, and More Profitably",
@@ -466,7 +654,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483289"
+      "date": "2026-04-05T08:35:24.586847"
     },
     {
       "title": "Insight Health Raises $11M To Advance AI Clinical Infrastructure",
@@ -481,7 +669,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483294"
+      "date": "2026-04-05T08:35:24.586856"
     },
     {
       "title": "AccuQuant Secures $20 Million To Advance AI Infrastructure",
@@ -496,7 +684,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483299"
+      "date": "2026-04-05T08:35:24.586864"
     },
     {
       "title": "Syneron Bio Raises $150M for Peptide Drug Platform",
@@ -511,7 +699,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483303"
+      "date": "2026-04-05T08:35:24.586871"
     },
     {
       "title": "EFEX raises $8 million to strengthen its treasury platform",
@@ -526,13 +714,13 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483308"
+      "date": "2026-04-05T08:35:24.586885"
     },
     {
-      "title": "After fighting malware for decades, this cybersecurity veteran is now hacking drones",
-      "url": "https://techcrunch.com/2026/04/04/after-fighting-malware-for-decades-this-cybersecurity-veteran-is-now-hacking-drones/",
-      "source": "TechCrunch",
-      "region": "欧洲",
+      "title": "Mapping India’s key education startups",
+      "url": "https://www.techinasia.com/visual-story/india-education-landscape-map",
+      "source": "Tech in Asia",
+      "region": "亚太",
       "event_types": [
         "other"
       ],
@@ -541,13 +729,13 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483313"
+      "date": "2026-04-05T08:35:24.586893"
     },
     {
-      "title": "Lucid blames dip in Q1 sales on seat supplier issue",
-      "url": "https://techcrunch.com/2026/04/03/lucid-blames-dip-in-q1-sales-on-seat-supplier-issue/",
-      "source": "TechCrunch",
-      "region": "欧洲",
+      "title": "Impulse Space, Anduril to develop space interceptor prototypes",
+      "url": "https://www.techinasia.com/news/impulse-space-anduril-to-develop-space-interceptor-prototypes",
+      "source": "Tech in Asia",
+      "region": "亚太",
       "event_types": [
         "other"
       ],
@@ -556,13 +744,13 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483317"
+      "date": "2026-04-05T08:35:24.586901"
     },
     {
-      "title": "The anonymous social app that thinks it can work in Saudi Arabia",
-      "url": "https://techcrunch.com/2026/04/03/the-anonymous-social-app-that-thinks-it-can-work-in-saudi-arabia/",
-      "source": "TechCrunch",
-      "region": "欧洲",
+      "title": "US compliance startup Delve parts ways with Y Combinator",
+      "url": "https://www.techinasia.com/news/us-compliance-startup-delve-parts-ways-with-y-combinator",
+      "source": "Tech in Asia",
+      "region": "亚太",
       "event_types": [
         "other"
       ],
@@ -571,13 +759,13 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483322"
+      "date": "2026-04-05T08:35:24.586909"
     },
     {
-      "title": "Tesla’s Texas factory workforce reportedly shrunk 22% in 2025",
-      "url": "https://techcrunch.com/2026/04/03/teslas-texas-factory-workforce-reportedly-shrunk-22-in-2025/",
-      "source": "TechCrunch",
-      "region": "欧洲",
+      "title": "India’s Gujarat High Court restricts AI in judicial decisions",
+      "url": "https://www.techinasia.com/news/indias-gujarat-high-court-restricts-ai-in-judicial-decisions",
+      "source": "Tech in Asia",
+      "region": "亚太",
       "event_types": [
         "other"
       ],
@@ -586,13 +774,13 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483329"
+      "date": "2026-04-05T08:35:24.586918"
     },
     {
-      "title": "Best iPad apps to boost productivity and make your life easier",
-      "url": "https://techcrunch.com/2026/04/03/best-ipad-apps-to-boost-productivity-make-your-life-easier/",
-      "source": "TechCrunch",
-      "region": "欧洲",
+      "title": "Meta to meet Indonesian ministry over child protection rules",
+      "url": "https://www.techinasia.com/news/meta-to-meet-indonesian-ministry-over-child-protection-rules",
+      "source": "Tech in Asia",
+      "region": "亚太",
       "event_types": [
         "other"
       ],
@@ -601,22 +789,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483334"
-    },
-    {
-      "title": "AI companies are building huge natural gas plants to power data centers. What could go wrong?",
-      "url": "https://techcrunch.com/2026/04/03/ai-companies-are-building-huge-natural-gas-plants-to-power-data-centers-what-could-go-wrong/",
-      "source": "TechCrunch",
-      "region": "欧洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483341"
+      "date": "2026-04-05T08:35:24.586926"
     },
     {
       "title": "25 rising startups in the Philippines",
@@ -631,7 +804,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483346"
+      "date": "2026-04-05T08:35:24.586934"
     },
     {
       "title": "Meet the 100 top-funded startups and tech companies in China",
@@ -646,82 +819,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483351"
-    },
-    {
-      "title": "50 rising startups in China",
-      "url": "https://www.techinasia.com/50-rising-startups-china",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483356"
-    },
-    {
-      "title": "Supabase eyes $10b valuation in new funding talks",
-      "url": "https://www.techinasia.com/news/supabase-eyes-10b-valuation-funding-talks",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483360"
-    },
-    {
-      "title": "Chinese AI lab DeepSeek to run v4 on Huawei chips",
-      "url": "https://www.techinasia.com/news/chinese-ai-lab-deepseek-run-v4-huawei-chips",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483364"
-    },
-    {
-      "title": "Mapping SEA’s leading cleantech players",
-      "url": "https://www.techinasia.com/visual-story/mapping-sea-cleantech",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483369"
-    },
-    {
-      "title": "UBTech offers $18m pay for AI scientist",
-      "url": "https://www.techinasia.com/news/ubtech-offers-18m-pay-ai-scientist",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483373"
+      "date": "2026-04-05T08:35:24.586942"
     },
     {
       "title": "The Middle East’s butterfly effect on the global economy",
@@ -736,22 +834,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483378"
-    },
-    {
-      "title": "WHOOP attracts Gulf sovereign funds and global athletes in $575M round",
-      "url": "http://wamda.com/2026/04/whoop-attracts-gulf-sovereign-funds-global-athletes-575m-round",
-      "source": "WAMDA",
-      "region": "中东",
-      "event_types": [
-        "other"
-      ],
-      "level": "C",
-      "score": 5,
-      "why_important": "待分析",
-      "impact_scope": "未知",
-      "companies": [],
-      "date": "2026-04-04T22:38:30.483382"
+      "date": "2026-04-05T08:35:24.586951"
     },
     {
       "title": "estaie secures 7-figure pre-seed led by Plus VC",
@@ -766,7 +849,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483388"
+      "date": "2026-04-05T08:35:24.586959"
     },
     {
       "title": "ITIDA, Plug and Play support 61 Upper Egypt startups, unlock $3.7M in funding",
@@ -781,7 +864,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483392"
+      "date": "2026-04-05T08:35:24.586972"
     },
     {
       "title": "As war unfolds, Sofra is turning solidarity into a system that sustains Lebanon",
@@ -796,7 +879,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483397"
+      "date": "2026-04-05T08:35:24.586981"
     },
     {
       "title": "“I wasn’t aiming for Eventbrite, I was aiming for Ticketmaster”: Day 1 to 1000 of Jetron Ticket",
@@ -811,7 +894,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483401"
+      "date": "2026-04-05T08:35:24.586992"
     },
     {
       "title": "Telkom Kenya is now Kenya’s smallest mobile operator after two-year slide",
@@ -826,7 +909,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483406"
+      "date": "2026-04-05T08:35:24.587005"
     },
     {
       "title": "Kenya adds 9 million mobile money users but the easy growth is over",
@@ -841,7 +924,7 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483410"
+      "date": "2026-04-05T08:35:24.587019"
     },
     {
       "title": "Regulatory Passporting and the Future of Cross-Border Fintech in Africa",
@@ -856,7 +939,37 @@
       "why_important": "待分析",
       "impact_scope": "未知",
       "companies": [],
-      "date": "2026-04-04T22:38:30.483414"
+      "date": "2026-04-05T08:35:24.587031"
+    },
+    {
+      "title": "Radhika Bhachu left BlackRock and returned home to rethink wealth",
+      "url": "https://techcabal.com/2026/04/03/radhika-bhachu-ex-blackrock-exec-came-back-home-wealth/",
+      "source": "TechCabal",
+      "region": "非洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.587043"
+    },
+    {
+      "title": "BitGo’s Nick Coombs thinks everyone is reading Africa’s crypto market wrong",
+      "url": "https://techcabal.com/2026/04/03/bitgos-nick-coombs-on-infrastructure-plumbing-in-africa/",
+      "source": "TechCabal",
+      "region": "非洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 5,
+      "why_important": "待分析",
+      "impact_scope": "未知",
+      "companies": [],
+      "date": "2026-04-05T08:35:24.587054"
     }
   ]
 }

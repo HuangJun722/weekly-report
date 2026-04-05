@@ -260,13 +260,7 @@
 <div class="container">
 
     {# ===== 高价值信号区 ===== #}
-    {% set signal_events = [] %}
-    {% for event in top_events %}
-        {% if event.event_types and event.event_types[0] != 'other' %}
-            {% set _ = signal_events.append(event) %}
-        {% endif %}
-    {% endfor %}
-
+    {# signal_events 已在 Python 端过滤并按 score 排序，最多 8 条 #}
     {% if signal_events %}
     <section class="signal-cards" id="signalSection">
         <div class="section-header">

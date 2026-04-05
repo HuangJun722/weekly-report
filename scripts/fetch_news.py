@@ -41,12 +41,12 @@ RSS_SOURCES = [
     {'name': 'e27',              'url': 'https://e27.co/feed/',                             'source': 'e27',           'region': '亚太', 'priority': 2},
     # --- 中东/非洲 ---
     {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                    'source': 'WAMDA',         'region': '中东', 'priority': 3},
-    {'name': 'TechCabal',       'url': 'https://techcabal.com/feed',                    'source': 'TechCabal',     'region': '非洲', 'priority': 3},
-    {'name': 'Disrupt Africa',  'url': 'https://disrupt-africa.com/feed/',               'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2},
+    {'name': 'TechCabal',       'url': 'https://techcabal.com/feed',                    'source': 'TechCabal',     'region': '非洲', 'priority': 2},
+    # Disrupt Africa RSS 已废弃，只返回2024年旧文，改用 HTML 采集
     {'name': 'Techpoint',       'url': 'https://techpoint.africa/feed/',              'source': 'Techpoint',     'region': '非洲', 'priority': 2},
     {'name': 'Ventureburn',     'url': 'https://ventureburn.com/feed/',               'source': 'Ventureburn',   'region': '非洲', 'priority': 2},
     # --- 拉美 ---
-    {'name': 'Bloomberg LATAM', 'url': 'https://feeds.bloomberg.com/technology/news.rss', 'source': 'Bloomberg', 'region': '拉美', 'priority': 2},
+    # 注意：Bloomberg RSS 是全球综合科技，不限于拉美，已移除避免噪声
     {'name': 'LAVCA',           'url': 'https://lavca.org/feed/',                     'source': 'LAVCA',         'region': '拉美', 'priority': 3},
     {'name': 'Contxto',         'url': 'https://contxto.com/en/feed/',               'source': 'Contxto',       'region': '拉美', 'priority': 2},
 ]
@@ -59,43 +59,65 @@ def detect_event_types(title):
     t = title.lower()
     types = []
     # 融资（最高优先）
-    if any(k in t for k in ['raises', 'raises $', 'secures $', 'closes $', 'raises £',
+    if any(k in t for k in ['raises', 'secures $', 'closes $', 'raises £',
                        'closes funding', 'series ', 'seed round', 'valued at', 'unicorn',
                        'pre-series', 'investment of $', 'received $', 'attracts $',
-                       '$50m', '$100m', '$200m', '$500m', '$1b', 'bags $',
-                       'raises in', 'ltd raises', 'raises in', 'funding of', 'funding to']):
+                       'ltd raises', 'funding of', 'funding to',
+                       # 融资金额直接出现
+                       '$50m', '$100m', '$200m', '$500m', '$1b', '$1b+', 'bags $',
+                       # 融资进展
+                       'funding round', 'raises in ', 'closes $', 'm series',
+                       'attracts gulf',  # WAMDA 常见格式
+                       # 估值相关
+                       'valuation', 'valued at', 'eyes $', '$b valuation']):
         types.append('funding')
     # 并购/收购
     if any(k in t for k in ['acquires', 'acquired', 'acquisition', 'merger', 'merges',
-                       'takeover', 'takes control', 'stake in', 'buys', 'purchases']):
+                       'takeover', 'takes control', 'stake in', 'buys', 'purchases',
+                       'buyout', 'sold to']):
         types.append('ma')
     # 财报/IPO
     if any(k in t for k in ['revenue', 'earnings', 'profit', 'quarterly results',
                        'fiscal year', 'ipo ', 'listing', 'goes public',
                        'files to go public', 'quarterly profit', 'quarterly loss',
-                       'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results']):
+                       'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results',
+                       'goes live', 'shares ', 'stock ']):
         types.append('earnings')
     # 战略/市场
     if any(k in t for k in ['partners with', 'partnership', 'strategic',
                        'joint venture', 'expands to', 'flagship store',
                        'exits ', 'layoffs', 'shutdown', 'spins off',
                        'disrupts', 'CEO says', 'CEO on', 'ceo on', 'expansion',
-                       'launches ', 'rolls out', 'deploys']):
+                       'launches ', 'rolls out', 'deploys', 'to launch',
+                       'launches in', 'listing ', 'eyes $', '$ valuation']):
         types.append('strategy')
     return types if types else ['other']
 
-# 中美公司（精确匹配）
-BLACKLIST = re.compile(
-    r'\b(' + '|'.join([
-        'OpenAI', 'Anthropic', 'xAI', 'SpaceX', 'Palantir', 'ByteDance', 'TikTok',
-        'ChatGPT', 'GPT-', 'Gemini ', 'Claude ', 'Perplexity', 'Character\\.AI',
-        'DeepMind', 'Waymo', 'Cruise',  # 自动驾驶（美）
-    ]) + r')\b',
-    re.IGNORECASE
-)
+# 中美公司关键词（匹配标题中出现的公司名，排除不相关内容）
+# 用非贪婪匹配 + 上下文判断，避免误杀（如 "DeepMind raises" 才排除，纯叙述不排除）
+BLACKLIST_COMPANIES = [
+    # 美国公司/产品
+    'OpenAI', 'Anthropic', 'xAI', 'x.AI', 'SpaceX', 'Starlink', 'Palantir',
+    'ChatGPT', 'GPT-4', 'GPT-5', 'Claude ', 'Perplexity', 'Character.AI',
+    'Waymo', 'Cruise',  # 自动驾驶（美）
+    # 中国公司/产品
+    'ByteDance', 'TikTok', 'Douyin', 'DeepSeek', 'Kimi', 'Qwen',
+    # AI 产品名
+    'Gemini ', 'Gemini,', 'Gemini.', 'Gemini/',  # Google AI 产品
+]
+BLACKLIST_PATTERNS = [re.compile(r'\b' + re.escape(c) + r'\b', re.IGNORECASE) for c in BLACKLIST_COMPANIES]
 
 def is_blacklisted(title):
-    return bool(BLACKLIST.search(title))
+    t = title
+    for pat in BLACKLIST_PATTERNS:
+        if pat.search(t):
+            return True
+    # 域名黑名单（URL 中出现这些域名也算排除）
+    for dom in ['openai.com', 'anthropic.com', 'x.ai', 'spacex.com', 'byteDance.com',
+                'tiktok.com', 'deepmind.google', 'waymo.com']:
+        if dom in t.lower():
+            return True
+    return False
 
 # ============================================================
 # HTTP
@@ -160,6 +182,64 @@ def fetch_rss(cfg):
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
+        })
+
+    return results
+
+# ============================================================
+# HTML 备用采集（RSS 失效时的降级方案）
+# ============================================================
+
+HTML_SOURCES = [
+    # Disrupt Africa RSS 已废弃，改用 HTML 采集
+    {'name': 'Disrupt Africa', 'url': 'https://disrupt-africa.com/category/funding/', 'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2},
+]
+
+def fetch_html(cfg):
+    """从 HTML 页面提取文章列表"""
+    resp = fetch_url(cfg['url'])
+    if not resp: return []
+
+    soup = BeautifulSoup(resp.text, 'html.parser')
+    results = []
+
+    # Disrupt Africa 文章列表结构
+    articles = soup.select('article') or soup.select('.post') or soup.select('.article')
+    if not articles:
+        # 通用结构
+        articles = soup.select('a[href]')
+
+    for art in articles[:15]:
+        # 提取标题和链接
+        title_el = art.select_one('h2,h3,h4,.title,.entry-title') or art
+        title = title_el.get_text(strip=True)
+        if len(title) < 15 or is_blacklisted(title): continue
+
+        link_el = art.select_one('a') or title_el.select_one('a')
+        link = ''
+        if link_el:
+            link = (link_el.get('href') or '').strip()
+        if not link or link.startswith('#') or link.startswith('javascript'): continue
+
+        # 过滤非文章链接
+        if any(x in link for x in ['/category/', '/tag/', '/author/', '/page/',
+                                    'subscribe', 'newsletter', 'contact']): continue
+
+        # 过滤日期太旧的
+        date_el = art.select_one('time,.date,.published,.post-date')
+        date_str = ''
+        if date_el:
+            date_str = date_el.get('datetime', '') or date_el.get_text(strip=True)
+
+        types = detect_event_types(title)
+        results.append({
+            'title': title,
+            'url': link,
+            'source': cfg['source'],
+            'region': cfg['region'],
+            'priority': cfg.get('priority', 1),
+            'event_types': types,
+            '_date_str': date_str,  # 用于调试/日志
         })
 
     return results
@@ -291,6 +371,16 @@ def main():
             print(f"  [{cfg['name']}] {len(items)} 条")
             raw.extend(items)
         time.sleep(REQUEST_DELAY)
+
+    # HTML 备用采集（RSS 失效时的降级方案）
+    if HTML_SOURCES:
+        print("🌐 HTML 备用采集...")
+        for cfg in HTML_SOURCES:
+            items = fetch_html(cfg)
+            if items:
+                print(f"  [{cfg['name']}] {len(items)} 条")
+                raw.extend(items)
+            time.sleep(REQUEST_DELAY)
 
     # 按 URL 去重
     seen, unique = set(), []

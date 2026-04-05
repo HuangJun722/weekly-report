@@ -6,15 +6,49 @@ import os
 from datetime import datetime, timedelta
 from jinja2 import Template
 
+# 旧格式 category → event_types 映射
+CATEGORY_MAP = {
+    '融资': 'funding', '并购': 'ma', 'IPO': 'earnings',
+    '财报': 'earnings', '战略': 'strategy', '其他': 'other',
+    '上市': 'earnings', '扩张': 'strategy',
+}
+
+# 被截断的垃圾 why_important（来自旧格式的 summary[:25] 截断）
+TRUNCATED_JUNK = {
+    'Show HN: I built a f', 'Big-Endian Testing w', 'April 2026 TLDR Setu',
+    'Show HN: I built a f', 'Show HN: I built a frontp', 'Show HN: ctx – an Ag',
+    'Samsung Magician dis', 'Google releases Gemm', 'Show HN: Apfel – The',
+    'Decisions that erode', 'What Category Theory',
+    'ESP32-S31: Dual-Core', 'Yeachan-Heo/oh-my-co', 'onyx-dot-app/onyx',
+    'google-research/time', 'siddharthvaddem/open', 'dmtrKovalenko/fff.nv',
+    'f/prompts.chat', 'sherlock-project/she',
+}
+
 def enrich(event):
-    """确保事件有所有必要字段"""
-    event.setdefault('why_important', event.get('summary', '待分析')[:25] if 'summary' in event else '待分析')
+    """统一事件格式，确保所有字段存在且有效"""
+    # 统一 event_types（旧格式用 category）
+    if 'event_types' not in event:
+        cat = event.get('category', '其他')
+        event['event_types'] = [CATEGORY_MAP.get(cat, 'other')]
+
+    # 统一 why_important（旧格式用 summary，且被截断成垃圾）
+    why = event.get('why_important', '')
+    if why in TRUNCATED_JUNK or (len(why) < 20 and why != '待分析'):
+        # 垃圾截断，用原文前50字代替
+        title = event.get('title', '')
+        event['why_important'] = title[:50] + ('...' if len(title) > 50 else '') if title else '待分析'
+
+    event.setdefault('why_important', '待分析')
     event.setdefault('impact_scope', '未知')
     event.setdefault('companies', [])
     event.setdefault('level', 'C')
     event.setdefault('score', 5)
     event.setdefault('region', '未知')
-    event.setdefault('event_types', ['other'])
+
+    # 清理无意义字段（旧格式遗留）
+    for old_key in ('summary', 'category', 'impact_range'):
+        event.pop(old_key, None)
+
     return event
 
 def load_events():
