@@ -34,7 +34,10 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
   color: var(--text);
   min-height: 100vh;
-  background-color: var(--bg);
+  background-image: url('https://huangjun722.github.io/weekly-report/assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   overflow-x: hidden;
 }
 .wrap {
@@ -232,13 +235,13 @@ body {
         <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
         {% for ev_type, count in weekly.type_counts.items() %}
         {% if count > 0 %}
-        <button class="filter-btn" data-filter="type" data-value="{{ ev_type }}">{{ ev_type }}<sup style="font-size:10px;margin-left:2px">{{ count }}</sup></button>
+        <button class="filter-btn" data-filter="type" data-value="{{ ev_type }}">{{ ev_type }}</button>
         {% endif %}
         {% endfor %}
         <span class="filter-divider"></span>
         <button class="filter-btn active" data-filter="region" data-value="all">全部地区</button>
         {% for region_name, region_count in weekly.region_distribution.items() %}
-        <button class="filter-btn" data-filter="region" data-value="{{ region_name }}">{{ region_name }}<sup style="font-size:10px;margin-left:2px">{{ region_count }}</sup></button>
+        <button class="filter-btn" data-filter="region" data-value="{{ region_name }}">{{ region_name }}</button>
         {% endfor %}
       </div>
       <div class="meta">
