@@ -154,7 +154,7 @@ body::before {
 .badge { width: 8px; height: 8px; border-radius: 999px; margin-top: 5px; background: var(--accent); box-shadow: 0 0 0 4px rgba(14,165,233,0.08); }
 .badge.alt { background: var(--accent-2); box-shadow: 0 0 0 4px rgba(139,92,246,0.08); }
 .badge.green { background: var(--accent-3); box-shadow: 0 0 0 4px rgba(16,185,129,0.08); }
-.signal h4 { margin: 0 0 4px; font-size: 13px; font-weight: 600; line-height: 1.45; letter-spacing: -0.02em; }
+.signal h4 { margin: 0 0 4px; font-size: 13px; font-weight: 600; line-height: 1.45; letter-spacing: -0.02em; overflow-wrap: break-word; word-break: break-word; }
 .signal p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .signal .tag {
   display: inline-flex; padding: 4px 8px; border-radius: 999px;
@@ -185,7 +185,12 @@ body::before {
 
 /* Feed */
 .feed { display: grid; gap: 10px; }
-.feed-item { display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
+.feed-item {
+  display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 18px;
+  border: 1px solid var(--stroke); background: var(--panel);
+  backdrop-filter: blur(12px); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
 .feed-main h4 { margin: 0 0 7px; font-size: 14px; font-weight: 650; line-height: 1.5; letter-spacing: -0.02em; }
 .feed-main p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; max-width: 80ch; }
 .feed-side { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 8px; min-width: 150px; }
@@ -287,8 +292,8 @@ body::before {
           <div class="signal">
             <span class="badge {% if loop.index == 2 %}alt{% elif loop.index == 3 %}green{% endif %}"></span>
             <div>
-              <h4>{{ ev.title[:38] }}</h4>
-              <p>{{ ev.reason[:38] }}</p>
+              <h4>{{ ev.title }}</h4>
+              <p>{{ ev.reason }}</p>
             </div>
             <span class="tag">{{ ev.region }}</span>
           </div>
