@@ -31,24 +31,27 @@ REQUEST_DELAY = 1.2  # 避免被封
 RSS_SOURCES = [
     # --- 欧洲：融资专业源优先 ---
     {'name': 'TechCrunch',       'url': 'https://techcrunch.com/feed/',                  'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
-    {'name': 'TechCrunch VC',   'url': 'https://techcrunch.com/category/venture/feed/',      'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
-    {'name': 'Tech.eu',          'url': 'https://tech.eu/feed/',                             'source': 'Tech.eu',       'region': '欧洲', 'priority': 3},
-    {'name': 'Sifted',           'url': 'https://sifted.eu/feed/',                           'source': 'Sifted',        'region': '欧洲', 'priority': 2},
-    {'name': 'EU-Startups',      'url': 'https://www.eu-startups.com/feed/',                 'source': 'EU-Startups',   'region': '欧洲', 'priority': 2},
+    {'name': 'TechCrunch VC',   'url': 'https://techcrunch.com/category/venture/feed/', 'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
+    {'name': 'Tech.eu',          'url': 'https://tech.eu/feed/',                         'source': 'Tech.eu',       'region': '欧洲', 'priority': 3},
+    {'name': 'The Next Web',     'url': 'https://thenextweb.com/feed/',                  'source': 'The Next Web',  'region': '欧洲', 'priority': 2},
+    # EU-Startups 已移除：Cloudflare 全面拦截（RSS + HTML 均 403）
+    # Sifted 已移除：Cloudflare 全面拦截，无法绕过
     # --- 亚太：融资专业源 ---
-    {'name': 'Tech in Asia',     'url': 'https://www.techinasia.com/feed/',                 'source': 'Tech in Asia',  'region': '亚太', 'priority': 3},
-    {'name': 'DealStreetAsia',  'url': 'https://www.dealstreetasia.com/feed/',             'source': 'DealStreetAsia', 'region': '亚太', 'priority': 3},
-    {'name': 'e27',              'url': 'https://e27.co/feed/',                             'source': 'e27',           'region': '亚太', 'priority': 2},
+    {'name': 'Tech in Asia',     'url': 'https://www.techinasia.com/feed/',              'source': 'Tech in Asia',  'region': '亚太', 'priority': 3},
+    # DealStreetAsia RSS 已停用（"Temporarily Disabled"），改用 HTML 降级采集
+    # e27 已移除：Cloudflare 全面拦截，无法绕过，改用 HTML 降级
     # --- 中东/非洲 ---
-    {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                    'source': 'WAMDA',         'region': '中东', 'priority': 3},
-    {'name': 'TechCabal',       'url': 'https://techcabal.com/feed',                    'source': 'TechCabal',     'region': '非洲', 'priority': 2},
-    # Disrupt Africa RSS 已废弃，只返回2024年旧文，改用 HTML 采集
-    {'name': 'Techpoint',       'url': 'https://techpoint.africa/feed/',              'source': 'Techpoint',     'region': '非洲', 'priority': 2},
-    {'name': 'Ventureburn',     'url': 'https://ventureburn.com/feed/',               'source': 'Ventureburn',   'region': '非洲', 'priority': 2},
+    {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                     'source': 'WAMDA',         'region': '中东', 'priority': 3},
+    {'name': 'MENAbytes',        'url': 'https://www.menabytes.com/feed/',               'source': 'MENAbytes',     'region': '中东', 'priority': 2},
+    {'name': 'TechCabal',        'url': 'https://techcabal.com/feed',                   'source': 'TechCabal',     'region': '非洲', 'priority': 2},
+    # Disrupt Africa：RSS 恢复，root feed 可用
+    {'name': 'Disrupt Africa',   'url': 'https://disrupt-africa.com/feed/',             'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2},
+    {'name': 'Techpoint',        'url': 'https://techpoint.africa/feed/',               'source': 'Techpoint',     'region': '非洲', 'priority': 2},
+    {'name': 'Ventureburn',      'url': 'https://ventureburn.com/feed/',                'source': 'Ventureburn',   'region': '非洲', 'priority': 2},
     # --- 拉美 ---
     # 注意：Bloomberg RSS 是全球综合科技，不限于拉美，已移除避免噪声
-    {'name': 'LAVCA',           'url': 'https://lavca.org/feed/',                     'source': 'LAVCA',         'region': '拉美', 'priority': 3},
-    {'name': 'Contxto',         'url': 'https://contxto.com/en/feed/',               'source': 'Contxto',       'region': '拉美', 'priority': 2},
+    {'name': 'LAVCA',            'url': 'https://lavca.org/feed/',                        'source': 'LAVCA',         'region': '拉美', 'priority': 3},
+    {'name': 'Contxto',          'url': 'https://contxto.com/en/feed/',                  'source': 'Contxto',       'region': '拉美', 'priority': 2},
 ]
 
 # ============================================================
@@ -191,31 +194,85 @@ def fetch_rss(cfg):
 # ============================================================
 
 HTML_SOURCES = [
-    # Disrupt Africa RSS 已废弃，改用 HTML 采集
-    {'name': 'Disrupt Africa', 'url': 'https://disrupt-africa.com/category/funding/', 'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2},
+    # DealStreetAsia RSS 停用（"Temporarily Disabled"），主站为 JS SPA
+    # 低频尝试：大部分时间为 JS 空壳，偶尔可能含静态内容
+    {'name': 'DealStreetAsia', 'url': 'https://dealstreetasia.com/', 'source': 'DealStreetAsia', 'region': '亚太', 'priority': 1},
+    # e27：Angular JS + Cloudflare 双层保护，RSS + HTML 均无法采集，已移除
 ]
 
 def fetch_html(cfg):
-    """从 HTML 页面提取文章列表"""
+    """从 HTML 页面提取文章列表（降级方案，针对各站点结构定制）"""
     resp = fetch_url(cfg['url'])
     if not resp: return []
 
     soup = BeautifulSoup(resp.text, 'html.parser')
     results = []
 
-    # Disrupt Africa 文章列表结构
-    articles = soup.select('article') or soup.select('.post') or soup.select('.article')
-    if not articles:
-        # 通用结构
-        articles = soup.select('a[href]')
+    # 根据来源选择器定制
+    source = cfg['source']
+    if source == 'DealStreetAsia':
+        # DealStreetAsia: JS SPA，文章在特定 div 结构中
+        # 尝试多种文章容器选择器
+        selectors = [
+            'article', '.post-card', '.deal-card', '.startup-card',
+            '[class*=card]', '[class*=item]', '[class*=post]',
+            '.listing article', '.archive article',
+        ]
+        articles = []
+        for sel in selectors:
+            found = soup.select(sel)
+            if found:
+                articles = found
+                break
+        # 也尝试从链接模式找文章：/2026/ 或包含 deal/startup/invest
+        if not articles:
+            all_links = soup.select('a[href]')
+            art_links = []
+            for a in all_links:
+                href = a.get('href', '')
+                if '/202' in href and any(x in href for x in ['/deals/', '/startups/', '/funding/', '/invest/']):
+                    parent = a.find_parent()
+                    if parent:
+                        art_links.append(parent)
+            if art_links:
+                articles = art_links
+    elif source == 'e27':
+        # e27: 文章在特定列表结构中
+        selectors = [
+            'article', '.post', '.listing-item', '.article-item',
+            '[class*=article]', '[class*=post]',
+        ]
+        articles = []
+        for sel in selectors:
+            found = soup.select(sel)
+            if found:
+                articles = found
+                break
+        # 也从链接中提取：e27.co/20xx/ 模式
+        if not articles:
+            all_links = soup.select('a[href]')
+            art_links = []
+            for a in all_links:
+                href = a.get('href', '')
+                if '/20' in href and ('startup' in href or 'funding' in href or 'investment' in href or 'series' in href):
+                    parent = a.find_parent()
+                    if parent:
+                        art_links.append(parent)
+            if art_links:
+                articles = art_links
+    else:
+        # 通用回退
+        articles = soup.select('article') or soup.select('.post') or soup.select('.article')
+        if not articles:
+            articles = soup.select('a[href]')
 
     for art in articles[:15]:
         # 提取标题和链接
-        title_el = art.select_one('h2,h3,h4,.title,.entry-title') or art
+        title_el = art.select_one('h2,h3,h4,h5,.title,.entry-title,.post-title,.article-title') or art
         title = title_el.get_text(strip=True)
         if len(title) < 15 or is_blacklisted(title): continue
 
-        link_el = art.select_one('a') or title_el.select_one('a')
+        link_el = art.select_one('a') or (title_el if isinstance(title_el, object) else None)
         link = ''
         if link_el:
             link = (link_el.get('href') or '').strip()
@@ -223,13 +280,12 @@ def fetch_html(cfg):
 
         # 过滤非文章链接
         if any(x in link for x in ['/category/', '/tag/', '/author/', '/page/',
-                                    'subscribe', 'newsletter', 'contact']): continue
-
-        # 过滤日期太旧的
-        date_el = art.select_one('time,.date,.published,.post-date')
-        date_str = ''
-        if date_el:
-            date_str = date_el.get('datetime', '') or date_el.get_text(strip=True)
+                                    'subscribe', 'newsletter', 'contact', '/cdn-cgi/']): continue
+        # 只保留绝对 URL 或同源链接
+        if not link.startswith('http'):
+            if link.startswith('/'):
+                base = cfg['url'].split('/')[2]  # 提取域名
+                link = 'https://' + base + link
 
         types = detect_event_types(title)
         results.append({
@@ -239,7 +295,6 @@ def fetch_html(cfg):
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
-            '_date_str': date_str,  # 用于调试/日志
         })
 
     return results
