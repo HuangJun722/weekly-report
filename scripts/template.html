@@ -63,28 +63,32 @@ body::before {
 /* Topbar */
 .topbar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 20px;
   margin-bottom: 18px;
 }
-.brand { display: flex; align-items: center; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .mark {
-  width: 52px; height: 52px; border-radius: 18px;
+  width: 44px; height: 44px; border-radius: 14px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.18);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.18);
   position: relative; overflow: hidden; flex: 0 0 auto;
 }
 .mark::before {
   content: "";
-  position: absolute; inset: 11px; border-radius: 14px;
+  position: absolute; inset: 9px; border-radius: 11px;
   border: 1.5px solid rgba(255,255,255,0.85);
   transform: rotate(10deg);
 }
-.brand h1 { margin: 0; font-size: 21px; line-height: 1.12; letter-spacing: -0.04em; }
-.brand p { margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
-.meta { display: flex; align-items: center; gap: 10px; padding-top: 8px; color: var(--muted); font-size: 13px; white-space: nowrap; }
-.dot { width: 8px; height: 8px; border-radius: 999px; background: var(--accent-3); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.12); }
+.brand h1 { margin: 0; font-size: 18px; line-height: 1.12; letter-spacing: -0.04em; }
+.brand p { margin: 4px 0 0; font-size: 12px; line-height: 1.4; color: var(--muted); }
+.topbar-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.search-field { min-width: 200px; }
+.filter-btn-group { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.filter-divider { width: 1px; height: 16px; background: var(--stroke-2); margin: 0 4px; }
+.meta { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; white-space: nowrap; flex-shrink: 0; }
+.dot { width: 7px; height: 7px; border-radius: 999px; background: var(--accent-3); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12); }
 
 /* Hero */
 .hero {
@@ -109,31 +113,26 @@ body::before {
   background: radial-gradient(circle, rgba(14, 165, 233, 0.08), transparent 68%);
   pointer-events: none;
 }
-.hero-left { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px;
-  width: fit-content; border-radius: 999px;
-  background: rgba(14, 165, 233, 0.08); color: #0369a1;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
-  border: 1px solid rgba(14, 165, 233, 0.12);
-}
+.hero-left { display: flex; flex-direction: column; gap: 14px; min-width: 0; justify-content: center; }
 .hero h2 {
-  margin: 0; font-size: clamp(22px, 3vw, 40px); line-height: 1.2;
-  letter-spacing: -0.03em; max-width: 24ch;
+  margin: 0; font-size: clamp(18px, 2.4vw, 32px); line-height: 1.25;
+  letter-spacing: -0.03em; max-width: 28ch;
 }
-.hero p {
-  margin: 0; color: var(--muted-2); font-size: 15px; line-height: 1.75; max-width: 64ch;
+.hero-desc {
+  margin: 0; color: var(--muted-2); font-size: 14px; line-height: 1.8; max-width: 60ch;
 }
-.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
 .field {
-  display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 12px 14px;
-  border-radius: 16px; border: 1px solid var(--stroke); background: var(--panel-2);
+  display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px;
+  border-radius: 12px; border: 1px solid var(--stroke); background: var(--panel-2);
   color: var(--muted-2); box-shadow: var(--shadow-soft);
 }
-.field input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 14px; }
-.field .label { font-size: 13px; white-space: nowrap; }
-.ico { width: 18px; height: 18px; flex: 0 0 auto; opacity: 0.8; }
-.hero-right { display: grid; gap: 12px; align-content: start; }
+.field input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; }
+.ico { width: 16px; height: 16px; flex: 0 0 auto; opacity: 0.7; }
+.hero-right { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12px; align-content: start; }
+.region-cards { display: flex; flex-direction: column; gap: 8px; }
+.region-card { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--stroke); background: var(--panel-2); }
+.region-card b { font-size: 20px; line-height: 1; letter-spacing: -0.04em; min-width: 24px; }
+.region-card span { font-size: 13px; color: var(--muted); }
 .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .stat { padding: 16px; border-radius: 18px; border: 1px solid var(--stroke); background: var(--panel-2); }
 .stat b { display: block; font-size: 22px; line-height: 1; letter-spacing: -0.05em; margin-bottom: 6px; }
@@ -225,7 +224,7 @@ body::before {
 .stamp { color: var(--muted); font-size: 11px; text-align: right; line-height: 1.5; }
 
 /* Tab Switcher */
-.tab-bar { display: flex; gap: 4px; margin-bottom: 14px; }
+.tab-bar { display: flex; gap: 4px; margin-bottom: 16px; }
 .tab-btn {
   padding: 6px 16px; border-radius: 999px; border: 1px solid var(--stroke);
   background: var(--panel); font-size: 13px; font-weight: 500; color: var(--muted);
@@ -237,7 +236,6 @@ body::before {
 .tab-panel.active { display: block; }
 
 /* Filter Buttons */
-.filter-btn-group { display: flex; gap: 4px; align-items: center; }
 .filter-btn {
   padding: 4px 10px; border-radius: 999px; border: 1px solid var(--stroke);
   background: transparent; font-size: 12px; font-weight: 500; color: var(--muted);
@@ -246,26 +244,40 @@ body::before {
 .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
 .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
+/* History */
+.history-day { margin-bottom: 24px; }
+.history-date { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke); }
+
+/* Empty State */
+.empty-state { text-align: center; padding: 48px 0; color: var(--muted); font-size: 14px; }
+
 /* Footer */
 .footer-note { text-align: center; margin-top: 24px; color: var(--muted); font-size: 12px; line-height: 1.65; }
 
 /* Responsive */
-@media (max-width: 1080px) {
-  .hero, .featured { grid-template-columns: 1fr; }
-  .controls { grid-template-columns: 1fr; }
-  .topbar { flex-direction: column; }
+@media (max-width: 1200px) {
+  .hero-right { grid-template-columns: 1fr; }
+  .region-cards { flex-direction: row; flex-wrap: wrap; }
+  .region-card { flex: 1 1 calc(50% - 4px); min-width: 120px; }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; align-items: flex-start; }
+  .topbar-controls { width: 100%; }
+  .search-field { min-width: unset; flex: 1; }
   .feed-item { grid-template-columns: 1fr; }
   .feed-side { align-items: flex-start; min-width: 0; flex-direction: row; flex-wrap: wrap; }
   .feed-tags { justify-content: flex-start; }
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
   .wrap { width: min(calc(100% - 20px), var(--max)); margin-top: 12px; }
-  .hero { padding: 20px; border-radius: 24px; }
-  .hero h2 { max-width: 11ch; }
-  .brand h1 { font-size: 19px; }
-  .stat-grid { grid-template-columns: 1fr; }
-  .terminal { min-height: unset; }
-  .feature-card h4 { font-size: 20px; }
+  .hero { padding: 20px; border-radius: 20px; }
+  .hero h2 { font-size: 18px; max-width: unset; }
+  .region-cards { flex-direction: column; }
+  .region-card { flex: unset; }
+  .brand h1 { font-size: 17px; }
+  .filter-btn-group { gap: 3px; }
+  .filter-btn { padding: 3px 8px; font-size: 11px; }
 }
 </style>
 </head>
@@ -277,12 +289,32 @@ body::before {
       <div class="mark" aria-hidden="true"></div>
       <div>
         <h1>全球互联网百晓生</h1>
-        <p>除中美之外全球互联网动态 · 面向ICT从业者的轻量情报终端</p>
+        <p>除中美之外全球互联网动态</p>
       </div>
     </div>
-    <div class="meta">
-      <span class="dot"></span>
-      <span>Updated {{ update_time }}</span>
+    <div class="topbar-controls">
+      <div class="field search-field">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
+      </div>
+      <div class="filter-btn-group">
+        <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
+        <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
+        <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
+        <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
+        <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
+        <span class="filter-divider"></span>
+        <button class="filter-btn active" data-filter="region" data-value="all">全部地区</button>
+        <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
+        <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
+        <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
+        <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
+        <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
+      </div>
+      <div class="meta">
+        <span class="dot"></span>
+        <span>{{ update_time }}</span>
+      </div>
     </div>
   </header>
 
@@ -290,40 +322,23 @@ body::before {
   <section class="hero">
     <div class="hero-left">
       <h2 class="hero-headline">{{ weekly.headline }}</h2>
-      <p>重点信息优先呈现，普通动态作为背景补充。数字背后反映行业趋势，帮你快速判断变化方向。</p>
-      <div class="controls">
-        <div class="field">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-          <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
-        </div>
-        <div class="field filter-btn-group" style="flex-wrap:wrap">
-          <button class="filter-btn active" data-filter="type" data-value="all">类型</button>
-          <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
-          <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
-          <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
-          <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
-          <span style="width:1px;height:16px;background:var(--stroke);margin:0 4px"></span>
-          <button class="filter-btn active" data-filter="region" data-value="all">地区</button>
-          <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
-          <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
-          <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
-          <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
-          <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
-        </div>
-      </div>
+      <p class="hero-desc">{{ weekly.summary }}</p>
     </div>
     <div class="hero-right">
-      <div class="stat-grid">
-        <div class="stat"><b>{{ weekly.funding }}</b><span>融资事件</span></div>
-        <div class="stat"><b>{{ weekly.total_signals }}</b><span>高价值信号</span></div>
-        <div class="stat"><b>{{ weekly.total_events }}</b><span>总条目</span></div>
+      <div class="region-cards">
+        {% for region_name, region_count in weekly.region_distribution.items() %}
+        <div class="region-card">
+          <b>{{ region_count }}</b>
+          <span>{{ region_name }}</span>
+        </div>
+        {% endfor %}
       </div>
       <div class="terminal">
         <div class="terminal-head">
           <h3>Market Pulse</h3>
           <span class="chip">
             <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#10b981"/></svg>
-            Insight mode
+            Top 3
           </span>
         </div>
         <div class="signal-list">
@@ -331,8 +346,8 @@ body::before {
           <div class="signal">
             <span class="badge {% if loop.index == 2 %}alt{% elif loop.index == 3 %}green{% endif %}"></span>
             <div>
-              <h4>{{ ev.title[:40] }}</h4>
-              <p>{{ ev.reason[:40] }}</p>
+              <h4>{{ ev.title[:38] }}</h4>
+              <p>{{ ev.reason[:38] }}</p>
             </div>
             <span class="tag">{{ ev.region }}</span>
           </div>
@@ -345,76 +360,44 @@ body::before {
   {# ===== Tab Switcher ===== #}
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日</button>
-    {% if history %}
-    <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期动态</button>
-    {% endif %}
+    <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期</button>
   </div>
 
   {# ===== Today Panel ===== #}
   <div class="tab-panel active" id="tab-today">
-
-    {# Top Attention #}
-    {% if today_feature %}
-    <section class="section">
-      <div class="section-title">
-        <h3>今日重点</h3>
-        <span>Top 1</span>
-      </div>
-      <div class="featured">
-        <article class="feature-card">
-          <div class="mini-row">
-            <span class="kicker">
-              Top 1 · {{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(today_feature.event_types[0],'') }}
-              · {{ today_feature.region }}
-            </span>
-            <span class="score">{{ today_feature.score }}/10</span>
-          </div>
-          <h4>{{ today_feature.title }}</h4>
-          {% if today_feature.reason %}
-          <p>{{ today_feature.reason }}</p>
-          {% endif %}
-          {% if today_feature.impact and today_feature.impact != '未知' %}
-          <div class="meta-line">
-            <span class="meta-chip">影响：{{ today_feature.impact }}</span>
-            <span class="meta-chip">{{ today_feature.source }}</span>
-          </div>
-          {% endif %}
-        </article>
-        <div class="feature-side">
-          {% for region_name, region_count in weekly.region_distribution.items() %}
-          <div class="side-box">
-            <b>{{ region_count }} <span style="font-size:13px;font-weight:500;color:var(--muted)">{{ region_name }}</span></b>
-            <span>
-              {% if region_name == '欧洲' %}
-              融资最密集，Mistral 830M 大额领跑
-              {% elif region_name == '中东' %}
-              主权基金入场，WHOOP 获 575M
-              {% elif region_name == '非洲' %}
-              AI 与 BioTech 双线并行
-              {% elif region_name == '拉美' %}
-              金融科技早期融资为主
-              {% elif region_name == '亚太' %}
-              Genspark B 轮扩至 385M
-              {% else %}
-              融资活跃
-              {% endif %}
-            </span>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-    {% endif %}
-
-    {# Feed #}
     {% if all_feed %}
-    <section class="section">
-      <div class="section-title">
-        <h3>Structured Feed</h3>
-        <span>{{ all_feed|length }} 条 · 发生了什么 · 为什么重要 · 影响谁</span>
-      </div>
+    <div class="feed">
+      {% for ev in all_feed %}
+      <article class="feed-item"
+        data-filterable
+        data-region="{{ ev.region }}"
+        data-type="{{ ev.event_types|join(',') }}"
+        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
+        <div class="feed-main">
+          <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+          {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
+        </div>
+        <div class="feed-side">
+          <span class="importance">{{ ev.insight_label }}</span>
+          <div class="feed-tags">
+            <span class="small-tag">{{ ev.region }}</span>
+            <span class="small-tag">{{ ev.source }}</span>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  {# ===== History Panel ===== #}
+  <div class="tab-panel" id="tab-history">
+    {% if history %}
+    {% for date_str, events in history %}
+    <div class="history-day">
+      <div class="history-date">{{ date_str }}</div>
       <div class="feed">
-        {% for ev in all_feed %}
+        {% for ev in events %}
         <article class="feed-item"
           data-filterable
           data-region="{{ ev.region }}"
@@ -422,9 +405,7 @@ body::before {
           data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
           <div class="feed-main">
             <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-            {% if ev.reason %}
-            <p>{{ ev.reason }}</p>
-            {% endif %}
+            {% if ev.reason %}<p>{{ ev.reason[:60] }}</p>{% endif %}
           </div>
           <div class="feed-side">
             <span class="importance">{{ ev.insight_label }}</span>
@@ -436,44 +417,12 @@ body::before {
         </article>
         {% endfor %}
       </div>
-    </section>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="empty-state">暂无往期数据</div>
     {% endif %}
-
   </div>
-
-  {# ===== History Panel ===== #}
-  {% if history %}
-  <div class="tab-panel" id="tab-history">
-    <section class="section">
-      <div class="section-title">
-        <h3>往期动态</h3>
-        <span>近{{ history|length }} 天</span>
-      </div>
-      {% for date_str, events in history %}
-      <div style="margin-bottom: 20px">
-        <div style="font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke);">{{ date_str }}</div>
-        <div class="feed">
-          {% for ev in events %}
-          <article class="feed-item">
-            <div class="feed-main">
-              <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-              {% if ev.reason %}<p>{{ ev.reason[:60] }}</p>{% endif %}
-            </div>
-            <div class="feed-side">
-              <span class="importance">{{ ev.insight_label }}</span>
-              <div class="feed-tags">
-                <span class="small-tag">{{ ev.region }}</span>
-                <span class="small-tag">{{ ev.source }}</span>
-              </div>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-      </div>
-      {% endfor %}
-    </section>
-  </div>
-  {% endif %}
 
   <div class="footer-note">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</div>
 </div>

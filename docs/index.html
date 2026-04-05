@@ -63,28 +63,32 @@ body::before {
 /* Topbar */
 .topbar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 20px;
   margin-bottom: 18px;
 }
-.brand { display: flex; align-items: center; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .mark {
-  width: 52px; height: 52px; border-radius: 18px;
+  width: 44px; height: 44px; border-radius: 14px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.18);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.18);
   position: relative; overflow: hidden; flex: 0 0 auto;
 }
 .mark::before {
   content: "";
-  position: absolute; inset: 11px; border-radius: 14px;
+  position: absolute; inset: 9px; border-radius: 11px;
   border: 1.5px solid rgba(255,255,255,0.85);
   transform: rotate(10deg);
 }
-.brand h1 { margin: 0; font-size: 21px; line-height: 1.12; letter-spacing: -0.04em; }
-.brand p { margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
-.meta { display: flex; align-items: center; gap: 10px; padding-top: 8px; color: var(--muted); font-size: 13px; white-space: nowrap; }
-.dot { width: 8px; height: 8px; border-radius: 999px; background: var(--accent-3); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.12); }
+.brand h1 { margin: 0; font-size: 18px; line-height: 1.12; letter-spacing: -0.04em; }
+.brand p { margin: 4px 0 0; font-size: 12px; line-height: 1.4; color: var(--muted); }
+.topbar-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.search-field { min-width: 200px; }
+.filter-btn-group { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.filter-divider { width: 1px; height: 16px; background: var(--stroke-2); margin: 0 4px; }
+.meta { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; white-space: nowrap; flex-shrink: 0; }
+.dot { width: 7px; height: 7px; border-radius: 999px; background: var(--accent-3); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12); }
 
 /* Hero */
 .hero {
@@ -109,31 +113,26 @@ body::before {
   background: radial-gradient(circle, rgba(14, 165, 233, 0.08), transparent 68%);
   pointer-events: none;
 }
-.hero-left { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px;
-  width: fit-content; border-radius: 999px;
-  background: rgba(14, 165, 233, 0.08); color: #0369a1;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
-  border: 1px solid rgba(14, 165, 233, 0.12);
-}
+.hero-left { display: flex; flex-direction: column; gap: 14px; min-width: 0; justify-content: center; }
 .hero h2 {
-  margin: 0; font-size: clamp(22px, 3vw, 40px); line-height: 1.2;
-  letter-spacing: -0.03em; max-width: 24ch;
+  margin: 0; font-size: clamp(18px, 2.4vw, 32px); line-height: 1.25;
+  letter-spacing: -0.03em; max-width: 28ch;
 }
-.hero p {
-  margin: 0; color: var(--muted-2); font-size: 15px; line-height: 1.75; max-width: 64ch;
+.hero-desc {
+  margin: 0; color: var(--muted-2); font-size: 14px; line-height: 1.8; max-width: 60ch;
 }
-.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
 .field {
-  display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 12px 14px;
-  border-radius: 16px; border: 1px solid var(--stroke); background: var(--panel-2);
+  display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px;
+  border-radius: 12px; border: 1px solid var(--stroke); background: var(--panel-2);
   color: var(--muted-2); box-shadow: var(--shadow-soft);
 }
-.field input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 14px; }
-.field .label { font-size: 13px; white-space: nowrap; }
-.ico { width: 18px; height: 18px; flex: 0 0 auto; opacity: 0.8; }
-.hero-right { display: grid; gap: 12px; align-content: start; }
+.field input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; }
+.ico { width: 16px; height: 16px; flex: 0 0 auto; opacity: 0.7; }
+.hero-right { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12px; align-content: start; }
+.region-cards { display: flex; flex-direction: column; gap: 8px; }
+.region-card { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--stroke); background: var(--panel-2); }
+.region-card b { font-size: 20px; line-height: 1; letter-spacing: -0.04em; min-width: 24px; }
+.region-card span { font-size: 13px; color: var(--muted); }
 .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .stat { padding: 16px; border-radius: 18px; border: 1px solid var(--stroke); background: var(--panel-2); }
 .stat b { display: block; font-size: 22px; line-height: 1; letter-spacing: -0.05em; margin-bottom: 6px; }
@@ -225,7 +224,7 @@ body::before {
 .stamp { color: var(--muted); font-size: 11px; text-align: right; line-height: 1.5; }
 
 /* Tab Switcher */
-.tab-bar { display: flex; gap: 4px; margin-bottom: 14px; }
+.tab-bar { display: flex; gap: 4px; margin-bottom: 16px; }
 .tab-btn {
   padding: 6px 16px; border-radius: 999px; border: 1px solid var(--stroke);
   background: var(--panel); font-size: 13px; font-weight: 500; color: var(--muted);
@@ -237,7 +236,6 @@ body::before {
 .tab-panel.active { display: block; }
 
 /* Filter Buttons */
-.filter-btn-group { display: flex; gap: 4px; align-items: center; }
 .filter-btn {
   padding: 4px 10px; border-radius: 999px; border: 1px solid var(--stroke);
   background: transparent; font-size: 12px; font-weight: 500; color: var(--muted);
@@ -246,26 +244,40 @@ body::before {
 .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
 .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
+/* History */
+.history-day { margin-bottom: 24px; }
+.history-date { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke); }
+
+/* Empty State */
+.empty-state { text-align: center; padding: 48px 0; color: var(--muted); font-size: 14px; }
+
 /* Footer */
 .footer-note { text-align: center; margin-top: 24px; color: var(--muted); font-size: 12px; line-height: 1.65; }
 
 /* Responsive */
-@media (max-width: 1080px) {
-  .hero, .featured { grid-template-columns: 1fr; }
-  .controls { grid-template-columns: 1fr; }
-  .topbar { flex-direction: column; }
+@media (max-width: 1200px) {
+  .hero-right { grid-template-columns: 1fr; }
+  .region-cards { flex-direction: row; flex-wrap: wrap; }
+  .region-card { flex: 1 1 calc(50% - 4px); min-width: 120px; }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; align-items: flex-start; }
+  .topbar-controls { width: 100%; }
+  .search-field { min-width: unset; flex: 1; }
   .feed-item { grid-template-columns: 1fr; }
   .feed-side { align-items: flex-start; min-width: 0; flex-direction: row; flex-wrap: wrap; }
   .feed-tags { justify-content: flex-start; }
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
   .wrap { width: min(calc(100% - 20px), var(--max)); margin-top: 12px; }
-  .hero { padding: 20px; border-radius: 24px; }
-  .hero h2 { max-width: 11ch; }
-  .brand h1 { font-size: 19px; }
-  .stat-grid { grid-template-columns: 1fr; }
-  .terminal { min-height: unset; }
-  .feature-card h4 { font-size: 20px; }
+  .hero { padding: 20px; border-radius: 20px; }
+  .hero h2 { font-size: 18px; max-width: unset; }
+  .region-cards { flex-direction: column; }
+  .region-card { flex: unset; }
+  .brand h1 { font-size: 17px; }
+  .filter-btn-group { gap: 3px; }
+  .filter-btn { padding: 3px 8px; font-size: 11px; }
 }
 </style>
 </head>
@@ -277,53 +289,76 @@ body::before {
       <div class="mark" aria-hidden="true"></div>
       <div>
         <h1>全球互联网百晓生</h1>
-        <p>除中美之外全球互联网动态 · 面向ICT从业者的轻量情报终端</p>
+        <p>除中美之外全球互联网动态</p>
       </div>
     </div>
-    <div class="meta">
-      <span class="dot"></span>
-      <span>Updated 2026-04-05 17:56</span>
+    <div class="topbar-controls">
+      <div class="field search-field">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
+      </div>
+      <div class="filter-btn-group">
+        <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
+        <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
+        <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
+        <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
+        <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
+        <span class="filter-divider"></span>
+        <button class="filter-btn active" data-filter="region" data-value="all">全部地区</button>
+        <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
+        <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
+        <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
+        <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
+        <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
+      </div>
+      <div class="meta">
+        <span class="dot"></span>
+        <span>2026-04-05 18:43</span>
+      </div>
     </div>
   </header>
 
   
   <section class="hero">
     <div class="hero-left">
-      <h2 class="hero-headline">Mistral $830M 刷新地区融资纪录，欧洲资本热度持续</h2>
-      <p>重点信息优先呈现，普通动态作为背景补充。数字背后反映行业趋势，帮你快速判断变化方向。</p>
-      <div class="controls">
-        <div class="field">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-          <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
-        </div>
-        <div class="field filter-btn-group" style="flex-wrap:wrap">
-          <button class="filter-btn active" data-filter="type" data-value="all">类型</button>
-          <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
-          <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
-          <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
-          <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
-          <span style="width:1px;height:16px;background:var(--stroke);margin:0 4px"></span>
-          <button class="filter-btn active" data-filter="region" data-value="all">地区</button>
-          <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
-          <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
-          <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
-          <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
-          <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
-        </div>
-      </div>
+      <h2 class="hero-headline">WHOOP $575M融资刷新记录，中东资本热度不减</h2>
+      <p class="hero-desc">欧洲事件最多（6起），占今日大头。 融资仍是主旋律，共12起，最大单笔来自WHOOP。 另有1起并购，显示欧洲行业整合加速。</p>
     </div>
     <div class="hero-right">
-      <div class="stat-grid">
-        <div class="stat"><b>12</b><span>融资事件</span></div>
-        <div class="stat"><b>13</b><span>高价值信号</span></div>
-        <div class="stat"><b>13</b><span>总条目</span></div>
+      <div class="region-cards">
+        
+        <div class="region-card">
+          <b>6</b>
+          <span>欧洲</span>
+        </div>
+        
+        <div class="region-card">
+          <b>3</b>
+          <span>非洲</span>
+        </div>
+        
+        <div class="region-card">
+          <b>2</b>
+          <span>中东</span>
+        </div>
+        
+        <div class="region-card">
+          <b>1</b>
+          <span>亚太</span>
+        </div>
+        
+        <div class="region-card">
+          <b>1</b>
+          <span>拉美</span>
+        </div>
+        
       </div>
       <div class="terminal">
         <div class="terminal-head">
           <h3>Market Pulse</h3>
           <span class="chip">
             <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#10b981"/></svg>
-            Insight mode
+            Top 3
           </span>
         </div>
         <div class="signal-list">
@@ -331,28 +366,28 @@ body::before {
           <div class="signal">
             <span class="badge "></span>
             <div>
-              <h4>Mistral raises $830M, 9fin hits unicorn </h4>
-              <p>法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin</p>
-            </div>
-            <span class="tag">欧洲</span>
-          </div>
-          
-          <div class="signal">
-            <span class="badge alt"></span>
-            <div>
-              <h4>WHOOP attracts Gulf sovereign funds and </h4>
+              <h4>WHOOP attracts Gulf sovereign funds an</h4>
               <p>健康可穿戴品牌WHOOP获$575M融资，海湾主权基金入局，健康科技大额融资</p>
             </div>
             <span class="tag">中东</span>
           </div>
           
           <div class="signal">
+            <span class="badge alt"></span>
+            <div>
+              <h4>Syneron Bio Raises $150M for Peptide D</h4>
+              <p>非洲生物科技公司Syneron Bio获$150M融资，BioTech成非洲</p>
+            </div>
+            <span class="tag">非洲</span>
+          </div>
+          
+          <div class="signal">
             <span class="badge green"></span>
             <div>
-              <h4>AI agent startup Genspark expands Series</h4>
-              <p>东南亚AI Agent独角兽Genspark将B轮扩至$385M，亚太AI竞争加</p>
+              <h4>Mistral raises $830M, 9fin hits unicor</h4>
+              <p>法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9f</p>
             </div>
-            <span class="tag">亚太</span>
+            <span class="tag">欧洲</span>
           </div>
           
         </div>
@@ -363,368 +398,258 @@ body::before {
   
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日</button>
-    
+    <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期</button>
   </div>
 
   
   <div class="tab-panel active" id="tab-today">
-
     
-    
-    <section class="section">
-      <div class="section-title">
-        <h3>今日重点</h3>
-        <span>Top 1</span>
-      </div>
-      <div class="featured">
-        <article class="feature-card">
-          <div class="mini-row">
-            <span class="kicker">
-              Top 1 · 融资
-              · 欧洲
-            </span>
-            <span class="score">9/10</span>
-          </div>
-          <h4>Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled</h4>
-          
-          <p>法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin晋级独角兽</p>
-          
-          
-          <div class="meta-line">
-            <span class="meta-chip">影响：欧洲AI/金融科技行业</span>
-            <span class="meta-chip">Tech.eu</span>
-          </div>
-          
-        </article>
-        <div class="feature-side">
-          
-          <div class="side-box">
-            <b>6 <span style="font-size:13px;font-weight:500;color:var(--muted)">欧洲</span></b>
-            <span>
-              
-              融资最密集，Mistral 830M 大额领跑
-              
-            </span>
-          </div>
-          
-          <div class="side-box">
-            <b>2 <span style="font-size:13px;font-weight:500;color:var(--muted)">中东</span></b>
-            <span>
-              
-              主权基金入场，WHOOP 获 575M
-              
-            </span>
-          </div>
-          
-          <div class="side-box">
-            <b>1 <span style="font-size:13px;font-weight:500;color:var(--muted)">亚太</span></b>
-            <span>
-              
-              Genspark B 轮扩至 385M
-              
-            </span>
-          </div>
-          
-          <div class="side-box">
-            <b>3 <span style="font-size:13px;font-weight:500;color:var(--muted)">非洲</span></b>
-            <span>
-              
-              AI 与 BioTech 双线并行
-              
-            </span>
-          </div>
-          
-          <div class="side-box">
-            <b>1 <span style="font-size:13px;font-weight:500;color:var(--muted)">拉美</span></b>
-            <span>
-              
-              金融科技早期融资为主
-              
-            </span>
-          </div>
-          
+    <div class="feed">
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding"
+        data-text="WHOOP attracts Gulf sovereign funds and global athletes in $575M round 健康可穿戴品牌WHOOP获$575M融资，海湾主权基金入局，健康科技大额融资 中东 WAMDA">
+        <div class="feed-main">
+          <h4><a href="https://wamda.com/2026/04/whoop-attracts-gulf-sovereign-funds-global-athletes-575m-round" target="_blank">WHOOP attracts Gulf sovereign funds and global athletes in $575M round</a></h4>
+          <p>健康可穿戴品牌WHOOP获$575M融资，海湾主权基金入局，健康科技大额融资</p>
         </div>
-      </div>
-    </section>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">中东</span>
+            <span class="small-tag">WAMDA</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="非洲"
+        data-type="funding"
+        data-text="Syneron Bio Raises $150M for Peptide Drug Platform 非洲生物科技公司Syneron Bio获$150M融资，BioTech成非洲新兴投资热点 非洲 Ventureburn">
+        <div class="feed-main">
+          <h4><a href="https://ventureburn.com/syneron-bio-raises-150m-for-peptide-drug-platform/" target="_blank">Syneron Bio Raises $150M for Peptide Drug Platform</a></h4>
+          <p>非洲生物科技公司Syneron Bio获$150M融资，BioTech成非洲新兴投资热点</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">非洲</span>
+            <span class="small-tag">Ventureburn</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="funding"
+        data-text="Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled 法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin晋级独角兽 欧洲 Tech.eu">
+        <div class="feed-main">
+          <h4><a href="https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/" target="_blank">Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled</a></h4>
+          <p>法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin晋级独角兽</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">Tech.eu</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="亚太"
+        data-type="funding"
+        data-text="AI agent startup Genspark expands Series B to $385m 东南亚AI Agent独角兽Genspark将B轮扩至$385M，亚太AI竞争加剧 亚太 Tech in Asia">
+        <div class="feed-main">
+          <h4><a href="https://www.techinasia.com/news/ai-agent-startup-genspark-expands-series-385m" target="_blank">AI agent startup Genspark expands Series B to $385m</a></h4>
+          <p>东南亚AI Agent独角兽Genspark将B轮扩至$385M，亚太AI竞争加剧</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">Tech in Asia</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="非洲"
+        data-type="funding"
+        data-text="AccuQuant Secures $20 Million To Advance AI Infrastructure 非洲AI基础设施公司获$20M融资，非洲AI生态持续获资本关注 非洲 Ventureburn">
+        <div class="feed-main">
+          <h4><a href="https://ventureburn.com/accuquant-secures-20-million-to-advance-ai-infrastructure/" target="_blank">AccuQuant Secures $20 Million To Advance AI Infrastructure</a></h4>
+          <p>非洲AI基础设施公司获$20M融资，非洲AI生态持续获资本关注</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">非洲</span>
+            <span class="small-tag">Ventureburn</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="funding"
+        data-text="Former Coatue partner raises huge $65M seed for enterprise AI agent startup 前Coatue合伙人创办AI Agent初创，获$65M种子轮，企业AI自动化持续火热 欧洲 TechCrunch">
+        <div class="feed-main">
+          <h4><a href="https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/" target="_blank">Former Coatue partner raises huge $65M seed for enterprise AI agent startup</a></h4>
+          <p>前Coatue合伙人创办AI Agent初创，获$65M种子轮，企业AI自动化持续火热</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">TechCrunch</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="拉美"
+        data-type="funding"
+        data-text="EFEX raises $8 million to strengthen its treasury platform 拉美金融科技公司EFEX获$8M融资，treasury management赛道在拉美兴起 拉美 Contxto">
+        <div class="feed-main">
+          <h4><a href="https://contxto.com/en/funding/efex-raises-8-million-to-strengthen-its-treasury-platform/" target="_blank">EFEX raises $8 million to strengthen its treasury platform</a></h4>
+          <p>拉美金融科技公司EFEX获$8M融资，treasury management赛道在拉美兴起</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">Contxto</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="非洲"
+        data-type="funding"
+        data-text="Insight Health Raises $11M To Advance AI Clinical Infrastructure 非洲医疗AI公司获$11M融资，AI+医疗在非洲快速发展 非洲 Ventureburn">
+        <div class="feed-main">
+          <h4><a href="https://ventureburn.com/insight-health-raises-11m/" target="_blank">Insight Health Raises $11M To Advance AI Clinical Infrastructure</a></h4>
+          <p>非洲医疗AI公司获$11M融资，AI+医疗在非洲快速发展</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">非洲</span>
+            <span class="small-tag">Ventureburn</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="funding"
+        data-text="Wearable Robotics closes €5M Series A to scale development 可穿戴机器人公司获€5M A轮，欧洲硬科技早期融资持续 欧洲 Tech.eu">
+        <div class="feed-main">
+          <h4><a href="https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/" target="_blank">Wearable Robotics closes €5M Series A to scale development</a></h4>
+          <p>可穿戴机器人公司获€5M A轮，欧洲硬科技早期融资持续</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">Tech.eu</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding,strategy"
+        data-text="CarniStore attracts $12.2 million strategic investment 中东食品科技公司CarniStore获$12.2M战略投资，中东食品供应链数字化加速 中东 WAMDA">
+        <div class="feed-main">
+          <h4><a href="https://wamda.com/2026/03/carnistore-attracts-12-2-million-strategic-investment-scale-premium-food-operations" target="_blank">CarniStore attracts $12.2 million strategic investment</a></h4>
+          <p>中东食品科技公司CarniStore获$12.2M战略投资，中东食品供应链数字化加速</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">中东</span>
+            <span class="small-tag">WAMDA</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="ma"
+        data-text="Cafeyn acquires Readly's non-Nordic operations to scale European press platform 欧洲数字出版平台Cafeyn收购Readly非北欧业务，媒体整合加速 欧洲 Tech.eu">
+        <div class="feed-main">
+          <h4><a href="https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/" target="_blank">Cafeyn acquires Readly's non-Nordic operations to scale European press platform</a></h4>
+          <p>欧洲数字出版平台Cafeyn收购Readly非北欧业务，媒体整合加速</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">Tech.eu</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="funding"
+        data-text="Omniscient raises $4.1M to strengthen data-driven executive decision-making 企业决策AI公司获$4.1M融资，B2B AI数据赛道持续有资金流入 欧洲 Tech.eu">
+        <div class="feed-main">
+          <h4><a href="https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/" target="_blank">Omniscient raises $4.1M to strengthen data-driven executive decision-making</a></h4>
+          <p>企业决策AI公司获$4.1M融资，B2B AI数据赛道持续有资金流入</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">Tech.eu</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="funding"
+        data-text="Peter Thiel's big bet on solar-powered cow collars PayPal创始人Thiel投资太阳能奶牛项圈，农业科技赛道获顶级投资人关注 欧洲 TechCrunch">
+        <div class="feed-main">
+          <h4><a href="https://techcrunch.com/2026/04/05/peter-thiels-big-bet-on-solar-powered-cow-collars/" target="_blank">Peter Thiel's big bet on solar-powered cow collars</a></h4>
+          <p>PayPal创始人Thiel投资太阳能奶牛项圈，农业科技赛道获顶级投资人关注</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">TechCrunch</span>
+          </div>
+        </div>
+      </article>
+      
+    </div>
     
-
-    
-    
-    <section class="section">
-      <div class="section-title">
-        <h3>Structured Feed</h3>
-        <span>13 条 · 发生了什么 · 为什么重要 · 影响谁</span>
-      </div>
-      <div class="feed">
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="欧洲"
-          data-type="funding"
-          data-text="Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled 法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin晋级独角兽 欧洲 Tech.eu">
-          <div class="feed-main">
-            <h4><a href="https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/" target="_blank">Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled</a></h4>
-            
-            <p>法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin晋级独角兽</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">欧洲</span>
-              <span class="small-tag">Tech.eu</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="中东"
-          data-type="funding"
-          data-text="WHOOP attracts Gulf sovereign funds and global athletes in $575M round 健康可穿戴品牌WHOOP获$575M融资，海湾主权基金入局，健康科技大额融资 中东 WAMDA">
-          <div class="feed-main">
-            <h4><a href="https://wamda.com/2026/04/whoop-attracts-gulf-sovereign-funds-global-athletes-575m-round" target="_blank">WHOOP attracts Gulf sovereign funds and global athletes in $575M round</a></h4>
-            
-            <p>健康可穿戴品牌WHOOP获$575M融资，海湾主权基金入局，健康科技大额融资</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">中东</span>
-              <span class="small-tag">WAMDA</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="亚太"
-          data-type="funding"
-          data-text="AI agent startup Genspark expands Series B to $385m 东南亚AI Agent独角兽Genspark将B轮扩至$385M，亚太AI竞争加剧 亚太 Tech in Asia">
-          <div class="feed-main">
-            <h4><a href="https://www.techinasia.com/news/ai-agent-startup-genspark-expands-series-385m" target="_blank">AI agent startup Genspark expands Series B to $385m</a></h4>
-            
-            <p>东南亚AI Agent独角兽Genspark将B轮扩至$385M，亚太AI竞争加剧</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">亚太</span>
-              <span class="small-tag">Tech in Asia</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="欧洲"
-          data-type="funding"
-          data-text="Former Coatue partner raises huge $65M seed for enterprise AI agent startup 前Coatue合伙人创办AI Agent初创，获$65M种子轮，企业AI自动化持续火热 欧洲 TechCrunch">
-          <div class="feed-main">
-            <h4><a href="https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/" target="_blank">Former Coatue partner raises huge $65M seed for enterprise AI agent startup</a></h4>
-            
-            <p>前Coatue合伙人创办AI Agent初创，获$65M种子轮，企业AI自动化持续火热</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">欧洲</span>
-              <span class="small-tag">TechCrunch</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="非洲"
-          data-type="funding"
-          data-text="AccuQuant Secures $20 Million To Advance AI Infrastructure 非洲AI基础设施公司获$20M融资，非洲AI生态持续获资本关注 非洲 Ventureburn">
-          <div class="feed-main">
-            <h4><a href="https://ventureburn.com/accuquant-secures-20-million-to-advance-ai-infrastructure/" target="_blank">AccuQuant Secures $20 Million To Advance AI Infrastructure</a></h4>
-            
-            <p>非洲AI基础设施公司获$20M融资，非洲AI生态持续获资本关注</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">非洲</span>
-              <span class="small-tag">Ventureburn</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="非洲"
-          data-type="funding"
-          data-text="Syneron Bio Raises $150M for Peptide Drug Platform 非洲生物科技公司Syneron Bio获$150M融资，BioTech成非洲新兴投资热点 非洲 Ventureburn">
-          <div class="feed-main">
-            <h4><a href="https://ventureburn.com/syneron-bio-raises-150m-for-peptide-drug-platform/" target="_blank">Syneron Bio Raises $150M for Peptide Drug Platform</a></h4>
-            
-            <p>非洲生物科技公司Syneron Bio获$150M融资，BioTech成非洲新兴投资热点</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">非洲</span>
-              <span class="small-tag">Ventureburn</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="欧洲"
-          data-type="ma"
-          data-text="Cafeyn acquires Readly's non-Nordic operations to scale European press platform 欧洲数字出版平台Cafeyn收购Readly非北欧业务，媒体整合加速 欧洲 Tech.eu">
-          <div class="feed-main">
-            <h4><a href="https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/" target="_blank">Cafeyn acquires Readly's non-Nordic operations to scale European press platform</a></h4>
-            
-            <p>欧洲数字出版平台Cafeyn收购Readly非北欧业务，媒体整合加速</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">欧洲</span>
-              <span class="small-tag">Tech.eu</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="拉美"
-          data-type="funding"
-          data-text="EFEX raises $8 million to strengthen its treasury platform 拉美金融科技公司EFEX获$8M融资，treasury management赛道在拉美兴起 拉美 Contxto">
-          <div class="feed-main">
-            <h4><a href="https://contxto.com/en/funding/efex-raises-8-million-to-strengthen-its-treasury-platform/" target="_blank">EFEX raises $8 million to strengthen its treasury platform</a></h4>
-            
-            <p>拉美金融科技公司EFEX获$8M融资，treasury management赛道在拉美兴起</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">拉美</span>
-              <span class="small-tag">Contxto</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="欧洲"
-          data-type="funding"
-          data-text="Wearable Robotics closes €5M Series A to scale development 可穿戴机器人公司获€5M A轮，欧洲硬科技早期融资持续 欧洲 Tech.eu">
-          <div class="feed-main">
-            <h4><a href="https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/" target="_blank">Wearable Robotics closes €5M Series A to scale development</a></h4>
-            
-            <p>可穿戴机器人公司获€5M A轮，欧洲硬科技早期融资持续</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">欧洲</span>
-              <span class="small-tag">Tech.eu</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="欧洲"
-          data-type="funding"
-          data-text="Omniscient raises $4.1M to strengthen data-driven executive decision-making 企业决策AI公司获$4.1M融资，B2B AI数据赛道持续有资金流入 欧洲 Tech.eu">
-          <div class="feed-main">
-            <h4><a href="https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/" target="_blank">Omniscient raises $4.1M to strengthen data-driven executive decision-making</a></h4>
-            
-            <p>企业决策AI公司获$4.1M融资，B2B AI数据赛道持续有资金流入</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">欧洲</span>
-              <span class="small-tag">Tech.eu</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="非洲"
-          data-type="funding"
-          data-text="Insight Health Raises $11M To Advance AI Clinical Infrastructure 非洲医疗AI公司获$11M融资，AI+医疗在非洲快速发展 非洲 Ventureburn">
-          <div class="feed-main">
-            <h4><a href="https://ventureburn.com/insight-health-raises-11m/" target="_blank">Insight Health Raises $11M To Advance AI Clinical Infrastructure</a></h4>
-            
-            <p>非洲医疗AI公司获$11M融资，AI+医疗在非洲快速发展</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">非洲</span>
-              <span class="small-tag">Ventureburn</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="中东"
-          data-type="funding,strategy"
-          data-text="CarniStore attracts $12.2 million strategic investment 中东食品科技公司CarniStore获$12.2M战略投资，中东食品供应链数字化加速 中东 WAMDA">
-          <div class="feed-main">
-            <h4><a href="https://wamda.com/2026/03/carnistore-attracts-12-2-million-strategic-investment-scale-premium-food-operations" target="_blank">CarniStore attracts $12.2 million strategic investment</a></h4>
-            
-            <p>中东食品科技公司CarniStore获$12.2M战略投资，中东食品供应链数字化加速</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">中东</span>
-              <span class="small-tag">WAMDA</span>
-            </div>
-          </div>
-        </article>
-        
-        <article class="feed-item"
-          data-filterable
-          data-region="欧洲"
-          data-type="funding"
-          data-text="Peter Thiel's big bet on solar-powered cow collars PayPal创始人Thiel投资太阳能奶牛项圈，农业科技赛道获顶级投资人关注 欧洲 TechCrunch">
-          <div class="feed-main">
-            <h4><a href="https://techcrunch.com/2026/04/05/peter-thiels-big-bet-on-solar-powered-cow-collars/" target="_blank">Peter Thiel's big bet on solar-powered cow collars</a></h4>
-            
-            <p>PayPal创始人Thiel投资太阳能奶牛项圈，农业科技赛道获顶级投资人关注</p>
-            
-          </div>
-          <div class="feed-side">
-            <span class="importance">资金流向</span>
-            <div class="feed-tags">
-              <span class="small-tag">欧洲</span>
-              <span class="small-tag">TechCrunch</span>
-            </div>
-          </div>
-        </article>
-        
-      </div>
-    </section>
-    
-
   </div>
 
   
-  
+  <div class="tab-panel" id="tab-history">
+    
+    <div class="empty-state">暂无往期数据</div>
+    
+  </div>
 
   <div class="footer-note">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</div>
 </div>
