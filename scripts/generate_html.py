@@ -15,8 +15,8 @@ CATEGORY_MAP = {
     '上市': 'earnings', '扩张': 'strategy',
 }
 INSIGHT_LABEL_MAP = {
-    'funding': '资金流向', 'ma': '资金流向',
-    'earnings': '背景补充', 'strategy': '合作机会', 'other': '背景补充',
+    'funding': '融资', 'ma': '并购',
+    'earnings': '财报', 'strategy': '战略', 'other': '其他',
 }
 TRUNCATED_JUNK = {
     'Show HN: I built a f', 'Big-Endian Testing w', 'April 2026 TLDR Setu',

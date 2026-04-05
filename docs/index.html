@@ -185,7 +185,12 @@ body::before {
 
 /* Feed */
 .feed { display: grid; gap: 10px; }
-.feed-item { display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
+.feed-item {
+  display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 18px;
+  border: 1px solid var(--stroke); background: var(--panel);
+  backdrop-filter: blur(12px); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
 .feed-main h4 { margin: 0 0 7px; font-size: 14px; font-weight: 650; line-height: 1.5; letter-spacing: -0.02em; }
 .feed-main p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; max-width: 80ch; }
 .feed-side { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 8px; min-width: 150px; }
@@ -262,7 +267,7 @@ body::before {
       </div>
       <div class="meta">
         <span class="dot"></span>
-        <span>2026-04-05 19:37</span>
+        <span>2026-04-05 19:53</span>
       </div>
     </div>
   </header>
@@ -337,7 +342,7 @@ body::before {
           <p>健康可穿戴品牌WHOOP获$575M融资，海湾主权基金入局，健康科技大额融资</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">中东</span>
             <span class="small-tag">WAMDA</span>
@@ -355,7 +360,7 @@ body::before {
           <p>非洲生物科技公司Syneron Bio获$150M融资，BioTech成非洲新兴投资热点</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">非洲</span>
             <span class="small-tag">Ventureburn</span>
@@ -373,7 +378,7 @@ body::before {
           <p>法国AI独角兽Mistral获$830M融资，欧洲AI竞赛升温；金融科技9fin晋级独角兽</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">Tech.eu</span>
@@ -391,7 +396,7 @@ body::before {
           <p>东南亚AI Agent独角兽Genspark将B轮扩至$385M，亚太AI竞争加剧</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">亚太</span>
             <span class="small-tag">Tech in Asia</span>
@@ -409,7 +414,7 @@ body::before {
           <p>非洲AI基础设施公司获$20M融资，非洲AI生态持续获资本关注</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">非洲</span>
             <span class="small-tag">Ventureburn</span>
@@ -427,7 +432,7 @@ body::before {
           <p>前Coatue合伙人创办AI Agent初创，获$65M种子轮，企业AI自动化持续火热</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">TechCrunch</span>
@@ -445,7 +450,7 @@ body::before {
           <p>拉美金融科技公司EFEX获$8M融资，treasury management赛道在拉美兴起</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">拉美</span>
             <span class="small-tag">Contxto</span>
@@ -463,7 +468,7 @@ body::before {
           <p>非洲医疗AI公司获$11M融资，AI+医疗在非洲快速发展</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">非洲</span>
             <span class="small-tag">Ventureburn</span>
@@ -481,7 +486,7 @@ body::before {
           <p>可穿戴机器人公司获€5M A轮，欧洲硬科技早期融资持续</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">Tech.eu</span>
@@ -499,7 +504,7 @@ body::before {
           <p>中东食品科技公司CarniStore获$12.2M战略投资，中东食品供应链数字化加速</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">中东</span>
             <span class="small-tag">WAMDA</span>
@@ -517,7 +522,7 @@ body::before {
           <p>欧洲数字出版平台Cafeyn收购Readly非北欧业务，媒体整合加速</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">并购</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">Tech.eu</span>
@@ -535,7 +540,7 @@ body::before {
           <p>企业决策AI公司获$4.1M融资，B2B AI数据赛道持续有资金流入</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">Tech.eu</span>
@@ -553,7 +558,7 @@ body::before {
           <p>PayPal创始人Thiel投资太阳能奶牛项圈，农业科技赛道获顶级投资人关注</p>
         </div>
         <div class="feed-side">
-          <span class="importance">资金流向</span>
+          <span class="importance">融资</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">TechCrunch</span>
