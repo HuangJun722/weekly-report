@@ -37,10 +37,21 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: var(--font-sans);
-            background: var(--bg-page);
+            background-image: url('https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-05%2FMiniMax-M2.7%2F2040257300140135310%2F1c080e870b00f824bc0b942f5979f7af5d059a7e01f377773c186055115b2c7e..jpeg?Expires=1775446057&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=9PqsS2a8PCXKdO9S59gIE2VLs4k%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--text-primary);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(248, 250, 248, 0.72);
+            backdrop-filter: blur(4px);
+            z-index: -1;
         }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -254,7 +265,7 @@
     <div class="masthead-inner">
         <div class="masthead-top">
             <div class="masthead-title">🌍 全球互联网动态情报站</div>
-            <div class="masthead-meta">最后更新：2026-04-05 11:02:43</div>
+            <div class="masthead-meta">最后更新：2026-04-05 11:27:14</div>
         </div>
         <div class="toolbar">
             <div class="search-wrap">
