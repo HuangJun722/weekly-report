@@ -1,528 +1,498 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全球互联网动态情报站</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-page: #FAFAF8;
-            --bg-card: rgba(255, 255, 255, 0.85);
-            --bg-card-glass: rgba(255, 255, 255, 0.6);
-            --bg-subtle: rgba(255, 255, 255, 0.4);
-            --text-primary: #111827;
-            --text-secondary: #6B7280;
-            --text-tertiary: #9CA3AF;
-            --accent: #1D4ED8;
-            --accent-light: #EFF6FF;
-            --border: rgba(0, 0, 0, 0.08);
-            --border-2: rgba(0, 0, 0, 0.12);
-            --shadow: 0 26px 70px rgba(0, 0, 0, 0.08);
-            --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.05);
-            --level-a: #16A34A; --level-a-bg: rgba(22, 163, 74, 0.08);
-            --level-b: #2563EB; --level-b-bg: rgba(37, 99, 235, 0.08);
-            --level-c: #D97706; --level-c-bg: rgba(217, 119, 6, 0.08);
-            --level-d: #6B7280; --level-d-bg: rgba(107, 114, 128, 0.08);
-            --type-funding: #7C3AED; --type-funding-bg: rgba(124, 58, 237, 0.08);
-            --type-ma: #DC2626; --type-ma-bg: rgba(220, 38, 38, 0.08);
-            --type-earnings: #059669; --type-earnings-bg: rgba(5, 150, 105, 0.08);
-            --type-strategy: #D97706; --type-strategy-bg: rgba(217, 119, 6, 0.08);
-            --type-other: #9CA3AF; --type-other-bg: rgba(156, 163, 175, 0.08);
-            --radius: 12px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
-            --font-serif: 'Noto Serif SC', Georgia, serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --max-w: 900px;
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: var(--font-sans);
-            background-image: url('https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-05%2FMiniMax-M2.7%2F2040257300140135310%2F1c080e870b00f824bc0b942f5979f7af5d059a7e01f377773c186055115b2c7e..jpeg?Expires=1775446057&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=9PqsS2a8PCXKdO9S59gIE2VLs4k%3D');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: var(--text-primary);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-            background-size: 56px 56px;
-            mask-image: linear-gradient(180deg, rgba(0,0,0,0.4), transparent 85%);
-            -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.4), transparent 85%);
-            pointer-events: none;
-            z-index: -1;
-        }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        button { cursor: pointer; font-family: inherit; }
-        .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球互联网百晓生</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8fafc;
+  --panel: rgba(255, 255, 255, 0.85);
+  --panel-2: rgba(255, 255, 255, 0.6);
+  --stroke: rgba(0, 0, 0, 0.08);
+  --stroke-2: rgba(0, 0, 0, 0.12);
+  --text: #1e293b;
+  --muted: #64748b;
+  --muted-2: #475569;
+  --accent: #0ea5e9;
+  --accent-2: #8b5cf6;
+  --accent-3: #10b981;
+  --warn: #f59e0b;
+  --shadow: 0 26px 70px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.05);
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --max: 1320px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background-image: url('https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-05%2FMiniMax-M2.7%2F2040257300140135310%2F1c080e870b00f824bc0b942f5979f7af5d059a7e01f377773c186055115b2c7e..jpeg?Expires=1775446057&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=9PqsS2a8PCXKdO9S59gIE2VLs4k%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.3), transparent 85%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.3), transparent 85%);
+  pointer-events: none;
+  opacity: 0.2;
+}
+.wrap {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 24px auto 42px;
+  position: relative;
+  z-index: 1;
+}
 
-        /* ===== Masthead ===== */
-        .masthead {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border);
-            position: sticky; top: 0; z-index: 100;
-        }
-        .masthead-inner { padding: 0 24px; max-width: var(--max-w); margin: 0 auto; }
-        .masthead-top {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 18px 0 14px; gap: 16px;
-        }
-        .masthead-brand { display: flex; align-items: center; gap: 12px; }
-        .masthead-logo { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
-        .masthead-title {
-            font-family: var(--font-serif);
-            font-size: 20px; font-weight: 700;
-            color: var(--text-primary); flex-shrink: 0;
-        }
-        .masthead-meta { font-size: 13px; color: var(--text-tertiary); }
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.mark {
+  width: 52px; height: 52px; border-radius: 18px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.18);
+  position: relative; overflow: hidden; flex: 0 0 auto;
+}
+.mark::before {
+  content: "";
+  position: absolute; inset: 11px; border-radius: 14px;
+  border: 1.5px solid rgba(255,255,255,0.85);
+  transform: rotate(10deg);
+}
+.brand h1 { margin: 0; font-size: 21px; line-height: 1.12; letter-spacing: -0.04em; }
+.brand p { margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.meta { display: flex; align-items: center; gap: 10px; padding-top: 8px; color: var(--muted); font-size: 13px; white-space: nowrap; }
+.dot { width: 8px; height: 8px; border-radius: 999px; background: var(--accent-3); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.12); }
 
-        /* ===== Toolbar ===== */
-        .toolbar {
-            display: flex; flex-direction: column; gap: 10px;
-            padding: 10px 0 14px;
-        }
-        /* 搜索框独占一行 */
-        .search-wrap { position: relative; }
-        .search-icon {
-            position: absolute; left: 12px; top: 50%;
-            transform: translateY(-50%); color: var(--text-tertiary); pointer-events: none; font-size: 14px;
-        }
-        .search-box {
-            width: 100%; padding: 10px 14px 10px 38px;
-            border: 1px solid var(--border); border-radius: 12px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            font-size: 14px; color: var(--text-primary);
-            transition: border-color 0.15s, box-shadow 0.15s;
-        }
-        .search-box:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(29,78,216,0.1); }
-        .search-box::placeholder { color: var(--text-tertiary); }
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 16px;
+  border: 1px solid var(--stroke);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-xl);
+  padding: 26px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 18px;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -100px -120px auto;
+  width: 360px; height: 360px; border-radius: 999px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.08), transparent 68%);
+  pointer-events: none;
+}
+.hero-left { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px;
+  width: fit-content; border-radius: 999px;
+  background: rgba(14, 165, 233, 0.08); color: #0369a1;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
+  border: 1px solid rgba(14, 165, 233, 0.12);
+}
+.hero h2 {
+  margin: 0; font-size: clamp(36px, 5.1vw, 72px); line-height: 0.95;
+  letter-spacing: -0.065em; max-width: 12ch;
+}
+.hero p {
+  margin: 0; color: var(--muted-2); font-size: 15px; line-height: 1.75; max-width: 64ch;
+}
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+.field {
+  display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 12px 14px;
+  border-radius: 16px; border: 1px solid var(--stroke); background: var(--panel-2);
+  color: var(--muted-2); box-shadow: var(--shadow-soft);
+}
+.field input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 14px; }
+.field .label { font-size: 13px; white-space: nowrap; }
+.ico { width: 18px; height: 18px; flex: 0 0 auto; opacity: 0.8; }
+.hero-right { display: grid; gap: 12px; align-content: start; }
+.stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { padding: 16px; border-radius: 18px; border: 1px solid var(--stroke); background: var(--panel-2); }
+.stat b { display: block; font-size: 22px; line-height: 1; letter-spacing: -0.05em; margin-bottom: 6px; }
+.stat span { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.terminal {
+  border-radius: var(--radius-lg); border: 1px solid var(--stroke);
+  background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.3));
+  padding: 18px; min-height: 200px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+}
+.terminal-head { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 8px; }
+.terminal-head h3 { margin: 0; font-size: 15px; letter-spacing: -0.02em; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px;
+  border-radius: 999px; background: rgba(16, 185, 129, 0.08);
+  color: #047857; font-size: 12px; font-weight: 600;
+  border: 1px solid rgba(16, 185, 129, 0.12); white-space: nowrap;
+}
+.signal-list { display: grid; gap: 10px; }
+.signal { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: start; padding: 10px 0; border-top: 1px solid var(--stroke); }
+.signal:first-child { border-top: 0; padding-top: 0; }
+.badge { width: 8px; height: 8px; border-radius: 999px; margin-top: 5px; background: var(--accent); box-shadow: 0 0 0 4px rgba(14,165,233,0.08); }
+.badge.alt { background: var(--accent-2); box-shadow: 0 0 0 4px rgba(139,92,246,0.08); }
+.badge.green { background: var(--accent-3); box-shadow: 0 0 0 4px rgba(16,185,129,0.08); }
+.signal h4 { margin: 0 0 4px; font-size: 13px; font-weight: 600; line-height: 1.45; letter-spacing: -0.02em; }
+.signal p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.signal .tag {
+  display: inline-flex; padding: 4px 8px; border-radius: 999px;
+  background: var(--panel-2); border: 1px solid var(--stroke); color: var(--muted-2);
+  font-size: 11px; white-space: nowrap; align-self: start;
+}
 
-        /* 筛选行：类型 + 区域 */
-        .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-        .filter-label { font-size: 11px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.8px; margin-right: 2px; }
-        .filter-sep {
-            width: 1px; height: 16px; background: var(--border); margin: 0 4px;
-            flex-shrink: 0;
-        }
-        .filter-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-        .filter-btn {
-            padding: 5px 13px; border: 1px solid var(--border); border-radius: 20px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            font-size: 12px; font-weight: 500;
-            color: var(--text-secondary); transition: all 0.15s; white-space: nowrap;
-        }
-        .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .filter-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
+/* Section */
+.section { margin-top: 22px; }
+.section-title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.section-title h3 { margin: 0; font-size: 16px; letter-spacing: -0.02em; }
+.section-title span { color: var(--muted); font-size: 13px; }
 
-        /* ===== Main ===== */
-        .main { padding: 40px 0 80px; }
+/* Featured */
+.featured { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; }
+.feature-card, .feed-item {
+  border: 1px solid var(--stroke); background: var(--panel);
+  backdrop-filter: blur(12px); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+.feature-card { padding: 22px; position: relative; overflow: hidden; }
+.feature-card::after {
+  content: ""; position: absolute; inset: auto -100px -80px auto;
+  width: 260px; height: 260px; border-radius: 999px;
+  background: radial-gradient(circle, rgba(14,165,233,0.07), transparent 68%);
+  pointer-events: none;
+}
+.mini-row { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 14px; }
+.mini-row .kicker {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px;
+  border-radius: 999px; background: rgba(14,165,233,0.08); color: #0369a1;
+  font-size: 12px; font-weight: 700; border: 1px solid rgba(14,165,233,0.12);
+}
+.mini-row .score { color: var(--warn); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+.feature-card h4 { margin: 0 0 10px; font-size: 26px; line-height: 1.15; letter-spacing: -0.05em; max-width: 20ch; }
+.feature-card p { margin: 0; color: var(--muted-2); font-size: 14px; line-height: 1.8; max-width: 58ch; }
+.meta-line { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.meta-chip {
+  display: inline-flex; align-items: center; padding: 6px 10px;
+  border-radius: 999px; background: var(--panel-2); color: #0c4a6e;
+  font-size: 12px; border: 1px solid var(--stroke);
+}
+.feature-side { padding: 18px; display: grid; gap: 10px; align-content: start; }
+.side-box { padding: 14px 16px; border-radius: var(--radius-md); border: 1px solid var(--stroke); background: var(--panel-2); }
+.side-box b { display: block; font-size: 18px; margin-bottom: 5px; letter-spacing: -0.04em; }
+.side-box span { color: var(--muted); font-size: 12px; line-height: 1.5; }
 
-        /* ===== Section ===== */
-        .section-header {
-            display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
-        }
-        .section-title { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--text-primary); }
-        .section-count { font-size: 12px; font-weight: 600; color: var(--text-tertiary); background: var(--bg-subtle); padding: 2px 10px; border-radius: 10px; }
-        .section-line { flex: 1; height: 1px; background: var(--border); }
+/* Feed */
+.feed { display: grid; gap: 10px; }
+.feed-item { display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
+.feed-main h4 { margin: 0 0 7px; font-size: 14px; font-weight: 650; line-height: 1.5; letter-spacing: -0.02em; }
+.feed-main p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; max-width: 80ch; }
+.feed-side { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 8px; min-width: 150px; }
+.importance {
+  display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px;
+  border-radius: 999px; background: rgba(16,185,129,0.08); color: #047857;
+  border: 1px solid rgba(16,185,129,0.12); font-size: 11px; font-weight: 700;
+}
+.feed-tags { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+.small-tag {
+  display: inline-flex; padding: 4px 8px; border-radius: 999px;
+  background: var(--panel-2); border: 1px solid var(--stroke); color: var(--muted-2); font-size: 11px;
+}
+.stamp { color: var(--muted); font-size: 11px; text-align: right; line-height: 1.5; }
 
-        /* ===== Priority: Signal Cards ===== */
-        /* 高价值信号卡片：融资/并购/财报 */
-        .signal-cards { margin-bottom: 48px; }
-        .signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+/* Tab Switcher */
+.tab-bar { display: flex; gap: 4px; margin-bottom: 14px; }
+.tab-btn {
+  padding: 6px 16px; border-radius: 999px; border: 1px solid var(--stroke);
+  background: var(--panel); font-size: 13px; font-weight: 500; color: var(--muted);
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+.tab-btn.active { background: var(--text); border-color: var(--text); color: #fff; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
 
-        .signal-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            padding: 20px 22px;
-            position: relative; overflow: hidden;
-            transition: box-shadow 0.2s, transform 0.2s;
-            display: flex; flex-direction: column; gap: 10px;
-        }
-        .signal-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: var(--border-2); }
-        .signal-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+/* Filter Buttons */
+.filter-btn-group { display: flex; gap: 4px; align-items: center; }
+.filter-btn {
+  padding: 4px 10px; border-radius: 999px; border: 1px solid var(--stroke);
+  background: transparent; font-size: 12px; font-weight: 500; color: var(--muted);
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
-        .signal-card.type-funding::before { background: var(--type-funding); }
-        .signal-card.type-ma::before { background: var(--type-ma); }
-        .signal-card.type-earnings::before { background: var(--type-earnings); }
-        .signal-card.type-strategy::before { background: var(--type-strategy); }
+/* Footer */
+.footer-note { text-align: center; margin-top: 24px; color: var(--muted); font-size: 12px; line-height: 1.65; }
 
-        /* 卡片头部：标签行 */
-        .card-tags { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-        .card-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
-        .tag-region { color: var(--accent); background: var(--accent-light); }
-        .tag-type { font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
-        .type-funding .tag-type { background: var(--type-funding-bg); color: var(--type-funding); }
-        .type-ma .tag-type { background: var(--type-ma-bg); color: var(--type-ma); }
-        .type-earnings .tag-type { background: var(--type-earnings-bg); color: var(--type-earnings); }
-        .type-strategy .tag-type { background: var(--type-strategy-bg); color: var(--type-strategy); }
-        .type-other .tag-type { background: var(--type-other-bg); color: var(--type-other); }
-
-        /* 情报标签 badge */
-        .tag-insight { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.3px; }
-        .tag-insight.资金流向 { background: var(--type-funding-bg); color: var(--type-funding); }
-        .tag-insight.合作机会 { background: var(--accent-light); color: var(--accent); }
-        .tag-insight.警示信号 { background: var(--type-ma-bg); color: var(--type-ma); }
-        .tag-insight.背景补充 { background: var(--type-other-bg); color: var(--type-other); }
-
-        /* 卡片标题 */
-        .card-title {
-            font-family: var(--font-serif); font-size: 14px; font-weight: 600;
-            line-height: 1.45; color: var(--text-primary);
-            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-        }
-        .card-title a { color: inherit; text-decoration: none; }
-        .card-title a:hover { color: var(--accent); }
-
-        /* 为什么重要（ICT受众视角） */
-        .card-reason {
-            font-size: 13px; color: var(--text-secondary); line-height: 1.55;
-            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-            flex: 1;
-        }
-
-        /* 影响谁 */
-        .card-impact {
-            font-size: 12px; color: var(--text-tertiary); line-height: 1.5;
-            padding: 6px 10px; background: var(--bg-subtle); border-radius: 6px;
-        }
-        .card-impact-label { color: var(--text-tertiary); font-weight: 500; margin-right: 4px; }
-
-        /* 卡片底部 */
-        .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-        .card-source { font-size: 11px; color: var(--text-tertiary); }
-        .card-score { font-size: 11px; font-weight: 700; color: var(--text-tertiary); padding: 2px 6px; background: var(--bg-subtle); border-radius: 4px; }
-        .card-score.score-a { color: var(--level-a); background: var(--level-a-bg); }
-        .card-score.score-b { color: var(--level-b); background: var(--level-b-bg); }
-        .card-score.score-c { color: var(--level-c); background: var(--level-c-bg); }
-
-        /* ===== Full Feed ===== */
-        .feed { }
-        .date-group { margin-bottom: 32px; }
-        .date-header {
-            display: flex; align-items: center; gap: 10px; padding: 8px 0;
-            cursor: pointer; user-select: none;
-        }
-        .date-header:hover .date-label { color: var(--accent); }
-        .date-label { font-size: 15px; font-weight: 600; color: var(--text-primary); transition: color 0.15s; }
-        .date-count { font-size: 12px; color: var(--text-tertiary); background: var(--bg-subtle); padding: 2px 8px; border-radius: 10px; }
-        .date-line { flex: 1; height: 1px; background: var(--border); }
-        .date-toggle { font-size: 12px; color: var(--text-tertiary); transition: transform 0.2s; }
-        .date-header.expanded .date-toggle { transform: rotate(90deg); }
-        .date-items { padding: 10px 0 4px; }
-        .date-items.collapsed { display: none; }
-
-        .feed-item {
-            display: grid; grid-template-columns: auto 1fr auto;
-            align-items: start; gap: 0 12px; padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg-card);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 0;
-            transition: background 0.15s;
-        }
-        }
-        .feed-item:last-child { border-bottom: none; }
-        .feed-item:hover { background: var(--bg-subtle); margin: 0 -8px; padding: 10px 8px; border-radius: 8px; }
-
-        .item-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
-        .dot-funding { background: var(--type-funding); }
-        .dot-ma { background: var(--type-ma); }
-        .dot-earnings { background: var(--type-earnings); }
-        .dot-strategy { background: var(--type-strategy); }
-        .dot-other { background: var(--type-other); }
-
-        .item-content { min-width: 0; }
-        .item-title {
-            font-size: 14px; font-weight: 500; color: var(--text-primary); line-height: 1.5;
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-        }
-        .item-title a { color: inherit; }
-        .item-title a:hover { color: var(--accent); }
-        .item-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
-        .item-tag { font-size: 11px; font-weight: 500; padding: 1px 7px; border-radius: 4px; }
-        .tag-region { color: var(--accent); background: var(--accent-light); }
-        .tag-source { color: var(--text-secondary); background: var(--bg-subtle); }
-        .tag-funding { color: var(--type-funding); background: var(--type-funding-bg); }
-        .tag-ma { color: var(--type-ma); background: var(--type-ma-bg); }
-        .tag-earnings { color: var(--type-earnings); background: var(--type-earnings-bg); }
-        .tag-strategy { color: var(--type-strategy); background: var(--type-strategy-bg); }
-        .item-arrow { font-size: 12px; color: var(--text-tertiary); padding-top: 3px; opacity: 0; transition: opacity 0.15s; }
-        .feed-item:hover .item-arrow { opacity: 1; }
-
-        /* ===== Empty State ===== */
-        .empty { text-align: center; padding: 60px 20px; color: var(--text-tertiary); font-size: 15px; }
-
-        /* ===== Footer ===== */
-        .footer {
-            text-align: center; padding: 28px 0;
-            border-top: 1px solid var(--border);
-            font-size: 13px; color: var(--text-tertiary);
-        }
-
-        /* ===== Responsive ===== */
-        @media (max-width: 640px) {
-            :root { --max-w: 100%; }
-            .masthead-top { padding: 14px 0 10px; }
-            .masthead-logo { width: 32px; height: 32px; }
-            .masthead-title { font-size: 16px; }
-            .signal-grid { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 480px) {
-            .filter-section .filter-label { display: none; }
-        }
-    </style>
+/* Responsive */
+@media (max-width: 1080px) {
+  .hero, .featured { grid-template-columns: 1fr; }
+  .controls { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; }
+  .feed-item { grid-template-columns: 1fr; }
+  .feed-side { align-items: flex-start; min-width: 0; flex-direction: row; flex-wrap: wrap; }
+  .feed-tags { justify-content: flex-start; }
+}
+@media (max-width: 720px) {
+  .wrap { width: min(calc(100% - 20px), var(--max)); margin-top: 12px; }
+  .hero { padding: 20px; border-radius: 24px; }
+  .hero h2 { max-width: 11ch; }
+  .brand h1 { font-size: 19px; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .terminal { min-height: unset; }
+  .feature-card h4 { font-size: 20px; }
+}
+</style>
 </head>
 <body>
+<div class="wrap">
 
-<!-- Masthead -->
-<header class="masthead">
-    <div class="masthead-inner">
-        <div class="masthead-top">
-            <div class="masthead-brand">
-                <img class="masthead-logo" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-05%2FMiniMax-M2.7%2F2040257300140135310%2F7f61d012121ab58c16638e0ad3936c1c24059ca6cd729f041e95d4ceac4d1b35..jpeg?Expires=1775451246&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=PMXkjw5s3y6Fr1ZpnBX71FEZ1bg%3D" alt="百晓生" />
-                <span class="masthead-title">全球互联网百晓生</span>
-            </div>
-            <div class="masthead-meta">最后更新：{{ update_time }}</div>
-        </div>
-        <div class="toolbar">
-            <div class="search-wrap">
-                <span class="search-icon">⌕</span>
-                <input type="text" class="search-box" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off">
-            </div>
-            <div class="filter-row">
-                <span class="filter-label">类型</span>
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
-                    <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
-                    <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
-                    <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
-                    <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
-                </div>
-                <div class="filter-sep"></div>
-                <span class="filter-label">区域</span>
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="region" data-value="all">全部</button>
-                    <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
-                    <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
-                    <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
-                    <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
-                    <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
-                </div>
-            </div>
-        </div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <h1>全球互联网百晓生</h1>
+        <p>除中美之外全球互联网动态 · 面向ICT从业者的轻量情报终端</p>
+      </div>
     </div>
-</header>
+    <div class="meta">
+      <span class="dot"></span>
+      <span>Updated {{ update_time }}</span>
+    </div>
+  </header>
 
-<main class="main">
-<div class="container">
-
-    {# ===== 高价值信号区 ===== #}
-    {# signal_events 已在 Python 端过滤并按 score 排序，最多 8 条 #}
-    {% if signal_events %}
-    <section class="signal-cards" id="signalSection">
-        <div class="section-header">
-            <h2 class="section-title">💡 今日高价值信号</h2>
-            <span class="section-count">{{ signal_events|length }} 条</span>
-            <div class="section-line"></div>
+  {# ===== Hero ===== #}
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">本周概要 · 先看结论，再看证据</div>
+      <h2>{{ weekly.takeaway }}</h2>
+      <p>重点信息优先呈现，普通动态作为背景补充。数字背后反映行业趋势，帮你快速判断变化方向。</p>
+      <div class="controls">
+        <div class="field">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
         </div>
-        <div class="signal-grid">
-            {% for event in signal_events[:8] %}
-            <article class="signal-card type-{{ event.event_types[0] }}"
-                     data-type="{{ event.event_types|join(',') }}"
-                     data-region="{{ event.region }}"
-                     data-insight="{{ event.insight_label }}"
-                     data-text="{{ event.title }} {{ event.region }} {{ event.source }} {{ event.reason }} {{ event.impact }}">
-
-                {# 标签行 #}
-                <div class="card-tags">
-                    <span class="card-tag tag-type">{{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(event.event_types[0],'其他') }}</span>
-                    <span class="card-tag tag-region">{{ event.region }}</span>
-                    <span class="card-tag tag-insight {{ event.insight_label }}">{{ event.insight_label }}</span>
-                </div>
-
-                {# 标题 #}
-                <h3 class="card-title">
-                    <a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
-                </h3>
-
-                {# 为什么重要 #}
-                {% if event.reason and event.reason != '待分析' %}
-                <div class="card-reason">{{ event.reason }}</div>
-                {% endif %}
-
-                {# 影响谁 #}
-                {% if event.impact and event.impact != '未知' %}
-                <div class="card-impact">
-                    <span class="card-impact-label">影响：</span>{{ event.impact }}
-                </div>
-                {% endif %}
-
-                {# 底部 #}
-                <div class="card-footer">
-                    <span class="card-source">{{ event.source }}</span>
-                    <span class="card-score score-{{ event.level|lower }}">{{ event.level }} {{ event.score }}/10</span>
-                </div>
-            </article>
-            {% endfor %}
+        <div class="field filter-btn-group">
+          <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
+          <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
+          <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
+          <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
+          <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
         </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="stat-grid">
+        <div class="stat"><b>{{ weekly.funding }}</b><span>融资事件</span></div>
+        <div class="stat"><b>{{ weekly.total_signals }}</b><span>高价值信号</span></div>
+        <div class="stat"><b>{{ weekly.total_events }}</b><span>总条目</span></div>
+      </div>
+      <div class="terminal">
+        <div class="terminal-head">
+          <h3>Market Pulse</h3>
+          <span class="chip">
+            <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#10b981"/></svg>
+            Insight mode
+          </span>
+        </div>
+        <div class="signal-list">
+          {% for ev in weekly.top3 %}
+          <div class="signal">
+            <span class="badge {% if loop.index == 2 %}alt{% elif loop.index == 3 %}green{% endif %}"></span>
+            <div>
+              <h4>{{ ev.title[:40] }}</h4>
+              <p>{{ ev.reason[:40] }}</p>
+            </div>
+            <span class="tag">{{ ev.region }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ===== Tab Switcher ===== #}
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日</button>
+    {% if history %}
+    <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期动态</button>
+    {% endif %}
+  </div>
+
+  {# ===== Today Panel ===== #}
+  <div class="tab-panel active" id="tab-today">
+
+    {# Top Attention #}
+    {% if today_feature %}
+    <section class="section">
+      <div class="section-title">
+        <h3>今日重点</h3>
+        <span>Top 1</span>
+      </div>
+      <div class="featured">
+        <article class="feature-card">
+          <div class="mini-row">
+            <span class="kicker">
+              Top 1 · {{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(today_feature.event_types[0],'') }}
+              · {{ today_feature.region }}
+            </span>
+            <span class="score">{{ today_feature.score }}/10</span>
+          </div>
+          <h4>{{ today_feature.title }}</h4>
+          {% if today_feature.reason %}
+          <p>{{ today_feature.reason }}</p>
+          {% endif %}
+          {% if today_feature.impact and today_feature.impact != '未知' %}
+          <div class="meta-line">
+            <span class="meta-chip">影响：{{ today_feature.impact }}</span>
+            <span class="meta-chip">{{ today_feature.source }}</span>
+          </div>
+          {% endif %}
+        </article>
+        <div class="feature-side">
+          <div class="side-box"><b>资金流向</b><span>把融资、并购、财报里的金额和方向单独拎出来，形成可判断的信号。</span></div>
+          <div class="side-box"><b>合作机会</b><span>从战略调整和地区扩张里，找出最可能产生ICT采购的对象。</span></div>
+          <div class="side-box"><b>背景动态</b><span>保留为背景层，让页面既有信息宽度，也有判断重点。</span></div>
+        </div>
+      </div>
     </section>
     {% endif %}
 
-    {# ===== 全部动态 ===== #}
-    <section class="feed" id="feedSection">
-        <div class="section-header">
-            <h2 class="section-title">📋 全部动态</h2>
-            <span class="section-count" id="visibleCount">{{ all_events[sorted_dates[0]]|length if sorted_dates and sorted_dates[0] in all_events else 0 }} 条</span>
-            <div class="section-line"></div>
-        </div>
-
-        {% for date in sorted_dates %}
-        <div class="date-group"
-             data-date="{{ date }}"
-             data-region-items="{{ all_events[date]|map(attribute='region')|join(' ') }}">
-            <div class="date-header" onclick="toggleDate(this)">
-                <span class="date-label">{{ date }}</span>
-                <span class="date-count" id="count-{{ loop.index }}">{{ all_events[date]|length }} 条</span>
-                <div class="date-line"></div>
-                <span class="date-toggle">‣</span>
+    {# Feed #}
+    {% if all_feed %}
+    <section class="section">
+      <div class="section-title">
+        <h3>Structured Feed</h3>
+        <span>{{ all_feed|length }} 条 · 发生了什么 · 为什么重要 · 影响谁</span>
+      </div>
+      <div class="feed">
+        {% for ev in all_feed %}
+        <article class="feed-item"
+          data-filterable
+          data-region="{{ ev.region }}"
+          data-type="{{ ev.event_types|join(',') }}"
+          data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
+          <div class="feed-main">
+            <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+            {% if ev.reason %}
+            <p>{{ ev.reason }}</p>
+            {% endif %}
+          </div>
+          <div class="feed-side">
+            <span class="importance">{{ ev.insight_label }}</span>
+            <div class="feed-tags">
+              <span class="small-tag">{{ ev.region }}</span>
+              <span class="small-tag">{{ ev.source }}</span>
             </div>
-            <div class="date-items {% if date != sorted_dates[0] %}collapsed{% endif %}">
-                {% for event in all_events[date] %}
-                <div class="feed-item"
-                     data-type="{{ event.event_types|join(',') if event.event_types else 'other' }}"
-                     data-region="{{ event.region }}"
-                     data-text="{{ event.title }} {{ event.region }} {{ event.source }} {{ event.why_important }}">
-                    <div class="item-dot dot-{{ event.event_types[0] if event.event_types and event.event_types[0] != 'other' else 'other' }}"></div>
-                    <div class="item-content">
-                        <div class="item-title">
-                            <a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
-                        </div>
-                        <div class="item-tags">
-                            <span class="item-tag tag-region">{{ event.region }}</span>
-                            <span class="item-tag tag-source">{{ event.source }}</span>
-                            {% if event.event_types and event.event_types[0] != 'other' %}
-                            <span class="item-tag tag-{{ event.event_types[0] }}">{{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(event.event_types[0],'') }}</span>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="item-arrow">→</div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+          </div>
+        </article>
         {% endfor %}
-
-        <div class="empty" id="emptyState" style="display:none">
-            没有符合条件的条目
-        </div>
+      </div>
     </section>
+    {% endif %}
 
+  </div>
+
+  {# ===== History Panel ===== #}
+  {% if history %}
+  <div class="tab-panel" id="tab-history">
+    <section class="section">
+      <div class="section-title">
+        <h3>往期动态</h3>
+        <span>近{{ history|length }} 天</span>
+      </div>
+      {% for date_str, events in history %}
+      <div style="margin-bottom: 20px">
+        <div style="font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke);">{{ date_str }}</div>
+        <div class="feed">
+          {% for ev in events %}
+          <article class="feed-item">
+            <div class="feed-main">
+              <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+              {% if ev.reason %}<p>{{ ev.reason[:60] }}</p>{% endif %}
+            </div>
+            <div class="feed-side">
+              <span class="importance">{{ ev.insight_label }}</span>
+              <div class="feed-tags">
+                <span class="small-tag">{{ ev.region }}</span>
+                <span class="small-tag">{{ ev.source }}</span>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+  {% endif %}
+
+  <div class="footer-note">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</div>
 </div>
-</main>
-
-<footer class="footer">
-    <div class="container">
-        全球互联网动态情报站 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动
-    </div>
-</footer>
 
 <script>
-    const state = { region: 'all', type: 'all', search: '' };
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelector('.tab-btn[data-tab="'+name+'"]').classList.add('active');
+  document.getElementById('tab-'+name).classList.add('active');
+}
 
-    function toggleDate(header) {
-        const group = header.parentElement;
-        const items = group.querySelector('.date-items');
-        header.classList.toggle('expanded');
-        items.classList.toggle('collapsed');
-    }
+var state = { region:'all', type:'all', q:'' };
 
-    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.dataset.filter;
-            const value = btn.dataset.value;
-            document.querySelectorAll(`.filter-btn[data-filter="${filter}"]`).forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            state[filter] = value;
-            applyFilters();
-        });
-    });
+document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var f = btn.getAttribute('data-filter');
+    var v = btn.getAttribute('data-value');
+    document.querySelectorAll('.filter-btn[data-filter="'+f+'"]').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    state[f] = v;
+    applyFilters();
+  });
+});
 
-    document.getElementById('searchBox').addEventListener('input', e => {
-        state.search = e.target.value.trim().toLowerCase();
-        applyFilters();
-    });
+document.getElementById('searchBox').addEventListener('input', function(e){
+  state.q = e.target.value.trim().toLowerCase();
+  applyFilters();
+});
 
-    function applyFilters() {
-        const { region, type, search } = state;
-        let totalVisible = 0;
-
-        document.querySelectorAll('.date-group').forEach(group => {
-            let groupVisible = 0;
-            group.querySelectorAll('.feed-item').forEach(item => {
-                const itemRegion = item.dataset.region || '';
-                const itemTypes = (item.dataset.type || '').split(',');
-                const itemText = (item.dataset.text || '').toLowerCase();
-
-                const matchR = region === 'all' || itemRegion === region;
-                const matchT = type === 'all' || itemTypes.includes(type);
-                const matchS = !search || itemText.includes(search);
-
-                if (matchR && matchT && matchS) {
-                    item.style.display = '';
-                    groupVisible++;
-                    totalVisible++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            const countEl = group.querySelector('.date-count');
-            if (countEl) countEl.textContent = groupVisible + ' 条';
-            group.style.display = groupVisible > 0 ? '' : 'none';
-        });
-
-        // Signal section
-        document.querySelectorAll('#signalSection .signal-card').forEach(card => {
-            const cardRegion = card.dataset.region || '';
-            const cardTypes = (card.dataset.type || '').split(',');
-            const cardText = (card.dataset.text || '').toLowerCase();
-            const matchR = region === 'all' || cardRegion === region;
-            const matchT = type === 'all' || cardTypes.includes(type);
-            const matchS = !search || cardText.includes(search);
-            card.style.display = (matchR && matchT && matchS) ? '' : 'none';
-        });
-
-        const visibleSignal = document.querySelectorAll('#signalSection .signal-card:not([style*="none"])').length;
-        const signalSection = document.getElementById('signalSection');
-        if (signalSection) {
-            signalSection.style.display = visibleSignal > 0 ? '' : 'none';
-        }
-
-        const empty = document.getElementById('emptyState');
-        if (empty) empty.style.display = totalVisible === 0 ? 'block' : 'none';
-    }
+function applyFilters(){
+  var r = state.region, t = state.type, q = state.q;
+  document.querySelectorAll('[data-filterable]').forEach(function(el){
+    var er = el.getAttribute('data-region')||'';
+    var et = el.getAttribute('data-type')||'';
+    var text = (el.getAttribute('data-text')||'').toLowerCase();
+    var mr = r==='all' || er===r;
+    var mt = t==='all' || et.split(',').indexOf(t) > -1;
+    var mq = !q || text.indexOf(q) > -1;
+    el.style.display = (mr && mt && mq) ? '' : 'none';
+  });
+}
 </script>
 </body>
 </html>
