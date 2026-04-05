@@ -32,14 +32,15 @@ TRUNCATED_JUNK = {
 def _parse_amount(title):
     """从标题提取金额（单位：M美元），返回浮点数"""
     patterns = [
-        (r'\$(\d+(?:\.\d+)?)\s*[Bb](?:illion)?', 1000),
-        (r'€(\d+(?:\.\d+)?)\s*[Mm](?:illion)?', 1),
-        (r'\$(\d+(?:\.\d+)?)\s*[Mm](?:illion)?', 1),
+        (r'\$([0-9,]+(?:\.\d+)?)\s*[Bb](?:illion)?', 1000),
+        (r'€([0-9,]+(?:\.\d+)?)\s*[Mm](?:illion)?', 1),
+        (r'\$([0-9,]+(?:\.\d+)?)\s*[Mm](?:illion)?', 1),
     ]
     for pat, mult in patterns:
         m = re.search(pat, title, re.I)
         if m:
-            return float(m.group(1)) * mult
+            val = float(m.group(1).replace(',', '')) * mult
+            return val
     return 0
 
 def _format_amount(amount):
@@ -77,6 +78,33 @@ REGION_WEIGHT = {
     '亚太': 1.20,
     '拉美': 1.15,
     '欧洲': 1.00,
+    '中资': 1.25,  # 中国科技巨头海外扩张，高情报价值
+}
+
+# 中资出海公司名单（用于识别"中资"区域）
+CHINESE_CAPITAL_COMPANIES = {
+    '字节', 'tiktok', 'byteDance', 'bytedance', '抖音',
+    '腾讯', 'tencent', '微信',
+    '阿里巴巴', 'alibaba', 'aliyun', 'lazada',
+    '京东', 'jd.com', 'jd retail',
+    '快手', 'kuaishou',
+    '美团', 'meituan',
+    '蚂蚁', 'ant group', 'antgroup', '支付宝', 'alipay',
+    '拼多多', 'pinduoduo',
+    '百度', 'baidu',
+    '小米', 'xiaomi',
+    '滴滴', 'didi',
+    'shein', '希音',
+    'temu',
+    'oppo', 'vivo', 'realme',
+    '传音', 'transsion', 'tecno',
+    '比亚迪', 'byd',
+}
+
+# 亚太新增公司（提升区域关联性）
+REGION_COMPANIES = {
+    '亚太': {'cyberagent', 'square enix', 'vng', 'vnggroup', 'grab', 'gojek', 'sea group', 'shopee'},
+    '欧洲': {'trendyol', 'hepsiburada', 'kaspi', 'olx', ' Allegro'},
 }
 
 # 用 \b 词边界避免子串误匹配
@@ -104,6 +132,14 @@ def _has_top_investor(title_lower):
     ]
     return any(inv in title_lower for inv in investors)
 
+def _is_chinese_capital(event):
+    """检测事件是否涉及中资出海公司"""
+    title_lower = event.get('title', '').lower()
+    reason_lower = event.get('why_important', '').lower()
+    companies_lower = [c.lower() for c in event.get('companies', [])]
+    combined = ' '.join([title_lower, reason_lower] + companies_lower)
+    return any(kw.lower() in combined for kw in CHINESE_CAPITAL_COMPANIES)
+
 def calculate_score(event):
     """多因子评分，clamp(1-10)，全部从数据推导"""
     title = event.get('title', '')
@@ -113,7 +149,8 @@ def calculate_score(event):
     amount = _parse_amount(title)
     amt_pts = _amount_score(amount) if amount > 0 else 1
     type_pts = EVT_SCORE.get(ev_type, 0)
-    region_mult = REGION_WEIGHT.get(event.get('region', ''), 1.0)
+    region = event.get('region', '')
+    region_mult = REGION_WEIGHT.get(region, 1.0)
     industry_pts = 1 if _is_hot_industry(title_lower, event.get('why_important', '')) else 0
     named_pts = 1 if event.get('companies') else 0
     investor_pts = 1 if _has_top_investor(title_lower) else 0
@@ -142,6 +179,13 @@ def enrich(event):
     # 用于 Market Pulse 突出展示
     amt = _parse_amount(event.get('title', ''))
     event['display_amount'] = _format_amount(amt) if amt > 0 else ''
+
+    # 检测中资出海：若涉及中国科技公司出海，追加"中资"标签
+    is_chinese = _is_chinese_capital(event)
+    event['is_chinese_capital'] = is_chinese
+    if is_chinese:
+        ev_type = event.get('event_types', ['other'])[0]
+        event['insight_label'] = '中资出海'
 
     for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important', 'summary_short', 'level'):
         event.pop(old_key, None)
@@ -235,8 +279,14 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         parts.append(f"{hot_region}事件最多（{region_counts[hot_region]}起），占今日大头。")
     if funding >= 3:
         tf = top_funding
-        top_co = tf.get('companies', [''])[0] if tf and tf.get('companies') else '未知'
-        parts.append(f"融资仍是主旋律，共{funding}起，最大单笔{top_co}。")
+        top_co = tf.get('companies', [''])[0] if tf and tf.get('companies') else ''
+        top_amt = _format_amount(_parse_amount(tf.get('title', ''))) if tf else ''
+        if top_co and top_amt:
+            parts.append(f"融资仍是主旋律，共{funding}起，最大单笔{top_co} {top_amt}。")
+        elif top_co:
+            parts.append(f"融资仍是主旋律，共{funding}起，最大单笔来自{top_co}。")
+        else:
+            parts.append(f"融资仍是主旋律，共{funding}起。")
     elif funding >= 1:
         parts.append(f"有{funding}起融资落地。")
     if ma >= 1:
