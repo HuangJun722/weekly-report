@@ -65,14 +65,7 @@ jobs:
           # 检查今日实际采集条数，空数据不覆盖已有数据
           TODAY=$(date +%Y-%m-%d)
           if [ -f "data/events.json" ]; then
-            EVENT_COUNT=$(python -c "
-import json, sys
-try:
-    d = json.load(open('data/events.json'))
-    print(len(d.get('$TODAY', [])))
-except:
-    print(0)
-")
+            EVENT_COUNT=$(python -c "import json,sys;d=json.load(open('data/events.json'));print(len(d.get('$TODAY',[])))" 2>/dev/null || echo "0")
             echo "今日采集：$EVENT_COUNT 条"
             if [ "$EVENT_COUNT" = "0" ]; then
               echo "今日无数据，跳过提交以避免覆盖已有数据"
