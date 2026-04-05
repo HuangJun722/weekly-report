@@ -118,8 +118,8 @@ body::before {
   border: 1px solid rgba(14, 165, 233, 0.12);
 }
 .hero h2 {
-  margin: 0; font-size: clamp(36px, 5.1vw, 72px); line-height: 0.95;
-  letter-spacing: -0.065em; max-width: 12ch;
+  margin: 0; font-size: clamp(22px, 3vw, 40px); line-height: 1.2;
+  letter-spacing: -0.03em; max-width: 24ch;
 }
 .hero p {
   margin: 0; color: var(--muted-2); font-size: 15px; line-height: 1.75; max-width: 64ch;
@@ -282,27 +282,33 @@ body::before {
     </div>
     <div class="meta">
       <span class="dot"></span>
-      <span>Updated 2026-04-05 17:03</span>
+      <span>Updated 2026-04-05 17:56</span>
     </div>
   </header>
 
   
   <section class="hero">
     <div class="hero-left">
-      <div class="eyebrow">本周概要 · 先看结论，再看证据</div>
-      <h2>欧洲融资活跃（12起）、1起并购</h2>
+      <h2 class="hero-headline">Mistral $830M 刷新地区融资纪录，欧洲资本热度持续</h2>
       <p>重点信息优先呈现，普通动态作为背景补充。数字背后反映行业趋势，帮你快速判断变化方向。</p>
       <div class="controls">
         <div class="field">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
           <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
         </div>
-        <div class="field filter-btn-group">
-          <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
+        <div class="field filter-btn-group" style="flex-wrap:wrap">
+          <button class="filter-btn active" data-filter="type" data-value="all">类型</button>
           <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
           <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
           <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
           <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
+          <span style="width:1px;height:16px;background:var(--stroke);margin:0 4px"></span>
+          <button class="filter-btn active" data-filter="region" data-value="all">地区</button>
+          <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
+          <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
+          <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
+          <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
+          <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
         </div>
       </div>
     </div>
@@ -391,9 +397,52 @@ body::before {
           
         </article>
         <div class="feature-side">
-          <div class="side-box"><b>资金流向</b><span>把融资、并购、财报里的金额和方向单独拎出来，形成可判断的信号。</span></div>
-          <div class="side-box"><b>合作机会</b><span>从战略调整和地区扩张里，找出最可能产生ICT采购的对象。</span></div>
-          <div class="side-box"><b>背景动态</b><span>保留为背景层，让页面既有信息宽度，也有判断重点。</span></div>
+          
+          <div class="side-box">
+            <b>6 <span style="font-size:13px;font-weight:500;color:var(--muted)">欧洲</span></b>
+            <span>
+              
+              融资最密集，Mistral 830M 大额领跑
+              
+            </span>
+          </div>
+          
+          <div class="side-box">
+            <b>2 <span style="font-size:13px;font-weight:500;color:var(--muted)">中东</span></b>
+            <span>
+              
+              主权基金入场，WHOOP 获 575M
+              
+            </span>
+          </div>
+          
+          <div class="side-box">
+            <b>1 <span style="font-size:13px;font-weight:500;color:var(--muted)">亚太</span></b>
+            <span>
+              
+              Genspark B 轮扩至 385M
+              
+            </span>
+          </div>
+          
+          <div class="side-box">
+            <b>3 <span style="font-size:13px;font-weight:500;color:var(--muted)">非洲</span></b>
+            <span>
+              
+              AI 与 BioTech 双线并行
+              
+            </span>
+          </div>
+          
+          <div class="side-box">
+            <b>1 <span style="font-size:13px;font-weight:500;color:var(--muted)">拉美</span></b>
+            <span>
+              
+              金融科技早期融资为主
+              
+            </span>
+          </div>
+          
         </div>
       </div>
     </section>

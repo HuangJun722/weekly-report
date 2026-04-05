@@ -103,12 +103,42 @@ def build_weekly_summary(signals, all_events):
     # 区域覆盖
     regions_covered = len({e.get('region', '未知') for events_list in all_events.values() for e in events_list})
 
-    # 一句话总结
+    # 区域分布
     region_counts = {}
     for e in signals:
         r = e.get('region', '未知')
         region_counts[r] = region_counts.get(r, 0) + 1
     hot_region = max(region_counts, key=region_counts.get) if region_counts else ''
+
+    # 动态 headline：基于数据生成判断语
+    # 找最大额融资
+    top_funding = max(signals, key=lambda x: x.get('score', 0)) if signals else None
+    if top_funding and top_funding.get('event_types', [''])[0] == 'funding':
+        title = top_funding.get('title', '')
+        companies = top_funding.get('companies', [])
+        company = companies[0] if companies else ''
+        # 从标题提取金额
+        import re
+        amount_match = re.search(r'\$?([0-9,]+)\s*[MB]', title, re.I)
+        if amount_match:
+            amount_str = amount_match.group(0).replace('$', '').replace(',', '')
+            amount_display = f"${amount_str}"
+        else:
+            amount_display = ""
+        if company and amount_display:
+            headline = f"{company} {amount_display} 刷新地区融资纪录，{hot_region or '新兴市场'}资本热度持续"
+        elif company:
+            headline = f"{company} 大额融资引燃{hot_region or '新兴市场'}关注"
+        else:
+            headline = f"{hot_region or '新兴市场'}融资密集，多赛道并行推进"
+    elif funding >= 5:
+        headline = f"{hot_region or '新兴市场'}融资密集，{funding}起事件覆盖AI、金融科技多赛道"
+    elif funding >= 1:
+        headline = f"本周{hot_region or '新兴市场'}有{funding}起融资，资本保持活跃"
+    elif ma >= 1:
+        headline = f"{hot_region or '新兴市场'}有{ma}起并购，行业整合加速"
+    else:
+        headline = f"共{total_events}条动态，{hot_region or '各地区'}保持关注"
 
     parts = []
     if funding >= 3: parts.append(f"{hot_region}融资活跃（{funding}起）" if hot_region else f"融资活跃（{funding}起）")
@@ -116,6 +146,9 @@ def build_weekly_summary(signals, all_events):
     if ma >= 1: parts.append(f"{ma}起并购")
     if earnings >= 1: parts.append(f"{earnings}起财报")
     takeaway = "、".join(parts) if parts else f"共{total_events}条动态"
+
+    # 过滤掉"未知"
+    region_distribution = {k: v for k, v in region_counts.items() if k != '未知'}
 
     return {
         'total_events': total_events,
@@ -127,6 +160,8 @@ def build_weekly_summary(signals, all_events):
         'regions': regions_covered,
         'days': len(all_days),
         'takeaway': takeaway,
+        'headline': headline,
+        'region_distribution': region_distribution,
         'top3': signals[:3],
     }
 
