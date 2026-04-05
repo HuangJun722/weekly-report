@@ -303,20 +303,53 @@ def configure_gemini():
     if not key: return False
     genai.configure(api_key=key); return True
 
+# ============================================================
+# AI 分析 Prompt 模板（Few-shot，输出稳定）
+# ============================================================
+
+AI_SYSTEM_PROMPT = """你是全球互联网科技情报分析师。受众是ICT从业者，关注：合作机会、供应链变化、预算流向。
+每条事件输出4个字段：summary_short（事实）、reason（为什么重要，ICT视角）、impact（影响谁）、insight_label（资金流向/合作机会/警示信号/背景补充）。
+非中美公司融资≥$100M → score 9；融资≥$20M → score 7-8；并购 → score 7-8；财报盈利稳定 → score 5-6；亏损/下滑 → score 7-9；战略扩张 → score 6-7；裁员/关停 → score 6-8。
+只返回JSON数组，不要解释。"""
+
+AI_EXAMPLES = """
+示例1（融资大额）：
+标题: "Mistral raises $830M, 9fin hits unicorn status"
+输出: {"url":"","summary_short":"Mistral获$830M融资，9fin晋级独角兽","reason":"欧洲AI独角兽获顶级融资，后续可能开放生态合作和API采购","impact":"AI基础设施供应商、云服务商、API集成商","insight_label":"资金流向","score":9}
+
+示例2（融资中等）：
+标题: "Wearable Robotics closes €5M Series A"
+输出: {"url":"","summary_short":"可穿戴机器人公司获€5M A轮","reason":"欧洲硬科技早期融资，B2B机器人赛道持续有资金流入","impact":"机器人供应链、工业软件合作方","insight_label":"资金流向","score":6}
+
+示例3（并购）：
+标题: "Cafeyn acquires Readly non-Nordic operations"
+输出: {"url":"","summary_short":"Cafeyn收购Readly非北欧业务","reason":"欧洲数字出版整合加速，中小媒体可能面临挤压或被整合","impact":"数字媒体公司、内容分发合作方","insight_label":"资金流向","score":7}
+
+示例4（战略合作）：
+标题: "Arabic.AI partners with Qistas to deliver sovereign Arabic legal AI"
+输出: {"url":"","summary_short":"Arabic.AI与Qistas合作推阿拉伯语法务AI","reason":"中东主权AI战略落地，法律科技出现新的ICT集成机会","impact":"法律科技集成商、中东政府IT合作方","insight_label":"合作机会","score":6}
+
+示例5（战略裁员）：
+标题: "Telecom Italia cuts 2000 jobs amid network upgrade"
+输出: {"url":"","summary_short":"意大利电信裁员2000人","reason":"传统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","score":7}
+
+示例6（财报盈利）：
+标题: "Nubank Q1 revenue up 34% to $2.8B"
+输出: {"url":"","summary_short":"Nubank营收$2.8B，同比+34%","reason":"拉美数字银行持续高增长，东南亚复制模式具有参考价值","impact":"拉美金融科技合作方、银行科技供应商","insight_label":"背景补充","score":6}
+
+示例7（财报亏损）：
+标题: "Gorillas files for insolvency amid funding crunch"
+输出: {"url":"","summary_short":"欧洲快送平台Gorillas申请破产保护","reason":"即时配送赛道资金耗尽，同类公司需警惕融资环境恶化信号","impact":"同类快送平台、物流技术供应商","insight_label":"警示信号","score":8}
+"""
+
 def analyze_events_gemini(items):
     model = genai.GenerativeModel('gemini-2.0-flash-exp')
     news = [{'title': it['title'], 'url': it['url'], 'source': it['source']} for it in items]
-    prompt = f"""分析以下科技新闻，返回JSON数组（不要markdown）：
-
-{json.dumps(news, ensure_ascii=False)}
-
-返回格式：
-[{{"url":"...","companies":["非中美公司"],"why_important":"中文25字","impact_scope":"谁受影响","score":1-10}}]
-
-规则：非中美公司融资/IPO/并购/新品→score≥7；美国/中国公司新闻→忽略。只返回JSON。"""
+    prompt = f"{AI_SYSTEM_PROMPT}\n{AI_EXAMPLES}\n\n分析以下事件，返回JSON数组：\n{json.dumps(news, ensure_ascii=False)}\n\n返回JSON："
     try:
         resp = model.generate_content(prompt)
         text = resp.text.strip()
+        # 去掉 markdown 代码块
         for m in ['```json', '```']:
             if m in text:
                 parts = text.split(m)
@@ -324,14 +357,43 @@ def analyze_events_gemini(items):
                     text = p.strip()
                     if text.endswith('```'): text = text[:-3].strip()
                     break
-        return json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+        result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+        # 验证结果：过滤掉无效条目
+        if isinstance(result, list):
+            result = [r for r in result if r.get('url') and r.get('summary_short')]
+        return result
     except Exception:
         return None
 
 def build_event(item, analysis=None):
+    """构建事件对象，兼容有/无 AI 分析两种情况"""
     score = (analysis or {}).get('score', 5) if analysis else 5
     level = 'A' if score >= 8 else 'B' if score >= 6 else 'C' if score >= 4 else 'D'
-    why = (analysis or {}).get('why_important', '待分析') if analysis else '待分析'
+    # 有 AI 分析时
+    if analysis:
+        return {
+            'title': item['title'],
+            'url': item['url'],
+            'source': item['source'],
+            'region': item['region'],
+            'event_types': item['event_types'],
+            'level': level,
+            'score': score,
+            'summary_short': analysis.get('summary_short', item['title'][:25]),
+            'reason': analysis.get('reason', '待分析'),
+            'impact': analysis.get('impact', '未知'),
+            'insight_label': analysis.get('insight_label', '背景补充'),
+            'companies': (analysis or {}).get('companies', []) or [],
+            'date': datetime.now().isoformat(),
+        }
+    # 无 AI 分析时的 fallback
+    ev_type = item.get('event_types', ['other'])[0]
+    default_label = {
+        'funding': '资金流向',
+        'ma': '资金流向',
+        'earnings': '背景补充',
+        'strategy': '合作机会',
+    }.get(ev_type, '背景补充')
     return {
         'title': item['title'],
         'url': item['url'],
@@ -340,9 +402,11 @@ def build_event(item, analysis=None):
         'event_types': item['event_types'],
         'level': level,
         'score': score,
-        'why_important': why,
-        'impact_scope': (analysis or {}).get('impact_scope', '未知') if analysis else '未知',
-        'companies': (analysis or {}).get('companies', []) if analysis else [],
+        'summary_short': item['title'][:25],
+        'reason': '待分析',
+        'impact': '未知',
+        'insight_label': default_label,
+        'companies': [],
         'date': datetime.now().isoformat(),
     }
 

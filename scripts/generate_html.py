@@ -13,10 +13,19 @@ CATEGORY_MAP = {
     '上市': 'earnings', '扩张': 'strategy',
 }
 
-# 被截断的垃圾 why_important（来自旧格式的 summary[:25] 截断）
+# insight_label 默认规则（按事件类型）
+INSIGHT_LABEL_MAP = {
+    'funding': '资金流向',
+    'ma': '资金流向',
+    'earnings': '背景补充',
+    'strategy': '合作机会',
+    'other': '背景补充',
+}
+
+# 被截断的垃圾字段（旧格式遗留）
 TRUNCATED_JUNK = {
     'Show HN: I built a f', 'Big-Endian Testing w', 'April 2026 TLDR Setu',
-    'Show HN: I built a f', 'Show HN: I built a frontp', 'Show HN: ctx – an Ag',
+    'Show HN: I built a frontp', 'Show HN: ctx – an Ag',
     'Samsung Magician dis', 'Google releases Gemm', 'Show HN: Apfel – The',
     'Decisions that erode', 'What Category Theory',
     'ESP32-S31: Dual-Core', 'Yeachan-Heo/oh-my-co', 'onyx-dot-app/onyx',
@@ -31,22 +40,28 @@ def enrich(event):
         cat = event.get('category', '其他')
         event['event_types'] = [CATEGORY_MAP.get(cat, 'other')]
 
-    # 统一 why_important（旧格式用 summary，且被截断成垃圾）
-    why = event.get('why_important', '')
-    if why in TRUNCATED_JUNK or (len(why) < 20 and why != '待分析'):
-        # 垃圾截断，用原文前50字代替
-        title = event.get('title', '')
-        event['why_important'] = title[:50] + ('...' if len(title) > 50 else '') if title else '待分析'
+    ev_type = event.get('event_types', ['other'])[0]
 
-    event.setdefault('why_important', '待分析')
-    event.setdefault('impact_scope', '未知')
-    event.setdefault('companies', [])
+    # 统一新字段（从旧字段迁移）
+    why = event.get('why_important', '')
+    if why in TRUNCATED_JUNK or (len(why) < 15 and why != '待分析'):
+        event['reason'] = event.get('title', '')[:60]
+    elif why and why != '待分析':
+        event.setdefault('reason', why)
+
+    # 新字段默认值
+    event.setdefault('summary_short', event.get('title', '')[:25])
+    event.setdefault('reason', '待分析')
+    event.setdefault('impact', event.get('impact_scope', '未知'))
+    event.setdefault('insight_label', INSIGHT_LABEL_MAP.get(ev_type, '背景补充'))
     event.setdefault('level', 'C')
     event.setdefault('score', 5)
     event.setdefault('region', '未知')
+    event.setdefault('companies', [])
+    event.setdefault('source', '未知')
 
-    # 清理无意义字段（旧格式遗留）
-    for old_key in ('summary', 'category', 'impact_range'):
+    # 清理旧格式遗留字段
+    for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important'):
         event.pop(old_key, None)
 
     return event
@@ -96,7 +111,7 @@ def generate_html():
         f.write(html)
 
     total = sum(len(v) for v in events.values())
-    print(f"✓ 生成完成：{len(events)} 天，共 {total} 条事件，{len(signal_events)} 条高价值信号")
+    print(f"OK: {len(events)} days, {total} events total, {len(signal_events)} high-value signals")
 
 if __name__ == '__main__':
     generate_html()

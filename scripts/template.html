@@ -114,9 +114,10 @@
 
         .signal-card {
             background: var(--bg-card); border-radius: var(--radius);
-            box-shadow: var(--shadow-md); padding: 22px 24px;
+            box-shadow: var(--shadow-md); padding: 20px 22px;
             position: relative; overflow: hidden;
             transition: box-shadow 0.2s, transform 0.2s;
+            display: flex; flex-direction: column; gap: 10px;
         }
         .signal-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
         .signal-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
@@ -126,27 +127,54 @@
         .signal-card.type-earnings::before { background: var(--type-earnings); }
         .signal-card.type-strategy::before { background: var(--type-strategy); }
 
-        .signal-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-        .signal-type-tag {
-            font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 5px; text-transform: uppercase; letter-spacing: 0.5px;
-        }
-        .type-funding .signal-type-tag { background: var(--type-funding-bg); color: var(--type-funding); }
-        .type-ma .signal-type-tag { background: var(--type-ma-bg); color: var(--type-ma); }
-        .type-earnings .signal-type-tag { background: var(--type-earnings-bg); color: var(--type-earnings); }
-        .type-strategy .signal-type-tag { background: var(--type-strategy-bg); color: var(--type-strategy); }
+        /* 卡片头部：标签行 */
+        .card-tags { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .card-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+        .tag-region { color: var(--accent); background: var(--accent-light); }
+        .tag-type { font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
+        .type-funding .tag-type { background: var(--type-funding-bg); color: var(--type-funding); }
+        .type-ma .tag-type { background: var(--type-ma-bg); color: var(--type-ma); }
+        .type-earnings .tag-type { background: var(--type-earnings-bg); color: var(--type-earnings); }
+        .type-strategy .tag-type { background: var(--type-strategy-bg); color: var(--type-strategy); }
+        .type-other .tag-type { background: var(--type-other-bg); color: var(--type-other); }
 
-        .signal-region-tag { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 8px; border-radius: 4px; }
+        /* 情报标签 badge */
+        .tag-insight { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+        .tag-insight.资金流向 { background: var(--type-funding-bg); color: var(--type-funding); }
+        .tag-insight.合作机会 { background: var(--accent-light); color: var(--accent); }
+        .tag-insight.警示信号 { background: var(--type-ma-bg); color: var(--type-ma); }
+        .tag-insight.背景补充 { background: var(--type-other-bg); color: var(--type-other); }
 
-        .signal-title {
-            font-family: var(--font-serif); font-size: 15px; font-weight: 600;
-            line-height: 1.45; color: var(--text-primary); margin-bottom: 8px;
+        /* 卡片标题 */
+        .card-title {
+            font-family: var(--font-serif); font-size: 14px; font-weight: 600;
+            line-height: 1.45; color: var(--text-primary);
             display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
         }
-        .signal-title a { color: inherit; }
-        .signal-title a:hover { color: var(--accent); }
+        .card-title a { color: inherit; text-decoration: none; }
+        .card-title a:hover { color: var(--accent); }
 
-        .signal-why { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px; }
-        .signal-source { font-size: 12px; color: var(--text-tertiary); }
+        /* 为什么重要（ICT受众视角） */
+        .card-reason {
+            font-size: 13px; color: var(--text-secondary); line-height: 1.55;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+            flex: 1;
+        }
+
+        /* 影响谁 */
+        .card-impact {
+            font-size: 12px; color: var(--text-tertiary); line-height: 1.5;
+            padding: 6px 10px; background: var(--bg-subtle); border-radius: 6px;
+        }
+        .card-impact-label { color: var(--text-tertiary); font-weight: 500; margin-right: 4px; }
+
+        /* 卡片底部 */
+        .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+        .card-source { font-size: 11px; color: var(--text-tertiary); }
+        .card-score { font-size: 11px; font-weight: 700; color: var(--text-tertiary); padding: 2px 6px; background: var(--bg-subtle); border-radius: 4px; }
+        .card-score.score-a { color: var(--level-a); background: var(--level-a-bg); }
+        .card-score.score-b { color: var(--level-b); background: var(--level-b-bg); }
+        .card-score.score-c { color: var(--level-c); background: var(--level-c-bg); }
 
         /* ===== Full Feed ===== */
         .feed { }
@@ -273,18 +301,38 @@
             <article class="signal-card type-{{ event.event_types[0] }}"
                      data-type="{{ event.event_types|join(',') }}"
                      data-region="{{ event.region }}"
-                     data-text="{{ event.title }} {{ event.region }} {{ event.source }} {{ event.why_important }}">
-                <div class="signal-meta">
-                    <span class="signal-type-tag">{{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(event.event_types[0],'其他') }}</span>
-                    <span class="signal-region-tag">{{ event.region }}</span>
+                     data-insight="{{ event.insight_label }}"
+                     data-text="{{ event.title }} {{ event.region }} {{ event.source }} {{ event.reason }} {{ event.impact }}">
+
+                {# 标签行 #}
+                <div class="card-tags">
+                    <span class="card-tag tag-type">{{ {'funding':'融资','ma':'并购','earnings':'财报','strategy':'战略'}.get(event.event_types[0],'其他') }}</span>
+                    <span class="card-tag tag-region">{{ event.region }}</span>
+                    <span class="card-tag tag-insight {{ event.insight_label }}">{{ event.insight_label }}</span>
                 </div>
-                <h3 class="signal-title">
+
+                {# 标题 #}
+                <h3 class="card-title">
                     <a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
                 </h3>
-                {% if event.why_important and event.why_important != '待分析' %}
-                <div class="signal-why">{{ event.why_important }}</div>
+
+                {# 为什么重要 #}
+                {% if event.reason and event.reason != '待分析' %}
+                <div class="card-reason">{{ event.reason }}</div>
                 {% endif %}
-                <div class="signal-source">{{ event.source }}</div>
+
+                {# 影响谁 #}
+                {% if event.impact and event.impact != '未知' %}
+                <div class="card-impact">
+                    <span class="card-impact-label">影响：</span>{{ event.impact }}
+                </div>
+                {% endif %}
+
+                {# 底部 #}
+                <div class="card-footer">
+                    <span class="card-source">{{ event.source }}</span>
+                    <span class="card-score score-{{ event.level|lower }}">{{ event.level }} {{ event.score }}/10</span>
+                </div>
             </article>
             {% endfor %}
         </div>
