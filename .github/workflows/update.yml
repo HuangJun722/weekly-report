@@ -1,9 +1,10 @@
 name: 全球互联网动态情报站
 
 on:
-  # 每天凌晨 2:00 UTC (= 上午 10:00 北京时间) 自动运行
+  # 每天 18:00 UTC (= 次日 02:00 北京时间) 自动运行
+  # 选择此时段：欧洲/亚太/中东/拉美当日新闻已全部发布，采集最完整
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 18 * * *'
   # 支持手动触发
   workflow_dispatch:
     inputs:
@@ -62,15 +63,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 检查今日实际采集条数，空数据不覆盖已有数据
+          # 始终提交：即使采集0条也记录空日期，避免日期缺失
           TODAY=$(date +%Y-%m-%d)
           if [ -f "data/events.json" ]; then
             EVENT_COUNT=$(python -c "import json,sys;d=json.load(open('data/events.json'));print(len(d.get('$TODAY',[])))" 2>/dev/null || echo "0")
             echo "今日采集：$EVENT_COUNT 条"
-            if [ "$EVENT_COUNT" = "0" ]; then
-              echo "今日无数据，跳过提交以避免覆盖已有数据"
-              exit 0
-            fi
           fi
 
           git add data/ docs/

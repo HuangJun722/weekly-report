@@ -299,17 +299,10 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         parts.append(f"共{total}条动态，覆盖{', '.join(region_counts.keys()) if region_counts else '各地区'}。")
     summary = ' '.join(parts)
 
-    # ── Market Pulse：改为最大单笔事件的突出展示（避免重复 Feed）─────
-    # 显示今日最大金额 + 次大金额的摘要，不重复 Feed 内容
-    mp_events = []
-    if top_funding:
-        mp_events.append(top_funding)
-    if len(funding_events) > 1:
-        second = sorted(funding_events, key=lambda x: x.get('score', 0), reverse=True)[1]
-        if second['url'] != top_funding['url']:
-            mp_events.append(second)
-    if max_ma:
-        mp_events.append(max_ma)
+    # ── Market Pulse：始终取所有信号事件中评分最高的3条─────
+    # Hero区域不变，始终显示TOP3（与主tab内容解耦）
+    sorted_signals = sorted(signals, key=lambda x: x.get('score', 0), reverse=True) if signals else []
+    mp_events = sorted_signals[:3]
 
     return {
         'total_events': total,
@@ -329,26 +322,56 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
 def generate_html():
     events = load_events()
     sorted_dates = sorted(events.keys(), reverse=True)
+
+    # 主tab：最近一次有内容的采集批次（回退到昨天兜底）
+    # 历史tab：除主tab批次之外的所有日期
+    today_str = datetime.now().strftime('%Y-%m-%d')
+    main_date = None
+    main_events = []
+
+    # 找最近一个有内容的批次
+    for d in sorted_dates:
+        evs = events.get(d, [])
+        if evs:
+            main_date = d
+            main_events = evs
+            break
+
+    # 今天批次为空 → 回退到昨天
+    if main_date == today_str and not main_events:
+        for d in sorted_dates:
+            if d != today_str:
+                evs = events.get(d, [])
+                if evs:
+                    main_date = d
+                    main_events = evs
+                    break
+
+    # 标题去重 + 按评分排序
+    seen_titles = set()
+    deduped = []
+    for e in main_events:
+        norm = re.sub(r'[^\w]', '', e.get('title', '').lower())
+        if norm not in seen_titles and len(norm) > 10:
+            seen_titles.add(norm)
+            deduped.append(e)
+    deduped.sort(key=lambda x: x.get('score', 5), reverse=True)
+    all_feed = deduped
+
+    # 历史tab：15天内除主tab批次之外的所有有内容日期
+    cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
+    history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
+    history = [(d, events.get(d, [])) for d in history_dates if events.get(d, [])]
+
     signals = get_signal_events(events)
-    latest_date = sorted_dates[0] if sorted_dates else None
-
-    latest_events = events.get(latest_date, [])
-    sig_urls = {e['url'] for e in signals}
-    other_events = [e for e in latest_events if e['url'] not in sig_urls]
-    all_feed = signals + other_events
-    all_feed.sort(key=lambda x: x.get('score', 5), reverse=True)
-
-    cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
-    history_dates = [d for d in sorted_dates if d >= cutoff and d != latest_date]
-    history = [(d, events.get(d, [])) for d in history_dates]
-
-    weekly = build_weekly_summary(all_feed, signals, latest_events, events)
+    weekly = build_weekly_summary(all_feed, signals, main_events, events)
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
         weekly=weekly,
         all_feed=all_feed,
         history=history,
+        main_date=main_date,
         update_time=datetime.now().strftime('%Y-%m-%d %H:%M'),
     )
 

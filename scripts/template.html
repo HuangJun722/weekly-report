@@ -291,12 +291,12 @@ body {
 
   {# ===== Tab Switcher ===== #}
   <div class="tab-bar">
-    <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日</button>
+    <button class="tab-btn active" data-tab="main" onclick="switchTab('main')">{{ main_date }}</button>
     <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期</button>
   </div>
 
-  {# ===== Today Panel ===== #}
-  <div class="tab-panel active" id="tab-today">
+  {# ===== Main Panel ===== #}
+  <div class="tab-panel active" id="tab-main">
     {% if all_feed %}
     <div id="feed-list">
     <div class="feed">
@@ -315,6 +315,7 @@ body {
           <div class="feed-tags">
             <span class="small-tag">{{ ev.region }}</span>
             <span class="small-tag">{{ ev.source }}</span>
+            <span class="small-tag">发布 {{ ev.date[:10] }}</span>
           </div>
         </div>
       </article>
@@ -328,11 +329,11 @@ body {
   {# ===== History Panel ===== #}
   <div class="tab-panel" id="tab-history">
     {% if history %}
-    {% for date_str, events in history %}
+    {% for date_str, day_events in history %}
     <div class="history-day">
       <div class="history-date">{{ date_str }}</div>
       <div class="feed">
-        {% for ev in events %}
+        {% for ev in day_events %}
         <article class="feed-item"
           data-filterable
           data-region="{{ ev.region }}"
@@ -348,6 +349,7 @@ body {
             <div class="feed-tags">
               <span class="small-tag">{{ ev.region }}</span>
               <span class="small-tag">{{ ev.source }}</span>
+              <span class="small-tag">发布 {{ ev.date[:10] }}</span>
             </div>
           </div>
         </article>
