@@ -16,6 +16,7 @@ except ImportError:
 
 import warnings; warnings.filterwarnings('ignore')
 import google.generativeai as genai
+from google.api_core.exceptions import ResourceExhausted
 import requests
 from bs4 import BeautifulSoup
 
@@ -44,7 +45,7 @@ REQUEST_DELAY = 1.2  # 避免被封（仅用于重试，非采集）
 REQUEST_TIMEOUT = 8   # 单次请求超时（秒），降级提速
 
 # ============================================================
-# 信源：重点标注是否为融资专属源
+# ���源：重点标注是否为融资专属源
 # ============================================================
 
 RSS_SOURCES = [
@@ -564,7 +565,7 @@ AI_EXAMPLES = """
 
 示例5（战略裁员）：
 标题: "Telecom Italia cuts 2000 jobs amid network upgrade"
-输出: {"url":"","summary_short":"意大利电信裁员2000人","reason":"传统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","score":7}
+输出: {"url":"","summary_short":"意大利电信裁员2000人","reason":"���统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","score":7}
 
 示例6（财报盈利）：
 标题: "Nubank Q1 revenue up 34% to $2.8B"
@@ -595,6 +596,36 @@ def analyze_events_gemini(items):
         if isinstance(result, list):
             result = [r for r in result if r.get('url') and r.get('summary_short')]
         return result
+    except ResourceExhausted as e:
+        print(f"  ⚠️  Gemini API 配额耗尽（429）：{e}，等待重试...")
+        # 重试3次，每次等待更长时间
+        for attempt in range(3):
+            wait = (attempt + 1) * 5
+            print(f"    等待 {wait}s 后重试（第{attempt+1}次）...")
+            time.sleep(wait)
+            try:
+                resp = model.generate_content(prompt)
+                text = resp.text.strip()
+                for m in ['```json', '```']:
+                    if m in text:
+                        parts = text.split(m)
+                        for p in parts[1:]:
+                            text = p.strip()
+                            if text.endswith('```'): text = text[:-3].strip()
+                            break
+                result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+                if isinstance(result, list):
+                    result = [r for r in result if r.get('url') and r.get('summary_short')]
+                print(f"    重试成功！")
+                return result
+            except ResourceExhausted as re2:
+                print(f"    重试失败：{re2}")
+                continue
+            except Exception as re2:
+                print(f"    重试失败：{type(re2).__name__}: {re2}")
+                break
+        print(f"  ⚠️  Gemini API 配额耗尽，已重试{3}次，降级")
+        return None
     except Exception as e:
         print(f"  ⚠️  Gemini API 调用失败：{type(e).__name__}: {e}")
         return None
