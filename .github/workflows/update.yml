@@ -41,13 +41,14 @@ jobs:
         run: python scripts/fetch_news.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Debug environment
-          run: |
-            python --version
-            python -c "import jinja2; print('Jinja2:', jinja2.__version__)"
-            python -c "import sys; print(sys.path)"
-            cat data/events.json | head -c 1000
-            
+        run: |
+          python --version
+          python -c "import jinja2; print('Jinja2:', jinja2.__version__)"
+          python -c "import sys; print(sys.path)"
+          cat data/events.json | head -c 1000
+
       - name: Generate HTML
         run: python scripts/generate_html.py
 
@@ -68,14 +69,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # 始终提交：即使采集0条也记录空日期，避免日期缺失
           TODAY=$(date +%Y-%m-%d)
           if [ -f "data/events.json" ]; then
             EVENT_COUNT=$(python -c "import json,sys;d=json.load(open('data/events.json'));print(len(d.get('$TODAY',[])))" 2>/dev/null || echo "0")
             echo "今日采集：$EVENT_COUNT 条"
           fi
-
           git add data/ docs/
           if git diff --staged --quiet; then
             echo "没有变化，跳过提交"
