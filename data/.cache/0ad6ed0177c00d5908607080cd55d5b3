@@ -12,7 +12,7 @@
 	<atom:link href="https://techpoint.africa/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techpoint.africa</link>
 	<description>Startups, Innovation and Technology in Africa</description>
-	<lastBuildDate>Tue, 07 Apr 2026 14:12:46 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 07 Apr 2026 15:05:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,20 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Introducing EGF: An Open File Format for Educational Games</title>
+		<link>https://techpoint.africa/brandpress/introducing-egf-an-open-file-format-for-educational-games/</link>
+		
+		<dc:creator><![CDATA[Brand Press]]></dc:creator>
+		<pubDate>Tue, 07 Apr 2026 15:00:00 +0000</pubDate>
+				<category><![CDATA[Brand Press]]></category>
+		<guid isPermaLink="false">https://techpoint.africa/?p=352268</guid>
+
+					<description><![CDATA[EGF is an EPUB-inspired format published on Zenodo in Nov...]]></description>
+		
+		
+		
+			</item>
+		<item>
 		<title>OPay Showcases Smart Business Innovation at Nigeria Agrofood 2026 </title>
 		<link>https://techpoint.africa/brandpress/opay-showcases-smart-business-innovation-at-nigeria-agrofood-2026/</link>
 		
@@ -307,19 +321,5 @@
 			<media:rating scheme="urn:simple">nonadult</media:rating>
 		</media:content>
 	</item>
-		<item>
-		<title>USD-backed stablecoins fuel Nigeria’s trade amid FX uncertainty</title>
-		<link>https://techpoint.africa/insight/usd-backed-stablecoins-fuel-nigerias-trade-amid-fx-uncertainty/</link>
-		
-		<dc:creator><![CDATA[Chimgozirim Nwokoma]]></dc:creator>
-		<pubDate>Wed, 01 Apr 2026 03:00:00 +0000</pubDate>
-				<category><![CDATA[Insights]]></category>
-		<guid isPermaLink="false">https://techpoint.africa/?p=352015</guid>
-
-					<description><![CDATA[With the naira stabilising in recent weeks, Nigerian businesses increasingly rely on USD-backed stablecoins to hedge currency risk and maintain trade continuity.]]></description>
-		
-		
-		
-			</item>
 	</channel>
 </rss>

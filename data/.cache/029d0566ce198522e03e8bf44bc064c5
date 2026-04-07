@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Tue, 07 Apr 2026 14:30:08 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 07 Apr 2026 16:31:41 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,128 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Croatia’s Media King picks Nigeria to test its cloud-powered public WiFi model</title>
+		<link>https://techcabal.com/2026/04/07/media-king-picks-nigeria-as-first-stop-in-africa-wifi-rollout/</link>
+		
+		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
+		<pubDate>Tue, 07 Apr 2026 16:31:39 +0000</pubDate>
+				<category><![CDATA[Telecoms]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Meta]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[public WiFi]]></category>
+		<category><![CDATA[Tizeti]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185364</guid>
+
+					<description><![CDATA[Now, through a local partnership led by Nigerian entrepreneur and film producer Charles Okpaleke, Media King is preparing its first large-scale African rollout, with Nigeria as the launchpad for a broader continental push.]]></description>
+										<content:encoded><![CDATA[
+<p>Media King Group, a Croatian smart public WiFi provider, is setting its sights on Nigeria, one of Africa’s most challenging connectivity markets, to test a new public WiFi model that could reshape how cities stay online.</p>
+
+
+
+<p>Founded in 2017 by Darko Kraljević, the company has spent nearly a decade building what it calls a “smart WiFi” system designed to fix a familiar problem: networks that buckle under heavy demand.&nbsp;</p>
+
+
+
+<p>Now, through a local partnership led by Nigerian entrepreneur and film producer Charles Okpaleke, Media King is preparing its first large-scale African rollout, with Nigeria as the launchpad for a broader continental push.</p>
+
+
+
+<p>“We don’t want to just be local in Nigeria,” Kraljević told TechCabal in April 2026. “Nigeria will be the starting point for the entire African market.”</p>
+
+
+
+<p>Media King is betting that a cloud-managed WiFi architecture can succeed where earlier public access efforts have stalled. Big Tech-backed initiatives<span style="margin: 0px;padding: 0px">, including<a href="https://techcabal.com/2022/02/08/meta-quietly-shuts-down-its-low-cost-internet-service-across-africa/#:~:text=It%20was%20designed%20to%20be,completed%20in%202023%20or%202024.&amp;text=Meta%27s%20different%20initiatives%20are%20part,low%2Dcost%20internet%20across%20Africa." target="_blank"> Meta,</a></span> <a href="https://techcabal.com/2025/10/08/why-lagos-still-has-no-functional-public-wifi-network/" target="_blank" rel="noreferrer noopener">Google</a>, and <a href="https://wifi.com.ng/tizeti-microsoft-collaborate-to-boost-high-speed-internet-in-nigeria-with-airband-initiative/" target="_blank" rel="noreferrer noopener">Microsoft-linked deployments via Tizeti</a>, have all struggled to make free public WiFi viable at scale in Nigeria.</p>
+
+
+
+<p>Unlike earlier attempts to &#8220;blanket&#8221; areas with standard Wi-Fi protocols, which struggled with Nigeria&#8217;s high user density and power instability, Media King’s approach rethinks the architecture. </p>
+
+
+
+<p>Instead of relying on access points that both connect users and process traffic, it shifts the heavy lifting, traffic management, routing, and bandwidth allocation into the cloud. The company claims that the approach makes networks cheaper to deploy, easier to scale, and more resilient in high-density environments where demand typically overwhelms infrastructure.</p>
+
+
+
+<p>Traditional systems rely on access points that both connect users and handle computing tasks. But as more users pile on, those systems quickly overload, leading to the familiar experience of slow speeds or complete failure in crowded areas like airports, malls, or city squares.</p>
+
+
+
+<p>Media King shifts that computing burden away from the hardware into a centralised cloud-based system. In Kraljević’s telling, access points become little more than “antennas,” while the heavy lifting, traffic management, bandwidth allocation, and routing are handled remotely and dynamically.</p>
+
+
+
+<p>The result, he claims, is a network that can support an unlimited number of concurrent users without degrading performance. Instead of rationing bandwidth equally, the system allocates resources in real time, prioritising users with heavier data needs while maintaining overall stability.</p>
+
+
+
+<p>That promise has already been tested in Croatia, where Media King was born and deployed what was described as <a href="https://total-croatia-news.com/lifestyle/split-72/" target="_blank" rel="noreferrer noopener">Europe’s fastest public WiFi network along Split’s busy waterfront</a>. The system has since been used in shopping malls, public transport systems, hospitals, and government buildings, often in high-density environments where conventional networks struggle.</p>
+
+
+
+<p>For the Nigerian partners, the appeal lies not just in the technology but in its potential to succeed where previous public WiFi efforts in the country have failed.</p>
+
+
+
+<p>“The challenge was that existing infrastructure couldn’t reliably deliver quality service,” said Afam Anyika, CEO of Media King Nigeria. “With 60–70% of budgets going into infrastructure, we’ve partnered with Media King Global to cut upfront costs while still rolling out our systems nationwide.”</p>
+
+
+
+<p>Nigeria has seen multiple attempts at public connectivity, from government-backed initiatives to experiments by global tech giants. Still, most have struggled with sustainability, high infrastructure costs, and poor service quality. In many cases, networks deteriorated quickly or failed to scale beyond pilot phases.</p>
+
+
+
+<p>“The real issue has always been that traditional infrastructure cannot meet real-world demand,” said Anyika. “Even when you solve for access, the quality drops as more people connect.”</p>
+
+
+
+<p>Media King believes its model addresses both the technical and commercial challenges. By partnering locally, the company avoids the heavy upfront costs typically associated with infrastructure deployment, instead focusing on operations, workforce development, and market expansion.</p>
+
+
+
+<p>Crucially, the service will be free for end users, a non-negotiable, according to Kraljević. “It must be free, because someone else pays,” he said.</p>
+
+
+
+<p>That “someone” is expected to come from a mix of advertisers, government use cases, and data-driven services built on top of the network. Media King’s platform includes an integrated digital layer that turns each WiFi hotspot into a communication and advertising channel. When users connect, they can be directed to targeted content, public service announcements, or brand campaigns.</p>
+
+
+
+<p>Beyond advertising, the system also offers anonymised data insights, such as foot traffic and dwell time, to help businesses and governments make decisions about urban planning, service delivery, and customer engagement.</p>
+
+
+
+<p>The company says it has already deployed the model in Croatia, where its network supported public health messaging during the COVID-19 pandemic. It is now exploring similar use cases in Nigeria, spanning education, healthcare, and local government services.</p>
+
+
+
+<p>However, expanding into Nigeria comes with notable execution risks, particularly on the regulatory front. As of 2026, the introduction of the <a href="https://ncc.gov.ng/sites/default/files/2026-02/Internet-Code-of-Practice-2026.pdf">Internet Code of Practice</a> has tightened oversight, clearly defining the obligations of Internet Access Service Providers, including those offering public WiFi hotspots. Under NCC guidelines, commercial or public WiFi is no longer plug-and-play—operators must obtain a valid ISP licence, typically renewable every five years, and register each hotspot location with the Commission.</p>
+
+
+
+<p>Media King, however, maintains that it does not require additional licencing because it operates on existing public WiFi frequencies and partners with local internet service providers. The company also plans to fully localise its deployment, from data infrastructure to operational teams, to reduce latency and better align with regulatory expectations.</p>
+
+
+
+<p>Initial rollouts are expected later this year to target high-density urban areas and underserved communities with limited broadband access.&nbsp;</p>
+
+
+
+<p>In some cases, the company says it could combine its system with satellite connectivity, such as Starlink, to extend coverage to remote locations without traditional fibre infrastructure.</p>
+
+
+
+<p>For now, the focus is on getting the first deployments off the ground. The company says it is already in discussions with government and private sector partners, with early rollouts expected this year.</p>
+
+
+
+<p>“We spent years proving this system works,&#8221; Kraljević said. &#8220;Now we are ready to take it global, and Africa starts with Nigeria.”</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>I built a product in 20 minutes with Projectmaven</title>
 		<link>https://techcabal.com/2026/04/07/the-backend-of-projectmaven/</link>
 		
@@ -1874,486 +1996,6 @@ You received this email because you signed up on our website or made purchase fr
 
 
 <p>Overall, MTN’s biggest market is no longer its best market. As long as currency pressure and inflation persist, Nigeria will keep delivering volume without matching value, leaving smaller, more stable markets like Ghana to do the real financial heavy lifting.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>👨🏿‍🚀TechCabal Daily – MTN Ghana&#8217;s MoMo moves out</title>
-		<link>https://techcabal.com/2026/04/06/techcabal-daily-mtn-ghanas-momo-moves-out/</link>
-		
-		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
-		<pubDate>Mon, 06 Apr 2026 06:06:33 +0000</pubDate>
-				<category><![CDATA[Newsletters]]></category>
-		<category><![CDATA[TC Daily]]></category>
-		<category><![CDATA[Charge]]></category>
-		<category><![CDATA[Kenswitch]]></category>
-		<category><![CDATA[MTN]]></category>
-		<category><![CDATA[VISA]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185234</guid>
-
-					<description><![CDATA[In today's edition: MTN separates Ghana MoMo business &#124;&#124; 3 in 4 Kenyans now use mobile money &#124;&#124; Kenswitch and Visa partner &#124;&#124; Charge eyes tokenised public listing ]]></description>
-										<content:encoded><![CDATA[
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div id="wrapper" style="width:100%;max-width:600px;background-color: #FFFFFF; color:#000000;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-rendering: optimizeLegibility !important; -webkit-font-smoothing: antialiased !important; margin: 0 auto; padding:17px 0;box-sizing: border-box;">
-            <div class="content_date" id="intro" style="box-sizing: border-box; padding: 0 12px 16px; display: table; width: 100%; background-color: white;">
-                <div style="display:block; width: 100%; text-align: center;padding-bottom: 24px;">
-                   
-                <div style="display: block;padding-bottom:24px;">
-                    <div style="display:table;width: 100%;">
-                        <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/tc-daily-banner.png" alt="" width="100%" height="167" style="object-fit:contain;">
-                    </div>
-                     <div style="display: inline-block;vertical-align: middle;">
-                        <span style="display:inline-block; padding-right: 8px;font-size:10px; font-weight:400;">In partnership with</span>
-                    </div>
-                    <div style="display:inline-block;vertical-align: middle;">
-                        <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/01/Partner-with-TC.png" alt="Fincra logo" width="110px" style="display:inline;">
-                    </div>
-                </div>
-                    <div style="display:table;width:100%;padding: 12px;box-sizing: border-box;border-bottom:1px solid #18181833;">
-                        
-                    </div>
-                </div>
-<div style="width: 100%; padding: 8px; height:47px; font-size: 10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 700; background-color: #fcf8fa; border-radius: 4px; box-sizing:border-box; display: table;">
-                <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=fr&amp;u=https://techcabal.com/2026/04/06/techcabal-daily-mtn-ghanas-momo-moves-out/" style="color: #28121f !important">Lire en Français</a>
-                </div>
-                <div style="display: table-cell; vertical-align:middle; text-align: right;">
-                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=ar&amp;u=https://techcabal.com/2026/04/06/techcabal-daily-mtn-ghanas-momo-moves-out/" style="color: #28121f !important">اقرأ هذا باللغة العربية</a>
-          </div>
-        </div>
-    </div>
-<div id="Story1" style="width:100%; background-color: transparent; box-sizing:border-box; padding: 0 12px 16px;">
-<div style="width: 100%;padding-bottom:16px;text-align:left;box-sizing:border-box;">
-<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin-top:0;">
-                    
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;"><strong>Happy Easter Monday. <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/2600.png" alt="☀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong></p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;">If TC Daily keeps landing in your Spam folder, please move us to your Primary or Main inbox. We deliver fresh editions every day at 7 AM WAT, and we don&#8217;t want you to miss a thing.</p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;">Let&rsquo;s dive in.</p>
-</div>
-</div>
-
-                    
-<div class="todays_edition" style="width:100%; background-color: transparent; box-sizing:border-box; text-align:center; padding:0 12px; margin-bottom:0;">
-    <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/today-edition-img-1.png" 
-         alt="today's edition image" 
-         style="width:100%; max-width:343px; height:auto; display:block; margin:0 auto;">
-
-                </div>
-                <div style="background-color: #FAE2E3;padding:16px 32px;">
-                    <ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px;">
-                    
-                    
-<li><a href="#Story1" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">MTN separates Ghana MoMo business</a></li>
-<li><a href="#Story2" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">3 in 4 Kenyans now use mobile money</a></li>
-<li><a href="#Story3" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Kenswitch and Visa partner</a></li>
-<li><a href="#Story4" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Charge eyes tokenised public listing</a></li>
-<li> <a href="#Story5" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">World Wide Web 3</a></li>
-<li> <a href="#Story6" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Job Openings</a></li>
-  
-                    </ul>
-                </div>
-            </div>
-            
-             <div id="Story1" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">Telecoms</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">MTN separates Ghana mobile money business</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/03/MTN-Group.jpeg" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: MTN</figcaption>
-</figure>
-
-<p style="padding:5px 0;margin:0;">MTN Group, Africa&#8217;s largest telecoms operator, has <a href="https://techcabal.com/2026/04/03/mtn-completes-ghana-momo-standalone-fintech-arm/" style="text-decoration: underline; color: #b61313 !important;">completed the separation of its mobile money business</a> in Ghana, carving out its most valuable growth engine into a standalone entity that can raise capital and be valued on its own terms.</p>
-<p style="padding:5px 0;margin:0;">The restructuring consolidates the mobile money arm into a new entity, MobileMoney Fintech Ltd, jointly owned by MTN Dutch Holdings B.V. and a local trust representing minority investors in Ghana. Operationally, little changes. Strategically, it marks a shift in how MTN wants investors to see its business.</p>
-<p style="padding:5px 0;margin:0;">For years, the company&rsquo;s fintech arm has been masked by the slower growth profile of voice and data. Mobile money, by contrast, is expanding rapidly, with higher margins and deeper customer engagement across payments, lending, and financial services.</p>
-<p style="padding:5px 0;margin:0;">Separating the unit begins to draw a clearer line between those businesses.</p>
-<p style="padding:5px 0;margin:0;">The timing reflects how much the market has matured. Mobile money in sub-Saharan Africa is now a <a href="https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf" style="text-decoration: underline; color: #b61313 !important;">$1.4 trillion transaction ecosystem</a>, no longer an emerging experiment but a core layer of the financial system.</p>
-<p style="padding:5px 0;margin:0;">Ghana is the test case. It is one of MTN&rsquo;s most mature markets, making it the easiest place to prove that a standalone fintech unit can attract external capital.</p>
-<p style="padding:5px 0;margin:0;">Success there would strengthen the case for similar <a href="https://www.mtn.com/mtn-group-takes-significant-step-in-strategic-delivery-with-mtn-uganda-shareholder-approval-for-momo-separation/" style="text-decoration: underline; color: #b61313 !important;">separations already underway</a> in Uganda.</p>
-<p style="padding:5px 0;margin:0;">The broader shift is already visible. MTN is positioning fintech not as a supporting product, but as the centerpiece of its long-term growth story.</p>
-                </div>
-                    <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                               <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="bizdev1" style="padding: 24px 12px 0;">
-                <div style="width:100%; background-color:transparent;box-sizing:border-box;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px;">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">20+ Markets. One API.
-                </h5>
-                <a href="https://blog.fincra.com/fincra-canada-psp-license-africa-payments/">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-3.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Fincra connects your business to Africa&#8217;s payment rails without building market by market. For collection, payout, FX, and settlement through a single integration. <a href= "https://blog.fincra.com/fincra-canada-psp-license-africa-payments/" style="text-decoration: underline;color: #b61313 !important">See what this means for your business</a>.</p>
-
-            </div>
-        </div>
-
-<div id="Story2" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Mobile Money</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">3 in 4 Kenyans now use mobile money</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2021/09/Mobile-money-agents-in-Kampala.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: Google</figcaption>
-                    </figure>
-                        
-<p style="padding:5px 0;margin:0;">Kenya&#8217;s mobile money market is booming. In 2025, the country <a href="https://techcabal.com/2026/04/04/kenya-adds-9-million-mobile-money-users/" style="text-decoration: underline; color: #b61313 !important;">added 9 million mobile subscriptions</a>, pushing the total to 51.36 million. This means that 3 in every 4 Kenyans now use mobile money.</p>
-<p style="padding:5px 0;margin:0;">The country&#8217;s mobile money penetration now stands at 98%; at nearly full capacity, the competition is no longer to get more Kenyans to use mobile money. The next fight between operators will be the first to provide vertical integration that locks in customers.&nbsp;</p>
-<p ><strong>The pricing war: </strong>Airtel Money, the country&#8217;s second-largest mobile money operator (MMO), has spent the last few years pulling a classic challenger move of lower fees, free transfers, and wider agent distribution to win over users from its largest competitor, M-PESA.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">That strategy has worked; M-PESA&#8217;s dominant market share <a href="https://www.the-star.co.ke/business/2025-12-10-airtel-money-hits-double-digit-share-as-m-pesa-slightly-drops" style="text-decoration: underline; color: #b61313 !important;">has since slipped</a> from 95% in 2023 to below 90% in 2025, while Airtel Money has climbed into double digits.</p>
-<p style="padding:5px 0;margin:0;"><strong>But the room to compete on price is shrinking. </strong>Regulators are stepping in to force fees down across the industry, with <a href="https://techcabal.com/2025/09/29/why-kenya-cut-m-pesa-airtel-money-fees/" style="text-decoration: underline; color: #b61313 !important;">plans to cut</a> average transaction costs from about KES 23 ($0.18) to KES 10 ($0.077). If these prices eventually reduce, MMOs will be forced to price reasonably; it might also dull the low-price edge that operators, such as Airtel Money, previously relied on.</p>
-<p style="padding:5px 0;margin:0;"><strong>Safaricom, on its part</strong>, is betting that the next phase of competition will not be won on price, but on depth. Instead of matching Airtel fee for fees, it is building a closed-loop ecosystem by expanding what M-PESA can do by layering in savings, credit, investment products, and merchant tools to make the wallet harder to leave.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">In a market where almost every Kenyan has been onboarded, the real winner will be the operator that users rely on the most, and that&rsquo;s what Safaricom is trying to achieve.</p>
-</div>
-<div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
- <div id="Story3" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Payments</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">Kenswitch and Visa partner to power Kenya&#8217;s payments system</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Kenswitch.jpeg" width="100%" height="auto" style="object-fit: cover"></a>
-<figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Visa East Africa Chad Pollock (seated left) and Kenswitch CEO John Mukono with other officials pose for a photo during the signing of a partnership agreement. Image source: Kenswitch</figcaption>
-</figure>
-                        
-<p style="padding:5px 0;margin:0;">Kenswitch, a Kenyan payments infrastructure provider, <a href="https://techcabal.com/2026/04/03/kenswitch-visa-deal-stakes-kenya-payments-overhaul/" style="text-decoration: underline; color: #b61313 !important;">has partnered</a> with Visa, the global payments infrastructure company, to build out the technology and services that could underpin Kenya&rsquo;s next phase of digital payments.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">Kenswitch, which already connects over 30 financial institutions, is layering on the global rails of Visa to expand its case of becoming Kenya&#8217;s next payments switch.&nbsp;</p>
-<p style="padding:5px 0;margin:0;"><strong>What both companies are planning to build:</strong> Kenya is in the middle of designing a fast payment system (FPS) and a national switch that would allow money to move seamlessly across banks and mobile wallets in real time.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">This national switch acts as an invisible layer that routes transactions between players. By plugging Visa into its infrastructure, Kenswitch is aiming to upgrade how transactions are processed and settled, while also enabling new products for financial institutions.</p>
-<p style="padding:5px 0;margin:0;"><strong>The competition is heating up:</strong> Everyone wants a stake in the rails. Kenyan banks <a href="https://techcabal.com/2025/02/04/safaricom-pesalink-banks-fps/" style="text-decoration: underline; color: #b61313 !important;">are pushing Pesalink</a>, a switch operated by the Kenya Bankers Association (KBA) through its fintech arm, Integrated Payment Services Limited (IPSL), as the backbone of the new system. Across the continent, similar backbone operators, such as the Nigeria Inter-Bank Settlement System (NIBSS), the country&rsquo;s payment switch, <a href="https://techcabal.com/2025/03/24/nibss-ceva-lobby-kenyas-new-payment-system/" style="text-decoration: underline; color: #b61313 !important;">partnered with local firm Ceva</a> in 2025.</p>
-<p style="padding:5px 0;margin:0;">Kenswitch is in an arms race to anchor Kenya&#8217;s payments ecosystem, a high-stakes contest involving a new FPS built from scratch and Pesalink, which recently <a href="https://techcabal.com/2026/02/27/techcabal-daily-pesalink-joins-papss/" style="text-decoration: underline; color: #b61313 !important;">joined</a> the Pan-African Payment and Settlement System (PAPSS) to fuel its cross-border trade ambitions.</p>
-                    </div>
-                    <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<div id="Story3" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Startups</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">South African EV startup Charge plans tokenised public raise in June</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/CHARGE-Opening_MEP-72-scaled-1-e1737096381895.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-<figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">An EV charging station operated by Charge. Image Source: Charge.</figcaption>
-</figure>
-                        
-<p style="padding:5px 0;margin:0;">Off-grid electric vehicle (EV) charging startup Charge is skipping South Africa&rsquo;s stock exchange and heading straight to the blockchain.</p>
-<p style="padding:5px 0;margin:0;">The company <a href="https://techcentral.co.za/ev-charging-start-up-charge-bypasses-jse-for-token-based-raise/279762/" style="text-decoration: underline; color: #b61313 !important;">plans a tokenised public raise</a> on Mesh, a decentralised exchange (DEX) that allows investors to buy fractional stakes in real-world assets. It is already raising privately on the platform ahead of a broader public offering expected in June, open to retail investors shut out of traditional fundraising rounds.</p>
-<p style="padding:5px 0;margin:0;"><strong>Charge&rsquo;s pitch:</strong> Building a nationwide EV charging network is capital-intensive and slow. Charge wants to deploy stations every 150 kilometers along highways, but founder Joubert Roux says institutional capital in South Africa moves cautiously, even with one of the world&rsquo;s largest pension pools. Tokenisation offers speed, access, and fewer intermediaries to bypass.</p>
-<p style="padding:5px 0;margin:0;">The deeper story is about what happens when public markets stop working for early-stage infrastructure bets. Listing on the Johannesburg Stock Exchange (JSE) <a href="https://www.jsemagazine.co.za/market-place/speed/" style="text-decoration: underline; color: #b61313 !important;">can take several weeks</a> to months. For a company racing to build ahead of EV adoption, that lag matters.</p>
-<p style="padding:5px 0;margin:0;">The economics hinge on a market that barely exists today. Charge says each station needs about seven vehicles a day to break even. That sounds manageable. But South Africa&rsquo;s EV base remains small&mdash;with EV sales <a href="https://www.cars.co.za/motoring-news/sas-ev-sales-fell-in-2025-but-the-total-nev-market-grew/337269/" style="text-decoration: underline; color: #b61313 !important;">declining</a> 13.4% in 2025&mdash;and concentrated, with limited highway usage. Demand will take time to catch up with supply.</p>
-<p style="padding:5px 0;margin:0;"><strong>That is Charge&rsquo;s bet.</strong> Build first and hope utilisation follows. Tokenisation changes who carries that risk. Instead of institutions, retail investors are funding infrastructure that may take years to generate steady returns.</p>
-<p style="padding:5px 0;margin:0;">If EV adoption accelerates, it works. If not, early investors are left waiting.</p>
-                    </div>
-                    <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  <div id="Story5" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="crypto_tracker" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    
-                    
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align:left;margin:0;text-transform:uppercase;">CRYPTO TRACKER</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">The World Wide Web3</h3>
-                    
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-                        <div style="font-style: normal; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 20px; display: table; width: 100%; font-size: 14px; font-weight: 700;">
-                            <p style="padding:5px 0;display: table-cell; vertical-align: middle; text-align:left;">Source:</p>
-                            <span style="display: table-cell; vertical-align:middle; text-align: right;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/07/CoinMarketCap-logo.png" alt="CoinMarketCap logo" style="width:96px; height: auto;"></span>
-                        </div>
-                        <table style="width: 100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; border-collapse: collapse;">
-                            <colgroup>
-                                <col span="1" style="width: 25%;">
-                                <col span="1" style="width: 25%;">
-                                <col span="1" style="width: 25%;">
-                                <col span="1" style="width: 25%;">
-                            </colgroup>
-                            <tbody style="font-size: 12px; font-weight: 400; line-height: 15px;">
-                            <tr style=" width: 100%; border-bottom:1px dashed #C3C3C3; padding: 20px;">
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Coin Name
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Current Value
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Day
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Month
-                            </p>
-                            </th>
-                            </tr>
-                            </tbody>
-                            <tbody style="font-size: 12px; font-weight: 700;">
-                            <tr style="border-bottom: 1px dashed #C3C3C3;">
-<td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Bitcoin</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$69,122</td>
-                                <td style="padding: 0">
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 3.96%
-                                    </p>
-                                </td>
-                               <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 1.80%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
-                            <tr style="border-bottom:1px dashed #C3C3C3">
-                                <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Ether</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$2,131</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 3.83%
-                                    </p>
-                                </td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 7.84%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
-                            <tr style="border-bottom:1px dashed #C3C3C3">
-<td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>XRP</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$1.33</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 2.44%
-                                    </p>
-                                </td>
-                                <td>
- <p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
-                                        &#8211; 2.00%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-
-
-                        <tbody style="font-size: 12px;font-weight: 700">
-                            <tr style="border-bottom:1px dashed #C3C3C3;margin-bottom: 20px">
-                                <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Solana</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$781.92</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">    + 2.80%
-                                    </p>
-                                </td>
-                                <td>
- <p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px"> 
-                                        &#8211; 2.85%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div style="width:100%;background-color: transparent">
-                        <p style="padding:5px 0;font-style: italic;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 400">
-                            * Data as of 06.40 AM WAT, April 5, 2026.
-                        </p>
-                            <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;padding-bottom:20px;">
-                                
-                                <div style="display: table; width: 100%;">
-                                    <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                            <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                    </div>
-                                </div>
-</div> 
-</div> 
-    
-<div id="Story6" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="financial_education" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center;">
-                       <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#FFFFFF;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Job Openings</h3>
-                </div>
-               
-                <div style="background-color:#F4FFF9;padding:16px 32px;">
-                    <ul style="padding-left: 20px;margin:0;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:400;font-size:16px;line-height:25.6px;">
-
-<li><strong>Big Cabal Media</strong> &mdash; <a href="https://noisy-van-d5b.notion.site/30b128a3cc018129af88d4c4cee2ebd4?pvs=105" style="text-decoration: underline; color: #b61313 !important;">Senior Motion Designer</a>, <a href="https://noisy-van-d5b.notion.site/309128a3cc01814eb7d5cbc7545250f0?pvs=105" style="text-decoration: underline; color: #b61313 !important;">YouTube Growth Strategist</a>, <a href="https://noisy-van-d5b.notion.site/305128a3cc01819abf08c61a669beb7f?pvs=105" style="text-decoration: underline; color: #b61313 !important;">Quality Assurance Engineer</a>, <a href="https://noisy-van-d5b.notion.site/30e128a3cc0180c1aad1e229a1130eab?pvs=105" style="text-decoration: underline; color: #b61313 !important;">Editor-in-Chief (TechCabal)</a> &mdash; Lagos, Nigeria&nbsp;</li>
-<li><strong>Big Cabal Media</strong> &mdash; <a href="https://noisy-van-d5b.notion.site/a5d9951531214a35a4801a2ffb0e0e85?pvs=105" style="text-decoration: underline; color: #b61313 !important;">Senior Reporters, South Africa</a> &mdash; Remote (South Africa)</li>
-<li><strong>Fincra</strong> &mdash; <a href="https://fincra.bamboohr.com/careers/50" style="text-decoration: underline; color: #b61313 !important;">Country Manager, Kenya</a> &mdash; Remote (Kenya)</li>
-<li><strong>Fincra</strong> &mdash; <a href="https://fincra.bamboohr.com/careers/51" style="text-decoration: underline; color: #b61313 !important;">Country Manager, Mozambique</a> &mdash; Remote (Mozambique)</li>
-<li><strong>Fincra</strong> &mdash; <a href="https://fincra.bamboohr.com/careers/49" style="text-decoration: underline; color: #b61313 !important;">Country Manager, South Africa</a> &mdash; Remote (South Africa)</li>
-<li><strong>Fincra</strong> &mdash; <a href="https://fincra.bamboohr.com/careers/42" style="text-decoration: underline; color: #b61313 !important;">Senior Product Engineer</a>, <a href="https://fincra.bamboohr.com/careers/57" style="text-decoration: underline; color: #b61313 !important;">Senior Marketing Specialist</a>, and <a href="https://fincra.com/careers/#career-list" style="text-decoration: underline; color: #b61313 !important;">several other roles</a> &mdash; Remote (anywhere in the world)</li>
-<li><strong>Numida</strong> &mdash; <a href="https://fincra.bamboohr.com/careers/42" style="text-decoration: underline; color: #b61313 !important;">Customer Lifecycle &#038; Experience Manager</a> &mdash; Nairobi, Kenya</li>
-<li><strong>Paga</strong> &mdash; <a href="https://paga.bamboohr.com/careers/390" style="text-decoration: underline; color: #b61313 !important;">Strategic Partnership Executive</a>, <a href="https://paga.bamboohr.com/careers/380" style="text-decoration: underline; color: #b61313 !important;">Software Architect</a>, <a href="https://paga.bamboohr.com/careers/391" style="text-decoration: underline; color: #b61313 !important;">Senior Sales Executive</a>, <a href="https://paga.bamboohr.com/careers/331" style="text-decoration: underline; color: #b61313 !important;">Doroki Growth Marketing Manager</a>, and <a href="https://wearepaga.com/jobs/" style="text-decoration: underline; color: #b61313 !important;">several other roles</a> &mdash; Lagos, Nigeria</li>
-</ul>
-<p>There are more jobs on <a href="https://techcabal.com/jobs/" style="text-decoration: underline; color: #b61313 !important;">TechCabal&rsquo;s job board</a>. If you have job opportunities to share, please submit them at <a href="http://bit.ly/tcxjobs" style="text-decoration: underline; color: #b61313 !important;">bit.ly/tcxjobs</a>.</p>
-</ul></div>
-</div>
-</div>
-</div>
-
-
-
-
-
-<div style="width:100%; background-color: transparent; box-sizing:border-box; text-align:center; padding:0 12px;">
-  <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/ion-img-1.png" 
-       alt="in other news image" 
-       style="width:100%; max-width:343px; height:auto; display:block; margin:0 auto;">
-</div>
-</div>
-<div style="background-color: #FAE2E3;padding:16px 32px;">
-<ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px;">
-   
-
-<li><a href="https://techcabal.com/2026/04/03/radhika-bhachu-ex-blackrock-exec-came-back-home-wealth/" style="text-decoration: underline;color:#000000 !important">Radhika Bhachu left BlackRock and returned home to rethink wealth</a></li>
-<li><a href="https://techcabal.com/2026/04/03/africa-crypto-sector-entering-its-pay-the-milkman-era/" style="text-decoration: underline;color:#000000 !important">Why Africa’s crypto sector is entering its ‘pay the milkman’ era</a></li>
-<li><a href="https://techcabal.com/2026/04/03/bitgos-nick-coombs-on-infrastructure-plumbing-in-africa/" style="text-decoration: underline;color:#000000 !important">BitGo’s Nick Coombs thinks everyone is reading Africa’s crypto market wrong</a></li>
-<li><a href="https://techcabal.com/2026/04/04/telkom-drops-to-fifth-and-last/" style="text-decoration: underline;color:#000000 !important">Telkom Kenya is now Kenya’s smallest mobile operator after two-year slide</a></li>
-<li><a href="https://techcabal.com/2026/04/04/jetron-tickets-day-1-1000/" style="text-decoration: underline;color:#000000 !important">“I wasn’t aiming for Eventbrite, I was aiming for Ticketmaster”: Day 1 to 1000 of Jetron Ticket</a></li>
-<li><a href="https://restofworld.org/2026/frugal-ai-big-tech/" style="text-decoration: underline;color:#000000 !important">Nations priced out of Big AI are building with frugal models</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            
-<div style="width:100%; background-color: transparent; box-sizing:border-box;">
-<div style="width:100%;box-sizing:border-box;background-color:transparent;padding:0 12px;text-align:center;">
-<div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center;">
-<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0;"><strong>Written by:</strong> Emmanuel Nwosu and Opeyemi Kareem</p>
-<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0;"><strong>Edited by: </strong>Emmanuel Nwosu</p>
- </div>
-</div>
-<div style="background-color:#F4FFF9;padding:16px 32px;">
-<h6 style="text-align:center;font-size:16px;font-weight:700;line-height:23.1px;margin:0 0 10px;">Want more of TechCabal?</h6>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:20px;margin:0;text-align:center;">Sign up for our insightful newsletters on the business and economy of tech in Africa.</p>
-<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000;"></div>
-<ul style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size:16px; line-height: 30px;margin:0;padding-left: 20px;">
-<li><a href="https://techcabal.com/next-wave" style="text-decoration: none !important; font-style: normal !important; color:#F23204 !important; font-weight:700 !important;">The Next Wave</a>: futuristic analysis of the business of tech in Africa. </li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfMR3ibg7a2IgUx_qGnx75IFIg1SQcpPIwQASTiFUSmENW1DA/viewform" style="text-decoration: none !important;font-style: normal !important;color:#F23204 !important;font-weight:700 !important">Francophone Weekly by TechCabal</a>: insider insights and analysis of Francophone’s tech ecosystem </li>
-</ul>
-<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000;"></div>
-<p style="padding:5px 0;font-weight:400; font-size: 16px;text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:23px;color:#000000;">P:S If you’re often missing TC Daily in your inbox, check your Promotions folder and move any edition of TC Daily from “Promotions” to your “Main” or “Primary” folder and TC Daily will always come to you.</p>
-                </div>
-<a style="display:block;width:100%;box-sizing: border-box;text-align:center;" href="mailto:ads@bigcabal.com">
-                <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/email-us-tcd-1.png" alt="Email Us" width="100%" height="auto" style="max-width:343px;margin:0 auto;object-fit: cover;"></a>
-            </div> 
-        </div>
-     </div> 
-   </div> 
- </div>
-</body>
-</html>
 ]]></content:encoded>
 					
 		
