@@ -189,6 +189,9 @@ def enrich(event):
 
     for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important', 'summary_short', 'level'):
         event.pop(old_key, None)
+    # 保留 date 字段用于 Market Pulse 日期权重
+    if 'date' not in event:
+        event['date'] = datetime.now().strftime('%Y-%m-%d')
 
     return event
 
@@ -213,7 +216,20 @@ def get_signal_events(events):
                 seen.add(event['url'])
                 if event.get('event_types', ['other'])[0] != 'other':
                     result.append(event)
-    result.sort(key=lambda x: x.get('score', 5), reverse=True)
+    today = datetime.now().strftime('%Y-%m-%d')
+    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    def _recency_boost(e):
+        score = e.get('score', 5)
+        d = e.get('date', '')
+        if d == today:
+            return score + 4
+        elif d == yesterday:
+            return score + 3
+        elif d >= week_ago:
+            return score + 1
+        return score
+    result.sort(key=_recency_boost, reverse=True)
     return result[:20]
 
 def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
@@ -301,7 +317,20 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
 
     # ── Market Pulse：始终取所有信号事件中评分最高的3条─────
     # Hero区域不变，始终显示TOP3（与主tab内容解耦）
-    sorted_signals = sorted(signals, key=lambda x: x.get('score', 0), reverse=True) if signals else []
+    today_s = datetime.now().strftime('%Y-%m-%d')
+    yesterday_s = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    week_ago_s = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    def _recency_boost_s(e):
+        score = e.get('score', 0)
+        d = e.get('date', '')
+        if d == today_s:
+            return score + 4
+        elif d == yesterday_s:
+            return score + 3
+        elif d >= week_ago_s:
+            return score + 1
+        return score
+    sorted_signals = sorted(signals, key=_recency_boost_s, reverse=True) if signals else []
     mp_events = sorted_signals[:3]
 
     return {
