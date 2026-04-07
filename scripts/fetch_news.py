@@ -15,8 +15,6 @@ except ImportError:
     pass
 
 import warnings; warnings.filterwarnings('ignore')
-import google.generativeai as genai
-from google.api_core.exceptions import ResourceExhausted
 import requests
 from bs4 import BeautifulSoup
 
@@ -517,25 +515,20 @@ def smart_filter(items):
     return result
 
 # ============================================================
-# Gemini 分析（可选）
+# 豆包分析（可选）
 # ============================================================
 
-def configure_gemini():
-    key = os.environ.get('GEMINI_API_KEY')
-    print(f"  🔑 GEMINI_API_KEY 环境变量：{'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置'}")
+def configure_doubao():
+    key = os.environ.get('DOUBAO_API_KEY')
+    print(f"  🔑 DOUBAO_API_KEY 环境变量：{'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置'}")
     if not key:
-        print(f"  ⚠️  未找到 GEMINI_API_KEY 环境变量")
+        print(f"  ⚠️  未找到 DOUBAO_API_KEY 环境变量")
         return False
     if len(key) < 10:
-        print(f"  ⚠️  GEMINI_API_KEY 长度异常（{len(key)} 字符）")
+        print(f"  ⚠️  DOUBAO_API_KEY 长度异常（{len(key)} 字符）")
         return False
-    try:
-        genai.configure(api_key=key)
-        print(f"  ✅ Gemini 配置成功")
-        return True
-    except Exception as e:
-        print(f"  ⚠️  Gemini 配置失败：{e}")
-        return False
+    print(f"  ✅ 豆包 API 配置检查通过（OpenAI 兼容模式）")
+    return True
 
 # ============================================================
 # AI 分析 Prompt 模板（Few-shot，输出稳定）
@@ -576,59 +569,69 @@ AI_EXAMPLES = """
 输出: {"url":"","summary_short":"欧洲快送平台Gorillas申请破产保护","reason":"即时配送赛道资金耗尽，同类公司需警惕融资环境恶化信号","impact":"同类快送平台、物流技术供应商","insight_label":"警示信号","score":8}
 """
 
-def analyze_events_gemini(items):
-    model = genai.GenerativeModel('gemini-2.0-flash')
+def analyze_events_doubao(items):
+    """
+    使用豆包大模型分析新闻事件（OpenAI 兼容 API）
+    模型：doubao-pro-32k
+    """
+    import os
+    api_key = os.environ.get('DOUBAO_API_KEY')
+    if not api_key:
+        print("  ⚠️  未设置 DOUBAO_API_KEY，降级跳过 AI 分析")
+        return None
+
+    url = "https://ark.cn-beijing.volcengineapi.com/completion-api/v2/chat"
+    headers = {
+        "Authorization": "Bearer " + api_key,
+        "Content-Type": "application/json"
+    }
+
     news = [{'title': it['title'], 'url': it['url'], 'source': it['source']} for it in items]
-    prompt = f"{AI_SYSTEM_PROMPT}\n{AI_EXAMPLES}\n\n分析以下事件，返回JSON数组：\n{json.dumps(news, ensure_ascii=False)}\n\n返回JSON："
-    try:
-        resp = model.generate_content(prompt)
-        text = resp.text.strip()
-        # 去掉 markdown 代码块
-        for m in ['```json', '```']:
-            if m in text:
-                parts = text.split(m)
-                for p in parts[1:]:
-                    text = p.strip()
-                    if text.endswith('```'): text = text[:-3].strip()
-                    break
-        result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
-        # 验证结果：过滤掉无效条目
-        if isinstance(result, list):
-            result = [r for r in result if r.get('url') and r.get('summary_short')]
-        return result
-    except ResourceExhausted as e:
-        print(f"  ⚠️  Gemini API 配额耗尽（429）：{e}，等待重试...")
-        # 重试3次，每次等待更长时间
-        for attempt in range(3):
-            wait = (attempt + 1) * 5
-            print(f"    等待 {wait}s 后重试（第{attempt+1}次）...")
-            time.sleep(wait)
-            try:
-                resp = model.generate_content(prompt)
-                text = resp.text.strip()
-                for m in ['```json', '```']:
-                    if m in text:
-                        parts = text.split(m)
-                        for p in parts[1:]:
-                            text = p.strip()
-                            if text.endswith('```'): text = text[:-3].strip()
-                            break
-                result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
-                if isinstance(result, list):
-                    result = [r for r in result if r.get('url') and r.get('summary_short')]
-                print(f"    重试成功！")
-                return result
-            except ResourceExhausted as re2:
-                print(f"    重试失败：{re2}")
+    prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
+
+    payload = {
+        "model": "doubao-pro-32k",
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 4096,
+        "temperature": 0.1
+    }
+
+    for attempt in range(4):
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=30)
+            if resp.status_code == 429:
+                wait = (attempt + 1) * 5
+                print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
+                time.sleep(wait)
                 continue
-            except Exception as re2:
-                print(f"    重试失败：{type(re2).__name__}: {re2}")
-                break
-        print(f"  ⚠️  Gemini API 配额耗尽，已重试{3}次，降级")
-        return None
-    except Exception as e:
-        print(f"  ⚠️  Gemini API 调用失败：{type(e).__name__}: {e}")
-        return None
+            resp.raise_for_status()
+            data = resp.json()
+            text = data.get('choices', [{}])[0].get('message', {}).get('content', '')
+            if not text:
+                print("  ⚠️  豆包返回空内容: " + str(data))
+                return None
+            for m in ['```json', '```']:
+                if m in text:
+                    parts = text.split(m)
+                    for p in parts[1:]:
+                        text = p.strip()
+                        if text.endswith('```'):
+                            text = text[:-3].strip()
+                        break
+                    break
+            result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+            if isinstance(result, list):
+                result = [r for r in result if r.get('url') and r.get('summary_short')]
+            return result
+        except Exception as e:
+            if attempt < 3:
+                wait = (attempt + 1) * 5
+                print("  ⚠️  豆包 API 调用失败（" + type(e).__name__ + "），等待 " + str(wait) + "s 后重试...")
+                time.sleep(wait)
+                continue
+            print("  ⚠️  豆包 API 调用失败，降级：" + type(e).__name__ + " " + str(e))
+            return None
+    return None
 
 def _calc_score(item):
     """程序评分：基于金额、事件类型、区域权重计算确定性分数"""
@@ -795,23 +798,23 @@ def main():
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
 
     # Gemini 分析（configure_gemini 内部会打印配置状态）
-    use_gemini = configure_gemini()
+    use_doubao = configure_doubao()
     today_events = []
-    if use_gemini:
-        print(f"\n🤖 Gemini 分析...")
+    if use_doubao:
+        print(f"\n🤖 豆包 AI 分析...")
         for i in range(0, len(filtered), 8):
             batch = filtered[i:i+8]
-            results = analyze_events_gemini(batch)
+            results = analyze_events_doubao(batch)
             if results is None:
                 print(f"  批次 {(i//8)+1} API 调用失败，降级到无 AI 模式")
-                use_gemini = False  # 降级
+                use_doubao = False  # 降级
                 break
             for item in batch:
                 r = next((x for x in results if x.get('url') == item['url']), {})
                 today_events.append(build_event(item, r))
             print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8}")
             time.sleep(0.5)
-    if not use_gemini:
+    if not use_doubao:
         for item in filtered:
             today_events.append(build_event(item))
 
