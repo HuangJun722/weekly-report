@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Tue, 07 Apr 2026 11:09:05 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 07 Apr 2026 14:30:08 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,210 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>I built a product in 20 minutes with Projectmaven</title>
+		<link>https://techcabal.com/2026/04/07/the-backend-of-projectmaven/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Tue, 07 Apr 2026 14:30:05 +0000</pubDate>
+				<category><![CDATA[The BackEnd]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[products]]></category>
+		<category><![CDATA[startups]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185333</guid>
+
+					<description><![CDATA[Projectmaven uses artificial intelligence (AI) to take a rough idea and turn it into a structured plan with proposed features, target users, third-party integrations, technical architecture, timelines, and cost estimates.]]></description>
+										<content:encoded><![CDATA[
+<p>In my short life on earth, I have started many businesses.</p>
+
+
+
+<p>In 2020, I was making face masks. One year later, I was convinced skincare was my calling, so I started making black soap. Now, that idea never made it off the ground because I never quite mastered the craft, but for a while, I was all in. </p>
+
+
+
+<p>Then there was the online restaurant, freelance gigs, a brief attempt at making clothes, and a handful of other ideas that felt just as promising at the time, but sometimes, translating those ideas into a product that actually worked was difficult.</p>
+
+
+
+<p>Recently, I found myself once again sitting on a product idea that felt exciting but slightly out of reach. This time, I wanted to try something different instead of letting it sit in my notes like many others before it, and that was how I ended up on Projectmaven.</p>
+
+
+
+<p>Founded in March 2026 by Olaotan Towry-Coker, a serial entrepreneur who previously founded AfriTickets, a ticketing platform, and <a href="https://techcabal.com/2016/09/28/what-we-learnt-from-cranium-ones-fireside-chat-with-ycs-qasar-younis/">Cranium One</a>, a Coworking space, Projectmaven is designed to turn an idea into a product.</p>
+
+
+
+<p>&#8220;I have been building in the tech space since 2011,” Towry-Coker told me when we spoke last Friday on the phone. “Non-technical founders who are trying to build technical products typically run into a layer of friction, which is that if you don&#8217;t understand the technical aspect of what you&#8217;re building, you&#8217;re going to run into problems when you have to describe it to your developer.”</p>
+
+
+
+<p>Projectmaven is his attempt to remove that friction. The platform uses artificial intelligence (AI) to take a rough idea and turn it into a structured plan with proposed features, target users, third-party integrations, technical architecture, timelines, and cost estimates.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>How Projectmaven works</strong></h2>
+
+
+
+<p>I get a lot of messages—emails, SMS, WhatsApp—sometimes simultaneously. To reduce the overwhelm and make responding easier, I dreamt of an app that could notify me of a message with a summary of what the sender said and three possible replies I could tap to send. That was the idea that I took into Projectmaven.</p>
+
+
+
+<p>When I loaded the website, it started with a single prompt asking for my idea, and I typed it in as it was in my head.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="1024" height="597" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5-1024x597.png" alt="" class="wp-image-185334" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5-1024x597.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5-300x175.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5-768x448.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5-1536x896.png 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5-1240x723.png 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-5.png 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Typing my idea into Projectmaven. Image source: TechCabal</em></figcaption></figure>
+
+
+
+<p>From there, Projectmaven began a nine-step process to help me figure out what my product was.</p>
+
+
+
+<p>The first step is product description, where the AI agent reflected my idea to me in a more structured format. It broke down what it understood I was trying to build and how it would work. It also highlighted the parts of the app I had not thought about, such as access to third-party messaging apps, privacy concerns, and difficulties in accurate message summarisation. It showed me similar existing products and suggested ways my version could stand out.</p>
+
+
+
+<p>Towry-Coker explained that Projectmaven uses a mixture of OpenAI and Gemini frontier models for its tasks.&nbsp;</p>
+
+
+
+<p>&#8220;We&#8217;ve implemented fine-tuned prompts, custom prompts that allow the system to understand the client&#8217;s request,&#8221; he told me. &#8220;What it&#8217;s doing is that it takes the idea, does a web search, crunches all the data points, and then it presents the data in a fixed format.&#8221;</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="733" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-7-1024x733.png" alt="" class="wp-image-185336" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-7-1024x733.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-7-300x215.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-7-768x550.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-7-1240x887.png 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-7.png 1494w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em><em>Projectmaven’s breakdown of my idea. Image source: TechCabal</em></em></figcaption></figure>
+
+
+
+<p>The next step is selecting the product scale, where the AI agent prompted me to choose if I wanted the product to be extra small, small, medium, or large, depending on my goal. I selected a small-scale product, basically a Minimum Viable Product (MVP).&nbsp;</p>
+
+
+
+<p>According to Olaotan, every choice a user makes at each step determines the result in subsequent ones.&nbsp;</p>
+
+
+
+<p>&#8220;Every step has an output that we&#8217;re trying to achieve&#8230; when you&#8217;re speaking to an AI agent, the prompt essentially dictates the outcome that it gives you,&#8221; he said. &#8220;We fine-tuned our prompts to specifically focus on each step that we&#8217;re building upon.&#8221;</p>
+
+
+
+<p>After selecting the scale of my product, the website prompted me to choose my target audience for the app.&nbsp;</p>
+
+
+
+<p>The AI agent recommended options based on my idea, which included busy professionals, business owners, customer support agents, gig workers, and visually impaired users.</p>
+
+
+
+<p>In the next step, I had to select features, out of a curated list, that made sense for the product I described. It allowed me to either accept them or tweak them. I didn&#8217;t have to do either because I hadn&#8217;t thought that far. I selected the agent&#8217;s recommendations and moved to the next step, integrations.&nbsp;</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="918" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-6-1024x918.png" alt="" class="wp-image-185335" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-6-1024x918.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-6-300x269.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-6-768x689.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-6-1004x900.png 1004w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-6.png 1537w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em><em>Step 5: Integration. Image source: TechCabal</em></em></figcaption></figure>
+
+
+
+<p>At this stage, it was getting more technical as I had to select the external tools and Application Programming Interface (APIs) the product would need to function, such as Gmail APIs, AI models for summarisation, and messaging systems. After integrations, it moved into design preferences, where it displayed different visual directions the app could take, prompting me to pick one.</p>
+
+
+
+<p>The next step was technical integration. This is where users start seeing things like React Native, Firebase, Flutter, and native iOS—mobile app development and backend service platforms.&nbsp;</p>
+
+
+
+<p>The user could either choose themselves or let the platform decide for them. On any other day, this is where I would check out, but I let Projectmaven choose.</p>
+
+
+
+<p>From there, it moved to the developer experience, which required me to select what level of developer I needed and showed estimated hourly rates. I chose a junior developer. I then selected a timeline, determined by how complex a product is and how fast a user wants it built.</p>
+
+
+
+<p>Twenty minutes and nine steps later, Projectmaven generated a full project summary detailing cost estimates, a statement of work, a product requirements document, design direction, technical stack, and integrations.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="597" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-1024x597.png" alt="" class="wp-image-185339" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-1024x597.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-300x175.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-768x448.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-1536x896.png 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-2048x1194.png 2048w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Projectmaven-AI-Project-Scoping-Cost-Estimation-Tool-1240x723.png 1240w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Product summary by Projectmaven. Image source: TechCabal</em></figcaption></figure>
+
+
+
+<p>For my app, it estimated a cost of about $5,720 over 160 hours, and broke the cost estimate down by feature, hours required, and the developer rate I had selected.</p>
+
+
+
+<p>Projectmaven goes a step further, allowing users to start building the app on rapid AI app builders such as Lovable, Replit, Bolt, Cursor, and v0.dev. Selecting an option provided a prompt that could be copied and pasted in the chatbox of these AI app builders. I was not going to let another of my ideas sit in a document, so I created a lovable account and ran the prompt.&nbsp;</p>
+
+
+
+<p>It worked.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="597" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8-1024x597.png" alt="" class="wp-image-185338" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8-1024x597.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8-300x175.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8-768x448.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8-1536x896.png 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8-1240x723.png 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-8.png 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em><em>Lovable’s result of prompt copied from Projectmaven. Image source: TechCabal</em></em></figcaption></figure>
+
+
+
+<p>The result wasn&#8217;t perfect because it still displayed my app as a messaging app rather than just being a pop-up notification (the whole point is that I don&#8217;t want to have to open a messaging app ever again). But it was enough to see the structure, the summarised version of messages, and short responses I could tap to send.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Who Projectmaven is for</strong></h2>
+
+
+
+<p>Towry-Coker said Projectmaven was originally built for founders like himself, who had ideas but struggled to translate them into what developers could work with. The early use case was to help founders scope their ideas and get cost estimates, but that didn’t last long.</p>
+
+
+
+<p>“What we found out was that founders typically have a one-off need,” he said. “They use it once for a project and move on. But the people who actually need it more are developers and agencies.”</p>
+
+
+
+<p>This change mattered because if a core user only shows up when they have a new idea and disappears immediately after, then it is not a sticky product. The founder has a very useful tool. Developers could use Projectmaven to scope a founder&#8217;s idea and communicate it with them.&nbsp;</p>
+
+
+
+<p>Towry-Coker described the developer workflow as involving hours of calls to understand a founder&#8217;s vision. In that context, Projectmaven compresses this lengthy process, which directly affects how developers make money.</p>
+
+
+
+<p>Project Maven runs on a subscription model with tiered plans, all tied to a credit system. Every action undertaken on the platform, such as generating outputs and refining ideas, consumes credits. The more actions taken, the more credits are consumed. The Free Plan provides 100 credits, the Starter Plan is priced at $17 monthly and provides 3,000 credits, while the $39 monthly Pro Plan provides 15,000 credits.</p>
+
+
+
+<p>Project Maven competes, loosely, with tools like ChatGPT or Gemini, even though it is built on the same underlying models, but the competition is about process. What Towry-Coker is trying to replace is the act of prompting itself, the trial-and-error of figuring out how to get those models to think through a product.</p>
+
+
+
+<p>A user who knows what they are doing can replicate most of Projectmaven’s nine-step process using ChatGPT. What the platform does is remove the need to know how to do that. Instead of starting from a blank prompt box, users move through a guided sequence of decisions; the prompting still happens, but hidden under taps. This is helpful for non-technical users because it turns an open-ended question into a structured one, but it has the product’s limitations.</p>
+
+
+
+<p>Projectmaven works best at the earliest stage, when an idea is still forming and needs shaping, but this is also the least technically difficult part of building a product. The platform does not build the product, validate whether it should exist, or solve what happens after it is launched.</p>
+
+
+
+<p>This begs the question: Is structuring the idea of a product enough to sustain it? The advantage of guided and structured prompting that Projectmaven has today is not impossible to replicate. It is possible to imagine a future where this kind of structured prompting becomes built directly into larger AI tools, which could reduce Projectmaven&#8217;s edge.</p>
+
+
+
+<p>The product works now: I used it, and in 20 minutes, I got a product that would have taken longer to figure out on my own. But Projectmaven&#8217;s long-term bet is that such a problem still exists and requires a separate tool to solve. If structured prompting becomes standard, Projectmaven becomes a feature inside larger AI models.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Safaricom migrates M-PESA app users to My OneApp in platform consolidation push</title>
 		<link>https://techcabal.com/2026/04/07/safaricom-migrates-m-pesa-users-to-my-oneapp-in-platform-consolidation-push/</link>
 		
@@ -58,7 +262,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="1024" height="819" 
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="819" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3-1024x819.jpeg" alt="" class="wp-image-185316" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3-1024x819.jpeg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3-300x240.jpeg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3-768x614.jpeg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3-1536x1229.jpeg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3-1125x900.jpeg 1125w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-3.jpeg 1600w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>My OneApp combines features from the M-PESA and mySafaricom apps, which have duplicated services.</em></figcaption></figure>
 
 
@@ -2150,196 +2354,6 @@ You received this email because you signed up on our website or made purchase fr
  </div>
 </body>
 </html>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>“I wasn’t aiming for Eventbrite, I was aiming for Ticketmaster”: Day 1 to 1000 of Jetron Ticket</title>
-		<link>https://techcabal.com/2026/04/04/jetron-tickets-day-1-1000/</link>
-		
-		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
-		<pubDate>Sat, 04 Apr 2026 10:54:28 +0000</pubDate>
-				<category><![CDATA[Day 1-1000]]></category>
-		<category><![CDATA[Jetron Tickets]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185220</guid>
-
-					<description><![CDATA[The idea for Jetron Ticket came when his close friend, Jemedafe Caleb, who organised events and parties, needed coordination and a more reliable way to manage attendees. ]]></description>
-										<content:encoded><![CDATA[
-<p>Damilola Jerugba describes his interest in building things as a fascination with how things work and come together. He said he taught himself how to code through Udemy courses and YouTube tutorials, and then went on to work as a software engineer at companies like Reddit, Moniepoint, and Busha.</p>
-
-
-
-<p>At Reddit, he worked on the advertising team, helping build the infrastructure companies use to run campaigns. At Moniepoint, he worked on customer support tools as a senior frontend engineer, and at Busha, he worked as a backend engineer. These experiences, he said, shaped how he thought about performance, reliability, and building systems that worked at scale.</p>
-
-
-
-<p>“These weren&#8217;t just jobs; they were an education I brought back into Jetron Ticket every single time.”</p>
-
-
-
-<p>The idea for Jetron Ticket came when his close friend, Jemedafe Caleb, who organised events and parties, needed coordination and a more reliable way to manage attendees. Jerugba saw it as a problem to solve and an opportunity to sharpen his coding skills. He co-founded with Akinkunmi Solomon in 2022.</p>
-
-
-
-<p>In its earliest version, Jetron Ticket was an online ticketing platform where event organisers could create events, sell tickets, and manage check-ins through a dashboard. Operated by a 10-person team, the platform gradually grew from a side project to one that supports events across multiple Nigerian cities, including Lagos, Kaduna, Plateau, and Rivers.</p>
-
-
-
-<p>Nigeria&#8217;s events scene has expanded rapidly in recent years, driven by music, nightlife, and cultural moments like <a href="https://techcabal.com/2025/12/01/top-apps-for-detty-december/" target="_blank" rel="noreferrer noopener">Detty December</a>, the festive period from mid-December through the New Year. defined by partying, concerts, and festivities. In 2025, Lagos recorded <a href="https://cowrywise.com/detty-december-2025" target="_blank" rel="noreferrer noopener">nearly ₦400 billion ($290 million)</a> in consumer spending during the period, with over ₦129 billion ($93 million) going to entertainment and nightlife alone, according to a report by YC-backed fintech, Cowrywise.</p>
-
-
-
-<p>What pushed Jerugba into ticketing was what he described as a gap between demand and infrastructure.</p>
-
-
-
-<p>&#8220;When Jetron Ticket started, there wasn&#8217;t much out there to help organisers run professional events,&#8221; he said. &#8220;The infrastructure serving that market still hasn&#8217;t caught up with the demand.&#8221;</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Day 1: The missing emails and the founder who did almost everything</strong></h2>
-
-
-
-<p>Jetron&#8217;s first day was at a Y2K-themed party organised by the same friend whose problem led Jerugba to build the product.</p>
-
-
-
-<p>He had spent two months building the platform’s first version: users could create events, attendees could buy tickets, receive QR codes, and get scanned in at the venue. It worked, mostly. But the gaps became obvious quickly.</p>
-
-
-
-<p>The platform had no system to store customer emails, which meant that there was no way to build a user base or follow up on attendees after the event. To improvise, Jerugba and his team asked attendees for their names and email addresses at check-in and then typed them into an Excel spreadsheet, one by one</p>
-
-
-
-<p>It was slow and made check-in more tedious than it needed to be, but it was the only workaround the team had.</p>
-
-
-
-<p>There were other problems. Some attendees completed payments but didn’t immediately receive their QR codes. Because the team was still small, Jerugba handled most of those issues himself.</p>
-
-
-
-<p>&#8220;I was handling everything during that time,&#8221; he said. &#8220;I handled the entire software development life cycle, customer support, and check-ins, meaning I went to the events to help them with scanning to make sure everything went well.&#8221;</p>
-
-
-
-<p>The missing email system was one of the first things the company fixed after that debut event. Payment confirmation was overhauled so tickets could be delivered reliably. With each new event, Jerugba said, the rough edges from that first night were addressed one by one.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Day 500: Growth came, and so did the bills</strong></h2>
-
-
-
-<p>By Jetron&#8217;s 100-day mark, something had started to click.&nbsp;</p>
-
-
-
-<p>The platform had grown beyond the initial circle of friends and was showing up across different cities, without a marketing strategy in place, according to Jerugba.</p>
-
-
-
-<p>“Once someone uses our platform for an event… attendees who also organise events will look at our platform and use it,” he said.</p>
-
-
-
-<p>For what started as a side project, he didn&#8217;t hide his surprise at the traction it was getting, particularly when he received a customer support request for an event in Kaduna, one of the most populous cities in Northern Nigeria.&nbsp; As usage grew, so did the demands of running the business behind it.</p>
-
-
-
-<p>From its inception, Jetron was sustained by Jerugba and his co-founder’s salaries,&nbsp; channelled directly into the company. According to Jerugba, the team was spending over ₦1.6 million ($1,160) monthly on salaries alone, with labour accounting for the bulk of its costs, followed by infrastructure and third-party tools required to keep the platform running. It worked for a while until Jerugba lost his job at Reddit in 2023 when his contract role ended.&nbsp;</p>
-
-
-
-<p>While Jetron was generating revenue, it wasn&#8217;t enough to cover costs, and letting employees go wasn&#8217;t something he was willing to consider. For about three months, Jetron ran entirely on his personal savings. “It was a tight window, but because our infrastructure costs were lean, the platform stayed live throughout.”</p>
-
-
-
-<p>His understanding of the industry itself was also deepening. Working closely with event organisers, especially during peak periods like Detty December, exposed Jerugba to the mechanics of the market.</p>
-
-
-
-<p>He began studying global players in the ticketing space like Ticketmaster and StubHub, learning how they handled growth, their unique features, how their systems were structured, and how they supported large events. That research shaped Jetron&#8217;s direction.&nbsp;</p>
-
-
-
-<p>In 2023, Jetron introduced new features, like seat mapping, to give attendees more control over where they would sit at an event, believing it would bring a level of structure that mirrored more mature ticketing systems. Over time, the product expanded to include tools like group tickets, promo codes, and curated guest lists—features designed to reflect how people actually attend events in Nigeria, often in groups or through coordinated access.</p>
-
-
-
-<p>Eventually, revenue began to reflect Jetron&#8217;s growth and match its costs. According to Jerugba, Jetron processed over ₦60 million ($43,000) in ticket sales in 2023, a figure that jumped to over ₦250 million ($180,000) in 2024.&nbsp;</p>
-
-
-
-<p>The company has continued on that trajectory, as revenue projections at least double its previous performance, driven by increased adoption, he said.</p>
-
-
-
-<p>To date, Jerugba said Jetron has supported over 2,000 events, from small gatherings to large-scale concerts.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Day 1000: Starting from scratch, again</strong></h2>
-
-
-
-<p>Jetron has survived early uncertainty and the strain of funding itself, but a new problem was rising: the system it was built on could no longer keep up.</p>
-
-
-
-<p>The earlier version of Jetron had been built quickly without speed or large-scale functionality in mind.&nbsp;</p>
-
-
-
-<p>According to Jerugba, the platform began to slow down as more features were added, and the existing infrastructure was not designed for the level of scale the company was now aiming for. So, they decided to start again.</p>
-
-
-
-<p>&#8220;With our previous infrastructure and codebase, we could not really add more features as quickly as we wanted. So we rebuilt everything from scratch,&#8221; Jerugba said.&nbsp;</p>
-
-
-
-<p>The rebuild took most of 2025 and resulted in a mobile app launch in December, along with new features designed to improve both the organiser and attendee experience. Users could discover events with tools like event calendars and location-based maps that showed what was happening nearby, and organisers could offer promo codes and administrative dashboard controls.</p>
-
-
-
-<p>It also introduced a ticket-sharing feature, which allowed users to distribute multiple purchased tickets to other users, and a queueing system for making ticket purchases. The team also expanded slightly during this period, bringing in additional support for product and mobile development.</p>
-
-
-
-<p>Still, even with a revamped system, Jerugba was already thinking beyond the current version of Jetron.</p>
-
-
-
-<p>“We&#8217;re planning on releasing something we call Jetron Fluid,” he said. “What we&#8217;ve learned is that a lot of event organisers want their own personal website. So we&#8217;re now building APIs (Application Programming Interfaces) that event hosts can integrate with. They can render their events on their own website, users can buy tickets directly from their website, but they&#8217;re using our infrastructure under the hood.”</p>
-
-
-
-<p>He described adoption as one of the most difficult challenges in building a ticketing infrastructure in Nigeria.&nbsp;</p>
-
-
-
-<p>“People are used to a very basic ticketing experience, and expanding that mindset takes work. The technology is the easier part; changing behaviour is the real challenge.”&nbsp;</p>
-
-
-
-<p>In a market where multiple ticketing platforms are competing for organisers, including Eventbrite and Tix Africa, Jerugba noted that Jetron&#8217;s advantage lies in the depth of its tooling, as the company is focused on building more advanced tools for organisers and attendees.</p>
-
-
-
-<p>He said the company was beginning to attract interest beyond Nigeria, hinting at partnerships that could bring international acts into the country and expand the scale of events hosted on the platform.&nbsp;</p>
-
-
-
-<p>For Jerugba, these were signals that Jetron Ticket could operate at a larger scale, aligning with his earlier vision.</p>
-
-
-
-<p>“When I was starting the company, I had my dream: I wanted to be as big as the big dogs out there,” Jerugba said. “I was not aiming for Eventbrite; I was aiming for Ticketmaster.”</p>
 ]]></content:encoded>
 					
 		
