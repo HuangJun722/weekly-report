@@ -731,7 +731,7 @@ def main():
     except: all_events = {}
 
     # 采集（并行优化）
-    _clear_old_cache()  # 清理旧缓存，确保每次都真实抓取
+    _clear_old_cache()  # 清理旧缓存，确保���次都真实抓取
     print("📡 采集 RSS 信源（并行）...")
     t0 = time.time()
 
@@ -762,7 +762,7 @@ def main():
 
     # HTML 备用采集（降级方案）
     if HTML_SOURCES:
-        print("\n🌐 HTML 降级采集...")
+        print("\n🌐 HTML 降级���集...")
         for cfg in HTML_SOURCES:
             items = fetch_html(cfg)
             sig = sum(1 for it in items if it['event_types'][0] != 'other')
@@ -824,7 +824,8 @@ def main():
         if event['url'] in existing_urls:
             continue  # 跨批次去重
         existing_urls.add(event['url'])  # 同批次内也去重
-        date_key = event.pop('article_date', None)  # 取出，不要写入 json
+        date_key = event.pop('article_date', None)  # 取出，写入 event 的 date 字段
+        event['date'] = date_key or today  # 保留 date 供 Market Pulse 使用
         if date_key:
             pubdate_ok += 1
             all_events.setdefault(date_key, []).append(event)
