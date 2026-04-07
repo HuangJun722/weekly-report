@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+	 xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	 xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	 xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	 xmlns:media="http://search.yahoo.com/mrss/"
+	 xmlns:custom="http://tech.eu/custom-feed">
+	<channel>
+		<title>Tech.eu</title>
+		<link>https://tech.eu</link>
+		<description><![CDATA[The premier source of European technology news, data, research, analysis and in-depth market intelligence.]]></description>
+		<atom:link href="https://tech.eu/feed" rel="self" type="application/rss+xml" />
+		<language>en</language>
+		<lastBuildDate>Tue, 07 Apr 2026 11:03:00 +0000</lastBuildDate>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+			<title><![CDATA[Handhold raises €3M to replace fragmented software buying journeys with AI account managers]]></title>
+			<category><![CDATA[SaaS]]></category>
+			<link>https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/</link>
+			<comments>https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/#comments</comments>
+			<description><![CDATA[Handhold, an AI-agent platform that turns visitors into customers without sales reps, has raised €3 million Seed funding led by Entourage Capital, with participation from Inovia Capital and e2vc. Ange...]]></description>
+			<content:encoded><![CDATA[<p><a href="https://handhold.io/">Handhold</a>, an AI-agent platform that turns visitors into customers without sales reps, has raised €3 million Seed funding led by Entourage Capital, with participation from Inovia Capital and e2vc. Angel investors include:</p>
+<ul>
+<li> Markus Villig (founder of Bolt), </li>
+<li>Ott Kaukver (former CTO of Twilio), </li>
+<li>Harsh Sinha (CTO of Wise), and </li>
+<li>Janer Gorohhov (founder of Veriff). </li>
+</ul>
+<p> Software buyers are more informed than ever and expect instant, personalised support. However, in reality, they often face unnecessary demo calls, generic onboarding flows and multiple handovers. When selling software, companies choose between product-led and sales-led motions. The choice comes down to setup complexity, product depth and price point. </p>
+<p>But when the factors don't align, neither approach works cleanly: product-led growth leads to low activation and high churn, while giving a dedicated sales rep to every SMB account isn't economically viable.</p>
+<p>  Handhold automates the inbound customer journey, from first interaction to renewal, using AI account managers that qualify leads, run demos, and activate users around the clock. </p>
+<p>I spoke to Georg Vooglaid, co-founder and CEO of Handhold, to learn more. <br> </p>
+<h2>Why high-touch account management doesn’t work for most customers</h2>
+<p> Originally from Estonia, Handhold co-founder and CEO Georg Vooglaid started his career at TransferWise, then moved to London to study and later joined Seedcamp.  ​ But while advising founders, he realised he wanted operating experience of his own. He found it at identity verification company Passbase, where he worked across the revenue organisation as the business scaled across New York and Berlin. There, he built close relationships with the company’s largest clients and supported them from validation through retention and upsell. The model proved effective, but only for the top few accounts where the economics justified that level of personal attention. ​ </p>
+<p>He explained: </p>
+<blockquote><p>“With our biggest client, I was available on WhatsApp 24/7. If we could’ve, we would’ve liked to give that level of attention to every customer, but there was no way we could afford to staff it.” ​ </p></blockquote>
+<p>After leaving Passbase, Vooglaid reunited with his now co-founder to build a compensation benchmarking side project, which they later sold.  ​</p>
+<p> In May 2023, they launched what would become Handhold, initially as a conversation intelligence tool used by companies including Superhuman, Moss, and Katana. But after running into the limits of long sales cycles and relatively low pricing, they pivoted in late 2024. ​ </p>
+<p>The result was Handhold’s current product, shaped by customer feedback and his earlier experience. Turning every prospect into a managed account </p>
+<p>According to Vooglaid:</p>
+<blockquote><p>“With AI agents, we can now replicate that one-to-one experience at scale because the economics work. You can give a ten-person startup a personal account manager that works around the clock, in any language, without actually growing headcount.” </p></blockquote>
+<p> Each prospect or customer is assigned an AI account manager who validates use cases, runs demos, supports onboarding, and manages the relationship over time.</p>
+<h2> From funnel to full lifecycle </h2>
+<p>Handhold aims to manage the full customer lifecycle — from first website visit through activation, retention, and expansion. With Handhold’s agents taking care of advancing the top of the funnel and closing smaller clients, sales teams can fully focus on building relationships with mid-market and enterprise accounts. </p>
+<p> The buyer feels like they’re dealing with the same account manager, but behind the scenes, three agents actually split the work:  ​ </p>
+<ul>
+<li>One handles text Q&A and lead qualification, </li>
+<li>Another runs voice demos tailored to the prospect, </li>
+<li>A third sits inside the product to tailor activation paths for new users. <br> </li>
+</ul>
+<p>While you don’t have to use all three agents, context carries between them, and each following agent adapts to what the previous one has already discovered.  Vooglaid explained: </p>
+<blockquote><p>“We approach it from the customer journey. What does the user actually need at each step? If you have a quick question, text works best. If you want a deeper understanding, a demo agent works better. </p></blockquote>
+<blockquote><p>During onboarding, the agent might sit inside the product and guide you directly in the UI. From the user’s perspective, it’s always the same agent — in our case, “Holly” — but the form adapts to the context. The agent is there when needed and invisible when not.” </p></blockquote>
+<p>Vooglaid contends, “If we can price based on the number of customers we manage end-to-end, that’s a strong signal that we’re delivering real value. It means we’re not just improving one part of the funnel, but actually driving outcomes across the entire journey.” This experience shaped his view on a broader problem: </p>
+<h2>What human–AI interaction really looks like in practice </h2>
+<p>I was interested in learning how people interact with AI agents. Vooglaid notes that people are initially very direct with agents — almost testing them. </p>
+<blockquote><p>“Only once the agent proves itself does the interaction become more conversational.” </p></blockquote>
+<p>Second, attention is critical. </p>
+<p> “You have five to ten seconds to engage someone — there are no social norms keeping them in the interaction. Third, active listening matters more than we expected.  Giving users space to process and respond significantly improves the experience.” </p>
+<p>And finally, personalisation is powerful, but risky. He contends that good personalisation can close a deal, but if you get it wrong and make incorrect assumptions, it can completely break trust. </p>
+<p>Vooglaid explained that Handhold started at the top of the funnel — pre-sales, which enables the team to gather context early. </p>
+<blockquote><p> “For example, if a user interacts with a Q&A agent first, that context carries into the demo. The demo is then tailored to what they’ve already asked. <br><br>As we expand deeper into the journey, that context compounds. At the same time, users become familiar with the agent, which builds trust. So when the agent appears later inside the product, it doesn’t feel intrusive.” </p></blockquote>
+<h2>More agents, but one winner: the account manager layer ​ </h2>
+<p>Agentic sales agents and tools are likely to become more commonplace, even with large players like Salesforce, which <a href="https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-qualified/">acquired</a>  Qualified. Vooglaid sees the real competitive battleground in building a persistent AI account manager that supports customers across the entire journey. </p>
+<blockquote><p>“We’re particularly focused on SMB segments, where traditional sales models are harder to scale economically. That’s where this approach delivers the most value.”</p></blockquote>
+<p> The core benefit for customers is conversion and efficiency. Vooglaid explained: </p>
+<blockquote><p>“Some companies use us to handle inbound volume they can’t manage manually. Others use us for lower-priced segments where it doesn’t make sense to allocate a salesperson.”</p></blockquote>
+<p> Handhold also sees strong demand from companies operating across time zones — the agent can handle traffic outside working hours. Ultimately, the goal is to convert more visitors into customers without compromising the experience. </p>
+<h2>Where AI agents work today and gain the most traction </h2>
+<p>Handhold soft-launched in September 2025 and grew to a strong six-figure ARR run rate by year-end. The platform is working with more than 15 customers, who are seeing strong early results. For instance, workforce management company Parim reported a 60 per cent reduction in bad-fit demos alongside double-digit month-over-month growth in sales-qualified leads since deploying Handhold. </p>
+<p> Vooglaid admits much of this is still trial and error. One advantage, however, is access to large volumes of sales call recordings and transcripts. </p>
+<blockquote><p>“From those, we can extract best practices — how to handle objections, how to structure demos — and use that to improve the agent’s performance.” </p></blockquote>
+<p>In terms of customer response, while people are already familiar with agentic Q&A and onboarding, the demo agent is more novel. Vooglaid admits that early on, there was concern around quality and whether the experience would feel polished enough. </p>
+<blockquote><p>“We’re now seeing more success with 'reverse demos,' where customers experience the agent themselves first. Once they see it working well, they’re much more open to deploying it.” </p></blockquote>
+<p>As for the hardest parts of the customer journey to get right, Vooglaid points to qualification and routing, detailing:  “If companies position the agent as a core part of their brand experience, the quality bar is much higher."</p>
+<blockquote><p>"They need it to perform really well. If the alternative is to enter new markets or cover gaps in availability, companies are more flexible. <br><br>So a lot of this comes down to brand risk and how central the agent is to the customer experience.” </p></blockquote>
+<h2>From human sellers to hybrid sales models </h2>
+<p>As for job displacement, Vooglaid asserts that Handhold is not directly replacing roles today. Instead, he sees that companies want their sales teams focused on mid-market and enterprise customers. </p>
+<blockquote><p> “We help handle the lower-value segment more efficiently. For example, one UK customer reduced low-quality demo bookings by 60 per cent. That didn’t reduce headcount — it allowed their team to focus on higher-value opportunities.” </p></blockquote>
+<p>Looking ahead, Vooglaid believes tools like his are fundamentally changing how software is bought and sold. AI enables more personalised, scalable interactions, which opens up new business models. It also shortens the sales cycle. </p>
+<blockquote><p>“We may even move toward a world where agents are buying software on behalf of users, or where some purchases become nearly instant. Exactly how this evolves is still unclear, but the direction is toward faster, more efficient buying.”</p></blockquote>
+<p> Handhold is already exploring use cases beyond SaaS, with clear applications across many industries. For example, the startup is piloting with a telecom company the use of agents to guide users through installing a Wi-Fi router. You scan a QR code, and the agent walks you through the setup step by step. </p>
+<p>According to Pieterjan Bouten, Partner at Entourage Capital, AI agents are fundamentally changing how we buy software. </p>
+<blockquote><p>“From enabling new motions to becoming buyers themselves, Georg and Uku are building a system that opens up completely new business models and helps companies validate what’s working about their sales motion and what their customers need. <br><br> The early traction is a sign that they're on to something, and we’re excited to help them redefine how software gets sold in the future.”</p></blockquote>
+<p>  The funding will accelerate go-to-market efforts and expand Handhold’s ability to move from converting leads to managing entire customer bases. <br><br></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Tue, 07 Apr 2026 11:03:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/handheld-915.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/handheld-915_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[WholeSum tops up Pre-Seed with $335K to fix AI’s trust problem in text analytics]]></title>
+			<category><![CDATA[Artificial Intelligence]]></category>
+			<link>https://tech.eu/2026/04/07/wholesum-tops-up-pre-seed-with-335k-to-fix-ais-trust-problem-in-text-analytics/</link>
+			<comments>https://tech.eu/2026/04/07/wholesum-tops-up-pre-seed-with-335k-to-fix-ais-trust-problem-in-text-analytics/#comments</comments>
+			<description><![CDATA[UK-based analytics startup WholeSum has brought its total Pre-Seed funding to $1.3 million, with an additional $335,000 new investment from Love Ventures, Beamline, and strategic angels, following its...]]></description>
+			<content:encoded><![CDATA[<p>UK-based analytics startup <a href="https://tech.eu/2026/01/05/wholesum-raises-730k-to-advance-qualitative-data-analysis-platform/">WholeSum</a> has brought its total Pre-Seed funding to $1.3 million, with an additional $335,000 new investment from <a href="https://tech.eu/2024/01/15/detecteds-innovative-onboarding-platform-attracts-25-million-investmen/">Love Ventures</a>, <a href="https://www.beamline.fund/">Beamline</a>, and strategic angels, following its initial $965k raise led by Twin Path Ventures announced earlier this year. </p>
+<p>The round comes amid growing demand from enterprises in high-trust sectors, where organisations are increasingly finding that existing AI tools fail to deliver reliable, auditable insight from large volumes of text data. </p>
+<p>While most organisational data is unstructured, teams continue to struggle to analyse it at scale. In practice, many have turned to LLMs, only to encounter hallucinations, inconsistencies, and outputs that cannot be reproduced or defended – particularly in regulated environments such as healthcare, financial services, and defence. </p>
+<p>Founded by Emily Kucharski and Dr Adam Kucharski, WholeSum was born out of the founders’ frustration with existing AI tools while analysing large-scale qualitative datasets in a previous venture. The experience highlighted a systemic problem: organisations want to extract meaningful insight from qualitative data, but lack tools that are both scalable and scientifically defensible. </p>
+<p>“From talking to dozens of large organisations making high-stakes decisions, we’ve seen a clear pattern: teams are experimenting with AI for text analysis, but quickly hit a wall when outputs can’t be trusted or reproduced,” said Emily Kucharski, cofounder and CEO of WholeSum. </p>
+<blockquote><p>“This funding allows us to move faster in building infrastructure for robust analysis at scale.”</p></blockquote>
+<p> WholeSum addresses this gap with a hybrid AI and statistical inference platform that converts free-text data into uncertainty-aware, reproducible, and auditable insight. </p>
+<p>Designed as an API-first infrastructure layer, it integrates directly into existing analytics workflows, enabling organisations to extract nuanced signals and underlying drivers with the same rigour as numerical data. </p>
+<p>Since its initial raise, WholeSum has seen strong traction across enterprise organisations in high-trust sectors. Early work with universities, financial institutions and pharmaceutical companies has demonstrated that the most valuable early signals are often buried in unstructured text data rather than in lagged quantitative metrics. </p>
+<p>“Generic LLMs can’t deliver the consistent, reliable signals that high-trust industries need from unstructured data,” said Bill Corfield, Principal at Love Ventures.  </p>
+<blockquote><p>“Emily and Adam are uniquely positioned to solve this, and we're delighted to be backing them as they scale across Pharmaceuticals, Financial Services and beyond.” The company is now rolling out pilots and enterprise integration for increasingly complex, large-scale datasets. <br></p></blockquote>
+<p>The additional funding will be used for R&D, expanding the company’s world-class scientific and engineering teams, and scale enterprise deployments in sectors where methodological rigour is critical.</p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/07/wholesum-tops-up-pre-seed-with-335k-to-fix-ais-trust-problem-in-text-analytics/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Tue, 07 Apr 2026 10:04:32 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/07/wholesum-tops-up-pre-seed-with-335k-to-fix-ais-trust-problem-in-text-analytics/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-50-739.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-50-739_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[“All of us live in the dark, we don’t have anything better to do than build,” says Baltic hacker house organiser]]></title>
+			<category><![CDATA[Artificial Intelligence]]></category>
+			<link>https://tech.eu/2026/04/07/all-of-us-live-in-the-dark-we-dont-have-anything-better-to-do-than-build-says-baltic-hacker-house-organiser/</link>
+			<comments>https://tech.eu/2026/04/07/all-of-us-live-in-the-dark-we-dont-have-anything-better-to-do-than-build-says-baltic-hacker-house-organiser/#comments</comments>
+			<description><![CDATA[“All of us live in the dark most of the year, and we don’t have anything better to do than build,” says an organiser of one of a new wave of hacker houses which have cropped up in recent months across...]]></description>
+			<content:encoded><![CDATA[<p>“All of us live in the dark most of the year, and we don’t have anything better to do than build,” says an organiser of one of a new wave of hacker houses which have cropped up in recent months across Scandinavia and the Baltics. </p>
+<p>This resurgence in hacker houses can be seen all across Europe. But across Scandinavia and the Baltics, the hacker house mentality, the esprit de corps, is particularly acute, given the relative smallness of the markets.</p>
+<p>Amid waning deal flow, particularly across the Baltics, investors see them as a quick-fire win to turbo-charge investment, while builders view them as a chance to showcase their talents. </p>
+<p>Latvia-based Shipyard, Estonia’s ruum, Lithuania’s Basedspace and Denmark-based Bifrost House are examples of the new breed to emerge. </p>
+<p>Hacker houses became popular in the early 2000s, particularly in Silicon Valley and the San Francisco Bay Area startup ecosystem- in response to rising housing costs and the need for collaborative startup environments. They are now enjoying a resurgence, with a more explicit hacker house/ builder lab format. </p>
+<h1>ruum</h1>
+<p><a href="https://www.ruumtallinn.com" target="_blank">Tallinn-based ruum</a> is one of the new crop of hacker houses which launched last year.</p>
+<p>Helery Pops, ruum founder who is also a VC and angel investor, says ruum took inspiration from Basedspace, a neighbouring hacker space in Lithuania. </p>
+<p>Pops said: “When we started looking into it, it was like an avenue of green flags everywhere. There was really no reason not to do it.” </p>
+<p>The idea was to give free working space to builders just starting out in their careers, she says. Central to ruum's hacker house programme was a full-day hackathon, with 12 teams selected from 110 applicants, with the resulting progamme running for two and a half months. </p>
+<p>Pops said: “There have been many hackathons, there have been many accelerators, there are some that are still on-going in Estonia. But at this point, it seemed that the deal flow was not coming on as it had been maybe in the last five years. There was space for something new. People are seeing there is a problem with the early-stage companies. This just seems like a possibility to solve a little bit of it.” </p>
+<p>The programme was supported by €20,000 in funding, which came from Skaala, the family office of Skype alumni and Wise cofounder Taavet Hinrikus and his Skype colleague Sten Tamkiv, Startup Estonia, and a few angel investors.  </p>
+<p>The broader Estonian tech community helped out by offering their services for free. The winners, Bilt.me (a "Lovable" for mobile apps), a six-strong team with an average age of 21, were whisked off for a week in San Francisco.</p>
+<p> Pops says: “They work six days a week. If you are in the working space with them, and you start going home at 5pm, they are generally shocked. It is very cool to see how much energy and power they are putting into it.” </p>
+<p>Ruum might have started out as a hobby, but Pops said the future could see more programmes, with a slightly amended format. </p>
+<h1>Shipyard </h1>
+<p>Meanwhile, across the Baltics, in Latvia, another newish hacker house space is the <a href="https://www.shipyardai.org" target="_blank">AI-centred Shipyard.</a></p>
+<p>According to one of Shipyard’s founders, Marija Rucevska, who is also GP at a VC investing in the Baltics, Shipyard was created recognising the impact of AI on startups. </p>
+<p>Rucevska said: “This new movement is acknowledging that you can move a lot faster to market and understand if it’s worth building something longer term or maybe just something that you are building for yourself.” </p>
+<p>Like ruum, Shipyard’s admission programme was a 48-hour hackathon, with the programme then taking on 20 teams over three months, which is then whittled down further to a group of eight teams looking to get pre-seed funding. </p>
+<p>Part of the programme, designed to turn builders into founders who are building AI-native teams, demanded builders deliver weekly shipping cycles. </p>
+<p>“If you don’t deliver, you are out,” she says. </p>
+<p>She adds: “We want to cherish and nurture the building, energy and spirit and also witness some of those of new AI native founders.” </p>
+<p>Shipyard also helps Rucevska tap into her VC pipeline efforts, she said. She says: “We have really technically brilliant people here, a lot of very AI-savvy teams applying different types of tools.” </p>
+<p>On the broader emergence of hacker houses across the Baltics, she said: “That kind of comes from the fact that all of us live in the dark most of the year and we don’t have anything better to do than build.” </p>
+<p>She says the Baltics are also “very ecosystem driven” given the relative smallness of the countries, which means that individual countries are always rooting for each other. </p>
+<h1>Bifrost House</h1>
+<p> In Scandinavia, there is Copenhagen-based <a href="https://www.bifrosthouse.com" target="_blank">Bifrost House</a>, which bills itself as “Copenhagen’s most ambitious startup community and co-working space”. </p>
+<p>It is a venture studio that builds startups from the ground up, with a hacker house mentality. Bifrost House raises capital, forms founding teams, and operates businesses across sectors, including defence technology, consumer goods, B2B SaaS, and financial data.  </p>
+<p>It is currently raising a €30m fund and has hitherto built 25 startups, with a mission to build 100 companies a year. </p>
+<p>Sophus Blom-Hanssen, who runs the operation, said there is nothing like Bifrost House in Europe, given the scale of its ambitions. </p>
+<p>He says: “The reason we are doing it, and the reason a lot of these type of spaces will emerge is that the whole modus operandi of a startup, of getting a startup to market quickly, that timeframe is compressing super-quickly. Both to build a product and the timeframe you are relevant in the market is also compressing.” </p>
+<p>On its fund, he said: "We look at what does the business case we are scoping around require from a funding perspective? And work together with the founder and entrepreneur to structure a cap table that works to actually reach the first or second milestone so that the business can raise more money."</p>
+<p>IMAGE: Bifrost House</p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/07/all-of-us-live-in-the-dark-we-dont-have-anything-better-to-do-than-build-says-baltic-hacker-house-organiser/</guid>
+			<dc:creator><![CDATA[John Reynolds]]></dc:creator>
+            			<pubDate>Tue, 07 Apr 2026 10:00:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/07/all-of-us-live-in-the-dark-we-dont-have-anything-better-to-do-than-build-says-baltic-hacker-house-organiser/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/smart-114.jpg" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/smart-114_240x135.jpg" width="240" height="135"   />
+			<custom:socialShare>false</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Xoople raises $130M Series B to build Earth’s system of record]]></title>
+			<category><![CDATA[Artificial Intelligence]]></category>
+			<link>https://tech.eu/2026/04/07/xoople-raises-130m-series-b-to-build-earths-system-of-record/</link>
+			<comments>https://tech.eu/2026/04/07/xoople-raises-130m-series-b-to-build-earths-system-of-record/#comments</comments>
+			<description><![CDATA[Xoople, the data infrastructure company building a globalsystem of record for physical change on Earth, has closed a $130 million SeriesB round. The round included investors such as Nazca Capital, MCH...]]></description>
+			<content:encoded><![CDATA[<p><a href="https://www.xoople.com/" target="_blank">Xoople</a>, the data infrastructure company building a global
+system of record for physical change on Earth, has closed a $130 million Series
+B round. The round included investors such as Nazca Capital, MCH, CDTI
+(Government of Spain), Buenavista Equity Partners, and Endeavor Catalyst,
+bringing the company’s total funding to <a href="https://tech.eu/2025/05/14/spanish-company-xoople-secures-funding-for-next-gen-earth-intelligence/" target="_blank">$225 million</a>.</p>
+<p>Founded in 2019, Xoople has spent the past seven years
+developing its end-to-end system in stealth while building global partnerships
+to integrate its data into enterprise tools. </p>
+<p>The investment positions the
+company as one of the most well-capitalised players in its category, supported
+by a proprietary satellite-based system capable of generating high-precision,
+scientific-grade datasets. Xoople is now entering its commercial phase, with
+rollout beginning this quarter.</p>
+<p>As AI systems increasingly shift toward autonomous,
+agent-driven workflows, demand for reliable real-world data is expected to
+grow. Xoople’s platform provides this “ground-truth” layer, enabling
+applications across supply chain optimisation, infrastructure monitoring,
+insurance risk modelling, disaster response, and geopolitical analysis.</p>
+<p> The
+company refers to this infrastructure as the “Earth’s System of Record,”
+designed to connect digital systems with real-time physical-world intelligence.</p>
+<blockquote><p>Every major computing era creates a new system of record;
+those that define that system become the economic centers of that era. CRMs
+gave companies a system of record for customers. Cloud platforms create systems
+of record for software and data. We are building the system of record for the
+physical world in the AI era with Xoople. After seven years developing our
+system in stealth, we are incredibly excited to begin commercialisation in Q2
+and start scaling up that capability in the market,</p></blockquote>
+<p>said <a href="https://www.linkedin.com/in/fpirondini/" target="_blank">Fabrizio Pirondini</a>, CEO of Xoople.</p>
+<p>Early users include government agencies and Fortune 500
+companies applying the platform to areas such as agricultural forecasting,
+urban planning, and scenario modelling.</p>
+<p><span>Xoople’s mission is to provide organisations
+with access to real-time physical-world intelligence, supporting the next
+generation of AI systems.</span></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/07/xoople-raises-130m-series-b-to-build-earths-system-of-record/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Tue, 07 Apr 2026 08:00:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/07/xoople-raises-130m-series-b-to-build-earths-system-of-record/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/xoople-featured-787.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/xoople-featured-787_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[nFuse raises $2M as messaging overtakes B2B ordering apps]]></title>
+			<category><![CDATA[Logistics &amp; Transportation]]></category>
+			<link>https://tech.eu/2026/04/07/nfuse-raises-2m-as-messaging-overtakes-b2b-ordering-apps/</link>
+			<comments>https://tech.eu/2026/04/07/nfuse-raises-2m-as-messaging-overtakes-b2b-ordering-apps/#comments</comments>
+			<description><![CDATA[nFuse, an AI-powered B2B ordering platform that enables retailers and HoReCa operators to place orders through WhatsApp, Viber, and SMS using text, voice, or images, has raised $2 million in funding f...]]></description>
+			<content:encoded><![CDATA[<p><a href="https://nfuse.ai/">nFuse</a>, an AI-powered B2B ordering platform that enables retailers and HoReCa operators to place orders through WhatsApp, Viber, and SMS using text, voice, or images, has raised $2 million in funding from <a href="https://tech.eu/2025/07/22/blue-longevity-clinic-raises-eur2m-to-launch-next-gen-health-centers-in-se-europe/">Eleven Ventures</a> and LAUNCHub. </p>
+<p>For the past decade, every major FMCG company has had the same idea: build a B2B eCommerce platform, get retailers to download it, and watch orders roll in digitally. The results have been almost universally disappointing. </p>
+<p>Adoption rates for B2B ordering apps in fragmented trade hover around 15 per cent. Implementation timelines stretch to 18 months. And the retailers these platforms were built to serve — millions of small shops, kiosks, and independent stores across emerging markets — largely ignore them. </p>
+<h2>The lived experience that led to nFuse </h2>
+<p>Stoyan Ivanov and Stefan Radov watched this pattern repeat for nearly 30 years combined at Coca-Cola, working across distribution, sales, and go-to-market operations. They didn't learn about fragmented trade from market research - they lived it, visiting thousands of small retailers and watching firsthand as digital initiatives repeatedly failed to gain traction.</p>
+<p> "We were the people being asked to make these B2B platforms work," Radov explains. </p>
+<blockquote><p>"We sat in the meetings where adoption targets kept getting missed. We saw the gap between what headquarters wanted and what actually happened in the field. Eventually, we decided to build what we wished had existed." </p></blockquote>
+<h2>The digital gap in fragmented trade</h2>
+<p> Fragmented trade - the network of independent retailers, small shops, and kiosks that dominate commerce in emerging markets - represents over $5 trillion in global value. And in regions like CESEE, Latin America, Africa, and Southeast Asia, these outlets account for the majority of FMCG sales. </p>
+<p>They're not a niche. They're the market. Yet the industry's approach to digitising this channel has been remarkably consistent: build sophisticated B2B portals with product catalogues, order management, and analytics dashboards. Train sales reps to onboard retailers and wait for adoption. The waiting tends to last a while. </p>
+<p>"The fundamental assumption was wrong," says Stoyan Ivanov, nFuse co-founder and CEO.</p>
+<blockquote><p> "The industry built and designed eB2B for headquarters - for the people who wanted dashboards and data. Not for the retailer standing behind a counter who just needs to reorder beer before the weekend rush."</p></blockquote>
+<p> Industry analysts estimate 80–95 per cent of B2B eCommerce projects underperform or fail outright. The platforms work technically. They just don't work behaviourally. nFuse builds on how retailers actually communicate </p>
+<p>Ivanov and Radov’s insight came from watching what retailers actually did, not what platforms wanted them to do.  Across emerging markets, small retailers were already running their businesses through messaging apps — sending photos of empty shelves, handwritten notes on Viber or voice-messaging orders because typing was slower. </p>
+<p>nFuse is built on this observation. Retailers place orders via WhatsApp, Viber, or SMS using text, voice, or photos. No app to download, no login to remember, no interface to learn. A photo of an empty shelf becomes a confirmed order in seconds.</p>
+<p> “These retailers aren’t technology-averse,” says Stefan Radov, co-founder and COO. </p>
+<blockquote><p> "They're using technology constantly. Just not the technology we kept trying to give them. They don't want another app. They want to order the same way they message their family." </p></blockquote>
+<h2>nFuse hits 70 per cent where B2B platforms stall </h2>
+<p>The numbers back the approach: while traditional B2B platforms struggle to reach 10–15 per cent adoption, nFuse reports 70 per cent+ adoption among enterprise clients. Revenue per outlet increases 15–30 per cent. Deployment takes eight weeks - not eighteen months. </p>
+<p>The economics shift too. Traditional B2B ordering - whether through sales reps, call centres, or underused portals - carries a high cost per transaction. nFuse drives cost per order targeting below $1, a 5x to 20x reduction that fundamentally changes the math on serving small, frequent-ordering retailers that were previously too expensive to reach efficiently. </p>
+<p>Early clients report ordering frequency jumping from monthly to weekly cycles. Retailers who previously waited for a sales rep visit now reorder whenever they need stock. </p>
+<p>For brands, this means increased volume, a direct channel to push more SKUs - including new launches - and faster feedback on what's moving. Outlets themselves are choosing nFuse as their primary ordering channel over portals, call centres, or waiting for a rep.</p>
+<p> The company is already working with category leaders across beverages, dairy, pet food, and wholesale distribution - validating the model across FMCG verticals, not just one category. <br></p>
+<p>According to Ivaylo Simov, Partner, Eleven Ventures, Stoyan and Stefan know the FMCG industry inside out and have set out an ambitious task to solve the broken model of B2B e-commerce solutions.  <br></p>
+<blockquote><p>“Instead of asking retailers to change their behaviour, the advancements in AI have opened a new frontier of intelligent solutions that "speak" their language via the channels they usually use. <br><br>This unlocks enormous opportunities for brands, as the tail of the market (i.e. all the fragmented hotels, small shops and restaurants) can now be served efficiently and at scale."   </p></blockquote>
+<p>Rumen Iliev, Partner, LAUNCHub Ventures, shared that the B2B eCommerce graveyard is full of platforms that worked technically but failed commercially.  </p>
+<blockquote><p>“Most portals force unnatural behaviour — buyers do not want to click through SKUs and quantities. nFuse makes ordering natural again via voice, text, or image, just like speaking or texting to a sales rep. <br><br>With 30 years in distribution, the founders have seen exactly where adoption fails. We backed the insight as much as the product.”  </p></blockquote>
+<p>The funding will accelerate nFuse's expansion across Europe, with plans to move into broader EMEA and American markets. But Ivanov sees the self-ordering flow as just the entry point. </p>
+<p>"Self-ordering is where we start because it's the most obvious pain point," he says. </p>
+<blockquote><p>"But once you're the channel through which orders flow, you become the infrastructure for the entire relationship between brands and retailers. Trade marketing, promotions, inventory visibility, loyalty programs — it all runs through the same conversation." </p></blockquote>
+<p>With the core model proven, nFuse sees payments and micro-lending as the next unlock: letting retailers pay through the same WhatsApp thread where they order, collapsing an entire workflow into one conversation. It's the same thesis applied to a bigger problem. Not "how do we build better apps?" but "how do we stop asking people to install them?" </p>
+<p>"The industry spent a decade trying to get retailers to come to us," says Ivanov. "We're just going to where they already are." <br><br><br></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/07/nfuse-raises-2m-as-messaging-overtakes-b2b-ordering-apps/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Tue, 07 Apr 2026 07:00:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/07/nfuse-raises-2m-as-messaging-overtakes-b2b-ordering-apps/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-49-88.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-49-88_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[European tech weekly recap: More than 60 tech funding deals worth over €1.2B]]></title>
+			<category><![CDATA[Data/Research]]></category>
+			<category><![CDATA[Premium]]></category>
+			<link>https://tech.eu/2026/04/06/european-tech-weekly-recap-more-than-55-tech-funding-deals-worth-over-eur504m/</link>
+			<comments>https://tech.eu/2026/04/06/european-tech-weekly-recap-more-than-55-tech-funding-deals-worth-over-eur504m/#comments</comments>
+			<description><![CDATA[Last week, we tracked more than 60 tech funding deals worth over €1.2 billion, and over 5 exits, M&A transactions, rumours, and related news stories across Europe.Haberin devamını okumak için tıklayın...]]></description>
+			<content:encoded><![CDATA[Last week, we tracked more than 60 tech funding deals worth over €1.2 billion, and over 5 exits, M&A transactions, rumours, and related news stories across Europe.<br /><br /><a href="https://tech.eu/2026/04/06/european-tech-weekly-recap-more-than-55-tech-funding-deals-worth-over-eur504m/" target="_blank">Click to read the rest of the news</a>.]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/06/european-tech-weekly-recap-more-than-55-tech-funding-deals-worth-over-eur504m/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Mon, 06 Apr 2026 08:00:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/06/european-tech-weekly-recap-more-than-55-tech-funding-deals-worth-over-eur504m/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/featured-image-05042026-195.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/featured-image-05042026-195_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Mistral raises $830M, 9fin hits unicorn status, and new Tech.eu Summit speakers unveiled]]></title>
+			<category><![CDATA[General]]></category>
+			<link>https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/</link>
+			<comments>https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/#comments</comments>
+			<description><![CDATA[This week, we tracked more than 60 tech funding deals worth over €1.2 billion and over 5 exits, M&amp;A transactions, rumours, and related news stories across Europe.Alongside the week’s top funding r...]]></description>
+			<content:encoded><![CDATA[<p>This week, we tracked more than <strong>60 tech funding deals</strong> worth over <strong>€1.2 billion</strong> and over <strong>5 exits, M&A transactions, rumours</strong>, and related news stories across Europe.</p>
+<p>Alongside the week’s top funding rounds, we’ve highlighted key industry developments, as well as notable trends in European venture activity, investor moves and emerging sectors shaping the current funding landscape. </p>
+<p>This week we shared the announcement of 🎤 <a href="https://tech.eu/2026/04/01/the-tech-eu-summit-london-2026-unveils-new-speakers-leaders-from-openai-london-stock-exchange-group-morgan-stanley-nato-innovation-fund-mastercard-and-many-more/" target="_blank">new speakers</a> for the 🇬🇧 <a href="https://tech.eu/event/2026/summit-london/" target="_blank">Tech.eu Summit London 2026</a>, taking place on 21–22 April at the Queen Elizabeth II Centre in London, featuring senior leaders, founders, and investors from leading organisations shaping technology across Europe and beyond.</p>
+<p>If email is more your thing, you can always <a href="https://tech.eu/subscribe-to-newsletter/" target="_blank">subscribe</a> to our newsletter and receive a more robust version of this round-up delivered to your inbox. </p>
+<p>Either way, let's get you up to speed.</p>
+<hr>
+<h2>💸 Notable and big funding rounds 
+</h2>
+<p> 🇫🇷 Mistral <a href="https://tech.eu/2026/03/30/mistral-and-accenture-strike-deal-to-help-businesses-deploy-ai/" target="_blank">secures</a> first debt raise of $830M to power its first data centre </p>
+<p>🇬🇧 9fin <a href="https://tech.eu/2026/03/31/london-headquartered-fintech-9fin-raises-170m-reaching-a-1-3bn-valuation/" target="_blank">raises</a> $170M, reaching a $1.3B valuation</p>
+<p>🇫🇮 IQM <a href="https://tech.eu/2026/03/30/iqm-secures-eur50m-to-accelerate-global-growth/" target="_blank">secures</a> €50M to accelerate global growth</p>
+<hr>
+<h2>🫱🏽‍🫲🏻 Noteworthy acquisitions and mergers 
+</h2>
+<p>🇮🇹 Online publishing company ZNEXT <a href="https://startupitalia.eu/economy/znext-acquisisce-factanza/" target="_blank">acquires</a> a majority stake in Factanza Media, worth €5.1M</p>
+<p>🇩🇪 Afreshed <a href="https://tech.eu/2026/03/31/afreshed-acquires-etepetete-as-food-waste-startups-consolidate-in-dach/" target="_blank">acquires</a> etepetete as food waste startups consolidate in DACH </p>
+<p>🇸🇪 Cafeyn <a href="https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/" target="_blank">acquires</a> Readly’s non-Nordic operations to scale European press platform</p>
+<p>🇩🇪 Uber has <a href="https://webrazzi.com/2026/03/31/uber-soforlu-arac-hizmeti-sirketi-blacklane-i-satin-aldi/" target="_blank">acquired</a> chauffeur-driven ride-hailing company Blacklane</p>
+<hr>
+<h2>🚀 Interesting moves from investors 
+</h2>
+<p>💰 Empirical Ventures <a href="https://tech.eu/2026/03/30/empirical-ventures-secures-ps10m-boost-to-back-uk-venture-scientists-building-deeptech-breakthroughs/" target="_blank">secures</a> £10M to back UK “venture scientists” building deeptech</p>
+<p>💸 Ysios Capital <a href="https://elreferente.es/venture-capital/ysios-capital-lanza-inceptionbio-un-fondo-de-100me-para-impulsar-la-creacion-de-companias-biotecnologicas/" target="_blank">launches</a> InceptionBio, a €100M fund to boost the creation of biotechnology companies </p>
+<p>🤖 UK government-backed fund aimed at backing female founders <a href="https://tech.eu/2026/04/02/uk-government-backed-fund-aimed-at-backing-female-founders-reaches-ps130m-close/" target="_blank">reaches</a> £130M first close</p>
+<hr>
+<h2>🗞️ In other (important) news </h2>
+<p>🇪🇪 Estonia <a href="https://investinestonia.com/estonia-launches-e10m-push-to-cut-business-paperwork/" target="_blank">launches</a> €10M push to cut business paperwork</p>
+<p>🌍 Building Europe’s <a href="https://tech.eu/2026/03/31/building-europes-deeptech-backbone-inside-european-deeptech-week-2026/" target="_blank">deeptech</a> backbone: Inside European Deeptech Week 2026</p>
+<p>💻 Nebius announces <a href="https://tech.eu/2026/03/31/nebius-says-constructing-one-of-europes-largest-data-centres/" target="_blank">construction</a> of one of Europe's largest data centres</p>
+<hr>
+<h2>📡 Recommended reads and listens </h2>
+<p>💡 The missing layer in Europe’s AI <a href="https://tech.eu/2026/04/01/the-missing-layer-in-europes-ai-strategy-data-ownership/" target="_blank">strategy</a>: data ownership</p>
+<p>🇮🇹 From fragmented <a href="https://tech.eu/2026/04/02/from-fragmented-funding-to-growing-maturity-the-italian-tech-ecosystem/" target="_blank">funding</a> to growing maturity: the Italian tech ecosystem</p>
+<p>📌 STV Group and Post-Quantum <a href="https://tech.eu/2026/03/31/stv-group-and-post-quantum-unveil-quantum-safe-drones-ready-for-battlefield-deployment/" target="_blank">unveil</a> quantum-safe drones ready for battlefield deployment</p>
+<p>🎓 Is university <a href="https://tech.eu/2026/03/31/is-university-losing-its-edge-elvtr-bets-on-live-industry-led-learning/" target="_blank">losing</a> its edge? ELVTR bets on live, industry-led learning</p>
+<hr>
+<h2>🔭 European tech startups to watch </h2>
+<style type="text/css"><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}--></style>
+<style type="text/css"><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}--></style>
+<style type="text/css"><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}--></style>
+<p>🇪🇪 “Digital Brains” for experts as Pickmybrain <a href="https://tech.eu/2026/04/01/digital-brains-for-experts-as-pickmybrain-raises-21m/" target="_blank">raises</a> $2.1M</p>
+<p>🇸🇪 Endform <a href="https://tech.eu/2026/03/31/endform-secures-eur15m-for-high-performance-web-testing-tools/" target="_blank">secures</a> €1.5M for high-performance web testing tools</p>
+<p>🇫🇮 Test of Things <a href="https://tech.eu/2026/03/31/test-of-things-raises-eur12m-to-automate-cybersecurity-testing-for-connected-devices/" target="_blank">raises</a> €1.2M to automate cybersecurity testing for connected devices</p>
+<p>🇲🇩 Paparuda Studio <a href="https://tech.eu/2026/04/02/paparuda-studio-lands-eur210k-to-launch-moldovas-next-generation-of-game-development-talent/" target="_blank">lands</a> €210,000 to launch Moldova’s next generation of game development talent</p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Fri, 03 Apr 2026 14:30:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/03/mistral-raises-830m-9fin-hits-unicorn-status-and-new-tech-eu-summit-speakers-unveiled/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/weekly-roundup-3april2026-834.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/weekly-roundup-3april2026-834_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Wearable Robotics closes €5M Series A to scale development]]></title>
+			<category><![CDATA[Robotics]]></category>
+			<link>https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/</link>
+			<comments>https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/#comments</comments>
+			<description><![CDATA[Wearable Robotics,an Italy-based company developing wearable robotics for neuromotorrehabilitation, has raised €5 million in a Series A funding round to supportinternational expansion and product deve...]]></description>
+			<content:encoded><![CDATA[<p><span><a href="http://www.wearable-robotics.com/" target="_blank">Wearable Robotics</a>,
+an Italy-based company developing wearable robotics for neuromotor
+rehabilitation, has raised €5 million in a Series A funding round to support
+international expansion and product development. </span><span>The round was led by
+<a href="https://www.cdpventurecapital.it/en/cdp_venture_homepage.page" target="_blank">CDP Venture Capital</a>, with participation from MITO Technology, LIFTT, SIMEST,
+RoboIT, and Toscana Next, a co-investment fund managed by CDP Venture Capital.</span></p>
+<p><span>The company develops
+rehabilitation solutions that combine wearable robotics with augmented and
+virtual reality technologies, aiming to improve neuromotor recovery and support
+activities of daily living. Its flagship device, ALEX RS, is a bilateral upper-limb
+rehabilitation system with more than 50 units deployed internationally, forming
+the basis of the company’s current market position.</span></p>
+<p><span>Building on this
+foundation, Wearable Robotics is focused on expanding its product portfolio
+with modular and integrable robotic solutions that extend applications across
+additional rehabilitation areas. The company also plans to advance regulatory
+approvals in key markets, strengthen compliance processes, and accelerate the
+time-to-market of its technologies.</span></p>
+<p><span>At the same time,
+the company is working to expand its commercial capabilities and distribution
+network, with a focus on strengthening its presence both in existing markets
+and internationally. This includes the development of new partnerships and
+entry into key regions, particularly in North America.</span></p>
+<p><span>According to CEO
+<a href="https://www.linkedin.com/in/lucia-lencioni-1a60b486/" target="_blank">Lucia Lencioni</a>, the funding supports the company’s next phase of growth, with a
+focus on scaling operations, advancing product innovation, and expanding its
+global footprint:</span></p>
+<blockquote><p><span>Our goal is to
+bring increasingly advanced and modular wearable robotics solutions, capable of
+generating a concrete impact along the entire rehabilitation continuum.</span></p></blockquote>
+<p><span>The funding will be
+used to complete the company’s product portfolio, scale commercial development,
+and strengthen its competitive positioning across international markets.</span></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Fri, 03 Apr 2026 08:58:44 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/03/wearable-robotics-closes-eur5m-series-a-to-scale-development/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/wearablerobotics-featured-420.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/wearablerobotics-featured-420_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Omniscient raises $4.1M to strengthen data-driven executive decision-making]]></title>
+			<category><![CDATA[Artificial Intelligence]]></category>
+			<category><![CDATA[SaaS]]></category>
+			<link>https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/</link>
+			<comments>https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/#comments</comments>
+			<description><![CDATA[Paris-basedOmniscient, a decision intelligence platform for boards and senior executives,has raised $4.1 million in pre-seed funding. The round was led by Seedcamp,with participation from Drysdale, Pl...]]></description>
+			<content:encoded><![CDATA[<p><span>Paris-based
+<a href="https://www.omniscient-ai.io/" target="_blank">Omniscient</a>, a decision intelligence platform for boards and senior executives,
+has raised $4.1 million in pre-seed funding. The round was led by <a href="https://seedcamp.com/" target="_blank">Seedcamp</a>,
+with participation from Drysdale, Plug and Play, MS&AD, Raise, Anamcara,
+and xdeck, alongside support from Bpifrance.</span></p>
+<p><span>As
+corporate reputation continues to represent a significant share of enterprise
+value, organisations face growing challenges from fragmented data sources,
+reactive workflows, and the limitations of manual monitoring.</span></p>
+<p><span>Founded
+by <a href="https://www.linkedin.com/in/arnauddestienne/" target="_blank">Arnaud d’Estienne</a> and <a href="https://www.linkedin.com/in/mehdi-benseghir-a103aa66/" target="_blank">Mehdi Benseghir</a>, both former McKinsey consultants,
+Omniscient aims to address these challenges by providing a unified intelligence
+layer for senior leadership. Its AI-driven platform aggregates and
+contextualises data from a wide range of sources, including media, social
+platforms, and internal systems, delivering real-time, actionable insights
+through a single interface.</span></p>
+<p><span>According
+to d’Estienne, a recurring pattern became evident across numerous engagements
+during his time at McKinsey.</span></p>
+<blockquote><p><span>Organisations
+were sitting on vast amounts of data, but with no reliable way to turn it into
+decisions at the speed the market demands. The cost of that gap - in missed
+signals, missed opportunities, damaged reputations, and reactive crisis
+management - is enormous. <br>Omniscient exists to close it. It gives executive
+teams the intelligence they need, and frees the operational teams around them
+to focus on what actually moves the needle, rather than manually chasing
+information. The C-suite deserves better than yesterday's news.</span></p></blockquote>
+<p><span>At its
+core, the platform uses a network of specialised AI agents to analyse areas
+such as regulatory developments, supply chains, and competitive activity.
+Outputs are synthesised into concise, real-time briefings, enabling
+organisations to identify emerging risks and opportunities more efficiently.
+The system is designed to operate across multiple markets and languages, while
+continuously improving as it adapts to each organisation’s context.</span></p>
+<p><span>Omniscient
+is already working with global companies and is expanding its capabilities
+toward predictive and prescriptive analytics.</span></p>
+<p><span>The funding will be used to
+support engineering hires, further product development, and the expansion of
+commercial operations as the company scales its platform.</span></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 14:45:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/omniscient-raises-41m-to-strengthen-data-driven-executive-decision-making/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/omniscient-featured-912.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/omniscient-featured-912_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Generare secures €20M to scale molecular discovery platform]]></title>
+			<category><![CDATA[Biotech]]></category>
+			<link>https://tech.eu/2026/04/02/generare-secures-eur20m-to-scale-molecular-discovery-platform/</link>
+			<comments>https://tech.eu/2026/04/02/generare-secures-eur20m-to-scale-molecular-discovery-platform/#comments</comments>
+			<description><![CDATA[Generare,a Paris-based biotechnology company focused on generating molecular data fordrug development, has raised €20 million in a Series A funding round. The roundwas co-led by Alven and Daphni, with...]]></description>
+			<content:encoded><![CDATA[<p><span><a href="https://generare.bio/" target="_blank">Generare</a>,
+a Paris-based biotechnology company focused on generating molecular data for
+drug development, has raised €20 million in a Series A funding round. The round
+was co-led by <a href="https://alven.co/" target="_blank">Alven</a> and <a href="https://www.daphni.com/" target="_blank">Daphni</a>, with participation from existing investors
+including Galion.exe, Teampact Ventures, and VIVES Partners.</span></p>
+<p><span>Drug
+discovery has historically been constrained to a relatively narrow chemical
+space, largely due to limited data availability beyond it. At the same time,
+microbial genomes contain a vast reservoir of molecular diversity developed
+over billions of years, much of which remains unexplored. Generare is focused
+on generating and characterising this previously inaccessible data at scale to
+make it usable for drug development.</span></p>
+<p><span>Founded
+in 2023 by <a href="https://www.linkedin.com/in/gvandenesch/" target="_blank">Guillaume Vandenesch</a> and <a href="https://www.linkedin.com/in/vincent-libis-35a82046/" target="_blank">Vincent Libis</a>, the company is building a
+large-scale dataset of novel small molecules derived from microbial genomes. By
+decoding previously unexplored biological data, it aims to expand the chemical
+space available for drug discovery and address long-standing limitations in
+access to high-quality molecular data.</span></p>
+<p><span>The
+company specialises in small molecules, the class of compounds behind many
+widely used medicines, with each newly identified molecule contributing to an
+expanding dataset. Its platform combines high-throughput cloning and sequencing
+technologies to identify, express, and characterise bioactive compounds,
+generating structured data on their properties and potential therapeutic
+applications.</span></p>
+<p><span>According
+to co-founder and CEO Vandenesch, the lack of novel, high-quality molecular
+data remains a key constraint in drug discovery, limiting the effectiveness of
+existing approaches and models.</span></p>
+<p><span>Generare
+reports increasing adoption of its platform among pharmaceutical and research
+organisations, with newly identified molecules being used in early-stage drug
+development. The company is focused on scaling its dataset and expanding its
+capabilities to meet growing demand.</span></p>
+<p><span>The
+funding will be used to expand the company’s compound library, scale its
+discovery platform, and grow its multidisciplinary team as it continues to
+develop its data-driven approach to drug discovery.</span></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/generare-secures-eur20m-to-scale-molecular-discovery-platform/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 14:40:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/generare-secures-eur20m-to-scale-molecular-discovery-platform/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/generare-featured-925.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/generare-featured-925_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Covalo lands €3.5M funding extension to advance personal care data platform]]></title>
+			<category><![CDATA[SaaS]]></category>
+			<link>https://tech.eu/2026/04/02/covalo-lands-eur35m-funding-extension-to-advance-personal-care-data-platform/</link>
+			<comments>https://tech.eu/2026/04/02/covalo-lands-eur35m-funding-extension-to-advance-personal-care-data-platform/#comments</comments>
+			<description><![CDATA[Covalo, a Switzerland-based platform for ingredient discovery and datamanagement in the personal care industry, has raised €3.5 million in a fundingextension. The round was led by Hi Inov, with partic...]]></description>
+			<content:encoded><![CDATA[<p><span><span><a href="http://www.covalo.com/" target="_blank">Covalo</a>, a Switzerland-based platform for ingredient discovery and data
+management in the personal care industry, has raised €3.5 million in a funding
+extension. The round was led by <a href="https://www.hiinov.com/" target="_blank">Hi Inov</a>, with participation from existing
+investors <a href="https://www.htgf.de/en/venture-capital-investor-2/" target="_blank">HTGF</a> and <a href="https://www.seedandspeed.com/" target="_blank">seed+speed Ventures</a>.</span></span></p>
+<p><span><span>The company addresses challenges in managing ingredient data, which is
+often fragmented across multiple systems, formats, and stakeholders. Product
+development typically requires handling large volumes of technical, regulatory,
+and sustainability information, creating operational complexity for R&D,
+regulatory, and procurement teams.</span></span></p>
+<p><span><span>According to co-founder and co-CEO <a href="https://www.linkedin.com/in/yann-chilvers/" target="_blank">Yann Chilvers</a>, inefficiencies in how
+product data is managed and shared contribute to delays and unsuccessful
+product launches, while limiting the industry’s ability to respond to
+regulatory changes and evolving market demands.</span></span></p>
+<p><span><span>Covalo provides a platform that connects suppliers and brands through
+structured, standardised data flows, replacing manual processes such as emails,
+spreadsheets, and PDFs. By integrating directly with suppliers’ product
+information management systems and brands’ internal workflows, it enables
+real-time updates and more efficient data exchange across the product
+lifecycle.</span></span></p>
+<p><span><span>The platform is used by a broad network of suppliers and brands across
+the personal care ecosystem and works with industry organisations to support
+data integration, regulatory processes, and sustainability initiatives.</span></span></p>
+<p><span><span>The funding will support the expansion of Covalo’s data platform and
+enterprise offering, including the development of AI-based tools for workflow
+automation, data processing, and regulatory compliance, as the company
+continues to scale its infrastructure for the personal care industry.</span></span></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/covalo-lands-eur35m-funding-extension-to-advance-personal-care-data-platform/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 14:34:51 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/covalo-lands-eur35m-funding-extension-to-advance-personal-care-data-platform/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/cavalo-featured-493.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/cavalo-featured-493_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[New Belgian AI platform Backbone aims to cut costly quality failures in food production]]></title>
+			<category><![CDATA[Foodtech]]></category>
+			<category><![CDATA[Industrialtech]]></category>
+			<link>https://tech.eu/2026/04/02/new-belgian-ai-platform-backbone-aims-to-cut-costly-quality-failures-in-food-production/</link>
+			<comments>https://tech.eu/2026/04/02/new-belgian-ai-platform-backbone-aims-to-cut-costly-quality-failures-in-food-production/#comments</comments>
+			<description><![CDATA[Former managers at Belgian legaltech scale-up Henchman are launching Backbone, an AI platform for real-time quality and compliance management in the food industry, with Seed funding from 100IN.  Backb...]]></description>
+			<content:encoded><![CDATA[<p> Former managers at Belgian legaltech scale-up <a href="https://tech.eu/2023/03/02/contract-drafting-startup/">Henchman</a> are launching <a href="https://www.usebackbone.ai/">Backbone</a>, an AI platform for real-time quality and compliance management in the food industry, with Seed funding from 100IN.  </p>
+<p>Backbone consolidates fragmented data, from supplier documents to lab results, giving quality managers the tools to detect risks before they reach production. </p>
+<p> A recipe change at a food manufacturer triggers an immediate cascade of quality checks. Regulatory requirements around food safety have intensified sharply in recent years, and compliance now spans the entire organisation, from procurement and R&D to production and business development. Yet most of that oversight still runs on manual processes.</p>
+<p> In practice, every supplier switch, product launch or incoming raw material delivery means manually cross-referencing certificates and specs, typically across Excel sheets, Word documents and email threads. Without real-time visibility, mismatches can go undetected until a product is already in production or worse, on the shelf. </p>
+<p>Backbone's founders estimate that poor quality costs the food sector up to 15 per cent of revenue, excluding reputational damages.</p>
+<p> The culprit is rarely a single critical failure, but an accumulation of small deviations caught too late. The recent wave of baby food incidents has put a sharp edge on what those numbers actually mean in practice. Backbone addresses the problem by centralising and automatically analysing data already within organisations, from supplier documentation and lab results to internal procedures.</p>
+<p> "The data is usually already there, but scattered across systems or locked in people's heads," says co-founder Louis Opsomer. </p>
+<blockquote><p>"We make that information usable for day-to-day decisions." </p></blockquote>
+<p>"Many companies still operate reactively, treating certificates as their quality benchmark, but a certificate is just a snapshot," he adds.</p>
+<blockquote><p> “Backbone goes well beyond audit: rather than verifying compliance after the fact, it surfaces risks continuously. Besides, the time saved on administration frees quality managers to focus on what actually moves the needle.” </p></blockquote>
+<p>The platform is now operational across multiple production sites, and the team is handling inbound interest from both domestic and international prospects. Early customers include Zoutman, Greenway, Azingro and Euromeat. </p>
+<p>The capital will fund commercial expansion and continued product development. Backbone is also establishing partnerships with international standards bodies, including BRCGS, and technology partners such as Microsoft, with integrations into Copilot among the initiatives under development. </p>
+<p>"This is a global problem, and the inbound demand confirms that," says Siska Lannoo. </p>
+<blockquote><p> "The food industry is moving towards predictive systems that surface risks before they materialise. We are helping companies make that transition now. In AI, speed is a competitive advantage, but without deep domain expertise, you cannot build something that holds up at scale. <br><br>That combination is what Backbone brings to the table."  <br></p></blockquote>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/new-belgian-ai-platform-backbone-aims-to-cut-costly-quality-failures-in-food-production/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 11:27:34 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/new-belgian-ai-platform-backbone-aims-to-cut-costly-quality-failures-in-food-production/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-70-718.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-70-718_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[UK government-backed fund aimed at backing female founders reaches £130m first close]]></title>
+			<category><![CDATA[Investment]]></category>
+			<link>https://tech.eu/2026/04/02/uk-government-backed-fund-aimed-at-backing-female-founders-reaches-ps130m-close/</link>
+			<comments>https://tech.eu/2026/04/02/uk-government-backed-fund-aimed-at-backing-female-founders-reaches-ps130m-close/#comments</comments>
+			<description><![CDATA[The flagship fund of a UK government-backed initiative addressing the shortage of equity capital for women in the UK who are building businesses has reached a £130m first close of the fund, it said to...]]></description>
+			<content:encoded><![CDATA[<p>The flagship fund of a UK government-backed initiative addressing the shortage of equity capital for women in the UK who are building businesses has reached a £130m first close of the fund, it said today.</p>
+<p>The “Women Backing Women” fund is aiming to raise £250m in total to invest in female fund managers to back female-led businesses.</p>
+<p>The initiative is a key part of the UK government-backed Women Taskforce, aimed at addressing the long-standing challenge of women struggling to secure investment capital. </p>
+<p>Just 2p of every £1 of equity funding in the UK goes to female-founded businesses. </p>
+<p>Today, Bootstrap4F, which is managing the fund of funds, said it had reached the £130m first close of its £250m raise, with investment from Barclays, the British Business Bank, M&G and Nationwide.</p>
+<p>Bootstrap4F said it will now begin investing in fund managers.</p>
+<p>Stephanie Heller, managing director at Bootstrap4F, said: “Securing £130m in commitments, with Barclays, the British Business Bank, M&G plc and Nationwide, is an exceptional outcome in this market. We have built the infrastructure to deploy capital efficiently, and the funds that have expressed interest so far are both strong and high in quality. We are committed to making every investment count.” </p>
+<p>Minister for Investment Lord Stockwood said: "The UK is a thriving business hub, and this £130m investment into the Women Backing Women fund is a major moment in showcasing the power of government and industry in coming together to make a positive difference in our investment environment."</p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/uk-government-backed-fund-aimed-at-backing-female-founders-reaches-ps130m-close/</guid>
+			<dc:creator><![CDATA[John Reynolds]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 10:33:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/uk-government-backed-fund-aimed-at-backing-female-founders-reaches-ps130m-close/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/bootstrap4f-15.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/bootstrap4f-15_240x135.png" width="240" height="135"   />
+			<custom:socialShare>false</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Cafeyn acquires Readly’s non-Nordic operations to scale European press platform]]></title>
+			<category><![CDATA[Acquisition]]></category>
+			<link>https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/</link>
+			<comments>https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/#comments</comments>
+			<description><![CDATA[Press aggregation platform Cafeyn Group is acquiring Readly’s non-Nordic operations, marking a significant step forward in its European expansion.  Cafeyn offers unlimited access to over 2,000 nationa...]]></description>
+			<content:encoded><![CDATA[<p>Press aggregation platform <a href="https://www.cafeyn.co/uk/newsstand">Cafeyn Group</a> is acquiring <a href="https://au.readly.com/">Readly</a>’s non-Nordic operations, marking a significant step forward in its European expansion.  </p>
+<p>Cafeyn offers unlimited access to over 2,000 national and international titles across multiple formats and devices, while Readly provides a single subscription that gives users access to over 8,000 magazines and newspapers. </p>
+<p>Following the transaction, Cafeyn will serve more than 2.5 million users and generate combined revenues of nearly €100 million, significantly strengthening its scale and position across Europe. </p>
+<p>Readly’s Nordic operations remain owned and operated by Bonnier News, while activities outside the Nordic countries (notably in Germany and the United Kingdom) are now joining Cafeyn. </p>
+<p>The original Readly application will continue to be owned and operated by Bonnier News for the Nordic markets. </p>
+<p>Laurent Kayser, CEO of Cafeyn, stated: </p>
+<blockquote><p> “This acquisition marks a turning point for Cafeyn. This will allow us to deliver greater value to users, more sustainable revenues for publishers, and to support quality journalism at a time when access to trusted information has never been more important.” </p></blockquote>
+<p>Anders Eriksson, CEO of Bonnier News, added:  </p>
+<blockquote><p>“This agreement enables both parties to focus on their respective growth strategies. We now look forward to further developing and growing Readly in the Nordic markets, as an important and integrated part of our business.” </p></blockquote>
+<p>The integration of Readly’s operations will significantly expand the catalogue available to users, further enhancing the breadth and diversity of content accessible on the platform, while strengthening Cafeyn’s ability to deliver a compelling and comprehensive offering to its audiences.<br><br></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 09:24:21 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/cafeyn-acquires-readlys-non-nordic-operations-to-scale-european-press-platform/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-69-205.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-69-205_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Paparuda Studio lands €210K to launch Moldova’s next generation of game development talent]]></title>
+			<category><![CDATA[Gaming]]></category>
+			<link>https://tech.eu/2026/04/02/paparuda-studio-lands-eur210k-to-launch-moldovas-next-generation-of-game-development-talent/</link>
+			<comments>https://tech.eu/2026/04/02/paparuda-studio-lands-eur210k-to-launch-moldovas-next-generation-of-game-development-talent/#comments</comments>
+			<description><![CDATA[Today, Moldovan game development studio Paparuda Studio secured an investment of over €210,000 (4 million MDL) to develop its first internationally targeted video game, marking a new step in the count...]]></description>
+			<content:encoded><![CDATA[<p>Today, Moldovan game development studio <a href="https://paparuda.games/">Paparuda Studio</a> secured an investment of over €210,000 (4 million MDL) to develop its first internationally targeted video game, marking a new step in the country’s transition toward high-value digital industries.   </p>
+<p>Founded in 2026 by Victor Marchitan, Artiom Snegur, and Alex Culeva, Paparuda Studio represents a new generation of Moldovan developers moving beyond outsourcing to create original intellectual property (IP). The company plans to launch its first commercial game within the next 12–15 months, targeting global distribution platforms.   </p>
+<p>The studio focuses on the Indie and AA (double-A) segment, combining creative independence with advanced production capabilities. </p>
+<p>Its first projects centre on cooperative (co-op) gaming experiences, designed to foster social interaction and collaborative gameplay.   </p>
+<p>The recent investment will support expanding the team from 5 to approximately 15–20 specialists, including programmers, game designers, and 2D/3D artists. Paparuda Studio is also exploring partnerships with internationally recognised publishers such as Devolver Digital and Team17, aiming to secure additional financing and global distribution opportunities.  <br></p>
+<p>The company is preparing to release its products on major platforms, including Sony PlayStation, Microsoft Xbox, and Nintendo. <br></p>
+<p>“For us, game development is not only about creating games, but also about building a community and contributing to the development of a strong local industry. We aim to create products that can compete globally,” said Victor Marchitan, co-founder of Paparuda Studio.</p>
+<p> The emergence of companies like Paparuda Studio reflects broader developments within <a href="https://tech.eu/2025/05/07/the-moldova-opportunity-mozaic-unlocks-early-stage-investment-in-europe-s-next-startup-hotspot/">Moldova</a>'s technology and creative industries. Education and policy frameworks are playing a key role in supporting this growth.</p>
+<p><em>Check out our earlier <a href="https://tech.eu/2025/05/08/7-tax-fast-registration-and-female-leadership-moldovas-startup-scene-has-arrived/">deep dive</a> into the Moldovan tech ecosystem.</em></p>
+<p>The Moldova State University (USM) has recently launched a dedicated bachelor’s degree program in Game Design, aimed at training future specialists in programming, 3D art, and animation — critical skills for the industry’s expansion. <br></p>
+<p>At the same time, Moldova Innovation Technology Park (MITP) provides a competitive environment through its simplified 7 per cent tax regime, enabling companies to reinvest in product development and talent acquisition.</p>
+<p> Moldova’s IT and creative industries continue to demonstrate strong growth: </p>
+<ul>
+<li>In 2025, the sector generated approximately $864 million, accounting for over a quarter of total service exports.</li>
+<li>Over the past five years, the sector has grown more than threefold.</li>
+<li>The IT sector represents approximately 5 per cent of total Foreign Direct Investment stock, which reached $6.3 billion in 2025.<br><br><br></li>
+</ul>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/paparuda-studio-lands-eur210k-to-launch-moldovas-next-generation-of-game-development-talent/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 08:47:37 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/paparuda-studio-lands-eur210k-to-launch-moldovas-next-generation-of-game-development-talent/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-68-229.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-68-229_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[From fragmented funding to growing maturity: the Italian tech ecosystem]]></title>
+			<category><![CDATA[General]]></category>
+			<link>https://tech.eu/2026/04/02/from-fragmented-funding-to-growing-maturity-the-italian-tech-ecosystem/</link>
+			<comments>https://tech.eu/2026/04/02/from-fragmented-funding-to-growing-maturity-the-italian-tech-ecosystem/#comments</comments>
+			<description><![CDATA[Italy’s tech funding landscape in 2025 appears larger andmore mature, but also highly concentrated. Total funding of around €2.5 billionis driven by a small number of very large rounds, while most dea...]]></description>
+			<content:encoded><![CDATA[<p>Italy’s tech funding landscape in 2025 appears larger and
+more mature, but also highly concentrated. Total funding of around <a href="https://tech.eu/2026/01/29/inside-the-numbers-ten-countries-leading-europes-tech-investment-in-2025/" target="_blank">€2.5 billion
+</a>is driven by a small number of very large rounds, while most deals remain
+relatively small, indicating a broad early-stage base but limited late-stage
+depth.</p>
+<p>A significant share of funding comes from debt, suggesting
+that more mature companies are increasingly accessing structured and
+non-dilutive capital. This reflects an evolving ecosystem in which businesses
+with stronger fundamentals can access more sophisticated financing beyond
+traditional venture equity.</p>
+<p>Investment is led by software, with strong activity across
+security, fintech, healthcare, robotics, and deeptech, pointing to a shift
+towards infrastructure, industrial applications, and regulated sectors. </p>
+<p>Cybersecurity stands out for attracting larger rounds,
+fintech remains highly active, and healthcare continues to show steady growth.
+Robotics and deeptech indicate increasing confidence in capital-intensive
+innovation, while cleantech is still developing through smaller, earlier-stage
+funding. A broader trend is the integration of AI across sectors,
+rather than its emergence as a standalone category. </p>
+<p><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/italy-323.png" title="italy-323" alt=""></p>
+<p>Overall, the market is
+shifting towards B2B, infrastructure, and applied deeptech. A key consideration
+for the coming period is whether more companies can transition from early-stage
+funding to larger growth rounds, reducing reliance on a limited number of
+outsized deals (for more detailed analyses of the European technology ecosystem, check out Tech.eu’s annual report: <a href="https://tech.eu/reports/download/8f1a623e85f0c8eaa1f15131a175beba/" target="_blank">European Tech 2025 - The Big Picture</a>). </p>
+<p>Here are the 10 companies that raised the most in 2025.</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/01-bendingspoons-413_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/01-bendingspoons-413.png" /><br>Amount raised in 2025: €1.1B
+
+<a href="https://bendingspoons.com/" target="_blank" rel="noopener">Bending Spoons</a> is a technology company that acquires and operates established digital products, focusing on long-term ownership and performance improvement. 
+
+The company enhances acquired platforms using proprietary technologies and in-house expertise to drive innovation, improve user experience, and strengthen business outcomes. Its portfolio includes widely used consumer and enterprise applications, serving hundreds of millions of users globally.
+
+In 2025, the company raised approximately <a href="https://tech.eu/2025/10/30/bending-spoons-raises-710m-one-day-after-buying-aol/" target="_blank" rel="noopener">€1.1 billion</a> across two corporate financing rounds to support the continued expansion of its product portfolio.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/02-inwit-294_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/02-inwit-294.png" /><br>Amount raised in 2025: €350M
+
+<a href="https://www.inwit.it/it/" target="_blank" rel="noopener">INWIT</a> is a digital infrastructure company that builds and manages shared telecommunications assets, including mobile towers, distributed antenna systems, and indoor coverage solutions. 
+
+It enables mobile operators and other clients to deliver reliable connectivity, supporting technologies such as 4G, 5G, and IoT. By expanding and upgrading infrastructure across urban and rural areas, INWIT plays a key role in improving network coverage, capacity, and the overall digitalisation of Italy.
+
+INWIT received a <b>€350 million</b> loan from the European Investment Bank in 2025 to support digitalisation and connectivity, including improved mobile coverage in rural areas.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/03-exein-938_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/03-exein-938.png" /><br>Amount raised in 2025: €170M
+
+<a href="https://www.exein.io/" target="_blank" rel="noopener">Exein</a> is an embedded cybersecurity company that develops software to secure IoT devices at the firmware level. 
+
+Its technology enables real-time threat detection, response, and monitoring directly on devices, helping manufacturers and operators protect connected systems without relying on cloud-based security. 
+
+By integrating security into the device itself, Exein supports compliance with evolving regulations and strengthens resilience across critical infrastructure, industrial systems, and consumer IoT environments.
+
+In 2025, Exein raised <a href="https://tech.eu/2025/12/18/exein-raises-an-additional-eur100m-to-expand-its-embedded-cybersecurity-platform/" target="_blank" rel="noopener">€170 million</a> across <a href="https://tech.eu/2025/07/16/exein-raises-eur70m-to-protect-critical-infrastructure-from-back-door-attacks/" target="_blank" rel="noopener">two</a> funding rounds to support product development, acquisitions, and international expansion of its embedded cybersecurity solutions for connected devices.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/04-nanophoria-584_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/04-nanophoria-584.png" /><br>Amount raised in 2025: €83.5M
+
+<a href="https://www.nanophoria.com/" target="_blank" rel="noopener">NanoPhoria</a> is a preclinical-stage biotechnology company developing inhalable therapies for cardiovascular diseases. Its proprietary platform uses non-viral, calcium phosphate nanoparticles to deliver biologics such as peptides and RNA directly to target tissues.
+
+By enabling precise, tissue-directed drug delivery via inhalation, NanoPhoria aims to improve treatment effectiveness while reducing systemic side effects, with a focus on conditions such as heart failure.
+
+In 2025, NanoPhoria secured <a href="https://webrazzi.com/2025/10/06/biyoteknoloji-girisimi-nanophoria-83-5-milyon-euro-yatirim-aldi/" target="_blank" rel="noopener">€83.5 million</a> in funding to support the preparation of its NP-MP1 drug candidate for human trials.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/05-generativebionics-558_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/05-generativebionics-558.png" /><br>Amount raised in 2025: €70M
+
+<a href="https://gbionics.ai/" target="_blank" rel="noopener">Generative Bionics</a> is a deeptech company developing intelligent humanoid robot platforms powered by “Physical AI,” combining robotics, artificial intelligence, and design.
+
+Its systems are built to operate safely in real-world environments, working alongside humans to support industrial and complex tasks. The company focuses on creating human-centred robots that enhance productivity and address labour shortages, with applications across sectors such as manufacturing, logistics, and healthcare.
+
+In 2025, Generative Bionics secured <a href="https://webrazzi.com/2025/12/09/generative-bionics-tether-in-de-katildigi-turda-70-milyon-euro-yatirim-aldi/" target="_blank" rel="noopener">€70 million</a> in funding to advance the development of physical AI systems, establish a dedicated manufacturing facility, and expand edge AI applications across logistics, healthcare, and manufacturing.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/06-scalapay-983_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/06-scalapay-983.png" /><br>Amount raised in 2025: €70M
+
+<a href="https://www.scalapay.com/" target="_blank" rel="noopener">Scalapay</a> is a fintech company offering buy now, pay later (BNPL) payment solutions that allow consumers to split purchases into interest-free instalments. 
+
+Founded in 2019, the platform enables seamless payments both online and in-store, helping shoppers access flexible payment options while allowing merchants to increase conversion rates and customer engagement. Scalapay operates across multiple European markets, partnering with thousands of retailers to deliver accessible and transparent digital payment experiences.
+
+In 2025, Scalapay secured <b>€70 million</b> from the European Investment Bank to support growth, expand its product offering, and strengthen its presence across existing markets.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/07-hercle-222_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/07-hercle-222.png" /><br>Amount raised in 2025: $60M
+
+<a href="https://www.hercle.financial/" target="_blank" rel="noopener">Hercle</a> is a fintech infrastructure company providing institutional-grade solutions for global money movement across fiat currencies, digital assets, and stablecoins. 
+
+Its platform enables banks, brokers, fintechs, and payment providers to execute cross-border transactions, trading, and settlement in real time, combining deep liquidity with regulatory-compliant infrastructure. By bridging traditional financial systems with digital asset networks, Hercle supports large-scale, low-latency transfers and treasury operations across multiple currencies and markets.
+
+Hercle raised <b>$60 million</b> in 2025 to strengthen its institutional services and expand its international reach.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/08-caracol-506_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/08-caracol-506.png" /><br>Amount raised in 2025: $40M
+
+<a href="https://www.caracol-am.com/" target="_blank" rel="noopener">Caracol</a> is an advanced manufacturing company that develops large-format additive manufacturing (LFAM) technologies combining robotics, software, and materials. 
+
+Its turnkey solutions enable the production of large-scale, complex components across industries such as aerospace, automotive, and energy. By integrating digital design, robotic systems, and on-demand manufacturing services, Caracol aims to improve efficiency, flexibility, and sustainability in industrial production.
+
+In 2025, Caracol secured <b>$40 million</b> in Series B funding to scale its robotic additive manufacturing platform and support global expansion and technology development.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/09-jethr-119_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/09-jethr-119.png" /><br>Amount raised in 2025: €25M
+
+<a href="https://www.jethr.com/" target="_blank" rel="noopener">Jethro</a> is a technology company that provides software solutions and integration services for the banking, financial services, and public sectors. 
+
+Its platform supports core banking systems, payments, document management, and digital services, helping organisations modernise operations, improve efficiency, and enhance customer experience.
+
+In 2025, Jet HR raised <b>€25 million</b> to enhance its platform and develop new modules aimed at reducing administrative complexity for businesses.
+</p>
+<p>
+<img src="https://cdn.tech.eu/uploads/2026/03/10-tulumenergy-730_48x27.png" class="lazyload" alt="" sizes="auto" data-src="https://cdn.tech.eu/uploads/2026/03/10-tulumenergy-730.png" /><br>Amount raised in 2025: $27M
+
+<a href="https://tulum.energy/" target="_blank" rel="noopener">Tulum Energy</a> is a climate-tech company developing methane pyrolysis technology to produce low-carbon hydrogen for industrial applications. 
+
+Its approach repurposes existing industrial equipment to generate clean hydrogen and solid carbon without direct CO₂ emissions, offering a scalable and cost-effective alternative to traditional production methods. The company focuses on enabling the decarbonisation of heavy industries such as steel, chemicals, and refining by delivering high-volume hydrogen solutions tailored to industrial demand.
+
+Tulum Energy secured <a href="https://webrazzi.com/2025/07/08/tulum-energy-27-milyon-dolar-yatirimi-aldi/" target="_blank" rel="noopener">$27 million</a> in seed funding in 2025, to develop hydrogen production technology based on methane pyrolysis.
+</p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/02/from-fragmented-funding-to-growing-maturity-the-italian-tech-ecosystem/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Thu, 02 Apr 2026 08:00:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/02/from-fragmented-funding-to-growing-maturity-the-italian-tech-ecosystem/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/03/italy-featured-286.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/03/italy-featured-286_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[The missing layer in Europe’s AI strategy: data ownership]]></title>
+			<category><![CDATA[Data Analytics]]></category>
+			<link>https://tech.eu/2026/04/01/the-missing-layer-in-europes-ai-strategy-data-ownership/</link>
+			<comments>https://tech.eu/2026/04/01/the-missing-layer-in-europes-ai-strategy-data-ownership/#comments</comments>
+			<description><![CDATA[As France   and Germany push digital sovereignty up the policy agenda, a more practical question is emerging: who actually owns the data driving Europe’s AI systems?  As models become increasingly com...]]></description>
+			<content:encoded><![CDATA[<p>As <a href="https://www.msn.com/en-us/money/other/france-ditches-zoom-and-teams-as-europe-races-for-digital-independence/ar-AA1VEpTo">France </a>  and <a href="https://www.it-planungsrat.de/beschluss/b-2026-03-it">Germany</a> push digital sovereignty up the policy agenda, a more practical question is emerging: who actually owns the data driving Europe’s AI systems?  </p>
+<p>As models become increasingly commoditised, competitive advantage is shifting to the data layer, thereby raising the stakes around who owns and controls it. In an AI-driven economy, proprietary data — not models — creates an opportunity for competitive advantage.   </p>
+<p>Analytics startup <a href="https://countly.com/">Countly</a> is a product analytics and customer engagement platform built on an open-source, self-hosted foundation.   </p>
+<p>The company helps organisations reduce reliance on third-party platforms by enabling them to capture, analyse, and act on their own user data—while maintaining full control over it. It operates on the belief that data privacy and actionable insights are fundamentally interconnected. <br> </p>
+<p>I spoke to Onur Alp Soner, CEO and co-founder of Countly, to learn more.  </p>
+<h2>The business opportunity </h2>
+<p>Embedding data sovereignty into a company’s commercial strategy can strengthen product differentiation, build regulatory trust, and unlock new partnership opportunities, particularly in sectors where data control is critical, such as healthcare, finance, and public services. </p>
+<p>Countly’s platform is built on an open-source, self-hosted foundation that helps companies collect and process operational and usage data from their software products, essentially enabling them to understand how users interact with apps and services and improve those experiences.  <br> </p>
+<p>Soner sees his company as an early mover. Founded in 2013, Countly was built around self-hosted analytics long before data sovereignty became a defining issue in Europe.  </p>
+<p>According to Soner: </p>
+<blockquote><p>“Basically, our main focus is data control and data ownership. We want companies to have complete control over the data they collect — that’s why we’ve existed since day one.” </p></blockquote>
+<p>He contends that the conversation has simply evolved in waves. When he founded Countly, he started from a simple idea: if you don’t control your data, you don’t control your systems.  <br> </p>
+<h2>From GDPR to AI: how the data ownership debate evolved <br> </h2>
+<p>Long before AI regulation entered the conversation, Soner was already working with European organisations in finance, telecoms, healthcare, and the public sector that needed to know precisely where their behavioural data lives, who can access it, and how it’s used. </p>
+<blockquote><p>“Right now, the spotlight is on AI. Before that, it was GDPR. Even when we started, the issue was that products in the market were collecting your data and giving you free analytics in exchange for using that data for their advertising business. </p></blockquote>
+<blockquote><p>I’m not just talking about Google — there were other competitors too. One of the most prominent was <a href="https://www.flurry.com/">Flurry</a>. That model was fundamental at the time.</p></blockquote>
+<blockquote><p> What’s changed is that different events — whether regulation or growing concerns about US companies using your data — have brought more attention to the importance of ownership. So we started Countly with the idea that businesses should control their own data. We didn’t want a third party using that data for purposes the business doesn’t even know about.”</p></blockquote>
+<h2>AI is making data ownership economically viable </h2>
+<p>There’s been a long-standing idea that people or companies should own and monetise their data by extracting economic value from data assets, but that model never fully materialised in earlier innovation waves like IoT and website browsing (<a href="https://tech.eu/2023/03/15/gener8-expands-the-future-of-data/">Gener8</a> is an interesting outlier).  </p>
+<p>But AI is now changing the equation, with the data that fuels machine learning systems, as a highly valuable company asset, whether directly (selling data) or indirectly (using data to generate revenue).  </p>
+<p>However, for Soner, that positioning around data ownership hasn’t always been straightforward. Of the big themes — data monetisation, regulation, and AI — he believes AI is the most promising for helping businesses understand the importance of the data layer and data control. </p>
+<blockquote><p>“Before that, it was really hard to market concepts like privacy, data ownership, and data control. It always ended up being framed as a regulation issue. <br><br>But it’s not just about regulation. Your data is the only truly unique thing about your business.”</p></blockquote>
+<h2> “Your data is your only moat”: the challenge for startups. </h2>
+<p>However, the challenge is that large players give away so much for free. How do you compete with that? </p>
+<p>Soner admits that for large companies, it might be easier, but for startups, it’s very difficult to say: ‘We won’t use all these free tools — we’ll stick to our principles.’ That’s a hard stance to maintain.” </p>
+<p>AI doesn’t create value in isolation. Rather, it amplifies the quality of the data it is trained on. Without control over that data, companies risk outsourcing their long-term competitive advantage. </p>
+<h2>The missing layer in Europe’s AI debate </h2>
+<p>So what are we talking about when we talk about a sovereign data layer? At the heart of Soner’s argument is a simple framework where the AI ecosystem exists as three layers: </p>
+<ul>
+<li>First, compute: GPUs, infrastructure, and physical machines. </li>
+<li>Second, models: LLMs like OpenAI, Anthropic, Mistral. </li>
+<li>Third, the data layer. </li>
+</ul>
+<blockquote><p>“The first two layers get most of the attention. But the data layer is just as important and arguably more so — and it’s not being discussed enough.” </p></blockquote>
+<p>He contends that conversations with large companies, this often becomes a regulation issue: </p>
+<blockquote><p> “Because of GDPR, we can’t do this.” But the real question is — why are you sending that data to external tools in the first place? This is operational data that feeds your AI models. It’s what makes AI valuable. AI amplifies whatever you already have — or don’t have — as a business. </p></blockquote>
+<blockquote><p>But because everyone is afraid of missing out on AI, they focus on the exciting parts and ignore the “boring” ones: data control, data cleaning, and organisation-wide tracking strategies. Those are actually the critical conversations.”</p></blockquote>
+<h2> Making sovereignty sell: from regulation to user value</h2>
+<p> So how do you incentivise companies to prioritise data ownership while still staying competitive? Soner points to Apple as a rare example of successfully turning privacy into a product feature. </p>
+<blockquote><p>“They communicate clearly: your data stays on your device. That’s the right approach. It’s not about saying, “We’re a German company, we follow strict regulations.” Customers don’t care about that. They care about what’s in it for them.” So you need to translate data sovereignty into tangible user benefits:<br> </p></blockquote>
+<blockquote><p>“This is how we protect your data. This is how we keep it in our infrastructure. And you still get great functionality.” That’s a much more understandable story.” </p></blockquote>
+<h2>Europe wants control but runs on foreign tech </h2>
+<p>But can a European company really claim digital sovereignty if it relies on US infrastructure, analytics, or models? Soner admits that even Countly, which is building infrastructure for this purpose, still relies on technologies from US or Chinese companies.  This creates a paradox. He admits:</p>
+<blockquote><p>“There’s no way around it. Take databases — almost all major ones are US-based. So the question isn’t whether you use external technology—it’s how you use it. It’s about layering.” </p></blockquote>
+<p>Rather than full independence, data sovereignty becomes a deliberate architectural strategy, deciding what stays in-house and what can be outsourced. For example, you can control your data flows, decide what leaves your system and build proprietary datasets. He suggests that while you can use tools like Google Analytics, you should be mindful of what data you are sending and why. </p>
+<blockquote><p> “Maybe you intentionally only use such a tool for high-level metrics, while keeping detailed user data in your own infrastructure. Because data is where long-term competitive advantage comes from.</p></blockquote>
+<blockquote><p>Companies like Instagram, Amazon, Uber, and Airbnb are all data businesses. If you blindly use tools without thinking about your data flows, you lose that advantage.” </p></blockquote>
+<h2>Make data ownership part of your company culture </h2>
+<p>Soner suggests that even for small companies, if you build data ownership into your story early, it becomes part of your culture. </p>
+<blockquote><p>“At Countly, every decision goes through that lens of data ownership. You can’t just say, “Let’s use this SaaS tool” or “Let’s plug in this AI." There’s always a level of mindfulness. That becomes part of how the organisation grows.” </p></blockquote>
+<h2>Europe can build, but can it keep its companies? </h2>
+<p>Europe’s challenge is not building companies, but keeping them. </p>
+<p>Looking ahead, I wanted to understand what a truly sovereign European digital infrastructure would look like. Soner explained that in the first instance, Europe needs strong infrastructure: data centres, electricity, and networking.</p>
+<p>"Everything else depends on that."</p>
+<p>However, this can not be considered in isolation from European talent.  </p>
+<p>He asserts that while Europe is already building strong companies, the migration of companies to the US for capital and a broader ecosystem is a bigger issue, admitting, “We almost did the same ourselves."</p>
+<blockquote><p>"So the key question becomes: how do you make it attractive for founders to stay? That comes down to funding, incentives, and ecosystem support. If Europe can strengthen that, it can retain talent and companies—and that’s probably the most strategic investment it can make right now.”</p></blockquote>
+<h2> Stop benchmarking the US and China and start building leverage</h2>
+<p> In terms of competitiveness, Soner asserts that we’re focusing on the wrong thing and that, while the debate often becomes "the US is ahead, China is ahead," the real race right now is about AGI and who gets there first. </p>
+<p>“Still, that doesn’t mean Europe should wait. We can’t wait for others to define the future,” he says.</p>
+<blockquote><p> “We need to build our own systems, support our own companies, and retain our talent. If we do that, it’s perfectly fine to use global technologies—but on our own terms. <br><br>Control of the data layer — not just the models — will define who captures value in AI.”</p></blockquote>
+<p>The real opportunity for Europe lies not in competing on models, but in owning the data layer that underpins them.<br><br></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/01/the-missing-layer-in-europes-ai-strategy-data-ownership/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Wed, 01 Apr 2026 11:58:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/01/the-missing-layer-in-europes-ai-strategy-data-ownership/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-67-390.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-67-390_240x135.png" width="240" height="135"   />
+			<custom:socialShare>false</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[The Tech.eu Summit London 2026 unveils new speakers: Leaders from OpenAI, London Stock Exchange Group, Morgan Stanley, NATO Innovation Fund, Mastercard and many more…]]></title>
+			<category><![CDATA[Events]]></category>
+			<link>https://tech.eu/2026/04/01/the-tech-eu-summit-london-2026-unveils-new-speakers-leaders-from-openai-london-stock-exchange-group-morgan-stanley-nato-innovation-fund-mastercard-and-many-more/</link>
+			<comments>https://tech.eu/2026/04/01/the-tech-eu-summit-london-2026-unveils-new-speakers-leaders-from-openai-london-stock-exchange-group-morgan-stanley-nato-innovation-fund-mastercard-and-many-more/#comments</comments>
+			<description><![CDATA[Following our previous announcements, we are excited to unveil a new group of confirmed speakers for the Tech.eu Summit London 2026. The event will take place on 21–22 April 2026 at the Queen Elizabet...]]></description>
+			<content:encoded><![CDATA[<p>Following our previous <a href="https://tech.eu/2026/02/26/new-speakers-for-the-tech-eu-summit-london-2026-announced/" target="_blank"><strong>announcements</strong></a>, we are excited to unveil a new group of confirmed speakers for the <a href="https://tech.eu/event/2026/summit-london/" target="_blank"><strong>Tech.eu Summit London 2026</strong></a>. The event will take place on <strong>21–22 April 2026 at the Queen Elizabeth II Centre in London</strong>, featuring senior leaders, founders and investors from some of the most influential organisations driving technology forward across Europe and beyond.</p>
+<p>This newly confirmed group brings together a diverse mix of perspectives, spanning global financial institutions, deep tech ventures, AI-focused startups and venture capital firms actively investing in the next wave of European technology. Their addition further strengthens a lineup built around practical insight and real-world experience from across the industry.</p>
+<h2>Meet the new speakers</h2>
+<p><a href="https://www.linkedin.com/in/alexandra-edmonds/" target="_blank"><strong>Alexandra Edmonds - Mastercard / Vice President of Emerging Fin Tech & Agentic AI, Startup Investments & Partnerships</strong></a></p>
+<p><a href="https://www.linkedin.com/in/axel-kalinowski-9780982/" target="_blank"><strong>Axel Kalinowski - London Stock Exchange Group / Head of Central and Southern Europe </strong></a></p>
+<p><a href="https://www.linkedin.com/in/davesmallwood/" target="_blank"><strong>Dave Smallwood - Mollie / Managing Director UK & Ireland </strong></a></p>
+<p><a href="https://www.linkedin.com/in/edmondyang/" target="_blank"><strong>Edmond Yang -  Yangmedia / Founder </strong></a></p>
+<p><a href="https://www.linkedin.com/in/felixjmartinez/" target="_blank"><strong>Felix Martinez - Seedcamp / Principal </strong></a></p>
+<p><a href="https://www.linkedin.com/in/gianmariagramondi/" target="_blank"><strong>Gian Maria Gramondi - Shop Circle / Co-Founder<br></strong></a></p>
+<p><strong><a href="https://www.linkedin.com/in/greg-lawton-3545497b/" target="_blank">Greg Lawton - Nodes & Links / Co-Founder & CEO</a></strong></p>
+<p><a href="https://www.linkedin.com/in/harshit-krishna/" target="_blank"><strong>Harshit Krishna - Multiverse Computing / Head of Funding and CorpDev</strong></a></p>
+<p><a href="https://www.linkedin.com/in/jean-michel-deligny-96152/" target="_blank"><strong>Jean-Michel Deligny - Triple B / Chair of the Investment Committee </strong></a></p>
+<p><a href="https://www.linkedin.com/in/louis-mather-8166ba82/" target="_blank"><strong>Louis Mather - Axelera AI / VP Strategy </strong></a></p>
+<p><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/04/techeu-summit3-468.png" title="techeu-summit3-468" alt=""></p>
+<p><strong><a href="linkedin.com/in/maud-vinet-quantum?originalSubdomain=fr">Maud Vinet - Quobly / Chief Executive Officer and Co-Founder</a></strong></p>
+<p><strong><a href="https://www.linkedin.com/in/naseemmoumene/" target="_blank">Naseem Moumene - Northzone / Vice President <br></a></strong></p>
+<p><a href="https://www.linkedin.com/in/paytondobbs/" target="_blank"><strong>Payton Dobbs - Hoxton Ventures / Partner <br></strong></a></p>
+<p><a href="https://www.linkedin.com/in/sam-ross-29ab0311/" target="_blank"><strong>Sam Ross - Remote / Chief Legal Officer </strong></a></p>
+<p><a href="https://www.linkedin.com/in/ksmitra/" target="_blank"><strong>Sanghamitra Karra - Morgan Stanley / Global Co-Head of Inclusive & Sustainable Ventures </strong></a></p>
+<p><a href="https://www.linkedin.com/in/sarahkunst/" target="_blank"><strong>Sarah Kunst - Cleo Capital / Managing Director </strong></a></p>
+<p><a href="https://www.linkedin.com/in/sedinam-simpson/" target="_blank"><strong>Sedinam Simpson - The Tech Bros / Co-Founder<br></strong></a></p>
+<p><a href="https://www.linkedin.com/in/ted-eltringham-15860bab/" target="_blank"><strong>Ted Eltringham - Architect AI / CEO & Co-Founder </strong></a></p>
+<p><a href="https://www.linkedin.com/in/terosarkkinen/" target="_blank"><strong>Tero Sarkkinen - Basemark / Founder & CEO </strong></a></p>
+<p><a href="https://www.linkedin.com/in/wulfie-bain/" target="_blank"><strong>Wulfie Bain - OpenAI / International Applied AI Lead for Startups </strong></a></p>
+<p><a href="https://www.linkedin.com/in/xavier-collins-58492280/" target="_blank"><strong>Xavier Collins - WonderStudios / Co-Founder and CEO</strong></a></p>
+<p><a href="https://www.linkedin.com/in/zivreichert/" target="_blank"><strong>Ziv Reichert - Phoenix Court / Partner </strong></a></p>
+<p><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/04/techeu-summit4-187.png" title="techeu-summit4-187" alt=""></p>
+<h2>Here are the speakers we have previously announced for the Tech.eu Summit London 2026</h2>
+<p><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/04/techeu-summit-315.png" title="techeu-summit-315" alt=""></p>
+<p><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/04/techeu-summit1-663.png" title="techeu-summit1-663" alt=""></p>
+<h2>What's on the agenda</h2>
+<p>The two-day event will bring into focus the trends and decisions shaping the next phase of European technology. Sessions will span <strong>artificial intelligence, fintech, deeptech, climate tech and beyond</strong>, with an emphasis on execution, market realities and the strategic choices facing founders and investors in 2026. </p>
+<p>Through a mix of sessions and discussions, attendees will hear directly from<strong> investors, founders and technology executives</strong> on the challenges and opportunities defining the current moment, from building and scaling AI-native businesses to navigating regulatory shifts, funding dynamics and the path to sustainable growth.</p>
+<h2>Get your ticket</h2>
+<p><strong>Last Chance tickets are <a href="https://tech.eu/order/ticket/summit-london-2026/" target="_blank">available</a></strong> for a limited time. Secure your place and join one of Europe's leading gatherings for founders, investors and technology professionals.</p>
+<h2>Start networking via the Tech.eu Events App</h2>
+<p>All registered attendees will have access to the<strong> Tech.eu Events App</strong>, available on both the <strong><a href="https://apps.apple.com/se/app/tech-eu-events/id6479996054" target="_blank">App Store</a></strong> and <a href="https://play.google.com/store/apps/details?id=com.webrazzi.techeu.events" target="_blank"><strong>Google Play</strong></a>, where they can browse attendee profiles, schedule meetings ahead of the event and stay up to date with the latest announcements and on-site updates.</p>
+<h2>More updates coming soon</h2>
+<p>Further speakers and the complete agenda will be revealed in the coming weeks as we continue to carefully curate a strong and diverse lineup for the Tech.eu Summit London 2026, ensuring a wide range of perspectives from leading founders, investors and technology experts across Europe and beyond.</p>
+<p>We invite you to London this April for two days dedicated to innovation, knowledge sharing and building valuable relationships. <strong>We look forward to seeing you there!</strong></p>
+<h2>Partners</h2>
+<p><strong>Pavilion Partner</strong></p>
+<p><strong><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/02/sponsor-1-1771336689557-923.png" title="sponsor-1-1771336689557-923" alt=""></strong></p>
+<p><strong>Gold Partner</strong></p>
+<p><strong><a href="https://evam.com/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/02/2-1771334787421-919.png" title="2-1771334787421-919" alt=""></a> <a href="https://www.londonstockexchange.com/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/london-130.png" title="london-130" alt=""></a></strong></p>
+<p><strong>Silver Partners</strong></p>
+<p><a href="https://www.aitechbuilders.com/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/02/adsiz-tasarim-17-kopyasi-1771335279131-929.png" title="adsiz-tasarim-17-kopyasi-1771335279131-929" alt=""></a> <a href="https://www.commencis.com/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/02/adsiz-tasarim-16-kopyasi-3-1771334134690-618.png" title="adsiz-tasarim-16-kopyasi-3-1771334134690-618" alt=""></a></p>
+<p><strong>Supporting Partner</strong></p>
+<p><strong><a href="https://osome.com/uk/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/02/sponsor-2-1771585538114-708.png" title="sponsor-2-1771585538114-708" alt=""></a></strong></p>
+<p><strong>Community Partners</strong></p>
+<p><strong><a href="https://eicscalingclub.eu/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/eic-180.png" title="eic-180" alt=""></a> <a href="https://eic.ec.europa.eu/index_en" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/council-609.png" title="council-609" alt=""></a>    </strong><br></p>
+<p><strong><a href="https://www.femalefoundry.co/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/ff-953.png" title="ff-953" alt=""></a> <a href="https://innovup.net/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/inno-976.png" title="inno-976" alt=""></a></strong></p>
+<p><strong><a href="https://www.plugandplaytechcenter.com/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/pp-436.png" title="pp-436" alt=""></a> <a href="https://startup-insider.com/" target="_blank"><img class="lazyload " data-src="https://cdn.tech.eu/uploads/2026/03/si-227.png" title="si-227" alt=""></a></strong> </p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/01/the-tech-eu-summit-london-2026-unveils-new-speakers-leaders-from-openai-london-stock-exchange-group-morgan-stanley-nato-innovation-fund-mastercard-and-many-more/</guid>
+			<dc:creator><![CDATA[Tech.eu Events]]></dc:creator>
+            			<pubDate>Wed, 01 Apr 2026 10:07:12 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/01/the-tech-eu-summit-london-2026-unveils-new-speakers-leaders-from-openai-london-stock-exchange-group-morgan-stanley-nato-innovation-fund-mastercard-and-many-more/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/techeu-summit2-358.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/techeu-summit2-358_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[“Digital Brains” for experts as Pickmybrain raises $2.1M]]></title>
+			<category><![CDATA[Artificial Intelligence]]></category>
+			<category><![CDATA[SaaS]]></category>
+			<link>https://tech.eu/2026/04/01/digital-brains-for-experts-as-pickmybrain-raises-21m/</link>
+			<comments>https://tech.eu/2026/04/01/digital-brains-for-experts-as-pickmybrain-raises-21m/#comments</comments>
+			<description><![CDATA[Tallinn-basedPickmybrain, a startup developing AI-powered “Digital Brains” for professionalsand public figures, has raised $2.1 million in a pre-seed funding round backedby business angels, Raison.app...]]></description>
+			<content:encoded><![CDATA[<p><span>Tallinn-based
+<a href="https://pickmybrain.com/" target="_blank">Pickmybrain</a>, a startup developing AI-powered “Digital Brains” for professionals
+and public figures, has raised $2.1 million in a pre-seed funding round backed
+by business angels, Raison.app, and other investors.</span></p>
+<p><span>The
+company is building a platform that enables experts to transform their
+knowledge into AI-driven digital counterparts, allowing users to access
+personalised, domain-specific insights at scale. The approach addresses a
+common challenge faced by professionals and public figures, sharing expertise
+without the need for continuous content creation or repetitive engagement.</span></p>
+<p><span>Pickmybrain
+trains AI models on structured, expert-provided content, including interviews,
+articles, books, and recorded responses. This ensures that each Digital Brain
+reflects individual perspectives rather than generic data. Experts retain
+control over the materials used, while the platform also provides tools for
+those with limited existing content to generate training inputs.</span></p>
+<p><span>The
+platform combines AI-driven responses with human interaction, handling routine
+queries automatically while directing more complex or high-value questions to
+experts through asynchronous one-to-one video. This hybrid model is designed to
+scale knowledge access while maintaining a level of personal engagement.</span></p>
+<p><span>According
+to founder <a href="https://www.linkedin.com/in/verbitski/" target="_blank">Sergei Verbitski</a>, the platform reflects a broader shift toward more
+personalised AI applications, where models are built around individual
+expertise rather than general internet data, enabling professionals to scale
+and monetise their knowledge in new ways.</span></p>
+<p><span>The
+company positions its approach as part of a broader transition from
+attention-based, advertising-driven models toward more utility-focused
+platforms that enable direct value exchange around expertise.</span></p>
+<p><span>The
+funding will be used to expand the team, enhance the product, and support
+international growth.</span></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/01/digital-brains-for-experts-as-pickmybrain-raises-21m/</guid>
+			<dc:creator><![CDATA[Tamara Djurickovic]]></dc:creator>
+            			<pubDate>Wed, 01 Apr 2026 09:00:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/01/digital-brains-for-experts-as-pickmybrain-raises-21m/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/03/pickmybrain-featured-875.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/03/pickmybrain-featured-875_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Sensmet secures €1.5M to scale real-time metals monitoring for Europe’s raw materials supply]]></title>
+			<category><![CDATA[Industrialtech]]></category>
+			<link>https://tech.eu/2026/04/01/sensmet-secures-1-5m-to-scale-real-time-metals-monitoring-for-europe-s-raw-materials-supply/</link>
+			<comments>https://tech.eu/2026/04/01/sensmet-secures-1-5m-to-scale-real-time-metals-monitoring-for-europe-s-raw-materials-supply/#comments</comments>
+			<description><![CDATA[Finnish developer of continuous metals monitoring technology, Sensmet, has received a €1.5m investment from EIT RawMaterials to help secure the supply of critical and strategically important raw mater...]]></description>
+			<content:encoded><![CDATA[<p>Finnish developer of continuous metals monitoring technology, <a href="http://www.sensmet.com">Sensmet</a>, has received a €1.5m investment from EIT RawMaterials to help secure the supply of critical and strategically important raw materials. Sensmet's breakthrough technology, Micro-Discharge Optical Emission Spectroscopy (µDOES), enables online multi-metal analysis of aqueous samples.  <br></p>
+<p>Critically important applications include the continuous monitoring of lithium and other battery metals during production processes and battery metal recycling. <br></p>
+<p>By delivering laboratory-grade results in real time, Sensmet helps improve process efficiency, increase metal recovery, ensure consistent product quality, and protect the environment.  <br></p>
+<p>Sensmet’s technology is deployed in numerous applications within raw material value chains – including wastewater treatment, battery recycling, lithium production and fertiliser manufacture.  <br></p>
+<p>The company will use the funds to scale up and deploy its µDOES online metal analysers to strengthen Europe’s raw materials resilience and competitiveness. <br></p>
+<p> “Our highly innovative technology provides process managers with continuous measurements for key metals within liquid process streams,” explains Sensmet CEO, Dr Toni Laurila. </p>
+<blockquote><p>“This enables them, for example, to extract critically important metals much more efficiently than would have been previously possible when relying on laboratory analysis.” <br></p></blockquote>
+<p>EIT RawMaterials’ mission is to secure a sustainable, independent supply of materials for Europe. EIT RawMaterials is a Knowledge and Innovation Community cofunded by the European Commission and one of Europe’s most active innovation ecosystems in the raw materials sector. The organisation supports technologies and industrial solutions that strengthen Europe’s security of supply for critical raw materials such as lithium, cobalt, nickel, and rare earth elements (REEs), which are essential for batteries, renewable energy systems, and advanced manufacturing. <br></p>
+<p>“Our business aligns perfectly with the goals of EIT RawMaterials,” adds Toni Laurila, “so we are honoured to receive this investment, and excited to see how we can use it to scale the µDOES platform and accelerate growth.” <br><br></p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/01/sensmet-secures-1-5m-to-scale-real-time-metals-monitoring-for-europe-s-raw-materials-supply/</guid>
+			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
+            			<pubDate>Wed, 01 Apr 2026 08:41:11 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/01/sensmet-secures-1-5m-to-scale-real-time-metals-monitoring-for-europe-s-raw-materials-supply/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-64-235.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-64-235_240x135.png" width="240" height="135"   />
+			<custom:socialShare>true</custom:socialShare>
+		</item>
+	</channel>
+</rss>
