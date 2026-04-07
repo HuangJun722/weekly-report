@@ -315,7 +315,7 @@ body {
           <div class="feed-tags">
             <span class="small-tag">{{ ev.region }}</span>
             <span class="small-tag">{{ ev.source }}</span>
-            <span class="small-tag">发布 {{ ev.date[:10] }}</span>
+            <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
           </div>
         </div>
       </article>
@@ -349,7 +349,7 @@ body {
             <div class="feed-tags">
               <span class="small-tag">{{ ev.region }}</span>
               <span class="small-tag">{{ ev.source }}</span>
-              <span class="small-tag">发布 {{ ev.date[:10] }}</span>
+              <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
             </div>
           </div>
         </article>
