@@ -190,7 +190,7 @@ def enrich(event):
     for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important', 'summary_short', 'level'):
         event.pop(old_key, None)
     # 保留 date 字段用于 Market Pulse 日期权重
-    if 'date' not in event:
+    if not event.get('date'):
         event['date'] = datetime.now().strftime('%Y-%m-%d')
 
     return event
@@ -221,7 +221,7 @@ def get_signal_events(events):
     week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     def _recency_boost(e):
         score = e.get('score', 5)
-        d = e.get('date', '')
+        d = e.get('date') or ''
         if d == today:
             return score + 4
         elif d == yesterday:
@@ -255,7 +255,7 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
     region_counts = dict(sorted(region_counts.items(), key=lambda x: x[1], reverse=True))
     hot_region = max(region_counts, key=region_counts.get) if region_counts else ''
 
-    # ── 金额计算（用于 headline）───────────────────────────
+    # ── 金额计算（用于 headline）────────────────────���──────
     # 找最大融资事件
     funding_events = [e for e in all_feed if e.get('event_types', [''])[0] == 'funding']
     top_funding = max(funding_events, key=lambda x: x.get('score', 0), default=None)
@@ -322,7 +322,7 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
     week_ago_s = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     def _recency_boost_s(e):
         score = e.get('score', 0)
-        d = e.get('date', '')
+        d = e.get('date') or ''
         if d == today_s:
             return score + 4
         elif d == yesterday_s:
