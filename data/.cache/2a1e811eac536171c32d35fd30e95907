@@ -14,89 +14,9 @@
 		<description><![CDATA[The premier source of European technology news, data, research, analysis and in-depth market intelligence.]]></description>
 		<atom:link href="https://tech.eu/feed" rel="self" type="application/rss+xml" />
 		<language>en</language>
-		<lastBuildDate>Tue, 07 Apr 2026 11:03:00 +0000</lastBuildDate>
+		<lastBuildDate>Tue, 07 Apr 2026 10:04:32 +0000</lastBuildDate>
 		<sy:updatePeriod>hourly</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-		<item>
-			<title><![CDATA[Handhold raises €3M to replace fragmented software buying journeys with AI account managers]]></title>
-			<category><![CDATA[SaaS]]></category>
-			<link>https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/</link>
-			<comments>https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/#comments</comments>
-			<description><![CDATA[Handhold, an AI-agent platform that turns visitors into customers without sales reps, has raised €3 million Seed funding led by Entourage Capital, with participation from Inovia Capital and e2vc. Ange...]]></description>
-			<content:encoded><![CDATA[<p><a href="https://handhold.io/">Handhold</a>, an AI-agent platform that turns visitors into customers without sales reps, has raised €3 million Seed funding led by Entourage Capital, with participation from Inovia Capital and e2vc. Angel investors include:</p>
-<ul>
-<li> Markus Villig (founder of Bolt), </li>
-<li>Ott Kaukver (former CTO of Twilio), </li>
-<li>Harsh Sinha (CTO of Wise), and </li>
-<li>Janer Gorohhov (founder of Veriff). </li>
-</ul>
-<p> Software buyers are more informed than ever and expect instant, personalised support. However, in reality, they often face unnecessary demo calls, generic onboarding flows and multiple handovers. When selling software, companies choose between product-led and sales-led motions. The choice comes down to setup complexity, product depth and price point. </p>
-<p>But when the factors don't align, neither approach works cleanly: product-led growth leads to low activation and high churn, while giving a dedicated sales rep to every SMB account isn't economically viable.</p>
-<p>  Handhold automates the inbound customer journey, from first interaction to renewal, using AI account managers that qualify leads, run demos, and activate users around the clock. </p>
-<p>I spoke to Georg Vooglaid, co-founder and CEO of Handhold, to learn more. <br> </p>
-<h2>Why high-touch account management doesn’t work for most customers</h2>
-<p> Originally from Estonia, Handhold co-founder and CEO Georg Vooglaid started his career at TransferWise, then moved to London to study and later joined Seedcamp.  ​ But while advising founders, he realised he wanted operating experience of his own. He found it at identity verification company Passbase, where he worked across the revenue organisation as the business scaled across New York and Berlin. There, he built close relationships with the company’s largest clients and supported them from validation through retention and upsell. The model proved effective, but only for the top few accounts where the economics justified that level of personal attention. ​ </p>
-<p>He explained: </p>
-<blockquote><p>“With our biggest client, I was available on WhatsApp 24/7. If we could’ve, we would’ve liked to give that level of attention to every customer, but there was no way we could afford to staff it.” ​ </p></blockquote>
-<p>After leaving Passbase, Vooglaid reunited with his now co-founder to build a compensation benchmarking side project, which they later sold.  ​</p>
-<p> In May 2023, they launched what would become Handhold, initially as a conversation intelligence tool used by companies including Superhuman, Moss, and Katana. But after running into the limits of long sales cycles and relatively low pricing, they pivoted in late 2024. ​ </p>
-<p>The result was Handhold’s current product, shaped by customer feedback and his earlier experience. Turning every prospect into a managed account </p>
-<p>According to Vooglaid:</p>
-<blockquote><p>“With AI agents, we can now replicate that one-to-one experience at scale because the economics work. You can give a ten-person startup a personal account manager that works around the clock, in any language, without actually growing headcount.” </p></blockquote>
-<p> Each prospect or customer is assigned an AI account manager who validates use cases, runs demos, supports onboarding, and manages the relationship over time.</p>
-<h2> From funnel to full lifecycle </h2>
-<p>Handhold aims to manage the full customer lifecycle — from first website visit through activation, retention, and expansion. With Handhold’s agents taking care of advancing the top of the funnel and closing smaller clients, sales teams can fully focus on building relationships with mid-market and enterprise accounts. </p>
-<p> The buyer feels like they’re dealing with the same account manager, but behind the scenes, three agents actually split the work:  ​ </p>
-<ul>
-<li>One handles text Q&A and lead qualification, </li>
-<li>Another runs voice demos tailored to the prospect, </li>
-<li>A third sits inside the product to tailor activation paths for new users. <br> </li>
-</ul>
-<p>While you don’t have to use all three agents, context carries between them, and each following agent adapts to what the previous one has already discovered.  Vooglaid explained: </p>
-<blockquote><p>“We approach it from the customer journey. What does the user actually need at each step? If you have a quick question, text works best. If you want a deeper understanding, a demo agent works better. </p></blockquote>
-<blockquote><p>During onboarding, the agent might sit inside the product and guide you directly in the UI. From the user’s perspective, it’s always the same agent — in our case, “Holly” — but the form adapts to the context. The agent is there when needed and invisible when not.” </p></blockquote>
-<p>Vooglaid contends, “If we can price based on the number of customers we manage end-to-end, that’s a strong signal that we’re delivering real value. It means we’re not just improving one part of the funnel, but actually driving outcomes across the entire journey.” This experience shaped his view on a broader problem: </p>
-<h2>What human–AI interaction really looks like in practice </h2>
-<p>I was interested in learning how people interact with AI agents. Vooglaid notes that people are initially very direct with agents — almost testing them. </p>
-<blockquote><p>“Only once the agent proves itself does the interaction become more conversational.” </p></blockquote>
-<p>Second, attention is critical. </p>
-<p> “You have five to ten seconds to engage someone — there are no social norms keeping them in the interaction. Third, active listening matters more than we expected.  Giving users space to process and respond significantly improves the experience.” </p>
-<p>And finally, personalisation is powerful, but risky. He contends that good personalisation can close a deal, but if you get it wrong and make incorrect assumptions, it can completely break trust. </p>
-<p>Vooglaid explained that Handhold started at the top of the funnel — pre-sales, which enables the team to gather context early. </p>
-<blockquote><p> “For example, if a user interacts with a Q&A agent first, that context carries into the demo. The demo is then tailored to what they’ve already asked. <br><br>As we expand deeper into the journey, that context compounds. At the same time, users become familiar with the agent, which builds trust. So when the agent appears later inside the product, it doesn’t feel intrusive.” </p></blockquote>
-<h2>More agents, but one winner: the account manager layer ​ </h2>
-<p>Agentic sales agents and tools are likely to become more commonplace, even with large players like Salesforce, which <a href="https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-qualified/">acquired</a>  Qualified. Vooglaid sees the real competitive battleground in building a persistent AI account manager that supports customers across the entire journey. </p>
-<blockquote><p>“We’re particularly focused on SMB segments, where traditional sales models are harder to scale economically. That’s where this approach delivers the most value.”</p></blockquote>
-<p> The core benefit for customers is conversion and efficiency. Vooglaid explained: </p>
-<blockquote><p>“Some companies use us to handle inbound volume they can’t manage manually. Others use us for lower-priced segments where it doesn’t make sense to allocate a salesperson.”</p></blockquote>
-<p> Handhold also sees strong demand from companies operating across time zones — the agent can handle traffic outside working hours. Ultimately, the goal is to convert more visitors into customers without compromising the experience. </p>
-<h2>Where AI agents work today and gain the most traction </h2>
-<p>Handhold soft-launched in September 2025 and grew to a strong six-figure ARR run rate by year-end. The platform is working with more than 15 customers, who are seeing strong early results. For instance, workforce management company Parim reported a 60 per cent reduction in bad-fit demos alongside double-digit month-over-month growth in sales-qualified leads since deploying Handhold. </p>
-<p> Vooglaid admits much of this is still trial and error. One advantage, however, is access to large volumes of sales call recordings and transcripts. </p>
-<blockquote><p>“From those, we can extract best practices — how to handle objections, how to structure demos — and use that to improve the agent’s performance.” </p></blockquote>
-<p>In terms of customer response, while people are already familiar with agentic Q&A and onboarding, the demo agent is more novel. Vooglaid admits that early on, there was concern around quality and whether the experience would feel polished enough. </p>
-<blockquote><p>“We’re now seeing more success with 'reverse demos,' where customers experience the agent themselves first. Once they see it working well, they’re much more open to deploying it.” </p></blockquote>
-<p>As for the hardest parts of the customer journey to get right, Vooglaid points to qualification and routing, detailing:  “If companies position the agent as a core part of their brand experience, the quality bar is much higher."</p>
-<blockquote><p>"They need it to perform really well. If the alternative is to enter new markets or cover gaps in availability, companies are more flexible. <br><br>So a lot of this comes down to brand risk and how central the agent is to the customer experience.” </p></blockquote>
-<h2>From human sellers to hybrid sales models </h2>
-<p>As for job displacement, Vooglaid asserts that Handhold is not directly replacing roles today. Instead, he sees that companies want their sales teams focused on mid-market and enterprise customers. </p>
-<blockquote><p> “We help handle the lower-value segment more efficiently. For example, one UK customer reduced low-quality demo bookings by 60 per cent. That didn’t reduce headcount — it allowed their team to focus on higher-value opportunities.” </p></blockquote>
-<p>Looking ahead, Vooglaid believes tools like his are fundamentally changing how software is bought and sold. AI enables more personalised, scalable interactions, which opens up new business models. It also shortens the sales cycle. </p>
-<blockquote><p>“We may even move toward a world where agents are buying software on behalf of users, or where some purchases become nearly instant. Exactly how this evolves is still unclear, but the direction is toward faster, more efficient buying.”</p></blockquote>
-<p> Handhold is already exploring use cases beyond SaaS, with clear applications across many industries. For example, the startup is piloting with a telecom company the use of agents to guide users through installing a Wi-Fi router. You scan a QR code, and the agent walks you through the setup step by step. </p>
-<p>According to Pieterjan Bouten, Partner at Entourage Capital, AI agents are fundamentally changing how we buy software. </p>
-<blockquote><p>“From enabling new motions to becoming buyers themselves, Georg and Uku are building a system that opens up completely new business models and helps companies validate what’s working about their sales motion and what their customers need. <br><br> The early traction is a sign that they're on to something, and we’re excited to help them redefine how software gets sold in the future.”</p></blockquote>
-<p>  The funding will accelerate go-to-market efforts and expand Handhold’s ability to move from converting leads to managing entire customer bases. <br><br></p>
-]]></content:encoded>
-			<guid isPermaLink="false">https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/</guid>
-			<dc:creator><![CDATA[Cate Lawrence]]></dc:creator>
-            			<pubDate>Tue, 07 Apr 2026 11:03:00 +0000</pubDate>
-			<wfw:commentRss>https://tech.eu/2026/04/07/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/feed</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-			<media:content url="https://cdn.tech.eu/uploads/2026/04/handheld-915.png" width="240" height="135" medium="image"   />
-			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/handheld-915_240x135.png" width="240" height="135"   />
-			<custom:socialShare>true</custom:socialShare>
-		</item>
 		<item>
 			<title><![CDATA[WholeSum tops up Pre-Seed with $335K to fix AI’s trust problem in text analytics]]></title>
 			<category><![CDATA[Artificial Intelligence]]></category>
@@ -1022,6 +942,30 @@ international growth.</span></p>
 			<media:content url="https://cdn.tech.eu/uploads/2026/04/untitled-design-64-235.png" width="240" height="135" medium="image"   />
 			<media:thumbnail url="https://cdn.tech.eu/uploads/2026/04/untitled-design-64-235_240x135.png" width="240" height="135"   />
 			<custom:socialShare>true</custom:socialShare>
+		</item>
+		<item>
+			<title><![CDATA[Monzo to exit US market]]></title>
+			<category><![CDATA[Fintech]]></category>
+			<link>https://tech.eu/2026/04/01/monzo-to-exit-us-market/</link>
+			<comments>https://tech.eu/2026/04/01/monzo-to-exit-us-market/#comments</comments>
+			<description><![CDATA[Monzo is closing its US banking operations after struggling to gain traction in the market, and will instead focus on its core UK and European business.The UK digital bank, famed for its bright coral ...]]></description>
+			<content:encoded><![CDATA[<p><a href="https://monzo.com" target="_blank">Monzo</a> is closing its US banking operations after struggling to gain traction in the market, and will instead focus on its core UK and European business.</p>
+<p>The UK digital bank, famed for its bright coral cards, will stop onboarding new customers and lay off about 50 employees in the US, according to a report in Bloomberg. US customers can continue to use their accounts until June.</p>
+<p>The move marks a key strategy decision by new CEO Diana Layfield, who replaced TS Anil as CEO last month.   </p>
+<p>Monzo said: "With a fast-growing customer base of 15 million in the UK and the growth opportunity our European banking licence creates, we're making a deliberate, strategic decision to focus on scaling in our home market and Europe ⁠to step away from the US.”   </p>
+<p>Monzo first made a play for the US market in 2020 but withdrew its application for a US banking licence in 2021. But it has continued to hold a presence in the US. The challenger bank, which has over 15m customers, has offices in New York and San Francisco, with its US business headed up by US CEO Conor Walsh, a former Cash App executive.   </p>
+<p>In December last year, Monzo, which already has a UK banking licence, <a href="https://tech.eu/2025/12/17/monzo-wins-european-banking-licence-as-investors-agitate-for-ceo-return/" target="_blank">won a European banking licence.</a></p>
+<p>The challenger bank has been vocal about its EU expansion plans.   </p>
+<p>Last month, Monzo rival Revolut said it was making a fresh attempt <a href="https://tech.eu/2026/03/05/revolut-makes-fresh-bid-for-us-licence/" target="_blank">to secure a US banking licence</a> as it scaled up its ambitions in the US market.</p>
+]]></content:encoded>
+			<guid isPermaLink="false">https://tech.eu/2026/04/01/monzo-to-exit-us-market/</guid>
+			<dc:creator><![CDATA[John Reynolds]]></dc:creator>
+            			<pubDate>Wed, 01 Apr 2026 07:35:00 +0000</pubDate>
+			<wfw:commentRss>https://tech.eu/2026/04/01/monzo-to-exit-us-market/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+			<media:content url="https://cdn.tech.eu/uploads/2025/06/monzo-641.png" width="240" height="135" medium="image"   />
+			<media:thumbnail url="https://cdn.tech.eu/uploads/2025/06/monzo-641_240x135.png" width="240" height="135"   />
+			<custom:socialShare>false</custom:socialShare>
 		</item>
 	</channel>
 </rss>
