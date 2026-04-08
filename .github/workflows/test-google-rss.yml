@@ -6,13 +6,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Test RSS
+      - name: Test all 27 companies
         run: |
           python -c "
 import requests, sys, re
@@ -24,17 +24,21 @@ companies = [
 ]
 ok, fail = 0, []
 for name in companies:
-    url = f'https://news.google.com/rss/search?q={requests.utils.quote(name)}&hl=en-US&gl=US&ceid=US:en'
+    url = 'https://news.google.com/rss/search?q=' + requests.utils.quote(name) + '&hl=en-US&gl=US&ceid=US:en'
     try:
         r2 = requests.get(url, timeout=10)
         if r2.status_code == 200 and '<rss' in r2.text:
             items = re.findall(r'<title>(.*?)</title>', r2.text)
-            print(f'OK  {name:15s} | {len(items)-1}')
+            print(f'OK  {name:15s} | {len(items)-1} titles')
             ok += 1
         else:
+            print(f'FAIL {name} | HTTP {r2.status_code}')
             fail.append(name)
     except Exception as e:
+        print(f'FAIL {name} | {type(e).__name__}')
         fail.append(name)
-print(f'Result: {ok}/{len(companies)}')
-if fail: sys.exit(1)
+print(f'Result: {ok}/{len(companies)} companies accessible')
+if fail:
+    print(f'Failed: {fail}')
+    sys.exit(1)
 "
