@@ -15,16 +15,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Test Google News RSS (Company Feeds)
+      - name: Test Google News RSS
         run: |
           python -c "
 import requests, sys, re
-headers = {'User-Agent': 'Mozilla/5.0 (compatible; GoogleBot/2.1; +http://www.google.com/bot.html)'}
 
 companies = [
-    'ByteDance', 'Tencent', 'Alibaba', 'Kakao', 'Rakuten', 'Sea Limited',
-    'Grab', 'MercadoLibre', 'Adyen', 'Jumia', 'Noon', 'Careem',
-    'Ant Group', 'Meituan', 'Kuaishou', 'Allegro', 'Trendyol', 'Tabby',
+    'ByteDance', 'TikTok', 'Tencent', 'Alibaba', 'JD.com', 'Kuaishou', 'Ant Group',
+    'Meituan', 'Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek',
+    'VNG Group', 'Yahoo', 'Cyberagent', 'Adyen', 'Zalando', 'Allegro', 'Trendyol',
+    'MercadoLibre', 'Rappi', 'Noon', 'Careem', 'Tabby', 'Kaspi.kz', 'Jumia', 'Konga',
 ]
 
 ok, fail = 0, []
@@ -40,46 +40,11 @@ for name in companies:
             print(f'FAIL {name} | HTTP {r.status_code}')
             fail.append(name)
     except Exception as e:
-        print(f'FAIL {name} | {type(e).__name__}: {e}')
-        fail.append(name)
-
-print(f'
-=== 结果: {ok}/{len(companies)} 通过 ===')
-if fail:
-    print(f'失败: {fail}')
-    sys.exit(1)
-"
-
-      - name: Test all 27 companies
-        run: |
-          python -c "
-import requests, sys, re
-
-all_companies = [
-    'ByteDance', 'TikTok', 'Tencent', 'Alibaba', 'JD.com', 'Kuaishou', 'Ant Group',
-    'Meituan', 'Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek',
-    'VNG Group', 'Yahoo', 'Cyberagent', 'Adyen', 'Zalando', 'Allegro', 'Trendyol',
-    'MercadoLibre', 'Rappi', 'Noon', 'Careem', 'Tabby', 'Kaspi.kz', 'Jumia', 'Konga',
-]
-
-ok, fail = 0, []
-for name in all_companies:
-    url = f'https://news.google.com/rss/search?q={requests.utils.quote(name)}&hl=en-US&gl=US&ceid=US:en'
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code == 200 and '<rss' in r.text:
-            items = re.findall(r'<title>(.*?)</title>', r.text)
-            print(f'OK  {name:15s} | {len(items)-1} titles')
-            ok += 1
-        else:
-            print(f'FAIL {name} | HTTP {r.status_code}')
-            fail.append(name)
-    except Exception as e:
         print(f'FAIL {name} | {type(e).__name__}')
         fail.append(name)
 
 print(f'
-=== 27公司全部测试: {ok}/{len(all_companies)} 通过 ===')
+=== 结果: {ok}/{len(companies)} 通过 ===')
 if fail:
     print(f'失败: {fail}')
     sys.exit(1)
