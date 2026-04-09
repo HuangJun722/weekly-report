@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Wed, 08 Apr 2026 17:20:33 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 09 Apr 2026 11:06:45 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,614 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Safaricom’s My OneApp faces first test with login issues days after rollout</title>
+		<link>https://techcabal.com/2026/04/09/safaricoms-my-oneapp-faces-login-issues/</link>
+		
+		<dc:creator><![CDATA[Kenn Abuya]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 10:50:55 +0000</pubDate>
+				<category><![CDATA[Telecoms]]></category>
+		<category><![CDATA[m-pesa app]]></category>
+		<category><![CDATA[My OneApp]]></category>
+		<category><![CDATA[mySafaricom app]]></category>
+		<category><![CDATA[Safaricom]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185526</guid>
+
+					<description><![CDATA[Safaricom’s newly launched My OneApp is facing widespread login failures just days after its debut, complicating plans to phase out its legacy M-PESA and mySafaricom platforms within six months.]]></description>
+										<content:encoded><![CDATA[
+<p>Safaricom’s newly launched <a href="https://techcabal.com/2026/04/07/safaricom-migrates-m-pesa-users-to-my-oneapp-in-platform-consolidation-push/" target="_blank" rel="noreferrer noopener">My OneApp</a> is facing widespread login failures just days after its debut, complicating plans to phase out its legacy M-PESA and mySafaricom platforms within six months.</p>
+
+
+
+<p>The Nairobi-listed company first <a href="https://x.com/SafaricomPLC/status/2040402603897491873" target="_blank" rel="noreferrer noopener">confirmed the issue</a> to a customer on April 4. &#8220;We are aware My OneApp has login issues, and most of the financial mini-app services are not working,&#8221; Safaricom said in a response on X. &#8220;Resolution is underway.&#8221;&nbsp;</p>
+
+
+
+<p>My OneApp is a critical part of the company&#8217;s <a href="https://techcabal.com/2025/09/22/m-pesa-core-upgrade-complete/" target="_blank" rel="noreferrer noopener">FinTech 2.0 strategy</a>, a push to consolidate over 10 million users onto a single platform and defend its fintech dominance as Kenyan banks, neobanks, and fintechs build competing mobile products.</p>
+
+
+
+<p>TechCabal spoke to several users who reported difficulties accessing the app, issues that were independently tested and confirmed. Some older Android devices cannot complete setup due to compatibility issues. The app also requires Safaricom mobile data during onboarding and blocks VPN users, while others who were logged out earlier this week have been unable to log back in.</p>
+
+
+
+<p>Safaricom did not immediately respond to a request for comment.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img fetchpriority="high" decoding="async" width="456" height="510" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/app-error.png" alt="" class="wp-image-185529" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/app-error.png 456w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/app-error-268x300.png 268w" sizes="auto, (max-width: 456px) 100vw, 456px" /><figcaption class="wp-element-caption">Error message shown on Safaricom’s My OneApp when users attempt to sign in, blocking access unless mobile data is active, the correct SIM is selected and VPN is disabled.</figcaption></figure>
+
+
+
+<p>“I’ve been testing the app since March, but I was logged out, and even before that, it hadn’t fully migrated my transaction data, like favourite paybills, from the M-PESA app,” Paminus Osike, an IT consultant in Nairobi, told TechCabal on Wednesday.&nbsp;</p>
+
+
+
+<p>The mobile data requirement during setup is tied to SIM-binding authentication, which could exclude a segment of M-PESA&#8217;s user base that relies on Wi-Fi or third-party data. Safaricom has yet to clarify whether the restriction applies beyond initial onboarding.</p>
+
+
+
+<p>“I downloaded it on Monday after an update arrived on my device, but I haven’t been able to log in at all,” Mike Tinega, a businessman in Nyanza, told TechCabal on Wednesday.</p>
+
+
+
+<p>In an earlier statement on Tuesday, Safaricom told TechCabal it will decommission both the M-PESA app and the mySafaricom app in six months.&nbsp;</p>
+
+
+
+<p>“We intend to decommission the MPESA app and MySafaricom app 6 months after launch of My OneApp,” a Safaricom representative said. “We will ensure a smooth transition for our customers through our support channels, rapid iteration where challenges arise and continuous improvement to meet customer needs.”</p>
+
+
+
+<p>My OneApp, unveiled at Safaricom’s Decode 4.0 engineering summit, is built on cloud-native infrastructure rated at 6,000 transactions per second and hosts more than 80 third-party services. The app also embeds the<a href="https://techcabal.com/2025/06/17/safaricom-ziidi-on-the-spot-over-anti-competitive-behaviour/" target="_blank" rel="noreferrer noopener"> Ziidi money market fund </a>and <a href="https://techcabal.com/2026/02/10/what-you-need-to-know-ziidi-trader/" target="_blank" rel="noreferrer noopener">share-trading tools</a> directly into the M-PESA flow.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Kenya’s cyber threats surge 441% in three months as defence gap widens</title>
+		<link>https://techcabal.com/2026/04/09/kenyas-cyber-threats-up-441-in-three-months/</link>
+		
+		<dc:creator><![CDATA[Kenn Abuya]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 07:10:34 +0000</pubDate>
+				<category><![CDATA[Cybersecurity]]></category>
+		<category><![CDATA[Communication Authority of Kenya]]></category>
+		<category><![CDATA[cyber attacks]]></category>
+		<category><![CDATA[Cyber Threats]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185500</guid>
+
+					<description><![CDATA[The numbers represent the sharpest test yet of whether Kenya's cybersecurity infrastructure can keep pace with its digital economy. ]]></description>
+										<content:encoded><![CDATA[
+<p>Kenya absorbed 4.6 billion cyber threat events in the three months to December 2025, the sharpest quarterly escalation the country&#8217;s computer incident response centre has recorded in at least three years, according to <a href="https://www.ca.go.ke/sites/default/files/2026-04/Sector%20Statistics%20Report%20Q2%202025-2026.pdf" target="_blank" rel="noreferrer noopener">a Communications Authority of Kenya (CA) report</a> reviewed by TechCabal.</p>
+
+
+
+<p>The surge from 842 million events in the previous quarter represents a 441.3% kump in a single reporting period. The numbers represent the sharpest test yet of whether Kenya&#8217;s cybersecurity infrastructure can keep pace with its digital economy.&nbsp;</p>
+
+
+
+<p>The numbers are stark across every threat category. System vulnerabilities, the largest category by volume at 4.37 billion events, rose 463.4%. Mobile application attacks climbed 303.2%.</p>
+
+
+
+<p>Distributed Denial-of-Service (DDoS) incidents, which overwhelm websites and servers with traffic until they go offline, grew 1,116.7% quarter-on-quarter. This is the fastest acceleration among all threat vectors in the report.</p>
+
+
+
+<p>Yet the advisory response to DDoS totalled just 1.34 million out of 21.8 million total advisories issued during the period. That mismatch between threat velocity and regulatory attention is the structural gap at the centre of Kenya&#8217;s cyber posture.</p>
+
+
+
+<p>Authorities attributed the rise in threat volumes partly to the exploitation of AI-driven tools by malicious actors, a pattern that has accelerated since 2023. The CA&#8217;s own report cites AI and machine-learning exploitation as a primary driver of the latest surge, alongside inadequate patching and low user awareness of social-engineering vectors.</p>
+
+
+
+<p>The current spike did not arrive without warning. The National Kenya Computer Incident Response Coordination Centre (KE-CIRT/CC) <a href="https://www.ca.go.ke/sites/default/files/2024-10/Cyber%20Security%20Report%20Q1%202024-2025.pdf" target="_blank" rel="noreferrer noopener">detected 657.8 million threat events </a>in July-September 2024, a 41.87% jump from the previous quarter, indicating a steep trajectory. </p>
+
+
+
+<p>Kenya <a href="https://www.techbooky.com/kenya-reports-2-54-billion-cyber-threats-in-q1-of-2025/" target="_blank" rel="noreferrer noopener">recorded 2.54 billion cyber threat events in the first quarter of 2025</a>, a 201.7% surge from the prior period. The December quarter&#8217;s 4.6 billion is another doubling.</p>
+
+
+
+<p>The country lost an estimated $83 million to cybercrime in 2023, placing it second in Africa behind Nigeria&#8217;s $1.8 billion. Its fintech sector is projected to reach $1.5 trillion in payments by 2030, a scale that makes the advisory gap a financial stability concern, not just a technical one.</p>
+
+
+
+<p><a href="https://www.safaricom.co.ke/media-center-landing/press-releases/m-pesa-celebrates-18-years-of-financial-innovation-officially-unveils-investment-product" target="_blank" rel="noreferrer noopener">M-PESA alone processes more than 100 million transactions daily</a>, across infrastructure that sits atop the same networks these attacks target.</p>
+
+
+
+<p>“Key measures for mitigating emerging cyber threats may be achieved through the implementation of multi-factor authentication with comprehensive password policies, proper network firewall and antivirus software configuration, and continuous enhancement of advisories to emphasise regular system and application patching,” the CA recommended in the report.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>👨🏿‍🚀TechCabal Daily – Zenith Bank is now in Kenya</title>
+		<link>https://techcabal.com/2026/04/09/techcabal-daily-zenith-bank-is-now-in-kenya/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 06:07:41 +0000</pubDate>
+				<category><![CDATA[Newsletters]]></category>
+		<category><![CDATA[TC Daily]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Fintech]]></category>
+		<category><![CDATA[Kenya]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185496</guid>
+
+					<description><![CDATA[In today's edition: Zenith Bank acquires Kenya’s Paramount Bank &#124;&#124; Changes at KRA &#124;&#124; GTCO’s HabariPay grows profit &#124;&#124; Nigeria's tax collection in Q4 2025]]></description>
+										<content:encoded><![CDATA[
+
+
+
+    
+    
+
+
+    <div id="wrapper" style="width:100%;max-width:600px;background-color: #FFFFFF;color:#000000;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin: 0 auto;padding:17px 0">
+            <div class="content_date" id="intro" style="padding: 0 12px 16px;width: 100%;background-color: white">
+                <div style="width: 100%;text-align: center;padding-bottom: 24px">
+                   
+                <div style="padding-bottom:24px">
+                    <div style="width: 100%">
+                        <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/tc-daily-banner.png" alt="" width="100%" height="167" style="object-fit:contain">
+                    </div>
+                     <div style="vertical-align: middle">
+                        <span style="padding-right: 8px;font-size:10px;font-weight:400">In partnership with</span>
+                    </div>
+                    <div style="vertical-align: middle">
+                        <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/01/Partner-with-TC.png" alt="Fincra logo" width="110px">
+                    </div>
+                </div>
+                    <div style="width:100%;padding: 12px;border-bottom:1px solid #18181833">
+                        
+                    </div>
+                </div>
+<div style="width: 100%;padding: 8px;height:47px;font-size: 10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 700;background-color: #fcf8fa;border-radius: 4px">
+                <div style="vertical-align:middle;text-align: left">
+                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=fr&amp;u=https://techcabal.com/2026/04/09/techcabal-daily-zenith-bank-is-now-in-kenya/" style="color: #28121f !important">Lire en Français</a>
+                </div>
+                <div style="vertical-align:middle;text-align: right">
+                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=ar&amp;u=https://techcabal.com/2026/04/09/techcabal-daily-zenith-bank-is-now-in-kenya/" style="color: #28121f !important">اقرأ هذا باللغة العربية</a>
+          </div>
+        </div>
+    </div>
+<div id="Story1" style="width:100%;background-color: transparent;padding: 0 12px 16px">
+<div style="width: 100%;padding-bottom:16px;text-align:left">
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin-top:0">
+                    
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0"><strong>Happy pre-TGIF. <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/2600.png" alt="☀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong></p>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">In case you forgot, Zikoko&#8217;s HERtitude is coming up on April 11!</p>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">This Saturday, all the cool women in tech and beyond will gather at <a>HERtitude</a>, the annual women-only party hosted by our sister publication, Zikoko. Lots of games, music, and women-themed events are in store for you.</p>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">All you need to do is <a>secure a ticket</a>.</p>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">This year&rsquo;s theme, <a>Main Character Energy</a>, celebrates all women as the main characters of their own lives and sets the tone for a room full of women who want to be present and seen. You do not want to miss the biggest women-only party of the year!</p>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">Save 15% on tickets when you enter the code <strong>&ldquo;BESTIE15&rdquo;</strong></p>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0"><a>Secure your tickets here</a>.</p>
+</div>
+</div>
+
+                    
+<div class="todays_edition" style="width:100%;background-color: transparent;text-align:center;padding:0 12px;margin-bottom:0">
+    <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/today-edition-img-1.png" alt="today's edition image" style="width:100%;max-width:343px;height:auto;margin:0 auto">
+
+                </div>
+                <div style="background-color: #FAE2E3;padding:16px 32px">
+                    <ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px">
+                    
+                    
+<li><a href="#Story1" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Zenith Bank acquires Kenya’s Paramount Bank</a></li>
+<li><a href="#Story2" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Changes at KRA</a></li>
+<li><a href="#Story3" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">GTCO’s HabariPay grows profit more than twofold</a></li>
+<li><a href="#Story4" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Nigeria&#8217;s tax collection in Q4 2025</a></li>
+<li> <a href="#Story5" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">World Wide Web 3</a></li>
+<li> <a href="#Story6" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Events</a></li>
+  
+                    </ul>
+                </div>
+            </div>
+            
+             <div id="Story1" style="padding:0 12px">
+                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
+                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
+                    </div>
+                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">Companies</h3>
+                </div>
+                <div style="width:100%;background-color: transparent">
+                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">Zenith Bank is now in Kenya</h3>
+                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
+<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
+
+
+<a href="https://techcabal.com/category/newsletters/tc-daily/">
+<img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/01/Screenshot-2026-01-22-at-16.29.39.png" width="100%" height="auto" style="object-fit: cover"></a>
+                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: Zenith Bank</figcaption>
+</figure>
+
+<p style="padding:5px 0;margin:0">Nigeria&#8217;s tier-1 bank, Zenith Bank, has <a style="text-decoration: underline;color: #b61313 !important" href="https://nairametrics.com/2026/04/08/zenith-bank-completes-acquisition-of-kenyas-paramount-bank/">completed the full acquisition</a> of Paramount Bank, a Kenyan lender, and will now be operational within the country. Previously, in January 2026, Zenith <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/01/22/kenyas-competition-regulator-clears-zenith-banks-paramount-acquisition/">secured approval</a> from the Competition Authority of Kenya (CAK), the country&rsquo;s competition and fair market regulator, for the deal.&nbsp;</p>
+<p style="padding: 5px 0;margin: 0">Its entry into Kenya comes at an unprecedented time when lenders, big and small(er), are finding their way to the East African country. Access Bank, a Nigerian tier-1 bank, <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2025/10/27/access-to-pay-109-million-for-nbk-local-arm-loss/">acquired</a> the National Bank of Kenya (NBK) in 2025 to deepen its existing presence in the country. Nigerian microfinance bank and fintech unicorn, Moniepoint, <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/03/26/nigerias-moniepoint-enters-kenya-with-78-stake-in-sumac-microfinance/">acquired</a> Kenya&rsquo;s Sumac Microfinance Bank in March. Several other banks are circling, including South Africa&rsquo;s FirstRand, whose CEO Mary Vilakazi <a style="text-decoration: underline;color: #b61313 !important" href="https://www.ecofinagency.com/news-finances/1508-48066-south-africa-based-firstrand-eyes-kenya-as-the-banking-capital-rules-opens-m-a-opportunities">said</a> &ldquo;We&rsquo;d like to go to Kenya&rdquo; in 2025, and Nedbank, which is in the<a style="text-decoration: underline;color: #b61313 !important" href="https://group.nedbank.co.za/news-and-insights/press/2026/nedbank-announces-intention-to-acquire-majority-stake-in-ncba-group-to-accelerate-east-african-growth.html">process of acquiring a 66% stake</a>in Kenya&rsquo;s NCBA.&nbsp;</p>
+<p style="padding: 5px 0;margin: 0"><strong>The Paramount acquisition gives Zenith 0.2% of the market:</strong> Paramount was ranked the 33rd out of 39 licenced banks in Kenya in terms of scale. It operated with a limited, specialised network, notably holding only eight branches at the time of its acquisition. According to the Kenyan lender, it <a style="text-decoration: underline;color: #b61313 !important" href="https://paramountbank.co.ke/about-us/#:~:text=Join%20over%20+150%2C000%20happy%20clients!">served</a> 150,000 clients, a mere footnote in Zenith&rsquo;s own 60 million customers. In its last report before the acquisition, Paramount <a style="text-decoration: underline;color: #b61313 !important" href="https://paramountbank.co.ke/wp-content/uploads/2025/10/Paramount-Bank-Annual-Report-2024.pdf">held KES 12.8 billion</a> ($98.9 million) in customer deposits, far outclassed by the KES 1.48 trillion ($11.4 billion) recorded by KCB, Kenya&rsquo;s largest bank by assets.&nbsp;</p>
+<p style="padding: 5px 0;margin: 0"><strong>Between the lines: </strong>The numbers show the level of turnaround Zenith has to pull off at Paramount if it wants the Kenyan acquisition to justify the capital, regulatory risk, and management attention it&rsquo;s throwing at the deal. Zenith <a style="text-decoration: underline;color: #b61313 !important" href="https://africa.businessinsider.com/local/markets/zenith-bank-breaks-into-east-africa-with-kenya-acquisition/r4k2erv">reportedly paid over $7.7 million</a> to acquire the bank and is expected to retain about 78 employees.</p>
+<p style="padding: 5px 0;margin: 0">The rest of the Kenyan banking industry is <a style="text-decoration: underline;color: #b61313 !important" href="https://nairametrics.com/2026/04/08/zenith-bank-completes-acquisition-of-kenyas-paramount-bank/">dominated</a> by local players, including Equity Group, KCB Bank, NCBA, and foreign players who acquired their way into the country, such as Nigeria&rsquo;s Access Bank (NBK), GTCO (Fina Bank), and United Bank for Africa (UBA), the odd one out that <a style="text-decoration: underline;color: #b61313 !important" href="https://www.reuters.com/article/business/finance/nigerias-uba-bank-launches-kenyan-operation-idUSJOE5960N8/">had a greenfield launch</a> in 2009.&nbsp;</p>
+<p style="padding: 5px 0;margin: 0"><strong>Now, add fintechs to the mix:</strong> Banks, big and small, will rival each other to grow their share of the Kenyan banking‑aware population. Yet, telecom players (read: Safaricom and Airtel Kenya) will be staking their own claim to be the default rails for everyday payments. With Kenyans now<a>using mobile money services more than ever before</a>, operators will be looking to keep them longer, luring them with credit, savings, and insurance, and steadily chipping away at banks&rsquo; relevance. Traditional fintechs, too, are not out of the mix; PalmPay also operates in the country, making payments a race to the top.</p>
+                </div>
+                    <div id="share_content" style="width: 100%;background-color: transparent">
+                        <div style="width: 100%">
+                            <div style="vertical-align:middle;text-align: left">
+                               <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="bizdev1" style="padding: 24px 12px 0">
+                <div style="width:100%;background-color:transparent;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px">
+                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;font-weight:700;font-size:10px;color:#93888F;text-align:center">20+ Markets. One API.
+                </h5>
+                <a href="https://blog.fincra.com/fincra-canada-psp-license-africa-payments/">
+                    <img decoding="async" loading="lazy" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-3.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
+                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Fincra connects your business to Africa&#8217;s payment rails without building market by market. For collection, payout, FX, and settlement through a single integration. <a href="https://blog.fincra.com/fincra-canada-psp-license-africa-payments/" style="text-decoration: underline;color: #b61313 !important">See what this means for your business</a>.</p>
+
+            </div>
+        </div>
+
+<div id="Story2" style="padding:0 12px">
+                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
+                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
+                    </div>
+                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">companies</h3>
+                </div>
+                <div style="width:100%;background-color: transparent">
+                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">Kenya replaces tax chief Humphrey Wattanga in leadership shake-up</h3>
+                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
+<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
+
+
+                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
+                             <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wattanga.webp" width="100%" height="auto" style="object-fit: cover"></a>
+                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Humphrey Wattanga. Image source: KRA</figcaption>
+                    </figure>
+                        
+<p style="padding:5px 0;margin:0">Kenya&rsquo;s tax authority is switching leadership at a delicate moment. The Kenya Revenue Authority (KRA) has <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/04/08/kenya-tax-collector-in-chief-humprey-wattanga-sudden/">declined to renew the contract</a> of its Commissioner General, Humphrey Wattanga, sending him on immediate terminal leave after just over two years in office.&nbsp;</p>
+<p style="padding:5px 0;margin:0">Wattanga, a Harvard-trained tax expert appointed in 2023, had been tasked with fixing underperforming revenue collection and pushing internal reforms. His tenure coincided with growing pressure on the agency to meet ambitious government targets amid rising debt and a tough economic environment.</p>
+<p style="padding:5px 0;margin:0"><strong>Between the lines: </strong>The KRA board, chaired by Ndiritu Muriithi, did not give a reason for the decision but named Lilian Nyawanda, head of customs and border control, as acting Commissioner General pending a competitive recruitment process. Nyawanda inherits an agency under scrutiny from both the private sector, over aggressive enforcement, and the government, which is relying heavily on tax revenues to fund its budget.</p>
+<p style="padding:5px 0;margin:0">Wattanga is not leaving public service entirely. Hours after his exit, President William Ruto <a style="text-decoration: underline;color: #b61313 !important" href="https://www.kenyans.co.ke/news/122418-former-kra-boss-humphrey-wattanga-lands-diplomatic-role-ruto-makes-foreign-service">nominated him</a> as Kenya&rsquo;s High Commissioner to South Africa, part of a routine cycle of diplomatic appointments across Kenya&rsquo;s foreign missions that will require parliamentary approval.</p>
+<p style="padding:5px 0;margin:0"><strong>Zoom out: </strong>Wattanga&rsquo;s exit signals a potential recalibration of Kenya&rsquo;s tax strategy under William Ruto&rsquo;s administration. Whether Nyawanda maintains the current enforcement-heavy approach or softens it to ease pressure on businesses will determine how investors and operators assess Kenya&rsquo;s operating environment in the months ahead.</p>
+</div>
+<div id="share_content" style="width: 100%;background-color: transparent">
+                        <div style="width: 100%">
+                            <div style="vertical-align:middle;text-align: left">
+                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div id="bizdev2" style="padding: 24px 12px 0">
+                <div style="width:100%;background-color:transparent;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px">
+                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;font-weight:700;font-size:10px;color:#93888F;text-align:center">HERtitude, Zikoko’s annual women-only party, is happening this Saturday, April 11.
+                </h5>
+                <a href="http://hertitude.zikoko.com">
+                    <img decoding="async" loading="lazy" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/1-tc-nl.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
+                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Over the past four years, Zikoko has created a safe space for women to gather, connect, bond, and party. The fifth edition is set to be the biggest, with an OPay shopping zone, DJ Performances, a fashion show, games, and dancing. Save 15% on tickets with the code “BESTIE15”. <a href="http://hertitude.zikoko.com" style="text-decoration: underline;color: #b61313 !important">Secure your tickets here</a>.</p>
+
+            </div>
+        </div>
+
+<div id="Story3" style="padding:0 12px">
+                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
+                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
+                    </div>
+                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">companies</h3>
+                </div>
+                <div style="width:100%;background-color: transparent">
+                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">GTCO’s HabariPay grows its profit more than twofold in 2025</h3>
+                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
+<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
+
+
+                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
+                             <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/GTBank.jpg" width="100%" height="auto" style="object-fit: cover"></a>
+                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image source: Getty Images.</figcaption>
+                    </figure>
+                        
+<p style="padding:5px 0;margin:0">Guaranty Trust Holding Company (GTCO), a Nigerian tier‑1 banking group that owns Guaranty Trust Bank, is leaning harder on its payments arm for growth. HabariPay, the subsidiary behind Squad, <a style="text-decoration: underline;color: #b61313 !important" href="https://nairametrics.com/2026/04/08/gtcos-habaripay-records-n9-7bn-profit-in-2025-jump-155/">recorded ₦9.74 billion ($7 million) in profit</a> in 2025, up from ₦3.83 billion ($2.8 million) the previous year, as merchants and consumers pushed more transfers and card payments through its rails.&nbsp;</p>
+<p style="padding:5px 0;margin:0">HabariPay is GTCO&rsquo;s most profitable non‑bank business and one of the most profitable stand‑alone bank‑owned fintechs in Nigeria.</p>
+<p style="padding:5px 0;margin:0"><strong>We should pay more attention to Nigerian bank-owned fintechs. </strong>Access Holdings, the non‑operating parent of tier-1 lender Access Bank, is further back on absolute profit, but closing in on growth.&nbsp;</p>
+<p style="padding:5px 0;margin:0">In the nine months to September 2025, Access Bank&rsquo;s payment segment&mdash;Hydrogen&mdash;generated ₦6.2 billion ($4.5 million) in revenue and ₦1.2 billion ($871,000) in profit before tax (PBT), slightly below the ₦6.8 billion ($4.9 million) revenue and ₦1.5 billion ($1.1 million) PBT it posted in the same period of 2024. The bank&rsquo;s digital lending (Oxygen X) and pensions segments also help diversify Access&rsquo;s earnings beyond interest on loans.</p>
+<p style="padding:5px 0;margin:0"><strong>Zoom out:</strong> HabariPay and Access-owned Hydrogen are proof that bank‑backed fintechs can throw off billions in profit and evidently compete with traditional fintechs. Keeping that performance steady&mdash;and even scaling it&mdash;while holding margins in check could blunt the &ldquo;speed&rdquo; argument of traditional fintechs, particularly if customers keep flocking in at a similar pace.</p>
+</div>
+<div id="share_content" style="width: 100%;background-color: transparent">
+                        <div style="width: 100%">
+                            <div style="vertical-align:middle;text-align: left">
+                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ <div id="Story4" style="padding:0 12px">
+                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
+                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
+                    </div>
+                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">TAX</h3>
+                </div>
+                <div style="width:100%;background-color: transparent">
+                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">Nigeria&#8217;s Q4 2025 tax collection result tells two stories</h3>
+                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
+<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
+
+<a href="https://techcabal.com/category/newsletters/tc-daily/">
+<img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/09/simpsons-taxes.gif" width="100%" height="auto" style="object-fit: cover"></a>
+<figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image source: Tenor</figcaption>
+</figure>
+                        
+<p style="padding:5px 0;margin:0">In the fourth quarter of 2025, Nigeria&rsquo;s Value Added Tax (VAT) collections and Company Income Tax (CIT) collections dropped quarter-on-quarter, according to the country&rsquo;s Bureau of Statistics.</p>
+<p style="padding:5px 0;margin:0"><strong>People are still spending: </strong>VAT, which tracks and collects from everyday spending, <a style="text-decoration: underline;color: #b61313 !important" href="https://nairametrics.com/2026/04/08/nigerias-vat-collections-drop-to-n2-19-trillion-in-q4-2025/">reduced </a>by 3.78% to ₦2.19 trillion ($1.5 billion) from the ₦2.28 trillion ($1.65 billion) in the previous quarter. Although it declined, it shows that people are still making purchases and transactions, just a bit more cautiously.</p>
+<p style="padding:5px 0;margin:0"><strong>Companies are struggling: </strong>CIT <a style="text-decoration: underline;color: #b61313 !important" href="https://nairametrics.com/2026/04/08/nigerias-company-income-tax-collections-drop-49-8-in-q4-2025/">fell sharply</a> by 49.81% to ₦1.49 trillion ($1.08 billion) in Q4 from ₦2.96 trillion ($2.1 billion) in Q3 2025. CIT usually tracks corporate profitability and taxable earnings, and such a sharp decline suggests that companies are under a different kind of pressure, ranging from lower earnings to delayed remittances.</p>
+<p style="padding:5px 0;margin:0"><strong>Why this matters: </strong>This split was happening just before Nigeria fully settled into its <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/02/21/nigerias-new-capital-gains-tax-sparks-foreign-vc-anxiety/">new tax regime</a> that took effect in 2026. So these numbers feel like a checkpoint about what things looked like before the rules tightened and compliance expanded. If reforms work, we might see stronger collections driven by a wider tax base and fewer quarterly drops.</p>
+                    </div>
+                    <div id="share_content" style="width: 100%;background-color: transparent">
+                        <div style="width: 100%">
+                            <div style="vertical-align:middle;text-align: left">
+                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+  <div id="Story4" style="padding:0 12px">
+                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
+                    <div id="crypto_tracker" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
+                    </div>
+                    
+                    
+                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align:left;margin:0;text-transform:uppercase">CRYPTO TRACKER</h3>
+                </div>
+                <div style="width:100%;background-color: transparent">
+                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">The World Wide Web3</h3>
+                    
+                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
+                        <div style="font-style: normal;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-bottom: 20px;width: 100%;font-size: 14px;font-weight: 700">
+                            <p style="padding:5px 0;vertical-align: middle;text-align:left">Source:</p>
+                            <span style="vertical-align:middle;text-align: right"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/07/CoinMarketCap-logo.png" alt="CoinMarketCap logo" style="width:96px;height: auto"></span>
+                        </div>
+                        <table style="width: 100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;border-collapse: collapse">
+                            <colgroup>
+                                <col span="1" style="width: 25%">
+                                <col span="1" style="width: 25%">
+                                <col span="1" style="width: 25%">
+                                <col span="1" style="width: 25%">
+                            </colgroup>
+                            <tbody style="font-size: 12px;font-weight: 400;line-height: 15px">
+                            <tr style="width: 100%;border-bottom:1px dashed #C3C3C3;padding: 20px">
+                            <th>
+                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
+                            Coin Name
+                            </p>
+                            </th>
+                            <th>
+                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
+                            Current Value
+                            </p>
+                            </th>
+                            <th>
+                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
+                            Day
+                            </p>
+                            </th>
+                            <th>
+                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
+                            Month
+                            </p>
+                            </th>
+                            </tr>
+                            </tbody>
+                            <tbody style="font-size: 12px;font-weight: 700">
+                            <tr style="border-bottom: 1px dashed #C3C3C3">
+<td><span style="padding-right:7px"><img decoding="async" 
+     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Bitcoin</td>
+                                <td style="text-align:right;padding-right:20px;font-weight:500">$70,874</td>
+                                <td style="padding: 0">
+<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
+                                        &#8211; 0.95%
+                                    </p>
+                                </td>
+                               <td>
+<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
+                                        + 1.46%
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
+                            <tr style="border-bottom:1px dashed #C3C3C3">
+                                <td><span style="padding-right:7px"><img decoding="async" 
+     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Ether</td>
+                                <td style="text-align:right;padding-right:20px;font-weight:500">$2,179</td>
+                                <td>
+<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
+                                        &#8211; 2.91%
+                                    </p>
+                                </td>
+                                <td>
+<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
+                                        + 6.93%
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
+                            <tr style="border-bottom:1px dashed #C3C3C3">
+<td><span style="padding-right:7px"><img decoding="async" 
+     	loading="lazy" src="./Polygon%201.svg" alt=""></span>XRP</td>
+                                <td style="text-align:right;padding-right:20px;font-weight:500">$1.32</td>
+                                <td>
+<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
+                                        &#8211; 3.28%
+                                    </p>
+                                </td>
+                                <td>
+ <p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
+                                        &#8211; 3.38%
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+                        <tbody style="font-size: 12px;font-weight: 700">
+                            <tr style="border-bottom:1px dashed #C3C3C3;margin-bottom: 20px">
+                                <td><span style="padding-right:7px"><img decoding="async" 
+     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Solana</td>
+                                <td style="text-align:right;padding-right:20px;font-weight:500">$81.91</td>
+                                <td>
+<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">    &#8211; 3.39%
+                                    </p>
+                                </td>
+                                <td>
+ <p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px"> 
+                                        &#8211; 4.61%
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="width:100%;background-color: transparent">
+                        <p style="padding:5px 0;font-style: italic;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 400">
+                            * Data as of 05.34 AM WAT, April 9, 2026.
+                        </p>
+                            <div id="share_content" style="width: 100%;background-color: transparent;padding-bottom:20px">
+                                
+                                <div style="width: 100%">
+                                    <div style="vertical-align:middle;text-align: left">
+                            <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
+                                    </div>
+                                </div>
+</div> 
+</div> 
+    
+<div id="Story7" style="padding:0 12px">
+                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
+                    <div id="financial_education" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
+                    </div>
+                    <div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center">
+                       <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#FFFFFF;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">Events</h3>
+                </div>
+               
+                <div style="background-color:#F4FFF9;padding:16px 32px">
+                    <ul style="padding-left: 20px;margin:0;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:400;font-size:16px;line-height:25.6px">
+
+<li><img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/03/unnamed-18.jpg" width="100%" height="auto" style="object-fit: cover"></a>The voices shaping Africa&rsquo;s digital future are taking the stage. From AI and IoT to cloud, connectivity and smart infrastructure, <strong>IOT West Africa | Data Centre &amp; Cloud Expo Africa 2026</strong> brings together the leaders building the continent&rsquo;s next digital chapter. This is where the ecosystem meets, and we&#8217;ll see you there. The event kicks off on April 28&ndash;30 at the Landmark Centre, Victoria Island, Lagos. <a>Register here to attend</a>.</li>
+<li>All roads lead to Nairobi on May 7, 2026. Gathered at the Sarit Expo Centre, senior leaders from across Africa&rsquo;s fintech and payments ecosystem will gather for a day of meaningful connections, market insights, and cross-border collaboration. The focus of the Africa Fintech Live event is on driving real engagement, bringing together industry leaders and emerging innovators to spark strategic conversations that will shape the future of finance on the continent. <a>Secure your early bird ticket now at 50% off</a>.</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div style="width:100%;background-color: transparent;text-align:center;padding:0 12px">
+  <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/ion-img-1.png" alt="in other news image" style="width:100%;max-width:343px;height:auto;margin:0 auto">
+</div>
+</div>
+<div style="background-color: #FAE2E3;padding:16px 32px">
+<ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px">
+   
+
+<li><a href="https://techcabal.com/2026/04/08/my-life-in-tech-irene-mwendwa/" style="text-decoration: underline;color:#000000 !important">My Life In Tech: Irene Mwendwa wants to prove the internet’s design is a women’s rights issue</a></li>
+<li><a href="https://techcabal.com/2026/04/08/over-700m-raised-in-q1-2026/" style="text-decoration: underline;color:#000000 !important">African startups raised over $700M in Q1 2026</a></li>
+<li><a href="https://techcabal.com/2026/04/08/global-settlement-holdings-to-acquire-majority-stake-in-akiba/" style="text-decoration: underline;color:#000000 !important">GSH to acquire majority stake in Uganda’s AKIBA to deepen tokenisation push</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+<div style="width:100%;background-color: transparent">
+<div style="width:100%;background-color:transparent;padding:0 12px;text-align:center">
+<div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center">
+<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0"><strong>Written by:</strong> Emmanuel Nwosu and Opeyemi Kareem</p>
+<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0"><strong>Edited by: </strong>Emmanuel Nwosu and Ganiu Oloruntade</p>
+ </div>
+</div>
+<div style="background-color:#F4FFF9;padding:16px 32px">
+<h6 style="text-align:center;font-size:16px;font-weight:700;line-height:23.1px;margin:0 0 10px">Want more of TechCabal?</h6>
+<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:20px;margin:0;text-align:center">Sign up for our insightful newsletters on the business and economy of tech in Africa.</p>
+<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000"></div>
+<ul style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height: 30px;margin:0;padding-left: 20px">
+<li><a href="https://techcabal.com/next-wave" style="text-decoration: none !important;font-style: normal !important;color:#F23204 !important;font-weight:700 !important">The Next Wave</a>: futuristic analysis of the business of tech in Africa. </li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfMR3ibg7a2IgUx_qGnx75IFIg1SQcpPIwQASTiFUSmENW1DA/viewform" style="text-decoration: none !important;font-style: normal !important;color:#F23204 !important;font-weight:700 !important">Francophone Weekly by TechCabal</a>: insider insights and analysis of Francophone’s tech ecosystem </li>
+</ul>
+<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000"></div>
+<p style="padding:5px 0;font-weight:400;font-size: 16px;text-align:center;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:23px;color:#000000">P:S If you’re often missing TC Daily in your inbox, check your Promotions folder and move any edition of TC Daily from “Promotions” to your “Main” or “Primary” folder and TC Daily will always come to you.</p>
+                </div>
+<a style="width:100%;text-align:center" href="mailto:ads@bigcabal.com">
+                <img decoding="async" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/email-us-tcd-1.png" alt="Email Us" width="100%" height="auto" style="max-width:343px;margin:0 auto;object-fit: cover"></a>
+            </div> 
+        </div>
+     </div> 
+   </div> 
+ </div>
+
+
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Kenya replaces tax chief Humphrey Wattanga in surprise leadership shake-up</title>
 		<link>https://techcabal.com/2026/04/08/kenya-tax-collector-in-chief-humprey-wattanga-sudden/</link>
 		
@@ -494,7 +1102,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="1024" height="576" 
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1024x576.jpg" alt="OnePlus 15" class="wp-image-185440" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Marques Brownlee on YouTube</figcaption></figure>
 
 
@@ -649,7 +1257,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1024x576.jpg" alt="" class="wp-image-185448" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: gizmochina on YouTube
 </figcaption></figure>
 
@@ -1217,396 +1825,6 @@
 
 
 <p>The filing also highlights a dual-incentive approach for Nigerian executives. In addition to group-level shares, leaders such as Toriola and MTN Nigeria&#8217;s Chief Financial Officer, Modupe Kadri, receive equity tied to the local subsidiary.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Madica grows portfolio with $600,000 investment in three African startups</title>
-		<link>https://techcabal.com/2026/04/08/pre-seed-fund-madica-backs-three-african-startups-with-600000/</link>
-		
-		<dc:creator><![CDATA[Fancy Goodman]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 09:59:28 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[VC funding]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185408</guid>
-
-					<description><![CDATA[Madica's approach pairs funding with an 18-month structured program including mentorship, executive coaching, and two fully funded immersion trips.]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://www.madica.vc/" target="_blank" rel="noreferrer noopener">Madica,</a> an Africa-focused pre-seed investment program, has made new investments in three startups, deploying up to $200,000 in each, part of its stated goal of backing founders typically locked out of Africa’s concentrated venture capital flows.</p>
-
-
-
-<p>The startups span three countries and three sectors: Kilimo Fresh (Tanzania), co-founded by Baraka Chijenga and Justice Mangu, connects smallholder farmers to urban markets through a technology-enabled produce supply chain; Hakimu (Kenya), co-founded by Rawan Dareer, Ahmed Ahmed, and Ahmed Elbashir, is building a pan-African legal infrastructure using AI; and Biovana (Nigeria), co-founded by Estelle Dogbo and Dr. Jumi Popoola, is a health data harmonisation platform targeting global pharmaceutical and clinical research markets.</p>
-
-
-
-<p>Beyond the capital, the investments underscore a structural bet Madica is making on startups. Africa&#8217;s tech funding remains heavily concentrated in a handful of markets and disproportionately flows to founders with established networks. The Big Four—Nigeria, Kenya, Egypt, and South Africa—<a href="https://insights.techcabal.com/six-things-we-learned-about-african-tech-in-2025/" target="_blank" rel="noreferrer noopener">got between 80% and 85% of total funding</a> in 2025.</p>
-
-
-
-<p>Madica&#8217;s approach, which pairs funding with an 18-month structured program including mentorship, executive coaching, and two fully funded immersion trips, is designed to address the parts of the startup journey that money alone cannot fix.</p>
-
-
-
-<p>Each startup was selected from applications across the continent and will gain access to Madica&#8217;s global investor network alongside its curriculum.</p>
-
-
-
-<p>&#8220;Each new investment brings us closer to the portfolio we set out to build, one that reflects the full breadth and diversity of African entrepreneurship. These three startups join a growing community of founders we&#8217;re backing with the resources, relationships, and runway they need to succeed at this early stage,&#8221; said Emmanuel Adegboye, Head of Madica.</p>
-
-
-
-<p>Alongside the investments, Madica released the first edition of a fundraising guidebook series, <a href="https://drive.google.com/file/d/1gaCsRT5AzbRG4m2mfpEPsfarPVoQxnkI/view" target="_blank" rel="noreferrer noopener">Zero to Funded: A Founder&#8217;s Guide to Pre-Seed Fundraising in Africa</a>. The 75-page guide targets early-stage founders navigating their first raise without the benefit of strong networks or prior fundraising experience, covering topics from how to evaluate venture capital trade-offs to how to balance local market dynamics with global investor expectations. </p>
-
-
-
-<p>Madica also appointed Tauriq Brown, former CEO of TooMuchWiFi, an internet infrastructure company and a veteran of Rocket Internet and Mountain Partners, as a mentor to its portfolio. He will support founders with practical, execution-focused insights to drive growth.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>African startups raised over $700M in Q1 2026</title>
-		<link>https://techcabal.com/2026/04/08/over-700m-raised-in-q1-2026/</link>
-		
-		<dc:creator><![CDATA[TechCabal Insights]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 08:06:08 +0000</pubDate>
-				<category><![CDATA[Funding]]></category>
-		<category><![CDATA[Startups]]></category>
-		<category><![CDATA[TC Insights]]></category>
-		<category><![CDATA[Africa]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185285</guid>
-
-					<description><![CDATA[Explore the African tech funding in Q1 2026. With $711M raised, see how Fintech and Energy led the market while M&#38;A activity reached new highs.]]></description>
-										<content:encoded><![CDATA[
-<p><em><strong>This article was originally <a href="https://insights.techcabal.com/over-700m-raised-in-q1-2026/" target="_blank" rel="noreferrer noopener">published on TechCabal Insights and was written by&nbsp;</a>Joseph Oloyede, Analyst at TechCabal Insights.</strong></em><a href="https://insights.techcabal.com/how-nigerian-banks-market-cap-tripled-to-%e2%82%a610-5t-in-six-years/" target="_blank" rel="noreferrer noopener"><strong><br></strong></a></p>
-
-
-
-<p>At <a href="https://insights.techcabal.com/" id="https://insights.techcabal.com/">TechCabal Insights</a>, we’ve been busy tracking every dollar and deal moving through the continent in the first three months of 2026.</p>
-
-
-
-<p>Here is your high-level briefing on the state of the market.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The big number: $711 Million</strong></h2>
-
-
-
-<p>In Q1 2026, we tracked over 80 deals across the African tech ecosystem.</p>
-
-
-
-<p>While 18% of these deals remained undisclosed, the disclosed transactions added up to a solid $711 million.</p>
-
-
-
-<p>This capital flowed through a healthy mix of equity, debt, and grant funding.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Where is the money going?</strong></h2>
-
-
-
-<p>Egypt and South Africa are currently leading the race for capital in 2026.</p>
-
-
-
-<p>Egypt secured $154M, followed closely by South Africa at $134M, with Kenya and Nigeria rounding out the top four.</p>
-
-
-
-<figure class="wp-block-image aligncenter size-large is-resized"><img loading="lazy" decoding="async" width="819" height="1024" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-819x1024.png" alt="" class="wp-image-185290" style="width:428px;height:auto" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-819x1024.png 819w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-240x300.png 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-768x960.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-720x900.png 720w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report.png 1080w" sizes="auto, (max-width: 819px) 100vw, 819px" /></figure>
-
-
-
-<h2 class="wp-block-heading">Fintech and energy remain king</h2>
-
-
-
-<p>Investors are still doubling down on financial services and sustainable infrastructure.</p>
-
-
-
-<p>Fintech attracted $221M, while the Energy &amp; Water sector secured $141M to solve the continent&#8217;s power gaps.</p>
-
-
-
-<p>Logistics and Transport followed closely behind with $149M in total investment.</p>
-
-
-
-<figure class="wp-block-image aligncenter size-large is-resized"><img loading="lazy" decoding="async" width="819" height="1024" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-1-1-819x1024.png" alt="" class="wp-image-185292" style="width:425px;height:auto" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-1-1-819x1024.png 819w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-1-1-240x300.png 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-1-1-768x960.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-1-1-720x900.png 720w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/SOTIA-Infographics-2025-Year-in-Review-Report-1-1.png 1080w" sizes="auto, (max-width: 819px) 100vw, 819px" /></figure>
-
-
-
-<h2 class="wp-block-heading"><strong>Hot: A wave of M&amp;A activity</strong></h2>
-
-
-
-<p>The &#8220;exit&#8221; story is heating up with over 30 M&amp;A deals tracked this quarter.</p>
-
-
-
-<p>Notable moves include Flutterwave&#8217;s acquisition of Mono and Moniepoint’s aggressive expansion into Kenya via Sumac Microfinance Bank.</p>
-
-
-
-<p>These deals show that larger players are now buying their way into new markets and product lines.</p>
-
-
-
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1080" height="1350" data-id="185295" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/4-819x1024.png" alt="" class="wp-image-185295" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/4-819x1024.png 819w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/4-240x300.png 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/4-768x960.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/4-720x900.png 720w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/4.png 1080w" sizes="auto, (max-width: 1080px) 100vw, 1080px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="819" height="1024" data-id="185296" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/5-819x1024.png" alt="" class="wp-image-185296" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/5-819x1024.png 819w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/5-240x300.png 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/5-768x960.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/5-720x900.png 720w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/5.png 1080w" sizes="auto, (max-width: 819px) 100vw, 819px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="819" height="1024" data-id="185297" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/6-819x1024.png" alt="" class="wp-image-185297" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/6-819x1024.png 819w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/6-240x300.png 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/6-768x960.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/6-720x900.png 720w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/6.png 1080w" sizes="auto, (max-width: 819px) 100vw, 819px" /></figure>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="819" height="1024" data-id="185298" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/7-1-819x1024.png" alt="" class="wp-image-185298" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/7-1-819x1024.png 819w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/7-1-240x300.png 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/7-1-768x960.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/7-1-720x900.png 720w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/7-1.png 1080w" sizes="auto, (max-width: 819px) 100vw, 819px" /></figure>
-</figure>
-
-
-
-<h2 class="wp-block-heading"><strong>Not: The graveyard and the pink slips</strong></h2>
-
-
-
-<p>The first quarter of 2026 has been a period of painful restructuring and market exits. While some startups are trimming teams to survive, others have reached the end of the road due to regulatory and financial hurdles.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The shutdown signal</strong></h2>
-
-
-
-<p>Capital and operational stability are drying up for those who cannot navigate shifting market conditions. The Kenyan climate tech firm <a href="https://techcabal.com/2026/01/31/koko-shut-down-carbon-credits-dispute/">KOKO was forced to lay off</a> its entire 700-person team and shut down operations following a dispute with the government over carbon credit sales.</p>
-
-
-
-<p>Jumia has exited Algeria, and Uber ceased operations in Tanzania as competition and costs mounted. Even long-standing names like Showmax and City Press (after 44 years) announced closures this quarter to cut costs.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Restructuring for efficiency</strong></h2>
-
-
-
-<p>Other major players are making deep cuts to reach profitability or pivot toward new technologies like AI. The neobank <a href="https://techcabal.com/2026/03/27/kuda-cuts-several-jobs-as-restructuring-hits-core-units-hundreds-feared-affected/">Kuda laid off</a> over 100 employees as part of a restructuring hit to its core business units. <a href="https://techcabal.com/2026/02/28/zap-africa-layoffs/">Zap Africa</a> also cut 44% of its workforce in a targeted AI-driven restructuring move.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>We tracked over 18 expansions in Q1 2026</strong></h2>
-
-
-
-<p>Lemfi expanded its payment services into Australia and Canada, while MoneyHash entered the Iraqi market.</p>
-
-
-
-<p>Closer to home, Auto24 and Payaza are deepening their footprints in Rwanda and Uganda.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>GITEX Africa is no longer about who shows up, but what they leave with</title>
-		<link>https://techcabal.com/2026/04/08/gitex-africa-is-no-longer-about-who-shows-up-but-what-they-leave-with/</link>
-		
-		<dc:creator><![CDATA[Temitayo Jaiyeola]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 07:37:06 +0000</pubDate>
-				<category><![CDATA[Events]]></category>
-		<category><![CDATA[GITEX Africa]]></category>
-		<category><![CDATA[Nigeria]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185381</guid>
-
-					<description><![CDATA[GITEX Africa started yesterday, and it did not feel like another “Africa Rising” conference.]]></description>
-										<content:encoded><![CDATA[
-<p>GITEX Africa started yesterday, and it did not feel like another “Africa Rising” conference.</p>
-
-
-
-<p>The organisers are no longer beating the drums of ambition and potential. It is time for execution, one speaker said on the main stage, at least from the parts of the opening ceremony I could understand, i.e., the English parts.</p>
-
-
-
-<p>GITEX is still the biggest tech and startup showcase on the continent, and organisers say 50,000 people are expected to walk its 24 halls between April 7 and 9. Over 130 countries are represented.</p>
-
-
-
-<p>Its ambition has been clear from<a href="https://techcabal.com/2023/06/07/gitex-africa-morocco/" target="_blank" rel="noreferrer noopener"> day one</a>: to make Morocco a nerve centre for technology investments in Africa, pulling capital, startups, and policy attention into one place, and away from the continent’s usual hubs, Nigeria, Kenya, Egypt, and South Africa.</p>
-
-
-
-<p>But four years in, the conversation is starting to tilt towards outcomes. Every tech event starts with hype and what the organisers say on stage. Eventually, this must shift to what founders say they took home from the last edition, if the event wants to retain its relevance.&nbsp;</p>
-
-
-
-<p><a href="https://techcabal.com/2025/04/15/morocco-gitex-africa/" target="_blank" rel="noreferrer noopener">In 2025</a>, Mohammed Drissi Melyani, Director-General of Morocco’s Digital Development Agency, said GITEX was becoming more than a showcase for innovation and turning into a platform for strengthening digital inclusion across African markets.</p>
-
-
-
-<p>This year, Aziz Akhannouch, Head of Government, Kingdom of Morocco, put it more directly in his speech during the opening ceremony, “GITEX Africa Morocco has become far more than an annual exhibition. It is a real platform for building partnerships and creating opportunities.”</p>
-
-
-
-<p>I spoke to a couple of returning startups to ask if they felt the same way.</p>
-
-
-
-<p>Abdoul Zakari, cofounder of Sako, a fintech in Niger Republic, told me he got actual business from last year’s event. He did not raise money, but he closed deals that translated into revenue in 2025. This year, he is back, hoping for more of the same.</p>
-
-
-
-<p>His startup focuses on cross-border payments in Francophone Africa. Now, it is looking at Nigeria.</p>
-
-
-
-<p>“There is a lot of trade between Nigeria and Niger, but payment is still complicated,” he said.</p>
-
-
-
-<p>Low bank account penetration in Niger makes it hard to move money into Nigeria. According to the <a href="https://digitalfinance.worldbank.org/country/niger" target="_blank" rel="noreferrer noopener">World Bank</a>, only 15% of people above age 15 have bank accounts.&nbsp;</p>
-
-
-
-<p> A system that allows businesses to pay from mobile money into Nigerian bank accounts would unlock much of that trade, Zakari argues.</p>
-
-
-
-<p>I also met Amsa, a Senegalese founder building Kaycber, a transit payments startup, who said he had just gotten a company ready to partner with his startup in Senegal.</p>
-
-
-
-<p>When he realised I was Nigerian, he did not try to explain his product from scratch. He just said: “We are like Cowry.”</p>
-
-
-
-<p>That was enough. Cowry is a contactless payment card <a href="https://techcabal.com/2025/03/10/touch-and-pay-fuels-growth/" target="_blank" rel="noreferrer noopener">developed by Touch and Pay (TAP) Technologies Limited</a>, a Nigerian fintech company, that allows commuters to pay for bus and train rides using near-field communication (NFC). </p>
-
-
-
-<p>According to him, some 5,000 people use their cards, with adoption strongest in Uganda.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Is Nigeria losing steam?</strong></h2>
-
-
-
-<p>One of the first things I did when I got to the venue was look for Nigeria’s pavilion.</p>
-
-
-
-<p>There was none. Last year, <a href="https://techcabal.com/2025/04/15/morocco-gitex-africa/" target="_blank" rel="noreferrer noopener">there was</a>.</p>
-
-
-
-<p>This year, the National Information Technology Development Agency (NITDA), Nigeria&#8217;s <a href="https://techcabal.com/tag/nitda/" target="_blank" rel="noreferrer noopener">tech regulator</a>, sponsored 10 startups. </p>
-
-
-
-<p>The agency only covered the cost of exhibition booths, which cost about $2,000, according to two founders who paid for theirs.&nbsp; Last year, it sponsored<a href="https://techcabal.com/2025/04/15/morocco-gitex-africa/"> 12 startups</a>.</p>
-
-
-
-<figure class="wp-block-image aligncenter size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="768" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-1024x768.jpg" alt="" class="wp-image-185387" style="width:1024px;height:auto" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-1024x768.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-300x225.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-768x576.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-1536x1152.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-2048x1536.jpg 2048w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/20260407_144628-2-1200x900.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Image source: TechCabal</em></figcaption></figure>
-
-
-
-<p>This is the first year NITDA is not fully funding participation.</p>
-
-
-
-<p>According to Aristole Onumo, the agency’s director of stakeholder management and partnership, this was intentional.</p>
-
-
-
-<p>“We want startups to show that their commitments too,” he told me.</p>
-
-
-
-<p>According to the agency, instead of running roadshows, a nationwide startup discovery tour, like previous years, it picked startups from its database, specifically those willing to cover the cost of their trip.&nbsp;</p>
-
-
-
-<p>“We have had people come to our roadshows, pitch great ideas, get selected, and after the event, they disappear into other businesses,” he said.</p>
-
-
-
-<p>Some founders, according to him, saw the opportunity as “their share of the national cake.” But showing up is expensive.</p>
-
-
-
-<p>One of the selected founders, who had to pay for his flight, hotel, and feeding, told me it costs between ₦4 million ($2,885) and ₦6 million ($4,327) on top of what NITDA had covered.</p>
-
-
-
-<p>Another self-funded Nigerian founder, who wasn’t sponsored by NITDA, said it cost him about $6,000, including hotel, booth, and flights, to attend with his co-founder,</p>
-
-
-
-<p>When I mentioned the funding issue, Onumo dismissed it, arguing that the agency has been playing its role as ecosystem orchestrator well.&nbsp;</p>
-
-
-
-<p>Six of the 10 startups NITDA sponsored were in attendance when I found the booths around 2 pm local time.</p>
-
-
-
-<p>One of the startups, Rescue Tap, was founded by Oyewole Joledo after losing two staff members to ‘one chance,’ a form of robbery or kidnapping involving fake public transport vehicles.&nbsp;</p>
-
-
-
-<p>The product is designed to alert security agencies automatically in such situations.</p>
-
-
-
-<p>Payments giant Visa funded another six Nigerian startups for this year’s event, David Adeleke, founder of open banking startup Zeeh, who was part of the cohort, told me. These startups are part of a cohort of about 18 African startups that the payment company is sponsoring for this year’s event.</p>
-
-
-
-<p>For the Nigerian contingent, attention is already shifting to GITEX Nigeria, scheduled for August. Space remains its biggest constraint, NITDA officials told me.</p>
-
-
-
-<p>Morocco can accommodate the foot traffic of close to tens of thousands of people across multiple halls. Nigeria, despite its scale, cannot.</p>
-
-
-
-<p>I have only scratched the surface of GITEX Africa today. There are still halls I have not walked and conversations I have not had, and I hope to do so today.&nbsp;</p>
 ]]></content:encoded>
 					
 		
