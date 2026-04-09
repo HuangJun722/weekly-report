@@ -39,7 +39,17 @@ jobs:
       - name: Fetch and analyze news
         if: inputs.mode != 'html-only'
         run: |
-          python -c "import os; k=os.environ.get('DOUBAO_API_KEY',''); print(f'DOUBAO_API_KEY length: {len(k)}')"
+          RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
+            -H "Authorization: Bearer $DOUBAO_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{"model":"doubao-pro-32k","messages":[{"role":"user","content":"hi"}],"stream":false}')
+          HTTP_CODE=$(echo "$RESP" | tail -1)
+          BODY=$(echo "$RESP" | head -c 200)
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "✅ 豆包 API 可用 (HTTP $HTTP_CODE)"
+          else
+            echo "❌ 豆包 API 失败 (HTTP $HTTP_CODE): $BODY"
+          fi
           python scripts/fetch_news.py
         env:
           DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
