@@ -42,7 +42,7 @@ jobs:
           RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
             -H "Authorization: Bearer $DOUBAO_API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{"model":"Doubao-1.5-lite-32k","messages":[{"role":"user","content":"hi"}],"stream":false}')
+            -d '{"model":"ep-20260409223830-dnt5b","messages":[{"role":"user","content":"hi"}],"stream":false}')
           HTTP_CODE=$(echo "$RESP" | tail -1)
           BODY=$(echo "$RESP" | head -c 300)
           if [ "$HTTP_CODE" = "200" ]; then
@@ -53,7 +53,6 @@ jobs:
           python scripts/fetch_news.py
         env:
           DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
-          DOUBAO_MODEL: Doubao-1.5-lite-32k
 
       - name: Debug environment
         run: |
