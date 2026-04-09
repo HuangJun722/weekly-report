@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Thu, 09 Apr 2026 13:48:30 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 09 Apr 2026 13:51:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,80 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>South Africa-founded Refiant AI raises $5 million to build leaner AI models</title>
+		<link>https://techcabal.com/2026/04/09/refiant-ai-raise-5-million/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 13:51:19 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Artifical Intelligence]]></category>
+		<category><![CDATA[funding]]></category>
+		<category><![CDATA[South Africa]]></category>
+		<category><![CDATA[startups]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185555</guid>
+
+					<description><![CDATA[Refiant AI has raised $5 million to support its compression and restrucutring tool for AI models to allow them run efficiently on smaller or local machines.]]></description>
+										<content:encoded><![CDATA[
+<p>Refiant AI, a South Africa-founded startup that uses algorithms to compress artificial intelligence (AI) models, has closed a $5 million seed round to build its platform, grow its team and support enterprise partnerships.&nbsp;</p>
+
+
+
+<p>VoLo Earth Ventures, a California climate technology fund, led the round, backing what it considers a more efficient approach to developing smarter and leaner AI models.</p>
+
+
+
+<p>Founded in 2025 by Viroshan Naicker, Siddharth Gutta, and Mathew Haswell, Refiant AI is building tools that restructure and compress AI models by reducing computational weight and retraining them to maintain performance, so that they can run efficiently on smaller or local machines.</p>
+
+
+
+<p>As global companies, such as Meta and Microsoft, race to deploy more efficient AI models, they are investing heavily in building data centres equipped with graphics processing units (GPUs) and cooling systems.&nbsp;</p>
+
+
+
+<p>That energy infrastructure is both expensive and resource-intensive. In the first quarter of the year, both companies <a href="https://www.bloomberg.com/news/articles/2026-03-12/microsoft-meta-add-to-700-billion-surge-in-data-center-leases" target="_blank" rel="noreferrer noopener nofollow">each committed</a> nearly $50 billion in additional data centre leases to support AI. <a href="https://www.bloomberg.com/news/articles/2026-03-12/microsoft-meta-add-to-700-billion-surge-in-data-center-leases" target="_blank" rel="noreferrer noopener nofollow">Bloomberg reported</a> that those pledges among the largest cloud computing companies helped push commitments to data centre leases above $700 billion.&nbsp;</p>
+
+
+
+<p>&#8220;AI&#8217;s growing energy footprint is one of the most urgent and underappreciated challenges in the climate space,&#8221; Gutta, one of Refiant AI’s co-founders, said. &#8220;The industry&#8217;s default answer is to build more data centres and consume more power. Ours is to make the AI itself dramatically more efficient.&#8221;</p>
+
+
+
+<p>Instead of relying on building more infrastructure, Refiant AI intends to make the AI models lighter so they require fewer resources to operate. The company said it had successfully compressed a 120-billion-parameter model to run on a standard laptop with just 12 gigabytes (GB) of RAM, a task that would typically require at least 80GB of memory. The company said that the compressed model retained between 95% and 99% of its original performance, using more than 80% less energy.</p>
+
+
+
+<p>Refiant said its technology is suited for markets where computing infrastructure is limited, and cloud access can be expensive. In sectors like banking, telecoms, and government services, its tools could allow organisations to run AI systems without needing constant access to the cloud.&nbsp;</p>
+
+
+
+<p>Nigeria&#8217;s Central Bank recently <a href="https://techcabal.com/2026/03/12/cbn-wants-ai-to-fight-money-laundering/" target="_blank" rel="noreferrer noopener">embedded AI</a> and machine learning into new baseline standards that require financial institutions to deploy automated anti-money laundering systems. Tools like Refiant’s could enable banks to deploy these systems locally without relying on costly foreign infrastructure or moving sensitive data across borders.</p>
+
+
+
+<p>The implications of compressed AI models vary. If powerful AI models can run on everyday hardware, African organisations may rely less on global cloud providers and expensive infrastructure. For the continent whose <a href="https://www.datacentermap.com/africa/" target="_blank" rel="noreferrer noopener nofollow">250 data centres</a> only <a href="http://africadca.org/en/data-centres-in-africa-2026-the-economic-report" target="_blank" rel="noreferrer noopener nofollow">account for 0.6% of the global capacity</a>, the AI compression technology could lower the barrier to adopting advanced AI models while keeping data local.</p>
+
+
+
+<p>At the same time, it introduces a new tension. Local data centre operators across Africa have been expanding their capacity to meet the rising demand for cloud services, <a href="https://www.ecofinagency.com/telecom/3004-46712-aws-bets-on-africa-s-fast-growing-cloud-market" target="_blank" rel="noreferrer noopener nofollow">estimated to reach</a> $25.46 billion by 2029. In July 2025, telecom giant MTN <a href="https://techcabal.com/2025/07/01/mtn-nigeria-completes-first-phase-of-235-million-data-centre/" target="_blank" rel="noreferrer noopener">completed the first phase</a> of its $235 million Tiier III data centre in Lagos, Nigeria.  In August, Airtel <a href="https://techcabal.com/2025/08/06/airtel-bets-on-ai-with-120-million-data-centre-set-to-go-live-in-2026/" target="_blank" rel="noreferrer noopener">announced</a> that its 38-megawatt data centre will come live in 2026. If more workloads shift to smaller devices, it could slow the pace at which these local facilities are needed.</p>
+
+
+
+<p>Global companies are already experimenting with reduced compute capacities in AI models. In March, Google <a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/" target="_blank" rel="noreferrer noopener">launched TurboQuant</a>, a compression algorithm designed to shrink how much memory AI models need to run. Refiant AI’s work sits in the same direction, but goes further by ensuring compression happens at much lower compute levels.</p>
+
+
+
+<p>On its path to growth, Refiant AI said it is already in discussions with multinational technology firms to explore how its technology can reduce compute costs without compromising performance.</p>
+
+
+
+<p>&#8220;AI&#8217;s biggest constraint isn&#8217;t demand &#8211; it&#8217;s energy,&#8221; said Joseph Goodman, Managing Partner, VoLo Earth. &#8220;What&#8217;s been missing is a fundamentally more efficient way to compute. Refiant&#8217;s architecture replaces brute-force scaling with a far more efficient, nature-inspired approach that lowers energy use while increasing capability.&#8221;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>This startup is building an ‘intelligence layer’ for Nigeria’s power grid</title>
 		<link>https://techcabal.com/2026/04/09/powerlabs-wants-to-make-nigerias-grid-think/</link>
 		
@@ -1648,334 +1722,6 @@
 
 
 
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Jessica Hope built Wimbart quietly, then let the work speak loudly</title>
-		<link>https://techcabal.com/2026/04/08/jessica-hope-on-wimbart-at-10/</link>
-		
-		<dc:creator><![CDATA[Fancy Goodman]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 13:11:37 +0000</pubDate>
-				<category><![CDATA[People]]></category>
-		<category><![CDATA[founder]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185434</guid>
-
-					<description><![CDATA[There is a composed, almost effortless stillness to her, even after a decade navigating the high-stakes world of public relations (PR).]]></description>
-										<content:encoded><![CDATA[
-<p>On a Thursday morning, Jessica Hope appears on my laptop screen, seated calmly for our Google Meet call. There is a composed, almost effortless stillness to her, even after a decade navigating the high-stakes world of public relations (PR).</p>
-
-
-
-<p>We spoke for over an hour, a conversation that ranged from her journalistic roots to her journey building <a href="https://wimbart.com/" target="_blank" rel="noreferrer noopener">Wimbart</a>, a PR&nbsp; agency specialised in Africa and emerging markets.&nbsp;</p>
-
-
-
-<p>Despite leading some of the continent&#8217;s most significant corporate narratives, she is quick to deflect the spotlight. Throughout our call, she frequently anchors the conversation back to the entire team, reminding me that Wimbart’s success is a collective effort.&nbsp;</p>
-
-
-
-<p>&#8220;It’s not a sort of solo sport,&#8221; she says, her voice steady and certain. &#8220;It’s very much a team sport.&#8221;</p>
-
-
-
-<p>Her journey began in 2014 as a &#8220;glorified freelancer,&#8221; a transition born from a refusal to let the African tech story be told through a pejorative lens. Ten years after founding Wimbart in 2016, she has evolved from being central to every win to a leader who finds the greatest excitement in her team’s success.</p>
-
-
-
-<p>I spoke with Hope as she peeled back the layers of her journey over the past decade, the &#8220;boringly consistent&#8221; personality traits that keep her grounded, and what is required to be in charge of one&#8217;s own destiny in an industry that never sleeps.</p>
-
-
-
-<p><em>This interview has been edited for length and clarity.&nbsp;</em></p>
-
-
-
-<p><strong>What did success look like to you when you started Wimbart?</strong></p>
-
-
-
-<p>On a basic level, every month that I was able to turn a small profit felt like success. But I would say more deeply — and this goes more to how I operate and how I feel about things—just doing a good job and [being] excellent. The Genesis story of Wimbart is that I was a glorified freelancer for the first couple of years from 2014 up until early 2016. Success looked like seeing my clients&#8217; names in global outlets.&nbsp;</p>
-
-
-
-<p>When I started being recommended from one client to another, that also felt like a success metric, probably because then it went back to my other success metric of doing a good job.</p>
-
-
-
-<p><strong>Over the span of 10 years, has your view on success changed?&nbsp;&nbsp;</strong></p>
-
-
-
-<p>I now don&#8217;t necessarily analyse the success based on my own kind of successes: in terms of me placing a story in the Financial Times or Bloomberg. I think success now looks more like celebrating the successes of my team members. I do get hyper-excited for when other people record wins, and especially when they have nothing to do with me. That means that Wimbart has scaled.&nbsp;</p>
-
-
-
-<p>As with many founders, a company stays small for a long time because everything centres around one central figure. That would have been me. And even in the first two or three years, I was central to absolutely every bit of success. Now, not so much. The fact is that quite often, we&#8217;re working on so many projects at any one time. I don&#8217;t have visibility across all of it, but I&#8217;d still know that excellence is still being delivered. And on top of that, we&#8217;re paying the bills as well;e&#8217;re generating revenue.</p>
-
-
-
-<p><strong>If I asked your childhood friends what you were like, what would they say, and how much of that person still runs Wimbart today?</strong></p>
-
-
-
-<p><strong><br></strong>I&#8217;m actually boringly consistent, and not sure if I&#8217;ve changed that much. But I do think that my school friends—who I&#8217;ve actually been very close with from the age of, say, 11—are probably still my kind of closest circle of friends. They would say I&#8217;ve always been quite intense, very determined. I think they would say that I have a ride-or-die mentality.&nbsp;</p>
-
-
-
-<p>I&#8217;m quite a perfectionist, which is deeply irritating for almost everybody in my circle. And I think they would say that I really care. I very rarely say I don&#8217;t care. That goes back to being a bit of a perfectionist, and that&#8217;s also probably quite stressful for a lot of people as well. I actually think a lot of those were kind of core personality traits that still stand today.</p>
-
-
-
-<p><strong>Are there parts of that person that still stand today that you’ve felt you needed to double down on or tone down?</strong></p>
-
-
-
-<p>When I moved into the African tech space. I worked for Jason Njoku in iROKO, and he is even more intense than [I am]. We&#8217;ve known each other since university [for] 20 years. Three and a half years working with Jason was like energy meets energy.&nbsp;&nbsp;</p>
-
-
-
-<p>Over the past 10 years, probably people that I&#8217;ve worked with haven&#8217;t always understood where I&#8217;m coming from.&nbsp; I guess I&#8217;ve had to sometimes tone down my intensity. But the flip side of that is that the clients really like [my intensity], because they get amazing results. They can literally feel that I care. We&#8217;ve worked mostly with founders over the years. Business building is really hard, no matter what you&#8217;re doing. Building any business is very, very, very, very hard. Founders like that intensity, and they want someone to care about their business as much as they do.</p>
-
-
-
-<p><strong>Have you ever felt underestimated in rooms that mattered? How did you handle it?</strong></p>
-
-
-
-<p>Yes, over the last 10 years, especially in the early days when PR, communications, storytelling, and strategy weren&#8217;t taken as seriously as they are. Now, I might have felt on occasion that I have to take people on the journey to explain what we do, why we do it, how we do it, and then the results. But most of the time, especially now, I think the kind of catalogue of work that has been built up and the clients that we&#8217;ve worked with over the last 10 years speak for itself. </p>
-
-
-
-<p><strong>You launched Wimbart in 2016, which, in the context of the PR scene, felt genuinely ahead of the curve. You’ve said in the past that you saw a gap in the market, but was it more than that? Was there a moment of frustration in your previous roles where you thought, &#8220;I could tell these stories better myself&#8221;?</strong></p>
-
-
-
-<p>I have confidence in my ability to understand what a story is. And I think that comes from the fact that I started as a journalist. [In the] early days, I was surprised when a lot of PRs were not looking at things from a journalistic background, so they weren&#8217;t able to curate stories and kind of go through the process.</p>
-
-
-
-<p>The reason for setting up Wimbart was not a personal frustration, necessarily. It was the fact that there was a gap in the market. It was Jason [iROKO’s founder], actually, who understood that there was a gap in the market. No one was talking about African tech.&nbsp; The BBCs,&nbsp; the CNNs or the Bloombergs and international outlets [had] the narrative just broadly around African business, not just tech, and it was mostly pejorative.&nbsp;</p>
-
-
-
-<p>The work we had to do with iROKO was to actually knock on the doors of global media outlets and Pan-African ones when it came to African tech and give context. Going through that process and doing all the hard work with iROKO showed other people what could be done about storytelling when you have consistent messaging [and] put the effort in.&nbsp;</p>
-
-
-
-<p>What was happening was that some of the other players in the space were asking Jason to subcontract me to them. Through his networks and the conversation he was having with people, he saw that there were people who could see the attention and the interest he was getting from telling his story locally, regionally, and internationally, and they wanted a slice of that.&nbsp;</p>
-
-
-
-<p>And then going back to the fact that I was like: ‘I am really good at storytelling. I&#8217;m pretty good at writing. I&#8217;m pretty good at building relationships with journalists,’ and all of those kinds of classic things that are necessary to build a PR agency.</p>
-
-
-
-<figure class="wp-block-image"><img loading="lazy" decoding="async" width="2560" height="1440" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-scaled.jpg" alt="" class="wp-image-185436" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-scaled.jpg 2560w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-2048x1152.jpg 2048w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Wimbart-Team-2026-1240x698.jpg 1240w" sizes="auto, (max-width: 2560px) 100vw, 2560px" /><figcaption class="wp-element-caption">Wimbart team. Image source: Wimbart</figcaption></figure>
-
-
-
-<p><strong>You started the business at 31. Looking back, what is one thing you lost—a relationship, a piece of your youth, a sense of ease—because you were building Wimbart? Was the trade-off worth it?</strong></p>
-
-
-
-<p>Whatever you do, you&#8217;re going to lose your youth. We all get older. So, I&#8217;m going to say I gained a lot of things. A vast majority of my close friends, clients, and people in my broader network now are people that I met through business building. Again, Jason and I have been friends for 20 years, and we are still friends, but we work together and collaborate. He&#8217;s like my number one “partner-in-crime”, really.&nbsp;</p>
-
-
-
-<p>I see it as a case of, ‘I have gained huge amounts of things.’ Yeah, we&#8217;ve had sleepless nights. Everyone has sleepless nights. You could be in a dead-end job that you hate, and you still have sleepless nights. I&#8217;m in a career that has massive amounts of career prospects, and I am the mistress of my own destiny as well. So I think that&#8217;s really fortunate.</p>
-
-
-
-<p>The other thing I would say is that within this role that I&#8217;ve had over the last 10 years, I&#8217;m lucky to have a large network of incredible mentors. I feel like I&#8217;ve almost had a free business course along the way. There&#8217;s always someone I can go and ask something; if I&#8217;m struggling with something, there&#8217;s always someone I can ask for some help. They&#8217;re able to help me and set me on the right course as well.</p>
-
-
-
-<p><strong>What delayed gratification have you had over the years?&nbsp;</strong></p>
-
-
-
-<p>I can&#8217;t have hobbies, because my schedule is nuts. Plus, I have a son, and I can&#8217;t say I&#8217;m going to do something every Tuesday or Thursday, or commit myself to things on the weekends. Because again, a lot of my work is very frenetic. The news is happening all the time. So quite often, even if I plan something, I&#8217;ve got to put that aside to jump on a big news deal or opportunity.&nbsp;</p>
-
-
-
-<p>A lot of my work is centred around social activities as well. I travel a lot. I spend a lot of time in Nigeria, South Africa, and Kenya. Trust me, I&#8217;m not just stuck in a hotel room that whole time. I&#8217;m out there with stakeholders or clients, having a glass of wine here, going to a party there, or going to an event. I&#8217;ve worked really hard and reaped some benefits, and hopefully there&#8217;ll be more.<br><br><strong>What was sacrificing like when you started, and what is it like now?&nbsp;</strong></p>
-
-
-
-<p>I guess we know at one point, when we were scaling, it was during COVID-19. There were many sacrifices from everybody in order to keep the company going. We actually scaled quite a lot during that period.&nbsp;</p>
-
-
-
-<p>On occasion, maybe I&#8217;ve had to sacrifice a little bit of family time. You know, there&#8217;s a picture of me [in the] early days, I think I&#8217;m pitching TechCrunch, and breastfeeding as well. [It was] business around the early stage, and it was my first child too. I think people make sacrifices all the time, whether or not you are a business owner. They&#8217;re for the greater good.&nbsp;</p>
-
-
-
-<p><strong>How have you multitasked and juggled so many responsibilities—motherhood and running a business?&nbsp;</strong></p>
-
-
-
-<p>I surround myself with many very high-achieving women, both clients and senior members of my team. So it&#8217;s the norm for my senior team to be juggling family life, work life, and social life. I&#8217;m not going to say that all women can have it all, because I&#8217;m not sure if they can. But I think with certain levels of determination, hopefully you can.&nbsp;</p>
-
-
-
-<p>It also comes back to personality traits. We assume that women are good organisers and good administrative stuff. I&#8217;m not. It&#8217;s like a running joke on my team that I&#8217;m very poor with those types of things. But I have a lot of traits that I think you might actually consider to be “masculine traits”.&nbsp;</p>
-
-
-
-<p><strong>What was a pivotal moment for Wimbart in the early days, and did that change how you saw the business?</strong></p>
-
-
-
-<p>The first pivotal moment would be my first hire in 2016, Maria Adediran, who had worked for me at iROKO. She started as a senior account executive, and she is now associate director, so it was pivotal for the entire company, for her and for me. She actually<a href="https://techcabal.com/2026/02/09/wimbart-lauches-wimbart-lite/" target="_blank" rel="noreferrer noopener"> launched Wimbart Lite </a>this year. When she launched her own department, that felt like a pivotal moment.&nbsp;</p>
-
-
-
-<p>At iROKO, she worked in comms and did a lot of the Nollywood stuff at iROKO. She didn&#8217;t have a background in PR, but she was a really fast learner [and paid] attention to detail. She really cares. I trust her as a founding member of the team, and she has another level of intensity that [was] required in the early stage as well. She&#8217;s really super driven. [These are] qualities that are imperative when you&#8217;re starting a business, and [they] have been instrumental as we&#8217;ve scaled the business.</p>
-
-
-
-<p>Another one would be when we secured Andela as a client in 2017. Before that, we had worked with quite a lot of early-stage startups and companies, but we always had Andela in our sights. I really pursued them quite hard. There were a number of touch points, but it took about 360 days to close our first project. It was a three-month project originally, and we ended up working with them for seven years.&nbsp;</p>
-
-
-
-<p><strong>Why Andela?&nbsp;</strong></p>
-
-
-
-<p>They had raised a significant amount of money. I love their positioning of <a href="https://www.andela.com/newsroom/the-startup-thats-harder-to-get-into-than-harvard" target="_blank" rel="noreferrer noopener">‘it&#8217;s harder to get into than Harvard</a>’. I felt that Jeremy, one of the founders, was super inspirational. He&#8217;s such a smart guy. I never felt [I had to prove myself to] Jeremy. I felt like it was completely collaborative. It was really creative, and he respected the decision-making. Bits of it were hyper-intellectual. Other times, it was just about execution, and we did some fantastic work together.</p>
-
-
-
-<p>Actually, there was an incredible Andela mafia. And even now, funnily enough, we still work with a lot of the Andela mafia from those days. Also, I love the Andela story. I loved what they were doing visually. Andela was the first to really document that kind of African tech energy and the ecosystem they invested heavily in.&nbsp;</p>
-
-
-
-<p>Wimbart was able to scale with Andela. When they launched, we started doing work in Nigeria originally, and then they wanted to do more work in Kenya. That allowed Wimbard to build our operation and media footprint in Kenya. I think we did more work in Egypt and South Africa. And the same. So we went from being Nigeria-focused to pan-African alongside our clients.</p>
-
-
-
-<p><strong>Which is the harder story to tell: the massive success that everyone wants a piece of, or the underdog that no one has heard of yet?</strong></p>
-
-
-
-<p>I&#8217;d probably say the underdog, especially if they don&#8217;t have any kind of media footprint. If I went and pitched you a story, something lands in your inbox, and you can&#8217;t find it online. If I send you a story about a company you haven&#8217;t heard of before, that&#8217;s a little bit harder, because then you&#8217;re like, ‘Why should I be spending my time writing about it?’ It&#8217;s probably harder because you and I have to have a little bit more discussion about why I think you should write about them and why they&#8217;re newsworthy.&nbsp;</p>
-
-
-
-<p><strong>PR is often seen as spin. Where do you draw the line between shaping a story and distorting it?</strong></p>
-
-
-
-<p>We are super ethical; we interrogate our clients. I don&#8217;t think that we often get presented with stories that need too much spin. Sometimes a client might come to us, and they say they want this story to go out there. With our journalist hats on—because at Wimbart, we have to be both PR and journalistic in our approach—we might actually counsel the client and say, ‘We don&#8217;t think the story is going to run. Have you thought about adding some weight to another story? Or is there something else?<br><br>We call it taking a client on the journey. So we wouldn&#8217;t just say to a client, “no”. There is a certain level of creativity and free-flowing discussion where we discuss options. It&#8217;s kind of creative, and it&#8217;s collaborative</p>
-
-
-
-<p>And I think even spin is probably not the right term, especially for what we&#8217;re doing in terms of tech, business, and corporate. It&#8217;s more of, “how can we amplify a subject matter in such a way that it is more newsworthy?”</p>
-
-
-
-<p><strong>Have you ever turned down a client because their story didn’t sit right with you?</strong></p>
-
-
-
-<p>There are certain times when certain clients, stories or things haven&#8217;t quite fit the Wimbart ethos. We&#8217;ve politely turned them down.<br></p>
-
-
-
-<p><strong>What&#8217;s your pitch to a founder who says, &#8220;I can&#8217;t afford PR right now&#8221;? How do you quantify the value of reputation when survival is the only metric?</strong></p>
-
-
-
-<p>I probably wouldn&#8217;t pitch them too hard. I will let my work speak for itself, and I will let my company&#8217;s work speak for itself. We have an extensive library of work to tell our story. I can chat about the technical bits of PR, all sorts of things, but I&#8217;m very much okay. It&#8217;s very much a case of, ‘I will let my work speak for itself.’</p>
-
-
-
-<p><strong>You operate in between two worlds. To the global eye, you might be seen as an expert on Africa. To someone deeply embedded in Africa’s tech scene, you might be seen as a gatekeeper. How do you navigate that duality without letting it define you?</strong></p>
-
-
-
-<p>We have operations on the ground. We do have two members of the team based in Lagos now, and a lot of people at Wimbart are from Nigeria or Ghana. It&#8217;s a big diaspora community, and they have a lot of on-the-ground connections from when they were either working in PR agencies or working in-house. We understand the markets that we&#8217;re dealing with every day.&nbsp; I spend a lot of time in the main markets—South Africa, Kenya and Nigeria. And when I&#8217;m there, it&#8217;s not just to see clients. I hang out with journalists and stakeholders and build my network.</p>
-
-
-
-<p>London is a global business capital, so a lot of our clients are just passing through London. There&#8217;s still a lot of work in the global market. That&#8217;s how I&#8217;ve been able to work across London and Europe and Pan-African markets as well.</p>
-
-
-
-<p><strong>In a sentence, how do you want to be described in a room you’re not in?</strong></p>
-
-
-
-<p>I would say elite, but not elitist. And what I love is when I&#8217;m having a conversation with people in person, and someone describes what my company does to a complete stranger, and they hit the nail on the head. It means people know what we do, and people want to talk about us.</p>
-
-
-
-<p><strong>Where do you see yourself and Wimbart in the next ten years?</strong></p>
-
-
-
-<p>Hopefully, [I see myself] on a beach somewhere. I&#8217;m still working out and figuring out my own leadership and growth journey. I&#8217;m still going to be a central part of Wimbart. Wimbart is the name of the street that my granddad, my dad, and I grew up in in South London. It’s deeply personal. I have to continue to build the senior and the middle management team so I can continue to grow the company and spend more time building the business rather than working in the business, and then probably do even more advisory work for other companies</p>
-
-
-
-<p>[I see Wimbart] broadening our scope of services. I think Wimbart grew really slowly. We haven&#8217;t even scratched the surface. We&#8217;ve always gone very narrow and deep in terms of PR tech, but I think there are opportunities to use the Wimbart blueprint in different markets and sectors as well.&nbsp; I think we probably need to work a little bit more in terms of positioning ourselves as that conduit for international companies that want to move into doing PR and communications. That&#8217;s something else that we&#8217;ll probably look to grow and expand on in the next decade.&nbsp;</p>
-
-
-
-<p>The kind of PR that we do is quite personal, so it hasn&#8217;t always been scalable. We need to think about how to build products. And also, how can we partner and collaborate with other international agencies? You know, in the next 10 years, it wouldn&#8217;t be surprising if Wimbart was acquired by a larger international kind of strategic comms agency.</p>
-
-
-
-<p><strong>What do you do for fun?</strong></p>
-
-
-
-<p>I do enjoy travelling. I spend a lot of time with my son, who travels with me. He came to the Africa Tech Summit in Nairobi with me.</p>
-
-
-
-<p><strong>Who keeps you grounded?</strong></p>
-
-
-
-<p>I&#8217;m still very close with my friends from when I was 11, and I&#8217;m now almost 43. The person that I speak to and deal with the most is still probably Jason. Our kids hang out together, and that&#8217;s actually grounding. I can also go to him for advice.&nbsp;</p>
-
-
-
-<figure class="wp-block-image"><img loading="lazy" decoding="async" width="2560" height="1707" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-scaled.jpg" alt="" class="wp-image-185438" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-scaled.jpg 2560w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-300x200.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-1024x683.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-240x160.jpg 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-768x512.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-1536x1024.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-2048x1366.jpg 2048w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Jess-Jason-Moonshot-1240x827.jpg 1240w" sizes="auto, (max-width: 2560px) 100vw, 2560px" /><figcaption class="wp-element-caption"><em>Jessica and Jason Njoku at Moonshot, TechCabal&#8217;s flagship conference. Image source: Wimbart</em></figcaption></figure>
-
-
-
-<p><strong>But are there instances when you feel “I could apply more of who I am at Wimbart to this area of my life”?</strong></p>
-
-
-
-<p>No, Wimbart is most of my life. I could go for a drink and have a chat [with you], and you wouldn&#8217;t really notice the difference in how I speak. Once you get to know me, I&#8217;m fairly informal [and] intense.</p>
-
-
-
-<p><strong>What would you have done differently if you were to start Wimbart from scratch?</strong></p>
-
-
-
-<p>Probably would have tried to scale a bit quicker. I do feel that we scaled quite slowly.&nbsp;</p>
-
-
-
-<p>What would I have changed over time? On a couple of occasions, I&#8217;ve compromised on quality, and that still irks me; it&#8217;s never worked out well.</p>
-
-
-
-<p><strong>What would post-Wimbart look like?</strong></p>
-
-
-
-<p>Probably a similar kind of work, but not just confined to PR and communications. More like business building in general. You know, I have picked up a lot of skills over the years that can be applied to multiple different areas of business—building and scaling.</p>
 ]]></content:encoded>
 					
 		
