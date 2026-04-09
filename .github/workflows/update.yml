@@ -39,7 +39,7 @@ jobs:
       - name: Fetch and analyze news
         if: inputs.mode != 'html-only'
         run: |
-          RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
+          RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volcengineapi.com/api/v3/chat/completions" \
             -H "Authorization: Bearer $DOUBAO_API_KEY" \
             -H "Content-Type: application/json" \
             -d '{"model":"Doubao-1.5-lite","messages":[{"role":"user","content":"hi"}],"stream":false}')

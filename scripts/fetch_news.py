@@ -572,7 +572,7 @@ def analyze_events_doubao(items):
         print("  ⚠️  未设置 DOUBAO_API_KEY，降级跳过 AI 分析")
         return None
 
-    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+    url = "https://ark.cn-beijing.volcengineapi.com/api/v3/chat/completions"
     headers = {
         "Authorization": "Bearer " + api_key,
         "Content-Type": "application/json"
