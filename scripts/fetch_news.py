@@ -518,7 +518,7 @@ def configure_doubao():
     if len(key) < 10:
         print(f"  ❌ DOUBAO_API_KEY 长度异常（{len(key)} 字符），跳过 AI 分析")
         return False
-    print(f"  ✅ 豆包 API 配置检查通过，endpoint: https://ark.cn-beijing.volces.com/api/v3/chat/completions")
+    print(f"  ✅ 豆包 API 配置检查通过，模型: Doubao-lite-32k")
     return True
 
 # ============================================================
@@ -581,7 +581,7 @@ def analyze_events_doubao(items):
     prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
 
     payload = {
-        "model": "doubao-pro-32k",
+        "model": "Doubao-lite-32k",
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": 4096,
         "temperature": 0.1
