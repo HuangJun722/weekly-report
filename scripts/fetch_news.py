@@ -511,14 +511,16 @@ def smart_filter(items):
 
 def configure_doubao():
     key = os.environ.get('DOUBAO_API_KEY')
+    model = os.environ.get('DOUBAO_MODEL', 'doubao-pro-32k')
     print(f"  🔑 DOUBAO_API_KEY: {'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置 ❌'}")
+    print(f"  🤖 模型: {model}")
     if not key:
-        print("  ❌ 未找到 DOUBAO_API_KEY 环境变量，跳过 AI 分析")
+        print("  ❌ 未找到 DOUBAO_API_KEY，跳过 AI 分析")
         return False
     if len(key) < 10:
         print(f"  ❌ DOUBAO_API_KEY 长度异常（{len(key)} 字符），跳过 AI 分析")
         return False
-    print(f"  ✅ 豆包 API 配置检查通过，模型: doubao-lite-32k")
+    print(f"  ✅ 豆包 API 配置检查通过")
     return True
 
 # ============================================================
@@ -581,7 +583,7 @@ def analyze_events_doubao(items):
     prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
 
     payload = {
-        "model": "doubao-lite-32k",
+        "model": os.environ.get('DOUBAO_MODEL', 'doubao-pro-32k'),
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": 4096,
         "temperature": 0.1
