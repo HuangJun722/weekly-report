@@ -42,11 +42,11 @@ jobs:
           RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
             -H "Authorization: Bearer $DOUBAO_API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{"model":"Doubao-lite-32k","messages":[{"role":"user","content":"hi"}],"stream":false}')
+            -d '{"model":"doubao-lite-32k","messages":[{"role":"user","content":"hi"}],"stream":false}')
           HTTP_CODE=$(echo "$RESP" | tail -1)
-          BODY=$(echo "$RESP" | head -c 200)
+          BODY=$(echo "$RESP" | head -c 300)
           if [ "$HTTP_CODE" = "200" ]; then
-            echo "✅ 豆包 API 可用 (HTTP $HTTP_CODE)"
+            echo "✅ 豆包 API 可用"
           else
             echo "❌ 豆包 API 失败 (HTTP $HTTP_CODE): $BODY"
           fi
