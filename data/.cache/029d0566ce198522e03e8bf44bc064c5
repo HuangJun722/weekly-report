@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Thu, 09 Apr 2026 11:06:45 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 09 Apr 2026 11:56:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,207 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>This startup is building an ‘intelligence layer’ for Nigeria’s power grid</title>
+		<link>https://techcabal.com/2026/04/09/powerlabs-wants-to-make-nigerias-grid-think/</link>
+		
+		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 11:56:07 +0000</pubDate>
+				<category><![CDATA[Features]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Grid collapsE Nigeria]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[Solar Energy]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185544</guid>
+
+					<description><![CDATA[PowerLabs wants to make sense of Nigeria’s crowded power mix. Its premise is simple: that the country’s energy problem is no longer just about supply, but about coordination.]]></description>
+										<content:encoded><![CDATA[
+<p>In Nigeria’s offices, factories, and hospitals, power comes from a patchwork of grid electricity, solar panels, batteries, and diesel generators, but the pieces rarely talk to each other. The result is wasted energy, higher costs, and a constant scramble to keep the lights on.</p>
+
+
+
+<p>This is the gap PowerLabs wants to close. The Lagos-based energy and climate-tech startup, founded in January 2023 by Tobechukwu Arize,  David Adebiyi, Joses Williams, and Eghonghon-aye Eigbe, says it wants to make sense of Nigeria’s crowded power mix. Its premise is simple: that the country’s energy problem is no longer just about supply, but coordination.</p>
+
+
+
+<p>PowerLabs is building what it calls an “intelligence layer” for energy. The system combines software with embedded hardware to manage multiple power inputs: grid, diesel, solar, and storage, as a single, responsive network. </p>
+
+
+
+<p>The timing is hard to ignore. Nigeria’s power sector continues to operate under structural strain, with a wide gulf between installed capacity and actual output. While the country can theoretically generate over 13,000 megawatts, the <a href="https://niggrid.org/Dashboard" target="_blank" rel="noreferrer noopener">real supply in early 2026 has hovered far lower</a>, weighed down by gas shortages, ageing infrastructure, and recurring grid failures.</p>
+
+
+
+<p>That instability has fed into a deeper financial crisis across the electricity value chain, where chronic payment delays have undermined confidence and investment. On April 5, 2026, President Bola Tinubu approved a ₦3.3 trillion ($2.39 billion) intervention to settle long-standing debts owed to generation companies and gas suppliers, a reset attempt for a system that has struggled to keep the lights on, let alone power growth.</p>
+
+
+
+<p>The grid operates at an estimated load factor of 90%, meaning nearly all available electricity is consumed as soon as it is generated. Distribution companies have improved commercial performance, with <a href="https://thenationonlineng.net/discos-generated-n207b-from-power-bills-in-december-nerc/#:~:text=by%20The%20Nation-,DisCos%20generated%20N207b%20from%20power%20bills%20in%20December%20%E2%80%94%20NERC,allowed%20average%20tariff%20of%20N124." target="_blank" rel="noreferrer noopener">monthly revenues exceeding ₦210 billion ($152.12 million) by December 2025</a>, while <a href="https://www.thisdaylive.com/2026/03/04/ikeja-eko-abuja-discos-lead-as-national-metering-rate-reaches-57/#:~:text=Terrorists%20in%20Abuja-,Ikeja%2C%20Eko%2C%20Abuja%20Discos%20Lead%20as%20National%20Metering%20Rate%20Reaches,installations%20month%2Don%2Dmonth." target="_blank" rel="noreferrer noopener">metering coverage has crossed 57%, reaching close to 7 million customers</a>.</p>
+
+
+
+<p>Yet these gains mask deeper inefficiencies. More than 40% of customers remain unmetered, according to data from the <a href="https://nerc.gov.ng/resource-category/metering-factsheet/" target="_blank" rel="noreferrer noopener">Nigerian Electricity Regulatory Commission (NERC)</a>, and persistent frequency instability continues to undermine grid reliability. For businesses and households alike, the result is the same: continued dependence on costly, self-managed power alternatives despite tariff increases and reform efforts.</p>
+
+
+
+<p>PowerLabs’ thesis emerges from this fragmentation. The traditional model of a centralised grid as the backbone of energy delivery is no longer sufficient, not in Nigeria, and increasingly, not globally.</p>
+
+
+
+<p>“There are two types of energy systems,” Arize, the company’s CEO, said in an interview with TechCabal on April 2, 2026. “The centralised system, which is the grid supplying power to users, and then decentralised systems where you have generators, solar, inverters, batteries. What is happening now is that these distributed energy resources are becoming critical to ensuring stability and diversity of power.”</p>
+
+
+
+<p>As Arize argues, the problem is that while these energy systems exist, they do not work together. Each operates in isolation, with little intelligence or coordination.&nbsp;</p>
+
+
+
+<p>In Nigeria, that fragmentation is especially visible: a factory may rely on diesel generators during outages, switch to solar during the day, and fall back on batteries at night, all without a unified system managing cost, efficiency, or reliability.</p>
+
+
+
+<p>“That’s where we come in,” Arize said. “We’re designing the intelligence layer that enables these hybrid energy sources to operate as a unified source.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>From energy chaos to orchestration</strong></h2>
+
+
+
+<p>PowerLabs emerged at the intersection of three converging pressures: surging energy demand fuelled by AI, rising power costs, and grids increasingly destabilised by climate stress. What once felt like region-specific challenges has begun to collapse into a single global reality.</p>
+
+
+
+<p>“In the past, energy problems were different across countries,” C Arize said. “Now, demand is rising everywhere, costs are climbing, and grids are becoming less reliable. It’s a shared global problem.”</p>
+
+
+
+<p>Nigeria, in many ways, arrived at this future early, almost by necessity. Decades of unreliable grid supply have forced businesses and households to engineer their own solutions, assembling a fragmented but resilient mix of diesel generators, solar panels, batteries, and inverters. At peak, generator capacity alone is estimated to rival, if not exceed, the grid itself, with solar adoption steadily expanding across commercial and industrial segments.</p>
+
+
+
+<p>That workaround has since evolved into a full-fledged industry. Companies like Daystar Power, Arnergy, Gennex Technologies, and Rensource Energy now deploy distributed energy systems across sectors, from hybrid solar-battery setups for banks and factories to modular solutions for SMEs and large commercial hubs.</p>
+
+
+
+<p>PowerLabs is betting on a different layer of the stack. Rather than building new assets, it is focused on orchestrating the ones already in place.&nbsp;</p>
+
+
+
+<p>“We’re building the intelligence layer to coordinate these systems,” Arize said, “giving customers real-time data to make better energy decisions.”</p>
+
+
+
+<p>In that framing, Nigeria’s patchwork energy system begins to look less like a constraint and more like latent infrastructure. Generators, solar, and batteries—once symbols of scarcity—are becoming the foundation for a more coordinated, data-driven energy system.&nbsp;</p>
+
+
+
+<p>“They’re the building blocks of energy prosperity,” Arize said. “But they need to be intelligent. They need to speak the same language.”</p>
+
+
+
+<p>That idea comes to life in Pai Enterprise, PowerLabs’ AI-enabled orchestration platform for businesses with complex energy needs. Launched in June 2025, the system combines on-site hardware with a cloud-based dashboard to monitor, analyse, and automate energy usage across multiple power sources.</p>
+
+
+
+<p>“Pai Enterprise has been deployed in the Northern and Southern parts of Nigeria across industries like hospitals, banks, factories, retail outlets, and schools, amongst others,” Arize said. “In the coming months, we will share more details on the customers we have been engaging with.”</p>
+
+
+
+<p>At the core of the Pai Enterprise is the Pai Enterprise Sensor, a compact device installed on an electrical panel to capture real-time data across grid, solar, and generator inputs, tracking voltage, current, frequency, and more. The data feeds into a central dashboard, where AI translates it into actionable insights: identifying wasted energy, optimising system sizing, and enabling multi-site performance benchmarking.</p>
+
+
+
+<p>But the system goes beyond visibility. As Arize explained, the Pai actively manages power in real time, automatically switching between sources based on cost and demand—shifting, for instance, from grid to solar during peak sunlight, removing the need for manual intervention while improving efficiency and reducing costs.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>How the system works</strong></h2>
+
+
+
+<p><a href="https://powerlabstech.com/company" target="_blank" rel="noreferrer noopener">PowerLabs’ platform</a> combines IoT sensors with software to monitor, predict, and control energy usage in real time. Installed at a client’s facility, the system continuously gathers data on power availability, consumption patterns, and operational demand across all energy sources.</p>
+
+
+
+<p>Think of it as a control tower for electricity. The sensors track when machines are used, how much power they consume, and which energy sources are available at any given moment.&nbsp;</p>
+
+
+
+<p>The software then analyses that data to optimise energy usage, automatically switching between grid, generator, solar, or battery depending on cost, availability, and demand.</p>
+
+
+
+<p>“We help businesses generate power at the lowest possible cost,” Arize said. “For example, we can switch across energy sources in real time to ensure they’re always operating at the most efficient level.”</p>
+
+
+
+<p>This is a step beyond traditional energy monitoring tools such as manual analog and digital meters or one-way smart meters, which typically provide visibility but not control. In Nigeria, where businesses often make dozens of daily decisions about when to turn on generators or conserve fuel, that shift from reactive to proactive management could be significant.</p>
+
+
+
+<p>For industries like manufacturing, healthcare, and data centres, where downtime carries heavy financial or operational consequences, the value is even clearer. A hospital can ensure uninterrupted power to critical units like intensive care. A factory can optimise production schedules around energy costs. A data centre can maintain uptime while reducing emissions.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Starting with enterprises</strong></h2>
+
+
+
+<p>PowerLabs is initially targeting large commercial and industrial customers, factories, hospitals, banks, and telecom infrastructure, where energy demand is high and inefficiencies are costly.</p>
+
+
+
+<p>“To achieve energy access at scale, you need to start with enterprises,” Arize said. “They are the industrial base. If you cannot power them, you cannot power the economy.”</p>
+
+
+
+<p>Nigeria’s manufacturing sector alone <a href="https://guardian.ng/news/manufacturers-groan-as-alternative-energy-gulps-n1-1tr-in-one-year/#:~:text=Related%20News,the%20year%2C%20the%20report%20said." target="_blank" rel="noreferrer noopener">spent ₦1.11 trillion ($804.07 million) on alternative energy in 2024</a>, a 42% jump from the previous year. For many businesses, energy is one of the largest operating expenses.</p>
+
+
+
+<p>By helping these enterprises optimise their energy systems, PowerLabs believes it can unlock broader benefits. In the long term, the company envisions a network where businesses generate excess power and share it with smaller consumers: households, small businesses, even rural communities.</p>
+
+
+
+<p>“We see a future where energy consumers can operate within each other and share power,” Arize said. “You move from just consuming electricity to actually earning from it.”</p>
+
+
+
+<h2 class="wp-block-heading"><strong>No “magic bullet” for energy</strong></h2>
+
+
+
+<p>One of PowerLabs’ core arguments is that the energy sector has been chasing the wrong solution. Over the past decade, different technologies, generators, inverters, and solar have each been positioned as the answer to energy access. None has fully delivered.</p>
+
+
+
+<p>“There is no magic drug,” Arize said. “It’s not about one energy source. It’s about how you orchestrate multiple sources.”</p>
+
+
+
+<p>Rather than being the sole provider of electricity, the national grid becomes just one component in a broader system.</p>
+
+
+
+<p>That means businesses will continue to rely on multiple energy sources. But with the right software layer, those sources can function as if they were a single, seamless system.</p>
+
+
+
+<p>“It doesn’t have to feel like multiple energy sources,” Arize said. “It can feel like one unified source.”</p>
+
+
+
+<p>PowerLabs says it has spent the past two years building and testing its platform with design partners across Nigeria. The company has closed an undisclosed pre-seed round led by Breega and backed by Catalyst Fund, Mercy Corps Ventures, and Kaleo Ventures, to scale production and expand commercial deployments as existing customers grow.</p>
+
+
+
+<p>“We’re building in Nigeria, where the problem is most advanced,” Arize said. “That makes what we’re building more resilient and globally relevant.”</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Safaricom’s My OneApp faces first test with login issues days after rollout</title>
 		<link>https://techcabal.com/2026/04/09/safaricoms-my-oneapp-faces-login-issues/</link>
 		
@@ -1775,56 +1976,6 @@
 
 
 <p>Probably a similar kind of work, but not just confined to PR and communications. More like business building in general. You know, I have picked up a lot of skills over the years that can be applied to multiple different areas of business—building and scaling.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>MTN awards Nigeria CEO Karl Toriola $335,000 in performance shares</title>
-		<link>https://techcabal.com/2026/04/08/mtn-nigeria-ceo-group-share-award/</link>
-		
-		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 10:00:45 +0000</pubDate>
-				<category><![CDATA[Telecoms]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[Karl Toriola]]></category>
-		<category><![CDATA[MTN]]></category>
-		<category><![CDATA[Nigeria]]></category>
-		<category><![CDATA[shares]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185398</guid>
-
-					<description><![CDATA[MTN Group has awarded its Nigeria CEO, Karl Toriola, performance shares worth approximately ₦463.7 million ($336,000)]]></description>
-										<content:encoded><![CDATA[
-<p>MTN Group has awarded its Nigeria CEO, Karl Toriola, performance shares worth approximately ₦463.7 million ($335,000), reinforcing the telecom giant’s <a href="https://techcabal.com/2026/02/27/mtn-doubles-number-of-employees-earning-%E2%82%A62-4million-monthly/" target="_blank" rel="noreferrer noopener">strategy to retain top leadership</a> in its most critical markets.</p>
-
-
-
-<p>The award, <a href="https://senspdf.jse.co.za/documents/SENS_20260407_S519528.pdf" target="_blank" rel="noreferrer noopener">disclosed in a regulatory filing</a> on Tuesday, is part of MTN’s 2010 Performance Share Plan (PSP), which allocates equity to senior executives across the group.&nbsp;</p>
-
-
-
-<p>Toriola received 28,704 shares valued at R5.5 million (about $$335,000), with additional long-term incentives tied to MTN Nigeria’s local compensation structure pushing the total value significantly higher in naira terms.</p>
-
-
-
-<p>The structure aligns executive incentives with long-term company performance while discouraging leadership turnover. It is particularly relevant for markets like Nigeria and Ghana, which contributed a combined 46.8% to group service revenue, but also present regulatory and macroeconomic challenges.</p>
-
-
-
-<p>The broader share allocation, worth over R150 million ($9.1 million), comes just after the close of Q1 2026 and signals strong confidence in the group’s leadership despite ongoing currency volatility and regulatory pressures in key African markets.</p>
-
-
-
-<p>At the group level, CEO Ralph Mupita received the largest allocation, with 207,633 shares worth nearly R40 million ($2.4 million). Other top executives, including Ebenezer Asante, Senior Vice President, Markets, MTN Group, and Tsholofelo Molefe, MTN Group Chief Financial Officer, also received substantial equity awards.</p>
-
-
-
-<p>The shares are not immediately accessible. They are tied to a three-year vesting period ending in December 2028 and are subject to performance conditions. These include targets likely linked to fintech growth, 5G expansion, and broader competitiveness metrics. If these benchmarks are not met, a portion of the shares may not vest.</p>
-
-
-
-<p>The filing also highlights a dual-incentive approach for Nigerian executives. In addition to group-level shares, leaders such as Toriola and MTN Nigeria&#8217;s Chief Financial Officer, Modupe Kadri, receive equity tied to the local subsidiary.</p>
 ]]></content:encoded>
 					
 		
