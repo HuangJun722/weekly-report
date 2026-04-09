@@ -511,9 +511,7 @@ def smart_filter(items):
 
 def configure_doubao():
     key = os.environ.get('DOUBAO_API_KEY')
-    model = os.environ.get('DOUBAO_MODEL', 'doubao-pro-32k')
     print(f"  🔑 DOUBAO_API_KEY: {'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置 ❌'}")
-    print(f"  🤖 模型: {model}")
     if not key:
         print("  ❌ 未找到 DOUBAO_API_KEY，跳过 AI 分析")
         return False
@@ -583,7 +581,6 @@ def analyze_events_doubao(items):
     prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
 
     payload = {
-        "model": os.environ.get('DOUBAO_MODEL', 'doubao-pro-32k'),
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": 4096,
         "temperature": 0.1
