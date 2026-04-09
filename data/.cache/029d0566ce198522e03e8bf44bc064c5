@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Thu, 09 Apr 2026 13:51:21 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 09 Apr 2026 17:33:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,417 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>For Kenyan stablecoin issuers, reserves must be kept close to home</title>
+		<link>https://techcabal.com/2026/04/09/kenyan-stablecoin-reserves-in-local-banks/</link>
+		
+		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 17:32:13 +0000</pubDate>
+				<category><![CDATA[Cryptocurrency]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185594</guid>
+
+					<description><![CDATA[Kenya’s draft rules are built to encourage well‑capitalised, heavily scrutinised stablecoin issuers whose fully backed, segregated reserves must stay ring‑fenced and available so holders can redeem at par and have a claim against the issuer if things go wrong. ]]></description>
+										<content:encoded><![CDATA[
+<p>Kenya is drawing a tight circle around who can issue stablecoins in the country and how those digital currencies must be built.&nbsp;</p>
+
+
+
+<p>The National Treasury’s draft Virtual Asset Service Providers Regulations, published in March and now <a href="https://techcabal.com/2026/03/17/kenya-opens-public-consultation-on-draft-crypto-licencing-regulations/" target="_blank" rel="noreferrer noopener">out for public comment until Friday</a>, lay out reserve rules, capital thresholds, and disclosure standards that together try to pull stablecoin value, data, and control firmly onshore.</p>
+
+
+
+<p>Under the proposed regulations, any firm issuing a stablecoin to the public in Kenya must hold local fiat‑backed reserves at all times in high‑quality liquid assets, such as cash or deposits with commercial banks or the central bank. Those reserves must be kept separate from the issuer’s own funds, free from third‑party claims, and always available for redemption.</p>
+
+
+
+<p>At least 30% of customer funds backing a stablecoin must sit in segregated accounts at commercial banks domiciled in Kenya, while the rest is limited to high‑quality liquid assets like cash or government securities with maturities of 90 days or less, anchoring a meaningful slice of stablecoin float in the domestic banking system.&nbsp;</p>
+
+
+
+<p>Tokens must be redeemable at par value on demand, and issuers are banned from paying interest or yield on stablecoins, including “indirect yield routed through other licenced virtual asset businesses.” It is a direct shot at yield‑bearing products that have powered much of global stablecoin adoption.</p>
+
+
+
+<p>Kenya’s draft rules are built to encourage well‑capitalised, heavily scrutinised stablecoin issuers whose fully backed, segregated reserves must stay ring‑fenced and available so holders can redeem at par and have a claim against the issuer if things go wrong.&nbsp;</p>
+
+
+
+<p>Yet, high capital and compliance demands risk pushing smaller issuers—and much of the informal mix of digital tokens that circulate in Kenya today—out of the licenced market altogether, narrowing the range of digital tokens that users can access through regulated channels.</p>
+
+
+
+<p>Stablecoin issuers “in or from Kenya” would <a href="https://techcabal.com/2026/03/26/stablecoin-issuers-face-500-million-kes-capital-bar/" target="_blank" rel="noreferrer noopener">need at least KES 500 million</a> ($3.85 million) in paid‑up capital, and core or liquid capital of KES 100 million ($773,700) or 100% of current liabilities for at least 30 days, whichever is higher.&nbsp;</p>
+
+
+
+<p>The draft also proposes recurring proof‑of‑reserves checks, annual independent reviews, and robust internal controls around custody and operations, alongside the licencing and renewal fees that apply across the sector.&nbsp;</p>
+
+
+
+<p>Boards of directors would be held accountable for the accuracy of disclosures, and issuers would have to file updates with regulators and include clear warnings that these products are not covered by investor compensation schemes.</p>
+
+
+
+<p>The draft also establishes a “Coordination Committee,” chaired by the National Treasury, with members from the Central Bank of Kenya (CBK); the Capital Markets Authority (CMA); the Financial Reporting Centre (FRC); the Asset Recovery Agency (ARA); the Directorate of Criminal Investigations (DCI); the National Intelligence Service (NIS); the Nairobi International Financial Centre (NIFC); the National Computer and Cybercrimes Coordination Committee (NC4); the Communications Authority of Kenya (CAK); the National Counter Terrorism Centre (NCTC); the Office of the Attorney General; and any other agency the Cabinet Secretary may designate.&nbsp;</p>
+
+
+
+<p>The 13-member committee’s mandate will be to coordinate supervision of virtual asset service providers, share supervisory and enforcement information, harmonise regulatory approaches, support joint inspections and risk assessments, and issue joint advisories where issues cut across multiple agencies. That structure means decisions about where reserves sit, which custodians are acceptable, when an issuer is too risky, or whether a coin should be halted or delisted are unlikely to rest with a single authority.</p>
+
+
+
+<p>Kenya’s approach mirrors moves in the United States and the European Union (EU) to tighten standards for stablecoins without banning them.&nbsp;</p>
+
+
+
+<p>In the US, the Guiding and Establishing National Innovation for US Stablecoins (GENIUS) Act, <a href="https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/" target="_blank" rel="noreferrer noopener nofollow">signed</a> in July 2025, requires permitted payment stablecoin issuers to hold 100% reserves in specified liquid assets—cash, deposits at regulated institutions, short‑term Treasuries, and certain money market funds—and to make regular public disclosures on how those reserves are composed.</p>
+
+
+
+<p>In the EU, the Markets in Crypto-Assets (MiCA) rules require smaller stablecoins to <a href="https://www.esrb.europa.eu/pub/pdf/reports/esrb.report202510_cryptoassets.en.pdf" target="_blank" rel="noreferrer noopener nofollow">hold at least 30%</a> of their reserves at commercial banks and “significant” stablecoins 60% or more, with the remainder in other high‑quality liquid assets. Kenya’s proposal echoes those trends on full backing and bank deposits but goes further in two ways: it ties a fixed slice of reserves specifically to Kenyan banks and assets, and it bans yield outright, where the US and EU frameworks focus more on reserve safety and disclosures than on how much return a holder can earn.</p>
+
+
+
+<p>The yield ban and licencing model narrow what licenced virtual asset companies in Kenya can do with yield‑bearing stablecoins. Since issuers are barred from paying interest on these coins, including indirectly through other licenced virtual asset businesses, a Kenyan‑regulated platform is unlikely to launch its own yield‑bearing token or wrap staking returns into a local product.&nbsp;</p>
+
+
+
+<div id="tc-kenya-stable-viz" style="font-family: 'Open Sans', sans-serif; background-color: #FAF7F2; border-radius: 12px; padding: 24px; margin: 24px auto; border: 1px solid #E2DDD6; box-sizing: border-box; max-width: 600px; color: #1A1A1A;">
+
+    <!-- HEADER -->
+    <div style="margin-bottom: 24px; text-align: center;">
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.5rem; color: #E8341A; margin: 0 0 8px 0; line-height: 1.2;">
+        The Kenyan Stablecoin Anchor
+      </h2>
+      <p style="font-size: 0.95rem; color: #6B6B6B; margin: 0; line-height: 1.5;">
+        Simulate the reserve requirements under Kenya&#8217;s 2026 draft VASP regulations.
+      </p>
+    </div>
+
+    <!-- INPUT SECTION -->
+    <div style="background: #FFFFFF; border-radius: 12px; padding: 20px; border: 1px solid #E2DDD6; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+        <label style="display: block; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #1A1A1A; margin-bottom: 12px;">
+          Proposed Stablecoin Supply (KES)
+        </label>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: 1.5rem; font-weight: 900; color: #C8931A;">KES</span>
+            <input type="number" id="tc-supply-input" value="1000000" step="100000" style="width: 100%; font-size: 1.5rem; font-weight: 700; padding: 8px; border: 1.5px solid #E2DDD6; border-radius: 8px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#E8341A'" onblur="this.style.borderColor='#E2DDD6'">
+        </div>
+        <p style="font-size: 0.8rem; color: #6B6B6B; margin: 0;">
+            Current Kenya stablecoin supply is approx. <strong>KES 18.8M</strong> ($145k).
+        </p>
+    </div>
+
+    <!-- RESERVE BREAKDOWN -->
+    <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px;">
+        <!-- 30% Bank Portion -->
+        <div style="background: #E8341A; color: #FFFFFF; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+            <div style="position: absolute; right: -10px; bottom: -10px; font-size: 4rem; opacity: 0.1; font-weight: 900;">30%</div>
+            <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px 0; opacity: 0.9;">Local Bank Anchor</p>
+            <h3 id="tc-bank-reserves" style="font-size: 1.75rem; font-weight: 900; margin: 0;">KES 300,000</h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; font-weight: 400; opacity: 0.9;">
+                Must be held in segregated accounts at commercial banks in Kenya.
+            </p>
+        </div>
+
+        <!-- 70% Liquid Assets -->
+        <div style="background: #1A1A1A; color: #FFFFFF; border-radius: 12px; padding: 20px; position: relative; overflow: hidden;">
+            <div style="position: absolute; right: -10px; bottom: -10px; font-size: 4rem; opacity: 0.1; font-weight: 900;">70%</div>
+            <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px 0; opacity: 0.9;">High-Quality Liquid Assets</p>
+            <h3 id="tc-liquid-reserves" style="font-size: 1.75rem; font-weight: 900; margin: 0;">KES 700,000</h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; font-weight: 400; opacity: 0.9;">
+                Cash or government securities with < 90 days maturity.
+            </p>
+        </div>
+    </div>
+
+    <!-- CAPITAL REQUIREMENT CALLOUT -->
+    <div style="border: 2px dashed #C8931A; border-radius: 12px; padding: 20px; text-align: center; background: #fff;">
+        <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #C8931A; margin-bottom: 8px;">The Barrier to Entry</p>
+        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">Fixed Paid-up Capital Required:</p>
+        <div style="font-size: 2.25rem; font-weight: 900; font-family: 'Playfair Display', serif; color: #1A1A1A;">KES 500M</div>
+        <p style="font-size: 0.85rem; color: #6B6B6B; margin-top: 12px;">
+            This is ~26x the size of Kenya&#8217;s entire current stablecoin market ($3.85M).
+        </p>
+    </div>
+
+    <!-- SHARE ACTION -->
+    <button id="tc-share-btn" style="width: 100%; margin-top: 24px; padding: 16px; background: #E8341A; color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.1s;" onmousedown="this.style.transform='scale(0.98)'" onmouseup="this.style.transform='scale(1)'">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg>
+        Share on X
+    </button>
+
+    <!-- FOOTER -->
+    <p style="font-size: 0.7rem; color: #6B6B6B; text-align: center; margin-top: 16px; line-height: 1.4;">
+        Based on Kenya&#8217;s draft VASP Regulations 2026. $1 ≈ KES 130. Calculations assume a 1:1 local currency peg as mandated by the Treasury draft.
+    </p>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const input = document.getElementById('tc-supply-input');
+        const bankDisplay = document.getElementById('tc-bank-reserves');
+        const liquidDisplay = document.getElementById('tc-liquid-reserves');
+        const shareBtn = document.getElementById('tc-share-btn');
+
+        const format = (num) => "KES " + Math.round(num).toLocaleString();
+
+        function update() {
+            const supply = parseFloat(input.value) || 0;
+            bankDisplay.textContent = format(supply * 0.3);
+            liquidDisplay.textContent = format(supply * 0.7);
+        }
+
+        input.addEventListener('input', update);
+
+        shareBtn.addEventListener('click', function() {
+            const supply = parseFloat(input.value) || 0;
+            const bankPortion = format(supply * 0.3);
+            const text = ⁠ Kenya's 2026 stablecoin rules: To issue ${format(supply)} in stablecoins, issuers must lock ${bankPortion} in Kenyan banks AND have KES 500M in paid-up capital. Read more: https://techcabal.com/2026/04/kenya-stablecoin-rules/ ⁠;
+            const url = ⁠ https://twitter.com/intent/tweet?text=${encodeURIComponent(text)} ⁠;
+            window.open(url, '_blank');
+        });
+
+        update();
+    });
+</script>
+
+
+
+<p>Stablecoins now sit at the heart of digital markets, and the numbers show how concentrated that market has become. As of March 2026, global stablecoin supply stood at $320.1 billion, with US dollar‑linked coins making up 99.76% of that supply, <a href="https://app.artemisanalytics.com/stablecoins?stablecoinsTab=overview" target="_blank" rel="noreferrer noopener">according to research firm Artemis</a>.&nbsp;</p>
+
+
+
+<p>By comparison, African currencies barely register stablecoin supply activity, accounting for a combined $665,300 in value, well below 1%.&nbsp;</p>
+
+
+
+<p>Within that tiny sliver, South Africa leads with roughly $426,400 in rand‑linked coins such as ZARSC and ZARP, followed by Kenya with around $145,300 (including KESm), Nigeria with about $67,800 (cNGN and NGNm), and Ghana with roughly $25,800 via the <a href="https://www.mento.org/stablecoins" target="_blank" rel="noreferrer noopener">cedi‑based stablecoin</a>.&nbsp;</p>
+
+
+
+<p>On‑chain stablecoin transactions in Africa fell from 657,900 in Q1 2025 to about 391,000 in Q1 2026, a 41% year‑on‑year drop that suggests trading and payment velocity is cooling even as regulators tighten the rules, according to Artemis data.</p>
+
+
+
+<p>Yield‑bearing stablecoins, which attract traders and long‑term holders looking to earn more than they would on other assets, have a <a href="https://messari.io/report/in-the-stables-the-rise-of-yield-bearing-stablecoins" target="_blank" rel="noreferrer noopener nofollow">market capitalisation of $303 billion</a> and represent 9% of the <a href="https://coinmarketcap.com/view/stablecoin/" target="_blank" rel="noreferrer noopener nofollow">stablecoin market</a>, according to research firm Messari.</p>
+
+
+
+<p>Regular, a France-based investment platform that helps corporations to invest in digital assets, says <a href="https://www.regular.eu/en/blog/rendement-stablecoin" target="_blank" rel="noreferrer noopener nofollow">realistic stablecoin yields typically sit between 2% and 6%</a> a year; that rate could climb to 10% during peak seasons or during high borrowing demand periods. Riskier stablecoins can offer up to 12% annual percentage yield (APY) to incentivise usage. </p>
+
+
+
+<p>For a chunk of users, that steady income is the main reason to hold stablecoins rather than keep money in cash or a basic bank account.</p>
+
+
+
+<p>Kenya is making a deliberate choice: by forcing at least 30% of reserves into commercial banks and the rest into tightly defined high‑quality liquid assets, the draft brings stablecoin money into clearer view for local lenders and the state. By banning yield and insisting on fully backed, instantly redeemable coins, it tries to keep holders away from losses tied to how issuers manage their reserve portfolios.</p>
+
+
+
+<p>The move aligns with global recommendations from the Financial Action Task Force (FATF), as Kenya tightens virtual asset supervision. It also signals its concern about the risks of heavy reliance on foreign currency-backed stablecoins for payments and savings.</p>
+
+
+
+<p>Yet, the design, combined with the required minimum capital requirement and ongoing audit and reporting costs, also narrows the field to well‑capitalised crypto firms, while making it harder for smaller teams experimenting with local‑currency tokens to justify full onshore, fully regulated structures for a market that is still measured in hundreds of thousands of dollars of supply.</p>
+
+
+
+<p>Kenya’s draft rules pose a dilemma over stablecoins: how much experimentation it is willing to give up in return for more safety and control. If they pass as proposed, the country is likely to have a small group of domestically anchored, transparently backed coins under close committee oversight, but far less room for the high‑yield, higher‑risk tokens that currently populate the market.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>M-KOPA unlocks $22.5 million in credit in South Africa as women drive uptake</title>
+		<link>https://techcabal.com/2026/04/09/m-kopa-impact-report/</link>
+		
+		<dc:creator><![CDATA[John Adoyi]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 16:12:21 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Fintech]]></category>
+		<category><![CDATA[funding]]></category>
+		<category><![CDATA[Kenya]]></category>
+		<category><![CDATA[startups]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185575</guid>
+
+					<description><![CDATA[M-KOPA's 2025 impact report reveals that the Kenyan asset financing startup has extended more than ZAR 370 million ($22.5 million) in credit to low-income consumers in South Africa since its 2023 launch.]]></description>
+										<content:encoded><![CDATA[
+<p>M-KOPA, a Kenyan asset financing startup, says it has extended more than ZAR 370 million ($22.5 million) in credit to low-income consumers in South Africa since its 2023 launch, pointing to the growing role of device financing in expanding access to the digital economy.</p>
+
+
+
+<p>Nearly half of that uptake has been driven by women, who account for 49% of the company’s 105,000 customers, <a href="https://cdn.prod.website-files.com/66dc00a653080e6802168f64/69ce6c967edf7749d4bfa149_04%20M-Kopa%20SOUTH%20AFRICA%20DIGITAL.pdf" target="_blank" rel="noreferrer noopener nofollow">according to its 2025 impact report</a>. 36% of female customers are first-time smartphone users, compared with 24% of men, the report said.</p>
+
+
+
+<p>The report, based on a survey of 452 customers and sales agents conducted by Caribou, found that 64% of users rely on their devices to generate income. About 35% reported increased earnings, while 39% said they could invest more in their children’s education.</p>
+
+
+
+<p>In South Africa, where cost keeps millions offline, M-KOPA is testing whether flexible credit can do what infrastructure investment alone has not by closing the gap between owning a smartphone and being able to afford one. </p>
+
+
+
+<p>According to the <a href="https://www.worldbank.org/en/publication/globalfindex" target="_blank" rel="noreferrer noopener nofollow">Global Findex 2025 </a>Digital Connectivity Tracker, just 74% of adults in Sub-Saharan Africa own a mobile phone, compared with 86% globally, and 77% of those without one cite cost as the main barrier. </p>
+
+
+
+<p>&#8220;South Africa&#8217;s unemployment crisis demands bold, inclusive solutions, and when Every Day Earners gain access to fair and flexible financing, they use it to unlock income, stability, and opportunity,&#8221; M-KOPA South Africa general manager Cameron Perumal said.&nbsp;</p>
+
+
+
+<p>Overall, 84% of customers reported an improved quality of life, and 66% said they were better able to meet household financial goals. Customers are largely urban (77%) and earn an average of ZAR 185 ($11.25) per day.</p>
+
+
+
+<p>Beyond consumer credit, M-KOPA said it contributed ZAR 24 million ($1.45 million) in taxes and ZAR 155.5 million ($9.46 million) in local procurement in 2024, while employing 155 people, 55% of them women.</p>
+
+
+
+<p>Founded in 2010, the company has now served more than 7 million customers across Africa and extended over $2.5 billion in credit across Kenya, Uganda, Ghana, and South Africa, including <a href="https://techcabal.com/2026/02/26/m-kopa-lends-%E2%82%A6231-billion-to-one-million-nigerians/" target="_blank" rel="noreferrer noopener">₦231 billion ($170.34 million) in Nigeria</a>.</p>
+
+
+
+<p>In South Africa, M-KOPA plans to expand nationwide and introduce refurbished smartphones in 2026, betting that lower-cost devices and flexible financing will deepen its reach among “everyday earners” still priced out of the digital economy.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>South Africa chose flexibility over control in its new AI policy</title>
+		<link>https://techcabal.com/2026/04/09/south-africas-new-policy-is-betting-on-decentralised-ai-control/</link>
+		
+		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 15:37:54 +0000</pubDate>
+				<category><![CDATA[Delve into AI]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[AI adoption]]></category>
+		<category><![CDATA[Artifical Intelligence]]></category>
+		<category><![CDATA[South Africa]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=185563</guid>
+
+					<description><![CDATA[South Africa is taking a different approach by spreading responsibility across existing agencies and favouring coordination over top-down control.]]></description>
+										<content:encoded><![CDATA[
+<p>As many countries rush to centralise control of AI, South Africa is taking a different approach by spreading responsibility across existing agencies and favouring coordination over top-down control.</p>
+
+
+
+<p>On April 2, 2026, the South African cabinet published a <a href="https://www.dcdt.gov.za/sa-national-ai-policy-framework.html" target="_blank" rel="noreferrer noopener">draft version of the policy</a>, dated d 24 October 24, 2024, for public comment. Spearheaded by the <a href="https://www.dcdt.gov.za/" target="_blank" rel="noreferrer noopener">Department of Communications and Digital Technologies (DCDT)</a>, the policy is expected to be fully implemented in the 2027/2028 financial year.</p>
+
+
+
+<p>“The AI policy aims to ensure that both the benefits and risks brought by AI are evenly distributed across society and generations,” the South African Cabinet said in a <a href="https://www.gov.za/news/cabinet-statements/statement-cabinet-meeting-25-march-2026-and-special-cabinet-meeting-1-april" target="_blank" rel="noreferrer noopener">statement</a>.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>No super-regulator</strong></h2>
+
+
+
+<p>In countries like Nigeria and <a href="https://techcabal.com/2026/04/02/kenyas-ai-bill-creates-a-powerful-new-digital-sheriff/">Kenya</a>, policymakers are moving toward centralised AI oversight. Dedicated agencies, commissioners, and top-down structures are becoming the standard. Nigeria’s proposed <a href="https://fmcide.gov.ng/wp-content/uploads/2024/07/National%20Digital%20Economy%20and%20E-Governance%20Bill%2C%202024%20-%20Draft.pdf" target="_blank" rel="noreferrer noopener">National Digital Economy and E-Governance Bill</a> follows a prescriptive, risk-based approach inspired by the <a href="https://artificialintelligenceact.eu/">EU AI Act</a>. High-risk AI systems—especially in surveillance, finance, and public administration—would need licensing, audits, and annual impact assessments.</p>
+
+
+
+<p><a href="https://new.kenyalaw.org/akn/ke/bill/senate/2026-02-19/the-artificial-intelligence-bill-2026/eng@2026-02-19" target="_blank" rel="noreferrer noopener">Kenya’s 2026 AI bill</a> takes a similar risk-based path but adds a strong political dimension. With elections approaching, it targets synthetic media and AI-driven manipulation, imposing criminal penalties for non-consensual deepfakes. At the same time, it maintains flexibility for innovation through regulatory sandboxes, allowing startups to test new AI products under lighter oversight.</p>
+
+
+
+<p>South Africa is doing the opposite.</p>
+
+
+
+<p>Instead of creating a new regulator, South Africa’s AI&nbsp; policy leans on institutions already embedded within those sectors. The <a href="https://www.fsca.co.za/" target="_blank" rel="noreferrer noopener">Financial Sector Conduct Authority (FSCA)</a> and the <a href="https://www.resbank.co.za/en/home" target="_blank" rel="noreferrer noopener">South African Reserve Bank</a> will oversee financial AI systems. The South African Health Products Regulatory Authority (SAHPRA) will handle AI in medical diagnostics. The <a href="https://inforegulator.org.za/" target="_blank" rel="noreferrer noopener">Information Regulator</a> retains its role as the primary enforcer of data privacy under the <a href="https://popia.co.za/" target="_blank" rel="noreferrer noopener">Protection of Personal Information Act (POPIA)</a>.</p>
+
+
+
+<p>The logic is that regulators closest to the problem are best placed to manage it. A mining regulator understands mining risks. A financial regulator understands financial systems. Why build a new bureaucracy when expertise already exists?</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Regulating by risk</strong></h2>
+
+
+
+<p>The backbone of South Africa’s AI framework is risk-tiered regulation. Not all AI systems are treated equally. Instead, they are grouped into four categories: unacceptable, high, limited, and minimal risk.</p>
+
+
+
+<p>At the top end, certain applications, manipulative behavioural systems or forms of mass surveillance are banned outright. High-risk systems, such as those used in hiring, lending, or healthcare, face stricter scrutiny, including audits, impact assessments, and requirements for human oversight. Lower-risk applications operate with lighter-touch rules.</p>
+
+
+
+<p>The idea is to focus regulatory firepower where it matters most. Rather than blanket restrictions, the system sends a clear signal: the higher the potential harm, the heavier the compliance burden.</p>
+
+
+
+<p>In theory, this creates space for innovation while maintaining safeguards. In practice, it depends heavily on execution.</p>
+
+
+
+<p>To hold the AI policy system together, the policy proposes a web of coordinating bodies. A National AI Coordination Office would guide implementation and set standards. Inter-departmental forums would align ministries. Advisory panels and multi-stakeholder groups would feed in technical and ethical expertise.</p>
+
+
+
+<p>At the centre sits an AI Advisory Council, a non-executive body bringing together researchers, industry leaders, legal experts, and civil society. Its role is to advise, not enforce.</p>
+
+
+
+<p>And that is the crux of the approach: none of these bodies has binding powers. They can guide, recommend, and coordinate, but they cannot compel action.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>The enforcement gap</strong></h2>
+
+
+
+<p>However, this design introduces a fundamental tension. Distributed oversight offers flexibility and sector-specific insight, but it also risks fragmentation.</p>
+
+
+
+<p>The framework is clear on what needs to be done: classify risk, conduct audits, ensure transparency, but it is less clear on who ultimately ensures compliance. Enforcement is left to existing regulators, each with different capacities, priorities, and levels of technical expertise.</p>
+
+
+
+<p>The result could be uneven oversight. Financial regulators, often well-resourced, may enforce rules rigorously. Other sectors could lag. Gaps and overlaps may emerge. Companies, in turn, may learn to navigate these inconsistencies, exploiting weaker links in the system.</p>
+
+
+
+<p>Capacity is another constraint. Risk-tiered regulation is technically demanding. It requires the ability to assess evolving AI systems, monitor real-world performance, and adapt rules as technologies change. Many regulators are already stretched. Building these capabilities will take time—and money.</p>
+
+
+
+<p>Even the act of classification is not straightforward. AI systems evolve. A chatbot that begins as a low-risk tool can become a high-stakes decision engine as it scales or integrates new data. Determining risk levels requires constant reassessment, raising the possibility of inconsistent rulings across sectors.</p>
+
+
+
+<p>For businesses, that creates uncertainty. A product deemed compliant today could face stricter rules tomorrow.</p>
+
+
+
+<p>Beyond governance, the framework is also an industrial strategy. It emphasises the need for local datasets, African language processing, and the integration of indigenous knowledge systems.</p>
+
+
+
+<p>The goal is to make AI systems more relevant and less biased. Models trained on foreign data often fail to capture local realities, reinforcing exclusion rather than solving it. By investing in local data infrastructure, South Africa hopes to build a more inclusive AI ecosystem.</p>
+
+
+
+<p>But this ambition adds another layer of complexity. Data governance, privacy, and data-sharing frameworks must now be coordinated across the same fragmented system that governs AI itself.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>South Africa-founded Refiant AI raises $5 million to build leaner AI models</title>
 		<link>https://techcabal.com/2026/04/09/refiant-ai-raise-5-million/</link>
 		
@@ -1026,702 +1437,6 @@
 
 
 <p>Zazu is backed by international investment funds, notably Plug and Play, Bell Ventures, and Ryad Ventures, as well as business angels from Solarisbank, Qonto, and Paymentology, alongside recognised figures from the Moroccan ecosystem: Ismael Belkhayat (Chari), Mohamed Benmansour (Binga / Nuitée), and Youssef Koun (Wonderful &amp; Co.).</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>GSH to acquire majority stake in Uganda’s AKIBA to deepen tokenisation push</title>
-		<link>https://techcabal.com/2026/04/08/global-settlement-holdings-to-acquire-majority-stake-in-akiba/</link>
-		
-		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 15:23:29 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[AKIBA]]></category>
-		<category><![CDATA[Global Settlement Holdings]]></category>
-		<category><![CDATA[tokenisation]]></category>
-		<category><![CDATA[Uganda]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185477</guid>
-
-					<description><![CDATA[The deal, which is subject to regulatory approvals, will give GSH the licences and local infrastructure to run a broker‑dealer off‑ramp, a regulated exchange for tokenised assets, and a mining platform.]]></description>
-										<content:encoded><![CDATA[
-<p>Global Settlement Holdings (GSH), the investment firm behind US-based blockchain infrastructure company Global Settlement Network, will acquire a majority stake in <a href="https://akiba-international.com/" target="_blank" rel="noreferrer noopener">AKIBA International</a>, a Uganda‑based investment and capital‑markets advisory firm, deepening its bet on turning Uganda into a hub for tokenised finance in Africa.</p>
-
-
-
-<p>The deal, which is subject to regulatory approvals, will give GSH the licences and local infrastructure to run a broker‑dealer off‑ramp, a regulated exchange for tokenised assets, and a mining platform.</p>
-
-
-
-<p>This comes six months after Global Settlement Network’s (GSX) <a href="https://techcabal.com/2025/10/08/uganda-digital-infrastructure-karamoja/" target="_blank" rel="noreferrer noopener">partnership with Uganda&#8217;s Diacente Group</a> to build Karamoja, a special economic zone (SEZ), and launch a central bank digital currency (CBDC) pilot, in a project backed by $5.5 billion in planned commitments.</p>
-
-
-
-<p>The AKIBA deal extends GSX’s Karamoja and CBDC work into market infrastructure. While the Diacente partnership lets GSX tokenise Uganda’s real‑world economic activity, AKIBA provides the regulated storefront where local and global investors can buy and sell those assets.</p>
-
-
-
-<p>Infrastructure projects, mining output, industrial developments, and export contracts can be converted to tokenised financial instruments and sold through a licenced exchange overseen by Ugandan regulators, increasing investor appeal.</p>
-
-
-
-<p>“Uganda&#8217;s regulators are doing something we don&#8217;t see often, actively building the framework for tokenised capital markets before the market forces them to,” said Ryan Kirkley, chief executive officer of GSH. “That creates a first-mover window for infrastructure that channels real capital into energy, mining, agriculture, and trade finance with proper oversight.”</p>
-
-
-
-<p>Under the joint venture, AKIBA will run the local operation, including exchange functions and broker‑dealer services, and handle integration with Uganda’s banking system and regulatory framework. It will also provide the operating and payments layer that will enable GSX to build token-based financial products that Ugandan businesses can use.</p>
-
-
-
-<p>Both companies plan to raise up to $1.5 billion for assets issued through the platform, focusing on four areas: infrastructure such as energy and digital systems; special economic zones and industrial programmes; responsible mining and mineral value chains; and trade finance products like invoices, receivables, and working‑capital structures.</p>
-
-
-
-<p>The system will operate under the <a href="https://kenyanwallstreet.com/uganda-unveils-its-first-regulatory-sandbox" target="_blank" rel="noreferrer noopener nofollow">Bank of Uganda’s (BoU) regulatory sandbox</a>, which allows financial products to be tested with real users under controlled conditions before full licences are granted. A licenced local bank will act as the settlement and integration partner. In 2025, Uganda’s Capital Markets Authority (CMA) also <a href="https://cmauganda.co.ug/2025/10/08/people-are-unaware-of-the-potentials-of-unit-trusts-to-create-cash-flows-2/" target="_blank" rel="noreferrer noopener nofollow">introduced a parallel fintech sandbox</a> for capital markets innovation, reflecting a broader push by regulators to test new infrastructure under supervision as they strengthen oversight of virtual assets.</p>
-
-
-
-<p>“Our shared objective is to build a regulated ecosystem that supports domestic development priorities, connecting local projects to global capital with appropriate oversight, governance, and banking integration,” said AKIBA CEO Chris Kyerere. “It will accelerate Uganda&#8217;s fintech modernisation and expand access to investment and trade finance.”</p>
-
-
-
-<p>The structure fits into GSH’s broader effort to build a vertically integrated investment pipeline. The group has expanded into investor onboarding and compliance infrastructure, after its <a href="https://www.globenewswire.com/news-release/2026/03/11/3253887/0/en/Global-Settlement-Acquires-InvestReady-and-Accreditoken-to-Launch-GSX-Identity.html" target="_blank" rel="noreferrer noopener nofollow">March 2026 acquisition</a> of US firms Accreditoken and InvestReady, which help users to create digital IDs, verify investors for private market access, and control eligibility for regulated offerings. </p>
-
-
-
-<p>GSH could expand this utility into the AKIBA platform to bring real-world projects onto the system, match them with investors, and allow those investments to be traded or sold later in the same place.</p>
-
-
-
-<p>The firm said it will embed anti-money laundering (AML) and counter-terrorism financing controls, governance standards, and reporting requirements from the outset, and will fund initial deployment of the new investment platform.</p>
-
-
-
-<p>Ugandan regulators have been moving in the same direction. The central bank and the capital markets regulator have both introduced sandboxes for fintech experimentation, as Uganda <a href="https://www.bis.org/review/r260210a.htm" target="_blank" rel="noreferrer noopener nofollow">moves from a cautious, risk‑assessment phase</a> toward comprehensive regulation of virtual assets, drawing inspiration from its <a href="https://techcabal.com/2026/03/17/kenya-opens-public-consultation-on-draft-crypto-licencing-regulations/" target="_blank" rel="noreferrer noopener">regional peer Kenya</a>.</p>
-
-
-
-<p>GSH and AKIBA are betting that formalising parts of Uganda’s informal economy through regulated digital markets could lower the cost of financing, widen access to capital, and improve transparency in sectors that remain underbanked.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Irene Mwendwa wants to prove the internet&#8217;s design is a women&#8217;s rights issue</title>
-		<link>https://techcabal.com/2026/04/08/my-life-in-tech-irene-mwendwa/</link>
-		
-		<dc:creator><![CDATA[Zia Yusuf]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 14:56:29 +0000</pubDate>
-				<category><![CDATA[My Life In Tech]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185455</guid>
-
-					<description><![CDATA[She is also a tech lawyer who has spent years documenting how the internet punishes women leaders.]]></description>
-										<content:encoded><![CDATA[
-<p>Irene Mwendwa hails from Machakos, a small village nestled in the Eastern part of Kenya, about 63 kilometres southeast of Nairobi, the country’s capital. The name means flowers. She carries this with her: the bloom, the light, the beauty that flowers bring into spaces. She describes herself as a farmer, a firstborn, a young African woman trying to survive in Nairobi.</p>
-
-
-
-<p>She is also a tech lawyer who has spent years documenting how the internet punishes women leaders.</p>
-
-
-
-<p>In 2024 and 2025, the world witnessed a <a href="https://www.undp.org/super-year-elections" target="_blank" rel="noreferrer noopener">super election cycle</a>. Over 70 national and local elections happened across 60 countries. It was the most elections the world had seen in over a decade. Technology, people said, would be the great equaliser. Digital platforms would amplify voices. Women would finally have the tools to compete.</p>
-
-
-
-<p>Despite the promise of digital tools as a great equaliser, the data reveals a stark regression in global leadership. According to the United Nations (<a href="https://www.unwomen.org/en/news-stories/press-release/2025/06/womens-political-leadership-declines-with-fewer-women-in-executive-office-in-2025" target="_blank" rel="noreferrer noopener">UN) Women</a>, the share of women in cabinet-level positions slipped from 23.3% in 2024 to 22.9% in 2025, leaving just 27 countries globally with a woman at the helm.</p>
-
-
-
-<p>Mwendwa was not surprised. She has been studying this for years. She knows why.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The standard does not represent us</strong></h2>
-
-
-
-<p>Mwendwa&#8217;s work starts with a simple observation: the data does not represent us. It does not look like us. It does not speak like us.</p>
-
-
-
-<p>“African women, we are colourful. We are excitable. We excite people. We have vigour,” she says. “If you look at how data is presented and used to build technologies and innovation, this always falls out. And it&#8217;s not because it cannot be done. It&#8217;s because the standard is a white male standard.”</p>
-
-
-
-<p>According to Mwendwa, the internet was built in English. The algorithms that decide what content gets seen, what behaviour gets rewarded, and what voices get amplified all reflect that origin. And when diversity, equity, and inclusion programs began to be rolled back at major tech companies, the problem worsened.</p>
-
-
-
-<p>“If there were 10 women, African women or black women or women of colour in these companies, the numbers have dwindled significantly,” Mwendwa says. “You&#8217;ll be going online and feeling like there&#8217;s just something off. And that&#8217;s because the people who were hired and who were fighting for us in some of these companies are no longer there.”</p>
-
-
-
-<p>This lack of representation is a structural failure with tangible consequences for the continent&#8217;s digital infrastructure. When fewer African women build technology, the resulting products often fail to account for the unique contexts and realities of half the population.&nbsp;</p>
-
-
-
-<p>This gap creates systems that, at best, ignore women’s needs, such as the <a href="https://www.gsma.com/gender-gap/" target="_blank" rel="noreferrer noopener">significant gender gap</a> in mobile internet usage across Sub-Saharan Africa, and at worst, actively harm them. Without women in the room to influence algorithmic logic, technology can become a tool for <a href="https://www.unesco.org/en/articles/reclaiming-digital-spaces-ending-technology-facilitated-gender-based-violence" target="_blank" rel="noreferrer noopener">technology-facilitated gender-based violence (TFGBV)</a>, where platforms prioritise engagement over the safety of vulnerable users.</p>
-
-
-
-<h2 class="wp-block-heading">When memes become weapons</h2>
-
-
-
-<p>Mwendwa studies what she calls digital political culture. It is the phenomenon of how some groups of people are rewarded for jokes online, while other groups are punished for the same behaviour.</p>
-
-
-
-<p>“We will enjoy memes of a few male leaders where we&#8217;re saying we connect with this gentleman because they are charismatic,” Mwendwa explains. “Whereas when it&#8217;s a woman leader, whether political or in corporate settings or community leadership, when memes are going around about who they are, they end up being punished by the same content.”</p>
-
-
-
-<p>Mwendwa doesn’t think this is accidental. Social media platforms are designed to reward engagement. Polarising content moves faster. Attacks generate more clicks. Women leaders, especially young women trying to enter politics, face coordinated harassment campaigns that platforms profit from but do not stop.</p>
-
-
-
-<p>She points to a case that still haunts her: <a href="https://www.bbc.com/news/articles/c4g058v3d35o" target="_blank" rel="noreferrer noopener">Marielle Franco</a>, a Brazilian councilwoman murdered in 2018. Franco was a vocal advocate for climate justice and land justice. She challenged gender norms. She faced sustained online attacks—coordinated, brutal, public. Then she was killed.</p>
-
-
-
-<p>“Most of the people who were engaged in very big coordinated online attacks have never been apprehended,” Mwendwa says. “Nothing has ever happened to them. Most of them continue to engage every day online and continue attacking other women.”</p>
-
-
-
-<h2 class="wp-block-heading">The platforms profit, the women pay</h2>
-
-
-
-<p>One of the things Mwendwa has investigated is how platforms treat verified accounts. Many women leaders have blue checks—Twitter, Instagram, Facebook. The verification is supposed to signal credibility.</p>
-
-
-
-<p>“They believe this person is high ranking,” she says. “The way people engage with them is not the same way they engage with you and me, who may not have a big following. So they exclude certain categories of people from protection.”</p>
-
-
-
-<p>Mwendwa warns that women are punished for defending themselves online, a statement corroborated by United Nations Educational, Scientific and Cultural Organisation (UNESCO) <a href="https://www.unesco.org/en/articles/unescos-global-survey-online-violence-against-women-journalists" target="_blank" rel="noreferrer noopener">research</a> showing that 73% of women in high-visibility roles like journalism face online violence, leading many to simply disconnect.</p>
-
-
-
-<p>&#8220;People expect a woman to communicate a certain way,&#8221; Mwendwa says. &#8220;People expect a woman to be affiliated with certain things—religion, a political party, a culture. You&#8217;re supposed to act in a certain reserved way. So you can see how this design of the internet punishes certain groups of people. It&#8217;s a structural issue.&#8221;</p>
-
-
-
-<p>The economics are straightforward: polarisation is a feature, not a bug. For platforms, a coordinated attack on a woman leader generates high-velocity engagement; replies, quote-posts, and shares, which translate directly into more ad impressions. While the platforms realise these gains, the &#8220;social cost&#8221; is externalised to the women.&nbsp;</p>
-
-
-
-<p>The price of visibility is measurable. Data from<a href="https://plan-international.org/publications/free-to-be-online/" target="_blank" rel="noreferrer noopener"> Plan International’s &#8216;Free to Be Online?&#8217; report</a> reveals that 58% of girls and young women globally have experienced online harassment, with <strong> </strong>25% of those targeted<strong> </strong>opting to disconnect or limit their public discourse to avoid further abuse.</p>
-
-
-
-<h2 class="wp-block-heading">Why punitive measures do not exist</h2>
-
-
-
-<p>The reason coordinated attacks continue, Mwendwa argues, is simple: there are almost no consequences.</p>
-
-
-
-<p>Platform offices are not based in Africa. This makes legal action difficult. Nigerian authorities <a href="https://fccpc.gov.ng/violations-tribunal-upholds-fccpcs-220-million-fine-against-meta-whatsapp/" target="_blank" rel="noreferrer noopener">took Meta</a> to court over data privacy violations in 2024. The case took two years, with Meta having to pay a $220m fine for unfair, discriminatory practices and a settled $32.8m penalty regarding user data privacy. As of publication time, Meta has yet to fully pay the fine. “Many governments end up saying the social media platform offices are not based in our countries, and therefore it&#8217;s quite hard to investigate, to address it in our court systems,” Mwendwa says. “It can take a long time. It can be quite expensive. You will need data sets, evidence, and a lawyer coming from the global north to testify in a Nigerian court.”</p>
-
-
-
-<p>This is why Mwendwa believes women&#8217;s numbers dropped during the super election cycle.&nbsp;</p>
-
-
-
-<h2 class="wp-block-heading">The work she does now</h2>
-
-
-
-<p>Mwendwa&#8217;s path to this work was not direct. She studied law at Kenyatta University because she has always been evidence-based and data-driven. She wanted to understand how societies create order, how people coexist when they do not know each other, when they do not share the same culture or language.</p>
-
-
-
-<p>Later, she began asking: how does law guide us in the digital sphere? How do we create safety online when the internet has no borders, no clear jurisdiction, and no enforceable rules?</p>
-
-
-
-<p>Today, Mwendwa works on platform governance in the Global South. She studies and <a href="https://ssir.org/articles/entry/how_gig_work_exploits_instead_of_empowers_women_in_the_global_south" target="_blank" rel="noreferrer noopener">writes</a> on how platforms engage with African governments and whether societies can benefit, whether communities can build their own technologies, and whether people can thrive in existing ones.</p>
-
-
-
-<p>Her work with <a href="https://www.linkedin.com/company/colmenafund/posts/?feedView=all" target="_blank" rel="noreferrer noopener">Colmena Fund</a>, a philanthropic organisation providing support for women, aims to platform women political leaders championing democracy and human rights across the Global South. </p>
-
-
-
-<p>She is building their portfolio on women’s political leaders and their role in building tech and data policy. The work is people-facing. It involves research, consultations, and convenings. It means sitting with women leaders in communities, understanding how they use technology, documenting the harms they face, and translating that into funding and project opportunities for women political leaders supporting organisations.</p>
-
-
-
-<p>“Most of the time, when you&#8217;re engaging communities, it&#8217;ll almost always come out as a suggestion from them,” she says. “You help them frame it better. And sometimes if the issue is too technical, you lay out a plan and share it and see if it works for everyone.”</p>
-
-
-
-<p>Her friends at the Data Labelers Association, an advocacy group for data labelers for artificial intelligence (AI), have been documenting another hidden cost: African workers hired to moderate violent content for Meta and other platforms. They are told it is a quick task. They sign non-disclosure agreements (NDAs). They are exposed to extreme violence, child abuse, graphic attacks, horrific material, without support, without disclosure, without consent. Post-Diversity, Equity and Inclusion (DEI) rollback, there are no ethical guardrails protecting them.</p>
-
-
-
-<p>&#8220;For markets like Africa, where the laws are still playing catch-up, they will always find labour to do some of these tasks,&#8221; Mwendwa says. &#8220;But I know there are people who are part of a very big body of work that will institute internet ethics on labour, internet standards on content moderation. And I&#8217;m happy to say it&#8217;s going to be young Africans leading this revolution, however painful it is.&#8221;</p>
-
-
-
-<h2 class="wp-block-heading">A tech lawyer, not an activist</h2>
-
-
-
-<p>Mwendwa says she is often dismissed in rooms where decisions are made. She says she is called an activist to diminish her. Activists, the implication goes, are emotional. They are not professionals. They do not have expertise.</p>
-
-
-
-<p>She rejects this framing.&nbsp;</p>
-
-
-
-<p>“I call myself a tech lawyer,” she says. “There are tech lawyers who work on tech and profits. There are tech lawyers who work on tech and infrastructure. I work on tech and society. I&#8217;m working to ensure that people are still able to enjoy the use of technologies without being harmed.”</p>
-
-
-
-<p>The distinction matters. Lawyers are professionals; they have standing, and they understand systems. When Mwendwa enters a room as a tech lawyer, not an activist, she claims authority. She shifts the conversation.</p>
-
-
-
-<p>“I&#8217;ve faced different challenges in rooms,” she admits. “Sometimes they&#8217;re able to understand my point of view. It&#8217;s rewarding to know that when history books are written, when kids will be studying technology from an African&#8217;s perspective, people like me will be named as people who were really trying to ensure that technology brings people together and not cause more divide.”</p>
-
-
-
-<h2 class="wp-block-heading">The optimism and the realism</h2>
-
-
-
-<p>When asked how she stays motivated when governments are slow, when platforms are extractive, and when women are being pushed offline, Mwendwa&#8217;s answer is a strong belief in the African youth.</p>
-
-
-
-<p>“African young people are resilient,” she says. “We are the youngest continent. We have labour from here to the end of the world. We wake up every day, even when we are being abused, even when we are underresourced, and still fuel these digital economies, still give our data that goes to build new platforms for other continents.”</p>
-
-
-
-<p>She sees progress. The push for digital accountability is increasingly led by a new cohort of policymakers who view technology as a sovereign asset rather than an external utility. In nations like<a href="https://www.unesco.org/en/articles/namibia-launches-artificial-intelligence-readiness-assessment-report" target="_blank" rel="noreferrer noopener"> Namibia</a>,<a href="https://mocti.gov.sl/minister-salima-at-the-un-high-impact-initiative-on-digital-public-infrastructure/" target="_blank" rel="noreferrer noopener"> Sierra Leone</a>, and<a href="https://numerique.gouv.bj/publications/actualites/le-benin-se-dote-d-une-strategie-nationale-d-intelligence-artificielle-et-des-megadonnees" target="_blank" rel="noreferrer noopener"> Benin</a>, women ICT ministers have moved beyond rhetoric to establish foundational AI and data frameworks. This regional momentum is mirrored at the continental level, where the<a href="https://au.int/en/documents/20220728/au-data-policy-framework" target="_blank" rel="noreferrer noopener"> African Union’s Data Policy Framework</a> and recommendations on platform accountability aim to secure data sovereignty and protect labour rights. </p>
-
-
-
-<p>However, as the ecosystem matures, Mwendwa says the challenge is shifting from the creation of tools to their enforcement. “I remain optimistic,” Mwendwa says. “I remain also realistic that we contribute to it. Therefore, we should also be recognised.”</p>
-
-
-
-<p>Her work is building frameworks for digital safety, documenting how technology punishes women, and fighting to ensure that the internet serves everyone, not just those who built it.</p>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Every OnePlus phone released in 2026, ranked</title>
-		<link>https://techcabal.com/2026/04/08/every-oneplus-phone-released-in-2026-ranked/</link>
-		
-		<dc:creator><![CDATA[Chukwuebuka Mgbojikwe]]></dc:creator>
-		<pubDate>Wed, 08 Apr 2026 13:32:46 +0000</pubDate>
-				<category><![CDATA[Consumer Tech]]></category>
-		<category><![CDATA[OnePlus]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185433</guid>
-
-					<description><![CDATA[Table of contents OnePlus 15 OnePlus 15R OnePlus 15T OnePlus Nord 6 OnePlus entered 2026 with arguably its strongest product lineup yet. Four phones have launched since late 2025 under the 2026 cycle: the flagship OnePlus 15, the value-driven 15R, the compact powerhouse 15T, and the battery-record-setting Nord 6. Each targets a different kind of [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<div class="wp-block-group tc-toc has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<h2 class="wp-block-heading">Table of contents</h2>
-
-
-
-<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<p><a href="#OnePlus-15" type="internal" id="#OnePlus-15">OnePlus 15</a></p>
-
-
-
-<p><a href="#OnePlus-15R" type="internal" id="#OnePlus-15R">OnePlus 15R</a></p>
-
-
-
-<p><a href="#OnePlus-15T" type="internal" id="#OnePlus-15T">OnePlus 15T</a></p>
-
-
-
-<p><a href="#OnePlus-Nord-6" type="internal" id="#OnePlus-Nord-6">OnePlus Nord 6</a></p>
-</div>
-</div>
-
-
-
-<p>OnePlus entered 2026 with arguably its strongest product lineup yet. Four phones have launched since late 2025 under the 2026 cycle: the flagship OnePlus 15, the value-driven 15R, the compact powerhouse 15T, and the battery-record-setting Nord 6. Each targets a different kind of buyer, but all four share the same DNA of massive batteries, 165Hz displays, and competitive pricing.</p>
-
-
-
-<p>Before you dive in, there is important context. Multiple <a href="https://9to5google.com/2026/03/24/source-oneplus-may-shut-down-in-global-markets-as-early-as-april/" target="_blank" rel="noreferrer noopener">credible sources report</a> that OnePlus is exiting the US, UK, and EU markets as early as April 2026, with India pivoting to online-only sales. The brand&#8217;s future outside China is deeply uncertain. That makes this current lineup potentially OnePlus&#8217;s final chapter for global consumers.</p>
-
-
-
-<p>Here is a ranked breakdown of every OnePlus phone released so far in 2026, starting with the best overall package.</p>
-
-
-
-<h2 class="wp-block-heading" id="OnePlus-15"><strong>1. OnePlus 15</strong></h2>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1024x576.jpg" alt="OnePlus 15" class="wp-image-185440" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Marques Brownlee on YouTube</figcaption></figure>
-
-
-
-<p class="has-text-align-left">The OnePlus 15 is the brand&#8217;s most ambitious flagship to date. It pairs Qualcomm&#8217;s top-tier Snapdragon 8 Elite Gen 5 (3nm) with a 7,300 mAh silicon-carbon battery, which was the largest in any North American flagship at launch. Tom&#8217;s Guide recorded 25 hours and 13 minutes of battery life in testing, calling it the best result they had ever measured.</p>
-
-
-
-<p>The phone dropped the long-running Hasselblad camera partnership in favour of a new in-house “DetailMax Engine.&#8221; Reviewers were split on this call. TechRadar awarded a perfect 5/5, while Android Authority gave 3/5 and flagged camera downgrades.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Key specs</strong></h4>
-
-
-
-
-
-
-
-<h4 class="wp-block-heading"><strong>Standout features</strong></h4>
-
-
-
-<p>The OnePlus 15 came with a full design overhaul. The circular camera island is gone, replaced by a rectangular module. The curved display is gone too, replaced by a flat screen. The iconic alert slider became a customisable “Plus Key&#8221; action button.</p>
-
-
-
-<p>The 165Hz LTPO display was the first screen above 1080p resolution to hit that refresh rate. Video recording goes up to 4K at 120fps with Dolby Vision HDR, a first for Android. A 360-degree Cryo-Velocity cooling system with aerospace-grade aerogel keeps the phone from overheating during long gaming sessions.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Pricing</strong></h4>
-
-
-
-
-
-
-
-<h4 class="wp-block-heading"><strong>Nigeria pricing</strong></h4>
-
-
-
-<p>OnePlus has no official distribution in Nigeria. Grey-market pricing on Jiji.ng starts around ₦850,000. The dedicated retailer JustFones.ng lists the 16GB/512GB at approximately ₦1,500,000. Aggregator sites show wildly varying estimates ranging from ₦250,000 to ₦1,800,000. Treat those numbers with caution.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Availability and release date</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>China: October 27-28, 2025</li>
-
-
-
-<li>Global (India, UK, EU, Canada): November 13, 2025</li>
-
-
-
-<li>United States: Mid-December 2025 (delayed by FCC approval issues)</li>
-
-
-
-<li>Nigeria/Africa: Not officially launched; grey-market imports only</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="OnePlus-15R"><strong>2. OnePlus 15R</strong></h2>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R-1024x576.jpg" alt="OnePlus 15R" class="wp-image-185445" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15R.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: GSMArena Official on YouTube
-</figcaption></figure>
-
-
-
-<p>The OnePlus 15R made history quietly. It was the first phone in the world to ship with Qualcomm&#8217;s Snapdragon 8 Gen 5, beating even its own flagship sibling to market with the new chip. It pairs that with the largest battery in the lineup at 7,400 mAh and starts at $699.99, $200 below the OnePlus 15.</p>
-
-
-
-<p>The trade-offs are real. You get no wireless charging, a dual camera setup instead of a triple (the telephoto is gone), and an LTPS panel rather than LTPO.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Key specs</strong></h4>
-
-
-
-
-
-
-
-<h4 class="wp-block-heading"><strong>Standout features</strong></h4>
-
-
-
-<p>Debuting the Snapdragon 8 Gen 5 chip is the headline, but the 15R also brought in a Tri-Chip System: a dedicated Wi-Fi chip and a 3,200Hz touch-response chip working alongside the main SoC. This setup is aimed squarely at competitive mobile gamers.</p>
-
-
-
-<p>The jump from an optical fingerprint sensor to an ultrasonic one is a notable hardware upgrade over the 13R&#8217;s predecessor. On the other side of the ledger, the 15R drops the telephoto lens the 13R had (a 50MP unit), and that is a clear step back that reviewers called out.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Pricing</strong></h4>
-
-
-
-
-
-
-
-<h4 class="wp-block-heading"><strong>Nigeria pricing</strong></h4>
-
-
-
-<p>The 15R is not officially available in Nigeria. Grey-market listings on Jiji.ng start from approximately N799,000. Aggregator estimates range from ₦369,000 to ₦1,250,000, reflecting the absence of any official distribution channel.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Availability and release date</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>Announced: December 17, 2025</li>
-
-
-
-<li>India: December 22, 2025</li>
-
-
-
-<li>US, UK, Europe: January 8-15, 2026 (via OnePlus.com, Amazon, Best Buy)</li>
-
-
-
-<li>China: Sold as “OnePlus Ace 6T&#8221; under different branding</li>
-
-
-
-<li>Nigeria/Africa: Not officially launched; grey-market only</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="OnePlus-15T"><strong>3. OnePlus 15T</strong></h2>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1024x576.jpg" alt="" class="wp-image-185448" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-15T.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: gizmochina on YouTube
-</figcaption></figure>
-
-
-
-<p>The OnePlus 15T is the most intriguing phone in the 2026 lineup and, frustratingly, the hardest to buy. It squeezes a 7,500 mAh battery, the Snapdragon 8 Elite Gen 5, and a 50MP periscope telephoto into a body that is only 150.56 mm tall and weighs 194 grams. That is more battery than the full-size OnePlus 15, in a body that is 20g lighter. The catch is that it launched exclusively in China on March 24, 2026, and no global or Indian launch has been announced.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Key specs</strong></h4>
-
-
-
-
-
-
-
-<h4 class="wp-block-heading"><strong>Standout features</strong></h4>
-
-
-
-<p>The 15T&#8217;s main talking point is its battery-to-size ratio. A 7,500 mAh battery in a 6.32-inch body that weighs under 200 grams. The Pixel 10 packs just 4,970 mAh, and the Galaxy S26 sits around 4,000 mAh in a comparable form factor. Nothing in its size class comes close.</p>
-
-
-
-<p>The LUMO periscope telephoto is a first for OnePlus&#8217;s T-series, offering genuine 3.5x optical zoom and 7x lossless zoom. A dedicated “Wind Chaser Gaming Kernel&#8221; and e-sports triple-core architecture (main SoC + Lingxi touch chip + G2 Wi-Fi chip) are built in for competitive gaming. Add 100W wired charging and 50W magnetic wireless charging, and you have a spec sheet that outclasses phones twice its physical size.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Pricing (China only)</strong></h4>
-
-
-
-
-
-
-
-<p><em>No official global, US, UK, EU, India, or Nigeria pricing exists. USD figures are approximate currency conversions only.</em></p>
-
-
-
-<h4 class="wp-block-heading"><strong>Availability and release date</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>China announced: March 24, 2026</li>
-
-
-
-<li>China on sale: March 25, 2026, via OPPO&#8217;s official store</li>
-
-
-
-<li>Colours: Healing White Chocolate, Pure Cocoa, Relaxing Matcha</li>
-
-
-
-<li>Global / India / US / UK / EU: Not launched, not announced as of April 8, 2026</li>
-
-
-
-<li>Nigeria/Africa: Not available</li>
-</ul>
-
-
-
-<p>Multiple credible outlets, including 9to5Google, PhoneArena, TechRadar, and NotebookCheck, have reported that a global launch is unlikely. <a href="https://www.phonearena.com/news/oneplus-15t-official-specs-features-price-new-compact-android-flagship_id179125" target="_blank" rel="noreferrer noopener">PhoneArena stated plainly</a> that the 15T is unlikely to ever reach the US. <a href="https://www.gizmochina.com/2026/03/22/oneplus-15s-bis-certification-india-specs-leak/" target="_blank" rel="noreferrer noopener">The phone received BIS</a> (Bureau of Indian Standards) certification, which suggests some Indian preparation. But with OnePlus India CEO Robin Liu resigning on March 24, 2026, the same day the 15T launched in China, a global release remains unconfirmed and looks improbable.</p>
-
-
-
-<h2 class="wp-block-heading" id="OnePlus-Nord-6"><strong>4. OnePlus Nord 6</strong></h2>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6-1024x576.jpg" alt="OnePlus Nord 6" class="wp-image-185460" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OnePlus-Nord-6.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Sillycorns on YouTube</figcaption></figure>
-
-
-
-<p>The OnePlus Nord 6 launched on April 7, 2026, as the most battery-dense phone OnePlus has ever made. Its 9,000 mAh silicon-carbon cell is a staggering number for any phone, let alone a mid-ranger starting at Rs. 38,999 (approximately $422). OnePlus claims 2.5+ days of moderate use and nearly 27 hours of continuous YouTube streaming.&nbsp;</p>
-
-
-
-<p>The phone borrows the OnePlus 15&#8217;s “Sunburst HDR&#8221; AMOLED panel and 165Hz refresh rate, and pairs them with the Snapdragon 8s Gen 4, the most powerful chip available in its price range.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Key specs</strong></h4>
-
-
-
-
-
-
-
-<h4 class="wp-block-heading"><strong>Standout features</strong></h4>
-
-
-
-<p>The 9,000 mAh battery is what gets all the attention, and it should. It is the largest ever fitted into a OnePlus phone. Despite that, the Nord 6 remains 8.5 mm thick and 217g, using silicon-carbon chemistry with 15% silicon content. The 27W reverse wired charging turns the phone into a power bank for your other devices.</p>
-
-
-
-<p>Borrowing the flagship OnePlus 15&#8217;s exact display panel and putting it in a phone that costs less than half the price is a significant value play. MIL-STD-810H certification, along with quad IP ratings (IP66, IP68, IP69, IP69K), makes it one of the most durable mid-range options available. The Tri-Chip architecture (Snapdragon 8s Gen 4 + touch chip + Wi-Fi chip) trickles down from the flagship lineup for better gaming performance.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Pricing</strong></h4>
-
-
-
-
-
-
-
-<p>Launch offers in India include Rs. 2,000 to Rs. 3,000 in bank discounts, bringing the effective starting price to approximately Rs. 35,999 (around $390).</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Europe / UK pricing</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>Not officially confirmed. Based on the Nord 5&#8217;s pricing pattern, leaks suggest approximately €449 and £399.</li>
-</ul>
-
-
-
-<h4 class="wp-block-heading"><strong>US pricing</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>Not expected. Nord devices have not traditionally launched in the US.</li>
-</ul>
-
-
-
-<h4 class="wp-block-heading"><strong>Nigeria pricing</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>Not available from any retailers as of April 8, 2026. No NGN pricing found.</li>
-</ul>
-
-
-
-<h4 class="wp-block-heading"><strong>Availability and release date</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li>Announced: April 7, 2026</li>
-
-
-
-<li>India sale: April 9, 2026, 12 PM IST (Amazon India, OnePlus.in, OnePlus stores, select offline retailers)</li>
-
-
-
-<li>China: Already available as “OnePlus Turbo 6&#8243; since January 2026</li>
-
-
-
-<li>Europe/UK: Expected but unconfirmed; OnePlus&#8217;s global retreat casts doubt</li>
-
-
-
-<li>US: Not expected</li>
-
-
-
-<li>Nigeria/Africa: Not available</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading"><strong>Quick comparison</strong></h2>
-
-
-
-<p>Here is how all four phones stack up side by side.</p>
-
-
-
-
 ]]></content:encoded>
 					
 		
