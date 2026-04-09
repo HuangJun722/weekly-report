@@ -511,14 +511,14 @@ def smart_filter(items):
 
 def configure_doubao():
     key = os.environ.get('DOUBAO_API_KEY')
-    print(f"  🔑 DOUBAO_API_KEY 环境变量：{'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置'}")
+    print(f"  🔑 DOUBAO_API_KEY: {'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置 ❌'}")
     if not key:
-        print(f"  ⚠️  未找到 DOUBAO_API_KEY 环境变量")
+        print("  ❌ 未找到 DOUBAO_API_KEY 环境变量，跳过 AI 分析")
         return False
     if len(key) < 10:
-        print(f"  ⚠️  DOUBAO_API_KEY 长度异常（{len(key)} 字符）")
+        print(f"  ❌ DOUBAO_API_KEY 长度异常（{len(key)} 字符），跳过 AI 分析")
         return False
-    print(f"  ✅ 豆包 API 配置检查通过（OpenAI 兼容模式）")
+    print(f"  ✅ 豆包 API 配置检查通过，endpoint: https://ark.cn-beijing.volces.com/api/v3/chat/completions")
     return True
 
 # ============================================================
@@ -595,7 +595,9 @@ def analyze_events_doubao(items):
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
                 time.sleep(wait)
                 continue
-            resp.raise_for_status()
+            if resp.status_code != 200:
+                print(f"  ❌ 豆包 API HTTP {resp.status_code}: {resp.text[:300]}")
+                return None
             data = resp.json()
             text = data.get('choices', [{}])[0].get('message', {}).get('content', '')
             if not text:
@@ -617,10 +619,10 @@ def analyze_events_doubao(items):
         except Exception as e:
             if attempt < 3:
                 wait = (attempt + 1) * 5
-                print("  ⚠️  豆包 API 调用失败（" + type(e).__name__ + "），等待 " + str(wait) + "s 后重试...")
+                print(f"  ⚠️  豆包 API 调用失败（{type(e).__name__}），等待 {wait}s 后重试...")
                 time.sleep(wait)
                 continue
-            print("  ⚠️  豆包 API 调用失败，降级：" + type(e).__name__ + " " + str(e))
+            print(f"  ❌ 豆包 API 最终失败: {type(e).__name__} {str(e)[:200]}")
             return None
     return None
 
