@@ -511,7 +511,7 @@ def smart_filter(items):
 
 def configure_doubao():
     key = os.environ.get('DOUBAO_API_KEY')
-    model = os.environ.get('DOUBAO_MODEL', 'doubao-1.5-lite')
+    model = os.environ.get('DOUBAO_MODEL', 'Doubao-1.5-lite-32k')
     print(f"  🔑 DOUBAO_API_KEY: {'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置 ❌'}")
     if not key:
         print("  ❌ 未找到 DOUBAO_API_KEY，跳过 AI 分析")
@@ -573,6 +573,7 @@ def analyze_events_doubao(items):
         return None
 
     url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+    model = os.environ.get('DOUBAO_MODEL', 'Doubao-1.5-lite-32k')
     headers = {
         "Authorization": "Bearer " + api_key,
         "Content-Type": "application/json"
@@ -582,7 +583,7 @@ def analyze_events_doubao(items):
     prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
 
     payload = {
-        "model": os.environ.get('DOUBAO_MODEL', 'doubao-1.5-lite'),
+        "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": 4096,
         "temperature": 0.1
