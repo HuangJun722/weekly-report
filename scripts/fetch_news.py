@@ -678,7 +678,7 @@ def build_event(item, analysis=None):
             'level': level,
             'score': score,
             'summary_short': analysis.get('summary_short', item['title'][:25]),
-            'reason': analysis.get('reason', '待分析'),
+            'why_important': analysis.get('reason', '待分析'),
             'impact': analysis.get('impact', '未知'),
             'insight_label': analysis.get('insight_label', '背景补充'),
             'companies': (analysis or {}).get('companies', []) or [],
@@ -692,6 +692,12 @@ def build_event(item, analysis=None):
         'earnings': '背景补充',
         'strategy': '合作机会',
     }.get(ev_type, '背景补充')
+    why_fallback = {
+        'funding': f"{item['region']}科技公司融资事件，金额待确认",
+        'ma': f"{item['region']}科技公司并购/收购",
+        'earnings': f"{item['region']}科技公司财报披露",
+        'strategy': f"{item['region']}科技公司战略动态",
+    }.get(ev_type, f"{item['region']}科技行业动态")
     return {
         'title': item['title'],
         'url': item['url'],
@@ -701,7 +707,7 @@ def build_event(item, analysis=None):
         'level': level,
         'score': score,
         'summary_short': item['title'][:25],
-        'reason': '⚠️ AI 分析未运行',
+        'why_important': why_fallback,
         'impact': '未知',
         'insight_label': default_label,
         'companies': [],
