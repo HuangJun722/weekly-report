@@ -166,12 +166,18 @@ def enrich(event):
     ev_type = event['event_types'][0]
     why = event.get('why_important', '')
     if why in TRUNCATED_JUNK or why == '待分析' or len(why) < 10:
-        # reason 已是有效中文则保留，只对真正的废弃值 fallback
         existing_reason = event.get('reason', '')
         if existing_reason and len(existing_reason) >= 10 and '⚠️' not in existing_reason and '待分析' not in existing_reason:
-            pass  # 已有有效 reason，保留
+            pass
         else:
-            event['reason'] = event.get('title', '')[:50]
+            # 生成中文 fallback
+            fallback = {
+                'funding': f"{event.get('region','该地区')}科技公司融资事件",
+                'ma': f"{event.get('region','该地区')}科技公司并购/收购",
+                'earnings': f"{event.get('region','该地区')}科技公司财报披露",
+                'strategy': f"{event.get('region','该地区')}科技公司战略动态",
+            }.get(ev_type, f"{event.get('region','该地区')}科技行业动态")
+            event['reason'] = fallback
     else:
         event['reason'] = why
 
