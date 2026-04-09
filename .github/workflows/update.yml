@@ -38,7 +38,9 @@ jobs:
 
       - name: Fetch and analyze news
         if: inputs.mode != 'html-only'
-        run: python scripts/fetch_news.py
+        run: |
+          python -c "import os; k=os.environ.get('DOUBAO_API_KEY',''); print(f'DOUBAO_API_KEY length: {len(k)}')"
+          python scripts/fetch_news.py
         env:
           DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
 
