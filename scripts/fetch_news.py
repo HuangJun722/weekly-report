@@ -6,7 +6,7 @@
 import json, os, time, re, hashlib
 from datetime import datetime, timedelta
 from pathlib import Path
-from email.utils import parsedate_to_datetime
+import feedparser
 
 try:
     from dotenv import load_dotenv
@@ -254,23 +254,7 @@ async def fetch_all_parallel(urls):
 
 def _parse_rss_date(item):
     """从 RSS/Atom 条目提取文章发布日期，返回 ISO 格式字符串，失败返回 None"""
-    # 尝试多个日期字段（RSS 2.0 / Atom / Dublin Core）
-    for field in ['pubDate', 'published', 'updated', 'dc:date']:
-        el = item.select_one(field)
-        if not el: continue
-        raw = el.get_text(strip=True)
-        if not raw: continue
-        try:
-            dt = parsedate_to_datetime(raw)
-            return dt.strftime('%Y-%m-%d')
-        except Exception:
-            # 尝试直接解析常见格式
-            for fmt in ['%a, %d %b %Y %H:%M:%S %z', '%Y-%m-%dT%H:%M:%SZ',
-                        '%Y-%m-%dT%H:%M:%S+00:00', '%Y-%m-%d']:
-                try:
-                    return datetime.strptime(raw[:25], fmt).strftime('%Y-%m-%d')
-                except Exception:
-                    pass
+    # 已废弃：feedparser 自动标准化日期，保留接口兼容
     return None
 
 # ============================================================
@@ -278,40 +262,47 @@ def _parse_rss_date(item):
 # ============================================================
 
 def _parse_rss_text(cfg, text):
-    """解析 RSS 文本，返回事件列表（不从网络抓取，供并行调用）"""
+    """解析 RSS/Atom 文本，返回事件列表。feedparser 自动处理编码/日期标准化。"""
     if not text: return []
     text = text.strip()
     if not any(text.startswith(x) or x in text[:300] for x in ['<?xml', '<rss', '<feed']):
         return []
+
     try:
-        soup = BeautifulSoup(text, 'xml')
+        parsed = feedparser.parse(text)
     except Exception:
         return []
 
-    items = soup.select('item') or soup.select('entry')
     results = []
     max_items = cfg.get('max', 8)
 
-    for item in items:
+    for entry in parsed.entries:
         if len(results) >= max_items: break
-        title_el = item.select_one('title')
-        link_el  = item.select_one('link')
-        if not title_el: continue
-        title = title_el.get_text(strip=True)
-        if len(title) < 15 or is_blacklisted(title): continue
 
+        # 标题
+        title = (entry.get('title') or '').strip()
+        if len(title) < 15 or is_blacklisted(title):
+            continue
+
+        # 链接：优先 href 属性，其次纯文本 link
         link = ''
-        if link_el:
-            link = (link_el.get('href') or '').strip()
-            if not link: link = link_el.get_text(strip=True)
+        link_val = entry.get('link', '')
+        if isinstance(link_val, dict):
+            link = (link_val.get('href') or '').strip()
+        else:
+            link = (link_val or '').strip()
         if not link:
-            guid_el = item.select_one('guid')
-            if guid_el: link = guid_el.get_text(strip=True)
-        if not link: continue
+            link = (entry.get('id') or '').strip()
+        if not link:
+            continue
+
+        # 日期：feedparser 标准化为 time.struct_time
+        article_date = None
+        tp = entry.get('published_parsed') or entry.get('updated_parsed')
+        if tp:
+            article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
 
         types = detect_event_types(title)
-        # 提取文章发布日期（按实际发布时间分组，而非采集时间）
-        article_date = _parse_rss_date(item)
         results.append({
             'title': title,
             'url': link,
@@ -319,7 +310,7 @@ def _parse_rss_text(cfg, text):
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
-            'article_date': article_date,  # 原始发布时间，可能为 None
+            'article_date': article_date,
         })
     return results
 
@@ -580,7 +571,7 @@ def analyze_events_doubao(items):
         print("  ⚠️  未设置 DOUBAO_API_KEY，降级跳过 AI 分析")
         return None
 
-    url = "https://ark.cn-beijing.volcengineapi.com/completion-api/v2/chat"
+    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
     headers = {
         "Authorization": "Bearer " + api_key,
         "Content-Type": "application/json"
