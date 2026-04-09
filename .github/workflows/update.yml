@@ -40,7 +40,7 @@ jobs:
         if: inputs.mode != 'html-only'
         run: python scripts/fetch_news.py
         env:
-          DOUBAO_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
 
       - name: Debug environment
         run: |
