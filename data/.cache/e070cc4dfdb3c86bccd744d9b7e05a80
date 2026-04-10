@@ -12,7 +12,7 @@
 	<atom:link href="https://techwireasia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techwireasia.com/</link>
 	<description>Where technology and business intersect</description>
-	<lastBuildDate>Thu, 09 Apr 2026 08:24:19 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 10 Apr 2026 08:06:16 +0000</lastBuildDate>
 	<language>en-GB</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,171 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>AWS AI revenue hits US$15 billion. Andy Jassy says the hard part is keeping up with demand</title>
+		<link>https://techwireasia.com/2026/04/aws-ai-revenue-hits-us15-billion-andy-jassy-says-the-hard-part-is-keeping-up-with-demand/</link>
+		
+		<dc:creator><![CDATA[Dashveenjit Kaur]]></dc:creator>
+		<pubDate>Fri, 10 Apr 2026 09:00:26 +0000</pubDate>
+				<category><![CDATA[AI & Intelligence]]></category>
+		<category><![CDATA[Asia Pacific Focus]]></category>
+		<category><![CDATA[Cloud & Infrastructure]]></category>
+		<category><![CDATA[Enterprise Sector]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[aws]]></category>
+		<guid isPermaLink="false">https://techwireasia.com/?p=247233</guid>
+
+					<description><![CDATA[<p>AWS AI revenue tops US$15 billion in Q1 2026, presents real returns. Amazon&#8217;s custom chip business doubles to US$20bn. Capacity constraints mean demand is still outrunning supply For the better part of two years, the loudest criticism of AI investment has been the same: show me the revenue. Amazon CEO Andy Jassy had a straightforward [&#8230;]</p>
+<p>The post <a href="https://techwireasia.com/2026/04/aws-ai-revenue-hits-us15-billion-andy-jassy-says-the-hard-part-is-keeping-up-with-demand/">AWS AI revenue hits US$15 billion. Andy Jassy says the hard part is keeping up with demand</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<ul>
+<li><strong>AWS AI revenue tops US$15 billion in Q1 2026, presents real returns.</strong></li>
+<li><strong>Amazon&#8217;s custom chip business doubles to US$20bn.</strong></li>
+<li><strong>Capacity constraints mean demand is still outrunning supply</strong></li>
+</ul>
+<p>For the better part of two years, the loudest criticism of AI investment has been the same: show me the revenue. Amazon CEO Andy Jassy had a <a href="https://www.aboutamazon.com/news/aws/amazon-ceo-andy-jassy-aws-ai">straightforward answer</a> this week. In his annual shareholder letter, he put AWS AI revenue at over US$15 billion in Q1 2026, noting it is &#8220;ascending rapidly,&#8221; and drawing a pointed comparison to AWS&#8217;s own early days, when the cloud business had a US$58 million revenue run rate three years after launch.</p>
+<p>Three years into the AI wave, that figure is 260 times larger. The disclosure helped alleviate some investor concerns about the billions Amazon is deploying into AI-related <a href="https://techwireasia.com/2026/01/aws-reveals-major-ai-and-cloud-announcements-at-reinvent-2025/">initiatives</a>. Following the release of the letter, Amazon shares rose 2% in pre-market trading.</p>
+<p>The numbers landed at a moment when markets have been pressing hyperscalers hard on whether AI infrastructure spending will produce durable returns or simply represent the largest capital mis-allocation in tech history.</p>
+<p>Jassy&#8217;s response to that was direct. &#8220;We&#8217;re not investing approximately US$200 billion in CAPEX in 2026 on a hunch,&#8221; he wrote.</p>
+<h3>The chip business nobody saw coming</h3>
+<p>The AWS AI revenue figure is significant. These custom chip numbers are arguably more so. Amazon&#8217;s chips business, which includes Graviton processors, Trainium AI chips and Nitro networking cards, now has an annualised revenue run rate of over US$20 billion, doubling from the US$10 billion <a href="https://finance.yahoo.com/sectors/technology/articles/amazon-says-annual-revenue-run-101958790.html">disclosed</a> with fourth-quarter results.</p>
+<p>Jassy drew a direct line between this trajectory and what happened in CPU compute. Graviton, which offers up to 40% better price-performance than x86 processors, is now used by 98% of the top 1,000 EC2 customers. Trainium2 had about 30% better price-performance than comparable GPUs and has largely sold out. Trainium3, which started shipping at the start of 2026, is 30 to 40% more price-performant than Trainium2 and is nearly fully subscribed.</p>
+<p>The demand picture is striking enough that two large AWS customers asked whether they could buy all of its custom Graviton capacity for 2026. Amazon declined – it still needs to provide CPU capacity to other customers – but Jassy cited it as a signal of where appetite sits.</p>
+<p>Jassy also raised the prospect of selling chips externally. &#8220;There&#8217;s so much demand for our chips that it&#8217;s quite possible we&#8217;ll sell racks of them to third parties in the future,&#8221; he said. That would put Amazon in direct competition with Nvidia and AMD in a segment the company has so far only served internally.</p>
+<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2023/11/what-are-aws-and-nvidia-doing-to-ai-cloud/>AWS becomes the first cloud provider to launch Nvidia GH200 Superchips with NVLink for AI cloud infrastructure</a></i></div>
+<h3>What this means for the Asia Pacific</h3>
+<p>The AWS AI revenue milestone does not exist in isolation for the region. AWS has committed SG$12 billion, approximately US$9 billion, to Singapore between 2024 and 2028. Across Southeast Asia, Malaysia is gaining traction not only as an offshoot of Singapore but increasingly for local workloads as the government digitises the economy, while Indonesia&#8217;s cloud computing market has been growing at a CAGR of 48% over the last five years.</p>
+<p>That regional build-out sits inside a broader constraint that Jassy acknowledged plainly. AI revenue &#8220;could be growing even faster,&#8221; but for capacity constraints currently facing the tech industry. AWS added 3.9 gigawatts of new power capacity in 2025 and plans to double total power capacity by the end of 2027.</p>
+<p>Access to grid power remains the biggest constraint in the Asia Pacific, a challenge set to intensify in 2026 as data centre workloads change to more intensive AI-driven demand. For enterprises in the region building AI workloads on AWS, that capacity ceiling is not an abstract concern – it shapes availability, pricing and lead times on the services they are planning around.</p>
+<h3>The CAPEX argument</h3>
+<p>Amazon reiterated its plans to spend roughly US$200 billion in capital expenditure in 2026, with much of it expected to be monetised in 2027 and 2028, and already supported by customer commitments, including more than $100 billion from OpenAI.</p>
+<p>The AI investment cycle has produced genuine scepticism among analysts and investors about whether the returns will match the spending. Brian Mulberry, chief market strategist at Zacks Investment Management, said: &#8220;The AI run-rate is a strong validation that AWS is successfully turning the AI boom into real, high-growth revenue. It&#8217;s still early days per Jassy, but the momentum positions AWS as a leader in AI infrastructure.&#8221;</p>
+<p>Whether other hyperscalers can point to comparable proof points when they report will determine how long that scepticism lingers. For now, Amazon has put a number on what the AI time looks like as a revenue line. The rest of the industry is being asked to follow.</p>
+<p><a href="https://techexevent.com/"><img fetchpriority="high" decoding="async" class="alignleft wp-image-247146 size-full" src="https://techwireasia.com/wp-content/uploads/2026/03/AI.png" alt="" width="728" height="90" srcset="https://techwireasia.com/wp-content/uploads/2026/03/AI.png 728w, https://techwireasia.com/wp-content/uploads/2026/03/AI-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a></p>
+<p><b>Want to learn more about AI and big data from industry leaders?</b> Check out<a href="https://www.ai-expo.net/"> AI &amp; Big Data Expo</a> taking place in Amsterdam, California, and London. This comprehensive event is part of <a href="https://techexevent.com/">TechEx</a> and is co-located with other leading technology events, click<a href="https://techexevent.com/"> here</a> for more information.</p>
+<p>Tech Wire Asia is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
+<p>The post <a href="https://techwireasia.com/2026/04/aws-ai-revenue-hits-us15-billion-andy-jassy-says-the-hard-part-is-keeping-up-with-demand/">AWS AI revenue hits US$15 billion. Andy Jassy says the hard part is keeping up with demand</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Minor Hotels builds data and AI platform with Google Cloud</title>
+		<link>https://techwireasia.com/2026/04/minor-hotels-builds-data-and-ai-platform-with-google-cloud/</link>
+		
+		<dc:creator><![CDATA[Muhammad Zulhusni]]></dc:creator>
+		<pubDate>Fri, 10 Apr 2026 09:00:09 +0000</pubDate>
+				<category><![CDATA[AI & Intelligence]]></category>
+		<category><![CDATA[Cloud & Infrastructure]]></category>
+		<category><![CDATA[Cloud Platforms]]></category>
+		<category><![CDATA[Digital Transformation]]></category>
+		<category><![CDATA[Software & Applications]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[cloud computing]]></category>
+		<category><![CDATA[data]]></category>
+		<category><![CDATA[google cloud]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">https://techwireasia.com/?p=247230</guid>
+
+					<description><![CDATA[<p>Minor Hotels builds data and AI platform with Google Cloud and Salesforce. Supports AI tools with built-in privacy controls. A change is underway in how hotel groups use data as travel becomes more shaped by digital tools and automated systems. Minor Hotels is building a new data and AI platform with support from Google Cloud, [&#8230;]</p>
+<p>The post <a href="https://techwireasia.com/2026/04/minor-hotels-builds-data-and-ai-platform-with-google-cloud/">Minor Hotels builds data and AI platform with Google Cloud</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<ul>
+<li><strong>Minor Hotels builds data and AI platform with Google Cloud and Salesforce.</strong></li>
+<li><strong>Supports AI tools with built-in privacy controls.</strong></li>
+</ul>
+<p>A change is underway in how hotel groups use data as travel becomes more shaped by digital tools and automated systems. Minor Hotels is building a new data and AI platform with support from Google Cloud, Salesforce, OneTrust, and Deloitte.</p>
+<p>At the centre of the plan is a single platform that connects guest data, marketing systems, and service operations. The goal is to help the group recognise guests in its brands and locations and tailor communication based on past stays and preferences. Privacy controls are being built into the system from the start.</p>
+<p>Hotel groups are relying less on third-party platforms and more on their own data. Minor Hotels, which operates and develops more than 640 properties worldwide, is building a more direct link with guests in that network.</p>
+<p>The platform is being built from scratch not tied to older systems, allowing the company to use newer AI tools without legacy constraints. The rollout is planned for 2026.</p>
+<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/03/google-completes-wiz-acquisition-as-cloud-security-demand-grows/>Google completes Wiz acquisition as cloud security demand grows</a></i></div>
+<p>The platform is designed to support newer tools like <a href="https://techwireasia.com/2024/06/ai-implementation-apac-australia-artificial-intelligence-machine-learning/">generative AI</a> and automated agents from the outset.</p>
+<h3>AI and guest experience</h3>
+<p>Ian Di Tullio, Chief Commercial Officer of Minor Hotels, said AI is starting to act as the &#8220;front door to travel&#8221;, changing who controls demand. He said success will depend on how well brands use data and respond in real time.</p>
+<p>The platform will run on infrastructure from Google Cloud, using tools like BigQuery and Vertex AI to form the core data layer. These systems bring together guest data from different brands and digital channels into one place. A guest who stays at one property could have their preferences recognised at another, even in a different country.</p>
+<p>The platform is being designed to support AI agents that can handle more complex tasks, including managing bookings, suggesting travel plans, and responding to guest requests in real time.</p>
+<p>Mark Micallef, Managing Director for Southeast Asia at Google Cloud, said the future will rely on AI agents that can anticipate needs and act in the travel journey. He said the platform may help address issues linked to fragmented cloud systems and support more responsive guest experiences.</p>
+<p>Customer communication and marketing will be handled through systems from Salesforce. Tools will manage guest interactions in a trip. Data 360 will bring in guest preferences from the central system, which can be used to group customers and tailor offers.</p>
+<p>Apisit Kuparatana, Country Leader and Managing Director of Salesforce Thailand, said guests now expect interactions to be &#8220;instant and deeply personal&#8221;. He said automation based on guest insights can help connect touchpoints into a single journey.</p>
+<h3>Privacy and operations</h3>
+<p>Handling guest data also brings regulatory and trust concerns. OneTrust is responsible for ensuring that privacy and consent are built into the platform. This includes managing how guest data is collected and used in different regions.</p>
+<p>Arran Mulvaney, Regional Director for ASEAN at OneTrust, said consent plays a central role in long-term customer relationships. He said embedding privacy and governance into the platform makes responsible data use a priority.</p>
+<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/03/google-cloud-and-nokia-bring-agentic-ai-to-telecom-networks/>Google Cloud and Nokia bring agentic AI to telecom networks</a></i></div>
+<p>Beyond guest-facing features, the platform will also support internal operations. AI tools are expected to assist contact centres and hotel staff, helping them respond to requests more quickly. They may also support recommendations for upgrades or local experiences.</p>
+<p>Digital assistants and AI-driven tools are playing a larger role in how travellers choose destinations and services. Deloitte is overseeing the design and rollout of the system. Its role includes bringing together the different technology partners and ensuring the platform fits into the company&#8217;s daily operations. The systems need to work in different regions and align with existing processes used by teams in over 60 countries.</p>
+<p>Dr Metinee Jongsaliswang, Country Managing Partner at Deloitte Thailand, said projects of this scale depend on both technology and organisational alignment. She said teams in different markets need to work together to ensure the system is used effectively.</p>
+<p>The platform will continue to develop with changes to digital services and AI-driven features.</p>
+<p><a href="https://techexevent.com/"><img fetchpriority="high" decoding="async" class="alignleft wp-image-247146 size-full" src="https://techwireasia.com/wp-content/uploads/2026/03/AI.png" alt="" width="728" height="90" srcset="https://techwireasia.com/wp-content/uploads/2026/03/AI.png 728w, https://techwireasia.com/wp-content/uploads/2026/03/AI-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a></p>
+<p><b>Want to learn more about AI and big data from industry leaders?</b> Check out<a href="https://www.ai-expo.net/"> AI &amp; Big Data Expo</a> taking place in Amsterdam, California, and London. This comprehensive event is part of <a href="https://techexevent.com/">TechEx</a> and is co-located with other leading technology events, click<a href="https://techexevent.com/"> here</a> for more information.</p>
+<p>AI News is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
+<p>The post <a href="https://techwireasia.com/2026/04/minor-hotels-builds-data-and-ai-platform-with-google-cloud/">Minor Hotels builds data and AI platform with Google Cloud</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The MATCH Act would cut off China&#8217;s last chipmaking lifeline–Asia is already feeling it</title>
+		<link>https://techwireasia.com/2026/04/match-act-semiconductor-export-controls-china-asia/</link>
+		
+		<dc:creator><![CDATA[Dashveenjit Kaur]]></dc:creator>
+		<pubDate>Fri, 10 Apr 2026 01:00:19 +0000</pubDate>
+				<category><![CDATA[Asia Pacific Focus]]></category>
+		<category><![CDATA[China]]></category>
+		<category><![CDATA[Compliance, Regulations & Governance]]></category>
+		<category><![CDATA[Supply Chain & Logistics]]></category>
+		<category><![CDATA[Asia semiconductor]]></category>
+		<category><![CDATA[asml]]></category>
+		<category><![CDATA[china]]></category>
+		<category><![CDATA[lithography]]></category>
+		<category><![CDATA[MATCH Act]]></category>
+		<category><![CDATA[semiconductor export controls]]></category>
+		<category><![CDATA[semiconductors]]></category>
+		<guid isPermaLink="false">https://techwireasia.com/?p=247226</guid>
+
+					<description><![CDATA[<p>The MATCH Act would extend US controls to block China from DUV lithography tools it can&#8217;t make itself. South Korean and Taiwanese chipmakers with Chinese fabs exposed. Beijing pushes for 80% chip self-sufficiency by 2030. Washington has been tightening semiconductor export controls on China for years. The MATCH Act, introduced in the House of Representatives [&#8230;]</p>
+<p>The post <a href="https://techwireasia.com/2026/04/match-act-semiconductor-export-controls-china-asia/">The MATCH Act would cut off China&#8217;s last chipmaking lifeline–Asia is already feeling it</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<ul>
+<li><strong>The MATCH Act would extend US controls to block China from DUV lithography tools it can&#8217;t make itself.</strong></li>
+<li><strong>South Korean and Taiwanese chipmakers with Chinese fabs exposed.</strong></li>
+<li><strong>Beijing pushes for 80% chip self-sufficiency by 2030.</strong></li>
+</ul>
+<p>Washington has been tightening semiconductor export controls on China for years. The MATCH Act, introduced in the House of Representatives on April 2, suggests the next round will be the most consequential yet, and its ripple effects will be felt hardest in Asia.</p>
+<p>The <a href="https://www.foreign.senate.gov/press/rep/release/risch-ricketts-kim-introduce-match-act-level-the-global-playing-field-for-us-tech">draft legislation</a>, introduced by a cross-party group of US lawmakers, is aimed at protecting the US lead in artificial intelligence by preventing Chinese companies from obtaining chip manufacturing tools they cannot make themselves, while ensuring that companies based in US-allied nations face the same restrictions as their US rivals.</p>
+<p>The primary target is ASML&#8217;s deep ultraviolet (DUV) lithography systems – the machines that etch circuit patterns onto silicon wafers and that China&#8217;s biggest fabs have, until now, still been able to purchase. The MATCH Act explicitly names the Chinese companies affected: SMIC, Hua Hong, Huawei, CXMT, and YMTC would not be allowed to purchase or have chip manufacturing machines serviced.</p>
+<p>That last word – serviced – is the detail that changes everything.</p>
+<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2025/03/global-chip-race-china-semiconductor-sector-surpasses-south-korea/>Global chip race: China semiconductor sector surpasses South Korea</a></i></div>
+<h3>Why servicing matters more than sales</h3>
+<p>Manufacturing tools are not appliances that you set up once and leave alone. Without support, calibration, parts supply, and technical assistance, not only does availability decline, but process stability diminishes in the medium term. The draft thus targets not only the influx of new tools but potentially also the usability of already-installed systems.</p>
+<p>China has acquired hundreds of DUV machines from ASML over the past several years, and China was ASML&#8217;s <a href="https://www.globaltimes.cn/page/202602/1355751.shtml">biggest market</a> in the fourth quarter of 2025, representing 36% of net system sales. Cutting off maintenance on that installed base is a different proposition from simply halting new sales; it creates operational degradation over time not a clean break.</p>
+<p>For ASML, the financial exposure is significant. Analysts at Quilter Cheviot estimate the legislation would impact around 10 – 15% of ASML&#8217;s overall sales, with China accounting for approximately 50% of that mix, a potential revenue hit of around 5%.</p>
+<h3>Where Asia gets complicated</h3>
+<p>The MATCH Act&#8217;s reach does not stop at China&#8217;s borders. ASML has recently received large orders from allies like SK Hynix and Samsung, highlighting how demand is spread in multiple regions, but both South Korean memory giants run manufacturing operations inside China, operations that depend on a steady flow of equipment and service.</p>
+<p>Washington approved annual export licences for Samsung and SK Hynix at the start of 2026, replacing the validated end-user waiver system that had allowed relatively unrestricted tool shipments to their Chinese factories. Those licences cover maintenance and continued operation, not capacity expansion.</p>
+<p>The MATCH Act, if passed, would put even that level of access under threat. Samsung&#8217;s NAND flash plant in Xi&#8217;an and SK Hynix&#8217;s DRAM fab in Wuxi and NAND facility in Dalian collectively account for a meaningful share of global memory supply. Any disruption to tool servicing at those sites touches supply chains that run through every major consumer electronics market in Asia.</p>
+<p>The picture at SEMICON China 2026 captured the direction of travel. Applied Materials and ASML kept a low profile at the event under tightening US export controls, while domestic Chinese suppliers dominated visibility and floor presence.</p>
+<h3>China is already responding</h3>
+<p>The recurring argument against tightening semiconductor export controls further is that the restrictions have historically accelerated exactly what they sought to prevent. US measures are proving more successful at <a href="https://www.csis.org/analysis/chinas-localisation-drive-semiconductors-gains-impetus-allied-chip-export-controls">catalysing</a> genuine Chinese chip innovation than at blocking it, manifested in recent achievements in advanced packaging, alternative forms of lithography, and novel system architecture.</p>
+<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2025/12/china-tests-prototype-system-aimed-at-advanced-chip-manufacturing/>China tests prototype system aimed at advanced chip manufacturing</a></i></div>
+<p>China&#8217;s semiconductor industry has set a target of 80% chip self-sufficiency by 2030, with plans to build and test production lines using fully domestically developed equipment for 7nm chips, as well as achieving stable production at 14nm. China&#8217;s chip self-sufficiency rate stood at 33% in 2024.</p>
+<p>Beijing has already mandated that chipmakers use at least 50% domestically produced equipment when adding new manufacturing capacity, a policy reshaping procurement decisions in the country&#8217;s fab build-out. Naura, China&#8217;s largest semiconductor equipment supplier, is reportedly testing its etching tools on SMIC&#8217;s advanced 7nm production line, building on earlier deployments at 14nm.</p>
+<p>UBS projects China&#8217;s semiconductor equipment spending will reach US$47.05 billion in 2026, rising to US$50 billion in 2027 – growth driven by memory expansion, high fab use, and the ongoing push to close the gap in leading-edge logic.</p>
+<h3>The legislative road ahead</h3>
+<p>Both analysts covering ASML noted that the proposals are in their early stages and would still need to work through the American legislative process. Unlike previous rounds of export restrictions, which were driven by the executive branch under Presidents Trump and Biden, this initiative originates from Congress, signalling a broader political consensus around technology competition with China.</p>
+<p>Whether or not the MATCH Act passes in its current form, the direction it signals is clear. The time of China being able to purchase and maintain Western lithography tools as a matter of course is ending. Asian chipmakers with China operation snow face a narrowing set of options on both sides of the trade divide – and the MATCH Act has not even passed yet.</p>
+<p><a href="https://techexevent.com/"><img fetchpriority="high" decoding="async" class="alignleft wp-image-247146 size-full" src="https://techwireasia.com/wp-content/uploads/2026/03/AI.png" alt="" width="728" height="90" srcset="https://techwireasia.com/wp-content/uploads/2026/03/AI.png 728w, https://techwireasia.com/wp-content/uploads/2026/03/AI-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a></p>
+<p><b>Want to learn more about AI and big data from industry leaders?</b> Check out<a href="https://www.ai-expo.net/"> AI &amp; Big Data Expo</a> taking place in Amsterdam, California, and London. This comprehensive event is part of <a href="https://techexevent.com/">TechEx</a> and is co-located with other leading technology events, click<a href="https://techexevent.com/"> here</a> for more information.</p>
+<p>Tech Wire Asia is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
+<p>The post <a href="https://techwireasia.com/2026/04/match-act-semiconductor-export-controls-china-asia/">The MATCH Act would cut off China&#8217;s last chipmaking lifeline–Asia is already feeling it</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Amperity expands to Australian AWS Regions and invests in local talent</title>
 		<link>https://techwireasia.com/2026/04/amperity-expands-to-australian-aws-regions-and-invests-in-local-talent/</link>
 		
@@ -554,172 +719,6 @@
 <h2><b>Choose the CRM that turns data into decisions</b></h2>
 <p><span style="font-weight: 400;">Select the CRM with a reporting style that matches how your team works. The right choice gets your data in front of the right people fast enough to matter. Everything else is secondary.</span></p>
 <p>The post <a href="https://techwireasia.com/2026/04/which-crms-offer-the-most-powerful-reporting-tools/">Which CRMs offer the most powerful reporting tools?</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What Australia’s Anthropic deal reveals about tracking AI at work</title>
-		<link>https://techwireasia.com/2026/04/what-australia-anthropic-deal-reveals-about-tracking-ai-at-work/</link>
-		
-		<dc:creator><![CDATA[Muhammad Zulhusni]]></dc:creator>
-		<pubDate>Wed, 01 Apr 2026 06:00:49 +0000</pubDate>
-				<category><![CDATA[AI & Intelligence]]></category>
-		<category><![CDATA[Australasia]]></category>
-		<category><![CDATA[Compliance, Regulations & Governance]]></category>
-		<category><![CDATA[Generative AI & LLMs]]></category>
-		<category><![CDATA[Government Initiatives & Policy]]></category>
-		<category><![CDATA[Public Sector]]></category>
-		<category><![CDATA[ai]]></category>
-		<category><![CDATA[australia]]></category>
-		<category><![CDATA[compliance]]></category>
-		<category><![CDATA[data centres]]></category>
-		<category><![CDATA[government policy]]></category>
-		<guid isPermaLink="false">https://techwireasia.com/?p=247180</guid>
-
-					<description><![CDATA[<p>Anthropic expands in Australia through a data and AI partnership. Supports universities and startups under national AI plans. Efforts are increasing in Australia to track how artificial intelligence is affecting jobs and industries, with the government working with AI firms to gather data on its use in the economy. One such effort is a new [&#8230;]</p>
-<p>The post <a href="https://techwireasia.com/2026/04/what-australia-anthropic-deal-reveals-about-tracking-ai-at-work/">What Australia’s Anthropic deal reveals about tracking AI at work</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<ul>
-<li><strong>Anthropic expands in Australia through a data and AI partnership.</strong></li>
-<li><strong>Supports universities and startups under national AI plans.</strong></li>
-</ul>
-<p>Efforts are increasing in Australia to track how artificial intelligence is affecting jobs and industries, with the government working with AI firms to gather data on its use in the economy.</p>
-<p>One such effort is a new agreement between Anthropic and the Australian government covering economic data sharing, AI testing, and research.</p>
-<p>At the core of the agreement is access to Anthropic&#8217;s Economic Index data, which tracks AI use and its impact on jobs and productivity. The government plans to use it to understand where AI is being adopted and how it may affect workers.</p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/03/microsoft-slows-hiring-outside-ai-as-spending-shifts-priorities/>Microsoft slows hiring outside AI as spending shifts priorities</a></i></div>
-<p>The analysis will first focus on sectors that play a large role in Australia&#8217;s economy. This includes natural resources, agriculture and financial services.</p>
-<p>Anthropic said its data shows Australians are using Claude in a range of tasks. Compared with other English-speaking countries, use in Australia appears more varied. People are applying AI in management, sales, business operations, and life sciences. Many also use detailed prompts for more complex work.</p>
-<h3>Safety work and national AI plans</h3>
-<p>Alongside data sharing, the agreement includes joint work on AI safety. Anthropic will share research on how its models behave, including their limits and risks. It will also take part in joint testing with Australia&#8217;s AI Safety Institute and work with universities on related studies. Similar arrangements are already in place with government bodies in the US, the United Kingdom, and Japan.</p>
-<p>&#8220;Australia&#8217;s investment in AI safety makes it a natural partner for responsible AI development,&#8221; said Dario Amodei during a visit to Canberra, where he met with Anthony Albanese. &#8220;This memorandum of understanding gives our collaboration a formal foundation.&#8221;</p>
-<p>The agreement also ties into Australia&#8217;s broader plan to expand AI use in the economy. Under its National AI Plan, the government wants to attract investment in data centres and improve access to computing power. It also plans to build skills for AI-related work. Rather than introduce new laws, it will rely on existing rules and voluntary guidelines on safety and privacy.</p>
-<p>The company said it is exploring investment in <a href="https://techwireasia.com/2026/03/malaysia-data-centre-policy-ai-moratorium/">data centre infrastructure</a> and energy projects in Australia, in line with government expectations. The projects are expected to support the growing demand for computing resources needed to run AI systems.</p>
-<h3>Research funding and industry support</h3>
-<p>The partnership includes direct funding for research. Anthropic has set aside AUD$3 million in API credits for four Australian institutions: the Australian National University, the Murdoch Children&#8217;s Research Institute, the Garvan Institute of Medical Research, and Curtin University. These organisations will use AI tools to support work in areas like medical research and computer science education.</p>
-<p>Some of the projects focus on healthcare. Researchers at the Australian National University are using AI to analyse genetic data linked to rare diseases. At the Garvan Institute, teams are working on ways to connect genetic variation with how diseases behave in specific cell types, which could help identify new treatment options. Work at the Murdoch Children&#8217;s Research Institute includes studies on childhood conditions.</p>
-<p>There is also a focus on skills and training. The agreement includes plans to support AI education, with universities using tools like Claude in teaching and research.</p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/04/enterprise-data-resilience-ai-era-backup/>Enterprise data resilience is no longer about backup. AI broke the old rules.</a></i></div>
-<p>Beyond academic research, Anthropic is looking to support startups in Australia. The company plans to offer API credits of up to US$50,000 to selected firms working in areas like drug discovery, climate modelling, and medical diagnostics, a programme aimed at helping smaller companies build products using AI tools.</p>
-<p>The steps come as Anthropic begins to expand its presence in the Asia-Pacific region. The company is preparing to open an office in Sydney and build a local team.</p>
-<p>While Australia does not yet have AI-specific laws, the government&#8217;s approach points to gradual adoption with oversight. By working with AI companies, it wants to gather data and test risks. It also wants a clearer view of how the technology is being used in different sectors.</p>
-<p>The agreement with Anthropic adds another layer to this approach, linking policy goals with practical use cases in research and education.</p>
-<p><img decoding="async" class="alignleft size-full wp-image-245816" src="https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM.png" alt="" width="932" height="115" srcset="https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM.png 932w, https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM-300x37.png 300w, https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM-768x95.png 768w" sizes="(max-width: 932px) 100vw, 932px" /></p>
-<p><b>Want to experience the full spectrum of enterprise technology innovation?</b> Join <a href="https://techexevent.com/">TechEx</a> in Amsterdam, California, and London. Covering AI, Big Data, Cyber Security, IoT, Digital Transformation, Intelligent Automation, Edge Computing, and Data Centres, TechEx brings together global leaders to share real-world use cases and in-depth insights. Click <a href="https://techexevent.com/">here</a> for more information.</p>
-<p>Tech Wire Asia is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
-<p>The post <a href="https://techwireasia.com/2026/04/what-australia-anthropic-deal-reveals-about-tracking-ai-at-work/">What Australia’s Anthropic deal reveals about tracking AI at work</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Alibaba is turning agentic AI into a merchant workforce, and it&#8217;s doing it at scale</title>
-		<link>https://techwireasia.com/2026/04/alibaba-agentic-ai-ecommerce-digital-workforce-taobao-tmall/</link>
-		
-		<dc:creator><![CDATA[Dashveenjit Kaur]]></dc:creator>
-		<pubDate>Wed, 01 Apr 2026 01:00:44 +0000</pubDate>
-				<category><![CDATA[AI & Intelligence]]></category>
-		<category><![CDATA[Asia Pacific Focus]]></category>
-		<category><![CDATA[China]]></category>
-		<category><![CDATA[Enterprise Sector]]></category>
-		<category><![CDATA[Retail, Marketplaces & E-Commerce]]></category>
-		<category><![CDATA[ai]]></category>
-		<category><![CDATA[china]]></category>
-		<category><![CDATA[e-commerce]]></category>
-		<category><![CDATA[platforms]]></category>
-		<guid isPermaLink="false">https://techwireasia.com/?p=247168</guid>
-
-					<description><![CDATA[<p>Alibaba rolls out autonomous digital workers to millions of Taobao and Tmall merchants. It bets the token economy, not the chatbot, is where AI value lands. The conversation surrounding AI agents has been running ahead of the evidence for some time now. Most enterprise deployments are still in pilot mode, confined to controlled workflows, narrow [&#8230;]</p>
-<p>The post <a href="https://techwireasia.com/2026/04/alibaba-agentic-ai-ecommerce-digital-workforce-taobao-tmall/">Alibaba is turning agentic AI into a merchant workforce, and it&#8217;s doing it at scale</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<ul>
-<li><strong>Alibaba rolls out autonomous digital workers to millions of Taobao and Tmall merchants.</strong></li>
-<li><strong>It bets the token economy, not the chatbot, is where AI value lands.</strong></li>
-</ul>
-<p>The conversation surrounding AI agents has been running ahead of the evidence for some time now. Most enterprise deployments are still in pilot mode, confined to controlled workflows, narrow tasks, and limited autonomy. What Alibaba is doing on Taobao and Tmall this month is something different: it is putting agentic AI e-commerce into live commercial operation, at a scale that most organisations haven&#8217;t reached in any single AI programme.</p>
-<p>As per a recent <em>South China Morning Post</em> <a href="https://www.scmp.com/tech/big-tech/article/3348237/alibaba-deploy-ai-digital-workforce-millions-merchants-taobao-tmall?module=top_story&amp;pgtype=section">report</a>, the company unveiled the service at Tmall&#8217;s annual TopTalk merchant summit in Shanghai last week, announcing that agentic AI abilities would be extended to millions of merchants on both platforms before the end of March.</p>
-<p>Built on its existing merchant tool Business Advisor, the service gives sellers a 24/7 autonomous layer – one that can handle customer queries, push vouchers and adjust product pricing in real time without human instruction.</p>
-<p>Xu Haipeng, who oversees merchant platforms at Taobao and Tmall, framed the change plainly at the event. Autonomous, execution-oriented AI had moved from aspiration to operational reality, he said, and over the next one to two years, the standard operating model of e-commerce would evolve into a collaboration between human and digital employees.</p>
-<p>That last phrase is worth sitting with. Not AI-assisted employees. Not AI-augmented workflows. Digital employees – a distinction that signals a meaningful change in how Alibaba is thinking about what these systems actually are.</p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/03/openclaw-agentic-ai-security-enterprise-risks/>OpenClaw: The agentic AI security wake-up call enterprises didn&#8217;t ask for</a></i></div>
-<h3>The infrastructure behind the announcement</h3>
-<p>On March 16, Alibaba <a href="https://mlq.ai/news/alibaba-unveils-wukong-ai-agent-platform-for-enterprise-automation/">created</a> the Alibaba Token Hub business group, consolidating its Tongyi Laboratory, Qwen AI unit, and Wukong enterprise platform under CEO Eddie Wu – a restructure designed specifically around what the company calls the agentic era.</p>
-<p>Wukong, Alibaba&#8217;s AI-native enterprise platform, was <a href="https://www.theasianbanker.com/press-releases/alibaba-launches-ai-native-agentic-platform-wukong-for-enterprises">unveiled</a> a day later as the product of that new group, capable of coordinating multiple agents to handle complex tasks in a single interface.</p>
-<p>The Taobao and Tmall merchant deployment represent Alibaba&#8217;s argument that agentic AI e-commerce requires the consumer-facing layer and the enterprise infrastructure to be moving in the same direction.</p>
-<p>To power that consumption, Taobao and Tmall said they plan to inject one trillion tokens into their AI services, targeting customer service scenarios specifically, upgrading their existing AI tools from reactive chatbots into proactive shopping guides capable of handling complex tasks.</p>
-<h3>What the numbers say</h3>
-<p>Over the past year, AI tools provided by Taobao and Tmall have been used by five million merchants, helping them save an estimated 100 billion yuan in costs. The AI customer service tool Dianxiaomi has served 300 million customers while raising transaction conversion rates by 30%.</p>
-<p>China&#8217;s AI agent sector is <a href="https://techwireasia.com/2026/03/alibaba-wukong-enterprise-ai-agent/">projected</a> to scale from under US$1 billion in 2024 to over US$30 billion by 2028, with the enterprise segment attracting the bulk of structural investment. Gartner estimates that 40% of enterprise applications will adopt task-specific AI agents by 2026, up from less than 5% in 2025.</p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/02/huawei-agentic-ai-open-standards-aaif/>Huawei&#8217;s entry into the Agentic AI open standards race is more significant than it looks</a></i></div>
-<h3>The structural advantage that matters</h3>
-<p>What separates Alibaba&#8217;s agentic AI e-commerce deployment from most Western enterprise counterparts is not the ambition. It is the plumbing. Alibaba&#8217;s models can theoretically guide a consumer to a product, complete the purchase, process payment and arrange delivery – all <a href="https://openclawai.io/blog/alibaba-100b-agentic-ai-cloud-qwen-wukong/">in</a> a single agent interface, without negotiating third-party APIs, because the data flows through systems Alibaba already owns.</p>
-<p>The broader Alibaba ecosystem – Taobao, Tmall, 1688, Alipay and Alibaba Cloud – is being integrated into Wukong as modular agent skills, with third-party integrations. The agent does not need to leave the building to do its job.</p>
-<p>Most enterprise AI deployments in markets outside China are still working through integration agreements, data access negotiations and fragmented vendor stacks. Alibaba is operating from a unified system it built and controls. That is not a marginal advantage.</p>
-<h3>What does this signal for enterprise AI teams</h3>
-<p>The Taobao and Tmall announcement is a proof point about where agentic AI deployment is headed and how quickly the gap between &#8220;exploring&#8221; and &#8220;operating&#8221; can close when the underlying infrastructure is already in place. Alibaba&#8217;s cloud president has said publicly that a single person equipped with AI agents could run a billion-dollar company in three to five years. The merchant deployment this month is the first meaningful evidence that the company is building toward that thesis not stating it.</p>
-<p>Organisations still debating whether agentic AI belongs in their roadmap are now watching a competitor class that has moved past the roadmap entirely.</p>
-<p><img decoding="async" class="alignleft size-full wp-image-245816" src="https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM.png" alt="" width="932" height="115" srcset="https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM.png 932w, https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM-300x37.png 300w, https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM-768x95.png 768w" sizes="(max-width: 932px) 100vw, 932px" /></p>
-<p><strong>Want to experience the full spectrum of enterprise technology innovation?</strong> Join <a href="https://techexevent.com/">TechEx</a> in Amsterdam, California, and London. Covering AI, Big Data, Cyber Security, IoT, Digital Transformation, Intelligent Automation, Edge Computing, and Data Centres, TechEx brings together global leaders to share real-world use cases and in-depth insights. Click <a href="https://techexevent.com/">here</a> for more information.</p>
-<p>Tech Wire Asia is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
-<p>The post <a href="https://techwireasia.com/2026/04/alibaba-agentic-ai-ecommerce-digital-workforce-taobao-tmall/">Alibaba is turning agentic AI into a merchant workforce, and it&#8217;s doing it at scale</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Enterprise data resilience is no longer about backup. AI broke the old rules.</title>
-		<link>https://techwireasia.com/2026/04/enterprise-data-resilience-ai-era-backup/</link>
-		
-		<dc:creator><![CDATA[Dashveenjit Kaur]]></dc:creator>
-		<pubDate>Wed, 01 Apr 2026 00:00:09 +0000</pubDate>
-				<category><![CDATA[AI & Intelligence]]></category>
-		<category><![CDATA[Asia Pacific Focus]]></category>
-		<category><![CDATA[Enterprise Sector]]></category>
-		<category><![CDATA[ai]]></category>
-		<category><![CDATA[artificial intelligence]]></category>
-		<category><![CDATA[business]]></category>
-		<guid isPermaLink="false">https://techwireasia.com/?p=247163</guid>
-
-					<description><![CDATA[<p>Enterprise data resilience means ensuring the data AI systems act on is trustworthy. Infrastructure decisions will determine AI deployments hold up under real operating conditions. World Backup Day turns 15 this year. When it started, the message was simple: stop losing your files. That framing made sense in 2011. In 2026, it barely scratches the [&#8230;]</p>
-<p>The post <a href="https://techwireasia.com/2026/04/enterprise-data-resilience-ai-era-backup/">Enterprise data resilience is no longer about backup. AI broke the old rules.</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<ul>
-<li><strong>Enterprise data resilience means ensuring the data AI systems act on is trustworthy.</strong></li>
-<li><strong>Infrastructure decisions will determine AI deployments hold up under real operating conditions.</strong></li>
-</ul>
-<p>World Backup Day turns 15 this year. When it started, the message was simple: stop losing your files. That framing made sense in 2011. In 2026, it barely scratches the surface of what enterprise data resilience actually requires.</p>
-<p>The change has been gradual, but the acceleration has not. The data infrastructure that underpins AI is carrying a different kind of load – and the consequences of getting it wrong have changed in kind, not in degree. A corrupted backup used to mean lost work. A compromised data pipeline feeding an autonomous AI agent means something considerably worse: decisions made at scale, at speed, on data that cannot be trusted.</p>
-<p>Kumar Mitra, Executive Director and General Manager, Infrastructure Solutions Group, Central Asia Pacific &amp; ANZ, Lenovo, says preventing data loss is necessary, but not sufficient. As AI – particularly inferencing – becomes central to real-time decision-making, resilience must go beyond availability to ensuring data is trustworthy.</p>
-<p>The quality of inputs determines the quality of outcomes, and in an AI-driven enterprise, that relationship is unforgiving.</p>
-<h3>The pilot problem has a data problem inside it</h3>
-<p>At Lenovo Tech World in Hong Kong earlier this month, one <a href="https://techwireasia.com/2026/01/lenovo-data-shows-why-ai-spending-is-rising-in-asia-pacific/">statistic</a> kept surfacing in executive conversations: roughly half of all enterprise AI proofs of concept never reach production. The reasons cited ranged from cost overruns to governance gaps to infrastructure misalignment. But Mitra points to something more fundamental sitting underneath most of those explanations.</p>
-<p>A large part of that failure rate comes down to data readiness. Proofs of concept work in isolation. They break when organisations try to scale them against real-world environments where data is inconsistent, ungoverned, or fragmented in systems that were never designed to talk to each other.</p>
-<p>&#8220;Organisations that prioritise data readiness and governance as part of their core infrastructure will be far better positioned to move from pilots to real business impact,&#8221; he said, in an exclusive interview with<em> Tech Wire Asia.</em></p>
-<p>The infrastructure consequences of this are specific. Enterprise data resilience in the context of AI production workloads is not about whether data can be recovered after a failure. It is about whether data is consistently accessible, properly governed, and integrated in environments before anything goes wrong.</p>
-<p>The backup conversation and the AI readiness conversation, which most enterprises have been treating as separate problems owned by separate teams, are the same.</p>
-<h3>Inferencing changes the infrastructure calculus</h3>
-<figure id="attachment_247165" aria-describedby="caption-attachment-247165" style="width: 239px" class="wp-caption alignleft"><img loading="lazy" decoding="async" class="wp-image-247165 size-medium" src="https://techwireasia.com/wp-content/uploads/2026/03/Kumar-Mitra-239x300.jpg" alt="" width="239" height="300" srcset="https://techwireasia.com/wp-content/uploads/2026/03/Kumar-Mitra-239x300.jpg 239w, https://techwireasia.com/wp-content/uploads/2026/03/Kumar-Mitra.jpg 248w" sizes="(max-width: 239px) 100vw, 239px" /><figcaption id="caption-attachment-247165" class="wp-caption-text"><em>Kumar Mitra, Executive Director and General Manager, Infrastructure Solutions Group, Central Asia Pacific &amp; ANZ, Lenovo</em></figcaption></figure>
-<p>The cost curve for AI infrastructure is not what most enterprise planning assumptions are built on. Art Hu, Lenovo&#8217;s SVP Global CIO, was candid about this at the Hong Kong event: inferencing costs can run up to 15 times training costs over a model&#8217;s operational lifecycle. By 2030, 75% of AI compute is expected to be inferencing workloads, with 80% of that running on distributed edge infrastructure.</p>
-<p>That change changes what enterprise data resilience needs to deliver. Training a model is a bounded exercise. Inferencing is continuous, high-volume, and increasingly real-time. The data infrastructure supporting it – storage, retrieval, movement – has to perform not at project timescales but at operational ones, and the margin for latency or degradation is narrow.</p>
-<p>Mitra&#8217;s framing is that the efficiency with which data can be stored and moved to support real-time decisions at scale is now a core infrastructure design requirement. CIOs still thinking about data infrastructure in terms of storage costs not inferencing performance are planning for an AI deployment environment that does not exists.</p>
-<h3>Sovereignty reshapes what resilience means in ASEAN</h3>
-<p>Lenovo&#8217;s <a href="https://www.lenovo.com/us/en/solutions/cioplaybook2026/">CIO Playbook</a> 2026, commissioned with IDC, found that 86% of APAC organisations are running hybrid AI environments. In ASEAN, the figure reflects data sovereignty pressures that are structural not transitional. These are not organisations that chose hybrid as a design preference but organisations operating in jurisdictions where certain data cannot leave the country, and where constraint shapes downstream infrastructure decisions.</p>
-<p>The enterprise data resilience implications are significant. The traditional model – centralised systems, replication in geographies, recovery from a primary site – does not work when data cannot move freely in borders. What replaces it is what Mitra calls distributed resilience: workloads placed based on data sensitivity, latency requirements, and regulatory constraints, with architecture designed to ensure continuity and security without compromising compliance at any point.</p>
-<p>&#8220;In a fragmented regulatory landscape like ASEAN, resilience is not about recovery. It is about maintaining trust and continuity wherever the data resides,&#8221; Mitra said.</p>
-<p>Organisations operating in multiple ASEAN markets are effectively managing multiple resilience architectures simultaneously, each calibrated to a different regulatory environment. The ones treating this as a unified infrastructure challenge not a country-by-country compliance exercise are the ones building something that will actually scale.</p>
-<h3>Agentic AI and the integrity problem</h3>
-<p>The data resilience conversation is about to get harder. Agentic AI – autonomous systems that reason and write back to enterprise data without a human in the loop at every step – introduces a category of risk that backup and recovery frameworks were not designed for. The question is not only whether data can be restored, but after an autonomous agent has acted on it, can it the data still be trusted.</p>
-<p>Lenovo&#8217;s CIO Playbook data captures the hesitation this creates: 33% of organisations cite security and privacy risks as a primary concern, and 27% point to data quality and integration issues. The deliberate slowness with which most organisations are approaching agentic AI deployment – the same playbook data shows most expect it to take more than 12 months to scale – reflects a recognition that the governance frameworks required to protect data integrity in an agentic environment do not yet exist at most enterprises.</p>
-<p>Mitra&#8217;s prescription is strong governance from the start, including access controls, validation of how data is written or modified, and full traceability of AI-driven actions. As AI becomes more autonomous, resilience must ensure not that data is available, but that it remains trusted throughout the lifecycle of every agent action.</p>
-<p>World Backup Day was built around the simple, durable anxiety of losing data you cannot get back. That anxiety has changed to whether the data that AI systems are operating on accurate and worthy of the decisions being made on its basis.</p>
-<p>Enterprise data resilience in 2026 spans those two concerns simultaneously. The infrastructure decisions that felt optional two years ago – hybrid architecture, distributed governance, sovereignty-aware design – are now structural requirements for any organisation serious about AI at production scale. Organisations that built those foundations early are discovering that what looked like compliance overhead was actually the groundwork for everything else. The ones that deferred it are finding out what it costs to retrofit.</p>
-<p><img decoding="async" class="alignleft size-full wp-image-245816" src="https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM.png" alt="" width="932" height="115" srcset="https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM.png 932w, https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM-300x37.png 300w, https://techwireasia.com/wp-content/uploads/2025/09/Screenshot-2025-09-03-at-11.58.16-AM-768x95.png 768w" sizes="(max-width: 932px) 100vw, 932px" /></p>
-<p><strong>Want to experience the full spectrum of enterprise technology innovation?</strong> Join <a href="https://techexevent.com/">TechEx</a> in Amsterdam, California, and London. Covering AI, Big Data, Cyber Security, IoT, Digital Transformation, Intelligent Automation, Edge Computing, and Data Centres, TechEx brings together global leaders to share real-world use cases and in-depth insights. Click <a href="https://techexevent.com/">here</a> for more information.</p>
-<p>Tech Wire Asia is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
-<p>The post <a href="https://techwireasia.com/2026/04/enterprise-data-resilience-ai-era-backup/">Enterprise data resilience is no longer about backup. AI broke the old rules.</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
 ]]></content:encoded>
 					
 		
