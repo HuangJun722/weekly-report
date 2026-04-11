@@ -356,7 +356,7 @@ def _parse_rss_text(cfg, text):
         results.append({
             'title': title,
             'url': link,
-            'source': cfg['source'],
+            'source': cfg.get('source', cfg.get('name', 'Google News')),
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
@@ -557,7 +557,7 @@ def fetch_html(cfg):
         results.append({
             'title': title,
             'url': link,
-            'source': cfg['source'],
+            'source': cfg.get('source', cfg.get('name', 'Google News')),
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
