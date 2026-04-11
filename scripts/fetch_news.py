@@ -916,21 +916,18 @@ def main():
             raw.extend(items)
             time.sleep(REQUEST_DELAY)
 
-    # 27家公司监控
+    # 27家公司监控（直接用 requests，不用 aiohttp，因为 aiohttp 不走系统代理）
     print("\n🏢 采集公司动态...")
     t1 = time.time()
-    company_url_map = {}
     import urllib.parse
+    company_raw = []
     for cfg in COMPANY_SOURCES:
         q = urllib.parse.quote(cfg['query'])
         url = f'https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en'
-        company_url_map[url] = cfg
-
-    company_fetched = asyncio.run(fetch_all_parallel(list(company_url_map.keys())))
-    company_raw = []
-    for url, (body, cached) in company_fetched.items():
-        cfg = company_url_map.get(url)
-        if not cfg or not body: continue
+        body = fetch_url(url)  # fetch_url 内部会用 requests（支持代理）
+        if not body:
+            print(f"  ✗ [{cfg['name']}] 失败")
+            continue
         items = _parse_rss_text(cfg.copy(), body)
         # 噪音过滤
         filtered = []
@@ -939,12 +936,12 @@ def main():
             if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
             filtered.append(item)
         sig = sum(1 for it in filtered if it['event_types'][0] != 'other')
-        mark = "📦" if cached else "🌐"
-        print(f"  {mark} [{cfg['name']}] {len(filtered)} 条（信号{sig}）")
+        print(f"  🌐 [{cfg['name']}] {len(filtered)} 条（信号{sig}）")
         for item in filtered:
             item['is_company'] = True
             item['company_name'] = cfg['name']
         company_raw.extend(filtered)
+        time.sleep(0.5)  # 避免请求过快
 
     # 公司新闻单独去重
     seen_company, company_unique = set(), []
