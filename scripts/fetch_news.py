@@ -528,6 +528,9 @@ def configure_doubao():
 
 AI_SYSTEM_PROMPT = """你是全球互联网科技情报分析师。受众是ICT从业者，关注：合作机会、供应链变化、预算流向。
 每条事件输出4个字段：summary_short（事实）、reason（为什么重要，ICT视角）、impact（影响谁）、insight_label（资金流向/合作机会/警示信号/背景补充）。
+
+reason 要求：必须从标题提取公司名/产品名/技术名，组合地区+行业+具体机会描述，格式固定为"[地区][行业]具体描述"。禁止出现"无法判断""无法确定""待确认""相关"等模糊词。
+impact 要求：指明具体受益方或受损方，如"东南亚电商平台""海湾主权基金""非洲移动支付商"，禁止"相关行业"。
 非中美公司融资≥$100M → score 9；融资≥$20M → score 7-8；并购 → score 7-8；财报盈利稳定 → score 5-6；亏损/下滑 → score 7-9；战略扩张 → score 6-7；裁员/关停 → score 6-8。
 只返回JSON数组，不要解释。"""
 
@@ -579,7 +582,7 @@ def analyze_events_doubao(items):
         "Content-Type": "application/json"
     }
 
-    news = [{'title': it['title'], 'url': it['url'], 'source': it['source']} for it in items]
+    news = [{'title': it['title'], 'url': it['url'], 'source': it['source'], 'region': it.get('region','')} for it in items]
     prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
 
     payload = {
@@ -589,9 +592,9 @@ def analyze_events_doubao(items):
         "temperature": 0.1
     }
 
-    for attempt in range(4):
+    for attempt in range(5):
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=30)
+            resp = requests.post(url, headers=headers, json=payload, timeout=45)
             if resp.status_code == 429:
                 wait = (attempt + 1) * 5
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
@@ -618,8 +621,28 @@ def analyze_events_doubao(items):
             if isinstance(result, list):
                 result = [r for r in result if r.get('url') and r.get('summary_short')]
             return result
+        except json.JSONDecodeError as e:
+            if attempt < 4:
+                wait = (attempt + 1) * 5
+                print(f"  ⚠️  豆包返回非JSON（批次{len(items)}条），尝试修正解析...")
+                # 尝试从损坏的文本中提取JSON数组
+                import re as re2
+                match = re2.search(r'\[[\s\S]*\]', text if 'text' in dir() else '')
+                if match:
+                    try:
+                        result = json.loads(match.group())
+                        result = [r for r in result if isinstance(r, dict) and r.get('url')]
+                        if result:
+                            print(f"  ✅ 修正解析成功，提取 {len(result)} 条")
+                            return result
+                    except: pass
+                print(f"  解析失败，等待 {wait}s 后重试...")
+                time.sleep(wait)
+                continue
+            print(f"  ❌ 豆包 JSON 解析最终失败")
+            return None
         except Exception as e:
-            if attempt < 3:
+            if attempt < 4:
                 wait = (attempt + 1) * 5
                 print(f"  ⚠️  豆包 API 调用失败（{type(e).__name__}），等待 {wait}s 后重试...")
                 time.sleep(wait)
@@ -627,6 +650,11 @@ def analyze_events_doubao(items):
             print(f"  ❌ 豆包 API 最终失败: {type(e).__name__} {str(e)[:200]}")
             return None
     return None
+
+
+def analyze_single_event_doubao(item):
+    """单条事件分析（批次失败时的兜底）"""
+    return analyze_events_doubao([item])
 
 def _calc_score(item):
     """程序评分：基于金额、事件类型、区域权重计算确定性分数"""
@@ -803,17 +831,20 @@ def main():
     today_events = []
     if use_doubao:
         print(f"\n🤖 豆包 AI 分析...")
-        for i in range(0, len(filtered), 8):
-            batch = filtered[i:i+8]
+        for i in range(0, len(filtered), 5):
+            batch = filtered[i:i+5]
             results = analyze_events_doubao(batch)
             if results is None:
-                print(f"  批次 {(i//8)+1} API 调用失败，降级到无 AI 模式")
-                use_doubao = False  # 降级
-                break
-            for item in batch:
-                r = next((x for x in results if x.get('url') == item['url']), {})
-                today_events.append(build_event(item, r))
-            print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8}")
+                # 批次失败 → 逐条兜底
+                print(f"  批次 {(i//5)+1} 批次API失败，逐条重试...")
+                for item in batch:
+                    r = analyze_single_event_doubao(item)
+                    today_events.append(build_event(item, r))
+            else:
+                for item in batch:
+                    r = next((x for x in results if x.get('url') == item['url']), {})
+                    today_events.append(build_event(item, r))
+            print(f"  批次 {(i//5)+1}/{(len(filtered)+4)//5} 完成")
             time.sleep(0.5)
     if not use_doubao:
         for item in filtered:

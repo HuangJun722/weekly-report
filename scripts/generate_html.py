@@ -412,7 +412,7 @@ def generate_html():
         all_feed=all_feed,
         history=history,
         main_date=main_date,
-        update_time=datetime.now().strftime('%Y-%m-%d %H:%M'),
+        update_time=(datetime.now() + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M') + ' 北京时间',
     )
 
     os.makedirs('docs', exist_ok=True)
