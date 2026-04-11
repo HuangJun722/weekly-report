@@ -217,6 +217,22 @@ def load_events():
         return grouped
     return {k: [enrich(e) for e in v] for k, v in data.items()}
 
+
+def split_company_events(events):
+    """将事件拆分为公司动态和通用热点"""
+    company_events = []
+    generic_events = []
+    for date_str, evs in events.items():
+        for e in evs:
+            if e.get('is_company'):
+                company_events.append(e)
+            else:
+                generic_events.append(e)
+    # 分别按 score 排序
+    company_events.sort(key=lambda x: x.get('score', 5), reverse=True)
+    generic_events.sort(key=lambda x: x.get('score', 5), reverse=True)
+    return company_events, generic_events
+
 def get_signal_events(events):
     """去重后按 score 排序，最多20条"""
     seen = set()
@@ -398,6 +414,14 @@ def generate_html():
     deduped.sort(key=lambda x: x.get('score', 5), reverse=True)
     all_feed = deduped
 
+    # 公司动态单独处理
+    company_events, generic_events = split_company_events(events)
+    company_by_company = {}
+    for e in company_events:
+        name = e.get('company_name', '其他')
+        company_by_company.setdefault(name, []).append(e)
+    company_list = sorted(company_by_company.items(), key=lambda x: len(x[1]), reverse=True)
+
     # 历史tab：15天内除主tab批次之外的所有有内容日期
     cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
     history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
@@ -405,6 +429,9 @@ def generate_html():
 
     signals = get_signal_events(events)
     weekly = build_weekly_summary(all_feed, signals, main_events, events)
+    # 公司动态也加入周报摘要
+    weekly['company_count'] = len(company_events)
+    weekly['company_list'] = company_list
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
@@ -412,6 +439,8 @@ def generate_html():
         all_feed=all_feed,
         history=history,
         main_date=main_date,
+        company_events=company_events,
+        company_list=company_list,
         update_time=(datetime.now() + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M') + ' 北京时间',
     )
 
@@ -419,7 +448,7 @@ def generate_html():
     with open('docs/index.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
-    print(f"OK | {len(all_feed)} 条 | {len(history)} 天往期")
+    print(f"OK | 通用{len(generic_events)} 条 | 公司{len(company_events)} 条 | {len(history)} 天往期")
 
 if __name__ == '__main__':
     generate_html()
