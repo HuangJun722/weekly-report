@@ -825,6 +825,8 @@ def build_event(item, analysis=None):
             'impact': analysis.get('impact', '未知'),
             'insight_label': analysis.get('insight_label', '背景补充'),
             'companies': (analysis or {}).get('companies', []) or [],
+            'is_company': item.get('is_company', False),
+            'company_name': item.get('company_name', ''),
             'date': item.get('article_date', datetime.now().isoformat()[:10]),
         }
     # 无 AI 分析时的 fallback
@@ -854,6 +856,8 @@ def build_event(item, analysis=None):
         'impact': '未知',
         'insight_label': default_label,
         'companies': [],
+        'is_company': item.get('is_company', False),
+        'company_name': item.get('company_name', ''),
         'date': item.get('article_date', datetime.now().isoformat()[:10]),
     }
 
