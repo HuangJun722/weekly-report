@@ -75,6 +75,56 @@ RSS_SOURCES = [
 ]
 
 # ============================================================
+# 27家重点公司监控 — Google News RSS
+# ============================================================
+
+COMPANY_SOURCES = [
+    # 中国企业海外
+    {'name': 'ByteDance/TikTok', 'query': 'ByteDance overseas', 'region': '中资', 'priority': 3},
+    {'name': 'Tencent', 'query': 'Tencent international', 'region': '中资', 'priority': 2},
+    {'name': 'Alibaba', 'query': 'Alibaba international overseas', 'region': '中资', 'priority': 2},
+    {'name': 'JD.com', 'query': 'JD.com international overseas', 'region': '中资', 'priority': 2},
+    {'name': 'Kuaishou', 'query': 'Kuaishou overseas international', 'region': '中资', 'priority': 1},
+    {'name': 'Ant Group', 'query': 'Ant Group international overseas', 'region': '中资', 'priority': 2},
+    {'name': 'Meituan', 'query': 'Meituan international overseas', 'region': '中资', 'priority': 1},
+    # 亚太
+    {'name': 'Kakao', 'query': 'Kakao', 'region': '亚太', 'priority': 2},
+    {'name': 'Naver', 'query': 'Naver', 'region': '亚太', 'priority': 2},
+    {'name': 'Rakuten', 'query': 'Rakuten', 'region': '亚太', 'priority': 2},
+    {'name': 'Sea Limited', 'query': 'Sea Limited Shopee', 'region': '亚太', 'priority': 2},
+    {'name': 'Grab', 'query': 'Grab holdings Singapore', 'region': '亚太', 'priority': 2},
+    {'name': 'Gojek', 'query': 'Gojek', 'region': '亚太', 'priority': 2},
+    {'name': 'VNG Group', 'query': 'VNG Group Vietnam', 'region': '亚太', 'priority': 1},
+    {'name': 'Yahoo', 'query': 'Yahoo Tech APAC', 'region': '亚太', 'priority': 1},
+    {'name': 'Cyberagent', 'query': 'CyberAgent Japan', 'region': '亚太', 'priority': 1},
+    # 欧洲
+    {'name': 'Adyen', 'query': 'Adyen', 'region': '欧洲', 'priority': 2},
+    {'name': 'Zalando', 'query': 'Zalando Germany', 'region': '欧洲', 'priority': 2},
+    {'name': 'Allegro', 'query': 'Allegro Polish ecommerce', 'region': '欧洲', 'priority': 2},
+    {'name': 'Trendyol', 'query': 'Trendyol', 'region': '欧洲', 'priority': 1},
+    # 拉美
+    {'name': 'MercadoLibre', 'query': 'MercadoLibre', 'region': '拉美', 'priority': 3},
+    {'name': 'Rappi', 'query': 'Rappi Colombia', 'region': '拉美', 'priority': 1},
+    # 中东
+    {'name': 'Noon', 'query': 'Noon ecommerce UAE Dubai', 'region': '中东', 'priority': 2},
+    {'name': 'Careem', 'query': 'Careem UAE', 'region': '中东', 'priority': 2},
+    {'name': 'Tabby', 'query': 'Tabby UAE fintech', 'region': '中东', 'priority': 2},
+    {'name': 'Kaspi.kz', 'query': 'Kaspi.kz super app', 'region': '中东', 'priority': 2},
+    # 非洲
+    {'name': 'Jumia', 'query': 'Jumia Africa ecommerce', 'region': '非洲', 'priority': 2},
+    {'name': 'Konga', 'query': 'Konga Nigeria', 'region': '非洲', 'priority': 1},
+]
+
+# Google News RSS 关键词黑名单（公司新闻噪音）
+COMPANY_BLACKLIST = [
+    'show hn:', 'launch HN', 'Ask HN:', 'Hiring ',
+    'Introducing Claude', 'Introducing GPT', 'Introducing Gemini',
+    'openai launches', 'anthropic announces', 'google announces',
+    'apple announces', 'meta announces', 'microsoft announces',
+    'weekly newsletter', 'daily newsletter',
+]
+
+# ============================================================
 # 关键词检测（宽松模式，宁多不漏）
 # ============================================================
 
@@ -350,6 +400,67 @@ HTML_SOURCES = [
     # e27：Angular JS + Cloudflare 双层保护，RSS + HTML 均无法采集，已移除
 ]
 
+def fetch_company_news(cfg):
+    """
+    从 Google News RSS 抓取特定公司的新闻
+    每家公司每天最多取 5 条
+    """
+    import urllib.parse
+    query = urllib.parse.quote(cfg['query'])
+    url = f'https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en'
+    body = fetch_url(url)
+    if not body: return []
+
+    if not any(body.strip().startswith(x) or x in body[:300] for x in ['<?xml', '<rss', '<feed']):
+        return []
+
+    try:
+        parsed = feedparser.parse(body)
+    except Exception:
+        return []
+
+    results = []
+    for entry in parsed.entries:
+        if len(results) >= 5: break
+
+        title = (entry.get('title') or '').strip()
+        if len(title) < 15: continue
+
+        # 基础噪音过滤
+        title_lower = title.lower()
+        if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
+
+        link = ''
+        link_val = entry.get('link', '')
+        if isinstance(link_val, dict):
+            link = (link_val.get('href') or '').strip()
+        else:
+            link = (link_val or '').strip()
+        if not link:
+            link = (entry.get('id') or '').strip()
+        if not link: continue
+
+        # 日期
+        article_date = None
+        tp = entry.get('published_parsed') or entry.get('updated_parsed')
+        if tp:
+            article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
+
+        types = detect_event_types(title)
+        results.append({
+            'title': title,
+            'url': link,
+            'source': 'Google News',
+            'region': cfg['region'],
+            'priority': cfg.get('priority', 1),
+            'event_types': types,
+            'article_date': article_date,
+            'is_company': True,
+            'company_name': cfg['name'],
+        })
+    return results
+
+
 def fetch_html(cfg):
     """从 HTML 页面提取文章列表（降级方案，针对各站点结构定制）"""
     body = fetch_url(cfg['url'])
@@ -466,36 +577,36 @@ def smart_filter(items):
     """
     策略：
     1. 所有融资/并购/财报事件全部保留
-    2. 其他事件按 priority 排序，每天最多 40 条
-    3. 每天至少覆盖所有区域
+    2. 公司监控事件全部保留（is_company=True）
+    3. 其他事件按 priority 排序，每天最多 40 条（通用部分）
     """
     # 信号事件（全部保留）
     signal = [it for it in items if it['event_types'][0] != 'other']
-    # 非信号事件（按 priority 排序，取剩余名额）
-    others = [it for it in items if it['event_types'][0] == 'other']
+    # 公司监控事件（全部保留，不管 event_types 是什么）
+    company = [it for it in items if it.get('is_company')]
+    # 非信号、非公司事件（按 priority 排序，取剩余名额）
+    others = [it for it in items if it['event_types'][0] == 'other' and not it.get('is_company')]
     others.sort(key=lambda x: x.get('priority', 1), reverse=True)
-
-    # 优先确保每个区域至少有 2 条
-    by_region = {}
-    for it in items:
-        by_region.setdefault(it['region'], []).append(it)
 
     result = []
     used_urls = set()
 
-    # 1. 全部信号事件
+    # 1. 公司监控事件（全部保留）
+    for it in company:
+        if it['url'] not in used_urls:
+            result.append(it); used_urls.add(it['url'])
+
+    # 2. 全部信号事件
     for it in signal:
         if it['url'] not in used_urls:
             result.append(it); used_urls.add(it['url'])
 
-    # 2. 非信号事件补足到 MAX_DAILY，每个区域最多 MAX_PER_REGION 条
+    # 3. 非信号事件补足到 MAX_DAILY，每个区域最多 MAX_PER_REGION 条
     regions = list(dict.fromkeys(it['region'] for it in items))  # 保持原始顺序
-    region_count = {}
     for region in regions:
         remaining = MAX_DAILY - len(result)
         if remaining <= 0: break
         region_others = [it for it in others if it['region'] == region and it['url'] not in used_urls]
-        # 每个区域最多补 MAX_PER_REGION - signal_count_for_this_region 条非信号
         signal_in_region = sum(1 for it in result if it['region'] == region)
         max_other_for_region = max(0, MAX_PER_REGION - signal_in_region)
         for it in region_others[:max_other_for_region]:
@@ -794,7 +905,7 @@ def main():
 
     # HTML 备用采集（降级方案）
     if HTML_SOURCES:
-        print("\n🌐 HTML 降级���集...")
+        print("\n🌐 HTML 降级采集...")
         for cfg in HTML_SOURCES:
             items = fetch_html(cfg)
             sig = sum(1 for it in items if it['event_types'][0] != 'other')
@@ -805,22 +916,63 @@ def main():
             raw.extend(items)
             time.sleep(REQUEST_DELAY)
 
-    # 按 URL 去重
-    seen, unique = set(), []
-    for it in raw:
-        if it['url'] and it['url'] not in seen:
-            seen.add(it['url']); unique.append(it)
+    # 27家公司监控
+    print("\n🏢 采集公司动态...")
+    t1 = time.time()
+    company_url_map = {}
+    import urllib.parse
+    for cfg in COMPANY_SOURCES:
+        q = urllib.parse.quote(cfg['query'])
+        url = f'https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en'
+        company_url_map[url] = cfg
+
+    company_fetched = asyncio.run(fetch_all_parallel(list(company_url_map.keys())))
+    company_raw = []
+    for url, (body, cached) in company_fetched.items():
+        cfg = company_url_map.get(url)
+        if not cfg or not body: continue
+        items = _parse_rss_text(cfg.copy(), body)
+        # 噪音过滤
+        filtered = []
+        for item in items:
+            title_lower = item['title'].lower()
+            if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
+            filtered.append(item)
+        sig = sum(1 for it in filtered if it['event_types'][0] != 'other')
+        mark = "📦" if cached else "🌐"
+        print(f"  {mark} [{cfg['name']}] {len(filtered)} 条（信号{sig}）")
+        for item in filtered:
+            item['is_company'] = True
+            item['company_name'] = cfg['name']
+        company_raw.extend(filtered)
+
+    # 公司新闻单独去重
+    seen_company, company_unique = set(), []
+    for it in company_raw:
+        if it['url'] and it['url'] not in seen_company:
+            seen_company.add(it['url'])
+            company_unique.append(it)
+    print(f"  ⏱  公司采集耗时 {time.time()-t1:.1f}s | {len(company_unique)} 条（去重后）")
+
+    # 合并：公司新闻 + 通用新闻（分别去重）
+    all_raw = company_unique + raw
+    seen_all, unique = set(), []
+    for it in all_raw:
+        if it['url'] and it['url'] not in seen_all:
+            seen_all.add(it['url'])
+            unique.append(it)
 
     # 统计
     types = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
     for it in unique: types[it['event_types'][0]] += 1
     regions = {}
     for it in unique: regions[it['region']] = regions.get(it['region'],0) + 1
+    company_count = sum(1 for it in unique if it.get('is_company'))
 
     print(f"\n📊 采集：{len(unique)} 条（融资{types['funding']} | 并购{types['ma']} | 财报{types['earnings']} | 战略{types['strategy']} | 其他{types['other']}）")
-    print(f"   区域：{regions}")
+    print(f"   区域：{regions} | 公司动态：{company_count} 条")
 
-    # 智能过滤
+    # 智能过滤（公司新闻单独处理，不做 smart_filter）
     filtered = smart_filter(unique)
     types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
     for it in filtered: types2[it['event_types'][0]] += 1
@@ -872,8 +1024,10 @@ def main():
     all_events.setdefault(today, [])
 
     # 输出统计
-    if pubdate_ok + pubdate_fallback > 0:
-        print(f"  📅 pubDate 解析：{pubdate_ok} 条有日期 | {pubdate_fallback} 条无日期（归入今日）")
+    company_added = sum(1 for e in today_events if e.get('is_company'))
+    generic_added = len(today_events) - company_added
+    print(f"  📅 pubDate 解析：{pubdate_ok} 条有日期 | {pubdate_fallback} 条无日期（归入今日）")
+    print(f"  🏢 公司动态：{company_added} 条 | 通用热点：{generic_added} 条")
 
     # 清理 15 天前（避免数据无限膨胀）
     cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
@@ -886,11 +1040,14 @@ def main():
     for date_key in sorted(all_events.keys(), reverse=True):
         events = all_events[date_key]
         regions = {}
+        company_n = 0
         for e in events:
             regions[e['region']] = regions.get(e['region'], 0) + 1
-        print(f"  ✅ {date_key}：{len(events)} 条 | 区域：{regions}")
+            if e.get('is_company'): company_n += 1
+        print(f"  ✅ {date_key}：{len(events)} 条（公司{company_n}）| 区域：{regions}")
     total = sum(len(v) for v in all_events.values())
-    print(f"\n  共 {total} 条历史事件（跨 {len(all_events)} 天）")
+    company_total = sum(1 for v in all_events.values() for e in v if e.get('is_company'))
+    print(f"\n  共 {total} 条历史事件（公司 {company_total} 条），跨 {len(all_events)} 天）")
 
 if __name__ == '__main__':
     main()
