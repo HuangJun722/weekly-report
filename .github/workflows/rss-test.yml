@@ -2,6 +2,12 @@ name: RSS Test
 
 on:
   workflow_dispatch:
+    inputs:
+      verbose:
+        description: 'Verbose output'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   test:
