@@ -188,6 +188,16 @@ body {
 /* Empty / No results */
 .empty-state { text-align: center; padding: 48px 0; color: var(--muted); font-size: 14px; }
 
+/* Company news items */
+.company-item {
+  border-left: 3px solid #8b5cf6 !important;
+}
+.company-tag {
+  background: rgba(139, 92, 246, 0.08) !important;
+  border-color: rgba(139, 92, 246, 0.2) !important;
+  color: #7c3aed !important;
+}
+
 /* History */
 .history-day { margin-bottom: 24px; }
 .history-date { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke); }
@@ -292,6 +302,7 @@ body {
   {# ===== Tab Switcher ===== #}
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="main" onclick="switchTab('main')">{{ main_date }}</button>
+    <button class="tab-btn" data-tab="company" onclick="switchTab('company')">公司动态 {% if weekly.company_count > 0 %}({{ weekly.company_count }}){% endif %}</button>
     <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期</button>
   </div>
 
@@ -301,6 +312,7 @@ body {
     <div id="feed-list">
     <div class="feed">
       {% for ev in all_feed %}
+      {% if not ev.is_company %}
       <article class="feed-item"
         data-filterable
         data-region="{{ ev.region }}"
@@ -319,10 +331,45 @@ body {
           </div>
         </div>
       </article>
+      {% endif %}
       {% endfor %}
     </div>
     </div>
     <div id="no-results" class="empty-state" style="display:none">当前筛选条件下没有内容，换个关键词试试</div>
+    {% endif %}
+  </div>
+
+  {# ===== Company Panel ===== #}
+  <div class="tab-panel" id="tab-company">
+    {% if company_events %}
+    <div class="feed">
+      {% for ev in company_events %}
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="{{ ev.region }}"
+        data-type="{{ ev.event_types|join(',') }}"
+        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name }} {{ ev.source }}">
+        data-filterable
+        data-region="{{ ev.region }}"
+        data-type="{{ ev.event_types|join(',') }}"
+        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
+        <div class="feed-main">
+          <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+          {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
+        </div>
+        <div class="feed-side">
+          <span class="importance">{{ ev.insight_label }}</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">{{ ev.company_name }}</span>
+            <span class="small-tag">{{ ev.region }}</span>
+            <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">暂无公司动态数据</div>
     {% endif %}
   </div>
 
