@@ -197,6 +197,31 @@ body {
   border-color: rgba(139, 92, 246, 0.2) !important;
   color: #7c3aed !important;
 }
+.company-group {
+  margin-bottom: 20px;
+}
+.company-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(139, 92, 246, 0.06);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.company-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #7c3aed;
+}
+.company-count {
+  font-size: 11px;
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.1);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
 
 /* History */
 .history-day { margin-bottom: 20px; }
@@ -347,27 +372,34 @@ body {
 
   {# ===== Company Panel ===== #}
   <div class="tab-panel" id="tab-company">
-    {% if company_events %}
+    {% if company_list %}
     <div class="feed">
-      {% for ev in company_events %}
-      <article class="feed-item company-item"
-        data-filterable
-        data-region="{{ ev.region }}"
-        data-type="{{ ev.event_types|join(',') }}"
-        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name }}">
-        <div class="feed-main">
-          <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-          {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
+      {% for company_name, evs in company_list %}
+      <div class="company-group">
+        <div class="company-group-header">
+          <span class="company-name">{{ company_name }}</span>
+          <span class="company-count">{{ evs|length }}条</span>
         </div>
-        <div class="feed-side">
-          <span class="importance">{{ ev.insight_label }}</span>
-          <div class="feed-tags">
-            <span class="small-tag company-tag">{{ ev.company_name }}</span>
-            <span class="small-tag">{{ ev.region }}</span>
-            <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
+        {% for ev in evs %}
+        <article class="feed-item company-item"
+          data-filterable
+          data-region="{{ ev.region }}"
+          data-type="{{ ev.event_types|join(',') }}"
+          data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name }}">
+          <div class="feed-main">
+            <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+            {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
           </div>
-        </div>
-      </article>
+          <div class="feed-side">
+            <span class="importance">{{ ev.insight_label }}</span>
+            <div class="feed-tags">
+              <span class="small-tag">{{ ev.region }}</span>
+              <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
       {% endfor %}
     </div>
     {% else %}

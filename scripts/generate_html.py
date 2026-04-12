@@ -160,59 +160,151 @@ def calculate_score(event):
 
 # ─── Fallback reason 生成 ───────────────────────────────────
 
+# 常见监控公司名（用于从标题提取当事人）
+# 标题中包含这些词时直接用作 subject
+KNOWN_COMPANIES = {
+    'tabby', 'grab', 'gojek', 'noon', 'jumia', 'konga', 'trendyol',
+    'rakuten', 'adyen', 'zalando', 'mercado', 'rappi', 'meesho',
+    'swiggy', 'zomato', 'deliveroo', 'gorillas', 'getir',
+    'ant group', 'alibaba', 'tencent', 'bytedance', 'tiktok',
+    'jd.com', 'jd.com', 'kuaishou', 'shein', 'temu',
+    'mercadoli', 'nubank', 'dlocal', 'paystack', 'flutterwave',
+    'uber', 'lyft', 'grab', 'ola', 'bolt', 'inDrive',
+    'flipkart', 'amazon', 'shopee', 'lazada',
+    'stc pay', 'urpay', 'tala', 'chime', 'klarna', 'marqeta',
+    'allegro', 'olx', 'letgo', '不成',
+}
+
+# 中资出海关键词
+CHINESE_OUTBOUND = {
+    '字节', 'tiktok', 'bytedance', '抖音', 'temu', 'shein',
+    '希音', '腾讯', 'tencent', '阿里', 'alibaba', '蚂蚁',
+    'ant group', '京东', 'jd.com', '快手', 'kuaishou', '拼多多',
+    '美团', 'meituan', '滴滴', 'didi', '百度', 'baidu',
+}
+
 def _extract_subject(title):
-    """从标题提取当事人公司/产品名"""
-    title_lower = title.lower()
-    # 模式1: "X raises $Y" / "X closes $Y" / "X gets $Y" → X是主角
-    m = re.search(r'^([A-Z][A-Za-z0-9\s&.,]+?)\s+(?:raises|closes|gets|raises|secures|wins|raises?\s+[0-9])', title, re.I)
-    if m:
-        name = m.group(1).strip().rstrip(',').strip()
-        if len(name) > 2 and len(name) < 50:
-            return name
-    # 模式2: "X acquires Y" / "X buys Y" → X是主角
-    m = re.search(r'^([A-Z][A-Za-z0-9\s&.,]+?)\s+(?:acquires|acquisition|buys|merges|acquire)', title, re.I)
-    if m:
-        name = m.group(1).strip().rstrip(',').strip()
-        if len(name) > 2 and len(name) < 50:
-            return name
-    # 模式3: "X announces Y results" → X是主角
-    m = re.search(r'^([A-Z][A-Za-z0-9\s&]+?)[\'’]?(?:\s+[\w]+\s+)?(?:revenue|results|profit|income|earnings|loss)', title, re.I)
-    if m:
-        name = m.group(1).strip().rstrip(',').strip()
-        if len(name) > 2 and len(name) < 50:
-            return name
-    # 模式4: 常见开头词
-    m = re.search(r'^(?:Why\s+|How\s+|What\s+)?([A-Z][a-zA-Z0-9&\s]{2,30})(?:\s+[-\u2014]|:|$)', title)
-    if m:
-        name = m.group(1).strip()
-        if len(name) > 2 and len(name) < 40:
-            return name
+    """从标题提取当事人公司/产品名，优先级：已知公司 > 正则模式"""
+    # 清理标题（去掉来源后缀）
+    clean = re.sub(r'\s*[-|]\s*(Forbes|Reuters|TechCrunch|WIRED|BBC|CNBC|Bloomberg|Al Arabiya|cairoscene| african businessNewswire|Business Wire|PRNewswire|Euronews|Arab News).*$', '', title, flags=re.I)
+    clean = clean.strip()
+
+    # 策略1：已知名公司匹配（最优先）
+    title_lower = clean.lower()
+    for kw in sorted(KNOWN_COMPANIES, key=len, reverse=True):  # 长的先匹配
+        if kw in title_lower:
+            # 从标题中提取原始大小写版本
+            idx = title_lower.find(kw)
+            # 往回找到词边界
+            start = max(0, idx - 1)
+            while start > 0 and title[start-1].isalnum():
+                start -= 1
+            # 往后取词
+            end = idx + len(kw)
+            while end < len(title) and (title[end].isalnum() or title[end] in ' -'):
+                end += 1
+            name = title[start:end].strip().rstrip(' -').strip()
+            if len(name) >= 2:
+                return name
+
+    # 策略2：正则提取
+    patterns = [
+        # "X Raises/Closes/Secures $NNNM" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:raises|closes|secures|wins|gets|attracts|draws)\s+', 1),
+        # "X Raises $NNNM in/on Y" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+raises?\s+\$', 1),
+        # "X acquires/buys Y" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:acquires|acquisition|buys|purchases|merges)', 1),
+        # "X to acquire Y" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+to\s+acquire', 1),
+        # "X posts/reports QN revenue/profit" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.\-\u2019]+?)[\'’]?(?:\s+\w+)?\s+(?:posts|reports|beats|misses|revenue|profit|earnings)', 1),
+        # "X launches/expands into Y" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.\-\u2019]+?)\s+(?:launches|expands|enters|rolls out|partners)', 1),
+        # "X valued at $Y" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.\-\u2019]+?)\s+valued\s+at', 1),
+        # "X files for IPO" → X 是主角
+        (r'^([A-Z][A-Za-z0-9\s&\.\-\u2019]+?)\s+(?:files|plans|ready)\s+(?:for|to)', 1),
+    ]
+    for pat, group in patterns:
+        m = re.search(pat, clean, re.I)
+        if m:
+            name = m.group(group).strip().rstrip(',;:').strip()
+            # 清理常见前缀词
+            skip = {'why ', 'how ', 'what ', 'who ', 'where ', 'when ', 'this ', 'the '}
+            for s in skip:
+                if name.lower().startswith(s):
+                    name = name[len(s):].strip()
+            if len(name) >= 2 and len(name) <= 40:
+                return name
+
     return None
 
 def _build_reason(title, ev_type, region):
-    """生成有信息量的 reason：包含当事人+事件+地区"""
+    """生成 fallback reason：必须包含当事人 + 事件 + 金额（从标题提取）"""
     subject = _extract_subject(title)
-    r = region or '该地区'
+    r = region or ''
+
+    # 金额提取
+    amt = _parse_amount(title)
+    amt_str = _format_amount(amt) if amt > 0 else ''
+
+    # 中资出海检测
+    is_chinese = any(kw.lower() in title.lower() for kw in CHINESE_OUTBOUND)
+
     if subject:
-        # 金额提取
-        amt = _parse_amount(title)
-        amt_str = _format_amount(amt) if amt > 0 else ''
-        templates = {
-            'funding': f"{subject}获{amt_str}融资" if amt_str else f"{subject}完成融资",
-            'ma':      f"{subject}达成并购交易",
-            'earnings':f"{subject}发布财报",
-            'strategy':f"{subject}战略动态",
-            'other':   f"{subject}有新动态",
-        }
+        # 包含公司名的 reason
+        if ev_type == 'funding':
+            if amt_str:
+                reason = f"{subject}获{amt_str}融资"
+            else:
+                reason = f"{subject}完成融资"
+        elif ev_type == 'ma':
+            # 尝试提取收购对象
+            m = re.search(r'(?:acquires?|buys|purchases)\s+([A-Z][A-Za-z0-9\s&\-]+?)(?:\s+for|\s+in|\s*$|\.)', title, re.I)
+            target = m.group(1).strip() if m else None
+            if target and len(target) < 30:
+                reason = f"{subject}收购{target}"
+            else:
+                reason = f"{subject}达成并购"
+        elif ev_type == 'earnings':
+            # 尝试提取增长数字
+            m = re.search(r'(up|down|growth|jumped|rose|fell|slumped)\s+(\d+(?:\.\d+)?%?)', title, re.I)
+            if m:
+                reason = f"{subject}营收{m.group(1)} {m.group(2)}"
+            else:
+                reason = f"{subject}发布财报"
+        elif ev_type == 'strategy':
+            m = re.search(r'(?:launches|expands|enters|partners|files for IPO|plans to go)', title, re.I)
+            if m:
+                reason = f"{subject}战略新动向"
+            else:
+                reason = f"{subject}战略调整"
+        else:
+            reason = f"{subject}有新动态"
     else:
-        templates = {
-            'funding': f"{r}科技公司融资",
-            'ma':      f"{r}科技公司并购",
-            'earnings':f"{r}科技公司财报",
-            'strategy':f"{r}科技公司战略",
-            'other':   f"{r}科技动态",
-        }
-    return templates.get(ev_type, f"{r}科技动态")
+        # 没有任何信息时的最后兜底
+        if is_chinese:
+            # 中资出海公司，尝试找公司名
+            for kw in ['tiktok', 'shein', 'temu', 'bytedance', 'alibaba', 'tencent', 'ant', 'jd.com', 'kuaishou']:
+                if kw in title.lower():
+                    reason = f"{kw.capitalize()}有新动态"
+                    break
+            else:
+                reason = "中资科技公司动态"
+        elif r:
+            templates = {
+                'funding': f"{r}科技公司融资{amt_str}落地" if amt_str else f"{r}科技公司融资",
+                'ma':      f"{r}科技公司并购",
+                'earnings':f"{r}科技公司财报",
+                'strategy':f"{r}科技公司战略",
+                'other':   f"{r}科技动态",
+            }
+            reason = templates.get(ev_type, f"{r}科技动态")
+        else:
+            reason = "全球科技动态"
+
+    return reason
 
 # ─── Enrich ─────────────────────────────────────────────────
 
@@ -296,13 +388,16 @@ def split_company_events(events):
     return company_events, generic_events
 
 def get_signal_events(events):
-    """去重后按 score 排序，最多20条"""
+    """去重后按 score 排序，最多20条（排除中资出海，Market Pulse 展示全球非中资）"""
     seen = set()
     result = []
     for date in sorted(events.keys(), reverse=True):
         for event in events[date]:
             if event['url'] not in seen:
                 seen.add(event['url'])
+                # 排除中资出海：定位"非中美"，中资只在公司标签页展示
+                if event.get('is_chinese_capital'):
+                    continue
                 if event.get('event_types', ['other'])[0] != 'other':
                     result.append(event)
     today = datetime.now().strftime('%Y-%m-%d')
@@ -322,13 +417,15 @@ def get_signal_events(events):
     return result[:20]
 
 def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
-    """生成周报摘要：所有数字从 all_feed（今日全部）计算"""
-    # ── 数字统计（从全部事件算，不只是高分信号）──────────────
-    funding = sum(1 for e in all_feed if e.get('event_types', [''])[0] == 'funding')
-    ma      = sum(1 for e in all_feed if e.get('event_types', [''])[0] == 'ma')
-    earnings= sum(1 for e in all_feed if e.get('event_types', [''])[0] == 'earnings')
-    strategy= sum(1 for e in all_feed if e.get('event_types', [''])[0] == 'strategy')
-    total   = len(all_feed)
+    """生成周报摘要：排除中资出海，只展示真正的"非中美"动态"""
+    # 排除中资出海（中资有独立标签页）
+    non_chinese = [e for e in all_feed if not e.get('is_chinese_capital')]
+    # ── 数字统计 ───────────────────────────────────────────
+    funding = sum(1 for e in non_chinese if e.get('event_types', [''])[0] == 'funding')
+    ma      = sum(1 for e in non_chinese if e.get('event_types', [''])[0] == 'ma')
+    earnings= sum(1 for e in non_chinese if e.get('event_types', [''])[0] == 'earnings')
+    strategy= sum(1 for e in non_chinese if e.get('event_types', [''])[0] == 'strategy')
+    total   = len(non_chinese)
 
     # ── type_counts：动态生成筛选按钮用 ───────────────────
     type_counts = {
@@ -337,21 +434,21 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
 
     # 区域分布
     region_counts = {}
-    for e in all_feed:
+    for e in non_chinese:
         r = e.get('region', '未知')
         if r != '未知':
             region_counts[r] = region_counts.get(r, 0) + 1
     region_counts = dict(sorted(region_counts.items(), key=lambda x: x[1], reverse=True))
     hot_region = max(region_counts, key=region_counts.get) if region_counts else ''
 
-    # ── 金额计算（用于 headline）────────────────────���──────
+    # ── 金额计算（用于 headline）───────────────────────
     # 找最大融资事件
-    funding_events = [e for e in all_feed if e.get('event_types', [''])[0] == 'funding']
+    funding_events = [e for e in non_chinese if e.get('event_types', [''])[0] == 'funding']
     top_funding = max(funding_events, key=lambda x: x.get('score', 0), default=None)
-    max_ma = next((e for e in all_feed if e.get('event_types', [''])[0] == 'ma'), None)
+    max_ma = next((e for e in non_chinese if e.get('event_types', [''])[0] == 'ma'), None)
 
     # ── Headline ────────────────────────────────────────
-    top = all_feed[0] if all_feed else None
+    top = non_chinese[0] if non_chinese else None
     headline = ""
     if top:
         ev_type = top.get('event_types', [''])[0]
