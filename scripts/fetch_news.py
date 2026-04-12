@@ -705,7 +705,7 @@ def analyze_events_doubao(items):
 
     for attempt in range(5):
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=45)
+            resp = requests.post(url, headers=headers, json=payload, timeout=180)
             if resp.status_code == 429:
                 wait = (attempt + 1) * 5
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
@@ -810,8 +810,8 @@ def build_event(item, analysis=None):
     # 程序评分（确定性，始终运行）
     score = _calc_score(item)
     level = 'A' if score >= 8 else 'B' if score >= 6 else 'C' if score >= 4 else 'D'
-    # 有 AI 分析时
-    if analysis:
+    # 有 AI 分析时（必须是 dict 类型，防止列表或其他异常类型）
+    if analysis and isinstance(analysis, dict):
         return {
             'title': item['title'],
             'url': item['url'],
@@ -824,7 +824,7 @@ def build_event(item, analysis=None):
             'reason': analysis.get('reason', '待分析'),
             'impact': analysis.get('impact', '未知'),
             'insight_label': analysis.get('insight_label', '背景补充'),
-            'companies': (analysis or {}).get('companies', []) or [],
+            'companies': analysis.get('companies', []) or [],
             'is_company': item.get('is_company', False),
             'company_name': item.get('company_name', ''),
             'date': item.get('article_date', datetime.now().isoformat()[:10]),
