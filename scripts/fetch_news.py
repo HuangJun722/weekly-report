@@ -976,7 +976,8 @@ def main():
     # 智能过滤（公司新闻单独处理，不做 smart_filter）
     filtered = smart_filter(unique)
     # 限制 AI 分析数量，防止 API 超时和费用失控
-    MAX_AI_ITEMS = 120
+    # 豆包免费额度 9万 tokens/天，设上限 30 条（≈3600 tokens）
+    MAX_AI_ITEMS = 30
     if len(filtered) > MAX_AI_ITEMS:
         # 优先保留高分和融资/并购事件
         funding_ma = [e for e in filtered if e.get('event_types',['other'])[0] in ('funding','ma','earnings')]
