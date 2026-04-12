@@ -188,9 +188,25 @@ body {
 /* Empty / No results */
 .empty-state { text-align: center; padding: 48px 0; color: var(--muted); font-size: 14px; }
 
+/* Company news items */
+.company-item {
+  border-left: 3px solid #8b5cf6 !important;
+}
+.company-tag {
+  background: rgba(139, 92, 246, 0.08) !important;
+  border-color: rgba(139, 92, 246, 0.2) !important;
+  color: #7c3aed !important;
+}
+
 /* History */
-.history-day { margin-bottom: 24px; }
-.history-date { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke); }
+.history-day { margin-bottom: 20px; }
+.history-date {
+  font-size: 13px; font-weight: 600; color: var(--muted);
+  margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke);
+}
+.history-day-open .history-date { color: var(--accent-2); }
+.history-day-open .history-date::before { content: "▼ "; font-size: 10px; }
+.history-day:not(.history-day-open) .history-date::before { content: "▶ "; font-size: 10px; }
 
 /* Footer */
 .footer-note { text-align: center; margin-top: 24px; color: var(--muted); font-size: 12px; line-height: 1.65; }
@@ -253,7 +269,7 @@ body {
       </div>
       <div class="meta">
         <span class="dot"></span>
-        <span>2026-04-11 21:08 北京时间</span>
+        <span>2026-04-12 09:36 北京时间</span>
       </div>
     </div>
   </header>
@@ -261,8 +277,8 @@ body {
   
   <section class="hero">
     <div class="hero-left">
-      <h2 class="hero-headline">$4B融资领跑，亚太资本保持活跃</h2>
-      <p class="hero-desc">亚太事件最多（11起），占今日大头。 有1起融资落地。</p>
+      <h2 class="hero-headline">$4B融资领跑，中资资本保持活跃</h2>
+      <p class="hero-desc">中资事件最多（53起），占今日大头。 融资仍是主旋律，共13起。 另有9起并购，显示中资行业整合加速。 本周财报季有20起值得关注。 另有6起战略动态值得关注。</p>
     </div>
     <div class="hero-right">
       <div class="terminal">
@@ -278,17 +294,17 @@ body {
           <div class="signal">
             <span class="badge"></span>
             <div>
-              <h4>AWS AI revenue hits US$15 billion. Andy Jassy says the hard part is keeping up with demand</h4>
-              <p>云计算巨头AI业务强劲增长，反映市场趋势，可能影响相关领域资金和合作布局</p>
+              <h4>Gulf fintech Tabby valued at $4.5 bln ahead of potential public listing - Al Arabiya English</h4>
+              <p>中东科技公司融资事件，金额待确认</p>
             </div>
-            <span class="tag">亚太</span>
+            <span class="tag">中东</span>
           </div>
           
           <div class="signal">
             <span class="badge alt"></span>
             <div>
-              <h4>Japan raises Rapidus support to $4b for chip plans</h4>
-              <p>亚太地区芯片计划获大额资金支持，半导体产业链迎来发展机遇</p>
+              <h4>Grab Buys Foodpanda Operations In Taiwan For $600 Million - Forbes</h4>
+              <p>亚太地区出行平台拓展外卖业务版图，加强本地服务能力</p>
             </div>
             <span class="tag">亚太</span>
           </div>
@@ -296,10 +312,10 @@ body {
           <div class="signal">
             <span class="badge green"></span>
             <div>
-              <h4>Vietnam's MoMo weighs options including new investors at $2b+ valuation</h4>
-              <p>亚太科技公司融资事件</p>
+              <h4>E-commerce Platform Noon Raises $500M as It Prepares for Potential IPO - cairoscene.com</h4>
+              <p>中东科技公司融资事件，金额待确认</p>
             </div>
-            <span class="tag">亚太</span>
+            <span class="tag">中东</span>
           </div>
           
         </div>
@@ -309,7 +325,8 @@ body {
 
   
   <div class="tab-bar">
-    <button class="tab-btn active" data-tab="main" onclick="switchTab('main')">2026-04-11</button>
+    <button class="tab-btn active" data-tab="main" onclick="switchTab('main')">2026-04-12</button>
+    <button class="tab-btn" data-tab="company" onclick="switchTab('company')">公司动态 (91)</button>
     <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期</button>
   </div>
 
@@ -319,385 +336,208 @@ body {
     <div id="feed-list">
     <div class="feed">
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <article class="feed-item"
         data-filterable
-        data-region="亚太"
+        data-region="欧洲"
         data-type="funding"
-        data-text="Japan raises Rapidus support to $4b for chip plans 亚太地区芯片计划获大额资金支持，半导体产业链迎来发展机遇 亚太 Tech in Asia">
+        data-text="Nvidia-backed SiFive hits $3.65 billion valuation for open AI chips 欧洲科技公司融资事件，金额待确认 欧洲 TechCrunch">
         <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/japan-s-korea-business-groups-to-collaborate-on-ai-semiconductors" target="_blank">Japan raises Rapidus support to $4b for chip plans</a></h4>
-          <p>亚太地区芯片计划获大额资金支持，半导体产业链迎来发展机遇</p>
+          <h4><a href="https://techcrunch.com/2026/04/11/nvidia-backed-sifive-hits-3-65-billion-valuation-for-open-ai-chips/" target="_blank">Nvidia-backed SiFive hits $3.65 billion valuation for open AI chips</a></h4>
+          <p>欧洲科技公司融资事件，金额待确认</p>
         </div>
         <div class="feed-side">
           <span class="importance">资金流向</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="feed-item"
-        data-filterable
-        data-region="中东"
-        data-type="other"
-        data-text="MENA startup funding falls to $48.3 million in March 2026 中东初创公司融资规模下降，资金流入减少，可能影响相关科技企业发展和创新 中东 WAMDA">
-        <div class="feed-main">
-          <h4><a href="http://wamda.com/2026/04/mena-startup-funding-drops-48-3-million-march-2026" target="_blank">MENA startup funding falls to $48.3 million in March 2026</a></h4>
-          <p>中东初创公司融资规模下降，资金流入减少，可能影响相关科技企业发展和创新</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">资金流向</span>
-          <div class="feed-tags">
-            <span class="small-tag">中东</span>
-            <span class="small-tag">WAMDA</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="IBM pays $17m to resolve US DEI claims 亚太地区IBM应对企业社会责任问题，反映企业在合规方面的投入和态度 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/google-settles-50m-racial-bias-claims-affecting-4000-workers" target="_blank">IBM pays $17m to resolve US DEI claims</a></h4>
-          <p>亚太地区IBM应对企业社会责任问题，反映企业在合规方面的投入和态度</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">警示信号</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Peter Thiel-backed Cognition eyes Japan, Singapore offices in Asia push 亚太地区AI行业战略扩张，带来新的合作机会，可能与当地企业合作拓展业务 亚太 DealStreetAsia">
-        <div class="feed-main">
-          <h4><a href="https://dealstreetasia.com/stories/cognition-pushes-into-asia-478851/" target="_blank">Peter Thiel-backed Cognition eyes Japan, Singapore offices in Asia push</a></h4>
-          <p>亚太地区AI行业战略扩张，带来新的合作机会，可能与当地企业合作拓展业务</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">合作机会</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">DealStreetAsia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="feed-item"
-        data-filterable
-        data-region="欧洲"
-        data-type="other"
-        data-text="NASA Artemis II splashes down in Pacific Ocean in ‘perfect’ landing for Moon mission 欧洲航天领域重大进展，航天科技发展对ICT技术有长期需求推动 欧洲 TechCrunch">
-        <div class="feed-main">
-          <h4><a href="https://techcrunch.com/2026/04/10/nasa-artemis-ii-landing-pacific-ocean-splash-down/" target="_blank">NASA Artemis II splashes down in Pacific Ocean in ‘perfect’ landing for Moon mission</a></h4>
-          <p>欧洲航天领域重大进展，航天科技发展对ICT技术有长期需求推动</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">背景补充</span>
           <div class="feed-tags">
             <span class="small-tag">欧洲</span>
             <span class="small-tag">TechCrunch</span>
-            <span class="small-tag">发布 2026-04-11</span>
+            <span class="small-tag">发布 2026-04-12</span>
           </div>
         </div>
       </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="欧洲"
-        data-type="other"
-        data-text="How to watch NASA’s Artemis II splash back down to Earth 欧洲航天领域公众对航天事件的关注，可能带动相关航天技术科普类ICT服务需求 欧洲 TechCrunch">
-        <div class="feed-main">
-          <h4><a href="https://techcrunch.com/2026/04/10/how-to-watch-nasa-artemis-ii-landing/" target="_blank">How to watch NASA’s Artemis II splash back down to Earth</a></h4>
-          <p>欧洲航天领域公众对航天事件的关注，可能带动相关航天技术科普类ICT服务需求</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">背景补充</span>
-          <div class="feed-tags">
-            <span class="small-tag">欧洲</span>
-            <span class="small-tag">TechCrunch</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="欧洲"
-        data-type="other"
-        data-text="Battery recycler Ascend Elements files for bankruptcy 欧洲电池回收行业资金链断裂，相关供应链企业需重新评估合作风险 欧洲 TechCrunch">
-        <div class="feed-main">
-          <h4><a href="https://techcrunch.com/2026/04/10/battery-recycler-ascend-elements-files-for-bankruptcy/" target="_blank">Battery recycler Ascend Elements files for bankruptcy</a></h4>
-          <p>欧洲电池回收行业资金链断裂，相关供应链企业需重新评估合作风险</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">警示信号</span>
-          <div class="feed-tags">
-            <span class="small-tag">欧洲</span>
-            <span class="small-tag">TechCrunch</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="欧洲"
-        data-type="other"
-        data-text="France to ditch Windows for Linux to reduce reliance on US tech 欧洲国家政府层面的技术选型变化，Linux相关企业迎来合作机会，Windows相关企业面临业务调整 欧洲 TechCrunch">
-        <div class="feed-main">
-          <h4><a href="https://techcrunch.com/2026/04/10/france-to-ditch-windows-for-linux-to-reduce-reliance-on-us-tech/" target="_blank">France to ditch Windows for Linux to reduce reliance on US tech</a></h4>
-          <p>欧洲国家政府层面的技术选型变化，Linux相关企业迎来合作机会，Windows相关企业面临业务调整</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">合作机会</span>
-          <div class="feed-tags">
-            <span class="small-tag">欧洲</span>
-            <span class="small-tag">TechCrunch</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Quick, we’ve got quantum on the list 亚太地区量子领域相关信息整理，为量子领域从业者提供背景参考 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/quick-weve-quantum-list" target="_blank">Quick, we’ve got quantum on the list</a></h4>
-          <p>亚太地区量子领域相关信息整理，为量子领域从业者提供背景参考</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">背景补充</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Meet the 20 top-funded startups and tech companies in Hong Kong 亚太地区香港初创公司和科技公司融资情况展示，资金流入这些公司 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/meet-20-topfunded-startups-tech-companies-hong-kong" target="_blank">Meet the 20 top-funded startups and tech companies in Hong Kong</a></h4>
-          <p>亚太地区香港初创公司和科技公司融资情况展示，资金流入这些公司</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">资金流向</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Singapore’s top-funded tech companies in the last decade 亚太地区新加坡科技行业过去十年融资情况，可了解行业资金流向和发展趋势 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/visual-story/singapores-topfunded-tech-companies-decade" target="_blank">Singapore’s top-funded tech companies in the last decade</a></h4>
-          <p>亚太地区新加坡科技行业过去十年融资情况，可了解行业资金流向和发展趋势</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">资金流向</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Mapping the startups setting the pace in Korea’s AI sector 亚太地区韩国人工智能行业发展情况，为AI从业者提供合作机会和市场动态 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/visual-story/mapping-koreas-leading-ai-startups" target="_blank">Mapping the startups setting the pace in Korea’s AI sector</a></h4>
-          <p>亚太地区韩国人工智能行业发展情况，为AI从业者提供合作机会和市场动态</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">合作机会</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="UK taps defense startup Cambridge Aerospace for interceptors 亚太地区英国国防行业采购新动态，涉及国防科技合作机会 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/defense-tech-firm-anduril-uaes-edge-build-ai-drones-abu-dhabi" target="_blank">UK taps defense startup Cambridge Aerospace for interceptors</a></h4>
-          <p>亚太地区英国国防行业采购新动态，涉及国防科技合作机会</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">合作机会</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Accenture invests in US AI coding platform Replit 亚太地区科技投资机构与美国AI编码平台合作，体现AI技术领域的资金流向和合作趋势 亚太 Tech in Asia">
-        <div class="feed-main">
-          <h4><a href="https://www.techinasia.com/us-ai-coding-startup-replit-hits-3b-valuation-with-250m-funding" target="_blank">Accenture invests in US AI coding platform Replit</a></h4>
-          <p>亚太地区科技投资机构与美国AI编码平台合作，体现AI技术领域的资金流向和合作趋势</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">资金流向</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">Tech in Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="SG waste management firm Blue Planet's losses widen 3.5x in 2025 亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入 亚太 DealStreetAsia">
-        <div class="feed-main">
-          <h4><a href="https://dealstreetasia.com/stories/blue-planets-earnings-2025-478766/" target="_blank">SG waste management firm Blue Planet's losses widen 3.5x in 2025</a></h4>
-          <p>亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">警示信号</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">DealStreetAsia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="中东"
-        data-type="other"
-        data-text="The Middle East’s butterfly effect on the global economy 中东地区经济对全球经济产生影响，可能带来贸易、投资、技术等方面的变化 中东 WAMDA">
-        <div class="feed-main">
-          <h4><a href="http://wamda.com/2026/04/middle-east-butterfly-effect-global-economy" target="_blank">The Middle East’s butterfly effect on the global economy</a></h4>
-          <p>中东地区经济对全球经济产生影响，可能带来贸易、投资、技术等方面的变化</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">背景补充</span>
-          <div class="feed-tags">
-            <span class="small-tag">中东</span>
-            <span class="small-tag">WAMDA</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="非洲"
-        data-type="other"
-        data-text="Nigeria’s NIGCOMSAT says it earned $1.6 million amid satellite dispute 非洲卫星公司在争端中实现盈利，反映其经营能力和市场地位 非洲 TechCabal">
-        <div class="feed-main">
-          <h4><a href="https://techcabal.com/2026/04/10/nigcomsat-reports-revenue-2025/" target="_blank">Nigeria’s NIGCOMSAT says it earned $1.6 million amid satellite dispute</a></h4>
-          <p>非洲卫星公司在争端中实现盈利，反映其经营能力和市场地位</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">背景补充</span>
-          <div class="feed-tags">
-            <span class="small-tag">非洲</span>
-            <span class="small-tag">TechCabal</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="非洲"
-        data-type="other"
-        data-text="Nomba and Globus Bank say they built a loan book with sub-1% defaults 非洲银行贷款质量良好，可能吸引更多资金流入，促进金融合作 非洲 TechCabal">
-        <div class="feed-main">
-          <h4><a href="https://techcabal.com/2026/04/10/nomba-and-globus-bank-sub-1-defaults/" target="_blank">Nomba and Globus Bank say they built a loan book with sub-1% defaults</a></h4>
-          <p>非洲银行贷款质量良好，可能吸引更多资金流入，促进金融合作</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">背景补充</span>
-          <div class="feed-tags">
-            <span class="small-tag">非洲</span>
-            <span class="small-tag">TechCabal</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="非洲"
-        data-type="other"
-        data-text="Quick Fire 🔥 with Chukwuemeka Mbachu 未提及关键信息，无法从ICT视角判断重要性 非洲 TechCabal">
-        <div class="feed-main">
-          <h4><a href="https://techcabal.com/2026/04/10/quick-fire-with-chuckwuemeka-mbachu/" target="_blank">Quick Fire 🔥 with Chukwuemeka Mbachu</a></h4>
-          <p>未提及关键信息，无法从ICT视角判断重要性</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance"></span>
-          <div class="feed-tags">
-            <span class="small-tag">非洲</span>
-            <span class="small-tag">TechCabal</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
       
-      <article class="feed-item"
-        data-filterable
-        data-region="亚太"
-        data-type="other"
-        data-text="Minor Hotels builds data and AI platform with Google Cloud 亚太地区酒店行业与科技企业合作，推动酒店行业数字化转型 亚太 TechWire Asia">
-        <div class="feed-main">
-          <h4><a href="https://techwireasia.com/2026/04/minor-hotels-builds-data-and-ai-platform-with-google-cloud/" target="_blank">Minor Hotels builds data and AI platform with Google Cloud</a></h4>
-          <p>亚太地区酒店行业与科技企业合作，推动酒店行业数字化转型</p>
-        </div>
-        <div class="feed-side">
-          <span class="importance">合作机会</span>
-          <div class="feed-tags">
-            <span class="small-tag">亚太</span>
-            <span class="small-tag">TechWire Asia</span>
-            <span class="small-tag">发布 2026-04-11</span>
-          </div>
-        </div>
-      </article>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
     </div>
     </div>
@@ -706,12 +546,2185 @@ body {
   </div>
 
   
+  <div class="tab-panel" id="tab-company">
+    
+    <div class="feed">
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding,earnings,strategy"
+        data-text="Gulf fintech Tabby valued at $4.5 bln ahead of potential public listing - Al Arabiya English 中东科技公司融资事件，金额待确认 中东 Tabby Tabby">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQUHdja2o3SmVYWExrT2ZkQS10ZFlzamRmX2gwdmZDNkZMa1dKZVZScTBRUm1GMkxSUjNPd0Vxd0N4SEE0Q0MzMHIzRmlWX3A1U2xpVFloZXFJekZaeTFNUVlaeHk3bHBFZjRKT19HRDlzMFB3UF9XT1FKb3FiaW5acERzTi0zdXBFcF9mb0gxRFNDbU8xSkdDYlQ3OGZYbXBaZG55RkhRZW4zdkVKN2prRENZRmpuMVVyYmFvQ3ROQndZMUEtQnfSAcsBQVVfeXFMUHRqUTI0U2tiQ0tKc3dlUVlHMjFlQ0Nza1pkZW1uV01GQkxkcXE1N1IwaU1BanRsVGMzS2NVYTQ5RlpXcVN6Z0g4U2hkd2Nwb2tsdWl3Zk12SUZsUWFMVW9uYjBNdzl1QlQ3N0dnWEZsejY5eDdhajlLNXlTUzh4N19LNnltVTVPMUZPVlFwQ09iUnJVZjlLZmxGamJ0ajIyQ1dSY21KNUd3QmlFVDFuODVVNTRyYkN4eC05LXFJR1Y5OVFJM3gxdVpMeVE?oc=5" target="_blank">Gulf fintech Tabby valued at $4.5 bln ahead of potential public listing - Al Arabiya English</a></h4>
+          <p>中东科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tabby</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="ma"
+        data-text="Grab Buys Foodpanda Operations In Taiwan For $600 Million - Forbes 亚太地区出行平台拓展外卖业务版图，加强本地服务能力 亚太 Grab Grab">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZnlTWFk1ZnhRYlM5NDkzbDI2ZFF1YWJnS1FxdjZ5bWZ5MFptd1pFemItQjMzbTlVTFE5eUQ1cXgtREp5WDlLV1h5U1NjektYb3lHcF9iekFZbi0xTkJQd09uOWlkQzNQQ2hZQTdmRE1vS29XTUdFMkNmWHFLYXRPQ1d3RllQMUNNcW9IUmU3YmxKdHM1RC01cmkwd0NkN3lRc29wRnNlMDlfNWs?oc=5" target="_blank">Grab Buys Foodpanda Operations In Taiwan For $600 Million - Forbes</a></h4>
+          <p>亚太地区出行平台拓展外卖业务版图，加强本地服务能力</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Grab</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding,earnings"
+        data-text="E-commerce Platform Noon Raises $500M as It Prepares for Potential IPO - cairoscene.com 中东科技公司融资事件，金额待确认 中东 Noon Noon">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOeHNHYjM1NmpETFZVNGdjUUxyV25OMUNBem5zTkFvQWtXYTZpSGppQ0ZyWlpFMWRtUldnT2lYY0NoVHczeXc5NEhLcEJ3aW9lN1VPd3B6MUgyWDBCNnFoeFhsZEkyVW9PSld3ZzU2MmEtT2c3TnlISjZISXl1U2xHd1ViRDV5VWZ1MTNUdng1SWZlSVlMWWtCMzVWRUZ1Tl96ellv?oc=5" target="_blank">E-commerce Platform Noon Raises $500M as It Prepares for Potential IPO - cairoscene.com</a></h4>
+          <p>中东科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Noon</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding,earnings"
+        data-text="ZAWYA-SNG: MENA’s e-commerce noon secures $500mln funding co-led by PIF for potential IPO - TradingView 中东科技公司融资事件，金额待确认 中东 Noon Noon">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxQeUp6eGZDbEl2bXY2eU1RSW9fYnlaWl82Wm43aV9nalEtaHhhbkIzWjI3S0RnYXg1M0NYUklCV01uc01zWHFtd3lUektBbmh3SjFvaE1IWTVNVzdjM2c3RWRNSzAtUE1nQ0NOS0d0cGpWamFOU3JzRTRHR0liUW16ZXhySEk4ZXVweEJIVFB0RXJ1cUp2alNYUGZyOWx2MWhURmcwVFZNOEJtbkF1WDY2MzRUTjNBYjB2WTJ2b2Z3WEhmbHhxakE5bnVDMWFDaEhHZ0lJWlFUQ3NJZXo2ME1KMWFsZC05dzNqQ3BzdHh5YjQ3MnVxRnc?oc=5" target="_blank">ZAWYA-SNG: MENA’s e-commerce noon secures $500mln funding co-led by PIF for potential IPO - TradingView</a></h4>
+          <p>中东科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Noon</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China’s Kuaishou to raise US$2 billion from maiden overseas bond sale - South China Morning Post 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPSl94NGNYM2VJbWZCVE5GWGYtYnM0ZmtIU05xSWNkWHhYelZjUHBOY0tIY1hLVDNHcFJkUVdFQTJvLThXRnJzX0JpZnJ4czRBaUloZXVkMHNDcDIwdHQzd2VuMFRWSnVsdHVYTERxLWE0ZGhacVBTNjNHNURlMXJ0emxtM0xaaV8ycDJtY0p4V1Q3Q0JmX0s5alZWdXM4WUR5QXlyTkoyc2dZNlllV0xlOXJRM29YanRTSFJSWlRvQdIBvwFBVV95cUxOWnE0a3gyVGZpSFdKSlhjdVduM3pYblNpR1gyRFdaN2FveG1mWFpra01LbjR0TVUtbjJ5N1VoVHdaQUdQbXZmUnEzakdiMWNOU242NkJsd2hmTFRjQmVXRV9Pdm9qam42eE1MTmdpQmlENlRSY094eHFRNWVaUXpQbzhlQXAtR2FIcm1RRzJYSnZpRjdmeDlSWlpHRVhVMDAwTzBXS0xFZy1pVHo3NFhtZlBiM1QwSHduTmFCdjVIQQ?oc=5" target="_blank">China’s Kuaishou to raise US$2 billion from maiden overseas bond sale - South China Morning Post</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Kuaishou Seeks $2 Billion in Offshore Bond Sale to Power AI Push - Caixin Global 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNWFV5S3lfb1ljQktSdkVMdkFVNVQtNC1RWUxweHl2dVhxSUdwLXhGOXU4YllXWDQ4VDFzVFB5TXNMZjUyWUlnaWwwbC1TeVhuUjhTRU95YnpyWWhQSEdrYy1sbW1xcllTbUZkbDJjY3Vra0lVaS16NTREeWV3OXJaZkRLLUlSRDBMWVB2azNhYzJYRVNOaC14dnRXXzBoSThoWno2M3RqMUVMbUZqMHRBVnBhR1RQQ3BCVFE?oc=5" target="_blank">Kuaishou Seeks $2 Billion in Offshore Bond Sale to Power AI Push - Caixin Global</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Ant Group's overseas unit brings in $3 billion ahead of spinoff - report - MSN 中资科技动态 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi-gJBVV95cUxOVHZDOHFkTWNVMExycjUzeWhOMFRtMFMtY3RKTnhjdHF4TVpGcjM1TW9RQ2o1SzltSXplMVh0dGJxTnh1VEJWejVUb2tudjhtdzNDZ3QzQ3JVcWpTQ2xEejNWcjZLclhyRkljSkVjMk14aTJHUkVxQXgyZ1Z5a3ZYMk9ZQW9VZEd3aVh6ekNxcy1KQnhybzM4V0h2QWtBWjJXYUIzVFFlTkNXa0RlUHV4OEV6cndvMmVvTGZWMVdJX0JsZGE2Nlc3RUVLSm8tQjV1NUZhbDI4V0dscnIxdHNRMUdFeUVVcWZsdWFWaHNTQUpiSW5uSEF2cGM5NFF3bE9qcEpjaWZiWG1hb3hFemVkVXhmNkpYbmdvQ3EtbC16cUI3TjN0Wk1LVE5RelBBaWgwalVITEUxdk9xaGh2N1hIUmRqbFNSSFlNaklsLWRuYTlvOWNHaGFhamItN1dHQVRtUVVHeFh5a2FnM0ZRTm9SN2M0dDFxWmhwS3c?oc=5" target="_blank">Ant Group's overseas unit brings in $3 billion ahead of spinoff - report - MSN</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="ma"
+        data-text="Alibaba (BABA) Sells Majority Stake in Trendyol GO for $700 Mill - GuruFocus 欧洲科技公司并购/收购 欧洲 Trendyol Trendyol">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQSmVZd3dtUF9sbFYyN01XSFlraEt5cGZYU1dKOHVBRGQyQVY2cWlqOTlOYWpWNTdVZFliZnV4WmZiWjhhZlA5X2RKcnlORExwamVhallmUWZDZTBJY1BVc1hmbHc0dW9Cd0lvNmV5dWFWeUU2bFoyalpranlUd0lvRXlzQmJXSmVObnY5bkRIQW9CUEJIVU45cFFsRHVTYlhESWZYQ1YybXFfQ0s0MnNTdTdvR0VuUQ?oc=5" target="_blank">Alibaba (BABA) Sells Majority Stake in Trendyol GO for $700 Mill - GuruFocus</a></h4>
+          <p>欧洲科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Trendyol</span>
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="funding"
+        data-text="Rakuten Medical Raises $100 Million in Oversubscribed Series F to Accelerate Development Toward U.S. Regulatory Approval - Rakuten Medical 亚太地区医疗科技公司大额融资，后续可能增加研发合作和供应链采购 亚太 Rakuten Rakuten">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFByU3pzRkwyb3F5QllvT3RFTW1SN1NteURnTUU5cFhVYXJzTEREVWZOeVB0UXNxUzRoa1F4VzBvWkZXOERGNFZodFRHd1BKQTJ2MG9ZZndjUHJuZi1CWFFOY1c1aXotUEx1TzM1U2NJeGg?oc=5" target="_blank">Rakuten Medical Raises $100 Million in Oversubscribed Series F to Accelerate Development Toward U.S. Regulatory Approval - Rakuten Medical</a></h4>
+          <p>亚太地区医疗科技公司大额融资，后续可能增加研发合作和供应链采购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Rakuten</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding,earnings"
+        data-text="Fintech Unicorn Tabby Reports $387M in Revenue From Saudi Unit - cairoscene.com 中东科技公司融资事件，金额待确认 中东 Tabby Tabby">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNZE0wREIyaS03ajhMWVppRUNMVDU3YWd5OXFZa0ZQZVYxZ3I0enp0bUZOUmdjamhfNVNVWkxtM0Q0VGw4WUFHWGx1cFhXd1MxS0pzTFA4SzFndWJ2NU5QQzJTZ0NNM0Q2VGZCamdkakZPTzlKeEpOS2w4c2FGT0xoZGdDMnBMMGRGLWJWRklJNnJRbGpuUXpNQw?oc=5" target="_blank">Fintech Unicorn Tabby Reports $387M in Revenue From Saudi Unit - cairoscene.com</a></h4>
+          <p>中东科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tabby</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings"
+        data-text="Tencent Q4 2025 earnings preview: what to watch - ig.com 中资科技公司财务表现受关注，影响行业资金布局和合作策略 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQcEpOSWRxUEFYajhjV0lFWUZfdXVMdlFNUk5TUllTUVQ0ZWZoMGFSYjlmVG1WSFVJOXZaeUVndUNMV2tCVUo0aUZWaTNSaHhzXzNYMGhGWl9Ga2RLRGpJZGQ3X2hkWHlYajRRS000YmZ0d0lDeG9Kc1JfTm9PemRrU1FIeWxDOElOLUE?oc=5" target="_blank">Tencent Q4 2025 earnings preview: what to watch - ig.com</a></h4>
+          <p>中资科技公司财务表现受关注，影响行业资金布局和合作策略</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings"
+        data-text="Tencent Posts 15% Revenue Jump, Sustaining Growth Without Splashy AI Bets - Bloomberg.com 中资科技巨头持续增长，巩固行业地位，吸引更多合作资源 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNa3ViWF9LVlJMX3BXS0t2cnFFeGVSM1IzS2Z1bHRYN0ZPTy1tb3cwSFUtVVU1bDZHZFRoczdjUGFGckV6LWdJdGpTd3NlMmlQN0laUWNiYTlyTEFpdVJSd3ZQR2lwcGg1N3NxSlUyLXJDTkV1N3d5Qk5jWjF3SHdZN2tSTWlFQ21PaWVYX2xFWFFocVRxck4weHR3Nl9Ca2ZiRDFtUW1nLXVfOEJsNDhwbGZBaU5fZw?oc=5" target="_blank">Tencent Posts 15% Revenue Jump, Sustaining Growth Without Splashy AI Bets - Bloomberg.com</a></h4>
+          <p>中资科技巨头持续增长，巩固行业地位，吸引更多合作资源</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings"
+        data-text="Alibaba's overseas business unit makes profit for the first time - Nikkei Asia 中资电商巨头海外拓展成功，为国际市场ICT合作带来新机遇 中资 Alibaba Alibaba">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPNUZicHBVbldBRVEwRjdXT0RaU2FFbnU3RjNiNWJNQjltcmswRXVYRXl0ZFNtRERjM0JsVndvUllTbkY3NndSbkpWdnY5bFpGd24xMnpaOHA5MWNyMmFKcGFNYUJKRkJzTVNJNXRUdjduTXBFOGtvbFI2Y3NoMGV1N3hTbVZqRlJMc2JWSkI3NWVacENqMDlFRUV0ZU1sem9YWU1DaGdsUnhxU0hk?oc=5" target="_blank">Alibaba's overseas business unit makes profit for the first time - Nikkei Asia</a></h4>
+          <p>中资电商巨头海外拓展成功，为国际市场ICT合作带来新机遇</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Alibaba</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings"
+        data-text="Kuaishou Jumps After Chinese Video Site Posts Double-Digit Revenue Growth in First Quarter - Yicai Global 中资视频平台增长强劲提升行业影响力，吸引资金和合作关注 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaDUtTGRaMWxtWTNQcFFTbGhqUGtfWkJzVmQ5eGo3MExjaW90V1k3YkRZYVNtdV9MNmVNQWZ6Z0NFZVRDWUFuUjBEaFRCdGxSOFNJZWlTREpGbFVTRk5UdENwM2JNVXJ5Rnd0amR6NUloUERaclBhZy1WcEdEVHV6VVl3dUVLbUNFaUZYbThNQzA5Y1hfdlp3anF4bjlrRk9LOXJ6RkVIWG5uSm5DMW53UThPV3lEQjdLVHByNC1haUNreVVwRWM1dg?oc=5" target="_blank">Kuaishou Jumps After Chinese Video Site Posts Double-Digit Revenue Growth in First Quarter - Yicai Global</a></h4>
+          <p>中资视频平台增长强劲提升行业影响力，吸引资金和合作关注</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings,strategy"
+        data-text="Ant Group's Strategic Move: Listing Ant International on Hong Kong Stock Exchange - News and Statistics - IndexBox 中资金融科技巨头战略布局，吸引资金流入，提升行业关注度 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOdnNkei04aVQyd2sxQzhBaUlBQklKSHN3NUVvb2RiZ0VfWUNZTGVlcmNvVTVid3FiWHJxYVM3TWQ0Z0JzcXlFQlJkNkRRUnNTY1JLWEltLWc1ZUxtRTJNTFZUckZBT1A5NlN6MWlLZTlaYVZtbUNFSl9iUDVwX0s2MjV5QzlEcm5IeTJubTJOTWtxUVBLZEFqaHJjRGxxODZk?oc=5" target="_blank">Ant Group's Strategic Move: Listing Ant International on Hong Kong Stock Exchange - News and Statistics - IndexBox</a></h4>
+          <p>中资金融科技巨头战略布局，吸引资金流入，提升行业关注度</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings"
+        data-text="Alibaba's Fintech Arm Ant Group Eyes Hong Kong IPO For Ant International - Yahoo Finance 中资科技公司财报披露 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNYXAzWEVlb2hKWUJLT25hM3dZSXA2SnA5SWtYWm01dlVLY29XbnRUUHV3UU9RSkdoRm5TSDQ5amFZRnVzM3BJWEZ2d09ybTdxRWNXWlI2V3V3RENsU2wyeGQ1dnBxd0VCSXBxcEJYUzhINEFLbUc3d3drYklINW51UUF3?oc=5" target="_blank">Alibaba's Fintech Arm Ant Group Eyes Hong Kong IPO For Ant International - Yahoo Finance</a></h4>
+          <p>中资科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="earnings"
+        data-text="Chinese food delivery company Meituan's profit slides as competition intensifies - Reuters 中资科技公司财报披露 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWlF1QkRoR3RvTm52YUZJZGROSEZBSkRTTFlnWGh2RzVtSGwzTDJVcHpDUkF0QnVDaXk3dTRaelU0U3pnMFpiRkRYTHNuR3VWaUJSVUR5SWZXS3NPYzN3M3hHdk5vX2tYcmxqNHV6NXpUdEF2VDFxOTlTZzhhV0ZGLS1oLUFQV0ZiNVBzY3JCVllCNjE0X2pxemEtc0hrcnVrWmNtcHJqNm9tNlNOR3VsVzRQak5qX2lpTlBUa1JHV3c?oc=5" target="_blank">Chinese food delivery company Meituan's profit slides as competition intensifies - Reuters</a></h4>
+          <p>中资科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="ma"
+        data-text="Uber reviews potential acquisition of Kakao Mobility stake- report - Investing.com 亚太科技公司并购/收购 亚太 Kakao Kakao">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOeG40N0lyMVFuSXF1eHZ6M0RmNlByYUJfTlZ2bnJIMDJ3bVJzOE9YR2NHNWdMamUwMmwyQXNmRC1VMGxUUExZMHZBYWh0VExEQmdEMm9YT29wYWNGMnA1dDNYOVYxb0tfdGFNU21wR3pPWXhrb01vRHFNZUdWZjBHZzZnbXNLd2dIYmRmSnI2YndEcVFxYlNQQWpGZGRyMDY5aFBrSWRmM1B5dHFtZS1FWE8wa3ZkZExIYzAwcVFPYTczNmF2Snc?oc=5" target="_blank">Uber reviews potential acquisition of Kakao Mobility stake- report - Investing.com</a></h4>
+          <p>亚太科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kakao</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="ma"
+        data-text="Kakao selling stake in Kakao Games to Japan’s LY Corporation to focus on AI - Korea JoongAng Daily 亚太科技公司并购/收购 亚太 Kakao Kakao">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxPTk1raEM5RkNod3ZBN21nNTQ0cm5USkVBZWNnRVc1RzJaZmRGa2tLVEVyU0kxUHd0dTdCdGhqZXVndGpnQTFncEZQLUJ4XzJDUDBsSU1Rd3FieTI5a2ZpaGI3dUdyN0lXdllmZHJiTkFTdVNGb3ZtU04yd0Y0SVdOZURyLTJXYldVWUVsMnJfVFpicEZzckVySWM3SzdySTI4ZE9qZUZPdEZqNEFIbGJjZ3U0MEtkNEFjSzltQzNfU2o0NlNGOVYtSllsY29CTmhYa2JGaTJrWXZBNEtzWFZZN2Z1MmRybmNu?oc=5" target="_blank">Kakao selling stake in Kakao Games to Japan’s LY Corporation to focus on AI - Korea JoongAng Daily</a></h4>
+          <p>亚太科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kakao</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="ma"
+        data-text="Dunamu Wins Court Challenge to FIU Sanctions, Adding Momentum to Naver Merger - bloomingbit 亚太科技公司并购/收购 亚太 Naver Naver">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE9FX1VfOVhnb3E5eG44anhfcFB4MTA0LUlDbzFGZ1hacVVNMkRlUHo1LWdkWmVfMThYTHJaZEw0enpNcjBHWHMzWHlJemJyTGgyT3YzeQ?oc=5" target="_blank">Dunamu Wins Court Challenge to FIU Sanctions, Adding Momentum to Naver Merger - bloomingbit</a></h4>
+          <p>亚太科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Naver</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="ma,strategy"
+        data-text="Naver Financial to launch local stablecoin wallet amid Upbit merger: report - The Block 亚太地区金融科技公司推出新钱包，可能带来新的支付合作机会 亚太 Naver Naver">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBhWVQ0QXFteldMOXZnQ0x6UXZXQnJUV252Y0g4R0RMTzdpQnJGUk9vemhsRThVeWg4WlhvYXVTVWQtaDlreUFCQlRKNVNaNnpGaGNSYjRHVXp5WG9ESVVLLWFzalpFZkZBQVdfeG02U0RhN2c?oc=5" target="_blank">Naver Financial to launch local stablecoin wallet amid Upbit merger: report - The Block</a></h4>
+          <p>亚太地区金融科技公司推出新钱包，可能带来新的支付合作机会</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">合作机会</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Naver</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="earnings"
+        data-text="Shopee Finally Became Profitable in 2025 - The Diplomat – Asia-Pacific Current Affairs Magazine 亚太地区电商平台盈利，供应链和运营成本控制或有新经验可借鉴 亚太 Sea Limited Sea Limited">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE41RTk2VnJVYm1hc2xmdFNLNE5IT3lud0JEblFnWDR4VV9QOXpvUy1DcTkta1FkSG91TWtjTGRtOEhGRU1OX05IbUIyb3Y3ZU0wWXJ5SjNKLWNmRzgyeEJVT2Z1eTBwWklIbl9kbUVLWEwxR2lRTExZaVRZTDNCdw?oc=5" target="_blank">Shopee Finally Became Profitable in 2025 - The Diplomat – Asia-Pacific Current Affairs Magazine</a></h4>
+          <p>亚太地区电商平台盈利，供应链和运营成本控制或有新经验可借鉴</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Sea Limited</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="earnings,strategy"
+        data-text="Sea Faces Shift from Expansion to Profit Focus as Shopee Outlook Sparks Sell-Off - Bitget 亚太地区电商公司战略调整，供应链和市场投入策略或变化 亚太 Sea Limited Sea Limited">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Ta2NWc1dCUXZLNUo1V3JhdUdFTElEdVNpMzZzVUZMZmk0djRuXzU4UnZ2LTVEa3dQWVBVS25FUm5pS2s2RzF1SDZiTFJiSWJqUmV6OERvZTdremttYlV6OWV4Y9IBY0FVX3lxTE9Ta2NWc1dCUXZLNUo1V3JhdUdFTElEdVNpMzZzVUZMZmk0djRuXzU4UnZ2LTVEa3dQWVBVS25FUm5pS2s2RzF1SDZiTFJiSWJqUmV6OERvZTdremttYlV6OWV4Yw?oc=5" target="_blank">Sea Faces Shift from Expansion to Profit Focus as Shopee Outlook Sparks Sell-Off - Bitget</a></h4>
+          <p>亚太地区电商公司战略调整，供应链和市场投入策略或变化</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">警示信号</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Sea Limited</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="earnings"
+        data-text="Grab Holdings forecasts annual revenue below estimates as platform momentum slows - Reuters 亚太地区出行平台增长放缓，营收低于预期 亚太 Grab Grab">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOOWFpZ3Q5RXFCQU9FUzFEal9tMU5YMlNSUk12c0JsSUhPQ0prcjROaVVrTTQ0S2d4dUxhaHlVNnczejc0ZGZUSTVFSlc1UnFsODhjdi0yZDFpaEVQeDJaUDdtX2RtZkhkRUZSZWJsTlB5TGZOcFFQNmtuOVVURnhFeUYzOUJqajdvZlNBRWFPYlVVLWZHOEZORXVOcU1pNmo2OWlDelNRekw3bHNlODFiWlEtcUpiR2U3WDN3UXNSbXhjeW5OaW5hVEZjdmdOREd5aUljTTVoYVlSX1VP?oc=5" target="_blank">Grab Holdings forecasts annual revenue below estimates as platform momentum slows - Reuters</a></h4>
+          <p>亚太地区出行平台增长放缓，营收低于预期</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">警示信号</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Grab</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="earnings"
+        data-text="What To Expect From PT Goto Gojek Tokopedia Tbk (ISX:GOTO) Q2 2025 Earnings - Yahoo Finance 亚太地区电商与出行巨头财务表现受关注，影响行业资金流向预期 亚太 Gojek Gojek">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOejRoY2Vtdk16QkdIVWtXSF9WNGYzeXBsbloxRFQ4a2ZlZTZ4ZmZJemFuMFMwbm1HMmJ4UlpmbGZUUFVMbUNaNThUSUU4S1dHWkI2dmpaLVZYMDVTWlB6MVlmRUd6dXh5NzZpajJhLWgwSzdiNHJUZmlWeG1fdV9GNTFR?oc=5" target="_blank">What To Expect From PT Goto Gojek Tokopedia Tbk (ISX:GOTO) Q2 2025 Earnings - Yahoo Finance</a></h4>
+          <p>亚太地区电商与出行巨头财务表现受关注，影响行业资金流向预期</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Gojek</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="funding"
+        data-text="Vietnam's tech "unicorn" VNG extends losses to 5th year, $12.4M in 2025 - TNGlobal 亚太科技公司融资事件，金额待确认 亚太 VNG Group VNG Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzNDZjFtUVZOWWNzY1RwRm84YnZVSGc1WjVQa3h4dUp1cFpzZHU2bUNnNHVRMkVVeTZ4cnBxVVBnQnU0c0MyYnF4dENkeldkTGR0VFdtR1JfVjhMalJud1gwa0hfTFRyZVFTSEc5N2V1OUR0V2cwNkVTQ2gyaDNvbmhod1R6RkJ3dUFXSVUwSUJOM1RXZDVBSTZQNDFNY0V1ZF91RA?oc=5" target="_blank">Vietnam's tech "unicorn" VNG extends losses to 5th year, $12.4M in 2025 - TNGlobal</a></h4>
+          <p>亚太科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">VNG Group</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="ma"
+        data-text="Vietnam's VNG merges AI infrastructure and cloud units under "GreenNode" brand - Data Center Dynamics 亚太科技公司并购/收购 亚太 VNG Group VNG Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPTE1kdGJuNGZROWs1UFp6VmVBZVBYNGVPcFI2Z0Uxa2p5NEVsVV9mTFQ0OXZicXBPUEJYVnVFVzN4ZzdkSEhBTkR0V0FFMXBvX1V1bFJEZEdyNDJGWWswa3VCVlBSaV93T29sYTc1M2hxYXE0bnFGX0h5SUZoQXhGMFpFbWItXy03YndMd1N4c1hpQ1M3R3VvX3NrNFV1VklDQ043VkZPVmdEODlHWXA1U0tvZm1uYmZHZkFJ?oc=5" target="_blank">Vietnam's VNG merges AI infrastructure and cloud units under "GreenNode" brand - Data Center Dynamics</a></h4>
+          <p>亚太科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">VNG Group</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="earnings"
+        data-text="VNG Group Reaffirms US IPO Plans Despite Market Volatility - The Exchange Asia 亚太科技公司财报披露 亚太 VNG Group VNG Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE10U2ZHelI3Rm5Rd3NZRVpfLVA5YUlIWHVZS2hmSWc3STAxUy1QMjVlODM5WXNVeWt5Uk9qbHJvdE03cWVRT3BuUS1yWnY?oc=5" target="_blank">VNG Group Reaffirms US IPO Plans Despite Market Volatility - The Exchange Asia</a></h4>
+          <p>亚太科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">VNG Group</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="earnings"
+        data-text="ZAWYA: Careem shares key customer trends during Ramadan - TradingView 中东科技公司财报披露 中东 Careem Careem">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOc2Z3ZDJWTjFzUDY4Q2xCeXVwMEFZUGpJZGZ4eUpDTTF2X0kyYXhSanN6WDJfNkFwd2kwS0laRHk3YkVyTk9sVFFOdnJJbjlXY240S1hfTzdIREppM0JHell5d0JKT1J3LWUwa19xdnd5V2Q1MElaXzZJZGtYTzI2ZTdJai03emRsUXBBOHRwclJaUmtIQ24xSDNlSW02WkNIWDZEWGJfMlJUUExtMDJXU3ZvV3BEdjNjUXlzMno0dDZnVXpxMzh3UnJn?oc=5" target="_blank">ZAWYA: Careem shares key customer trends during Ramadan - TradingView</a></h4>
+          <p>中东科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Careem</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="earnings"
+        data-text="Kaspi.kz to Announce Financial Results for Q4 and Full-Year 2025 on March 2, 2026 - Quiver Quantitative 中东科技公司财报披露 中东 Kaspi.kz Kaspi.kz">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPMW1NUTNBaFdLZFVRcjBFZXBSSWRpU3dkbGtnRHBaTk1xSmx6SF9TYXN5VDVyMXBySXJkOTE3R0g5Mk1IaGhQdU1sVHl6MGpSQUVZNkt5SHN3ZDF1aUFyVEhTNGtMSXBTUWQ0WkRsMGE2c0lwZmVUZWpfNmgzekY2UzhOZzdfQl95RERXTTlYV1RyQTBKYlNHODF2aXhjbzdwdzZEVHp5ZjVwOW5iQVlxR0ZIbDFZYzg?oc=5" target="_blank">Kaspi.kz to Announce Financial Results for Q4 and Full-Year 2025 on March 2, 2026 - Quiver Quantitative</a></h4>
+          <p>中东科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kaspi.kz</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="非洲"
+        data-type="earnings"
+        data-text="African e-commerce firm Jumia aims for profit as it fends off Chinese rivals - Reuters 非洲科技公司财报披露 非洲 Jumia Jumia">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOdGNoaHg2dGpTWTZ3bDFmR1JfcElqSW5fandibV9FcVlwejMwaXFoMDdiRlVuZXo4dzFyak84SkVPRzFHMjhiOWZmM0thMzFrMFhoWHpnTWptcmphN203RzNRT2Z4UklLU3NWRHl4MXpuQWV1QVRmUkxNMkJJZ1BndGoxN0I4UXd2MmZRN0NTTmFlZVB3SUs4czdPVDdnazN3NXRhRE1YZDVJazY5MFhsYTd2ZnViSjNEMmc?oc=5" target="_blank">African e-commerce firm Jumia aims for profit as it fends off Chinese rivals - Reuters</a></h4>
+          <p>非洲科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Jumia</span>
+            <span class="small-tag">非洲</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="earnings"
+        data-text="E-commerce firm Allegro reports earnings beat, but trims Polish volume growth view - FashionNetwork - The World's Fashion Business News 欧洲科技公司财报披露 欧洲 Allegro Allegro">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWmNlY0lvNjF5dFVVY0dsbHY1SGZRcnhBYWR6NEtQRVdITkdwdkhNN2o3bWdkNjlGVGsxRUpsYWtDYkI0WkdyRWRhdjE2Y2dpUm5EVVJBT0pHN1N6MVJ1cGcxcGpLQlRuMjRQNUZuLWt4WlpwUnRGbWp1cmpTZ3hFcFQ4amFmM3FtNlJQR3NaZHFGYzd3NmxIWXFTOFYzd0VvRlhtXzB5VXBhXzVWVk12eDQwZVRHYkg2NDl1dGwxdGFHY1ZOaF9XTw?oc=5" target="_blank">E-commerce firm Allegro reports earnings beat, but trims Polish volume growth view - FashionNetwork - The World's Fashion Business News</a></h4>
+          <p>欧洲科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Allegro</span>
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="earnings"
+        data-text="MercadoLibre Balances Scale and Profitability: Hold or Fold the Stock? - Zacks Investment Research 拉美科技公司财报披露 拉美 MercadoLibre MercadoLibre">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNbGdBT0VfWndaSm9jZWNQWXV5ODhsV0pHQ19nTTN3bExfT1FvbFZaN2pFZllFR1lnb1lhaF9jaXJrUTBXcVM0anNvQVFtQXREM2dIWGt0SGdiLTJ5Qzc4TlB3TVVBZjJZVjNlbGVUWFNFMGFPckIwYXhBUGNONTYxWDU2SVh5UEpvYlZoQTVLalRfc0VKSHRMcUQ5Rm5aYXlUQ3JNMXVmd3NVUmljQmc?oc=5" target="_blank">MercadoLibre Balances Scale and Profitability: Hold or Fold the Stock? - Zacks Investment Research</a></h4>
+          <p>拉美科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">MercadoLibre</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="earnings"
+        data-text="MercadoLibre Is Investing Heavily in AI. Will This Bet Pay Off for the Stock in 2026 and Beyond? - The Motley Fool 拉美科技公司财报披露 拉美 MercadoLibre MercadoLibre">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ3ZMSXd3N3RjS3kzZUtsMWhxem1XUk1QellEcDdNblZCaUF4Zy1FOGxUOUhNN01LWGpDLS0xYXl1dVVlN0ExWWJYYlVfa09QTVo3WFd1X2dXUW05R2dQNVc2WTFzWGpFQVpKUU5lVVoxZDd1a2dlYjk2MFE2QTNOSE54TG5QMThGa0RRRWRGR0V4MGQtZjBz?oc=5" target="_blank">MercadoLibre Is Investing Heavily in AI. Will This Bet Pay Off for the Stock in 2026 and Beyond? - The Motley Fool</a></h4>
+          <p>拉美科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">MercadoLibre</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="earnings"
+        data-text="MELI Stock Price, Quote & Chart | MERCADOLIBRE INC (NASDAQ:MELI) - ChartMill 拉美科技公司财报披露 拉美 MercadoLibre MercadoLibre">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zcHVhdHA3cjJiLWJ3Y2FUd21IYWZybl9iQWhLRnBpQmVEQi1VcnotV2llYVN0Y2JWTUlxalk4ZG5vcGdPTlRXTkdlcUVOZzAxa1ppZWhsWkFUd25XSG1r?oc=5" target="_blank">MELI Stock Price, Quote & Chart | MERCADOLIBRE INC (NASDAQ:MELI) - ChartMill</a></h4>
+          <p>拉美科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">MercadoLibre</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="earnings"
+        data-text="BTIG reiterates MercadoLibre stock Buy rating with $2,400 target - Investing.com 拉美科技公司财报披露 拉美 MercadoLibre MercadoLibre">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOX3dyQzEzLUpEM3IxZzdmcmhNWENmbnBuRHdfZ1ZaRkxUUENhdVU2alZWNUN6WkdIMGppelVYdWtGWF9RdnNFYzBNcC1ER1pDMmllY2ZnaXhlcHhYRGxTV194X0FJRDBtRjREVTdaU1N0Zkl5WlZaZEJ4QXJfS19wY0RGekNfNWYwelRSRE1LVEp1Y3RjMXdCRUo2OGt5MEhOMlcwbVFuMzRCOFFPZnppbXdxZk5DcFk5LXQ5TUR4cw?oc=5" target="_blank">BTIG reiterates MercadoLibre stock Buy rating with $2,400 target - Investing.com</a></h4>
+          <p>拉美科技公司财报披露</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">MercadoLibre</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="ma"
+        data-text="Amazon Buys Stake in Latin American Delivery Startup Rappi - Bloomberg.com 拉美科技公司并购/收购 拉美 Rappi Rappi">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQQ181UGtTSkJzaWx2Vm5DVjNLV1hEMkNWSURnOVZ1U1phbjE2b0NFeDhGQ0k3Wjh6R01Tb1RLajExSlpHMGlpVkJOcEJUQ1dNdW9pV3l3MjN5T0ZTM3BpTGVmNnItU1VuX09kQzJKWjZUc2Z4YXBwUkFZZHppMmhyU3lMZlFFNDJEa0ozcmJKVUFHd1k5WUYxTjhJdkEwTDJNUTQzcnJBYmJJMzVqR1E?oc=5" target="_blank">Amazon Buys Stake in Latin American Delivery Startup Rappi - Bloomberg.com</a></h4>
+          <p>拉美科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Rappi</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="ma"
+        data-text="Amazon takes stake in Colombian delivery company Rappi - Bloomberg - Investing.com 拉美科技公司并购/收购 拉美 Rappi Rappi">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPcmpDQ3F0ZUdTSXB6OVRaaFdaa2hVZ1FpSW5OSkpGYW0yQTFEVWxNdFdfbHM4T3djZFlOZFBQWUNUdXc0NEo2bGxDZFVYcm5RT3RNR1VjbmFZLXlqcFQ0ZlM3dXF6QWFMNlRxbHBHUE9xSzd2VkhMR09NdFJHSVRGdFU2cTVIUzR4eUdManZmNDJHQm1JWGdOeVpSNnVlZFU4Z2RFZWY3bV9HWTlNTGtfX0ZxLW1zaF9vcUx1TWJzMHlXaHZISEE?oc=5" target="_blank">Amazon takes stake in Colombian delivery company Rappi - Bloomberg - Investing.com</a></h4>
+          <p>拉美科技公司并购/收购</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Rappi</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="funding,earnings"
+        data-text="Sea Limited (SE) Valuation Check After Record Revenue And Growth In Shopee And SeaMoney - simplywall.st 亚太地区电商和金融科技公司业绩增长，吸引投资并可能带来新合作机会 亚太 Sea Limited Sea Limited">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPa3NndGk3WFpNdklGSHlBVnZNeWhrVERsNDBoMi1tekFiNl9yaGppVDJvQUxFdDktTVpJdmN6cFpDcGctQmd2d05jMkxBTm5qYkM3ODh5YTFSa2ZQeC1SekdtdGd3UHBISTIwUmROS092SllBcUxFR281SkgzeXVZZGk0X2tnZXowR3JzbWZfQk5IQWZIXzIwVlhVUDJ0Uk1TVlRrM0d3SXozdnhkM24tY0MxN2VhclHSAbwBQVVfeXFMTjhwajQ3QWlMLXJRb2MycHZpNWk5RjQ3aHpHdDdvQm5OM3Z0YUVBUkxfMGo3WC0tUERJbHU3SGd3S1pYeEpYTkZqOW9OQXRfczhySTBSTkZWbGdud2F1NE5nWmlLV1R2X1RpdFlqZlJlcHFFR2xTY2ROTkQ2bGMzRmEza1Vud2xMWTluWGZjQUhmekZpcW1OOVRicnhpR1BrbnZnLWZINDB1MUI4Mld1WjlFN0U1dmE2ZGFIY3U?oc=5" target="_blank">Sea Limited (SE) Valuation Check After Record Revenue And Growth In Shopee And SeaMoney - simplywall.st</a></h4>
+          <p>亚太地区电商和金融科技公司业绩增长，吸引投资并可能带来新合作机会</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Sea Limited</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="funding"
+        data-text="Vietnam’s tech unicorn VNG extends losses to 5th year - Theinvestor 亚太地区科技独角兽财务困境，影响行业投资信心和资金流向 亚太 VNG Group VNG Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNbDZpbHo0ZG1ndU1YNDZGVzA2d1dZRjVlTHZHQjRiRTBrX2pYZ2tBS09qR1VJZUFSc3R3c2RXWHlEZFVYZ1RGRUJ0Y0xacFRLMWlGVHI4V1hveDNlY2Q2UjBWVXp4bVdvTm9ORnJOeFdMS0ZxRC1iNTJ2bFRzX0NOQ3RHbUZFaTRKRUlhSVBHdE8?oc=5" target="_blank">Vietnam’s tech unicorn VNG extends losses to 5th year - Theinvestor</a></h4>
+          <p>亚太地区科技独角兽财务困境，影响行业投资信心和资金流向</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">警示信号</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">VNG Group</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="欧洲"
+        data-type="funding"
+        data-text="Expedia Payment Overhaul With Adyen And What It Could Mean For Valuation - simplywall.st 欧洲科技公司融资事件，金额待确认 欧洲 Adyen Adyen">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxONjRhZTNpRlF6VTZ6bUQyaU5jblkwY1NfWkVqZ2tRbkF2WmlWMTdHbGViLW1UYlZheDdud3RRaGlFbFN1cDBfZ0pXOEI0YXBKQ1dQbi1vYzVOYkYxRHk1U1Uzb1RvVTgwb1JzSm5BU2xLUFgzcEpWWFhibm9YN2hXWWtNUlRTLUlIbl9VY2xYamc1VnFQdGt3YUtnOXBOM3MzR2hBdVBteFUzb3U0ZXVfcHg3aS1oV0E5by1weDBVUmxGbXIyeU8tNzY1T1lpM0UxNWNWOE54VWPSAd4BQVVfeXFMUFU2R1lOdzJudjFjcXlYWHJxdHhiQjg5OGQ1ZFRjc19hLTJfM242S3dqNldzSzNxT24wZTRtN2R4TjVwcms0N2wzQTFISnRKUElwbGYwanZtR3JubGx4N24zOGtTRWpQZk9pS1I5dXhfVU1kRDFiVmZRNS0tMzVCQUFWSHpMZXFpaHotNDk4YklkeHhVZnZTeHVkbE8tanZTanhQNExqTEVmS0NLeVc2Y2c3dUJfMGNpRTRRRjVpbnY4M3lYZ1lLTnlmalNzUEJrYW54XzBoMExIRlRsNENR?oc=5" target="_blank">Expedia Payment Overhaul With Adyen And What It Could Mean For Valuation - simplywall.st</a></h4>
+          <p>欧洲科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Adyen</span>
+            <span class="small-tag">欧洲</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="funding,ma"
+        data-text="Prime Capital Investment Advisors LLC Raises Stake in MercadoLibre, Inc. $MELI - MarketBeat 拉美科技公司融资事件，金额待确认 拉美 MercadoLibre MercadoLibre">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZGhSTmdOTzVyZDhvNTRtcDlMZHZXeV9JRV8yR1MzZjc4VURuUjZfN29YcHpjMmpnMndab3Q4RjBtRXA4SzNMQmlsQ1g0cHN4N0haN1BhTTR6bGtjQTNDRzZFLTBOT0VFanZ1cGtGR2xmRkNlUGhxcWJOYk0yNHZkSnVOVDZrTktxLU5ETEhWZjkzb0hSUjN4TTJNbFFoN2xuZEFBR3E0VUNqeG5fNTZJX29jTUZqSF9fT1pwd3dEOEI0WUR6dHVMdnNDZFpnMGFUNVE?oc=5" target="_blank">Prime Capital Investment Advisors LLC Raises Stake in MercadoLibre, Inc. $MELI - MarketBeat</a></h4>
+          <p>拉美科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">MercadoLibre</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="拉美"
+        data-type="funding"
+        data-text="Colombia’s First Unicorn Keeps Delivering - Americas Quarterly 拉美科技公司融资事件，金额待确认 拉美 Rappi Rappi">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdVd6cnFqMHVBSTRvWTlzRmR3OGdxTEg4VUREQ0Jkd1hURE1kc21YcmUtQTJZNm5SYXM3YmxtNHhEdGM1cVFWajJta1ZTczFwNXZOdnJxRGZiTG1Yd0JUSkllX0FqS1BvUDFzaDV2N3IzOTBnUGEyV1N2Q2xleFFXT0xkY2QwQ3EtdHZr?oc=5" target="_blank">Colombia’s First Unicorn Keeps Delivering - Americas Quarterly</a></h4>
+          <p>拉美科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Rappi</span>
+            <span class="small-tag">拉美</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中东"
+        data-type="funding,earnings"
+        data-text="Noon Raises USD 500M as It Prepares for a Potential IPO - waya.media 中东科技公司融资事件，金额待确认 中东 Noon Noon">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNTktfYjZLMU10czJPczZnSzl3Q0xJYzF0dWdJdHFBNjZjcHZ2Q080WnZzT3NSM2xET0Vxd1ZNcE9xQXBEWHJjTU9VU0N6SFBsQUZQSGh1UTZFRHc5MS02dFF5OFVGVmJfemVPd0gxUDBSeVQ4RXhfcDM2MXFkWGg1dw?oc=5" target="_blank">Noon Raises USD 500M as It Prepares for a Potential IPO - waya.media</a></h4>
+          <p>中东科技公司融资事件，金额待确认</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">资金流向</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Noon</span>
+            <span class="small-tag">中东</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="strategy"
+        data-text="Alibaba Cloud Cuts Prices for Specific Overseas Markets in Global Expansion Drive - Yicai Global 中资科技公司战略动态 中资 Alibaba Alibaba">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxQX2RLSmhhWWIwaXk5dmkxdURPRW0tUHVJYVcxcU5EU2tKUzdIR1laa2h5VTlqeTBVMnZLQmNvcVNfbXlzNVd0eURxZGQ4d3NDMkh3eEVldHU4SEQwOVAzTWxzaXNaZ1l6ZWk0Rzgzc0RHbnJ1TTVWX3pUV0R2Z1hsS1VuZUhWLU1HV0tuZEFHZDlLejVjSTNRMXI1RkFPcGtfNFFHZENaNlQ5MTY0YmE3VDZCUktxZ28zY0ZtNDZTeHRYUUk?oc=5" target="_blank">Alibaba Cloud Cuts Prices for Specific Overseas Markets in Global Expansion Drive - Yicai Global</a></h4>
+          <p>中资科技公司战略动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Alibaba</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="strategy"
+        data-text="Chongqing Partners with Alibaba.com to Expand ILSTC’s Global Reach for Local Exporters - iChongqing 中资科技公司战略动态 中资 Alibaba Alibaba">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0k1OHZFOHdNQkFCZ1J1cmkwTFZQdlB0SVo4QlFZelBfSUI3WVRvZElWQkVGVXdKem82LV9BUlNnalktYTQ1cGdfUUNxM1d5bk9IZ0F2WlpHOXdpOGtfYVNZUnM1RmN2Rk9KTXNDNDgtWW14YV9icEptdUViU3hyZkZ0NUEyYk85em1KekZOeF9pSmptMk92Z2JzUWFnSVpscjdtbEhSbzVDTy1qeVFLbjFkWDFVUzQ1UFI3amJSZFZfTEXSAcgBQVVfeXFMT1pYUkRISmJORGVEVGNTZGlhVWJBaGtDQjFsSDhGRWk3ZkhTbVl5T3ZuSG15di1jUjdqSjh1THJJWW0xYmZ1dkx0U3pmXzYycms2Z1laVUlnS1E4NHdUVlhxUFplcVh3RzlDV052QmZXOHhjUXhLOHdtc0huQVVRVGRNN2hKdnYxZVh2Ti1oRjQwVndJc05LeVVleXc4UjVBRGFrdHNLbGNPd2EwODhpZHpMNXNDb0hSazk0cVNCM2RoZXBSTmgzUmc?oc=5" target="_blank">Chongqing Partners with Alibaba.com to Expand ILSTC’s Global Reach for Local Exporters - iChongqing</a></h4>
+          <p>中资科技公司战略动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Alibaba</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="strategy"
+        data-text="JD Health Launches Global Healthcare Service Platform - JD Corporate Blog 中资科技公司战略动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOQVN0TkZidGhzTW5WMWtsXzhwY0lDY2dOZC1PSmtuVHhzWG8zUVM1ZS1yeWVNVkJLNi03NTRQWlJ1U1hTdUpkeENfd0FXTWZYLWJZSWNzSk1oSGRTVVJiY2Z4WUt5c19STjR2MGZxMmlpSVlGNlpHZUlRQklFNnhMSE5HSFJpMnhHZXc?oc=5" target="_blank">JD Health Launches Global Healthcare Service Platform - JD Corporate Blog</a></h4>
+          <p>中资科技公司战略动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">合作机会</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="strategy"
+        data-text="JD.com to Launch 50 New National Pavilions in 2026, Bolstering Global Imports to China - JD Corporate Blog 中资科技公司战略动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNdHlsTy1nUndBZFJSTlcxbDhDeVM3QmpkaG9HVHk0cFRlQjlzU1NCbmFvUV9adnZ1ZHFWdmZUVDJSUTFqTFJZWlViWXAxUDFHOVdkdVFSbG5FcUd2aS1xaVM0X1lMMXF5anl3d19wWnNhVFVzOFVtQ0ttQnh2YWVnWEtnX3hka2I1eHdrOUthQ2M4aGJhUkdka1VXMHVZYWFQVnlxN0U0eFpJRGROQ2VZWk9XSXY?oc=5" target="_blank">JD.com to Launch 50 New National Pavilions in 2026, Bolstering Global Imports to China - JD Corporate Blog</a></h4>
+          <p>中资科技公司战略动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="strategy"
+        data-text="PL-Universe Robotics Launches ProWhite Robot 2.0 and Dexterous Hand, Powered by JD.com Global Online Partnership for Overseas Expansion - PA Media 中资科技公司战略动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMikgJBVV95cUxOT21oR3l2VGhOV2Q0cUFrMEdWR0F6RHYtTUljdWtYeTNzTjQ5RjNvYVJjR2Fha1RlUGxWNkw1eS1qb0JYQWd4b3ZLaVowanpDR3Brb1REX3d1R3dCMnZBYkU3UkVYVC1qTEZmNktxd2VwaDdTLUk4RGtCdWdJd29aTEswQld3S0prcGk0Z0UzQ09FaHJNclE2SDNfRkthRDhaUTc4QndjRmZZSVFKWkE2RjlfQzAwZmdyOGRNVDFrZ0tsWEtDbm1rd0Y5cWJESkNPbmRQb3owcFFndDR6QWx0Wi1TS0tScUstalhGQVhKaVZJVk5OWmRUNVJCaEkxaXdlS19OS2dqOXYyaERfMk1mdk53?oc=5" target="_blank">PL-Universe Robotics Launches ProWhite Robot 2.0 and Dexterous Hand, Powered by JD.com Global Online Partnership for Overseas Expansion - PA Media</a></h4>
+          <p>中资科技公司战略动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="strategy"
+        data-text="Meituan CEO Urges Focused Global Expansion, Warns Against ‘Blind’ Push - Caixin Global 中资科技公司战略动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOVDJwT0VJaUFuRTAwcWtjYzJKRUNITEVQdWFXUm9fejRfTTJyRE0wYXBpRnVtY0x2NG1BR1hxMjVTT05NUkJ6UHYzMmJDTVlDM1dXTjk2OGV2WEdVTU5DOWVWcm1ZclQybUNqdFMyN1hMUnUza05fZG5VQTVIWW4zTTdnQUNCbXZfV0FJQ3pBVXROVnk1ZEpCM1V4U2FwQktlRk5YbGJlWUlBNVNHUWNURUhTd0dtaUpiWGx4dzZaWQ?oc=5" target="_blank">Meituan CEO Urges Focused Global Expansion, Warns Against ‘Blind’ Push - Caixin Global</a></h4>
+          <p>中资科技公司战略动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China's tech giants move AI model training overseas to access Nvidia chips, FT reports - Reuters 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNYzVJeTN5ZTBJZzJ2UXk5ZjluTUxKZC11aDdmRmdGWEtVLUF4TVdrQjVlWHoyY0pGakxyWlFNLWhQa0UtRk5NYUNyWktGSFdUbDk4Q3VGQlJoQlpDSTJ5aXRyOUdQQXU0dllKa2ZraUF4dFctM2o3ZkpFR1NrN29QTEZsUDhuanNOSVdTeUQxQzEtUnY2WHpDSWVZMGpJZ2dNQmE1N2xQekhnai01aFppcXNtb1NUNHpxN1g0a0RyS0k3eHUz?oc=5" target="_blank">China's tech giants move AI model training overseas to access Nvidia chips, FT reports - Reuters</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China’s tech giants take AI model training offshore to tap Nvidia chips - Financial Times 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNdS1Ha2RhemlabWU3cUlYWlBHT3pVd3RrX1FrMEtYS3lSa1pmVm9PMmlhTHR0N2pqN1VqZjlUdXdsZERLV0xweHV3OVFhUWtPNW5KVGwyLTVUdGMxVjdYT3Z1aU91T3VvRFZuVkxOeElreEZJTkFVblhXeTNsMzFWbXlIZ2g?oc=5" target="_blank">China’s tech giants take AI model training offshore to tap Nvidia chips - Financial Times</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China Digital Exports Surge As Alibaba, Tencent Lead Global Push - Bloomberg.com 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOQnAxWXBqRDl2RUpJYnBzRk5ldGxhUTBOME5KSWlwRXpSQ0dGQkZvTThrSHhIbmtOWnFwRzRWQ2xfZHA1NklqcVBhVzNtTDA1aktfR2Y4MktBeEM2aVFrWFpLb1pyTHRrSnFuY1NCaW9sdEdlOEJXUndnNGlPNTktZUdqdHg4WlBQWFB6OEUxZU55bFVYa2NyQnhMak9wU21oVnJjbW93a1U3b3BrbUs2NVlxODc?oc=5" target="_blank">China Digital Exports Surge As Alibaba, Tencent Lead Global Push - Bloomberg.com</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China digital exports surge as Alibaba, Tencent lead global push - The Business Times 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNMTVVWG9YSEw5TWsxaGlSNUNaemZVSnhuQ3NrVDZIOUVESlNISWRRTnhSU3cyUGtIVGFhSWdlUHh0bnlQYlhGa2lxcGdpaENmbUJ2NWR6Y0NlZnJkdThCUGVkMFNRaGV1U1lOdHczLWFNWWxSRzhoNEZuS0gyekRod2tWcnREVE9OSzFKYmFPTzhDZm5ZWV9FeExwcVBVUHJmaVlkc0R3dU5jYXhhSFZpWGhOMDE?oc=5" target="_blank">China digital exports surge as Alibaba, Tencent lead global push - The Business Times</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Chinese tech giants' push into U.S., Europe's markets sets up potential clash with Amazon - CNBC 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQbkVfMGViNzN3M0I4VjBXTFhqeDQ1STJwYmx0eUM1Q0RCYlRzTWN1a3RqSXFzSTVadkdLQk1MckktVDJqdm42ZnFVN2VWTHRWNmgyTEpRdldLbHhYMk13bXJ6TGdBSHpHTFE5WkxiX2Vxc284ODNwYjV2azdsM1dtWVdZNVIwNWp4Y0k3cWFXNlVRWEltbW9iekVVVEtsVUlLNUVoWm9RaVl6VFgxbTFwZjl30gG3AUFVX3lxTE5mOXdNaUJVdU9uREZaUEZlV1lhYkR4aDRFak9ETkJDbjhWUW5yWEwwNDNScjMxOXY3SS12cktTYTJiT2Y4R2NuUEdBVkkyMUlkLWZVeEo1TUN1VlptMjM1X1lPa044Ui01TXhFLW9XVVlMVDhZSFhwU2k5WW9fUVN5NzZFVHBmaUxvYWdvWXZfT2E2bHlnNmtpZHpLaUs3azNWaWxqaUc0ZE5fajJWbnRGbFJrb2F4UQ?oc=5" target="_blank">Chinese tech giants' push into U.S., Europe's markets sets up potential clash with Amazon - CNBC</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Chinese Firms Face Authoritarianism at Home and Hostility Abroad (Published 2024) - The New York Times 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPdzdMeUpFczY5M1lCT1I3VVJNQ3o4WG9adHNDcUt4OVVmSlBsTW45d1dEaTBkblJ0SzFySlVGeGxnRzRxSjhWaDJ3a0NublpvNndLRHcxVWwxVUR6TWxqR3EySElvNHZqMklHZjd2NFFvU21ZeXllRUctWnkxbEpSU3VfMlR3VUE?oc=5" target="_blank">Chinese Firms Face Authoritarianism at Home and Hostility Abroad (Published 2024) - The New York Times</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China’s King of Internet Fluff Wants to Conquer the World (Published 2018) - The New York Times 中资科技动态 中资 ByteDance/TikTok ByteDance/TikTok">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOSTNnMW1xeWdVM0ZEQXZEWVgxT0VnY3JwaDRET2pudGM4Zm5xU0JfUWtXaDloNzF3NGV4eWxzVEU0QndUZm5MTGowcE5qWF8wQ0RCSUVuVHhEWVdlMW44eGlpeXA3RE43MEtKcGN6cmlUNWNJRkZnekgtZGFPZkMzNVdpWEI?oc=5" target="_blank">China’s King of Internet Fluff Wants to Conquer the World (Published 2018) - The New York Times</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">ByteDance/TikTok</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Tencent: Not A Bargain Despite YTD Share Price Weakness (OTCMKTS:TCEHY) - Seeking Alpha Tencent有新动态 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPS01yd1BScDNHVFl0Zk1qV1Z2STVtZTU1eU40UW1IQjRpYlZ5UWRBY0JLOHNzRHcydHcwSXZmX0ZtMTM1UVBUTVV3aDA2djNWR3A0UDJETUp6X3pPUEFJb1hmcHhzcFQ0a3hFU1YxcVhkZjMyZ1lhNmlReXNHVy1xRVlzUl9veDJteTZTTjBfejNKQlpNRTB6UDhfVQ?oc=5" target="_blank">Tencent: Not A Bargain Despite YTD Share Price Weakness (OTCMKTS:TCEHY) - Seeking Alpha</a></h4>
+          <p>Tencent有新动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Tencent Malaysia Secures "Malaysia Digital" Status, Strengthening Local Capabilities to Advance Regional Innovation - Tencent 腾讯 Tencent Malaysia有新动态 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBLeFNhYkdvSGtMUzVPc3VoNDA1TnQza3NjYWlZUVBSRzlJWW9PeXEwR1BtMFBYYkVUVFBiX1dwZlZud2ZEOVBYWGpFeUNiZllQOUMzU1NoRGkwdFoyTG1Idg?oc=5" target="_blank">Tencent Malaysia Secures "Malaysia Digital" Status, Strengthening Local Capabilities to Advance Regional Innovation - Tencent 腾讯</a></h4>
+          <p>Tencent Malaysia有新动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Tencent pledges higher AI investment in 2026 after chip curbs hit capex plans - Reuters 中资科技动态 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPOHI4MDJ5dGpiMmhkR2E5ejMwUndUNGRjWHhMdWNfWmhYZDVsVFVhME1DbERiVzc3X3Bicm82UnJYUU5ud25weFNhd0VPY0VqZ01nRUlUbVQ2TWxfeExZcTJLUUZXb01CRE1nTEp5UloxbnBwSXpRbF8yX2xBRGE3eE12eTlDMkhTS0tQV3RrSHNoU0syUF9Qa1V3cFg2QTVYV3hGX3o0YUlISlFtenJyLQ?oc=5" target="_blank">Tencent pledges higher AI investment in 2026 after chip curbs hit capex plans - Reuters</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="A Tale Of Two Engines: Meet The New Tencent - Forrester A Tale Of Two Engines有新动态 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPbXhZYkpTTmVXa0xOTnV5N0NoQk5oM2g1R3lCLTRlT0ZtTElpY3A5a1Rta2tpM1RLWGxUcUFvNFFTWmtoUmZjc09GTTIyTzM3VWhFTWk4eC11VFVHdWhTYnJ1WlpLT3lKQ2RTNHVLQlByTDl2eldTOVNsb1Y3OERhQQ?oc=5" target="_blank">A Tale Of Two Engines: Meet The New Tencent - Forrester</a></h4>
+          <p>A Tale Of Two Engines有新动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China digital exports surge as Alibaba, Tencent lead global push - Jing Daily 中资科技动态 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOSV9laU85SG5sVkd1TTdSRHc5LVZWcHBySC11TWdNaThyNjFhT3ZneGxZcVhqSkcyOElXVTlFTzlmOVMxdGl5RjBFYVRMZElubll1WS1yeUkwaWdoMU9IN01qT2hyQkQyaFpSS0UwSWxLSV9ZTkVrYmZVcTB0ZmhWY1JPeUwwaXBFLU1BYXBUbEpvRlB0MWc?oc=5" target="_blank">China digital exports surge as Alibaba, Tencent lead global push - Jing Daily</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Tencent Announces Global Launch of Hunyuan 3D Engine to Empower Creators with Advanced Creation Tools - PR Newswire 中资科技动态 中资 Tencent Tencent">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxNVjlEVTluVl9DRWswZ1hSZHF6T0U5Zk5uRkd3bG04Ql9RejFqTEZ3Q0Q2cFZPcVpUTGFMd3Y4c04zN1lFWndacTUxT3lvSzVXbnBDSEh5ZmE4SFVKb2JxN3dqSF84YmNDSndncGl3NXhGSHBDclpuVnAwT2VpTG5uWUdrUk0wLVNickdnNnpjYWVXYkFJMTZOMnZUcGxQcTlEQzFIRzB2YklHQkQzdF9NZUZKOGpLQzZuZkxCcEFhSHJZVEJpZHp4ZzZlUlpZa0ZManRiVVNyb2VpY0Y5VG9KNzVDVWtkNllsaXptUlRB?oc=5" target="_blank">Tencent Announces Global Launch of Hunyuan 3D Engine to Empower Creators with Advanced Creation Tools - PR Newswire</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Tencent</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Mediastorm Expands Overseas via Alibaba International, Using AI Tools to Tackle Cross-Border Commerce Challenges - Pandaily 中资科技动态 中资 Alibaba Alibaba">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOV01Ib3ZtX1VaZFNmQloyczdqZmZ1UGhFU0VVTHdLTE1LaVZsMmJuc3RrSTNTdUVLNkloRjdqam1udE1yOEU5WFN0MEkwbjVvb2t1ejVlcU1GT2tyYms1akNuUXMtZVVtdGxvOEViQ0lDVE45UVN5TURmQWZwSnV0M3o3MXZfSWlFdWhOY0dKaFBSaVVKdE4teGJpTi1Nd3Z1YlF2RFA5WGo2aVRpLVh0NHBrWU5ibGJsNDQxT21qUENCZ1RpdmVqSHN0elU?oc=5" target="_blank">Mediastorm Expands Overseas via Alibaba International, Using AI Tools to Tackle Cross-Border Commerce Challenges - Pandaily</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Alibaba</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="From infrastructure to AI: how Alibaba Cloud powers the global ambitions of Chinese companies - South China Morning Post From infrastructure to AI有新动态 中资 Alibaba Alibaba">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxPWDdHSmJQOGttLVBuekdRczA2cG0yellDd3VmcDlIUUlhWm9FYWd5b0NUUGo3ZkJtb3hDTUxJV0kyTllaU292dUlKN1JvVlVWWmFEX2FjSG1hWFBCRnpnRHA3MTROMkpxb1V4QUhhWG1wRzBoWnpRVmdRbHpRVWpLUWVrVWlubVBFRUxHdFZ2bTgxWHA4Y0dqTkdzSzl1akVRSVl1SURTWk9yY0pWYWQwcFRvZF8xMzR5THBUbG50TGJBSUNyU1BWWHZXNWs5MzRicTRwZk9OMGpBMVcxaUpRbDJReG84RmVGRUpYYmZSYnk1anhfMHpZ?oc=5" target="_blank">From infrastructure to AI: how Alibaba Cloud powers the global ambitions of Chinese companies - South China Morning Post</a></h4>
+          <p>From infrastructure to AI有新动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Alibaba</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Alibaba, Kering, and 5 More International Bargain Stocks for 2026 - Barron's 中资科技动态 中资 Alibaba Alibaba">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPVjdJdHRpbEZ5dER2ZHJsS01kSDJlclFSR29pNDVKdkhubllLeG9CUWk5Mno5dTluX0lBcXlOZWtIRXZoNkNNUmpaQl9JdG9JOHdnZE5wSmxNcWZhSW1DdER4Qy0wZ2prcW1RTEJpNTFOZmZhRkY5YWw3anRiRGNXZFczU05WTjRnY3pjZDBB?oc=5" target="_blank">Alibaba, Kering, and 5 More International Bargain Stocks for 2026 - Barron's</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Alibaba</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Xinhua Silk Road: Think tank delegation tours JD.com global headquarters, experiencing its digital intelligence innovations - Yahoo Finance Singapore Xinhua Silk Road有新动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxQU18tWUJNcnlvNXRCc3E5VE9EMzJTVTJITEVnX2Y4NEhGTG9uX2JEMTd2VDkwS1d0WjFGdFV6NWlKdlhJeTNEZzdld3ZGTlZMTmJuZUNteWhMVExWTlpNa3JjTU5zbHZELTV2UE5TaGQ0SW9TX09lcDhzaF93SXJYdEdR?oc=5" target="_blank">Xinhua Silk Road: Think tank delegation tours JD.com global headquarters, experiencing its digital intelligence innovations - Yahoo Finance Singapore</a></h4>
+          <p>Xinhua Silk Road有新动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China's JD.com looks to international market for growth - Reuters 中资科技动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOaG9tNWNXMERhQzJDMEpBblYyYnBuOS1UWXZGMWdtNENzWG11UFNHdUZJSUhrcFczVkpwZ3htV1FsQmVMX2NFZ1J4S2lPNzQwMTA5eHpsUnR5bHFGRU01VGxFaGlaVFhQa2prYjBnWF9sTW0xbEVieGpmMnNRbVRvX1poc0Q1M05HbEpHMjJNcGtOdDl2LVpzZktFS3JEVXJCc2dDNmRUTUZfSzVXNld4N2U5dTF2RFBSZEV4WkpTMDVHVmlPVzFzTmJDaw?oc=5" target="_blank">China's JD.com looks to international market for growth - Reuters</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="JD.com Billionaire Unveils Turnaround Plan After Five-Year Slump - Bloomberg.com 中资科技动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOYUNWeDZsXzl5T0VDM2tjYUpjNERCN2R3d3ZDMDJIRk4wUHhfUE90Vy1DTjRNd3prZ01vQjg4WmFoTFFQZExLM3Z2Tk5aUFA0bHdTd0dFcnZYbFFweTRIRVI1VDA1UWxqeEQzWEhJNlQ3SUFzZk1oUXoycTZLS1lxWW9tNnlPVVpISkk4eG5xcWF4UEs0M2tVaHhOQmJNRmtyU1k4S2pkMnRBdU15akxhbTJ1R0NXQQ?oc=5" target="_blank">JD.com Billionaire Unveils Turnaround Plan After Five-Year Slump - Bloomberg.com</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="JD.com takes its Meituan rivalry to Saudi Arabia with express delivery service - South China Morning Post 中资科技动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQY0hBZURjZ21TS0tJOUZpX1dvcGh4UWEwSG5uTW81bjFPM241Rlh1aVpmRXFkVThGeE80Z3dGdHliMElOdDNNbnpaVTFVSlRfMWRzM1VaWElIZFlocEdhUzI5TFRLLS1iYWFFSjFEU0pFUXlwOGE1M0U4ejctSHBKaGxzc3MwNkwtQU9hMzRfb2NObnQyZm5tTnYtMEpORjJoRUNBcFF5S1A0UURCbFZmMGt0dDJsLUdGLTdpZF9B0gG-AUFVX3lxTE05Nzd5OWNKZGFRaVZ1QVhMelAzc1BNSnU4TUpjUldSZER2Wi1UTU55d0w0Zjl2bWVYUWJDZUdqaGJOejRnVlowMTBqRVlHNDZWbEdZYjRkaVBRSURCa0xSSHBvbzJBMzNPdTUyeW1vWTBZcVIxdnJSUTJCTWJ3ZTYwWnB2ZkJrcWQ5d3U1dVV1R0ZnQkVodldEdW5Sa2RiVHlJVS1Ld2RpT0xzbmhVVHJMUzBSd0hnVkpSVjI4QVE?oc=5" target="_blank">JD.com takes its Meituan rivalry to Saudi Arabia with express delivery service - South China Morning Post</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="JD debuts JoyExpress in Saudi Arabia, extending delivery model overseas - China Daily 中资科技动态 中资 JD.com JD.com">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTFBZSEdKMDlyT05vM01tZVVXcVVPbVBRTHlLa3ZtTWNVTUFuN2VSUmNKS05zazlicG5SNFdWVTFfRzFPUHc5dHJjdHMzRUVFVWJLVW1LdXZXbkd2UUhVOGQxUERXdmlHM3RheG9lZGFqYmZyTk1TNFd3c2FkLU5HQQ?oc=5" target="_blank">JD debuts JoyExpress in Saudi Arabia, extending delivery model overseas - China Daily</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">JD.com</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China’s Kuaishou attracts overseas users with adult AI companions - Tech in Asia 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPNU53b3ZkSW1hbUl1STc0el9Fc3JsekpqZFhDaUVSeW9tdDdyR3VGMEllWlBNRlppNG13MEgtQ0lzMGlwemR0LUpSUjVFMWVFY2pXVTA1WmVSS3JxOTF2NW9QTUFkelJBSmlZTmNGeDBzN1Y0N2N3Q2Ezb3J5dktiMWhiNU1vR0l0ZHBDOFg0WkZWTUtOdWc?oc=5" target="_blank">China’s Kuaishou attracts overseas users with adult AI companions - Tech in Asia</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Kuaishou turns a corner in Q1 as AI push begins to pay off - KrASIA 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOM204d0g4WE5aYnk0bG9iXzd5RkxVMmNXTUtWSTRjanp1UmgxdDVlU1lSYnNrcDUwdC1UMzdHNGt1eFo1YVNGM1hmRmN6dk50c0xXM3MxX1p4WnFtcjY1NGFjbU5ic05heGwwMjQ0TDNId2hBUE1FZzI5TnVUaFV6eVBwck8?oc=5" target="_blank">Kuaishou turns a corner in Q1 as AI push begins to pay off - KrASIA</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Kuaishou's journey of commercial evolution in emerging markets - China Daily 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9fNnNsR1k1N0ZuVXZoRE5feHA4UjNjVllfa3o4RGVFeTN2MFNxLWdIN1RRVVN4LVQtUEVlQkpzbjJRbUZ4QVJxRjBtcnNzVTFaYkRqcVUybFpoTGl1dWRSZ0JSc0RWcktfMFVWNmZnQnFVLWR6aVZPX28xcnpVUQ?oc=5" target="_blank">Kuaishou's journey of commercial evolution in emerging markets - China Daily</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Impressive KLING AI video generator now available internationally - the-decoder.com 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOVXNNZHlOOU12dWhJS3k1cGVyczJHdXIwT2h4V25ZQmFqaHpvN2JZTDVYQVA0aUt4Rldvd0V6NUhoeDd5RnNtbFpOZGgtZ1RJU0xabEVZNnBBSmVCRjJHZGpRY2JlM3M1YTdGMTBldTZjalFKVFQwLUlfOE9tTFVwQlJfYkNUUGNPejBNamEyQ2JtQ2du?oc=5" target="_blank">Impressive KLING AI video generator now available internationally - the-decoder.com</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Kuaishou Grows US Marketing Team, Prepares Global Brand Launch - Business Insider 中资科技动态 中资 Kuaishou Kuaishou">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOVGlTajhQcWg0TGhGUC1qNzVHUURtS2EteTBoSFZMVHNpX242cFRuU3pRSjhDckZUWE1JbU54S21jYWdMYTIxYWdfQUNHZHNRSl9VQzJHOUhzd0VjLXpFc3M1YzFPeXJzVk1Xb0F2VGlGOTZmak5oWGhQWG9ncThjNkVVdTA4LW5zeHBvdzNwbHpsbDBTaXpnSC04aDhVUXRXeGc?oc=5" target="_blank">Kuaishou Grows US Marketing Team, Prepares Global Brand Launch - Business Insider</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kuaishou</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="In Hong Kong, Ant Group finds an anchor for its global fintech ambitions - KrASIA 中资科技动态 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNNDAtc25PY1pyUkozUDFQYUJZWjY2VVl4RWZ1OW5aTURlbUtOcmtBTXYxNHIybDhydFNSUGlyR25iSnhpUkxNZHgxbzF2TmJMeUFsWFgzSnMtcGd2VjZDTXdSMHkzd0toaFRUNUtQUWxWX1c1TGg1d0RSdndCUWdMVlZEM2RVVDhCOEh4MXdEd0wxMEdvcGc?oc=5" target="_blank">In Hong Kong, Ant Group finds an anchor for its global fintech ambitions - KrASIA</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="China's Ant Group plans to list overseas unit in Hong Kong, report says - Reuters 中资科技动态 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNkhPTG8tTUlSRElMNWo5OHNHdDBlR2kwamgxLWlFdk9oNXh3eV9PejFIak5kblNWYUNnX2NMdmRaMHNEV3QycnNuVXR0UU1WRGd3Tk53ZEgxY3dadWN3ZnRRZTZJcjJidjd6T1JoRFVoenh4amExWl9FT2U2aDZEZGpMYklKdVVKcjQyaFBlNHhxeUxyaVpCOE5WZkRVY3BRZFdXeUEzcnpqb1ZsOXNNeGJaNV8zZW53ci1mOXlZSzhlZzZaYjBLNnVIRFRHYTl0SDRFQnFB?oc=5" target="_blank">China's Ant Group plans to list overseas unit in Hong Kong, report says - Reuters</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Ant International becomes China’s first foreign payment gateway partner - Electronic Payments International 中资科技动态 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOSlEyMDdlalZzelBiQzRyQUFmX1RycG0xbXhfcS01amE1TzZYQ2k0R0prb20xTFhiTGlEZzhXYjRneWlyM19tUjFlel9yaTZuTGxKZ3dRTWMtd1otMlJRUHoxMzQ3S2ZNRy1SZkpsSEtzWVVuNXJiX2VEczBaVEMzdmJjWTVDVUNmdzFzdkMybw?oc=5" target="_blank">Ant International becomes China’s first foreign payment gateway partner - Electronic Payments International</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Alipay, Weixin Pay embrace China’s new cross-border payment system - South China Morning Post 中资科技动态 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPT29HY0d0M1Zla2NrZkZQWFRuQnJ2eVMyQXAzVWNmVkdpOFBZMVdhMnNXdDJ4X1JBaXRkeDZITmt1d1E3eEc0Q0VBcWY4WGFBd2huNnlsWURXZFpDTTBvSHJnbUtUM1loNWs2YUlJaDdYVGhNaDBSaElpQWhWVGYxekRjb3FEaTN2RnBjTnhJbUtOUUlxd0p4dFEzdjlzdWdRVGxyeG9PVFdmUVBwRU9HRlJHa0Y0T2t3VkxUa2J5Wm1WdHRPRWFnZjFsX0tMQklB0gHQAUFVX3lxTE0yYzlNbVItR21ZZ1JoRHdOY0s0TWxxOFFqVWV2RUpFZ2hFeTh2YTdlbnVneGVxcV9ILXBlb0k5NVk4cU5YcFhKTHBpTkFreXBDc0R6NGVUZ3pEaVdKOUgtcHJMM01yUENCNmNxNGV4U1FlZnVBY3JKMGRrWV9uRUNjRGtmUEVmaWx4SjJrc0dWN08tXzFqaVBfZXZPYmVHWlJmak9hV25sSmpfLVJIc0JWakJBWFpTdmtRYlozT1JORjF0c2lacFZ4aWowcktQVzM?oc=5" target="_blank">Alipay, Weixin Pay embrace China’s new cross-border payment system - South China Morning Post</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Ant Group Renews International Push - The Wire China 中资科技动态 中资 Ant Group Ant Group">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQZHhsQkpQN0gwbEhmMXJ4S0ZDMTNlSHZRUng0aS1GYURBczY5ZGItdVRYMm9zcUU5VzZLdVU0dzA0UjB5dG9laEs3ODgtTkQ3UklMR2pIajJSSkZVY1NWM0VvWVgyVWNSaF8yZ1FJYS1hOHZjNGtDRS1BNUsxeWsyUU1oTGxvbXBEVjlZQ1h5THhscm1oUzV2cVFyRU5lbWZES09oeVNB?oc=5" target="_blank">Ant Group Renews International Push - The Wire China</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Ant Group</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Meituan's overseas push steadies investor confidence despite losses - Let's Data Science 中资科技动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNVTFBZmJraDN1ZWZ6dEVhWXk1aG95aEtBQzVoc3Y4dUpPS3dMT0NhYTFfV2Y4SFlrNEFSaTN5d1VHTEs2aFBCTjlCamxYMjZyMHVJODlVVUpCOFdxeU1TNXZEQS1xUUxJR3ZEdGlLLWVMVzRyQkxCV2pock9DYm5HYWJ6dklKOWZGeW9aeEFIc0VTTW9EbmxpVVVnRXdjQ3JURHlF?oc=5" target="_blank">Meituan's overseas push steadies investor confidence despite losses - Let's Data Science</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Meituan’s overseas push steadies investors despite second consecutive loss - KrASIA 中资科技动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNS0duUVh3VUZLT1JhYjZ1S1cyTXBzNi02Q2dGZ2JRV2RMV1l1akkwZUcwd19pYy1jcWU3ZTJ1eEl5TlMxcmlKTGNJRG4wQ0FfY0tkQmhTdDdkd0FWaXgzaWZJZEVJcnhiV0l6OUNtSER5cEMwVVI3d1pOb0RRRXBtd3NRcTBmbXVneXdiYWdSU0tYYWdMZUdKQg?oc=5" target="_blank">Meituan’s overseas push steadies investors despite second consecutive loss - KrASIA</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="‘It’s been an expensive year’: Meituan counts cost of China’s delivery wars - Financial Times 中资科技动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQZXlMNktPWkdfSGd4TENxZ2J6QzlOV1hpMEFZcktZblh6NTA4WmtXSGVDYUxqUEF3Rkd0amlFa09oR0tjanNfMVpzOTNxWTFBbG13VnNpOHFxNWRkb3BoWWMtaFJpckV3OWh1MDVTWHFLdFpHME5FZlRjOXZlWmlQY3kwYnU?oc=5" target="_blank">‘It’s been an expensive year’: Meituan counts cost of China’s delivery wars - Financial Times</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Meituan enters the U.S. market, but not via food delivery - The Low Down - Momentum Works 中资科技动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxOUGs2RzItcEFqT19BSG9TUWNaZmZHVl8xNVF4M3VCUzBYdHNaaHNMOEROdjVwYW00WC10akRxZmM3OGpkVmFpMzRIQzViNGxaMjBWdkozakYtUVBxYVlGRXVIRGx5N3JvZm1HRWF0MlZCTG5rcjl2S2lVNnZtU2NIU0VVOHZTVUV6NmpPeVRvNmpFU1k?oc=5" target="_blank">Meituan enters the U.S. market, but not via food delivery - The Low Down - Momentum Works</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="How a Chinese Brand Reshaped Hong Kong’s Food Delivery Scene - The New York Times 中资科技动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQM0hnYUJBbWs0NTllQ2MwM21vdmZxNllXb3ZBeUtSZlVQVDB2X0VWN0VDZVB4M05ITFU0SWwxN3pLamwxVEhKaXZ5NzV5cFRKM1VlcElWTHFlRHQyZnFZNWJiME9zYkZ6dmFPanlfSm4yWkh3MWY3ODZDZkhhNXdKQzJoUk44aTU0RUE?oc=5" target="_blank">How a Chinese Brand Reshaped Hong Kong’s Food Delivery Scene - The New York Times</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="中资"
+        data-type="other"
+        data-text="Meituan drives to Brazil in search of growth, only to crash into Chinese rival DiDi - thebambooworks.com 中资科技动态 中资 Meituan Meituan">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPNDlRQVp0czRYbTN2SUNQYWNWT3VFMlJiZ1ducEo5bHdZWGhQUk0zWlg0SWVhTXhWNF9RcTVMamdjRGI1c3lQUmhVb3NrS0lFOVFjVVVxZHlCTFNjbzF4Ukc4NHRYYnkzVGJReF9laDRqY3FvTVpMMDA5Zl9fLS1EYmwzaTJrbFhzYXdQbnVpMS05VUhwclVTa0VMZVpiOFJQajRGSlRaRzhKYjljWGhn?oc=5" target="_blank">Meituan drives to Brazil in search of growth, only to crash into Chinese rival DiDi - thebambooworks.com</a></h4>
+          <p>中资科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">中资出海</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Meituan</span>
+            <span class="small-tag">中资</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="other"
+        data-text="Kakao Bank targets Mongolia in next global push - The Korea Herald 亚太科技动态 亚太 Kakao Kakao">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE02eXpMRG9zQVo5Q3V6VzQyb0VkZDFBVm5TUjY2YkZOb0hlSkRKWUlISG9YUWVubE5TY09Sa01BbFg4LUw0RGR3ZER6V09ZOFFaR1ZrenBMOA?oc=5" target="_blank">Kakao Bank targets Mongolia in next global push - The Korea Herald</a></h4>
+          <p>亚太科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kakao</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="other"
+        data-text="Kakao Healthcare, Sanofi launch AI-driven RWE studies in Korea - koreabiomed.com 亚太科技动态 亚太 Kakao Kakao">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9rOUotZUdPbXR0TDlSU0tHc3FiTkMtNnFlYXloSTBqa1RfdVBoajdzbFFNQ05wTEE3WDZWdzVLb2Z0QjYtbmJ0Z1c1Z1AtREkxZzhlRDExclgwTjJLQi04MkJXRTZWTHdLb0w1NkNR0gFyQVVfeXFMT1dDcG5oc2YyVnlRbE80aUdkaGlMcF9tamcxY1IzWkExeVhrdTZILU5OeTBPWE01djlwdC1Pa1dRdG5JU1Q3bTVvbTdNRmRFbWlrZmxIQlUtNjlNSkVZcHVBN19meHAxUlJseGlEdG14SkhB?oc=5" target="_blank">Kakao Healthcare, Sanofi launch AI-driven RWE studies in Korea - koreabiomed.com</a></h4>
+          <p>亚太科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kakao</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="other"
+        data-text="Executive Turntable: Kakao Entertainment Shakes Up Leadership Structure — Plus, Moves at Warner Records Nashville - billboard.com Executive Turntable有新动态 亚太 Kakao Kakao">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNUUFzWlR2UVhROVNtWllZcHhTbExnVE5UdF91QTF5SWpBamhhVUlQdEJYVEZoeXlYQXRQS0I0S1c3SDdZV2hyWUZKNF9PNm90TWloTFM4SEowN0pkbHR6V203X0Y2aU9waWRzLVcxaXZXV0NFWExWcTVRR2RwRE9wM1phS2JzMXFHT19qOF9VbU53QVRC?oc=5" target="_blank">Executive Turntable: Kakao Entertainment Shakes Up Leadership Structure — Plus, Moves at Warner Records Nashville - billboard.com</a></h4>
+          <p>Executive Turntable有新动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kakao</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+      <article class="feed-item company-item"
+        data-filterable
+        data-region="亚太"
+        data-type="other"
+        data-text="South Korea’s Kakao Entertainment appoints JungHee Ko as Co-CEO alongside Joseph Chang in leadership restructure - Music Business Worldwide 亚太科技动态 亚太 Kakao Kakao">
+        <div class="feed-main">
+          <h4><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNU3VoVDY0eUgxaTh5LTRzdWw2VlZxd0c1T0pIQ2xFbHpzemJZbzhVekRpbVBaUFBFcXhLdzRVWmZVUFFvM3RTWUdjdjdBMTNCUUpiWmFQY182MFdseW14NDlqNXhpRFJGYlNkUF9yc2ZOM0F1ZkRuNWRucFVLbnpyeXZqSVB1enNKbVhwdS1OTEtzNGlSWVRydnFvM3FKemE4X0phcjVQaHdGWjBFaUtWbzlfSEhpbUJoNW45NWlxQWZXUTItSXkzQWFfVU9YSklkRWtKTA?oc=5" target="_blank">South Korea’s Kakao Entertainment appoints JungHee Ko as Co-CEO alongside Joseph Chang in leadership restructure - Music Business Worldwide</a></h4>
+          <p>亚太科技动态</p>
+        </div>
+        <div class="feed-side">
+          <span class="importance">背景补充</span>
+          <div class="feed-tags">
+            <span class="small-tag company-tag">Kakao</span>
+            <span class="small-tag">亚太</span>
+            <span class="small-tag">发布 2026-04-12</span>
+          </div>
+        </div>
+      </article>
+      
+    </div>
+    
+  </div>
+
+  
   <div class="tab-panel" id="tab-history">
     
     
+    <div class="history-day history-day-open">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        2026-04-11
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed">
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="funding"
+          data-text="Japan raises Rapidus support to $4b for chip plans 亚太地区芯片计划获大额资金支持，半导体产业链迎来发展机遇 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/japan-s-korea-business-groups-to-collaborate-on-ai-semiconductors" target="_blank">Japan raises Rapidus support to $4b for chip plans</a></h4>
+            <p>亚太地区芯片计划获大额资金支持，半导体产业链迎来发展机遇</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">资金流向</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="欧洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="NASA Artemis II splashes down in Pacific Ocean in ‘perfect’ landing for Moon mission 欧洲航天领域重大进展，航天科技发展对ICT技术有长期需求推动 欧洲 TechCrunch">
+          <div class="feed-main">
+            <h4><a href="https://techcrunch.com/2026/04/10/nasa-artemis-ii-landing-pacific-ocean-splash-down/" target="_blank">NASA Artemis II splashes down in Pacific Ocean in ‘perfect’ landing for Moon mission</a></h4>
+            <p>欧洲航天领域重大进展，航天科技发展对ICT技术有长期需求推动</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">背景补充</span>
+            <div class="feed-tags">
+              <span class="small-tag">欧洲</span>
+              <span class="small-tag">TechCrunch</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="欧洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="How to watch NASA’s Artemis II splash back down to Earth 欧洲航天领域公众对航天事件的关注，可能带动相关航天技术科普类ICT服务需求 欧洲 TechCrunch">
+          <div class="feed-main">
+            <h4><a href="https://techcrunch.com/2026/04/10/how-to-watch-nasa-artemis-ii-landing/" target="_blank">How to watch NASA’s Artemis II splash back down to Earth</a></h4>
+            <p>欧洲航天领域公众对航天事件的关注，可能带动相关航天技术科普类ICT服务需求</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">背景补充</span>
+            <div class="feed-tags">
+              <span class="small-tag">欧洲</span>
+              <span class="small-tag">TechCrunch</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="欧洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="Battery recycler Ascend Elements files for bankruptcy 欧洲电池回收行业资金链断裂，相关供应链企业需重新评估合作风险 欧洲 TechCrunch">
+          <div class="feed-main">
+            <h4><a href="https://techcrunch.com/2026/04/10/battery-recycler-ascend-elements-files-for-bankruptcy/" target="_blank">Battery recycler Ascend Elements files for bankruptcy</a></h4>
+            <p>欧洲电池回收行业资金链断裂，相关供应链企业需重新评估合作风险</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">警示信号</span>
+            <div class="feed-tags">
+              <span class="small-tag">欧洲</span>
+              <span class="small-tag">TechCrunch</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="欧洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="France to ditch Windows for Linux to reduce reliance on US tech 欧洲国家政府层面的技术选型变化，Linux相关企业迎来合作机会，Windows相关企业面临业务调整 欧洲 TechCrunch">
+          <div class="feed-main">
+            <h4><a href="https://techcrunch.com/2026/04/10/france-to-ditch-windows-for-linux-to-reduce-reliance-on-us-tech/" target="_blank">France to ditch Windows for Linux to reduce reliance on US tech</a></h4>
+            <p>欧洲国家政府层面的技术选型变化，Linux相关企业迎来合作机会，Windows相关企业面临业务调整</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">合作机会</span>
+            <div class="feed-tags">
+              <span class="small-tag">欧洲</span>
+              <span class="small-tag">TechCrunch</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Quick, we’ve got quantum on the list 亚太地区量子领域相关信息整理，为量子领域从业者提供背景参考 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/quick-weve-quantum-list" target="_blank">Quick, we’ve got quantum on the list</a></h4>
+            <p>亚太地区量子领域相关信息整理，为量子领域从业者提供背景参考</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">背景补充</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Meet the 20 top-funded startups and tech companies in Hong Kong 亚太地区香港初创公司和科技公司融资情况展示，资金流入这些公司 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/meet-20-topfunded-startups-tech-companies-hong-kong" target="_blank">Meet the 20 top-funded startups and tech companies in Hong Kong</a></h4>
+            <p>亚太地区香港初创公司和科技公司融资情况展示，资金流入这些公司</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">资金流向</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Singapore’s top-funded tech companies in the last decade 亚太地区新加坡科技行业过去十年融资情况，可了解行业资金流向和发展趋势 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/visual-story/singapores-topfunded-tech-companies-decade" target="_blank">Singapore’s top-funded tech companies in the last decade</a></h4>
+            <p>亚太地区新加坡科技行业过去十年融资情况，可了解行业资金流向和发展趋势</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">资金流向</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Mapping the startups setting the pace in Korea’s AI sector 亚太地区韩国人工智能行业发展情况，为AI从业者提供合作机会和市场动态 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/visual-story/mapping-koreas-leading-ai-startups" target="_blank">Mapping the startups setting the pace in Korea’s AI sector</a></h4>
+            <p>亚太地区韩国人工智能行业发展情况，为AI从业者提供合作机会和市场动态</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">合作机会</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="IBM pays $17m to resolve US DEI claims 亚太地区IBM应对企业社会责任问题，反映企业在合规方面的投入和态度 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/google-settles-50m-racial-bias-claims-affecting-4000-workers" target="_blank">IBM pays $17m to resolve US DEI claims</a></h4>
+            <p>亚太地区IBM应对企业社会责任问题，反映企业在合规方面的投入和态度</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">警示信号</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="UK taps defense startup Cambridge Aerospace for interceptors 亚太地区英国国防行业采购新动态，涉及国防科技合作机会 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/defense-tech-firm-anduril-uaes-edge-build-ai-drones-abu-dhabi" target="_blank">UK taps defense startup Cambridge Aerospace for interceptors</a></h4>
+            <p>亚太地区英国国防行业采购新动态，涉及国防科技合作机会</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">合作机会</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Accenture invests in US AI coding platform Replit 亚太地区科技投资机构与美国AI编码平台合作，体现AI技术领域的资金流向和合作趋势 亚太 Tech in Asia">
+          <div class="feed-main">
+            <h4><a href="https://www.techinasia.com/us-ai-coding-startup-replit-hits-3b-valuation-with-250m-funding" target="_blank">Accenture invests in US AI coding platform Replit</a></h4>
+            <p>亚太地区科技投资机构与美国AI编码平台合作，体现AI技术领域的资金流向和合作趋势</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">资金流向</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">Tech in Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="SG waste management firm Blue Planet's losses widen 3.5x in 2025 亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入 亚太 DealStreetAsia">
+          <div class="feed-main">
+            <h4><a href="https://dealstreetasia.com/stories/blue-planets-earnings-2025-478766/" target="_blank">SG waste management firm Blue Planet's losses widen 3.5x in 2025</a></h4>
+            <p>亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">警示信号</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">DealStreetAsia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="SG waste management firm Blue Planet's losses widen 3.5x in 2025 亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入 亚太 DealStreetAsia">
+          <div class="feed-main">
+            <h4><a href="https://www.dealstreetasia.com/section/climate-and-impact/" target="_blank">SG waste management firm Blue Planet's losses widen 3.5x in 2025</a></h4>
+            <p>亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">警示信号</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">DealStreetAsia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Peter Thiel-backed Cognition eyes Japan, Singapore offices in Asia push 亚太地区AI行业战略扩张，带来新的合作机会，可能与当地企业合作拓展业务 亚太 DealStreetAsia">
+          <div class="feed-main">
+            <h4><a href="https://dealstreetasia.com/stories/cognition-pushes-into-asia-478851/" target="_blank">Peter Thiel-backed Cognition eyes Japan, Singapore offices in Asia push</a></h4>
+            <p>亚太地区AI行业战略扩张，带来新的合作机会，可能与当地企业合作拓展业务</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">合作机会</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">DealStreetAsia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="中东"
+          data-chinese="0"
+          data-type="other"
+          data-text="MENA startup funding falls to $48.3 million in March 2026 中东初创公司融资规模下降，资金流入减少，可能影响相关科技企业发展和创新 中东 WAMDA">
+          <div class="feed-main">
+            <h4><a href="http://wamda.com/2026/04/mena-startup-funding-drops-48-3-million-march-2026" target="_blank">MENA startup funding falls to $48.3 million in March 2026</a></h4>
+            <p>中东初创公司融资规模下降，资金流入减少，可能影响相关科技企业发展和创新</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">资金流向</span>
+            <div class="feed-tags">
+              <span class="small-tag">中东</span>
+              <span class="small-tag">WAMDA</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="中东"
+          data-chinese="0"
+          data-type="other"
+          data-text="The Middle East’s butterfly effect on the global economy 中东地区经济对全球经济产生影响，可能带来贸易、投资、技术等方面的变化 中东 WAMDA">
+          <div class="feed-main">
+            <h4><a href="http://wamda.com/2026/04/middle-east-butterfly-effect-global-economy" target="_blank">The Middle East’s butterfly effect on the global economy</a></h4>
+            <p>中东地区经济对全球经济产生影响，可能带来贸易、投资、技术等方面的变化</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">背景补充</span>
+            <div class="feed-tags">
+              <span class="small-tag">中东</span>
+              <span class="small-tag">WAMDA</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="非洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="Nigeria’s NIGCOMSAT says it earned $1.6 million amid satellite dispute 非洲卫星公司在争端中实现盈利，反映其经营能力和市场地位 非洲 TechCabal">
+          <div class="feed-main">
+            <h4><a href="https://techcabal.com/2026/04/10/nigcomsat-reports-revenue-2025/" target="_blank">Nigeria’s NIGCOMSAT says it earned $1.6 million amid satellite dispute</a></h4>
+            <p>非洲卫星公司在争端中实现盈利，反映其经营能力和市场地位</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">背景补充</span>
+            <div class="feed-tags">
+              <span class="small-tag">非洲</span>
+              <span class="small-tag">TechCabal</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="非洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="Nomba and Globus Bank say they built a loan book with sub-1% defaults 非洲银行贷款质量良好，可能吸引更多资金流入，促进金融合作 非洲 TechCabal">
+          <div class="feed-main">
+            <h4><a href="https://techcabal.com/2026/04/10/nomba-and-globus-bank-sub-1-defaults/" target="_blank">Nomba and Globus Bank say they built a loan book with sub-1% defaults</a></h4>
+            <p>非洲银行贷款质量良好，可能吸引更多资金流入，促进金融合作</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">背景补充</span>
+            <div class="feed-tags">
+              <span class="small-tag">非洲</span>
+              <span class="small-tag">TechCabal</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="非洲"
+          data-chinese="0"
+          data-type="other"
+          data-text="Quick Fire 🔥 with Chukwuemeka Mbachu 未提及关键信息，无法从ICT视角判断重要性 非洲 TechCabal">
+          <div class="feed-main">
+            <h4><a href="https://techcabal.com/2026/04/10/quick-fire-with-chuckwuemeka-mbachu/" target="_blank">Quick Fire 🔥 with Chukwuemeka Mbachu</a></h4>
+            <p>未提及关键信息，无法从ICT视角判断重要性</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance"></span>
+            <div class="feed-tags">
+              <span class="small-tag">非洲</span>
+              <span class="small-tag">TechCabal</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="feed-item"
+          data-filterable
+          data-region="亚太"
+          data-chinese="0"
+          data-type="other"
+          data-text="Minor Hotels builds data and AI platform with Google Cloud 亚太地区酒店行业与科技企业合作，推动酒店行业数字化转型 亚太 TechWire Asia">
+          <div class="feed-main">
+            <h4><a href="https://techwireasia.com/2026/04/minor-hotels-builds-data-and-ai-platform-with-google-cloud/" target="_blank">Minor Hotels builds data and AI platform with Google Cloud</a></h4>
+            <p>亚太地区酒店行业与科技企业合作，推动酒店行业数字化转型</p>
+          </div>
+          <div class="feed-side">
+            <span class="importance">合作机会</span>
+            <div class="feed-tags">
+              <span class="small-tag">亚太</span>
+              <span class="small-tag">TechWire Asia</span>
+              <span class="small-tag">发布 2026-04-11</span>
+            </div>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+
+    
+    
     <div class="history-day">
-      <div class="history-date">2026-04-10</div>
-      <div class="feed">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        2026-04-10
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed" style="display:none;">
         
         <article class="feed-item"
           data-filterable
@@ -997,18 +3010,21 @@ body {
     </div>
     
     <div class="history-day">
-      <div class="history-date">2026-04-09</div>
-      <div class="feed">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        2026-04-09
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed" style="display:none;">
         
         <article class="feed-item"
           data-filterable
           data-region="欧洲"
           data-chinese="0"
           data-type="ma"
-          data-text="Canva doubles down on AI and marketing automation with Simtheory, Ortto acquisitions 欧洲科技公司并购/收购 欧洲 TechCrunch">
+          data-text="Canva doubles down on AI and marketing automation with Simtheory, Ortto acquisitions 欧洲科技公司并购 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/08/canva-doubles-down-on-ai-and-marketing-automation-with-simtheory-ortto-acquisitions/" target="_blank">Canva doubles down on AI and marketing automation with Simtheory, Ortto acquisitions</a></h4>
-            <p>欧洲科技公司并购/收购</p>
+            <p>欧洲科技公司并购</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1025,10 +3041,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Sybol raises €1M+ to advance its corporate digital identity wallet 欧洲科技公司融资事件 欧洲 Tech.eu">
+          data-text="Sybol raises €1M+ to advance its corporate digital identity wallet Sybol获$1M融资 欧洲 Tech.eu">
           <div class="feed-main">
             <h4><a href="https://tech.eu/2026/04/09/sybol-raises-eur1m-to-advance-its-corporate-digital-identity-wallet/" target="_blank">Sybol raises €1M+ to advance its corporate digital identity wallet</a></h4>
-            <p>欧洲科技公司融资事件</p>
+            <p>Sybol获$1M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1045,10 +3061,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="earnings"
-          data-text="Vinted’s revenues top €1BN but profits slide 欧洲科技公司财报披露 欧洲 Tech.eu">
+          data-text="Vinted’s revenues top €1BN but profits slide 欧洲科技公司财报 欧洲 Tech.eu">
           <div class="feed-main">
             <h4><a href="https://tech.eu/2026/04/09/vinted-s-revenues-top-1bn-but-profits-slide/" target="_blank">Vinted’s revenues top €1BN but profits slide</a></h4>
-            <p>欧洲科技公司财报披露</p>
+            <p>欧洲科技公司财报</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1065,10 +3081,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Plume raises €3.3M to cut years from renewable energy development timelines 欧洲科技公司融资事件 欧洲 Tech.eu">
+          data-text="Plume raises €3.3M to cut years from renewable energy development timelines Plume获$3M融资 欧洲 Tech.eu">
           <div class="feed-main">
             <h4><a href="https://tech.eu/2026/04/09/plume-raises-3-3m-to-cut-years-from-renewable-energy-development-timelines/" target="_blank">Plume raises €3.3M to cut years from renewable energy development timelines</a></h4>
-            <p>欧洲科技公司融资事件</p>
+            <p>Plume获$3M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1085,10 +3101,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="strategy"
-          data-text="Revolut rolls out first AI assistant to UK customers 欧洲科技公司战略动态 欧洲 Tech.eu">
+          data-text="Revolut rolls out first AI assistant to UK customers 欧洲科技公司战略 欧洲 Tech.eu">
           <div class="feed-main">
             <h4><a href="https://tech.eu/2026/04/09/revolut-wins-full-uk-banking-licence-as-finally-exits-mobilisation-phase/" target="_blank">Revolut rolls out first AI assistant to UK customers</a></h4>
-            <p>欧洲科技公司战略动态</p>
+            <p>欧洲科技公司战略</p>
           </div>
           <div class="feed-side">
             <span class="importance">合作机会</span>
@@ -1105,10 +3121,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Handhold raises €3M to replace fragmented software buying journeys with AI account managers 欧洲科技公司融资事件 欧洲 Tech.eu">
+          data-text="Handhold raises €3M to replace fragmented software buying journeys with AI account managers Handhold获$3M融资 欧洲 Tech.eu">
           <div class="feed-main">
             <h4><a href="https://tech.eu/2026/04/08/handhold-raises-eur3m-to-replace-fragmented-software-buying-journeys-with-ai-account-managers/" target="_blank">Handhold raises €3M to replace fragmented software buying journeys with AI account managers</a></h4>
-            <p>欧洲科技公司融资事件</p>
+            <p>Handhold获$3M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1125,10 +3141,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="strategy"
-          data-text="Verne launches Europe’s first commercial robotaxi service in Zagreb 欧洲科技公司战略动态 欧洲 Tech.eu">
+          data-text="Verne launches Europe’s first commercial robotaxi service in Zagreb 欧洲科技公司战略 欧洲 Tech.eu">
           <div class="feed-main">
             <h4><a href="https://tech.eu/2026/04/08/verne-launches-europes-first-commercial-robotaxi-service-in-zagreb/" target="_blank">Verne launches Europe’s first commercial robotaxi service in Zagreb</a></h4>
-            <p>欧洲科技公司战略动态</p>
+            <p>欧洲科技公司战略</p>
           </div>
           <div class="feed-side">
             <span class="importance">合作机会</span>
@@ -1145,10 +3161,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="ma"
-          data-text="Canva acquires Simtheory and Ortto in a twin deal aimed at turning a design tool into an end-to-end work platform 欧洲科技公司并购/收购 欧洲 The Next Web">
+          data-text="Canva acquires Simtheory and Ortto in a twin deal aimed at turning a design tool into an end-to-end work platform Canva达成并购交易 欧洲 The Next Web">
           <div class="feed-main">
             <h4><a href="https://thenextweb.com/news/canva-acquires-simtheory-ortto-agentic-ai-marketing" target="_blank">Canva acquires Simtheory and Ortto in a twin deal aimed at turning a design tool into an end-to-end work platform</a></h4>
-            <p>欧洲科技公司并购/收购</p>
+            <p>Canva达成并购交易</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1165,10 +3181,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="earnings"
-          data-text="Mamaearth parent Honasa sees over 20% Q4 revenue growth 亚太科技公司财报披露 亚太 Tech in Asia">
+          data-text="Mamaearth parent Honasa sees over 20% Q4 revenue growth 亚太科技公司财报 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/sg-d2c-brand-stryv-acquires-water-purifier-brand-sterra" target="_blank">Mamaearth parent Honasa sees over 20% Q4 revenue growth</a></h4>
-            <p>亚太科技公司财报披露</p>
+            <p>亚太科技公司财报</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1185,10 +3201,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="earnings"
-          data-text="Indian SaaS firm Zoho revenue rises 17.7%, profit slips to $344m 亚太科技公司财报披露 亚太 Tech in Asia">
+          data-text="Indian SaaS firm Zoho revenue rises 17.7%, profit slips to $344m Indian SaaS firm发布财报 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/saaspocalypse-survives" target="_blank">Indian SaaS firm Zoho revenue rises 17.7%, profit slips to $344m</a></h4>
-            <p>亚太科技公司财报披露</p>
+            <p>Indian SaaS firm发布财报</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1205,10 +3221,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="funding"
-          data-text="S Korean chip firm Panmnesia secures $10m AI data center R&D project 亚太科技公司融资事件 亚太 Tech in Asia">
+          data-text="S Korean chip firm Panmnesia secures $10m AI data center R&D project S Korean chip firm Panmnesia获$10M融资 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/peak-xv-leads-15m-series-a-in-indian-startup-c2i" target="_blank">S Korean chip firm Panmnesia secures $10m AI data center R&D project</a></h4>
-            <p>亚太科技公司融资事件</p>
+            <p>S Korean chip firm Panmnesia获$10M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1225,10 +3241,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="strategy"
-          data-text="Amperity expands to Australian AWS Regions and invests in local talent 亚太科技公司战略动态 亚太 TechWire Asia">
+          data-text="Amperity expands to Australian AWS Regions and invests in local talent 亚太科技公司战略 亚太 TechWire Asia">
           <div class="feed-main">
             <h4><a href="https://techwireasia.com/2026/04/amperity-expands-to-australian-aws-regions-and-invests-in-local-talent/" target="_blank">Amperity expands to Australian AWS Regions and invests in local talent</a></h4>
-            <p>亚太科技公司战略动态</p>
+            <p>亚太科技公司战略</p>
           </div>
           <div class="feed-side">
             <span class="importance">合作机会</span>
@@ -1245,10 +3261,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="ElGoat raises $266,000 seed to build skill-based football gaming platform 中东科技公司融资事件 中东 WAMDA">
+          data-text="ElGoat raises $266,000 seed to build skill-based football gaming platform ElGoat完成融资 中东 WAMDA">
           <div class="feed-main">
             <h4><a href="http://wamda.com/2026/04/elgoat-raises-266000-seed-build-skill-based-football-gaming-platform" target="_blank">ElGoat raises $266,000 seed to build skill-based football gaming platform</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>ElGoat完成融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1265,10 +3281,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Egypt’s Lucky secures $23 million Series B to expand in North Africa 中东科技公司融资事件 中东 WAMDA">
+          data-text="Egypt’s Lucky secures $23 million Series B to expand in North Africa 中东科技公司融资 中东 WAMDA">
           <div class="feed-main">
             <h4><a href="http://wamda.com/2026/04/egypt-lucky-secures-23-million-series-b-expand-north-africa" target="_blank">Egypt’s Lucky secures $23 million Series B to expand in North Africa</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1285,10 +3301,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Backed by Sanabil 500, Maison Safqa secures $620,000 pre-seed 中东科技公司融资事件 中东 WAMDA">
+          data-text="Backed by Sanabil 500, Maison Safqa secures $620,000 pre-seed Backed by Sanabil 500, Maison Safqa完成融资 中东 WAMDA">
           <div class="feed-main">
             <h4><a href="http://wamda.com/2026/04/backed-sanabil-500-maison-safqa-secures-620000-pre-seed" target="_blank">Backed by Sanabil 500, Maison Safqa secures $620,000 pre-seed</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>Backed by Sanabil 500, Maison Safqa完成融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1305,10 +3321,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Zsystems brings total funding to $2.7 million with latest Seed round 中东科技公司融资事件 中东 WAMDA">
+          data-text="Zsystems brings total funding to $2.7 million with latest Seed round 中东科技公司融资 中东 WAMDA">
           <div class="feed-main">
             <h4><a href="http://wamda.com/2026/04/zsystems-brings-total-funding-2-7-million-latest-seed-round" target="_blank">Zsystems brings total funding to $2.7 million with latest Seed round</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1325,10 +3341,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Saudi’s Orbii raises $3.6 million in Prosus-led seed to help banks and fintechs launch SME lending 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Saudi’s Orbii raises $3.6 million in Prosus-led seed to help banks and fintechs launch SME lending 中东科技公司融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/orbii-seed/?utm_source=rss&utm_medium=rss&utm_campaign=orbii-seed" target="_blank">Saudi’s Orbii raises $3.6 million in Prosus-led seed to help banks and fintechs launch SME lending</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1345,10 +3361,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Dubai’s WheelsOn raises $12.5 million in debt and equity for its deposit-free car rental platform 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Dubai’s WheelsOn raises $12.5 million in debt and equity for its deposit-free car rental platform 中东科技公司融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/wheelson-12-5-million/?utm_source=rss&utm_medium=rss&utm_campaign=wheelson-12-5-million" target="_blank">Dubai’s WheelsOn raises $12.5 million in debt and equity for its deposit-free car rental platform</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1365,10 +3381,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Saudi’s Intella raises $12.5 million in Prosus-led Series A to offer AI transcription for 25+ Arabic dialects 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Saudi’s Intella raises $12.5 million in Prosus-led Series A to offer AI transcription for 25+ Arabic dialects 中东科技公司融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/intella-series-a/?utm_source=rss&utm_medium=rss&utm_campaign=intella-series-a" target="_blank">Saudi’s Intella raises $12.5 million in Prosus-led Series A to offer AI transcription for 25+ Arabic dialects</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1385,10 +3401,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Munify raises $3 million to serve Egyptian diaspora abroad and freelancers at home with cross-border banking 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Munify raises $3 million to serve Egyptian diaspora abroad and freelancers at home with cross-border banking Munify获$3M融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/munify-3-million/?utm_source=rss&utm_medium=rss&utm_campaign=munify-3-million" target="_blank">Munify raises $3 million to serve Egyptian diaspora abroad and freelancers at home with cross-border banking</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>Munify获$3M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1405,10 +3421,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Saudi’s Zetta raises $12 million Series A to expand device subscription services for enterprises 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Saudi’s Zetta raises $12 million Series A to expand device subscription services for enterprises 中东科技公司融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/zetta-series-a/?utm_source=rss&utm_medium=rss&utm_campaign=zetta-series-a" target="_blank">Saudi’s Zetta raises $12 million Series A to expand device subscription services for enterprises</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1425,10 +3441,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Dubai’s Holo raises $22 million Series A to expand digital mortgage platform across GCC 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Dubai’s Holo raises $22 million Series A to expand digital mortgage platform across GCC 中东科技公司融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/holo-series-a/?utm_source=rss&utm_medium=rss&utm_campaign=holo-series-a" target="_blank">Dubai’s Holo raises $22 million Series A to expand digital mortgage platform across GCC</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>中东科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1445,10 +3461,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="funding"
-          data-text="Saudi vacation rental platform Gathern raises $72 million at a valuation of over $266 million, eyes IPO 中东科技公司融资事件 中东 MENAbytes">
+          data-text="Saudi vacation rental platform Gathern raises $72 million at a valuation of over $266 million, eyes IPO Saudi vacation rental platform Gathern获$72M融资 中东 MENAbytes">
           <div class="feed-main">
             <h4><a href="https://www.menabytes.com/gathern-series-b/?utm_source=rss&utm_medium=rss&utm_campaign=gathern-series-b" target="_blank">Saudi vacation rental platform Gathern raises $72 million at a valuation of over $266 million, eyes IPO</a></h4>
-            <p>中东科技公司融资事件</p>
+            <p>Saudi vacation rental platform Gathern获$72M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1465,10 +3481,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="strategy"
-          data-text="Zazu taps Visa to launch online business accounts in Morocco 非洲科技公司战略动态 非洲 TechCabal">
+          data-text="Zazu taps Visa to launch online business accounts in Morocco 非洲科技公司战略 非洲 TechCabal">
           <div class="feed-main">
             <h4><a href="https://techcabal.com/2026/04/08/zazu-taps-visa-to-launch-online-business-accounts-in-morocco/" target="_blank">Zazu taps Visa to launch online business accounts in Morocco</a></h4>
-            <p>非洲科技公司战略动态</p>
+            <p>非洲科技公司战略</p>
           </div>
           <div class="feed-side">
             <span class="importance">合作机会</span>
@@ -1485,10 +3501,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="ma"
-          data-text="GSH to acquire majority stake in Uganda’s AKIBA to deepen tokenisation push 非洲科技公司并购/收购 非洲 TechCabal">
+          data-text="GSH to acquire majority stake in Uganda’s AKIBA to deepen tokenisation push GSH to达成并购交易 非洲 TechCabal">
           <div class="feed-main">
             <h4><a href="https://techcabal.com/2026/04/08/global-settlement-holdings-to-acquire-majority-stake-in-akiba/" target="_blank">GSH to acquire majority stake in Uganda’s AKIBA to deepen tokenisation push</a></h4>
-            <p>非洲科技公司并购/收购</p>
+            <p>GSH to达成并购交易</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1505,10 +3521,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="strategy"
-          data-text="Madica backs three startups, launches fundraising guide for first-time founders 非洲科技公司战略动态 非洲 Techpoint">
+          data-text="Madica backs three startups, launches fundraising guide for first-time founders 非洲科技公司战略 非洲 Techpoint">
           <div class="feed-main">
             <h4><a href="https://techpoint.africa/news/madica-backs-three-startups-launches-guide/" target="_blank">Madica backs three startups, launches fundraising guide for first-time founders</a></h4>
-            <p>非洲科技公司战略动态</p>
+            <p>非洲科技公司战略</p>
           </div>
           <div class="feed-side">
             <span class="importance">合作机会</span>
@@ -1525,10 +3541,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="funding"
-          data-text="CertifID Raises $47.5M To Strengthen Real Estate Fraud Protection 非洲科技公司融资事件 非洲 Ventureburn">
+          data-text="CertifID Raises $47.5M To Strengthen Real Estate Fraud Protection CertifID获$48M融资 非洲 Ventureburn">
           <div class="feed-main">
             <h4><a href="https://ventureburn.com/certifid-raises-47-5m/" target="_blank">CertifID Raises $47.5M To Strengthen Real Estate Fraud Protection</a></h4>
-            <p>非洲科技公司融资事件</p>
+            <p>CertifID获$48M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1545,10 +3561,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Pharos Raises $44M to Expand Its On-Chain Economy 非洲科技公司融资事件 非洲 Ventureburn">
+          data-text="Pharos Raises $44M to Expand Its On-Chain Economy Pharos获$44M融资 非洲 Ventureburn">
           <div class="feed-main">
             <h4><a href="https://ventureburn.com/pharos-raises-44m-to-expand-its-on-chain-economy/" target="_blank">Pharos Raises $44M to Expand Its On-Chain Economy</a></h4>
-            <p>非洲科技公司融资事件</p>
+            <p>Pharos获$44M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1565,10 +3581,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Starfish Space Raises $100M to Expand Satellite Servicing Missions 非洲科技公司融资事件 非洲 Ventureburn">
+          data-text="Starfish Space Raises $100M to Expand Satellite Servicing Missions Starfish Space获$100M融资 非洲 Ventureburn">
           <div class="feed-main">
             <h4><a href="https://ventureburn.com/starfish-space-raises-100m-to-expand-satellite-servicing-missions/" target="_blank">Starfish Space Raises $100M to Expand Satellite Servicing Missions</a></h4>
-            <p>非洲科技公司融资事件</p>
+            <p>Starfish Space获$100M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1585,10 +3601,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Livid Raises $10M to Build an Ad-Free Video Hosting Alternative 非洲科技公司融资事件 非洲 Ventureburn">
+          data-text="Livid Raises $10M to Build an Ad-Free Video Hosting Alternative Livid获$10M融资 非洲 Ventureburn">
           <div class="feed-main">
             <h4><a href="https://ventureburn.com/livid-raises-10m-to-build-an-ad-free-video-hosting-alternative/" target="_blank">Livid Raises $10M to Build an Ad-Free Video Hosting Alternative</a></h4>
-            <p>非洲科技公司融资事件</p>
+            <p>Livid获$10M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1605,10 +3621,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Jeito Capital Raises $1.2B to Drive European Biopharma Growth 非洲科技公司融资事件 非洲 Ventureburn">
+          data-text="Jeito Capital Raises $1.2B to Drive European Biopharma Growth Jeito Capital获$1B融资 非洲 Ventureburn">
           <div class="feed-main">
             <h4><a href="https://ventureburn.com/jeito-capital-1-2b/" target="_blank">Jeito Capital Raises $1.2B to Drive European Biopharma Growth</a></h4>
-            <p>非洲科技公司融资事件</p>
+            <p>Jeito Capital获$1B融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1625,10 +3641,10 @@ body {
           data-region="非洲"
           data-chinese="0"
           data-type="funding"
-          data-text="Sidewinder Therapeutics Raises $137 Million to Advance Bispecific ADCs 非洲科技公司融资事件 非洲 Ventureburn">
+          data-text="Sidewinder Therapeutics Raises $137 Million to Advance Bispecific ADCs Sidewinder Therapeutics获$137M融资 非洲 Ventureburn">
           <div class="feed-main">
             <h4><a href="https://ventureburn.com/sidewinder-therapeutics-137m/" target="_blank">Sidewinder Therapeutics Raises $137 Million to Advance Bispecific ADCs</a></h4>
-            <p>非洲科技公司融资事件</p>
+            <p>Sidewinder Therapeutics获$137M融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
@@ -1645,10 +3661,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="WireGuard VPN developer can’t ship software updates after Microsoft locks account 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="WireGuard VPN developer can’t ship software updates after Microsoft locks account 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/08/wireguard-vpn-developer-cant-ship-software-updates-after-microsoft-locks-account/" target="_blank">WireGuard VPN developer can’t ship software updates after Microsoft locks account</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1665,10 +3681,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="A self-driving car in Texas hit and killed a mother duck, sparking neighborhood outrage 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="A self-driving car in Texas hit and killed a mother duck, sparking neighborhood outrage 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/08/avride-self-driving-car-austin-kills-duck-mueller/" target="_blank">A self-driving car in Texas hit and killed a mother duck, sparking neighborhood outrage</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1685,10 +3701,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Poke makes using AI agents as easy as sending a text 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Poke makes using AI agents as easy as sending a text 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/08/poke-makes-ai-agents-as-easy-as-sending-a-text/" target="_blank">Poke makes using AI agents as easy as sending a text</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1705,10 +3721,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Amazon to end support for older Kindle devices 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Amazon to end support for older Kindle devices 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/08/amazon-to-end-support-for-older-kindle-devices-2012/" target="_blank">Amazon to end support for older Kindle devices</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1725,10 +3741,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Meet the 10 top-funded startups and tech companies in Thailand 亚太科技行业动态 亚太 Tech in Asia">
+          data-text="Meet the 10 top-funded startups and tech companies in Thailand 亚太科技动态 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/meet-10-topfunded-startups-tech-companies-thailand" target="_blank">Meet the 10 top-funded startups and tech companies in Thailand</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1745,10 +3761,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Bithumb seeks bitcoin freeze after payout error sell-off 亚太科技行业动态 亚太 Tech in Asia">
+          data-text="Bithumb seeks bitcoin freeze after payout error sell-off 亚太科技动态 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/uk-govt-plans-to-monetize-seized-cryptocurrency-worth-billions" target="_blank">Bithumb seeks bitcoin freeze after payout error sell-off</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1765,10 +3781,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="LG unveils multimodal AI model Exaone 4.5 亚太科技行业动态 亚太 Tech in Asia">
+          data-text="LG unveils multimodal AI model Exaone 4.5 亚太科技动态 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/ai-chip-firm-rebellions-receives-samsung-backing-200m" target="_blank">LG unveils multimodal AI model Exaone 4.5</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1785,10 +3801,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Goldman Sachs-backed taxi app Go Inc plans Japan IPO 亚太科技行业动态 亚太 Tech in Asia">
+          data-text="Goldman Sachs-backed taxi app Go Inc plans Japan IPO 亚太科技动态 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/taiwan-regulator-approves-ubers-acquisition-crown-taxi" target="_blank">Goldman Sachs-backed taxi app Go Inc plans Japan IPO</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1805,10 +3821,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Why Google moved fast on AI in Search but held back on chat 亚太科技行业动态 亚太 Tech in Asia">
+          data-text="Why Google moved fast on AI in Search but held back on chat 亚太科技动态 亚太 Tech in Asia">
           <div class="feed-main">
             <h4><a href="https://www.techinasia.com/why-google-moved-fast-on-ai-in-search-but-held-back-on-chat" target="_blank">Why Google moved fast on AI in Search but held back on chat</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1825,10 +3841,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Singapore’s BIOBOT Surgical secures S$10m, ClavystBio joins cap table 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Singapore’s BIOBOT Surgical secures S$10m, ClavystBio joins cap table 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/biobot-surgical-clavystbio-478643/" target="_blank">Singapore’s BIOBOT Surgical secures S$10m, ClavystBio joins cap table</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1845,10 +3861,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Singapore’s BIOBOT Surgical secures S$10m, ClavystBio joins cap table 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Singapore’s BIOBOT Surgical secures S$10m, ClavystBio joins cap table 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://www.dealstreetasia.com/section/deal-investment/" target="_blank">Singapore’s BIOBOT Surgical secures S$10m, ClavystBio joins cap table</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1865,10 +3881,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Partners Group plans full exit from HK-listed Green Tea Group 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Partners Group plans full exit from HK-listed Green Tea Group 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/partners-group-exit-green-tea-group-478700/" target="_blank">Partners Group plans full exit from HK-listed Green Tea Group</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1885,10 +3901,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Dutch lender FMO backs India's Aye Finance with $15m investment 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Dutch lender FMO backs India's Aye Finance with $15m investment 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/dutch-fmo-aye-finance-478523/" target="_blank">Dutch lender FMO backs India's Aye Finance with $15m investment</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1905,10 +3921,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="other"
-          data-text="Propeller brings five MENA deeptech startups to Silicon Valley with Kernel Camp 中东科技行业动态 中东 WAMDA">
+          data-text="Propeller brings five MENA deeptech startups to Silicon Valley with Kernel Camp 中东科技动态 中东 WAMDA">
           <div class="feed-main">
             <h4><a href="http://wamda.com/2026/04/propeller-brings-mena-deeptech-startups-silicon-valley-kernel-camp" target="_blank">Propeller brings five MENA deeptech startups to Silicon Valley with Kernel Camp</a></h4>
-            <p>中东科技行业动态</p>
+            <p>中东科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1925,10 +3941,10 @@ body {
           data-region="中东"
           data-chinese="0"
           data-type="other"
-          data-text="Aramco Ventures backs Via Separations in $36 million round 中东科技行业动态 中东 WAMDA">
+          data-text="Aramco Ventures backs Via Separations in $36 million round 中东科技动态 中东 WAMDA">
           <div class="feed-main">
             <h4><a href="http://wamda.com/2026/04/aramco-ventures-backs-separations-36-million-round" target="_blank">Aramco Ventures backs Via Separations in $36 million round</a></h4>
-            <p>中东科技行业动态</p>
+            <p>中东科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -1945,10 +3961,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Ex-Tesla engineer’s startup taps Pronto to help automate a copper mine 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Ex-Tesla engineer’s startup taps Pronto to help automate a copper mine 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/09/mariana-minerals-taps-pronto-to-help-automate-a-copper-mine/" target="_blank">Ex-Tesla engineer’s startup taps Pronto to help automate a copper mine</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2025,10 +4041,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Radify’s sci-fi plasma reactors could break China’s dominance of rare earth elements 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Radify’s sci-fi plasma reactors could break China’s dominance of rare earth elements 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/09/radifys-sci-fi-plasma-reactors-could-break-chinas-dominance-of-rare-earth-elements/" target="_blank">Radify’s sci-fi plasma reactors could break China’s dominance of rare earth elements</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2045,10 +4061,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Instagram expands its movie inspired content restrictions for teens internationally 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Instagram expands its movie inspired content restrictions for teens internationally 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/09/instagram-expands-its-movie-inspired-content-restriction-for-teens-internationally/" target="_blank">Instagram expands its movie inspired content restrictions for teens internationally</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2105,10 +4121,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Final 2 days to save up to $500 on your TechCrunch Disrupt 2026 ticket 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Final 2 days to save up to $500 on your TechCrunch Disrupt 2026 ticket 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/09/final-2-days-to-save-up-to-500-on-your-techcrunch-disrupt-2026-ticket/" target="_blank">Final 2 days to save up to $500 on your TechCrunch Disrupt 2026 ticket</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2125,10 +4141,10 @@ body {
           data-region="欧洲"
           data-chinese="0"
           data-type="other"
-          data-text="Spotify now lets everyone turn off videos in its app 欧洲科技行业动态 欧洲 TechCrunch">
+          data-text="Spotify now lets everyone turn off videos in its app 欧洲科技动态 欧洲 TechCrunch">
           <div class="feed-main">
             <h4><a href="https://techcrunch.com/2026/04/09/spotify-now-lets-everyone-turn-off-all-videos-in-its-app/" target="_blank">Spotify now lets everyone turn off videos in its app</a></h4>
-            <p>欧洲科技行业动态</p>
+            <p>欧洲科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2444,18 +4460,21 @@ body {
     </div>
     
     <div class="history-day">
-      <div class="history-date">2026-04-08</div>
-      <div class="feed">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        2026-04-08
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed" style="display:none;">
         
         <article class="feed-item"
           data-filterable
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Grab to lean on scale, AI to offset rising fuel costs, says CEO Anthony Tan 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Grab to lean on scale, AI to offset rising fuel costs, says CEO Anthony Tan 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/grab-fuel-costs-ceo-anthony-tan-478385/" target="_blank">Grab to lean on scale, AI to offset rising fuel costs, says CEO Anthony Tan</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2472,10 +4491,10 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Grab to lean on scale, AI to offset rising fuel costs, says CEO Anthony Tan 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Grab to lean on scale, AI to offset rising fuel costs, says CEO Anthony Tan 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://www.dealstreetasia.com/section/interviews/" target="_blank">Grab to lean on scale, AI to offset rising fuel costs, says CEO Anthony Tan</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
@@ -2492,10 +4511,10 @@ body {
           data-region="亚太"
           data-chinese="1"
           data-type="other"
-          data-text="Tencent finds its edge amid China's rapid adoption of AI Agents 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Tencent finds its edge amid China's rapid adoption of AI Agents 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/tencent-ai-agents-478314/" target="_blank">Tencent finds its edge amid China's rapid adoption of AI Agents</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">中资出海</span>
@@ -2512,10 +4531,10 @@ body {
           data-region="亚太"
           data-chinese="1"
           data-type="other"
-          data-text="Agenda Reveal: 10 power-packed sessions on Asia PE opportunity 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Agenda Reveal: 10 power-packed sessions on Asia PE opportunity Agenda Reveal有新动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/blogs/agenda-reveal-10-power-packed-sessions-on-asia-pe-opportunity/" target="_blank">Agenda Reveal: 10 power-packed sessions on Asia PE opportunity</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>Agenda Reveal有新动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">中资出海</span>
@@ -2531,25 +4550,28 @@ body {
     </div>
     
     <div class="history-day">
-      <div class="history-date">2026-04-07</div>
-      <div class="feed">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        2026-04-07
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed" style="display:none;">
         
         <article class="feed-item"
           data-filterable
           data-region="亚太"
           data-chinese="0"
           data-type="funding"
-          data-text="Vietnam's MoMo weighs options including new investors at $2b+ valuation 亚太科技公司融资事件 亚太 DealStreetAsia">
+          data-text="Vietnam's MoMo weighs options including new investors at $2b+ valuation 亚太科技公司融资 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/momo-weighs-options-478163/" target="_blank">Vietnam's MoMo weighs options including new investors at $2b+ valuation</a></h4>
-            <p>亚太科技公司融资事件</p>
+            <p>亚太科技公司融资</p>
           </div>
           <div class="feed-side">
             <span class="importance">资金流向</span>
             <div class="feed-tags">
               <span class="small-tag">亚太</span>
               <span class="small-tag">DealStreetAsia</span>
-              <span class="small-tag">发布 2026-04-11</span>
+              <span class="small-tag">发布 2026-04-12</span>
             </div>
           </div>
         </article>
@@ -2559,17 +4581,17 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Emerging managers face extended fundraising timelines as DFIs turn selective 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Emerging managers face extended fundraising timelines as DFIs turn selective 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/emerging-managers-fundraising-478055/" target="_blank">Emerging managers face extended fundraising timelines as DFIs turn selective</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
             <div class="feed-tags">
               <span class="small-tag">亚太</span>
               <span class="small-tag">DealStreetAsia</span>
-              <span class="small-tag">发布 2026-04-11</span>
+              <span class="small-tag">发布 2026-04-12</span>
             </div>
           </div>
         </article>
@@ -2579,17 +4601,17 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="Emerging managers face extended fundraising timelines as DFIs turn selective 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="Emerging managers face extended fundraising timelines as DFIs turn selective 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://www.dealstreetasia.com/section/analysis/" target="_blank">Emerging managers face extended fundraising timelines as DFIs turn selective</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
             <div class="feed-tags">
               <span class="small-tag">亚太</span>
               <span class="small-tag">DealStreetAsia</span>
-              <span class="small-tag">发布 2026-04-11</span>
+              <span class="small-tag">发布 2026-04-12</span>
             </div>
           </div>
         </article>
@@ -2599,17 +4621,17 @@ body {
           data-region="亚太"
           data-chinese="0"
           data-type="other"
-          data-text="DALI’s largest shareholder tightens grip, and other updates 亚太科技行业动态 亚太 DealStreetAsia">
+          data-text="DALI’s largest shareholder tightens grip, and other updates 亚太科技动态 亚太 DealStreetAsia">
           <div class="feed-main">
             <h4><a href="https://dealstreetasia.com/stories/data-vantage-dali-other-updates-478075/" target="_blank">DALI’s largest shareholder tightens grip, and other updates</a></h4>
-            <p>亚太科技行业动态</p>
+            <p>亚太科技动态</p>
           </div>
           <div class="feed-side">
             <span class="importance">背景补充</span>
             <div class="feed-tags">
               <span class="small-tag">亚太</span>
               <span class="small-tag">DealStreetAsia</span>
-              <span class="small-tag">发布 2026-04-11</span>
+              <span class="small-tag">发布 2026-04-12</span>
             </div>
           </div>
         </article>
@@ -2618,8 +4640,11 @@ body {
     </div>
     
     <div class="history-day">
-      <div class="history-date">2026-04-04</div>
-      <div class="feed">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        2026-04-04
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed" style="display:none;">
         
         <article class="feed-item"
           data-filterable
@@ -2896,6 +4921,20 @@ function switchTab(name) {
   document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
   document.querySelector('.tab-btn[data-tab="'+name+'"]').classList.add('active');
   document.getElementById('tab-'+name).classList.add('active');
+}
+
+function toggleHistory(el) {
+  var day = el.parentElement;
+  var feed = day.querySelector('.history-feed');
+  if (!feed) return;
+  var isOpen = day.classList.contains('history-day-open');
+  if (isOpen) {
+    day.classList.remove('history-day-open');
+    feed.style.display = 'none';
+  } else {
+    day.classList.add('history-day-open');
+    feed.style.display = '';
+  }
 }
 
 var state = { region:'all', type:'all', q:'' };
