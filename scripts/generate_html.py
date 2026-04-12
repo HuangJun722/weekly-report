@@ -317,14 +317,30 @@ def enrich(event):
     region = event.get('region', '')
     title = event.get('title', '')
 
-    # 判断 reason 是否有效
+    # 判断 reason 是否有效（通用模板也算无效，必须重新生成）
     why = event.get('why_important', '')
     existing_reason = event.get('reason', '')
+    # 通用模板 reason 列表——这些是 AI 生成的烂 reason，必须重新生成
+    GENERIC_REASONS = {
+        '中东科技公司融资事件，金额待确认',
+        '中资科技动态', '亚太科技动态', '欧洲科技动态', '中东科技动态',
+        '非洲科技动态', '拉美科技动态',
+        '中资科技公司战略动态',
+        '中资科技公司财报披露',
+        '中资科技公司并购/收购',
+        '中资科技巨头持续增长，巩固行业地位，吸引更多合作资源',
+        '中资电商巨头海外拓展成功，为国际市场ICT合作带来新机遇',
+        '中资视频平台增长强劲提升行业影响力，吸引资金和合作关注',
+        '中资金融科技巨头战略布局，吸引资金流入，提升行业关注度',
+        '亚太地区出行平台拓展外卖业务版图，加强本地服务能力',
+    }
+    is_generic = existing_reason in GENERIC_REASONS
     reason_ok = (existing_reason
                  and len(existing_reason) >= 10
                  and '⚠️' not in existing_reason
                  and '待分析' not in existing_reason
-                 and existing_reason not in TRUNCATED_JUNK)
+                 and existing_reason not in TRUNCATED_JUNK
+                 and not is_generic)
     why_ok = why and len(why) >= 10 and why not in TRUNCATED_JUNK
 
     if why_ok:
@@ -600,7 +616,7 @@ def generate_html():
         main_date=main_date,
         company_events=company_events,
         company_list=company_list,
-        update_time=(datetime.now() + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M') + ' 北京时间',
+        update_time=main_date + ' 数据（每日02:00北京时间自动更新）',
     )
 
     os.makedirs('docs', exist_ok=True)
