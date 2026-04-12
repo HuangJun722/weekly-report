@@ -47,18 +47,43 @@ jobs:
       - name: Fetch and analyze news
         if: github.event_name != 'workflow_dispatch' || inputs.mode != 'html-only'
         run: |
-          RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
-            -H "Authorization: Bearer $DOUBAO_API_KEY" \
-            -H "Content-Type: application/json" \
-            -d '{"model":"ep-20260409223830-dnt5b","messages":[{"role":"user","content":"hi"}],"stream":false}')
-          HTTP_CODE=$(echo "$RESP" | tail -1)
-          BODY=$(echo "$RESP" | head -c 300)
-          if [ "$HTTP_CODE" = "200" ]; then
-            echo "✅ 豆包 API 可用"
+          # 预检：测试关键 RSS 信源在 GitHub Actions 中的可达性
+          echo "=== RSS 信源可达性预检 ==="
+          SOURCES=(
+            "https://techcrunch.com/feed/"
+            "https://tech.eu/feed/"
+            "https://www.techinasia.com/feed"
+            "https://wamda.com/feed/"
+          )
+          ACCESSIBLE=0
+          for src in "${SOURCES[@]}"; do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 8 "$src")
+            if [ "$CODE" = "200" ] || [ "$CODE" = "301" ] || [ "$CODE" = "302" ]; then
+              echo "✅ $CODE $src"
+              ACCESSIBLE=$((ACCESSIBLE+1))
+            else
+              echo "❌ $CODE $src"
+            fi
+          done
+          echo "可达: $ACCESSIBLE/${#SOURCES[@]}"
+          if [ $ACCESSIBLE -eq 0 ]; then
+            echo "⚠️  所有 RSS 信源不可达，跳过采集（可能有网络限制）"
+            echo '{}' > data/events.json
           else
-            echo "❌ 豆包 API 失败 (HTTP $HTTP_CODE): $BODY"
+            echo "=== 豆包 API 可用性检测 ==="
+            RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
+              -H "Authorization: Bearer $DOUBAO_API_KEY" \
+              -H "Content-Type: application/json" \
+              -d '{"model":"ep-20260409223830-dnt5b","messages":[{"role":"user","content":"hi"}],"stream":false}')
+            HTTP_CODE=$(echo "$RESP" | tail -1)
+            BODY=$(echo "$RESP" | head -c 300)
+            if [ "$HTTP_CODE" = "200" ]; then
+              echo "✅ 豆包 API 可用"
+            else
+              echo "❌ 豆包 API 失败 (HTTP $HTTP_CODE): $BODY"
+            fi
+            python scripts/fetch_news.py
           fi
-          python scripts/fetch_news.py
         env:
           DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
 
@@ -94,7 +119,7 @@ jobs:
             EVENT_COUNT=$(python -c "import json,sys;d=json.load(open('data/events.json'));print(len(d.get('$TODAY',[])))" 2>/dev/null || echo "0")
             echo "今日采集：$EVENT_COUNT 条"
           fi
-          git add data/ docs/ rss_test_results.md
+          git add data/ docs/
           if git diff --staged --quiet; then
             echo "没有变化，跳过提交"
           else
@@ -125,7 +150,25 @@ jobs:
     if: failure()
     runs-on: ubuntu-latest
     steps:
+      - name: 检查是否已有未关闭告警
+        id: check-issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toISOString().slice(0,10);
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: undefined,
+              per_page: 50
+            });
+            const existing = issues.find(i => i.title.includes('[自动告警]'));
+            console.log('::set-output name=has_issue::' + (existing ? 'true' : 'false'));
+            if (existing) console.log('已有未关闭告警: ' + existing.number);
+
       - name: 创建告警 Issue
+        if: steps.check-issue.outputs.has_issue != 'true'
         uses: actions/github-script@v7
         with:
           script: |
@@ -135,3 +178,4 @@ jobs:
               title: `[自动告警] 情报站更新失败 — ${new Date().toISOString().slice(0,10)}`,
               body: `工作流运行失败，请检查日志：https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
             })
+            console.log('已创建告警 Issue')

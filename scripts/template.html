@@ -199,8 +199,14 @@ body {
 }
 
 /* History */
-.history-day { margin-bottom: 24px; }
-.history-date { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke); }
+.history-day { margin-bottom: 20px; }
+.history-date {
+  font-size: 13px; font-weight: 600; color: var(--muted);
+  margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke);
+}
+.history-day-open .history-date { color: var(--accent-2); }
+.history-day-open .history-date::before { content: "▼ "; font-size: 10px; }
+.history-day:not(.history-day-open) .history-date::before { content: "▶ "; font-size: 10px; }
 
 /* Footer */
 .footer-note { text-align: center; margin-top: 24px; color: var(--muted); font-size: 12px; line-height: 1.65; }
@@ -348,11 +354,7 @@ body {
         data-filterable
         data-region="{{ ev.region }}"
         data-type="{{ ev.event_types|join(',') }}"
-        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name }} {{ ev.source }}">
-        data-filterable
-        data-region="{{ ev.region }}"
-        data-type="{{ ev.event_types|join(',') }}"
-        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
+        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name }}">
         <div class="feed-main">
           <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
           {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
@@ -376,11 +378,14 @@ body {
   {# ===== History Panel ===== #}
   <div class="tab-panel" id="tab-history">
     {% if history %}
-    {% for date_str, day_events in history %}
-    <div class="history-day">
-      <div class="history-date">{{ date_str }}</div>
-      <div class="feed">
-        {% for ev in day_events %}
+    {# 只展示最近一天，其他默认折叠 #}
+    <div class="history-day history-day-open">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        {{ history[0][0] }}
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed">
+        {% for ev in history[0][1] %}
         <article class="feed-item"
           data-filterable
           data-region="{{ ev.region }}"
@@ -389,7 +394,39 @@ body {
           data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
           <div class="feed-main">
             <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-            {% if ev.reason %}<p>{{ ev.reason[:60] }}</p>{% endif %}
+            {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
+          </div>
+          <div class="feed-side">
+            <span class="importance">{{ ev.insight_label }}</span>
+            <div class="feed-tags">
+              <span class="small-tag">{{ ev.region }}</span>
+              <span class="small-tag">{{ ev.source }}</span>
+              <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# 更早的日期折叠 #}
+    {% for item in history[1:] %}
+    <div class="history-day">
+      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
+        {{ item[0] }}
+        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
+      </div>
+      <div class="history-feed" style="display:none;">
+        {% for ev in item[1] %}
+        <article class="feed-item"
+          data-filterable
+          data-region="{{ ev.region }}"
+          data-chinese="{{ '1' if ev.is_chinese_capital else '0' }}"
+          data-type="{{ ev.event_types|join(',') }}"
+          data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
+          <div class="feed-main">
+            <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+            {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
           </div>
           <div class="feed-side">
             <span class="importance">{{ ev.insight_label }}</span>
@@ -418,6 +455,20 @@ function switchTab(name) {
   document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
   document.querySelector('.tab-btn[data-tab="'+name+'"]').classList.add('active');
   document.getElementById('tab-'+name).classList.add('active');
+}
+
+function toggleHistory(el) {
+  var day = el.parentElement;
+  var feed = day.querySelector('.history-feed');
+  if (!feed) return;
+  var isOpen = day.classList.contains('history-day-open');
+  if (isOpen) {
+    day.classList.remove('history-day-open');
+    feed.style.display = 'none';
+  } else {
+    day.classList.add('history-day-open');
+    feed.style.display = '';
+  }
 }
 
 var state = { region:'all', type:'all', q:'' };

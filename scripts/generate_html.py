@@ -158,28 +158,90 @@ def calculate_score(event):
     raw = (amt_pts + type_pts + industry_pts + named_pts + investor_pts) * region_mult
     return max(round(min(raw, 10)), 1)
 
+# ─── Fallback reason 生成 ───────────────────────────────────
+
+def _extract_subject(title):
+    """从标题提取当事人公司/产品名"""
+    title_lower = title.lower()
+    # 模式1: "X raises $Y" / "X closes $Y" / "X gets $Y" → X是主角
+    m = re.search(r'^([A-Z][A-Za-z0-9\s&.,]+?)\s+(?:raises|closes|gets|raises|secures|wins|raises?\s+[0-9])', title, re.I)
+    if m:
+        name = m.group(1).strip().rstrip(',').strip()
+        if len(name) > 2 and len(name) < 50:
+            return name
+    # 模式2: "X acquires Y" / "X buys Y" → X是主角
+    m = re.search(r'^([A-Z][A-Za-z0-9\s&.,]+?)\s+(?:acquires|acquisition|buys|merges|acquire)', title, re.I)
+    if m:
+        name = m.group(1).strip().rstrip(',').strip()
+        if len(name) > 2 and len(name) < 50:
+            return name
+    # 模式3: "X announces Y results" → X是主角
+    m = re.search(r'^([A-Z][A-Za-z0-9\s&]+?)[\'’]?(?:\s+[\w]+\s+)?(?:revenue|results|profit|income|earnings|loss)', title, re.I)
+    if m:
+        name = m.group(1).strip().rstrip(',').strip()
+        if len(name) > 2 and len(name) < 50:
+            return name
+    # 模式4: 常见开头词
+    m = re.search(r'^(?:Why\s+|How\s+|What\s+)?([A-Z][a-zA-Z0-9&\s]{2,30})(?:\s+[-\u2014]|:|$)', title)
+    if m:
+        name = m.group(1).strip()
+        if len(name) > 2 and len(name) < 40:
+            return name
+    return None
+
+def _build_reason(title, ev_type, region):
+    """生成有信息量的 reason：包含当事人+事件+地区"""
+    subject = _extract_subject(title)
+    r = region or '该地区'
+    if subject:
+        # 金额提取
+        amt = _parse_amount(title)
+        amt_str = _format_amount(amt) if amt > 0 else ''
+        templates = {
+            'funding': f"{subject}获{amt_str}融资" if amt_str else f"{subject}完成融资",
+            'ma':      f"{subject}达成并购交易",
+            'earnings':f"{subject}发布财报",
+            'strategy':f"{subject}战略动态",
+            'other':   f"{subject}有新动态",
+        }
+    else:
+        templates = {
+            'funding': f"{r}科技公司融资",
+            'ma':      f"{r}科技公司并购",
+            'earnings':f"{r}科技公司财报",
+            'strategy':f"{r}科技公司战略",
+            'other':   f"{r}科技动态",
+        }
+    return templates.get(ev_type, f"{r}科技动态")
+
+# ─── Enrich ─────────────────────────────────────────────────
+
 def enrich(event):
     """统一事件格式 + 自动评分"""
     if 'event_types' not in event:
         event['event_types'] = [CATEGORY_MAP.get(event.get('category', '其他'), 'other')]
 
     ev_type = event['event_types'][0]
+    region = event.get('region', '')
+    title = event.get('title', '')
+
+    # 判断 reason 是否有效
     why = event.get('why_important', '')
-    if why in TRUNCATED_JUNK or why == '待分析' or len(why) < 10:
-        existing_reason = event.get('reason', '')
-        if existing_reason and len(existing_reason) >= 10 and '⚠️' not in existing_reason and '待分析' not in existing_reason:
-            pass
-        else:
-            # 生成中文 fallback
-            fallback = {
-                'funding': f"{event.get('region','该地区')}科技公司融资事件",
-                'ma': f"{event.get('region','该地区')}科技公司并购/收购",
-                'earnings': f"{event.get('region','该地区')}科技公司财报披露",
-                'strategy': f"{event.get('region','该地区')}科技公司战略动态",
-            }.get(ev_type, f"{event.get('region','该地区')}科技行业动态")
-            event['reason'] = fallback
-    else:
+    existing_reason = event.get('reason', '')
+    reason_ok = (existing_reason
+                 and len(existing_reason) >= 10
+                 and '⚠️' not in existing_reason
+                 and '待分析' not in existing_reason
+                 and existing_reason not in TRUNCATED_JUNK)
+    why_ok = why and len(why) >= 10 and why not in TRUNCATED_JUNK
+
+    if why_ok:
         event['reason'] = why
+    elif reason_ok:
+        pass  # 保留 AI 生成的 reason
+    else:
+        # 生成有信息量的 fallback：提取公司名 + 事件类型
+        event['reason'] = _build_reason(title, ev_type, region)
 
     event.setdefault('impact', event.get('impact_scope', '未知'))
     event.setdefault('insight_label', INSIGHT_LABEL_MAP.get(ev_type, '其他'))

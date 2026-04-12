@@ -9,8 +9,9 @@ build/
 .env
 .env.local
 
-# 数据文件（不提交 data/archive）
+# 数据文件
 data/archive/
+data/.cache/
 
 # macOS
 .DS_Store

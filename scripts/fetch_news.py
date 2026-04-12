@@ -975,6 +975,16 @@ def main():
 
     # 智能过滤（公司新闻单独处理，不做 smart_filter）
     filtered = smart_filter(unique)
+    # 限制 AI 分析数量，防止 API 超时和费用失控
+    MAX_AI_ITEMS = 120
+    if len(filtered) > MAX_AI_ITEMS:
+        # 优先保留高分和融资/并购事件
+        funding_ma = [e for e in filtered if e.get('event_types',['other'])[0] in ('funding','ma','earnings')]
+        others = [e for e in filtered if e not in funding_ma]
+        funding_ma.sort(key=lambda x: x.get('score', 5), reverse=True)
+        others.sort(key=lambda x: x.get('score', 5), reverse=True)
+        filtered = (funding_ma + others)[:MAX_AI_ITEMS]
+        print(f"   ⚠️  超过 {MAX_AI_ITEMS} 条，截断保留高分事件")
     types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
