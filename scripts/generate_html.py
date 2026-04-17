@@ -389,14 +389,16 @@ def load_events():
 
 
 def split_company_events(events):
-    """将事件拆分为公司动态和通用热点"""
+    """将事件拆分为公司动态和通用热点（公司动态只保留7天内）"""
+    week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     company_events = []
     generic_events = []
     for date_str, evs in events.items():
         for e in evs:
-            if e.get('is_company'):
+            # 公司动态只保留7天内的（避免旧数据堆积）
+            if e.get('is_company') and date_str >= week_ago:
                 company_events.append(e)
-            else:
+            elif not e.get('is_company'):
                 generic_events.append(e)
     # 分别按 score 排序
     company_events.sort(key=lambda x: x.get('score', 5), reverse=True)
@@ -464,32 +466,19 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
     max_ma = next((e for e in non_chinese if e.get('event_types', [''])[0] == 'ma'), None)
 
     # ── Headline ────────────────────────────────────────
-    top = non_chinese[0] if non_chinese else None
-    headline = ""
-    if top:
-        ev_type = top.get('event_types', [''])[0]
-        company = top.get('companies', [''])[0] if top.get('companies') else ''
-        top_region = top.get('region', '')
-        amount = _parse_amount(top.get('title', ''))
-
-        if ev_type == 'ma' and max_ma:
-            amt_str = _format_amount(_parse_amount(max_ma.get('title', '')))
-            mCompany = max_ma.get('companies', [''])[0] if max_ma.get('companies') else ''
-            headline = f"{mCompany or top_region}达成{amt_str}并购，{region_counts.get(top_region, '')}起事件折射整合加速" if top_region else f"并购整合加速，本周至少{ma}起"
-        elif ev_type == 'earnings':
-            headline = f"{company or top_region or '本周'}财报数据公布，{earnings}起值得持续关注"
-        elif amount > 0 and company:
-            headline = f"{company} {_format_amount(amount)}融资刷新记录，{top_region or '新兴市场'}资本热度不减"
-        elif amount > 0:
-            headline = f"{_format_amount(amount)}融资领跑，{hot_region or '新兴市场'}资本保持活跃"
-        elif company:
-            headline = f"{company}成{hot_region or '本周'}焦点，{total}起事件折射多赛道并进"
-        elif hot_region:
-            headline = f"{hot_region}领跑本周新兴市场，{region_counts.get(hot_region,'')}起事件折射多赛道并进"
-        else:
-            headline = f"本周{total}条动态覆盖{len(region_counts)}个地区，多赛道资本活跃"
-    else:
-        headline = f"共{total}条动态"
+    # 用趋势描述，不用单一事件（避免"说亚太最强但Top3全是欧洲"的尴尬）
+    parts_hl = []
+    if funding > 0:
+        parts_hl.append(f"融资{int(funding)}起")
+    if ma > 0:
+        parts_hl.append(f"并购{int(ma)}起")
+    if earnings > 0:
+        parts_hl.append(f"财报{int(earnings)}起")
+    if hot_region and region_counts.get(hot_region):
+        parts_hl.append(f"{hot_region}{region_counts[hot_region]}起")
+    headline = "、".join(parts_hl) if parts_hl else f"共{int(total)}条动态"
+    if len(region_counts) > 1:
+        headline += f"覆盖{len(region_counts)}地区"
 
     # ── Summary ─────────────────────────────────────────
     parts = []

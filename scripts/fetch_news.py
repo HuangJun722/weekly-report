@@ -354,11 +354,13 @@ def _parse_rss_text(cfg, text):
         if not link:
             continue
 
-        # 日期：feedparser 标准化为 time.struct_time
+        # 日期：feedparser 标准化时间，URL 日期兜底
         article_date = None
         tp = entry.get('published_parsed') or entry.get('updated_parsed')
         if tp:
             article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
+        if not article_date:
+            article_date = _extract_date_from_url(link)
 
         types = detect_event_types(title)
         results.append({
@@ -407,6 +409,14 @@ HTML_SOURCES = [
     {'name': 'DealStreetAsia', 'url': 'https://dealstreetasia.com/', 'source': 'DealStreetAsia', 'region': '亚太', 'priority': 1},
     # e27：Angular JS + Cloudflare 双层保护，RSS + HTML 均无法采集，已移除
 ]
+
+def _extract_date_from_url(url):
+    """从 URL 提取日期兜底，如 /2026/04/15/"""
+    m = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', url)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    return None
+
 
 def fetch_company_news(cfg):
     """
@@ -460,11 +470,13 @@ def fetch_company_news(cfg):
             link = (entry.get('id') or '').strip()
         if not link: continue
 
-        # 日期过滤：只取当天或昨天（避免旧闻）
+        # 日期过滤：RSS日期优先，URL日期兜底
         article_date = None
         tp = entry.get('published_parsed') or entry.get('updated_parsed')
         if tp:
             article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
+        if not article_date:
+            article_date = _extract_date_from_url(link)
         if article_date and article_date not in allowed_dates:
             continue
 
@@ -616,16 +628,27 @@ def smart_filter(items):
 
     result = []
     used_urls = set()
+    used_title_norm = set()  # 标题归一化去重（前60字符）
+
+    def _norm_title(title):
+        return re.sub(r'[^\w]', '', title.lower())[:60]
+
+    def _add_unique(it):
+        norm = _norm_title(it['title'])
+        if it['url'] not in used_urls and norm not in used_title_norm:
+            result.append(it)
+            used_urls.add(it['url'])
+            used_title_norm.add(norm)
+            return True
+        return False
 
     # 1. 公司监控事件（全部保留）
     for it in company:
-        if it['url'] not in used_urls:
-            result.append(it); used_urls.add(it['url'])
+        _add_unique(it)
 
     # 2. 全部信号事件
     for it in signal:
-        if it['url'] not in used_urls:
-            result.append(it); used_urls.add(it['url'])
+        _add_unique(it)
 
     # 3. 非信号事件补足到 MAX_DAILY，每个区域最多 MAX_PER_REGION 条
     regions = list(dict.fromkeys(it['region'] for it in items))  # 保持原始顺序
@@ -636,9 +659,8 @@ def smart_filter(items):
         signal_in_region = sum(1 for it in result if it['region'] == region)
         max_other_for_region = max(0, MAX_PER_REGION - signal_in_region)
         for it in region_others[:max_other_for_region]:
-            if it['url'] not in used_urls:
-                result.append(it); used_urls.add(it['url'])
-                if len(result) >= MAX_DAILY: break
+            _add_unique(it)
+            if len(result) >= MAX_DAILY: break
 
     return result
 
