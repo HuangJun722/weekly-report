@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Fri, 17 Apr 2026 12:27:41 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 17 Apr 2026 17:41:27 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,1976 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Africa runs on digital payments. Now it must build for reliability</title>
+		<link>https://techcabal.com/2026/04/17/africa-digital-payments/</link>
+		
+		<dc:creator><![CDATA[Guest Author]]></dc:creator>
+		<pubDate>Fri, 17 Apr 2026 16:33:01 +0000</pubDate>
+				<category><![CDATA[Opinion]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=186110</guid>
+
+					<description><![CDATA[ Across multiple payment channels, it becomes harder to determine where a payment failed, who holds the funds, and how quickly it can be recovered.]]></description>
+										<content:encoded><![CDATA[
+<p>Africa’s financial infrastructure did not evolve like Europe’s or North America’s. In many respects, it leapfrogged legacy models altogether.</p>
+
+
+
+<p>Across much of the continent, mobile money, not cards, is the primary payments infrastructure. Instant payment volumes across the continent have grown at an average rate of <a href="https://www.africanenda.org/en/siips2025" target="_blank" rel="noreferrer noopener nofollow">35% annually since 2020</a>, and mobile money volumes now exceed 80 billion transactions per year. <a href="https://techcabal.com/tag/financial-inclusion/" target="_blank" rel="noreferrer noopener">Financial inclusion</a> has expanded rapidly over the past decade, bringing millions into formal commerce for the first time.</p>
+
+
+
+<p>Consumers who were previously cash-bound can now pay for pretty much everything directly from their phones.&nbsp;</p>
+
+
+
+<p>As Africa’s digital economy accelerates toward a <a href="https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2025-1/march/digital-payments-economy-in-africa-expected-to-reach-1-5-trillion-by-2030-according-to-new-report/" target="_blank" rel="noreferrer noopener">projected $1.5 trillion</a> by 2030, the question is no longer whether African consumers can participate in the digital economy. They already do. The real question is whether this infrastructure can support enterprise-scale trade without creating new systemic risks.</p>
+
+
+
+<p>When transactions increase from thousands to millions, payments stop being a growth feature and start becoming critical infrastructure. At that point, clarity becomes essential: knowing whether a payment has succeeded, when funds will settle, and who is responsible when something goes wrong.</p>
+
+
+
+<p>At low volumes, ambiguity is manageable. At scale, it becomes costly.</p>
+
+
+
+<p>Consider a customer who authorises a payment and is debited, but the business never receives confirmation. Goods cannot be released, and trust is instantly damaged. The stakes are higher in time-sensitive contexts such as transport, food delivery, or credit repayment, where delayed confirmation creates immediate friction. At scale, these failures translate directly into lost revenue and reputational damage. Across the continent, unresolved or failed transactions cost businesses <a href="https://nannews.ng/2025/12/03/how-africa-loses-5bn-to-payment-settlement-inadequacies-cibn/" target="_blank" rel="noreferrer noopener">billions</a> annually.&nbsp;</p>
+
+
+
+<p>These frictions are not edge cases. They are structural symptoms of a system still moving from consumer-scale adoption to enterprise-grade infrastructure.</p>
+
+
+
+<p>As payment flows become more interconnected across banks, mobile money operators, and fintech platforms, small breaks also stop being isolated issues. A delayed confirmation or a missing status update doesn’t just affect a single transaction or one single customer; it creates uncertainty across reconciliation, customer experience, and cash flow.</p>
+
+
+
+<p>At scale, that uncertainty compounds. Across multiple payment channels, it becomes harder to determine where a payment failed, who holds the funds, and how quickly it can be recovered. That complexity is greater still in a cross-border context, where siloed regulatory frameworks add further uncertainty to how the individual payment channels interact with one another across different markets.&nbsp;</p>
+
+
+
+<p>The result is a hidden tax on growth, one that increases with volume. Not because payments are failing more often, but because the cost of not knowing increases.</p>
+
+
+
+<p>Building for resilience is not about eliminating failure; it’s about making failure visible, attributable, and recoverable within defined timelines. That is what separates infrastructure that can support enterprise-scale trade from systems that simply process transactions at scale.</p>
+
+
+
+<p>The first phase of African fintech prioritised speed and access, connecting consumers and businesses to digital rails at scale. That mission has largely been accomplished. Now those same businesses are moving into higher-value, cross-border trade. Africa and the Middle East’s B2B payments markets alone are projected to reach <a href="https://straitsresearch.com/report/b2b-payments-market/middle-east-and-africa" target="_blank" rel="noreferrer noopener">$162 billion by 2033</a>.&nbsp;</p>
+
+
+
+<p>The next phase demands operational certainty: systems that deliver finality, liquidity, and resilience robust enough for enterprise growth. Access to financial systems has unlocked participation. But it is reliability that will determine who can scale. This is particularly true in today’s environment, where regulatory scrutiny is tightening, and enforcement is catching up with transaction volume. Businesses built on opaque or heavily intermediated structures may find it harder to sustain enterprise growth.&nbsp;</p>
+
+
+
+<p>Over time, I’ve seen that three attributes increasingly define infrastructure built for this scale.</p>
+
+
+
+<p>First, transaction certainty. Businesses need visibility over every payment, from initiation to final settlement. Not every transaction will succeed; that is a reality of any payment system. But uncertainty about what happened to a customer’s money erodes trust faster than failure itself. Volume does not break payment systems. Ambiguity does. When providers cannot give real-time status, clear settlement timelines, and proper exception handling, merchants carry the risk and the cost as they grow.</p>
+
+
+
+<p>Second, compliance depth. Licencing should be treated as an infrastructure, not administration. Direct regulatory engagement and meaningful local authorisation reduce reliance on intermediaries, lower structural risk, and demonstrate long-term commitment to safeguarding funds.&nbsp;</p>
+
+
+
+<p>Third, platform resilience. Uptime should be a technical metric that reflects architectural discipline. In fragmented markets, downstream failures are inevitable. Systems built to anticipate those failures and reconcile them in near real time are the ones capable of supporting enterprise-grade volume.</p>
+
+
+
+<p>The next phase will be quieter but more demanding, managing complexity to ensure every transaction resolves with certainty. When payments disappear from everyday conversation, that is when they are working. Good payments are invisible; not because they are simple, but because someone else is managing the complexity.</p>
+
+
+
+<p>____</p>
+
+
+
+<p><em><strong><a href="https://www.linkedin.com/in/jamie-steell/" target="_blank" rel="noreferrer noopener nofollow">Jamie Steell</a> is the Chief Operating Officer at pawaPay, where he has helped build and scale one of Africa&#8217;s leading mobile money payment platforms.&nbsp;His background spans high-growth fintech and multinational regulated environments, including senior roles at betPawa, Sportech PLC, and KPMG.</strong></em></p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Naira volatility cost his family. He built an FX platform for businesses.</title>
+		<link>https://techcabal.com/2026/04/17/esca-finance-fx-business/</link>
+		
+		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
+		<pubDate>Fri, 17 Apr 2026 16:25:19 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[Esca Finance]]></category>
+		<category><![CDATA[foreign exchange]]></category>
+		<category><![CDATA[fx]]></category>
+		<category><![CDATA[stablecoins]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=186106</guid>
+
+					<description><![CDATA[Shalom Osiadi founded Esca Finance after naira volatility directly affected his family’s property investments in Nigeria, exposing how quickly currency swings can erase value in dollar terms. ]]></description>
+										<content:encoded><![CDATA[
+<p>Shalom Osiadi founded a company out of a frustration that came too close to home. In 2022, as Naira <a href="https://www.premiumtimesng.com/business/business-news/524918-naira-down-to-three-month-low-against-dollar.html" target="_blank" rel="noreferrer noopener nofollow">lost value</a> against the dollar, his parents, living in Ireland, watched the real estate properties they had bought in Nigeria before emigrating lose much of their value in dollar terms, even though nothing about the physical assets had changed.</p>
+
+
+
+<p>The experience forced him to confront a problem he had already been thinking about as an entrepreneur: what happens to African businesses when the currency they earn becomes a liability rather than an asset?</p>
+
+
+
+<p>That question became Osiadi’s obsession. In 2023, he founded <a href="https://www.esca.finance/" target="_blank" rel="noreferrer noopener nofollow">Esca Finance</a>, a company that provides foreign exchange (FX) for clients in emerging markets.&nbsp;</p>
+
+
+
+<p>“I built a Euro‑backed stablecoin in 2018, which taught me financial engineering. I used that experience to build an ecosystem that lets businesses hedge currency exposure in volatile markets like Nigeria, using stablecoins and Bitcoin inside the infrastructure. That’s essentially what became Esca today,” said Osiadi.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>From food delivery to fintech&nbsp;</strong></h2>
+
+
+
+<p>Osiadi’s early life followed a straight line into technology and entrepreneurship. As a teenager in secondary school, he said he was obsessed with computers and taught himself basic programming from YouTube.</p>
+
+
+
+<p>He said he built and sold a small business for his parents during a single summer holiday. That experience convinced him to abandon law and study computer science and business at Dublin City University (DCU) in Ireland.</p>
+
+
+
+<p>With the software development experience he honed over the years, Osiadi tried to build his first business, Esca Menu. Having moved to Ireland for college, he saw an opportunity in the last-mile delivery market for users who didn’t like fast food and enjoyed slow-cooked meals.&nbsp;</p>
+
+
+
+<p>Esca Menu was a home‑cooked food platform where home chefs and small restaurants listed meals, and customers ordered through an app. It offered cashback in stablecoins—digital currencies that are tied to real-world currencies such as the dollar—and Bitcoin instead of naira.&nbsp;</p>
+
+
+
+<p>In 2022, the company <a href="https://businessday.ng/technology/article/online-food-platform-launches-to-help-nigerians-earn-from-orders/" target="_blank" rel="noreferrer noopener nofollow">expanded operations to Lagos, Nigeria</a>, onboarding restaurants in dense neighbourhoods like Yaba after finding Ireland’s small Black and African population too limited for meaningful growth; though Ireland remained its legal base, said Osiadi.</p>
+
+
+
+<p>Between August and October 2022, Esca Menu had onboarded about 130 restaurants, said Osiadi. But the transaction data did not match a typical food-marketplace pattern: there were many sign‑ups and repeated orders from the same restaurants, yet very few actual deliveries.&nbsp;</p>
+
+
+
+<p>When the team spoke to merchants, a pattern emerged for Esca. In a market where the dollar‑naira rate was volatile, businesses were using Esca Menu to earn and hold stablecoins because they trusted those digital dollars more than the naira in their bank accounts.</p>
+
+
+
+<p>The logic of the cashback made sense to them. If a restaurant kept all its profit in naira, every devaluation meant it paid more naira tomorrow for the same bag of rice. If part of its earnings stayed in stablecoins, it could convert those tokens back later into more naira than the original revenue, cushioning the impact of price increases.&nbsp;</p>
+
+
+
+<p>The problem, for Osiadi, was that he was running a food business whose most engaged users were really there for FX protection.</p>
+
+
+
+<p>In December 2022, he and his team decided to shut down the food layer of Esca Menu and keep only the financial engine beneath it. In January 2023, they partnered with Nigerian fintech <a href="https://techcabal.com/tag/palmpay/" target="_blank" rel="noreferrer noopener">PalmPay</a> to extend the <a href="https://www.esca.finance/case-studies/CIG%20Group" target="_blank" rel="noreferrer noopener nofollow">same crypto-cashback model</a> to PalmPay’s point-of-sale (PoS) machines.</p>
+
+
+
+<p>When a customer paid in a restaurant by transfer or card on a PalmPay PoS terminal, Esca’s software awarded stablecoins to the restaurant owner and, where configured, to the customer too. That moved Esca out of the business of handling orders and deliveries and into the business of helping restaurants convert part of their naira earnings into digital dollars.</p>
+
+
+
+<p>The PalmPay integration took Esca from zero to $30,000 in total payment volume (TPV) by February 2023, according to Osiadi. Yet, the business depended on another company’s hardware. By August 2023, after it became clear that the startup could operate its own infrastructure, it walked away from PoS devices entirely and rebuilt itself as Esca Finance.&nbsp;</p>
+
+
+
+<p>From that point, it became a pure FX and liquidity service provider: businesses wired local currency into Esca Finance and received dollars, euros, or cryptocurrencies out, using those positions to hedge against devaluation. In 2025, the company earned about $1.4 million in revenue, according to Osiadi. It is targeting $6 million in 2026.</p>
+
+
+
+<p>Esca Finance now processes between $75 million and $120 million in monthly transactions, he added.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>How Esca Finance works</strong></h2>
+
+
+
+<p>Without a hedge, companies can lose money in dollar or euro terms after conversion, especially if they earn in local currencies that lose value.</p>
+
+
+
+<p>Esca Finance sells a simple promise: it helps businesses stop losing money to bad exchange rates. It does this by taking the currency they earn in volatile markets and converting it into the hard currencies they actually report and plan in, such as dollars, euros, or pounds.</p>
+
+
+
+<p>Osiadi describes Esca as “a currency management system for businesses in emerging markets,” targeting companies that earn in currencies like the naira or cedi but need to show their investors numbers in dollars or euros. It serves businesses and corporations in Nigeria, Ghana, Cameroon, Mozambique, Angola, South Africa, and partners in Europe and Latin America.&nbsp;</p>
+
+
+
+<p>When a company signs up, Esca Finance onboards it, runs know-your-business (KYB) and compliance checks, and gives it a Nigerian bank account inside Esca’s infrastructure. It also opens US Dollar (USD), British Pounds (GBP), and Euro accounts in Europe for that same client, even if the business is legally registered elsewhere.&nbsp;</p>
+
+
+
+<p>The client can then set the rules: every naira that hits the Nigerian account can be automatically converted at the current rate and swept into a chosen hard currency balance. If the naira weakens before the books are closed, that revenue is already sitting in dollars or euros, and not exposed to the local FX swing.</p>
+
+
+
+<p>The mechanism works in reverse for foreign companies that want to sell in Africa but never want to touch naira or other local currencies. A business in the United Kingdom (UK) or the United States (US) can collect payments from Nigerian customers into an Esca‑managed local account. Esca then auto‑converts those naira receipts and moves them into the client’s foreign currency account; its treasury stays in GBP or USD terms while its sales and business operations run in naira.</p>
+
+
+
+<p>According to Osiadi, Esca serves global financial institutions. About 20% of its customers are remittance companies, cryptocurrency exchanges, and infrastructure platforms, including <a href="https://techcabal.com/tag/nala/">NALA</a>, MoneyGram, and Bridge, the Stripe‑owned cryptocurrency infrastructure firm.</p>
+
+
+
+<p>When a fintech buys liquidity on a particular African corridor from one of these partners, the African currency on the other side often comes from Esca’s books, said Osiadi. The rest of the company’s client list is made up of smaller corporations, including exporters and companies in sectors like energy, metals, and other medium‑ to high‑risk industries that have meaningful FX exposure.</p>
+
+
+
+<p>“If I’m an Irish business with operations in Nigeria, my Nigerian arm earns in naira, but I have to report to investors in Euros,” said Osiadi. “So every dime generated there [Nigeria] has to match what I tell them. What Esca does is make sure that revenue is actually held as Euros, so if the naira drops, I’m not claiming we made €1 million when in reality it’s only half that.”</p>
+
+
+
+<p>Esca also lets businesses lock in exchange rates for future payments <a href="https://www.tcxfund.com/fx-forwards/" target="_blank" rel="noreferrer noopener nofollow">through forward contracts</a>, and prices those deals so that if the naira or cedi moves, customers can still convert at the previously agreed rate. The company does this by forecasting how much key currency pairs, such as the dollar against the naira, are likely to move within that period. It sets a rate wide enough to cover any swings, so any volatility is priced into what the client pays, and doesn’t result in a loss for Esca.</p>
+
+
+
+<p>According to Osiadi, that makes Esca one of the few firms on the continent, outside older players like <a href="https://www.tcxfund.com/" target="_blank" rel="noreferrer noopener nofollow">TCX</a>, that offers this kind of hedging at scale to African corporates, including in markets where central banks do not provide forwards. The harder part, for Osiadi, is the education. Many finance executives he meets still see derivatives as complex or unfamiliar, which slows adoption even when the need is obvious.</p>
+
+
+
+<p>The company also offers a non‑fixed deposit product that lets businesses earn interest on their local currency balances, such as naira, and netting up to 20% in returns, according to Osiadi.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>How Esca Finance makes money</strong></h2>
+
+
+
+<p>Esca Finance generates revenue from fees and FX spreads. The company charges between 0.3% and 2% on all currency trades, depending on how much a business is moving: larger tickets attract lower fees, while smaller trades attract near-2%. It also charges a $300 onboarding fee, which filters out “unserious prospects” rather than serving as a major revenue line, said Osiadi.</p>
+
+
+
+<p>Stablecoins are critical to how Esca operates, though clients never see them. On major routes like naira‑dollar or naira‑euro, the company can stay entirely on fiat rails and deliver fiat to client accounts within 24 hours.&nbsp;</p>
+
+
+
+<p>It has also built a business in what it calls “exotic” or difficult markets, such as Ethiopia, Mozambique, and Angola, where capital controls and banking frictions can make moving money hard. It accepts and remits funds in those corridors using the same mix of local partners, stablecoins, and fiat rails, a capability it presents as one of the reasons larger firms like MoneyGram, NALA, and Bridge plug into its network rather than trying to build everything themselves.</p>
+
+
+
+<p>Esca takes local currency, converts it into US‑backed stablecoins to trade where liquidity is deeper, then turns the proceeds back into fiat in the target currency and credits the client’s account; for businesses, it functions like a simple treasury tool: local cash in, hard currency out.</p>
+
+
+
+<p>“We are different because we focus first on economic impact, and then second on the technology that brings about positive economic impact,” Osiadi said, speaking about the choice of stablecoins powering its FX treasury solution. “We were doing it before anybody said it was cool.”</p>
+
+
+
+<p>Esca relies on third‑party liquidity providers, about 70 of them according to Osiadi, to source currencies on the spot as trades on its platform are executed. This deepens its liquidity pool and reduces the need to hold large currency positions itself, but it also creates counterparty risk that the company has to manage carefully.</p>
+
+
+
+<p>To reduce those risks, Esca runs tight checks on both clients and liquidity partners. Its team meets partners in person, visits their offices, reviews corporate documents in detail and, where something feels off, discreetly speaks to their existing customers or runs background checks before approving them. The goal is to be “very sure people are who they say they are” before trusting them with volume, said Osiadi.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>Esca’s bid to become a global FX infrastructure&nbsp;</strong></h2>
+
+
+
+<p>Esca Finance is a European‑based company serving African and emerging market businesses. It is headquartered in Dublin, Ireland, with operating entities in Nigeria, Ghana, and Canada. It uses Ireland and the UK as its main bases for Europe and Nigeria as its hub in Africa.</p>
+
+
+
+<p>Its licences follow that footprint. Esca Finance is <a href="https://amlincubator.com/msb-search" target="_blank" rel="noreferrer noopener nofollow">registered</a> as a Money Services Business (MSB) in Canada and is working toward an Electronic Money Institution (EMI) licence in Ireland. In Nigeria, Esca says it offers its services through licenced third‑party international money transfer operators (IMTOs) and microfinance banks, rather than holding those licences directly. Osiadi said the company is also in talks with the Nigerian Securities and Exchange Commission (SEC) for virtual asset service provider status. It is also pursuing <a href="https://techcabal.com/2026/03/10/ghana-admits-11-crypto-startups-to-sandbox/" target="_blank" rel="noreferrer noopener">similar approvals</a> in Ghana and other African markets as it builds out virtual asset operations.</p>
+
+
+
+<p>Esca Finance competes with several other global FX providers in the <a href="https://www.imarcgroup.com/foreign-exchange-market" target="_blank" rel="noreferrer noopener nofollow">crowded $917.9 billion market</a>, according to US-based research firm IMARC Group, including banks, traditional FX houses, and newer fintechs such as Wise, Revolut, and Africa‑ and emerging market-focused players like Yellow Card, Fincra, and Onafriq.</p>
+
+
+
+<p>The company plans to deepen its banking infrastructure and expand to more corridors, making it easy to open and operate a local account in more elusive African markets where FX is hard to source. It also plans to expand the same model into Latin American markets, such as Brazil and Mexico.&nbsp;</p>
+
+
+
+<p>For Osiadi, the ambition is to become the FX plumbing that the most important companies in the world, large and mid-sized, rely on.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>This Nigerian state is building 260 smart schools. Scale is the challenge.</title>
+		<link>https://techcabal.com/2026/04/17/enugu-smart-schools/</link>
+		
+		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
+		<pubDate>Fri, 17 Apr 2026 16:16:42 +0000</pubDate>
+				<category><![CDATA[Enterprise & Policy]]></category>
+		<category><![CDATA[enugu]]></category>
+		<category><![CDATA[Smart School]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=186095</guid>
+
+					<description><![CDATA[Enugu is building 260 smart schools across the state, combining technology, funding, and curriculum reform to tackle deep-rooted learning gaps and modernise public education.]]></description>
+										<content:encoded><![CDATA[
+<p>On the outskirts of Enugu city in Southeastern Nigeria, the state government is developing new schools in communities where classrooms have long faced challenges such as inadequate infrastructure and outdated curricula. The buildings are clean-lined and modern, fitted with interactive boards, science labs, digital libraries, and innovation studios. </p>
+
+
+
+<p>In some, children who once hawked goods in markets now sit behind desks, tapping through lessons on computer screens.</p>
+
+
+
+<p>The state government says it wants to build 260 smart schools, one in each ward,&nbsp; one of the most ambitious public education reforms in Nigeria today, aimed at improving classrooms and restructuring key elements of the system. That intent is backed by money: 32.27% of the state’s 2026 budget has been earmarked for education, <a href="https://www.premiumtimesng.com/regional/ssouth-east/871882-enugu-abia-and-ebonyi-lead-south-east-education-spending-in-2026-budgets.html#:~:text=Despite%20the%20increased%20allocations%2C%20only,and%20Cultural%20Organisation%20(UNESCO)." target="_blank" rel="noreferrer noopener nofollow">the highest allocation by any Nigerian state</a>.</p>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-gallery aligncenter has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="576" data-id="186096" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-1024x576.jpeg" alt="One of the refurbished computer labs in the Government Technical College, Enugu. Abakaliki Road, GRA Enugu." class="wp-image-186096" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-1024x576.jpeg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-300x169.jpeg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-768x432.jpeg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-1536x863.jpeg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-1240x697.jpeg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26.jpeg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="575" data-id="186102" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-1024x575.jpg" alt="" class="wp-image-186102" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-1024x575.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-768x431.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-1536x863.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-2048x1151.jpg 2048w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/THE-TVET-COLLEGE-8-1240x697.jpg 1240w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+<figcaption class="blocks-gallery-caption wp-element-caption"><em>One of the refurbished computer labs in the Government Technical College, Enugu (left), Abakaliki Road, GRA Enugu. Image source: Enugu State government</em></figcaption></figure>
+
+
+
+<p>But behind that promise is a tougher reality: decades of systemic failure in public education still weigh on infrastructure, technology, and political will.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>A system in crisis</strong></h2>
+
+
+
+<p>Before the introduction of smart schools, the problems were stark. According to Chinyere Onyeisi, Special Adviser to the Governor on Education Innovation, the state uncovered a deep “learning crisis” when it began assessing its public schools.</p>
+
+
+
+<p>“Three out of four children in our public schools have foundational literacy problems,” she told TechCabal on Wednesday during a tour of one of the pilot smart schools at Owo in Nkanu East Local Government Area.&nbsp; “When they don’t have a good foundation, they continue to struggle all the way to secondary school.”</p>
+
+
+
+<p>The dysfunction went far beyond weak reading skills. Students were routinely promoted regardless of competence, many carrying fractured academic histories—switching schools, dropping out intermittently, or landing in classes far above their level, according to Onyeisi. Teachers, wary of losing enrolment, often passed them on rather than insist they repeat a class, deepening the gaps with each step forward.</p>
+
+
+
+<p>In 2023, Enugu had<a href="https://www.unicef.org/nigeria/media/9211/file/Nigeria%20Education%20Fact%20Sheets.pdf" target="_blank" rel="noreferrer noopener nofollow"> an 89.46% literacy rate</a> with the number of <a href="https://x.com/thecableindex/status/1770027637487841539" target="_blank" rel="noreferrer noopener nofollow">out-of-school children at 7.5%, ranking among the lowest 10 states in Nigeria</a>. The reality was different.&nbsp;</p>
+
+
+
+<p>In one early assessment, Onyeisi said she and her team conducted in 2024, the scale of the problem became “undeniable.”&nbsp;</p>
+
+
+
+<p>“In a class of 40, only seven students could read,” she recalled. “The remaining 33 could not read, could not write properly, could not even spell simple words.”</p>
+
+
+
+<p>She also noted that English comprehension was a barrier. Many students had been taught primarily in local dialects and struggled to follow lessons delivered in English. Others exhibited behavioural challenges—bullying, restlessness, disengagement—symptoms of a system that had long failed to hold their attention.</p>
+
+
+
+<p>“It was clear to us that nothing had been happening in many of the schools,” she said bluntly. “I’m not exaggerating because I saw it.”</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Building from the margins</strong></h2>
+
+
+
+<p>Rather than begin the smart school projects in urban centres like Enugu City metropolis, Nike or Nsukka, the state started its smart school rollout in rural communities, places where the system was weakest.</p>
+
+
+
+<p>“If it works in the village, it will work anywhere,” Onyeisi explained.</p>
+
+
+
+<p>Each smart school, she further noted, is designed as an integrated campus, combining early childhood, primary, and junior secondary education. Some merge as many as six previously under-resourced schools into one facility, bringing together hundreds of students under a single system.</p>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-1024x576.jpeg" alt="Smart Green School, Owo, Enugu." class="wp-image-186097" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-1024x576.jpeg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-300x169.jpeg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-768x432.jpeg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-1536x864.jpeg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-1240x698.jpeg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27.jpeg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Smart Green School, Owo, Enugu. Image Source: Enugu State government. </em></figcaption></figure>
+
+
+
+<p>The infrastructure includes classrooms equipped with interactive boards, science labs segmented into physics, chemistry, and biology stations, and innovation studios where students explore robotics, coding, and artificial intelligence (AI).</p>
+
+
+
+<p>But the model goes beyond hardware. It also includes free uniforms, books, and daily meals, an effort to remove the economic barriers that keep children out of school. The Enugu State Government disclosed that it <a href="https://www.tvcnews.tv/enugu-to-spend-n30bn-feeding-260000-pupils-in-2026-budget/" target="_blank" rel="noreferrer noopener nofollow">earmarked ₦30 billion ($21.7 million) in its 2026 budget</a> estimates to provide daily meals for about 260,000 pupils in the 260 Smart Green Schools built across the state.</p>
+
+
+
+<p>“You see a child on the street, you can now ask: What are you doing here?” Onyeisi said. “Because now you have smart schools, they are free, they provide food, uniforms, books—there’s no excuse not to be in school.”</p>
+
+
+
+<p>That combination of incentives is aimed at tackling Enugu’s out-of-school crisis, long visible in markets where children of school age work during class hours.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Rewiring how children learn</strong></h2>
+
+
+
+<p>Perhaps the most significant shift is not in infrastructure, but in how students are taught. For decades, Nigeria’s public education system has relied on rote memorisation, ability to recall information verbatim. The result is that students learn content for exams and often forget it soon after.</p>
+
+
+
+<p>The <a href="https://www.nerdc.gov.ng/content_manager/new_curriculum_home.html" target="_blank" rel="noreferrer noopener nofollow">new Basic Education Curriculum for the 2025/2026</a> session aims to change that. It prioritises critical thinking, problem-solving, and digital literacy as core pillars, replacing memorisation with applied learning. <a href="https://education.gov.ng/wp-content/uploads/2025/09/FG-OVERHAULS-CURRICULUM.pdf" target="_blank" rel="noreferrer noopener nofollow">Government reform documents acknowledge</a> that the previous curriculum was overloaded and outdated, forcing teachers to rush through topics and reinforcing exam-driven learning.</p>
+
+
+
+<p>The smart schools are trying to break that cycle through experiential learning or “learning by doing.”</p>
+
+
+
+<p>“We moved away from the conventional lecture method,” Onyeisi said. “Everything the student learns, they must engage with it practically.”</p>
+
+
+
+<p>In practice, this means lessons are tied to real-world contexts. Onyeisi noted that a topic like drug abuse, for instance, is no longer taught as an abstract concept. Teachers use videos, case studies, and discussions to connect it to lived experiences.</p>
+
+
+
+<p>Interactive boards replace chalkboards, turning lessons into multimedia experiences. Students watch, listen, question, and respond.</p>
+
+
+
+<p>The curriculum itself has also been updated, according to Onyeisi. While still aligned with Nigeria’s national standards, it incorporates new subjects such as robotics, coding, AI, and mechatronics, a multidisciplinary field of engineering that acts as the &#8220;connective tissue&#8221; between mechanical systems, electronics, and computer software. It was introduced from the upper primary levels.</p>
+
+
+
+<p>In one school’s “smart farm,” students plant crops, track growth, and record data, blending agriculture with science and mathematics.</p>
+
+
+
+<p>“They count seeds before planting, monitor germination, and record observations,” Onyeisi said. “They are learning data collection without even knowing it.”</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>The difficult work of catching up</strong></h2>
+
+
+
+<p>The transition, however, has not been smooth, she noted. When the first smart schools opened in September 2025, many students arrived with severe learning gaps.&nbsp;</p>
+
+
+
+<p>“It was a shock,” Onyeisi admitted. “But it showed us the reality.”</p>
+
+
+
+<p>Rather than push ahead with the curriculum, the state paused and implemented intensive intervention programmes. Teachers were retrained in phonics, handwriting, and foundational literacy techniques.</p>
+
+
+
+<p>“We told them: forget covering the syllabus. Let’s fix the foundation first,” said Onyeisi.</p>
+
+
+
+<p>For three weeks, classes focused almost entirely on reading and writing basics: letter sounds, simple words, and handwriting drills. Students who lagged were separated for additional support, she noted.</p>
+
+
+
+<p>“We saw improvement,” she said. “Students began to understand more. They became more engaged.”</p>
+
+
+
+<p>Even so, the challenge remains ongoing. Rebuilding foundational skills across thousands of students is a long-term effort, not a quick fix.&nbsp;</p>
+
+
+
+<p>There is also a challenge of maintaining the facilities, which are starting to show signs of wear and tear, including removed ceiling boards, rusty staircases, and peeling floors.&nbsp;</p>
+
+
+
+<p>“We have a plan to make maintenance regular and sustainable, so we are speaking to some people who would start work on the facilities before the school break is over,” Onyeisi said.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Technology as </strong>the backbone and bet</h2>
+
+
+
+<p>To ensure a sustainable supply of technology, the state has partnered with a subsidiary of the Haier Group, a Chinese electronics company, to supply and assemble the technology powering the smart schools. Haier operates through its subsidiary Hiatech Enugu, led locally by Uche Chime.</p>
+
+
+
+<p>“All the ICT products you see here—the interactive screens, laptops, desktops—are assembled here in Enugu,” Chime told TechCabal during a visit to the assembly plant.</p>
+
+
+
+<p>So far, the company claims to have delivered 30,000 all-in-one desktop units to the state government, with thousands more devices planned, including tablets for students.</p>
+
+
+
+<p>“The governor said he wants every child in a smart school to have access to a tablet,” Chime explained. “You can imagine that’s the kind of thing you see in the Western world.”</p>
+
+
+
+<p>Students from Primary 4 to 6 would be allowed to use the tablets only in school, while the students in Junior Secondary 1 to 3 can take the tablets home, according to Abasiekeme Umana, an aide to the Governor of Enugu State, Peter Mbah.</p>
+
+
+
+<p>The project, Hiatech stated, extends beyond education. Hiatech is also planning renewable energy facilities, including solar panel assembly and battery production, to support the infrastructure powering the schools.</p>
+
+
+
+<p>“We are looking at injecting over $30 million into renewable energy,” Chime said. “Lithium batteries, inverters, solar panels—these are all part of the plan.”</p>
+
+
+
+<p>The goal is to localise production, reduce costs, and create jobs. “When we can source materials locally, we make products more affordable,” he added. “And we create employment for the state.”</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Early signs of transformation</strong></h2>
+
+
+
+<p>In classrooms, there are glimpses of change.</p>
+
+
+
+<p>Onyeisi recounts taking a group of primary school students to a radio programme. When asked what she wanted to become, one 12-year-old girl gave an unexpected answer.</p>
+
+
+
+<p>“She said she wanted to be a farmer,” Onyeisi recalled. “Not just any farmer—she talked about large-scale farming, creating jobs, ensuring food security.”</p>
+
+
+
+<p>It was not just the answer, but the reasoning behind it that stood out for Onyeisi.</p>
+
+
+
+<p>“These are the kind of children we are now seeing,” she said. “They are thinking differently.”</p>
+
+
+
+<p>Juliet Okeyeze, head teacher at Enugu Smart Green School, recalled a student who is shy and struggles to speak in class but excels in robotics, building and programming devices with ease. In a traditional system, such a student might be overlooked. Here, the goal is to recognise and nurture different forms of intelligence.</p>
+
+
+
+<p>“Our assessment is not just based on English or writing,” said Okeyeze. It’s also about what you can do with your hands.”</p>
+
+
+
+<h2 class="wp-block-heading"><strong>The sustainability question</strong></h2>
+
+
+
+<p>Yet for all its promise, the smart school initiative carries real risks.</p>
+
+
+
+<p>The first is scale. Building 260 schools is ambitious; maintaining them can be harder. Technology needs constant updates, steady electricity, and ongoing technical support—areas where public projects in Nigeria often stumble. Early warning signs are already emerging, with critics questioning the quality of some facilities after <a href="https://x.com/Nedumcity_/status/2043959906026295347/video/1" target="_blank" rel="noreferrer noopener nofollow">images surfaced online</a>.</p>
+
+
+
+<p>“We see those videos, and each time we reach out to the local government where the projects are located to find out what happened,” Umana said. “Monitoring all the projects in 260 wards may not be very easy.”</p>
+
+
+
+<p>Power infrastructure remains another pressure point. The state needs 200 megawatts of electricity to be self-sufficient. It currently receives <a href="https://eerc.eerc.en.gov.ng/news/#:~:text=Enugu%20targets%20690MW%2C%2020%2Dhour,%2Dhour%20per%20day..." target="_blank" rel="noreferrer noopener nofollow">approximately 70 megawatts (MW)</a> of power from the national grid, with plans to generate 1000MW from its coal deposits. In the meantime, these developmental projects have to rely on renewable energy sources.&nbsp;</p>
+
+
+
+<p>Flagship sites like the Enugu Smart Green School in Owo and the Government Technical College on Abakaliki Road, GRA Enugu, are currently powered by 16-tubular-battery solar systems, with plans to transition to longer-lasting lithium batteries. This underscores the complexity of sustaining these systems.</p>
+
+
+
+<p>The second risk is teacher capacity. Retraining programmes are underway, according to Onyeisi, but reshaping teaching culture across hundreds of schools is a long, uneven process—one that could take years to take hold fully.</p>
+
+
+
+<p>The third risk is funding. The model—free meals, learning materials, and embedded technology—is capital-intensive, raising questions about its long-term sustainability, especially in a volatile economic climate. While the state has embraced a fully digital governance system, bureaucratic bottlenecks still slow access to funding, making rapid execution difficult. As a result, the rollout has been structured in phases.</p>
+
+
+
+<p>Even Chime acknowledges that constraint. “You cannot do everything at once,” he said. “It has to be done step by step.”</p>
+
+
+
+<p>Whether Enugu succeeds will depend not on the scale of its ambition, but on the discipline of its follow-through.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Over 80% of South Africa ride-hailing trips are cash-based, Bolt report finds</title>
 		<link>https://techcabal.com/2026/04/17/over-80-of-south-africa-ride-hailing-trips-are-cash-based/</link>
 		
@@ -375,7 +2345,7 @@
 
 
 
-<p>I&#8217;m still very excited about Kenya. We have a partnership with Safaricom&#8217;s M-PESA that is going to be huge. We&#8217;re already insuring one out of every 30 Kenyans today. We&#8217;ll be insuring one out of every 20 Kenyans within the next year.</p>
+<p>I&#8217;m still very excited about Kenya. We have partnerships that are going to be huge. We&#8217;re already insuring one out of every 30 Kenyans today. We&#8217;ll be insuring one out of every 20 Kenyans within the next year.</p>
 ]]></content:encoded>
 					
 		
@@ -1383,1024 +3353,6 @@
 
 
 <p>Whether prosecutors act on the ODPC’s recommendation will test how far Kenya is willing to go in enforcing accountability under its data protection framework.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What e-invoicing is and why it matters for Nigerian businesses </title>
-		<link>https://techcabal.com/2026/04/16/all-you-need-to-know-about-e-invoicing-in-nigeria/</link>
-		
-		<dc:creator><![CDATA[Fancy Goodman]]></dc:creator>
-		<pubDate>Thu, 16 Apr 2026 11:05:00 +0000</pubDate>
-				<category><![CDATA[Consumer Tech]]></category>
-		<category><![CDATA[Business Compliance]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185975</guid>
-
-					<description><![CDATA[E-invoicing is the electronic exchange of a clearance document between a supplier, the tax authority, and a buyer.]]></description>
-										<content:encoded><![CDATA[
-<p>Somewhere in Nigeria, a finance team in a company spends weeks, or even months, manually reconciling paper receipts and hunting through email chains for PDF attachments. Hundreds of Nigerian businesses face this reality, with <a href="https://www.thecable.ng/taiwo-oyedele-tax-reforms-to-unlock-n3-4trn-input-vat-credits-for-businesses/" target="_blank" rel="noreferrer noopener">₦3.4 trillion</a> ($2.5 billion) in recoverable Value Added Tax (VAT) returns locked in the economy.&nbsp;</p>
-
-
-
-<p>Under the <a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html" target="_blank" rel="noreferrer noopener">2025 tax reforms</a>, a paper receipt or a standard PDF is no longer enough to prove a transaction; if an invoice isn’t pre-cleared by the Nigeria Revenue Service (NRS) before it reaches a client, it transforms from a claimable asset into a financial liability.</p>
-
-
-
-<p>The  Nigerian government, through the NRS, introduced a mandatory e-invoicing framework. E-invoicing, under the new tax rules. With medium-sized businesses having until July 2026 to comply with the new mandatory framework, there is no better time to audit your processes. </p>
-
-
-
-<p>In this piece, we break down the best e-invoicing insights into clear categories for easy action, and spoke to Olumide Akinsola, Country Director, Nigeria, at Namiri Technology (DigiTax), a platform that enables businesses and individuals to manage their e-invoicing requirements.&nbsp;</p>
-
-
-
-<h2 class="wp-block-heading"><strong>What is e-invoicing?</strong></h2>
-
-
-
-<p>E-invoicing is the electronic exchange of a clearance document between a supplier, the tax authority, and a buyer.</p>
-
-
-
-<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="726" height="280" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26.png" alt="" class="wp-image-185980" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26.png 726w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-26-300x116.png 300w" sizes="auto, (max-width: 726px) 100vw, 726px" /><figcaption class="wp-element-caption"><em>Image source: NRS Website</em></figcaption></figure>
-
-
-
-<p>In Nigeria, this system operates under the framework of the Nigeria Revenue Service (NRS), through the Merchant Buyer Solution (MBS), Nigeria’s national E-invoicing framework. The national platform is designed to enable businesses to generate, validate, and exchange invoices electronically in real time.&nbsp;</p>
-
-
-
-<p>&#8220;This is not a reporting obligation you discharge once a year; it is a live, transaction-by-transaction compliance system covering business-to-business, business-to-government, and business-to-consumer transactions,&#8221; Akinsola noted.</p>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" width="580" height="319" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27.png" alt="" class="wp-image-185981" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27.png 580w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-27-300x165.png 300w" sizes="auto, (max-width: 580px) 100vw, 580px" /><figcaption class="wp-element-caption"><em>Invoicing model for invoices issued by a business to customers. Image source: NRS website</em></figcaption></figure>
-
-
-
-<p>&#8220;For decades, businesses have been handing each other paper receipts or emailing PDFs of invoices, and the tax authority only finds out about those transactions much later, if at all. E-invoicing replaces that with a system where every invoice is transmitted to a government-approved platform in real time,&#8221; Akinsola said.</p>
-
-
-
-<p>For business-to-business (B2B) and business-to-government (B2G) transactions, the e-invoicing process is rigorous. Every invoice must be pre-cleared by the NRS before the buyer even receives it.&nbsp;</p>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" width="579" height="306" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-28.png" alt="" class="wp-image-185982" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-28.png 579w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-28-300x159.png 300w" sizes="auto, (max-width: 579px) 100vw, 579px" /><figcaption class="wp-element-caption"><em>Invoicing model for invoice issued by supplier to buyer. Image source: NRS website</em></figcaption></figure>
-
-
-
-<p>The cleared invoice, usually featuring a QR code, is then returned to the supplier to be delivered to the customer.&nbsp;</p>
-
-
-
-<p>&#8220;That IRN-bearing invoice is the only legally recognised document for the transaction,&#8221; Akinsola shared.</p>
-
-
-
-<p>Every invoice must be routed through an NRS-certified System Integrator or Access Point Provider, which is responsible for validating and transmitting invoices. Once validated by an Access Point Provider, such as DigiTax, the invoice is assigned two critical digital markers:</p>
-
-
-
-<ol class="wp-block-list">
-<li><strong>Invoice Reference Number (IRN):</strong> a unique identifier assigned to each invoice, used to track and validate the invoice in electronic invoicing systems. It ensures the authenticity and traceability of the invoice throughout the invoicing process.</li>
-</ol>
-
-
-
-<ol start="2" class="wp-block-list">
-<li><strong>Cryptographic Stamp Identifier (CSID):</strong> A unique digital signature applied to e-invoices. It ensures that each invoice is authentic, has not been tampered with, and complies with FIRS regulations.&nbsp;</li>
-</ol>
-
-
-
-<h2 class="wp-block-heading"><strong>Why the Nigerian government is mandating the e-invoicing transition&nbsp;&nbsp;</strong></h2>
-
-
-
-<p>The primary motivation for the Nigerian government is revenue mobilisation.&nbsp;</p>
-
-
-
-<p>For years, Nigeria has grappled with a persistent budget deficit, exacerbated by a porous manual tax system. The government is attempting to widen the tax net without necessarily raising tax rates for those already compliant, by mandating a digital trail for every commercial transaction. As a result, every Naira of Value Added Tax (VAT) collected at the point of sale would reach the federation account.</p>
-
-
-
-<p>“Nigeria’s tax-to-GDP ratio stands at approximately 8.2%; one of the lowest in Africa and among the lowest in the world, against an African average of 16.1% and a broader emerging economy average closer to 15 to 20%,” Akinsola explained.</p>
-
-
-
-<p>The government’s goal is to raise the GDP ratio to 18%, and e-invoicing is one of the tools to achieve it.&nbsp;</p>
-
-
-
-<p>&#8220;A significant portion of taxable commercial activity currently goes unrecorded, under-reported, or deliberately obscured. E-invoicing is the government’s mechanism for making the real economy visible in real time, at scale, without the need for an army of auditors,&#8221; Akinsola stated.</p>
-
-
-
-<p>By closing gaps created by invoice manipulation and Value Added Tax (VAT) under-declaration, the NRS can ensure that the real economy is visible as it moves.</p>
-
-
-
-<p>There is also international pressure at play. To demonstrate fiscal responsibility to creditors like the International Monetary Fund (IMF) and World Bank, Nigeria has aligned itself with global standards.&nbsp;</p>
-
-
-
-<p>In September 2025, Nigeria was<a href="https://punchng.com/nigeria-achieves-milestone-in-cross-border-tax-compliance/#google_vignette" target="_blank" rel="noreferrer noopener"> registered as a Pan-European Public Procurement On-Line (PEPPOL) Authority</a>, meaning Nigeria now uses the same e-invoicing standards as the UAE, Singapore, and Australia.&nbsp;</p>
-
-
-
-<p>Akinsola said this &#8220;signals institutional seriousness in a way that policy announcements alone cannot.&#8221;</p>
-
-
-
-<p>Akinsola added that by seeing who buys from whom and at what volumes, the NRS gains data that is invaluable for economic planning and financial inclusion initiatives.</p>
-
-
-
-<p>“That data infrastructure has profound value for economic planning, tax policy, and financial inclusion initiatives,” Akinsola noted.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The rollout schedule</strong></h2>
-
-
-
-<p>The mandate for e-invoicing is being rolled out in waves, starting with those who have the highest impact on the economy.&nbsp;</p>
-
-
-
-<p>Phase 1, which went live on August 1, 2025, targets large taxpayers with an annual turnover of ₦5 billion ($3,678,500) or above. This group includes approximately 5,000 companies. While the initial deadline was August, it was extended to November 1, 2025, to allow for technical integration.</p>
-
-
-
-<p>&#8220;The government cannot tax what it cannot see. Large businesses move enormous volumes of revenue; they are the highest-yield targets for compliance enforcement,&#8221; Akinsola explains.</p>
-
-
-
-<p>The timeline for other businesses is as follows:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Medium taxpayers—₦1 billion to ₦5 billion ($735,700-$3,678,500) turnover: Go-live in July 2026, with enforcement from January 2027.</li>
-
-
-
-<li>Small businesses—below ₦1 billion ($735,700) turnover: Rollout in 2027, with enforcement from 2028.</li>
-</ul>
-
-
-
-
-
-
-
-<p>Akinsola compared the phased rollout to traffic safety laws, stating that &#8220;the logic mirrors how seatbelt laws were first enforced on highways before extending to all road users; you start where the risk and the capacity are highest.&#8221;</p>
-
-
-
-<h2 class="wp-block-heading"><strong>What are the penalties for non-compliance?</strong></h2>
-
-
-
-<p>Businesses cannot afford to ignore these deadlines. The Nigeria Tax Administration Act 2025 has introduced heavy financial consequences that came into full legal force on January 1, 2026.&nbsp;</p>
-
-
-
-<p>Under Section 104, if a business fails to process a taxable invoice through the MBS platform, they face a penalty of:</p>
-
-
-
-<ul class="wp-block-list">
-<li>&nbsp;₦200,000&nbsp; ($147.14) per invoice.&nbsp;</li>
-
-
-
-<li>Additionally, they must pay 100% of the VAT due on that invoice, plus interest at 2% above the CBN Monetary Policy Rate.</li>
-</ul>
-
-
-
-<p>However, the damage goes beyond direct fines. Because an invoice without an IRN is not legally recognised, buyers cannot use it to claim input VAT credit. This creates a massive ripple effect in the supply chain.&nbsp;</p>
-
-
-
-<p>“Invoices not routed through the MBS platform do not receive an IRN and are not recognised as valid tax documents; meaning buyers cannot claim input VAT credit on them, and sellers face potential disallowance of business expenses,” Akinsola warned.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>How businesses can connect to the MBS platform</strong></h2>
-
-
-
-<p>To comply with the law, businesses must route their invoices through NRS-certified providers like DigiTax Nigeria. There are two primary ways to get onboarded, depending on the company&#8217;s size and technical infrastructure.</p>
-
-
-
-<ol class="wp-block-list">
-<li><strong>ERP integration</strong></li>
-</ol>
-
-
-
-<p>The first route is full Enterprise Resource Planning (ERP) integration. This is designed for large enterprises using systems like SAP, Oracle, or Microsoft Dynamics. By connecting the ERP&#8217;s invoicing module directly to the DigiTax API, the process becomes automated.</p>
-
-
-
-<p>Akinsola described this as the &#8220;optimal route for large businesses processing hundreds or thousands of invoices monthly; it is seamless, scalable, and eliminates human error.&#8221;</p>
-
-
-
-<ol start="2" class="wp-block-list">
-<li><strong>NRS-certified provider</strong></li>
-</ol>
-
-
-
-<p>The second route is through an NRS-certified provider, such as <a href="https://punchng.com/nrs-boosts-e-invoicing-compliance-with-pillarcraft-accreditation/#google_vignette" target="_blank" rel="noreferrer noopener">Pillarcraft</a>, <a href="https://heirstechnologies.com/heirs-technologies-accredited-by-nrs-to-support-nigerian-businesses-on-e-invoicing-compliance/#:~:text=Heirs%20Technologies%20Accredited%20by%20NRS,E%2DInvoicing%20Compliance%20%E2%80%93%20Heirs%20Technologies" target="_blank" rel="noreferrer noopener">Heirs Technologies</a>, or on the <a href="https://digitax.tech/" target="_blank" rel="noreferrer noopener">DigiTax web portal</a>. This is a solution for businesses that are not yet ready for deep API integration. It allows them to raise, submit, and track invoices manually through a secure website, ensuring compliance from day one while the business plans for a more permanent technical setup.&nbsp;</p>
-
-
-
-<p>The business does not have to deal with the NRS directly.&nbsp;</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="514" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25-1024x514.png" alt="" class="wp-image-185979" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25-1024x514.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25-300x151.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25-768x386.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25-1536x771.png 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25-1240x623.png 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-25.png 1756w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Image source: DigiTax website</em></figcaption></figure>
-
-
-
-<p>More details on onboarding a business for E-invoicing are available in the <a href="https://einvoice.firs.gov.ng/documents/Navigating-the-NRSMBS-(e-Invoice)-Portal.pdf" target="_blank" rel="noreferrer noopener">NRS user guide</a>. To register, businesses need their Taxpayer Identification Number (TIN).&nbsp;</p>
-
-
-
-<h3 class="wp-block-heading"><strong>The benefits of e-invoicing for businesses</strong></h3>
-
-
-
-<ul class="wp-block-list">
-<li><strong>VAT credits</strong></li>
-</ul>
-
-
-
-<p>E-invoicing solves a major financial headache for Nigerian companies: locked-up VAT credits. Under the Nigerian tax system, businesses can reclaim the VAT they pay on purchases (input VAT) against what they collect on sales.</p>
-
-
-
-<p>However, the NRS will now only honour these claims if they are backed by an IRN-bearing invoice.&nbsp;</p>
-
-
-
-<p>“The NRS will only honour input VAT claims backed by valid, IRN-bearing, MBS-compliant invoices. This is now codified in law; invoices not routed through the MBS platform are deemed invalid for tax purposes, and the buyer loses the right to claim input VAT on them entirely,” Akinsola pointed out.</p>
-
-
-
-<p>&nbsp;Nigerian businesses stand to recover as much as ₦3.4 trillion ($2.5 billion) in input VAT credits locked away precisely because of non-compliant invoicing. For a manufacturer spending billions on raw materials, this is a massive amount of cash that can finally be recovered.</p>
-
-
-
-<p>This creates a new dynamic where businesses must police their own suppliers.&nbsp;</p>
-
-
-
-<p>&#8220;Your input VAT recovery depends directly on your supplier’s compliance status. A supplier who has not onboarded onto MBS is not just their own problem; they are a cash flow liability to every business that buys from them,&#8221; he said.&nbsp;</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Enhancing audit defence and operational efficiency</strong></li>
-</ul>
-
-
-
-<p>In the past, a tax audit was a stressful, backwards-looking investigation where accountants had to reconstruct months or years of records. E-invoicing changes this entirely. Since the NRS already holds the secured transaction record, an audit becomes a simple reconciliation exercise.</p>
-
-
-
-<p>&#8220;The compliance risk that keeps CFOs and finance directors awake at night is substantially reduced,&#8221; Akinsola said.</p>
-
-
-
-<p>Also, automation saves money. Once the system is integrated, the need for large manual compliance teams diminishes. Savings are found not just in the software, but in the reduced operational expenses required to prepare for audits and respond to government queries.&nbsp;</p>
-
-
-
-<p>&#8220;Because the MBS platform holds a complete, cryptographically-secured record of every transaction in real time, audit preparation becomes a near-automated exercise rather than a weeks-long mobilisation of staff,&#8221; Akinsola noted.</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Improved access to credit and market credibility</strong></li>
-</ul>
-
-
-
-<p>An exciting medium-term benefit of e-invoicing is its impact on the credit market. Because every invoice on the MBS platform is verified and tamper-proof, banks can trust this data.</p>
-
-
-
-<p>&#8220;Banks and fintechs will, over time, be able to use verified invoice histories as a basis for working capital lending and invoice discounting,&#8221; Akinsola explained.</p>
-
-
-
-<p>This is particularly helpful for mid-sized businesses that often struggle to prove their turnover to formal lenders.</p>
-
-
-
-<p>E-invoicing is becoming a prerequisite for doing business with big players. Multinationals and government agencies are increasingly making MBS compliance a condition for procurement.&nbsp;</p>
-
-
-
-<p>&#8220;Being fully onboarded onto the NRS MBS platform is becoming a condition of doing business with the most commercially attractive counterparties in the Nigerian market; not just a regulatory checkbox,&#8221; he noted.</p>
-
-
-
-<p><strong>*Rate used is $1 to ₦1,359.25</strong></p>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>👨🏿‍🚀TechCabal Daily – Kenya gives credit where it’s due</title>
-		<link>https://techcabal.com/2026/04/16/techcabal-daily-kenya-gives-credit-where-its-due/</link>
-		
-		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
-		<pubDate>Thu, 16 Apr 2026 06:23:13 +0000</pubDate>
-				<category><![CDATA[Newsletters]]></category>
-		<category><![CDATA[TC Daily]]></category>
-		<category><![CDATA[cbk]]></category>
-		<category><![CDATA[Cellulant]]></category>
-		<category><![CDATA[digital lenders]]></category>
-		<category><![CDATA[Zambia]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185971</guid>
-
-					<description><![CDATA[In today's edition: Kenya issues 32 digital lending licences &#124;&#124; Nigeria’s CAC affected by security breach &#124;&#124; Cellulant taps ex-Xapo Bank executive &#124;&#124; Zambia is digitising patient records]]></description>
-										<content:encoded><![CDATA[
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div id="wrapper" style="width:100%;max-width:600px;background-color: #FFFFFF; color:#000000;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-rendering: optimizeLegibility !important; -webkit-font-smoothing: antialiased !important; margin: 0 auto; padding:17px 0;box-sizing: border-box;">
-            <div class="content_date" id="intro" style="box-sizing: border-box; padding: 0 12px 16px; display: table; width: 100%; background-color: white;">
-                <div style="display:block; width: 100%; text-align: center;padding-bottom: 24px;">
-                   
-                <div style="display: block;padding-bottom:24px;">
-                    <div style="display:table;width: 100%;">
-                        <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/tc-daily-banner.png" alt="" width="100%" height="167" style="object-fit:contain;">
-                    </div>
-                     <div style="display: inline-block;vertical-align: middle;">
-                        <span style="display:inline-block; padding-right: 8px;font-size:10px; font-weight:400;">In partnership with</span>
-                    </div>
-                    <div style="display:inline-block;vertical-align: middle;">
-                        <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/01/Partner-with-TC.png" alt="Fincra logo" width="110px" style="display:inline;">
-                    </div>
-                </div>
-                    <div style="display:table;width:100%;padding: 12px;box-sizing: border-box;border-bottom:1px solid #18181833;">
-                        
-                    </div>
-                </div>
-<div style="width: 100%; padding: 8px; height:47px; font-size: 10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 700; background-color: #fcf8fa; border-radius: 4px; box-sizing:border-box; display: table;">
-                <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=fr&amp;u=https://techcabal.com/2026/04/16/techcabal-daily-kenya-gives-credit-where-its-due/" style="color: #28121f !important">Lire en Français</a>
-                </div>
-                <div style="display: table-cell; vertical-align:middle; text-align: right;">
-                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=ar&amp;u=https://techcabal.com/2026/04/16/techcabal-daily-kenya-gives-credit-where-its-due/" style="color: #28121f !important">اقرأ هذا باللغة العربية</a>
-          </div>
-        </div>
-    </div>
-<div id="Story1" style="width:100%; background-color: transparent; box-sizing:border-box; padding: 0 12px 16px;">
-<div style="width: 100%;padding-bottom:16px;text-align:left;box-sizing:border-box;">
-<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin-top:0;">
-                    
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;"><strong>Good morning. <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/2600.png" alt="☀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong></p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;"><strong><em>Will tech entrepreneurs join in shaping Nigeria&rsquo;s 2027 elections?</em></strong></p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;">While you consider that question, Zikoko Citizen, in collaboration with TechCabal Insights, has released the <a href="https://citizen.zikoko.com/wp-content/uploads/sites/6/2026/02/Citizen-Report-2026-e.pdf" style="text-decoration: underline;color: #b61313 !important">Citizen Report 2026</a>, a comprehensive survey of youth electoral behaviour ahead of Nigeria&rsquo;s 2027 general elections, based on responses from 10,681 people across all 36 states and the FCT.</p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;">As we edge closer to the moments that will define the kind of economy industries have over the next four years, it is pertinent that all eyes are on what matters: the citizens&rsquo; willpower to vote.</p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;">What will the polls look like come 2027? <a href="https://citizen.zikoko.com/wp-content/uploads/sites/6/2026/02/Citizen-Report-2026-e.pdf" style="text-decoration: underline;color: #b61313 !important">Download the Citizen Report here</a>.</p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;">Let&#8217;s dive in.</p>
-</div>
-</div>
-
-                    
-<div class="todays_edition" style="width:100%; background-color: transparent; box-sizing:border-box; text-align:center; padding:0 12px; margin-bottom:0;">
-    <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/today-edition-img-1.png" 
-         alt="today's edition image" 
-         style="width:100%; max-width:343px; height:auto; display:block; margin:0 auto;">
-
-                </div>
-                <div style="background-color: #FAE2E3;padding:16px 32px;">
-                    <ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px;">
-                    
-                    
-<li><a href="#Story1" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Kenya issues 32 digital lending licences</a></li>
-<li><a href="#Story2" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Nigeria’s CAC affected by security breach</a></li>
-<li><a href="#Story3" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Cellulant taps ex-Xapo Bank executive</a></li>
-<li><a href="#Story4" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Zambia is digitising patient records</a></li>
-<li> <a href="#Story5" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">World Wide Web 3</a></li>
-<li> <a href="#Story6" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important;">Events</a></li>
-  
-                    </ul>
-                </div>
-            </div>
-            
-             <div id="Story1" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">Fintech</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">Kenya licences 32 more digital lenders</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/images-1.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: Make a Meme</figcaption>
-</figure>
-
-<p style="padding:5px 0;margin:0;">Before digital lenders in Kenya were mandated to obtain licences, there were <a href="https://www.theguardian.com/global-development/2022/oct/12/traumatising-how-rogue-digital-loan-apps-in-kenya-intimidate-borrowers" style="text-decoration: underline;color: #b61313 !important">widespread concerns</a> about loan pricing, unethical debt practices, and the misuse of personal data.</p>
-<p style="padding:5px 0;margin:0;">To address this, the Central Bank of Kenya (CBK) <a href="https://techcabal.com/2024/03/11/crackdown-on-digital-lenders-in-kenya/" style="text-decoration: underline;color: #b61313 !important">mandated licence registrations</a> starting in March 2022.</p>
-<p style="padding:5px 0;margin:0;">Since then, the CBK has disclosed that it has received over 800 applications. On Tuesday, the regulator <a href="https://techpoint.africa/news/cbk-approves-32-digital-lenders/" style="text-decoration: underline;color: #b61313 !important">issued 32 more digital lending licences</a>, taking the total count to 227.</p>
-<p style="padding:5px 0;margin:0;"><strong>What the CBK looks out for: </strong>The regulator <a href="https://techtrendske.co.ke/2026/04/15/cbk-digital-credit-providers-kenya-april-2026/" style="text-decoration: underline;color: #b61313 !important">assesses digital lenders</a> on business model, ownership structure, consumer protection standards, and how the management and shareholders of these companies are structured. Licenced digital lenders must also meet specific requirements, including rules around anti-money laundering (AML) monitoring and limits on how borrowers are listed on credit bureaus.&nbsp;</p>
-<p style="padding:5px 0;margin:0;"><strong>The rules are still being tightened: </strong>In 2025, the CBK <a href="https://techcabal.com/2025/09/05/kenyas-digital-lenders-lend-594-million-in-three-years/" style="text-decoration: underline;color: #b61313 !important">published a draft Non-Deposit Taking Credit Providers Regulations</a>, which further define how these lenders should operate. The proposed regulations required credit-only providers with at least KES 20 million ($155,000) in capital, borrowings, or loan book to obtain a licence. It also imposed stricter data protection practices, including limiting the information digital lenders can collect, setting boundaries on how it can be shared or transmitted to bureaus.</p>
-<p style="padding:5px 0;margin:0;"><strong>Kenya&rsquo;s digital lending market is still booming.</strong> As of 2025, lenders in the country <a href="https://techcabal.com/2025/09/05/kenyas-digital-lenders-lend-594-million-in-three-years/" style="text-decoration: underline;color: #b61313 !important">had disbursed</a> 5.5 million loans worth KES 76.8 billion ($594 million) in the previous three years. It is an industry growing large enough for tight oversight to protect users and ensure safer borrowing.</p>
-                </div>
-                    <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                               <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="bizdev1" style="padding: 24px 12px 0;">
-                <div style="width:100%; background-color:transparent;box-sizing:border-box;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px;">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">20+ Markets. One API.
-                </h5>
-                <a href="https://blog.fincra.com/fincra-canada-psp-license-africa-payments/">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-3.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Fincra connects your business to Africa&#8217;s payment rails without building market by market. For collection, payout, FX, and settlement through a single integration. <a href= "https://blog.fincra.com/fincra-canada-psp-license-africa-payments/" style="text-decoration: underline;color: #b61313 !important">See what this means for your business</a>.</p>
-
-            </div>
-        </div>
-
-<div id="Story2" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Government</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">Nigeria&#8217;s corporate registry says a security breach affected parts of its system</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/12/Falz-problem-meme.png" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: Zikoko Memes</figcaption>
-                    </figure>
-                        
-<p style="padding:5px 0;margin:0;">Nigeria&rsquo;s Corporate Affairs Commission (CAC), the authority that keeps the records of companies and businesses operating in the country, <a href="https://nairametrics.com/2026/04/15/corporate-affairs-commission-flags-security-breach-urges-users-to-update-credentials/" style="text-decoration: underline;color: #b61313 !important">has confirmed</a> a security breach that allowed unauthorised access to parts of its system.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">&ldquo;Appropriate containment measures have been implemented, and additional safeguards are in place,&rdquo; the CAC said in a statement on Wednesday.</p>
-<p style="padding:5px 0;margin:0;"><strong>What is CAC doing about it? </strong>The Commission has further told users and stakeholders to monitor their records on the CAC portal and &ldquo;remain cautious&rdquo; of suspicious data requests or communications.It also claimed that it activated response protocols and brought in the National Information Technology Development Agency (NITDA), the IT sector regulator, and other partners to investigate.</p>
-<p style="padding:5px 0;margin:0;"><strong>A graveyard of security breaches:</strong> Cybersecurity incidents are becoming more common across Nigeria and Africa. In March, Nigerian payment processing firm, Remita, and tier-2 commercial lender, Sterling Bank, were <a href="https://www.premiumtimesng.com/news/top-news/869669-ndpc-investigates-remita-sterling-bank-for-alleged-data-breach.html" style="text-decoration: underline;color: #b61313 !important">allegedly breached</a>. October 2025 had the biggest healthcare incident with Kenya&rsquo;s <a href="https://techcabal.com/2025/10/28/safaricom-backed-m-tiba-hacked-exposing-4-8-patient-records/" style="text-decoration: underline;color: #b61313 !important">M-TIBA data breach</a>, where hackers published siphoned patient records on public Telegram channels. Between 2019 and 2025, Africa <a href="https://www.interpol.int/content/download/23094/file/INTERPOL_Africa_Cyberthreat_Assessment_Report_2025.pdf" style="text-decoration: underline;color: #b61313 !important">lost more than $3 billion</a> to cybercrime, according to INTERPOL.&nbsp;</p>
-<p style="padding:5px 0;margin:0;"><strong>So, what now?</strong> Regulators across the continent are fighting hard. In April 2025, Zambia <a href="https://techcabal.com/2025/12/30/cyber-breaches-became-harder-to-hide/" style="text-decoration: underline;color: #b61313 !important">split its cyber law</a> into a Cyber Security Act governing security service providers and a Cyber Crimes Act dealing with offences and penalties. In the same month, South Africa&#8217;s Information Regulator <a href="https://inforegulator.org.za/wp-content/uploads/2025/04/MEDIA-STATEMENT-INVITATION-TO-REPORT-SECURITY-COMPROMISES-THROUGH-THE-eSERVICES-PORTAL-.pdf" style="text-decoration: underline;color: #b61313 !important">mandated companies to log breaches</a> through an online reporting portal and must state what happened, what data was involved, what they are doing to contain it, and what individuals should do to protect themselves. In Kenya, operators <a href="https://www.odpc.go.ke/wp-content/uploads/2025/11/ODPC-%E2%80%93-Guidance-Note-on-Processing-by-MSMEs.pdf" style="text-decoration: underline;color: #b61313 !important">are mandated to alert data controllers of potential data breaches</a> within 48 hours, even if the full facts are not yet in.</p>
-<p style="padding:5px 0;margin:0;">Yet, the cyber-threats are not slowing down, so defences have to catch up.</p>
-<div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<div id="bizdev1" style="padding: 24px 12px 0;">
-                <div style="width:100%; background-color:transparent;box-sizing:border-box;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px;">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">20+ Markets. One API.
-                </h5>
-                <a href="https://africatechnologyexpo.com/breet">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-2.jpg" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Breet is offering a $10,000 equity-free grant to growth-stage fintech, crypto and payments startups in Africa. Integrate the API, submit your product, and pitch live at ATE Lagos. Two winners get $5,000 each. Deadline by May 31. <a href= "https://africatechnologyexpo.com/breet" style="text-decoration: underline;color: #b61313 !important">Learn more</a>.</p>
-
-            </div>
-        </div>
-
-<div id="Story3" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Fintech</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">Cellulant taps former Xapo Bank executive as COO</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Anthony-Hernandez-Cellulant-COO-at-his-desk-scaled.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Anthony Hernandez Cellulant COO at his desk. Image: Cellulant</figcaption>
-                    </figure>
-                        
-<p style="padding:5px 0;margin:0;">Cellulant is done hiring for growth. It is now hiring to fix the engine mid-flight.</p>
-<p style="padding:5px 0;margin:0;">The pan-African payments company has <a href="https://techcabal.com/2026/04/15/cellulant-hires-ex-xapo-bank-executive-anthony-hernandez-as-coo/" style="text-decoration: underline;color: #b61313 !important">appointed former Xapo Bank executive</a> Anthony Hernandez as Chief Operating Officer (COO), the latest in a <a href="https://techcabal.com/2026/02/05/cellulant-appoints-michael-muriuki-as-cpto/" style="text-decoration: underline;color: #b61313 !important">string of senior hires</a> that includes a Chief Product and Technology Officer (CPTO) in February and a <a href="https://www.cellulant.io/2026/03/19/cellulant-appoints-former-agoda-cfo-to-drive-next-phase-of-pan-african-growth/" style="text-decoration: underline;color: #b61313 !important">Chief Financial Officer (CFO)</a> in March.&nbsp;</p>
-<p style="padding:5px 0;margin:0;"><strong>Between the lines: </strong>A trained accountant, Hernandez has spent the majority of his career working in banking and financial services firms, including Xapo Bank, DEMICA, GE Capital, and, most recently, at UK-based Railsr.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">He is bringing his experience in risk and corporate operations to Cellulant with one goal in mind: to make payments work better. That means fewer failures, stronger transaction visibility, and smoother onboarding across Cellulant&rsquo;s 20 African markets, where infrastructure is anything but uniform. At 4.5 million daily transactions, even small inefficiencies quickly become expensive problems.</p>
-<p style="padding:5px 0;margin:0;"><strong>State of play: </strong>Cellulant <a href="https://weetracker.com/2025/04/24/african-fintech-cellulant-profitability-progress/" style="text-decoration: underline;color: #b61313 !important">reached profitability</a> in 2024; that milestone often changes how a company thinks. The focus shifts from &ldquo;how fast can we grow?&rdquo; to &ldquo;how well can we run?&rdquo; This hire, and the ones before it, suggest Cellulant is firmly in that second phase.</p>
-<p style="padding:5px 0;margin:0;">It is also a defensive move. Competition is no longer just other fintechs. Banks and large merchants are increasingly building their own payment stacks, reducing their reliance on third-party providers. For a company like Cellulant, scale alone is no longer enough. Reliability is what keeps customers from quietly switching.</p>
-<p style="padding:5px 0;margin:0;"><strong>Zoom out: </strong>Hernandez&rsquo;s background points to someone brought in to enforce discipline at the executive level. In payments, expansion gets you noticed. Execution is what keeps you in business.</p>
-</div>
-<div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<div id="Story4" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-<div class="cool_stuff" style="width:100%; background-color: transparent; box-sizing:border-box;">
-<div style="width:100%;box-sizing:border-box;background-color:transparent;padding:0 12px;text-align:center;height:12px;margin-bottom:0px;">
- </div>
- <div style="background-color: #FAE2E3;padding:16px 32px;">
- <!-- Fake UL wrapper to preserve your formatting -->
-    <div style="padding-left:20px;margin:0;font-size:16px;line-height:25.6px;">
-  <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:50.1px;text-align: left;margin:0;text-transform:uppercase;">TECHCABAL 4.0</h3>
- <a href="https://techcabal.com/2026/04/14/welcome-to-techcabal-4-0/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/IMG-20260415-WA0012.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-<p style="padding:5px 0;margin:0;">In March 2013, TechCabal published its first article. Thousands of stories later, the work continues, and today, it goes deeper.</p>
-<p style="padding:5px 0;margin:0;">TechCabal has always been free. That&#8217;s not changing.</p>
-<p style="padding:5px 0;margin:0;">We&#8217;ve opened a new layer. Reporting that goes further, built on sources you won&rsquo;t find anywhere else, and told in ways we haven&#8217;t tried before. You&#8217;re among the first to see it.</p>
-<p style="padding:5px 0;margin:0;">Getting in takes less than 15 seconds.</p>
-<p style="padding:5px 0;margin:0;">You&#8217;re one step away from the other side.</p>
-<p style="padding:5px 0;margin:0;">Click the button below to see what TechCabal 4.0 looks like and what it means for you.</p>
-<div style="text-align: center; margin-top: 20px;">
-    <a href="https://techcabal.com/2026/04/14/welcome-to-techcabal-4-0/" 
-       style="display:inline-block; width:220px; text-align:center; color:#ffffff !important; text-decoration:none; padding:10px 0; border:1px solid #28121f; border-radius:6px; background:#f23204;">
-       Become an Insider</a>
-</div>
-</div>
-</div>
-
-
- <div id="Story4" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Emerging Tech</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">Zambia consolidates 12 million patient records as it builds AI-ready health system</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/1776165579016.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-<figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Percy Chiyana, Permanent Secretary at Smart Institute, Zambia. Image source: Smart Institute
-</figcaption>
-</figure>
-                        
-<p style="padding:5px 0;margin:0;">Every other market day, there&#8217;s an African country that wants to do something with AI. Zambia has joined that cohort of countries, including Indonesia, Brazil, India, Singapore, Vietnam, and the UK, <a href="https://healthai.agency/zambia-first-african-country-joins-healthai-grn/" style="text-decoration: underline;color: #b61313 !important">digitising their patient health records</a> using AI, but first, it wants to address an underlying sorting problem.&nbsp;</p>
-<p style="padding:5px 0;margin:0;">Health paperwork can get messy; records can get scattered across facilities, duplicated across systems, and sometimes go missing when it matters most. Zambia wants to sort first and introduce Big Brother AI into the process later.</p>
-<p style="padding:5px 0;margin:0;"><strong>What is Zambia doing? </strong>Zambia says it <a href="https://itweb.africa/article/zambia-unveils-ai-health-records-for-the-masses/WnpNgM21BR47VrGd" style="text-decoration: underline;color: #b61313 !important">consolidated more than 12 million patient records</a> into its SmartCare Pro platform, a national electronic health system launched in 2023. Over 2,000 health facilities are now connected, and 14,000 health workers are trained to use it. This replaces a patchwork of systems across more than 1,600 facilities that previously could not communicate. Now, patient data can be stored, accessed, and shared across locations, creating a single, unified view of healthcare records.</p>
-<p style="padding:5px 0;margin:0;"><strong>What does Zambia need AI for? </strong>With data finally in one place, Zambia is positioning itself to use AI for things that actually matter in healthcare: identifying disease patterns, improving diagnosis, forecasting outbreaks, and supporting clinical decisions. These systems depend on large volumes of clean, structured data. Without that, AI is just a buzzword sitting on top of broken inputs.</p>
-<p style="padding:5px 0;margin:0;"><strong>Will AI solve patient record storage? </strong>Not really. AI does not fix bad data. It depends on good data. What Zambia has built so far is the prerequisite: a centralised, standardised data layer. The real challenge is ensuring that records are consistently entered, updated, and accurate across thousands of facilities. If that discipline slips, the intelligence layer on top will not deliver much value.</p>
-<p style="padding:5px 0;margin:0;"><strong>Zoom out: </strong>Zambia&rsquo;s approach stands out; it is the only known African country aiming to implement AI into its healthcare patient database. While others announce AI strategies, it is doing the slower work of integration, training, and system-building, backed by President Hakainde Hichilema.</p>
-                    </div>
-                    <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;">
-                        <div style="display: table; width: 100%;">
-                            <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-  <div id="Story6" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="crypto_tracker" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    
-                    
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align:left;margin:0;text-transform:uppercase;">CRYPTO TRACKER</h3>
-                </div>
-                <div style="width:100%; background-color: transparent; box-sizing:border-box;">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left;box-sizing:border-box;">The World Wide Web3</h3>
-                    
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px;box-sizing:border-box;">
-                        <div style="font-style: normal; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 20px; display: table; width: 100%; font-size: 14px; font-weight: 700;">
-                            <p style="padding:5px 0;display: table-cell; vertical-align: middle; text-align:left;">Source:</p>
-                            <span style="display: table-cell; vertical-align:middle; text-align: right;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/07/CoinMarketCap-logo.png" alt="CoinMarketCap logo" style="width:96px; height: auto;"></span>
-                        </div>
-                        <table style="width: 100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; border-collapse: collapse;">
-                            <colgroup>
-                                <col span="1" style="width: 25%;">
-                                <col span="1" style="width: 25%;">
-                                <col span="1" style="width: 25%;">
-                                <col span="1" style="width: 25%;">
-                            </colgroup>
-                            <tbody style="font-size: 12px; font-weight: 400; line-height: 15px;">
-                            <tr style=" width: 100%; border-bottom:1px dashed #C3C3C3; padding: 20px;">
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Coin Name
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Current Value
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Day
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400; padding-bottom: 10px; text-align: left;">
-                            Month
-                            </p>
-                            </th>
-                            </tr>
-                            </tbody>
-                            <tbody style="font-size: 12px; font-weight: 700;">
-                            <tr style="border-bottom: 1px dashed #C3C3C3;">
-<td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Bitcoin</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$74,948</td>
-                                <td style="padding: 0">
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 0.93%
-                                    </p>
-                                </td>
-                               <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 0.82%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
-                            <tr style="border-bottom:1px dashed #C3C3C3">
-                                <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Ether</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$2,353</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 1.01%
-                                    </p>
-                                </td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 1.60%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
-                            <tr style="border-bottom:1px dashed #C3C3C3">
-<td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Bio Protocol</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$0.04548</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px"> 
-                                        + 122.51%
-                                    </p>
-                                </td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px"> 
-                                        + 99.98%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-
-
-                        <tbody style="font-size: 12px;font-weight: 700">
-                            <tr style="border-bottom:1px dashed #C3C3C3;margin-bottom: 20px">
-                                <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Solana</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$85.14</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">    + 2.06%
-                                    </p>
-                                </td>
-                                <td>
- <p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px"> 
-                                        &#8211; 9.20%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div style="width:100%;background-color: transparent">
-                        <p style="padding:5px 0;font-style: italic;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 400">
-                            * Data as of 06.20 AM WAT, April 16, 2026.
-                        </p>
-                            <div id="share_content" style="width: 100%; background-color: transparent;box-sizing:border-box;padding-bottom:20px;">
-                                
-                                <div style="display: table; width: 100%;">
-                                    <div style="display: table-cell; vertical-align:middle; text-align: left;">
-                            <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="display:inline;width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px;"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle;"></a>
-                                    </div>
-                                </div>
-</div> 
-</div> 
-    
-<div id="Story7" style="padding:0 12px;box-sizing:border-box;">
-                <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
-                    <div id="financial_education" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
-                    </div>
-                    <div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center;">
-                       <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#FFFFFF;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase;">Events</h3>
-                </div>
-               
-                <div style="background-color:#F4FFF9;padding:16px 32px;">
-                    <ul style="padding-left: 20px;margin:0;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:400;font-size:16px;line-height:25.6px;">
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/03/unnamed-18.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-<li>The voices shaping Africa&rsquo;s digital future are taking the stage. From AI and IoT to cloud, connectivity and smart infrastructure, <strong>IOT West Africa | Data Centre &amp; Cloud Expo Africa 2026</strong> brings together the leaders building the continent&rsquo;s next digital chapter. This is where the ecosystem meets, and we&#8217;ll see you there. The event kicks off on April 28&ndash;30 at the Landmark Centre, Victoria Island, Lagos. <a href = "https://lnkd.in/g8QVV_Ri" style="text-decoration: underline;color: #b61313 !important">Register here to attend</a>.</li>
-<li>All roads lead to Nairobi on May 7, 2026. Gathered at the Sarit Expo Centre, senior leaders from across Africa&rsquo;s fintech and payments ecosystem will gather for a day of meaningful connections, market insights, and cross-border collaboration. The focus of the Africa Fintech Live event is on driving real engagement, bringing together industry leaders and emerging innovators to spark strategic conversations that will shape the future of finance on the continent. <a href = "https://lnkd.in/g8QVV_Ri" style="text-decoration: underline;color: #b61313 !important">Secure your early bird ticket now at 50% off</a>.</li>
-</ul></div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-<div style="width:100%; background-color: transparent; box-sizing:border-box; text-align:center; padding:0 12px;">
-  <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/ion-img-1.png" 
-       alt="in other news image" 
-       style="width:100%; max-width:343px; height:auto; display:block; margin:0 auto;">
-</div>
-</div>
-<div style="background-color: #FAE2E3;padding:16px 32px;">
-<ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px;">
-   
-
-<li><a href="https://www.theverge.com/policy/912689/live-nation-ticketmaster-antitrust-monopoly-trial-verdict" style="text-decoration: underline;color:#000000 !important">Ticketmaster is an illegal monopoly, jury finds</a></li>
-<li><a href="https://techcentral.co.za/the-cameras-behind-artemis-iis-stunning-lunar-images/280201/" style="text-decoration: underline;color:#000000 !important">The cameras behind Artemis II’s stunning lunar images</a></li>
-<li><a href="https://techcabal.com/2026/04/15/telemedan-builds-kioks-in-chad/" style="text-decoration: underline;color:#000000 !important">The solar-powered medical kiosks bringing doctors to remote Chadians</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            
-<div style="width:100%; background-color: transparent; box-sizing:border-box;">
-<div style="width:100%;box-sizing:border-box;background-color:transparent;padding:0 12px;text-align:center;">
-<div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center;">
-<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0;"><strong>Written by:</strong> Emmanuel Nwosu and Opeyemi Kareem</p>
-<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0;"><strong>Edited by: </strong>Emmanuel Nwosu and Ganiu Oloruntade</p>
- </div>
-</div>
-<div style="background-color:#F4FFF9;padding:16px 32px;">
-<h6 style="text-align:center;font-size:16px;font-weight:700;line-height:23.1px;margin:0 0 10px;">Want more of TechCabal?</h6>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:20px;margin:0;text-align:center;">Sign up for our insightful newsletters on the business and economy of tech in Africa.</p>
-<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000;"></div>
-<ul style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size:16px; line-height: 30px;margin:0;padding-left: 20px;">
-<li><a href="https://techcabal.com/next-wave" style="text-decoration: none !important; font-style: normal !important; color:#F23204 !important; font-weight:700 !important;">The Next Wave</a>: futuristic analysis of the business of tech in Africa. </li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfMR3ibg7a2IgUx_qGnx75IFIg1SQcpPIwQASTiFUSmENW1DA/viewform" style="text-decoration: none !important;font-style: normal !important;color:#F23204 !important;font-weight:700 !important">Francophone Weekly by TechCabal</a>: insider insights and analysis of Francophone’s tech ecosystem </li>
-</ul>
-<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000;"></div>
-<p style="padding:5px 0;font-weight:400; font-size: 16px;text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:23px;color:#000000;">P:S If you’re often missing TC Daily in your inbox, check your Promotions folder and move any edition of TC Daily from “Promotions” to your “Main” or “Primary” folder and TC Daily will always come to you.</p>
-                </div>
-<a style="display:block;width:100%;box-sizing: border-box;text-align:center;" href="mailto:ads@bigcabal.com">
-                <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/email-us-tcd-1.png" alt="Email Us" width="100%" height="auto" style="max-width:343px;margin:0 auto;object-fit: cover;"></a>
-            </div> 
-        </div>
-     </div> 
-   </div> 
- </div>
-</body>
-</html>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>The solar-powered medical kiosks bringing doctors to remote Chadians</title>
-		<link>https://techcabal.com/2026/04/15/telemedan-builds-kioks-in-chad/</link>
-		
-		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
-		<pubDate>Wed, 15 Apr 2026 12:05:54 +0000</pubDate>
-				<category><![CDATA[Startups]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[Chad]]></category>
-		<category><![CDATA[Healthtech]]></category>
-		<category><![CDATA[startups]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=185900</guid>
-
-					<description><![CDATA[Telemedan works like a small clinic, designed to handle consultation and diagnosis of a patient in one place.]]></description>
-										<content:encoded><![CDATA[
-<p>When Abakar Mahamat was completing his Master&#8217;s in Information Technology (IT) engineering at  ISGA (Institut Supérieur des Génies et des Affaires), Morocco, in 2021, he did not think he would end up building medical kiosks. </p>
-
-
-
-<p>At first, he tried to build an app that would connect patients to doctors in his home country, Chad, because of the healthcare access gap he found during his research. What stood out to Mahamat was the effort it took for people to get a consultation.&nbsp;</p>
-
-
-
-<p>Chad has about<a href="https://data.who.int/countries/148" target="_blank" rel="noreferrer noopener nofollow"> 0.8 physicians per 10,000 people</a>, far below the global benchmark of <a href="https://databank.worldbank.org/metadataglossary/health-nutrition-and-population-statistics/series/SH.MED.PHYS.ZS" target="_blank" rel="noreferrer noopener nofollow">2.5 medical staff per 1,000 people</a>, according to data from the World Health Organisation (WHO). For many patients, getting care means travelling long distances and spending on transport to navigate a system that is physically out of reach.</p>
-
-
-
-<p>An app felt like a clean fix to bring medicine closer to the people. However, as Mahamat began to sketch what would eventually become Telemedan, the idea changed. An app assumes that patients have smartphones and stable internet connectivity enough to sustain a consultation. In Chad, where internet penetration stands at <a href="https://datareportal.com/reports/digital-2026-chad" target="_blank" rel="noreferrer noopener nofollow">13.2%</a>, a purely digital solution might struggle to solve the problem it was built for.&nbsp;</p>
-
-
-
-<p>&#8220;Remote areas in Chad have a very low rate of electrification and connectivity,&#8221; Mahamat said. &#8220;The Internet is expensive for remote areas, so developing a mobile app for this context was not suitable.&#8221;</p>
-
-
-
-<p>Diagnosis required more than just talking. For doctors to get an accurate diagnosis of a patient, they need to conduct tests such as checking the blood pressure and what the heartbeat sounds like, checking for muffled sounds in the lungs, knowing the body temperature, and the blood oxygen level.</p>
-
-
-
-<p>&#8220;During the teleconsultation, what if the doctors need to know the temperature or the blood oxygenation levels in the patients? An app doesn&#8217;t have tools to get that data,&#8221; he said, reflecting on the early stages of the idea.</p>
-
-
-
-<p>In 2021, Mahamat and  Ahmed Kotoko launched Telemedan, a solar-powered medical kiosk that connects Chadians in rural provinces to medical doctors. </p>
-
-
-
-<h2 class="wp-block-heading"><strong>Inside the kiosk</strong></h2>
-
-
-
-<p>Telemedan works like a small clinic, designed to handle consultation and diagnosis of a patient in one place.</p>
-
-
-
-<p>A patient could walk in, book an appointment to connect with a doctor using video conferencing. According to Mahamat, Chad&#8217;s Ministry of Health provides the doctors through a 2022 partnership</p>
-
-
-
-<p>Mahamat explained that the doctors follow a pre-screening process and are selected through the <a href="https://www.ecofinagency.com/news-digital/0307-47533-chad-begins-drafting-digital-health-program-to-tackle-medical-staff-gaps" target="_blank" rel="noreferrer noopener nofollow">National Digital Health Program</a>, a government initiative for the effective implementation of digital health tools in the country.&nbsp;</p>
-
-
-
-<p>“This ensures that the clinicians involved are qualified, aligned with national standards, and integrated into the public health system,” he said.</p>
-
-
-
-<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="825" height="754" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-22.jpeg" alt="" class="wp-image-185901" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-22.jpeg 825w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-22-300x274.jpeg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-22-768x702.jpeg 768w" sizes="auto, (max-width: 825px) 100vw, 825px" /><figcaption class="wp-element-caption"><em><em>A man using Telemedan’s Kiosk. Image source: Telemedan</em></em></figcaption></figure>
-
-
-
-<p>The kiosk is equipped with a set of medical devices that allow the doctor to gather real-time diagnostic data during the session. These tools are what Mahamat describes as on-site diagnostics, and include a dermatoscope for examining skin conditions, a stethoscope for heart activity, an otoscope for ear examinations, an oximeter for measuring blood oxygen levels, and temperature sensors.&nbsp;</p>
-
-
-
-<p>For maternal care, the kiosk also includes a probe that can be used to monitor the foetus. This setup is meant to close the gap that a standard video consultation cannot, because the doctors are receiving inputs that emulate a physical examination.</p>
-
-
-
-<p>Interacting with these tools is not always known, particularly for first-time users. Because of this, each kiosk is manned by a trained local operator who steps into position to set up the devices and provide assistance. </p>
-
-
-
-<p>&#8220;The kiosk is placed in a private area where there are only the patients and their doctors. The local operators can be nearby if the patient needs help with the on-site diagnostics,&#8221; he added.</p>
-
-
-
-<p>Telemedan&#8217;s kiosks also handle care continuity; doctors can issue prescriptions at the end of a session, which patients can print directly from the kiosk. At the same time, patients receive updates and reminders through SMS on their phones to ensure that they can follow up on appointments or treatment without needing a smartphone.</p>
-
-
-
-<p>For users with a smartphone, Telemedan is extending this information and follow-up layer through a mobile application that is currently in development. According to Mahamat, this app will allow patients to access their prescriptions and medical records as an extension of the Kiosks.</p>
-
-
-
-<p>Mahamat noted that the kiosks are optimised for environments with unreliable infrastructure; they are solar-powered and connect to the internet using a mix of 4G and satellite systems, depending on what is available in each location.&nbsp;</p>
-
-
-
-<p>“In some areas it’s working perfectly,” he said of 4G, “but in some areas that are very, very far we are using the satellite antenna… for more efficiency.”</p>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="577" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23-1024x577.jpeg" alt="" class="wp-image-185902" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23-1024x577.jpeg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23-300x169.jpeg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23-768x433.jpeg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23-1536x866.jpeg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23-1240x699.jpeg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/image-23.jpeg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em><em>Assembly of Telemedan Kiosk. Image source: Telemedan</em></em></figcaption></figure>
-
-
-
-<p>Each kiosk takes about two weeks to produce, according to Mahamat, because some components, like the touchscreen, are imported before local assembly. He noted that the kiosks are designed to be low-maintenance, not needing constant intervention. Local operators are trained to handle minor physical issues, such as disconnected components, while more complex software problems are resolved remotely by the Telemedan team.&nbsp;</p>
-
-
-
-<p>“If you have a problem with the software, we can fix that at a distance,” he said, but for hardware issues like a broken screen, the team may need to step in physically.</p>
-
-
-
-<p>Telemedan has begun to layer in additional capabilities, more recently, an AI-powered tool used for detecting diabetic retinopathy through retinal scans, Mahamat noted, describing it as one of the first steps in integrating AI into the system.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Partnerships and pricing</strong></h2>
-
-
-
-<p>Telemedan&#8217;s business operation is such that the people who need the service the most are not the ones who pay for the infrastructure. The kiosks themselves cost about $10,000 per unit, and that cost is not passed on to patients, because Telemedan sells directly to governments and public health programmes and organisations that are working to expand access to care.</p>
-
-
-
-<p>This structure makes Telemedan a business-to-government (B2G) and business-to-business (B2B) model, with patients as end users rather than customers. Once a kiosk is deployed, it is no longer owned by Telemedan as it becomes part of the system operated by that government or partner.</p>
-
-
-
-<p>Consultations through the kiosk typically range from $2 to $15, depending on whether the patient is seeing a general practitioner or a specialist. Those fees are not set by Telemedan, and are often tied to existing public health insurance schemes or pricing structures defined by the deploying partner, according to Mahamat.&nbsp;</p>
-
-
-
-<p>The result of this model is one where revenue is not tied to usage, meaning that selling kiosks will generate revenue, but increased usage by patients does not directly translate into additional revenue. The company is now trying to change that.&nbsp;</p>
-
-
-
-<p>&#8220;We want to deploy our own network of kiosks, that is, owned by Telemedan, where we could collect fees from the teleconsultation,” Mahamat said.</p>
-
-
-
-<p>Since its launch in 2021, the company has installed 37 kiosks across 11 provinces in Chad, reaching an estimated 143,000 people, according to Mahamat. His ambition, however, is larger than Chad.&nbsp;</p>
-
-
-
-<p>“The problem we are tackling is not just a Chad problem… it’s an African problem,” he said, noting that expansion to new markets will not be straightforward.</p>
-
-
-
-<p>Launching the solution in new markets means navigating regulatory environments, securing partnerships with governments and health agencies, and adapting the kiosk to different environments—realities, which Mahamat is well aware of. However, the focus remains on strengthening what already exists in Chad and preparing the model for the kind of partnerships that an expansion will require.</p>
 ]]></content:encoded>
 					
 		
