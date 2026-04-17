@@ -1,5 +1,10 @@
 name: 全球互联网动态情报站
 
+# 防止重复并发：新的 scheduled run 启动时，取消还在跑的旧 run
+concurrency:
+  group: intelligence-station
+  cancel-in-progress: true
+
 on:
   # 每次推送 main 分支自动运行（用于测试代码改动）
   push:
@@ -26,7 +31,7 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     permissions:
       contents: write
 

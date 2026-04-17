@@ -156,13 +156,21 @@ def detect_event_types(title):
                        'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results',
                        'goes live', 'shares ', 'stock ']):
         types.append('earnings')
-    # 战略/市场
+    # 战略/市场（出海、全球化、产品发布）
     if any(k in t for k in ['partners with', 'partnership', 'strategic',
                        'joint venture', 'expands to', 'flagship store',
                        'exits ', 'layoffs', 'shutdown', 'spins off',
                        'disrupts', 'CEO says', 'CEO on', 'ceo on', 'expansion',
                        'launches ', 'rolls out', 'deploys', 'to launch',
-                       'launches in', 'listing ', 'eyes $', '$ valuation']):
+                       'launches in', 'listing ', 'eyes $', '$ valuation',
+                       # 出海/国际化关键词
+                       'overseas', 'international', 'global launch', 'global push',
+                       'enter', 'enters', 'entering', 'to expand', 'expanding',
+                       'global expansion', 'international expansion',
+                       # 产品/市场动作
+                       'debut', 'debuts', 'debuting', 'launch', 'launched',
+                       'available in', 'rollout', 'available internationally',
+                       'files for IPO', 'goes public', 'listing']):
         types.append('strategy')
     return types if types else ['other']
 
@@ -403,7 +411,7 @@ HTML_SOURCES = [
 def fetch_company_news(cfg):
     """
     从 Google News RSS 抓取特定公司的新闻
-    每家公司每天最多取 5 条
+    只取当天/昨天的 + 有信号的事件 + 每公司最多3条
     """
     import urllib.parse
     query = urllib.parse.quote(cfg['query'])
@@ -419,12 +427,24 @@ def fetch_company_news(cfg):
     except Exception:
         return []
 
+    today = datetime.now().strftime('%Y-%m-%d')
+    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    allowed_dates = {today, yesterday}
+
     results = []
+    seen_titles = set()  # 标题归一化去重（多家报道同一事件只取第一条）
+
     for entry in parsed.entries:
-        if len(results) >= 5: break
+        if len(results) >= 3: break  # 每公司最多3条
 
         title = (entry.get('title') or '').strip()
         if len(title) < 15: continue
+
+        # 标题归一化去重
+        norm = re.sub(r'[^\w]', '', title.lower())[:40]
+        if norm in seen_titles:
+            continue
+        seen_titles.add(norm)
 
         # 基础噪音过滤
         title_lower = title.lower()
@@ -440,13 +460,19 @@ def fetch_company_news(cfg):
             link = (entry.get('id') or '').strip()
         if not link: continue
 
-        # 日期
+        # 日期过滤：只取当天或昨天（避免旧闻）
         article_date = None
         tp = entry.get('published_parsed') or entry.get('updated_parsed')
         if tp:
             article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
+        if article_date and article_date not in allowed_dates:
+            continue
 
         types = detect_event_types(title)
+        # 过滤：无信号事件不保留（公司监控只追踪实质动作）
+        if types[0] == 'other':
+            continue
+
         results.append({
             'title': title,
             'url': link,
@@ -703,11 +729,11 @@ def analyze_events_doubao(items):
         "temperature": 0.1
     }
 
-    for attempt in range(5):
+    for attempt in range(3):  # 最多重试3次
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=180)
+            resp = requests.post(url, headers=headers, json=payload, timeout=30)  # 30s timeout，快速失败
             if resp.status_code == 429:
-                wait = (attempt + 1) * 5
+                wait = (attempt + 1) * 10
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
                 time.sleep(wait)
                 continue
@@ -732,11 +758,13 @@ def analyze_events_doubao(items):
             if isinstance(result, list):
                 result = [r for r in result if r.get('url') and r.get('summary_short')]
             return result
+        except requests.exceptions.Timeout:
+            print(f"  ⚠️  豆包 API 超时（30s），快速失败，跳过该批次")
+            return None  # 超时直接跳过，不重试
         except json.JSONDecodeError as e:
-            if attempt < 4:
+            if attempt < 2:
                 wait = (attempt + 1) * 5
-                print(f"  ⚠️  豆包返回非JSON（批次{len(items)}条），尝试修正解析...")
-                # 尝试从损坏的文本中提取JSON数组
+                print(f"  ⚠️  豆包返回非JSON，尝试修正解析...")
                 import re as re2
                 match = re2.search(r'\[[\s\S]*\]', text if 'text' in dir() else '')
                 if match:
@@ -753,7 +781,7 @@ def analyze_events_doubao(items):
             print(f"  ❌ 豆包 JSON 解析最终失败")
             return None
         except Exception as e:
-            if attempt < 4:
+            if attempt < 2:
                 wait = (attempt + 1) * 5
                 print(f"  ⚠️  豆包 API 调用失败（{type(e).__name__}），等待 {wait}s 后重试...")
                 time.sleep(wait)
@@ -765,7 +793,12 @@ def analyze_events_doubao(items):
 
 def analyze_single_event_doubao(item):
     """单条事件分析（批次失败时的兜底）"""
-    return analyze_events_doubao([item])
+    # 单条分析也有30s timeout，不等待
+    try:
+        result = analyze_events_doubao([item])
+        return result
+    except Exception:
+        return None
 
 def _calc_score(item):
     """程序评分：基于金额、事件类型、区域权重计算确定性分数"""
@@ -984,20 +1017,19 @@ def main():
     today_events = []
     if use_doubao:
         print(f"\n🤖 豆包 AI 分析...")
-        for i in range(0, len(filtered), 5):
-            batch = filtered[i:i+5]
+        for i in range(0, len(filtered), 8):
+            batch = filtered[i:i+8]
             results = analyze_events_doubao(batch)
             if results is None:
                 # 批次失败 → 逐条兜底
-                print(f"  批次 {(i//5)+1} 批次API失败，逐条重试...")
+                print(f"  批次 {(i//8)+1} 批次API失败，跳过（程序生成reason）...")
                 for item in batch:
-                    r = analyze_single_event_doubao(item)
-                    today_events.append(build_event(item, r))
+                    today_events.append(build_event(item))
             else:
                 for item in batch:
                     r = next((x for x in results if x.get('url') == item['url']), {})
                     today_events.append(build_event(item, r))
-            print(f"  批次 {(i//5)+1}/{(len(filtered)+4)//5} 完成")
+            print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
             time.sleep(0.5)
     if not use_doubao:
         for item in filtered:
