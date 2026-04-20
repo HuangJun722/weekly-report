@@ -6,9 +6,6 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  # 每次推送 main 分支自动运行（用于测试代码改动）
-  push:
-    branches: [main]
   # 每天 18:00 UTC (= 次日 02:00 北京时间) 自动运行
   # 选择此时段：欧洲/亚太/中东/拉美当日新闻已全部发布，采集最完整
   schedule:
