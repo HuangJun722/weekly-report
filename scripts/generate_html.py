@@ -703,10 +703,21 @@ def generate_html():
     )
 
     os.makedirs('docs', exist_ok=True)
-    with open('docs/index.html', 'w', encoding='utf-8') as f:
-        f.write(html)
-
-    print(f"OK | 通用{len(generic_events)} 条 | 公司{len(company_events)} 条 | {len(history)} 天往期")
+    # 如果已存在 hero carousel 设计的 index.html，保留不覆盖
+    index_path = 'docs/index.html'
+    existing = None
+    if os.path.exists(index_path):
+        content = open(index_path, 'r', encoding='utf-8').read()
+        # 检测是否是 hero carousel 设计（有玻璃态 CSS 变量）
+        if 'var(--bg)' in content and 'var(--panel)' in content and 'backdrop-filter' in content:
+            existing = content
+            print(f"Preserved existing hero carousel design ({len(content)} bytes)")
+    if existing:
+        print(f"OK | 通用{len(generic_events)} 条 | 公司{len(company_events)} 条 | {len(history)} 天往期 | (设计已保留)")
+    else:
+        with open(index_path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"OK | 通用{len(generic_events)} 条 | 公司{len(company_events)} 条 | {len(history)} 天往期")
 
 if __name__ == '__main__':
     generate_html()
