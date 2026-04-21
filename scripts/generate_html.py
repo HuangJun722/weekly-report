@@ -158,6 +158,17 @@ def calculate_score(event):
     raw = (amt_pts + type_pts + industry_pts + named_pts + investor_pts) * region_mult
     return max(round(min(raw, 10)), 1)
 
+# ─── 预设公司名单 ─────────────────────────────────────────────
+
+PRESET_COMPANIES = {
+    '中资': ['ByteDance/TikTok', 'Tencent', 'Alibaba', 'JD.com', 'Kuaishou', 'Ant Group', 'Meituan'],
+    '亚太': ['Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek', 'VNG Group', 'Yahoo', 'Cyberagent'],
+    '欧洲': ['Adyen', 'Zalando', 'Allegro', 'Trendyol'],
+    '中东': ['Noon', 'Careem', 'Tabby', 'Kaspi.kz'],
+    '非洲': ['Jumia', 'Konga'],
+    '拉美': ['MercadoLibre', 'Rappi'],
+}
+
 # ─── Fallback reason 生成 ───────────────────────────────────
 
 # 常见监控公司名（用于从标题提取当事人）
@@ -389,50 +400,74 @@ def load_events():
 
 
 def split_company_events(events):
-    """将事件拆分为公司动态和通用热点（公司动态只保留7天内）"""
+    """
+    将事件拆分为公司动态和通用热点
+    - 公司动态只保留7天内，不过滤
+    - 通用热点：排除other类型和评分<5的事件
+    """
     week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     company_events = []
     generic_events = []
+
     for date_str, evs in events.items():
         for e in evs:
-            # 公司动态只保留7天内的（避免旧数据堆积）
             if e.get('is_company') and date_str >= week_ago:
+                # 公司动态：只保留7天内的，不过滤
                 company_events.append(e)
             elif not e.get('is_company'):
+                # 通用事件：排除other类型和低评分
+                score = e.get('score', 0)
+                ev_type = e.get('event_types', ['other'])[0]
+                if ev_type == 'other' or score < 5:
+                    continue
                 generic_events.append(e)
-    # 分别按 score 排序
-    company_events.sort(key=lambda x: x.get('score', 5), reverse=True)
-    generic_events.sort(key=lambda x: x.get('score', 5), reverse=True)
+
+    # 按时间倒序，同一天按评分排序
+    company_events.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
+    generic_events.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
     return company_events, generic_events
 
 def get_signal_events(events):
-    """去重后按 score 排序，最多20条（排除中资出海，Market Pulse 展示全球非中资）"""
+    """
+    获取信号事件：
+    1. 只取最近7天内的信号事件
+    2. 排除中资出海
+    3. 排除other类型
+    4. 排除低评分（<5）事件
+    5. 按日期倒序排序
+    """
     seen = set()
     result = []
-    for date in sorted(events.keys(), reverse=True):
-        for event in events[date]:
-            if event['url'] not in seen:
-                seen.add(event['url'])
-                # 排除中资出海：定位"非中美"，中资只在公司标签页展示
-                if event.get('is_chinese_capital'):
-                    continue
-                if event.get('event_types', ['other'])[0] != 'other':
-                    result.append(event)
-    today = datetime.now().strftime('%Y-%m-%d')
-    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+
     week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
-    def _recency_boost(e):
-        score = e.get('score', 5)
-        d = e.get('date') or ''
-        if d == today:
-            return score + 4
-        elif d == yesterday:
-            return score + 3
-        elif d >= week_ago:
-            return score + 1
-        return score
-    result.sort(key=_recency_boost, reverse=True)
-    return result[:20]
+
+    for date in sorted(events.keys(), reverse=True):
+        # 只处理最近7天内的日期
+        if date < week_ago:
+            continue
+
+        for event in events[date]:
+            if event['url'] in seen:
+                continue
+            seen.add(event['url'])
+
+            # 排除中资出海
+            if event.get('is_chinese_capital'):
+                continue
+
+            # 只取信号事件（排除other类型）
+            ev_type = event.get('event_types', ['other'])[0]
+            if ev_type == 'other':
+                continue
+
+            # 排除低评分事件（评分<5视为低质量）
+            score = event.get('score', 0)
+            if score < 5:
+                continue
+
+            result.append(event)
+
+    return result  # 已经在日期倒序遍历，返回即有序
 
 def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
     """生成周报摘要：排除中资出海，只展示真正的"非中美"动态"""
@@ -506,23 +541,27 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         parts.append(f"共{total}条动态，覆盖{', '.join(region_counts.keys()) if region_counts else '各地区'}。")
     summary = ' '.join(parts)
 
-    # ── Market Pulse：始终取所有信号事件中评分最高的3条─────
-    # Hero区域不变，始终显示TOP3（与主tab内容解耦）
+    # ── Market Pulse：最近3天的优质信号事件─────
+    # 优先今天 > 昨天 > 前天，按评分排序
     today_s = datetime.now().strftime('%Y-%m-%d')
     yesterday_s = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
-    week_ago_s = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
-    def _recency_boost_s(e):
-        score = e.get('score', 0)
-        d = e.get('date') or ''
-        if d == today_s:
-            return score + 4
-        elif d == yesterday_s:
-            return score + 3
-        elif d >= week_ago_s:
-            return score + 1
-        return score
-    sorted_signals = sorted(signals, key=_recency_boost_s, reverse=True) if signals else []
-    mp_events = sorted_signals[:3]
+    two_days_ago_s = (datetime.now() - timedelta(days=2)).strftime('%Y-%m-%d')
+
+    # 按优先级分组
+    today_signals = [e for e in signals if e.get('date') == today_s]
+    yesterday_signals = [e for e in signals if e.get('date') == yesterday_s]
+    two_days_ago_signals = [e for e in signals if e.get('date') == two_days_ago_s]
+
+    # 今天优先，然后昨天，然后前天
+    mp_events = today_signals[:7]
+    if len(mp_events) < 7:
+        need = 7 - len(mp_events)
+        mp_events.extend(yesterday_signals[:need])
+    if len(mp_events) < 7:
+        need = 7 - len(mp_events)
+        mp_events.extend(two_days_ago_signals[:need])
+
+    mp_events = mp_events[:7]
 
     return {
         'total_events': total,
@@ -536,7 +575,8 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         'type_counts': type_counts,
         'headline': headline,
         'summary': summary,
-        'top3': mp_events[:3],
+        'top3': mp_events[:3],  # 保持兼容
+        'top7': mp_events,  # 新增：今日要点7条
     }
 
 def generate_html():
@@ -567,24 +607,77 @@ def generate_html():
                     main_events = evs
                     break
 
-    # 标题去重 + 按评分排序
+    # 标题去重 + 质量过滤 + 按时间排序
+    # 1. 排除other类型和低评分事件
+    # 2. 按时间倒序（最新的在前）
     seen_titles = set()
     deduped = []
     for e in main_events:
         norm = re.sub(r'[^\w]', '', e.get('title', '').lower())
-        if norm not in seen_titles and len(norm) > 10:
-            seen_titles.add(norm)
-            deduped.append(e)
-    deduped.sort(key=lambda x: x.get('score', 5), reverse=True)
+        if norm in seen_titles or len(norm) <= 10:
+            continue
+        seen_titles.add(norm)
+
+        # 排除other类型事件（低质量）
+        ev_type = e.get('event_types', ['other'])[0]
+        if ev_type == 'other':
+            continue
+
+        # 排除低评分事件（评分<5视为低质量）
+        score = e.get('score', 0)
+        if score < 5:
+            continue
+
+        deduped.append(e)
+
+    # 按时间倒序，同一天按评分排序
+    deduped.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
     all_feed = deduped
 
     # 公司动态单独处理
     company_events, generic_events = split_company_events(events)
+
+    # 统计每个公司的事件，每公司保留3-4条高质量的
+    # 过滤逻辑：按评分排序，取高分事件，优先保留有信号类型的
     company_by_company = {}
     for e in company_events:
         name = e.get('company_name', '其他')
         company_by_company.setdefault(name, []).append(e)
-    company_list = sorted(company_by_company.items(), key=lambda x: len(x[1]), reverse=True)
+
+    # 对每公司的事件进行筛选：优先信号事件（funding/ma/earnings/strategy），再按评分排序
+    for name, evs in company_by_company.items():
+        # 信号事件优先
+        signal_evs = [e for e in evs if e.get('event_types', ['other'])[0] != 'other']
+        # other类型次之
+        other_evs = [e for e in evs if e.get('event_types', ['other'])[0] == 'other']
+
+        # 信号事件按评分排序取前3条
+        signal_evs.sort(key=lambda x: x.get('score', 0), reverse=True)
+        # other类型按评分排序取前1条
+        other_evs.sort(key=lambda x: x.get('score', 0), reverse=True)
+
+        # 保留：信号3条 + other1条 = 每公司最多4条
+        company_by_company[name] = signal_evs[:3] + other_evs[:1]
+
+    # 使用预设公司名单，填充实际采集到的事件数量
+    preset_company_list = []
+    for region, companies in PRESET_COMPANIES.items():
+        for company_name in companies:
+            evs = company_by_company.get(company_name, [])
+            preset_company_list.append({
+                'name': company_name,
+                'region': region,
+                'count': len(evs),
+                'events': evs
+            })
+
+    # 按事件数量排序，有事件的排前面
+    preset_company_list.sort(key=lambda x: x['count'], reverse=True)
+
+    # 全部事件 = 通用热点 + 公司动态（筛选后），统一按时间排序
+    company_events_filtered = [e for evs in company_by_company.values() for e in evs]
+    all_events_for_list = list(generic_events) + company_events_filtered
+    all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
 
     # 历史tab：15天内除主tab批次之外的所有有内容日期
     cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
@@ -594,17 +687,18 @@ def generate_html():
     signals = get_signal_events(events)
     weekly = build_weekly_summary(all_feed, signals, main_events, events)
     # 公司动态也加入周报摘要
-    weekly['company_count'] = len(company_events)
-    weekly['company_list'] = company_list
+    weekly['company_count'] = len(company_events_filtered)
+    weekly['company_list'] = preset_company_list
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
         weekly=weekly,
         all_feed=all_feed,
+        all_events_for_list=all_events_for_list,
         history=history,
         main_date=main_date,
         company_events=company_events,
-        company_list=company_list,
+        company_list=preset_company_list,
         update_time=main_date + ' 数据（每日02:00北京时间自动更新）',
     )
 

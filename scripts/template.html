@@ -86,25 +86,118 @@ body {
 /* Hero */
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   border: 1px solid var(--stroke);
   background: var(--panel);
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow);
   border-radius: var(--radius-xl);
-  padding: 32px 34px;
+  padding: 28px 32px;
   overflow: hidden;
   position: relative;
   margin-bottom: 18px;
 }
-.hero-left { display: flex; flex-direction: column; gap: 18px; min-width: 0; justify-content: center; }
-.hero h2 {
-  margin: 0; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.18;
-  letter-spacing: -0.04em; max-width: 18ch;
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
-.hero-desc {
-  margin: 0; color: var(--muted-2); font-size: 14px; line-height: 1.8; max-width: 56ch;
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+.stat-num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.hero-pulse {
+  background: var(--panel-2);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+.pulse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.pulse-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.pulse-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pulse-item {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 10px;
+  align-items: start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--stroke);
+}
+.pulse-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.pulse-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pulse-badge.pulse-ma { background: var(--warn); }
+.pulse-badge.pulse-earnings { background: var(--muted); }
+.pulse-badge.pulse-strategy { background: var(--accent-3); }
+.pulse-content h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pulse-content p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.pulse-region {
+  font-size: 10px;
+  color: var(--muted-2);
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 .field {
   display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px;
@@ -113,36 +206,8 @@ body {
 }
 .field input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 13px; }
 .ico { width: 16px; height: 16px; flex: 0 0 auto; opacity: 0.7; }
-.hero-right { display: flex; flex-direction: column; }
 
-/* Market Pulse */
-.hero-right { display: flex; flex-direction: column; }
-.terminal {
-  border-radius: var(--radius-lg); border: 1px solid var(--stroke);
-  background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3));
-  padding: 22px 24px; flex: 1;
-}
-.terminal-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 14px; }
-.terminal-head h3 { margin: 0; font-size: 14px; letter-spacing: -0.02em; font-weight: 600; }
-.chip {
-  display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px;
-  border-radius: 999px; background: rgba(16, 185, 129, 0.08);
-  color: #047857; font-size: 11px; font-weight: 600;
-  border: 1px solid rgba(16, 185, 129, 0.12); white-space: nowrap;
-}
-.signal-list { display: grid; gap: 12px; }
-.signal { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: start; padding: 10px 0; border-top: 1px solid var(--stroke); }
-.signal:first-child { border-top: 0; padding-top: 0; }
-.badge { width: 8px; height: 8px; border-radius: 999px; margin-top: 5px; background: var(--accent); box-shadow: 0 0 0 4px rgba(14,165,233,0.08); flex-shrink: 0; }
-.badge.alt { background: var(--accent-2); box-shadow: 0 0 0 4px rgba(139,92,246,0.08); }
-.badge.green { background: var(--accent-3); box-shadow: 0 0 0 4px rgba(16,185,129,0.08); }
-.signal h4 { margin: 0 0 4px; font-size: 13px; font-weight: 600; line-height: 1.45; letter-spacing: -0.02em; overflow-wrap: break-word; word-break: break-word; }
-.signal p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
-.signal .tag {
-  display: inline-flex; padding: 4px 8px; border-radius: 999px;
-  background: var(--panel-2); border: 1px solid var(--stroke); color: var(--muted-2);
-  font-size: 11px; white-space: nowrap; align-self: start;
-}
+/* Market Pulse - removed, replaced by hero-stats */
 
 /* Tab Switcher */
 .tab-bar { display: flex; gap: 4px; margin-bottom: 16px; }
@@ -223,6 +288,92 @@ body {
   border-radius: 999px;
 }
 
+/* Today Panel */
+.today-header {
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-lg);
+}
+.today-headline {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+.today-desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.today-item {
+  border-left: 3px solid var(--accent) !important;
+}
+
+/* Company Navigation */
+.company-nav {
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(12px);
+}
+.company-nav-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.company-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.company-nav-region {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.company-nav-region-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted-2);
+  min-width: 40px;
+  padding-top: 4px;
+}
+.company-nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.company-nav-btn {
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(139, 92, 246, 0.05);
+  font-size: 11px;
+  font-weight: 500;
+  color: #7c3aed;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.company-nav-btn:hover {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+.company-nav-btn.active {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: #fff;
+}
+.company-nav-btn.empty {
+  opacity: 0.4;
+  cursor: default;
+}
+
 /* History */
 .history-day { margin-bottom: 20px; }
 .history-date {
@@ -277,18 +428,12 @@ body {
         <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
       </div>
       <div class="filter-btn-group">
-        <button class="filter-btn active" data-filter="type" data-value="all">全部</button>
-        <button class="filter-btn" data-filter="type" data-value="funding">融资</button>
-        <button class="filter-btn" data-filter="type" data-value="ma">并购</button>
-        <button class="filter-btn" data-filter="type" data-value="earnings">财报</button>
-        <button class="filter-btn" data-filter="type" data-value="strategy">战略</button>
-        <span class="filter-divider"></span>
         <button class="filter-btn active" data-filter="region" data-value="all">全部地区</button>
+        <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
         <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
         <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
         <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
         <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
-        <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
         <span class="filter-divider"></span>
         <button class="filter-btn" data-filter="region" data-value="中资">中资出海</button>
       </div>
@@ -299,52 +444,58 @@ body {
     </div>
   </header>
 
-  {# ===== Hero ===== #}
-  <section class="hero">
-    <div class="hero-left">
-      <h2 class="hero-headline">{{ weekly.headline }}</h2>
-      <p class="hero-desc">{{ weekly.summary }}</p>
-    </div>
-    <div class="hero-right">
-      <div class="terminal">
-        <div class="terminal-head">
-          <h3>Market Pulse</h3>
-          <span class="chip">
-            <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#10b981"/></svg>
-            Top 3
-          </span>
-        </div>
-        <div class="signal-list">
-          {% for ev in weekly.top3 %}
-          <div class="signal">
-            <span class="badge{% if loop.index == 2 %} alt{% elif loop.index == 3 %} green{% endif %}"></span>
-            <div>
-              <h4>{{ ev.title }}</h4>
-              <p>{{ ev.reason }}</p>
-            </div>
-            <span class="tag">{{ ev.region }}</span>
+  {# ===== Hero Carousel ===== #}
+  <section class="hero-carousel" id="heroCarousel">
+    <div class="carousel-track">
+      {% for ev in weekly.top3 %}
+      <div class="carousel-slide gradient-{{ ev.region }}" data-index="{{ loop.index0 }}">
+        <div class="slide-content">
+          <div class="slide-meta">
+            <span class="slide-rank">{{ loop.index }}</span>
+            <span class="slide-region">{{ ev.region }}</span>
           </div>
-          {% endfor %}
+          <h2 class="slide-title">{{ ev.title }}</h2>
+          <p class="slide-reason">{{ ev.reason }}</p>
+          <div class="slide-footer">
+            <span class="slide-source">{{ ev.source }}</span>
+            <a href="{{ ev.url }}" target="_blank" class="slide-link">查看详情 →</a>
+          </div>
+        </div>
+        <div class="slide-decoration">
+          <div class="deco-circle deco-1"></div>
+          <div class="deco-circle deco-2"></div>
+          <div class="deco-lines"></div>
         </div>
       </div>
+      {% endfor %}
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+      <div class="carousel-indicators">
+        {% for ev in weekly.top3 %}
+        <span class="indicator{% if loop.first %} active{% endif %}" data-index="{{ loop.index0 }}"></span>
+        {% endfor %}
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
     </div>
   </section>
 
   {# ===== Tab Switcher ===== #}
   <div class="tab-bar">
-    <button class="tab-btn active" data-tab="main" onclick="switchTab('main')">{{ main_date }}</button>
-    <button class="tab-btn" data-tab="company" onclick="switchTab('company')">公司动态 {% if weekly.company_count > 0 %}({{ weekly.company_count }}){% endif %}</button>
-    <button class="tab-btn" data-tab="history" onclick="switchTab('history')">往期</button>
+    <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日要点</button>
+    <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
   </div>
 
-  {# ===== Main Panel ===== #}
-  <div class="tab-panel active" id="tab-main">
-    {% if all_feed %}
-    <div id="feed-list">
+  {# ===== Today Panel (今日要点) ===== #}
+  <div class="tab-panel active" id="tab-today">
+    {% if weekly.top7 %}
+    <div class="today-header">
+      <h3 class="today-headline">{{ weekly.headline }}</h3>
+      <p class="today-desc">{{ weekly.summary }}</p>
+    </div>
     <div class="feed">
-      {% for ev in all_feed %}
-      {% if not ev.is_company %}
-      <article class="feed-item"
+      {% for ev in weekly.top7 %}
+      <article class="feed-item today-item"
         data-filterable
         data-region="{{ ev.region }}"
         data-type="{{ ev.event_types|join(',') }}"
@@ -358,123 +509,73 @@ body {
           <div class="feed-tags">
             <span class="small-tag">{{ ev.region }}</span>
             <span class="small-tag">{{ ev.source }}</span>
-            <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
           </div>
         </div>
       </article>
-      {% endif %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">暂无今日要点数据</div>
+    {% endif %}
+  </div>
+
+  {# ===== All Panel (全部事件 + 公司索引) ===== #}
+  <div class="tab-panel" id="tab-all">
+    {# 公司索引导航：使用预设公司名单 #}
+    {% if company_list %}
+    <div class="company-nav" id="companyNav">
+      <div class="company-nav-title">📂 公司快链</div>
+      <div class="company-nav-list">
+        {% set regions = ['亚太', '欧洲', '中东', '非洲', '拉美', '中资'] %}
+        {% for region in regions %}
+        {% set companies_in_region = [] %}
+        {% for c in company_list if c.region == region %}
+          {% set _ = companies_in_region.append(c) %}
+        {% endfor %}
+        {% if companies_in_region %}
+        <div class="company-nav-region">
+          <span class="company-nav-region-name">{{ region }}</span>
+          <div class="company-nav-items">
+            {% for c in companies_in_region %}
+            <button class="company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">{{ c.name }}{% if c.count > 0 %} ({{ c.count }}){% endif %}</button>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {# 全部事件列表：通用事件 + 公司动态，统一按时间排序 #}
+    {% if all_events_for_list %}
+    <div id="feed-list">
+    <div class="feed">
+      {% for ev in all_events_for_list %}
+      <article class="feed-item{% if ev.is_company %} company-item{% endif %}"
+        data-filterable
+        data-company="{{ ev.company_name if ev.is_company else '' }}"
+        data-region="{{ ev.region }}"
+        data-type="{{ ev.event_types|join(',') }}"
+        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+        <div class="feed-main">
+          <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
+          {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
+        </div>
+        <div class="feed-side">
+          <span class="importance{% if ev.is_company %} company-tag{% endif %}">{{ ev.insight_label }}</span>
+          <div class="feed-tags">
+            {% if ev.is_company %}<span class="small-tag company-tag">{{ ev.company_name }}</span>{% endif %}
+            <span class="small-tag">{{ ev.region }}</span>
+            {% if not ev.is_company %}<span class="small-tag">{{ ev.source }}</span>{% endif %}
+            <span class="small-tag">{{ (ev.date or '')[:10] }}</span>
+          </div>
+        </div>
+      </article>
       {% endfor %}
     </div>
     </div>
     <div id="no-results" class="empty-state" style="display:none">当前筛选条件下没有内容，换个关键词试试</div>
-    {% endif %}
-  </div>
-
-  {# ===== Company Panel ===== #}
-  <div class="tab-panel" id="tab-company">
-    {% if company_list %}
-    <div class="feed">
-      {% for company_name, evs in company_list %}
-      <div class="company-group">
-        <div class="company-group-header">
-          <span class="company-name">{{ company_name }}</span>
-          <span class="company-count">{{ evs|length }}条</span>
-        </div>
-        {% for ev in evs %}
-        <article class="feed-item company-item"
-          data-filterable
-          data-region="{{ ev.region }}"
-          data-type="{{ ev.event_types|join(',') }}"
-          data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name }}">
-          <div class="feed-main">
-            <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-            {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
-          </div>
-          <div class="feed-side">
-            <span class="importance">{{ ev.insight_label }}</span>
-            <div class="feed-tags">
-              <span class="small-tag">{{ ev.region }}</span>
-              <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-state">暂无公司动态数据</div>
-    {% endif %}
-  </div>
-
-  {# ===== History Panel ===== #}
-  <div class="tab-panel" id="tab-history">
-    {% if history %}
-    {# 只展示最近一天，其他默认折叠 #}
-    <div class="history-day history-day-open">
-      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
-        {{ history[0][0] }}
-        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
-      </div>
-      <div class="history-feed">
-        {% for ev in history[0][1] %}
-        <article class="feed-item"
-          data-filterable
-          data-region="{{ ev.region }}"
-          data-chinese="{{ '1' if ev.is_chinese_capital else '0' }}"
-          data-type="{{ ev.event_types|join(',') }}"
-          data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
-          <div class="feed-main">
-            <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-            {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
-          </div>
-          <div class="feed-side">
-            <span class="importance">{{ ev.insight_label }}</span>
-            <div class="feed-tags">
-              <span class="small-tag">{{ ev.region }}</span>
-              <span class="small-tag">{{ ev.source }}</span>
-              <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-
-    {# 更早的日期折叠 #}
-    {% for item in history[1:] %}
-    <div class="history-day">
-      <div class="history-date" onclick="toggleHistory(this)" style="cursor:pointer;user-select:none;">
-        {{ item[0] }}
-        <span style="font-weight:400;font-size:11px;color:#94a3b8;margin-left:8px;">点击展开/收起</span>
-      </div>
-      <div class="history-feed" style="display:none;">
-        {% for ev in item[1] %}
-        <article class="feed-item"
-          data-filterable
-          data-region="{{ ev.region }}"
-          data-chinese="{{ '1' if ev.is_chinese_capital else '0' }}"
-          data-type="{{ ev.event_types|join(',') }}"
-          data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }}">
-          <div class="feed-main">
-            <h4><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-            {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
-          </div>
-          <div class="feed-side">
-            <span class="importance">{{ ev.insight_label }}</span>
-            <div class="feed-tags">
-              <span class="small-tag">{{ ev.region }}</span>
-              <span class="small-tag">{{ ev.source }}</span>
-              <span class="small-tag">发布 {{ (ev.date or '')[:10] }}</span>
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <div class="empty-state">暂无往期数据</div>
     {% endif %}
   </div>
 
@@ -503,8 +604,9 @@ function toggleHistory(el) {
   }
 }
 
-var state = { region:'all', type:'all', q:'' };
+var state = { region:'all', type:'all', q:'', company:'all' };
 
+// 筛选按钮点击事件
 document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn){
   btn.addEventListener('click', function(){
     var f = btn.getAttribute('data-filter');
@@ -516,23 +618,51 @@ document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn){
   });
 });
 
+// 搜索框输入事件
 document.getElementById('searchBox').addEventListener('input', function(e){
   state.q = e.target.value.trim().toLowerCase();
   applyFilters();
 });
 
+// 公司导航按钮点击事件
+document.querySelectorAll('.company-nav-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    // 无数据的按钮不响应
+    if (btn.classList.contains('empty')) return;
+
+    var company = btn.getAttribute('data-company');
+    var isActive = btn.classList.contains('active');
+
+    // 清除所有按钮的active状态
+    document.querySelectorAll('.company-nav-btn').forEach(function(b){ b.classList.remove('active'); });
+
+    if (isActive) {
+      // 取消选中，恢复全部
+      state.company = 'all';
+    } else {
+      // 选中该公司
+      btn.classList.add('active');
+      state.company = company.toLowerCase();
+    }
+    applyFilters();
+  });
+});
+
 function applyFilters(){
-  var r = state.region, t = state.type, q = state.q;
+  var r = state.region, t = state.type, q = state.q, c = state.company;
   var visible = 0;
   document.querySelectorAll('[data-filterable]').forEach(function(el){
     var er = el.getAttribute('data-region')||'';
     var ec = el.getAttribute('data-chinese')||'0';
     var et = el.getAttribute('data-type')||'';
+    var ecn = (el.getAttribute('data-company')||'').toLowerCase();
     var text = (el.getAttribute('data-text')||'').toLowerCase();
     var mr = r==='all' || (r==='中资' && ec==='1') || er===r;
     var mt = t==='all' || et.split(',').indexOf(t) > -1;
     var mq = !q || text.indexOf(q) > -1;
-    var show = mr && mt && mq;
+    // 公司筛选：匹配data-company属性或text内容中的公司名
+    var mc = c==='all' || ecn===c || (ecn && text.indexOf(c) > -1);
+    var show = mr && mt && mq && mc;
     el.style.display = show ? '' : 'none';
     if (show) visible++;
   });

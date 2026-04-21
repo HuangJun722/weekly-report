@@ -163,14 +163,20 @@ def detect_event_types(title):
                        'disrupts', 'CEO says', 'CEO on', 'ceo on', 'expansion',
                        'launches ', 'rolls out', 'deploys', 'to launch',
                        'launches in', 'listing ', 'eyes $', '$ valuation',
-                       # 出海/国际化关键词
-                       'overseas', 'international', 'global launch', 'global push',
+                       # 出海/国际化关键词（扩充）
+                       'overseas', 'offshore', 'abroad', 'foreign market',
+                       'international', 'global launch', 'global push', 'global ambition',
                        'enter', 'enters', 'entering', 'to expand', 'expanding',
                        'global expansion', 'international expansion',
-                       # 产品/市场动作
+                       'digital hub', 'digital status', 'digital economy',
+                       'tech hub', 'tech investment', 'AI investment',
+                       # 产品/市场动作（扩充）
                        'debut', 'debuts', 'debuting', 'launch', 'launched',
                        'available in', 'rollout', 'available internationally',
-                       'files for IPO', 'goes public', 'listing']):
+                       'files for IPO', 'goes public', 'listing',
+                       'turnaround', 'restructure', 'reorganization',
+                       'cloud service', 'cloud expansion', 'data center',
+                       'partners with', 'signs MOU', 'joint venture']):
         types.append('strategy')
     return types if types else ['other']
 
@@ -481,9 +487,8 @@ def fetch_company_news(cfg):
             continue
 
         types = detect_event_types(title)
-        # 过滤：无信号事件不保留（公司监控只追踪实质动作）
-        if types[0] == 'other':
-            continue
+        # 公司动态只要有company_name就保留，不再过滤other类型
+        # 因为扩充关键词后other类型减少，且other中也有有价值的出海新闻
 
         results.append({
             'title': title,
@@ -665,7 +670,124 @@ def smart_filter(items):
     return result
 
 # ============================================================
-# 豆包分析（可选）
+# MiniMax API（主力）
+# ============================================================
+
+def configure_minimax():
+    """配置 MiniMax API，优先使用"""
+    key = os.environ.get('MINIMAX_API_KEY')
+    model = os.environ.get('MINIMAX_MODEL', 'MiniMax-M2.7')
+    print(f"  🔑 MINIMAX_API_KEY: {'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置 ❌'}")
+    if not key:
+        print("  ⚠️  未设置 MINIMAX_API_KEY，将降级使用豆包")
+        return False
+    if len(key) < 10:
+        print(f"  ❌ MINIMAX_API_KEY 长度异常（{len(key)} 字符），降级使用豆包")
+        return False
+    print(f"  ✅ MiniMax API 配置检查通过，模型: {model}")
+    return True
+
+
+def analyze_events_minimax(items):
+    """
+    使用 MiniMax 大模型分析新闻事件（OpenAI 兼容格式）
+    模型: MiniMax-Text-01
+    """
+    import os
+    api_key = os.environ.get('MINIMAX_API_KEY')
+    if not api_key:
+        print("  ⚠️  未设置 MINIMAX_API_KEY")
+        return None
+
+    url = "https://api.minimax.chat/v1/text/chatcompletion_v2"
+    model = os.environ.get('MINIMAX_MODEL', 'MiniMax-M2.7')
+    headers = {
+        "Authorization": "Bearer " + api_key,
+        "Content-Type": "application/json"
+    }
+
+    news = [{'title': it['title'], 'url': it['url'], 'source': it['source'], 'region': it.get('region','')} for it in items]
+    prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
+
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 4096,
+        "temperature": 0.1
+    }
+
+    # 创建不使用代理的session（MiniMax不需要代理）
+    session = requests.Session()
+    session.trust_env = False  # 禁用环境变量代理
+
+    for attempt in range(3):
+        try:
+            resp = session.post(url, headers=headers, json=payload, timeout=60)
+            if resp.status_code == 429:
+                wait = (attempt + 1) * 10
+                print(f"  ⚠️  MiniMax API 配额耗尽（429），等待 {wait}s 后重试...")
+                time.sleep(wait)
+                continue
+            if resp.status_code == 400:
+                print(f"  ⚠️  MiniMax API 请求错误（400）: {resp.text[:200]}，尝试降级...")
+                return None
+            if resp.status_code != 200:
+                print(f"  ❌ MiniMax API HTTP {resp.status_code}: {resp.text[:300]}")
+                return None
+            data = resp.json()
+            text = data.get('choices', [{}])[0].get('message', {}).get('content', '')
+            if not text:
+                print("  ⚠️  MiniMax 返回空内容: " + str(data))
+                return None
+            for m in ['```json', '```']:
+                if m in text:
+                    parts = text.split(m)
+                    for p in parts[1:]:
+                        text = p.strip()
+                        if text.endswith('```'):
+                            text = text[:-3].strip()
+                        break
+                    break
+            result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+            if isinstance(result, list):
+                result = [r for r in result if r.get('url') and r.get('summary_short')]
+            print(f"  ✅ MiniMax 分析成功，{len(result) if isinstance(result, list) else 0} 条")
+            return result
+        except requests.exceptions.Timeout:
+            print(f"  ⚠️  MiniMax API 超时（60s），快速失败，跳过该批次")
+            return None
+        except json.JSONDecodeError as e:
+            if attempt < 2:
+                wait = (attempt + 1) * 5
+                print(f"  ⚠️  MiniMax 返回非JSON，尝试修正解析...")
+                import re as re2
+                match = re2.search(r'\[[\s\S]*\]', text if 'text' in dir() else '')
+                if match:
+                    try:
+                        result = json.loads(match.group())
+                        result = [r for r in result if isinstance(r, dict) and r.get('url')]
+                        if result:
+                            print(f"  ✅ 修正解析成功，提取 {len(result)} 条")
+                            return result
+                    except: pass
+                print(f"  解析失败，等待 {wait}s 后重试...")
+                time.sleep(wait)
+                continue
+            print(f"  ❌ MiniMax JSON 解析最终失败")
+            return None
+        except Exception as e:
+            if attempt < 2:
+                wait = (attempt + 1) * 5
+                print(f"  ⚠️  MiniMax API 调用失败（{type(e).__name__}），等待 {wait}s 后重试...")
+                time.sleep(wait)
+                continue
+            print(f"  ❌ MiniMax API 最终失败: {type(e).__name__} {str(e)[:200]}")
+            return None
+    return None
+
+
+# ============================================================
+# 豆包分析（备份）
 # ============================================================
 
 def configure_doubao():
@@ -813,8 +935,17 @@ def analyze_events_doubao(items):
     return None
 
 
+def analyze_single_event_minimax(item):
+    """单条事件分析（MiniMax批次失败时的兜底）"""
+    try:
+        result = analyze_events_minimax([item])
+        return result
+    except Exception:
+        return None
+
+
 def analyze_single_event_doubao(item):
-    """单条事件分析（批次失败时的兜底）"""
+    """单条事件分析（豆包批次失败时的兜底）"""
     # 单条分析也有30s timeout，不等待
     try:
         result = analyze_events_doubao([item])
@@ -1034,11 +1165,40 @@ def main():
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
 
-    # Gemini 分析（configure_gemini 内部会打印配置状态）
-    use_doubao = configure_doubao()
+    # AI 分析：MiniMax 优先，豆包降级
+    use_minimax = configure_minimax()
+    use_doubao_fallback = False
     today_events = []
-    if use_doubao:
-        print(f"\n🤖 豆包 AI 分析...")
+
+    if use_minimax:
+        print(f"\n🤖 MiniMax AI 分析（主力）...")
+        for i in range(0, len(filtered), 8):
+            batch = filtered[i:i+8]
+            results = analyze_events_minimax(batch)
+            if results is None:
+                # MiniMax 批次失败 → 尝试豆包兜底
+                print(f"  批次 {(i//8)+1} MiniMax 失败，尝试豆包降级...")
+                if not use_doubao_fallback:
+                    use_doubao_fallback = configure_doubao()
+                if use_doubao_fallback:
+                    results = analyze_events_doubao(batch)
+                if results is None:
+                    print(f"  批次 {(i//8)+1} 豆包也失败，跳过（程序生成reason）...")
+                    for item in batch:
+                        today_events.append(build_event(item))
+                else:
+                    for item in batch:
+                        r = next((x for x in results if x.get('url') == item['url']), {})
+                        today_events.append(build_event(item, r))
+            else:
+                for item in batch:
+                    r = next((x for x in results if x.get('url') == item['url']), {})
+                    today_events.append(build_event(item, r))
+            print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
+            time.sleep(0.5)
+    elif configure_doubao():
+        # MiniMax 未配置，降级使用豆包
+        print(f"\n🤖 豆包 AI 分析（降级）...")
         for i in range(0, len(filtered), 8):
             batch = filtered[i:i+8]
             results = analyze_events_doubao(batch)
@@ -1053,7 +1213,8 @@ def main():
                     today_events.append(build_event(item, r))
             print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
             time.sleep(0.5)
-    if not use_doubao:
+    else:
+        # 两者都未配置，使用程序生成reason
         for item in filtered:
             today_events.append(build_event(item))
 
