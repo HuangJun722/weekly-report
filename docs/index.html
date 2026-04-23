@@ -4173,6 +4173,37 @@ body {
 </div>
 
 <script>
+// Hero Carousel
+var currentSlide = 0;
+var totalSlides = 0;
+function moveSlide(dir) {
+  var slides = document.querySelectorAll('.carousel-slide');
+  var indicators = document.querySelectorAll('.indicator');
+  if (slides.length === 0) return;
+  totalSlides = slides.length;
+  slides[currentSlide].classList.remove('active');
+  indicators[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+  slides[currentSlide].classList.add('active');
+  indicators[currentSlide].classList.add('active');
+}
+// Auto-play
+setInterval(function(){ if (totalSlides > 0) moveSlide(1); }, 5000);
+// Indicator click
+document.querySelectorAll('.indicator').forEach(function(ind){
+  ind.addEventListener('click', function(){
+    var idx = parseInt(ind.getAttribute('data-index'));
+    document.querySelectorAll('.carousel-slide')[currentSlide].classList.remove('active');
+    document.querySelectorAll('.indicator')[currentSlide].classList.remove('active');
+    currentSlide = idx;
+    document.querySelectorAll('.carousel-slide')[currentSlide].classList.add('active');
+    ind.classList.add('active');
+  });
+});
+// Init
+document.querySelectorAll('.carousel-slide').forEach(function(s,i){ if(i===0) s.classList.add('active'); });
+document.querySelectorAll('.indicator').forEach(function(ind,i){ if(i===0) ind.classList.add('active'); });
+
 function switchTab(name) {
   document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
   document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
