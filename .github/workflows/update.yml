@@ -97,7 +97,7 @@ jobs:
           cat data/events.json | head -c 1000
 
       - name: Generate HTML
-        run: python scripts/generate_html.py
+        run: python scripts/generate_html.py --force
 
       - name: Verify output
         run: |

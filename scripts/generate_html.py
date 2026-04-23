@@ -2,6 +2,7 @@
 生成全球互联网动态情报站 HTML 页面
 评分系统：基于 Galtung & Ruge 新闻价值理论 + 金融情报平台通用因子
 """
+import argparse
 import json
 import os
 import re
@@ -579,7 +580,7 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         'top7': mp_events,  # 新增：今日要点7条
     }
 
-def generate_html():
+def generate_html(force=False, preview_mode=False):
     events = load_events()
     sorted_dates = sorted(events.keys(), reverse=True)
 
@@ -703,21 +704,23 @@ def generate_html():
     )
 
     os.makedirs('docs', exist_ok=True)
-    # 如果已存在 hero carousel 设计的 index.html，保留不覆盖
-    index_path = 'docs/index.html'
-    existing = None
-    if os.path.exists(index_path):
-        content = open(index_path, 'r', encoding='utf-8').read()
-        # 检测是否是 hero carousel 设计（有玻璃态 CSS 变量）
-        if 'var(--bg)' in content and 'var(--panel)' in content and 'backdrop-filter' in content:
-            existing = content
-            print(f"Preserved existing hero carousel design ({len(content)} bytes)")
-    if existing:
-        print(f"OK | 通用{len(generic_events)} 条 | 公司{len(company_events)} 条 | {len(history)} 天往期 | (设计已保留)")
-    else:
-        with open(index_path, 'w', encoding='utf-8') as f:
-            f.write(html)
-        print(f"OK | 通用{len(generic_events)} 条 | 公司{len(company_events)} 条 | {len(history)} 天往期")
+    index_path = 'docs/preview.html' if preview_mode else 'docs/index.html'
+
+    with open(index_path, 'w', encoding='utf-8') as f:
+        f.write(html)
+
+    mode = '预览' if preview_mode else '生产'
+    print(f"OK | {mode}模式 | 通用{len(generic_events)}条 | 公司{len(company_events)}条 | {len(history)}天往期")
 
 if __name__ == '__main__':
-    generate_html()
+    parser = argparse.ArgumentParser(description='生成全球互联网动态情报站 HTML')
+    parser.add_argument('--force', action='store_true', help='强制重写 index.html（跳过内容对比）')
+    parser.add_argument('--preview', action='store_true', help='生成本地预览文件 preview.html（不覆盖 index.html）')
+    args = parser.parse_args()
+
+    if args.preview:
+        # 预览模式：生成到 preview.html
+        generate_html(preview_mode=True)
+    else:
+        # 默认模式：生成到 index.html
+        generate_html(force=args.force)
