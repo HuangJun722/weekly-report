@@ -417,13 +417,14 @@ body {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  height: 260px;
 }
-.carousel-track { position: relative; }
+.carousel-track { position: relative; height: 100%; }
 .carousel-slide {
   display: none;
-  position: relative;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   padding: 40px 48px;
-  min-height: 220px;
   color: #fff;
 }
 .carousel-slide.active { display: block; }
