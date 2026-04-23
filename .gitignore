@@ -24,3 +24,7 @@ data/.cache/
 # 临时文件
 *.tmp
 *.log
+*.bak
+
+# 开发临时文件
+docs/hero-carousel-*.html
