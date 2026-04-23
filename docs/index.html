@@ -409,6 +409,70 @@ body {
   .filter-btn-group { gap: 3px; }
   .filter-btn { padding: 3px 7px; font-size: 11px; }
 }
+
+/* Hero Carousel */
+.hero-carousel {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.carousel-track { position: relative; }
+.carousel-slide {
+  display: none;
+  position: relative;
+  padding: 40px 48px;
+  min-height: 220px;
+  color: #fff;
+}
+.carousel-slide.active { display: block; }
+.carousel-slide.gradient-拉美 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.carousel-slide.gradient-中东 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.carousel-slide.gradient-非洲 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.carousel-slide.gradient-欧洲 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.carousel-slide.gradient-亚太 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.carousel-slide.gradient-中资 { background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%); }
+.slide-content { position: relative; z-index: 2; max-width: 700px; }
+.slide-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.slide-rank {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(255,255,255,0.25); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px;
+}
+.slide-region { font-size: 13px; font-weight: 600; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+.slide-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 12px; text-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.slide-reason { font-size: 14px; opacity: 0.9; margin-bottom: 20px; }
+.slide-footer { display: flex; align-items: center; gap: 16px; }
+.slide-source { font-size: 12px; font-weight: 500; opacity: 0.8; }
+.slide-link { color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 2px; transition: opacity 0.2s; }
+.slide-link:hover { opacity: 0.8; }
+.slide-decoration { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: 1; pointer-events: none; }
+.deco-circle {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);
+}
+.deco-1 { width: 200px; height: 200px; top: -60px; right: -40px; }
+.deco-2 { width: 150px; height: 150px; bottom: -50px; left: 20%; }
+.deco-lines { position: absolute; top: 0; right: 0; bottom: 0; width: 40%; background: repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 20px); }
+.carousel-controls { position: absolute; bottom: 20px; right: 24px; display: flex; align-items: center; gap: 12px; z-index: 10; }
+.carousel-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: none; background: rgba(255,255,255,0.25); backdrop-filter: blur(8px);
+  color: #fff; font-size: 20px; cursor: pointer; transition: all 0.2s;
+}
+.carousel-btn:hover { background: rgba(255,255,255,0.4); transform: scale(1.1); }
+.carousel-indicators { display: flex; gap: 8px; }
+.indicator {
+  width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.2s;
+}
+.indicator.active { background: #fff; transform: scale(1.3); }
+@media (max-width: 600px) {
+  .carousel-slide { padding: 24px 20px; min-height: 180px; }
+  .slide-title { font-size: 18px; }
+  .slide-reason { font-size: 13px; }
+}
 </style>
 </head>
 <body>
