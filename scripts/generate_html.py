@@ -638,29 +638,13 @@ def generate_html(force=False, preview_mode=False):
     # 公司动态单独处理
     company_events, generic_events = split_company_events(events)
 
-    # 统计每个公司的事件，每公司保留3-4条高质量的
-    # 过滤逻辑：按评分排序，取高分事件，优先保留有信号类型的
+    # 收集每家公司所有事件（时间窗口内，不过滤数量上限）
     company_by_company = {}
     for e in company_events:
         name = e.get('company_name', '其他')
         company_by_company.setdefault(name, []).append(e)
 
-    # 对每公司的事件进行筛选：优先信号事件（funding/ma/earnings/strategy），再按评分排序
-    for name, evs in company_by_company.items():
-        # 信号事件优先
-        signal_evs = [e for e in evs if e.get('event_types', ['other'])[0] != 'other']
-        # other类型次之
-        other_evs = [e for e in evs if e.get('event_types', ['other'])[0] == 'other']
-
-        # 信号事件按评分排序取前3条
-        signal_evs.sort(key=lambda x: x.get('score', 0), reverse=True)
-        # other类型按评分排序取前1条
-        other_evs.sort(key=lambda x: x.get('score', 0), reverse=True)
-
-        # 保留：信号3条 + other1条 = 每公司最多4条
-        company_by_company[name] = signal_evs[:3] + other_evs[:1]
-
-    # 使用预设公司名单，填充实际采集到的事件数量
+    # 按事件数量排序，有事件的排前面
     preset_company_list = []
     for region, companies in PRESET_COMPANIES.items():
         for company_name in companies:
