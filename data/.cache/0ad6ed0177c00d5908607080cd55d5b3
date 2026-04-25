@@ -12,7 +12,7 @@
 	<atom:link href="https://techpoint.africa/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techpoint.africa</link>
 	<description>Startups, Innovation and Technology in Africa</description>
-	<lastBuildDate>Fri, 24 Apr 2026 14:43:16 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 25 Apr 2026 12:44:02 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,20 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Who controls AI systems once governments adopt them?</title>
+		<link>https://techpoint.africa/insight/ai-systems-control-once-governments-adopts/</link>
+		
+		<dc:creator><![CDATA[Guest Contributor]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2026 12:44:00 +0000</pubDate>
+				<category><![CDATA[Insights]]></category>
+		<guid isPermaLink="false">https://techpoint.africa/?p=353483</guid>
+
+					<description><![CDATA[Once AI systems are deployed into a government workflow, the harder question is no longer whether it is compliant on paper, but whether the government can actually see it, control it, or stop it if conditions change.]]></description>
+		
+		
+		
+			</item>
+		<item>
 		<title>GIGM unveils Hire X, its ride-hailing service, and PASS, a travel and ticketing platform, at GPC 2026</title>
 		<link>https://techpoint.africa/coverage/gigm-unveils-hire-x-and-pass/</link>
 		
@@ -303,26 +317,5 @@ Terra Industries is building Africa's largest drone factory in Accra, Ghana. The
 		
 		
 			</item>
-		<item>
-		<title>Nigeria’s airtime lifeline just got disrupted</title>
-		<link>https://techpoint.africa/insight/techpoint-digest-1326/</link>
-		
-		<dc:creator><![CDATA[Victoria Fakiya]]></dc:creator>
-		<pubDate>Mon, 20 Apr 2026 07:00:00 +0000</pubDate>
-				<category><![CDATA[Insights]]></category>
-		<guid isPermaLink="false">https://techpoint.africa/?p=353084</guid>
-
-					<description><![CDATA[On Techpoint Digest, we discuss how Nigeria's airtime borrowing drama has got messy, how a 22-year-old gaming kid became a startup founder, and how MTN plans expansion while still fixing broken cables.]]></description>
-		
-		
-		
-		<media:content url="https://www.youtube.com/embed/hZOy2DZvrNg" medium="video" width="1280" height="720">
-			<media:player url="https://www.youtube.com/embed/hZOy2DZvrNg" />
-			<media:title type="plain">How Nollywood can tap into the $11 billion micro drama market</media:title>
-			<media:description type="html"><![CDATA[If you’ve spent any time on TikTok or Snapchat over the past couple of years, chances are you’ve encountered them: dramatic, often over-the-top “movies” that...]]></media:description>
-			<media:thumbnail url="https://techpoint.africa/wp-content/uploads/2021/03/TECHPOINT-1-1.jpg" />
-			<media:rating scheme="urn:simple">nonadult</media:rating>
-		</media:content>
-	</item>
 	</channel>
 </rss>

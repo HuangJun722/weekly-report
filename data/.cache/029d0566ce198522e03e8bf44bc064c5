@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Fri, 24 Apr 2026 15:19:49 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 25 Apr 2026 14:48:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,2246 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Digital Nomads: Amara Uyanna has worked across four continents. She is not done.</title>
+		<link>https://techcabal.com/2026/04/25/digital-nomads-how-amara-uyanna-built-a-global-career/</link>
+		
+		<dc:creator><![CDATA[Eme Oreoluwa]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2026 14:48:29 +0000</pubDate>
+				<category><![CDATA[Digital Nomads]]></category>
+		<category><![CDATA[Al Jazeera]]></category>
+		<category><![CDATA[Amara Uyanna]]></category>
+		<category><![CDATA[ExxonMobil]]></category>
+		<category><![CDATA[Lazerpay]]></category>
+		<category><![CDATA[Risevest]]></category>
+		<category><![CDATA[Schneider Electric]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=186623</guid>
+
+					<description><![CDATA[Amara Uyanna left Lagos with one goal: run a global oil company. A summer internship in the Niger Delta changed everything. What followed was a decade of reinvention across oil fields, newsrooms, fintech startups, and energy-tech operations in four continents.]]></description>
+										<content:encoded><![CDATA[
+<p>It starts in an elevator in Paris, France.&nbsp;</p>
+
+
+
+<p>On Saturday, April 4, 2026, Amara Uyanna was trying to catch a 10 a.m. flight, mentally checking off her usual work-travel list. Her suitcase in hand, she made her way to the lowest floor of a Parisian hotel where she had lodged; the elevator doors slid open, and she walked in. There, a stranger stepped in, whispering, almost to himself, “Bismillah.” Without thinking, she answered, “Bismillah,” too, their first connection in a foreign land.</p>
+
+
+
+<p>When they got out of the elevator, they realised they were both headed to the airport. The man was still trying to find a ride. Uyanna, who was in a hurry to catch her flight, offered to share her Uber with him.&nbsp;</p>
+
+
+
+<p>In the car, they fell into an easy conversation, switching between Arabic and English; the stranger and the Uber driver were surprised that she could speak Arabic.</p>
+
+
+
+<p>Uyanna recalls this specific camaraderie fondly.&nbsp;</p>
+
+
+
+<p>It is a snapshot of how she moves through the world: switching languages, sectors, and continents like she switches tabs on a laptop.</p>
+
+
+
+<p>She works as the Chief of Staff at Schneider Electric, the global energy firm, yet her life and work history read like the itinerary of a perpetual commuter between worlds: oil and gas, global policy, media, fintech, crypto, and energy; Nigeria, the United States, the Middle East, Europe, and Southeast Asia.</p>
+
+
+
+<p>“The vision is [to be] a global expert,” she told me. But that vision started far from Paris. This is the life of Uyanna, a globe-trotter.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading">The scholarship child who wanted to run Chevron</h2>
+
+
+
+<p>Uyanna grew up in Lagos, where she finished primary school before winning a scholarship to Nigerian Turkish International College (NTIC) in Abuja for high school. She went on to Louisiana Tech University in Ruston, Louisiana, United States, to study Chemical Engineering &amp; French. At a young age, she wanted to be the Managing Director of a global oil company, and for a while, she was on course to achieve that goal.&nbsp;</p>
+
+
+
+<p>In the summer of 2015, she landed an internship at the Nigerian subsidiary of&nbsp; <a href="https://corporate.exxonmobil.com/">ExxonMobil</a>, the multinational oil and gas firm. It came with the prestige she had dreamt about as a kid: the exposure, the above-average stipends, and other little privileges she earned from working in a Fortune 500 company.&nbsp;</p>
+
+
+
+<p>During her internship, she visited the Qua Iboe Terminal, a crude oil export facility in Akwa Ibom State, southern Nigeria.&nbsp;</p>
+
+
+
+<p>It felt like a dream assignment on paper: a front-row seat to the industry she’d always wanted to lead. But the reality was different. She watched as crude oil spills stained the waterways that the local communities depended on. She watched people cough in the air they were supposed to breathe, and she saw crops die in ways that felt anything but natural.</p>
+
+
+
+<p>The work she had romanticised, she realised, was not as she had thought. It was rather an occupational hazard for the people living in a resource-rich region that did not feel rich at all.</p>
+
+
+
+<p>Her quasi-honeymoon ended after that experience. In its place, a single, stubborn question took root: why wasn’t a multinational company held to the same environmental standards in Nigeria as it was abroad?</p>
+
+
+
+<p>The answers she found were not enough. She went looking for better tools.</p>
+
+
+
+<p>After her graduation in 2016, Uyanna felt her Chemical Engineering background was no longer enough. To change the rules, she realised, she had to sit in rooms where the rules were written.</p>
+
+
+
+<p>She enrolled for a master’s in global policy at The Lyndon B. Johnson School of Public Affairs at The University of Texas at Austin, in the US, focusing on development, innovation, and economics. In March 2016, during a summer break, she joined Sustainability International, a nonprofit working to clean up the Niger Delta region.</p>
+
+
+
+<p>But philanthropy has its own bottleneck: donors were far removed from the affected region, she realised.</p>
+
+
+
+<p>“I said to my boss [at Sustainability International], ‘let’s make a virtual reality documentary, so that way, we’ll be able to bridge the empathy gap,’” said Uyanna. “And even if people haven’t heard of where we are talking about, once they wear those headsets, we’ll take them there.”</p>
+
+
+
+<p>Al Jazeera had just launched its Virtual Reality (VR) unit, <a href="https://network.aljazeera.net/en/pressroom/al-jazeera-launches-vr-brand-%E2%80%9Ccontrast-vr%E2%80%9D" target="_blank" rel="noreferrer noopener nofollow">Contrast VR,</a> in 2017. Uyanna pitched the global media company a VR documentary that would visually pull people into the creeks of the Niger Delta, rather than just read about it. Al Jazeera said yes.</p>
+
+
+
+<p>By May 2017, she was back in Nigeria with a six-person Al Jazeera crew, searching for a woman whose story would anchor the film. They chose a woman because Uyanna felt that when systems fail, women absorb the shock first and longest, and putting her at the centre would force the viewers to confront the human cost they usually scroll past.</p>
+
+
+
+<p>“Every time there is some sort of systemic imbalance, women pay the price more,” she said.&nbsp;</p>
+
+
+
+<p>The film followed Lessi Phillips, who was 16 when an oil pipeline burst in Bodo, a coastal town in Rivers State,  southern Nigeria, in 2008, <a href="https://www.amnesty.org/en/latest/news/2018/03/niger-delta-oil-spills-decoders/" target="_blank" rel="noreferrer noopener nofollow">causing a major spill</a> linked to the multinational oil firm Shell.</p>
+
+
+
+<p>The VR documentary, <a href="https://ajcontrast.com/oilinourcreeks" target="_blank" rel="noreferrer noopener nofollow">“Oil in Our Creeks,”</a> highlighted the environmental impact of oil spills on mangrove swamps and the Bodo community&#8217;s ten-year fight for justice, cleanup, and recovery. </p>
+
+
+
+<p>The documentary premiered at film festivals in Amsterdam, Rio de Janeiro, and Vancouver, raising the funds needed for at least one pilot clean-up project. One of the villages needed $25,000 to clean up after the spills; the team raised well over that amount, according to Uyanna.</p>
+
+
+
+<h2 class="wp-block-heading">The callback that rerouted her career</h2>
+
+
+
+<p>Months after the documentary<em> </em>premiered, Uyanna was back in the US, splitting her time between policy classes and her nonprofit work. Then the email came. Al Jazeera wanted her back. This time, not as a filmmaker, but inside the machine that made stories possible.</p>
+
+
+
+<p>The network had an opening in its business operations unit for a programme manager.</p>
+
+
+
+<p>Uyanna had never imagined herself working in news. But when she read the mission statement, something clicked: “to be fearless in the pursuit of truth and to be the voice of the voiceless.”&nbsp; It felt like a corporate version of the questions that had been keeping her up at night since Qua Iboe.</p>
+
+
+
+<p>She said yes to Al Jazeera.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="906" height="1024" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-e1777127075650-906x1024.jpg" alt="Uyanna at Al Jazeera in Qatar." class="wp-image-186641" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-e1777127075650-906x1024.jpg 906w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-e1777127075650-265x300.jpg 265w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-e1777127075650-768x868.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-e1777127075650-796x900.jpg 796w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-e1777127075650.jpg 1200w" sizes="auto, (max-width: 906px) 100vw, 906px" /><figcaption class="wp-element-caption"><em>Uyanna at Al Jazeera in Qatar. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<p>While completing her master&#8217;s in the US, she worked as a Technical Programme Manager at the network, building systems that connected the tech teams to finance, HR, legal, and editorial. Where other people saw “operations,” she saw a backstage wiring that made a global newsroom run.</p>
+
+
+
+<p>When she graduated in 2018, Al Jazeera went a step further. The company filed a freelance contractor visa so she could relocate to Qatar. When she landed in Doha, the country&#8217;s capital city, she converted it into a full-time residency permit.&nbsp;</p>
+
+
+
+<p>The <a href="https://www.mol.gov.qa/En/Services/Pages/ServiceDetails.aspx?itemid=75" target="_blank" rel="noreferrer noopener nofollow">freelance visa</a>, which often requires sponsorship from a local entity, allowed Uyanna to legally live and work in the country for two years, opening a new chapter in her life in the Middle East.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="1007" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-e1777127034789-1024x1007.jpg" alt="Uyanna at Al Jazeera in Qatar." class="wp-image-186640" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-e1777127034789-1024x1007.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-e1777127034789-300x295.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-e1777127034789-768x755.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-e1777127034789-915x900.jpg 915w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-e1777127034789.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Uyanna at Al Jazeera in Qatar. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">Choosing the harder room</h2>
+
+
+
+<p>Doha, for Uyanna, was the pivot point.</p>
+
+
+
+<p>By 2018, she was living in a city where skyscrapers rose out of the desert and where the two dominant industries—media and energy—were both on her résumé.&nbsp;</p>
+
+
+
+<p>Her tech-adjacent role at Al Jazeera meant she spent her days with ex-AWS and ex-Azure engineers, exposing her to how software development architectures worked.</p>
+
+
+
+<p>After two years and three months at her second stint at Al Jazeera, she realised she was standing at a fork: go deeper into pure tech, or walk away.</p>
+
+
+
+<p>Uyanna walked away. But not very far.</p>
+
+
+
+<p>Qatar&#8217;s other dominant player was QatarEnergy, the state-owned energy giant. If she was going to re-enter the sector that had shaken her in Akwa Ibom,, she wanted to do so on different terms. She wanted to build sustainable development practices from the inside, and not just critique from the outside.</p>
+
+
+
+<p>She did something that feels very on-brand for her story: she bypassed the front door.</p>
+
+
+
+<p>She found the executive she wanted to work with, reached out directly on LinkedIn, followed up with a phone call, and pitched herself. His reply came in under thirty minutes.</p>
+
+
+
+<p>“[It&#8217;s] a moment in my career I can never forget,” she recalled. “The speed, the validation of my competence. I won’t forget it anytime soon.”</p>
+
+
+
+<p>The opportunity she proposed—to build the company’s sustainable development strategy—didn’t technically exist yet at QatarEnergy. But her would-be boss was hiring for a global joint venture assets portfolio position and thought she could do that and build the sustainability function in parallel.</p>
+
+
+
+<p>He offered her both. She said yes—for the next year and ten months.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="768" height="1024" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-768x1024.png" alt="Uyanna at QatarEnergy." class="wp-image-186639" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-768x1024.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-225x300.png 225w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5-675x900.png 675w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-5.png 810w" sizes="auto, (max-width: 768px) 100vw, 768px" /><figcaption class="wp-element-caption"><em>Uyanna at QatarEnergy. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">From energy to fintech&nbsp;</h2>
+
+
+
+<p>After nearly two years at QatarEnergy, managing joint-venture assets while drafting rules for the company&#8217;s global sustainability engagement, her time in Doha had run its course. In December 2021, she returned to Nigeria for a hiatus.</p>
+
+
+
+<p>For eight months, she stepped off the treadmill.</p>
+
+
+
+<p>Yet she was soon back, gearing up to continue the impact work that has driven her since she was a kid. But this time, she joined a fintech; impact could wait, it seemed.</p>
+
+
+
+<p>In February 2022, she joined Rise, a Nigerian investment startup, as Chief Operating Officer (COO), a fast-moving, software-led consumer-facing venture she was completely new to. This didn&#8217;t deter her.&nbsp;</p>
+
+
+
+<p>“I think that while energy is the foundation of the economy,” Uyanna said. “Finance and tech are the fuel that keeps things going.”&nbsp;</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="768" height="1024" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-6-768x1024.png" alt="Uyanna at Risevest’s office in Yaba, Lagos." class="wp-image-186638"/><figcaption class="wp-element-caption"><em>Uyanna at Risevest’s office in Yaba, Lagos. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<p>She left Rise after four months and joined Lazerpay, another Nigerian fintech that was powering cross-border payments with cryptocurrencies. Uyanna joined as the Head of Middle East and Africa (MEA) Partnerships.</p>
+
+
+
+<p>At first, her colleagues weren&#8217;t sure of what to make of her, she shared. She wasn&#8217;t a “blockchain person,” as co-founder and chief technology officer (CTO) Abdulfatai Suleiman of the <a href="https://techcabal.com/2023/05/08/inside-the-shutdown-of-lazerpay-the-web3-startup-that-was-high-on-hope-but-short-on-capital/" target="_blank" rel="noreferrer noopener">now-shuttered startup</a> remembers. But that scepticism didn&#8217;t last long.</p>
+
+
+
+<p>Within her brief three-month stint at Lazerpay, she was quickly promoted to COO. Uyanna left the role in October 2022. She still had her eyes and mind set on the energy sector.&nbsp;</p>
+
+
+
+<p>Uyanna was keen on a senior role. The same year, she returned to class for a master&#8217;s in business administration (MBA) degree at the Institut Européen d&#8217;administration des Affaires (INSEAD), a business school with campuses in Fontainebleau (France) and Singapore. Abu Dhabi. She began to roam the world freely again. She spent eight months in France and three months in Singapore.</p>
+
+
+
+<p>“The global policy gave me a really good understanding of the power structures in the world and the geopolitics of the world,” she said. “Coming from chemical engineering and then policy, I never really got what I felt like was strong business foundations. I [always] learned on the job.”</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="810" height="516" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-7-1.png" alt="" class="wp-image-186644" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-7-1.png 810w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-7-1-300x191.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-7-1-768x489.png 768w" sizes="auto, (max-width: 810px) 100vw, 810px" /><figcaption class="wp-element-caption"><em>Uyanna at INSEAD. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<p>The programme also widened her sense of how different cultures hold on to themselves while modernising.</p>
+
+
+
+<p>“Asia, as a continent, does a good job of holding on to its culture while adopting Western values,” she said. “They hold on to what is theirs, what is historic, what is old, while also making space for the tech and the newness.”&nbsp;</p>
+
+
+
+<p>In Africa, she argued, the rate of holding on to cultural history is radically low.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="768" height="1024" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-8-768x1024.png" alt="Uyanna at her graduation from INSEAD." class="wp-image-186636" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-8-768x1024.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-8-225x300.png 225w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-8-675x900.png 675w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-8.png 810w" sizes="auto, (max-width: 768px) 100vw, 768px" /><figcaption class="wp-element-caption"><em>Uyanna at her graduation from INSEAD. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">The Geometric Power experiment&nbsp;</h2>
+
+
+
+<p>In 2024, shortly after wrapping up her MBA programme, Uyanna was back in the job market for a role at a sector she was familiar with: energy, but this time, a more expansive segment than oil and gas.&nbsp;&nbsp;</p>
+
+
+
+<p>Schneider Electric came calling, offering her a role as a Strategy Manager for Power Systems and Global Services. The job was based in New York, the US, a country where she had lived for some years studying and contributing to nonprofit work back home.</p>
+
+
+
+<p>It was the kind of role many people would have jumped into immediately. But she made a different decision: she would spend time in Nigeria&#8217;s power sector first. The role only resumed in a few months, giving her a four-month cushion to consult at Geometric Power, an energy company based in Aba, a city in eastern Nigeria.</p>
+
+
+
+<p>She reached out to Geometric Power and offered her services at a reduced rate, framing it as a consulting engagement. The role would allow her to stay based in Abuja, Nigeria’s capital city, while working deeply in the business.&nbsp;</p>
+
+
+
+<p>What mattered to her was learning the business of the trade and the nuance of Nigeria’s power market, applying it to her oil and gas experience. She was preparing herself for her big role at Schneider Electric.</p>
+
+
+
+<p>She flew into Lagos on Saturday, February 24, 2024, two days before the commissioning of Geometric’s power plant. She led conversations with partners, and whenever she was available, she was present for the company’s field work.&nbsp;</p>
+
+
+
+<p>As shared by Blessing Ogbe, former COO of Aba Power, Uyanna contributed directly to the company’s revenue line, helping reach ₦1 billion ($652,771) in May 2024—a first milestone in its history.</p>
+
+
+
+<p>Ogbe credited the revenue jump to specific changes Uyanna pushed. One of them was a gamified rewards system for teams, which produced ₦200 million ($130,554) increase in cash-in-hand after the first month alone.</p>
+
+
+
+<p>Language was also part of the strategy, Ogbe mentioned.</p>
+
+
+
+<p>“She understands more than one language, so it&#8217;s easier for her,” Ogbe told me over a call in June 2025. “When we get to some meetings, she uses the native language to communicate to see that people bought into the idea of accepting our business transactions.”</p>
+
+
+
+<p>In a city, and even a country by extension, where power bills and trust had a long, complicated history, speaking to people in her language they joked and argued in made the business case easier to accept.</p>
+
+
+
+<p>Uyanna is also quick to credit her team.&nbsp;</p>
+
+
+
+<p>“Engineer Blessing did the heavy lifting,” she said. ”I just came at the right time, when they were crossing over from all the work they had put in.”&nbsp;</p>
+
+
+
+<p>After her work with Geometric Power, Uyanna felt she was ready to take on another challenge at Schneider Electric, one that catapulted her to a managerial role in the energy sector for the first time in her storied career.&nbsp;</p>
+
+
+
+<p>In June 2024, Uyanna travelled to New York, the United States, to begin life as a Strategy Manager for Power Systems and Global Services at the firm.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="768" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-9-1024x768.png" alt="Uyanna at Schneider Electric." class="wp-image-186635" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-9-1024x768.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-9-300x225.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-9-768x576.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-9.png 1080w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Uyanna at Schneider Electric. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">The strategist in New York</h2>
+
+
+
+<p>Her job at Schneider Electric was to help a company built on hardware—transformers, circuit breakers, and physical infrastructure—shift into a world where services, subscriptions, data, and predictive maintenance are just as important as equipment.&nbsp;</p>
+
+
+
+<p>There, she worked with the teams to identify how to grow recurring revenue along important business offers in the markets where they operated.</p>
+
+
+
+<p>Her fintech and crypto years turned out to be more than a detour. Watching companies like Lazerpay decide how to price and bundle their products became a mental template she could now apply to industrial energy.</p>
+
+
+
+<p>In April 2026, she was promoted to Chief of Staff to the Global Head of Services Division, a business with a portfolio in the billions of euros and a footprint in every geography where Schneider operates, giving Uyanna travel access to 31 countries where she has visited today.</p>
+
+
+
+<p>Having lived, studied, and worked across Africa, the United States, the Middle East, Europe, and Asia, she is now part of a global team that spans almost every time zone.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="768" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-10-1024x768.png" alt="Uyanna in Annecy, France, in 2025." class="wp-image-186634" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-10-1024x768.png 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-10-300x225.png 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-10-768x576.png 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/unnamed-10.png 1080w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Uyanna in Annecy, France, in 2025. Image Source: Amara Uyanna. </em></figcaption></figure>
+
+
+
+<p>Her multi-continental journey across energy infrastructure and oil and gas has taught her about taking radical bets on herself and valuing the connections she makes along her daily commuting work life. Uyanna carries this experience with her as a critical part of her identity.</p>
+
+
+
+<p>“The more you know about the different parts of the world, the better you&#8217;re able to navigate as a leader,” she said.</p>
+
+
+
+<p><em>* Exchange rate as of May 2024: $1 = ₦1,531.</em></p>
+
+
+
+<p><strong>What did you think of this edition, and what would you love to read next on Digital Nomads? </strong><a href="https://airtable.com/appfYsdywu0n0Dkg4/pag8DbBsHN1mUA8NU/form" target="_blank" rel="noreferrer noopener nofollow"><strong>Share your thoughts and ideas with us here</strong></a><strong>.</strong></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Why Nigerian crypto startups are expanding beyond retail trading</title>
+		<link>https://techcabal.com/2026/04/25/why-nigerian-startups-expand-beyond-crypto-retail-trading/</link>
+		
+		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2026 11:03:23 +0000</pubDate>
+				<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[Azza]]></category>
+		<category><![CDATA[Crypto retail trading]]></category>
+		<category><![CDATA[cryptocurrency]]></category>
+		<category><![CDATA[Dantown]]></category>
+		<category><![CDATA[Luno]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=186611</guid>
+
+					<description><![CDATA[The serious push into stablecoins, B2B payment rails, futures, and more complex financial products accelerated from 2023 onward to diversify income beyond the volatile retail cycle. Recently, that strategy has become more pronounced.]]></description>
+										<content:encoded><![CDATA[
+<p>Nigerian crypto startups built their businesses on facilitating the buying and selling of digital currencies for retail customers. Now, that may no longer be enough.</p>
+
+
+
+<p>The country is one of Africa’s <a href="https://www.chainalysis.com/blog/subsaharan-africa-crypto-adoption-2025/" target="_blank" rel="noreferrer noopener nofollow">largest crypto markets</a>. Yet, at least two operators say competition is compressing margins. Costs do not fall with volume, and the customers driving the most revenue are hard to retain.</p>
+
+
+
+<p>Peer-to-peer (P2P) trading <a href="https://techcabal.com/2025/02/19/how-crypto-startups-survived-2021-ban/" target="_blank" rel="noreferrer noopener">became a lifeline</a> for Nigerian crypto users after the Central Bank of Nigeria (CBN) <a href="https://techcabal.com/2021/02/08/why-the-central-bank-of-nigeria-banned-crypto-accounts/" target="_blank" rel="noreferrer noopener">barred</a> banks from servicing crypto transactions in 2021. It forced local startups to find workarounds as global platforms like Paxful, a P2P marketplace that has <a href="https://paxful.com/blog/paxful-closure-announcement" target="_blank" rel="noreferrer noopener nofollow">since shut down</a>, and Binance competed for the same users.</p>
+
+
+
+<p>Nigerian startups began offering a broader range of products, including P2P and bill payments, around that time. The serious push into stablecoins, B2B payment rails, futures, and more complex financial products accelerated from 2023 onward to diversify income beyond the volatile retail cycle. Recently, that strategy has become more pronounced.</p>
+
+
+
+<p>Several crypto startups operating in Nigeria, including Busha, <a href="https://techcabal.com/2026/03/23/roqqu-crypto-cards-prediction-market/" target="_blank" rel="noreferrer noopener">Roqqu</a>, Dantown, <a href="https://techcabal.com/2026/03/19/luno-launches-prediction-markets/" target="_blank" rel="noreferrer noopener">Luno</a>, and <a href="https://techcabal.com/2025/10/20/blockchain-com-tokenised-us-stocks/" target="_blank" rel="noreferrer noopener">Blockchain.com</a>, have all expanded beyond retail crypto trading. Startups like <a href="https://techcabal.com/2025/11/03/yellow-card-closes-retail-app-turns-to-enterprises/" target="_blank" rel="noreferrer noopener">Yellow Card</a> have shut it down entirely to focus on the B2B side of digital currencies, signalling that the pressure on retail margins is acute enough to force a complete strategic pivot.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>The maths behind a single trade</strong></h2>
+
+
+
+<p>The unit economics of running a crypto retail trading business begin with one trade.</p>
+
+
+
+<p>On a typical $100 retail transaction, the gross revenue a platform earns ranges from about $0.3 to under $1.40, three crypto startups told TechCabal.</p>
+
+
+
+<p>One founder, who asked not to be named to speak freely due to the sensitivity of the details being disclosed, breaks this down: a 1% transaction fee earns $1, while foreign exchange (FX) spread on the naira conversion adds roughly $0.35. After deducting direct costs like payment processing and liquidity, gross profit exceeds $1.25.&nbsp;</p>
+
+
+
+<p>Another operator, who also spoke on the condition of anonymity, said that gross profit after all costs is $0.30 to $0.50, reflecting the startup&#8217;s leaner, flat-fee pricing model with zero spread.</p>
+
+
+
+<p>In normal market conditions, a startup keeps between 0.5% and 1.6% of every transaction, a figure known as the blended take rate. During volatile periods, when spreads widen, that range climbs to between 1.6% and 2.3%, according to the three startups.</p>
+
+
+
+<p>One startup charges a fixed flat fee regardless of market conditions; others run tiered models from 0.35% to 1% depending on trade size.</p>
+
+
+
+<p>The cost side is where things get complicated.</p>
+
+
+
+<p>Running a regulated crypto trading platform means carrying expenses that do not shrink when trading slows: staff, security, compliance, banking and payment partnerships, and the infrastructure needed to move money reliably. These costs are largely fixed regardless of the number of trades a platform processes.</p>
+
+
+
+<p>When retail trading activity slows, revenue falls, and sometimes becomes disproportionately lower than these fixed expenses, according to the three operators who spoke to TechCabal.</p>
+
+
+
+<p>“While certain costs scale down with lower activity, a significant portion of the cost base is fixed or semi-fixed,” said Joshua Avoaja, chief technology officer and co-founder of <a href="https://www.useazza.com/" target="_blank" rel="noreferrer noopener nofollow">Azza</a>, a Nigerian WhatsApp-based crypto payments startup that said it has <a href="https://dune.com/devjosh/useazza-onchain-volume" target="_blank" rel="noreferrer noopener nofollow">processed over $17 million</a>. “Costs don’t compress proportionally during periods of lower trading volume.”</p>
+
+
+
+<p>A typical active retail customer makes between two and six trades a month—rising to eight during market peaks—and spends between $13 to $15 per trade, according to the range provided by the three operators.&nbsp;</p>
+
+
+
+<p>Taking the midpoint—about four trades monthly at $14 per trade—and applying the 1% take rate, a crypto startup would earn about $0.56 per customer per month in gross revenue. </p>
+
+
+
+<p>Set against a customer acquisition cost (CAC) of between ₦8,000 and ₦22,000 (about $5 to $14), recouping that investment on the average user spans between nine months and over two years.</p>
+
+
+
+<p>For a business solely dependent on retail trading, it needs a deep runway to sustain its operations.</p>
+
+
+
+<p>&#8220;[Crypto retail trading] is a solid but structurally constrained business,&#8221; said Avoaja. “Customer acquisition costs are relatively low, gross margins on individual trades are healthy, and demand has proven resilient. But there are limitations. Monetisation is uneven across the user base, with a smaller cohort of highly active users driving a disproportionate share of value.&#8221;</p>
+
+
+
+<p>The business works with sufficient scale, but it has real limits as a standalone product, Avoaja said. Those limits become clearest when you look at who actually moves the revenue needle.</p>
+
+
+
+<p>High-frequency retail traders called ‘power users,’ make between 20 and 30 transactions monthly and generate a disproportionate share of platform revenue, said Avoaja. These are the customers every crypto startup wants to keep.</p>
+
+
+
+<p>Yet, they are also the most demanding customers: price-sensitive, quick to move to a competitor offering tighter spreads, and unforgiving of downtime or rate inconsistencies. Retaining them is not a growth problem; it is a reliability problem.</p>
+
+
+
+<p>Despite the margin compression, Emmanuel Peter, Head of Trading and Markets at Roqqu, a Nigerian crypto exchange, said retail trading remains “a great business” for the startup.</p>
+
+
+
+<div id="tc-breakeven-tool" style="font-family: 'Open Sans', -apple-system, sans-serif; max-width: 480px; margin: 32px auto; border: 1px solid #E3E8EF; border-radius: 12px; background: #FFFFFF; color: #151515; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+    
+    <div style="background: #EA2D2E; padding: 24px; color: #FFFFFF; text-align: center;">
+        <h2 style="margin: 0; font-size: 1.5rem; font-weight: 700; line-height: 1.2;">Crypto Breakeven Calculator</h2>
+        <p style="margin: 8px 0 0; font-size: 0.9rem; opacity: 0.9;">Analyze the unit economics of retail trading</p>
+    </div>
+
+    <div style="padding: 24px;">
+        
+        <div style="display: flex; background: #F6F6F6; padding: 4px; border-radius: 8px; margin-bottom: 24px;">
+            <button id="btn-median" onclick="applyPreset('median')" style="flex: 1; padding: 10px; border: none; border-radius: 6px; cursor: pointer; font-family: inherit; font-weight: 600; font-size: 0.85rem; transition: 0.2s; background: #FFFFFF; color: #EA2D2E; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Median User</button>
+            <button id="btn-power" onclick="applyPreset('power')" style="flex: 1; padding: 10px; border: none; border-radius: 6px; cursor: pointer; font-family: inherit; font-weight: 600; font-size: 0.85rem; transition: 0.2s; background: transparent; color: #666;">Power User</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #666; text-transform: uppercase; margin-bottom: 8px;">Ticket Size ($)</label>
+                <input type="number" id="ticket-size" value="14" oninput="calculate()" style="width: 100%; padding: 12px; border: 1px solid #E3E8EF; border-radius: 6px; font-size: 1rem; font-family: inherit; outline: none; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #666; text-transform: uppercase; margin-bottom: 8px;">Trades / Mo</label>
+                <input type="number" id="frequency" value="4" oninput="calculate()" style="width: 100%; padding: 12px; border: 1px solid #E3E8EF; border-radius: 6px; font-size: 1rem; font-family: inherit; outline: none; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <label style="font-size: 0.75rem; font-weight: 700; color: #666; text-transform: uppercase;">Acquisition Cost (CAC)</label>
+                <span id="cac-val" style="font-size: 1rem; font-weight: 700; color: #EA2D2E;">$10</span>
+            </div>
+            <input type="range" id="cac-input" min="5" max="14" step="1" value="10" oninput="updateCAC(this.value)" style="width: 100%; height: 6px; background: #E3E8EF; border-radius: 5px; appearance: none; outline: none; cursor: pointer; accent-color: #EA2D2E;">
+        </div>
+
+        <div id="result-box" style="background: #F6F6F6; border-left: 4px solid #EA2D2E; padding: 24px; border-radius: 4px; text-align: center; transition: 0.3s;">
+            <div style="font-size: 0.7rem; font-weight: 800; color: #999; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">Time to Breakeven</div>
+            <div id="breakeven-result" style="font-size: 2.5rem; font-weight: 800; color: #151515; margin-bottom: 12px;">18 Months</div>
+            <p id="insight-text" style="font-size: 0.875rem; line-height: 1.5; color: #444; margin: 0;"></p>
+        </div>
+
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #F0F0F0;">
+            <p style="font-size: 0.7rem; color: #999; margin: 0 0 12px 0; font-style: italic; line-height: 1.4;">
+                Data Source: TechCabal Research (Assumes 1% blended take rate &#038; $1.25 avg gross profit per $100 trade).
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #EA2D2E;">TechCabal Tools</span>
+                <div style="background: #EA2D2E; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-weight: 900; font-size: 10px;">TC</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function applyPreset(type) {
+    const btnMedian = document.getElementById('btn-median');
+    const btnPower = document.getElementById('btn-power');
+    const ticketInp = document.getElementById('ticket-size');
+    const freqInp = document.getElementById('frequency');
+
+    if (type === 'median') {
+        ticketInp.value = 14;
+        freqInp.value = 4;
+        btnMedian.style.background = '#FFFFFF';
+        btnMedian.style.color = '#EA2D2E';
+        btnMedian.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        btnPower.style.background = 'transparent';
+        btnPower.style.color = '#666';
+        btnPower.style.boxShadow = 'none';
+    } else {
+        ticketInp.value = 50;
+        freqInp.value = 25;
+        btnPower.style.background = '#FFFFFF';
+        btnPower.style.color = '#EA2D2E';
+        btnPower.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        btnMedian.style.background = 'transparent';
+        btnMedian.style.color = '#666';
+        btnMedian.style.boxShadow = 'none';
+    }
+    calculate();
+}
+
+function updateCAC(val) {
+    document.getElementById('cac-val').innerText = '$' + val;
+    calculate();
+}
+
+function calculate() {
+    const ticket = parseFloat(document.getElementById('ticket-size').value) || 0;
+    const freq = parseFloat(document.getElementById('frequency').value) || 0;
+    const cac = parseFloat(document.getElementById('cac-input').value);
+    
+    // Logic: 1% blended take rate (Source: Source 13)
+    const monthlyRev = (ticket * 0.01) * freq;
+    let months = monthlyRev > 0 ? (cac / monthlyRev) : Infinity;
+    
+    const display = document.getElementById('breakeven-result');
+    const insight = document.getElementById('insight-text');
+    const resultBox = document.getElementById('result-box');
+
+    if (months === Infinity || months > 120) {
+        display.innerText = "Never";
+        insight.innerText = "Revenue per trade is too low to ever cover acquisition costs.";
+        resultBox.style.borderLeftColor = '#151515';
+    } else {
+        months = Math.ceil(months);
+        display.innerText = months + (months === 1 ? " Month" : " Months");
+        
+        if (months > 12) {
+            resultBox.style.borderLeftColor = '#EA2D2E';
+            insight.innerHTML = "<strong>The Long Game:</strong> Thin margins mean it takes over a year to break even. This explains the pivot to other products.";
+        } else if (months > 3) {
+            resultBox.style.borderLeftColor = '#FFC52F';
+            insight.innerHTML = "<strong>Healthy Growth:</strong> Standard retail performance. Retention is key to making this user profitable.";
+        } else {
+            resultBox.style.borderLeftColor = '#20C997';
+            insight.innerHTML = "<strong>Power User:</strong> These users pay for themselves rapidly, driving the majority of platform value.";
+        }
+    }
+}
+
+// Initial Run
+calculate();
+</script>
+
+
+
+<h2 class="wp-block-heading"><strong>Why building beyond retail trading makes economic sense</strong></h2>
+
+
+
+<p>The trading business is cyclical. Volume peaks in December and March, the former driven by end-of-year remittances and bonuses, said Avoaja.</p>
+
+
+
+<p>These peak periods can deliver 50%–100% more volume per user than slow months, driven primarily by larger transaction sizes rather than increased frequency, he added.&nbsp;</p>
+
+
+
+<p>During bearish stretches or low-activity periods, users transact more deliberately: fewer trades, more intentional, and with a slight tilt toward off-ramping (converting crypto back to cash).</p>
+
+
+
+<p>For platforms whose revenue is entirely tied to that cycle, the income curve is lumpy and hard to plan around, making the case for expansion beyond retail trading more sensible.</p>
+
+
+
+<p>Some platforms are moving into payment-driven use cases: utility bill payments, airtime top-ups, and other everyday financial services that generate activity independent of whether Bitcoin is up or down.&nbsp;</p>
+
+
+
+<p>While retail trading features remain a mainstay in most Nigerian crypto startups, expanded product lines are quickly becoming “convenience features” during off-peak periods, said Avoaja.</p>
+
+
+
+<p>According to three operators who spoke to TechCabal, these expansive products are still early in monetisation.</p>
+
+
+
+<p>But the logic behind these product add-ons is to keep trading activities flowing even during slow periods. Every time a user pays an electricity bill or buys airtime through the app, they are keeping their balance on the platform, reducing the chance of churn, and building a habit that survives a bear market.</p>
+
+
+
+<p>Dollar virtual cards have emerged as one of the higher-margin products beyond trading, said Chimene Chinah, chief executive officer of <a href="https://godantown.com/" target="_blank" rel="noreferrer noopener nofollow">Dantown</a>, a Nigerian crypto payments startup. Dantown counts cards among its most profitable offerings outside its core buy and sell business.</p>
+
+
+
+<p>“[Cards] increase retention because users no longer need to move funds off our platform to access the feature,” said Chinah.</p>
+
+
+
+<p>Cards keep money in motion on the platform. Users who spend via a virtual card have little reason to withdraw their balances elsewhere. Retention goes up, balance float improves, and the card itself generates interchange revenue that does not fluctuate with crypto prices.</p>
+
+
+
+<p>Futures trading is another lever. <a href="https://roqqu.com/" target="_blank" rel="noreferrer noopener nofollow">Roqqu</a>, a Nigerian crypto startup, designed its futures offering to give customers trading opportunities even during bear markets, a way to keep the trading engine alive when spot markets—regular crypto buying and selling—slow.&nbsp;</p>
+
+
+
+<p>Crypto-backed loans serve a similar counter-cyclical function: by allowing users to borrow against their holdings rather than sell them, platforms can discourage sell-offs that reduce trading volume and thin the order book.&nbsp;</p>
+
+
+
+<p>A savings feature designed to encourage holding stablecoins creates sticky balances that also survive a downturn.</p>
+
+
+
+<p>The pattern is consistent across all three operators: each new product is engineered to either smooth the revenue cycle, extend the time a user&#8217;s money stays on the platform, or open an entirely new monetisation surface. The trading product acquires the customer; the expanded product suite justifies keeping them.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>The OTC problem and its promise</strong></h2>
+
+
+
+<p>Most Nigerian crypto startups operate over-the-counter (OTC) desks alongside their retail platforms. These desks serve a different customer entirely: institutional buyers, small businesses, high-volume individual traders commonly called “whales,” and other crypto startups that need to move large amounts of liquidity without going through an exchange&#8217;s public order book.&nbsp;</p>
+
+
+
+<p>Most of these trades happen off-platform, according to two operators. Some platforms provide a dedicated channel or webpage where prospective buyers submit their information and complete know-your-business (KYB) checks before any trade is confirmed.</p>
+
+
+
+<p>The economics here work differently from retail. When a platform sources, say, 100 Bitcoins from an exchange at a known rate, it can calculate with reasonable precision the spread it stands to earn by selling to a set of clients, as long as rates hold steady over the settlement window.&nbsp;</p>
+
+
+
+<p>The spread itself is thinner than retail: platforms earn anywhere above 0.3% in gross terms, but after accounting for the exchange&#8217;s own spread on the sourcing side, net margin can compress to as low as 0.1%.&nbsp;</p>
+
+
+
+<p>Yet, the transactions are large, so even a 0.1% margin on a $500,000 trade is $500—nearly twice the amount of revenue a startup would generate from serving 500 retail customers and earning the median blended take rate.</p>
+
+
+
+<p>OTC revenue is not a function of how many users downloaded the app last month or whether the market is in a bull or bear phase. It is a function of client relationships, pricing discipline, and reliable execution: variables that a well-run desk can control in a way that retail volume simply cannot.</p>
+
+
+
+<p>But the OTC market has its own structural problem: it is crowded.</p>
+
+
+
+<p>&#8220;The market is saturated,&#8221; said Peter. &#8220;Your margins have to be as tight as possible.&#8221;</p>
+
+
+
+<p>OTC desks have proliferated across the Nigerian crypto ecosystem, and competition has driven spreads to their floor. The desk that wins a client is often the one willing to accept the thinnest margin.&nbsp;</p>
+
+
+
+<p>For platforms trying to use OTC as a buffer against retail volatility, this is a real constraint; the buffer itself is under compression.</p>
+
+
+
+<p>The OTC market does not offer a high-margin escape from the pressures of retail trading. It offers a different kind of pressure: predictable but tight. For a business trying to build something durable out of the Nigerian crypto opportunity, &#8220;predictable but tight&#8221; is still better than &#8220;unpredictable and cyclical,” said Peter.</p>
+
+
+
+<p>Nigerian crypto startups are building their businesses on the same bet: that Nigeria&#8217;s crypto market—already one of the largest in Africa by volume, growing year-on-year—is big enough to sustain multiple revenue lines, and that the platforms which last will be the ones that figure out how to make money beyond retail trading.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Nigeria is tightening tax enforcement. TaxStreem wants to automate compliance.</title>
+		<link>https://techcabal.com/2026/04/25/taxstreem-wants-to-file-your-taxes-as-transactions-happen/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2026 09:38:26 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[startups]]></category>
+		<category><![CDATA[Tax]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=186559</guid>
+
+					<description><![CDATA[TaxStreem is an AI-powered tax calculation and computation tool that a tool that sits directly on top of a business’s financial activity.]]></description>
+										<content:encoded><![CDATA[
+<p>While working in the tax computation and advisory department at the Nigerian subsidiary of KPMG, the global professional services firm, Kelechi Ibe spent his days helping clients to calculate and structure their taxes. His role was to match the transaction descriptions, which were shared by clients, to the tax law. However, the process for each transaction remained the same.</p>
+
+
+
+<p>By 2019, a year and a half at KPMG, that pattern had become hard to ignore. The logic was familiar, but the process remained manual, so he tried to automate it using Excel Macros, a tool for automating repetitive tasks.&nbsp;</p>
+
+
+
+<p>&#8220;It didn&#8217;t work,&#8221; Ibe said, explaining that the task required using an intelligent tool that could read every transaction and determine the appropriate tax to apply. “This would only have been possible if every transaction were hardcoded into the database and had rules associated with each of them. It would have been tough and complicated, with a higher risk of errors,” he said</p>
+
+
+
+<p>Seven years later, Ibe teamed up with Sam Ayo, a senior intelligence and machine learning engineer, to build <a href="https://www.taxstreem.com/" target="_blank" rel="noreferrer noopener nofollow">TaxStreem</a>, an automated tax compliance platform. Launched in March 2026, TaxStreem uses AI to automate tax computation and compliance by interpreting financial transactions in real time.</p>
+
+
+
+<p>&#8220;AI understands context and nuances, and it gets better with training. A tax technology, as I had always envisaged, could only have been possible with AI,&#8221; Ibe said.</p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>Tax compliance is not optional</strong></h2>
+
+
+
+<p>Under Nigeria&#8217;s new tax regime, small businesses are required to use the <a href="https://techcabal.com/2026/04/16/all-you-need-to-know-about-e-invoicing-in-nigeria/" target="_blank" rel="noreferrer noopener">e-invoicing system</a> from July 2027 to digitally record their transactions for stricter tax compliance.&nbsp;</p>
+
+
+
+<p>To properly issue tax-compliant invoices, businesses first need to understand the tax implications of every transaction they make, including what attracts value-added tax (VAT), what is exempt, what is zero-rated, what withholding tax applies, and why. That calculation and figuring-out layer is where TaxStreem operates.</p>
+
+
+
+<p>TaxStreem is designed as an infrastructure layer for tax—a tool that sits directly on top of a business’s financial activity and interprets it in real time. The platform operates four tools that each handle a different task.&nbsp;</p>
+
+
+
+<p>The first is TaxStreem Numens, an AI-powered tax intelligence and computation engine. The engine, according to Ibe, is trained on Nigerian tax laws and acts as the system’s core calculation tool.</p>
+
+
+
+<p>He explained that when users connect their business bank accounts from providers such as GTBank, Access Bank, and fintech rails like Kuda, Paystack, and Flutterwave, Numens reads each transaction’s narration, interprets what it represents, assigns the correct tax treatment, and provides an explanation on why it took that particular decision.&nbsp;</p>
+
+
+
+<p>Although users can still upload reconciliation documents manually to calculate their tax, Ibe noted that pulling transactions directly ensures no transactions are left out.</p>
+
+
+
+<p>Its second engine, Flux, is an automated filing engine that logs into government portals, particularly the Nigeria Revenue Service (NRS) portal, to submit tax returns and retrieve proof of filing for businesses.</p>
+
+
+
+<p>TaxStreem Prism, the third engine, focuses on invoicing and accounts, specifically Accounts Payable (AP) and Accounts Receivable (AR), a company&#8217;s revenue and expenditures. On the expenditure side, Prism replaces the traditional email-based invoice process with a dedicated vendor portal where vendors can upload their invoices.&nbsp;</p>
+
+
+
+<p>Ibe noted that Prism analyses the uploaded invoice to check if there are errors in the tax calculation or tax ID, and sends a list of noted errors to both the business and the vendor that uploaded the invoice.</p>
+
+
+
+<p>On the revenue accounts side, Prism allows businesses to generate invoices directly within the platform. Over a call, Ibe demo-ed how it works:&nbsp; businesses only need to input their product, and the system automatically determines the correct tax treatment. For example, entering ‘diapers&#8217; would automatically be recorded as VAT-exempt, as <a href="https://techcabal.com/2025/11/04/50-things-that-wont-be-taxed-on-under-nigeria-new-tax-law/" target="_blank" rel="noreferrer noopener">classified</a> under Nigeria&#8217;s tax laws. The invoice is then generated with the correct tax structure already applied.</p>
+
+
+
+<p>Martina, TaxStreem&#8217;s AI chatbot, is the fourth layer. Beyond answering tax questions, it sits atop all transaction data and interprets business performance by offering insights for decision-making. TaxStreem combines its internal AI model, which is trained on Nigerian tax rules, with frontier models like Google&#8217;s Gemini to run minor agentic tasks.</p>
+
+
+
+<p>&#8220;What we did is create a custom domain-driven model that is proprietary to us and leverage frontier models to run some mundane tasks for some of the things that would not require user data to protect data privacy within the financial sector,&#8221; co-founder Ayo noted.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>The business of compliance</strong></h2>
+
+
+
+<p>TaxStreem has two revenue streams, targeted at both small and medium enterprises (SMEs) and larger businesses. It charges a ₦25,000 ($18.49) monthly subscription and has an enterprise plan without a labelled pricetag. TaxStreem also sells its Application Programming Interface (APIs) to other platforms, particularly business banking and payments tools.</p>
+
+
+
+<p>The startup operates in a market with existing expense management solutions for businesses, including FlexFinance, Bujeti, Duplo, and Bumpa, as well as accounting and bookkeeping tools like QuickBooks, FreshBooks, and Xero.&nbsp;</p>
+
+
+
+<p>However, Ibe noted that he views such tools as partners that could integrate with the platform rather than competitors. For him, TaxStreem&#8217;s edge lies in its automated filing on government portals.</p>
+
+
+
+<p>TaxStreem has raised an undisclosed friends and family round that Ibe estimated to be “tens of thousands of dollars.”</p>
+
+
+
+<p>&#8220;I have not raised institutional funding, and it was very deliberate,&#8221; he noted. &#8220;I didn&#8217;t want to raise until we had launched and had some traction.&#8221;</p>
+
+
+
+<p>He explained that TaxStreem’s next step is to add state-level tax filing on the Lagos Internal Revenue Service (LIRS) portal. Ibe also noted current API integrations with fintech platforms he chose not to name, against a backdrop of increasing enforcement.</p>
+
+
+
+<p>&#8220;The government is going to enforce tax laws, and more businesses are going to suffer if they do not comply,&#8221; he said. “However, there is a technology alignment. Everything came together to give us a perfect time to build a solution like this.”</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>This Kenyan startup wants to rebuild enterprise software around AI agents</title>
 		<link>https://techcabal.com/2026/04/24/this-kenyan-startup-wants-to-rebuild-enterprise-software-around-ai-agents/</link>
 		
@@ -272,7 +2512,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="1024" height="576" 
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1-1024x576.jpg" alt="OPPO Find X9 Ultra" class="wp-image-186561" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-1.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Image source: The Tech Chap on YouTube</em></figcaption></figure>
 
 
@@ -625,7 +2865,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2-1024x576.jpg" alt="OPPO Find X9 Ultra" class="wp-image-186562" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/OPPO-Find-X9-Ultra-2.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption"><em>Image source: The Tech Chap on YouTube</em></figcaption></figure>
 
 
@@ -918,7 +3158,7 @@
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="683" 
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="683" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Chiira-1024x683.jpg" alt="" class="wp-image-186523" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Chiira-1024x683.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Chiira-300x200.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Chiira-240x160.jpg 240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Chiira-768x512.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/Chiira.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Benard Chiira speaking at a past event. Image source: Innovate Now</figcaption></figure>
 
 
@@ -1889,291 +4129,6 @@
  </div>
 
 
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Swoop raises $7.3 million seed for African super app, food delivery first</title>
-		<link>https://techcabal.com/2026/04/23/swoop-seed-round/</link>
-		
-		<dc:creator><![CDATA[Muktar Oladunmade]]></dc:creator>
-		<pubDate>Thu, 23 Apr 2026 19:04:30 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Swoop]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=186467</guid>
-
-					<description><![CDATA[Swoop’s seed raise is one of the largest seed rounds disclosed by an African consumer startup.]]></description>
-										<content:encoded><![CDATA[
-<p>Swoop,<a href="https://www.swoop.com.ng/" target="_blank" rel="noreferrer noopener"> an Eswatini food delivery </a>startup, has raised $7.3 million in seed funding to support its expansion into Nigeria as it pursues its super-app model outside its home country for the first time.&nbsp;</p>
-
-
-
-<p>The round, backed by Silicon Valley investors including Long Journey, Variant, Version One, Dune Ventures, Soma Capital, and Zero Knowledge Ventures, will fund the buildout of a consumer platform starting with food delivery. Walter Kortschak and Base Capital also participated.&nbsp;</p>
-
-
-
-<p>Swoop’s seed raise is one of the largest seed rounds disclosed by an African consumer startup, and nearly as large as the <a href="https://techcabal.com/2025/08/11/chowdeck-raise-9-million/" target="_blank" rel="noreferrer noopener">$9 million Series A that Chowdeck closed </a>in August 2025 after four years of operations and expansion into 11 cities.&nbsp;</p>
-
-
-
-<p>“It&#8217;s super hard to build a super app, and our investors recognise that. They recognise that you need a bit of runway and foundation to be able to do the things that you need to do operationally,” said Demola Adesina, Swoop’s Nigerian country manager.&nbsp;</p>
-
-
-
-<p>Swoop believes Nigeria&#8217;s food delivery market—<a href="https://www.imarcgroup.com/nigeria-online-food-delivery-market" target="_blank" rel="noreferrer noopener">valued at $1.1 billion in 2025</a>—has more room to grow than its competitors suggest. According to Nigerian payments processor Paystack, which processes payments for Swoop and all the major food delivery companies in Nigeria, the <a href="http://foodpod.substack.com/p/1-magic-beans" target="_blank" rel="noreferrer noopener">sector grew by 187% between 2021 and 2024</a>.&nbsp;</p>
-
-
-
-<p>Nigeria’s ratio of food ordered for delivery to food consumed outside the home is far lower in the country than in peer markets in Africa or Southeast Asia, and the real opportunity lies in converting non-consumers rather than poaching existing users, Adesina said. </p>
-
-
-
-<p>“We think that the food delivery space in Nigeria is still significantly under-penetrated. Our target is not existing consumption but the users that are not consuming,” he said. “We are not getting into a war with other platforms. We are trying to grow the pie.”</p>
-
-
-
-<p>Swoop, formerly known as Thumo, launched in Eswatini in August 2025 and acquired 6,000 users in its first month, according to<a href="https://www.linkedin.com/feed/update/urn:li:activity:7366856908105740288/" target="_blank" rel="noreferrer noopener"> co-founder Aubrey Niederhoffer. </a>Edwin Ruiz, another co-founder,<a href="https://independentnews.co.sz/23129/business/thumo-launches-food-delivery-service-in-eswatini/" target="_blank" rel="noreferrer noopener"> told local press in Eswatini</a> that the goal was to build a pan-African super app combining food, groceries, and rides.&nbsp;</p>
-
-
-
-<p>The startup is starting with food delivery in Yaba, a neighbourhood in Lagos Mainland, already served by Chowdeck, Glovo, and FoodCourt, its competitors in Nigeria’s growing food delivery sector.&nbsp;</p>
-
-
-
-<p>“There is more confidence regarding regulatory risk, and international investors committing capital to us proves that,” Adesina said. “Beyond that, I am passionate about Nigerians. There is better market education and more interest in positively changing consumer habits. We think this is the perfect time to build on that.”</p>
-
-
-
-<p>Swoop says it uses a network of independent riders rather than an employed fleet, generating revenue through commissions on restaurant sales and customer handling fees. While riders retain 100% of delivery fees, the startup applies a 7% service charge to fund operations.</p>
-
-
-
-<p>Adesina declined to disclose the startup&#8217;s fee structure or unit economics, saying current fees are low because the priority is user acquisition. He added that the company is not interested in a price war.&nbsp;</p>
-
-
-
-<p>“Our approach is to find the reason why some people are not consuming [through food delivery] and to make them consumers. We are not just slashing prices and getting into a price war,” he said.&nbsp;</p>
-
-
-
-<p>Picking food delivery as the first vertical in a multi-product approach allows Swoop to acquire daily customers that create a habit with the app, a proven but costly growth engine for its super-app ambitions.&nbsp;OPay, one of Nigeria&#8217;s largest fintechs, initially bundled food delivery and ride-hailing with its payments wallet to drive daily usage for its wallet before <a href="https://techcabal.com/2020/07/02/opay-temporarily-shutters-non-fintech-verticals/" target="_blank" rel="noreferrer noopener">shutting down the non-fintech products.</a></p>
-
-
-
-<p>“Food delivery is a metric for how developed the ecosystem is. If you get food delivery right, you can essentially be the node of the ecosystem,” Adesina said.&nbsp;</p>
-
-
-
-<p>“We believe that if we have a group of customers around that node, we are able to translate that into other areas and verticals,” he shared, adding that Swoop will let its users determine the next vertical to launch.&nbsp;</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Nigeria’s ‘difficult’ food delivery market</strong></h2>
-
-
-
-<p>Food delivery in Nigeria is a tightly contested sector that has claimed many startups and local divisions of well-funded international companies like HelloFood, Jumia Food, Bolt Food, and OFood, as the unit economics rarely work at scale. According to Jumia&#8217;s<a href="https://techcabal.com/2023/02/16/jumia-q4-2022-report/" target="_blank" rel="noreferrer noopener"> 2022 financial report</a>, its food delivery arm lost $1.80 for every $10 it made.&nbsp;</p>
-
-
-
-<p>The logistics and marketing costs exceeded the revenue made from the order, which meant Jumia was essentially paying customers and restaurants to use the service. These unit economics are a primary reason why Jumia eventually <a href="https://techcabal.com/2023/12/14/jumia-shuts-down-food-delivery-segment-in-race-to-profitability/" target="_blank" rel="noreferrer noopener">shuttered its food delivery business in late 2023.</a></p>
-
-
-
-<p>Despite Jumia Food’s shutdown, Chowdeck, the largest food delivery platform in Nigeria, <a href="http://linkedin.com/posts/femialuko_chowdeck-just-hit-2-million-users-it-feels-activity-7403765437001293824-dx2n" target="_blank" rel="noreferrer noopener">serves two million registered users with over 20,000 riders</a> operating across 14 cities in Nigeria and Ghana while maintaining profitability, a rare feat for young food delivery startups.&nbsp;</p>
-
-
-
-<p>Swoop’s strategy will require acquiring high-volume, lower-income customers on the outskirts of Lagos and in smaller cities, where local restaurants and quick-service outlets dominate, if it is to create a new set of food delivery consumers.</p>
-
-
-
-<p>Whether Swoop becomes a success depends on three things: what it builds after food delivery and in what order, a monetisation strategy that ensures it is profitable, and whether it can scale beyond Yaba and Lagos before it runs out of cash.&nbsp;</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Nigerian telecom customers to receive airtime refunds after disruptions, says NCC</title>
-		<link>https://techcabal.com/2026/04/23/nigerian-telcos-to-begin-airtime-refunds-for-service-disruption/</link>
-		
-		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
-		<pubDate>Thu, 23 Apr 2026 17:41:56 +0000</pubDate>
-				<category><![CDATA[Telecoms]]></category>
-		<category><![CDATA[MTN]]></category>
-		<category><![CDATA[NCC]]></category>
-		<category><![CDATA[Nigeria]]></category>
-		<category><![CDATA[Telecom industry]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=186460</guid>
-
-					<description><![CDATA[Nigeria’s telecom subscribers will receive airtime refunds as compensation for poor service experienced between November 2025 and January 2026. The refunds will begin on Friday,]]></description>
-										<content:encoded><![CDATA[
-<p>Nigeria’s telecom subscribers will receive airtime refunds as compensation for poor service experienced between November 2025 and January 2026. The refunds will begin on Friday, April 24, according to the Nigerian Communications Commission (NCC).</p>
-
-
-
-<p>The NCC said operators failed to meet required performance benchmarks in several parts of the country following a March 29, 2026, directive.</p>
-
-
-
-<p>While this is not the first time the regulator has ordered compensation for service failures—<a href="https://www.telecompaper.com/news/ncc-fines-mtn-celtel-ngn-47-bln-over-poor-service--590323#:~:text=The%20Nigerian%20Communications%20Commission%20has,ruling%2C%20but%20lost%20the%20case." target="_blank" rel="noreferrer noopener">MTN and Celtel (now Airtel) were fined in 2008</a>—the latest directive signals a more assertive approach to holding telecom operators accountable. </p>
-
-
-
-<p>The NCC said it has also directed tower companies responsible for many of the outages to channel their compensation obligations into upgrading tower infrastructure. These investments, separate from their annual capital plans, will be monitored by independent auditors to ensure compliance.</p>
-
-
-
-<p>“It’s actually compensation for the quality of service experience you may have had,” NCC’s Executive Vice Chairman and chief executive officer, Aminu Maida, said at a press briefing on Thursday in Lagos, adding that subscribers will begin receiving alerts via SMS detailing the credits applied to their lines.</p>
-
-
-
-<p>Unlike previous enforcement approaches, which assessed service quality at the state level, the NCC said it has shifted to a more granular system. Performance is now measured at the local government level, allowing the regulator to better capture variations in network experience across the country.</p>
-
-
-
-<p>“What we have now adopted is to carry out the assessment at local government levels,” Maida said. “This ensures that whatever we measure is as close as possible to what subscribers actually experience.”</p>
-
-
-
-<p>Under this framework, operators are evaluated across multiple network layers—2G, 3G, and 4G—against key performance indicators set out in the commission’s quality of service regulations. Where operators fall short, penalties are imposed, part of which is now being redirected as compensation to affected users.</p>
-
-
-
-<p>Maida acknowledged the gap between demand and current network capacity but pointed to ongoing investments by operators as a sign of progress. <a href="https://techcabal.com/2025/08/18/operators-pour-1-billion-into-nigerias-telecoms-after-tariff-hike/">In 2025, the industry invested over $1 billion</a> upgrading networks, importing equipment, and building new towers. According to Maida, one operator has already invested $1 billion in infrastructure this year. </p>
-
-
-
-<p>“Things actually improve, but we need to be patient,” he said, noting that infrastructure expansion remains the primary driver of better service quality.</p>
-
-
-
-<p>According to him, operators deployed just under 300 new sites last year. In contrast, they have committed to rolling out about 12,000 sites in 2026. So far, around 2,800 have been completed, including new builds, spectrum additions, and upgrades such as converting 3G sites to 4G and deploying 5G in select locations.</p>
-
-
-
-<p>“You can see we’re already moving way ahead of what we did last year,” he said.</p>
-
-
-
-<p>Operators say they are complying with the directive while continuing to invest in network improvements. MTN Nigeria said in a statement on Thursday that all affected customers will receive airtime compensation in line with the NCC framework, describing the directive as one that “places customers at the centre of regulatory decision-making.”</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Mauritius’ new AI policy makes ethics mandatory, not optional</title>
-		<link>https://techcabal.com/2026/04/23/mauritius-new-ai-strategy-sets-a-new-bar-ethics-before-execution/</link>
-		
-		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
-		<pubDate>Thu, 23 Apr 2026 12:02:44 +0000</pubDate>
-				<category><![CDATA[Delve into AI]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[AI adoption]]></category>
-		<category><![CDATA[funding]]></category>
-		<category><![CDATA[Mauritius]]></category>
-		<category><![CDATA[South Africa AI policy]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=186421</guid>
-
-					<description><![CDATA[Mauritius’s approach reflects a broader shift in how African countries may position themselves in the AI landscape.]]></description>
-										<content:encoded><![CDATA[
-<p>While many African countries race to deploy artificial intelligence, Mauritius has made governance and ethics the starting point of its AI strategy, rather than a problem to solve after the technology is in use.</p>
-
-
-
-<p>Central to the strategy is the <a href="https://aim.govmu.org/aim/fair-guidelines/" target="_blank" rel="noreferrer noopener">FAIR framework</a>, a set of guidelines that governs how AI systems are designed, deployed, and managed. It sets clear expectations across sectors and applies to the entire AI lifecycle, from design and development to deployment, monitoring, and eventual decommissioning.</p>
-
-
-
-<p>Mauritius’s approach reflects a broader shift in how African countries may position themselves in the AI landscape. While larger markets such as Nigeria and Kenya emphasise scale and ecosystem growth, and South Africa focuses on institutional regulation, Mauritius is advancing a governance-led model centred on enforceable standards.&nbsp;</p>
-
-
-
-<p>The Mauritius <a href="https://govmu.org/EN/newsgov/SitePages/National-AI-Strategy-and-FAIR-Guidelines-unveiled-to-position-Mauritius-as-a-high-tech,-innovation-driven-econ.aspx#:~:text=The%20Regional%20AI%20Marketplace%2C%20hosted,deployment%20of%20AI%2Ddriven%20solutions." target="_blank" rel="noreferrer noopener">National AI Strategy 2025–2029, alongside the FAIR Guidelines</a> introduced in April 2026, is designed to be vendor-neutral and border-agnostic. Any AI system operating within the country, regardless of origin, must comply with a unified set of ethical and operational standards.</p>
-
-
-
-<p>Imported AI tools are subject to the same level of scrutiny as domestic systems. The framework requires compliance with principles of fairness, accountability, inclusiveness, integrity, and responsibility. In high-risk sectors such as fintech and gaming, systems must undergo bias audits to mitigate discriminatory outcomes. Accountability provisions also require foreign providers to designate locally based representatives who can be held responsible for system outcomes.</p>
-
-
-
-<p>Any AI system that affects individuals, organisations, or public interests in Mauritius falls within the framework’s scope, reflecting a recognition that AI risks are not bound by geography and that governance should be determined by impact rather than origin.</p>
-
-
-
-<p>Although the FAIR Guidelines are currently non-binding, there are no immediate legal penalties or fines for non-compliance—at least not yet; they are designed with a clear legal and policy trajectory. They are expected to shape government policy, inform sector-specific regulations, influence procurement standards, and eventually underpin future legislation.&nbsp;</p>
-
-
-
-<p>In effect, Mauritius is building a regulatory framework that can evolve alongside the technology, rather than locking in rigid rules too early. This contrasts with approaches like <a href="https://techcabal.com/2026/04/09/south-africas-new-policy-is-betting-on-decentralised-ai-control/" target="_blank" rel="noreferrer noopener">South Africa’s Draft National AI Policy</a>, which proposes steep penalties—<a href="https://www.gov.za/sites/default/files/gcis_document/202604/54477gen3880.pdf#:~:text=The%20Draft%20National%20AI%20Policy%20is%20based,final%20approach%20to%20the%20AI%20policy%20landscape." target="_blank" rel="noreferrer noopener">including fines of about $530,000 or up to 10 years in prison</a>—for serious ethical breaches. </p>
-
-
-
-<p>The Mauritius approach allows the country to remain flexible while still establishing a stable reference point for accountability. Policymakers, regulators, businesses, and even courts can rely on these principles as AI adoption expands.</p>
-
-
-
-<p>The framework has four pillars: fairness, accountability, inclusiveness, and integrity. Each addresses a specific risk that has emerged in global AI deployment and is tied to concrete expectations.</p>
-
-
-
-<p>Fairness focuses on preventing bias. AI systems must not discriminate based on income, gender, ethnicity, or geography, the policy stated. This is particularly important in a small and diverse society, where flawed systems could quickly exclude entire groups from access to services or opportunities. To address this, the guidelines emphasise the use of representative local datasets and require bias testing, especially in high-impact sectors such as finance and public services.</p>
-
-
-
-<p>Accountability tackles one of AI’s most persistent challenges: the “black box” problem. Under the FAIR framework, there must always be a clearly identifiable party responsible for an AI system’s decisions. This includes defining liability, maintaining audit trails, and establishing mechanisms for redress when harm occurs. AI decisions are not meant to be opaque or unchallengeable.</p>
-
-
-
-<p>Inclusiveness ensures that the benefits of AI are widely distributed. Rather than concentrating advantages among large firms or urban populations, the strategy promotes AI literacy through initiatives like “<a href="https://president.govmu.org/president/launching-of-ai-for-all-ai-pou-nou-tou-booklet/" target="_blank" rel="noreferrer noopener">AI for All</a>,” supports small and medium-sized enterprises, and expands access to digital infrastructure. The goal is to prevent a new form of inequality—what the policy’s authors describe as a potential “digital divide 2.0.”</p>
-
-
-
-<p>The final pillar, integrity and responsibility, addresses the technical and ethical robustness of AI systems. It covers data governance, privacy, cybersecurity, and safeguards against misuse, including fraud and manipulation. For a government that plans to integrate AI into public service delivery, trust in system reliability is essential.</p>
-
-
-
-<p>What sets Mauritius apart is not just the inclusion of these principles, but how they are embedded into the broader economic strategy. The FAIR framework is tied directly to procurement decisions, system design, and policy development. It is positioned as a baseline requirement, not optional guidance.</p>
-
-
-
-<p>This reflects a broader strategic choice: as a small, open economy of just <a href="https://www.worldometers.info/world-population/mauritius-population/" target="_blank" rel="noreferrer noopener">1.26 million people</a> and a <a href="https://www.worldeconomics.com/GDP/Mauritius.aspx" target="_blank" rel="noreferrer noopener">roughly $15 billion GDP</a>, Mauritius cannot compete on scale with larger economies like South Africa, with an <a href="https://tradingeconomics.com/south-africa/gdp" target="_blank" rel="noreferrer noopener">over $400 billion GDP</a>.</p>
-
-
-
-<p>It is not that South Africa and Nigeria are ignoring trust. The difference lies in priorities and timing. Mauritius is using its smaller size to position itself as a focused, “boutique” AI regulator, while South Africa and Nigeria must balance building trust with driving the scale of growth their larger economies demand.</p>
-
-
-
-<p>In doing so, it hopes to attract investment, build partnerships, and integrate into global AI value chains.</p>
-
-
-
-<p>The country’s economic ambitions reinforce this direction. AI is seen as a new growth pillar, alongside traditional sectors like manufacturing, whose contribution to GDP has steadily declined—<a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/oecd-economic-outlook-volume-2024-issue-2-country-notes_2e3ba011/mauritius_9051ace4/b79d8096-en.pdf" target="_blank" rel="noreferrer noopener">from over 20% in the late 1990s to about 10.7% in 2020</a>, and only a modest recovery to roughly 12.8% in 2024. </p>
-
-
-
-<p>According to the policy, the country now sees AI as a way to revitalise these sectors, improve efficiency, and create new opportunities in areas such as fintech, logistics, and the ocean economy.</p>
-
-
-
-<p>To drive this transformation, Mauritius is building institutional capacity in the form of an AI Council. The council would be supported by public and private sector stakeholders, and international experts, who will oversee implementation, coordinate projects, and measure socio-economic impact. Incentives such as tax credits, grants, and regulatory support are also being deployed to encourage adoption.</p>
-
-
-
-<p>This governance-led approach stands in contrast to other African AI strategies. Nigeria, for instance, is <a href="https://techcabal.com/2025/11/06/nigeria-ai-bill/" target="_blank" rel="noreferrer noopener">prioritising large-scale deployment and talent development</a>, with governance structures still evolving. Kenya is focused on building <a href="https://techcabal.com/2026/04/02/kenyas-ai-bill-creates-a-powerful-new-digital-sheriff/" target="_blank" rel="noreferrer noopener">a regional innovation hub and a powerful AI sheriff</a>, while South Africa is leaning toward <a href="https://techcabal.com/2026/04/09/south-africas-new-policy-is-betting-on-decentralised-ai-control/" target="_blank" rel="noreferrer noopener">a more regulation-heavy model with multiple oversight bodies</a>.</p>
-
-
-
-<p>Mauritius, by comparison, is betting that trust can be a competitive advantage.</p>
-
-
-
-<p>There are risks to this strategy. Overemphasis on governance could slow down innovation if not carefully managed. And as the guidelines transition into binding rules, questions will arise about enforcement capacity and regulatory burden. But for now, the country appears to be striking a balance, setting clear expectations without stifling experimentation.</p>
 ]]></content:encoded>
 					
 		
