@@ -1,363 +1,4 @@
 {
-  "2026-04-11": [
-    {
-      "title": "Japan raises Rapidus support to $4b for chip plans",
-      "url": "https://www.techinasia.com/japan-s-korea-business-groups-to-collaborate-on-ai-semiconductors",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "funding"
-      ],
-      "level": "B",
-      "score": 7,
-      "summary_short": "日本将Rapidus芯片计划支持提升至$40亿",
-      "reason": "亚太地区芯片计划获大额资金支持，半导体产业链迎来发展机遇",
-      "impact": "芯片设计商、设备制造商、原材料供应商",
-      "insight_label": "资金流向",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "NASA Artemis II splashes down in Pacific Ocean in ‘perfect’ landing for Moon mission",
-      "url": "https://techcrunch.com/2026/04/10/nasa-artemis-ii-landing-pacific-ocean-splash-down/",
-      "source": "TechCrunch",
-      "region": "欧洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "NASA阿耳忒弥斯二号在太平洋完美溅落完成月球任务",
-      "reason": "欧洲航天领域重大进展，航天科技发展对ICT技术有长期需求推动",
-      "impact": "航天科技供应商、ICT技术服务商",
-      "insight_label": "背景补充",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "How to watch NASA’s Artemis II splash back down to Earth",
-      "url": "https://techcrunch.com/2026/04/10/how-to-watch-nasa-artemis-ii-landing/",
-      "source": "TechCrunch",
-      "region": "欧洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "介绍观看NASA阿耳忒弥斯二号溅落地球的方式",
-      "reason": "欧洲航天领域公众对航天事件的关注，可能带动相关航天技术科普类ICT服务需求",
-      "impact": "航天技术科普类ICT服务提供商",
-      "insight_label": "背景补充",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Battery recycler Ascend Elements files for bankruptcy",
-      "url": "https://techcrunch.com/2026/04/10/battery-recycler-ascend-elements-files-for-bankruptcy/",
-      "source": "TechCrunch",
-      "region": "欧洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "电池回收商Ascend Elements申请破产",
-      "reason": "欧洲电池回收行业资金链断裂，相关供应链企业需重新评估合作风险",
-      "impact": "电池回收供应链上下游企业",
-      "insight_label": "警示信号",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "France to ditch Windows for Linux to reduce reliance on US tech",
-      "url": "https://techcrunch.com/2026/04/10/france-to-ditch-windows-for-linux-to-reduce-reliance-on-us-tech/",
-      "source": "TechCrunch",
-      "region": "欧洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "法国将弃用Windows改用Linux以减少对美国技术的依赖",
-      "reason": "欧洲国家政府层面的技术选型变化，Linux相关企业迎来合作机会，Windows相关企业面临业务调整",
-      "impact": "Linux供应商、相关软件服务提供商、Windows相关企业",
-      "insight_label": "合作机会",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Quick, we’ve got quantum on the list",
-      "url": "https://www.techinasia.com/quick-weve-quantum-list",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "关于量子的列表",
-      "reason": "亚太地区量子领域相关信息整理，为量子领域从业者提供背景参考",
-      "impact": "亚太地区量子领域从业者",
-      "insight_label": "背景补充",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Meet the 20 top-funded startups and tech companies in Hong Kong",
-      "url": "https://www.techinasia.com/meet-20-topfunded-startups-tech-companies-hong-kong",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "介绍香港20家顶级融资的初创公司和科技公司",
-      "reason": "亚太地区香港初创公司和科技公司融资情况展示，资金流入这些公司",
-      "impact": "香港初创公司和科技公司",
-      "insight_label": "资金流向",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Singapore’s top-funded tech companies in the last decade",
-      "url": "https://www.techinasia.com/visual-story/singapores-topfunded-tech-companies-decade",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "新加坡过去十年融资最多的科技公司",
-      "reason": "亚太地区新加坡科技行业过去十年融资情况，可了解行业资金流向和发展趋势",
-      "impact": "新加坡科技公司及相关投资机构",
-      "insight_label": "资金流向",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Mapping the startups setting the pace in Korea’s AI sector",
-      "url": "https://www.techinasia.com/visual-story/mapping-koreas-leading-ai-startups",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "韩国人工智能领域领先的初创公司",
-      "reason": "亚太地区韩国人工智能行业发展情况，为AI从业者提供合作机会和市场动态",
-      "impact": "韩国AI初创公司、AI技术合作商",
-      "insight_label": "合作机会",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "IBM pays $17m to resolve US DEI claims",
-      "url": "https://www.techinasia.com/google-settles-50m-racial-bias-claims-affecting-4000-workers",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "IBM支付1700万美元解决美国多元化、公平和包容（DEI）索赔",
-      "reason": "亚太地区IBM应对企业社会责任问题，反映企业在合规方面的投入和态度",
-      "impact": "IBM相关业务合作方、受影响员工",
-      "insight_label": "警示信号",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "UK taps defense startup Cambridge Aerospace for interceptors",
-      "url": "https://www.techinasia.com/defense-tech-firm-anduril-uaes-edge-build-ai-drones-abu-dhabi",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "英国选择国防初创公司Cambridge Aerospace生产拦截器",
-      "reason": "亚太地区英国国防行业采购新动态，涉及国防科技合作机会",
-      "impact": "Cambridge Aerospace、英国国防部相关采购方",
-      "insight_label": "合作机会",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Accenture invests in US AI coding platform Replit",
-      "url": "https://www.techinasia.com/us-ai-coding-startup-replit-hits-3b-valuation-with-250m-funding",
-      "source": "Tech in Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "埃森哲投资美国人工智能编码平台Replit",
-      "reason": "亚太地区科技投资机构与美国AI编码平台合作，体现AI技术领域的资金流向和合作趋势",
-      "impact": "Replit、埃森哲及相关AI技术合作商",
-      "insight_label": "资金流向",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "SG waste management firm Blue Planet's losses widen 3.5x in 2025",
-      "url": "https://dealstreetasia.com/stories/blue-planets-earnings-2025-478766/",
-      "source": "DealStreetAsia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "新加坡垃圾管理公司Blue Planet 2025年亏损扩大3.5倍",
-      "reason": "亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入",
-      "impact": "垃圾处理技术供应商、环保产业投资者",
-      "insight_label": "警示信号",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "SG waste management firm Blue Planet's losses widen 3.5x in 2025",
-      "url": "https://www.dealstreetasia.com/section/climate-and-impact/",
-      "source": "DealStreetAsia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "新加坡垃圾管理公司Blue Planet 2025年亏损扩大3.5倍",
-      "reason": "亚太地区垃圾管理行业亏损扩大，资金压力增大，可能影响后续技术升级投入",
-      "impact": "垃圾处理技术供应商、环保产业投资者",
-      "insight_label": "警示信号",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Peter Thiel-backed Cognition eyes Japan, Singapore offices in Asia push",
-      "url": "https://dealstreetasia.com/stories/cognition-pushes-into-asia-478851/",
-      "source": "DealStreetAsia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "Peter Thiel支持的Cognition在亚洲拓展，设立日本和新加坡办公室",
-      "reason": "亚太地区AI行业战略扩张，带来新的合作机会，可能与当地企业合作拓展业务",
-      "impact": "亚太地区AI初创企业、当地科技服务提供商",
-      "insight_label": "合作机会",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "MENA startup funding falls to $48.3 million in March 2026",
-      "url": "http://wamda.com/2026/04/mena-startup-funding-drops-48-3-million-march-2026",
-      "source": "WAMDA",
-      "region": "中东",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 2,
-      "summary_short": "2026年3月中东初创公司融资降至4830万美元",
-      "reason": "中东初创公司融资规模下降，资金流入减少，可能影响相关科技企业发展和创新",
-      "impact": "中东科技初创公司、潜在投资者",
-      "insight_label": "资金流向",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "The Middle East’s butterfly effect on the global economy",
-      "url": "http://wamda.com/2026/04/middle-east-butterfly-effect-global-economy",
-      "source": "WAMDA",
-      "region": "中东",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "中东对全球经济的蝴蝶效应",
-      "reason": "中东地区经济对全球经济产生影响，可能带来贸易、投资、技术等方面的变化",
-      "impact": "全球经济参与者、相关行业企业",
-      "insight_label": "背景补充",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Nigeria’s NIGCOMSAT says it earned $1.6 million amid satellite dispute",
-      "url": "https://techcabal.com/2026/04/10/nigcomsat-reports-revenue-2025/",
-      "source": "TechCabal",
-      "region": "非洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "尼日利亚NIGCOMSAT在卫星争端中盈利160万美元",
-      "reason": "非洲卫星公司在争端中实现盈利，反映其经营能力和市场地位",
-      "impact": "NIGCOMSAT、卫星产业相关企业",
-      "insight_label": "背景补充",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Nomba and Globus Bank say they built a loan book with sub-1% defaults",
-      "url": "https://techcabal.com/2026/04/10/nomba-and-globus-bank-sub-1-defaults/",
-      "source": "TechCabal",
-      "region": "非洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "Nomba和Globus银行不良贷款率低于1%",
-      "reason": "非洲银行贷款质量良好，可能吸引更多资金流入，促进金融合作",
-      "impact": "Nomba和Globus银行、金融合作方",
-      "insight_label": "背景补充",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Quick Fire 🔥 with Chukwuemeka Mbachu",
-      "url": "https://techcabal.com/2026/04/10/quick-fire-with-chuckwuemeka-mbachu/",
-      "source": "TechCabal",
-      "region": "非洲",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "与Chukwuemeka Mbachu的快速问答",
-      "reason": "未提及关键信息，无法从ICT视角判断重要性",
-      "impact": "",
-      "insight_label": "",
-      "companies": [],
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Minor Hotels builds data and AI platform with Google Cloud",
-      "url": "https://techwireasia.com/2026/04/minor-hotels-builds-data-and-ai-platform-with-google-cloud/",
-      "source": "TechWire Asia",
-      "region": "亚太",
-      "event_types": [
-        "other"
-      ],
-      "level": "D",
-      "score": 1,
-      "summary_short": "Minor Hotels与谷歌云合作构建数据和人工智能平台",
-      "reason": "亚太地区酒店行业与科技企业合作，推动酒店行业数字化转型",
-      "impact": "Minor Hotels、谷歌云及相关数据和人工智能服务提供商",
-      "insight_label": "合作机会",
-      "companies": [],
-      "date": "2026-04-11"
-    }
-  ],
   "2026-04-12": [
     {
       "title": "Tencent Q4 2025 earnings preview: what to watch - ig.com",
@@ -13802,6 +13443,941 @@
       "is_company": false,
       "company_name": "",
       "date": "2026-04-26"
+    }
+  ],
+  "2026-04-27": [
+    {
+      "title": "Artificial Intelligence Software Platforms Global Market Report 2026: Google, Microsoft, AWS, Tencent, and IBM Led the $79.38 Billion Market in 2025 - Yahoo Finance Australia",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxON09fUThLYk5JTnFMWDNyQkEzQ2pHVEdxWmpmYVE2djBqbzY4VmF1Q2s3VV9oZWZzbVJfbGlpeDF3WTY4VTlVV0R1WTZiZG5qanJaZTdTYkNWNUExUHBwUk1QZnpQb1RqRGRIRmZkdjBrSWw5NDdoYldLNFpLNy13VGZ4aVZIeGpQaUJyMWJMbDBRbEFoZ0NzdXRhSVktMGs?oc=5",
+      "source": "Tencent",
+      "region": "中资",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Artificial Intelligence S",
+      "reason": "中资科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Tencent",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "JD.com Announces \"10 Billion GigaGrowth Plan\" to Introduce 1,000 Overseas Brands to China over Next Three Years - JD Corporate Blog",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOTENhYVFRTGZ5TTJwNVRUc2tCOVNsUUVBcV9NUzNYYmNlV0NHdTkxcVVCLXU2TzJSbEU0SGdTM3loMnA3Q0VtNmFvSkJTYmJ6OTlCTmIzSlNNN3FuQndsb3dCaUZXa3drS2hkRFNJOTBhbC0xUnRJbGV5czNMMmxqYkxaWURMNW5RcDkxTTg2ZFl0LThvd19nUk9uR1kxSzNDenVkX1AyU3RieVZDdDFGNGk1MzZaM2Q2bGZyUTI5Q21IUGxkZlA2eDNQdGFpUQ?oc=5",
+      "source": "JD.com",
+      "region": "中资",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "JD.com Announces \"10 Bill",
+      "reason": "中资科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": true,
+      "company_name": "JD.com",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Naver Webtoon, Kakao Entertainment Shut Down Spanish Piracy Site With 86 Million Monthly Visits - Seoul Economic Daily",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMGZzSnpDVmRpdXdKN21iZjdXR3d2X2ZiV3NCMElJZFlRekJxWmlnb3YwYWVNS0VfWlZsT2tOZmIyLXpGcnQ4QlVuMmQtRW9pdkZ3SDZ4Rl91cUFvSjlISEdtN2tpbS1EbVN4T0FkQUFIWXpxNVViMTlGRXMxMHk5MUV3eFNKdVFTN0Jyd1JfV2t3a1k3ZV9yVVRoY0pQekM3aVI3RF9n?oc=5",
+      "source": "Kakao",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Naver Webtoon, Kakao Ente",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Domestic webtoon platform companies have jointly responded, leading to the closure of large illegal - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0tLU5QdElFMmZLbEN6ZTZtYUhxREg5NUlXME1rUzhMci1EeVgtUlhlR3Q1VUs4QjFla1RfWlFVeGxDWmcweG56OHNDWQ?oc=5",
+      "source": "Kakao",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Domestic webtoon platform",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "10 essential apps you need to download before your trip to South Korea - Lifestyle Asia Hong Kong",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY0tQcmpteVRfSkc5R3hNbkk1dmpYZU1BNUE4a2szRjBacXI2ZFRfNVI2bk9LbW9XNHotSnJuZDU3VzN5eWVlTVVOUWNacWZ5MXVCb1ZvejZfeEZvODl4X3FHZE5KakFhLXVheFhlelFBdEsxV2xIZzRadlNUY2NaQU80Y09PM1MtZ1FnZUxZc0tMc0XSAZgBQVVfeXFMTm1QNExja3dIXzdYUDRINndOSW5OWUR5NGc0VHdSWllLYUR5TFlHaUQwcWI4elRsY3oyV0FoTy1JTGxMLURvWWN2RUNsQ1hzZURGQ0JHQTZJRlAwUDdVYk5vUThYM1pqSUdwb2FMblR1bkdIWlgtR0ROVmNUS2R5bmk1Qzc1Y01jdk14UnoySDV6NUgzU1NPVG8?oc=5",
+      "source": "Kakao",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "10 essential apps you nee",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Naver, Dunamu Deepen Ties With Unlisted Trading Platform Rebrand - thelec.net",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5pNmhrb29ETU5kM3JXcHZpYUliQUhGM21QQnQ5UXF2TmJSNk1hZG54WDlSQ2sweGdFbnlTd1QtcmY3Q0VlOGVGME02akJ6T2VSN2Z4QWhiaVU1VDRsM1UybDkwc2dlaU0?oc=5",
+      "source": "Naver",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Naver, Dunamu Deepen Ties",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Naver Cloud and HanmiGlobal target global data center expansion amid AI infrastructure race - digitimes",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQU09KUktyenZ4UlVCcWhqZ1J5VG5tVm1keGwtbVVlTV9IWHdZRjlsVEdrcjRaVHl0cWk0ZGR0M0J2U2xPY2wtamI3cnBVQm1aQWxTTUZQLVFiclFVd04td0x6NXNiMWJmREh2WE9IZG9BM3RpMVVQSncxb2ZYWHFUZ1JMenh2ZG1TR1MySmd0XzRxUDNHX2p4cGZPMWQ5eEJr?oc=5",
+      "source": "Naver",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Naver Cloud and HanmiGlob",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "KFTC Corrects Unfair Clauses in Coupang, Naver, Other Open Markets - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSlRyVVVVMVN5Vk9RcGtfNjdwWE5tTXp6S21pVXFYNEdLTnd5SGQ2cktGamZ5NU1oYmxaVmZOdVpwb0RvUUVzb3d5TW5zYmhDdWp6YW43YVMyekVWSUpUM21YSnRoQ1llMlZPUlh2YUF2UVRiSWZyOVJsUTJSTkg3WTdDMTJYWGJaMmJlQnFn?oc=5",
+      "source": "Naver",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "KFTC Corrects Unfair Clau",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Coupang, Naver among seven platforms revising unfair user terms in South Korea - MLex",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS2FIMjR2TlBwLXpjV1FFcFd6U1RhYjZGOGxHYmF4SEphb1JYUk5iTFlmdG5tNFZ5WVZZbWozaDZXSGRfelBGTlpuaVlpUGFlZzhKbDlRY2Y5aE1lQ0thRV9tc1ZRQ21XWUdnZWxzYV80X0puWXZaN2wyRFdRbXVQTGh1emNMT2pCWmNBb2FFOU9aYml1LU9XOUZRYVI0VDl6UjNaWWNGanBIYjlJYl9LcW1hZVJkT1NrQ0JSTTZOYWljSGptQm9zSWdSc0cyZGQ1UGFNNl9Leld2UdIBWkFVX3lxTFBvTVVuN3p3N1oyYkVodGphWHYyRmNIS2tGNGsycmZWOGNUTnpRcUJiUEZhQ29wRW9FZTFvTURzNURqT2JMQTB1SWYxNWtVSzA5ZXBaQkMxY2tHdw?oc=5",
+      "source": "Naver",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Coupang, Naver among seve",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Naver Webtoon’s Anti-Piracy Tool Results 23% Increase In Platform’s Revenue - Animehunch",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRFNlQXNfSzJFMkJncjc0S1BTX1B2Y3RLeklQNElJTDEzNmJvZEtUX1NtZnNYV3otQXhIdmMtRjFhVmtGbDRLOXY3cG1FWjNFTmdPNFNWNHBXbzRqVm9FYmRMSXl4UW1takUyMjlFbXJsZUh2UEpVWDd4TUJJN0l4djBSZWR6RzRTcmFVM1FLVFZqOXp3cDZvZ3ZIMVc?oc=5",
+      "source": "Naver",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Webtoon’s Anti-Pira",
+      "reason": "亚太科技公司财报披露",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "ASTS Stock Jumps Overnight: Retail Traders Brush Off Rakuten's Massive Share Sale - Stocktwits",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcmdRSDFSY3k1aVY2U3dvQzZwU3RNY0ZVR1dPdVJWUnBZR2djeFZPdWlkMXRGZXUxZUphbm44NDRMd1dST0FnWTVUalpMSUxuZlgyODJ1cU81YlM4X0FHMng2LXBGLVMtVHJzS0tZN2VSZXNneE1hZEV4bHZGSlRTcnIxZi1UdUFhcGJNUVdleHhCWHZldkUzVUlQc1Fham9MVTVFaE5sTG4xS0VBRTJaOEtQME5pdjQ?oc=5",
+      "source": "Rakuten",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "ASTS Stock Jumps Overnigh",
+      "reason": "亚太科技公司财报披露",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Rakuten Symphony Expands Rakuten Maritime Cybersecurity Platform to All Vessel Types and Shipbuilders with New Partnerships - Ocean News & Technology",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQa3BVRU4xeXlQSUdDc19nUEVMVGlLdFJsUTZYZzd3Q1l6cFBSUGtiS1lBY3h1aFVJMjNfcUkxQUVYSlBoLWgxLUJ1QWlaSkVDWnUzV0d5TUlLTkRTOFEzVk5KUnZEaUNBdVYtNkhueUxWeG44a3h1aTk4V2t4MmZ4ekxHQ0JFb1gxd0hhS3hnTTdUYzY3MzJtRmplMEwyN2l5VnlrSHB2alZSRVFnSEJUSUVmQnRfbHJ3UUw3Z2JWNVhTdHd4TmIyMmV5aGF0OS04T3hEZ3ZfYjduVVJxZlgwalJaTHJJd0JaSWJvLTNTa2Q?oc=5",
+      "source": "Rakuten",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Rakuten Symphony Expands ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Rakuten Symphony raids Nokia territory with Celona private 5G deal - SDxCentral",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWHh0ckctaVNtcnl6cmpPNXUweFdPU05lUHBWTy1jZ09uUWRlUHRfZ2NReENNeDNleXhzNUtQOHlRR1VnS0FhYUhrVDN4SjZ2UVJoQ2lKck1Yc21WeFIxTmF0eVNWUVZ6bnRSdURJNVcwQ1B2WndvMXYzbC1pQUtpTUVRWHlFWm9Sa0M0MGJIakpQRzRjWm8zRU04R1Rvc3Jo?oc=5",
+      "source": "Rakuten",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Rakuten Symphony raids No",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Celona, Rakuten Symphony team on enterprise private 5G deployments - Telecompaper",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNVNCOERfYWlsT2REZ056UEdXOVRoQU9nbzFxTDhnMl9KSnNPUjRUNHk0YmVJQkR5c3lHYUFpeTlaaFRRdjF5bnp0cEd1Y1lzZXJYMEd2NGt3SDJqeFRHQnk3VWtoZXRIaExlcndGbVg5emJwcTAzcDJ0X3hPb3hWZW8xbWpxQks2VVFoNXN3SEN4WGplbmx0QjI2R1Mwb3p6elY3SUpodVpQSU40?oc=5",
+      "source": "Rakuten",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Celona, Rakuten Symphony ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Google, Shopee-owner Sea to develop AI tools for e-commerce, gaming - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxPdi0yNU96SHl1N0lyVmxXVzkwZDJSTXdzWVo3Zi1PTlhCU1RlRHFfR0RObkp1WDQ2LXA2MXE2SW1iTkhPQkp2YUZlWGU5U2lnY3hMT1ZQR0lFVjUyX0lHdF9nYnNlTTlTOFdOS0Y4bXFKbVpjLXFuUnVCdElmcDlER1VJY20yVUJ3cWFsRldOT3lOUFFsMVkzdVpMajg4aEhYaDRyc0ZRLTRqR1JiemdMYjJmRGhjZXpQbGxXLTcwbkNndzBvZHFybFFsX2Z1Z2F1REdPS2JqUGE1ZThha2xZa1JpVzBoZmdUYmcyZmJGTW9EcXFfSG1sYlBNMnV6YXg2QjlrLTVFcE51c1RSU0ZzQ0c1VjR4aHRJeVhDRWduY0RoOVFkZXB3alZ2WE9ycndEem1mWnV3anhrOGI3Rk13d1EwSmJuVEFtdndiSXdxTktMd084R3UwMEVaOE1iS29PX2dyMC1wbGU?oc=5",
+      "source": "Sea Limited",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Google, Shopee-owner Sea ",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Sea Limited",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Is Grab Holdings Limited (GRAB) A Good Stock To Buy Now? - Yahoo Finance Singapore",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOM091R3l3YS1MWVVhOWVLRVBoSmUwNE9wcGVFRkxXUnFWbUxEZ1Q3TGQzeHF5ei1mZmp2bHFyYllsZHVvdkF2Q1lmbFBjVE1HTm1leHlsUlpWOXBuMHB6SXdCUXVjc25DNjFVb1BjVU5KOUtEdXRqSU1VSnJNWl9GMmJ4WkV4aUE?oc=5",
+      "source": "Grab",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Is Grab Holdings Limited ",
+      "reason": "亚太科技公司财报披露",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Grab",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "GoTo Gojek Tokopedia PT Tbk Stock Price Today | JK: GOTOM Live - Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ObmFfcUpQQTMwNXdHWG13LVhSQ1FLa2pGdzB5UGVaUHlkM3d5QUJscS1FbjhmZ1F0Z1k2WkUyajh1bnllRzhpcG9rLWM0dXBuM2s0eDMydFV5ejE0N2IyWlVIaklpYkdRLTRMSEE4TQ?oc=5",
+      "source": "Gojek",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "GoTo Gojek Tokopedia PT T",
+      "reason": "亚太科技公司财报披露",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Gojek",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "GoSend Enhances Delivery Security with New OTP-Based Verification Feature - Jakarta Globe",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWTl6WnNtdktfdV9pbnRNTUd5UjQtSi0xamJvS3JjUS1pYlo4c014Y0VhNElrYVJad2RCbXgzRDlvZ2JKaGJJT1BQbnEwOGZpLVhnMzVYeGxiOGpjS0d0YldScC1heGkzOVh2ZU5Dc1I2Z0NCNmJ0UmxyZ2lGMlpPX0xrYlU3bUVYamhiM2hscjUyY0lQQWxXeHNQV19rcWRHMHFIZkVuWTc4bmRyWTRwdE9R?oc=5",
+      "source": "Gojek",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "GoSend Enhances Delivery ",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Gojek",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Justice Department to drop Powell investigation; Adyen to buy German loyalty platform in first-ever acquisition; and more in today's Bankers' Hours - LinkedIn",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUnItOGFaNThjWUZWRXJGY3o5Q210U29Nb19mbGk2VWloSHRxQnp3ejlhWHE4ekJfT1NPZUUxb1htRDhlcnl3Wkt5ekxldVNOQ3hjOGliV1g3Y0NyeVlpODZnN2VEU3BldktPWVBqNXp3YTNXRWJFVDBFaTVxVERmRXItbl9FTUhLYzhKTkUxczgxdU4wREE?oc=5",
+      "source": "Adyen",
+      "region": "欧洲",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Justice Department to dro",
+      "reason": "欧洲科技公司并购/收购",
+      "impact": "未知",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Adyen to acquire loyalty platform Talon.One for €750m - FinTech Futures",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1TOUVSak9kT0E1YjJURVdCOUZfLVV5UFc3VVpmZXc1YUpzQmZCR1VJTVR4azJWZVFZRGNGel9wVHJrZldTWGdZYzZlRnBZSnAxaDUxX1Y0ZzAwRjh0U3g4RzNWaGUycW9zZ2tBMmttRVFjbVhWa1NrZDZB?oc=5",
+      "source": "Adyen",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Adyen to acquire loyalty ",
+      "reason": "欧洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Adyen to buy Talon.One for €750m in loyalty and promotions push - Electronic Payments International",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPS1dqanZJSnZIWFdQU2hIUGJib0dEaUdwVGNVX2FMTExZclRVYzhVZS1qMWJkYXJwSm9JN3lMRzlEbDVJYVdCNTEwRGUwaklsYzB3azluSE1pUlZRTW4tbnQ0WjB3Wm5VRWVxdGdHVHh5bGlmazRaSXFLX3ZrTFdJdk53?oc=5",
+      "source": "Adyen",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Adyen to buy Talon.One fo",
+      "reason": "欧洲科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Adyen (OTCMKTS:ADYEY) Sees Unusually-High Trading Volume - What's Next? - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORFp5Mjd6OWFCOGdGdGpvUGVycGpsNXJFZW5qNzZCaVhLSFZHR1gyZmlsNjRsWERyY0c5S01hblZuX2dPdEJhT2pZdndmRHNrYnZ6WnFySW00OE05a0hoWEY2Z2NJWEt4ZjlWWUFTbWFycVJibHkwTE9oU0QwQzFqamE5Q2pSUzZZbUhoaGpnUDFJc25NbXJ1NEE3U0w1akdzTnJRWWZOVlZBbGlZMGFLR2M5SHJ5X3ZhTGc?oc=5",
+      "source": "Adyen",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Adyen (OTCMKTS:ADYEY) See",
+      "reason": "欧洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Adyen agrees €750m deal for loyalty and incentives platform Talon.One - Finextra Research",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVVJPbzhpWkllV2RhQWNNTzdnWDZLWU5KQnpKMllnd1BnSGhiN2Jxc3oweFhYUlg5ekhFdDRvQVhlOG5EdU1SQWRzb1RqWXl3QXZRMkdnVWhSU0c2TjZrbkdfWU9QMjEyemNCWEJOOGR3R0JmclNEWnp6bmhVOEpxM3FyY2Z4U3B3Q3ZoWVJBN0ZGYXZvcmFuME5PTG1HVjdpYW5BM1ZscjFiVWhrbFBJ?oc=5",
+      "source": "Adyen",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Adyen agrees €750m deal f",
+      "reason": "欧洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Zalando SE: Release according to Article 40, Section 1 of the WpHG [the German Securities Trading Ac - AD HOC NEWS",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRVludmtfQ1hQZlRDU2ktbjFaYmYzcWlJSnhSbmhjcGpFczVLYUxnZjBveFlmaFBONFVrVXRUYkd0SXcxcVdaeno4bjlFdU45dDVQUl94elJubkdHRDM3UzNIengteTFoUjBOSGlCbWk1SkJiUVZaVlpFWlFITWJkYkp0eVRNSHZvZUxGTGM3ZENaaE9i?oc=5",
+      "source": "Zalando",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Zalando SE: Release accor",
+      "reason": "欧洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Zalando",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Cantor Fitzgerald and Jefferies are Positive on MercadoLibre (MELI) - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcXcxOG1iRXVRNjB5Y29GQTJnazNuTGhZM2RtalBhX0Z2VDFzNE9NVjJuMnhsbjd2c1FOYlN4TVdYNHZOdUh0bkxWS2UyS2pDN0xYNUl4aVNVcV9TRjdmQ0kwUUhRMXA5R1hyOHlWa0JUVFlpRTRZeHlUWTVZNC0xS29lVGk0TzZ3X2F1ZlpETkJ1UEhyTzFSSmxJSG9RWHAyQnY1RHlHUXZWOERuOVRrT2RVWC0?oc=5",
+      "source": "MercadoLibre",
+      "region": "拉美",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Cantor Fitzgerald and Jef",
+      "reason": "拉美科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Booking Holdings Is the First Blockbuster Stock Split of 2026 -- and the Table Is Set for This Company (Up 6,430% Since Its IPO) to Follow in Its Footsteps - The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxPMzlRQTdmbG5NNnROVmk5MDRmbk9VT3NkclktV0ZGdVBnMkpoTHc1RmR4aGlONVNsZDFNbG1mTjh0SHhOYldXTTBNN1BUNUh0YVJZS0ZIVjVnd0hoXzRiWUFqV0NWcTdZaGE4bmZxZ1l3SDBFV2FnNjhlY0NhWkkxTVNPOExudU1FRFlsdEVtaV9KVEh4YS1nME5HeUV4MUpMUGNXWlF4dUwyZGlnVUZTZEF5VzBFVkRXckdOZ0RuamFMYVpPSktEdjA1OUdiLWZSTGwwNkNsVk9iMXRIb3Q2X29GV0hibEE3NjdHd3BWaVRQbnl1Y3RtUVg1OExBUXFpX3phd0JnOFF0RFlMRDBtUENxU243cW1MNWYxMEw1dkdraXFxUmVCaVkwUFBuV3lLWFVhRWNrWUZMME10R2c4R2pld0JmQmg0WnVpS0JlbGcxX1RZTnc?oc=5",
+      "source": "MercadoLibre",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Booking Holdings Is the F",
+      "reason": "拉美科技公司财报披露",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Does Kaspi.kz’s (KSPI) Oversubscribed Bond Deal Reveal a Deeper Shift in Its Funding Strategy? - simplywall.st",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVkhvWkFwM2d6Nk1zWTdHVGJnaWFiMUpESThfTkk1MktZOGwzaDhmYTBaQ3k5dDdqbWdxWDNkMmdRRFhCSmQyb0Jxc3JXT2NCRDNaR2Y0ODJ0TnVkaHYwemZGY1EzeXNyakt0THAtNTc5REw0WlNjUzdOSnA4NDR3d1EtV2Z1YWdsRXVCT1Q3TnNsRTc1LTIxdjNKenh0alQzSHJXOURhNmE3N1N5S0FCaVJLUjhqcFlnZ0hLUkY1ck9MSGdXRF85YWVKRTZ1RjZNLXJOYkxB0gHbAUFVX3lxTE9JbnFJdTVPcWxSUGk2Q0o5YU90MXVXaHNTU0tKUjN5ajZWZDE3bno1a3JlcHNCQ2FVamx0TlQ1V01kS3NPT2ZNREo3WmNPQU5GQWtBc3A3U1VoWUNjTDhVWUc5bUhOeFczcTM0VkNoSXJJajRlMGFlVmZNZi02VnBsRkg4WDZITi1mZk1pYXZ3ajltWjZJVU5QY291c0diRUdvajRLdWNnemhyaW9TMTJVYmZteVM5TTBPZlotenVLcmFrUlBHdkpwSUpWdDRHYm1oNmFYTFdldWd1WQ?oc=5",
+      "source": "Kaspi.kz",
+      "region": "中东",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Does Kaspi.kz’s (KSPI) Ov",
+      "reason": "中东科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kaspi.kz",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Samsung Galaxy S26 Series: Innovation Meets Accessibility on Konga | Tech | Business | Economy - Techeconomy",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdUZrMENmR2tkN2JnTjVFM1lsRXN6dGZHOWdKbVBjdEJ0aE9FMUV3SG5ZVVJYcUczTVQ4M0ljRGZuQnVlVm9SQTl3TTUwdHhYYk9LRmJPeHBrMy1RaFNqQlZWWWhSNkg1WGtIMXhndnYyTHI1U25UemZXQVNRNWtuQnNSUHpuc0xxSjZMamNYemtrV2c?oc=5",
+      "source": "Konga",
+      "region": "非洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Samsung Galaxy S26 Series",
+      "reason": "非洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Konga",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Investors back Skye’s AI home screen app for iPhone ahead of launch",
+      "url": "https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "投资者在Skye的AI应用发布前注资",
+      "reason": "欧洲AI应用获投资，后续可能推动产品升级和市场推广",
+      "impact": "AI应用开发者、相关技术服务商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Data center demand drives 66% surge in natural gas power plant costs",
+      "url": "https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "数据中心需求使天然气发电厂成本激增66%",
+      "reason": "欧洲数据中心需求增长影响能源成本，相关企业成本上升",
+      "impact": "数据中心运营商、能源供应商",
+      "insight_label": "警示信号",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Ineffable Intelligence launches with record-breaking $1.1B Seed round",
+      "url": "https://tech.eu/2026/04/27/ineffable-intelligence-launches-with-record-breaking-11b-seed-round/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Ineffable Intelligence获$1.1B种子轮融资",
+      "reason": "欧洲人工智能独角兽获顶级融资，后续可能开放生态合作和API采购",
+      "impact": "AI基础设施供应商、云服务商、API集成商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Vinted hits €8B valuation as EQT leads €880M secondary share sale",
+      "url": "https://tech.eu/2026/04/27/vinted-hits-eur8b-valuation-as-eqt-leads-eur880m-secondary-share-sale/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Vinted获€880M二级股票出售，估值达€8B",
+      "reason": "欧洲二手电商平台获大额融资，市场竞争力增强",
+      "impact": "二手电商供应链、物流合作方",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "German robotics startup Sereact raises $110M",
+      "url": "https://tech.eu/2026/04/27/german-robotics-startup-sereact-raises-110m/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "德国机器人初创公司Sereact获$110M融资",
+      "reason": "欧洲机器人赛道早期融资，B2B机器人赛道持续有资金流入",
+      "impact": "机器人供应链、工业软件合作方",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "QuoIntelligence raises €7.3M Series A to deliver “finished” threat intelligence at scale",
+      "url": "https://tech.eu/2026/04/27/quointelligence-raises-eur73m-series-a-to-deliver-finished-threat-intelligence-at-scale/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "QuoIntelligence获€7.3M A轮融资",
+      "reason": "欧洲网络安全早期融资，威胁情报赛道持续有资金流入",
+      "impact": "网络安全供应商、数据合作方",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Vinted reaches €8 billion valuation in €880 million secondary share sale led by EQT",
+      "url": "https://thenextweb.com/news/vinted-8-billion-valuation-secondary-share-sale",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Vinted获€880M二级股票出售，估值达€8B",
+      "reason": "欧洲二手电商平台获大额融资，市场竞争力增强",
+      "impact": "二手电商供应链、物流合作方",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Spotify expands from soundtrack to sweat session: Peloton partnership puts 1,400 classes inside the app",
+      "url": "https://thenextweb.com/news/spotify-fitness-peloton-1400-classes-premium",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Spotify与Peloton合作，在应用内提供1400节健身课程",
+      "reason": "欧洲数字音乐与健身行业合作，拓展业务领域",
+      "impact": "健身课程供应商、音乐内容合作方",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "GXS Bank, Funding Societies launch SME property loans",
+      "url": "https://www.techinasia.com/gxsvalidus-deal-spur-fintechbank-partnerships",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "GXS Bank与Funding Societies推出中小企业房产贷款",
+      "reason": "亚太地区金融科技合作推出新业务，拓展市场份额",
+      "impact": "中小企业、金融科技服务供应商",
+      "insight_label": "合作机会",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "China blocks Meta’s Manus acquisition",
+      "url": "https://www.techinasia.com/meta-continues-manus-integration-despite-china-commerce-probe",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "中国阻止Meta收购Manus",
+      "reason": "亚太地区监管影响Meta业务拓展，相关行业需关注政策风险",
+      "impact": "Meta、Manus相关业务方",
+      "insight_label": "警示信号",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "US robotics software startup Sereact raises $110m",
+      "url": "https://www.techinasia.com/mbodi-ai-robots-adapt-fast-workers",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "美国机器人软件初创公司Sereact获$110m融资",
+      "reason": "美国机器人软件赛道获大额融资，后续可能开放生态合作和API采购",
+      "impact": "机器人软件供应商、硬件集成商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Comfi expands across MENA after raising $65 million pre-Series A",
+      "url": "http://wamda.com/2026/04/comfi-expands-mena-raising-65-million-pre-series",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Comfi在中东地区扩张，此前获$65m A轮前融资",
+      "reason": "中东地区金融科技公司扩张，后续可能开放生态合作和API采购",
+      "impact": "金融科技供应商、支付技术集成商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Lola closes $3 million seed to scale across GCC",
+      "url": "http://wamda.com/2026/04/lola-closes-3-million-seed-scale-gcc",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Lola获$3m种子轮融资以在海湾地区扩张",
+      "reason": "中东地区金融科技早期融资，海湾地区金融科技赛道持续有资金流入",
+      "impact": "金融科技供应链、支付软件合作方",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "After years building telecom and enterprise software, this founder is now focused on HR for African businesses",
+      "url": "https://techpoint.africa/feature/after-hours-chuma-chukwujama/",
+      "source": "Techpoint",
+      "region": "非洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "在构建电信和企业软件多年后，这位创始人现在专注于非洲企业的人力资源领域",
+      "reason": "非洲行业发展方向转变，人力资源领域可能吸引更多ICT资源投入",
+      "impact": "非洲人力资源服务企业、相关ICT供应商",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Nervonik Raises $52.5M for Nerve Stim Tech",
+      "url": "https://ventureburn.com/nervonik-raises-52-5m-for-nerve-stim-tech/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Nervonik获$52.5M用于神经刺激技术",
+      "reason": "非洲神经刺激技术获融资，该领域相关企业和供应商将受益",
+      "impact": "非洲神经刺激技术企业、技术供应商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Kashable Raises $60M Series C Led by Goldman Sachs",
+      "url": "https://ventureburn.com/kashable-raises-60m-series-c-led-by-goldman-sachs/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Kashable获高盛领投的$60M C轮融资",
+      "reason": "非洲金融科技企业获大额融资，行业发展前景受关注",
+      "impact": "非洲金融科技企业、相关金融服务供应商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Sereact Raises $110M to Scale AI Robotics Platform",
+      "url": "https://ventureburn.com/sereact-raises-110m-to-scale-ai-robotics-platform/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Sereact获$110M用于扩展AI机器人平台",
+      "reason": "非洲AI机器人平台获融资，将推动该领域发展",
+      "impact": "非洲AI机器人企业、技术供应商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "ComfyUI Raises $30M to Expand AI Image Generation Tools",
+      "url": "https://ventureburn.com/comfyui-raises-30m-to-expand-ai-image-generation-tools/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "ComfyUI获$30M用于扩展AI图像生成工具",
+      "reason": "非洲AI图像生成工具领域获融资，相关企业和技术供应商受益",
+      "impact": "非洲AI图像生成工具企业、技术供应商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "QumulusAI Secures $45M to Scale AI Infrastructure",
+      "url": "https://ventureburn.com/qumulusai-secures-45m-to-scale-ai-infrastructure/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "QumulusAI获$45M用于扩展AI基础设施",
+      "reason": "非洲AI基础设施获融资，将提升该领域服务能力",
+      "impact": "非洲AI基础设施企业、技术供应商",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "The healthtech industry is accelerating its growth with the expansion of startups and new product launches",
+      "url": "https://contxto.com/en/healthtech/the-healthtech-industry-is-accelerating-its-growth-with-the-expansion-of-startups-and-new-product-launches/",
+      "source": "Contxto",
+      "region": "拉美",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "拉美健康科技行业加速增长，初创公司扩张，新产品发布",
+      "reason": "拉美健康科技行业增长加速，新的ICT集成机会可能出现",
+      "impact": "健康科技供应商、医疗软件开发商",
+      "insight_label": "背景补充",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
+    },
+    {
+      "title": "Singapore’s Cube bags up to $3.5m in Series A round led by Betatron",
+      "url": "https://dealstreetasia.com/stories/cube-asia-funding-480547/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "新加坡Cube获高达$350万A轮融资，由Betatron领投",
+      "reason": "亚太地区健康科技早期融资，后续可能开放生态合作和API采购",
+      "impact": "健康科技供应链、医疗软件合作方",
+      "insight_label": "资金流向",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-04-27"
     }
   ]
 }
