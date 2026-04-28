@@ -12,7 +12,7 @@
 	<atom:link href="https://techwireasia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techwireasia.com/</link>
 	<description>Where technology and business intersect</description>
-	<lastBuildDate>Mon, 27 Apr 2026 09:17:02 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 28 Apr 2026 13:18:42 +0000</lastBuildDate>
 	<language>en-GB</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,117 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Kong reveals &#8216;agent-to-agent communication&#8217; critical for Asian enterprises</title>
+		<link>https://techwireasia.com/2026/04/kong-reveals-agent-to-agent-communication-critical-for-asian-enterprises/</link>
+		
+		<dc:creator><![CDATA[Ruiguo Lai, regional sales director Asia, Kong]]></dc:creator>
+		<pubDate>Tue, 28 Apr 2026 13:13:58 +0000</pubDate>
+				<category><![CDATA[Sponsored Content]]></category>
+		<guid isPermaLink="false">https://techwireasia.com/?p=247378</guid>
+
+					<description><![CDATA[<p>Author: Ruiguo Lai, regional sales director Asia, Kong. Agentic AI is experiencing rapid advancements in the APAC region. But with evolution also comes great risk. Without unified visibility and control of Agentic AI, security gaps emerge, costs spiral, and compliance becomes impossible to verify. According to Kong Inc., a leading developer of API and AI [&#8230;]</p>
+<p>The post <a href="https://techwireasia.com/2026/04/kong-reveals-agent-to-agent-communication-critical-for-asian-enterprises/">Kong reveals &#8216;agent-to-agent communication&#8217; critical for Asian enterprises</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><i><span style="font-weight: 400;">Author: Ruiguo Lai, regional sales director Asia, Kong.</span></i></p>
+<p><span style="font-weight: 400;">Agentic AI is experiencing rapid advancements in the APAC region. But with evolution also comes great risk. Without unified visibility and control of Agentic AI, security gaps emerge, costs spiral, and compliance becomes impossible to verify. According to</span><a href="https://konghq.com/" target="_blank" rel="noopener"> <span style="font-weight: 400;">Kong Inc.</span></a><span style="font-weight: 400;">, a leading developer of API and AI connectivity technologies, as enterprises in APAC move AI from experimentation to production, they face a growing connectivity and governance challenge.</span></p>
+<p><span style="font-weight: 400;">Organisations do not route prompts to a single LLM, but orchestrate complex systems where agents communicate with external tools via MCP and collaborate with other agents using emerging agent communication protocols, like Agent to Agent (A2A). Most solutions address only a fraction of this traffic, leaving enterprises to stitch together multiple point solutions or accept blind spots in their AI infrastructure.</span></p>
+<h3><b>Empowering safer and clearer pathways for LLM traffic</b></h3>
+<p><span style="font-weight: 400;">&#8220;When enterprises started experimenting with LLMs,</span><a href="https://konghq.com/solutions/ai-governance" target="_blank" rel="noopener"> <span style="font-weight: 400;">the governance challenge</span></a><span style="font-weight: 400;">, while still difficult, was relatively contained once you had an AI Gateway for LLM traffic. You had a request going to a model, a response coming back, and a gateway in between to enforce policy. With the right solutions, this becomes manageable pretty quickly,&#8221;</span><a href="https://konghq.com/blog/product-releases/kong-agent-gateway" target="_blank" rel="noopener"> <span style="font-weight: 400;">said</span></a><span style="font-weight: 400;"> Alex Drag, head of product marketing at Kong.</span></p>
+<p><span style="font-weight: 400;">&#8220;That world is now over. Today&#8217;s agentic architectures look nothing like that. Agents are calling tools via</span><a href="https://konghq.com/blog/learning-centre/what-is-mcp" target="_blank" rel="noopener"> <span style="font-weight: 400;">MCP</span></a><span style="font-weight: 400;">. Agents are delegating tasks to other agents via A2A. These other agents are producing and consuming event streams. Data flows in every direction, often with little to no human in the loop, and often with no visibility into what&#8217;s actually happening.&#8221;</span></p>
+<p><span style="font-weight: 400;">Kong</span><a href="https://konghq.com/company/press-room/press-release/kong-ai-gateway-now-supports-agent-to-agent-traffic-becoming-the-most-comprehensive-ai-gateway-for-the-agentic-era" target="_blank" rel="noopener"> <span style="font-weight: 400;">recently announced</span></a><span style="font-weight: 400;"> a new solution,</span><a href="https://konghq.com/agent-gateway" target="_blank" rel="noopener"> <span style="font-weight: 400;">Kong Agent Gateway</span></a><span style="font-weight: 400;"> in the AI Gateway 3.14 release. According to Kong, this launch positions Kong AI Gateway as the only gateway solution on the market to support advanced LLM, MCP, and agent-to-agent (A2A) use cases.</span></p>
+<p><span style="font-weight: 400;">&#8220;This is the problem we built Kong Agent Gateway to solve. And now Agent Gateway is GA and prod-ready as of AI Gateway 3.14,&#8221; Drag said.</span></p>
+<h3><b>Transition from experimental AI to commercial automation in Asian markets</b></h3>
+<p><span style="font-weight: 400;">According to Ruiguo Lai, regional sales director Asia, Kong, for APAC organisations, the transition from experimental AI to production-grade autonomy represents an important change in regional competitiveness.</span></p>
+<p><span style="font-weight: 400;">&#8220;As enterprises in ASEAN, South Korea and Greater China Region scale multi-agent systems in regulated and multi-cloud environments, the primary challenge has moved beyond simple model access to the complex governance of &#8220;Agent Sprawl,&#8221; he said.</span></p>
+<p><span style="font-weight: 400;">&#8220;This is a matter of managing operational risk and unpredictable token costs, to securing the &#8220;Agent Mesh&#8221; and ensuring that autonomous agent-to-agent (A2A) communications remain in the guardrails of regional data sovereignty laws and internal security protocols.&#8221;</span></p>
+<p><span style="font-weight: 400;">According to Lai, the launch of Kong&#8217;s new Agent Gateway provides organisations in Asia with a definitive control point for the entire AI lifecycle. By centralising visibility and policy enforcement in the full AI data path &#8211; from APIs and LLMs through to MCP tools and agent-to-agent workflows.</span></p>
+<p><span style="font-weight: 400;">&#8220;Kong lets a seamless flow of intelligence without sacrificing governance. This is particularly vital in the APAC region, where the need for rapid digital commerce innovation must coexist with stringent compliance requirements in financial services and government sectors. With the Agent Gateway, organisations can finally move from isolated AI pilots to a scalable, &#8220;agentic&#8221; infrastructure that is secure, cost-effective, and fully resilient,&#8221; he said.</span></p>
+<p><span style="font-weight: 400;">With agent gateway, organisations can have:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Unified observability in all native AI traffic: Kong Konnect acts as a single observability dashboard for all native AI traffic.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Production-ready agentic AI: Security, access control, and audit abilities to confidently move agentic workloads out of pilot and into production.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Cost visibility and control: Granular tracking of token consumption and resource use in agent workflows, enabling accurate cost allocation and margin optimisation.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Reduced compliance risk: Full audit logging of A2A conversations for regulatory requirements and internal governance policies.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Faster time to see value: Teams can focus on building agent abilities not piecing together governance infrastructure and custom gateway policies.</span></li>
+</ul>
+<p><span style="font-weight: 400;">&#8220;Every enterprise is wrestling with the same three challenges: not having full visibility into all AI traffic and resource consumption in an agentic workflow, struggling to adopt AI in a way that helps increase margins, and dealing with issues when moving AI and agentic workloads into production,&#8221; said Reza Shafii, SVP of Product at Kong.</span></p>
+<p><span style="font-weight: 400;">&#8220;We built Agent Gateway to solve this directly. Engineering teams can now govern all of their multi-agent traffic in a single place. This is the kind of control and connectivity that makes agentic AI workable at enterprise scale.&#8221;</span></p>
+<p><span style="font-weight: 400;">Agent Gateway is now available in Kong AI Gateway, part of the Kong Konnect platform. To learn more, visit</span><a href="https://konghq.com/products/kong-ai-gateway" target="_blank" rel="noopener"> <span style="font-weight: 400;">konghq.com/products/kong-ai-gateway</span></a><span style="font-weight: 400;">.</span></p>
+<p><i><span style="font-weight: 400;">Author: Ruiguo Lai, regional sales director Asia, Kong.</span></i></p>
+<p>The post <a href="https://techwireasia.com/2026/04/kong-reveals-agent-to-agent-communication-critical-for-asian-enterprises/">Kong reveals &#8216;agent-to-agent communication&#8217; critical for Asian enterprises</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Huawei picked Malaysia for its biggest AI move outside China. Anwar said why.</title>
+		<link>https://techwireasia.com/2026/04/huawei-malaysia-ai-sovereignty/</link>
+		
+		<dc:creator><![CDATA[Dashveenjit Kaur]]></dc:creator>
+		<pubDate>Tue, 28 Apr 2026 06:00:46 +0000</pubDate>
+				<category><![CDATA[AI & Intelligence]]></category>
+		<category><![CDATA[Asia Pacific Focus]]></category>
+		<category><![CDATA[Malaysia]]></category>
+		<category><![CDATA[Sovereignty & Privacy]]></category>
+		<category><![CDATA[5G Malaysia]]></category>
+		<category><![CDATA[AI geopolitics]]></category>
+		<category><![CDATA[AI Governance]]></category>
+		<category><![CDATA[AI infrastructure]]></category>
+		<category><![CDATA[Anwar Ibrahim]]></category>
+		<category><![CDATA[huawei]]></category>
+		<category><![CDATA[Huawei AI Lab]]></category>
+		<category><![CDATA[Huawei Malaysia]]></category>
+		<category><![CDATA[MADANI]]></category>
+		<category><![CDATA[Malaysia AI sovereignty]]></category>
+		<category><![CDATA[Malaysia digital economy]]></category>
+		<category><![CDATA[MCMC]]></category>
+		<category><![CDATA[RMK13]]></category>
+		<category><![CDATA[Southeast Asia tech]]></category>
+		<category><![CDATA[U Mobile 5G]]></category>
+		<guid isPermaLink="false">https://techwireasia.com/?p=247370</guid>
+
+					<description><![CDATA[<p>Huawei&#8217;s first AI incubation centre outside China lands in Malaysia. Cements the country&#8217;s position in the company&#8217;s global AI strategy Majority of Prime Minister Anwar Ibrahim&#8217;s remarks at launch a Malaysia AI sovereignty statement. There is a version of yesterday&#8217;s Huawei AI Lab and Innovation Centre launch at The Exchange 106, Kuala Lumpur that writes [&#8230;]</p>
+<p>The post <a href="https://techwireasia.com/2026/04/huawei-malaysia-ai-sovereignty/">Huawei picked Malaysia for its biggest AI move outside China. Anwar said why.</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<ul>
+<li><strong>Huawei&#8217;s first AI incubation centre outside China lands in Malaysia.</strong></li>
+<li><strong>Cements the country&#8217;s position in the company&#8217;s global AI strategy</strong></li>
+<li><strong>Majority of Prime Minister Anwar Ibrahim&#8217;s remarks at launch a Malaysia AI sovereignty statement.</strong></li>
+</ul>
+<p>There is a version of yesterday&#8217;s Huawei AI Lab and Innovation Centre launch at The Exchange 106, Kuala Lumpur that writes itself – anniversary milestone, government endorsement, ribbon cut, photos taken. Every tech publication in the region will file that version. But the more consequential story was in what was actually said, by whom, and what it reveals about where Malaysia has chosen to stand on one of the defining technology questions of this decade.</p>
+<h3>What 25 years have actually built</h3>
+<p>To understand what the AI Lab represents, you need to understand what Huawei already is in Malaysia, because Wind Li, vice president and CEO of Huawei Global Sector Business at Huawei, was not overselling when he described the country as Huawei&#8217;s &#8220;overseas home.&#8221;</p>
+<p>Huawei entered Malaysia on April 25, 2001. Today, it employs over 4,000 people here, more than 80% of whom are local hires. Its Asia Pacific headquarters is in Malaysia. So, is it the only global training centre outside China. It operates 11 shared services centres on Malaysian soil and has trained over 72,000 ICT professionals through programmes spanning the Huawei ASEAN Academy, Huawei ICT Academies and the Huawei-MCMC Digital Leadership Excellence Programme.</p>
+<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/04/huawei-malaysia-ai-sovereignty/>Huawei picked Malaysia for its biggest AI move outside China. Anwar said why.</a></i></div>
+<p>The company&#8217;s reach into Malaysia&#8217;s infrastructure is equally substantial. Huawei has been supporting U Mobile&#8217;s second 5G network since 2025, and in March 2026, Ookla&#8217;s Speedtest Award recognised that network as <a href="https://techwireasia.com/2026/03/u-mobile-ranked-fastest-5g-network-in-malaysia-in-late-2025-tests/">delivering the fastest 5G speeds</a> in Malaysia. Huawei claims its solutions reach approximately 97% of Malaysia&#8217;s population, though the company has not detailed how that figure is measured or whether it&#8217;s been verified independently.</p>
+<p>The AI Lab, then, is not a beginning. As Li put it, the new centre spanning 13,638 square feet at TRX is &#8220;the first centre of its kind outside China&#8221;; Huawei&#8217;s first AI-enabled industrial incubation base globally outside its home market. That it landed in Kuala Lumpur, and not Singapore, Tokyo, or Western-aligned tech hub, is a choice worth sitting with.</p>
+<h3>What the centre is actually built to do</h3>
+<p>Li was specific about the centre&#8217;s purpose in a way the contents of the press materials were not. Beyond the showcase function – demonstrating Huawei&#8217;s enterprise solutions in government, finance, education, and healthcare – the centre is designed to incubate locally-adapted AI applications for Malaysian industries and deepen what Li called &#8220;ecosystem partner&#8221; collaboration. Huawei has cultivated over 80 ecosystem partners in Malaysia and works with more than 1,000 local enterprise partners. The centre gives the network a formalised base.</p>
+<p>On talent, Huawei&#8217;s ambitions extend beyond ICT training into specialised AI ability building, with the centre serving as an anchor for that effort. A concrete signal of where Huawei sees vertical opportunity came in an unexpected detail from Li&#8217;s speech: a collaboration with a local Malaysian university on a diabetes risk study, tied to the upcoming Huawei Watch FIT 5 Pro. With one in five Malaysian adults living with diabetes – approximately 4.75 million people, nearly half of whom remain un-diagnosed – Li framed the wearable&#8217;s preventive health features as a genuine public health intervention. Health technology is clearly being added to Huawei&#8217;s priorities in Malaysia.</p>
+<p>Li also pointed to the broader ambition underpinning all of this. Huawei has reinvested more than 20% of its annual revenue into R&amp;D over the past five years, with over US$27 billion invested in research last year. The goal, in Li&#8217;s framing, is to &#8220;turn data into intelligence, and intelligence into real impact,&#8221; building full-stack AI abilities in the entire data lifecycle, from distribution and transmission through to processing, storage and reasoning.</p>
+<h3>The sovereignty statement hiding in plain sight</h3>
+<p>Prime Minister Anwar Ibrahim&#8217;s <a href="https://www.pmo.gov.my/ms/verbatim-ms/verbatim-text-speech-at-the-launch-of-the-huawei-ai-lab-and-innovation-centre/">speech</a> was where the event became something more than a launch. He did not confine his remarks to Malaysia&#8217;s digital roadmap or congratulate Huawei and move on. Instead, he delivered a candid assessment of AI&#8217;s implications for jobs, institutional readiness, and the pace at which governments – including his own – are keeping up with technological disruption.</p>
+<p>He warned that those most exposed to AI&#8217;s reshaping of work are often those with the least capacity to adapt, and that the window for building sound governance frameworks is narrowing.</p>
+<p>But his sharpest remarks were directed outward. Anwar pushed back explicitly against what he described as the doctrine that &#8220;certain forms of technology found in the West must dictate our policies.&#8221;</p>
+<p>He invoked Edward Said&#8217;s Orientalism, the foundational critique of how Western frameworks position non-Western cultures as inferior or subordinate, and rejected the framing of Western technological supremacy as a justification for dictating other nations&#8217; infrastructure choices. The colonial mindset, he said, &#8220;was wrong then and it is wrong now.&#8221;</p>
+<p>This was not abstract philosophy. Malaysia has faced sustained pressure, as have other Southeast Asian nations, over its continued engagement with Huawei at a time when the US and its allies have moved systematically to exclude the company from their own critical infrastructure.</p>
+<p>Anwar&#8217;s remarks were a direct response to that pressure – delivered, pointedly, at a Huawei event, with the MCMC chairman seated in the room. His closing line on the matter crystallised the Malaysia AI sovereignty position his government has been building toward: &#8220;While the technology may come from anywhere, the rules will be made in Malaysia.&#8221;</p>
+<p>It is an endorsement of Huawei&#8217;s presence and a boundary condition simultaneously. Malaysia is open, but not unconditionally so.</p>
+<h3>The infrastructure question underneath it all</h3>
+<p>What gives that sovereignty declaration its complexity is the depth of Huawei&#8217;s existing footprint. A company that is embedded in connectivity infrastructure, talent pipelines, enterprise solutions and now AI incubation, is not a vendor relationship that pivots easily. Malaysia is not hosting a facility.</p>
+<p>It has, over 25 years, built its digital infrastructure in part around a single company that the Western-aligned world continues to treat as a security risk. Anwar&#8217;s promise that the rules will be made in Malaysia is the right instinct.</p>
+<p>Whether the governance frameworks being developed – the National AI Office, the AI governance framework, the data protection regime – are being built quickly enough, and with enough independence, to give that promise real substance is the question that yesterday&#8217;s speeches did not answer, and that Malaysia&#8217;s technology community will be watching closely in the months ahead.</p>
+<p><a href="https://www.ai-expo.net/"><img fetchpriority="high" decoding="async" class="alignleft wp-image-247146 size-full" src="https://techwireasia.com/wp-content/uploads/2026/03/AI.png" alt="" width="728" height="90" srcset="https://techwireasia.com/wp-content/uploads/2026/03/AI.png 728w, https://techwireasia.com/wp-content/uploads/2026/03/AI-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a></p>
+<p><strong>Want to learn more about AI and big data from industry leaders?</strong> Check out<a href="https://www.ai-expo.net/"> AI &amp; Big Data Expo</a> taking place in Amsterdam, California, and London. The comprehensive event is part of <a href="https://techexevent.com/">TechEx</a> and is co-located with other leading technology events, click<a href="https://techexevent.com/"> here</a> for more information.</p>
+<p>Tech Wire Asia is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
+<p>The post <a href="https://techwireasia.com/2026/04/huawei-malaysia-ai-sovereignty/">Huawei picked Malaysia for its biggest AI move outside China. Anwar said why.</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>DeepSeek launches V4 model adapted for Huawei AI chips</title>
 		<link>https://techwireasia.com/2026/04/deepseek-v4-huawei-ai-chips/</link>
 		
@@ -624,115 +735,6 @@
 <p><span data-preserver-spaces="true">The advice is practical. Whether the pace of deployment across Malaysian enterprises allows for that kind of discipline is another matter entirely.</span></p>
 <p><em><span data-preserver-spaces="true">TrendAI commissioned Sapio Research to survey 3,700 IT and business decision makers across 23 countries globally. The Malaysia media briefing was held on April 16, 2026, in Kuala Lumpur.</span></em></p>
 <p>The post <a href="https://techwireasia.com/2026/04/ai-governance-gap-malaysia/">Malaysia is rushing into AI faster than anyone. Its governance gap is the price</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Apple&#8217;s CEO transition puts a hardware engineer in charge–at exactly the right moment</title>
-		<link>https://techwireasia.com/2026/04/apple-ceo-transition-john-ternus-tim-cook-hardware/</link>
-		
-		<dc:creator><![CDATA[Dashveenjit Kaur]]></dc:creator>
-		<pubDate>Tue, 21 Apr 2026 08:00:14 +0000</pubDate>
-				<category><![CDATA[Asia Pacific Focus]]></category>
-		<category><![CDATA[China]]></category>
-		<category><![CDATA[India]]></category>
-		<category><![CDATA[Apple]]></category>
-		<category><![CDATA[Apple CEO]]></category>
-		<category><![CDATA[India manufacturing]]></category>
-		<category><![CDATA[John Ternus]]></category>
-		<category><![CDATA[leadership]]></category>
-		<category><![CDATA[supply chain]]></category>
-		<category><![CDATA[Tim Cook]]></category>
-		<category><![CDATA[vietnam]]></category>
-		<guid isPermaLink="false">https://techwireasia.com/?p=247317</guid>
-
-					<description><![CDATA[<p>Apple&#8217;s CEO transition marks the company&#8217;s first leadership change in 15 years John Ternus spent 25 years shaping Apple&#8217;s hardware from the inside. Now he&#8217;ll lead a company betting on India and Vietnam to redefine how it builds When Steve Jobs handed the CEO role to Tim Cook in August 2011, the consensus in Silicon [&#8230;]</p>
-<p>The post <a href="https://techwireasia.com/2026/04/apple-ceo-transition-john-ternus-tim-cook-hardware/">Apple&#8217;s CEO transition puts a hardware engineer in charge–at exactly the right moment</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<ul>
-<li><strong><span data-preserver-spaces="true">Apple&#8217;s CEO transition marks the company&#8217;s first leadership change in 15 years</span></strong></li>
-<li><strong><span data-preserver-spaces="true">John Ternus spent 25 years shaping Apple&#8217;s hardware from the inside. Now he&#8217;ll lead a company betting on India and Vietnam to redefine how it builds</span></strong></li>
-</ul>
-<p><span data-preserver-spaces="true">When Steve Jobs handed the CEO role to Tim Cook in August 2011, the consensus in Silicon Valley was polite scepticism. Cook was a skilled behind-the-scenes operator whose mastery of supply chains had helped Apple thrive during the Jobs era, but questions immediately arose about whether he had the vision to carry Apple&#8217;s innovation mantle forward.</span></p>
-<p><span data-preserver-spaces="true">Within months of taking over, Apple&#8217;s stock price nearly doubled. He answered his critics the only way that matters. Fifteen years on, Apple is doing this again. On Monday, the company </span><a class="editor-rtfLink" href="https://www.apple.com/my/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/" target="_blank" rel="noopener"><span data-preserver-spaces="true">confirmed</span></a><span data-preserver-spaces="true"> that Cook, now 65, will step down as CEO on September 1, moving to executive chairman. </span></p>
-<p><span data-preserver-spaces="true">John Ternus, SVP of Hardware Engineering and a 25-year Apple veteran, will take the top job. And once again, the same questions are already forming: is this the right person, and is the timing right?</span></p>
-<p><span data-preserver-spaces="true">The difference this time is that the uncertainty isn&#8217;t about vision. It&#8217;s about whether Apple can hold together one of the most complex manufacturing operations in the world while simultaneously reinventing where and how it builds things.</span></p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/03/apple-siri-may-shift-toward-a-system-level-ai-agent/>Apple’s Siri may shift toward a system-level AI agent</a></i></div>
-<h3><span data-preserver-spaces="true">From the supply chain to the product line</span></h3>
-<p><span data-preserver-spaces="true">Cook&#8217;s defining contribution to Apple wasn&#8217;t the iPhone. It was making sure hundreds of millions of iPhones could actually be made, on time, at scale, every year. Under Cook, the iPhone grew into a US$210 billion per year business generating nearly half of Apple&#8217;s total revenue. That engine runs on a supply chain that, for all its efficiency, remains heavily concentrated in one part of the world.</span></p>
-<p><span data-preserver-spaces="true">China still accounts for around 80% of Apple&#8217;s production capacity, with roughly 90% of iPhones assembled there. That worked well for decades. It works less well now, with US tariffs reshaping trade flows and geopolitical pressure mounting on companies with deep China exposure. But Apple has been moving–fast. </span></p>
-<p><span data-preserver-spaces="true">As far back as May 2025, during Apple&#8217;s Q2 earnings call, Cook told analysts that the majority of iPhones sold in the US would have India as their country of origin for the June quarter, with Vietnam the country of origin for almost all iPads, Mac, Apple Watches, and AirPods sold in the US. The decision is a direct response to US tariff pressure that was already reshaping the company&#8217;s production calculus. That shift has continued since, and it is now the reality Ternus inherits.</span></p>
-<p><span data-preserver-spaces="true">The </span><a class="editor-rtfLink" href="https://www.trendforce.com/news/2025/06/09/news-apples-supply-chain-reality-what-u-s-tariffs-overlook" target="_blank" rel="noopener"><span data-preserver-spaces="true">challenge</span></a><span data-preserver-spaces="true"> is real: India and Southeast Asia have made inroads in electronics assembly, but precision manufacturing and printed circuit boards remain largely concentrated in China. Closing that gap is not a logistics problem. It is a hardware problem.</span></p>
-<h3><span data-preserver-spaces="true">The engineer in the corner office</span></h3>
-<p><span data-preserver-spaces="true">This is precisely where Ternus&#8217;s background becomes the argument for him. He </span><a class="editor-rtfLink" href="https://techcrunch.com/2026/04/20/who-is-john-ternus-the-incoming-apple-ceo/" target="_blank" rel="noopener"><span data-preserver-spaces="true">joined</span></a><span data-preserver-spaces="true"> Apple&#8217;s product design team in 2001, rose to VP of Hardware Engineering by 2013, and has been involved in nearly everything Apple has shipped over the past decade–AirPods, Apple Watch, the Apple Silicon transition, and most recently the MacBook Neo. </span></p>
-<p><span data-preserver-spaces="true">He pushed repairability and durability as strategic priorities and is credited with introducing manufacturing techniques that reduced the carbon footprint of Apple&#8217;s products, including a new recycled aluminium compound used across multiple product lines, a report by </span><a class="editor-rtfLink" href="https://techcrunch.com/2026/04/20/tim-cook-stepping-down-as-apple-ceo-john-ternus-taking-over/" target="_blank" rel="noopener"><span data-preserver-spaces="true">TechCrunch</span></a><span data-preserver-spaces="true"> indicated.</span></p>
-<p><span data-preserver-spaces="true">He also has a clear philosophy about craft. Ternus has recounted a story about Jobs inspecting the back of a chest of drawers and being bothered by the unfinished wood, a surface no customer would ever see. Ternus has said he thinks about that story constantly, as it captures what Apple is supposed to do. </span></p>
-<p><span data-preserver-spaces="true">Rethinking <a href="https://techwireasia.com/2026/03/apple-iphone-production-india-25-percent-global-output/">manufacturing in India</a> and Vietnam, building quality into factories that didn&#8217;t exist in their current form five years ago, is very much a question of what happens where no one is watching.</span></p>
-<p><span data-preserver-spaces="true">The leadership structure around him has also been </span><a class="editor-rtfLink" href="https://www.apple.com/newsroom/2026/04/johny-srouji-named-apples-chief-hardware-officer/" target="_blank" rel="noopener"><span data-preserver-spaces="true">reorganised</span></a><span data-preserver-spaces="true">. Johny Srouji, previously SVP of Hardware Technologies, has been named chief hardware officer effective immediately, taking over the hardware engineering organisation and expanding his role to cover silicon strategy, product design, and reliability. </span></p>
-<p><span data-preserver-spaces="true">Cook called him one of the most talented people he has worked with and said his influence on Apple&#8217;s silicon strategy has been felt across the industry. Ternus and Srouji are, in other words, the hardware leadership pairing Apple is placing its next chapter on.</span></p>
-<p><span data-preserver-spaces="true">Cook will remain close. His executive chairman role includes engaging with policymakers globally, which, given Apple&#8217;s tariff exposure across Asia, matters. It&#8217;s a cleaner handover than 2011 was, without the grief and without the existential doubt. But the pressures Ternus walks into are no less real.</span></p>
-<p>The post <a href="https://techwireasia.com/2026/04/apple-ceo-transition-john-ternus-tim-cook-hardware/">Apple&#8217;s CEO transition puts a hardware engineer in charge–at exactly the right moment</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Memory shortage to persist through 2027 as supply lags demand</title>
-		<link>https://techwireasia.com/2026/04/memory-shortage-2027-supply-demand-gap/</link>
-		
-		<dc:creator><![CDATA[Muhammad Zulhusni]]></dc:creator>
-		<pubDate>Mon, 20 Apr 2026 10:00:24 +0000</pubDate>
-				<category><![CDATA[AI & Intelligence]]></category>
-		<category><![CDATA[Asia Pacific Focus]]></category>
-		<category><![CDATA[Cloud & Infrastructure]]></category>
-		<category><![CDATA[Data Centres]]></category>
-		<category><![CDATA[Data Processing & Storage]]></category>
-		<category><![CDATA[Supply Chain & Logistics]]></category>
-		<category><![CDATA[Cloud Infrastructure]]></category>
-		<category><![CDATA[Data Centre]]></category>
-		<category><![CDATA[memory]]></category>
-		<category><![CDATA[supply chain]]></category>
-		<guid isPermaLink="false">https://techwireasia.com/?p=247311</guid>
-
-					<description><![CDATA[<p>Memory shortage to persist through 2027 as supply lags demand. AI demand and limited capacity keep memory prices high and shipments weak. Rising memory costs are expected to persist through at least 2027, as supply continues to lag demand, according to Nikkei Asia. Leading US and South Korean suppliers are increasing DRAM output at a [&#8230;]</p>
-<p>The post <a href="https://techwireasia.com/2026/04/memory-shortage-2027-supply-demand-gap/">Memory shortage to persist through 2027 as supply lags demand</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<ul>
-<li><strong>Memory shortage to persist through 2027 as supply lags demand.</strong></li>
-<li><strong>AI demand and limited capacity keep memory prices high and shipments weak.</strong></li>
-</ul>
-<p>Rising memory costs are expected to persist through at least 2027, as supply continues to lag demand, according to <em>Nikkei Asia</em>. Leading US and South Korean suppliers are increasing DRAM output at a pace that would meet only about 60% of demand by 2027.</p>
-<p>The report estimates that memory production would need to expand by around 12% annually through 2027 to meet demand. Current growth stands at approximately 7.5%, while a gap of about 40% remains between supply and demand.</p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/04/chinese-memory-chips-ymtc-cxmt-nand-dram-expansion/>Chinese memory giants are scaling fast, and the AI boom is giving them cover</a></i></div>
-<h3>Supply constraints persist</h3>
-<p>Additional data from market research firms indicates that price increases have accelerated in recent quarters. TrendForce estimates that DRAM contract prices rose by approximately 90% to 95% quarter over quarter in early 2026, while NAND flash prices increased by 55% to 60% over the same period.</p>
-<p>TrendForce said persistent demand from AI servers and <a href="https://techwireasia.com/2026/02/openai-samsung-and-sk-move-ahead-with-korea-data-centre-build/">data centres</a> in the first quarter of 2026 further worsened the supply-demand imbalance, increasing suppliers&#8217; pricing power.</p>
-<h3>AI demand and memory allocation</h3>
-<p><em>Nikkei Asia</em> also reported that demand for memory has increased with AI-related workloads, which require higher volumes of DRAM. Samsung Electronics, SK Hynix, and Micron Technology together account for about 90% of the global DRAM market and are effectively the only companies able to produce high-bandwidth memory at scale.</p>
-<p>TrendForce and IDC have also pointed to limited capacity expansion following the previous industry downturn as a factor constraining supply, reflecting the time required to bring new fabrication capacity online.</p>
-<p>In recent years, those suppliers have prioritised high-bandwidth memory, <em>Nikkei Asia</em> reported. Production increases for general-purpose memory used in PCs and smartphones were delayed, contributing to shortages from late 2025.</p>
-<p>Manufacturing capacity expansion is underway but remains limited in the near term. Samsung Electronics plans to bring a fourth fabrication plant at its Pyeongtaek campus online in 2026. However, full-scale mass production at the facility is not expected until 2027 or later.</p>
-<p>The Pyeongtaek site is also designed to produce logic chips, which will constrain its ability to increase memory output. Samsung is also developing a fifth production line at the same location focused on AI-oriented memory, though this facility is not expected to begin operations until 2028 or later.</p>
-<p>Samsung memory chief Kim Jae-june said in January that production scale remains constrained in the industry and that supply increases in 2026 and 2027 will be limited.</p>
-<p>High-bandwidth memory, or HBM, is a type of high-performance DRAM used in AI semiconductors. SK Group Chairman Chey Tae-won said supply constraints in AI memory could continue into 2030 due to wafer shortages and limits on scaling production.</p>
-<p>In the interim, SK Hynix began operating an HBM plant in Cheongju in February. According to <em>Nikkei Asia</em>, it is one of the few production increases among leading suppliers expected to add to supply in 2026.</p>
-<p>SK Hynix is also accelerating construction of a plant in Yongin, with completion targeted for February 2027, three months earlier than originally planned. Micron, meanwhile, plans to begin HBM production in Idaho and Singapore in 2027, and aims to start mass production at a new Hiroshima facility in 2028.</p>
-<h3>Impact on devices and supply chains</h3>
-<p>Memory demand remains concentrated in a small number of product categories. About 80% to 90% of memory chips are used in PCs and servers, with the remainder going to automobiles, industrial equipment, and other products, <em>Nikkei Asia</em> reported.</p>
-<p>The pressure is already showing up in end markets. IDC said worldsmartphone shipments are expected to fall 12.9% in 2026 to 1.12 billion units, while the PC market is projected to decline 11.3% in 2026.</p>
-<p>Cost pressures are more visible in lower-priced devices. Memory accounts for about 20% of the manufacturing cost of low-priced smartphones and could reach nearly 40% by mid-2026, according to IDC figures cited by <em>Nikkei Asia</em>.</p>
-<div class="see-also wide" style="padding:10px;border:1px solid grey;margin-bottom:10px;"><i>See also: <a href=https://techwireasia.com/2026/02/memory-chip-shortage-smartphone-prices-asia-2026/>Memory chip shortage threatens Asia&#8217;s smartphone affordability as prices set to surge</a></i></div>
-<p>TrendForce reported that rising NAND flash prices, with DRAM increases, are contributing to higher overall component costs in PCs and other devices. Its March outlook said DRAM suppliers continue reallocating capacity toward server-related applications, while NAND capacity is increasingly being directed to enterprise SSDs.</p>
-<p>Supply chain conditions remain a contributing factor to pricing pressure. Disruptions linked to tensions around the Strait of Hormuz have affected shipping routes and energy markets. <em>Reuters</em> reported that the strait typically carries about 20% of the world&#8217;s oil and liquefied natural gas flows.</p>
-<p><em>Nikkei Asia</em> also reported that turmoil in the Middle East is increasing electricity and materials costs, adding further uncertainty to the production outlook.</p>
-<p>Counterpoint Research said supply and demand conditions in the memory market are not expected to stabilise until around 2028 based on current production and demand trends.</p>
-<p><a href="https://www.ai-expo.net/"><img fetchpriority="high" decoding="async" class="alignleft wp-image-247146 size-full" src="https://techwireasia.com/wp-content/uploads/2026/03/AI.png" alt="" width="728" height="90" srcset="https://techwireasia.com/wp-content/uploads/2026/03/AI.png 728w, https://techwireasia.com/wp-content/uploads/2026/03/AI-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a></p>
-<p><b>Want to learn more about AI and big data from industry leaders?</b> Check out<a href="https://www.ai-expo.net/"> AI &amp; Big Data Expo</a> taking place in Amsterdam, California, and London. The comprehensive event is part of <a href="https://techexevent.com/">TechEx</a> and is co-located with other leading technology events, click<a href="https://techexevent.com/"> here</a> for more information.</p>
-<p>AI News is powered by <a href="https://techforge.pub/">TechForge Media</a>. Explore other upcoming enterprise technology events and webinars <a href="https://techforge.pub/events/">here</a>.</p>
-<p>The post <a href="https://techwireasia.com/2026/04/memory-shortage-2027-supply-demand-gap/">Memory shortage to persist through 2027 as supply lags demand</a> appeared first on <a href="https://techwireasia.com">TechWire Asia</a>.</p>
 ]]></content:encoded>
 					
 		
