@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Fri, 01 May 2026 18:48:04 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 02 May 2026 12:38:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,1908 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>“It’s been a story of a lot of pivots”: Day 1-1000 of Insight7</title>
+		<link>https://techcabal.com/2026/05/02/day-1-to-1000-of-insight7/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Sat, 02 May 2026 12:37:52 +0000</pubDate>
+				<category><![CDATA[Day 1-1000]]></category>
+		<category><![CDATA[Insight 7]]></category>
+		<category><![CDATA[J2ME]]></category>
+		<category><![CDATA[Security Compass]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=187177</guid>
+
+					<description><![CDATA[Odun Odubanjo saw the same problem everywhere he worked: companies drowning in data but unable to act on it. So he built Insight7. Three years and two pivots later, he is still figuring it out.]]></description>
+										<content:encoded><![CDATA[
+<p>Odun Odubanjo became obsessed with data during his time as a computer engineering student at Obafemi Awolowo University, Ile-Ife,  in southwestern Nigeria. He recalls using  J2ME, a technology for developing applications and games on older mobile phones, to build mobile applications for Java-supported phones.</p>
+
+
+
+<p>Although he was skilled at programming, he was drawn to understanding how data could be used in real-world scenarios.</p>
+
+
+
+<p>Fresh out of university, he cofounded Twinpine, a mobile advertising startup, in 2011. The company eventually evolved into a cloud-based marketing data platform, pulling him deeper into data-driven decision-making.</p>
+
+
+
+<p>Still, that passion for working with data didn&#8217;t let up. Odubanjo relocated to Toronto, Canada, in 2019 to join Security Compass, a cybersecurity startup, as a Product Innovation lead. But as he gained more experience, he noticed a disconnect in how data was used.</p>
+
+
+
+<p>During his one-year stint at Security Compass, Odunbanjo said he found teams relying on spreadsheets to manually piece together insights, struggling to turn information into something usable. Later at Shopify, an e-commerce company, where he worked as a Product Lead for three years, he encountered a more complex version of the same problem: companies had access to data but lacked the clarity needed to act on it.</p>
+
+
+
+<p>&#8220;It was clear to me that there needed to be tools that would help you really understand your customers and markets, and then use that data to make the right product and market decisions in your business,&#8221; he said. &#8220;I immediately recognised that there was an opportunity here.&#8221;</p>
+
+
+
+<p>In May 2022, Odubanjo set out to build Insight7, an AI-powered platform designed to help businesses turn qualitative data—such as interviews and customer conversations—into valuable insights.</p>
+
+
+
+<p>Insight7 operates in the conversational intelligence and customer experience analytics market,&nbsp; <a href="https://www.futuremarketinsights.com/reports/conversation-intelligence-software-market" target="_blank" rel="noreferrer noopener nofollow">projected to reach $27.4 billion</a> in 2026 and grow to $60.3 billion by 2036, according to Future Market Insights, a market research company. The startup primarily serves United States-based mid-market and enterprise businesses, and has seen growing adoption in European markets, including the United Kingdom and Germany, according to Odubanjo. It is now expanding into Nigeria.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>Day 1: False starts and building anyway</strong></h2>
+
+
+
+<p>Insight7&#8217;s earliest version aggregated job postings and mined them for company insights. The thinking was that if a company was hiring for certain roles, the data could reveal what it was building. That kind of intelligence could help sales teams identify prospective clients and better product positioning.&nbsp;&nbsp;</p>
+
+
+
+<p>However, the model required a large volume of data to be useful, making it difficult to execute, according to Odubanjo. So, he scrapped it.</p>
+
+
+
+<p>When he tried again, he changed the model. This time, instead of collecting external data, he built a system where companies could bring in their own data, and Insight7 would synthesise it. The pioneer team had four engineers and later grew to seven. Their focus was building the product, testing it with potential users, and refining it based on feedback.&nbsp;</p>
+
+
+
+<p>&#8220;The early days were us just trying to figure out a product that could analyse interviews for product managers or product teams so that they could understand their customers better,&#8221; he said. The final product launched publicly in January 2023.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Day 500: Understanding wasn’t enough</strong></h2>
+
+
+
+<p>After Insight7&#8217;s public launch in January 2023, Odubanjo&#8217;s focus shifted from building the product to adoption.</p>
+
+
+
+<p>&#8220;There was a lot of confusion around what we were doing,&#8221; he said. &#8220;The idea was to prove&nbsp; that conviction.&#8221;</p>
+
+
+
+<p>So, he reached out to founders and product leaders in his network to show them what his product could do. He said he walked them through the problem of understanding customer behaviour from qualitative data, such as interviews and conversations, to explain why it mattered that they use his solution to fix the problem. He posted consistently on LinkedIn to build an audience around the idea and get the product in front of as many people as possible.</p>
+
+
+
+<p>For a while, it seemed to be working for him. He explained that he was getting in front of decision-makers at large companies—he declined to disclose. They understood the problem and, in some cases, described it as serious. But these conversations kept ending with interest and not commitment.</p>
+
+
+
+<p>Even when Insight7 started making money, bringing in a few thousand dollars in monthly revenue, according to Odubanjo, it did not change his conviction that the product made sense. But, but it was just not a priority for the people he was speaking to.</p>
+
+
+
+<p>“There was revenue,” he said. “We could see that there was something here, but we couldn&#8217;t get traction. It was clear that the urgency of the pain wasn’t there.”</p>
+
+
+
+<p>For Odubanjo, Insight7&#8217;s day 500 felt like being stuck, but not for much longer.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>Day 1000: Pivots and the pivot hell</strong></h2>
+
+
+
+<p>Insight7&#8217;s first pivot came in 2024.&nbsp;</p>
+
+
+
+<p>After months of trying to convince product teams to act on a problem they acknowledged but would not prioritise, Odubanjo and his team were forced to redirect their focus when a representative from an unnamed market research company, who was already working closely with quantitative data, requested the solution.&nbsp;</p>
+
+
+
+<p>&#8220;We did more research, and we understood that there was this whole segment of people who were doing a lot of market research that required qualitative analysis,&#8221; he said. &#8220;So we just pivoted at that point; focused the same product on a new market, and created a lot of content around it. We started to see traction.&#8221;</p>
+
+
+
+<p>By the end of 2024, Odubanjo said that Insight7 had generated 10x its revenue from the previous year.&nbsp;</p>
+
+
+
+<p>&#8220;We were still passionate about helping businesses transform how they leverage data to make decisions and serve their customers better,” he said. “But if we didn&#8217;t pivot, we wouldn&#8217;t exist now.&#8221;</p>
+
+
+
+<p>That newfound stability only lasted for less than a year.&nbsp;&nbsp;</p>
+
+
+
+<p>With the increasing popularity of general-purpose AI tools like Claude, ChatGPT, and Copilot, and the products offering similar analytics capabilities, sometimes for free, competition intensified for Insight7. So came the startup&#8217;s second pivot.</p>
+
+
+
+<p>This time, it began to reshape its product to focus on analysing customer service calls and using the data to train employees. That idea came as a request from one of its users.&nbsp;</p>
+
+
+
+<p>&#8220;We felt we could use the same underlying platform to build a new user experience for that,&#8221; Odubanjo said.&nbsp;</p>
+
+
+
+<p>He explained that the demand for the new version of Insight7 outpaced the old, and by the end of 2025, revenue had tripled. “It’s been a story of a lot of pivots, he said.</p>
+
+
+
+<p>Odubanjo described those transition periods as “pivot hell,” a phase where a product is not fully working and its next direction is unclear.&nbsp;</p>
+
+
+
+<p>“It&#8217;s challenging, but also very exciting because we have the conviction that our customers need our current products,” he said.&nbsp;</p>
+
+
+
+<p>Insight7&#8217;s current iteration reflects these pivots.&nbsp;</p>
+
+
+
+<p>What started as a tool for analysing interviews for product teams has evolved into a platform with features including call performance scorecards from conversations with customers, AI coaching and roleplay for practising real conversation scenarios, a live AI assistant that provides real-time guidance during conversations, and a knowledge base with evidence tracking.</p>
+
+
+
+<p>Insight7 operates on a Software-as-a-Service (SaaS) tiered subscription model, with customers paying monthly or annually based on usage, features, and team size. Subscription ranges from $0-$250 monthly.</p>
+
+
+
+<p>The startup has also expanded its business model to cater to individual customers rather than businesses by launching a consumer-facing app, Insight7 AI Coach for communication, in April.&nbsp;</p>
+
+
+
+<p>The app was designed to help individuals improve communication skills across interviews, the workplace and personal conversations, and is priced at $14.99 monthly.&nbsp;</p>
+
+
+
+<p>Insight7 competes with a set of AI tools that offer parts of its functionality, including Observe.AI, Quantified AI, and Document360.&nbsp;</p>
+
+
+
+<p>&#8220;Our moat is compounding intelligence, meaning every interaction makes our customers smarter over time,&#8221; Odubanjo said.</p>
+
+
+
+<p>Insight7 is also looking to deepen its presence in Nigeria, where its founders and early network are rooted, while continuing to serve its global customers, according to Odubanjo.</p>
+
+
+
+<p>When asked if there will be more pivots for Insight7 in the future, he said, “You have got to keep pivoting… You have got to choose: do you want to die or do you want to be alive?”</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Four graduates are building an AI video-dubbing tool for African filmmakers</title>
+		<link>https://techcabal.com/2026/05/02/reedapt-ai-video-dubbing-tool-for-african-filmmakers/</link>
+		
+		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
+		<pubDate>Sat, 02 May 2026 12:06:59 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[Aforevo]]></category>
+		<category><![CDATA[African filmmakers]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Reedapt]]></category>
+		<category><![CDATA[video dubbing]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=187175</guid>
+
+					<description><![CDATA[Reedapt is now focused on becoming the go-to dubbing and real-time multilingual streaming platform for Nollywood filmmakers, churches, and African content creators who want their work to travel further than the English language will take it. ]]></description>
+										<content:encoded><![CDATA[
+<p>Apotierioluwa Owoade had a problem he could not stop thinking about.&nbsp;</p>
+
+
+
+<p>He had spent time working at <a href="https://aforevo.com/" target="_blank" rel="noreferrer noopener nofollow">Aforevo</a>, a local streaming and dubbing firm in Lagos, Nigeria, and his experience stayed with him. During his time at the company, from 2022 to 2023, he saw firsthand how cost-prohibitive the dubbing industry could be. </p>
+
+
+
+<p>Translating a film into another language costs upwards of $500,000 for a full production, according to Owoade.</p>
+
+
+
+<p>Yet, beyond the cost, something frustrated him even more: the lack of nuance that most translators failed to capture in the local tongue. Voice actors, overstretched and underpaid, flattened the emotional texture of scenes they were recording. The existing software tools were no better.&nbsp;</p>
+
+
+
+<p>He had seen Yoruba rendered so poorly that the phrase “I am pregnant” came out flatly as “I have a ball,”&nbsp; he explained, his face visibly grimacing over our video call.</p>
+
+
+
+<p>He wanted to fix it. He called his friend David Mac-Asore, who was a Computer Engineering undergraduate at the time and a software developer.&nbsp;</p>
+
+
+
+<p>Owoade and Mac-Asore had known each other for years, a friendship anchored partly through shared work at Living Faith Church Worldwide International, one of Nigeria&#8217;s largest churches. Since 2022, the two have collaborated on projects to bridge the language divide between the church’s English and French-speaking congregations at its headquarters in Ota, Ogun State, in south-western Nigeria, said Mac-Asore.</p>
+
+
+
+<p>When Owoade pitched his idea, Mac-Asore was in, but they agreed they needed someone steeped in machine learning.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>Assembling a team</strong></h2>
+
+
+
+<p>Mac-Asore reached out to two of his former schoolmates from Covenant University, a private Christian university in Ota: Maryann Nnaji and Emmanuel Ibiang. Both had graduated in 2024.&nbsp;</p>
+
+
+
+<p>The four got on a call. At the time, they did not even have a name for what they were building. According to Owoade, they called it the Hagen Project, a name that made me chuckle.</p>
+
+
+
+<p>The ‘Hagen Project’ eventually evolved into <a href="https://reedapt.com/" target="_blank" rel="noreferrer noopener nofollow">Reedapt</a> in 2025.</p>
+
+
+
+<p>Nnaji brought the machine learning depth the team needed.&nbsp;</p>
+
+
+
+<p>Before joining, she had built a sign language-to-speech and text model as part of her undergraduate thesis, working through the full pipeline from data collection to training, deployment, and testing.&nbsp;</p>
+
+
+
+<p>She had noticed the friction the <a href="https://techcabal.com/2026/02/16/talksign-launches-real-time-sign-language-translation-model/" target="_blank" rel="noreferrer noopener">hard-of-hearing (HOH) community</a> faced in everyday interactions and wanted to use technology to address it. </p>
+
+
+
+<p>She had to put the work on hold, partly due to a data gap that would later feel very familiar when she began working on Reedapt.&nbsp;</p>
+
+
+
+<p>According to Nnaji, most research on sign language recognition was built on Western contexts, not Nigerian or African ones.&nbsp;</p>
+
+
+
+<p>“When I started the project, it was just a way to actually see how technology could be a way of bridging this gap,” Nnaji said. “To prove something to myself that this is applicable.”</p>
+
+
+
+<p>Ibiang, Reedapt&#8217;s product engineer, arrived with a different but equally critical instinct: an obsession with usability. Where the AI engineers on the team reached for accuracy, Ibiang optimised for the user.&nbsp;</p>
+
+
+
+<p>“Can the average Joe use your product without having to be walked through?” Ibiang asked rhetorically, almost as if he was expecting a response. “Ease of use of the product—that’s what my role optimises for.”</p>
+
+
+
+<p>For a product as technically complex as Reedapt, that perspective has been the team&#8217;s internal check against building something impressive that nobody can use.</p>
+
+
+
+<p>In a four-man small team where Mac-Asore and Nnaji are the technical engineers, and Ibiang is the product specialist, Owoade was described by his teammates as the person with the ideas.&nbsp;</p>
+
+
+
+<p>The four of them, all fresh out of school and under 25, decided to build together.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>From a translation tool to a dubbing platform</strong></h2>
+
+
+
+<p>I first met Owoade and Mac-Asore at the <a href="https://www.foundersconnect.xyz/tbs2025" target="_blank" rel="noreferrer noopener nofollow">Builders Summit by Founders Connect</a> in May 2025, a networking event for early-stage technology founders held in Lagos, Nigeria. </p>
+
+
+
+<p>At the time, they told me they wanted to build a translation tool that allowed users to move between different languages over text or audio, without needing to learn a new language.&nbsp;</p>
+
+
+
+<p>I remember joking that their ambition would eventually put <a href="https://www.duolingo.com/" target="_blank" rel="noreferrer noopener nofollow">Duolingo</a> out of business. </p>
+
+
+
+<p>More seriously, I asked them why this needed to exist in a world where we already have <a href="https://www.deepl.com/en/translator" target="_blank" rel="noreferrer noopener nofollow">DeepL</a>.</p>
+
+
+
+<p>They didn’t have a clear answer. I sensed they were still finding the edges of it.</p>
+
+
+
+<p>Since that conversation, the vision has sharpened considerably.&nbsp;</p>
+
+
+
+<p>Reedapt is now focused on becoming the go-to dubbing and real-time multilingual streaming platform for Nollywood filmmakers, churches, and African content creators who want their work to travel further than the English language will take it.&nbsp;</p>
+
+
+
+<p>The startup, Owoade said, has signed two enterprise dubbing contracts with a Nollywood gospel producer, with those projects expected to be completed before the end of 2026. </p>
+
+
+
+<p>Reedapt’s paying customers today are a mix of Nollywood producers and churches. It currently serves over 200 active users.&nbsp;</p>
+
+
+
+<p>About 94% are individual creators on its consumer tier, while the remaining 6% are enterprise clients who generate the majority of revenue, said Owoade.</p>
+
+
+
+<p>Reedapt makes money by charging subscription fees.&nbsp;</p>
+
+
+
+<p>Pricing is structured in dollar-denominated tiers: a free plan offering up to 60 minutes of usage, a creator plan at $11 per month, and higher tiers at $39 and $99.</p>
+
+
+
+<p>The decision to price in dollars was deliberate, said Owoade.&nbsp;</p>
+
+
+
+<p>The team had experimented with Naira pricing early and found that it undercut their credibility with both users and potential investors.&nbsp;</p>
+
+
+
+<p>“Most of our costs are not in Naira,” he said. “So it would be significantly disadvantageous to charge in Naira.”</p>
+
+
+
+<p>The team is now aiming to reach 50,000 users before the end of 2026.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>How the four graduates built Reedapt</strong></h2>
+
+
+
+<p>Building a speech technology product for African languages is not the same as building one for English or French.&nbsp;</p>
+
+
+
+<p>According to Owoade, the tools that exist in the market were not built with Africa as a priority.&nbsp;</p>
+
+
+
+<p>“Big Tech isn’t really building with Africa for Africa as a priority,” he said.&nbsp;</p>
+
+
+
+<p>“Apple released AirPods with a live translation feature, and you see their focus is on languages like English, French, and Spanish.&nbsp;</p>
+
+
+
+<p>In fact, they seem to prioritise Spanish even more because they’re catering to Latin American users. So, if I had to say it, Nigeria is out of the conversation.”</p>
+
+
+
+<p>Reedapt is trying to change that, but the foundation of any good model is data, and the data problem for African languages is acute.&nbsp;</p>
+
+
+
+<p>According to Nnaji, training data for the languages Reedapt needs is either very scarce or too poor in quality to be useful.&nbsp;</p>
+
+
+
+<p>The machine learning engineer likened the problem of training a model to raising a child.&nbsp;</p>
+
+
+
+<p>If you show a child only one breed of dog, they will struggle to recognise other breeds, said Nnaji, visually describing the challenge.</p>
+
+
+
+<p>“If the volume of what you&#8217;re feeding it is not enough,” she said. “Your model still performs poorly.”&nbsp;</p>
+
+
+
+<p>The team is currently working with open-source licenced data while building pipelines to collect its own higher-quality training sets.</p>
+
+
+
+<p>The model architecture builds on existing foundations rather than starting from scratch.&nbsp;</p>
+
+
+
+<p>Reedapt had previously used credits from <a href="https://elevenlabs.io/" target="_blank" rel="noreferrer noopener nofollow">ElevenLabs</a>, one of the biggest names in text-to-speech and dubbing, but has since moved toward independence. </p>
+
+
+
+<p>Before the end of Q2 2026, the team plans to release its first in-house model, designed to handle the specific challenges of African speech: code-switching between English and Yoruba mid-sentence, incantations, spiritual language that should not be translated, and names that existing models routinely mangle.&nbsp;</p>
+
+
+
+<p>“We aim to have our first model released to the world that is capable of handling a wide variety of tasks, but only for niche cases,” said Owoade.&nbsp;</p>
+
+
+
+<p>“It [will be] quite independent. But even [today], we&#8217;re not giving our customers&#8217; data to any third parties, and we&#8217;re also aware of the fact that it&#8217;s a competition.”</p>
+
+
+
+<p>The infrastructure built around the model is just as important as the model itself.&nbsp;</p>
+
+
+
+<p>Mac-Asore explained one layer of the pipeline that often goes unnoticed: before any audio reaches the model, the team runs it through a diarisation and cleaning process, which helps to separate different speakers and strips background noise from audio.</p>
+
+
+
+<p>“We have proper audio engineering before it gets to the model,” said Mac-Asore. “To give it a better form of the initial speech.”&nbsp;</p>
+
+
+
+<p>Accuracy is tracked using word error rate, a metric that measures how far a model&#8217;s output strays from a correct transcript, and supplemented with human evaluation where team members listen back and flag anything that sounds wrong to a native ear.</p>
+
+
+
+<p>According to Owoade, Reedapt&#8217;s dubbing already performs at the same accuracy level as ElevenLabs for general content, and exceeds it on African-specific nuances.&nbsp;</p>
+
+
+
+<p>The platform includes an editor that allows clients to correct pronunciation errors, and Nollywood producers can upload scripts ahead of a dubbing job to give the model additional context. Voice cloning is handled entirely in-house, said Owoade.</p>
+
+
+
+<p>The cost of building all of this is high. Compute costs for training machine learning models are “outrageously pricey,” said Nnaji.</p>
+
+
+
+<p>Collecting data at the quality the team needs requires controlled environments and specialised recording equipment.&nbsp;</p>
+
+
+
+<p>Across the entire development process, the four graduates have bootstrapped Reedapt to the tune of over $50,000, according to Owoade, drawing on cloud credits from service providers and AI model providers to subsidise a significant portion, with the remainder coming out of their own pockets.&nbsp;</p>
+
+
+
+<p>The startup is now seeking to raise $500,000 to accelerate product development.</p>
+
+
+
+<p></p>
+
+
+<style>
+#list-newsletter-form {
+  background-color: #FFE1DA;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0;
+}
+#list-newsletter-form h2.text-center { text-align: center; }
+#list-newsletter-form h2.text-right { text-align: right; }
+#list-newsletter-form h2.text-left { text-align: left; }
+#list-newsletter-form .sub-copy.text-center { text-align: center; }
+#list-newsletter-form .sub-copy.text-right { text-align: right; }
+#list-newsletter-form .sub-copy.text-left { text-align: left; }
+#list-newsletter-form input, #list-newsletter-form select {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+#list-newsletter-form .input-field.has-icon input {
+  padding-left: 40px;
+}
+#list-newsletter-form .input-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+#list-newsletter-form button.theheader__form__submit {
+  background-color: #E63A12;
+  border-color: #E63A12;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#list-newsletter-form button.theheader__form__submit:hover {
+  background-color: #c3310f;
+  border-color: #c3310f;
+  transform: translateY(-1px);
+}
+#list-newsletter-form .newsletter-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+#list-newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+#list-newsletter-form .checkbox-input {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+#list-newsletter-form .checkbox-input-elem {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#list-newsletter-form .checkbox-control {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control {
+  background: #E63A12;
+  border-color: #E63A12;
+}
+#list-newsletter-form .checkbox-control svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#list-newsletter-form .checkbox-input-elem:checked + .checkbox-control svg {
+  opacity: 1;
+}
+#list-newsletter-form .newsletter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#list-newsletter-form .input-field {
+  position: relative;
+}
+</style>
+        <section id="list-newsletter-form" class="list-newsletter-form ">
+            <div class="content">
+                                    <!-- Default layout: title, paragraph, then form -->
+                                            <h2 class="text-left">Get The Best African Tech Newsletters In Your Inbox</h2>
+                                        
+                                    
+                <form class="tc-newsletter newsletter-signup-form" data-location="">
+                    <input id="web-source" type="hidden" value="Home Page" name="websource" />
+                    
+                            <div class="newsletter-fields">
+                    <div class="input-field">
+            
+                            <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="email" 
+                    required                    placeholder="Email address"
+                >
+                    </div>
+                <div class="input-field">
+            
+                            <select name="country" class="country" >
+                    <option value="" disabled selected>
+                        Select your country                    </option>
+                                <option value="Nigeria">
+                Nigeria            </option>
+                        <option value="Ghana">
+                Ghana            </option>
+                        <option value="Kenya">
+                Kenya            </option>
+                        <option value="South Africa">
+                South Africa            </option>
+                        <option value="Egypt">
+                Egypt            </option>
+                        <option value="Morocco">
+                Morocco            </option>
+                        <option value="Tunisia">
+                Tunisia            </option>
+                        <option value="Algeria">
+                Algeria            </option>
+                        <option value="Libya">
+                Libya            </option>
+                        <option value="Sudan">
+                Sudan            </option>
+                        <option value="Ethiopia">
+                Ethiopia            </option>
+                        <option value="Somalia">
+                Somalia            </option>
+                        <option value="Djibouti">
+                Djibouti            </option>
+                        <option value="Eritrea">
+                Eritrea            </option>
+                        <option value="Uganda">
+                Uganda            </option>
+                        <option value="Tanzania">
+                Tanzania            </option>
+                        <option value="Rwanda">
+                Rwanda            </option>
+                        <option value="Burundi">
+                Burundi            </option>
+                        <option value="Democratic Republic of the Congo">
+                Democratic Republic of the Congo            </option>
+                        <option value="Republic of the Congo">
+                Republic of the Congo            </option>
+                        <option value="Central African Republic">
+                Central African Republic            </option>
+                        <option value="Chad">
+                Chad            </option>
+                        <option value="Cameroon">
+                Cameroon            </option>
+                        <option value="Gabon">
+                Gabon            </option>
+                        <option value="Equatorial Guinea">
+                Equatorial Guinea            </option>
+                        <option value="São Tomé and Príncipe">
+                São Tomé and Príncipe            </option>
+                        <option value="Angola">
+                Angola            </option>
+                        <option value="Zambia">
+                Zambia            </option>
+                        <option value="Zimbabwe">
+                Zimbabwe            </option>
+                        <option value="Botswana">
+                Botswana            </option>
+                        <option value="Namibia">
+                Namibia            </option>
+                        <option value="Lesotho">
+                Lesotho            </option>
+                        <option value="Eswatini">
+                Eswatini            </option>
+                        <option value="Mozambique">
+                Mozambique            </option>
+                        <option value="Madagascar">
+                Madagascar            </option>
+                        <option value="Mauritius">
+                Mauritius            </option>
+                        <option value="Seychelles">
+                Seychelles            </option>
+                        <option value="Comoros">
+                Comoros            </option>
+                        <option value="Cape Verde">
+                Cape Verde            </option>
+                        <option value="Guinea-Bissau">
+                Guinea-Bissau            </option>
+                        <option value="Senegal">
+                Senegal            </option>
+                        <option value="The Gambia">
+                The Gambia            </option>
+                        <option value="Guinea">
+                Guinea            </option>
+                        <option value="Sierra Leone">
+                Sierra Leone            </option>
+                        <option value="Liberia">
+                Liberia            </option>
+                        <option value="Côte d&#039;Ivoire">
+                Côte d&#039;Ivoire            </option>
+                        <option value="Burkina Faso">
+                Burkina Faso            </option>
+                        <option value="Mali">
+                Mali            </option>
+                        <option value="Niger">
+                Niger            </option>
+                        <option value="Benin">
+                Benin            </option>
+                        <option value="Togo">
+                Togo            </option>
+                        <option value="Other">
+                Other            </option>
+                            </select>
+                    </div>
+                <div class="input-field">
+            
+                            <select name="gender" class="gender" >
+                    <option value="" disabled selected>
+                        Select your gender                    </option>
+                                <option value="male">
+                Male            </option>
+                        <option value="female">
+                Female            </option>
+                        <option value="others">
+                Others            </option>
+                            </select>
+                    </div>
+                </div>
+                            
+                                                    <div class="tc-newsletter-checkbox newsletter-checkbox">
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcdaily" 
+                            value="beehiiv"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Daily</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_tcevents" 
+                            value="107863894"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">TC Events</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_nextwave" 
+                            value="107863897"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Next wave</span>
+                </label>
+                            <label class="checkbox">
+                    <span class="checkbox-input">
+                        <input 
+                            class="checkbox-input-elem" 
+                            type="checkbox" 
+                            name="list_enteringtech" 
+                            value="111498002"
+                            checked                        >
+                        <span class="checkbox-control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="checkbox-radio-label">Entering Tech</span>
+                </label>
+                    </div>
+         
+                                        
+                    <button type="button" class="theheader__form__submit border-button">
+                        Subscribe                    </button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+<h2 class="wp-block-heading"><strong>The weight of building something personal</strong></h2>
+
+
+
+<p>For Owoade, building Reedapt is an expression of something he has carried for a long time.&nbsp;</p>
+
+
+
+<p>He studied Foreign Languages and Literatures at university and worked in the dubbing industry before starting the company.&nbsp;</p>
+
+
+
+<p>His reason for building Reedapt, he said, stemmed from a deeply held conviction that African creators deserve to tell their stories in their own languages and be heard across the world without having to route everything through English.&nbsp;</p>
+
+
+
+<p>He remembers growing up in a school environment where speaking Yoruba, his native language, was treated as an infraction.</p>
+
+
+
+<p>&#8220;They dictated the fact that in most schools, when you spoke Yoruba, it was vernacular,&#8221; he said. &#8220;That&#8217;s our mother tongue.&#8221;</p>
+
+
+
+<p>Reedapt, in his telling, is the rebuttal to that, and his ambition for scale and storytelling in Africa for Africans is unmistakably passionate.</p>
+
+
+
+<p>By 2026, he and his team aim for Reedapt to be the top dubbing and real-time multilingual streaming tool in Africa.</p>
+
+
+
+<p>Within five years, the startup plans to expand into <a href="https://www.cnbc.com/2025/08/19/indias-creator-economy-is-booming-as-influencers-start-businesses.html" target="_blank" rel="noreferrer noopener nofollow">India</a> and <a href="https://psa.gov.ph/statistics/creative-economy" target="_blank" rel="noreferrer noopener nofollow">the Philippines</a>, markets where content creation is booming, and creators face revenue disadvantages similar to those of their African counterparts. </p>
+
+
+
+<p>By 2030, the team is targeting support for 500 languages.</p>
+
+
+
+<p>Owoade asked his teammates to call him a cockroach, a half-serious reference to the insect&#8217;s famous resilience.&nbsp;</p>
+
+
+
+<p>The journey, he says, has been brutal in ways that are hard to fully convey: days with no clear sense of where the next round of resources would come from. But he is not stepping back.</p>
+
+
+
+<p>Yet scaling Reedapt, and betting that a dubbing tool built out of Africa is one people want, is a large bet from a team still counting credits and pulling from their own pockets.&nbsp;</p>
+
+
+
+<p>The only thing that would make them stop, Owoade said, is if 50,000 customers told them the product was not worth building.&nbsp;</p>
+
+
+
+<p>So far, not one has, he added.</p>
+
+
+
+<p>And if, despite everything, Reedapt does not survive, Owoade says he has thought about that, too.&nbsp;</p>
+
+
+
+<p>He plans to leave an open-source version behind for someone else to carry forward.</p>
+
+
+
+<p>“That&#8217;s how passionate we are about the problem we&#8217;re solving,” he said. &#8220;[Reedapt] is not simply a tool; it&#8217;s very personal for us, and that&#8217;s how we approach the mission at Reedapt.&#8221;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Nigeria’s data consumption hits record 4 million terabytes in a quarter</title>
 		<link>https://techcabal.com/2026/05/01/nigerias-data-use-hits-record-4-million-terabytes-in-a-quarter/</link>
 		
@@ -2729,518 +4631,6 @@ function hideTip(id) { document.getElementById(id).style.display = 'none'; }
 
 
 <p>Grey said it is also registered as a Money Services Business with the Financial Transactions and Reports Analysis Centre of Canada (FINTRAC) in Canada and with the Financial Crimes Enforcement Network in the United States.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>He survived a misdiagnosis. Then he built an AI platform for clinical decisions.</title>
-		<link>https://techcabal.com/2026/04/30/monte-sereno-wants-to-fix-africas-healthcare-with-ai/</link>
-		
-		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
-		<pubDate>Thu, 30 Apr 2026 14:08:17 +0000</pubDate>
-				<category><![CDATA[Delve into AI]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[AI Africa]]></category>
-		<category><![CDATA[Healthcare]]></category>
-		<category><![CDATA[Nigeria]]></category>
-		<category><![CDATA[telemedicine]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=187074</guid>
-
-					<description><![CDATA[Monte Sereno is building a a full-stack digital infrastructure designed to sit above and connect every part of the care journey.
-
-]]></description>
-										<content:encoded><![CDATA[
-<p>On March 20, 2017, Clement Okoh walked into a Lagos hospital with what previous doctors he consulted believed was a muscle strain and routine pain. Hours later, he said he could no longer walk.&nbsp;</p>
-
-
-
-<p>He later learnt the muscle strain diagnosis was incorrect. What had been dismissed as routine pain was later diagnosed as aggressive multiple myeloma—blood cancer that develops in plasma cells—eating away at his spine. By the time the error became clear, the damage was severe. The tumour had weakened his vertebrae —the bones that form the human spinal column—so much that a minor fall was enough to fracture his spine and leave him paralysed.</p>
-
-
-
-<p>Within hours, Okoh said he was flown to the United States. The doctors at John Hopkins Hospital, in Baltimore, Maryland, USA, he said, gave him four to five years to live, with a range of immediate risks: stroke, pulmonary embolism, deep vein thrombosis, blood poisoning, and internal bleeding. Surgeons removed the tumour and fused his spine. Okoh recalled his neurosurgeon once telling him that he would never walk again. But he did.</p>
-
-
-
-<p>That recovery did more than save his life; it shaped his direction afterwards. During his time in intensive care and rehabilitation, he resolved that if he survived, he would return to Nigeria and work on building systems that could reduce the chances of similar outcomes in the future.</p>
-
-
-
-<p>That promise became Monte Sereno Health, an artificial intelligence-powered platform designed to deliver proactive primary care and continuous health management, founded in 2021.</p>
-
-
-
-<p>The company is attempting to address a deeper structural problem in Africa’s healthcare systems: fragmentation. Patients often move between informal providers, under-resourced clinics, pharmacies, and labs that rarely share data, while overstretched doctors make decisions with limited information.&nbsp;</p>
-
-
-
-<p><a href="https://www.afro.who.int/health-topics/health-information-system#:~:text=For%20example%2C%20the%20report%20revealed,in%20most%20of%20these%20countries." target="_blank" rel="noreferrer noopener">A 2021 World Health Organisation (WHO) report</a> on health information systems found that 30 of 47 African countries lacked the capacity to accurately register births and deaths, with cause-of-death data largely unavailable. The absence of common data standards further limits the ability to integrate and compare health information across systems.</p>
-
-
-
-<p>Okoh’s misdiagnosis, he said, was not simply incompetence. It was the predictable outcome of a fragmented system,&nbsp; where doctors operate with limited data, patients carry paper records, and there is little real-time verification or support during clinical decisions.</p>
-
-
-
-<p>In many cases, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jep.12747" target="_blank" rel="noreferrer noopener">diagnosis depends on a single doctor’s judgment</a>, often without access to full patient history or decision support tools. A study<a href="https://www.aarp.org/health/conditions-treatments/second-diagnosis-saves-lives/" target="_blank" rel="noreferrer noopener"> by Mayo Clinic, a non-profit academic medical centre, shows that up to 20% of serious conditions are misdiagnosed</a> during initial visits globally. Telehealth, which has expanded access in recent years, does not fully solve the problem. It connects patients to doctors, but offers little oversight or quality control during consultations.</p>
-
-
-
-<p>“You have no idea who you’re talking to, and there’s no real-time quality check,” Okoh said.</p>
-
-
-
-<p>Monte Sereno’s answer, Okoh stressed, is not another telemedicine app. It is what he describes as a healthcare operating system: a full-stack digital infrastructure designed to sit above and connect every part of the care journey.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>A healthcare operating system</strong></h2>
-
-
-
-<p>Instead of isolated consultations, the platform works by embedding artificial intelligence (AI) into every interaction. During a medical session, Monte’s AI agent, called StarPilot, sits alongside the doctor and patient, analysing symptoms in real time, pulling medical records, and querying global research databases.</p>
-
-
-
-<p>If a patient reports a fever and headache, the system does not stop at common assumptions. It asks where the patient has travelled, cross-references disease prevalence, and suggests follow-up questions or tests. A visit to Lagos, for instance, would trigger prompts to rule out malaria or typhoid and not just flu.</p>
-
-
-
-<p>The goal for Monte is not to replace doctors but to reduce the margin of error, according to Okoh.&nbsp; A 2025 <a href="https://www.researchgate.net/publication/394456201_Prevalence_pattern_and_determinants_of_medical_errors_among_health_workers_in_suburban_Edo_State_Nigeria_A_multicenter_study" target="_blank" rel="noreferrer noopener">cross-sectional study of Nigerian medical practitioners</a><span style="margin: 0px;padding: 0px"><a href="https://www.researchgate.net/publication/394456201_Prevalence_pattern_and_determinants_of_medical_errors_among_health_workers_in_suburban_Edo_State_Nigeria_A_multicenter_study" target="_blank">&nbsp;</a></span>found that prevalence rates for medical errors range from 42.8% to as high as 89.8%.</p>
-
-
-
-<p>“The AI can challenge both the doctor and the patient in real time,” Okoh said. “But the doctor still makes the final call.”</p>
-
-
-
-<p>One of the platform’s central features is a portable electronic health record that follows the patient across providers and geographies.</p>
-
-
-
-<p>Monte Sereno’s system digitises records, even from paper, using uploads. Once integrated, the data becomes part of a continuously updated profile that informs every interaction on the platform.</p>
-
-
-
-<p>The system not only stores information; it interprets it. If a medication becomes unsafe due to new research, the platform flags it automatically. If a doctor prescribes a conflicting drug, it alerts both parties.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Designing for scarcity</strong></h2>
-
-
-
-<p>Monte Sereno is being built with Africa’s constraints in mind, according to Okoh. <a href="https://insights.techcabal.com/future-of-digital-health-in-nigeria-data-access-equity/" target="_blank" rel="noreferrer noopener">The continent faces a deepening health workforce crisis</a>, with a projected shortfall of 6.1 million workers by 2030. At the same time, data from the Africa Centres for Disease Control and Prevention and UNECA shows a $66 billion annual gap in health financing.</p>
-
-
-
-<p><a href="https://punchng.com/nigeria-has-one-doctor-to-10000-patients-nma/" target="_blank" rel="noreferrer noopener">In Nigeria, doctor-to-patient ratios can reach one to 10,000, according to the Nigeria Medical Association.</a> In some rural areas, patients travel more than 30 kilometres from their homes to get medical attention where available.</p>
-
-
-
-<p>Through built-in translation tools, Monte allows doctors in other countries like India, Egypt, and Latin America to consult with patients in Nigeria without language barriers. In pilot tests, multilingual consultations were conducted seamlessly, with each participant seeing responses in their preferred language.</p>
-
-
-
-<p>It also supports shared consultations, where multiple patients can be assessed using a single device. Inspired by trials in India, this model helps extend care to communities with limited access to smartphones and reliable internet, where a single phone can serve thousands of patients.</p>
-
-
-
-<p>But this approach raises privacy concerns. When multiple patients use the same device, sensitive data, such as medical histories, diagnoses, and personal details, can be exposed if safeguards are weak.&nbsp;</p>
-
-
-
-<p>In low-connectivity settings, where devices are reused, and security is harder to enforce, the risks of data leaks or unauthorised access increase. Without strong encryption, user authentication, and clear data separation, patient confidentiality could be compromised, especially in communities where health-related stigma is high.</p>
-
-
-
-<p>Okoh said the company has taken steps to address these risks.&nbsp;</p>
-
-
-
-<p>“We opted out of letting LLM providers use any data from our platform to train their models,” he said. “We also have strict privacy agreements in place, and all data is encrypted and anonymised. Our serverless infrastructure on AWS is HIPAA-compliant.”</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Integrating what already exists</strong></h2>
-
-
-
-<p>A defining feature of Monte Sereno’s approach is its attempt to integrate informal healthcare systems rather than replace them.</p>
-
-
-
-<p>Across Africa, a <a href="https://www.afro.who.int/health-topics/traditional-medicine#:~:text=Traditional%20medicine%20refers%20to%20the%20knowledge%2C%20skills%20and%20practices%20based,in%20people%20living%20with%20HIV." target="_blank" rel="noreferrer noopener">significant portion</a> of care is delivered outside formal institutions—by traditional birth attendants, herbal practitioners, and community healers. <a href="https://www.afro.who.int/health-topics/traditional-medicine#:~:text=Traditional%20medicine%20refers%20to%20the%20knowledge%2C%20skills%20and%20practices%20based,in%20people%20living%20with%20HIV." target="_blank" rel="noreferrer noopener">WHO Regional Office for Africa</a> noted in 2023 that 80% of the continent’s population still relies on traditional medicine for their basic health needs. These providers often operate without oversight, data, or connection to hospitals, <a href="https://iris.who.int/server/api/core/bitstreams/f67507c0-30a3-41c0-b497-2fa9034b197d/content" target="_blank" rel="noreferrer noopener nofollow">the WHO report noted</a>.</p>
-
-
-
-<p>Instead of sidelining them, the platform wants to bring them into a <a href="https://techcabal.com/reports/the-state-of-health-tech-in-nigeria/" target="_blank" rel="noreferrer noopener">digital framework</a>.</p>
-
-
-
-<p>On April 13, 2026, Monte Sereno said it signed a partnership with the Institute of Public Health at Obafemi Awolowo University (OAUIPH) to deploy agentic AI in maternal care and Traditional African Medicine (TAM). The $454,000 project, funded by the Wilkie Family Foundation with support from AWS and NVIDIA, focuses on formalising traditional care practices and developing African language models.</p>
-
-
-
-<p>As part of this effort, the company created a population-scale programme to onboard 1,000 Traditional Birth Attendants (TBAs) across Lagos and Osun States, with the potential to impact more than 25,000 newborns. The company says it plans to launch its platform for public use in June 2026, expanding through partnerships with banks, churches, state governments, HMOs, universities, and community organisations.</p>
-
-
-
-<p>The goal, Monte noted, is to reduce maternal mortality by providing real-time guidance, referrals, and decision support during childbirth.</p>
-
-
-
-<p>Nigeria accounts for a disproportionate share of global maternal deaths. <a href="https://healthynewbornnetwork.org/resource/2023/nigeria-maternal-newborn-health-country-profile/#:~:text=The%202023%20report%20can%20be,in%20the%20conflict%20affected%20settings." target="_blank" rel="noreferrer noopener">According to a UN report</a>, nearly 28.5% of all global maternal deaths occur in Nigeria. Many occur in settings where skilled medical support is unavailable.</p>
-
-
-
-<p>With augmented reality tools, Monte believes it could guide midwives through procedures visually—overlaying instructions onto their field of view. If a complication arises, the system can escalate to a remote doctor instantly.</p>
-
-
-
-<p>At the same time, the company is attempting to formalise traditional African medicine. By cataloguing remedies, analysing their composition, and validating their efficacy, it aims to build a digital database of medicines.</p>
-
-
-
-<p>This could transform a largely undocumented practice into a structured, scalable industry.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Building for prevention, not just treatment</strong></h2>
-
-
-
-<p>While much of the platform focuses on diagnosis and care delivery, its broader ambition is to shift healthcare toward prevention.</p>
-
-
-
-<p>Simple interventions like access to clean water can eliminate a large percentage of common illnesses. The platform incorporates wellness monitoring, allowing users to track vital signs using only a smartphone camera.</p>
-
-
-
-<p>Okoh claimed that in under two minutes, patients can generate basic health metrics and receive guidance on next steps.</p>
-
-
-
-<p>The idea is to reduce the need for expensive treatment by catching issues early—or avoiding them altogether.</p>
-
-
-
-<p>Monte Sereno Health is still early but gaining traction. The company says it has raised $1 million from the Wilkie Family Foundation, NVIDIA, and Amazon Web Services, and is now seeking an additional $2.5 million to scale. Existing backers, including the Wilkie Foundation and Anthropic, have signalled interest in the round.</p>
-
-
-
-<p>“The plan is to secure a lead investor and bring the round up to $2.5 million,” Okoh said. “While most startups use that capital to build and acquire customers, we’ve already figured out how to grow without heavy spending on acquisition.” The focus now is on expansion.</p>
-
-
-
-<p>So far, pilot programmes in India and Nigeria have engaged about 50 doctors and reached roughly 2,000 users. The company is scaling through partnerships with banks, churches, and community organisations ahead of a broader rollout in June 2026.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Chams profit rises 188% as cybersecurity revenue triples</title>
-		<link>https://techcabal.com/2026/04/30/chams-profit-rises-188-as-cybersecurity-revenue-triples/</link>
-		
-		<dc:creator><![CDATA[Temitayo Jaiyeola]]></dc:creator>
-		<pubDate>Thu, 30 Apr 2026 13:58:01 +0000</pubDate>
-				<category><![CDATA[Companies]]></category>
-		<category><![CDATA[Chams]]></category>
-		<category><![CDATA[cybersecurity]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=187069</guid>
-
-					<description><![CDATA[While biometrics and card services still anchor revenue, the security and digital infrastructure are emerging as the next phase of expansion. ]]></description>
-										<content:encoded><![CDATA[
-<p>Chams Holding Company Plc, a Nigerian identity management and transactional technology provider, grew its profit by 188.44% to ₦429.40 million ($311,281) in the first quarter of 2026, as rising demand for cybersecurity services boosted its earnings.</p>
-
-
-
-<p>Revenue rose 8.52% to ₦4.20 billion ($3.05 million), while a 7.18% drop in cost of sales boosted profitability, according to its<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46866_CHAMS_HOLDING_COMPANY_PLC-_QUARTER_1_-_FINANCIAL_STATEMENT_FOR_2026_FINANCIAL_STATEMENTS_APRIL_2026.pdf" target="_blank" rel="noreferrer noopener"> unaudited Q1 results</a>.</p>
-
-
-
-<p>The results highlight cybersecurity as a key growth driver for Chams, as Nigerian organisations ramp up spending to defend against escalating cyber threats and stricter regulatory demands. While biometrics and card services still anchor revenue, the security and digital infrastructure are emerging as the next phase of expansion.&nbsp;</p>
-
-
-
-<p>Revenue from its cybersecurity and infrastructure business jumped <a href="https://doclib.ngxgroup.com/Financial_NewsDocs/44030_CHAMS_HOLDING_COMPANY_PLC-_QUARTER_1_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_APRIL_2025.pdf" target="_blank" rel="noreferrer noopener">240.11%</a> to ₦730.31 million ($529,417), meaning the company has already achieved 88.44% of its full-year <a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46494_CHAMS_HOLDING_COMPANY_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MARCH_2026.pdf" target="_blank" rel="noreferrer noopener">2025 revenue</a> from the segment in just one quarter.&nbsp;</p>
-
-
-
-<p>The surge reflects a broader shift in Nigeria’s risk environment. Cyberattacks have intensified across financial institutions and government agencies, with the <a href="https://techcabal.com/2026/04/29/nigeria-moves-to-end-silence-on-cyberattacks/" type="link" id="https://techcabal.com/2026/04/29/nigeria-moves-to-end-silence-on-cyberattacks/">National Information Technology Development Agency</a> (NITDA), Nigeria’s tech regulator, pushing for organisations to begin disclosing breaches and share intelligence to improve collective resilience.&nbsp;</p>
-
-
-
-<p>Through its subsidiary,<a href="https://www.chamsaccess.com/cybersecurity-solutions" target="_blank" rel="noreferrer noopener"> Chams Access</a>, which provides cybersecurity solutions, the group is benefiting as organisations ramp up spending on cyber defence.</p>
-
-
-
-<div id="tc-chams-tool" class="tc-widget-container">
-    
-    <style>
-        /* Scoped CSS for Mobile Responsiveness */
-        .tc-widget-container {
-            font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
-            background: #FFFFFF; 
-            border: 1px solid #E3E8EF; 
-            border-radius: 12px; 
-            /* Fluid padding: 16px on mobile, up to 32px on desktop */
-            padding: clamp(16px, 5vw, 32px); 
-            max-width: 650px; 
-            margin: 32px auto; 
-            color: #151515; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.03); 
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
-        .tc-widget-container * {
-            box-sizing: border-box;
-        }
-        .tc-btn-group {
-            display: flex; 
-            gap: 8px; 
-            margin-bottom: 32px; 
-            background: #F6F6F6; 
-            padding: 6px; 
-            border-radius: 8px; 
-            width: max-content; 
-            border: 1px solid #E3E8EF;
-        }
-        .tc-btn-group button {
-            padding: 10px 28px; 
-            border-radius: 6px; 
-            cursor: pointer; 
-            font-weight: 700; 
-            font-size: 0.875rem; 
-            transition: all 0.3s ease;
-        }
-        .tc-summary-board {
-            background: #151515; 
-            border-radius: 10px; 
-            padding: 24px; 
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 16px; 
-            color: #FFFFFF; 
-            position: relative; 
-            overflow: hidden;
-        }
-        .tc-sum-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .tc-sum-left { text-align: left; padding-left: 12px; }
-        .tc-sum-mid { text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; }
-        .tc-sum-right { text-align: right; }
-        
-        /* Mobile Breakpoint */
-        @media (max-width: 480px) {
-            .tc-btn-group {
-                flex-direction: column;
-                width: 100%;
-            }
-            .tc-btn-group button {
-                width: 100%;
-            }
-            .tc-summary-board {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                padding: 20px 16px;
-            }
-            .tc-sum-left, .tc-sum-mid, .tc-sum-right {
-                text-align: left;
-                padding-left: 12px;
-            }
-            .tc-sum-mid {
-                border-left: none;
-                border-right: none;
-                border-top: 1px solid #333;
-                border-bottom: 1px solid #333;
-                padding: 12px 0 12px 12px;
-            }
-            .tc-footer {
-                flex-direction: column;
-                align-items: flex-start !important;
-                gap: 8px;
-            }
-        }
-    </style>
-
-    <div style="margin-bottom: 28px; text-align: left;">
-        <div style="display: inline-block; background: #FFF5F5; color: #EA2D2E; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Data Explorer</div>
-        <h3 style="color: #151515; margin: 0 0 12px 0; font-size: clamp(1.4rem, 4vw, 1.75rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.5px;">The Chams Revenue Engine</h3>
-        <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #555;">While legacy hardware provides scale, Cybersecurity is the new multiplier. Toggle the timeline below to see how shifting revenues and dropping costs drove a massive 188% profit spike.</p>
-    </div>
-
-    <div class="tc-btn-group">
-        <button id="tc-btn-2025" onclick="tcUpdateData('2025')" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" style="background: #FFFFFF; color: #151515; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Q1 2025</button>
-        <button id="tc-btn-2026" onclick="tcUpdateData('2026')" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" style="background: #EA2D2E; color: #FFFFFF; border: 1px solid #EA2D2E; box-shadow: 0 2px 8px rgba(234, 45, 46, 0.3);">Q1 2026</button>
-    </div>
-
-    <div style="display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px;">
-        
-        <div class="tc-bar-container" style="cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; align-items: flex-end;">
-                <span style="font-size: 0.9rem; font-weight: 700; color: #151515;">Cybersecurity &#038; Infrastructure</span>
-                <span id="tc-val-cyber" style="color: #EA2D2E; font-weight: 800; font-size: 1.1rem; transition: color 0.3s;">₦730.3M</span>
-            </div>
-            <div style="background: #F6F6F6; border-radius: 6px; width: 100%; height: 14px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
-                <div id="tc-bar-cyber" style="background: linear-gradient(90deg, #EA2D2E, #FF5C5C); height: 100%; width: 36.5%; border-radius: 6px; transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);"></div>
-            </div>
-        </div>
-
-        <div class="tc-bar-container" style="cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; align-items: flex-end;">
-                <span style="font-size: 0.9rem; font-weight: 600; color: #555;">Biometrics &#038; Devices</span>
-                <span id="tc-val-bio" style="font-weight: 700; font-size: 1rem; color: #151515;">₦1.61B</span>
-            </div>
-            <div style="background: #F6F6F6; border-radius: 6px; width: 100%; height: 10px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
-                <div id="tc-bar-bio" style="background: #24292F; height: 100%; width: 80.5%; border-radius: 6px; transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);"></div>
-            </div>
-        </div>
-
-        <div class="tc-bar-container" style="cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; align-items: flex-end;">
-                <span style="font-size: 0.9rem; font-weight: 600; color: #555;">Data Card Products</span>
-                <span id="tc-val-cards" style="font-weight: 700; font-size: 1rem; color: #151515;">₦1.80B</span>
-            </div>
-            <div style="background: #F6F6F6; border-radius: 6px; width: 100%; height: 10px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
-                <div id="tc-bar-cards" style="background: #24292F; height: 100%; width: 90%; border-radius: 6px; transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);"></div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="tc-summary-board">
-        <div style="position: absolute; top: 0; left: 0; height: 100%; width: 4px; background: #FFC52F;"></div>
-        
-        <div class="tc-sum-item tc-sum-left">
-            <p style="margin: 0 0 6px 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: #A0A0A0;">Total Revenue</p>
-            <p id="tc-val-rev" style="margin: 0; font-size: 1.25rem; font-weight: 800; transition: color 0.3s;">₦4.20B</p>
-        </div>
-
-        <div class="tc-sum-item tc-sum-mid">
-            <p style="margin: 0 0 6px 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: #A0A0A0;">Cost of Sales</p>
-            <p id="tc-val-cos" style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #E3E8EF; transition: color 0.3s;">₦2.87B</p>
-        </div>
-
-        <div class="tc-sum-item tc-sum-right">
-            <p style="margin: 0 0 6px 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: #A0A0A0;">Net Profit</p>
-            <p id="tc-val-profit" style="margin: 0; font-size: 1.25rem; font-weight: 800; color: #20C997; transition: color 0.3s;">₦429.4M</p>
-        </div>
-    </div>
-    
-    <div class="tc-footer" style="margin-top: 20px; font-size: 0.8rem; color: #888; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-weight: 600; color: #EA2D2E;">TechCabal</span>
-        <em style="text-align: right;">Source: Chams HoldCo Unaudited Financial Statements</em>
-    </div>
-
-    <script>
-        const tcData = {
-            '2025': {
-                cyberVal: '₦214.7M', cyberWidth: '10.7%',
-                bioVal: '₦751.1M', bioWidth: '37.5%',
-                cardsVal: '₦948.8M', cardsWidth: '47.4%',
-                rev: '₦3.87B', cos: '₦3.09B', profit: '₦148.8M',
-                cyberColor: '#555' 
-            },
-            '2026': {
-                cyberVal: '₦730.3M', cyberWidth: '36.5%',
-                bioVal: '₦1.61B', bioWidth: '80.5%',
-                cardsVal: '₦1.80B', cardsWidth: '90.0%',
-                rev: '₦4.20B', cos: '₦2.87B', profit: '₦429.4M',
-                cyberColor: '#EA2D2E'
-            }
-        };
-
-        function tcUpdateData(year) {
-            // Update Text Metrics with a slight fade effect
-            const elementsToUpdate = ['tc-val-cyber', 'tc-val-bio', 'tc-val-cards', 'tc-val-rev', 'tc-val-cos', 'tc-val-profit'];
-            
-            elementsToUpdate.forEach(id => {
-                const el = document.getElementById(id);
-                el.style.opacity = '0';
-                setTimeout(() => {
-                    if(id === 'tc-val-cyber') el.innerText = tcData[year].cyberVal;
-                    if(id === 'tc-val-bio') el.innerText = tcData[year].bioVal;
-                    if(id === 'tc-val-cards') el.innerText = tcData[year].cardsVal;
-                    if(id === 'tc-val-rev') el.innerText = tcData[year].rev;
-                    if(id === 'tc-val-cos') el.innerText = tcData[year].cos;
-                    if(id === 'tc-val-profit') el.innerText = tcData[year].profit;
-                    el.style.opacity = '1';
-                }, 200);
-            });
-
-            // Change emphasis color on Cybersecurity text depending on the year
-            document.getElementById('tc-val-cyber').style.color = tcData[year].cyberColor;
-
-            // Update Bars
-            document.getElementById('tc-bar-cyber').style.width = tcData[year].cyberWidth;
-            document.getElementById('tc-bar-bio').style.width = tcData[year].bioWidth;
-            document.getElementById('tc-bar-cards').style.width = tcData[year].cardsWidth;
-
-            // Update Button Styles
-            if(year === '2026') {
-                document.getElementById('tc-btn-2026').style.background = '#EA2D2E';
-                document.getElementById('tc-btn-2026').style.color = '#FFFFFF';
-                document.getElementById('tc-btn-2026').style.borderColor = '#EA2D2E';
-                document.getElementById('tc-btn-2026').style.boxShadow = '0 2px 8px rgba(234, 45, 46, 0.3)';
-                
-                document.getElementById('tc-btn-2025').style.background = '#FFFFFF';
-                document.getElementById('tc-btn-2025').style.color = '#151515';
-                document.getElementById('tc-btn-2025').style.borderColor = 'rgba(0,0,0,0.05)';
-                document.getElementById('tc-btn-2025').style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
-            } else {
-                document.getElementById('tc-btn-2025').style.background = '#EA2D2E';
-                document.getElementById('tc-btn-2025').style.color = '#FFFFFF';
-                document.getElementById('tc-btn-2025').style.borderColor = '#EA2D2E';
-                document.getElementById('tc-btn-2025').style.boxShadow = '0 2px 8px rgba(234, 45, 46, 0.3)';
-                
-                document.getElementById('tc-btn-2026').style.background = '#FFFFFF';
-                document.getElementById('tc-btn-2026').style.color = '#151515';
-                document.getElementById('tc-btn-2026').style.borderColor = 'rgba(0,0,0,0.05)';
-                document.getElementById('tc-btn-2026').style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
-            }
-        }
-    </script>
-</div>
-
-
-
-<h2 class="wp-block-heading"><strong>Biometrics and cards still drive scale&nbsp;</strong></h2>
-
-
-
-<p>Beyond cybersecurity, the company’s more established businesses continue to deliver scale.&nbsp;</p>
-
-
-
-<p>Card-related revenue, classified as “data card products supply,” generated ₦1.80 billion ($1.31 million) in Q1, driven by increased SIM card production for telecommunications providers. CardCentre, a Chams subsidiary, said it was producing about <a href="https://techcabal.com/2025/09/01/how-cardcentre-hit-%E2%82%A64-9bn-revenue/" target="_blank" rel="noreferrer noopener">three million SIM cards</a> monthly and 5,000 bank cards daily as of September 2025.&nbsp;</p>
-
-
-
-<p>Biometrics, another core revenue line, contributed ₦1.61 billion ($1.17 million) in the quarter. The company remains a key player in biometric identity solutions, with clients across government and financial services, including First Bank and Sterling Bank. In 2025, biometrics was its largest segment, generating <a href="https://techcabal.com/2026/01/31/chams-grows-17-9-in-2025-on-a-4-26-million-sim-and-bank-card-boom/" target="_blank" rel="noreferrer noopener">₦10.65 billion</a> ($7.72 million) out of total revenue of ₦17.48 billion ($12.67 million).&nbsp;</p>
-
-
-
-<p>Since 2025, Chams has aligned its strategy around SIM distribution, payments infrastructure, and digital services.</p>
-
-
-
-<p>In August, 2025, the company announced plans to raise <a href="https://www.chamsholdco.com/post/chams-holdco-announces-n7-65bn-capital-raise-to-expand-digital-payments-fintech-leadership-in-africa" target="_blank" rel="noreferrer noopener">₦7.65 billion</a> ($5.55 million) to invest in a card personalisation plant and expand into cross-border digital payments. By February 2026, it had created a new subsidiary, <a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46025_CHAMS_HOLDING_COMPANY_PLC-CHAMS_HOLDCO_PLC_-_CREATION_OF_A_NEW_SUBSIDIARY_CORPORATE_ACTIONS_FEBRUARY_2026.pdf" target="_blank" rel="noreferrer noopener">ChamsCorp Plc</a>, to target opportunities in artificial intelligence and data centre infrastructure.&nbsp;</p>
-
-
-
-<p>For now, one of its fastest-growing opportunities is tied to a more immediate concern for many organisations: cybersecurity.&nbsp;<br></p>
-
-
-
-<p></p>
 ]]></content:encoded>
 					
 		
