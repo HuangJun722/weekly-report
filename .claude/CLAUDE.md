@@ -1,0 +1,46 @@
+# 全球互联网动态情报站 — 项目规范
+
+> 自动爬取非中美地区互联网/科技动态，AI 分析后展示为情报产品。
+
+## 核心架构
+
+- **数据采集**：`scripts/fetch_news.py` — RSS 并行采集 + HTML 降级 + 27家公司监控
+- **AI 分析管线**：DeepSeek API（主力）→ 豆包 API（降级）→ 程序降级
+- **API Key 加密**：`scripts/decrypt_key.py` — PBKDF2 + Fernet 解密本地加密的 API Key
+- **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
+- **部署**：GitHub Actions + GitHub Pages（`docs/` 目录）
+
+## AI 分析输出格式
+
+每条事件输出 5 个字段：
+- `summary_short`：中英双语摘要
+- `reason`：为什么重要（"所以呢"导向，对谁有影响、窗口期、连锁反应）
+- `impact`：具体受益方或受损方
+- `insight_label`：资金流向 / 合作机会 / 警示信号 / 趋势信号 / 中资出海
+- `trend_topic`：所属趋势主题（如"中东FinTech赛道升温"）
+
+## 环境变量
+
+| 变量 | 用途 | 获取地址 |
+|------|------|---------|
+| `DEEPSEEK_API_KEY` | 主力 AI 分析 | https://platform.deepseek.com/ |
+| `DOUBAO_API_KEY` | 降级备用 AI | https://console.volcengine.com/ark/ |
+
+## 无 CLAUDE.md 时的默认行为
+
+进入项目后先读本文件。没有 CLAUDE.md 则按全局指令执行。
+
+## 设计原则
+
+- `scripts/template.html` 是设计的唯一真相来源（SSOT）
+- `docs/*.html` 是自动生成物，不要直接编辑
+- 三层信息架构：今日判断(30s) → 趋势分组事件(3min) → 公司导航/搜索(需要时)
+- 两 tab 卡片风格统一：今日要点和全部事件使用一致的 `.daily-event` 卡片结构
+- 评分徽章已移除：事件不显示分数，分数仅用于内部排序和 AI 筛选阈值
+
+## 红线（必须先问我）
+
+- git push、git rebase、git reset --hard
+- 修改 workflow 文件（`.github/workflows/`）
+- 删除 data/ 目录或 events.json
+- 修改 GitHub Secrets

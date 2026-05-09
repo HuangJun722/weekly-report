@@ -27,9 +27,19 @@ cd weekly-report
 ### 2. 配置 API Key
 
 ```bash
+# 方式一（推荐）：加密存储
+# 1. 创建 .env 文件
 cp .env.example .env
-# 编辑 .env，填入你的 Gemini API Key
-# 获取地址：https://aistudio.google.com/apikey
+# 2. 编辑 .env，填入你的 DeepSeek API Key
+# 3. 运行加密脚本（将 key 加密存储到 .env.encrypted）
+python scripts/encrypt_key.py
+
+# 方式二（开发调试）：直接使用 .env 文件
+# 编辑 .env 填入 DEEPSEEK_API_KEY=sk-xxx
+# fetch_news.py 会优先读取 .env
+
+# DeepSeek 获取地址：https://platform.deepseek.com/
+# 豆包获取地址：https://console.volcengine.com/ark/
 ```
 
 ### 3. 安装依赖
@@ -41,12 +51,11 @@ pip install -r requirements.txt
 ### 4. 运行
 
 ```bash
-# 抓取数据 + 生成 HTML
-python scripts/fetch_news.py
-python scripts/generate_html.py
+# Windows（使用 Python 启动器）
+py -3 scripts/generate_html.py --force
 
-# 仅生成 HTML（数据已存在）
-python scripts/generate_html.py
+# Linux/macOS
+python scripts/generate_html.py --force
 ```
 
 生成的文件在 `docs/index.html`，用浏览器打开即可预览。
@@ -83,8 +92,9 @@ python scripts/generate_html.py
 
 ## 技术栈
 
-- **数据采集**：Python + BeautifulSoup + Requests（RSS + HTML 降级采集）
-- **AI 分析**：Google Gemini API（免费额度足够）
+- **数据采集**：Python + aiohttp + BeautifulSoup（异步 RSS + HTML 降级采集）
+- **AI 分析**：DeepSeek API（主力）+ 豆包 API（降级备用）
+- **API Key 安全**：PBKDF2 + Fernet 加密存储
 - **页面生成**：Jinja2 模板
 - **部署**：GitHub Actions + GitHub Pages
 
@@ -97,15 +107,17 @@ python scripts/generate_html.py
 ```
 weekly-report/
 ├── .github/
-│   └── workflows/update.yml   # 自动更新工作流（每天北京时间 10:00）
+│   └── workflows/update.yml      # 自动更新工作流（每天北京时间 10:00）
 ├── data/
-│   └── events.json            # 事件数据（保留近 7 天）
+│   └── events.json               # 事件数据（保留近 7 天）
 ├── scripts/
-│   ├── fetch_news.py          # 爬取 + AI 分析
-│   ├── generate_html.py        # 生成 HTML
-│   └── template.html          # HTML 模板
+│   ├── fetch_news.py             # 爬取 + AI 分析
+│   ├── generate_html.py          # 生成 HTML
+│   ├── template.html             # HTML 模板（设计 SSOT）
+│   ├── decrypt_key.py            # API Key 解密（PBKDF2 + Fernet）
+│   └── DESIGN_WORKFLOW.md        # 设计变更流程
 ├── docs/
-│   └── index.html             # 生成的页面
+│   └── index.html                # 生成的页面
 ├── requirements.txt
 └── README.md
 ```
@@ -116,11 +128,13 @@ weekly-report/
 
 页面采用"极简克制 + 现代杂志风"设计：
 
-- **两层内容层级**：今日高价值信号（大卡片）+ 全部动态（紧凑列表）
+- **三层信息架构**：今日判断区（30秒扫读）→ 趋势分组事件（3分钟）→ 公司导航/搜索（需要时）
+- **两 tab 统一卡片风格**：今日要点和全部事件使用一致的 `.daily-event` 卡片设计
+- **趋势主题分组**：事件不再按类型分类，而是按 AI 分析的趋势主题（如"中东FinTech赛道升温"）聚合
+- **今日判断区**：顶部展示 AI 每日趋势判断 + 3个关键信号卡片
 - **固定顶栏**：搜索和筛选始终可见
-- **事件分类**：融资（紫）/ 并购（红）/ 财报（绿）/ 战略（橙）/ 其他（灰）
+- **事件标签**：资金流向 / 合作机会 / 警示信号 / 趋势信号 / 中资出海
 - **区域标签**：欧洲 / 亚太 / 中东 / 非洲 / 拉美
-- **信源等级**：A（8分以上）/ B（6-7分）/ C（4-5分）/ D（<4分）
 - **响应式**：移动端单栏布局
 
 ---
