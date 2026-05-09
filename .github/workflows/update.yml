@@ -93,6 +93,7 @@ jobs:
             python scripts/fetch_news.py
           fi
         env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
 
       - name: Debug environment
