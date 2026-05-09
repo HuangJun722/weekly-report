@@ -368,6 +368,19 @@ def _parse_rss_text(cfg, text):
         if not article_date:
             article_date = _extract_date_from_url(link)
 
+        # 图片：从 RSS media:content 或 media:thumbnail 提取
+        image_url = ''
+        mc = entry.get('media_content', [])
+        if mc:
+            for m in mc:
+                if m.get('url'):
+                    image_url = m['url']
+                    break
+        if not image_url:
+            mt = entry.get('media_thumbnail', [])
+            if mt and mt[0].get('url'):
+                image_url = mt[0]['url']
+
         types = detect_event_types(title)
         results.append({
             'title': title,
@@ -377,6 +390,7 @@ def _parse_rss_text(cfg, text):
             'priority': cfg.get('priority', 1),
             'event_types': types,
             'article_date': article_date,
+            'image_url': image_url,
         })
     return results
 
@@ -490,6 +504,19 @@ def fetch_company_news(cfg):
         # 公司动态只要有company_name就保留，不再过滤other类型
         # 因为扩充关键词后other类型减少，且other中也有有价值的出海新闻
 
+        # 图片：从 RSS media:content 或 media:thumbnail
+        image_url = ''
+        mc = entry.get('media_content', [])
+        if mc:
+            for m in mc:
+                if m.get('url'):
+                    image_url = m['url']
+                    break
+        if not image_url:
+            mt = entry.get('media_thumbnail', [])
+            if mt and mt[0].get('url'):
+                image_url = mt[0]['url']
+
         results.append({
             'title': title,
             'url': link,
@@ -500,6 +527,7 @@ def fetch_company_news(cfg):
             'article_date': article_date,
             'is_company': True,
             'company_name': cfg['name'],
+            'image_url': image_url,
         })
     return results
 
@@ -1120,6 +1148,7 @@ def build_event(item, analysis=None):
             'is_company': item.get('is_company', False),
             'company_name': item.get('company_name', ''),
             'date': item.get('article_date', datetime.now().isoformat()[:10]),
+            'image_url': item.get('image_url', ''),
         }
     # 无 AI 分析时的 fallback
     ev_type = item.get('event_types', ['other'])[0]
@@ -1152,7 +1181,49 @@ def build_event(item, analysis=None):
         'is_company': item.get('is_company', False),
         'company_name': item.get('company_name', ''),
         'date': item.get('article_date', datetime.now().isoformat()[:10]),
+        'image_url': item.get('image_url', ''),
     }
+
+# ============================================================
+# og:image 补抓 — 为没有 RSS 图片的事件获取文章配图
+# ============================================================
+
+def fill_event_images(events):
+    """并发获取事件文章的 og:image，只处理没有 image_url 的事件"""
+    batch = [e for e in events if not e.get('image_url') and e.get('url') and not e['url'].startswith('https://news.google.com')]
+    if not batch:
+        return
+    print(f"  🖼️  补抓 og:image（{len(batch)} 条无图片）...")
+    import asyncio
+    async def fetch_one(session, ev):
+        try:
+            async with session.get(ev['url'], timeout=aiohttp.ClientTimeout(total=4), ssl=False) as resp:
+                if resp.status != 200:
+                    return
+                html = await resp.text()
+                for m in ["og:image", "twitter:image"]:
+                    for pattern in [f'<meta property="{m}" content="', f'<meta name="{m}" content="']:
+                        idx = html.find(pattern)
+                        if idx >= 0:
+                            start = idx + len(pattern)
+                            end = html.find('"', start)
+                            if end > start:
+                                url = html[start:end]
+                                if url.startswith('http'):
+                                    ev['image_url'] = url
+                                    return
+        except Exception:
+            pass
+    async def run():
+        async with aiohttp.ClientSession(headers=HEADERS) as session:
+            tasks = [fetch_one(session, ev) for ev in batch]
+            await asyncio.gather(*tasks, return_exceptions=True)
+    try:
+        asyncio.run(run())
+    except Exception:
+        pass
+    filled = sum(1 for e in batch if e.get('image_url'))
+    print(f"    → 成功获取 {filled}/{len(batch)} 张")
 
 # ============================================================
 # 主函数
@@ -1271,6 +1342,9 @@ def main():
     types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
+
+    # 补抓 og:image（有 AI 分析的事件才需要配图）
+    fill_event_images(filtered)
 
     # AI 分析：DeepSeek 优先，豆包降级，程序生成兜底
     use_deepseek = configure_deepseek()
