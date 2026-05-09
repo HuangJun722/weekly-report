@@ -580,6 +580,27 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         'top7': mp_events,  # 新增：今日要点7条
     }
 
+def build_trend_groups(events):
+    """将事件按趋势主题分组，如果没有 trend_topic 则按 insight_label 分组"""
+    groups = {}
+    for e in events:
+        topic = e.get('trend_topic') or e.get('insight_label', '其他')
+        groups.setdefault(topic, []).append(e)
+    result = [{'topic': k, 'events': v} for k, v in groups.items()]
+    result.sort(key=lambda x: len(x['events']), reverse=True)
+    return result
+
+def group_events_by_date(events):
+    """将事件按日期分组，按时间倒序"""
+    groups = {}
+    for e in events:
+        d = (e.get('date') or '')[:10]
+        groups.setdefault(d, []).append(e)
+    result = [{'date': k, 'events': v} for k, v in sorted(groups.items(), reverse=True)]
+    return result
+
+CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
+
 def generate_html(force=False, preview_mode=False):
     events = load_events()
     sorted_dates = sorted(events.keys(), reverse=True)
@@ -675,16 +696,35 @@ def generate_html(force=False, preview_mode=False):
     weekly['company_count'] = len(company_events_filtered)
     weekly['company_list'] = preset_company_list
 
+    # 今日要点数据结构
+    trend_groups = build_trend_groups(all_feed)
+    daily_trend_judgment = weekly.get('summary', '')
+    daily_trend_signals = weekly.get('top3', [])
+    total_stories = len(all_feed)
+    dt = datetime.strptime(main_date, '%Y-%m-%d')
+    vol_label = f"VOL.{main_date}"
+    cn_date = f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}"
+
+    # 全部事件按日期分组
+    date_grouped_events = group_events_by_date(all_events_for_list)
+
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
         weekly=weekly,
         all_feed=all_feed,
         all_events_for_list=all_events_for_list,
+        date_grouped_events=date_grouped_events,
         history=history,
         main_date=main_date,
         company_events=company_events,
         company_list=preset_company_list,
         update_time=main_date + ' 数据（每日02:00北京时间自动更新）',
+        trend_groups=trend_groups,
+        daily_trend_judgment=daily_trend_judgment,
+        daily_trend_signals=daily_trend_signals,
+        total_stories=total_stories,
+        vol_label=vol_label,
+        cn_date=cn_date,
     )
 
     os.makedirs('docs', exist_ok=True)
