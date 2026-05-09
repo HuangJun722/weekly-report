@@ -696,11 +696,15 @@ def generate_html(force=False, preview_mode=False):
     weekly['company_count'] = len(company_events_filtered)
     weekly['company_list'] = preset_company_list
 
-    # 今日要点数据结构
-    trend_groups = build_trend_groups(all_feed)
+    # 今日要点数据结构：使用 all_events_for_list 中今天的事件（与全部事件一致）
+    today_events = [e for e in all_events_for_list if (e.get('date') or '')[:10] == main_date]
+    if not today_events:
+        # 兜底：用 all_feed
+        today_events = all_feed
+    trend_groups = build_trend_groups(today_events)
     daily_trend_judgment = weekly.get('summary', '')
     daily_trend_signals = weekly.get('top3', [])
-    total_stories = len(all_feed)
+    total_stories = len(today_events)
     dt = datetime.strptime(main_date, '%Y-%m-%d')
     vol_label = f"VOL.{main_date}"
     cn_date = f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}"
