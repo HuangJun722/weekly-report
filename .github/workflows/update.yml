@@ -9,12 +9,13 @@ on:
   # 每天 18:00 UTC (= 次日 02:00 北京时间) 自动运行
   schedule:
     - cron: '0 18 * * *'
-  # 模板/脚本变更时自动运行
+  # 模板/脚本/workflow 变更时自动运行
   push:
     branches: [main]
     paths:
       - 'scripts/*.py'
       - 'scripts/template.html'
+      - '.github/workflows/*.yml'
   # 手动触发
   repository_dispatch:
     types: [rss-test]
