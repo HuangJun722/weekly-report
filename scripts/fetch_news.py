@@ -803,6 +803,111 @@ def configure_doubao():
     print(f"  ✅ 豆包 API 配置检查通过，模型: {model}")
     return True
 
+
+def configure_deepseek():
+    """配置 DeepSeek API，优先使用"""
+    key = os.environ.get('DEEPSEEK_API_KEY')
+    model = os.environ.get('DEEPSEEK_MODEL', 'deepseek-chat')
+    print(f"  🔑 DEEPSEEK_API_KEY: {'已设置 (' + str(len(key)) + ' 字符)' if key else '未设置 ❌'}")
+    if not key:
+        print("  ⚠️  未设置 DEEPSEEK_API_KEY，将降级使用豆包")
+        return False
+    if len(key) < 10:
+        print(f"  ❌ DEEPSEEK_API_KEY 长度异常（{len(key)} 字符），降级使用豆包")
+        return False
+    print(f"  ✅ DeepSeek API 配置检查通过，模型: {model}")
+    return True
+
+
+def analyze_events_deepseek(items):
+    """
+    使用 DeepSeek 大模型分析新闻事件（OpenAI 兼容 API）
+    模型：deepseek-chat
+    """
+    api_key = os.environ.get('DEEPSEEK_API_KEY')
+    if not api_key:
+        print("  ⚠️  未设置 DEEPSEEK_API_KEY")
+        return None
+
+    url = "https://api.deepseek.com/v1/chat/completions"
+    model = os.environ.get('DEEPSEEK_MODEL', 'deepseek-chat')
+    headers = {
+        "Authorization": "Bearer " + api_key,
+        "Content-Type": "application/json"
+    }
+
+    news = [{'title': it['title'], 'url': it['url'], 'source': it['source'], 'region': it.get('region','')} for it in items]
+    prompt = AI_SYSTEM_PROMPT + "\n" + AI_EXAMPLES + "\n\n分析以下事件，返回JSON数组：\n" + json.dumps(news, ensure_ascii=False) + "\n\n返回JSON："
+
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 4096,
+        "temperature": 0.1
+    }
+
+    for attempt in range(3):
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=30)
+            if resp.status_code == 429:
+                wait = (attempt + 1) * 10
+                print("  ⚠️  DeepSeek API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
+                time.sleep(wait)
+                continue
+            if resp.status_code != 200:
+                print(f"  ❌ DeepSeek API HTTP {resp.status_code}: {resp.text[:300]}")
+                return None
+            data = resp.json()
+            text = data.get('choices', [{}])[0].get('message', {}).get('content', '')
+            if not text:
+                print("  ⚠️  DeepSeek 返回空内容: " + str(data))
+                return None
+            for m in ['```json', '```']:
+                if m in text:
+                    parts = text.split(m)
+                    for p in parts[1:]:
+                        text = p.strip()
+                        if text.endswith('```'):
+                            text = text[:-3].strip()
+                        break
+                    break
+            result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+            if isinstance(result, list):
+                result = [r for r in result if r.get('url') and r.get('summary_short')]
+            return result
+        except requests.exceptions.Timeout:
+            print(f"  ⚠️  DeepSeek API 超时（30s），快速失败，跳过该批次")
+            return None
+        except json.JSONDecodeError as e:
+            if attempt < 2:
+                wait = (attempt + 1) * 5
+                print(f"  ⚠️  DeepSeek 返回非JSON，尝试修正解析...")
+                import re as re2
+                match = re2.search(r'\[[\s\S]*\]', text if 'text' in dir() else '')
+                if match:
+                    try:
+                        result = json.loads(match.group())
+                        result = [r for r in result if isinstance(r, dict) and r.get('url')]
+                        if result:
+                            print(f"  ✅ 修正解析成功，提取 {len(result)} 条")
+                            return result
+                    except: pass
+                print(f"  解析失败，等待 {wait}s 后重试...")
+                time.sleep(wait)
+                continue
+            print(f"  ❌ DeepSeek JSON 解析最终失败")
+            return None
+        except Exception as e:
+            if attempt < 2:
+                wait = (attempt + 1) * 5
+                print(f"  ⚠️  DeepSeek API 调用失败（{type(e).__name__}），等待 {wait}s 后重试...")
+                time.sleep(wait)
+                continue
+            print(f"  ❌ DeepSeek API 最终失败: {type(e).__name__} {str(e)[:200]}")
+            return None
+    return None
+
+
 # ============================================================
 # AI 分析 Prompt 模板（Few-shot，输出稳定）
 # ============================================================
@@ -1165,19 +1270,19 @@ def main():
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
 
-    # AI 分析：MiniMax 优先，豆包降级
-    use_minimax = configure_minimax()
+    # AI 分析：DeepSeek 优先，豆包降级，程序生成兜底
+    use_deepseek = configure_deepseek()
     use_doubao_fallback = False
     today_events = []
 
-    if use_minimax:
-        print(f"\n🤖 MiniMax AI 分析（主力）...")
+    if use_deepseek:
+        print(f"\n🤖 DeepSeek AI 分析（主力）...")
         for i in range(0, len(filtered), 8):
             batch = filtered[i:i+8]
-            results = analyze_events_minimax(batch)
+            results = analyze_events_deepseek(batch)
             if results is None:
-                # MiniMax 批次失败 → 尝试豆包兜底
-                print(f"  批次 {(i//8)+1} MiniMax 失败，尝试豆包降级...")
+                # DeepSeek 批次失败 → 尝试豆包兜底
+                print(f"  批次 {(i//8)+1} DeepSeek 失败，尝试豆包降级...")
                 if not use_doubao_fallback:
                     use_doubao_fallback = configure_doubao()
                 if use_doubao_fallback:
@@ -1197,7 +1302,7 @@ def main():
             print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
             time.sleep(0.5)
     elif configure_doubao():
-        # MiniMax 未配置，降级使用豆包
+        # DeepSeek 未配置，降级使用豆包
         print(f"\n🤖 豆包 AI 分析（降级）...")
         for i in range(0, len(filtered), 8):
             batch = filtered[i:i+8]
@@ -1214,7 +1319,7 @@ def main():
             print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
             time.sleep(0.5)
     else:
-        # 两者都未配置，使用程序生成reason
+        # 都未配置，使用程序生成reason
         for item in filtered:
             today_events.append(build_event(item))
 
