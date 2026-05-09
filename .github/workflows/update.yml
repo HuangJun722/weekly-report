@@ -7,10 +7,15 @@ concurrency:
 
 on:
   # 每天 18:00 UTC (= 次日 02:00 北京时间) 自动运行
-  # 选择此时段：欧洲/亚太/中东/拉美当日新闻已全部发布，采集最完整
   schedule:
     - cron: '0 18 * * *'
-  # 支持手动触发
+  # 模板/脚本变更时自动 html-only 模式
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/template.html'
+      - 'scripts/generate_html.py'
+  # 手动触发
   repository_dispatch:
     types: [rss-test]
   workflow_dispatch:
@@ -47,7 +52,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Fetch and analyze news
-        if: github.event_name != 'workflow_dispatch' || inputs.mode != 'html-only'
+        if: github.event_name != 'push' && (github.event_name != 'workflow_dispatch' || inputs.mode != 'html-only')
         run: |
           # 预检：测试关键 RSS 信源在 GitHub Actions 中的可达性
           echo "=== RSS 信源可达性预检 ==="
@@ -135,6 +140,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     if: github.event_name == 'repository_dispatch' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'rss-test')
+    # push 事件不触发 rss-test
     steps:
       - uses: actions/checkout@v4
         with:
