@@ -79,7 +79,7 @@ jobs:
             echo '{}' > data/events.json
           else
             echo "=== 豆包 API 可用性检测 ==="
-            RESP=$(curl -s -w "\n%{http_code}" -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
+            RESP=$(curl -s -w "\n%{http_code}" --max-time 15 -X POST "https://ark.cn-beijing.volces.com/api/v3/chat/completions" \
               -H "Authorization: Bearer $DOUBAO_API_KEY" \
               -H "Content-Type: application/json" \
               -d '{"model":"ep-20260409223830-dnt5b","messages":[{"role":"user","content":"hi"}],"stream":false}')

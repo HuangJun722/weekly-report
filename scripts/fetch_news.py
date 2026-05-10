@@ -874,9 +874,9 @@ def analyze_events_deepseek(items):
         "temperature": 0.1
     }
 
-    for attempt in range(3):
+    for attempt in range(2):
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=30)
+            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
             if resp.status_code == 429:
                 wait = (attempt + 1) * 10
                 print("  ⚠️  DeepSeek API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
@@ -1006,9 +1006,9 @@ def analyze_events_doubao(items):
         "temperature": 0.1
     }
 
-    for attempt in range(3):  # 最多重试3次
+    for attempt in range(2):  # 最多重试1次（快速降级到程序生成）
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=60)  # 60s 超时（GHA 网络较慢）
+            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 30))  # 30s 超时
             if resp.status_code == 429:
                 wait = (attempt + 1) * 10
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
