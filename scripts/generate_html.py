@@ -581,14 +581,18 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
     }
 
 def build_trend_groups(events):
-    """将事件按趋势主题分组，如果没有 trend_topic 则按 insight_label 分组"""
+    """将事件按趋势主题分组，如果没有 trend_topic 则按 company_name / insight_label 降级"""
     groups = {}
     for e in events:
         topic = e.get('trend_topic')
         if not topic:
             region = e.get('region', '')
-            label = e.get('insight_label', '其他')
-            topic = f"{label} — {region}" if region else label
+            company = e.get('company_name', '')
+            if company:
+                topic = f"{company}动态 — {region}" if region else f"{company}动态"
+            else:
+                label = e.get('insight_label', '其他')
+                topic = f"{label} — {region}" if region else label
         groups.setdefault(topic, []).append(e)
     result = [{'topic': k, 'events': v} for k, v in groups.items()]
     result.sort(key=lambda x: len(x['events']), reverse=True)
@@ -694,17 +698,20 @@ def generate_html(force=False, preview_mode=False):
     history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
     history = [(d, events.get(d, [])) for d in history_dates if events.get(d, [])]
 
+    # 今日要点 = what'll be displayed — 从 all_events_for_list 中取今天事件
+    today_events = [e for e in all_events_for_list if (e.get('date') or '')[:10] == main_date]
+    if not today_events:
+        today_events = all_feed
+
     signals = get_signal_events(events)
-    weekly = build_weekly_summary(all_feed, signals, main_events, events)
+    # ⚠️ 关键：weekly 必须从 today_events 计数，不是 all_feed
+    # all_feed 过滤了 other 类型和低分事件，但页面上展示的是 today_events
+    # 两个数据源不一致导致"共0条动态"而实际有 9 条的矛盾
+    weekly = build_weekly_summary(today_events, signals, main_events, events)
     # 公司动态也加入周报摘要
     weekly['company_count'] = len(company_events_filtered)
     weekly['company_list'] = preset_company_list
 
-    # 今日要点数据结构：使用 all_events_for_list 中今天的事件（与全部事件一致）
-    today_events = [e for e in all_events_for_list if (e.get('date') or '')[:10] == main_date]
-    if not today_events:
-        # 兜底：用 all_feed
-        today_events = all_feed
     trend_groups = build_trend_groups(today_events)
     daily_trend_judgment = weekly.get('summary', '')
     daily_trend_signals = weekly.get('top3', [])

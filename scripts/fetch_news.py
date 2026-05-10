@@ -122,6 +122,22 @@ COMPANY_BLACKLIST = [
     'openai launches', 'anthropic announces', 'google announces',
     'apple announces', 'meta announces', 'microsoft announces',
     'weekly newsletter', 'daily newsletter',
+    # 体育/娱乐噪声
+    'baseball', 'football', 'soccer', 'basketball', 'tennis', 'cricket',
+    'playoffs', 'championship', 'world cup', 'olympic', 'sports',
+    'mother\'s day', 'mothers day', 'valentine', 'christmas', 'easter',
+    'celebrity', 'gossip', 'entertainment', 'tv show', 'movie',
+    'interview with', 'exclusive interview', 'we spoke to',
+    'highlights', 'replay', 'match report', 'ahegao',
+    # 产品页面/购物噪声
+    'free shipping', 'buy now', 'shop now', 'best price',
+    'glossy photo paper', 'tone paper', 'photo paper',
+    'coupon', 'discount', 'on sale', 'clearance ',
+    'order ', 'purchase ', 'delivery ',
+    # 占位/无内容噪声
+    '404', 'page not found', 'access denied', 'subscribe to',
+    # 政治/非科技
+    'election', 'president', 'protest', 'poll ', 'voting',
 ]
 
 # ============================================================
@@ -1008,7 +1024,7 @@ def analyze_events_doubao(items):
 
     for attempt in range(2):  # 最多重试1次（快速降级到程序生成）
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 30))  # 30s 超时
+            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 90))  # 90s 超时（给冷启动留足时间）
             if resp.status_code == 429:
                 wait = (attempt + 1) * 10
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
