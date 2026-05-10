@@ -1284,41 +1284,22 @@ def main():
             raw.extend(items)
             time.sleep(REQUEST_DELAY)
 
-    # 27家公司监控（直接用 requests，不用 aiohttp，因为 aiohttp 不走系统代理）
-    print("\n🏢 采集公司动态...")
+    # 27家公司监控（限当天/昨日，每公司最多3条）
+    print("\n🏢 采集公司动态（限当天/昨日，每公司最多3条）...")
     t1 = time.time()
-    import urllib.parse
     company_raw = []
     for cfg in COMPANY_SOURCES:
-        q = urllib.parse.quote(cfg['query'])
-        url = f'https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en'
-        body = fetch_url(url)  # fetch_url 内部会用 requests（支持代理）
-        if not body:
-            print(f"  ✗ [{cfg['name']}] 失败")
-            continue
-        items = _parse_rss_text(cfg.copy(), body)
-        # 噪音过滤
-        filtered = []
-        for item in items:
-            title_lower = item['title'].lower()
-            if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
-            filtered.append(item)
-        sig = sum(1 for it in filtered if it['event_types'][0] != 'other')
-        print(f"  🌐 [{cfg['name']}] {len(filtered)} 条（信号{sig}）")
-        for item in filtered:
-            item['is_company'] = True
-            item['company_name'] = cfg['name']
-            item['source'] = 'Google News'
-        company_raw.extend(filtered)
+        items = fetch_company_news(cfg)
+        sig = sum(1 for it in items if it['event_types'][0] != 'other')
+        if items:
+            print(f"  🌐 [{cfg['name']}] {len(items)} 条（信号{sig}）")
+        else:
+            print(f"  – [{cfg['name']}] 无今日动态")
+        company_raw.extend(items)
         time.sleep(0.5)  # 避免请求过快
 
-    # 公司新闻单独去重
-    seen_company, company_unique = set(), []
-    for it in company_raw:
-        if it['url'] and it['url'] not in seen_company:
-            seen_company.add(it['url'])
-            company_unique.append(it)
-    print(f"  ⏱  公司采集耗时 {time.time()-t1:.1f}s | {len(company_unique)} 条（去重后）")
+    company_unique = company_raw  # fetch_company_news 内部已去重
+    print(f"  ⏱  公司采集耗时 {time.time()-t1:.1f}s | {len(company_unique)} 条")
 
     # 合并：公司新闻 + 通用新闻（分别去重）
     all_raw = company_unique + raw
@@ -1344,61 +1325,71 @@ def main():
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
 
-    # 补抓 og:image（有 AI 分析的事件才需要配图）
-    fill_event_images(filtered)
+    # 评分前置：每个事件程序评分，分层决定是否送 AI
+    print(f"\n  📊 评分前置，分层处理...")
+    for it in filtered:
+        it['_prescore'] = _calc_score(it)
 
-    # AI 分析：DeepSeek 优先，豆包降级，程序生成兜底
-    use_deepseek = configure_deepseek()
-    use_doubao_fallback = False
-    today_events = []
+    # 三层：AI深度分析 / 程序生成（零API成本） / 丢弃
+    ai_tier, prog_tier = [], []
+    drop_count = 0
+    for it in filtered:
+        score = it['_prescore']
+        ev_type = it['event_types'][0]
+        if score >= 7 or ev_type in ('funding', 'ma', 'earnings'):
+            ai_tier.append(it)
+        elif score >= 4 or it.get('is_company'):
+            prog_tier.append(it)
+        else:
+            drop_count += 1
 
-    if use_deepseek:
-        print(f"\n🤖 DeepSeek AI 分析（主力）...")
-        for i in range(0, len(filtered), 8):
-            batch = filtered[i:i+8]
-            results = analyze_events_deepseek(batch)
-            if results is None:
-                # DeepSeek 批次失败 → 尝试豆包兜底
-                print(f"  批次 {(i//8)+1} DeepSeek 失败，尝试豆包降级...")
-                if not use_doubao_fallback:
-                    use_doubao_fallback = configure_doubao()
-                if use_doubao_fallback:
-                    results = analyze_events_doubao(batch)
+    print(f"    AI深度分析：{len(ai_tier)} 条 | 程序生成：{len(prog_tier)} 条 | 丢弃：{drop_count} 条")
+
+    # 程序生成（中分事件 + 低分公司事件，零API成本）
+    today_events = [build_event(item) for item in prog_tier]
+
+    # AI深度分析（高分/强信号事件）
+    if ai_tier:
+        fill_event_images(ai_tier)
+        use_deepseek = configure_deepseek()
+        deepseek_dead = not use_deepseek  # 没有API Key直接跳过
+        use_doubao = False
+
+        for i in range(0, len(ai_tier), 8):
+            batch = ai_tier[i:i+8]
+            results = None
+            batch_idx = (i // 8) + 1
+            total_batches = (len(ai_tier) + 7) // 8
+
+            # 尝试 DeepSeek（如果之前没失败过）
+            if not deepseek_dead:
+                results = analyze_events_deepseek(batch)
                 if results is None:
-                    print(f"  批次 {(i//8)+1} 豆包也失败，跳过（程序生成reason）...")
-                    for item in batch:
-                        today_events.append(build_event(item))
+                    print(f"  批次 {batch_idx}/{total_batches} DeepSeek 失败→降级...")
+                    deepseek_dead = True
                 else:
-                    for item in batch:
-                        r = next((x for x in results if x.get('url') == item['url']), {})
-                        today_events.append(build_event(item, r))
-            else:
+                    print(f"  批次 {batch_idx}/{total_batches} DeepSeek ✅")
+
+            # 豆包降级
+            if results is None:
+                if not use_doubao:
+                    use_doubao = configure_doubao()
+                if use_doubao:
+                    results = analyze_events_doubao(batch)
+                    if results:
+                        print(f"  批次 {batch_idx}/{total_batches} 豆包 ✅")
+                    else:
+                        print(f"  批次 {batch_idx}/{total_batches} 豆包失败，程序生成")
+
+            # 构建事件（有AI结果则合并，否则程序生成）
+            if results:
                 for item in batch:
                     r = next((x for x in results if x.get('url') == item['url']), {})
                     today_events.append(build_event(item, r))
-            print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
-            time.sleep(0.5)
-    elif configure_doubao():
-        # DeepSeek 未配置，降级使用豆包
-        print(f"\n🤖 豆包 AI 分析（降级）...")
-        for i in range(0, len(filtered), 8):
-            batch = filtered[i:i+8]
-            results = analyze_events_doubao(batch)
-            if results is None:
-                # 批次失败 → 逐条兜底
-                print(f"  批次 {(i//8)+1} 批次API失败，跳过（程序生成reason）...")
+            else:
                 for item in batch:
                     today_events.append(build_event(item))
-            else:
-                for item in batch:
-                    r = next((x for x in results if x.get('url') == item['url']), {})
-                    today_events.append(build_event(item, r))
-            print(f"  批次 {(i//8)+1}/{(len(filtered)+7)//8} 完成（{len(batch)}条）")
             time.sleep(0.5)
-    else:
-        # 都未配置，使用程序生成reason
-        for item in filtered:
-            today_events.append(build_event(item))
 
     # 按文章实际发布日期分组（而非脚本运行时间）
     # 同一批次抓到的文章可能有不同的发布日期
