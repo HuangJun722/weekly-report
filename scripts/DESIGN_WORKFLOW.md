@@ -20,7 +20,7 @@
 cd C:\Users\16120\Documents\claude-workspace\weekly-report-repo
 
 # 生成本地预览文件（不覆盖 index.html）
-python scripts/generate_html.py --preview
+py -3 scripts/generate_html.py --preview
 
 # 启动本地服务器（另一个终端）
 python -m http.server 8000 --directory docs
@@ -44,9 +44,10 @@ git push
 
 GitHub Actions 会自动：
 1. 拉取最新代码
-2. 运行 `generate_html.py --force`
-3. 从 `template.html` 重新生成 `index.html`
-4. 推送到 GitHub Pages
+2. 安装 Python 依赖
+3. 根据变更内容判断：改 `fetch_news.py` 或首次推送跑全量（采集+AI分析+HTML生成），仅改模板跑 html-only
+4. 从 `template.html` 重新生成 `index.html`
+5. 推送到 GitHub Pages
 
 ## 紧急回滚
 

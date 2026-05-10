@@ -70,13 +70,13 @@ python scripts/generate_html.py --force
 |------|----------|------|
 | TechCrunch | 全球 | 创业与科技新闻（含 VC 分类） |
 | Tech.eu | 欧洲 | 欧洲科技媒体，融资报道丰富 |
-| Sifted | 欧洲 | 欧洲科技创业媒体 |
-| EU-Startups | 欧洲 | 欧洲创业公司融资 |
+| The Next Web | 欧洲 | 欧洲科技新闻 |
+| TechWire Asia | 亚太 | 亚太科技新闻 |
 | Tech in Asia | 亚太 | 亚洲科技与创业新闻 |
-| DealStreetAsia | 亚太 | 亚太融资与并购 |
-| e27 | 亚太 | 东南亚科技生态 |
 | WAMDA | 中东 | 中东北非创业生态 |
+| MENAbytes | 中东 | 中东创业新闻 |
 | TechCabal | 非洲 | 非洲科技与创业 |
+| Disrupt Africa | 非洲 | 非洲创业融资（RSS 已恢复） |
 | Techpoint | 非洲 | 非洲科技媒体 |
 | Ventureburn | 非洲 | 非洲创业融资 |
 | LAVCA | 拉美 | 拉丁美洲创投与私募 |
@@ -86,7 +86,7 @@ python scripts/generate_html.py --force
 
 | 信源 | 覆盖区域 | 说明 |
 |------|----------|------|
-| Disrupt Africa | 非洲 | RSS 已废弃，改用 HTML 采集 |
+| DealStreetAsia | 亚太 | RSS 停用（Temporarily Disabled），JS SPA 降级成功率低 |
 
 ---
 
@@ -109,7 +109,7 @@ weekly-report/
 ├── .github/
 │   └── workflows/update.yml      # 自动更新工作流（每天北京时间 10:00）
 ├── data/
-│   └── events.json               # 事件数据（保留近 7 天）
+│   └── events.json               # 事件数据（保留近 15 天）
 ├── scripts/
 │   ├── fetch_news.py             # 爬取 + AI 分析
 │   ├── generate_html.py          # 生成 HTML
@@ -133,6 +133,7 @@ weekly-report/
 - **趋势主题分组**：事件不再按类型分类，而是按 AI 分析的趋势主题（如"中东FinTech赛道升温"）聚合
 - **今日判断区**：顶部展示 AI 每日趋势判断 + 3个关键信号卡片
 - **固定顶栏**：搜索和筛选始终可见
+- **事件图片**：左侧 100px×70px 缩略图（RSS media_content → og:image 两级兜底）
 - **事件标签**：资金流向 / 合作机会 / 警示信号 / 趋势信号 / 中资出海
 - **区域标签**：欧洲 / 亚太 / 中东 / 非洲 / 拉美
 - **响应式**：移动端单栏布局

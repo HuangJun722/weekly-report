@@ -1008,7 +1008,7 @@ def analyze_events_doubao(items):
 
     for attempt in range(3):  # 最多重试3次
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=30)  # 30s timeout，快速失败
+            resp = requests.post(url, headers=headers, json=payload, timeout=60)  # 60s 超时（GHA 网络较慢）
             if resp.status_code == 429:
                 wait = (attempt + 1) * 10
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
@@ -1308,6 +1308,7 @@ def main():
         for item in filtered:
             item['is_company'] = True
             item['company_name'] = cfg['name']
+            item['source'] = 'Google News'
         company_raw.extend(filtered)
         time.sleep(0.5)  # 避免请求过快
 

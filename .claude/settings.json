@@ -11,7 +11,18 @@
       "Glob",
       "Grep",
       "Bash(python scripts/*.py)",
-      "Bash(git *)"
+      "Bash(git status)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "Bash(git checkout *)",
+      "Bash(git remote *)",
+      "Bash(git config *)"
     ],
     "deny": [
       "Bash(git push --force)"

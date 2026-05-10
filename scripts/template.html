@@ -402,6 +402,7 @@ body {
           <span class="tag">{{ ev.company_name }}</span>
           {% endif %}
         </div>
+        <h4 class="daily-event-title"><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
         {% if ev.reason %}
         <p class="daily-event-reason">{{ ev.reason }}</p>
         {% endif %}

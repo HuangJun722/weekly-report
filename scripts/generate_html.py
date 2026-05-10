@@ -584,7 +584,11 @@ def build_trend_groups(events):
     """将事件按趋势主题分组，如果没有 trend_topic 则按 insight_label 分组"""
     groups = {}
     for e in events:
-        topic = e.get('trend_topic') or e.get('insight_label', '其他')
+        topic = e.get('trend_topic')
+        if not topic:
+            region = e.get('region', '')
+            label = e.get('insight_label', '其他')
+            topic = f"{label} — {region}" if region else label
         groups.setdefault(topic, []).append(e)
     result = [{'topic': k, 'events': v} for k, v in groups.items()]
     result.sort(key=lambda x: len(x['events']), reverse=True)
