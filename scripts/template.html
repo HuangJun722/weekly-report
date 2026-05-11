@@ -20,6 +20,7 @@ body {
 
 /* Header */
 .header {
+  position: relative;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #fff;
   padding: 28px 24px;
@@ -29,6 +30,14 @@ body {
 }
 .header h1 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
 .header p { margin: 4px 0 0; font-size: 13px; opacity: 0.8; }
+.theme-toggle {
+  position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 999px; padding: 8px; cursor: pointer; color: #fff; line-height: 0;
+  transition: all 0.2s;
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); transform: translateY(-50%) scale(1.1); }
+.theme-toggle svg { display: block; }
 
 /* Topbar Controls (search + filter + meta) */
 .topbar {
@@ -300,6 +309,73 @@ body {
   .daily-vol { font-size: 18px; }
 }
 
+/* ── Dark Mode ── */
+html { transition: background 0.3s; }
+[data-theme="dark"] body { background: #0a0a16; color: #d0d0e0; }
+[data-theme="dark"] .search-field { background: #1a1a30; border-color: #3a3a58; }
+[data-theme="dark"] .search-field input { color: #d0d0e0; }
+[data-theme="dark"] .search-field input::placeholder { color: #666680; }
+[data-theme="dark"] .filter-btn { background: #1a1a30; border-color: #3a3a58; color: #8888a8; }
+[data-theme="dark"] .filter-btn:hover { border-color: #6b5fc0; color: #b0a8e0; }
+[data-theme="dark"] .filter-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
+[data-theme="dark"] .card { background: #18182e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+[data-theme="dark"] .card-header { border-bottom-color: #2a2a48; color: #b0a8e0; }
+[data-theme="dark"] .daily-event { background: #18182e; border-color: #2a2a48; }
+[data-theme="dark"] .daily-event:hover { border-color: #3a3a68; box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+[data-theme="dark"] .daily-event-title a { color: #d0d0e0; }
+[data-theme="dark"] .daily-event-title a:hover { color: #8b7fd0; }
+[data-theme="dark"] .daily-event-reason { color: #8888a8; }
+[data-theme="dark"] .daily-event-img { background: #222240; }
+[data-theme="dark"] .tag { background: #222240; color: #8888a8; }
+[data-theme="dark"] .impact-tag { background: #1a2240; color: #6a8fc0; }
+[data-theme="dark"] .tab-btn { background: #1a1a30; border-color: #3a3a58; color: #8888a8; }
+[data-theme="dark"] .tab-btn:hover { border-color: #6b5fc0; color: #b0a8e0; }
+[data-theme="dark"] .tab-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
+[data-theme="dark"] .judgment-area { background: #12122a; border-color: #2a2a48; }
+[data-theme="dark"] .judgment-quote { color: #c8c8d8; background: rgba(0,0,0,0.3); border-left-color: #6b5fc0; }
+[data-theme="dark"] .signal-card { background: #18182e; border-color: #2a2a48; }
+[data-theme="dark"] .signal-card:hover { border-color: #6b5fc0; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+[data-theme="dark"] .signal-region { color: #8b7fd0; }
+[data-theme="dark"] .signal-label { background: #222240; color: #8888a8; }
+[data-theme="dark"] .signal-title { color: #d0d0e0; }
+[data-theme="dark"] .signal-reason { color: #8888a8; }
+[data-theme="dark"] .daily-vol { color: #d0d0e0; }
+[data-theme="dark"] .daily-vol small { color: #8888a8; }
+[data-theme="dark"] .daily-cn-date { color: #8888a8; }
+[data-theme="dark"] .daily-subtitle { color: #8888a8; }
+[data-theme="dark"] .daily-section-header { border-bottom-color: #2a2a48; }
+[data-theme="dark"] .daily-section-label { color: #b0a8e0; }
+[data-theme="dark"] .daily-section-count { color: #8888a8; }
+[data-theme="dark"] .daily-bottom { border-top-color: #2a2a48; }
+[data-theme="dark"] .daily-stats { color: #8888a8; }
+[data-theme="dark"] .daily-stat-num { color: #d0d0e0; }
+[data-theme="dark"] .daily-nav a { color: #8888a8; border-color: #3a3a58; }
+[data-theme="dark"] .daily-nav a:hover { border-color: #6b5fc0; color: #b0a8e0; }
+[data-theme="dark"] .company-nav { background: #18182e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+[data-theme="dark"] .company-nav-title { color: #b0a8e0; }
+[data-theme="dark"] .company-nav-btn { background: #1a1a30; border-color: #3a3a58; color: #8888a8; }
+[data-theme="dark"] .company-nav-btn:hover { border-color: #6b5fc0; color: #b0a8e0; }
+[data-theme="dark"] .company-nav-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
+[data-theme="dark"] .company-nav-btn.empty { opacity: 0.3; }
+[data-theme="dark"] .company-nav-region-name { color: #8888a8; }
+[data-theme="dark"] .related-link { background: #222240; color: #8b7fd0; }
+[data-theme="dark"] .related-link:hover { background: #2a2a50; }
+[data-theme="dark"] .related-label { color: #8888a8; }
+[data-theme="dark"] .related-more { background: #222240; color: #8888a8; }
+[data-theme="dark"] .empty-state { color: #8888a8; }
+[data-theme="dark"] .footer-note { color: #666680; border-top-color: #2a2a48; }
+[data-theme="dark"] .datestamp { background: #2a2a10; color: #c0a040; }
+[data-theme="dark"] .date-toggle:hover { background: #1a1a30; }
+[data-theme="dark"] .date-toggle .toggle-icon { color: #8888a8; }
+/* Region badges in dark mode */
+[data-theme="dark"] .region-badge[data-region="拉美"] { background: #0a1a30; color: #5a9fd0; }
+[data-theme="dark"] .region-badge[data-region="中东"] { background: #2a1a08; color: #d08030; }
+[data-theme="dark"] .region-badge[data-region="欧洲"] { background: #0a1a10; color: #3a9a50; }
+[data-theme="dark"] .region-badge[data-region="非洲"] { background: #2a0a10; color: #c04040; }
+[data-theme="dark"] .region-badge[data-region="亚太"] { background: #1a0a30; color: #7a4ac0; }
+[data-theme="dark"] .region-badge[data-region="中资"] { background: #2a1a00; color: #d09020; }
+[data-theme="dark"] .company-item { border-left-color: #7a4ac0 !important; }
+
 </style>
 </head>
 <body>
@@ -309,6 +385,14 @@ body {
   <header class="header">
     <h1>全球互联网百晓生</h1>
     <p>除中美之外全球互联网动态</p>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换暗色模式" title="切换暗色模式">
+      <svg id="moonIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg id="sunIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+    </button>
   </header>
 
   {# ===== Topbar Controls ===== #}
@@ -387,7 +471,9 @@ body {
       </div>
 
       {% for ev in group.events %}
-      <div class="daily-event">
+      <div class="daily-event" data-filterable data-region="{{ ev.region }}"
+        data-company="{{ ev.company_name if ev.is_company else '' }}"
+        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
         {% if ev.image_url %}
         <div class="daily-event-img"><img src="{{ ev.image_url }}" alt="" loading="lazy"></div>
         {% endif %}
@@ -433,9 +519,9 @@ body {
         <span class="daily-stat"><span class="daily-stat-num">{{ weekly.earnings }}</span> 财报</span>
       </div>
       <div class="daily-nav">
-        <a class="nav-disabled">« 前一日</a>
+        <a id="prevDay" class="nav-disabled" onclick="navigateDay(-1)" style="cursor:pointer">« 前一日</a>
         <a onclick="switchTab('all')">查看全部</a>
-        <a class="nav-disabled">后一日 »</a>
+        <a id="nextDay" class="nav-disabled" onclick="navigateDay(1)" style="cursor:pointer">后一日 »</a>
       </div>
     </div>
 
@@ -639,6 +725,116 @@ function applyFilters(){
   var feedList = document.getElementById('feed-list');
   if (noResults) noResults.style.display = (visible === 0) ? 'block' : 'none';
 }
+
+// ── Date Navigation（前一日/后一日翻页） ──
+var availableDates = {{ available_dates_json }};
+var datePanels = {{ date_panels_json }};
+var currentDateIndex = availableDates.indexOf('{{ main_date }}');
+
+function escHtml(s) {
+  if (!s) return '';
+  var d = document.createElement('div');
+  d.textContent = s; return d.innerHTML;
+}
+
+function eventCardHtml(ev) {
+  var img = ev.image_url
+    ? '<div class="daily-event-img"><img src="' + ev.image_url + '" alt="" loading="lazy"></div>' : '';
+  var reason = ev.reason ? '<p class="daily-event-reason">' + escHtml(ev.reason) + '</p>' : '';
+  var co = (ev.is_company && ev.company_name) ? '<span class="tag">' + escHtml(ev.company_name) + '</span>' : '';
+  var label = ev.insight_label ? '<span class="tag">' + escHtml(ev.insight_label) + '</span>' : '';
+  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.company_name||'');
+  return '<div class="daily-event" data-filterable data-region="' + escHtml(ev.region) + '"' +
+    ' data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
+    img +
+    '<div class="daily-event-body"><div class="daily-event-meta">' +
+    '<span class="region-badge" data-region="' + escHtml(ev.region) + '">' + escHtml(ev.region) + '</span>' +
+    label +
+    '<span class="tag">' + escHtml(ev.source) + '</span>' + co +
+    '</div><h4 class="daily-event-title"><a href="' + ev.url + '" target="_blank">' + escHtml(ev.title) + '</a></h4>' +
+    reason +
+    '</div></div>';
+}
+
+function navigateDay(dir) {
+  var ni = currentDateIndex + dir;
+  if (ni < 0 || ni >= availableDates.length) return;
+  var date = availableDates[ni];
+  var panel = datePanels[date];
+  if (!panel) return;
+  currentDateIndex = ni;
+
+  // 1. 今日判断
+  var q = document.querySelector('.judgment-quote');
+  if (q) q.textContent = panel.judgment || '';
+  var se = document.querySelector('.judgment-signals');
+  if (se && panel.top3) {
+    se.innerHTML = panel.top3.map(function(ev) {
+      return '<a href="' + ev.url + '" target="_blank" class="signal-card">' +
+        '<div class="signal-top"><span class="signal-region">' + escHtml(ev.region) + '</span>' +
+        '<span class="signal-label">' + escHtml(ev.insight_label) + '</span></div>' +
+        '<div class="signal-title">' + escHtml(ev.title) + '</div>' +
+        (ev.reason ? '<div class="signal-reason">' + escHtml(ev.reason) + '</div>' : '') +
+        '</a>';
+    }).join('');
+  }
+
+  // 2. VOL header
+  var vl = document.querySelector('.daily-vol');
+  if (vl) vl.innerHTML = panel.vol_label + ' <small>· ' + panel.total_stories + ' STORIES · 全球互联网百晓生</small>';
+  var cn = document.querySelector('.daily-cn-date');
+  if (cn) cn.textContent = panel.cn_date;
+  var hl = document.querySelector('.daily-subtitle');
+  if (hl) hl.textContent = panel.headline || '';
+
+  // 3. 趋势分组
+  var tab = document.getElementById('tab-today');
+  var vh = tab.querySelector('.daily-vol-header');
+  tab.querySelectorAll('.daily-section').forEach(function(s) { s.remove(); });
+
+  var after = vh;
+  panel.trend_groups.forEach(function(g) {
+    var sec = document.createElement('div');
+    sec.className = 'daily-section';
+    sec.innerHTML = '<div class="daily-section-header"><span class="daily-section-label">' +
+      escHtml(g.topic) + '</span><span class="daily-section-count">' + g.events.length + ' 条</span></div>';
+    g.events.forEach(function(ev) { sec.innerHTML += eventCardHtml(ev); });
+    tab.insertBefore(sec, after.nextSibling);
+    after = sec;
+  });
+
+  // 4. 底部统计
+  var stats = document.querySelectorAll('.daily-stat');
+  if (stats[0]) stats[0].querySelector('.daily-stat-num').textContent = panel.total_stories;
+  if (stats[1]) stats[1].querySelector('.daily-stat-num').textContent = panel.regions || 0;
+  if (stats[2]) stats[2].querySelector('.daily-stat-num').textContent = panel.funding || 0;
+  if (stats[3]) stats[3].querySelector('.daily-stat-num').textContent = panel.ma || 0;
+  if (stats[4]) stats[4].querySelector('.daily-stat-num').textContent = panel.earnings || 0;
+
+  // 5. 翻页按钮状态
+  document.getElementById('prevDay').className = ni <= 0 ? 'nav-disabled' : '';
+  document.getElementById('nextDay').className = ni >= availableDates.length - 1 ? 'nav-disabled' : '';
+}
+
+// ── Theme Toggle ──
+function toggleTheme() {
+  var html = document.documentElement;
+  var isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  updateThemeIcons(!isDark);
+}
+function updateThemeIcons(dark) {
+  var moon = document.getElementById('moonIcon');
+  var sun = document.getElementById('sunIcon');
+  if (moon) moon.style.display = dark ? 'none' : '';
+  if (sun) sun.style.display = dark ? '' : 'none';
+}
+(function() {
+  var saved = localStorage.getItem('theme');
+  var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) { document.documentElement.setAttribute('data-theme', 'dark'); updateThemeIcons(true); }
+})();
 </script>
 </body>
 </html>

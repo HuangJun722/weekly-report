@@ -612,6 +612,29 @@ def build_trend_groups(events):
     result.sort(key=lambda x: len(x['events']), reverse=True)
     return result
 
+
+def build_date_panel(date_str, day_events, all_events):
+    """预计算某日期的今日面板数据（趋势分组 + 判断 + 统计），供 JS 翻页切换"""
+    signals = get_signal_events(all_events)
+    weekly = build_weekly_summary(day_events, signals, day_events, all_events)
+    trend_groups = build_trend_groups(day_events)
+
+    dt = datetime.strptime(date_str, '%Y-%m-%d')
+    return {
+        'trend_groups': trend_groups,
+        'judgment': weekly.get('summary', ''),
+        'top3': weekly.get('top3', []),
+        'total_stories': len(day_events),
+        'vol_label': f"VOL.{date_str}",
+        'cn_date': f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}",
+        'headline': weekly.get('headline', ''),
+        'funding': weekly.get('funding', 0),
+        'ma': weekly.get('ma', 0),
+        'earnings': weekly.get('earnings', 0),
+        'regions': weekly.get('regions', 0),
+    }
+
+
 def group_events_by_date(events):
     """将事件按日期分组，按时间倒序"""
     groups = {}
@@ -737,6 +760,19 @@ def generate_html(force=False, preview_mode=False):
     # 全部事件按日期分组
     date_grouped_events = group_events_by_date(all_events_for_list)
 
+    # 预计算各日期面板数据（供 JS 翻页切换）
+    date_panels = {}
+    available_dates = []
+    for d in sorted_dates:
+        if d < cutoff:
+            continue
+        day_evs = [e for e in all_events_for_list if (e.get('date') or '')[:10] == d]
+        if not day_evs:
+            continue
+        available_dates.append(d)
+        date_panels[d] = build_date_panel(d, day_evs, events)
+    date_panels_json = json.dumps(date_panels, ensure_ascii=False)
+
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
         weekly=weekly,
@@ -754,6 +790,8 @@ def generate_html(force=False, preview_mode=False):
         total_stories=total_stories,
         vol_label=vol_label,
         cn_date=cn_date,
+        date_panels_json=date_panels_json,
+        available_dates_json=json.dumps(available_dates),
     )
 
     os.makedirs('docs', exist_ok=True)
