@@ -5,7 +5,9 @@
 ## 核心架构
 
 - **数据采集**：`scripts/fetch_news.py` — RSS 并行采集 + HTML 降级 + 27家公司监控
-- **AI 分析管线**：DeepSeek API（主力）→ 豆包 API（降级）→ 程序降级
+- **AI 分析管线**：GHA 直走豆包（跳过结构性不可达的 DeepSeek）；本地 DeepSeek 优先 → 豆包降级 → 程序降级
+- **评分前置分流**：`_calc_score()` 评分后，高分（≥7 或 funding/ma/earnings）走 AI，中分（≥4 或 is_company）程序生成，低分（<4）丢弃
+- **P0 Agent**：`build_daily_ai_summary()` 生成「今日判断」AI 趋势分析 → `data/summary.json` → HTML 读取；`rewrite_titles_for_display()` 改写程序层泛化描述；`ai_quality_judge()` 过滤低价值 other 事件
 - **API Key 加密**：`scripts/decrypt_key.py` — PBKDF2 + Fernet 解密本地加密的 API Key
 - **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
 - **部署**：GitHub Actions + GitHub Pages（`docs/` 目录）

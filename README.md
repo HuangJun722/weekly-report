@@ -93,7 +93,7 @@ python scripts/generate_html.py --force
 ## 技术栈
 
 - **数据采集**：Python + aiohttp + BeautifulSoup（异步 RSS + HTML 降级采集）
-- **AI 分析**：DeepSeek API（主力）+ 豆包 API（降级备用）
+- **AI 分析**：评分前置分流 → DeepSeek API（本地主力，GHA 不可达）+ 豆包 API（GHA 实际主力）+ 程序降级
 - **API Key 安全**：PBKDF2 + Fernet 加密存储
 - **页面生成**：Jinja2 模板
 - **部署**：GitHub Actions + GitHub Pages

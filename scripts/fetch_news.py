@@ -1102,6 +1102,274 @@ def analyze_single_event_doubao(item):
     except Exception:
         return None
 
+# ============================================================
+# P0 Agent：AI 标题改写 — 对程序层泛化事件用豆包改写描述
+# ============================================================
+
+def rewrite_titles_for_display(events):
+    """
+    对程序层中仍是泛化描述的事件，调用豆包改写成完整中文描述。
+    轻量级 prompt（~50 tokens），25 条/批，timeout=20s。
+    失败时静默降级，保持原描述。
+    """
+    generic_patterns = ['科技动态', '有新动态', '战略调整', '融资事件', '并购/收购', '财报披露', '金额待确认', '完成融资', '达成并购', '战略新动向', '战略动态']
+    to_rewrite = []
+    for e in events:
+        reason = e.get('reason', '')
+        if any(p in reason for p in generic_patterns):
+            to_rewrite.append(e)
+
+    if not to_rewrite:
+        return
+
+    api_key = os.environ.get('DOUBAO_API_KEY')
+    if not api_key:
+        return
+
+    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+    model = os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b')
+    rewrote = 0
+
+    for i in range(0, len(to_rewrite), 25):
+        batch = to_rewrite[i:i+25]
+        items = [{'url': e['url'], 'title': e['title'], 'region': e.get('region', ''), 'type': e.get('event_types', ['other'])[0]} for e in batch]
+
+        prompt = f"""为以下科技新闻事件各写一句简短的中文描述（20字以内），格式为"[地区][公司名][具体动作]"。
+要求：必须从标题提取公司名/产品名，描述具体做了什么。禁止出现"融资""并购""财报"等泛化词。
+只返回JSON数组，每个元素包含"url"和"reason"字段。
+
+{json.dumps(items, ensure_ascii=False)}
+
+返回JSON："""
+
+        payload = {
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 1024,
+            "temperature": 0.1,
+        }
+        headers = {
+            "Authorization": "Bearer " + api_key,
+            "Content-Type": "application/json"
+        }
+
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
+            if resp.status_code != 200:
+                continue
+            text = resp.json()['choices'][0]['message']['content']
+            for m in ['```json', '```']:
+                if m in text:
+                    parts = text.split(m)
+                    for p in parts[1:]:
+                        text = p.strip()
+                        if text.endswith('```'):
+                            text = text[:-3].strip()
+                        break
+                    break
+            results = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+            if not isinstance(results, list):
+                continue
+            for r in results:
+                url = r.get('url', '')
+                new_reason = r.get('reason', '')
+                if url and new_reason and len(new_reason) >= 8:
+                    for e in batch:
+                        if e['url'] == url:
+                            e['reason'] = new_reason
+                            rewrote += 1
+                            break
+        except Exception:
+            continue
+
+    if rewrote:
+        print(f"  ✏️  AI改写标题：{rewrote}/{len(to_rewrite)} 条")
+
+
+# ============================================================
+# P0 Agent：每日AI趋势分析 — 基于今日信号事件生成专业判断
+# ============================================================
+
+def build_daily_ai_summary(today_events):
+    """
+    基于今日信号事件，调用豆包生成 2-4 句专业情报趋势分析。
+    保存到 data/summary.json，供 generate_html.py 读取后覆盖模板摘要。
+    失败降级到模板生成（无影响）。
+    """
+    # 只取信号事件（非 other），最多 15 条
+    signal = [e for e in today_events if e.get('event_types', ['other'])[0] != 'other']
+    if not signal:
+        return None
+
+    signal = signal[:15]
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    api_key = os.environ.get('DOUBAO_API_KEY')
+    if not api_key:
+        return None
+
+    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+    model = os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b')
+
+    news_summary = []
+    for e in signal:
+        news_summary.append({
+            'title': e.get('title', ''),
+            'region': e.get('region', ''),
+            'type': e.get('event_types', ['other'])[0],
+            'reason': e.get('reason', '')[:80],
+        })
+
+    prompt = f"""你是全球互联网科技情报分析师，受众是ICT从业者。今天是{today}。
+
+基于以下今日非中美地区科技事件，写一段2-4句的专业情报趋势分析。要求：
+1. 总结今日最值得关注的趋势（资金流向哪个赛道、哪个地区最活跃、有什么结构性变化）
+2. 如果跨区域/跨赛道有关联，指出交叉分析
+3. 给出一个明确的判断结论
+4. 语气专业、简洁、有洞察力，不罗列数据
+
+事件列表：
+{json.dumps(news_summary, ensure_ascii=False, indent=2)}
+
+趋势分析（2-4句中文，不要超过120字）："""
+
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 512,
+        "temperature": 0.3,
+    }
+    headers = {
+        "Authorization": "Bearer " + api_key,
+        "Content-Type": "application/json"
+    }
+
+    try:
+        resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
+        if resp.status_code != 200:
+            print(f"  ⚠️  趋势分析API返回 {resp.status_code}")
+            return None
+        data = resp.json()
+        text = data['choices'][0]['message']['content'].strip().strip('"').strip()
+        if len(text) < 20:
+            print(f"  ⚠️  趋势分析结果过短: {text}")
+            return None
+
+        # 保存到 data/summary.json
+        os.makedirs('data', exist_ok=True)
+        summary_data = {}
+        try:
+            with open('data/summary.json', 'r', encoding='utf-8') as f:
+                summary_data = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+        summary_data[today] = text
+        with open('data/summary.json', 'w', encoding='utf-8') as f:
+            json.dump(summary_data, f, ensure_ascii=False, indent=2)
+
+        print(f"  📊 AI趋势分析已生成（{len(text)}字）: {text[:60]}...")
+        return text
+    except Exception as e:
+        print(f"  ⚠️  趋势分析生成失败: {type(e).__name__}")
+        return None
+
+
+# ============================================================
+# P0 Agent：情报价值评分 — AI过滤低价值 other 事件
+# ============================================================
+
+def ai_quality_judge(events):
+    """
+    对 other 类事件进行 AI 情报价值评分（1-5分）。
+    低分事件（≤2）将被丢弃。失败时降级：保留全部。
+    30 条/批，15s 超时。
+    """
+    other_events = [e for e in events if e['event_types'][0] == 'other' and not e.get('is_company')]
+    if not other_events:
+        return events
+
+    api_key = os.environ.get('DOUBAO_API_KEY')
+    if not api_key:
+        return events
+
+    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+    model = os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b')
+    kept_urls = set()
+    kept_count = 0
+    total_count = len(other_events)
+
+    for i in range(0, len(other_events), 30):
+        batch = other_events[i:i+30]
+        items = [{'url': e['url'], 'title': e['title'], 'region': e.get('region', ''), 'source': e.get('source', '')} for e in batch]
+
+        prompt = f"""评估以下科技新闻的情报价值（1-5分）。
+5分 = 涉及重大融资/并购/独家合作，直接关系到商业机会或竞争格局
+4分 = 重要战略动态，值得关注
+3分 = 一般行业动态，有参考价值
+2分 = 常规新闻，情报价值有限
+1分 = 无情报价值
+
+只返回JSON数组，每个元素包含"url"和"score"字段。
+
+{json.dumps(items, ensure_ascii=False)}
+
+返回JSON："""
+
+        payload = {
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 1024,
+            "temperature": 0.1,
+        }
+        headers = {
+            "Authorization": "Bearer " + api_key,
+            "Content-Type": "application/json"
+        }
+
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 15))
+            if resp.status_code != 200:
+                # 失败时保留本批次所有事件
+                for e in batch:
+                    kept_urls.add(e.get('url', ''))
+                continue
+            text = resp.json()['choices'][0]['message']['content']
+            for m in ['```json', '```']:
+                if m in text:
+                    parts = text.split(m)
+                    for p in parts[1:]:
+                        text = p.strip()
+                        if text.endswith('```'):
+                            text = text[:-3].strip()
+                        break
+                    break
+            results = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+            if not isinstance(results, list):
+                for e in batch:
+                    kept_urls.add(e.get('url', ''))
+                continue
+
+            scores = {}
+            for r in results:
+                if 'url' in r and 'score' in r:
+                    scores[r['url']] = int(r['score'])
+            for e in batch:
+                score = scores.get(e.get('url', ''), 3)
+                if score >= 3:
+                    kept_urls.add(e.get('url', ''))
+                    kept_count += 1
+        except Exception:
+            for e in batch:
+                kept_urls.add(e.get('url', ''))
+
+    # 过滤掉未保留的 other 事件
+    filtered = [e for e in events if e['event_types'][0] != 'other' or e.get('is_company') or e.get('url', '') in kept_urls]
+    dropped = total_count - kept_count
+    if dropped > 0:
+        print(f"  🎯 AI情报评分：保留 {kept_count}/{total_count} 条 other 事件（丢弃 {dropped} 条低价值）")
+    return filtered
+
+
 def _calc_score(item):
     """程序评分：基于金额、事件类型、区域权重计算确定性分数"""
     title = item.get('title', '')
@@ -1247,6 +1515,9 @@ def fill_event_images(events):
 
 def main():
     today = datetime.now().strftime('%Y-%m-%d')
+    ON_GHA = os.environ.get('GITHUB_ACTIONS') == 'true'
+    if ON_GHA:
+        print("  🤖 GHA 环境检测：跳过 DeepSeek（结构性不可达），专用豆包")
     print(f"\n🌍 全球互联网动态情报站")
     print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M')} | 目标：融资/并购/财报/战略\n")
 
@@ -1341,6 +1612,11 @@ def main():
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
 
+    # AI 情报价值评分：对 other 类事件豆包评分，过滤低价值
+    if any(it['event_types'][0] == 'other' and not it.get('is_company') for it in filtered):
+        filtered = ai_quality_judge(filtered)
+        print(f"   AI评分过滤后：{len(filtered)} 条")
+
     # 评分前置：每个事件程序评分，分层决定是否送 AI
     print(f"\n  📊 评分前置，分层处理...")
     for it in filtered:
@@ -1367,8 +1643,12 @@ def main():
     # AI深度分析（高分/强信号事件）
     if ai_tier:
         fill_event_images(ai_tier)
-        use_deepseek = configure_deepseek()
-        deepseek_dead = not use_deepseek  # 没有API Key直接跳过
+        if ON_GHA:
+            # GHA runner在US-west，DeepSeek api.deepseek.com 结构性不可达
+            deepseek_dead = True
+        else:
+            use_deepseek = configure_deepseek()
+            deepseek_dead = not use_deepseek  # 没有API Key直接跳过
         use_doubao = False
 
         for i in range(0, len(ai_tier), 8):
@@ -1406,6 +1686,9 @@ def main():
                 for item in batch:
                     today_events.append(build_event(item))
             time.sleep(0.5)
+
+    # AI标题改写：对程序层中仍为泛化描述的事件用豆包改写
+    rewrite_titles_for_display(today_events)
 
     # 按文章实际发布日期分组（而非脚本运行时间）
     # 同一批次抓到的文章可能有不同的发布日期
@@ -1453,6 +1736,9 @@ def main():
     total = sum(len(v) for v in all_events.values())
     company_total = sum(1 for v in all_events.values() for e in v if e.get('is_company'))
     print(f"\n  共 {total} 条历史事件（公司 {company_total} 条），跨 {len(all_events)} 天）")
+
+    # P0 Agent：每日AI趋势分析（生成2-4句专业判断）
+    build_daily_ai_summary(today_events)
 
 if __name__ == '__main__':
     main()

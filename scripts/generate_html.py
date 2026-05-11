@@ -564,6 +564,20 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
 
     mp_events = mp_events[:7]
 
+    # ── P0 Agent：读取 AI 趋势分析，覆盖程序摘要 ──
+    try:
+        summary_path = 'data/summary.json'
+        if os.path.exists(summary_path):
+            with open(summary_path, 'r', encoding='utf-8') as sf:
+                ai_summaries = json.load(sf)
+            today_s = datetime.now().strftime('%Y-%m-%d')
+            if today_s in ai_summaries:
+                ai_text = ai_summaries[today_s].strip()
+                if len(ai_text) >= 20:
+                    summary = ai_text  # 用 AI 生成的趋势分析代替程序摘要
+    except Exception:
+        pass  # 降级：保留程序生成摘要
+
     return {
         'total_events': total,
         'total_signals': len(signals),
