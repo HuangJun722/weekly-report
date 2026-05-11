@@ -207,9 +207,9 @@ def _extract_subject(title):
         if kw in title_lower:
             # 从标题中提取原始大小写版本
             idx = title_lower.find(kw)
-            # 往回找到词边界
+            # 往回找到词边界（只吃字母不吃数字，避免 "000 MercadoLibre"）
             start = max(0, idx - 1)
-            while start > 0 and title[start-1].isalnum():
+            while start > 0 and title[start-1].isalpha():
                 start -= 1
             # 往后取词
             end = idx + len(kw)
@@ -252,9 +252,9 @@ def _extract_subject(title):
 
     return None
 
-def _build_reason(title, ev_type, region):
+def _build_reason(title, ev_type, region, company_name=None):
     """生成 fallback reason：必须包含当事人 + 事件 + 金额（从标题提取）"""
-    subject = _extract_subject(title)
+    subject = _extract_subject(title) or company_name
     r = region or ''
 
     # 金额提取
@@ -295,9 +295,14 @@ def _build_reason(title, ev_type, region):
         else:
             reason = f"{subject}有新动态"
     else:
-        # 没有任何信息时的最后兜底
-        if is_chinese:
-            # 中资出海公司，尝试找公司名
+        # 没有任何信息时的最后兜底：用标题前段代替泛化模板
+        # 取第一个句子（句号/问号/叹号前），最长 35 字
+        title_short = re.split(r'[.。!！?？]', title)[0].strip()
+        if len(title_short) > 35:
+            title_short = title_short[:35] + '…'
+        if len(title_short) >= 8:
+            reason = f"{r or '全球'}：{title_short}"
+        elif is_chinese:
             for kw in ['tiktok', 'shein', 'temu', 'bytedance', 'alibaba', 'tencent', 'ant', 'jd.com', 'kuaishou']:
                 if kw in title.lower():
                     reason = f"{kw.capitalize()}有新动态"
@@ -334,6 +339,11 @@ def enrich(event):
     existing_reason = event.get('reason', '')
     # 通用模板 reason 列表——这些是 AI 生成的烂 reason，必须重新生成
     GENERIC_REASONS = {
+        # 短模式（子串匹配 — 覆盖 "亚太科技公司财报披露" 等程序生成变体）
+        '科技动态', '财报披露', '融资事件', '战略动态', '并购/收购', '金额待确认',
+        '战略调整', '有新动态', '科技公司融资', '科技公司并购', '科技公司战略',
+        '科技行业动态', '的高估值',
+        # 完整短语保留兼容
         '中东科技公司融资事件，金额待确认',
         '中资科技动态', '亚太科技动态', '欧洲科技动态', '中东科技动态',
         '非洲科技动态', '拉美科技动态',
@@ -346,7 +356,7 @@ def enrich(event):
         '中资金融科技巨头战略布局，吸引资金流入，提升行业关注度',
         '亚太地区出行平台拓展外卖业务版图，加强本地服务能力',
     }
-    is_generic = existing_reason in GENERIC_REASONS
+    is_generic = any(p in existing_reason for p in GENERIC_REASONS)
     reason_ok = (existing_reason
                  and len(existing_reason) >= 10
                  and '⚠️' not in existing_reason
@@ -361,7 +371,7 @@ def enrich(event):
         pass  # 保留 AI 生成的 reason
     else:
         # 生成有信息量的 fallback：提取公司名 + 事件类型
-        event['reason'] = _build_reason(title, ev_type, region)
+        event['reason'] = _build_reason(title, ev_type, region, event.get('company_name'))
 
     event.setdefault('impact', event.get('impact_scope', '未知'))
     event.setdefault('insight_label', INSIGHT_LABEL_MAP.get(ev_type, '其他'))

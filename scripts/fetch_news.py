@@ -1156,6 +1156,7 @@ def rewrite_titles_for_display(events):
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
             if resp.status_code != 200:
+                print(f"  ⚠️ AI改写标题 HTTP {resp.status_code}，跳过批次 {i//25+1}")
                 continue
             text = resp.json()['choices'][0]['message']['content']
             for m in ['```json', '```']:
@@ -1169,6 +1170,7 @@ def rewrite_titles_for_display(events):
                     break
             results = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
             if not isinstance(results, list):
+                print(f"  ⚠️ AI改写标题返回非列表JSON，跳过批次 {i//25+1}")
                 continue
             for r in results:
                 url = r.get('url', '')
@@ -1179,7 +1181,8 @@ def rewrite_titles_for_display(events):
                             e['reason'] = new_reason
                             rewrote += 1
                             break
-        except Exception:
+        except Exception as exc:
+            print(f"  ⚠️ AI改写标题异常: {exc}, 跳过批次 {i//25+1}")
             continue
 
     if rewrote:
