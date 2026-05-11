@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Mon, 11 May 2026 13:26:45 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 11 May 2026 14:32:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,604 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Three of Nigeria&#8217;s biggest banks lost $1.56 million to fraud in 2025</title>
+		<link>https://techcabal.com/2026/05/11/three-of-nigerias-biggest-banks-lost-1-56-million-to-fraud-in-2025/</link>
+		
+		<dc:creator><![CDATA[Temitayo Jaiyeola]]></dc:creator>
+		<pubDate>Mon, 11 May 2026 13:42:17 +0000</pubDate>
+				<category><![CDATA[Follow the Money]]></category>
+		<category><![CDATA[Access]]></category>
+		<category><![CDATA[fraud]]></category>
+		<category><![CDATA[GTCO]]></category>
+		<category><![CDATA[UBA]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=187750</guid>
+
+					<description><![CDATA[Nigeria's biggest banks lost $1.56 million to fraud in 2025. While incidents fell, fraudsters are extracting more per attack as digital payments scale.]]></description>
+										<content:encoded><![CDATA[
+<p>Nigeria’s biggest banks are processing record volumes of digital payments, but this is also increasing their exposure to fraud.&nbsp;</p>
+
+
+
+<p><a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46923_ACCESS_HOLDINGS_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MAY_2026.pdf" target="_blank" rel="noreferrer noopener nofollow">Access Holdings Plc</a>,<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46482_GUARANTY_TRUST_HOLDING_COMPANY_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MARCH_2026.pdf" target="_blank" rel="noreferrer noopener nofollow"> Guaranty Trust Holding Company Plc</a> (GTCO),<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46757_UNITED_BANK_FOR_AFRICA_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_APRIL_2026.pdf" target="_blank" rel="noreferrer noopener nofollow"> and United Bank for Africa Plc</a> (UBA) lost a combined ₦2.13 billion ($1.56 million) to fraud and forgery incidents in 2025, according to an analysis of their audited financial statements.</p>
+
+
+
+<p>Most of the incidents were electronic, with the total number of fraud incidents declining by 15.03% in 2025. However, the amount extracted per successful attack increased, indicating that fraudsters are becoming more efficient at exploiting banks’ vulnerabilities.</p>
+
+
+
+<p>The three banks lost an average of ₦44,454 ($32.65) per fraud incident in 2025, up from ₦40,488 ($29.74) in the previous year.&nbsp;</p>
+
+
+
+<p>The amount linked to fraud incidents declined by 0.87% to ₦10.29 billion ($7.56 million).&nbsp;</p>
+
+
+
+<p>Only 20.66% of that amount became actual losses, suggesting the three banks were able to recover or block part of the stolen funds before settlement.</p>
+
+
+
+<p></p>
+
+
+
+<div id="tc-bank-breakdown" class="tc-container">
+  <style>
+    /* Mobile-First Base Styles */
+    .tc-container {
+      font-family: 'Open Sans', sans-serif;
+      background: #FFFFFF;
+      padding: 16px;
+      border-radius: 12px;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #151515;
+      border: 1px solid #E3E8EF;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .tc-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #EA2D2E;
+      margin: 0 0 8px 0;
+      line-height: 1.2;
+    }
+    .tc-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0 0 24px 0;
+      color: #333;
+    }
+    .tc-insight-box {
+      background: #F6F6F6;
+      border-left: 4px solid #24292F;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 24px;
+    }
+    .tc-bank-row {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed #E3E8EF;
+    }
+    .tc-bank-row:last-child {
+      border-bottom: none;
+      margin-bottom: 8px;
+    }
+    .tc-bank-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 8px;
+    }
+    .tc-bank-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #151515;
+      margin: 0;
+    }
+    .tc-bank-incidents {
+      font-size: 0.75rem;
+      color: #666;
+      background: #F6F6F6;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    /* Chart Styles */
+    .tc-chart-scale-wrapper {
+      width: 100%;
+      background: transparent;
+      margin-bottom: 8px;
+    }
+    .tc-chart-bar-container {
+      display: flex;
+      height: 28px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #E3E8EF;
+    }
+    .tc-bar-intercepted {
+      height: 100%;
+      background: #20C997;
+      transition: width 1s ease-out;
+    }
+    .tc-bar-lost {
+      height: 100%;
+      background: #EA2D2E;
+      transition: width 1s ease-out;
+    }
+    .tc-stats-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .tc-footer {
+      font-size: 0.75rem;
+      text-align: center;
+      margin-top: 16px;
+      color: #666;
+      line-height: 1.6;
+      border-top: 1px solid #E3E8EF;
+      padding-top: 16px;
+    }
+
+    /* Tablet/Desktop */
+    @media (min-width: 600px) {
+      .tc-container { padding: 32px; }
+      .tc-title { font-size: 1.75rem; }
+      .tc-desc { font-size: 1rem; }
+      .tc-bank-name { font-size: 1.25rem; }
+      .tc-chart-bar-container { height: 32px; }
+    }
+  </style>
+
+  <h3 class="tc-title">The 2025 Bank Fraud Landscape</h3>
+  <p class="tc-desc">
+    Not all defense lines hold equal. By comparing the total volume fraudsters targeted against the actual financial impact, we can see how efficiently different banks intercepted attacks before settlement.
+  </p>
+
+  <div class="tc-insight-box">
+    <strong>System Insight:</strong> UBA faced the heaviest bombardment (₦4.56B targeted) but their infrastructure successfully intercepted 86.4% of it. Meanwhile, Access Bank suffered the highest actual impact (₦1.24B), with 39.1% of their successfully targeted funds crystallizing into a loss.
+  </div>
+
+  <div class="tc-bank-row">
+    <div class="tc-bank-header">
+      <h4 class="tc-bank-name">UBA</h4>
+      <span class="tc-bank-incidents">26,400 Incidents</span>
+    </div>
+    <div class="tc-chart-scale-wrapper">
+      <div class="tc-chart-bar-container" style="width: 100%;">
+        <div class="tc-bar-intercepted" style="width: 86.4%;" aria-label="86.4 percent intercepted"></div>
+        <div class="tc-bar-lost" style="width: 13.6%;" aria-label="13.6 percent lost"></div>
+      </div>
+    </div>
+    <div class="tc-stats-row">
+      <span style="color: #24292F;">₦4.56B Targeted</span>
+      <span style="color: #EA2D2E;">₦621.57M Lost (13.6%)</span>
+    </div>
+  </div>
+
+  <div class="tc-bank-row">
+    <div class="tc-bank-header">
+      <h4 class="tc-bank-name">Access Bank</h4>
+      <span class="tc-bank-incidents">5,981 Incidents</span>
+    </div>
+    <div class="tc-chart-scale-wrapper">
+      <div class="tc-chart-bar-container" style="width: 69.5%;">
+        <div class="tc-bar-intercepted" style="width: 60.9%;" aria-label="60.9 percent intercepted"></div>
+        <div class="tc-bar-lost" style="width: 39.1%;" aria-label="39.1 percent lost"></div>
+      </div>
+    </div>
+    <div class="tc-stats-row">
+      <span style="color: #24292F;">₦3.17B Targeted</span>
+      <span style="color: #EA2D2E;">₦1.24B Lost (39.1%)</span>
+    </div>
+  </div>
+
+  <div class="tc-bank-row">
+    <div class="tc-bank-header">
+      <h4 class="tc-bank-name">GTCO</h4>
+      <span class="tc-bank-incidents">15,469 Incidents</span>
+    </div>
+    <div class="tc-chart-scale-wrapper">
+      <div class="tc-chart-bar-container" style="width: 56.6%;">
+        <div class="tc-bar-intercepted" style="width: 89.6%;" aria-label="89.6 percent intercepted"></div>
+        <div class="tc-bar-lost" style="width: 10.4%;" aria-label="10.4 percent lost"></div>
+      </div>
+    </div>
+    <div class="tc-stats-row">
+      <span style="color: #24292F;">₦2.58B Targeted</span>
+      <span style="color: #EA2D2E;">₦269.44M Lost (10.4%)</span>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 16px; margin-top: 16px; font-size: 0.75rem; font-weight: 600; color: #666; justify-content: center;">
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <span style="display: block; width: 12px; height: 12px; background: #20C997; border-radius: 2px;"></span> Blocked / Recovered
+    </div>
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <span style="display: block; width: 12px; height: 12px; background: #EA2D2E; border-radius: 2px;"></span> Crystallized Impact
+    </div>
+  </div>
+
+  <p class="tc-footer">
+    Data extracted from 2025 Audited Financial Statements. Target amounts represent the &#8220;Successful&#8221; attack attempts.<br>
+    <strong style="color: #EA2D2E;">Built by TechCabal</strong>
+  </p>
+</div>
+
+
+
+<p>The numbers highlight that while faster payments create new revenue opportunities for banks and fintechs, they are also widening the attack surface for cybercriminals.&nbsp;</p>
+
+
+
+<p>Data from the<a href="https://nibss-plc.com.ng/digital-payment-fraud-drops-51-to-n25-85b-lagos-accounts-for-63/" target="_blank" rel="noreferrer noopener nofollow"> Nigerian Inter-Bank Settlement System</a> (NIBSS) showed that there were 67,518 fraud-related incidents in 2025 alone.</p>
+
+
+
+<p>On an individual level, <a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46923_ACCESS_HOLDINGS_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MAY_2026.pdf" target="_blank" rel="noreferrer noopener nofollow">Access</a> reported that electronic fraud cases fell 47.74% to 5,931, but cash theft, representing only 26 incidents, and contributing 14.31% to total losses.</p>
+
+
+
+<p>At<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46757_UNITED_BANK_FOR_AFRICA_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_APRIL_2026.pdf" target="_blank" rel="noreferrer noopener nofollow"> UBA</a>, electronic fraud accounted for 99.91% of the 26,400 fraud cases it recorded in 2025. Fraudulent transfers alone accounted for 35.99% of actual losses—the single largest fraud channel by value.</p>
+
+
+
+<p><a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46482_GUARANTY_TRUST_HOLDING_COMPANY_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MARCH_2026.pdf" target="_blank" rel="noreferrer noopener nofollow">GTCO</a> disclosed that the amount linked to fraud incidents increased 30.05%. Actual fraud losses rose 69.34%, despite a 0.48% decline in total fraud cases.</p>
+
+
+
+<p>These losses are <a href="https://www.cbn.gov.ng/Out/2025/CCD/Exposure%20draft%20of%20the%20Guidelines%20for%20Handling%20Authorised%20Push%20Payment%20Fraud.pdf" target="_blank" rel="noreferrer noopener nofollow">absorbed by the banks</a>, and stricter verification requirements and<a href="https://techcabal.com/2026/03/13/cbn-mandates-liveness-checks-and-device-limits-to-fight-digital-banking-fraud/" target="_blank" rel="noreferrer noopener"> tighter transfer controls</a> for customers are imposed.&nbsp;</p>
+
+
+
+<p>Instant payments reached<a href="https://nibss-plc.com.ng/industry-stat/?category=nibss-instant-payment---nip"> ₦284.99 trillion</a> ($209.34 billion) in the first quarter of 2025, according to&nbsp; NIBSS. Four commercial banks, GTCO, UBA, First Bank of Nigeria, and Zenith Bank, processed<a href="https://techcabal.com/2026/05/04/four-banks-process-208-billion-on-mobile/"> ₦286.19 trillion</a> ($210.22 billion) through their mobile apps in 2025.</p>
+
+
+
+<p>As transaction volumes rise, banks have to spend more money to protect their infrastructure. Collectively,<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46923_ACCESS_HOLDINGS_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MAY_2026.pdf" target="_blank" rel="noreferrer noopener nofollow"> Access Holdings</a>,<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46482_GUARANTY_TRUST_HOLDING_COMPANY_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MARCH_2026.pdf" target="_blank" rel="noreferrer noopener nofollow"> GTCO</a>, and <a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46757_UNITED_BANK_FOR_AFRICA_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_APRIL_2026.pdf" target="_blank" rel="noreferrer noopener nofollow">UBA</a> spent ₦280.90 billion ($206.33 million) on technology investments in 2025, including cybersecurity systems, fraud-monitoring tools, customer-authentication infrastructure, and transaction-security upgrades.</p>
+
+
+
+<p></p>
+
+
+
+<div id="tc-macro-explorer" class="tc-container">
+  <style>
+    /* Mobile-First Base Styles */
+    .tc-container {
+      font-family: 'Open Sans', sans-serif;
+      background: #FFFFFF;
+      padding: 16px;
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #151515;
+      border: 1px solid #E3E8EF;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .tc-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #EA2D2E;
+      margin: 0 0 8px 0;
+      line-height: 1.2;
+    }
+    .tc-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+      color: #333;
+    }
+    /* Toggles stack on small screens for easy tapping */
+    .tc-toggle-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+      background: #F6F6F6;
+      padding: 6px;
+      border-radius: 8px;
+    }
+    .tc-btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      text-align: center;
+    }
+    .tc-btn.active {
+      background: #24292F;
+      color: #FFFFFF;
+    }
+    .tc-btn.inactive {
+      background: transparent;
+      color: #24292F;
+    }
+    .tc-card {
+      background: #F6F6F6;
+      padding: 16px;
+      border-radius: 8px;
+    }
+    .tc-label {
+      font-size: 0.75rem;
+      color: #666;
+      margin: 0 0 4px 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tc-big-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #151515;
+      margin: 0 0 16px 0;
+    }
+    .tc-bar-section {
+      margin-bottom: 20px;
+    }
+    .tc-bar-labels {
+      display: flex;
+      flex-direction: column; /* Stack labels on mobile */
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      gap: 4px;
+    }
+    .tc-bar-wrapper {
+      display: flex;
+      height: 24px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #E3E8EF;
+    }
+    .tc-bar {
+      height: 100%;
+      transition: width 1s ease-out;
+    }
+    .tc-insight {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 12px;
+      border-radius: 6px;
+    }
+    .tc-insight-green {
+      background: #E8FCF6;
+      border-left: 4px solid #20C997;
+    }
+    .tc-insight-red {
+      background: #FFF5F5;
+      border-left: 4px solid #EA2D2E;
+    }
+    .tc-footer {
+      font-size: 0.75rem;
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+      line-height: 1.6;
+      border-top: 1px solid #E3E8EF;
+      padding-top: 16px;
+    }
+
+    /* Tablet and Desktop Adjustments */
+    @media (min-width: 480px) {
+      .tc-toggle-group {
+        flex-direction: row; /* Side-by-side toggles */
+      }
+      .tc-bar-labels {
+        flex-direction: row; /* Side-by-side labels */
+        justify-content: space-between;
+      }
+    }
+
+    @media (min-width: 600px) {
+      .tc-container {
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      }
+      .tc-title {
+        font-size: 1.75rem;
+        margin-bottom: 12px;
+      }
+      .tc-desc {
+        font-size: 1rem;
+        margin-bottom: 24px;
+      }
+      .tc-card {
+        padding: 24px;
+      }
+      .tc-big-number {
+        font-size: 2rem;
+        margin-bottom: 24px;
+      }
+      .tc-bar-wrapper {
+        height: 32px;
+        border-radius: 6px;
+      }
+      .tc-bar-labels {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+
+  <h3 class="tc-title">The True Cost of Cashless</h3>
+  <p class="tc-desc">
+    Banks lost ₦2.13 billion to fraud in 2025, but that is only the tip of the iceberg. Explore the data below to see the hidden scale of cyber attacks and the massive defense budget required to protect the ecosystem.
+  </p>
+
+  <div class="tc-toggle-group">
+    <button id="tc-btn-flow" class="tc-btn active" onclick="tcSwitchMacroView('flow')">The Attack Flow</button>
+    <button id="tc-btn-toll" class="tc-btn inactive" onclick="tcSwitchMacroView('toll')">The Defense Budget</button>
+  </div>
+
+  <div id="tc-view-flow" style="display: block;">
+    <div class="tc-card">
+      <p class="tc-label">Total Exposed Capital</p>
+      <h4 class="tc-big-number">₦10.29 Billion</h4>
+      
+      <div class="tc-bar-section">
+        <div class="tc-bar-labels">
+          <span style="color: #20C997;">Blocked/Recovered (79.3%)</span>
+          <span style="color: #EA2D2E;">Lost (20.7%)</span>
+        </div>
+        <div class="tc-bar-wrapper">
+          <div id="tc-bar-blocked" class="tc-bar" style="background: #20C997; width: 0%;" aria-label="79.3 percent recovered"></div>
+          <div id="tc-bar-lost" class="tc-bar" style="background: #EA2D2E; width: 0%;" aria-label="20.7 percent lost"></div>
+        </div>
+      </div>
+      <div class="tc-insight tc-insight-green">
+        <strong>Insight:</strong> While the total number of fraud incidents dropped, the amount extracted per successful attack increased to ₦44,454. Fraudsters are becoming more efficient, but banks successfully intercepted over 79% of targeted funds before settlement.
+      </div>
+    </div>
+  </div>
+
+  <div id="tc-view-toll" style="display: none;">
+    <div class="tc-card">
+      <p class="tc-label">Financial Burden: Spend vs Loss</p>
+      
+      <div class="tc-bar-section">
+        <div class="tc-bar-labels">
+          <span>Cybersecurity Spend</span>
+          <span>₦280.90B</span>
+        </div>
+        <div class="tc-bar-wrapper">
+          <div id="tc-bar-spend" class="tc-bar" style="background: #24292F; width: 0%;"></div>
+        </div>
+      </div>
+      
+      <div class="tc-bar-section" style="margin-bottom: 16px;">
+        <div class="tc-bar-labels">
+          <span style="color: #EA2D2E;">Actual Funds Lost</span>
+          <span style="color: #EA2D2E;">₦2.13B</span>
+        </div>
+        <div class="tc-bar-wrapper">
+          <div id="tc-bar-actual-loss" class="tc-bar" style="background: #EA2D2E; width: 0%; min-width: 4px;"></div>
+        </div>
+      </div>
+
+      <div class="tc-insight tc-insight-red">
+        <strong>Insight:</strong> To keep ₦71.06 trillion in customer deposits secure, Access, GTCO, and UBA collectively spent roughly <strong>131 times more</strong> on defense systems than what they actually lost to cybercriminals.
+      </div>
+    </div>
+  </div>
+
+  <p class="tc-footer">
+    Data based on 2025 Audited Financials (Access, GTCO, UBA).<br>
+    <strong style="color: #EA2D2E;">Built by TechCabal</strong>
+  </p>
+
+  <script>
+    function tcSwitchMacroView(view) {
+      const btnFlow = document.getElementById('tc-btn-flow');
+      const btnToll = document.getElementById('tc-btn-toll');
+      const viewFlow = document.getElementById('tc-view-flow');
+      const viewToll = document.getElementById('tc-view-toll');
+
+      // Reset Widths for animation trigger
+      document.getElementById('tc-bar-blocked').style.width = '0%';
+      document.getElementById('tc-bar-lost').style.width = '0%';
+      document.getElementById('tc-bar-spend').style.width = '0%';
+      document.getElementById('tc-bar-actual-loss').style.width = '0%';
+
+      if (view === 'flow') {
+        btnFlow.className = 'tc-btn active';
+        btnToll.className = 'tc-btn inactive';
+        
+        viewFlow.style.display = 'block';
+        viewToll.style.display = 'none';
+
+        setTimeout(() => {
+          document.getElementById('tc-bar-blocked').style.width = '79.34%';
+          document.getElementById('tc-bar-lost').style.width = '20.66%';
+        }, 50);
+
+      } else {
+        btnToll.className = 'tc-btn active';
+        btnFlow.className = 'tc-btn inactive';
+        
+        viewToll.style.display = 'block';
+        viewFlow.style.display = 'none';
+
+        setTimeout(() => {
+          document.getElementById('tc-bar-spend').style.width = '100%';
+          document.getElementById('tc-bar-actual-loss').style.width = '1%'; // visually representative minimum
+        }, 50);
+      }
+    }
+
+    // Initialize first view animations on load
+    setTimeout(() => {
+      document.getElementById('tc-bar-blocked').style.width = '79.34%';
+      document.getElementById('tc-bar-lost').style.width = '20.66%';
+    }, 200);
+  </script>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Regulatory push&nbsp;&nbsp;</strong></h2>
+
+
+
+<p>Banks have to render monthly returns on fraud and forgeries to the CBN, according to <a href="https://www.zenithbank.com/media/z3dmhjbt/zenith-bank-group-2025-fye-full-financial-statement.pdf" target="_blank" rel="noreferrer noopener nofollow">section 24</a> of the Banks and Other Financial Institutions Act 2020. According to&nbsp; <a href="https://nibss-plc.com.ng/digital-payment-fraud-drops-51-to-n25-85b-lagos-accounts-for-63/" target="_blank" rel="noreferrer noopener nofollow">NIBSS</a>, fraud reporting fell by 34% in the final quarter of 2025.</p>
+
+
+
+<p>Beyond that, the apex bank is increasingly mandating banks and fintechs to move from simply processing transactions to actively policing them.&nbsp;</p>
+
+
+
+<p>Banks are now expected to <a href="https://techcabal.com/2023/12/04/central-banks-new-kyc-rules-may-not-curb-fraud-despite-optimism/" target="_blank" rel="noreferrer noopener">verify customers</a> more aggressively, monitor transactions in real time, including using <a href="https://techcabal.com/2026/03/12/cbn-wants-ai-to-fight-money-laundering/" target="_blank" rel="noreferrer noopener">artificial intelligence</a>, detect suspicious device activity, and absorb the consequences of <a href="https://techcabal.com/2025/12/02/nigerian-banks-16-days-fraud-refund-cbn/" target="_blank" rel="noreferrer noopener">fraud failures</a>.&nbsp;</p>
+
+
+
+<p>In 2025, the CBN directed&nbsp; NIBSS to <a href="https://techcabal.com/2025/01/28/cbn-nibss-fraud/" target="_blank" rel="noreferrer noopener">begin debiting institutions</a> that receive proceeds from fraudulent transactions. The regulator also tightened onboarding requirements, including <a href="https://techcabal.com/2026/03/13/cbn-mandates-liveness-checks-and-device-limits-to-fight-digital-banking-fraud/" target="_blank" rel="noreferrer noopener">mandatory liveness</a> verification and device-binding measures designed to limit account takeovers and identity fraud.&nbsp;</p>
+
+
+
+<p><a href="https://techcabal.com/2026/03/27/ncc-orders-telcos-to-flag-suspected-scam-numbers-in-real-time/" target="_blank" rel="noreferrer noopener">Telecom operators</a> are also increasingly being pulled into fraud enforcement as regulators push for real-time phone-number risk flagging and <a href="https://techcabal.com/2026/04/21/new-cbn-ncc-opens-telecom-data-to-banks/" target="_blank" rel="noreferrer noopener">broader data-sharing</a> frameworks between telcos and financial institutions.</p>
+
+
+
+<p>When financial institutions fail to comply with anti-fraud controls, they face sanctions. In 2025, the CBN fined Access Holdings<a href="https://doclib.ngxgroup.com/Financial_NewsDocs/46923_ACCESS_HOLDINGS_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_MAY_2026.pdf" target="_blank" rel="noreferrer noopener nofollow"> ₦138 million</a> ($101,366) for inadequate Know Your Customer controls linked to fraud cases.</p>
+
+
+
+<p>For now, Nigeria’s banking system remains financially resilient. Access, GTCO, and UBA held ₦71.06 trillion ($52.19 billion) in customer deposits at the end of 2025, with actual fraud losses representing just 0.003% of deposits.</p>
+
+
+
+<p>But as digital payments scale deeper into the economy, fraud is becoming embedded as a hidden operating cost of Nigeria’s cashless transition, one that banks, customers, telecom operators, and regulators are increasingly being forced to pay.</p>
+
+
+
+<p><strong><em>Note: exchange rate used: ₦1,361.4/$</em></strong></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>MTN Rwanda returns to profit as data and fintech drive Q1 growth</title>
 		<link>https://techcabal.com/2026/05/11/data-and-fintech-power-mtn-rwandas-return-to-profitability/</link>
 		
@@ -485,13 +1083,13 @@
             
 <div id="Story5" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto; ">
                     </div>
-<div id="bizdev4" style="padding: 24px 12px 0;">
+<div id="bizdev3" style="padding: 24px 12px 0;">
                 <div style="width:100%; background-color:transparent;box-sizing:border-box;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px;">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">Moonshot is back!</h5>
-                <a href="https://moonshot.techcabal.com/">
+                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">80% faster. Nigeria&#8217;s first FlexSteel pipeline.</h5>
+                <a href="https://techcabal.com/2026/05/07/kenyon-international-rewrites-offshore-pipeline-economics-in-nigeria-using-flexsteel-technology/">
                     <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/moonshot.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Moonshot 2026 is coming! Join us at the National Theatre, Lagos on October 28 &#038; 29 for two days of tech and innovation. <a href="https://moonshot.techcabal.com/" style="text-decoration: underline; color: #b61313 !important;">Grab your early bird tickets now and get 15% off</a>.</p>
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-8-1.jpg" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
+                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Kenyon International has disrupted offshore engineering by deploying Nigeria’s inaugural FlexSteel underwater pipeline at OML 123. The project achieved an 80% duration reduction versus traditional methods, restoring production in record time. <a href="https://techcabal.com/2026/05/07/kenyon-international-rewrites-offshore-pipeline-economics-in-nigeria-using-flexsteel-technology/" style="text-decoration: underline; color: #b61313 !important;">Read more</a>.</p>
 
             </div>
         </div>
@@ -551,17 +1149,17 @@
                     </div>
                 </div>
             </div>
-
-<div id="bizdev3" style="padding: 24px 12px 0;">
+<div id="bizdev4" style="padding: 24px 12px 0;">
                 <div style="width:100%; background-color:transparent;box-sizing:border-box;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px;">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">80% faster. Nigeria&#8217;s first FlexSteel pipeline.</h5>
-                <a href="https://techcabal.com/2026/05/07/kenyon-international-rewrites-offshore-pipeline-economics-in-nigeria-using-flexsteel-technology/">
+                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;;font-weight:700;font-size:10px;color:#93888F;text-align:center;">Moonshot is back!</h5>
+                <a href="https://moonshot.techcabal.com/">
                     <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-8-1.jpg" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Kenyon International has disrupted offshore engineering by deploying Nigeria’s inaugural FlexSteel underwater pipeline at OML 123. The project achieved an 80% duration reduction versus traditional methods, restoring production in record time. <a href="https://techcabal.com/2026/05/07/kenyon-international-rewrites-offshore-pipeline-economics-in-nigeria-using-flexsteel-technology/" style="text-decoration: underline; color: #b61313 !important;">Read more</a>.</p>
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/moonshot.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
+                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Moonshot 2026 is coming! Join us at the National Theatre, Lagos on October 28 &#038; 29 for two days of tech and innovation. <a href="https://moonshot.techcabal.com/" style="text-decoration: underline; color: #b61313 !important;">Grab your early bird tickets now and get 15% off</a>.</p>
 
             </div>
         </div>
+
 
   <div id="Story6" style="padding:0 12px;box-sizing:border-box;">
                 <div class="section_heading" style="width:100%; background-color: transparent;box-sizing:border-box;padding-bottom:12px;">
@@ -3249,79 +3847,6 @@
 
 
 <p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Paga enters crypto through partnership with blockchain network Sui</title>
-		<link>https://techcabal.com/2026/05/08/paga-taps-sui-for-crypto-payments/</link>
-		
-		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
-		<pubDate>Fri, 08 May 2026 07:53:00 +0000</pubDate>
-				<category><![CDATA[Cryptocurrency]]></category>
-		<category><![CDATA[Crypto]]></category>
-		<category><![CDATA[Paga]]></category>
-		<category><![CDATA[Sui]]></category>
-		<category><![CDATA[USDsui]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=187633</guid>
-
-					<description><![CDATA[It marks Paga's first formal move into crypto since Tayo Oviosu transitioned to Group Chief Executive Officer (CEO) in April.]]></description>
-										<content:encoded><![CDATA[
-<p>Paga, one of Africa’s oldest fintechs, has partnered with Sui, the blockchain network built by US-based Mysten Labs, as it pushes into crypto payments, stablecoin yields, and asset tokenisation.</p>
-
-
-
-<p>The partnership was announced at the <a href="https://luma.com/SuiLive" target="_blank" rel="noreferrer noopener nofollow">Sui Live event</a> in Miami, the United States, on Thursday. It marks Paga&#8217;s first formal move into crypto since Tayo Oviosu <a href="https://techcabal.com/2026/04/07/paga-nigeria-new-ceo/" target="_blank" rel="noreferrer noopener">transitioned</a> to Group Chief Executive Officer (CEO) in April.</p>
-
-
-
-<p>Oviosu said the partnership will help Paga build financial rails that help Africans hedge against currency instability that erodes wealth, unlock opportunity in global commerce, fix cross-border payments, and expand access to alternative financial products.</p>
-
-
-
-<p>“These are the walls of the cage, and until we tear them down, financial freedom on this continent is incomplete,&#8221; Oviosu said <a href="https://www.youtube.com/live/iAsqhEhSKmE?si=dca37rvYe4gXTo1j" target="_blank" rel="noreferrer noopener nofollow">during a presentation</a> at Sui Live. “Tearing down these walls is not a job we can do on our own; it requires the right rails, the right partner, the right technology that is fast enough, cheap enough and global enough to serve 1 billion people. We found that partner—Paga and Sui.”</p>
-
-
-
-<p>The partnership will cover four things: high-yield USD accounts backed by USDsui, Sui&#8217;s newly launched dollar stablecoin; crypto on-ramps and off-ramps across Paga&#8217;s markets; tokenised real-world assets (RWAs), including real estate, bonds, and solar projects; and cross-border payment rails for businesses and consumers.</p>
-
-
-
-<p>Paga users could soon hold a dollar account that earns interest automatically, convert between local currency and crypto without friction, invest in assets like property or green energy projects that were previously out of reach, and send or receive money across borders as easily and cheaply as sending an email, said Oviosu.</p>
-
-
-
-<p>Paga’s move comes as African fintechs increasingly explore crypto and digital currency infrastructure for payments, settlement, and treasury operations. In October 2025, Flutterwave <a href="https://techcabal.com/2025/10/30/flutterwave-adopts-polygon-to-power-stablecoin-cross-border-payments/" target="_blank" rel="noreferrer noopener">partnered with blockchain firm Polygon</a> to build out its stablecoin payment infrastructure. Stripe-owned Paystack <a href="https://techcabal.com/2026/01/20/paystack-restructure-tsg/" target="_blank" rel="noreferrer noopener">reorganised</a> into The Stack Group (TSG) in January to deepen research in emerging technologies within fintech.</p>
-
-
-
-<p>Both companies were <a href="https://techcabal.com/2026/04/01/cbn-launches-crypto-aml-pilot-flutterwave-paystack/" target="_blank" rel="noreferrer noopener">admitted</a> into the Central Bank of Nigeria’s (CBN) anti-money laundering supervisory programme for virtual asset service providers (VASPs) on March 31.</p>
-
-
-
-<p>“57% of African adults don&#8217;t have a bank account,” Oviosu said. “When people hear that number, they see a problem. I see something different; I see an Africa that is the single largest financial greenfield market in the world, and that is the opportunity we&#8217;re going after.”</p>
-
-
-
-<p>Paga currently processes $1.5 billion in monthly payments. In 2025, it processed $11 billion from 169 million transactions, Oviosu said. Since its founding in 2009, the company has processed $42 billion in total payment volume (TPV) from 653 million transactions, a scale that gives the Sui partnership immediate reach rather than a standing start.</p>
-
-
-
-<p>“$42 billion are school fees paid, salaries received, grandmother receiving money from her son in the city, instantly, safely, and at a fraction of the cost of what it used to [be],” Oviosu said. “This is what the infrastructure was built for and we&#8217;re just getting started.”</p>
-
-
-
-<p>Sui <a href="https://blog.sui.io/sui-dollar-launch-bridge/" target="_blank" rel="noreferrer noopener nofollow">launched USDsui</a>, a US dollar-backed stablecoin, on its network on Monday, entering a stablecoin market dominated by Tether’s USDT and Circle’s USDC. Unlike those two stablecoins, USDsui is yield-bearing, allowing users to earn interest by holding the digital dollar in their accounts, putting it in competition with similar products such as DAI.</p>
-
-
-
-<p>The launch marks the second currency developed within the Sui ecosystem after the blockchain <a href="https://coinmarketcap.com/academy/article/sui-to-launch-mainnet-and-token-what-you-need-to-know" target="_blank" rel="noreferrer noopener nofollow">introduced its native SUI token</a> in 2023. Blockchain networks often create native tokens to drive adoption and utility across payments, lending, and decentralised application ecosystems.</p>
-
-
-
-<p>Bridge, the US crypto infrastructure firm <a href="https://techcrunch.com/2025/02/05/stripe-makes-1-1-billion-crypto-bet-as-it-closes-on-bridge-acquisition/" target="_blank" rel="noreferrer noopener">Stripe acquired for $1.1 billion</a> in 2025, will issue the USDsui stablecoin on the Sui blockchain.</p>
 ]]></content:encoded>
 					
 		
