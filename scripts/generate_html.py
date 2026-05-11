@@ -390,7 +390,7 @@ def enrich(event):
         ev_type = event.get('event_types', ['other'])[0]
         event['insight_label'] = '中资出海'
 
-    for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important', 'summary_short', 'level'):
+    for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important', 'level'):
         event.pop(old_key, None)
     # 保留 date 字段用于 Market Pulse 日期权重
     if not event.get('date'):
