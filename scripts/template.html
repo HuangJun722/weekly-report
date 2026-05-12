@@ -488,7 +488,7 @@ html { transition: background 0.3s; }
           {% endif %}
         </div>
         <h4 class="daily-event-title"><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-        {% if ev.summary_short and ev.summary_short != ev.title[:25] %}
+        {% if ev.summary_short and ev.summary_short != ev.title[:25] and ev.summary_short != ev.reason %}
         <p class="daily-event-summary">{{ ev.summary_short }}</p>
         {% endif %}
         {% if ev.reason %}
@@ -596,7 +596,7 @@ html { transition: background 0.3s; }
               <span class="tag">{{ ev.company_name }}</span>
               {% endif %}
             </div>
-            {% if ev.summary_short and ev.summary_short != ev.title[:25] %}
+            {% if ev.summary_short and ev.summary_short != ev.title[:25] and ev.summary_short != ev.reason %}
             <p class="daily-event-summary">{{ ev.summary_short }}</p>
             {% endif %}
             {% if ev.reason %}
@@ -738,6 +738,9 @@ function applyFilters(){
 var availableDates = {{ available_dates_json }};
 var datePanels = {{ date_panels_json }};
 var currentDateIndex = availableDates.indexOf('{{ main_date }}');
+// 初始化翻页按钮状态
+document.getElementById('prevDay').className = currentDateIndex <= 0 ? 'nav-disabled' : '';
+document.getElementById('nextDay').className = currentDateIndex >= availableDates.length - 1 ? 'nav-disabled' : '';
 
 function escHtml(s) {
   if (!s) return '';
@@ -748,7 +751,7 @@ function escHtml(s) {
 function eventCardHtml(ev) {
   var img = ev.image_url
     ? '<div class="daily-event-img"><img src="' + ev.image_url + '" alt="" loading="lazy"></div>' : '';
-  var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25))
+  var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25) && ev.summary_short !== ev.reason)
     ? '<p class="daily-event-summary">' + escHtml(ev.summary_short) + '</p>' : '';
   var reason = ev.reason ? '<p class="daily-event-reason">' + escHtml(ev.reason) + '</p>' : '';
   var imp = (ev.impact && ev.impact !== '未知') ? '<p class="daily-event-impact">影响：' + escHtml(ev.impact) + '</p>' : '';

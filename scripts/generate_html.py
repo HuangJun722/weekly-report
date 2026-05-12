@@ -373,6 +373,11 @@ def enrich(event):
         # 生成有信息量的 fallback：提取公司名 + 事件类型
         event['reason'] = _build_reason(title, ev_type, region, event.get('company_name'))
 
+    # summary_short fallback：AI 没生成时用 reason 兜底
+    ss = event.get('summary_short', '')
+    if not ss or len(ss) < 8 or ss[:25] == title[:25]:
+        event['summary_short'] = event.get('reason', '')
+
     event.setdefault('impact', event.get('impact_scope', '未知'))
     event.setdefault('insight_label', INSIGHT_LABEL_MAP.get(ev_type, '其他'))
     event.setdefault('region', '未知')
