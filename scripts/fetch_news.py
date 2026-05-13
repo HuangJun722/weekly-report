@@ -115,6 +115,37 @@ COMPANY_SOURCES = [
     {'name': 'Konga', 'query': 'Konga Nigeria', 'region': '非洲', 'priority': 1},
 ]
 
+COMPANY_ALIASES = {
+    'ByteDance/TikTok': ['ByteDance', 'TikTok', 'Douyin'],
+    'Tencent': ['Tencent', 'WeChat', 'Weixin'],
+    'Alibaba': ['Alibaba', 'AliExpress', 'Cainiao', 'Lazada', 'Alibaba Cloud'],
+    'JD.com': ['JD.com', 'JD', 'Jingdong', 'Jing Dong'],
+    'Kuaishou': ['Kuaishou', 'Kwai'],
+    'Ant Group': ['Ant Group', 'Ant International', 'Alipay'],
+    'Meituan': ['Meituan', 'Keeta'],
+    'Kakao': ['Kakao', 'Kakao Pay', 'Kakao Games', 'Kakao Entertainment'],
+    'Naver': ['Naver', 'Line'],
+    'Rakuten': ['Rakuten', 'Rakuten Securities'],
+    'Sea Limited': ['Sea Limited', 'Sea', 'Shopee', 'Garena'],
+    'Grab': ['Grab', 'Grab Holdings', 'GrabPay'],
+    'Gojek': ['Gojek', 'GoTo', 'Tokopedia'],
+    'VNG Group': ['VNG', 'VNG Group', 'Zalo'],
+    'Yahoo': ['Yahoo'],
+    'Cyberagent': ['CyberAgent', 'Cyberagent', 'ABEMA'],
+    'Adyen': ['Adyen'],
+    'Zalando': ['Zalando'],
+    'Allegro': ['Allegro'],
+    'Trendyol': ['Trendyol'],
+    'MercadoLibre': ['MercadoLibre', 'Mercado Libre', 'Mercado Pago', 'MELI'],
+    'Rappi': ['Rappi', 'RappiCard'],
+    'Noon': ['Noon'],
+    'Careem': ['Careem', 'Careem Pay'],
+    'Tabby': ['Tabby'],
+    'Kaspi.kz': ['Kaspi.kz', 'Kaspi'],
+    'Jumia': ['Jumia'],
+    'Konga': ['Konga'],
+}
+
 # Google News RSS 关键词黑名单（公司新闻噪音）
 COMPANY_BLACKLIST = [
     'show hn:', 'launch HN', 'Ask HN:', 'Hiring ',
@@ -139,6 +170,21 @@ COMPANY_BLACKLIST = [
     # 政治/非科技
     'election', 'president', 'protest', 'poll ', 'voting',
 ]
+
+COMPANY_LOW_SIGNAL_PATTERNS = [
+    'earnings call highlights', 'earnings snapshot', 'transcript :',
+    'stock is trending', 'price prediction', 'shares bought by',
+    'live score', 'predictions', 'gift (nasdaq', 'simplywall.st',
+    'marketbeat', 'benzinga', 'seeking alpha', 'openpr.com',
+    'upgraded points', 'sofascore',
+]
+
+TITLE_STOPWORDS = {
+    'the', 'and', 'for', 'with', 'from', 'into', 'over', 'under', 'amid', 'after',
+    'before', 'across', 'through', 'about', 'says', 'report', 'reports', 'reported',
+    'amid', 'launch', 'launches', 'launched', 'announces', 'announced', 'latest',
+    'today', 'week', 'news', 'update', 'live', 'analysis', 'opinion',
+}
 
 # ============================================================
 # 关键词检测（宽松模式，宁多不漏）
@@ -221,6 +267,125 @@ def is_blacklisted(title):
         if dom in t.lower():
             return True
     return False
+
+
+def _strip_title_source(title):
+    """去掉标题末尾的媒体名尾缀，避免同事件因来源不同被拆成多条。"""
+    title = (title or '').strip()
+    for sep in [' - ', ' | ', ' — ', ' – ', ' —']:
+        if sep in title:
+            left, right = title.rsplit(sep, 1)
+            if right and len(right) <= 40:
+                return left.strip()
+    return title
+
+
+def _normalize_text(text):
+    text = _strip_title_source(text).lower()
+    text = text.replace('&', ' and ')
+    text = re.sub(r'[\u2018\u2019\u201c\u201d]', ' ', text)
+    text = re.sub(r'[^a-z0-9\u4e00-\u9fff]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def _title_tokens(title):
+    tokens = []
+    for token in _normalize_text(title).split():
+        if token in TITLE_STOPWORDS:
+            continue
+        if len(token) <= 2 and token not in {'q1', 'q2', 'q3', 'q4', 'ai', 'ipo'}:
+            continue
+        if token.isdigit():
+            continue
+        tokens.append(token)
+    return tokens
+
+
+def _title_fingerprint(title):
+    core = _normalize_text(title)
+    if not core:
+        return ''
+    tokens = _title_tokens(title)
+    if not tokens:
+        return core
+    return ' '.join(tokens[:10])
+
+
+def _get_company_aliases(cfg_or_name):
+    name = cfg_or_name if isinstance(cfg_or_name, str) else cfg_or_name.get('name', '')
+    aliases = list(COMPANY_ALIASES.get(name, []))
+    if name and name not in aliases:
+        aliases.append(name)
+    return aliases
+
+
+def _title_mentions_aliases(title, aliases):
+    norm_title = ' ' + _normalize_text(title) + ' '
+    for alias in aliases:
+        alias_norm = _normalize_text(alias)
+        if not alias_norm:
+            continue
+        if f' {alias_norm} ' in norm_title:
+            return True
+        if alias_norm.replace(' ', '') and alias_norm.replace(' ', '') in norm_title.replace(' ', ''):
+            return True
+    return False
+
+
+def _title_mentions_company(title, cfg):
+    """
+    Google News 查询会放大相关词，这里要求标题至少命中一个公司别名，
+    防止把行业新闻误记到监控公司名下。
+    """
+    return _title_mentions_aliases(title, _get_company_aliases(cfg))
+
+
+def _is_low_signal_company_title(title):
+    title_lower = title.lower()
+    return any(pattern in title_lower for pattern in COMPANY_LOW_SIGNAL_PATTERNS)
+
+
+def _event_similarity(a, b):
+    ta = set(_title_tokens(a.get('title', '')))
+    tb = set(_title_tokens(b.get('title', '')))
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+def _event_signature(item):
+    """
+    生成事件级指纹，优先对齐“同公司/同日期/同主题”的跨媒体报道，
+    不再依赖 Google News 跳转 URL。
+    """
+    title_fp = _title_fingerprint(item.get('title', ''))
+    company = _normalize_text(item.get('company_name', ''))
+    date_key = item.get('article_date') or item.get('date') or ''
+    event_type = (item.get('event_types') or ['other'])[0]
+    return '|'.join([date_key, company, event_type, title_fp])
+
+
+def _is_same_event(candidate, existing):
+    if candidate.get('url') and candidate.get('url') == existing.get('url'):
+        return True
+
+    if _event_signature(candidate) == _event_signature(existing):
+        return True
+
+    date_a = candidate.get('article_date') or candidate.get('date') or ''
+    date_b = existing.get('article_date') or existing.get('date') or ''
+    if date_a and date_b and date_a != date_b:
+        return False
+
+    company_a = candidate.get('company_name', '')
+    company_b = existing.get('company_name', '')
+    if company_a and company_b and company_a != company_b:
+        return False
+
+    sim = _event_similarity(candidate, existing)
+    if company_a and company_b:
+        return sim >= 0.5
+    return sim >= 0.72
 
 # ============================================================
 # HTTP
@@ -478,7 +643,7 @@ def fetch_company_news(cfg):
     allowed_dates = {today, yesterday}
 
     results = []
-    seen_titles = set()  # 标题归一化去重（多家报道同一事件只取第一条）
+    seen_company_events = []
 
     for entry in parsed.entries:
         if len(results) >= 3: break  # 每公司最多3条
@@ -486,15 +651,14 @@ def fetch_company_news(cfg):
         title = (entry.get('title') or '').strip()
         if len(title) < 15: continue
 
-        # 标题归一化去重
-        norm = re.sub(r'[^\w]', '', title.lower())[:40]
-        if norm in seen_titles:
+        if not _title_mentions_company(title, cfg):
             continue
-        seen_titles.add(norm)
 
         # 基础噪音过滤
         title_lower = title.lower()
         if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
+        if _is_low_signal_company_title(title):
+            continue
 
         link = ''
         link_val = entry.get('link', '')
@@ -533,7 +697,7 @@ def fetch_company_news(cfg):
             if mt and mt[0].get('url'):
                 image_url = mt[0]['url']
 
-        results.append({
+        item = {
             'title': title,
             'url': link,
             'source': 'Google News',
@@ -544,7 +708,11 @@ def fetch_company_news(cfg):
             'is_company': True,
             'company_name': cfg['name'],
             'image_url': image_url,
-        })
+        }
+        if any(_is_same_event(item, existing) for existing in seen_company_events):
+            continue
+        seen_company_events.append(item)
+        results.append(item)
     return results
 
 
@@ -677,19 +845,18 @@ def smart_filter(items):
 
     result = []
     used_urls = set()
-    used_title_norm = set()  # 标题归一化去重（前60字符）
-
-    def _norm_title(title):
-        return re.sub(r'[^\w]', '', title.lower())[:60]
+    seen_items = []
 
     def _add_unique(it):
-        norm = _norm_title(it['title'])
-        if it['url'] not in used_urls and norm not in used_title_norm:
-            result.append(it)
+        if it['url'] in used_urls:
+            return False
+        if any(_is_same_event(it, existing) for existing in seen_items):
+            return False
+        result.append(it)
+        seen_items.append(it)
+        if it['url']:
             used_urls.add(it['url'])
-            used_title_norm.add(norm)
-            return True
-        return False
+        return True
 
     # 1. 公司监控事件（全部保留）
     for it in company:
@@ -712,6 +879,35 @@ def smart_filter(items):
             if len(result) >= MAX_DAILY: break
 
     return result
+
+
+def dedupe_events_by_day(all_events):
+    """清理历史 events.json 中同一天的重复/低信号事件，保持原始顺序。"""
+    cleaned = {}
+    removed = 0
+    for date_key, events in all_events.items():
+        kept = []
+        company_counts = {}
+        for event in events:
+            event.setdefault('date', date_key)
+            if event.get('is_company') and not _title_mentions_aliases(event.get('title', ''), _get_company_aliases(event.get('company_name', ''))):
+                removed += 1
+                continue
+            if event.get('is_company') and _is_low_signal_company_title(event.get('title', '')):
+                removed += 1
+                continue
+            if any(_is_same_event(event, existing) for existing in kept):
+                removed += 1
+                continue
+            company_name = event.get('company_name', '')
+            if event.get('is_company') and company_name:
+                if company_counts.get(company_name, 0) >= 3:
+                    removed += 1
+                    continue
+                company_counts[company_name] = company_counts.get(company_name, 0) + 1
+            kept.append(event)
+        cleaned[date_key] = kept
+    return cleaned, removed
 
 # ============================================================
 # MiniMax API（主力）
@@ -1052,8 +1248,13 @@ def analyze_events_doubao(items):
                 result = [r for r in result if r.get('url') and r.get('summary_short')]
             return result
         except requests.exceptions.Timeout:
-            print(f"  ⚠️  豆包 API 超时（30s），快速失败，跳过该批次")
-            return None  # 超时直接跳过，不重试
+            if attempt < 1:  # 重试一次（网络抖动场景）
+                wait = (attempt + 1) * 3
+                print(f"  ⚠️  豆包 API 超时，等待 {wait}s 后重试（第 {attempt+1}/2 次）...")
+                time.sleep(wait)
+                continue
+            print(f"  ⚠️  豆包 API 超时，重试耗尽，跳过该批次")
+            return None
         except json.JSONDecodeError as e:
             if attempt < 2:
                 wait = (attempt + 1) * 5
@@ -1591,13 +1792,13 @@ def main():
     company_unique = company_raw  # fetch_company_news 内部已去重
     print(f"  ⏱  公司采集耗时 {time.time()-t1:.1f}s | {len(company_unique)} 条")
 
-    # 合并：公司新闻 + 通用新闻（分别去重）
+    # 合并：公司新闻 + 通用新闻，按事件级指纹去重
     all_raw = company_unique + raw
-    seen_all, unique = set(), []
+    unique = []
     for it in all_raw:
-        if it['url'] and it['url'] not in seen_all:
-            seen_all.add(it['url'])
-            unique.append(it)
+        if any(_is_same_event(it, existing) for existing in unique):
+            continue
+        unique.append(it)
 
     # 统计
     types = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
@@ -1678,7 +1879,17 @@ def main():
                     if results:
                         print(f"  批次 {batch_idx}/{total_batches} 豆包 ✅")
                     else:
-                        print(f"  批次 {batch_idx}/{total_batches} 豆包失败，程序生成")
+                        # 批量失败后逐条兜底（应对间歇性超时）
+                        print(f"  批次 {batch_idx}/{total_batches} 豆包批量失败→逐条兜底...")
+                        results = []
+                        for item in batch:
+                            single = analyze_single_event_doubao(item)
+                            if single:
+                                results.extend(single)
+                        if results:
+                            print(f"  逐条兜底成功：{len(results)}/{len(batch)} 条 ✅")
+                        else:
+                            print(f"  逐条兜底全部失败，程序生成")
 
             # 构建事件（有AI结果则合并，否则程序生成）
             if results:
@@ -1695,13 +1906,16 @@ def main():
 
     # 按文章实际发布日期分组（而非脚本运行时间）
     # 同一批次抓到的文章可能有不同的发布日期
-    # 全局去重：同一 URL 在整个文件里只保留一条（避免多次运行重复追加）
-    existing_urls = {e['url'] for events in all_events.values() for e in events}
+    # 全局去重：按事件级指纹 + URL 双重控制，避免多次运行重复追加
+    existing_events = [e for events in all_events.values() for e in events]
+    existing_urls = {e['url'] for e in existing_events if e.get('url')}
     pubdate_ok, pubdate_fallback = 0, 0
     for event in today_events:
-        if event['url'] in existing_urls:
+        if event['url'] in existing_urls or any(_is_same_event(event, existing) for existing in existing_events):
             continue  # 跨批次去重
-        existing_urls.add(event['url'])  # 同批次内也去重
+        if event['url']:
+            existing_urls.add(event['url'])  # 同批次内也去重
+        existing_events.append(event)
         date_key = event.pop('article_date', None)  # 取出，写入 event 的 date 字段
         event['date'] = date_key or today  # 保留 date 供 Market Pulse 使用
         if date_key:
@@ -1723,6 +1937,9 @@ def main():
     # 清理 15 天前（避免数据无限膨胀）
     cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
     all_events = {k: v for k, v in all_events.items() if k >= cutoff}
+    all_events, removed_dups = dedupe_events_by_day(all_events)
+    if removed_dups:
+        print(f"  🧹 历史去重：清理 {removed_dups} 条同日重复事件")
 
     with open('data/events.json', 'w', encoding='utf-8') as f:
         json.dump(all_events, f, ensure_ascii=False, indent=2)
