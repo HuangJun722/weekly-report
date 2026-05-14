@@ -106,6 +106,9 @@ jobs:
       - name: Generate HTML
         run: python scripts/generate_html.py --force
 
+      - name: Generate RSS feed
+        run: python generate_feed.py
+
       - name: Verify output
         run: |
           if [ ! -f "docs/index.html" ]; then
