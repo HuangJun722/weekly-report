@@ -115,7 +115,7 @@ weekly-report/
 ├── .github/
 │   └── workflows/update.yml      # 自动更新工作流（每天北京时间 10:00）
 ├── data/
-│   └── events.json               # 事件数据（保留近 15 天）
+│   └── events.json               # 事件数据（保留近 90 天）
 ├── scripts/
 │   ├── fetch_news.py             # 爬取 + AI 分析
 │   ├── generate_html.py          # 生成 HTML

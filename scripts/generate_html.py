@@ -757,8 +757,8 @@ def generate_html(force=False, preview_mode=False):
     all_events_for_list = list(generic_events) + company_events_filtered
     all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
 
-    # 历史tab：15天内除主tab批次之外的所有有内容日期
-    cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
+    # 历史tab：90天内除主tab批次之外的所有有内容日期
+    cutoff = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
     history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
     history = [(d, events.get(d, [])) for d in history_dates if events.get(d, [])]
 
