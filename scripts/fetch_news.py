@@ -18,6 +18,11 @@ import warnings; warnings.filterwarnings('ignore')
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    from analysis_quality import annotate_event_quality, summarize_quality
+except ImportError:
+    from scripts.analysis_quality import annotate_event_quality, summarize_quality
+
 # ============================================================
 # 并行采集优化：aiohttp
 # ============================================================
@@ -1303,13 +1308,61 @@ def analyze_single_event_doubao(item):
     except Exception:
         return None
 
+
+def _results_by_url(results):
+    if not isinstance(results, list):
+        return {}
+    return {
+        r.get('url'): r
+        for r in results
+        if isinstance(r, dict) and r.get('url')
+    }
+
+
+def _chat_api_candidates():
+    """Return AI chat APIs in priority order: DeepSeek primary, Doubao fallback."""
+    apis = []
+    ds_key = os.environ.get('DEEPSEEK_API_KEY', '')
+    if ds_key and len(ds_key) >= 10:
+        apis.append({
+            'id': 'deepseek',
+            'name': 'DeepSeek',
+            'url': 'https://api.deepseek.com/v1/chat/completions',
+            'key': ds_key,
+            'model': os.environ.get('DEEPSEEK_MODEL', 'deepseek-chat'),
+        })
+    db_key = os.environ.get('DOUBAO_API_KEY', '')
+    if db_key and len(db_key) >= 10:
+        apis.append({
+            'id': 'doubao',
+            'name': '豆包',
+            'url': 'https://ark.cn-beijing.volces.com/api/v3/chat/completions',
+            'key': db_key,
+            'model': os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b'),
+        })
+    return apis
+
+
+def _post_chat(api, prompt, max_tokens=1024, temperature=0.1, timeout=(10, 20)):
+    payload = {
+        "model": api['model'],
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+    }
+    headers = {
+        "Authorization": "Bearer " + api['key'],
+        "Content-Type": "application/json"
+    }
+    return requests.post(api['url'], headers=headers, json=payload, timeout=timeout)
+
 # ============================================================
-# P0 Agent：AI 标题改写 — 对程序层泛化事件用豆包改写描述
+# P0 Agent：AI 标题改写 — 对程序层泛化事件用 AI 改写描述
 # ============================================================
 
 def rewrite_titles_for_display(events):
     """
-    对程序层中仍是泛化描述的事件，调用豆包改写成完整中文描述。
+    对程序层中仍是泛化描述的事件，优先调用 DeepSeek 改写成完整中文描述。
     轻量级 prompt（~50 tokens），25 条/批，timeout=20s。
     失败时静默降级，保持原描述。
     """
@@ -1323,12 +1376,10 @@ def rewrite_titles_for_display(events):
     if not to_rewrite:
         return
 
-    api_key = os.environ.get('DOUBAO_API_KEY')
-    if not api_key:
+    apis = _chat_api_candidates()
+    if not apis:
         return
 
-    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
-    model = os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b')
     rewrote = 0
 
     for i in range(0, len(to_rewrite), 25):
@@ -1343,48 +1394,40 @@ def rewrite_titles_for_display(events):
 
 返回JSON："""
 
-        payload = {
-            "model": model,
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 1024,
-            "temperature": 0.1,
-        }
-        headers = {
-            "Authorization": "Bearer " + api_key,
-            "Content-Type": "application/json"
-        }
-
-        try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
-            if resp.status_code != 200:
-                print(f"  ⚠️ AI改写标题 HTTP {resp.status_code}，跳过批次 {i//25+1}")
-                continue
-            text = resp.json()['choices'][0]['message']['content']
-            for m in ['```json', '```']:
-                if m in text:
-                    parts = text.split(m)
-                    for p in parts[1:]:
-                        text = p.strip()
-                        if text.endswith('```'):
-                            text = text[:-3].strip()
-                        break
-                    break
-            results = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
-            if not isinstance(results, list):
-                print(f"  ⚠️ AI改写标题返回非列表JSON，跳过批次 {i//25+1}")
-                continue
-            for r in results:
-                url = r.get('url', '')
-                new_reason = r.get('reason', '')
-                if url and new_reason and len(new_reason) >= 8:
-                    for e in batch:
-                        if e['url'] == url:
-                            e['reason'] = new_reason
-                            rewrote += 1
+        for api in apis:
+            try:
+                resp = _post_chat(api, prompt, max_tokens=1024, temperature=0.1, timeout=(10, 20))
+                if resp.status_code != 200:
+                    print(f"  ⚠️ AI改写标题 {api['name']} HTTP {resp.status_code}，尝试下一个")
+                    continue
+                text = resp.json()['choices'][0]['message']['content']
+                for m in ['```json', '```']:
+                    if m in text:
+                        parts = text.split(m)
+                        for p in parts[1:]:
+                            text = p.strip()
+                            if text.endswith('```'):
+                                text = text[:-3].strip()
                             break
-        except Exception as exc:
-            print(f"  ⚠️ AI改写标题异常: {exc}, 跳过批次 {i//25+1}")
-            continue
+                        break
+                results = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+                if not isinstance(results, list):
+                    print(f"  ⚠️ AI改写标题 {api['name']} 返回非列表JSON，尝试下一个")
+                    continue
+                for r in results:
+                    url = r.get('url', '')
+                    new_reason = r.get('reason', '')
+                    if url and new_reason and len(new_reason) >= 8:
+                        for e in batch:
+                            if e['url'] == url:
+                                e['reason'] = new_reason
+                                e['analysis_source'] = api['id']
+                                rewrote += 1
+                                break
+                break
+            except Exception as exc:
+                print(f"  ⚠️ AI改写标题 {api['name']} 异常: {exc}, 尝试下一个")
+                continue
 
     if rewrote:
         print(f"  ✏️  AI改写标题：{rewrote}/{len(to_rewrite)} 条")
@@ -1396,7 +1439,7 @@ def rewrite_titles_for_display(events):
 
 def build_daily_ai_summary(today_events):
     """
-    基于今日信号事件，调用豆包生成 2-4 句专业情报趋势分析。
+    基于今日信号事件，优先调用 DeepSeek 生成 2-4 句专业情报趋势分析。
     保存到 data/summary.json，供 generate_html.py 读取后覆盖模板摘要。
     失败降级到模板生成（无影响）。
     """
@@ -1408,12 +1451,9 @@ def build_daily_ai_summary(today_events):
     signal = signal[:15]
     today = datetime.now().strftime('%Y-%m-%d')
 
-    api_key = os.environ.get('DOUBAO_API_KEY')
-    if not api_key:
+    apis = _chat_api_candidates()
+    if not apis:
         return None
-
-    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
-    model = os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b')
 
     news_summary = []
     for e in signal:
@@ -1437,45 +1477,36 @@ def build_daily_ai_summary(today_events):
 
 趋势分析（2-4句中文，不要超过120字）："""
 
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 512,
-        "temperature": 0.3,
-    }
-    headers = {
-        "Authorization": "Bearer " + api_key,
-        "Content-Type": "application/json"
-    }
-
-    try:
-        resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
-        if resp.status_code != 200:
-            print(f"  ⚠️  趋势分析API返回 {resp.status_code}")
-            return None
-        data = resp.json()
-        text = data['choices'][0]['message']['content'].strip().strip('"').strip()
-        if len(text) < 20:
-            print(f"  ⚠️  趋势分析结果过短: {text}")
-            return None
-
-        # 保存到 data/summary.json
-        os.makedirs('data', exist_ok=True)
-        summary_data = {}
+    for api in apis:
         try:
-            with open('data/summary.json', 'r', encoding='utf-8') as f:
-                summary_data = json.load(f)
-        except (FileNotFoundError, json.JSONDecodeError):
-            pass
-        summary_data[today] = text
-        with open('data/summary.json', 'w', encoding='utf-8') as f:
-            json.dump(summary_data, f, ensure_ascii=False, indent=2)
+            resp = _post_chat(api, prompt, max_tokens=512, temperature=0.3, timeout=(10, 20))
+            if resp.status_code != 200:
+                print(f"  ⚠️  趋势分析 {api['name']} 返回 {resp.status_code}，尝试下一个")
+                continue
+            data = resp.json()
+            text = data['choices'][0]['message']['content'].strip().strip('"').strip()
+            if len(text) < 20:
+                print(f"  ⚠️  趋势分析 {api['name']} 结果过短: {text}")
+                continue
 
-        print(f"  📊 AI趋势分析已生成（{len(text)}字）: {text[:60]}...")
-        return text
-    except Exception as e:
-        print(f"  ⚠️  趋势分析生成失败: {type(e).__name__}")
-        return None
+            # 保存到 data/summary.json
+            os.makedirs('data', exist_ok=True)
+            summary_data = {}
+            try:
+                with open('data/summary.json', 'r', encoding='utf-8') as f:
+                    summary_data = json.load(f)
+            except (FileNotFoundError, json.JSONDecodeError):
+                pass
+            summary_data[today] = text
+            with open('data/summary.json', 'w', encoding='utf-8') as f:
+                json.dump(summary_data, f, ensure_ascii=False, indent=2)
+
+            print(f"  📊 AI趋势分析已生成（{api['name']}，{len(text)}字）: {text[:60]}...")
+            return text
+        except Exception as e:
+            print(f"  ⚠️  趋势分析 {api['name']} 失败: {type(e).__name__}")
+            continue
+    return None
 
 
 # ============================================================
@@ -1492,12 +1523,10 @@ def ai_quality_judge(events):
     if not other_events:
         return events
 
-    api_key = os.environ.get('DOUBAO_API_KEY')
-    if not api_key:
+    apis = _chat_api_candidates()
+    if not apis:
         return events
 
-    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
-    model = os.environ.get('DOUBAO_MODEL', 'ep-20260409223830-dnt5b')
     kept_urls = set()
     kept_count = 0
     total_count = len(other_events)
@@ -1519,40 +1548,36 @@ def ai_quality_judge(events):
 
 返回JSON："""
 
-        payload = {
-            "model": model,
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 1024,
-            "temperature": 0.1,
-        }
-        headers = {
-            "Authorization": "Bearer " + api_key,
-            "Content-Type": "application/json"
-        }
+        results = None
+        for api in apis:
+            try:
+                resp = _post_chat(api, prompt, max_tokens=1024, temperature=0.1, timeout=(10, 15))
+                if resp.status_code != 200:
+                    continue
+                text = resp.json()['choices'][0]['message']['content']
+                for m in ['```json', '```']:
+                    if m in text:
+                        parts = text.split(m)
+                        for p in parts[1:]:
+                            text = p.strip()
+                            if text.endswith('```'):
+                                text = text[:-3].strip()
+                            break
+                        break
+                parsed = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
+                if isinstance(parsed, list):
+                    results = parsed
+                    break
+            except Exception:
+                continue
+
+        if not isinstance(results, list):
+            # 失败时保留本批次所有事件
+            for e in batch:
+                kept_urls.add(e.get('url', ''))
+            continue
 
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 15))
-            if resp.status_code != 200:
-                # 失败时保留本批次所有事件
-                for e in batch:
-                    kept_urls.add(e.get('url', ''))
-                continue
-            text = resp.json()['choices'][0]['message']['content']
-            for m in ['```json', '```']:
-                if m in text:
-                    parts = text.split(m)
-                    for p in parts[1:]:
-                        text = p.strip()
-                        if text.endswith('```'):
-                            text = text[:-3].strip()
-                        break
-                    break
-            results = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
-            if not isinstance(results, list):
-                for e in batch:
-                    kept_urls.add(e.get('url', ''))
-                continue
-
             scores = {}
             for r in results:
                 if 'url' in r and 'score' in r:
@@ -1612,14 +1637,14 @@ def _calc_score(item):
     return max(min(int(raw), 10), 1)
 
 
-def build_event(item, analysis=None):
+def build_event(item, analysis=None, analysis_source=None, analysis_status=None):
     """构建事件对象：程序评分始终生效，AI 只补充 reason/impact/insight_label"""
     # 程序评分（确定性，始终运行）
     score = _calc_score(item)
     level = 'A' if score >= 8 else 'B' if score >= 6 else 'C' if score >= 4 else 'D'
     # 有 AI 分析时（必须是 dict 类型，防止列表或其他异常类型）
     if analysis and isinstance(analysis, dict):
-        return {
+        event = {
             'title': item['title'],
             'url': item['url'],
             'source': item['source'],
@@ -1638,6 +1663,11 @@ def build_event(item, analysis=None):
             'date': item.get('article_date', datetime.now().isoformat()[:10]),
             'image_url': item.get('image_url', ''),
         }
+        return annotate_event_quality(
+            event,
+            source=analysis_source or 'ai',
+            status=analysis_status,
+        )
     # 无 AI 分析时的 fallback
     ev_type = item.get('event_types', ['other'])[0]
     default_label = {
@@ -1652,7 +1682,7 @@ def build_event(item, analysis=None):
         'earnings': f"{item['region']}科技公司财报披露",
         'strategy': f"{item['region']}科技公司战略动态",
     }.get(ev_type, f"{item['region']}科技行业动态")
-    return {
+    event = {
         'title': item['title'],
         'url': item['url'],
         'source': item['source'],
@@ -1671,6 +1701,11 @@ def build_event(item, analysis=None):
         'date': item.get('article_date', datetime.now().isoformat()[:10]),
         'image_url': item.get('image_url', ''),
     }
+    return annotate_event_quality(
+        event,
+        source=analysis_source or 'program',
+        status=analysis_status or 'fallback',
+    )
 
 # ============================================================
 # og:image 补抓 — 为没有 RSS 图片的事件获取文章配图
@@ -1721,7 +1756,7 @@ def main():
     today = datetime.now().strftime('%Y-%m-%d')
     ON_GHA = os.environ.get('GITHUB_ACTIONS') == 'true'
     if ON_GHA:
-        print("  🤖 GHA 环境检测：跳过 DeepSeek（结构性不可达），专用豆包")
+        print("  🤖 GHA 环境检测：DeepSeek 为主，失败后自动用豆包兜底")
     print(f"\n🌍 全球互联网动态情报站")
     print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M')} | 目标：融资/并购/财报/战略\n")
 
@@ -1842,41 +1877,40 @@ def main():
     print(f"    AI深度分析：{len(ai_tier)} 条 | 程序生成：{len(prog_tier)} 条 | 丢弃：{drop_count} 条")
 
     # 程序生成（中分事件 + 低分公司事件，零API成本）
-    today_events = [build_event(item) for item in prog_tier]
+    today_events = [build_event(item, analysis_source='program', analysis_status='fallback') for item in prog_tier]
 
     # AI深度分析（高分/强信号事件）
     if ai_tier:
         fill_event_images(ai_tier)
-        if ON_GHA:
-            # GHA runner在US-west，DeepSeek api.deepseek.com 结构性不可达
-            deepseek_dead = True
-        else:
-            use_deepseek = configure_deepseek()
-            deepseek_dead = not use_deepseek  # 没有API Key直接跳过
+        use_deepseek = configure_deepseek()
+        deepseek_dead = not use_deepseek
         use_doubao = False
 
         for i in range(0, len(ai_tier), 8):
             batch = ai_tier[i:i+8]
             results = None
+            result_source = None
             batch_idx = (i // 8) + 1
             total_batches = (len(ai_tier) + 7) // 8
 
-            # 尝试 DeepSeek（如果之前没失败过）
+            # DeepSeek 主力；连续失败后本轮后续批次直接走豆包兜底
             if not deepseek_dead:
                 results = analyze_events_deepseek(batch)
                 if results is None:
                     print(f"  批次 {batch_idx}/{total_batches} DeepSeek 失败→降级...")
                     deepseek_dead = True
                 else:
+                    result_source = 'deepseek'
                     print(f"  批次 {batch_idx}/{total_batches} DeepSeek ✅")
 
-            # 豆包降级
+            # 豆包兜底
             if results is None:
                 if not use_doubao:
                     use_doubao = configure_doubao()
                 if use_doubao:
                     results = analyze_events_doubao(batch)
                     if results:
+                        result_source = 'doubao'
                         print(f"  批次 {batch_idx}/{total_batches} 豆包 ✅")
                     else:
                         # 批量失败后逐条兜底（应对间歇性超时）
@@ -1887,22 +1921,55 @@ def main():
                             if single:
                                 results.extend(single)
                         if results:
+                            result_source = 'doubao'
                             print(f"  逐条兜底成功：{len(results)}/{len(batch)} 条 ✅")
                         else:
                             print(f"  逐条兜底全部失败，程序生成")
 
             # 构建事件（有AI结果则合并，否则程序生成）
             if results:
+                result_map = _results_by_url(results)
                 for item in batch:
-                    r = next((x for x in results if x.get('url') == item['url']), {})
-                    today_events.append(build_event(item, r))
+                    r = result_map.get(item['url'])
+                    if r:
+                        today_events.append(
+                            build_event(
+                                item,
+                                r,
+                                analysis_source=result_source or 'ai',
+                            )
+                        )
+                    else:
+                        today_events.append(
+                            build_event(
+                                item,
+                                analysis_source='program',
+                                analysis_status='failed',
+                            )
+                        )
             else:
                 for item in batch:
-                    today_events.append(build_event(item))
+                    today_events.append(
+                        build_event(
+                            item,
+                            analysis_source='program',
+                            analysis_status='failed',
+                        )
+                    )
             time.sleep(0.5)
 
     # AI标题改写：对程序层中仍为泛化描述的事件用豆包改写
     rewrite_titles_for_display(today_events)
+    for event in today_events:
+        annotate_event_quality(event)
+
+    q = summarize_quality(today_events)
+    if q['total']:
+        print(
+            f"  🧪 分析质量：需修复 {q['needs_repair']}/{q['total']} 条"
+            f"（高分需修复 {q['high_score_needs_repair']} 条，"
+            f"兜底/失败 {q['fallback_or_failed']} 条）"
+        )
 
     # 按文章实际发布日期分组（而非脚本运行时间）
     # 同一批次抓到的文章可能有不同的发布日期
@@ -1934,8 +2001,8 @@ def main():
     print(f"  📅 pubDate 解析：{pubdate_ok} 条有日期 | {pubdate_fallback} 条无日期（归入今日）")
     print(f"  🏢 公司动态：{company_added} 条 | 通用热点：{generic_added} 条")
 
-    # 清理 15 天前（避免数据无限膨胀）
-    cutoff = (datetime.now() - timedelta(days=15)).strftime('%Y-%m-%d')
+    # 清理 90 天前（避免数据无限膨胀，保留 3 个月）
+    cutoff = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
     all_events = {k: v for k, v in all_events.items() if k >= cutoff}
     all_events, removed_dups = dedupe_events_by_day(all_events)
     if removed_dups:
