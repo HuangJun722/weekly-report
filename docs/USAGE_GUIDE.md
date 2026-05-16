@@ -160,10 +160,19 @@ HTML 降级 ──┘                          ↑
 2. **AI 标题改写**（`rewrite_titles_for_display`）：改写程序层泛化描述
 3. **AI 情报评分**（`ai_quality_judge`）：对 low-signal 事件做 1-5 分评分，≤2 分丢弃
 
+### RSS Feed
+
+`generate_feed.py` 将 events.json 转换为 Atom XML，输出最新一天全部事件到 `docs/feed.xml`。每天随采集流程自动更新。
+
+- **Feed 地址**：https://huangjun722.github.io/weekly-report/feed.xml
+- **格式**：Atom XML（标准 RSS 阅读器均可消费）
+- **内容**：最新一天全部事件，不是固定条数
+- **用途**：供外部 CLI / RSS 阅读器订阅每日新闻
+
 ### 部署
 
-- GitHub Actions 每天 UTC 6:00 / 14:00 / 22:00 自动运行（北京时间 14:00 / 22:00 / 6:00）
-- 推送到 `docs/` 目录 → GitHub Pages 自动部署
+- GitHub Actions 每天定时自动运行
+- 采集 → AI 分析 → HTML 生成 → Feed 生成 → 推送到 `docs/` → GitHub Pages 部署
 - 也支持 `workflow_dispatch` 手动触发
 
 ---
