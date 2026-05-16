@@ -12925,6 +12925,33 @@
       "needs_repair": true,
       "analysis_source": "program",
       "analysis_status": "fallback"
+    },
+    {
+      "title": "JustCo eyes $78m IPO in Singapore, more APAC openings",
+      "url": "https://www.techinasia.com/justco-eyes-78m-ipo-singapore-apac-openings",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "earnings",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "JustCo拟在新加坡IPO募资$78M并扩张亚太",
+      "reason": "亚太共享办公运营商计划IPO，将带动智能办公设备和IT服务采购",
+      "impact": "智能办公设备商、亚太IT集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太共享办公扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-16",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2024/12/1733465191_JustCo-Singapore.png",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ]
 }
