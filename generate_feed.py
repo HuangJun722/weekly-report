@@ -10,7 +10,8 @@ for date_str, day_events in events.items():
         flattened.append(ev)
 
 flattened.sort(key=lambda x: x['date_str'], reverse=True)
-flattened = flattened[:50]
+latest_date = flattened[0]['date_str']
+flattened = [ev for ev in flattened if ev['date_str'] == latest_date]
 
 now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 feed_id = 'tag:weekly-report,2026:main'
