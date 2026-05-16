@@ -9,6 +9,7 @@
 - **评分前置分流**：`_calc_score()` 评分后，高分（≥7 或 funding/ma/earnings）走 AI，中分（≥4 或 is_company）程序生成，低分（<4）丢弃
 - **P0 Agent**：`build_daily_ai_summary()` 生成「今日判断」AI 趋势分析 → `data/summary.json` → HTML 读取；`rewrite_titles_for_display()` 改写程序层泛化描述；`ai_quality_judge()` 过滤低价值 other 事件
 - **API Key 加密**：`scripts/decrypt_key.py` — PBKDF2 + Fernet 解密本地加密的 API Key
+- **存量补跑**：`scripts/retrofit_events.py` — 扫描 events.json 中泛化描述事件，通过 AI 改写后写回（本地 DeepSeek / GHA 豆包自动切换）
 - **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
 - **部署**：GitHub Actions + GitHub Pages（`docs/` 目录）
 
@@ -40,6 +41,9 @@
 - 两 tab 卡片风格统一：今日要点和全部事件使用一致的 `.daily-event` 卡片结构
 - 评分徽章已移除：事件不显示分数，分数仅用于内部排序和 AI 筛选阈值
 - 事件图片：左侧 100px×70px 缩略图，RSS media_content 优先 → og:image 补抓 → 无图不占位
+- **事件描述降级**：`enrich()` 中 `summary_short` 在 AI 未命中时以 `reason` 兜底；`reason` 再失败则走 `_build_reason()` 程序生成
+- **描述去重**：渲染层（Jinja + JS）检查 `summary_short != reason`，相同时只显示 `reason`
+- **翻页初始状态**：`navigateDay()` 需在页面加载时同步 `prevDay`/`nextDay` 按钮状态，模板默认 `nav-disabled` 需 init 代码纠正
 
 ## 红线（必须先问我）
 

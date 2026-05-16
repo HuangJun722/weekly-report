@@ -293,7 +293,19 @@ def _build_reason(title, ev_type, region, company_name=None):
             else:
                 reason = f"{subject}战略调整"
         else:
-            reason = f"{subject}有新动态"
+            # 从标题提取首段代替"有新动态"（零成本提高信息量）
+            title_short = re.split(r'[,;、。.!！?？]', title)[0].strip()
+            if len(title_short) > 40:
+                title_short = title_short[:40] + '…'
+            if len(title_short) >= 10:
+                if title_short.startswith(subject) and len(title_short) > len(subject):
+                    reason = title_short  # 标题以公司名开头，直接用标题
+                elif title_short != subject:
+                    reason = f"{subject}：{title_short}"
+                else:
+                    reason = f"{subject}有新动态"
+            else:
+                reason = f"{subject}有新动态"
     else:
         # 没有任何信息时的最后兜底：用标题前段代替泛化模板
         # 取第一个句子（句号/问号/叹号前），最长 35 字
