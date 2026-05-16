@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Fri, 15 May 2026 16:41:21 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 15 May 2026 21:23:44 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -127,11 +127,11 @@
 
 
 <ol class="wp-block-list">
-<li>Wipe the cache partition. Power off your phone, then hold the Volume Up and Side buttons together until the Samsung logo appears. Select Wipe cache partition using the volume buttons, confirm with the power button, then reboot. This does not delete your data.</li>
+<li><strong>Clear app cache for your most-used apps.</strong> Go to Settings > Apps, open each app you use heavily like Chrome, Gmail, Instagram, or WhatsApp, tap Storage, and select Clear cache. Do this for your five or six most-used apps. Samsung removed the full cache partition wipe option from the recovery menu with the February 2026 security patch, so clearing app cache individually is now the recommended alternative.</li>
 
 
 
-<li>Reset battery stats. Open the Phone dialer and type *#9900#. Scroll down to Battery stats Reset and tap it. Turn off Auto Blocker first (Settings > Security > Auto Blocker) and switch it back on after rebooting.</li>
+<li>Reset battery stats. Open the Phone dialer and type *#9900#. Scroll down to Battery stats Reset and tap it. Turn off Auto Blocker first (Settings &gt; Security &gt; Auto Blocker) and switch it back on after rebooting.</li>
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-<li>Check background app limits. Go to Settings > Battery > Background usage limits, and set heavy apps like Facebook and TikTok to deep sleep.</li>
+<li>Check background app limits. Go to Settings &gt; Battery &gt; Background usage limits, and set heavy apps like Facebook and TikTok to deep sleep.</li>
 </ol>
 
 
@@ -265,7 +265,7 @@
 
 
 
-<li>Once the update installs, go to Settings > Apps > Voice Recorder and scroll to the bottom to confirm the version is v21.5.86.26 or higher.</li>
+<li>Once the update installs, go to Settings &gt; Apps &gt; Voice Recorder and scroll to the bottom to confirm the version is v21.5.86.26 or higher.</li>
 
 
 
@@ -345,7 +345,7 @@
 
 
 <ul class="wp-block-list">
-<li>Submit feedback through Samsung Members. Go to Get help > Feedback > Suggestion. The more users flag it, the more likely Samsung is to respond.</li>
+<li>Submit feedback through Samsung Members. Go to Get help &gt; Feedback &gt; Suggestion. The more users flag it, the more likely Samsung is to respond.</li>
 
 
 
@@ -391,7 +391,7 @@
 
 
 
-<li>Report it via Samsung Members > Get help > Send feedback to help push Samsung toward a patch in the next maintenance update.</li>
+<li>Report it via Samsung Members &gt; Get help &gt; Send feedback to help push Samsung toward a patch in the next maintenance update.</li>
 </ul>
 
 
@@ -478,7 +478,7 @@
 
 
 
-<p>Z Fold 7 users on Verizon <a href="https://us.community.samsung.com/t5/Fold-Flip-Phones/One-UI-8-5-Z-Fold-7-Verizon/m-p/3560276" target="_blank" rel="noreferrer noopener">report</a> that Good Lock modules behave abnormally after the stable One UI 8.5 push. The fix: go to Settings > Apps > Good Lock > Storage > Clear cache, then open Good Lock and reinstall the misbehaving modules, such as Home Up and NavStar.</p>
+<p>Z Fold 7 users on Verizon <a href="https://us.community.samsung.com/t5/Fold-Flip-Phones/One-UI-8-5-Z-Fold-7-Verizon/m-p/3560276" target="_blank" rel="noreferrer noopener">report</a> that Good Lock modules behave abnormally after the stable One UI 8.5 push. The fix: go to Settings &gt; Apps &gt; Good Lock &gt; Storage &gt; Clear cache, then open Good Lock and reinstall the misbehaving modules, such as Home Up and NavStar.</p>
 
 
 
@@ -499,7 +499,7 @@
 
 
 <ul class="wp-block-list">
-<li>Wipe the cache partition (instructions under Problem 1 above)</li>
+<li>Clear the cache for your most-used apps individually (Settings > Apps > select the app > Storage > Clear cache)</li>
 
 
 
