@@ -687,7 +687,7 @@ def build_period_report(events, start_date, end_date, label):
     trend_counts = {}
     trend_regions = {}
     for e in period_events:
-        topic = e.get('trend_topic') or e.get('insight_label') or '背景补充'
+        topic = _front_trend_topic(e)
         trend_counts[topic] = trend_counts.get(topic, 0) + 1
         region = e.get('region') or '未知'
         trend_regions.setdefault(topic, {})
@@ -719,18 +719,138 @@ def build_period_report(events, start_date, end_date, label):
     }
 
 
+def clean_display_title(title):
+    title = (title or '').strip()
+    title = re.sub(r'^(背景补充|合作机会|资金流向|警示信号|中资出海|观察)[：:]\s*', '', title)
+    return title
+
+
 def split_judgment(text, fallback='今日非中美互联网动态更新'):
     """把长判断拆成适合头版展示的标题和正文。"""
     text = (text or '').strip()
     if not text:
         return fallback, ''
-    parts = re.split(r'(?<=[。！？])', text, maxsplit=1)
-    title = (parts[0] or text).strip()
-    lead = (parts[1] if len(parts) > 1 else '').strip()
-    if len(title) > 48:
-        title = title[:48].rstrip('，,。') + '。'
+    title = ''
+    lead = ''
+    sentence_parts = re.split(r'(?<=[。！？])', text, maxsplit=1)
+    first_sentence = (sentence_parts[0] or text).strip()
+    rest = (sentence_parts[1] if len(sentence_parts) > 1 else '').strip()
+    if len(first_sentence) > 42:
+        clause_parts = re.split(r'[，,；;]', first_sentence, maxsplit=1)
+        title = clause_parts[0].strip()
         lead = text
-    return title, lead
+    else:
+        title = first_sentence
+        lead = rest
+    if not re.search(r'[。！？]$', title):
+        title = title.rstrip('，,；;') + '。'
+    return clean_display_title(title), lead
+
+
+def _has_cjk(text):
+    return bool(re.search(r'[\u4e00-\u9fff]', text or ''))
+
+
+def _is_good_summary(summary, title, reason):
+    summary = (summary or '').strip()
+    if not summary or len(summary) < 8:
+        return False
+    if summary == (reason or '').strip():
+        return False
+    if summary[:25] == (title or '')[:25]:
+        return False
+    if not _has_cjk(summary):
+        return False
+    return True
+
+
+def _front_trend_topic(event):
+    """把后台分类转换成前台可读的趋势名，避免“背景补充”露出。"""
+    region = event.get('region') or '多地区'
+    event_types = event.get('event_types') or []
+    event_type = event_types[0] if event_types else 'other'
+    raw_topic = (event.get('trend_topic') or '').strip()
+    if raw_topic and not raw_topic.startswith(('背景补充', '合作机会')) and raw_topic not in {'背景补充', '合作机会', '其他'}:
+        return raw_topic
+    if event_type == 'funding':
+        return f'{region}资金流向'
+    if event_type == 'ma':
+        return f'{region}并购整合'
+    if event_type == 'earnings':
+        return f'{region}盈利与财报观察'
+    if event_type == 'strategy':
+        return f'{region}战略扩张'
+    company = event.get('company_name')
+    if company:
+        return f'{company}连续动态'
+    label = event.get('insight_label')
+    if label and label not in {'背景补充', '其他'}:
+        return f'{region}{label}'
+    return f'{region}区域动态'
+
+
+def enrich_frontend_fields(events):
+    """补齐前台专用字段，让模板少做判断。"""
+    for event in events:
+        title = event.get('title', '')
+        summary = event.get('summary_short', '')
+        reason = event.get('reason', '')
+        if _is_good_summary(summary, title, reason):
+            display_title = summary.strip()
+            original_title = title
+        elif _has_cjk(reason) and reason.strip() not in {'未知', '科技动态'}:
+            display_title = reason.strip()
+            original_title = title
+        else:
+            display_title = title
+            original_title = ''
+        event['display_title'] = clean_display_title(display_title)
+        event['original_title'] = original_title if original_title and original_title != display_title else ''
+        event['front_trend_topic'] = _front_trend_topic(event)
+        event['display_impact'] = '' if event.get('impact') == '未知' else event.get('impact', '')
+    return events
+
+
+def refine_daily_headline(headline, lead, trend_groups):
+    """避免把统计句当作第一屏判断。"""
+    weak = bool(re.search(r'事件最多|占今日大头|共\d+条动态|覆盖\d+地区', headline or ''))
+    if not weak:
+        return headline, lead
+    top_topic = ''
+    for group in trend_groups:
+        events = group.get('events') or []
+        if events:
+            top_topic = events[0].get('front_trend_topic') or _front_trend_topic(events[0])
+            break
+    if top_topic:
+        return f'{top_topic}成为今日主线。', lead or headline
+    return headline, lead
+
+
+def build_company_cards(company_list, now_date):
+    """生成公司索引里的追踪摘要。"""
+    start_7 = (datetime.strptime(now_date, '%Y-%m-%d') - timedelta(days=6)).strftime('%Y-%m-%d')
+    start_30 = (datetime.strptime(now_date, '%Y-%m-%d') - timedelta(days=29)).strftime('%Y-%m-%d')
+    result = []
+    for company in company_list:
+        events = company.get('events') or []
+        events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
+        recent_7 = [e for e in events if (e.get('date') or '')[:10] >= start_7]
+        recent_30 = [e for e in events if (e.get('date') or '')[:10] >= start_30]
+        latest = events[0] if events else {}
+        latest_title = clean_display_title(latest.get('display_title') or latest.get('summary_short') or latest.get('title') or '暂无近期事件')
+        signal = latest.get('insight_label') or '观察'
+        if signal in {'背景补充', '其他'}:
+            signal = '观察'
+        result.append({
+            **company,
+            'recent_7': len(recent_7),
+            'recent_30': len(recent_30),
+            'latest_title': latest_title,
+            'latest_date': (latest.get('date') or '')[:10],
+            'signal': signal,
+        })
+    return result
 
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
@@ -817,6 +937,8 @@ def generate_html(force=False, preview_mode=False):
     company_events_filtered = [e for evs in company_by_company.values() for e in evs]
     all_events_for_list = list(generic_events) + company_events_filtered
     all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
+    enrich_frontend_fields(all_events_for_list)
+    preset_company_list = build_company_cards(preset_company_list, main_date)
 
     # 历史tab：90天内除主tab批次之外的所有有内容日期
     cutoff = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
@@ -840,6 +962,7 @@ def generate_html(force=False, preview_mode=False):
     trend_groups = build_trend_groups(today_events)
     daily_trend_judgment = weekly.get('summary', '')
     daily_headline, daily_lead = split_judgment(daily_trend_judgment, weekly.get('headline', '今日非中美互联网动态更新'))
+    daily_headline, daily_lead = refine_daily_headline(daily_headline, daily_lead, trend_groups)
     daily_trend_signals = weekly.get('top3', [])
     total_stories = len(today_events)
     dt = datetime.strptime(main_date, '%Y-%m-%d')
