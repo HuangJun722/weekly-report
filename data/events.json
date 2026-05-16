@@ -13202,6 +13202,60 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Japan's SBI, Rakuten to sell crypto investment trusts developed in-house - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPYzBiYnZ0VnltNkVIVWJ2RUJMZExEbS10TWRhVW5BZHB0dVFkTHZTY1JfS0JqM0REMEJsdXRGbE5BMEFtM2ZjZVc2Z2hYb2J6V0VyUmtBdGdfbHdHSnloTWZRRFZyRGduRHRKRkJFc25MRWR0SnU3NWo5dWI0T2ZyNXo0bnBZNU1sdUJZTnhSQUZQRXpCZm1TWnd2NUdGZmowNzVRay1zeE14T2NYZ2FFejMzZzhwVDJEN1V2VjFacw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Japan's SBI, Rakuten to s",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-05-16",
+      "image_url": "",
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Marketing operating system Nectar Social raises $30M Series A led by Menlo",
+      "url": "https://techcrunch.com/2026/05/16/marketing-operating-system-nectar-social-raises-30m-series-a-in-round-led-by-menlo/",
+      "source": "TechCrunch",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Nectar Social获$30M A轮融资",
+      "reason": "欧洲营销SaaS赛道获资本加注，企业级自动化工具集成需求上升",
+      "impact": "欧洲营销技术集成商、CRM平台合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲营销SaaS融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-16",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/05/Nectar-Social.jpg?resize=1200,801",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ]
 }
