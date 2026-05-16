@@ -5,627 +5,424 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全球互联网百晓生</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --ink: #121820;
+  --muted: #66727f;
+  --quiet: #919aa4;
+  --paper: #f4f1ea;
+  --paper-deep: #ebe6da;
+  --surface: #fbfaf6;
+  --surface-cool: #eef2f3;
+  --line: #d9d1c4;
+  --line-cool: #cbd5db;
+  --navy: #172b3a;
+  --green: #1f6658;
+  --copper: #9a6330;
+  --red: #8f3e3a;
+  --radius: 8px;
+  --shadow: 0 18px 50px rgba(28, 35, 42, 0.11);
+}
+* { box-sizing: border-box; }
 body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(23,43,58,0.035) 1px, transparent 1px),
+    linear-gradient(180deg, var(--paper), #f7f5ef 42%, #eef2f3 100%);
+  background-size: 72px 72px, auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: #f5f6fa;
-  color: #1a1a2e;
-  line-height: 1.6;
+  line-height: 1.55;
 }
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px 32px;
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+.page { width: min(1280px, calc(100vw - 36px)); margin: 0 auto; padding: 26px 0 48px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.identity { display: flex; align-items: center; gap: 14px; }
+.seal {
+  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--navy); color: var(--paper); font-weight: 800;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
-
-/* Header */
-.header {
-  position: relative;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #fff;
-  padding: 28px 24px;
-  text-align: center;
-  margin-bottom: 20px;
-  border-radius: 0 0 16px 16px;
-}
-.header h1 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
-.header p { margin: 4px 0 0; font-size: 13px; opacity: 0.8; }
-.theme-toggle {
-  position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
-  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 999px; padding: 8px; cursor: pointer; color: #fff; line-height: 0;
-  transition: all 0.2s;
-}
-.theme-toggle:hover { background: rgba(255,255,255,0.2); transform: translateY(-50%) scale(1.1); }
-.theme-toggle svg { display: block; }
-
-/* Topbar Controls (search + filter + meta) */
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-.topbar-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; flex: 1; }
-.search-field {
-  display: flex; align-items: center; gap: 6px;
-  padding: 8px 12px;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-  min-width: 160px;
-}
-.search-field input { width: 100%; border: 0; outline: 0; background: transparent; font-size: 13px; color: #333; }
-.search-field input::placeholder { color: #aaa; }
-.filter-btn-group { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
-.filter-btn {
-  padding: 4px 12px; border-radius: 999px; border: 1px solid #e0e0e0;
-  background: #fff; font-size: 12px; font-weight: 500; color: #555;
-  cursor: pointer; transition: all 0.15s; white-space: nowrap;
-}
-.filter-btn:hover { border-color: #302b63; color: #302b63; }
-.filter-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
-.meta { display: flex; align-items: center; gap: 6px; color: #888; font-size: 12px; white-space: nowrap; }
-.dot { width: 6px; height: 6px; border-radius: 999px; background: #10b981; flex-shrink: 0; }
-
-/* Datestamp */
-.datestamp {
-  background: #fff3cd; color: #856404; text-align: center;
-  padding: 8px 16px; font-size: 13px; border-radius: 8px;
-  margin-bottom: 18px;
-}
-
-/* Tab Switcher */
-.tab-bar { display: flex; gap: 6px; margin-bottom: 16px; }
+.identity h1 { margin: 0; font-size: 21px; letter-spacing: 0; line-height: 1.15; }
+.identity p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+.timestamp { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.live-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 4px rgba(31,102,88,0.11); }
+.nav-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; }
+.nav { display: flex; gap: 2px; border-bottom: 1px solid var(--line); }
 .tab-btn {
-  padding: 6px 18px; border-radius: 999px; border: 1px solid #e0e0e0;
-  background: #fff; font-size: 13px; font-weight: 500; color: #555;
-  cursor: pointer; transition: all 0.15s;
+  border: 0; background: transparent; padding: 10px 16px 11px; color: var(--muted);
+  cursor: pointer; border-bottom: 2px solid transparent; transform: translateY(1px);
 }
-.tab-btn:hover { border-color: #302b63; color: #302b63; }
-.tab-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
-
-/* Cards */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  margin-bottom: 16px;
-  overflow: hidden;
-}
-.card-header {
-  padding: 12px 18px;
-  border-bottom: 1px solid #eee;
-  font-weight: 600;
-  font-size: 14px;
-  color: #302b63;
-}
-.card-body { padding: 16px 18px; }
-
-/* Region Badges */
-.region-badge {
-  display: inline-block; padding: 2px 10px; border-radius: 12px;
-  font-size: 11px; font-weight: 600; white-space: nowrap;
-}
-.region-badge[data-region="拉美"] { background: #e3f2fd; color: #1565c0; }
-.region-badge[data-region="中东"] { background: #fff3e0; color: #e65100; }
-.region-badge[data-region="欧洲"] { background: #e8f5e9; color: #2e7d32; }
-.region-badge[data-region="非洲"] { background: #fce4ec; color: #c62828; }
-.region-badge[data-region="亚太"] { background: #f3e5f5; color: #6a1b9a; }
-.region-badge[data-region="中资"] { background: #fff8e1; color: #f57f17; }
-
-/* Tags */
-.tag {
-  display: inline-block; padding: 2px 8px; border-radius: 10px;
-  font-size: 11px; background: #f0f0f5; color: #666;
-}
-
-/* Empty / No results */
-.empty-state { text-align: center; padding: 48px 0; color: #888; font-size: 14px; }
-
-/* Company Nav (全部事件 tab) */
-.company-nav {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 14px 18px;
-  margin-bottom: 14px;
-}
-.company-nav-title { font-size: 13px; font-weight: 600; color: #302b63; margin-bottom: 10px; }
-.company-nav-list { display: flex; flex-direction: column; gap: 8px; }
-.company-nav-region { display: flex; align-items: flex-start; gap: 10px; }
-.company-nav-region-name {
-  font-size: 11px; font-weight: 600; color: #666;
-  min-width: 36px; padding-top: 4px;
-}
-.company-nav-items { display: flex; flex-wrap: wrap; gap: 6px; }
-.company-nav-btn {
-  padding: 3px 10px; border-radius: 999px;
-  border: 1px solid #ddd; background: #fafafa;
-  font-size: 11px; font-weight: 500; color: #555; cursor: pointer;
-}
-.company-nav-btn:hover { border-color: #302b63; color: #302b63; }
-.company-nav-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
-.company-nav-btn.empty { opacity: 0.4; cursor: default; }
-
-/* Company item (purple left border) */
-.company-item { border-left: 3px solid #8b5cf6 !important; }
-
-/* Related Links */
-.related-links {
-  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-  margin-top: 6px; padding-top: 6px; border-top: 1px solid #eee;
-}
-.related-label { font-size: 11px; color: #888; flex-shrink: 0; }
-.related-link {
-  font-size: 11px; color: #302b63; text-decoration: none;
-  padding: 1px 6px; border-radius: 4px; background: #f0f0f5;
-}
-.related-link:hover { background: #e0e0ea; text-decoration: underline; }
-.related-more { font-size: 11px; color: #888; background: #f5f5f5; padding: 1px 6px; border-radius: 4px; }
-
-/* Daily Event Card — standalone card per event */
-.daily-event {
-  display: flex; gap: 14px;
-  padding: 14px 16px;
-  margin-bottom: 8px;
-  background: #fff;
-  border: 1px solid #f0f0f0;
-  border-radius: 10px;
-  transition: all 0.15s ease;
-}
-.daily-event:last-child { margin-bottom: 0; }
-.daily-event:hover {
-  border-color: #e0e0ea;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-.daily-event-img {
-  flex-shrink: 0; width: 100px; height: 70px;
-  border-radius: 6px; overflow: hidden;
-  background: #f5f5f5; margin-top: 2px;
-}
-.daily-event-img img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
-}
-.daily-event-img-placeholder { width: 100%; height: 100%; background: #f0f0f5; }
-.daily-event-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-.daily-event-title { margin: 0; font-size: 14px; font-weight: 600; line-height: 1.5; }
-.daily-event-title a { color: #1a1a2e; text-decoration: none; }
-.daily-event-title a:hover { color: #302b63; }
-.daily-event-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.daily-event-reason { margin: 0; font-size: 13px; color: #666; line-height: 1.6; }
-.daily-event-summary { margin: 4px 0 0 0; font-size: 13px; color: #1a1a2e; font-weight: 500; line-height: 1.5; }
-.daily-event-impact { margin: 2px 0 0 0; font-size: 12px; color: #888; line-height: 1.5; }
-
-/* 今日判断区 */
-.judgment-area {
-  margin-bottom: 20px;
-  padding: 20px 24px;
-  background: linear-gradient(135deg, #f8f9ff, #f0f0ff);
-  border: 1px solid #e0e0f0;
-  border-radius: 12px;
-}
-.judgment-header { margin-bottom: 12px; }
-.judgment-badge {
-  display: inline-block; padding: 3px 12px; border-radius: 999px;
-  background: linear-gradient(135deg, #302b63, #0f0c29);
-  color: #fff; font-size: 11px; font-weight: 600;
-}
-.judgment-quote {
-  margin: 0 0 16px;
-  font-size: 15px; line-height: 1.7; color: #333;
-  padding: 8px 14px; border-left: 3px solid #302b63;
-  background: rgba(255,255,255,0.7); border-radius: 0 8px 8px 0;
-}
-.judgment-signals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.signal-card {
-  display: flex; flex-direction: column; gap: 6px; padding: 14px;
-  background: #fff; border: 1px solid #e0e0e0; border-radius: 12px;
-  text-decoration: none; color: inherit; transition: all 0.15s;
-}
-.signal-card:hover { border-color: #302b63; box-shadow: 0 4px 12px rgba(48,43,99,0.08); transform: translateY(-1px); }
-.signal-top { display: flex; align-items: center; gap: 6px; }
-.signal-region { font-size: 10px; font-weight: 600; color: #302b63; text-transform: uppercase; }
-.signal-label { font-size: 10px; color: #666; padding: 1px 6px; border-radius: 4px; background: #f5f5f5; }
-.signal-title { font-size: 13px; font-weight: 600; line-height: 1.5; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.signal-reason { font-size: 11px; color: #666; line-height: 1.5; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-@media (max-width: 800px) { .judgment-signals { grid-template-columns: 1fr; } }
-
-/* Daily Section — 趋势主题分组 */
-.daily-section { margin-bottom: 24px; }
-.daily-section-header {
-  display: flex; align-items: baseline; gap: 8px;
-  padding: 8px 0; margin-bottom: 4px;
-  border-bottom: 2px solid #f0f0f0;
-}
-.daily-section-label { font-size: 15px; font-weight: 700; color: #302b63; }
-.daily-section-count { margin-left: auto; font-size: 11px; color: #888; }
-
-/* Daily Header — Vol */
-.daily-vol-header {
-  padding: 20px 0 12px; margin-bottom: 20px;
-  border-bottom: 2px solid #302b63;
-}
-.daily-vol { font-size: 22px; font-weight: 700; color: #1a1a2e; }
-.daily-vol small { font-size: 12px; font-weight: 500; color: #888; }
-.daily-cn-date { font-size: 12px; color: #666; margin-top: 2px; }
-.daily-subtitle { font-size: 12px; color: #888; margin-top: 2px; }
-
-/* Daily Bottom Bar */
-.daily-bottom {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 12px;
-  margin-top: 24px; padding: 14px 0;
-  border-top: 1px solid #eee;
-}
-.daily-stats { display: flex; align-items: center; gap: 16px; font-size: 12px; color: #888; }
-.daily-stat { display: flex; align-items: center; gap: 4px; }
-.daily-stat-num { font-weight: 700; color: #1a1a2e; }
-.daily-nav { display: flex; align-items: center; gap: 8px; font-size: 12px; }
-.daily-nav a {
-  color: #555; text-decoration: none; padding: 4px 10px;
-  border-radius: 6px; border: 1px solid #e0e0e0; transition: all 0.15s;
-}
-.daily-nav a:hover { border-color: #302b63; color: #302b63; }
-.daily-nav .nav-disabled { opacity: 0.3; cursor: default; pointer-events: none; }
-
-/* Date toggle (全部事件折叠) */
-.date-toggle {
-  cursor: pointer; user-select: none;
-  display: flex; align-items: center; gap: 8px;
-}
-.date-toggle:hover { background: #f8f8ff; }
-.date-toggle .event-count { font-size: 12px; color: #888; font-weight: 400; margin-left: auto; }
-.date-toggle .toggle-icon { font-size: 10px; color: #999; transition: transform 0.15s; }
-.date-body.collapsed { display: none; }
-
-/* Impact tag in event meta */
-
-/* Footer */
-.footer-note {
-  text-align: center; margin-top: 24px; padding: 20px 0;
-  color: #888; font-size: 12px;
-  border-top: 1px solid #eee;
-}
-
-/* Tab panels */
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active { color: var(--ink); border-bottom-color: var(--navy); }
+.controls { display: flex; align-items: center; gap: 8px; }
+.search, .select { border: 1px solid var(--line); background: rgba(251,250,246,0.82); color: var(--ink); border-radius: 8px; }
+.search { width: 280px; display: flex; align-items: center; gap: 8px; padding: 8px 11px; }
+.search span { color: var(--quiet); }
+.search input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 13px; }
+.select { padding: 8px 10px; min-width: 112px; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
-
-/* Responsive */
-@media (max-width: 800px) {
-  .topbar { flex-direction: column; align-items: stretch; }
-  .topbar-controls { flex-direction: column; }
-  .search-field { min-width: unset; }
-  .filter-btn-group { justify-content: center; }
+.issue-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 26px; align-items: start; margin-top: 28px; }
+.headline-area { padding: 34px 0 28px; border-bottom: 1px solid var(--line); }
+.label {
+  display: inline-flex; align-items: center; min-height: 24px; padding: 3px 9px;
+  border: 1px solid var(--line); border-radius: 999px; color: var(--muted);
+  background: rgba(251,250,246,0.7); font-size: 11px; white-space: nowrap;
 }
-@media (max-width: 600px) {
-  .header { padding: 20px 16px; }
-  .header h1 { font-size: 20px; }
-  .daily-vol { font-size: 18px; }
+.label.dark { border-color: var(--navy); background: var(--navy); color: var(--paper); }
+.label.green { border-color: rgba(31,102,88,0.24); background: rgba(31,102,88,0.09); color: var(--green); }
+.label.copper { border-color: rgba(154,99,48,0.24); background: rgba(154,99,48,0.09); color: var(--copper); }
+.label.red { border-color: rgba(143,62,58,0.24); background: rgba(143,62,58,0.08); color: var(--red); }
+.label-row { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.kicker { margin-bottom: 14px; }
+.main-title { max-width: 840px; margin: 0; font-size: 44px; line-height: 1.13; letter-spacing: 0; font-weight: 780; }
+.lead { max-width: 760px; margin: 18px 0 0; color: #38434d; font-size: 17px; line-height: 1.8; }
+.brief-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+.brief { padding: 14px 0 0; border-top: 2px solid var(--navy); }
+.brief h3 { margin: 0; font-size: 14px; }
+.brief p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+.rail { display: grid; gap: 14px; position: sticky; top: 18px; }
+.rail-card { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.78); box-shadow: var(--shadow); }
+.rail-title { margin: 0 0 12px; font-size: 13px; }
+.scoreboard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.score { padding: 12px; border-radius: 8px; background: rgba(238,242,243,0.82); border: 1px solid var(--line-cool); }
+.score strong { display: block; font-size: 22px; line-height: 1; }
+.score span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+.report-entry { display: block; padding: 13px 0; border-top: 1px solid var(--line); }
+.report-entry:first-of-type { border-top: 0; padding-top: 0; }
+.report-entry strong { display: block; font-size: 14px; }
+.report-entry span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+.content-block { margin-top: 24px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.9); box-shadow: var(--shadow); }
+.block-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.block-head h2 { margin: 0; font-size: 17px; }
+.block-head span { color: var(--muted); font-size: 12px; }
+.intelligence-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.intel { display: grid; grid-template-columns: 118px minmax(0, 1fr) 88px; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.intel:hover h3 { color: var(--navy); }
+.intel-meta { display: flex; flex-direction: column; gap: 7px; align-items: flex-start; }
+.intel h3 { margin: 0; font-size: 16px; line-height: 1.42; }
+.intel p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+.intel-impact { margin-top: 8px; color: var(--quiet); font-size: 12px; }
+.amount { align-self: start; justify-self: end; color: var(--copper); font-size: 15px; font-weight: 720; text-align: right; }
+.related-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
+.related-link, .related-more { color: var(--muted); background: var(--surface-cool); border-radius: 6px; padding: 2px 7px; font-size: 11px; }
+.quality-toggle { margin-top: 14px; width: 100%; padding: 12px 14px; border: 1px dashed var(--line); border-radius: 8px; background: rgba(251,250,246,0.72); color: var(--muted); cursor: pointer; text-align: left; }
+.quality-toggle:hover { border-style: solid; color: var(--ink); }
+.quality-box { display: none; }
+.quality-box.open { display: block; }
+.intel.low { opacity: 0.72; }
+.history-list { display: grid; gap: 7px; }
+.date-row { width: 100%; display: flex; justify-content: space-between; gap: 12px; border: 0; border-radius: 8px; padding: 9px 10px; background: transparent; color: var(--muted); cursor: pointer; }
+.date-row:hover, .date-row.active { background: var(--surface-cool); color: var(--ink); }
+.history-card { margin-bottom: 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.72); overflow: hidden; }
+.history-head { width: 100%; display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 13px 16px; border: 0; background: transparent; cursor: pointer; color: var(--ink); }
+.history-body { padding: 0 16px 16px; display: none; }
+.history-card.open .history-body { display: block; }
+.history-card.open .toggle-icon { transform: rotate(90deg); }
+.report-cover {
+  margin-top: 28px; padding: 34px; min-height: 360px; border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(23,43,58,0.96), rgba(25,55,66,0.9)), var(--navy);
+  color: var(--paper); box-shadow: var(--shadow); display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; align-items: end;
 }
-
-/* ── Dark Mode ── */
-html { transition: background 0.3s; }
-[data-theme="dark"] body { background: #0a0a16; color: #d0d0e0; }
-[data-theme="dark"] .search-field { background: #1a1a30; border-color: #3a3a58; }
-[data-theme="dark"] .search-field input { color: #d0d0e0; }
-[data-theme="dark"] .search-field input::placeholder { color: #666680; }
-[data-theme="dark"] .filter-btn { background: #1a1a30; border-color: #3a3a58; color: #8888a8; }
-[data-theme="dark"] .filter-btn:hover { border-color: #6b5fc0; color: #b0a8e0; }
-[data-theme="dark"] .filter-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
-[data-theme="dark"] .card { background: #18182e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-[data-theme="dark"] .card-header { border-bottom-color: #2a2a48; color: #b0a8e0; }
-[data-theme="dark"] .daily-event { background: #18182e; border-color: #2a2a48; }
-[data-theme="dark"] .daily-event:hover { border-color: #3a3a68; box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
-[data-theme="dark"] .daily-event-title a { color: #d0d0e0; }
-[data-theme="dark"] .daily-event-title a:hover { color: #8b7fd0; }
-[data-theme="dark"] .daily-event-reason { color: #8888a8; }
-[data-theme="dark"] .daily-event-summary { color: #d0d0e0; }
-[data-theme="dark"] .daily-event-impact { color: #7777a0; }
-[data-theme="dark"] .daily-event-img { background: #222240; }
-[data-theme="dark"] .tag { background: #222240; color: #8888a8; }
-[data-theme="dark"] .tab-btn { background: #1a1a30; border-color: #3a3a58; color: #8888a8; }
-[data-theme="dark"] .tab-btn:hover { border-color: #6b5fc0; color: #b0a8e0; }
-[data-theme="dark"] .tab-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
-[data-theme="dark"] .judgment-area { background: #12122a; border-color: #2a2a48; }
-[data-theme="dark"] .judgment-quote { color: #c8c8d8; background: rgba(0,0,0,0.3); border-left-color: #6b5fc0; }
-[data-theme="dark"] .signal-card { background: #18182e; border-color: #2a2a48; }
-[data-theme="dark"] .signal-card:hover { border-color: #6b5fc0; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
-[data-theme="dark"] .signal-region { color: #8b7fd0; }
-[data-theme="dark"] .signal-label { background: #222240; color: #8888a8; }
-[data-theme="dark"] .signal-title { color: #d0d0e0; }
-[data-theme="dark"] .signal-reason { color: #8888a8; }
-[data-theme="dark"] .daily-vol { color: #d0d0e0; }
-[data-theme="dark"] .daily-vol small { color: #8888a8; }
-[data-theme="dark"] .daily-cn-date { color: #8888a8; }
-[data-theme="dark"] .daily-subtitle { color: #8888a8; }
-[data-theme="dark"] .daily-section-header { border-bottom-color: #2a2a48; }
-[data-theme="dark"] .daily-section-label { color: #b0a8e0; }
-[data-theme="dark"] .daily-section-count { color: #8888a8; }
-[data-theme="dark"] .daily-bottom { border-top-color: #2a2a48; }
-[data-theme="dark"] .daily-stats { color: #8888a8; }
-[data-theme="dark"] .daily-stat-num { color: #d0d0e0; }
-[data-theme="dark"] .daily-nav a { color: #8888a8; border-color: #3a3a58; }
-[data-theme="dark"] .daily-nav a:hover { border-color: #6b5fc0; color: #b0a8e0; }
-[data-theme="dark"] .company-nav { background: #18182e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-[data-theme="dark"] .company-nav-title { color: #b0a8e0; }
-[data-theme="dark"] .company-nav-btn { background: #1a1a30; border-color: #3a3a58; color: #8888a8; }
-[data-theme="dark"] .company-nav-btn:hover { border-color: #6b5fc0; color: #b0a8e0; }
-[data-theme="dark"] .company-nav-btn.active { background: #302b63; border-color: #302b63; color: #fff; }
-[data-theme="dark"] .company-nav-btn.empty { opacity: 0.3; }
-[data-theme="dark"] .company-nav-region-name { color: #8888a8; }
-[data-theme="dark"] .related-link { background: #222240; color: #8b7fd0; }
-[data-theme="dark"] .related-link:hover { background: #2a2a50; }
-[data-theme="dark"] .related-label { color: #8888a8; }
-[data-theme="dark"] .related-more { background: #222240; color: #8888a8; }
-[data-theme="dark"] .empty-state { color: #8888a8; }
-[data-theme="dark"] .footer-note { color: #666680; border-top-color: #2a2a48; }
-[data-theme="dark"] .datestamp { background: #2a2a10; color: #c0a040; }
-[data-theme="dark"] .date-toggle:hover { background: #1a1a30; }
-[data-theme="dark"] .date-toggle .toggle-icon { color: #8888a8; }
-/* Region badges in dark mode */
-[data-theme="dark"] .region-badge[data-region="拉美"] { background: #0a1a30; color: #5a9fd0; }
-[data-theme="dark"] .region-badge[data-region="中东"] { background: #2a1a08; color: #d08030; }
-[data-theme="dark"] .region-badge[data-region="欧洲"] { background: #0a1a10; color: #3a9a50; }
-[data-theme="dark"] .region-badge[data-region="非洲"] { background: #2a0a10; color: #c04040; }
-[data-theme="dark"] .region-badge[data-region="亚太"] { background: #1a0a30; color: #7a4ac0; }
-[data-theme="dark"] .region-badge[data-region="中资"] { background: #2a1a00; color: #d09020; }
-[data-theme="dark"] .company-item { border-left-color: #7a4ac0 !important; }
-
+.report-cover .label { border-color: rgba(244,241,234,0.28); color: rgba(244,241,234,0.82); background: rgba(244,241,234,0.08); }
+.report-cover h2 { margin: 18px 0 0; max-width: 760px; font-size: 38px; line-height: 1.17; }
+.report-cover p { max-width: 650px; color: rgba(244,241,234,0.72); font-size: 15px; }
+.cover-stats { display: grid; gap: 10px; }
+.cover-stat { padding: 14px; border: 1px solid rgba(244,241,234,0.22); border-radius: 8px; }
+.cover-stat strong { display: block; font-size: 24px; }
+.cover-stat span { color: rgba(244,241,234,0.68); font-size: 12px; }
+.trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+.trend { padding-top: 16px; border-top: 2px solid var(--navy); }
+.trend h3 { margin: 0; font-size: 15px; }
+.trend p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.company-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.company { min-height: 128px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.82); }
+.company strong { display: block; margin-bottom: 9px; font-size: 17px; }
+.company span { color: var(--muted); font-size: 13px; }
+.empty-state { padding: 32px; text-align: center; color: var(--muted); }
+.footer-note { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
+@media (max-width: 1040px) {
+  .issue-layout { grid-template-columns: 1fr; }
+  .rail { position: static; grid-template-columns: repeat(3, 1fr); }
+  .rail-card:first-child { grid-column: span 2; }
+  .main-title { font-size: 38px; }
+  .report-cover { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .page { width: min(100% - 22px, 1280px); padding-top: 18px; }
+  .topbar, .nav-strip, .controls { flex-direction: column; align-items: stretch; }
+  .timestamp { white-space: normal; }
+  .nav { overflow-x: auto; }
+  .tab-btn { flex: 0 0 auto; }
+  .search, .select { width: 100%; }
+  .main-title { font-size: 30px; }
+  .lead { font-size: 15px; }
+  .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
+  .rail-card:first-child { grid-column: auto; }
+  .content-block { padding: 18px; }
+  .intel { grid-template-columns: 1fr; gap: 10px; }
+  .amount { justify-self: start; text-align: left; }
+  .report-cover { padding: 24px; }
+  .report-cover h2 { font-size: 28px; }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  {# ===== Header ===== #}
-  <header class="header">
-    <h1>全球互联网百晓生</h1>
-    <p>除中美之外全球互联网动态</p>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换暗色模式" title="切换暗色模式">
-      <svg id="moonIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-      </svg>
-      <svg id="sunIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
-        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-      </svg>
-    </button>
+<div class="page">
+  <header>
+    <div class="topbar">
+      <div class="identity">
+        <div class="seal">百</div>
+        <div>
+          <h1>全球互联网百晓生</h1>
+          <p>非中美互联网情报简报与趋势跟踪</p>
+        </div>
+      </div>
+      <div class="timestamp"><span class="live-dot"></span><span>{{ update_time }}</span></div>
+    </div>
+    <div class="nav-strip">
+      <nav class="nav" aria-label="主导航">
+        <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日情报</button>
+        <button class="tab-btn" data-tab="weekly" onclick="switchTab('weekly')">周报</button>
+        <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
+        <button class="tab-btn" data-tab="companies" onclick="switchTab('companies')">公司索引</button>
+        <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
+      </nav>
+      <div class="controls">
+        <label class="search"><span>⌕</span><input type="text" id="searchBox" placeholder="搜索公司、地区、关键词" autocomplete="off"></label>
+        <select class="select" id="regionSelect" aria-label="地区筛选">
+          <option value="all">全部地区</option>
+          <option value="亚太">亚太</option>
+          <option value="欧洲">欧洲</option>
+          <option value="中东">中东</option>
+          <option value="非洲">非洲</option>
+          <option value="拉美">拉美</option>
+          <option value="中资">中资出海</option>
+        </select>
+      </div>
+    </div>
   </header>
 
-  {# ===== Topbar Controls ===== #}
-  <div class="topbar">
-    <div class="topbar-controls">
-      <div class="search-field">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-        <input type="text" id="searchBox" placeholder="搜索公司、关键词..." autocomplete="off" />
-      </div>
-      <div class="filter-btn-group">
-        <button class="filter-btn active" data-filter="region" data-value="all">全部地区</button>
-        <button class="filter-btn" data-filter="region" data-value="亚太">亚太</button>
-        <button class="filter-btn" data-filter="region" data-value="欧洲">欧洲</button>
-        <button class="filter-btn" data-filter="region" data-value="中东">中东</button>
-        <button class="filter-btn" data-filter="region" data-value="非洲">非洲</button>
-        <button class="filter-btn" data-filter="region" data-value="拉美">拉美</button>
-        <button class="filter-btn" data-filter="region" data-value="中资">中资出海</button>
-      </div>
-    </div>
-    <div class="meta">
-      <span class="dot"></span>
-      <span>{{ update_time }}</span>
-    </div>
-  </div>
-
-
-  {# ===== Tab Switcher ===== #}
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日要点</button>
-    <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
-  </div>
-
-  {# ===== Today Panel — 先判断（SO WHAT）后事件（WHAT） ===== #}
-  <div class="tab-panel active" id="tab-today">
-    {% if trend_groups %}
-
-    {# ── 今日判断区（先总结） ── #}
-    {% if daily_trend_judgment %}
-    <div class="judgment-area">
-      <div class="judgment-header"><span class="judgment-badge">今日判断</span></div>
-      <blockquote class="judgment-quote">{{ daily_trend_judgment }}</blockquote>
-      {% if daily_trend_signals %}
-      <div class="judgment-signals">
-        {% for ev in daily_trend_signals %}
-        <a href="{{ ev.url }}" target="_blank" class="signal-card">
-          <div class="signal-top">
-            <span class="signal-region">{{ ev.region }}</span>
-            <span class="signal-label">{{ ev.insight_label }}</span>
-          </div>
-          <div class="signal-title">{{ ev.title }}</div>
-          {% if ev.reason %}
-          <div class="signal-reason">{{ ev.reason|truncate(80) }}</div>
-          {% endif %}
-        </a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
-    {% endif %}
-
-    {# ── VOL Header ── #}
-    <div class="daily-vol-header">
-      <div class="daily-vol">{{ vol_label }} <small>· {{ total_stories }} STORIES · 全球互联网百晓生</small></div>
-      <div class="daily-cn-date">{{ cn_date }}</div>
-      {% if weekly.headline %}<div class="daily-subtitle">{{ weekly.headline }}</div>{% endif %}
-    </div>
-
-    {# ── 按趋势主题分组的事件（后细节） ── #}
-    {% set section_num = namespace(value=0) %}
-    {% for group in trend_groups %}
-    {% set section_num.value = section_num.value + 1 %}
-    <div class="daily-section">
-      <div class="daily-section-header">
-        <span class="daily-section-label">{{ group.topic }}</span>
-        <span class="daily-section-count">{{ group.events|length }} 条</span>
-      </div>
-
-      {% for ev in group.events %}
-      <div class="daily-event" data-filterable data-region="{{ ev.region }}"
-        data-company="{{ ev.company_name if ev.is_company else '' }}"
-        data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
-        {% if ev.image_url %}
-        <div class="daily-event-img"><img src="{{ ev.image_url }}" alt="" loading="lazy"></div>
-        {% endif %}
-        <div class="daily-event-body">
-        <div class="daily-event-meta">
-          <span class="region-badge" data-region="{{ ev.region }}">{{ ev.region }}</span>
-          {% if ev.insight_label %}
-          <span class="tag">{{ ev.insight_label }}</span>
-          {% endif %}
-          <span class="tag">{{ ev.source }}</span>
-          {% if ev.is_company and ev.company_name %}
-          <span class="tag">{{ ev.company_name }}</span>
-          {% endif %}
-        </div>
-        <h4 class="daily-event-title"><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-        {% if ev.summary_short and ev.summary_short != ev.title[:25] and ev.summary_short != ev.reason %}
-        <p class="daily-event-summary">{{ ev.summary_short }}</p>
-        {% endif %}
-        {% if ev.reason %}
-        <p class="daily-event-reason">{{ ev.reason }}</p>
-        {% endif %}
-        {% if ev.impact and ev.impact != '未知' %}
-        <p class="daily-event-impact">影响：{{ ev.impact }}</p>
-        {% endif %}
-        {% if ev.related_links %}
-        <div class="related-links">
-          <span class="related-label">同源报道：</span>
-          {% for rl in ev.related_links[:3] %}
-          <a href="{{ rl }}" target="_blank" class="related-link">{{ rl|truncate(40, True) }}</a>
-          {% endfor %}
-          {% if ev.related_links|length > 3 %}
-          <span class="related-more">+{{ ev.related_links|length - 3 }}</span>
-          {% endif %}
-        </div>
-        {% endif %}
-        </div><!-- /daily-event-body -->
-      </div>
-      {% endfor %}
-    </div>
-    {% endfor %}
-
-    {# ── Bottom Stats + Nav ── #}
-    <div class="daily-bottom">
-      <div class="daily-stats">
-        <span class="daily-stat"><span class="daily-stat-num">{{ total_stories }}</span> 今日事件</span>
-        <span class="daily-stat"><span class="daily-stat-num">{{ weekly.regions }}</span> 覆盖区域</span>
-        <span class="daily-stat"><span class="daily-stat-num">{{ weekly.funding }}</span> 融资</span>
-        <span class="daily-stat"><span class="daily-stat-num">{{ weekly.ma }}</span> 并购</span>
-        <span class="daily-stat"><span class="daily-stat-num">{{ weekly.earnings }}</span> 财报</span>
-      </div>
-      <div class="daily-nav">
-        <a id="prevDay" class="nav-disabled" onclick="navigateDay(-1)" style="cursor:pointer">« 前一日</a>
-        <a onclick="switchTab('all')">查看全部</a>
-        <a id="nextDay" class="nav-disabled" onclick="navigateDay(1)" style="cursor:pointer">后一日 »</a>
-      </div>
-    </div>
-
-    {% else %}
-    <div class="empty-state">暂无今日数据</div>
-    {% endif %}
-  </div>
-
-  {# ===== All Panel (全部事件 + 公司索引) ===== #}
-  <div class="tab-panel" id="tab-all">
-    {# 公司索引导航：使用预设公司名单 #}
-    {% if company_list %}
-    <div class="company-nav" id="companyNav">
-      <div class="company-nav-title">📂 公司快链</div>
-      <div class="company-nav-list">
-        {% set regions = ['亚太', '欧洲', '中东', '非洲', '拉美', '中资'] %}
-        {% for region in regions %}
-        {% set companies_in_region = [] %}
-        {% for c in company_list if c.region == region %}
-          {% set _ = companies_in_region.append(c) %}
-        {% endfor %}
-        {% if companies_in_region %}
-        <div class="company-nav-region">
-          <span class="company-nav-region-name">{{ region }}</span>
-          <div class="company-nav-items">
-            {% for c in companies_in_region %}
-            <button class="company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">{{ c.name }}{% if c.count > 0 %} ({{ c.count }}){% endif %}</button>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-
-    {# 全部事件列表：按日期分组折叠 #}
-    {% if date_grouped_events %}
-    <div id="feed-list">
-      {% for group in date_grouped_events %}
-      <div class="card" data-date="{{ group.date }}">
-        <div class="card-header date-toggle" onclick="toggleDate(this)">
-          <span>{{ group.date }}</span>
-          <span class="event-count">{{ group.events|length }} 条</span>
-          <span class="toggle-icon">{% if loop.first %}▼{% else %}▶{% endif %}</span>
-        </div>
-        <div class="card-body date-body{% if not loop.first %} collapsed{% endif %}"{% if not loop.first %} style="display:none"{% endif %}>
-          {% for ev in group.events %}
-          <div class="daily-event{% if ev.is_company %} company-item{% endif %}"
-            data-filterable
-            data-company="{{ ev.company_name if ev.is_company else '' }}"
-            data-region="{{ ev.region }}"
-            data-type="{{ ev.event_types|join(',') }}"
-            data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
-            {% if ev.image_url %}
-            <div class="daily-event-img"><img src="{{ ev.image_url }}" alt="" loading="lazy"></div>
-            {% endif %}
-            <div class="daily-event-body">
-            <h4 class="daily-event-title"><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a></h4>
-            <div class="daily-event-meta">
-              <span class="region-badge" data-region="{{ ev.region }}">{{ ev.region }}</span>
-              {% if ev.insight_label %}
-              <span class="tag">{{ ev.insight_label }}</span>
-              {% endif %}
-              <span class="tag">{{ ev.source }}</span>
-              {% if ev.is_company and ev.company_name %}
-              <span class="tag">{{ ev.company_name }}</span>
-              {% endif %}
+  <main>
+    <section class="tab-panel active" id="tab-today">
+      {% if trend_groups %}
+      <div class="issue-layout">
+        <div>
+          <section class="headline-area">
+            <div class="label-row kicker">
+              <span class="label dark">今日判断</span>
+              <span class="label">{{ vol_label }}</span>
+              <span class="label green">AI 解析</span>
             </div>
-            {% if ev.summary_short and ev.summary_short != ev.title[:25] and ev.summary_short != ev.reason %}
-            <p class="daily-event-summary">{{ ev.summary_short }}</p>
-            {% endif %}
-            {% if ev.reason %}
-            <p class="daily-event-reason">{{ ev.reason }}</p>
-            {% endif %}
-            {% if ev.impact and ev.impact != '未知' %}
-            <p class="daily-event-impact">影响：{{ ev.impact }}</p>
-            {% endif %}
-            {% if ev.related_links %}
-            <div class="related-links">
-              <span class="related-label">同源报道：</span>
-              {% for rl in ev.related_links[:3] %}
-              <a href="{{ rl }}" target="_blank" class="related-link">{{ rl|truncate(40, True) }}</a>
+            <h2 class="main-title">{{ daily_headline }}</h2>
+            {% if daily_lead or weekly.headline %}<p class="lead">{{ daily_lead or weekly.headline }}</p>{% endif %}
+            {% if daily_trend_signals %}
+            <div class="brief-grid judgment-signals">
+              {% for ev in daily_trend_signals[:3] %}
+              <a href="{{ ev.url }}" target="_blank" class="brief event-item signal-card" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+                <h3>{{ ev.region }} · {{ ev.insight_label or '重点信号' }}</h3>
+                <p class="signal-title">{{ ev.title|truncate(64) }}</p>
+              </a>
               {% endfor %}
-              {% if ev.related_links|length > 3 %}
-              <span class="related-more">+{{ ev.related_links|length - 3 }}</span>
-              {% endif %}
             </div>
             {% endif %}
-            </div><!-- /daily-event-body -->
+          </section>
+
+          <section class="content-block">
+            <div class="block-head">
+              <h2>高价值事件</h2>
+              <span>主列表只放可信、可读、可行动的信息</span>
+            </div>
+            {% set repair_events = [] %}
+            <div class="intelligence-list">
+              {% for group in trend_groups %}
+              {% for ev in group.events %}
+              {% if ev.needs_repair or ev.analysis_status == 'fallback' or ev.impact == '未知' or ev.score|default(0) < 2 %}
+                {% set _ = repair_events.append(ev) %}
+              {% else %}
+              <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+                <div class="intel-meta">
+                  <span class="label green">{{ ev.region }}</span>
+                  {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
+                  {% if ev.is_company and ev.company_name %}<span class="label">{{ ev.company_name }}</span>{% endif %}
+                </div>
+                <div>
+                  <h3>{{ ev.title }}</h3>
+                  {% if ev.summary_short and ev.summary_short != ev.title[:25] and ev.summary_short != ev.reason %}
+                  <p>{{ ev.summary_short }}</p>
+                  {% endif %}
+                  {% if ev.reason %}<div class="intel-impact">{{ ev.reason }}</div>{% endif %}
+                  {% if ev.impact and ev.impact != '未知' %}<div class="intel-impact">影响：{{ ev.impact }}</div>{% endif %}
+                  {% if ev.related_links %}
+                  <div class="related-links">
+                    {% for rl in ev.related_links[:3] %}<span class="related-link">{{ rl|truncate(40, True) }}</span>{% endfor %}
+                    {% if ev.related_links|length > 3 %}<span class="related-more">+{{ ev.related_links|length - 3 }}</span>{% endif %}
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="amount">{{ ev.display_amount or ev.source }}</div>
+              </a>
+              {% endif %}
+              {% endfor %}
+              {% endfor %}
+            </div>
+            {% if repair_events %}
+            <button class="quality-toggle" id="qualityToggle">显示 {{ repair_events|length }} 条原始候选/需复核事件</button>
+            <div class="quality-box" id="qualityBox">
+              <div class="intelligence-list">
+                {% for ev in repair_events %}
+                <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+                  <div class="intel-meta"><span class="label red">需复核</span><span class="label">{{ ev.region }}</span></div>
+                  <div>
+                    <h3>{{ ev.title }}</h3>
+                    {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
+                  </div>
+                  <div class="amount">候选</div>
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </section>
+        </div>
+
+        <aside class="rail">
+          <section class="rail-card">
+            <h2 class="rail-title">今日摘要</h2>
+            <div class="scoreboard">
+              <div class="score"><strong id="statStories">{{ total_stories }}</strong><span>入选事件</span></div>
+              <div class="score"><strong id="statRegions">{{ weekly.regions }}</strong><span>覆盖地区</span></div>
+              <div class="score"><strong id="statFunding">{{ weekly.funding }}</strong><span>融资</span></div>
+              <div class="score"><strong id="statMa">{{ weekly.ma + weekly.earnings }}</strong><span>并购/财报</span></div>
+            </div>
+          </section>
+          <section class="rail-card">
+            <h2 class="rail-title">报告入口</h2>
+            <a class="report-entry" href="#" onclick="switchTab('weekly');return false;"><strong>本周报告</strong><span>{{ weekly_report.total }} 条事件，{{ weekly_report.companies }} 家重点公司</span></a>
+            <a class="report-entry" href="#" onclick="switchTab('monthly');return false;"><strong>本月报告</strong><span>{{ monthly_report.total }} 条事件，{{ monthly_report.companies }} 家重点公司</span></a>
+          </section>
+          <section class="rail-card">
+            <h2 class="rail-title">历史导航</h2>
+            <div class="history-list">
+              {% for d in available_dates[:5] %}
+              <button class="date-row{% if d == main_date %} active{% endif %}" onclick="navigateToDate('{{ d }}')"><span>{{ d }}</span><span>{{ date_panels[d].total_stories }} 条</span></button>
+              {% endfor %}
+              <button class="date-row" onclick="switchTab('all')"><span>90 天历史</span><span>{{ history|length }} 天</span></button>
+            </div>
+          </section>
+        </aside>
+      </div>
+      {% else %}
+      <div class="empty-state">暂无今日数据</div>
+      {% endif %}
+    </section>
+
+    <section class="tab-panel" id="tab-weekly">
+      <article class="report-cover">
+        <div>
+          <div class="label-row"><span class="label">周报</span><span class="label">{{ weekly_report.start }} 至 {{ weekly_report.end }}</span></div>
+          <h2>{{ weekly_report.title }}</h2>
+          <p>{{ weekly_report.summary }}</p>
+        </div>
+        <div class="cover-stats">
+          <div class="cover-stat"><strong>{{ weekly_report.total }}</strong><span>入选事件</span></div>
+          <div class="cover-stat"><strong>{{ weekly_report.companies }}</strong><span>重点公司</span></div>
+          <div class="cover-stat"><strong>{{ weekly_report.regions }}</strong><span>覆盖地区</span></div>
+        </div>
+      </article>
+      <section class="content-block">
+        <div class="block-head"><h2>本周核心趋势</h2><span>由近 7 天事件聚合</span></div>
+        <div class="trend-columns">
+          {% for t in weekly_report.trends[:3] %}
+          <div class="trend"><h3>{{ t.topic }}</h3><p>{{ t.count }} 条事件，主要地区：{{ t.region }}</p></div>
+          {% endfor %}
+        </div>
+      </section>
+    </section>
+
+    <section class="tab-panel" id="tab-monthly">
+      <article class="report-cover">
+        <div>
+          <div class="label-row"><span class="label">月报</span><span class="label">{{ monthly_report.month }}</span></div>
+          <h2>{{ monthly_report.title }}</h2>
+          <p>{{ monthly_report.summary }}</p>
+        </div>
+        <div class="cover-stats">
+          <div class="cover-stat"><strong>{{ monthly_report.total }}</strong><span>月度事件</span></div>
+          <div class="cover-stat"><strong>{{ monthly_report.companies }}</strong><span>重点公司</span></div>
+          <div class="cover-stat"><strong>{{ monthly_report.regions }}</strong><span>覆盖地区</span></div>
+        </div>
+      </article>
+      <section class="content-block">
+        <div class="block-head"><h2>月度观察框架</h2><span>区域、公司、赛道变化</span></div>
+        <div class="trend-columns">
+          {% for t in monthly_report.trends[:3] %}
+          <div class="trend"><h3>{{ t.topic }}</h3><p>{{ t.count }} 条事件，主要地区：{{ t.region }}</p></div>
+          {% endfor %}
+        </div>
+      </section>
+    </section>
+
+    <section class="tab-panel" id="tab-companies">
+      <section class="headline-area">
+        <div class="label-row kicker"><span class="label dark">公司索引</span><span class="label">从快链升级为跟踪对象</span></div>
+        <h2 class="main-title">公司不是筛选项，而是连续观察对象。</h2>
+        <p class="lead">每家公司会关联到每日事件、周报趋势和月度变化，形成轻量情报库。</p>
+      </section>
+      {% if company_list %}
+      <section class="content-block">
+        <div class="company-grid">
+          {% for c in company_list %}
+          <button class="company company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
+            <strong>{{ c.name }}</strong>
+            <span>{{ c.region }}，{{ c.count }} 条事件</span>
+          </button>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+    </section>
+
+    <section class="tab-panel" id="tab-all">
+      {% if date_grouped_events %}
+      <section class="content-block">
+        <div class="block-head"><h2>90 天事件库</h2><span>按日期折叠，支持搜索和地区/公司筛选</span></div>
+        <div id="feed-list">
+          {% for group in date_grouped_events %}
+          <div class="history-card" data-date="{{ group.date }}">
+            <button class="history-head" onclick="toggleDate(this)">
+              <span>{{ group.date }}</span>
+              <span>{{ group.events|length }} 条 <span class="toggle-icon">›</span></span>
+            </button>
+            <div class="history-body">
+              <div class="intelligence-list">
+                {% for ev in group.events %}
+                <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+                  <div class="intel-meta">
+                    <span class="label green">{{ ev.region }}</span>
+                    {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
+                    {% if ev.is_company and ev.company_name %}<span class="label">{{ ev.company_name }}</span>{% endif %}
+                  </div>
+                  <div>
+                    <h3>{{ ev.title }}</h3>
+                    {% if ev.summary_short and ev.summary_short != ev.title[:25] and ev.summary_short != ev.reason %}<p>{{ ev.summary_short }}</p>{% endif %}
+                    {% if ev.reason %}<div class="intel-impact">{{ ev.reason }}</div>{% endif %}
+                    {% if ev.impact and ev.impact != '未知' %}<div class="intel-impact">影响：{{ ev.impact }}</div>{% endif %}
+                  </div>
+                  <div class="amount">{{ ev.display_amount or ev.source }}</div>
+                </a>
+                {% endfor %}
+              </div>
+            </div>
           </div>
           {% endfor %}
         </div>
-      </div>
-      {% endfor %}
-    </div>
-    <div id="no-results" class="empty-state" style="display:none">当前筛选条件下没有内容，换个关键词试试</div>
-    {% endif %}
-  </div>
+        <div id="no-results" class="empty-state" style="display:none">当前筛选条件下没有内容，换个关键词试试</div>
+      </section>
+      {% endif %}
+    </section>
+  </main>
 
   <div class="footer-note">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</div>
 </div>
@@ -634,142 +431,85 @@ html { transition: background 0.3s; }
 function switchTab(name) {
   document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
   document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
-  document.querySelector('.tab-btn[data-tab="'+name+'"]').classList.add('active');
-  document.getElementById('tab-'+name).classList.add('active');
+  var btn = document.querySelector('.tab-btn[data-tab="'+name+'"]');
+  var panel = document.getElementById('tab-'+name);
+  if (btn) btn.classList.add('active');
+  if (panel) panel.classList.add('active');
 }
-
-function toggleHistory(el) {
-  var day = el.parentElement;
-  var feed = day.querySelector('.history-feed');
-  if (!feed) return;
-  var isOpen = day.classList.contains('history-day-open');
-  if (isOpen) {
-    day.classList.remove('history-day-open');
-    feed.style.display = 'none';
-  } else {
-    day.classList.add('history-day-open');
-    feed.style.display = '';
-  }
-}
-
 function toggleDate(header) {
-  var body = header.nextElementSibling;
-  var icon = header.querySelector('.toggle-icon');
-  if (!body || !icon) return;
-  if (body.style.display === 'none') {
-    body.style.display = '';
-    icon.textContent = '▼';
-  } else {
-    body.style.display = 'none';
-    icon.textContent = '▶';
-  }
+  var card = header.closest('.history-card');
+  if (card) card.classList.toggle('open');
 }
-
-var state = { region:'all', type:'all', q:'', company:'all' };
-
-// 筛选按钮点击事件
-document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var f = btn.getAttribute('data-filter');
-    var v = btn.getAttribute('data-value');
-    document.querySelectorAll('.filter-btn[data-filter="'+f+'"]').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
-    state[f] = v;
-    applyFilters();
-  });
-});
-
-// 搜索框输入事件
+var state = { region:'all', q:'', company:'all' };
 document.getElementById('searchBox').addEventListener('input', function(e){
   state.q = e.target.value.trim().toLowerCase();
   applyFilters();
 });
-
-// 公司导航按钮点击事件
+document.getElementById('regionSelect').addEventListener('change', function(e){
+  state.region = e.target.value;
+  applyFilters();
+});
 document.querySelectorAll('.company-nav-btn').forEach(function(btn){
   btn.addEventListener('click', function(){
-    // 无数据的按钮不响应
     if (btn.classList.contains('empty')) return;
-
     var company = btn.getAttribute('data-company');
     var isActive = btn.classList.contains('active');
-
-    // 清除所有按钮的active状态
     document.querySelectorAll('.company-nav-btn').forEach(function(b){ b.classList.remove('active'); });
-
-    if (isActive) {
-      // 取消选中，恢复全部
-      state.company = 'all';
-    } else {
-      // 选中该公司
-      btn.classList.add('active');
-      state.company = company.toLowerCase();
-    }
+    state.company = isActive ? 'all' : company.toLowerCase();
+    if (!isActive) btn.classList.add('active');
+    switchTab('all');
     applyFilters();
   });
 });
-
 function applyFilters(){
-  var r = state.region, q = state.q, c = state.company;
   var visible = 0;
   document.querySelectorAll('[data-filterable]').forEach(function(el){
-    var er = el.getAttribute('data-region')||'';
-    var ec = el.getAttribute('data-chinese')||'0';
-    var ecn = (el.getAttribute('data-company')||'').toLowerCase();
-    var text = (el.getAttribute('data-text')||'').toLowerCase();
-    var mr = r==='all' || (r==='中资' && ec==='1') || er===r;
-    var mq = !q || text.indexOf(q) > -1;
-    var mc = c==='all' || ecn===c || (ecn && text.indexOf(c) > -1);
+    var er = el.getAttribute('data-region') || '';
+    var ecn = (el.getAttribute('data-company') || '').toLowerCase();
+    var text = (el.getAttribute('data-text') || '').toLowerCase();
+    var mr = state.region === 'all' || er === state.region;
+    var mq = !state.q || text.indexOf(state.q) > -1;
+    var mc = state.company === 'all' || ecn === state.company || text.indexOf(state.company) > -1;
     var show = mr && mq && mc;
     el.style.display = show ? '' : 'none';
     if (show) visible++;
   });
-  // 隐藏没有可见事件的日期卡片
-  document.querySelectorAll('.card[data-date]').forEach(function(card){
-    var hasVisible = card.querySelectorAll('[data-filterable][style*="display: none"]').length < card.querySelectorAll('[data-filterable]').length;
-    card.style.display = hasVisible ? '' : 'none';
+  document.querySelectorAll('.history-card[data-date]').forEach(function(card){
+    var items = card.querySelectorAll('[data-filterable]');
+    var hidden = card.querySelectorAll('[data-filterable][style*="display: none"]');
+    card.style.display = hidden.length < items.length ? '' : 'none';
   });
   var noResults = document.getElementById('no-results');
-  var feedList = document.getElementById('feed-list');
-  if (noResults) noResults.style.display = (visible === 0) ? 'block' : 'none';
+  if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
 }
-
-// ── Date Navigation（前一日/后一日翻页） ──
 var availableDates = {{ available_dates_json }};
 var datePanels = {{ date_panels_json }};
 var currentDateIndex = availableDates.indexOf('{{ main_date }}');
-// 初始化翻页按钮状态
-document.getElementById('prevDay').className = currentDateIndex <= 0 ? 'nav-disabled' : '';
-document.getElementById('nextDay').className = currentDateIndex >= availableDates.length - 1 ? 'nav-disabled' : '';
-
 function escHtml(s) {
   if (!s) return '';
   var d = document.createElement('div');
-  d.textContent = s; return d.innerHTML;
+  d.textContent = s;
+  return d.innerHTML;
 }
-
+function labelHtml(text, cls) {
+  if (!text) return '';
+  return '<span class="label ' + (cls || '') + '">' + escHtml(text) + '</span>';
+}
 function eventCardHtml(ev) {
-  var img = ev.image_url
-    ? '<div class="daily-event-img"><img src="' + ev.image_url + '" alt="" loading="lazy"></div>' : '';
-  var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25) && ev.summary_short !== ev.reason)
-    ? '<p class="daily-event-summary">' + escHtml(ev.summary_short) + '</p>' : '';
-  var reason = ev.reason ? '<p class="daily-event-reason">' + escHtml(ev.reason) + '</p>' : '';
-  var imp = (ev.impact && ev.impact !== '未知') ? '<p class="daily-event-impact">影响：' + escHtml(ev.impact) + '</p>' : '';
-  var co = (ev.is_company && ev.company_name) ? '<span class="tag">' + escHtml(ev.company_name) + '</span>' : '';
-  var label = ev.insight_label ? '<span class="tag">' + escHtml(ev.insight_label) + '</span>' : '';
   var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.company_name||'');
-  return '<div class="daily-event" data-filterable data-region="' + escHtml(ev.region) + '"' +
-    ' data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
-    img +
-    '<div class="daily-event-body"><div class="daily-event-meta">' +
-    '<span class="region-badge" data-region="' + escHtml(ev.region) + '">' + escHtml(ev.region) + '</span>' +
-    label +
-    '<span class="tag">' + escHtml(ev.source) + '</span>' + co +
-    '</div><h4 class="daily-event-title"><a href="' + ev.url + '" target="_blank">' + escHtml(ev.title) + '</a></h4>' +
-    sum + reason + imp +
-    '</div></div>';
+  var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25) && ev.summary_short !== ev.reason)
+    ? '<p>' + escHtml(ev.summary_short) + '</p>' : '';
+  var reason = ev.reason ? '<div class="intel-impact">' + escHtml(ev.reason) + '</div>' : '';
+  var imp = (ev.impact && ev.impact !== '未知') ? '<div class="intel-impact">影响：' + escHtml(ev.impact) + '</div>' : '';
+  return '<a class="intel event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
+    '<div class="intel-meta">' + labelHtml(ev.region, 'green') + labelHtml(ev.insight_label, '') + (ev.company_name ? labelHtml(ev.company_name, '') : '') + '</div>' +
+    '<div><h3>' + escHtml(ev.title) + '</h3>' + sum + reason + imp + '</div>' +
+    '<div class="amount">' + escHtml(ev.display_amount || ev.source || '') + '</div></a>';
 }
-
+function navigateToDate(date) {
+  var idx = availableDates.indexOf(date);
+  if (idx >= 0) navigateDay(idx - currentDateIndex);
+}
 function navigateDay(dir) {
   var ni = currentDateIndex + dir;
   if (ni < 0 || ni >= availableDates.length) return;
@@ -777,78 +517,41 @@ function navigateDay(dir) {
   var panel = datePanels[date];
   if (!panel) return;
   currentDateIndex = ni;
-
-  // 1. 今日判断
-  var q = document.querySelector('.judgment-quote');
-  if (q) q.textContent = panel.judgment || '';
-  var se = document.querySelector('.judgment-signals');
-  if (se && panel.top3) {
-    se.innerHTML = panel.top3.map(function(ev) {
-      return '<a href="' + ev.url + '" target="_blank" class="signal-card">' +
-        '<div class="signal-top"><span class="signal-region">' + escHtml(ev.region) + '</span>' +
-        '<span class="signal-label">' + escHtml(ev.insight_label) + '</span></div>' +
-        '<div class="signal-title">' + escHtml(ev.title) + '</div>' +
-        (ev.reason ? '<div class="signal-reason">' + escHtml(ev.reason) + '</div>' : '') +
-        '</a>';
+  var title = document.querySelector('#tab-today .main-title');
+  if (title) title.textContent = panel.headline || panel.judgment || '今日非中美互联网动态更新';
+  var lead = document.querySelector('#tab-today .lead');
+  if (lead) lead.textContent = panel.judgment || '';
+  var briefs = document.querySelector('#tab-today .judgment-signals');
+  if (briefs && panel.top3) {
+    briefs.innerHTML = panel.top3.map(function(ev) {
+      return '<a href="' + escHtml(ev.url) + '" target="_blank" class="brief event-item signal-card" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml((ev.title||'') + ' ' + (ev.reason||'')) + '">' +
+        '<h3>' + escHtml(ev.region) + ' · ' + escHtml(ev.insight_label || '重点信号') + '</h3><p class="signal-title">' + escHtml(ev.title) + '</p></a>';
     }).join('');
   }
-
-  // 2. VOL header
-  var vl = document.querySelector('.daily-vol');
-  if (vl) vl.innerHTML = panel.vol_label + ' <small>· ' + panel.total_stories + ' STORIES · 全球互联网百晓生</small>';
-  var cn = document.querySelector('.daily-cn-date');
-  if (cn) cn.textContent = panel.cn_date;
-  var hl = document.querySelector('.daily-subtitle');
-  if (hl) hl.textContent = panel.headline || '';
-
-  // 3. 趋势分组
-  var tab = document.getElementById('tab-today');
-  var vh = tab.querySelector('.daily-vol-header');
-  tab.querySelectorAll('.daily-section').forEach(function(s) { s.remove(); });
-
-  var after = vh;
-  panel.trend_groups.forEach(function(g) {
-    var sec = document.createElement('div');
-    sec.className = 'daily-section';
-    sec.innerHTML = '<div class="daily-section-header"><span class="daily-section-label">' +
-      escHtml(g.topic) + '</span><span class="daily-section-count">' + g.events.length + ' 条</span></div>';
-    g.events.forEach(function(ev) { sec.innerHTML += eventCardHtml(ev); });
-    tab.insertBefore(sec, after.nextSibling);
-    after = sec;
+  var list = document.querySelector('#tab-today .content-block .intelligence-list');
+  if (list) {
+    var html = '';
+    panel.trend_groups.forEach(function(g){ g.events.forEach(function(ev){ html += eventCardHtml(ev); }); });
+    list.innerHTML = html;
+  }
+  document.getElementById('statStories').textContent = panel.total_stories || 0;
+  document.getElementById('statRegions').textContent = panel.regions || 0;
+  document.getElementById('statFunding').textContent = panel.funding || 0;
+  document.getElementById('statMa').textContent = (panel.ma || 0) + (panel.earnings || 0);
+  document.querySelectorAll('.date-row').forEach(function(btn){ btn.classList.remove('active'); });
+  var active = Array.from(document.querySelectorAll('.date-row')).find(function(btn){ return btn.textContent.indexOf(date) > -1; });
+  if (active) active.classList.add('active');
+  applyFilters();
+}
+var qualityToggle = document.getElementById('qualityToggle');
+if (qualityToggle) {
+  qualityToggle.addEventListener('click', function(){
+    var box = document.getElementById('qualityBox');
+    if (!box) return;
+    box.classList.toggle('open');
+    qualityToggle.textContent = box.classList.contains('open') ? '收起原始候选/需复核事件' : qualityToggle.textContent.replace('收起', '显示');
   });
-
-  // 4. 底部统计
-  var stats = document.querySelectorAll('.daily-stat');
-  if (stats[0]) stats[0].querySelector('.daily-stat-num').textContent = panel.total_stories;
-  if (stats[1]) stats[1].querySelector('.daily-stat-num').textContent = panel.regions || 0;
-  if (stats[2]) stats[2].querySelector('.daily-stat-num').textContent = panel.funding || 0;
-  if (stats[3]) stats[3].querySelector('.daily-stat-num').textContent = panel.ma || 0;
-  if (stats[4]) stats[4].querySelector('.daily-stat-num').textContent = panel.earnings || 0;
-
-  // 5. 翻页按钮状态
-  document.getElementById('prevDay').className = ni <= 0 ? 'nav-disabled' : '';
-  document.getElementById('nextDay').className = ni >= availableDates.length - 1 ? 'nav-disabled' : '';
 }
-
-// ── Theme Toggle ──
-function toggleTheme() {
-  var html = document.documentElement;
-  var isDark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  localStorage.setItem('theme', isDark ? 'light' : 'dark');
-  updateThemeIcons(!isDark);
-}
-function updateThemeIcons(dark) {
-  var moon = document.getElementById('moonIcon');
-  var sun = document.getElementById('sunIcon');
-  if (moon) moon.style.display = dark ? 'none' : '';
-  if (sun) sun.style.display = dark ? '' : 'none';
-}
-(function() {
-  var saved = localStorage.getItem('theme');
-  var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (dark) { document.documentElement.setAttribute('data-theme', 'dark'); updateThemeIcons(true); }
-})();
 </script>
 </body>
 </html>

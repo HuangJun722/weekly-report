@@ -671,6 +671,67 @@ def group_events_by_date(events):
     result = [{'date': k, 'events': v} for k, v in sorted(groups.items(), reverse=True)]
     return result
 
+
+def build_period_report(events, start_date, end_date, label):
+    """聚合周报/月报入口所需的轻量统计和趋势。"""
+    period_events = [
+        e for e in events
+        if start_date <= (e.get('date') or '')[:10] <= end_date
+    ]
+    regions = sorted({e.get('region') for e in period_events if e.get('region')})
+    companies = sorted({
+        e.get('company_name') for e in period_events
+        if e.get('is_company') and e.get('company_name')
+    })
+
+    trend_counts = {}
+    trend_regions = {}
+    for e in period_events:
+        topic = e.get('trend_topic') or e.get('insight_label') or '背景补充'
+        trend_counts[topic] = trend_counts.get(topic, 0) + 1
+        region = e.get('region') or '未知'
+        trend_regions.setdefault(topic, {})
+        trend_regions[topic][region] = trend_regions[topic].get(region, 0) + 1
+
+    trends = []
+    for topic, count in sorted(trend_counts.items(), key=lambda x: x[1], reverse=True):
+        region_map = trend_regions.get(topic, {})
+        top_region = max(region_map.items(), key=lambda x: x[1])[0] if region_map else '多地区'
+        trends.append({'topic': topic, 'count': count, 'region': top_region})
+
+    if trends:
+        title = f"{label}主线：{trends[0]['topic']}"
+        summary = f"{label}共收录 {len(period_events)} 条事件，覆盖 {len(regions)} 个地区、{len(companies)} 家重点公司。"
+    else:
+        title = f"{label}暂无足够事件形成趋势"
+        summary = "当前周期事件数量较少，先保留为观察入口。"
+
+    return {
+        'start': start_date,
+        'end': end_date,
+        'month': start_date[:7],
+        'title': title,
+        'summary': summary,
+        'total': len(period_events),
+        'companies': len(companies),
+        'regions': len(regions),
+        'trends': trends or [{'topic': '暂无趋势', 'count': 0, 'region': '无'}],
+    }
+
+
+def split_judgment(text, fallback='今日非中美互联网动态更新'):
+    """把长判断拆成适合头版展示的标题和正文。"""
+    text = (text or '').strip()
+    if not text:
+        return fallback, ''
+    parts = re.split(r'(?<=[。！？])', text, maxsplit=1)
+    title = (parts[0] or text).strip()
+    lead = (parts[1] if len(parts) > 1 else '').strip()
+    if len(title) > 48:
+        title = title[:48].rstrip('，,。') + '。'
+        lead = text
+    return title, lead
+
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
 def generate_html(force=False, preview_mode=False):
@@ -778,6 +839,7 @@ def generate_html(force=False, preview_mode=False):
 
     trend_groups = build_trend_groups(today_events)
     daily_trend_judgment = weekly.get('summary', '')
+    daily_headline, daily_lead = split_judgment(daily_trend_judgment, weekly.get('headline', '今日非中美互联网动态更新'))
     daily_trend_signals = weekly.get('top3', [])
     total_stories = len(today_events)
     dt = datetime.strptime(main_date, '%Y-%m-%d')
@@ -799,10 +861,17 @@ def generate_html(force=False, preview_mode=False):
         available_dates.append(d)
         date_panels[d] = build_date_panel(d, day_evs, events)
     date_panels_json = json.dumps(date_panels, ensure_ascii=False)
+    main_dt = datetime.strptime(main_date, '%Y-%m-%d')
+    weekly_start = (main_dt - timedelta(days=6)).strftime('%Y-%m-%d')
+    monthly_start = main_dt.replace(day=1).strftime('%Y-%m-%d')
+    weekly_report = build_period_report(all_events_for_list, weekly_start, main_date, '本周')
+    monthly_report = build_period_report(all_events_for_list, monthly_start, main_date, '本月')
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
         weekly=weekly,
+        weekly_report=weekly_report,
+        monthly_report=monthly_report,
         all_feed=all_feed,
         all_events_for_list=all_events_for_list,
         date_grouped_events=date_grouped_events,
@@ -813,12 +882,16 @@ def generate_html(force=False, preview_mode=False):
         update_time=main_date + ' 数据（每日02:00北京时间自动更新）',
         trend_groups=trend_groups,
         daily_trend_judgment=daily_trend_judgment,
+        daily_headline=daily_headline,
+        daily_lead=daily_lead,
         daily_trend_signals=daily_trend_signals,
         total_stories=total_stories,
         vol_label=vol_label,
         cn_date=cn_date,
+        date_panels=date_panels,
         date_panels_json=date_panels_json,
         available_dates_json=json.dumps(available_dates),
+        available_dates=available_dates,
     )
 
     os.makedirs('docs', exist_ok=True)
