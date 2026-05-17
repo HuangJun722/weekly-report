@@ -137,6 +137,24 @@ button, input, select { font: inherit; }
 .trend { padding-top: 16px; border-top: 2px solid var(--navy); }
 .trend h3 { margin: 0; font-size: 15px; }
 .trend p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.opportunity-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr); gap: 18px; align-items: start; }
+.opportunity-list { display: grid; gap: 12px; }
+.opportunity { display: grid; gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.opportunity:first-child { padding-top: 0; }
+.opportunity:last-child { border-bottom: 0; padding-bottom: 0; }
+.opportunity h3 { margin: 0; font-size: 15px; line-height: 1.4; }
+.opportunity p { margin: 0; color: var(--muted); font-size: 13px; }
+.opportunity-meta { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.mini-stack { display: grid; gap: 10px; }
+.mini-panel { padding: 13px; border: 1px solid var(--line); border-radius: 8px; background: rgba(238,242,243,0.6); }
+.mini-panel strong { display: block; font-size: 13px; }
+.mini-panel span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+.action-list { display: grid; gap: 10px; margin-top: 14px; }
+.action-row { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+.action-row:first-child { border-top: 0; padding-top: 0; }
+.action-window { color: var(--green); font-size: 13px; font-weight: 720; }
+.action-row strong { display: block; font-size: 14px; }
+.action-row span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
 .company-region-list { display: grid; gap: 22px; }
 .company-region { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
 .company-region:first-child { padding-top: 0; border-top: 0; }
@@ -207,6 +225,7 @@ button, input, select { font: inherit; }
   .main-title { font-size: 38px; }
   .report-cover { grid-template-columns: 1fr; }
   .ops-layout, .feedback-layout { grid-template-columns: 1fr; }
+  .opportunity-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .page { width: min(100% - 22px, 1280px); padding-top: 18px; }
@@ -218,6 +237,8 @@ button, input, select { font: inherit; }
   .main-title { font-size: 30px; }
   .lead { font-size: 15px; }
   .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
+  .opportunity-layout { grid-template-columns: 1fr; }
+  .action-row { grid-template-columns: 1fr; gap: 6px; }
   .company-region-head, .filter-state { align-items: stretch; flex-direction: column; }
   .filter-state-main { align-items: flex-start; }
   .release-item, .field-grid { grid-template-columns: 1fr; }
@@ -405,10 +426,33 @@ button, input, select { font: inherit; }
         </div>
       </article>
       <section class="content-block">
-        <div class="block-head"><h2>本周核心趋势</h2><span>由近 7 天事件聚合</span></div>
-        <div class="trend-columns">
-          {% for t in weekly_report.trends[:3] %}
-          <div class="trend"><h3>{{ t.topic }}</h3><p>{{ t.count }} 条事件，主要地区：{{ t.region }}</p></div>
+        <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
+        <div class="opportunity-layout">
+          <div class="opportunity-list">
+            {% for item in weekly_report.top_opportunities %}
+            <a class="opportunity" href="{{ item.url }}" target="_blank">
+              <div class="opportunity-meta">
+                <span class="label green">{{ item.priority }}</span>
+                <span class="label">{{ item.region }}</span>
+                <span class="label copper">{{ item.window }}</span>
+              </div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.company }}｜{{ item.trigger }}｜{{ item.direction }}</p>
+            </a>
+            {% endfor %}
+          </div>
+          <div class="mini-stack">
+            {% for r in weekly_report.regional_map[:4] %}
+            <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，{{ r.companies }} 家重点公司</span></div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      <section class="content-block">
+        <div class="block-head"><h2>下周跟进行动</h2><span>由事件窗口自动归类</span></div>
+        <div class="action-list">
+          {% for a in weekly_report.actions %}
+          <div class="action-row"><div class="action-window">{{ a.window }}</div><div><strong>{{ a.action }}</strong><span>{{ a.count }} 条线索，代表事件：{{ a.event }}</span></div></div>
           {% endfor %}
         </div>
       </section>
@@ -428,10 +472,25 @@ button, input, select { font: inherit; }
         </div>
       </article>
       <section class="content-block">
-        <div class="block-head"><h2>月度观察框架</h2><span>区域、公司、赛道变化</span></div>
+        <div class="block-head"><h2>月度市场优先级</h2><span>区域、客户与机会主题</span></div>
+        <div class="opportunity-layout">
+          <div class="mini-stack">
+            {% for r in monthly_report.regional_map[:6] %}
+            <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，平均评分 {{ r.avg_score }}</span></div>
+            {% endfor %}
+          </div>
+          <div class="mini-stack">
+            {% for theme in monthly_report.themes[:6] %}
+            <div class="mini-panel"><strong>{{ theme.name }}</strong><span>{{ theme.count }} 条线索沉淀</span></div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      <section class="content-block">
+        <div class="block-head"><h2>客户分层建议</h2><span>用于 BD 跟进优先级</span></div>
         <div class="trend-columns">
-          {% for t in monthly_report.trends[:3] %}
-          <div class="trend"><h3>{{ t.topic }}</h3><p>{{ t.count }} 条事件，主要地区：{{ t.region }}</p></div>
+          {% for c in monthly_report.customer_tiers[:6] %}
+          <div class="trend"><h3>{{ c.company }}</h3><p>{{ c.tier }}｜{{ c.region }}｜{{ c.direction }}</p></div>
           {% endfor %}
         </div>
       </section>

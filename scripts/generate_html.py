@@ -170,6 +170,80 @@ PRESET_COMPANIES = {
     '拉美': ['MercadoLibre', 'Rappi'],
 }
 
+# ─── BD opportunity fallback ────────────────────────────────
+
+VERTICAL_DEAL_SOURCES = {
+    'techcrunch', 'tech.eu', 'uktn', 'eu-startups', 'tech in asia', 'inc42',
+    'wamda', 'menabytes', 'disrupt africa', 'ventureburn', 'latamlist', 'lavca',
+}
+REGIONAL_ECOSYSTEM_SOURCES = {
+    'the recursive', 'the next web', 'techwire asia', 'techcabal',
+    'techpoint', 'weetracker', 'contxto', 'dealstreetasia',
+}
+OFFICIAL_IR_SOURCE_HINTS = {
+    'official', 'ir', 'investor', 'newsroom', 'press release',
+    'rakuten group', 'grab holdings', 'mercado libre', 'sea limited',
+}
+
+BD_TRIGGER_RULES = [
+    ('预算窗口', [
+        'raises', 'raised', 'funding', 'investment', 'series ', 'seed', 'revenue',
+        'earnings', 'profit', 'financial results', 'growth', 'margin', 'cash flow',
+        '融资', '财报', '营收', '利润',
+    ]),
+    ('扩张窗口', [
+        'launch', 'expands', 'expansion', 'enters', 'rolls out', 'available in',
+        'international', 'overseas', 'global', 'new market', 'debut',
+        '扩张', '出海', '上线', '进入',
+    ]),
+    ('降本窗口', [
+        'layoff', 'cuts', 'cost', 'efficiency', 'automation', 'restructure',
+        'turnaround', 'loss narrows', '亏损', '降本', '重组',
+    ]),
+    ('合规窗口', [
+        'regulator', 'license', 'compliance', 'fine', 'lawsuit', 'probe',
+        'antitrust', 'data protection', 'ban', '牌照', '监管', '合规',
+    ]),
+    ('整合窗口', [
+        'acquires', 'acquisition', 'merger', 'stake', 'takeover', 'buys',
+        'integration', '并购', '收购', '整合',
+    ]),
+    ('生态窗口', [
+        'partner', 'partnership', 'alliance', 'ecosystem', 'platform',
+        'merchant', 'developer', 'channel', 'mou', '合作', '生态',
+    ]),
+    ('竞争窗口', [
+        'rival', 'competition', 'competes', 'market share', 'overtakes',
+        'beats', 'challenges', 'versus', 'vs ', '竞争',
+    ]),
+]
+
+OPPORTUNITY_BY_TRIGGER = {
+    '预算窗口': ['增长方案', '云与AI基础设施', '广告商业化', '支付与风控'],
+    '扩张窗口': ['本地化合作', '渠道伙伴', '跨境支付', '云服务'],
+    '降本窗口': ['AI客服', '自动化运营', '外包服务', '成本优化'],
+    '合规窗口': ['合规科技', '数据治理', '安全风控', '牌照合作'],
+    '整合窗口': ['系统整合', '数据迁移', '组织协同工具', '生态打通'],
+    '生态窗口': ['联合解决方案', '商户增长', '开放平台合作', '渠道共建'],
+    '竞争窗口': ['竞品替代', '差异化增长', '市场进入策略', '客户防守'],
+}
+
+OPPORTUNITY_BY_TYPE = {
+    'funding': ['增长方案', '云与AI基础设施', '市场拓展合作'],
+    'ma': ['系统整合', '数据迁移', '生态打通'],
+    'earnings': ['广告商业化', '支付与风控', '成本优化'],
+    'strategy': ['联合解决方案', '本地化合作', '渠道伙伴'],
+    'other': ['持续观察'],
+}
+
+SOURCE_ROLE_BY_TIER = {
+    'L1 官方/IR源': 'official_ir',
+    'L2 垂直交易源': 'venture_media',
+    'L3 区域生态源': 'regional_ecosystem',
+    'L4 深度趋势源': 'deep_trend',
+    'L5 Google News 补漏源': 'company_radar',
+}
+
 # ─── Fallback reason 生成 ───────────────────────────────────
 
 # 常见监控公司名（用于从标题提取当事人）
@@ -335,6 +409,91 @@ def _build_reason(title, ev_type, region, company_name=None):
 
     return reason
 
+
+def _infer_source_tier(event):
+    """为历史事件补齐信源分层，保证周/月报能按业务价值排序。"""
+    source = (event.get('source') or '').lower()
+    url = (event.get('url') or '').lower()
+    combined = f'{source} {url}'
+    if event.get('source_tier'):
+        return event['source_tier']
+    if any(hint in combined for hint in OFFICIAL_IR_SOURCE_HINTS):
+        return 'L1 官方/IR源'
+    if 'google news' in source or 'news.google.com' in url:
+        return 'L5 Google News 补漏源'
+    if 'rest of world' in source:
+        return 'L4 深度趋势源'
+    if any(name in source for name in VERTICAL_DEAL_SOURCES):
+        return 'L2 垂直交易源'
+    if any(name in source for name in REGIONAL_ECOSYSTEM_SOURCES):
+        return 'L3 区域生态源'
+    return 'L3 区域生态源'
+
+
+def infer_frontend_bd_context(event):
+    """从既有事件字段推断 BD 触发器，修复历史数据缺字段的问题。"""
+    ev_type = (event.get('event_types') or ['other'])[0]
+    text = ' '.join([
+        event.get('title', ''),
+        event.get('summary_short', ''),
+        event.get('reason', ''),
+        event.get('impact', ''),
+        event.get('insight_label', ''),
+    ]).lower()
+    triggers = []
+    for name, keywords in BD_TRIGGER_RULES:
+        if any(kw in text for kw in keywords):
+            triggers.append(name)
+    if ev_type == 'funding' and '预算窗口' not in triggers:
+        triggers.append('预算窗口')
+    if ev_type == 'ma' and '整合窗口' not in triggers:
+        triggers.append('整合窗口')
+    if ev_type == 'earnings' and '预算窗口' not in triggers:
+        triggers.append('预算窗口')
+    if ev_type == 'strategy' and not any(t in triggers for t in ['扩张窗口', '生态窗口']):
+        triggers.append('扩张窗口')
+
+    opportunities = []
+    for trigger in triggers:
+        for name in OPPORTUNITY_BY_TRIGGER.get(trigger, []):
+            if name not in opportunities:
+                opportunities.append(name)
+    for name in OPPORTUNITY_BY_TYPE.get(ev_type, []):
+        if name not in opportunities:
+            opportunities.append(name)
+
+    score = event.get('score') or calculate_score(event)
+    if score >= 7 or ev_type in {'funding', 'ma'}:
+        follow_up_window = '7天内'
+        bd_priority = '高'
+    elif score >= 4 or event.get('is_company'):
+        follow_up_window = '30天内'
+        bd_priority = '中'
+    else:
+        follow_up_window = '持续观察'
+        bd_priority = '观察'
+
+    return {
+        'bd_triggers': triggers[:3] or ['持续观察'],
+        'opportunity_direction': ' / '.join(opportunities[:4] or ['持续观察']),
+        'follow_up_window': follow_up_window,
+        'bd_priority': bd_priority,
+    }
+
+
+def ensure_business_fields(event):
+    """补齐 BD 机会字段；新旧事件都走同一口径。"""
+    source_tier = _infer_source_tier(event)
+    event['source_tier'] = source_tier
+    event.setdefault('source_role', SOURCE_ROLE_BY_TIER.get(source_tier, 'regional_ecosystem'))
+    bd = infer_frontend_bd_context(event)
+    for key, value in bd.items():
+        if not event.get(key):
+            event[key] = value
+    if isinstance(event.get('bd_triggers'), str):
+        event['bd_triggers'] = [event['bd_triggers']]
+    return event
+
 # ─── Enrich ─────────────────────────────────────────────────
 
 def enrich(event):
@@ -413,7 +572,7 @@ def enrich(event):
     if not event.get('date'):
         event['date'] = datetime.now().strftime('%Y-%m-%d')
 
-    return event
+    return ensure_business_fields(event)
 
 def load_events():
     with open('data/events.json', 'r', encoding='utf-8') as f:
@@ -672,8 +831,164 @@ def group_events_by_date(events):
     return result
 
 
+def _bd_priority_rank(event):
+    priority_rank = {'高': 3, '中': 2, '观察': 1}
+    tier_rank = {
+        'L1 官方/IR源': 5,
+        'L2 垂直交易源': 4,
+        'L3 区域生态源': 3,
+        'L4 深度趋势源': 2,
+        'L5 Google News 补漏源': 1,
+    }
+    ev_type = (event.get('event_types') or ['other'])[0]
+    type_rank = {'funding': 4, 'ma': 4, 'earnings': 3, 'strategy': 3, 'other': 1}.get(ev_type, 1)
+    return (
+        priority_rank.get(event.get('bd_priority'), 0),
+        event.get('score', 0),
+        tier_rank.get(event.get('source_tier'), 0),
+        type_rank,
+        event.get('date', ''),
+    )
+
+
+def _short_event_text(event, max_len=54):
+    text = clean_display_title(
+        event.get('display_title') or event.get('summary_short') or event.get('reason') or event.get('title') or ''
+    )
+    return text if len(text) <= max_len else text[:max_len].rstrip() + '...'
+
+
+def _build_top_opportunities(period_events, limit=5):
+    seen = set()
+    result = []
+    for event in sorted(period_events, key=_bd_priority_rank, reverse=True):
+        key = (event.get('company_name') or event.get('title') or '').lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append({
+            'title': _short_event_text(event),
+            'company': event.get('company_name') or (event.get('companies') or [''])[0] or '区域事件',
+            'region': event.get('region') or '未知',
+            'priority': event.get('bd_priority') or '观察',
+            'trigger': ' / '.join(event.get('bd_triggers') or ['持续观察']),
+            'direction': event.get('opportunity_direction') or '持续观察',
+            'window': event.get('follow_up_window') or '持续观察',
+            'source_tier': event.get('source_tier') or 'L3 区域生态源',
+            'url': event.get('url') or '#',
+        })
+        if len(result) >= limit:
+            break
+    return result
+
+
+def _build_regional_map(period_events, limit=6):
+    grouped = {}
+    for event in period_events:
+        region = event.get('region') or '未知'
+        item = grouped.setdefault(region, {
+            'region': region,
+            'count': 0,
+            'high': 0,
+            'companies': set(),
+            'directions': {},
+            'score_sum': 0,
+        })
+        item['count'] += 1
+        item['score_sum'] += event.get('score', 0)
+        if event.get('bd_priority') == '高':
+            item['high'] += 1
+        if event.get('company_name'):
+            item['companies'].add(event['company_name'])
+        for direction in re.split(r'\s*/\s*', event.get('opportunity_direction') or ''):
+            if direction:
+                item['directions'][direction] = item['directions'].get(direction, 0) + 1
+
+    result = []
+    for item in grouped.values():
+        top_direction = max(item['directions'].items(), key=lambda x: x[1])[0] if item['directions'] else '持续观察'
+        avg_score = item['score_sum'] / item['count'] if item['count'] else 0
+        result.append({
+            'region': item['region'],
+            'count': item['count'],
+            'high': item['high'],
+            'companies': len(item['companies']),
+            'direction': top_direction,
+            'avg_score': round(avg_score, 1),
+        })
+    result.sort(key=lambda x: (x['high'], x['count'], x['avg_score']), reverse=True)
+    return result[:limit]
+
+
+def _build_actions(period_events, limit=5):
+    windows = ['7天内', '30天内', '持续观察']
+    result = []
+    for window in windows:
+        candidates = [e for e in period_events if e.get('follow_up_window') == window]
+        if not candidates:
+            continue
+        candidates.sort(key=_bd_priority_rank, reverse=True)
+        top = candidates[0]
+        result.append({
+            'window': window,
+            'action': f"围绕{top.get('region') or '重点区域'}的{top.get('opportunity_direction') or '合作机会'}建立跟进清单",
+            'event': _short_event_text(top, 42),
+            'count': len(candidates),
+        })
+        if len(result) >= limit:
+            break
+    return result
+
+
+def _build_customer_tiers(period_events, limit=6):
+    grouped = {}
+    for event in period_events:
+        company = event.get('company_name') or ((event.get('companies') or [''])[0] if event.get('companies') else '')
+        if not company:
+            continue
+        item = grouped.setdefault(company, {
+            'company': company,
+            'region': event.get('region') or '未知',
+            'count': 0,
+            'high': 0,
+            'score': 0,
+            'direction': event.get('opportunity_direction') or '持续观察',
+        })
+        item['count'] += 1
+        item['score'] = max(item['score'], event.get('score', 0))
+        if event.get('bd_priority') == '高':
+            item['high'] += 1
+        if event.get('opportunity_direction'):
+            item['direction'] = event['opportunity_direction']
+
+    result = []
+    for item in grouped.values():
+        if item['high'] > 0 or item['score'] >= 7:
+            tier = 'A类：优先触达'
+        elif item['count'] >= 2 or item['score'] >= 5:
+            tier = 'B类：持续经营'
+        else:
+            tier = 'C类：观察入库'
+        item['tier'] = tier
+        result.append(item)
+    result.sort(key=lambda x: (x['tier'], x['high'], x['score'], x['count']), reverse=True)
+    return result[:limit]
+
+
+def _build_themes(period_events, limit=6):
+    counts = {}
+    for event in period_events:
+        for direction in re.split(r'\s*/\s*', event.get('opportunity_direction') or ''):
+            if direction and direction != '持续观察':
+                counts[direction] = counts.get(direction, 0) + 1
+    return [
+        {'name': name, 'count': count}
+        for name, count in sorted(counts.items(), key=lambda x: x[1], reverse=True)[:limit]
+    ]
+
+
 def build_period_report(events, start_date, end_date, label):
-    """聚合周报/月报入口所需的轻量统计和趋势。"""
+    """按 BD 机会视角聚合周报/月报。"""
     period_events = [
         e for e in events
         if start_date <= (e.get('date') or '')[:10] <= end_date
@@ -699,11 +1014,23 @@ def build_period_report(events, start_date, end_date, label):
         top_region = max(region_map.items(), key=lambda x: x[1])[0] if region_map else '多地区'
         trends.append({'topic': topic, 'count': count, 'region': top_region})
 
-    if trends:
-        title = f"{label}主线：{trends[0]['topic']}"
-        summary = f"{label}共收录 {len(period_events)} 条事件，覆盖 {len(regions)} 个地区、{len(companies)} 家重点公司。"
+    top_opportunities = _build_top_opportunities(period_events, 5)
+    regional_map = _build_regional_map(period_events, 6)
+    actions = _build_actions(period_events, 5)
+    customer_tiers = _build_customer_tiers(period_events, 6)
+    themes = _build_themes(period_events, 6)
+    high_count = sum(1 for e in period_events if e.get('bd_priority') == '高')
+
+    if period_events:
+        title = f"{label}客户拓展机会报告"
+        leading_region = regional_map[0]['region'] if regional_map else '多地区'
+        leading_theme = themes[0]['name'] if themes else (top_opportunities[0]['direction'] if top_opportunities else '持续观察')
+        summary = (
+            f"{label}共收录 {len(period_events)} 条事件，其中 {high_count} 条为高优先级机会。"
+            f"当前优先看 {leading_region}，主线机会集中在{leading_theme}。"
+        )
     else:
-        title = f"{label}暂无足够事件形成趋势"
+        title = f"{label}客户拓展机会报告"
         summary = "当前周期事件数量较少，先保留为观察入口。"
 
     return {
@@ -716,6 +1043,12 @@ def build_period_report(events, start_date, end_date, label):
         'companies': len(companies),
         'regions': len(regions),
         'trends': trends or [{'topic': '暂无趋势', 'count': 0, 'region': '无'}],
+        'top_opportunities': top_opportunities,
+        'regional_map': regional_map,
+        'actions': actions,
+        'customer_tiers': customer_tiers,
+        'themes': themes,
+        'high_priority': high_count,
     }
 
 

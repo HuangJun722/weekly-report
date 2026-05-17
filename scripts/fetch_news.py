@@ -188,6 +188,13 @@ COMPANY_BLACKLIST = [
     '404', 'page not found', 'access denied', 'subscribe to',
     # 政治/非科技
     'election', 'president', 'protest', 'poll ', 'voting',
+    # Google News 金融站/安全告警噪声
+    'phishing', 'password reset', 'urgent alert', 'security alert',
+    'analyst rating', 'analyst ratings', 'analyst price target',
+    'target price', 'price target', 'valuation check', 'stock focus',
+    'nasdaqgs:', 'nyse:', 'otcmkts:', 'kr7 ', 'simply wall st',
+    'tipranks', 'yahoo finance', 'ad hoc news', 'indexbox',
+    'should you buy', 'is it time to buy', 'is it too late to buy',
 ]
 
 COMPANY_LOW_SIGNAL_PATTERNS = [
@@ -196,6 +203,14 @@ COMPANY_LOW_SIGNAL_PATTERNS = [
     'live score', 'predictions', 'gift (nasdaq', 'simplywall.st',
     'marketbeat', 'benzinga', 'seeking alpha', 'openpr.com',
     'upgraded points', 'sofascore',
+    'analyst target', 'analyst ratings', 'target price', 'price target',
+    'valuation check', 'stock focus', 'stock analysis', 'stock forecast',
+    'stock to buy', 'brokerages set', 'short interest', 'dividend yield',
+    'institutional investors', 'etf inflows', 'options trading',
+    'ticker report', 'defense world', 'american banking news',
+    'zacks', 'motley fool', 'investing.com', 'insider monkey',
+    'yahoo finance', 'tipranks', 'simply wall st', 'ad hoc news',
+    'indexbox', 'phishing', 'password', 'urgent alert',
 ]
 
 TITLE_STOPWORDS = {
@@ -373,6 +388,10 @@ def _title_mentions_company(title, cfg):
 def _is_low_signal_company_title(title):
     title_lower = title.lower()
     return any(pattern in title_lower for pattern in COMPANY_LOW_SIGNAL_PATTERNS)
+
+
+def _is_official_company_source(item):
+    return item.get('source_tier') == 'L1 官方/IR源' or item.get('source_role') == 'official_ir'
 
 
 def _event_similarity(a, b):
@@ -643,8 +662,13 @@ HTML_SKIP_TITLE_PATTERNS = [
 HTML_SOURCES = [
     # DealStreetAsia RSS 停用（"Temporarily Disabled"），主站为 JS SPA
     # 低频尝试：只采集新闻类页面，报告/评论页已过滤
-    {'name': 'DealStreetAsia', 'url': 'https://dealstreetasia.com/', 'source': 'DealStreetAsia', 'region': '亚太', 'priority': 1},
+    {'name': 'DealStreetAsia', 'url': 'https://dealstreetasia.com/', 'source': 'DealStreetAsia', 'region': '亚太', 'priority': 1, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media'},
     # e27：Angular JS + Cloudflare 双层保护，RSS + HTML 均无法采集，已移除
+    # 官方/IR源：用于校准重点客户自身披露，低频但高可信
+    {'name': 'Rakuten IR', 'url': 'https://global.rakuten.com/corp/news/press/?category=ir', 'source': 'Rakuten Group', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Rakuten', 'is_company': True, 'max': 4},
+    {'name': 'Grab IR', 'url': 'https://investors.grab.com/news-releases', 'source': 'Grab Holdings', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Grab', 'is_company': True, 'max': 4},
+    {'name': 'MercadoLibre IR', 'url': 'https://investor.mercadolibre.com/news-events', 'source': 'MercadoLibre', 'region': '拉美', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'MercadoLibre', 'is_company': True, 'max': 4},
+    {'name': 'Adyen IR', 'url': 'https://investors.adyen.com/news-and-events/press-releases', 'source': 'Adyen', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Adyen', 'is_company': True, 'max': 4},
 ]
 
 def _extract_date_from_url(url):
@@ -823,7 +847,11 @@ def fetch_html(cfg):
         if not articles:
             articles = soup.select('a[href]')
 
-    for art in articles[:15]:
+    max_items = cfg.get('max', 8)
+    max_scan = cfg.get('max_scan', 15)
+    for art in articles[:max_scan]:
+        if len(results) >= max_items:
+            break
         # 提取标题和链接
         title_el = art.select_one('h2,h3,h4,h5,.title,.entry-title,.post-title,.article-title') or art
         title = title_el.get_text(strip=True)
@@ -858,6 +886,8 @@ def fetch_html(cfg):
             'priority': cfg.get('priority', 1),
             'event_types': types,
             'article_date': None,  # HTML 无 pubDate，归入运行日
+            'is_company': cfg.get('is_company', False),
+            'company_name': cfg.get('company_name', ''),
         }, cfg))
 
     return results
@@ -873,13 +903,15 @@ def smart_filter(items):
     """
     策略：
     1. 所有融资/并购/财报事件全部保留
-    2. 公司监控事件全部保留（is_company=True）
+    2. 官方/IR 公司事件全部保留，Google News 公司 other 只有限补漏
     3. 其他事件按 priority 排序，每天最多 40 条（通用部分）
     """
     # 信号事件（全部保留）
     signal = [it for it in items if it['event_types'][0] != 'other']
-    # 公司监控事件（全部保留，不管 event_types 是什么）
-    company = [it for it in items if it.get('is_company')]
+    company = [
+        it for it in items
+        if it.get('is_company') and it['event_types'][0] == 'other' and _is_official_company_source(it)
+    ]
     # 非信号、非公司事件（按 priority 排序，取剩余名额）
     others = [it for it in items if it['event_types'][0] == 'other' and not it.get('is_company')]
     others.sort(key=lambda x: x.get('priority', 1), reverse=True)
@@ -899,7 +931,7 @@ def smart_filter(items):
             used_urls.add(it['url'])
         return True
 
-    # 1. 公司监控事件（全部保留）
+    # 1. 官方/IR 公司事件（高可信，低频保留）
     company_sorted = sorted(
         company,
         key=lambda x: (
