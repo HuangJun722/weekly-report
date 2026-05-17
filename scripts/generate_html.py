@@ -852,6 +852,23 @@ def build_company_cards(company_list, now_date):
         })
     return result
 
+def group_company_cards(company_list):
+    """按预设区域顺序组织公司索引，避免全局排序后用户找不到区域。"""
+    grouped = []
+    for region in PRESET_COMPANIES.keys():
+        companies = [c for c in company_list if c.get('region') == region]
+        if not companies:
+            continue
+        companies.sort(key=lambda x: (x.get('count', 0), x.get('recent_30', 0), x.get('recent_7', 0)), reverse=True)
+        grouped.append({
+            'region': region,
+            'total': len(companies),
+            'active': sum(1 for c in companies if c.get('count', 0) > 0),
+            'recent_30': sum(c.get('recent_30', 0) for c in companies),
+            'companies': companies,
+        })
+    return grouped
+
 def load_site_updates():
     """读取网站更新日志。"""
     path = os.path.join('data', 'site_updates.json')
@@ -976,6 +993,7 @@ def generate_html(force=False, preview_mode=False):
     all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
     enrich_frontend_fields(all_events_for_list)
     preset_company_list = build_company_cards(preset_company_list, main_date)
+    company_groups = group_company_cards(preset_company_list)
 
     # 历史tab：90天内除主tab批次之外的所有有内容日期
     cutoff = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
@@ -1040,6 +1058,7 @@ def generate_html(force=False, preview_mode=False):
         main_date=main_date,
         company_events=company_events,
         company_list=preset_company_list,
+        company_groups=company_groups,
         update_time=main_date + ' 数据（每日02:00北京时间自动更新）',
         trend_groups=trend_groups,
         daily_trend_judgment=daily_trend_judgment,

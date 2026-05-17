@@ -137,8 +137,17 @@ button, input, select { font: inherit; }
 .trend { padding-top: 16px; border-top: 2px solid var(--navy); }
 .trend h3 { margin: 0; font-size: 15px; }
 .trend p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.company-region-list { display: grid; gap: 22px; }
+.company-region { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
+.company-region:first-child { padding-top: 0; border-top: 0; }
+.company-region-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+.company-region-head h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+.company-region-head span { color: var(--muted); font-size: 12px; }
 .company-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.company { min-height: 128px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.82); }
+.company { min-height: 128px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.82); text-align: left; cursor: pointer; }
+.company:hover { border-color: var(--navy); background: var(--surface); }
+.company.active { border-color: var(--navy); background: rgba(23,43,58,0.08); box-shadow: inset 0 0 0 1px rgba(23,43,58,0.16); }
+.company.empty { opacity: 0.58; cursor: default; }
 .company strong { display: block; margin-bottom: 9px; font-size: 17px; }
 .company span { color: var(--muted); font-size: 13px; }
 .company small { display: block; margin-top: 9px; color: var(--quiet); font-size: 12px; line-height: 1.5; }
@@ -177,9 +186,18 @@ button, input, select { font: inherit; }
 .feedback-item p { margin: 7px 0 0; color: var(--muted); font-size: 12px; }
 .feedback-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 7px; }
 .feedback-output { margin-top: 14px; width: 100%; min-height: 160px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); padding: 12px; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; resize: vertical; }
-.filter-state { display: none; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.7); color: var(--muted); font-size: 12px; }
+.filter-state {
+  display: none; position: sticky; top: 0; z-index: 20; align-items: center; justify-content: space-between;
+  gap: 14px; margin-top: 12px; padding: 12px 14px; border: 1px solid rgba(23,43,58,0.28);
+  border-radius: 8px; background: rgba(250,247,238,0.98); color: var(--ink); font-size: 13px;
+  box-shadow: 0 12px 28px rgba(23,43,58,0.12);
+}
 .filter-state.active { display: flex; }
-.clear-filter { border: 0; border-radius: 6px; padding: 5px 9px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; }
+.filter-state strong { font-size: 13px; }
+.filter-state small { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
+.filter-state-marker { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; background: var(--copper); box-shadow: 0 0 0 4px rgba(154,99,48,0.14); }
+.filter-state-main { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.clear-filter { border: 0; border-radius: 6px; padding: 7px 11px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; white-space: nowrap; }
 .empty-state { padding: 32px; text-align: center; color: var(--muted); }
 .footer-note { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
 @media (max-width: 1040px) {
@@ -200,6 +218,8 @@ button, input, select { font: inherit; }
   .main-title { font-size: 30px; }
   .lead { font-size: 15px; }
   .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
+  .company-region-head, .filter-state { align-items: stretch; flex-direction: column; }
+  .filter-state-main { align-items: flex-start; }
   .release-item, .field-grid { grid-template-columns: 1fr; }
   .rail-card:first-child { grid-column: auto; }
   .content-block { padding: 18px; }
@@ -247,7 +267,13 @@ button, input, select { font: inherit; }
       </div>
     </div>
     <div class="filter-state" id="filterState">
-      <span id="filterStateText">当前筛选：全部情报</span>
+      <div class="filter-state-main">
+        <span class="filter-state-marker" aria-hidden="true"></span>
+        <div>
+          <strong id="filterStateTitle">正在查看筛选结果</strong>
+          <small id="filterStateText">当前筛选：全部情报</small>
+        </div>
+      </div>
       <button class="clear-filter" id="clearFilter" type="button">清除筛选</button>
     </div>
   </header>
@@ -417,15 +443,25 @@ button, input, select { font: inherit; }
         <h2 class="main-title">公司不是筛选项，而是连续观察对象。</h2>
         <p class="lead">每家公司会关联到每日事件、周报趋势和月度变化，形成轻量情报库。</p>
       </section>
-      {% if company_list %}
+      {% if company_groups %}
       <section class="content-block">
-        <div class="company-grid">
-          {% for c in company_list %}
-          <button class="company company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
-            <strong>{{ c.name }}</strong>
-            <span>{{ c.region }}，近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条</span>
-            <small>{{ c.signal }}：{{ c.latest_title|truncate(54) }}</small>
-          </button>
+        <div class="company-region-list">
+          {% for group in company_groups %}
+          <section class="company-region">
+            <div class="company-region-head">
+              <h3>{{ group.region }}</h3>
+              <span>{{ group.active }}/{{ group.total }} 家有记录，近 30 天 {{ group.recent_30 }} 条</span>
+            </div>
+            <div class="company-grid">
+              {% for c in group.companies %}
+              <button class="company company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
+                <strong>{{ c.name }}</strong>
+                <span>近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条</span>
+                <small>{{ c.signal }}：{{ c.latest_title|truncate(54) }}</small>
+              </button>
+              {% endfor %}
+            </div>
+          </section>
           {% endfor %}
         </div>
       </section>
@@ -622,6 +658,7 @@ function applyFilters(){
 }
 function updateFilterState(visible) {
   var bar = document.getElementById('filterState');
+  var title = document.getElementById('filterStateTitle');
   var text = document.getElementById('filterStateText');
   if (!bar || !text) return;
   var parts = [];
@@ -630,7 +667,8 @@ function updateFilterState(visible) {
   if (state.q) parts.push('关键词：' + state.q);
   var active = parts.length > 0;
   bar.classList.toggle('active', active);
-  text.textContent = active ? ('当前筛选：' + parts.join(' / ') + '，' + visible + ' 条结果') : '当前筛选：全部情报';
+  if (title) title.textContent = active ? '正在查看筛选结果' : '全部情报';
+  text.textContent = active ? (parts.join(' / ') + '，当前显示 ' + visible + ' 条结果') : '当前筛选：全部情报';
 }
 var availableDates = {{ available_dates_json }};
 var datePanels = {{ date_panels_json }};
