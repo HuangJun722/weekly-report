@@ -1,0 +1,42 @@
+name: 网站反馈
+description: 记录全球互联网百晓生的网站想法、问题或数据异常
+title: "[反馈] "
+labels:
+  - feedback
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 类型
+      options:
+        - 想法
+        - Bug
+        - 数据问题
+        - 体验建议
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - P2 常规
+        - P1 重要
+        - P0 阻塞
+        - P3 观察
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 详情
+      description: 看到的位置、期望结果、实际情况、相关事件或链接
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: 页面
+      description: 相关页面地址
+    validations:
+      required: false

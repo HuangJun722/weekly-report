@@ -142,6 +142,41 @@ button, input, select { font: inherit; }
 .company strong { display: block; margin-bottom: 9px; font-size: 17px; }
 .company span { color: var(--muted); font-size: 13px; }
 .company small { display: block; margin-top: 9px; color: var(--quiet); font-size: 12px; line-height: 1.5; }
+.ops-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
+.timeline { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.release-item { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 22px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.release-date { color: var(--muted); font-size: 13px; }
+.release-version { display: block; margin-top: 6px; color: var(--ink); font-size: 22px; font-weight: 760; line-height: 1; }
+.release-item h3 { margin: 0; font-size: 18px; line-height: 1.35; }
+.release-item p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.release-list { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; color: #38434d; font-size: 13px; }
+.release-list li { position: relative; padding-left: 16px; }
+.release-list li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+.release-side { display: grid; gap: 12px; }
+.side-panel { padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.78); }
+.side-panel strong { display: block; font-size: 13px; }
+.side-panel span { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; }
+.feedback-layout { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr); gap: 22px; margin-top: 24px; align-items: start; }
+.feedback-form, .feedback-records { border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.88); box-shadow: var(--shadow); padding: 20px; }
+.field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.field { display: grid; gap: 6px; margin-bottom: 12px; }
+.field span { color: var(--muted); font-size: 12px; }
+.field input, .field select, .field textarea {
+  width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+  color: var(--ink); padding: 10px 11px; outline: 0; resize: vertical;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(23,43,58,0.1); }
+.feedback-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+.action-btn { border: 0; border-radius: 8px; padding: 10px 13px; background: var(--navy); color: var(--paper); cursor: pointer; }
+.action-btn.secondary { border: 1px solid var(--line); background: transparent; color: var(--ink); }
+.action-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.feedback-list { display: grid; gap: 10px; margin-top: 14px; }
+.feedback-item { padding: 13px 0; border-top: 1px solid var(--line); }
+.feedback-item:first-child { border-top: 0; }
+.feedback-item h3 { margin: 0; font-size: 15px; line-height: 1.4; }
+.feedback-item p { margin: 7px 0 0; color: var(--muted); font-size: 12px; }
+.feedback-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 7px; }
+.feedback-output { margin-top: 14px; width: 100%; min-height: 160px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); padding: 12px; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; resize: vertical; }
 .filter-state { display: none; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.7); color: var(--muted); font-size: 12px; }
 .filter-state.active { display: flex; }
 .clear-filter { border: 0; border-radius: 6px; padding: 5px 9px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; }
@@ -153,6 +188,7 @@ button, input, select { font: inherit; }
   .rail-card:first-child { grid-column: span 2; }
   .main-title { font-size: 38px; }
   .report-cover { grid-template-columns: 1fr; }
+  .ops-layout, .feedback-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .page { width: min(100% - 22px, 1280px); padding-top: 18px; }
@@ -164,6 +200,7 @@ button, input, select { font: inherit; }
   .main-title { font-size: 30px; }
   .lead { font-size: 15px; }
   .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
+  .release-item, .field-grid { grid-template-columns: 1fr; }
   .rail-card:first-child { grid-column: auto; }
   .content-block { padding: 18px; }
   .intel { grid-template-columns: 1fr; gap: 10px; }
@@ -193,6 +230,8 @@ button, input, select { font: inherit; }
         <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
         <button class="tab-btn" data-tab="companies" onclick="switchTab('companies')">公司索引</button>
         <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
+        <button class="tab-btn" data-tab="updates" onclick="switchTab('updates')">更新日志</button>
+        <button class="tab-btn" data-tab="feedback" onclick="switchTab('feedback')">反馈</button>
       </nav>
       <div class="controls">
         <label class="search"><span>⌕</span><input type="text" id="searchBox" placeholder="搜索公司、地区、关键词" autocomplete="off"></label>
@@ -431,6 +470,95 @@ button, input, select { font: inherit; }
       </section>
       {% endif %}
     </section>
+
+    <section class="tab-panel" id="tab-updates">
+      <section class="headline-area">
+        <div class="label-row kicker"><span class="label dark">更新日志</span><span class="label">产品变更记录</span></div>
+        <h2 class="main-title">每一次网站调整，都留下可追踪的版本记录。</h2>
+        <p class="lead">这里记录信息架构、数据质量、自动化流程和展示体验的主要变化。</p>
+      </section>
+      <div class="ops-layout">
+        <section class="content-block">
+          <div class="block-head"><h2>最近更新</h2><span>{{ site_updates|length }} 条记录</span></div>
+          <div class="timeline">
+            {% for update in site_updates %}
+            <article class="release-item">
+              <div class="release-date">
+                <span>{{ update.date }}</span>
+                <strong class="release-version">{{ update.version }}</strong>
+              </div>
+              <div>
+                <div class="label-row">
+                  <span class="label green">{{ update.type }}</span>
+                  <span class="label">{{ update.status }}</span>
+                </div>
+                <h3>{{ update.title }}</h3>
+                {% if update.summary %}<p>{{ update.summary }}</p>{% endif %}
+                {% if update.changes %}
+                <ul class="release-list">
+                  {% for change in update.changes %}
+                  <li>{{ change }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+        <aside class="release-side">
+          <div class="side-panel"><strong>记录范围</strong><span>页面结构、分析质量、自动任务、用户体验和线上发布。</span></div>
+          <div class="side-panel"><strong>维护方式</strong><span>更新内容保存在 data/site_updates.json，随网站生成一起发布。</span></div>
+          <div class="side-panel"><strong>下一步</strong><span>反馈稳定后，可把有效建议沉淀为待办清单或 GitHub Issue。</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-feedback">
+      <section class="headline-area">
+        <div class="label-row kicker"><span class="label dark">反馈</span><span class="label">想法与问题记录</span></div>
+        <h2 class="main-title">把阅读中的想法和异常，变成下一轮优化线索。</h2>
+        <p class="lead">反馈会先保存在当前浏览器，也可以生成标准文本提交到仓库。</p>
+      </section>
+      <div class="feedback-layout">
+        <form class="feedback-form" id="feedbackForm">
+          <div class="field-grid">
+            <label class="field"><span>类型</span>
+              <select id="feedbackType">
+                <option value="想法">想法</option>
+                <option value="Bug">Bug</option>
+                <option value="数据问题">数据问题</option>
+                <option value="体验建议">体验建议</option>
+              </select>
+            </label>
+            <label class="field"><span>优先级</span>
+              <select id="feedbackPriority">
+                <option value="P2">P2 常规</option>
+                <option value="P1">P1 重要</option>
+                <option value="P0">P0 阻塞</option>
+                <option value="P3">P3 观察</option>
+              </select>
+            </label>
+          </div>
+          <label class="field"><span>标题</span><input id="feedbackTitle" type="text" maxlength="80" placeholder="一句话说明问题或想法" required></label>
+          <label class="field"><span>详情</span><textarea id="feedbackDetail" rows="7" placeholder="看到的位置、期望结果、实际情况、相关事件或链接" required></textarea></label>
+          <label class="field"><span>联系方式</span><input id="feedbackContact" type="text" maxlength="80" placeholder="可选"></label>
+          <div class="feedback-actions">
+            <button class="action-btn" type="submit">保存反馈</button>
+            <button class="action-btn secondary" id="copyFeedback" type="button">复制文本</button>
+            <button class="action-btn secondary" id="openIssue" type="button">打开提交页</button>
+          </div>
+          <textarea class="feedback-output" id="feedbackOutput" readonly placeholder="保存后会生成标准反馈文本"></textarea>
+        </form>
+        <section class="feedback-records">
+          <div class="block-head"><h2>本地反馈记录</h2><span id="feedbackCount">0 条</span></div>
+          <div id="feedbackList" class="feedback-list"></div>
+          <div class="feedback-actions">
+            <button class="action-btn secondary" id="clearFeedback" type="button">清空记录</button>
+          </div>
+        </section>
+      </div>
+    </section>
   </main>
 
   <div class="footer-note">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</div>
@@ -583,6 +711,128 @@ document.getElementById('clearFilter').addEventListener('click', function(){
   document.querySelectorAll('.company-nav-btn').forEach(function(b){ b.classList.remove('active'); });
   applyFilters();
 });
+var feedbackStorageKey = 'weekly-report-feedback-v1';
+var feedbackIssueUrl = '{{ feedback_issue_url }}';
+function safeReadFeedback() {
+  try {
+    var raw = localStorage.getItem(feedbackStorageKey);
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+function safeWriteFeedback(items) {
+  try {
+    localStorage.setItem(feedbackStorageKey, JSON.stringify(items));
+  } catch (e) {}
+}
+function feedbackMarkdown(item) {
+  if (!item) return '';
+  return [
+    '## ' + item.title,
+    '',
+    '- 类型：' + item.type,
+    '- 优先级：' + item.priority,
+    '- 页面：' + item.page,
+    '- 时间：' + item.createdAt,
+    item.contact ? '- 联系方式：' + item.contact : '',
+    '',
+    '### 详情',
+    item.detail
+  ].filter(Boolean).join('\n');
+}
+function renderFeedbackList() {
+  var list = document.getElementById('feedbackList');
+  var count = document.getElementById('feedbackCount');
+  if (!list || !count) return;
+  var items = safeReadFeedback();
+  count.textContent = items.length + ' 条';
+  if (!items.length) {
+    list.innerHTML = '<div class="empty-state">暂无反馈记录</div>';
+    return;
+  }
+  list.innerHTML = items.map(function(item){
+    return '<article class="feedback-item" data-id="' + escHtml(item.id) + '">' +
+      '<div class="feedback-meta">' + labelHtml(item.type, 'green') + labelHtml(item.priority, '') + '</div>' +
+      '<h3>' + escHtml(item.title) + '</h3>' +
+      '<p>' + escHtml(item.detail) + '</p>' +
+      '<p>' + escHtml(item.createdAt) + '</p>' +
+    '</article>';
+  }).join('');
+}
+function currentFeedbackDraft() {
+  var title = document.getElementById('feedbackTitle');
+  var detail = document.getElementById('feedbackDetail');
+  var type = document.getElementById('feedbackType');
+  var priority = document.getElementById('feedbackPriority');
+  var contact = document.getElementById('feedbackContact');
+  return {
+    id: String(Date.now()),
+    title: title ? title.value.trim() : '',
+    detail: detail ? detail.value.trim() : '',
+    type: type ? type.value : '想法',
+    priority: priority ? priority.value : 'P2',
+    contact: contact ? contact.value.trim() : '',
+    page: location.href,
+    createdAt: new Date().toLocaleString('zh-CN', { hour12: false })
+  };
+}
+function setFeedbackOutput(item) {
+  var output = document.getElementById('feedbackOutput');
+  if (output) output.value = feedbackMarkdown(item);
+}
+var feedbackForm = document.getElementById('feedbackForm');
+if (feedbackForm) {
+  feedbackForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var item = currentFeedbackDraft();
+    if (!item.title || !item.detail) return;
+    var items = safeReadFeedback();
+    items.unshift(item);
+    safeWriteFeedback(items.slice(0, 30));
+    setFeedbackOutput(item);
+    feedbackForm.reset();
+    renderFeedbackList();
+  });
+}
+var copyFeedback = document.getElementById('copyFeedback');
+if (copyFeedback) {
+  copyFeedback.addEventListener('click', function(){
+    var output = document.getElementById('feedbackOutput');
+    var item = currentFeedbackDraft();
+    if (item.title && item.detail) setFeedbackOutput(item);
+    if (!output || !output.value) return;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(output.value);
+    } else {
+      output.select();
+      document.execCommand('copy');
+    }
+  });
+}
+var openIssue = document.getElementById('openIssue');
+if (openIssue) {
+  openIssue.addEventListener('click', function(){
+    var output = document.getElementById('feedbackOutput');
+    var item = currentFeedbackDraft();
+    if (item.title && item.detail) setFeedbackOutput(item);
+    var body = output && output.value ? output.value : feedbackMarkdown(item);
+    var title = item.title || '网站反馈';
+    var url = new URL(feedbackIssueUrl);
+    url.searchParams.set('title', '[反馈] ' + title);
+    url.searchParams.set('body', body);
+    window.open(url.toString(), '_blank');
+  });
+}
+var clearFeedback = document.getElementById('clearFeedback');
+if (clearFeedback) {
+  clearFeedback.addEventListener('click', function(){
+    safeWriteFeedback([]);
+    setFeedbackOutput(null);
+    renderFeedbackList();
+  });
+}
+renderFeedbackList();
 </script>
 </body>
 </html>

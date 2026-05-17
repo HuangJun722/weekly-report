@@ -852,6 +852,43 @@ def build_company_cards(company_list, now_date):
         })
     return result
 
+def load_site_updates():
+    """读取网站更新日志。"""
+    path = os.path.join('data', 'site_updates.json')
+    fallback = [{
+        'date': datetime.now().strftime('%Y-%m-%d'),
+        'version': 'v0.1',
+        'type': '系统',
+        'status': '已上线',
+        'title': '网站初始化',
+        'summary': '全球互联网百晓生开始自动生成情报简报。',
+        'changes': ['自动采集事件', '生成静态情报页面'],
+    }]
+    if not os.path.exists(path):
+        return fallback
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            updates = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return fallback
+    if not isinstance(updates, list):
+        return fallback
+    cleaned = []
+    for item in updates:
+        if not isinstance(item, dict):
+            continue
+        changes = item.get('changes') if isinstance(item.get('changes'), list) else []
+        cleaned.append({
+            'date': item.get('date') or '',
+            'version': item.get('version') or '',
+            'type': item.get('type') or '更新',
+            'status': item.get('status') or '已记录',
+            'title': item.get('title') or '未命名更新',
+            'summary': item.get('summary') or '',
+            'changes': [str(c) for c in changes if str(c).strip()],
+        })
+    return sorted(cleaned or fallback, key=lambda x: x.get('date', ''), reverse=True)
+
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
 def generate_html(force=False, preview_mode=False):
@@ -989,6 +1026,7 @@ def generate_html(force=False, preview_mode=False):
     monthly_start = main_dt.replace(day=1).strftime('%Y-%m-%d')
     weekly_report = build_period_report(all_events_for_list, weekly_start, main_date, '本周')
     monthly_report = build_period_report(all_events_for_list, monthly_start, main_date, '本月')
+    site_updates = load_site_updates()
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
@@ -1015,6 +1053,9 @@ def generate_html(force=False, preview_mode=False):
         date_panels_json=date_panels_json,
         available_dates_json=json.dumps(available_dates),
         available_dates=available_dates,
+        site_updates=site_updates,
+        site_updates_json=json.dumps(site_updates, ensure_ascii=False),
+        feedback_issue_url='https://github.com/HuangJun722/weekly-report/issues/new?template=feedback.yml',
     )
 
     os.makedirs('docs', exist_ok=True)
