@@ -12845,6 +12845,110 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Jumia Nigeria Records Strong Q1 2026 Growth As Tech-Led Strategy Drives Market Expansion - Independent Newspaper Nigeria",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOT2Y4TnZoRjdRV1VsRHFSUk1XdUZDZnRQLWpmMDRsR0RfWGVZU0ZBUDRMVkpFeEZKWFJMU0JzMnBUQ3RsbEpDcmIxUk9qckRZdUtBZEZKb3N4MUFEelZ4WHB0UGF4Q3lBOTRIaEdiMkFXMnF0V09ZY3c5T2U1bk5TTkE0ZGFfclFyZUpGWGxOM29tandWclROeDVueS1sXzVDa0x3NmNXWXNjNzlZNDU0T0VB?oc=5",
+      "source": "Google News",
+      "region": "非洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Jumia Nigeria Records Str",
+      "reason": "非洲科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 非洲",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Jumia",
+      "date": "2026-05-17",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "预算窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Exclusive: Kakao Mobility risks management control transfer to TPG over IPO failure - MSN",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQURUQkJYVHhkVDBXS1ZleFBLdUFnNXpZZHVscjVUeHg1ekwzR2JFNm5lQ25mVUJXNmdxSEVaU3g2T0daLW9fUDdrX1NzRTRtM1hqUnBHWHNWMHlXZU41S1BCQlRuQVdBM1NjSWU3eGFja3VLZzBoV25hQzhySS0xUGFfSnRQVmVoVkNuQzdocXFZY1hxYTlIRnBUX1BEejBfQVlmbXE1VDdEUExRc1E?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Mobility因IPO失败面临控制权转移给TPG",
+      "reason": "韩国出行平台Kakao Mobility因IPO失败可能导致控制权变更，亚太出行科技领域出现资本重组机会",
+      "impact": "韩国出行平台、私募股权基金TPG",
+      "insight_label": "警示信号",
+      "trend_topic": "亚太出行科技资本重组",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "date": "2026-05-17",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Indian Startup IPO Tracker 2026",
+      "url": "https://inc42.com/features/indian-startup-ipo-tracker-2026/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "印度初创公司IPO追踪2026",
+      "reason": "印度科技IPO窗口持续开放，早期投资者退出路径清晰，带动Pre-IPO融资活跃",
+      "impact": "印度风险投资机构、Pre-IPO基金",
+      "insight_label": "背景补充",
+      "trend_topic": "印度科技IPO浪潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-17",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/01/SOC-2-100.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ]
 }
