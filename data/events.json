@@ -14376,6 +14376,117 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "YouTube Is the New Ruler, Not Naver - 동아사이언스",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YYm9HaDdQQkE3UTVGdEhQd2l4LTJ1YXFSMFZsNy1IT1NRelFDUkVSRmtxSUktNkI4NDdDQ2s5bzBVTHF3cDRuNXRkTWNqanF1N1pSNQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "YouTube Is the New Ruler,",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "date": "2026-05-17",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Mizuho Financial Group Making Arrangements to Invest in Rakuten Bank - The Japan News",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9scF90NkRmaEtod3EtZHlOT25fLUo0LUVGUGZxNlFrS0VRaGdiSmNYTS1zOFF1RFkxMXFJZWJ4anJqWk0wVlBrS1NGWVpYWmxSUFJ0ZEd3aVMzc1VkUVBXdjZXUDdCSUE3a2hQOURKcEFlbl85ZHc?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Mizuho Financial Group Ma",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-05-17",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "合规窗口"
+      ],
+      "opportunity_direction": "合规科技 / 数据治理 / 安全风控 / 牌照合作",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Sea targets ~25% 2026 Shopee GMV growth while keeping full-year adjusted EBITDA no lower than 2025 - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRnR0bkFVYy1vT05HUG1mMkZ5MWI5eTRyMFd5U1Y5dEpJYkJQSVdKckoyS0FxTUxpVWV3YkFTWUFIX0YzdkIxVE1ka0lIbjN4d0VkYWN6QzVXck54Z3dNSTUxY1ZBLUlvdlZMRzRJcURBM29mRzB1NGxMdWNhaGtTdTNiamlZVFNnUDNlUzJ2RDJWQ1JaRG9xb0stcXdaRndqYWxjOEFjdXpBSEMwSzJlSGFpNndlLW1hNjQ1eWlvLXRjUVlaLWdTX183eHV5RE9zeHBPUEVjUk1jZlhUc3RF?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Sea targets ~25% 2026 Sho",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Sea Limited",
+      "date": "2026-05-17",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
     }
   ]
 }
