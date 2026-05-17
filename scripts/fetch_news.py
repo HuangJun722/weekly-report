@@ -53,30 +53,38 @@ REQUEST_TIMEOUT = 8   # 单次请求超时（秒），降级提速
 
 RSS_SOURCES = [
     # --- 欧洲：融资专业源优先 ---
-    {'name': 'TechCrunch',       'url': 'https://techcrunch.com/feed/',                  'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
-    {'name': 'TechCrunch VC',   'url': 'https://techcrunch.com/category/venture/feed/', 'source': 'TechCrunch',    'region': '欧洲', 'priority': 3},
-    {'name': 'Tech.eu',          'url': 'https://tech.eu/feed/',                         'source': 'Tech.eu',       'region': '欧洲', 'priority': 3},
-    {'name': 'The Next Web',     'url': 'https://thenextweb.com/feed/',                  'source': 'The Next Web',  'region': '欧洲', 'priority': 2},
-    # EU-Startups 已移除：Cloudflare 全面拦截（RSS + HTML 均 403）
+    {'name': 'TechCrunch',       'url': 'https://techcrunch.com/feed/',                  'source': 'TechCrunch',    'region': '全球', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'TechCrunch VC',   'url': 'https://techcrunch.com/category/venture/feed/', 'source': 'TechCrunch',    'region': '全球', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'Tech.eu',          'url': 'https://tech.eu/feed/',                         'source': 'Tech.eu',       'region': '欧洲', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'UKTN',             'url': 'https://www.uktech.news/feed',                  'source': 'UKTN',          'region': '欧洲', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'EU-Startups',      'url': 'https://www.eu-startups.com/feed/',             'source': 'EU-Startups',   'region': '欧洲', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'The Recursive',    'url': 'https://therecursive.com/feed/',                'source': 'The Recursive', 'region': '欧洲', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 20, 'max': 6},
+    {'name': 'The Next Web',     'url': 'https://thenextweb.com/feed/',                  'source': 'The Next Web',  'region': '欧洲', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 20, 'max': 6},
     # Sifted 已移除：Cloudflare 全面拦截，无法绕过
     # --- 亚太：融资专业源 ---
-    {'name': 'Tech in Asia',     'url': 'https://www.techinasia.com/feed/',              'source': 'Tech in Asia',  'region': '亚太', 'priority': 3},
-    {'name': 'TechWire Asia',    'url': 'https://techwireasia.com/feed/',               'source': 'TechWire Asia', 'region': '亚太', 'priority': 2},
+    {'name': 'Tech in Asia',     'url': 'https://www.techinasia.com/feed/',              'source': 'Tech in Asia',  'region': '亚太', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 24, 'max': 8},
+    {'name': 'Inc42',            'url': 'https://inc42.com/feed/',                       'source': 'Inc42',         'region': '亚太', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 24, 'max': 8},
+    {'name': 'TechWire Asia',    'url': 'https://techwireasia.com/feed/',               'source': 'TechWire Asia', 'region': '亚太', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 20, 'max': 6},
     # DealStreetAsia RSS 已停用（"Temporarily Disabled"），改用 HTML 降级采集
     # e27 已移除：Cloudflare 全面拦截，无法绕过
     # Google News RSS 不可用：链接为 Google 内部跳转，非原始来源
     # --- 中东/非洲 ---
-    {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                     'source': 'WAMDA',         'region': '中东', 'priority': 3},
-    {'name': 'MENAbytes',        'url': 'https://www.menabytes.com/feed/',               'source': 'MENAbytes',     'region': '中东', 'priority': 2},
-    {'name': 'TechCabal',        'url': 'https://techcabal.com/feed',                   'source': 'TechCabal',     'region': '非洲', 'priority': 2},
+    {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                     'source': 'WAMDA',         'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'MENAbytes',        'url': 'https://www.menabytes.com/feed/',               'source': 'MENAbytes',     'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'TechCabal',        'url': 'https://techcabal.com/feed',                   'source': 'TechCabal',     'region': '非洲', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 20, 'max': 6},
     # Disrupt Africa：RSS 恢复，root feed 可用
-    {'name': 'Disrupt Africa',   'url': 'https://disrupt-africa.com/feed/',             'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2},
-    {'name': 'Techpoint',        'url': 'https://techpoint.africa/feed/',               'source': 'Techpoint',     'region': '非洲', 'priority': 2},
-    {'name': 'Ventureburn',      'url': 'https://ventureburn.com/feed/',                'source': 'Ventureburn',   'region': '非洲', 'priority': 2},
+    {'name': 'Disrupt Africa',   'url': 'https://disrupt-africa.com/feed/',             'source': 'Disrupt Africa', 'region': '非洲', 'priority': 2, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'Techpoint',        'url': 'https://techpoint.africa/feed/',               'source': 'Techpoint',     'region': '非洲', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 20, 'max': 6},
+    {'name': 'Ventureburn',      'url': 'https://ventureburn.com/feed/',                'source': 'Ventureburn',   'region': '非洲', 'priority': 2, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'WeeTracker',       'url': 'https://weetracker.com/feed/',                 'source': 'WeeTracker',    'region': '非洲', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 20, 'max': 6},
     # --- 拉美 ---
     # 注意：Bloomberg RSS 是全球综合科技，不限于拉美，已移除避免噪声
-    {'name': 'LAVCA',            'url': 'https://lavca.org/feed/',                        'source': 'LAVCA',         'region': '拉美', 'priority': 3},
-    {'name': 'Contxto',          'url': 'https://contxto.com/en/feed/',                  'source': 'Contxto',       'region': '拉美', 'priority': 2},
+    {'name': 'LatamList',        'url': 'https://latamlist.com/feed/',                   'source': 'LatamList',     'region': '拉美', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'LAVCA',            'url': 'https://lavca.org/feed/',                        'source': 'LAVCA',         'region': '拉美', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
+    {'name': 'Contxto',          'url': 'https://contxto.com/en/feed/',                  'source': 'Contxto',       'region': '拉美', 'priority': 2, 'source_tier': 'L3 区域生态源', 'source_role': 'regional_ecosystem', 'max_scan': 24, 'max': 6},
+    # --- 深度趋势源：只保留高信号，不参与普通新闻补量 ---
+    {'name': 'Rest of World Money', 'url': 'https://restofworld.org/feed/money/',        'source': 'Rest of World', 'region': '全球', 'priority': 2, 'source_tier': 'L4 深度趋势源', 'source_role': 'deep_trend', 'max_scan': 20, 'max': 4, 'signal_only': True},
+    {'name': 'Rest of World Ecommerce', 'url': 'https://restofworld.org/feed/e-commerce/', 'source': 'Rest of World', 'region': '全球', 'priority': 2, 'source_tier': 'L4 深度趋势源', 'source_role': 'deep_trend', 'max_scan': 20, 'max': 4, 'signal_only': True},
 ]
 
 # ============================================================
@@ -119,6 +127,12 @@ COMPANY_SOURCES = [
     {'name': 'Jumia', 'query': 'Jumia Africa ecommerce', 'region': '非洲', 'priority': 2},
     {'name': 'Konga', 'query': 'Konga Nigeria', 'region': '非洲', 'priority': 1},
 ]
+
+for _company_cfg in COMPANY_SOURCES:
+    _company_cfg.setdefault('source_tier', 'L5 Google News 补漏源')
+    _company_cfg.setdefault('source_role', 'company_radar')
+    _company_cfg.setdefault('max', 3)
+    _company_cfg.setdefault('max_other', 1)
 
 COMPANY_ALIASES = {
     'ByteDance/TikTok': ['ByteDance', 'TikTok', 'Douyin'],
@@ -246,6 +260,17 @@ def detect_event_types(title):
                        'partners with', 'signs MOU', 'joint venture']):
         types.append('strategy')
     return types if types else ['other']
+
+def _source_meta(cfg):
+    """保留信源分层，供后续日报/周报/月报按业务口径组织。"""
+    return {
+        'source_tier': cfg.get('source_tier', 'L3 区域生态源'),
+        'source_role': cfg.get('source_role', 'regional_ecosystem'),
+    }
+
+def _with_source_meta(item, cfg):
+    item.update(_source_meta(cfg))
+    return item
 
 # 中美公司关键词（匹配标题中出现的公司名，排除不相关内容）
 # 用非贪婪匹配 + 上下文判断，避免误杀（如 "DeepMind raises" 才排除，纯叙述不排除）
@@ -525,9 +550,13 @@ def _parse_rss_text(cfg, text):
 
     results = []
     max_items = cfg.get('max', 8)
+    max_scan = cfg.get('max_scan', max_items)
+    scanned = 0
 
     for entry in parsed.entries:
         if len(results) >= max_items: break
+        if scanned >= max_scan: break
+        scanned += 1
 
         # 标题
         title = (entry.get('title') or '').strip()
@@ -568,7 +597,9 @@ def _parse_rss_text(cfg, text):
                 image_url = mt[0]['url']
 
         types = detect_event_types(title)
-        results.append({
+        if cfg.get('signal_only') and types[0] == 'other':
+            continue
+        results.append(_with_source_meta({
             'title': title,
             'url': link,
             'source': cfg.get('source', cfg.get('name', 'Google News')),
@@ -577,7 +608,7 @@ def _parse_rss_text(cfg, text):
             'event_types': types,
             'article_date': article_date,
             'image_url': image_url,
-        })
+        }, cfg))
     return results
 
 
@@ -649,9 +680,12 @@ def fetch_company_news(cfg):
 
     results = []
     seen_company_events = []
+    max_items = cfg.get('max', 3)
+    max_other = cfg.get('max_other', 1)
+    other_count = 0
 
     for entry in parsed.entries:
-        if len(results) >= 3: break  # 每公司最多3条
+        if len(results) >= max_items: break  # 每公司最多N条
 
         title = (entry.get('title') or '').strip()
         if len(title) < 15: continue
@@ -686,8 +720,10 @@ def fetch_company_news(cfg):
             continue
 
         types = detect_event_types(title)
-        # 公司动态只要有company_name就保留，不再过滤other类型
-        # 因为扩充关键词后other类型减少，且other中也有有价值的出海新闻
+        if types[0] == 'other':
+            if other_count >= max_other:
+                continue
+            other_count += 1
 
         # 图片：从 RSS media:content 或 media:thumbnail
         image_url = ''
@@ -702,7 +738,7 @@ def fetch_company_news(cfg):
             if mt and mt[0].get('url'):
                 image_url = mt[0]['url']
 
-        item = {
+        item = _with_source_meta({
             'title': title,
             'url': link,
             'source': 'Google News',
@@ -713,7 +749,7 @@ def fetch_company_news(cfg):
             'is_company': True,
             'company_name': cfg['name'],
             'image_url': image_url,
-        }
+        }, cfg)
         if any(_is_same_event(item, existing) for existing in seen_company_events):
             continue
         seen_company_events.append(item)
@@ -814,7 +850,7 @@ def fetch_html(cfg):
                 link = 'https://' + base + link
 
         types = detect_event_types(title)
-        results.append({
+        results.append(_with_source_meta({
             'title': title,
             'url': link,
             'source': cfg.get('source', cfg.get('name', 'Google News')),
@@ -822,7 +858,7 @@ def fetch_html(cfg):
             'priority': cfg.get('priority', 1),
             'event_types': types,
             'article_date': None,  # HTML 无 pubDate，归入运行日
-        })
+        }, cfg))
 
     return results
 
@@ -864,8 +900,28 @@ def smart_filter(items):
         return True
 
     # 1. 公司监控事件（全部保留）
-    for it in company:
+    company_sorted = sorted(
+        company,
+        key=lambda x: (
+            0 if x['event_types'][0] != 'other' else 1,
+            -x.get('priority', 1),
+            x.get('company_name', ''),
+        )
+    )
+    company_counts = {}
+    company_other_counts = {}
+    for it in company_sorted:
+        cname = it.get('company_name', '')
+        if cname:
+            if company_counts.get(cname, 0) >= 3:
+                continue
+            if it['event_types'][0] == 'other' and company_other_counts.get(cname, 0) >= 1:
+                continue
         _add_unique(it)
+        if cname:
+            company_counts[cname] = company_counts.get(cname, 0) + 1
+            if it['event_types'][0] == 'other':
+                company_other_counts[cname] = company_other_counts.get(cname, 0) + 1
 
     # 2. 全部信号事件
     for it in signal:
@@ -1636,6 +1692,116 @@ def _calc_score(item):
     raw = (amt_pts + type_pts + named_pts) * region_mult
     return max(min(int(raw), 10), 1)
 
+BD_TRIGGER_RULES = [
+    ('预算窗口', [
+        'raises', 'raised', 'funding', 'series ', 'seed round', 'investment',
+        'valuation', 'valued at', 'revenue', 'profit', 'earnings', 'growth',
+        'ipo', 'listing', 'goes public',
+    ]),
+    ('扩张窗口', [
+        'expands', 'expansion', 'launches in', 'launches ', 'rolls out',
+        'enters', 'entering', 'international', 'overseas', 'global',
+        'new market', 'available in',
+    ]),
+    ('降本窗口', [
+        'loss', 'losses', 'layoff', 'layoffs', 'cuts jobs', 'shutdown',
+        'restructure', 'turnaround', 'cost', 'profitability',
+    ]),
+    ('合规窗口', [
+        'regulator', 'regulatory', 'license', 'licence', 'compliance',
+        'probe', 'investigation', 'ban', 'privacy', 'data protection',
+    ]),
+    ('整合窗口', [
+        'acquires', 'acquired', 'acquisition', 'merger', 'merges',
+        'stake in', 'buyout', 'integration', 'spins off',
+    ]),
+    ('生态窗口', [
+        'partners with', 'partnership', 'strategic partnership',
+        'joint venture', 'ecosystem', 'platform', 'developer', 'merchant',
+        'channel', 'mou',
+    ]),
+    ('竞争窗口', [
+        'rival', 'competition', 'competes', 'market share', 'overtakes',
+        'beats', 'challenges', 'versus', 'vs ',
+    ]),
+]
+
+OPPORTUNITY_BY_TRIGGER = {
+    '预算窗口': ['增长方案', '云与AI基础设施', '广告商业化', '支付与风控'],
+    '扩张窗口': ['本地化合作', '渠道伙伴', '跨境支付', '云服务'],
+    '降本窗口': ['AI客服', '自动化运营', '外包服务', '成本优化'],
+    '合规窗口': ['合规科技', '数据治理', '安全风控', '牌照合作'],
+    '整合窗口': ['系统整合', '数据迁移', '组织协同工具', '生态打通'],
+    '生态窗口': ['联合解决方案', '商户增长', '开放平台合作', '渠道共建'],
+    '竞争窗口': ['竞品替代', '差异化增长', '市场进入策略', '客户防守'],
+}
+
+OPPORTUNITY_BY_TYPE = {
+    'funding': ['增长方案', '云与AI基础设施', '市场拓展合作'],
+    'ma': ['系统整合', '数据迁移', '生态打通'],
+    'earnings': ['广告商业化', '支付与风控', '成本优化'],
+    'strategy': ['联合解决方案', '本地化合作', '渠道伙伴'],
+    'other': ['持续观察'],
+}
+
+def infer_bd_context(item, score=None):
+    """从事件标题/类型推断业务拓展触发器，先做确定性字段，后续可由 AI 精修。"""
+    title = item.get('title', '')
+    text = ' '.join([
+        title,
+        item.get('summary_short', ''),
+        item.get('reason', ''),
+        item.get('impact', ''),
+    ]).lower()
+    ev_type = (item.get('event_types') or ['other'])[0]
+    triggers = []
+    for name, keywords in BD_TRIGGER_RULES:
+        if any(kw in text for kw in keywords):
+            triggers.append(name)
+    if ev_type == 'funding' and '预算窗口' not in triggers:
+        triggers.append('预算窗口')
+    if ev_type == 'ma' and '整合窗口' not in triggers:
+        triggers.append('整合窗口')
+    if ev_type == 'earnings' and '预算窗口' not in triggers:
+        triggers.append('预算窗口')
+    if ev_type == 'strategy' and not any(t in triggers for t in ['扩张窗口', '生态窗口']):
+        triggers.append('扩张窗口')
+
+    opportunities = []
+    for trigger in triggers:
+        for item_name in OPPORTUNITY_BY_TRIGGER.get(trigger, []):
+            if item_name not in opportunities:
+                opportunities.append(item_name)
+    for item_name in OPPORTUNITY_BY_TYPE.get(ev_type, []):
+        if item_name not in opportunities:
+            opportunities.append(item_name)
+
+    s = score if score is not None else _calc_score(item)
+    if s >= 7 or ev_type in {'funding', 'ma'}:
+        window = '7天内'
+        priority = '高'
+    elif s >= 4 or item.get('is_company'):
+        window = '30天内'
+        priority = '中'
+    else:
+        window = '持续观察'
+        priority = '观察'
+
+    if not triggers:
+        triggers = ['持续观察']
+    return {
+        'bd_triggers': triggers[:3],
+        'opportunity_direction': ' / '.join(opportunities[:4] or ['持续观察']),
+        'follow_up_window': window,
+        'bd_priority': priority,
+    }
+
+def attach_business_context(event, item, score):
+    event['source_tier'] = item.get('source_tier', 'L3 区域生态源')
+    event['source_role'] = item.get('source_role', 'regional_ecosystem')
+    event.update(infer_bd_context({**item, **event}, score))
+    return event
+
 
 def build_event(item, analysis=None, analysis_source=None, analysis_status=None):
     """构建事件对象：程序评分始终生效，AI 只补充 reason/impact/insight_label"""
@@ -1663,6 +1829,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             'date': item.get('article_date', datetime.now().isoformat()[:10]),
             'image_url': item.get('image_url', ''),
         }
+        attach_business_context(event, item, score)
         return annotate_event_quality(
             event,
             source=analysis_source or 'ai',
@@ -1701,6 +1868,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'date': item.get('article_date', datetime.now().isoformat()[:10]),
         'image_url': item.get('image_url', ''),
     }
+    attach_business_context(event, item, score)
     return annotate_event_quality(
         event,
         source=analysis_source or 'program',

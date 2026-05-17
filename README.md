@@ -72,21 +72,26 @@ python scripts/generate_html.py --force
 
 ### RSS 信源
 
-| 信源 | 覆盖区域 | 说明 |
-|------|----------|------|
-| TechCrunch | 全球 | 创业与科技新闻（含 VC 分类） |
-| Tech.eu | 欧洲 | 欧洲科技媒体，融资报道丰富 |
-| The Next Web | 欧洲 | 欧洲科技新闻 |
-| TechWire Asia | 亚太 | 亚太科技新闻 |
-| Tech in Asia | 亚太 | 亚洲科技与创业新闻 |
-| WAMDA | 中东 | 中东北非创业生态 |
-| MENAbytes | 中东 | 中东创业新闻 |
-| TechCabal | 非洲 | 非洲科技与创业 |
-| Disrupt Africa | 非洲 | 非洲创业融资（RSS 已恢复） |
-| Techpoint | 非洲 | 非洲科技媒体 |
-| Ventureburn | 非洲 | 非洲创业融资 |
-| LAVCA | 拉美 | 拉丁美洲创投与私募 |
-| Contxto | 拉美 | 拉美创业与创新 |
+| 层级 | 信源 | 覆盖区域 | 说明 |
+|------|------|----------|------|
+| L2 垂直交易源 | TechCrunch / TechCrunch VC | 全球 | 创业、融资、VC 动态 |
+| L2 垂直交易源 | Tech.eu / UKTN / EU-Startups | 欧洲 | 欧洲融资、并购、上市与科技公司动态 |
+| L3 区域生态源 | The Recursive / The Next Web | 欧洲 | 欧洲区域生态与战略动态 |
+| L2 垂直交易源 | Tech in Asia / Inc42 | 亚太 | 亚洲与印度科技、融资、上市动态 |
+| L3 区域生态源 | TechWire Asia | 亚太 | 亚太科技生态动态 |
+| L2 垂直交易源 | WAMDA / MENAbytes | 中东 | 中东北非创业、融资、合作动态 |
+| L2/L3 | Disrupt Africa / Ventureburn / TechCabal / Techpoint / WeeTracker | 非洲 | 非洲创业融资、平台经济、区域生态 |
+| L2 垂直交易源 | LatamList / LAVCA | 拉美 | 拉美融资、创投、私募与创业动态 |
+| L3 区域生态源 | Contxto | 拉美 | 拉美创业与创新生态 |
+| L4 深度趋势源 | Rest of World Money / Ecommerce | 全球南方 | 只保留高信号事件，用于趋势和周/月报判断 |
+
+### 公司监控
+
+| 层级 | 信源 | 用途 |
+|------|------|------|
+| L5 Google News 补漏源 | 27 家重点公司关键词 | 只做公司动态雷达，每家公司最多 3 条，`other` 类默认最多 1 条 |
+
+每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`，用于后续把日报、周报、月报从“新闻摘要”升级为“客户拓展机会报告”。
 
 ### HTML 备用采集
 

@@ -62,6 +62,10 @@ jobs:
             "https://tech.eu/feed/"
             "https://www.techinasia.com/feed"
             "https://wamda.com/feed/"
+            "https://latamlist.com/feed/"
+            "https://inc42.com/feed/"
+            "https://www.uktech.news/feed"
+            "https://weetracker.com/feed/"
           )
           ACCESSIBLE=0
           for src in "${SOURCES[@]}"; do
