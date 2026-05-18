@@ -604,9 +604,7 @@ button, input, select { font: inherit; }
                 {% if update.summary %}<p>{{ update.summary }}</p>{% endif %}
                 {% if update.changes %}
                 <ul class="release-list">
-                  {% for change in update.changes %}
-                  <li>{{ change }}</li>
-                  {% endfor %}
+                  {% for change in update.changes %}<li>{{ change }}</li>{% endfor %}
                 </ul>
                 {% endif %}
               </div>

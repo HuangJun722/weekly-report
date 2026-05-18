@@ -240,6 +240,13 @@ TITLE_STOPWORDS = {
     'today', 'week', 'news', 'update', 'live', 'analysis', 'opinion',
 }
 
+EVENT_ENTITY_STOPWORDS = {
+    'inc', 'corp', 'corporation', 'company', 'co', 'ltd', 'limited', 'group',
+    'holdings', 'holding', 'technologies', 'technology', 'tech', 'systems',
+    'platform', 'platforms', 'analytics', 'computing', 'apps', 'app', 'software',
+    'ai', 'digital', 'global', 'online', 'the',
+}
+
 # ============================================================
 # 关键词检测（宽松模式，宁多不漏）
 # ============================================================
@@ -384,6 +391,61 @@ def _title_fingerprint(title):
     return ' '.join(tokens[:10])
 
 
+def _normalize_event_subject(subject):
+    tokens = []
+    for token in _normalize_text(subject).split():
+        if token in EVENT_ENTITY_STOPWORDS:
+            continue
+        if len(token) <= 1:
+            continue
+        tokens.append(token)
+    return ' '.join(tokens[:4])
+
+
+def _title_subject_key(title):
+    clean = _strip_title_source(title or '').strip()
+    clean = re.sub(r'^[^A-Za-z0-9\u4e00-\u9fff]{0,3}(?:[^:]{2,36}:\s*)', '', clean)
+    patterns = [
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:raises?|raised|secures?|secured|closes?|closed|lands?|landed|bags?|bagged|gets?|got|receives?|received|attracts?|attracted|wins?|won)\b',
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:doubles?|doubled|hits?|hit|reaches?|reached|is\s+valued|was\s+valued|valued)\b',
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:acquires?|acquired|buys?|bought|purchases?|purchased|merges?|merged)\b',
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:announces?|announced|reports?|reported|posts?|posted|files?|filed|plans?|planned|launches?|launched|expands?|expanded|partners?|partnered)\b',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, clean, re.I)
+        if not match:
+            continue
+        subject = match.group(1).strip().strip(',;:-')
+        subject = re.sub(r'^(?:why|how|what|when|where|inside|after)\s+', '', subject, flags=re.I)
+        if 2 <= len(subject) <= 60:
+            key = _normalize_event_subject(subject)
+            if key:
+                return key
+    return ''
+
+
+def _event_subject_key(item):
+    company = item.get('company_name') or ''
+    if company:
+        key = _normalize_event_subject(company)
+        if key:
+            return key
+    companies = item.get('companies') or []
+    if isinstance(companies, list) and companies:
+        key = _normalize_event_subject(str(companies[0]))
+        if key:
+            return key
+    return _title_subject_key(item.get('title', ''))
+
+
+def _has_funding_signal(title):
+    t = (title or '').lower()
+    return any(k in t for k in [
+        'raise', 'raises', 'raised', 'funding', 'series ', 'seed', 'valuation',
+        'valued', 'investment', 'secures', 'closes', 'bags', 'lands', '$', '€',
+    ])
+
+
 def _get_company_aliases(cfg_or_name):
     name = cfg_or_name if isinstance(cfg_or_name, str) else cfg_or_name.get('name', '')
     aliases = list(COMPANY_ALIASES.get(name, []))
@@ -478,6 +540,18 @@ def _is_same_event(candidate, existing):
         return False
 
     sim = _event_similarity(candidate, existing)
+    event_type_a = (candidate.get('event_types') or ['other'])[0]
+    event_type_b = (existing.get('event_types') or ['other'])[0]
+    subject_a = _event_subject_key(candidate)
+    subject_b = _event_subject_key(existing)
+    if subject_a and subject_a == subject_b and event_type_a == event_type_b:
+        if event_type_a == 'funding' and _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', '')):
+            return True
+        if event_type_a in {'ma', 'earnings'}:
+            return sim >= 0.18
+        if event_type_a == 'strategy':
+            return sim >= 0.42
+
     if company_a and company_b:
         return sim >= 0.5
     return sim >= 0.72

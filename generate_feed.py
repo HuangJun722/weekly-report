@@ -1,4 +1,7 @@
-import json, datetime, html, hashlib, os
+import json, datetime, html, hashlib, os, sys
+
+sys.path.insert(0, 'scripts')
+from generate_html import dedupe_display_events
 
 with open('data/events.json', 'r', encoding='utf-8') as f:
     events = json.load(f)
@@ -12,6 +15,7 @@ for date_str, day_events in events.items():
 flattened.sort(key=lambda x: x['date_str'], reverse=True)
 latest_date = flattened[0]['date_str']
 flattened = [ev for ev in flattened if ev['date_str'] == latest_date]
+flattened = dedupe_display_events(flattened)
 
 now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 feed_id = 'tag:weekly-report,2026:main'

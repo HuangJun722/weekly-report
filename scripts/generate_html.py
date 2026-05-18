@@ -849,6 +849,78 @@ def group_events_by_date(events):
     return result
 
 
+DISPLAY_ENTITY_STOPWORDS = {
+    'inc', 'corp', 'corporation', 'company', 'co', 'ltd', 'limited', 'group',
+    'holdings', 'holding', 'technologies', 'technology', 'tech', 'systems',
+    'platform', 'platforms', 'analytics', 'computing', 'apps', 'app', 'software',
+    'ai', 'digital', 'global', 'online', 'the',
+}
+
+
+def _normalize_display_subject(subject):
+    text = re.sub(r'[^a-z0-9\u4e00-\u9fff]+', ' ', (subject or '').lower())
+    tokens = [t for t in text.split() if t and t not in DISPLAY_ENTITY_STOPWORDS and len(t) > 1]
+    return ' '.join(tokens[:4])
+
+
+def _title_subject_key(title):
+    subject = _extract_subject(title or '') or ''
+    if subject:
+        key = _normalize_display_subject(subject)
+        if key:
+            return key
+    patterns = [
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:raises?|raised|secures?|secured|closes?|closed|lands?|landed|bags?|bagged|gets?|got|receives?|received|attracts?|attracted)\b',
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:doubles?|doubled|hits?|hit|reaches?|reached|is\s+valued|was\s+valued|valued)\b',
+        r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:acquires?|acquired|buys?|bought|merges?|merged|announces?|announced|reports?|reported|posts?|posted)\b',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, title or '', re.I)
+        if match:
+            return _normalize_display_subject(match.group(1))
+    return ''
+
+
+def _display_subject_key(event):
+    key = _normalize_display_subject(event.get('company_name') or '')
+    if key:
+        return key
+    companies = event.get('companies') or []
+    if isinstance(companies, list) and companies:
+        key = _normalize_display_subject(str(companies[0]))
+        if key:
+            return key
+    return _title_subject_key(event.get('title', ''))
+
+
+def _normalized_title_key(title):
+    return re.sub(r'[^a-z0-9\u4e00-\u9fff]+', '', (title or '').lower())
+
+
+def dedupe_display_events(events):
+    """展示前按同日、同主体、同类型兜底去重，避免跨来源改写重复占据首页。"""
+    kept = []
+    seen_titles = set()
+    seen_events = set()
+    for event in events:
+        title_key = _normalized_title_key(event.get('title', ''))
+        if title_key and title_key in seen_titles:
+            continue
+        if title_key:
+            seen_titles.add(title_key)
+
+        date_key = (event.get('date') or '')[:10]
+        event_type = (event.get('event_types') or ['other'])[0]
+        subject_key = _display_subject_key(event)
+        semantic_key = (date_key, event_type, subject_key)
+        if subject_key and event_type in {'funding', 'ma', 'earnings'}:
+            if semantic_key in seen_events:
+                continue
+            seen_events.add(semantic_key)
+        kept.append(event)
+    return kept
+
+
 def _bd_priority_rank(event):
     priority_rank = {'高': 3, '中': 2, '观察': 1}
     tier_rank = {
@@ -1344,6 +1416,7 @@ def generate_html(force=False, preview_mode=False):
     all_events_for_list = list(generic_events) + company_events_filtered
     all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
     enrich_frontend_fields(all_events_for_list)
+    all_events_for_list = dedupe_display_events(all_events_for_list)
     preset_company_list = build_company_cards(preset_company_list, main_date)
     company_groups = group_company_cards(preset_company_list)
 
