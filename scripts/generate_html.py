@@ -255,6 +255,7 @@ SOURCE_ROLE_BY_TIER = {
     'L2 垂直交易源': 'venture_media',
     'L3 区域生态源': 'regional_ecosystem',
     'L4 深度趋势源': 'deep_trend',
+    'L4 垂直赛道精品源': 'industry_vertical',
     'L5 Google News 补漏源': 'company_radar',
 }
 
@@ -435,6 +436,8 @@ def _infer_source_tier(event):
         return 'L1 官方/IR源'
     if 'google news' in source or 'news.google.com' in url:
         return 'L5 Google News 补漏源'
+    if any(name in source for name in ['newzoo', 'gamesindustry', 'pocketgamer', 'paypers', 'fintech futures', 'fintech news singapore', 'ecommercebytes', 'retail4growth', 'mobile world live']):
+        return 'L4 垂直赛道精品源'
     if 'rest of world' in source:
         return 'L4 深度趋势源'
     if any(name in source for name in VERTICAL_DEAL_SOURCES):
@@ -852,6 +855,7 @@ def _bd_priority_rank(event):
         'L1 官方/IR源': 5,
         'L2 垂直交易源': 4,
         'L3 区域生态源': 3,
+        'L4 垂直赛道精品源': 3,
         'L4 深度趋势源': 2,
         'L5 Google News 补漏源': 1,
     }

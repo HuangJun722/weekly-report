@@ -170,8 +170,24 @@ V2 开始按信源质量分层，不再把所有来源当成同等新闻。
 | L1 官方/IR源 | 官方披露 | Rakuten IR、Grab IR、MercadoLibre IR、Adyen IR | 校准重点客户自身动作 |
 | L2 垂直交易源 | 融资/并购/创投 | TechCrunch、Tech.eu、UKTN、EU-Startups、Tech in Asia、Inc42、WAMDA、LatamList、LAVCA 等 | 捕捉高价值交易和资金流 |
 | L3 区域生态源 | 区域科技生态 | The Recursive、The Next Web、TechWire Asia、TechCabal、Techpoint、WeeTracker、Contxto | 补充区域动态和战略信号 |
+| L4 垂直赛道精品源 | 子赛道专业观察 | GamesIndustry.biz、PocketGamer.biz、Fintech News Singapore、EcommerceBytes、Mobile World Live | 补充游戏、电商、支付金融、移动生态等赛道信号 |
 | L4 深度趋势源 | 趋势观察 | Rest of World Money / Ecommerce | 只保留高信号事件 |
 | L5 Google News 补漏源 | 公司雷达 | 重点公司 Google News RSS | 补漏，不作为高可信主源 |
+
+### 子赛道覆盖
+
+V2.1 开始增加垂直赛道精品源，重点覆盖：
+
+| 子赛道 | 代表信源 | 主要看什么 |
+|--------|----------|------------|
+| 游戏 | GamesIndustry.biz、PocketGamer.biz | 全球/区域游戏市场、移动游戏收入、发行与并购、平台生态变化 |
+| 电商/O2O | EcommerceBytes、Rest of World Ecommerce | 线上零售、社交电商、本地生活、渠道和履约变化 |
+| Fintech/支付金融 | Fintech News Singapore、Rest of World Money | 支付、钱包、牌照、银行科技、金融基础设施 |
+| 文娱社交/移动生态 | Mobile World Live、TechWire Asia、Rest of World | 移动互联网、社交娱乐、运营商生态、区域数字服务 |
+
+这类源不追求数量，而是捕捉能解释市场结构的“报告、排名、收入、用户、支付、合作、监管、并购”信号。
+
+候选精品源包括 Newzoo、The Paypers、FinTech Futures、Retail4Growth、Digital in Asia 等。它们的内容价值高，但当前 RSS/反爬可用性不稳定，暂不直接进入自动采集；后续可按 HTML 低频采集或人工精选方式接入。
 
 ### 当前重点公司监控
 
@@ -425,6 +441,11 @@ DeepSeek 主力 → 豆包兜底 → 程序生成兜底
 | L2 垂直交易源 | Tech in Asia | 亚太 | venture_media | 扫描 24，最多 8 |
 | L2 垂直交易源 | Inc42 | 亚太 | venture_media | 扫描 24，最多 8 |
 | L3 区域生态源 | TechWire Asia | 亚太 | regional_ecosystem | 扫描 20，最多 6 |
+| L4 垂直赛道精品源 | GamesIndustry.biz | 全球 | industry_vertical / 游戏 | 扫描 16，最多 4，只保留高信号内容 |
+| L4 垂直赛道精品源 | PocketGamer.biz | 全球 | industry_vertical / 游戏 | 扫描 16，最多 4，只保留高信号内容 |
+| L4 垂直赛道精品源 | Fintech News Singapore | 亚太 | industry_vertical / Fintech/支付 | 扫描 16，最多 4，只保留高信号内容 |
+| L4 垂直赛道精品源 | EcommerceBytes | 全球 | industry_vertical / 电商 | 扫描 16，最多 4，只保留高信号内容 |
+| L4 垂直赛道精品源 | Mobile World Live | 全球 | industry_vertical / 文娱社交/移动生态 | 扫描 16，最多 4，只保留高信号内容 |
 | L2 垂直交易源 | WAMDA | 中东 | venture_media | 扫描 20，最多 8 |
 | L2 垂直交易源 | MENAbytes | 中东 | venture_media | 扫描 20，最多 8 |
 | L3 区域生态源 | TechCabal | 非洲 | regional_ecosystem | 扫描 20，最多 6 |
@@ -479,6 +500,11 @@ Google News 默认配置：
 | e27 | 移除 | Angular JS + Cloudflare，RSS 和 HTML 均不可采 |
 | Bloomberg | 移除 | 全球综合科技源，区域噪声过大 |
 | Google News 泛区域 RSS | 不作为区域主源 | 链接是 Google 内部跳转，非原始来源 |
+| Newzoo | 候选，暂不自动采集 | 报告价值高，但当前脚本访问 403，需要 HTML/人工低频接入 |
+| The Paypers | 候选，暂不自动采集 | 当前 RSS 地址返回 HTML，不是标准 feed |
+| FinTech Futures | 候选，暂不自动采集 | 当前脚本访问 feed 返回 403 |
+| Retail4Growth | 候选，暂不自动采集 | 当前 RSS 地址不可用，需要重新验证 |
+| Digital in Asia | 候选，暂不自动采集 | 适合文娱社交/数字媒体观察，但需先确认稳定 feed |
 
 ---
 

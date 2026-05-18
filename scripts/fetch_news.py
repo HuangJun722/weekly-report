@@ -82,6 +82,12 @@ RSS_SOURCES = [
     # DealStreetAsia RSS 已停用（"Temporarily Disabled"），改用 HTML 降级采集
     # e27 已移除：Cloudflare 全面拦截，无法绕过
     # Google News RSS 不可用：链接为 Google 内部跳转，非原始来源
+    # --- 垂直赛道精品源：只保留高信号内容，避免泛资讯噪声 ---
+    {'name': 'GamesIndustry.biz', 'url': 'https://www.gamesindustry.biz/rss',            'source': 'GamesIndustry.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'PocketGamer.biz',   'url': 'https://www.pocketgamer.biz/rss/',             'source': 'PocketGamer.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Fintech News Singapore', 'url': 'https://fintechnews.sg/feed/',            'source': 'Fintech News Singapore', 'region': '亚太', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'EcommerceBytes',    'url': 'https://www.ecommercebytes.com/feed/',         'source': 'EcommerceBytes', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Mobile World Live', 'url': 'https://www.mobileworldlive.com/feed/',         'source': 'Mobile World Live', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '文娱社交/移动生态', 'max_scan': 16, 'max': 4, 'signal_only': True},
     # --- 中东/非洲 ---
     {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                     'source': 'WAMDA',         'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
     {'name': 'MENAbytes',        'url': 'https://www.menabytes.com/feed/',               'source': 'MENAbytes',     'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
@@ -286,7 +292,14 @@ def detect_event_types(title):
                        'files for IPO', 'goes public', 'listing',
                        'turnaround', 'restructure', 'reorganization',
                        'cloud service', 'cloud expansion', 'data center',
-                       'partners with', 'signs MOU', 'joint venture']):
+                       'partners with', 'signs MOU', 'joint venture',
+                       # 垂直赛道：报告、市场规模、用户/收入变化也有情报价值
+                       'report', 'forecast', 'market size', 'market share',
+                       'ranking', 'rankings', 'benchmark', 'consumer spend',
+                       'consumer spending', 'downloads', 'monthly active users',
+                       'subscribers', 'gmv', 'gross merchandise', 'payment volume',
+                       'digital payments', 'mobile wallet', 'social commerce',
+                       'gaming market', 'mobile games market', 'games market']):
         types.append('strategy')
     return types if types else ['other']
 
@@ -295,6 +308,7 @@ def _source_meta(cfg):
     return {
         'source_tier': cfg.get('source_tier', 'L3 区域生态源'),
         'source_role': cfg.get('source_role', 'regional_ecosystem'),
+        'vertical': cfg.get('vertical', ''),
     }
 
 def _with_source_meta(item, cfg):
@@ -406,6 +420,24 @@ def _is_low_signal_company_title(title):
 
 def _is_official_company_source(item):
     return item.get('source_tier') == 'L1 官方/IR源' or item.get('source_role') == 'official_ir'
+
+
+def _is_vertical_source(item):
+    return item.get('source_role') == 'industry_vertical' or item.get('source_tier') == 'L4 垂直赛道精品源'
+
+
+def _is_high_signal_vertical_title(title):
+    t = (title or '').lower()
+    keywords = [
+        'report', 'market', 'forecast', 'ranking', 'rankings', 'top ', 'top-', 'trend',
+        'trends', 'benchmark', 'data', 'revenue', 'spend', 'spending', 'downloads',
+        'users', 'subscribers', 'gmv', 'payment', 'payments', 'wallet', 'license',
+        'regulation', 'regulatory', 'launches', 'expands', 'partners', 'partnership',
+        'acquires', 'acquisition', 'merger', 'raises', 'funding', 'investment',
+        'gaming market', 'mobile games', 'ecommerce', 'e-commerce', 'fintech',
+        'digital commerce', 'social commerce', 'super app',
+    ]
+    return any(k in t for k in keywords)
 
 
 def _event_similarity(a, b):
@@ -630,6 +662,11 @@ def _parse_rss_text(cfg, text):
                 image_url = mt[0]['url']
 
         types = detect_event_types(title)
+        if _is_vertical_source(cfg):
+            if not _is_high_signal_vertical_title(title):
+                continue
+            if types[0] == 'other':
+                types = ['strategy']
         if cfg.get('signal_only') and types[0] == 'other':
             continue
         results.append(_with_source_meta({
@@ -1845,6 +1882,8 @@ def infer_bd_context(item, score=None):
 def attach_business_context(event, item, score):
     event['source_tier'] = item.get('source_tier', 'L3 区域生态源')
     event['source_role'] = item.get('source_role', 'regional_ecosystem')
+    if item.get('vertical'):
+        event['vertical'] = item.get('vertical')
     event.update(infer_bd_context({**item, **event}, score))
     return event
 
