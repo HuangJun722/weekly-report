@@ -46,6 +46,14 @@ button, input, select { font: inherit; }
 .identity h1 { margin: 0; font-size: 21px; letter-spacing: 0; line-height: 1.15; }
 .identity p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
 .timestamp { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.timestamp-wrap { display: flex; align-items: center; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
+.subscribe-link {
+  display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px;
+  border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.78);
+  color: var(--ink); font-size: 12px; white-space: nowrap;
+}
+.subscribe-link:hover { border-color: var(--navy); background: var(--surface); }
+.subscribe-link span { color: var(--green); font-weight: 700; }
 .live-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 4px rgba(31,102,88,0.11); }
 .nav-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; }
 .nav { display: flex; gap: 2px; border-bottom: 1px solid var(--line); }
@@ -262,7 +270,12 @@ button, input, select { font: inherit; }
           <p>非中美互联网情报简报与趋势跟踪</p>
         </div>
       </div>
-      <div class="timestamp"><span class="live-dot"></span><span>{{ update_time }}</span></div>
+      <div class="timestamp-wrap">
+        <a class="subscribe-link" href="feed.xml" type="application/atom+xml" target="_blank" rel="noopener">
+          <span>RSS</span><em>订阅</em>
+        </a>
+        <div class="timestamp"><span class="live-dot"></span><span>{{ update_time }}</span></div>
+      </div>
     </div>
     <div class="nav-strip">
       <nav class="nav" aria-label="主导航">

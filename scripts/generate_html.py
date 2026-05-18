@@ -6,8 +6,22 @@ import argparse
 import json
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from jinja2 import Template
+
+try:
+    from zoneinfo import ZoneInfo
+    SHANGHAI_TZ = ZoneInfo('Asia/Shanghai')
+except Exception:
+    SHANGHAI_TZ = timezone(timedelta(hours=8))
+
+
+def _cn_now():
+    return datetime.now(SHANGHAI_TZ)
+
+
+def _cn_today():
+    return _cn_now().strftime('%Y-%m-%d')
 
 CATEGORY_MAP = {
     '融资': 'funding', '并购': 'ma', 'IPO': 'earnings',
@@ -570,7 +584,7 @@ def enrich(event):
         event.pop(old_key, None)
     # 保留 date 字段用于 Market Pulse 日期权重
     if not event.get('date'):
-        event['date'] = datetime.now().strftime('%Y-%m-%d')
+        event['date'] = _cn_today()
 
     return ensure_business_fields(event)
 
@@ -580,7 +594,7 @@ def load_events():
     if isinstance(data, list):
         grouped = {}
         for event in data:
-            date = event.get('date', datetime.now().isoformat())[:10]
+            date = event.get('date', _cn_today())[:10]
             grouped.setdefault(date, []).append(enrich(event))
         return grouped
     return {k: [enrich(e) for e in v] for k, v in data.items()}
@@ -592,7 +606,7 @@ def split_company_events(events):
     - 公司动态只保留7天内，不过滤
     - 通用热点：排除other类型和评分<5的事件
     """
-    week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    week_ago = (_cn_now() - timedelta(days=7)).strftime('%Y-%m-%d')
     company_events = []
     generic_events = []
 
@@ -626,7 +640,7 @@ def get_signal_events(events):
     seen = set()
     result = []
 
-    week_ago = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    week_ago = (_cn_now() - timedelta(days=7)).strftime('%Y-%m-%d')
 
     for date in sorted(events.keys(), reverse=True):
         # 只处理最近7天内的日期
@@ -730,9 +744,10 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
 
     # ── Market Pulse：最近3天的优质信号事件─────
     # 优先今天 > 昨天 > 前天，按评分排序
-    today_s = datetime.now().strftime('%Y-%m-%d')
-    yesterday_s = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
-    two_days_ago_s = (datetime.now() - timedelta(days=2)).strftime('%Y-%m-%d')
+    today_s = _cn_today()
+    now_cn = _cn_now()
+    yesterday_s = (now_cn - timedelta(days=1)).strftime('%Y-%m-%d')
+    two_days_ago_s = (now_cn - timedelta(days=2)).strftime('%Y-%m-%d')
 
     # 按优先级分组
     today_signals = [e for e in signals if e.get('date') == today_s]
@@ -756,7 +771,7 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         if os.path.exists(summary_path):
             with open(summary_path, 'r', encoding='utf-8') as sf:
                 ai_summaries = json.load(sf)
-            today_s = datetime.now().strftime('%Y-%m-%d')
+            today_s = _cn_today()
             if today_s in ai_summaries:
                 ai_text = ai_summaries[today_s].strip()
                 if len(ai_text) >= 20:
@@ -1206,7 +1221,7 @@ def load_site_updates():
     """读取网站更新日志。"""
     path = os.path.join('data', 'site_updates.json')
     fallback = [{
-        'date': datetime.now().strftime('%Y-%m-%d'),
+        'date': _cn_today(),
         'version': 'v0.1',
         'type': '系统',
         'status': '已上线',
@@ -1247,7 +1262,7 @@ def generate_html(force=False, preview_mode=False):
 
     # 主tab：最近一次有内容的采集批次（回退到昨天兜底）
     # 历史tab：除主tab批次之外的所有日期
-    today_str = datetime.now().strftime('%Y-%m-%d')
+    today_str = _cn_today()
     main_date = None
     main_events = []
 
@@ -1329,7 +1344,7 @@ def generate_html(force=False, preview_mode=False):
     company_groups = group_company_cards(preset_company_list)
 
     # 历史tab：90天内除主tab批次之外的所有有内容日期
-    cutoff = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
+    cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
     history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
     history = [(d, events.get(d, [])) for d in history_dates if events.get(d, [])]
 

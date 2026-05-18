@@ -4,7 +4,7 @@
 """
 
 import json, os, time, re, hashlib
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import feedparser
 
@@ -17,6 +17,12 @@ except ImportError:
 import warnings; warnings.filterwarnings('ignore')
 import requests
 from bs4 import BeautifulSoup
+
+try:
+    from zoneinfo import ZoneInfo
+    SHANGHAI_TZ = ZoneInfo('Asia/Shanghai')
+except Exception:
+    SHANGHAI_TZ = timezone(timedelta(hours=8))
 
 try:
     from analysis_quality import annotate_event_quality, summarize_quality
@@ -46,6 +52,14 @@ HEADERS = {
 
 REQUEST_DELAY = 1.2  # 避免被封（仅用于重试，非采集）
 REQUEST_TIMEOUT = 8   # 单次请求超时（秒），降级提速
+
+
+def _cn_now():
+    return datetime.now(SHANGHAI_TZ)
+
+
+def _cn_today():
+    return _cn_now().strftime('%Y-%m-%d')
 
 # ============================================================
 # ���源：重点标注是否为融资专属源
@@ -698,8 +712,8 @@ def fetch_company_news(cfg):
     except Exception:
         return []
 
-    today = datetime.now().strftime('%Y-%m-%d')
-    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+    today = _cn_today()
+    yesterday = (_cn_now() - timedelta(days=1)).strftime('%Y-%m-%d')
     allowed_dates = {today, yesterday}
 
     results = []
@@ -1537,7 +1551,7 @@ def build_daily_ai_summary(today_events):
         return None
 
     signal = signal[:15]
-    today = datetime.now().strftime('%Y-%m-%d')
+    today = _cn_today()
 
     apis = _chat_api_candidates()
     if not apis:
@@ -1858,7 +1872,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             'companies': analysis.get('companies', []) or [],
             'is_company': item.get('is_company', False),
             'company_name': item.get('company_name', ''),
-            'date': item.get('article_date', datetime.now().isoformat()[:10]),
+            'date': item.get('article_date', _cn_today()),
             'image_url': item.get('image_url', ''),
         }
         attach_business_context(event, item, score)
@@ -1897,7 +1911,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'companies': [],
         'is_company': item.get('is_company', False),
         'company_name': item.get('company_name', ''),
-        'date': item.get('article_date', datetime.now().isoformat()[:10]),
+        'date': item.get('article_date', _cn_today()),
         'image_url': item.get('image_url', ''),
     }
     attach_business_context(event, item, score)
@@ -1953,12 +1967,12 @@ def fill_event_images(events):
 # ============================================================
 
 def main():
-    today = datetime.now().strftime('%Y-%m-%d')
+    today = _cn_today()
     ON_GHA = os.environ.get('GITHUB_ACTIONS') == 'true'
     if ON_GHA:
         print("  🤖 GHA 环境检测：DeepSeek 为主，失败后自动用豆包兜底")
     print(f"\n🌍 全球互联网动态情报站")
-    print(f"   {datetime.now().strftime('%Y-%m-%d %H:%M')} | 目标：融资/并购/财报/战略\n")
+    print(f"   {_cn_now().strftime('%Y-%m-%d %H:%M')} | 目标：融资/并购/财报/战略\n")
 
     os.makedirs('data', exist_ok=True)
     try:
@@ -2202,7 +2216,7 @@ def main():
     print(f"  🏢 公司动态：{company_added} 条 | 通用热点：{generic_added} 条")
 
     # 清理 90 天前（避免数据无限膨胀，保留 3 个月）
-    cutoff = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
+    cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
     all_events = {k: v for k, v in all_events.items() if k >= cutoff}
     all_events, removed_dups = dedupe_events_by_day(all_events)
     if removed_dups:

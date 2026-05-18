@@ -1,299 +1,657 @@
-# 全球互联网动态情报站 — 使用指南
+# 全球互联网动态情报站 V2 使用指南
 
-> 自动采集非中美地区互联网/科技动态，AI 分析后展示为情报产品。
+> 面向全球互联网项目拓展、战略、投资和产业研究场景，把非中美互联网动态整理成“客户拓展机会报告”。
 > 在线访问：[https://huangjun722.github.io/weekly-report/](https://huangjun722.github.io/weekly-report/)
+> 订阅地址：[https://huangjun722.github.io/weekly-report/feed.xml](https://huangjun722.github.io/weekly-report/feed.xml)
 
 ---
 
-## 为什么设计这个网站
+## 1. 这个网站现在解决什么问题
 
-### 背景
+V1 更像“非中美科技新闻聚合”。V2 的定位已经变了：它不是让你多看新闻，而是帮助你判断：
 
-中美互联网动态有大量中文媒体报道（36kr、虎嗅、晚点等），但**欧洲、亚太、中东、非洲、拉美**的科技生态在国内几乎没有系统性信息渠道。偶尔有一篇报道也是碎片化的，无法形成持续追踪。
+- 哪些区域正在出现客户机会？
+- 哪些公司值得跟进？
+- 哪些事件代表预算、扩张、整合、合规或竞争窗口？
+- 本周和本月应该把 BD 精力放在哪里？
 
-这个站的目标很简单：**每天花 30 秒扫一眼，知道非中美科技世界在发生什么。**
-
-### 定位
-
-- **情报性质**，不是新闻聚合。不只是"发生了什么"，还试图回答"所以呢？对谁有影响？"
-- **低成本运营**，零云成本（GitHub Pages + GitHub Actions），AI 分析每天约 ¥0.003
-- **排除中美**，聚焦被主流中文媒体忽视的地区
+推荐把它当作每天的轻量情报台，而不是普通资讯网站。
 
 ---
 
-## 信息架构（三层设计）
+## 2. 最推荐的阅读方式
 
-页面从上到下分三层，对应三种使用深度：
+### 每天 30 秒：看今日情报
 
-### Layer 1：今日判断（30 秒扫读）
+打开首页后先看“今日情报”：
 
-顶部的深色区块：
+1. 看顶部一句话判断，了解今天的主线。
+2. 看右侧“今日摘要”，快速知道事件数、覆盖地区、融资、并购/财报数量。
+3. 看“今日要点”里的重点事件，优先关注有明确公司、金额、区域和合作方向的事件。
 
-- **一句话判断**：AI 基于今日信号事件生成的趋势总结，比如"资金流向欧洲太空数据中心、出行科技等赛道"
-- **3 个信号卡片**：今日最重要的 3 条事件，点进去看原文
+适合早上快速扫一眼，判断今天有没有值得转给业务或销售团队的线索。
 
-用户场景：每天早上打开，30 秒知道今天什么方向在动。
+### 每周 5 分钟：看周报
 
-### Layer 2：趋势主题分组（3 分钟浏览）
+进入“周报”Tab，重点看三块：
 
-今日要点 tab 下，事件按**趋势主题**分组（如"中东 FinTech 赛道升温""欧洲太空经济融资活跃"），每组一个标题 + 若干事件卡片。同一主题的事件放在一起看，能看出产业链联动。
+| 模块 | 怎么看 |
+|------|--------|
+| 本周优先机会 | 按优先级、评分和信源质量排序，适合直接挑跟进对象 |
+| 区域机会图 | 看哪个区域事件多、高优先级多、公司活跃度高 |
+| 下周跟进行动 | 系统按 7 天内、30 天内、持续观察生成行动建议 |
 
-### Layer 3：全部事件 + 搜索筛选（需要时）
+周报适合回答：“这周哪些客户或区域值得跟？”
 
-切换到"全部事件"tab：
+### 每月 10 分钟：看月报
 
-- **按区域筛选**：欧洲 / 亚太 / 中东 / 非洲 / 拉美
-- **按事件类型筛选**：融资 / 并购 / 财报 / 战略
-- **搜索框**：搜索标题、描述、公司名
-- **公司导航**：右侧（或下拉）按公司名跳转
-- **日期翻页**：底部"前一日/后一日"浏览历史
+进入“月报”Tab，重点看：
 
-### 中资出海独立 tab
+| 模块 | 怎么看 |
+|------|--------|
+| 月度市场优先级 | 看区域热度、平均评分和机会方向 |
+| 机会主题 | 看本月机会集中在支付、云、AI、渠道、合规还是整合 |
+| 客户分层建议 | 区分 A 类优先触达、B 类持续经营、C 类观察入库 |
 
-涉及中国公司出海（TikTok、Shein、阿里云等）的事件单独放在"中资出海"tab，不与主信息流混合。
+月报适合回答：“下个月资源应该投向哪些区域和客户？”
 
 ---
 
-## 功能说明
+## 3. 页面 Tab 说明
 
-### 今日要点 vs 全部事件
+### 今日情报
 
-两个 tab 使用完全相同的卡片样式，区别在于：
-- **今日要点**：趋势主题分组 + 当日统计 + 信号卡片
-- **全部事件**：按区域/类型筛选 + 搜索功能更强
+当天主工作区，包含：
 
-### 日期翻页
+- 当日判断
+- 重点信号事件
+- 趋势分组
+- 右侧报告入口
+- 最近日期导航
 
-底部"前一日"和"后一日"按钮可浏览历史数据。翻页时整个"今日要点"面板（判断 + 信号 + 趋势分组）一起切换，已预计算好，无需重新请求。
+如果只想快速了解今天发生了什么，看这个 Tab 就够。
 
-### 暗色模式
+### 周报
 
-右上角按钮切换亮色/暗色。状态保存在 `localStorage`，下次打开自动恢复。首次访问跟随系统 `prefers-color-scheme`。
+从“事件列表”升级为“客户拓展机会报告”。它不是简单统计新闻，而是把近 7 天事件组织成：
 
-### 事件卡片
+- 优先机会
+- 区域机会
+- 跟进行动
 
-每条事件卡片包含：
+适合每周复盘或给业务团队同步。
 
-| 元素 | 说明 |
+### 月报
+
+月度视角下的市场和客户结构：
+
+- 哪些区域更热？
+- 哪些机会主题重复出现？
+- 哪些客户值得分层经营？
+
+适合月度规划、区域策略和客户名单整理。
+
+### 公司索引
+
+按预设区域组织重点公司，避免不熟悉公司的人找不到对象。当前区域包括：
+
+- 中资
+- 亚太
+- 欧洲
+- 中东
+- 非洲
+- 拉美
+
+每家公司卡片会显示近 7 天、近 30 天动态和最新信号。点击公司后，全站会进入公司筛选状态；顶部会出现醒目的筛选提示，避免你忘记当前只是在看某家公司。
+
+### 全部事件
+
+完整事件库，适合细查：
+
+- 搜索关键词
+- 按区域筛选
+- 按事件类型筛选
+- 查看历史日期事件
+- 复核低质量或背景事件
+
+当你想找“某个公司最近有没有动态”或“拉美最近有哪些融资”时，用这个 Tab。
+
+### 更新日志
+
+记录网站功能变更，包括页面结构、筛选体验、信源调整、反馈入口等。适合确认最近网站到底改了什么。
+
+### 反馈
+
+用于记录想法、Bug、数据问题和体验建议。当前是静态站方案：
+
+- 反馈先保存在当前浏览器本地。
+- 可以复制标准反馈文本。
+- 可以跳转到 GitHub Issue 模板提交。
+
+它不会自动写入远端数据库。如果后续反馈量增加，可以升级到飞书表格、GitHub Issues 工作流或 Supabase。
+
+---
+
+## 4. 事件字段怎么理解
+
+V2 事件不只记录“新闻类型”，还会补齐 BD 机会字段。
+
+| 字段 | 含义 |
 |------|------|
-| 缩略图 | 左侧 100px×70px，RSS media_content → og:image 两级兜底 |
-| 区域标签 | 欧洲 / 亚太 / 中东 / 非洲 / 拉美（可点击筛选） |
-| 情报标签 | 资金流向 / 合作机会 / 警示信号 / 趋势信号 / 中资出海 |
-| 来源 | 信源名称 |
-| 标题 | 可点击跳转原文 |
-| 事件描述 | AI 生成或程序提取的中文摘要，包含公司名 + 具体动作 |
-| 公司标签 | 如属于 27 家监控公司之一，显示公司名 |
+| `source_tier` | 信源层级，越靠前可信度或业务价值越高 |
+| `source_role` | 信源角色，如官方 IR、垂直交易源、区域生态源 |
+| `bd_triggers` | BD 触发器，如预算窗口、扩张窗口、整合窗口 |
+| `opportunity_direction` | 可能的合作方向，如云与 AI 基础设施、支付与风控、渠道伙伴 |
+| `follow_up_window` | 建议跟进窗口：7 天内、30 天内、持续观察 |
+| `bd_priority` | 机会优先级：高、中、观察 |
+
+这些字段会影响周报/月报排序，也会影响“客户分层建议”。
+
+### 常见 BD 触发器
+
+| 触发器 | 典型事件 | 可理解为 |
+|--------|----------|----------|
+| 预算窗口 | 融资、营收增长、利润改善 | 对方可能有新预算 |
+| 扩张窗口 | 进入新市场、上线新业务 | 对方可能需要本地合作 |
+| 降本窗口 | 裁员、重组、亏损收窄 | 对方可能需要效率工具 |
+| 合规窗口 | 牌照、监管、罚款、诉讼 | 对方可能需要合规/安全方案 |
+| 整合窗口 | 并购、收购、股权交易 | 对方可能需要系统整合 |
+| 生态窗口 | 合作、联盟、开放平台 | 对方可能需要生态伙伴 |
+| 竞争窗口 | 市占、挑战、对标、替代 | 对方可能存在竞争防守需求 |
 
 ---
 
-## 数据来源
+## 5. 信源层级
 
-### RSS 信源（主力，14 个）
+V2 开始按信源质量分层，不再把所有来源当成同等新闻。
 
-| 信源 | 区域 | 状态 |
-|------|------|------|
-| TechCrunch | 全球 | ✅ |
-| TechCrunch VC | 全球 | ✅ |
-| Tech.eu | 欧洲 | ✅ |
-| The Next Web | 欧洲 | ✅ |
-| Tech in Asia | 亚太 | ✅ |
-| TechWire Asia | 亚太 | ✅ |
-| WAMDA | 中东 | ✅ |
-| MENAbytes | 中东 | ✅ |
-| TechCabal | 非洲 | ✅ |
-| Disrupt Africa | 非洲 | ✅ |
-| Techpoint | 非洲 | ✅ |
-| Ventureburn | 非洲 | ✅ |
-| LAVCA | 拉美 | ✅ |
-| Contxto | 拉美 | ✅ |
+| 层级 | 角色 | 代表来源 | 用途 |
+|------|------|----------|------|
+| L1 官方/IR源 | 官方披露 | Rakuten IR、Grab IR、MercadoLibre IR、Adyen IR | 校准重点客户自身动作 |
+| L2 垂直交易源 | 融资/并购/创投 | TechCrunch、Tech.eu、UKTN、EU-Startups、Tech in Asia、Inc42、WAMDA、LatamList、LAVCA 等 | 捕捉高价值交易和资金流 |
+| L3 区域生态源 | 区域科技生态 | The Recursive、The Next Web、TechWire Asia、TechCabal、Techpoint、WeeTracker、Contxto | 补充区域动态和战略信号 |
+| L4 深度趋势源 | 趋势观察 | Rest of World Money / Ecommerce | 只保留高信号事件 |
+| L5 Google News 补漏源 | 公司雷达 | 重点公司 Google News RSS | 补漏，不作为高可信主源 |
 
-### HTML 降级采集（备用）
+### 当前重点公司监控
 
-| 信源 | 区域 | 说明 |
-|------|------|------|
-| DealStreetAsia | 亚太 | JS SPA，降级成功率低 |
+覆盖公司包括：
 
-### 已移除信源
+ByteDance/TikTok、Tencent、Alibaba、JD.com、Kuaishou、Ant Group、Meituan、Kakao、Naver、Rakuten、Sea Limited、Grab、Gojek、VNG Group、Yahoo、Cyberagent、Adyen、Zalando、Allegro、Trendyol、MercadoLibre、Rappi、Noon、Careem、Tabby、Kaspi.kz、Jumia、Konga。
 
-| 信源 | 原因 |
-|------|------|
-| Sifted | Cloudflare 拦截 |
-| DealStreetAsia RSS | 503 不可用 |
-| e27 | Cloudflare + JS 渲染 |
-| EU-Startups | Cloudflare 拦截 |
-| Bloomberg | 噪声太大，非科技 |
+Google News 已加强噪声过滤，重点过滤：
 
-### 27 家公司监控
-
-每天通过 Google News RSS 追踪指定公司的新闻。每家公司最多 3 条/天，7 天日期窗口，URL 去重。
-
-覆盖公司：ByteDance/TikTok、Tencent、Alibaba、JD.com、Kuaishou、Ant Group、Meituan、Kakao、Naver、Rakuten、Sea Limited、Grab、Gojek、VNG Group、Yahoo、Cyberagent、Adyen、Zalando、Allegro、Trendyol、MercadoLibre、Rappi、Noon、Careem、Tabby、Kaspi.kz、Jumia、Konga
+- 分析师目标价
+- 股票预测
+- 纯股价波动
+- 金融站复写稿
+- phishing / password / urgent alert 等安全告警噪声
 
 ---
 
-## 技术架构
+## 6. 更新频率和数据范围
 
-### 数据流
+- GitHub Actions 每天自动更新。
+- 页面使用 `docs/index.html` 静态生成。
+- 事件数据保留近 90 天。
+- 首页默认展示最近一次有内容的采集批次。
+- 周报按最近 7 天聚合。
+- 月报按当月聚合。
 
+如果刚推送了页面代码，线上 GitHub Pages 可能需要一点时间更新。默认不等待 Actions 完成，除非明确要确认部署成功。
+
+---
+
+## 7. 本地预览和维护
+
+### 仅重新生成页面
+
+```powershell
+Set-Location -LiteralPath 'D:\共享文件\AI协作工作区\01_工作文件区\weekly-report-repo'
+$py='C:\Users\16120\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+& $py scripts\generate_html.py --force
 ```
+
+### 本地打开预览
+
+```powershell
+Set-Location -LiteralPath 'D:\共享文件\AI协作工作区\01_工作文件区\weekly-report-repo\docs'
+& $py -m http.server 8765 --bind 127.0.0.1
+```
+
+然后打开：
+
+```text
+http://127.0.0.1:8765/
+```
+
+### 检查脚本语法
+
+```powershell
+& $py -m py_compile scripts\fetch_news.py scripts\generate_html.py
+```
+
+### 推送前检查
+
+```powershell
+git status --branch --short
+git diff --check
+```
+
+如果远端自动更新抢先推送，优先：
+
+```powershell
+git fetch origin
+git rebase origin/main
+```
+
+如果只冲突 `docs/index.html`，通常重新运行 `scripts\generate_html.py --force`，再 `git add docs/index.html` 即可。
+
+---
+
+## 8. 数据流与部署链路
+
+```text
 RSS 信源 ──┐
-Google News ├──→ fetch_news.py ──→ events.json ──→ generate_html.py ──→ docs/index.html ──→ GitHub Pages
-HTML 降级 ──┘                          ↑
-                                   data/summary.json（AI 趋势分析）
+官方/IR HTML ├──→ scripts/fetch_news.py ──→ data/events.json
+Google News ─┘                              │
+                                            ↓
+                              scripts/generate_html.py
+                                            ↓
+                                   docs/index.html
+                                            ↓
+                                      GitHub Pages
 ```
 
-### 三层评分筛选
+完整链路：
 
-所有事件经过 `_calc_score()` 评分后分流：
+1. GitHub Actions 定时或手动触发。
+2. `scripts/fetch_news.py` 并行抓取 RSS，低频抓取 HTML 备用源和官方/IR 页面，再抓取重点公司 Google News。
+3. 抓取结果先做标题、公司别名、低信号、重复事件过滤。
+4. `smart_filter()` 控制总量，优先保留信号事件和官方/IR 公司事件。
+5. 事件进入评分前置，分为 AI 深度分析、程序生成、丢弃。
+6. AI 或程序生成 `reason`、`summary_short`、`impact`、`insight_label`、`trend_topic` 等字段。
+7. `analysis_quality.py` 标注 `quality_flags` 和 `needs_repair`。
+8. 事件按文章日期写入 `data/events.json`，保留近 90 天。
+9. `scripts/generate_html.py` 读取事件，补齐前端字段和 BD 字段，生成 `docs/index.html`。
+10. GitHub Pages 从 `docs/` 发布静态网站。
 
-| 分数 | 处理方式 | 覆盖率 |
-|------|----------|--------|
-| ≥7 或 funding/ma/earnings | AI 深度分析（豆包 API） | 主力 |
-| ≥4 或 is_company | 程序生成描述 | 零成本 |
-| <4 | 丢弃 | 过滤噪声 |
+相关生成物：
 
-### AI 分析管线
-
-三个 P0 Agent，全部走豆包 API：
-
-1. **AI 趋势分析**（`build_daily_ai_summary`）：基于当日信号事件生成"今日判断"
-2. **AI 标题改写**（`rewrite_titles_for_display`）：改写程序层泛化描述
-3. **AI 情报评分**（`ai_quality_judge`）：对 low-signal 事件做 1-5 分评分，≤2 分丢弃
-
-### RSS Feed
-
-`generate_feed.py` 将 events.json 转换为 Atom XML，输出最新一天全部事件到 `docs/feed.xml`。每天随采集流程自动更新。
-
-- **Feed 地址**：https://huangjun722.github.io/weekly-report/feed.xml
-- **格式**：Atom XML（标准 RSS 阅读器均可消费）
-- **内容**：最新一天全部事件，不是固定条数
-- **用途**：供外部 CLI / RSS 阅读器订阅每日新闻
-
-### 部署
-
-- GitHub Actions 每天定时自动运行
-- 采集 → AI 分析 → HTML 生成 → Feed 生成 → 推送到 `docs/` → GitHub Pages 部署
-- 也支持 `workflow_dispatch` 手动触发
+| 文件 | 作用 |
+|------|------|
+| `data/events.json` | 近 90 天事件数据 |
+| `data/summary.json` | 每日趋势判断缓存 |
+| `data/site_updates.json` | 更新日志内容源 |
+| `docs/index.html` | 线上主页面 |
+| `docs/feed.xml` | Atom/RSS 阅读器订阅入口 |
 
 ---
 
-## 本地开发
+## 9. 评分与筛选机制
 
-```bash
-# 安装依赖
-pip install -r requirements.txt
+### 多因子评分
 
-# 配置 API Key
-# DeepSeek（本地开发主力）：https://platform.deepseek.com/
-# 豆包（GHA 主力，本地备用）：https://console.volcengine.com/ark/
-# 方式一：加密存储
-cp .env.example .env
-py scripts/encrypt_key.py
-# 方式二：直接写 .env
-# DEEPSEEK_API_KEY=sk-xxx
-# DOUBAO_API_KEY=xxx
-# DOUBAO_MODEL=ep-20260409223830-dnt5b
+事件会通过确定性评分函数计算 `score`，主要因子包括：
 
-# 采集 + 分析 + 生成（全流程）
-py scripts/fetch_news.py
-py scripts/generate_html.py --force
+| 因子 | 说明 |
+|------|------|
+| 金额 | 标题中解析 `$M`、`$B`、`€M`，金额越大分越高 |
+| 事件类型 | 并购、财报、融资、战略等不同类型有不同基础分 |
+| 区域权重 | 非洲、中东、亚太、拉美、中资出海等区域有不同权重 |
+| 热门赛道 | AI、FinTech、HealthTech、机器人、芯片、气候科技等加分 |
+| 知名投资方 | SoftBank、Mubadala、Temasek、a16z、Sequoia 等加分 |
+| 公司命中 | 能识别到重点公司或明确公司名时加分 |
 
-# 仅生成 HTML（使用已有数据）
-py scripts/generate_html.py --preview   # 预览模式，生成到 preview.html
-py scripts/generate_html.py --force     # 生产模式，覆盖 index.html
+最终分数会压到 1-10 区间。
 
-# 本地预览
-python -m http.server 8000 --directory docs
-# 打开 http://localhost:8000/
+### 事件类型识别
+
+标题先被规则识别为：
+
+| 类型 | 常见关键词 |
+|------|------------|
+| `funding` | raises、funding、series、seed、valued at、unicorn |
+| `ma` | acquires、merger、stake、buys、takeover |
+| `earnings` | revenue、earnings、profit、IPO、financial results |
+| `strategy` | launches、expands、partners、overseas、global、joint venture |
+| `other` | 不命中以上规则 |
+
+### 后端筛选
+
+`smart_filter()` 的基本策略：
+
+1. 融资、并购、财报、战略等信号事件优先保留。
+2. 官方/IR 公司事件即使是 `other` 也保留，因为可信度高。
+3. Google News 公司 `other` 事件不再无条件保留，避免股票和安全告警噪声。
+4. 非公司、非信号事件按优先级补足总量。
+5. 每日总量和单区域数量有上限，避免某个区域或信源刷屏。
+
+### 前端展示过滤
+
+页面端还会做一层展示过滤：
+
+- 今日情报：展示最新批次中非 `other`、评分较高的事件，以及 7 天内公司动态。
+- 全部事件：展示完整事件列表，并支持搜索、区域筛选、事件类型筛选、公司筛选。
+- 低质量候选：仍可查看，但不会抢占主视觉。
+- 公司筛选：点击公司索引后，全站进入公司过滤状态，顶部显示筛选提示和结果数量。
+
+### 周/月报排序
+
+周报和月报按 `_bd_priority_rank()` 排序，核心顺序是：
+
+```text
+BD 优先级 → 评分 → 信源层级 → 事件类型 → 日期
 ```
 
-> **Windows 注意**：控制台编码可能不支持 emoji，加 `-X utf8` 参数运行。
+因此官方/IR、垂直交易源、高分融资/并购，会比普通 Google News 背景事件更靠前。
 
 ---
 
-## 踩过的坑
+## 10. AI 分析管线与质量标注
 
-### DeepSeek API 在 GitHub Actions 结构性不可达
+AI 分析顺序：
 
-**症状**：workflow 每次都在 DeepSeek 调用上超时，60 分钟跑不完。
+```text
+DeepSeek 主力 → 豆包兜底 → 程序生成兜底
+```
 
-**根因**：GitHub Actions 的 US-west runner 无法直连 `api.deepseek.com`（中国 API），每次 POST 请求 Read timed out，三次重试每批次浪费 ~90s，33 批次 × 90s ≈ 50 分钟浪费在等待超时上。
+事件会经过评分前置：
 
-**解决**：检测 `GITHUB_ACTIONS` 环境变量，GHA 环境直接跳过 DeepSeek，只用豆包。本地开发 DeepSeek 正常。
+| 情况 | 处理 |
+|------|------|
+| 高分或融资/并购/财报 | AI 深度分析 |
+| 中分或公司事件 | 程序生成 + 必要时标题改写 |
+| 低分噪声 | 丢弃或作为低优先级背景 |
+
+如果 AI 失败，事件会记录 `analysis_source`、`analysis_status`、`quality_flags`、`needs_repair`，避免把兜底文本伪装成完整分析。
+
+### 3 个 P0 Agent
+
+这里的 P0 不是独立服务，而是采集流程里的三类高优先级 AI 任务：
+
+| Agent | 函数 | 作用 |
+|-------|------|------|
+| 事件深度分析 | `analyze_events_deepseek()` / `analyze_events_doubao()` | 为高分事件生成中文摘要、影响范围、趋势主题 |
+| AI 标题改写 | `rewrite_titles_for_display()` | 对程序层中仍泛化的描述做中文改写 |
+| AI 情报评分 | `ai_quality_judge()` | 对 `other` 类事件做 1-5 分价值判断，低分丢弃 |
+
+另外还有每日趋势判断：
+
+| 模块 | 函数 | 作用 |
+|------|------|------|
+| 每日趋势总结 | `build_daily_ai_summary()` | 基于当天信号事件生成 2-4 句专业情报判断 |
+
+### 质量标注系统
+
+`scripts/analysis_quality.py` 会检查事件是否仍然像兜底文本。
+
+常见质量标记：
+
+| 标记 | 含义 |
+|------|------|
+| `missing_summary` | 缺少短摘要 |
+| `title_prefix_summary` | 摘要只是标题前缀 |
+| `missing_reason` | 缺少事件原因 |
+| `generic_reason` | 描述仍是“科技动态”“战略调整”等模板话术 |
+| `unknown_impact` | 影响对象仍是“未知”或“相关企业” |
+
+质量字段：
+
+| 字段 | 含义 |
+|------|------|
+| `analysis_source` | `deepseek`、`doubao`、`program`、`unknown` |
+| `analysis_status` | `complete`、`partial`、`fallback`、`failed` |
+| `quality_flags` | 质量问题列表 |
+| `needs_repair` | 是否建议后续补改写 |
+
+这个系统的价值是：即使 AI 失败，也能明确标出“这是兜底结果”，不会让页面误以为它是完整分析。
+
+---
+
+## 11. RSS、HTML 与公司信源完整表
+
+### 当前 RSS 信源
+
+| 层级 | 信源 | 区域 | 角色 | 配额/规则 |
+|------|------|------|------|-----------|
+| L2 垂直交易源 | TechCrunch | 全球 | venture_media | 扫描 20，最多 8 |
+| L2 垂直交易源 | TechCrunch VC | 全球 | venture_media | 扫描 20，最多 8 |
+| L2 垂直交易源 | Tech.eu | 欧洲 | venture_media | 扫描 20，最多 8 |
+| L2 垂直交易源 | UKTN | 欧洲 | venture_media | 扫描 20，最多 8 |
+| L2 垂直交易源 | EU-Startups | 欧洲 | venture_media | 扫描 20，最多 8 |
+| L3 区域生态源 | The Recursive | 欧洲 | regional_ecosystem | 扫描 20，最多 6 |
+| L3 区域生态源 | The Next Web | 欧洲 | regional_ecosystem | 扫描 20，最多 6 |
+| L2 垂直交易源 | Tech in Asia | 亚太 | venture_media | 扫描 24，最多 8 |
+| L2 垂直交易源 | Inc42 | 亚太 | venture_media | 扫描 24，最多 8 |
+| L3 区域生态源 | TechWire Asia | 亚太 | regional_ecosystem | 扫描 20，最多 6 |
+| L2 垂直交易源 | WAMDA | 中东 | venture_media | 扫描 20，最多 8 |
+| L2 垂直交易源 | MENAbytes | 中东 | venture_media | 扫描 20，最多 8 |
+| L3 区域生态源 | TechCabal | 非洲 | regional_ecosystem | 扫描 20，最多 6 |
+| L2 垂直交易源 | Disrupt Africa | 非洲 | venture_media | 扫描 20，最多 8 |
+| L3 区域生态源 | Techpoint | 非洲 | regional_ecosystem | 扫描 20，最多 6 |
+| L2 垂直交易源 | Ventureburn | 非洲 | venture_media | 扫描 20，最多 8 |
+| L3 区域生态源 | WeeTracker | 非洲 | regional_ecosystem | 扫描 20，最多 6 |
+| L2 垂直交易源 | LatamList | 拉美 | venture_media | 扫描 20，最多 8 |
+| L2 垂直交易源 | LAVCA | 拉美 | venture_media | 扫描 20，最多 8 |
+| L3 区域生态源 | Contxto | 拉美 | regional_ecosystem | 扫描 24，最多 6 |
+| L4 深度趋势源 | Rest of World Money | 全球 | deep_trend | 扫描 20，最多 4，只保留信号事件 |
+| L4 深度趋势源 | Rest of World Ecommerce | 全球 | deep_trend | 扫描 20，最多 4，只保留信号事件 |
+
+### 当前 HTML / 官方 IR 源
+
+| 层级 | 信源 | 区域 | 用途 |
+|------|------|------|------|
+| L2 垂直交易源 | DealStreetAsia | 亚太 | RSS 停用后的 HTML 降级，成功率不稳定 |
+| L1 官方/IR源 | Rakuten IR | 亚太 | 官方披露、财报、公告 |
+| L1 官方/IR源 | Grab IR | 亚太 | 官方披露、财报、公告 |
+| L1 官方/IR源 | MercadoLibre IR | 拉美 | 官方披露、财报、公告 |
+| L1 官方/IR源 | Adyen IR | 欧洲 | 官方披露、财报、公告 |
+
+### 当前公司监控
+
+Google News 公司监控覆盖 28 个重点对象：
+
+| 区域 | 公司 |
+|------|------|
+| 中资 | ByteDance/TikTok、Tencent、Alibaba、JD.com、Kuaishou、Ant Group、Meituan |
+| 亚太 | Kakao、Naver、Rakuten、Sea Limited、Grab、Gojek、VNG Group、Yahoo、Cyberagent |
+| 欧洲 | Adyen、Zalando、Allegro、Trendyol |
+| 拉美 | MercadoLibre、Rappi |
+| 中东 | Noon、Careem、Tabby、Kaspi.kz |
+| 非洲 | Jumia、Konga |
+
+Google News 默认配置：
+
+| 配置 | 含义 |
+|------|------|
+| `source_tier=L5 Google News 补漏源` | 只做公司动态雷达 |
+| `source_role=company_radar` | 公司监控角色 |
+| `max=3` | 每家公司最多 3 条 |
+| `max_other=1` | `other` 类最多 1 条 |
+
+### 已移除或降级信源
+
+| 信源 | 状态 | 原因 |
+|------|------|------|
+| Sifted | 移除 | Cloudflare 全面拦截 |
+| DealStreetAsia RSS | 降级为 HTML | RSS 显示 Temporarily Disabled |
+| e27 | 移除 | Angular JS + Cloudflare，RSS 和 HTML 均不可采 |
+| Bloomberg | 移除 | 全球综合科技源，区域噪声过大 |
+| Google News 泛区域 RSS | 不作为区域主源 | 链接是 Google 内部跳转，非原始来源 |
+
+---
+
+## 12. 踩过的坑与排障记录
+
+### DeepSeek 在 GitHub Actions 曾经结构性不可达
+
+症状：
+
+- Workflow 每次都卡在 DeepSeek 调用。
+- 单批次重试超时，整体任务可能接近 60 分钟。
+
+原因：
+
+- GitHub Actions runner 到 `api.deepseek.com` 的网络不稳定或不可达。
+
+当前处理：
+
+- 当前逻辑是 DeepSeek 主力，失败后快速降级豆包。
+- 不再因为 DeepSeek 单点失败拖垮整轮采集。
+- Workflow 中会先检测 DeepSeek，再检测豆包。
 
 ### 豆包 API 返回非 JSON
 
-**症状**：豆包批次调用偶尔返回格式异常的 JSON，解析失败。
+症状：
 
-**解决**：增加 JSON 修正解析（去除 markdown 代码块标记 ` ```json `），失败后 5s 重试一次，再失败降级到程序生成。
+- 模型偶尔返回 Markdown 代码块或格式不标准 JSON。
+- 批量解析失败。
+
+处理：
+
+- 解析前去除 ```json / ``` 代码块。
+- 批量失败后可逐条兜底。
+- 最终失败时回退程序生成，并标记质量状态。
 
 ### 事件分析全是泛化描述
 
-**症状**：事件卡片显示"亚太科技公司财报披露""欧洲科技公司战略动态"——完全看不出具体是哪家公司、发生了什么。
+症状：
 
-**根因**：`GENERIC_REASONS` 使用精确集合匹配（`existing_reason in GENERIC_REASONS`），但程序层产出的 `"{region}科技公司财报披露"` 和集合中的 `"中资科技公司财报披露"` 不匹配（区域前缀不同）。
+- 页面出现“亚太科技公司财报披露”“欧洲科技公司战略动态”等空泛描述。
 
-**解决**：改为子串匹配（`any(p in existing_reason for p in GENERIC_REASONS)`），同时 `_build_reason()` 接收 `company_name` 参数，正则提取失败时直接用已知公司名。最后兜底用标题前段代替区域模板。
+原因：
+
+- 程序兜底模板被当成正式分析写入。
+- 旧逻辑没有明确标记 `analysis_status` 和 `needs_repair`。
+
+处理：
+
+- `_build_reason()` 从标题和公司名提取更具体描述。
+- `analysis_quality.py` 标记 `generic_reason`、`unknown_impact` 等问题。
+- 页面保留但弱化低质量候选，避免抢主视觉。
 
 ### 公司名提取吃掉前文数字
 
-**症状**：`"Baillie Gifford Dumps 248,000 MercadoLibre Shares"` → 提取出 `"000 MercadoLibre"`。
+症状：
 
-**根因**：`_extract_subject()` 的词边界回溯用 `isalnum()` 检查，数字（`0`）被当成单词的一部分捕获。
+```text
+Baillie Gifford Dumps 248,000 MercadoLibre Shares
+```
 
-**解决**：改为 `isalpha()`，只回退字母不包含数字。
+曾被提取成：
 
-### RSS 信源频繁失效
+```text
+000 MercadoLibre
+```
 
-| 信源 | 失效原因 | 处理 |
-|------|----------|------|
-| Sifted | Cloudflare 拦截 | 移除 |
-| DealStreetAsia RSS | 503 | 改为 HTML 降级 |
-| e27 | Cloudflare + JS 渲染 | 移除 |
-| EU-Startups | Cloudflare | 移除 |
-| Disrupt Africa | RSS 挂了一段时间 | 恢复后重新加入 |
+原因：
 
-### Workflow push 冲突
+- 公司名匹配时向前回溯词边界使用 `isalnum()`，把数字也当成词的一部分。
 
-**症状**：本地 push 代码 + workflow 自动 push HTML 互相踩，产生 merge 冲突。
+处理：
 
-**解决**：push 前先 `git fetch` + `git rebase origin/main`，遇到 `docs/index.html` 冲突直接用 `--theirs`（自动生成物以 workflow 版本为准）。
+- 改为只回退字母，避免吞掉金额或股数。
 
-### Workflow 预检不足导致空跑
+### Google News 把股票和安全噪声当公司动态
 
-**症状**：RSS 全部不可达（网络问题）时，workflow 照常跑满 5 分钟，生成空页面。
+症状：
 
-**解决**：增加 RSS 信源可达性预检（`curl --max-time 8`），全部不可达时跳过采集直接写空 JSON。增加豆包 API 预检，不可用时直接降级到程序生成。
+- 目标价、股票预测、analyst rating、phishing 邮件、安全告警进入公司动态。
 
-### AI 分析覆盖不均——部分事件描述仍是泛化
+处理：
 
-**症状**：同一页面上，"亚太AI赛道升温"事件有"香港快手计划分拆Kling AI，估值20亿美元"这样的详细描述，但旁边的 Kakao/Naver 事件只显示"Kakao发布财报"。
+- `COMPANY_BLACKLIST` 和 `COMPANY_LOW_SIGNAL_PATTERNS` 增加金融站、目标价、股票预测、安全告警等模式。
+- Google News 继续保留为 L5 补漏源，但不再作为高可信主源。
+- 官方/IR 源开始作为 L1 公司动态来源。
 
-**根因**：AI 分析管线（豆包 API）不稳定。事件评分分流正确——公司事件（is_company=true）和 earnings 类型都达到了 AI 门槛——但调用豆包 API 时部分批次超时/失败，回退到程序生成。`enrich()` 在 `generate_html.py` 中运行，无法二次调 AI，只能靠 `_build_reason()` 程序提取。
+### Workflow push 与本地 push 冲突
 
-**后续**：两个改进方向——(1) `_build_reason()` 增强正则从标题提取更多上下文（零成本）；(2) fetch_news.py AI 管线加重试/降级策略（不增加 API 次数，提高成功率）。
+症状：
 
-### 翻页按钮初始不可点击
+- GitHub Actions 自动更新 `docs/index.html`，本地同时推代码，导致 push rejected 或生成文件冲突。
 
-**症状**："前一日"/"后一日"按钮在页面加载后都不可点击，实际 `main_date` 是最近日期，应有更多历史日期可浏览。
+处理：
 
-**根因**：模板初始渲染两个按钮都绑定了 `nav-disabled` 类（`pointer-events: none`），但缺少初始化代码根据 `currentDateIndex` 更新按钮状态。`main_date` 在 `availableDates[0]` 时"后一日"应启用。
+```powershell
+git fetch origin
+git rebase origin/main
+```
 
-**解决**：`template.html` 中 `currentDateIndex` 赋值后立即更新两个按钮的 `className`。
+如果只冲突 `docs/index.html`：
 
-### summary_short 无 AI 产出时留空
+```powershell
+& $py scripts\generate_html.py --force
+git add docs\index.html
+git rebase --continue
+```
 
-**症状**：AI 未处理的事件在"今日要点"tab 中不显示任何 summary，只有 reason。
+原则：
 
-**根因**：`enrich()` 中有 `reason` 的 fallback（`_build_reason()`），但没有 `summary_short` 的 fallback。当 AI 未生成 `summary_short` 时，字段值为空或标题前 25 字，被渲染条件过滤掉。
+- `docs/index.html` 是生成物，不手工拼冲突。
+- 先吸收远端自动更新数据，再用当前脚本重新生成。
 
-**解决**：`enrich()` 中增加 `summary_short` fallback：当字段为空/太短/等于标题前缀时，用 `reason` 兜底。同时渲染层（Jinja + JS）加 `summary_short != reason` 检查避免重复。
+### 共享路径和真实仓库混淆
+
+事实：
+
+```text
+D:\共享文件\AI协作工作区\01_工作文件区\weekly-report-repo
+```
+
+就是当前真实 Git 仓库。后续不要再误判成影子目录。
+
+处理建议：
+
+- 每次动手前先 `git status --branch --short`。
+- 不要对用户未提交改动做 reset 或 checkout。
 
 ---
 
-## 设计原则
+## 13. 常见问题
 
-- **`scripts/template.html` 是设计的唯一真相来源（SSOT）** — 所有样式和结构改这个文件
-- **`docs/*.html` 是自动生成物** — 不要直接编辑，改了也会被覆盖
-- **评分不展示** — 分数仅用于内部排序和 AI 筛选阈值，用户看不到
-- **无图不占位** — 没有缩略图的事件卡片不留空白框
+### 为什么有些事件看起来仍然像背景信息？
+
+因为 Google News 公司雷达会抓到部分边缘动态。V2 已经降低它的权重，并增加官方/IR 源，但 Google News 仍保留为补漏源，避免漏掉重点公司动作。
+
+### 为什么周报/月报有时公司机会多于区域机会？
+
+公司监控和区域信源是两条数据流。若某天重点公司新闻多，周报/月报会更多体现客户机会；如果区域融资/并购源更活跃，则会体现区域机会。后续会继续扩大高质量区域源和官方源，让比例更健康。
+
+### 反馈 Tab 为什么不能直接提交到网站后台？
+
+当前网站是 GitHub Pages 静态站，没有后端数据库。反馈先保存在浏览器本地，并支持复制或跳转 GitHub Issue。这样成本最低，也最稳定。
+
+### 线上没立刻更新怎么办？
+
+GitHub Pages 需要部署时间。除非明确要确认部署成功，否则默认推送后不等待 Actions 跑完。
+
+### 可以把它当正式报告用吗？
+
+当前页面适合作为日常情报台和周/月度机会视图。如果要正式对外归档，建议下一步增加独立周报/月报 HTML、Markdown 或 Word 输出。
+
+---
+
+## 14. V2 相比 V1 的关键变化
+
+| 维度 | V1 | V2 |
+|------|----|----|
+| 产品定位 | 非中美科技新闻聚合 | 全球互联网客户拓展情报台 |
+| 周报/月报 | 轻量趋势聚合 | BD 机会报告 |
+| 公司索引 | 公司列表/筛选入口 | 按区域组织的连续观察对象 |
+| 信源策略 | RSS + Google News | 分层信源 + 官方/IR + Google News 补漏 |
+| 事件字段 | 新闻类型、评分、摘要 | 增加 BD 触发器、机会方向、跟进窗口、优先级 |
+| 反馈机制 | 无 | 本地反馈记录 + GitHub Issue 模板 |
+| 更新说明 | 无 | 更新日志 Tab |
+
+---
+
+## 15. 下一步建议
+
+优先级从高到低：
+
+1. 观察下一次自动更新后，Google News 噪声是否下降。
+2. 继续补第二批官方/IR 源，如 Sea Limited、Kaspi.kz、Zalando、Allegro、Naver/Kakao、Jumia。
+3. 增加正式周报/月报归档输出。
+4. 对历史旧事件运行小批量补改写，优先修复高分但 `needs_repair=true` 的事件。
+5. 反馈量变多后，接飞书表格、GitHub Issues 工作流或 Supabase。

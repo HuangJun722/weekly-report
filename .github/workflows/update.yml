@@ -37,6 +37,8 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: write
+    env:
+      TZ: Asia/Shanghai
 
     steps:
       - name: Checkout
@@ -107,7 +109,7 @@ jobs:
               fi
             fi
             python scripts/fetch_news.py
-            python scripts/check_event_quality.py --date "$(date +%Y-%m-%d)" --max-repair-ratio 0.6 || true
+            python scripts/check_event_quality.py --date "$(TZ=Asia/Shanghai date +%Y-%m-%d)" --max-repair-ratio 0.6 || true
           fi
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -143,7 +145,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          TODAY=$(date +%Y-%m-%d)
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
           if [ -f "data/events.json" ]; then
             EVENT_COUNT=$(python -c "import json,sys;d=json.load(open('data/events.json'));print(len(d.get('$TODAY',[])))" 2>/dev/null || echo "0")
             echo "今日采集：$EVENT_COUNT 条"
@@ -152,7 +154,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "没有变化，跳过提交"
           else
-            COMMIT_MSG="Update $(date +%Y-%m-%d\ %H:%M)"
+            COMMIT_MSG="Update $(TZ=Asia/Shanghai date +%Y-%m-%d\ %H:%M)"
             git commit -m "$COMMIT_MSG"
             git push
             echo "提交成功: $COMMIT_MSG"
