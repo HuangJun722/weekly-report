@@ -176,12 +176,12 @@ def calculate_score(event):
 # ─── 预设公司名单 ─────────────────────────────────────────────
 
 PRESET_COMPANIES = {
-    '中资': ['ByteDance/TikTok', 'Tencent', 'Alibaba', 'JD.com', 'Kuaishou', 'Ant Group', 'Meituan'],
     '亚太': ['Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek', 'VNG Group', 'Yahoo', 'Cyberagent'],
     '欧洲': ['Adyen', 'Zalando', 'Allegro', 'Trendyol'],
     '中东': ['Noon', 'Careem', 'Tabby', 'Kaspi.kz'],
     '非洲': ['Jumia', 'Konga'],
     '拉美': ['MercadoLibre', 'Rappi'],
+    '中资': ['ByteDance/TikTok', 'Tencent', 'Alibaba', 'JD.com', 'Kuaishou', 'Ant Group', 'Meituan'],
 }
 
 # ─── BD opportunity fallback ────────────────────────────────
