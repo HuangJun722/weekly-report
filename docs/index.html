@@ -36,19 +36,23 @@ body {
 a { color: inherit; text-decoration: none; }
 button, input, select { font: inherit; }
 .page { width: min(1280px, calc(100vw - 36px)); margin: 0 auto; padding: 26px 0 48px; }
-.topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-.identity { display: flex; align-items: center; gap: 14px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.identity { display: flex; align-items: center; gap: 15px; min-width: 0; }
 .seal {
-  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--navy); color: var(--paper); font-weight: 800;
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--navy); color: var(--paper); font-weight: 800; font-size: 18px;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
-.identity h1 { margin: 0; font-size: 21px; letter-spacing: 0; line-height: 1.15; }
-.identity p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
-.slogan { margin-top: 8px; display: flex; align-items: center; gap: 9px; color: #33414a; font-size: 13px; letter-spacing: 0.02em; }
-.slogan::before { content: ""; width: 28px; height: 1px; background: var(--green); opacity: 0.75; }
+.brand-copy { min-width: 0; }
+.identity h1 { margin: 0; font-size: 26px; letter-spacing: 0; line-height: 1.12; font-weight: 820; }
+.identity p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
+.slogan {
+  margin-top: 9px; display: flex; align-items: center; gap: 9px;
+  color: #33414a; font-size: 13px; line-height: 1.5; font-weight: 620;
+}
+.slogan::before { content: ""; width: 30px; height: 1px; background: var(--green); opacity: 0.75; }
 .timestamp { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; white-space: nowrap; }
-.timestamp-wrap { display: flex; align-items: center; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
+.timestamp-wrap { position: relative; display: flex; align-items: center; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
 .subscribe-link {
   display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px;
   border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.78);
@@ -65,7 +69,6 @@ button, input, select { font: inherit; }
 .feed-address code { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); color: var(--ink); font-size: 12px; }
 .feed-address button { border: 0; border-radius: 8px; padding: 9px 11px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; }
 .feed-note { color: var(--quiet); font-size: 11px; }
-.timestamp-wrap { position: relative; }
 .live-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 4px rgba(31,102,88,0.11); }
 .nav-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; }
 .nav { display: flex; gap: 2px; border-bottom: 1px solid var(--line); }
@@ -151,7 +154,7 @@ button, input, select { font: inherit; }
 .report-cover p { max-width: 650px; color: rgba(244,241,234,0.72); font-size: 15px; }
 .cover-stats { display: grid; gap: 10px; }
 .cover-stat { padding: 14px; border: 1px solid rgba(244,241,234,0.22); border-radius: 8px; }
-.period-shell { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 22px; align-items: start; margin-top: 28px; }
+.period-shell { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 26px; align-items: start; margin-top: 28px; }
 .period-nav { position: sticky; top: 18px; display: grid; gap: 8px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.86); box-shadow: var(--shadow); }
 .period-nav h3 { margin: 0 0 6px; font-size: 14px; }
 .period-btn { width: 100%; display: grid; gap: 3px; text-align: left; border: 1px solid transparent; border-radius: 8px; padding: 10px; background: transparent; color: var(--ink); cursor: pointer; }
@@ -265,6 +268,9 @@ button, input, select { font: inherit; }
   .page { width: min(100% - 22px, 1280px); padding-top: 18px; }
   .topbar, .nav-strip, .controls { flex-direction: column; align-items: stretch; }
   .timestamp { white-space: normal; }
+  .timestamp-wrap { justify-content: flex-start; }
+  .identity h1 { font-size: 24px; }
+  .seal { width: 42px; height: 42px; }
   .nav { overflow-x: auto; }
   .tab-btn { flex: 0 0 auto; }
   .search, .select { width: 100%; }
@@ -292,7 +298,7 @@ button, input, select { font: inherit; }
     <div class="topbar">
       <div class="identity">
         <div class="seal">百</div>
-        <div>
+        <div class="brand-copy">
           <h1>全球互联网百晓生</h1>
           <p>非中美互联网情报简报与趋势跟踪</p>
           <div class="slogan">见微知著，从微小变化中发现产业趋势和机会</div>
@@ -829,34 +835,6 @@ button, input, select { font: inherit; }
 
     <section class="tab-panel" id="tab-weekly">
       <div class="period-shell">
-        <aside class="period-nav" aria-label="周报档案">
-          <h3>周报档案</h3>
-
-          <button class="period-btn active" data-period-target="weekly-2026-W21" type="button">
-            <strong>2026年第21周（更新中）</strong>
-            <span>2026-05-18 至 2026-05-19</span>
-            <em class="period-status">更新中</em>
-          </button>
-
-          <button class="period-btn" data-period-target="weekly-2026-W20" type="button">
-            <strong>2026年第20周</strong>
-            <span>2026-05-11 至 2026-05-17</span>
-            <em class="period-status">已封存</em>
-          </button>
-
-          <button class="period-btn" data-period-target="weekly-2026-W19" type="button">
-            <strong>2026年第19周</strong>
-            <span>2026-05-04 至 2026-05-10</span>
-            <em class="period-status">已封存</em>
-          </button>
-
-          <button class="period-btn" data-period-target="weekly-2026-W18" type="button">
-            <strong>2026年第18周</strong>
-            <span>2026-04-27 至 2026-05-03</span>
-            <em class="period-status">已封存</em>
-          </button>
-
-        </aside>
         <div>
 
           <div class="period-panel active" id="weekly-2026-W21">
@@ -1232,21 +1210,39 @@ button, input, select { font: inherit; }
           </div>
 
         </div>
+        <aside class="period-nav" aria-label="周报档案">
+          <h3>周报档案</h3>
+
+          <button class="period-btn active" data-period-target="weekly-2026-W21" type="button">
+            <strong>2026年第21周（更新中）</strong>
+            <span>2026-05-18 至 2026-05-19</span>
+            <em class="period-status">更新中</em>
+          </button>
+
+          <button class="period-btn" data-period-target="weekly-2026-W20" type="button">
+            <strong>2026年第20周</strong>
+            <span>2026-05-11 至 2026-05-17</span>
+            <em class="period-status">已封存</em>
+          </button>
+
+          <button class="period-btn" data-period-target="weekly-2026-W19" type="button">
+            <strong>2026年第19周</strong>
+            <span>2026-05-04 至 2026-05-10</span>
+            <em class="period-status">已封存</em>
+          </button>
+
+          <button class="period-btn" data-period-target="weekly-2026-W18" type="button">
+            <strong>2026年第18周</strong>
+            <span>2026-04-27 至 2026-05-03</span>
+            <em class="period-status">已封存</em>
+          </button>
+
+        </aside>
       </div>
     </section>
 
     <section class="tab-panel" id="tab-monthly">
       <div class="period-shell">
-        <aside class="period-nav" aria-label="月报档案">
-          <h3>月报档案</h3>
-
-          <button class="period-btn active" data-period-target="monthly-2026-05" type="button">
-            <strong>2026-05 月报（更新中）</strong>
-            <span>2026-05-01 至 2026-05-19</span>
-            <em class="period-status">更新中</em>
-          </button>
-
-        </aside>
         <div>
 
           <div class="period-panel active" id="monthly-2026-05">
@@ -1318,6 +1314,16 @@ button, input, select { font: inherit; }
           </div>
 
         </div>
+        <aside class="period-nav" aria-label="月报档案">
+          <h3>月报档案</h3>
+
+          <button class="period-btn active" data-period-target="monthly-2026-05" type="button">
+            <strong>2026-05 月报（更新中）</strong>
+            <span>2026-05-01 至 2026-05-19</span>
+            <em class="period-status">更新中</em>
+          </button>
+
+        </aside>
       </div>
     </section>
 
