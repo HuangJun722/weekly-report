@@ -1078,7 +1078,7 @@ def _build_themes(period_events, limit=6):
     ]
 
 
-def build_period_report(events, start_date, end_date, label):
+def build_period_report(events, start_date, end_date, label, period_id=None, status='closed'):
     """按 BD 机会视角聚合周报/月报。"""
     period_events = [
         e for e in events
@@ -1117,17 +1117,22 @@ def build_period_report(events, start_date, end_date, label):
         leading_region = regional_map[0]['region'] if regional_map else '多地区'
         leading_theme = themes[0]['name'] if themes else (top_opportunities[0]['direction'] if top_opportunities else '持续观察')
         summary = (
-            f"{label}共收录 {len(period_events)} 条事件，其中 {high_count} 条为高优先级机会。"
+            f"本周期共收录 {len(period_events)} 条事件，其中 {high_count} 条为高优先级机会。"
             f"当前优先看 {leading_region}，主线机会集中在{leading_theme}。"
         )
     else:
         title = f"{label}客户拓展机会报告"
         summary = "当前周期事件数量较少，先保留为观察入口。"
+    date_label = start_date if start_date == end_date else f"{start_date} 至 {end_date}"
 
     return {
+        'id': period_id or f"{start_date}_{end_date}",
         'start': start_date,
         'end': end_date,
+        'date_label': date_label,
         'month': start_date[:7],
+        'label': label,
+        'status': status,
         'title': title,
         'summary': summary,
         'total': len(period_events),
@@ -1141,6 +1146,61 @@ def build_period_report(events, start_date, end_date, label):
         'themes': themes,
         'high_priority': high_count,
     }
+
+
+def build_weekly_archives(events, main_date):
+    """按自然周生成独立周报档案，已结束周固定封存，当前周更新至最新日期。"""
+    grouped = {}
+    main_dt = datetime.strptime(main_date, '%Y-%m-%d')
+    for event in events:
+        date_key = (event.get('date') or '')[:10]
+        if not date_key:
+            continue
+        try:
+            dt = datetime.strptime(date_key, '%Y-%m-%d')
+        except ValueError:
+            continue
+        week_start_dt = dt - timedelta(days=dt.weekday())
+        week_end_dt = week_start_dt + timedelta(days=6)
+        year, week, _ = dt.isocalendar()
+        key = f"{year}-W{week:02d}"
+        item = grouped.setdefault(key, {
+            'id': key,
+            'label': f"{year}年第{week:02d}周",
+            'start': week_start_dt.strftime('%Y-%m-%d'),
+            'natural_end': week_end_dt.strftime('%Y-%m-%d'),
+            'end': week_end_dt.strftime('%Y-%m-%d'),
+        })
+        if dt <= main_dt:
+            item['end'] = min(item['natural_end'], main_date)
+    archives = []
+    for item in grouped.values():
+        status = 'open' if item['end'] == main_date and item['natural_end'] > main_date else 'closed'
+        label = item['label'] if status == 'closed' else f"{item['label']}（更新中）"
+        archives.append(build_period_report(events, item['start'], item['end'], label, item['id'], status))
+    archives.sort(key=lambda x: x['start'], reverse=True)
+    return archives
+
+
+def build_monthly_archives(events, main_date):
+    """按自然月生成独立月报档案，已结束月份固定封存，当前月更新至最新日期。"""
+    months = sorted({(e.get('date') or '')[:7] for e in events if (e.get('date') or '')[:7]}, reverse=True)
+    archives = []
+    main_month = main_date[:7]
+    for month in months:
+        start_date = f"{month}-01"
+        if month == main_month:
+            end_date = main_date
+            status = 'open'
+            label = f"{month} 月报（更新中）"
+        else:
+            y, m = [int(x) for x in month.split('-')]
+            next_month = datetime(y + (1 if m == 12 else 0), 1 if m == 12 else m + 1, 1)
+            end_date = (next_month - timedelta(days=1)).strftime('%Y-%m-%d')
+            status = 'closed'
+            label = f"{month} 月报"
+        archives.append(build_period_report(events, start_date, end_date, label, month, status))
+    return archives
 
 
 def clean_display_title(title):
@@ -1464,11 +1524,10 @@ def generate_html(force=False, preview_mode=False):
         available_dates.append(d)
         date_panels[d] = build_date_panel(d, day_evs, events)
     date_panels_json = json.dumps(date_panels, ensure_ascii=False)
-    main_dt = datetime.strptime(main_date, '%Y-%m-%d')
-    weekly_start = (main_dt - timedelta(days=6)).strftime('%Y-%m-%d')
-    monthly_start = main_dt.replace(day=1).strftime('%Y-%m-%d')
-    weekly_report = build_period_report(all_events_for_list, weekly_start, main_date, '本周')
-    monthly_report = build_period_report(all_events_for_list, monthly_start, main_date, '本月')
+    weekly_archives = build_weekly_archives(all_events_for_list, main_date)
+    monthly_archives = build_monthly_archives(all_events_for_list, main_date)
+    weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], main_date, main_date, '本周', 'empty', 'open')
+    monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], main_date, main_date, '本月', 'empty', 'open')
     site_updates = load_site_updates()
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
@@ -1476,6 +1535,8 @@ def generate_html(force=False, preview_mode=False):
         weekly=weekly,
         weekly_report=weekly_report,
         monthly_report=monthly_report,
+        weekly_archives=weekly_archives,
+        monthly_archives=monthly_archives,
         all_feed=all_feed,
         all_events_for_list=all_events_for_list,
         date_grouped_events=date_grouped_events,
@@ -1501,6 +1562,7 @@ def generate_html(force=False, preview_mode=False):
         site_updates_json=json.dumps(site_updates, ensure_ascii=False),
         feedback_issue_url='https://github.com/HuangJun722/weekly-report/issues/new?template=feedback.yml',
     )
+    html = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'
 
     os.makedirs('docs', exist_ok=True)
     index_path = 'docs/preview.html' if preview_mode else 'docs/index.html'

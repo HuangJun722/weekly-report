@@ -45,15 +45,27 @@ button, input, select { font: inherit; }
 }
 .identity h1 { margin: 0; font-size: 21px; letter-spacing: 0; line-height: 1.15; }
 .identity p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+.slogan { margin-top: 8px; display: flex; align-items: center; gap: 9px; color: #33414a; font-size: 13px; letter-spacing: 0.02em; }
+.slogan::before { content: ""; width: 28px; height: 1px; background: var(--green); opacity: 0.75; }
 .timestamp { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; white-space: nowrap; }
 .timestamp-wrap { display: flex; align-items: center; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
 .subscribe-link {
   display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px;
   border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.78);
   color: var(--ink); font-size: 12px; white-space: nowrap;
+  cursor: pointer;
 }
 .subscribe-link:hover { border-color: var(--navy); background: var(--surface); }
 .subscribe-link span { color: var(--green); font-weight: 700; }
+.feed-popover { display: none; position: absolute; right: 0; top: 42px; width: min(420px, calc(100vw - 32px)); padding: 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); z-index: 40; }
+.feed-popover.open { display: grid; gap: 10px; }
+.feed-popover strong { font-size: 13px; }
+.feed-popover p { margin: 0; color: var(--muted); font-size: 12px; }
+.feed-address { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+.feed-address code { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); color: var(--ink); font-size: 12px; }
+.feed-address button { border: 0; border-radius: 8px; padding: 9px 11px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; }
+.feed-note { color: var(--quiet); font-size: 11px; }
+.timestamp-wrap { position: relative; }
 .live-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 4px rgba(31,102,88,0.11); }
 .nav-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; }
 .nav { display: flex; gap: 2px; border-bottom: 1px solid var(--line); }
@@ -139,6 +151,18 @@ button, input, select { font: inherit; }
 .report-cover p { max-width: 650px; color: rgba(244,241,234,0.72); font-size: 15px; }
 .cover-stats { display: grid; gap: 10px; }
 .cover-stat { padding: 14px; border: 1px solid rgba(244,241,234,0.22); border-radius: 8px; }
+.period-shell { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 22px; align-items: start; margin-top: 28px; }
+.period-nav { position: sticky; top: 18px; display: grid; gap: 8px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.86); box-shadow: var(--shadow); }
+.period-nav h3 { margin: 0 0 6px; font-size: 14px; }
+.period-btn { width: 100%; display: grid; gap: 3px; text-align: left; border: 1px solid transparent; border-radius: 8px; padding: 10px; background: transparent; color: var(--ink); cursor: pointer; }
+.period-btn:hover { background: var(--surface-cool); }
+.period-btn.active { border-color: rgba(23,43,58,0.28); background: rgba(23,43,58,0.08); }
+.period-btn strong { font-size: 13px; }
+.period-btn span { color: var(--muted); font-size: 12px; }
+.period-status { color: var(--green); font-size: 11px; font-weight: 720; }
+.period-panel { display: none; }
+.period-panel.active { display: block; }
+.period-panel .report-cover { margin-top: 0; }
 .cover-stat strong { display: block; font-size: 24px; }
 .cover-stat span { color: rgba(244,241,234,0.68); font-size: 12px; }
 .trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
@@ -232,6 +256,8 @@ button, input, select { font: inherit; }
   .rail-card:first-child { grid-column: span 2; }
   .main-title { font-size: 38px; }
   .report-cover { grid-template-columns: 1fr; }
+  .period-shell { grid-template-columns: 1fr; }
+  .period-nav { position: static; }
   .ops-layout, .feedback-layout { grid-template-columns: 1fr; }
   .opportunity-layout { grid-template-columns: 1fr; }
 }
@@ -243,6 +269,7 @@ button, input, select { font: inherit; }
   .tab-btn { flex: 0 0 auto; }
   .search, .select { width: 100%; }
   .main-title { font-size: 30px; }
+  .slogan { align-items: flex-start; line-height: 1.5; }
   .lead { font-size: 15px; }
   .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
   .opportunity-layout { grid-template-columns: 1fr; }
@@ -268,12 +295,22 @@ button, input, select { font: inherit; }
         <div>
           <h1>全球互联网百晓生</h1>
           <p>非中美互联网情报简报与趋势跟踪</p>
+          <div class="slogan">见微知著，从微小变化中发现产业趋势和机会</div>
         </div>
       </div>
       <div class="timestamp-wrap">
-        <a class="subscribe-link" href="feed.xml" type="application/atom+xml" target="_blank" rel="noopener">
+        <button class="subscribe-link" id="feedToggle" type="button" aria-expanded="false" aria-controls="feedPopover">
           <span>RSS</span><em>订阅</em>
-        </a>
+        </button>
+        <div class="feed-popover" id="feedPopover" role="dialog" aria-label="RSS 订阅地址">
+          <strong>RSS 订阅地址</strong>
+          <p>在阅读器里添加这个地址即可。</p>
+          <div class="feed-address">
+            <code id="feedUrl">https://huangjun722.github.io/weekly-report/feed.xml</code>
+            <button type="button" id="copyFeedUrl">复制</button>
+          </div>
+          <div class="feed-note" id="feedCopyState">不在页面内展开订阅内容。</div>
+        </div>
         <div class="timestamp"><span class="live-dot"></span><span>{{ update_time }}</span></div>
       </div>
     </div>
@@ -426,87 +463,123 @@ button, input, select { font: inherit; }
     </section>
 
     <section class="tab-panel" id="tab-weekly">
-      <article class="report-cover">
+      <div class="period-shell">
+        <aside class="period-nav" aria-label="周报档案">
+          <h3>周报档案</h3>
+          {% for report in weekly_archives %}
+          <button class="period-btn{% if loop.first %} active{% endif %}" data-period-target="weekly-{{ report.id }}" type="button">
+            <strong>{{ report.label }}</strong>
+            <span>{{ report.date_label }}</span>
+            <em class="period-status">{{ '更新中' if report.status == 'open' else '已封存' }}</em>
+          </button>
+          {% endfor %}
+        </aside>
         <div>
-          <div class="label-row"><span class="label">周报</span><span class="label">{{ weekly_report.start }} 至 {{ weekly_report.end }}</span></div>
-          <h2>{{ weekly_report.title }}</h2>
-          <p>{{ weekly_report.summary }}</p>
-        </div>
-        <div class="cover-stats">
-          <div class="cover-stat"><strong>{{ weekly_report.total }}</strong><span>入选事件</span></div>
-          <div class="cover-stat"><strong>{{ weekly_report.companies }}</strong><span>重点公司</span></div>
-          <div class="cover-stat"><strong>{{ weekly_report.regions }}</strong><span>覆盖地区</span></div>
-        </div>
-      </article>
-      <section class="content-block">
-        <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
-        <div class="opportunity-layout">
-          <div class="opportunity-list">
-            {% for item in weekly_report.top_opportunities %}
-            <a class="opportunity" href="{{ item.url }}" target="_blank">
-              <div class="opportunity-meta">
-                <span class="label green">{{ item.priority }}</span>
-                <span class="label">{{ item.region }}</span>
-                <span class="label copper">{{ item.window }}</span>
+          {% for report in weekly_archives %}
+          <div class="period-panel{% if loop.first %} active{% endif %}" id="weekly-{{ report.id }}">
+            <article class="report-cover">
+              <div>
+                <div class="label-row"><span class="label">周报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ '更新中' if report.status == 'open' else '已封存' }}</span></div>
+                <h2>{{ report.title }}</h2>
+                <p>{{ report.summary }}</p>
               </div>
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.company }}｜{{ item.trigger }}｜{{ item.direction }}</p>
-            </a>
-            {% endfor %}
+              <div class="cover-stats">
+                <div class="cover-stat"><strong>{{ report.total }}</strong><span>入选事件</span></div>
+                <div class="cover-stat"><strong>{{ report.companies }}</strong><span>重点公司</span></div>
+                <div class="cover-stat"><strong>{{ report.regions }}</strong><span>覆盖地区</span></div>
+              </div>
+            </article>
+            <section class="content-block">
+              <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
+              <div class="opportunity-layout">
+                <div class="opportunity-list">
+                  {% for item in report.top_opportunities %}
+                  <a class="opportunity" href="{{ item.url }}" target="_blank">
+                    <div class="opportunity-meta">
+                      <span class="label green">{{ item.priority }}</span>
+                      <span class="label">{{ item.region }}</span>
+                      <span class="label copper">{{ item.window }}</span>
+                    </div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.company }}｜{{ item.trigger }}｜{{ item.direction }}</p>
+                  </a>
+                  {% endfor %}
+                </div>
+                <div class="mini-stack">
+                  {% for r in report.regional_map[:4] %}
+                  <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，{{ r.companies }} 家重点公司</span></div>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+            <section class="content-block">
+              <div class="block-head"><h2>下周跟进行动</h2><span>由事件窗口自动归类</span></div>
+              <div class="action-list">
+                {% for a in report.actions %}
+                <div class="action-row"><div class="action-window">{{ a.window }}</div><div><strong>{{ a.action }}</strong><span>{{ a.count }} 条线索，代表事件：{{ a.event }}</span></div></div>
+                {% endfor %}
+              </div>
+            </section>
           </div>
-          <div class="mini-stack">
-            {% for r in weekly_report.regional_map[:4] %}
-            <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，{{ r.companies }} 家重点公司</span></div>
-            {% endfor %}
-          </div>
-        </div>
-      </section>
-      <section class="content-block">
-        <div class="block-head"><h2>下周跟进行动</h2><span>由事件窗口自动归类</span></div>
-        <div class="action-list">
-          {% for a in weekly_report.actions %}
-          <div class="action-row"><div class="action-window">{{ a.window }}</div><div><strong>{{ a.action }}</strong><span>{{ a.count }} 条线索，代表事件：{{ a.event }}</span></div></div>
           {% endfor %}
         </div>
-      </section>
+      </div>
     </section>
 
     <section class="tab-panel" id="tab-monthly">
-      <article class="report-cover">
+      <div class="period-shell">
+        <aside class="period-nav" aria-label="月报档案">
+          <h3>月报档案</h3>
+          {% for report in monthly_archives %}
+          <button class="period-btn{% if loop.first %} active{% endif %}" data-period-target="monthly-{{ report.id }}" type="button">
+            <strong>{{ report.label }}</strong>
+            <span>{{ report.date_label }}</span>
+            <em class="period-status">{{ '更新中' if report.status == 'open' else '已封存' }}</em>
+          </button>
+          {% endfor %}
+        </aside>
         <div>
-          <div class="label-row"><span class="label">月报</span><span class="label">{{ monthly_report.month }}</span></div>
-          <h2>{{ monthly_report.title }}</h2>
-          <p>{{ monthly_report.summary }}</p>
-        </div>
-        <div class="cover-stats">
-          <div class="cover-stat"><strong>{{ monthly_report.total }}</strong><span>月度事件</span></div>
-          <div class="cover-stat"><strong>{{ monthly_report.companies }}</strong><span>重点公司</span></div>
-          <div class="cover-stat"><strong>{{ monthly_report.regions }}</strong><span>覆盖地区</span></div>
-        </div>
-      </article>
-      <section class="content-block">
-        <div class="block-head"><h2>月度市场优先级</h2><span>区域、客户与机会主题</span></div>
-        <div class="opportunity-layout">
-          <div class="mini-stack">
-            {% for r in monthly_report.regional_map[:6] %}
-            <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，平均评分 {{ r.avg_score }}</span></div>
-            {% endfor %}
+          {% for report in monthly_archives %}
+          <div class="period-panel{% if loop.first %} active{% endif %}" id="monthly-{{ report.id }}">
+            <article class="report-cover">
+              <div>
+                <div class="label-row"><span class="label">月报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ '更新中' if report.status == 'open' else '已封存' }}</span></div>
+                <h2>{{ report.title }}</h2>
+                <p>{{ report.summary }}</p>
+              </div>
+              <div class="cover-stats">
+                <div class="cover-stat"><strong>{{ report.total }}</strong><span>月度事件</span></div>
+                <div class="cover-stat"><strong>{{ report.companies }}</strong><span>重点公司</span></div>
+                <div class="cover-stat"><strong>{{ report.regions }}</strong><span>覆盖地区</span></div>
+              </div>
+            </article>
+            <section class="content-block">
+              <div class="block-head"><h2>月度市场优先级</h2><span>区域、客户与机会主题</span></div>
+              <div class="opportunity-layout">
+                <div class="mini-stack">
+                  {% for r in report.regional_map[:6] %}
+                  <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，平均评分 {{ r.avg_score }}</span></div>
+                  {% endfor %}
+                </div>
+                <div class="mini-stack">
+                  {% for theme in report.themes[:6] %}
+                  <div class="mini-panel"><strong>{{ theme.name }}</strong><span>{{ theme.count }} 条线索沉淀</span></div>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+            <section class="content-block">
+              <div class="block-head"><h2>客户分层建议</h2><span>用于 BD 跟进优先级</span></div>
+              <div class="trend-columns">
+                {% for c in report.customer_tiers[:6] %}
+                <div class="trend"><h3>{{ c.company }}</h3><p>{{ c.tier }}｜{{ c.region }}｜{{ c.direction }}</p></div>
+                {% endfor %}
+              </div>
+            </section>
           </div>
-          <div class="mini-stack">
-            {% for theme in monthly_report.themes[:6] %}
-            <div class="mini-panel"><strong>{{ theme.name }}</strong><span>{{ theme.count }} 条线索沉淀</span></div>
-            {% endfor %}
-          </div>
-        </div>
-      </section>
-      <section class="content-block">
-        <div class="block-head"><h2>客户分层建议</h2><span>用于 BD 跟进优先级</span></div>
-        <div class="trend-columns">
-          {% for c in monthly_report.customer_tiers[:6] %}
-          <div class="trend"><h3>{{ c.company }}</h3><p>{{ c.tier }}｜{{ c.region }}｜{{ c.direction }}</p></div>
           {% endfor %}
         </div>
-      </section>
+      </div>
     </section>
 
     <section class="tab-panel" id="tab-companies">
@@ -678,6 +751,50 @@ function switchTab(name) {
   var panel = document.getElementById('tab-'+name);
   if (btn) btn.classList.add('active');
   if (panel) panel.classList.add('active');
+}
+document.querySelectorAll('.period-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var target = btn.getAttribute('data-period-target');
+    var shell = btn.closest('.period-shell');
+    if (!shell || !target) return;
+    shell.querySelectorAll('.period-btn').forEach(function(item){ item.classList.toggle('active', item === btn); });
+    shell.querySelectorAll('.period-panel').forEach(function(panel){ panel.classList.toggle('active', panel.id === target); });
+  });
+});
+var feedToggle = document.getElementById('feedToggle');
+var feedPopover = document.getElementById('feedPopover');
+if (feedToggle && feedPopover) {
+  feedToggle.addEventListener('click', function(event){
+    event.stopPropagation();
+    var open = !feedPopover.classList.contains('open');
+    feedPopover.classList.toggle('open', open);
+    feedToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(event){
+    if (!feedPopover.contains(event.target) && event.target !== feedToggle) {
+      feedPopover.classList.remove('open');
+      feedToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+var copyFeedUrl = document.getElementById('copyFeedUrl');
+if (copyFeedUrl) {
+  copyFeedUrl.addEventListener('click', function(event){
+    event.stopPropagation();
+    var feedUrl = document.getElementById('feedUrl');
+    var stateText = document.getElementById('feedCopyState');
+    var text = feedUrl ? feedUrl.textContent.trim() : '';
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){
+        if (stateText) stateText.textContent = '已复制订阅地址。';
+      }).catch(function(){
+        if (stateText) stateText.textContent = text;
+      });
+    } else if (stateText) {
+      stateText.textContent = text;
+    }
+  });
 }
 function toggleDate(header) {
   var card = header.closest('.history-card');
