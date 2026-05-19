@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Tue, 19 May 2026 11:29:06 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 19 May 2026 17:00:01 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,271 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>He started building in military-era Nigeria. Now he builds AI HR software.</title>
+		<link>https://techcabal.com/2026/05/19/nigerias-talpro-software-enters-the-ai-hr-race/</link>
+		
+		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
+		<pubDate>Tue, 19 May 2026 16:59:58 +0000</pubDate>
+				<category><![CDATA[Features]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[AI agents]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[Entreprise services]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=188385</guid>
+
+					<description><![CDATA[In the 1990s, when most Nigerian businesses still relied on paper files, fax machines, and office memos, Chuma Chukwujama was already convinced software was the future he should pursue.]]></description>
+										<content:encoded><![CDATA[
+<p>In the 1990s, when most Nigerian businesses still relied on paper files, fax machines, and office memos, Chuma Chukwujama was already convinced software was the future he should pursue. </p>
+
+
+
+<p>Fresh out of studying electrical and electronics engineering at Obafemi Awolowo University, one of Nigeria’s premier universities, in 1996, he had realised something early: he did not want to become a traditional engineer. </p>
+
+
+
+<p>Nigeria was still under military rule<span style="margin: 0px;padding: 0px">; engineering jobs were limited despite a&nbsp;<a href="https://www.richtmann.org/journal/index.php/mjss/article/download/10908/10521/41677" target="_blank">high employment rate of&nbsp;</a>over 82%, which was mostly informal; and the internet economy, which would later reshape business operations worldwide, was only beginning to take shape</span>. So instead of searching endlessly for employment, Chukwujama started building technology.</p>
+
+
+
+<p>“If thousands of engineering graduates came out of universities at the time, only a small fraction could find actual engineering jobs,” Chukwujama told TechCabal in an interview. So I started asking myself what else I could do, and that was how I began building technology.”</p>
+
+
+
+<p>He started his first company, Allied Technologies, in 1996 at a time when businesses globally <a href="https://my.idc.com/getdoc.jsp?containerId=prUS54010425" target="_blank" rel="noreferrer noopener nofollow">were beginning to shift from paper-based operations to digital tools</a>. That same year, Microsoft <a href="https://learn.microsoft.com/en-us/shows/history/history-of-microsoft-1996" target="_blank" rel="noreferrer noopener">released products</a> that helped make computers and the internet more practical for everyday business use. These included Internet Explorer 3.0, one of Microsoft’s early web browsers that helped popularise internet browsing, and Windows CE 1.0, a lightweight operating system designed for early handheld and portable devices.</p>
+
+
+
+<p>In November 1996, Microsoft Office 97 introduced Outlook, combining email, calendars, and scheduling into a single workplace application. As businesses slowly adopted these tools, Allied Technologies positioned itself to help Nigerian companies make the transition. The company assisted organisations in setting up computers, connecting office systems, and deploying Microsoft technologies, according to Chukwujama.</p>
+
+
+
+<p>In 2001, Chukwujama and his co-founder, Duke Obasi, renamed their company AlliedSoft as Nigeria’s telecom sector opened to new operators such as MTN Nigeria and Econet. The company began developing custom software for telecom operators, banks, and other large organisations.&nbsp;</p>
+
+
+
+<p>AlliedSoft built systems such as SIM registration platforms and other business software to help organisations manage their operations more efficiently.</p>
+
+
+
+<p>While working with these companies, Chukwujama noticed that many businesses struggled with <a href="https://techcabal.com/2025/10/16/hiring-in-africa/">managing their workforce and employee records</a>. Sensing an opportunity, the company expanded into HR software development in 2004 as an additional service.</p>
+
+
+
+<p>But building business software at the time came with major limitations. “When we started building technology, there was no cloud computing,” Chukwujama recalled.</p>
+
+
+
+<p>At the time, deploying software was expensive and technically demanding. In 2004, a mid-range enterprise server such as a Dell PowerEdge or HP ProLiant <a href="https://www.szwecent.com/what-is-the-price-of-the-dell-poweredge-r760xa-server/" target="_blank" rel="noreferrer noopener nofollow">could cost between $5,000 and $15,000 per unit</a>, excluding the additional cost of server racks, cooling systems, and networking equipment. </p>
+
+
+
+<p>For many medium-sized businesses, setting up a functional server room often <a href="https://dcmm.pro/network-server-room-setup-cost-atlanta-from-5k-to-50k-budgets/" target="_blank" rel="noreferrer noopener">starts at around $30,000</a>. Companies also needed physical servers inside their offices, internal networks connecting branches, and dedicated IT teams just to keep business applications running.</p>
+
+
+
+<p>The affordability gaps were glaring. Only large corporations could afford enterprise software infrastructure, including physical servers, internal computer networks, databases, internet systems, storage devices, and the IT teams that manage them. Smaller businesses were effectively shut out.</p>
+
+
+
+<p>“The way software was built then required companies to keep physical servers inside their offices,” Chukwujama explained. “Businesses also needed internal networks, and larger companies had to connect multiple branches through wide area networks. It was expensive and difficult to manage.”</p>
+
+
+
+<p>That began to change around 2010 with the <a href="https://blogs.microsoft.com/blog/2010/02/01/windows-azure-general-availability/" target="_blank" rel="noreferrer noopener">global launch of Microsoft Azure</a> and <a href="https://www.vanguardngr.com/2009/10/fibre-war-hots-up-as-main-one-lands-submarine-fibre-cable-in-lagos-accra/amp/" target="_blank" rel="noreferrer noopener">the arrival of the MainOne submarine cable</a> in Nigeria, the country&#8217;s first privately-owned cable, which improved internet access and made cloud computing more practical for businesses.&nbsp;</p>
+
+
+
+<p>Companies no longer needed to build expensive, diesel-powered server rooms inside their offices. Instead, they could host their systems in professional data centres such as MDXi and Rack Centre, where businesses shared the cost of industrial cooling, backup power, and internet infrastructure. The shift significantly reduced operating costs,<a href="https://rack-centre.com/companies-need-not-build-data-centers-rack-centre-boss/" target="_blank" rel="noreferrer noopener"> in some cases by as much as 40%</a>, while making software deployment faster and more reliable.</p>
+
+
+
+<p>By 2015, Chukwujama realised the shift to cloud technology could no longer be ignored. Companies around the world were moving away from traditional client-server systems to cloud-native platforms delivered over the internet, forcing software companies to rethink how they built and delivered products.</p>
+
+
+
+<p>“That was the conversation happening between 2010 and 2015,” he said. “Everybody had to decide whether to continue building software the old way or move fully into the cloud.”</p>
+
+
+
+<p>His company chose the latter.</p>
+
+
+
+<p>The business, which had previously operated as Allied Technologies and later Allied Software, evolved into Xceed365HR Limited in 2015, focused entirely on cloud-native HR software. A decade later, the company restructured again into Talpro Software, a broader software-as-a-service company with Xceed365HR as its flagship product.</p>
+
+
+
+<p>“We are building the HR ecosystem infrastructure for Africa,” Chukwujama said.</p>
+
+
+
+<p>That ambition comes as Nigeria’s enterprise software market grows increasingly crowded, with <a href="https://www.industryarc.com/Research/nigeria-software-development-market-research-800320" target="_blank" rel="noreferrer noopener">localised enterprise tech investments projected to exceed $2.45 billion by the end of 2023</a> as digital transformation accelerates. Global giants like SAP and Oracle remain dominant benchmarks for many large organisations, while newer startups continue to emerge across payroll, HR, and workplace management. At home, Xceed365HR is facing competition from Pade and Seamless HR.&nbsp;</p>
+
+
+
+<p>But Chukwujama believes African businesses still face a deeper problem: most global enterprise tools were not designed for African realities.&nbsp;</p>
+
+
+
+<p>“The paradigm has always been that technology is agnostic,” he said. “But what works globally does not always work here.”</p>
+
+
+
+<p>That localisation challenge, he argues, extends beyond language or currency support.&nbsp;</p>
+
+
+
+<p>Xceed365HR is designed to build around those complexities instead of ignoring them, according to Chukwujama.</p>
+
+
+
+<p>The company is integrating directly with African fintech infrastructure so businesses can move seamlessly from HR workflows into payroll and payment systems without relying on multiple disconnected platforms, according to Chukwujama.</p>
+
+
+
+<p>The next leap, however, may come from artificial intelligence.</p>
+
+
+
+<p>While many software companies are still trying to bolt AI assistants onto existing systems, Chukwujama says Talpro rebuilt its upcoming platform version entirely around AI agents. The “V3” system, which would go live on June 1, allows employees to complete HR tasks conversationally through voice or text commands.</p>
+
+
+
+<p>“You can simply open the app and say, ‘I want to go on leave,’” he explained. “The agent takes over from there.”</p>
+
+
+
+<p>Behind the product ambition lies Chukuwjama’s belief about Africa’s economic future. He argues that one of Africa’s biggest challenges is productivity. For him, software is not just about automation; it is about improving how businesses function at scale.</p>
+
+
+
+<p>“When we start seeing African companies becoming significantly more productive because of our software, and that contributes to improving Africa’s economic story, that’s success for me,” he said.</p>
+
+
+
+<p>Yet building enterprise technology in Nigeria remains difficult. The country continues to struggle with an unstable electricity supply, with power generation still hovering <a href="https://niggrid.org/Dashboard">between 3,000MW and 4,000MW</a> nationwide.&nbsp;</p>
+
+
+
+<p>At the same time, diesel prices <a href="https://www.globalpetrolprices.com/Nigeria/diesel_prices/#:~:text=Gallon,the%20country%20relative%20to%20other" target="_blank" rel="noreferrer noopener">climbed to about ₦1,892.50 ($1.38) per litre by mid-May</a>, significantly increasing operating costs for businesses dependent on generators. Internet reliability also remains a challenge. <a href="https://www.thisdaylive.com/2026/04/07/fibre-cuts-the-invisible-threat-to-nigerias-digital-growth/" target="_blank" rel="noreferrer noopener">Nigeria recorded 19,384 fibre-optic cable cuts in 2025 alon</a>e, averaging more than 2,400 incidents monthly, disruptions that continue to affect connectivity, uptime, and business operations for technology companies.</p>
+
+
+
+<p>“The infrastructure challenge is massive,” he admitted. “Even electricity alone is almost impossible in some locations.”</p>
+
+
+
+<p>Still, after nearly three decades in Nigeria’s technology industry, Chukwujama appears unfazed by the volatility. The company remains entirely self-funded, built without external venture capital, and continues to expand gradually across multiple African markets, including Ghana, Kenya, Tanzania, and South Africa.</p>
+
+
+
+<p>For a founder who started building software before cloud computing even existed, survival itself may already be part of the story.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Why Kenyan digital bank Cloud9 acquired Mtickets in $773,000 deal</title>
+		<link>https://techcabal.com/2026/05/19/cloud9-acquired-mtickets/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Tue, 19 May 2026 16:33:06 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Chpter]]></category>
+		<category><![CDATA[cloud9]]></category>
+		<category><![CDATA[Fintech]]></category>
+		<category><![CDATA[Kenya]]></category>
+		<category><![CDATA[marketforce]]></category>
+		<category><![CDATA[Mesongo Sibuti]]></category>
+		<category><![CDATA[mtickets]]></category>
+		<category><![CDATA[startups]]></category>
+		<category><![CDATA[Tesh Mbaabu]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=188387</guid>
+
+					<description><![CDATA[Cloud9, a Kenyan digital bank, acquired ticketing platform M-Tickets in an all-stock deal valued at roughly KES 100 million ($773,000).]]></description>
+										<content:encoded><![CDATA[
+<p>Tesh Mbaabu believes that finance begins in personal life.</p>
+
+
+
+<p>People wake up thinking about where they want to go, who they want to meet, or what they want to do, and not their banks, he explained. While consumers may not actively think about financial services, money powers almost every decision they make.</p>
+
+
+
+<p>&#8220;That is why I think the intersection of lifestyle and fintech has become very important and interesting,&#8221; he told TechCabal in an interview on Thursday, May 14. “It&#8217;s not just about moving money; it&#8217;s about what you can offer beyond payments infrastructure.”</p>
+
+
+
+<p>That thinking formed the rationale behind why Cloud9, the Kenyan digital bank Mbaabu founded with Mesongo Sibuti, acquired Kenyan ticketing platform M-Tickets in an all-stock deal valued at roughly KES 100 million ($773,000).</p>
+
+
+
+<p>The deal comes seven months after the cofounders <a href="https://techcabal.com/2025/10/01/chpter-co-founders-tesh-mbaabu-and-mesongo-sibuti-exit/" target="_blank" rel="noreferrer noopener">exited Chpter</a>, the social commerce startup that helps businesses sell and communicate with customers across platforms like WhatsApp and Instagram.&nbsp;</p>
+
+
+
+<p>The acquisition gives Cloud9 access to a platform that says it has processed more than one million tickets across concerts, transport and sports events since 2014.</p>
+
+
+
+<p>&#8220;On the surface, Mtickets looks like a ticketing platform,&#8221; Mbaabu said. &#8220;But for us, we see it as a really strong point of contact with the youth, while they&#8217;re going about their daily lives.&#8221;</p>
+
+
+
+<p>Mbaabu told TechCabal that Mtickets will continue operating as a standalone brand under CEO and founder Brian Bogonko, adding that Mtickets’ services will be integrated directly into the Cloud9 app.&nbsp;</p>
+
+
+
+<p>Cloud9 users can buy tickets on Mtickets and on its app. Event organisers and vendors will also be able to receive payments through Cloud9’s business banking infrastructure.</p>
+
+
+
+<p>He also noted that the acquisition could create lending opportunities for event organisers that need upfront capital before ticket revenues come in. Cloud9 intends to use transaction histories and sales performance data from the platform to assess creditworthiness and extend financing to selected organisers, he said.</p>
+
+
+
+<p>First <a href="https://techcabal.com/2025/10/01/tesh-mbaabu-mesongo-sibuti-launch-cloud9-after-chpter/" target="_blank" rel="noreferrer noopener">announced</a> in October 2025, Cloud9 targets younger African consumers who earn and transact online. The startup offers multicurrency accounts, cross-border payments, virtual cards, savings products and investment tools through partnerships with regulated banks. Users can hold Kenyan shillings, US dollars, euros, Tanzanian shillings and Ugandan shillings within the app, he noted.</p>
+
+
+
+<p>Cloud9 currently generates revenue through transaction fees and subscription-based account tiers ranging from a <a href="https://www.cloud9.money/" target="_blank" rel="noreferrer noopener nofollow">free plan to a KES 999 ($7.73)</a> monthly subscription. The paid tiers include features such as cashback and unlimited transfers.</p>
+
+
+
+<p>The deal pushes Cloud9 into competition with digital banks, fintech startups and ticketing platforms such as TicketSasa and Ticket Yetu. Mbaabu argued that Cloud9’s advantage lies in building financial services around user behaviour.</p>
+
+
+
+<p>Before Cloud9, Mbaabu and Sibuti <a href="https://techcabal.com/2025/10/01/chpter-co-founders-tesh-mbaabu-and-mesongo-sibuti-exit/" target="_blank" rel="noreferrer noopener">co-founded</a> social commerce startup Chpter and retail-tech company MarketForce. Mbaabu said both ventures shaped his understanding of how African consumers and merchants use digital services.</p>
+
+
+
+<p>&#8220;Each experience has built on top of the other in terms of just understanding what the continent needs from an innovation perspective,&#8221; he said. &#8220;It has made me better positioned to join the dots between how merchants operate and what they really need.&#8221;</p>
+
+
+
+<p>Cloud9 publicly launched in March 2026 after initially operating through a waitlist. The startup said it has thousands of users signed up and is recording hundreds of new registrations daily.</p>
+
+
+
+<p>Cloud9 plans to launch its business banking product publicly later this month and is exploring consumer credit and buy-now-pay-later products tied to ticket purchases and merchant activity on the platform.</p>
+
+
+
+<p>Mbaabu said the company remained open to more acquisitions and partnerships as it expands beyond consumer banking into embedded financial services.</p>
+
+
+
+<p>“The future of fintech won’t be defined by who builds the best banking app. It will be defined by who understands where life happens — and builds there first,” <a href="https://teshmbaabu.com/2026/05/05/why-we-acquired-mtickets/" target="_blank" rel="noreferrer noopener nofollow">he wrote in his personal blog</a>. “ For us, Mtickets is a step in that direction. Not because we want to be in ticketing. But because we want to be closer to life. And life doesn’t start in banking apps. It never did.”</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>MTN’s IHS acquisition could change who controls connectivity in Francophone West Africa</title>
 		<link>https://techcabal.com/2026/05/19/francophone-weekly-by-techcabal-023/</link>
 		
@@ -1273,808 +1538,6 @@ For Spotify, this means introducing new safeguards to promote AI transparency on
 
 
 <p>The startup raised a <a href="https://moneyhash.io/blog/pre-a-funding" target="_blank" rel="noreferrer noopener nofollow">$4.5 million seed round</a> in early 2024 and a <a href="https://techcabal.com/2025/01/21/egyptian-fintech-moneyhash-raises-5-2-million/" target="_blank" rel="noreferrer noopener">$5.2 million pre-Series A round</a> in 2025. In its statement, it identified Africa as one of the core pillars of its international growth strategy, citing growth in digital commerce and cross-border payments across the continent.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>As DFI money dries up, AFC is doubling down on African VC with $100 million</title>
-		<link>https://techcabal.com/2026/05/18/begna-afc-100-million/</link>
-		
-		<dc:creator><![CDATA[Muktar Oladunmade]]></dc:creator>
-		<pubDate>Mon, 18 May 2026 16:13:33 +0000</pubDate>
-				<category><![CDATA[Ask An Investor]]></category>
-		<category><![CDATA[AFC]]></category>
-		<category><![CDATA[Africa]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=188286</guid>
-
-					<description><![CDATA[Begna Gebreyes, the head of AFC’s technology division, is leading this pivot into tech investing for one of the largest Africa-focused development financial institutions. ]]></description>
-										<content:encoded><![CDATA[
-<p>For nearly two decades, Africa Finance Corporation (AFC) wrote cheques for bridges, ports, mines, and subsea cables. Now, the $19 billion Africa-focused development finance institution is doing something its own board initially resisted: betting $100 million on African venture capital.</p>
-
-
-
-<p>Future Africa, the early-stage venture capital firm, and LightRock Africa, an impact investment firm, have received <a href="https://techcabal.com/2026/05/18/afc-100-million/" target="_blank" rel="noreferrer noopener">a combined $40 million anchor commitment</a> from AFC, making them the first firms to raise capital from an unlikely backer of African venture capital. </p>
-
-
-
-<p>Begna Gebreyes, the head of AFC’s technology division, is leading this pivot into tech investing for one of the largest Africa-focused development financial institutions. </p>
-
-
-
-<p>Future Africa, the fund led by renowned tech founder and investor Iyin Aboyeji, is getting $15 million, and LightRock Africa will get $25 million as the first deployments from a $100 million fund the AFC has earmarked for African venture capital.&nbsp;</p>
-
-
-
-<p>While the AFC has previously backed African startups, it is the first time that the AFC is investing directly into an African tech venture capital firm, a pivot from writing cheques for bridges, ports, mines, and subsea cables. </p>
-
-
-
-<p>The investment comes as funding from development finance institutions (DFIs), historically the largest source of funding for African venture capital, fell to new lows in 2025, with only  <a href="https://www.avca.africa/media/umlh132j/avca25-15-vc-annual-report_4.pdf" target="_blank" rel="noreferrer noopener">27% of total commitments</a> coming from DFIs. </p>
-
-
-
-<p>Africa-focused fund managers raised just $107 million across six final closes in 2025, an 87% year-on-year drop by value, according to the African Private Capital Association.</p>
-
-
-
-<p>Established in 2007 and headquartered in Lagos, AFC has total assets of $19 billion. The DFI’s board, as Gebreyes recalls, initially pushed back on the idea of investing in African venture capital firms, telling him they sat on the board of an infrastructure developer, not a VC business.</p>
-
-
-
-<p>But Gebreyes, an Ethiopian banker who joined AFC 12 years ago as a sector-agnostic private equity product specialist, helped convince them to reconsider their decision.&nbsp;</p>
-
-
-
-<p>Investing in tech stemmed from an observation Gebreyes and colleagues made around 2021: that what would actually make the continent competitive was digital services such as fintech, e-commerce, e-logistics, e-government, and e-health.&nbsp;</p>
-
-
-
-<p>Supporting those services would drive traffic onto the subsea cables AFC had financed and content into the data centres it was building. It would prime the pump for the infrastructure that the corporation&#8217;s traditional projects were designed to close, while bridging the same infrastructure gaps.</p>
-
-
-
-<p>In our conversation, Gebreyes explained why AFC waited until now to back early-stage African VC, what AFC looks for in a VC fund manager, and how AFC could reshape how African startups are funded over the next decade.</p>
-
-
-
-<p><strong><em>This interview has been edited for length and clarity.&nbsp;</em></strong></p>
-
-
-
-<p><strong>What was the early limitation on how the AFC could participate in the technology sector?</strong></p>
-
-
-
-<p>The limitation we faced was the bank&#8217;s relatively low risk appetite compared to that of venture capital investors. That meant we were really only focused on very late-stage technology companies. We ended up doing co-investments with some physical equity and VC funds into M-KOPA, Moniepoint, and LulaLend. We did the working capital for Wave. We came close to doing a transaction with MNT-Halan.</p>
-
-
-
-<p>These were all very well-developed companies. We were only touching the unicorns or the soon-to-be unicorns, companies that were already profitable and had critical mass. What we pointed out to our board and management was that we were not addressing the other 95%, maybe even 98%, of the venture capital ecosystem on the continent.</p>
-
-
-
-<p>We convinced them that, rather than retooling our whole organisation to be able to address this segment, it made more sense to do the same thing lots of other DFIs are doing, which is using a mixed approach of a fund of funds to address the early stage and then making co-investments where appropriate into the best portfolio companies. Once those companies scale up and enter growth equity or debt fundraising rounds later, we will have already done our diligence on them and developed a direct relationship that puts us in a position to invest.</p>
-
-
-
-<p>We have been doing the second half of that already — looking at late-stage companies. But we were not involved in getting to know those companies earlier. We have now launched this fund-of-funds programme with an initial envelope of $100 million to invest. We reached an agreement with the first two funds: LightRock Africa II and Future Africa Three. We are looking to close on both within the next month or two and fill the initial envelope with additional funds.</p>
-
-
-
-<p>At the same time, as a multi-billion-dollar financial institution with extensive relationships in the business community and with the governments of our member countries, we are entering the institutional investor market – foundations, endowments, and pension funds – to crowd in co-investment.&nbsp;</p>
-
-
-
-<p>These are investors who cannot easily do small fund-by-fund investments in Africa because they do not feel they have the manpower or boots on the ground. We are telling them: come and invest alongside us in proportion with the $100 million commitment we have made. Our objective is to crowd in an additional $300 to $500 million of third-party capital to invest alongside our $100 million.</p>
-
-
-
-<p><strong>How did the conversations with the general partners of these firms begin?</strong></p>
-
-
-
-<p>When we first started investing in the VC space, we were looking to make direct investments, not through fund managers. The only companies that really met our criteria were the big multi-hundred-million-dollar valuation tech companies—MNT-Halan, Flutterwave, Moniepoint, and M-KOPA, to name a few.</p>
-
-
-
-<p>Along the way, as we were talking directly with these companies about making direct investments, we started developing a rapport with a fund manager called LightRock, which was managing funds for LGT, the largest private family office based out of Liechtenstein, owned by the Prince of Liechtenstein and his family. We really liked the way they think and invest. It was no coincidence that their two lead partners both came from what was CDC Group, now British International Investment, and there was a connection in the past between our CIO and these two lead partners from past lives.</p>
-
-
-
-<p>We teamed up with them and made three sidecar investments: one in M-KOPA, one in Moniepoint, and one in LulaLend. As they were getting ready to launch their second fund, we said we wanted to be an anchor investor. We worked with LGT and LightRock to develop a framework to position us as the anchor investor in the fund.</p>
-
-
-
-<p>At the same time, we had been working with the team at Future Africa on developing a <a href="https://techcabal.com/2025/06/10/inside-itana-nigerias-first-digital-free-zone/" target="_blank" rel="noreferrer noopener">project called Itana</a>, a digital services business free zone located in Alaro City, in Lekki. It is the first digital free zone in Nigeria, perhaps even in Africa. In our efforts to build a venture capital and academic ecosystem around it, we came to know the Future Africa team very well.</p>
-
-
-
-<p>When we took the presentation for the LightRock anchor fund participation to our investment committee for consideration, it occurred to us that we should actually work with both LightRock and Future Africa.&nbsp;</p>
-
-
-
-<p>As we thought about it more, we realised we should be thinking bigger. When we finally went to our board, we chose a package that included not only LightRock Africa and Future Africa but also a larger envelope to seed a portfolio of venture capital funds in Africa.</p>
-
-
-
-<p>From there, as we started describing our fund manager selection process and the economic and governance rights we have over these funds with US and European institutional investors, we realised there was an appetite among them to co-invest with us. </p>
-
-
-
-<p>We should make this a much bigger programme. That is really where we are ultimately trying to get. But it started deal by deal, what I refer to as hand-to-hand combat—by making direct investments, gaining comfort with the GPs we did sidecars with, and advancing project development on Itana.&nbsp;</p>
-
-
-
-<p>More recently, we have funded a much more structured process of inviting fund managers currently fundraising to make proposals to AFC, and we are conducting a vetting and screening process to select the additional funds to invest in.</p>
-
-
-
-<p><strong>What is the exact size of this investment vehicle?</strong></p>
-
-
-
-<p>We are starting with a $100 million envelope to invest. Our first two commitments are $25 million to LightRock and $15 million to Future Africa. The LightRock fund target size is $200 million, and the Future Africa fund target size is around $35 million.</p>
-
-
-
-<p>The Future Africa strategy is mostly seed and pre-seed. The LightRock Africa fund strategy is more like Series B and beyond: growth capital. There is another $60 million of risk limit that we have been pre-approved to find additional fund manager commitments for.</p>
-
-
-
-<p><strong>AFC is typically known for infrastructure investments. Backing tech VC fund managers is a very different ball game, a meaningful departure from backing infrastructure or telco. Why now?</strong></p>
-
-
-
-<p>As investors in telecoms, we sometimes touch on digital services, particularly mobile money. Some of our mobile network operator clients were active in that space and were launching payment service banks, initially in Nigeria. When we looked at what creates the jobs, what creates the demand for data centre capacity, what creates traffic on the undersea cables and terrestrial fibre we are laying, it is these digital services. It makes sense to support them.</p>
-
-
-
-<p>We also asked: how do we close the infrastructure gap in providing goods and services to Africa&#8217;s fast-growing future economy?</p>
-
-
-
-<p>Again, it is through digital services. We have primarily focused on fintech, e-commerce, e-logistics, e-government, and e-health — the primary verticals within the VC space that we think will drive the next round of growth acceleration in our member countries.</p>
-
-
-
-<p><strong>Is this part of your existing $1 billion heavy industries, telecoms, and technology desk?</strong></p>
-
-
-
-<p>Yes. The HIT desk stands for heavy industries, telecoms, and technology. Right now, technology is the smallest component of the HIT portfolio;we are probably somewhere around $50 million. But once this new programme is deployed, it will cost us about $150 million. At the same time, we expect the HIT portfolio overall to increase to close to $2 billion. We are still looking at something less than 10% of the overall portfolio.</p>
-
-
-
-<p><strong>What were the criteria for picking the VC fund managers? What attracted you to LightRock and Future Africa?</strong></p>
-
-
-
-<p>It is a couple of things, and it is not so different from other people. One is, of course, track record. Do they have a track record of investing and harvesting investment returns? Do they have a history of adding value to the businesses they invest in?</p>
-
-
-
-<p>We also look at the sectors they focus on. Are they closing infrastructure gaps that we see in access to goods and services and in job creation in our member countries?</p>
-
-
-
-<p>The one slightly unique thing we look for, which not every other VC fund manager looks for, is twofold. First, all our VC fund managers must focus on either businesses based in Africa or on supporting ventures created by and employing Africans while providing those services abroad. In every instance, the question always comes back to our core mandate: how is this catalysing economic activity on the continent?</p>
-
-
-
-<p>Second, are we acting as a catalyst? We look to be the largest and first LP commitment to the funds we back. We want to be an anchor investor, which comes with certain special economic and governance rights that other LPs would not be expected to have. We go in to catalyse those, because we are looking to crowd in investment. To the extent that a VC fund manager already has a long waiting list of LPs, as a DFI, we feel the market is already doing the job. We do not need to intervene. It is really with these high-potential, Africa-focused fund managers who may be struggling to secure that initial anchor investment that we want to step in.</p>
-
-
-
-<p><strong>Are there any geographic, sector, or stage constraints with this funding?</strong></p>
-
-
-
-<p>No stage constraints. We are looking at everything from seed through to Series E or so. The late stage is still the area where we can do direct investment. To the extent there is a stage constraint, it is more of a preference than a constraint: everything up to late-stage growth equity, because we can do that in-house. We are actually using investments in fund managers at earlier stages to act as a funnel for investments we would make off our own balance sheet.</p>
-
-
-
-<p>In terms of geographies, as long as the fund manager’s focus is on Africa or on African entrepreneurs selling services abroad, we are open to all of the above.</p>
-
-
-
-<p><strong>How was the case made internally for such a high-reward, high-risk investment class like venture, especially given where AFC gets its money from?</strong></p>
-
-
-
-<p>This is one of the reasons it took us so long to reach a point where we were comfortable. The idea of doing something in the technology space started around 2020. When we first started, we were only doing direct investment in late-stage technology companies. There was a reluctance to invest in anything that was pre-profitability or pre-growth. A lot of that was around cautiousness and unwillingness to lose money.</p>
-
-
-
-<p>We started cautiously and found that we were making good investment decisions and meeting fund managers who could pick winners, add value, and identify exit opportunities. When that happened, we decided we could create a small risk envelope for additional exposure in this space.</p>
-
-
-
-<p>From a total balance sheet perspective, we have $19 billion in total assets. If you look at how much we are committing to this sector, you are talking about 50 basis points of the balance sheet. That is not to say $100 million is not dear to us. It is dear. It is sacrosanct. We do not believe in losing money. But the amount of risk exposure we are taking in this sector is still a small fraction – about half of 1% of our overall global total assets.</p>
-
-
-
-<p>When you look at the development impact we can drive through this half of 1% of our total balance sheet, we think the returns on the development impact side will be substantially overweighted. Given our history in manager selection, market testing, and investment philosophy, we expect the actual investment returns will also be overweighted relative to the percentage of total assets we allocate.</p>
-
-
-
-<p><strong>Returns in Africa over the last five years have been hard to come by, with very few exits. Why is AFC entering now? What is your view on exit liquidity?</strong></p>
-
-
-
-<p>On the exit liquidity problem: it is true that the ability to exit in Africa relative to other markets is poor. There is less liquidity in the market, but it is not non-existent. You can look at just a handful of the transactions we have been in – whether they are Moniepoint, LulaLend, or M-KOPA. In each of those companies where we came in later, some earlier-stage investors were able to partially or fully exit.</p>
-
-
-
-<p>In the winners, we are seeing this. MNT-Halan is another good example. TimeBank is another. If you are finding the right assets, there are fundraising rounds where exits are happening. It may not be an exit of the entire shareholder base; it may just be some portion of it. From our perspective, if you are still creating value, you are profitable enough to distribute capital as dividends or reinvest it for growth. Whether it is a partial exit or a subsequent round that increases the valuation of the overall business, you can still be making returns.</p>
-
-
-
-<p>If you are not a fund, the real problem is for funds with finite lives – the fund manager has to close the fund and liquidate all assets by a certain date. If it does not, it may have two one-year extensions. That is where the problem arises: even though you are in a successful investment that is performing well and distributing dividends, it is somehow deemed that the lack of a complete exit is a failure.</p>
-
-
-
-<p>Because we are a permanent capital investment vehicle—we are set up by treaty; we are not a corporation, but are similar to one —we have a permanent capital base, and we do not have the pressure to achieve an exit within a limited time and space. We do take exits, similar to any other investor, to maximise our IRR when they become available. Most recently, we did a partial exit of our Arise industrial platform.</p>
-
-
-
-<p>We are not troubled by the possibility of holding an investment beyond a given fund&#8217;s life. From our perspective, if we can take some money out through a liquidity event—whether a recapitalisation or the entry of new investors—as long as value creation continues, we are very happy to remain involved in the company and grow it.&nbsp;</p>
-
-
-
-<p>That is ultimately why we are here, rather than just returning funds to a specific pool of investors within a specific period of time. Our mandate is to create value and grow companies. As long as the portfolio is doing that, we are achieving our mandate.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Showmax is gone. MultiChoice’s future is now premium streaming and payments</title>
-		<link>https://techcabal.com/2026/05/18/after-showmax-multichoice-bets-on-dstv-stream/</link>
-		
-		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
-		<pubDate>Mon, 18 May 2026 14:15:38 +0000</pubDate>
-				<category><![CDATA[Follow the Money]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[canal +]]></category>
-		<category><![CDATA[follow the money]]></category>
-		<category><![CDATA[Multichoice]]></category>
-		<category><![CDATA[Nigeria]]></category>
-		<category><![CDATA[showmax]]></category>
-		<category><![CDATA[South Africa]]></category>
-		<category><![CDATA[startups]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=188264</guid>
-
-					<description><![CDATA[DStv Stream reflects Canal+’s effort to streamline MultiChoice’s overlapping streaming bets after years of heavy losses and rising platform costs at Showmax, in a market where subscriber scale never matched the level of investment. Rather than exiting streaming, MultiChoice is consolidating around higher-margin businesses as it seeks more capital-efficient sources of growth.]]></description>
-										<content:encoded><![CDATA[
-<p><strong><em>This is </em></strong><a href="https://techcabal.com/category/techcabal-columns/follow-the-money/" target="_blank" rel="noreferrer noopener"><strong><em>Follow the Money</em></strong></a><strong><em>, our weekly series that unpacks the earnings, business, and scaling strategies of African fintechs, financial institutions, companies, and governments. A new edition drops every Monday.</em></strong></p>
-
-
-
-<p>MultiChoice still dominates Africa&#8217;s broadcasting market with 14.5 million subscribers, but its fast-growing bets now sit outside traditional television: in decoder-free Internet streaming and payments.</p>
-
-
-
-<p>The company, which previously operated the now-shuttered Showmax streaming platform, is now leaning on a two-pronged strategy built around <a href="https://www.dstv.com/en-za/watch/stream-with-dstv/?srsltid=AfmBOoo-ci-XduRpn7-gkqVvTiDNCsNPUnakNo7Re3Y2pWqZScgjfIuK" target="_blank" rel="noreferrer noopener nofollow">DStv Stream</a>, its premium Internet TV service, and payments business, <a href="https://momentco.net/" target="_blank" rel="noreferrer noopener nofollow">Moment</a>, to offset pressure on its traditional pay-TV operations.</p>
-
-
-
-<p>DStv Stream reflects Canal+’s effort to streamline MultiChoice’s overlapping streaming bets after years of heavy losses and rising platform costs at Showmax, in a market where subscriber scale never matched the level of investment. Rather than exiting streaming, MultiChoice is consolidating around higher-margin businesses as it seeks more capital-efficient sources of growth.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Why DStv Stream works better</strong></h2>
-
-
-
-<p>Unlike Showmax, DStv Stream was never designed as a low-cost mass-market platform.</p>
-
-
-
-<p>Originally launched as DStv Now before a <a href="https://mybroadband.co.za/news/broadcasting/507710-dstv-stream-problems-multichoice-responds.html" target="_blank" rel="noreferrer noopener nofollow">July 2023 relaunch</a>, DStv Stream offers the company’s full premium pay-TV experience over the Internet, including more than 150 live channels, the SuperSport network, news channels, and on-demand programming.</p>
-
-
-
-<p>The platform targets consumers willing to pay for premium entertainment but unwilling to install a satellite dish or decoder.</p>
-
-
-
-<p>Showmax, a mobile-first, on-demand service, depended on attracting millions of lower-paying users to justify its licencing and content spend. DStv Stream, by contrast, generates significantly higher revenue per customer because it attracts a more premium subscriber base anchored by premium content.</p>
-
-
-
-<p>Following its relaunch in 2023, DStv Stream’s standalone subscriber base grew 139%, with more than 90% of those being entirely new customers who had never subscribed to MultiChoice, <a href="https://webstir.jse.co.za/Downloads/File/?id=u5ZQiGMupTUqZeAu1%2fOtfQ%3d%3d" target="_blank" rel="noreferrer noopener nofollow">according to its 2024 report</a>.&nbsp;</p>
-
-
-
-<p>In 2024, the company <a href="https://webstir.jse.co.za/Downloads/File/?id=u5ZQiGMupTUqZeAu1%2fOtfQ%3d%3d" target="_blank" rel="noreferrer noopener nofollow">said the platform’s growth</a> skewed heavily toward Premium-tier subscribers, a more profitable customer segment than Showmax&#8217;s entry-level audience.</p>
-
-
-
-<p>While MultiChoice does not disclose DStv Stream’s exact revenue figures, it reported that revenue nearly tripled in 2024 after the relaunch, before growing another 48% in 2025.</p>
-
-
-
-<p>Across the broader group, however, the company <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">lost 96,000 Premium subscribers</a>, including Compact Plus customers, in 2025, signalling a dwindling base at its highest-paying tier.&nbsp;</p>
-
-
-
-<p>It shows the headwinds the pay-TV business has to deal with, where Premium subscribers are logging off due to costs. DStv Stream, <a href="https://www.dstv.com/shop/en-za/detail/package/70?type=DTH%20package" target="_blank" rel="noreferrer noopener nofollow">at R699 ($42) without a decoder or dish</a>, is a cheaper entry point into the same content, and therein lies the opportunity.</p>
-
-
-
-<p>The economics improve further because DStv Stream eliminates one of MultiChoice’s highest costs: <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">subsidising decoders</a>. In 2024, MultiChoice <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">spent $132 million subsidising decoders</a>; by 2025, that cost fell to $54 million, partly because more customers were shifting toward decoder-free streaming.</p>
-
-
-
-<p>Every DStv Stream subscriber costs a fraction of what a traditional satellite customer costs to acquire.</p>
-
-
-
-<p>The company is now trying to convert former Showmax users into DStv Stream customers. After Showmax’s shutdown, MultiChoice <a href="https://techcabal.com/2026/04/02/techcabal-daily-multichoice-single-choice/#Story1" target="_blank" rel="noreferrer noopener">offered subscribers</a> a free DStv Stream trial followed by a discounted R99 ($6) entry-tier package.</p>
-
-
-
-<p>The company is playing a high-risk, high-reward bet that price value and its deeper content library will nudge former Showmax users to higher-tier plans on DStv Stream.</p>
-
-
-
-<p></p>
-
-
-
-<div id="tc-tool-rev-css" style="font-family: 'Open Sans', sans-serif; background: #FFFFFF; color: #151515; border: 1px solid #E3E8EF; border-radius: 8px; padding: 24px; max-width: 600px; margin: 0 auto;">
-  <style>
-    /* Base Layout Styles */
-    .tc-rev-row { display: block; margin-bottom: 12px; cursor: pointer; padding: 8px; border-radius: 4px; border: 1px solid transparent; border-left: 4px solid transparent; transition: all 0.2s ease; }
-    .tc-rev-row:hover { background: #F6F6F6; }
-    .tc-rev-top { display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 600; margin-bottom: 8px; }
-    .tc-rev-bar { display: flex; height: 20px; border-radius: 4px; overflow: hidden; background: #E3E8EF; }
-    .tc-rev-sub { background: #EA2D2E; }
-    .tc-rev-oth { background: #24292F; }
-    .tc-legend { display: flex; gap: 16px; font-size: 0.75rem; color: #767676; margin-bottom: 20px; font-weight: 600; }
-    .tc-dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; }
-    
-    /* Panel Styles */
-    .tc-insight-panel-container { margin-top: 24px; background: #24292F; color: #FFFFFF; padding: 16px; border-radius: 8px; min-height: 120px;}
-    .tc-panel { display: none; flex-direction: column; gap: 12px; animation: fadeIn 0.3s ease-in-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-    .tc-insight-header { font-size: 1rem; font-weight: 700; color: #FFC52F; border-bottom: 1px solid #3A3A3A; padding-bottom: 8px; margin-bottom: 4px; }
-    .tc-metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .tc-metric-box { display: flex; flex-direction: column; }
-    .tc-m-label { font-size: 0.65rem; color: #E3E8EF; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .tc-m-val { font-size: 1.125rem; font-weight: 700; color: #FFFFFF; }
-    .tc-m-sub { font-size: 0.75rem; color: #A0A0A0; margin-top: 2px; }
-
-    /* CSS Interactive Logic (No JS needed) */
-    #tc-r-fy21:checked ~ .tc-rows label[for="tc-r-fy21"],
-    #tc-r-fy22:checked ~ .tc-rows label[for="tc-r-fy22"],
-    #tc-r-fy23:checked ~ .tc-rows label[for="tc-r-fy23"],
-    #tc-r-fy24:checked ~ .tc-rows label[for="tc-r-fy24"],
-    #tc-r-fy25:checked ~ .tc-rows label[for="tc-r-fy25"] {
-      background: #F6F6F6; border-color: #E3E8EF; border-left-color: #EA2D2E;
-    }
-
-    #tc-r-fy21:checked ~ .tc-insight-panel-container #tc-p-fy21,
-    #tc-r-fy22:checked ~ .tc-insight-panel-container #tc-p-fy22,
-    #tc-r-fy23:checked ~ .tc-insight-panel-container #tc-p-fy23,
-    #tc-r-fy24:checked ~ .tc-insight-panel-container #tc-p-fy24,
-    #tc-r-fy25:checked ~ .tc-insight-panel-container #tc-p-fy25 {
-      display: flex;
-    }
-  </style>
-
-  <h3 style="margin: 0 0 4px 0; font-size: 1.25rem; font-weight: 700;">MultiChoice Total Revenue (5-Year)</h3>
-  <p style="font-size: 0.875rem; margin: 0 0 16px 0; color: #24292F;">Macro-headwinds hit hard in FY25, pulling total revenue down to ZAR 50.8B.</p>
-
-  <div class="tc-legend">
-    <div><span class="tc-dot" style="background: #EA2D2E;"></span>Subscription</div>
-    <div><span class="tc-dot" style="background: #24292F;"></span>Other Revenue</div>
-  </div>
-
-  <input type="radio" id="tc-r-fy21" name="tc-year-group" style="display: none;">
-  <input type="radio" id="tc-r-fy22" name="tc-year-group" style="display: none;">
-  <input type="radio" id="tc-r-fy23" name="tc-year-group" style="display: none;">
-  <input type="radio" id="tc-r-fy24" name="tc-year-group" style="display: none;">
-  <input type="radio" id="tc-r-fy25" name="tc-year-group" style="display: none;" checked>
-
-  <div class="tc-rows">
-    
-    <label for="tc-r-fy21" class="tc-rev-row">
-      <div class="tc-rev-top"><span>FY21</span> <span>ZAR 53.4B</span></div>
-      <div style="width: 90.4%;">
-        <div class="tc-rev-bar">
-          <div class="tc-rev-sub" style="width: 83.7%;"></div>
-          <div class="tc-rev-oth" style="width: 16.3%;"></div>
-        </div>
-      </div>
-    </label>
-    
-    <label for="tc-r-fy22" class="tc-rev-row">
-      <div class="tc-rev-top"><span>FY22</span> <span>ZAR 55.1B</span></div>
-      <div style="width: 93.2%;">
-        <div class="tc-rev-bar">
-          <div class="tc-rev-sub" style="width: 82.2%;"></div>
-          <div class="tc-rev-oth" style="width: 17.8%;"></div>
-        </div>
-      </div>
-    </label>
-
-    <label for="tc-r-fy23" class="tc-rev-row">
-      <div class="tc-rev-top"><span>FY23</span> <span>ZAR 59.1B</span></div>
-      <div style="width: 100%;">
-        <div class="tc-rev-bar">
-          <div class="tc-rev-sub" style="width: 82.2%;"></div>
-          <div class="tc-rev-oth" style="width: 17.8%;"></div>
-        </div>
-      </div>
-    </label>
-
-    <label for="tc-r-fy24" class="tc-rev-row">
-      <div class="tc-rev-top"><span>FY24</span> <span>ZAR 56.0B</span></div>
-      <div style="width: 94.8%;">
-        <div class="tc-rev-bar">
-          <div class="tc-rev-sub" style="width: 80.8%;"></div>
-          <div class="tc-rev-oth" style="width: 19.2%;"></div>
-        </div>
-      </div>
-    </label>
-
-    <label for="tc-r-fy25" class="tc-rev-row">
-      <div class="tc-rev-top"><span>FY25</span> <span>ZAR 50.8B</span></div>
-      <div style="width: 85.9%;">
-        <div class="tc-rev-bar">
-          <div class="tc-rev-sub" style="width: 79.2%;"></div>
-          <div class="tc-rev-oth" style="width: 20.8%;"></div>
-        </div>
-      </div>
-    </label>
-
-  </div>
-
-  <div class="tc-insight-panel-container">
-    
-    <div id="tc-p-fy21" class="tc-panel">
-      <div class="tc-insight-header">FY21 Breakdown</div>
-      <div class="tc-metrics-grid">
-        <div class="tc-metric-box"><span class="tc-m-label">Total Revenue</span><span class="tc-m-val">ZAR 53.4B</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #EA2D2E;">Subscription</span><span class="tc-m-val">ZAR 44.7B</span><span class="tc-m-sub">84% of total</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #E3E8EF;">Other Revenue</span><span class="tc-m-val">ZAR 8.7B</span><span class="tc-m-sub">16% of total</span></div>
-      </div>
-    </div>
-
-    <div id="tc-p-fy22" class="tc-panel">
-      <div class="tc-insight-header">FY22 Breakdown</div>
-      <div class="tc-metrics-grid">
-        <div class="tc-metric-box"><span class="tc-m-label">Total Revenue</span><span class="tc-m-val">ZAR 55.1B</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #EA2D2E;">Subscription</span><span class="tc-m-val">ZAR 45.3B</span><span class="tc-m-sub">82% of total</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #E3E8EF;">Other Revenue</span><span class="tc-m-val">ZAR 9.8B</span><span class="tc-m-sub">18% of total</span></div>
-      </div>
-    </div>
-
-    <div id="tc-p-fy23" class="tc-panel">
-      <div class="tc-insight-header">FY23 Breakdown</div>
-      <div class="tc-metrics-grid">
-        <div class="tc-metric-box"><span class="tc-m-label">Total Revenue</span><span class="tc-m-val">ZAR 59.1B</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #EA2D2E;">Subscription</span><span class="tc-m-val">ZAR 48.6B</span><span class="tc-m-sub">82% of total</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #E3E8EF;">Other Revenue</span><span class="tc-m-val">ZAR 10.5B</span><span class="tc-m-sub">18% of total</span></div>
-      </div>
-    </div>
-
-    <div id="tc-p-fy24" class="tc-panel">
-      <div class="tc-insight-header">FY24 Breakdown</div>
-      <div class="tc-metrics-grid">
-        <div class="tc-metric-box"><span class="tc-m-label">Total Revenue</span><span class="tc-m-val">ZAR 56.0B</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #EA2D2E;">Subscription</span><span class="tc-m-val">ZAR 45.2B</span><span class="tc-m-sub">81% of total</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #E3E8EF;">Other Revenue</span><span class="tc-m-val">ZAR 10.7B</span><span class="tc-m-sub">19% of total</span></div>
-      </div>
-    </div>
-
-    <div id="tc-p-fy25" class="tc-panel">
-      <div class="tc-insight-header">FY25 Breakdown</div>
-      <div class="tc-metrics-grid">
-        <div class="tc-metric-box"><span class="tc-m-label">Total Revenue</span><span class="tc-m-val">ZAR 50.8B</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #EA2D2E;">Subscription</span><span class="tc-m-val">ZAR 40.2B</span><span class="tc-m-sub">79% of total</span></div>
-        <div class="tc-metric-box"><span class="tc-m-label" style="color: #E3E8EF;">Other Revenue</span><span class="tc-m-val">ZAR 10.6B</span><span class="tc-m-sub">21% of total</span></div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="font-size: 0.75rem; color: #767676; margin-top: 16px;">Data: MultiChoice&#8217;s Financial Reports</div>
-  <div style="margin-top: 24px; font-size: 0.75rem; color: #767676; text-align: center; border-top: 1px solid #E3E8EF; padding-top: 12px;">TechCabal Tools</div>
-</div>
-
-
-
-<p>With Canal+ <a href="https://techcabal.com/2026/03/17/canal-job-cuts-multichoice-turnaround/" target="_blank" rel="noreferrer noopener">committing $115 million</a> toward MultiChoice investment, it could deepen local content production, where shows like <em>Adulting</em>, <em>Youngins</em>, and <em>The Real Housewives</em> franchise already attract high viewership.</p>
-
-
-
-<p>If Premium subscribers continue to make up a bulk of DStv Stream’s base, the high-margin economics of the platform could sustain the content investment Canal+ is betting on.&nbsp;</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Moment and the fintech play</strong></h2>
-
-
-
-<p>Moment, a fintech platform partly owned by MultiChoice, started as a cost-cutting play. In 2023, when MultiChoice <a href="https://webstir.jse.co.za/Downloads/File/?id=t2D82lxzz0uAOnXmgPBqsg%3d%3d" target="_blank" rel="noreferrer noopener nofollow">launched</a> it as a joint venture with Rapyd, General Catalyst, Entrée Capital, and Raba, the company said it was <a href="https://webstir.jse.co.za/Downloads/File/?id=t2D82lxzz0uAOnXmgPBqsg%3d%3d" target="_blank" rel="noreferrer noopener nofollow">paying over $60 million annually</a> in third-party transaction fees. Moment was built to bring those payments in-house.&nbsp;</p>
-
-
-
-<p>That year, MultiChoice <a href="https://webstir.jse.co.za/Downloads/File/?id=t2D82lxzz0uAOnXmgPBqsg%3d%3d" target="_blank" rel="noreferrer noopener nofollow">paid $3.3 million</a> for an initial 25.5% stake. It later invested R151 million ($8 million) in Moment&#8217;s Seed+ round, <a href="https://webstir.jse.co.za/Downloads/File/?id=u5ZQiGMupTUqZeAu1%2fOtfQ%3d%3d" target="_blank" rel="noreferrer noopener nofollow">which closed in May 2024</a> at a post-money valuation of $82 million, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">according to its report</a>.&nbsp;</p>
-
-
-
-<p>MultiChoice initially increased its shareholding to 29.6% on a fully diluted basis. However, capital contributions from other investors in that round <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">diluted MultiChoice&#8217;s stake</a> to 28.5%. The company has also <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">committed an additional $6.5 million</a> through a simple agreement for future equity (SAFE) note, earmarked for conversion in a funding round expected in 2025.&nbsp;</p>
-
-
-
-<p>As an aggregator connected to over 200 payment partners, Moment processed $635 million in total payment volume (TPV) in <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">2025</a>, a sevenfold increase from $85 million the previous year.&nbsp;</p>
-
-
-
-<p>Moment grew because MultiChoice embedded it deeply into its own ecosystem: it processed 56% of the group company&#8217;s payment volumes in 2025, up from 20% the prior year, and within South Africa alone, its share grew to 81%, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d">according to its report</a>.</p>
-
-
-
-<p>With Moment in the picture, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">MultiChoice reported a 5% cost savings</a> in 2025; that uplift might seem small, but it possibly accounts for millions of dollars. By 2025, Moment&#8217;s annualised run rate, a projection of its expected annual revenue, had crossed $1 billion, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">according to former Group chief executive officer Calvo Mawela</a>. </p>
-
-
-
-<p>Moment has joined real-time payment networks in 18 countries and expanded into local and cross-border card payments across the 44 markets it covers, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">according to the MultiChoice 2025 report</a>.&nbsp;</p>
-
-
-
-<p>In South Africa, it was the first to launch PayShap for instant consumer-to-merchant payments. The next step is to grow its share of MultiChoice&#8217;s payment flows from 56% toward near-100% and push further into Africa&#8217;s mass economy.</p>
-
-
-
-<p>DStv Stream and Moment are MultiChoice&#8217;s dominant bets.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Why Irdeto, NMSIS, and KingMakers are smaller bets</strong></h2>
-
-
-
-<p>Other MultiChoice subsidiaries continue to contribute revenue, but none currently appear as strategically important as DStv Stream and Moment.</p>
-
-
-
-<p><a href="https://irdeto.com/" target="_blank" rel="noreferrer noopener nofollow">Irdeto</a>, the group’s cybersecurity and content protection business, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">contributed 4% of group revenue</a> in 2025. Yet, trading profit <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">still fell</a> from R400 million ($24 million) to R300 million ($18 million).&nbsp;</p>
-
-
-
-<p></p>
-
-
-
-<div id="tc-tool-ird" style="font-family: 'Open Sans', sans-serif; background: #FFFFFF; color: #151515; border: 1px solid #E3E8EF; border-radius: 8px; padding: 24px; max-width: 600px; margin: 0 auto;">
-  <style>
-    .tc-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.875rem; }
-    .tc-table th, .tc-table td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #E3E8EF; }
-    .tc-table th { color: #767676; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; }
-    .tc-table tr:hover { background: #F6F6F6; }
-    .tc-profit-pill { display: inline-block; padding: 4px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; background: #24292F; color: #FFFFFF; }
-  </style>
-
-  <h3 style="margin: 0 0 4px 0; font-size: 1.25rem; font-weight: 700;">Irdeto: The Profit Squeeze</h3>
-  <p style="font-size: 0.875rem; margin: 0; color: #24292F;">External B2B customer base vs. Trading Profit over 5 years.</p>
-
-  <table class="tc-table">
-    <thead>
-      <tr>
-        <th>Year</th>
-        <th>B2B Customers</th>
-        <th>Trading Profit (ZAR)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="font-weight: 700;">FY21</td>
-        <td>405</td>
-        <td><span class="tc-profit-pill">0.6 Billion</span></td>
-      </tr>
-      <tr>
-        <td style="font-weight: 700;">FY22</td>
-        <td>392</td>
-        <td><span class="tc-profit-pill" style="opacity: 0.9;">0.5 Billion</span></td>
-      </tr>
-      <tr>
-        <td style="font-weight: 700;">FY23</td>
-        <td>382</td>
-        <td><span class="tc-profit-pill">0.6 Billion</span></td>
-      </tr>
-      <tr>
-        <td style="font-weight: 700;">FY24</td>
-        <td>419</td>
-        <td><span class="tc-profit-pill" style="opacity: 0.8;">0.4 Billion</span></td>
-      </tr>
-      <tr>
-        <td style="font-weight: 700;">FY25</td>
-        <td style="color: #EA2D2E; font-weight: 700;">357</td>
-        <td><span class="tc-profit-pill" style="background: #EA2D2E;">0.3 Billion</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div style="font-size: 0.75rem; color: #767676; margin-top: 16px;">Data: MultiChoice&#8217;s Financial Reports</div>
-  <div style="margin-top: 24px; font-size: 0.75rem; color: #767676; text-align: center; border-top: 1px solid #E3E8EF; padding-top: 12px;">TechCabal Tools</div>
-</div>
-
-
-
-<p>Nearly half of Irdeto’s revenue still comes from MultiChoice itself, limiting its independence from the parent company’s performance.</p>
-
-
-
-<p><a href="https://www.santam.co.za/about-us/media-centre/corporate-news/santam-acquires-stake-in-multichoice-s-general-insurance-business/" target="_blank" rel="noreferrer noopener nofollow">NMS Insurance Services (NMSIS),</a> which provides products such as decoder insurance and funeral cover, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">remains profitable</a> and generated R425 million ($25.5 million) in trading profit in 2025. Yet, the business operates in a relatively narrow insurance segment despite MultiChoice selling a 60% stake to South African financial services company Sanlam in 2024.</p>
-
-
-
-<p></p>
-
-
-
-<div id="tc-tool-nmsis" style="font-family: 'Open Sans', sans-serif; background: #FFFFFF; color: #151515; border: 1px solid #E3E8EF; border-radius: 8px; padding: 24px; max-width: 600px; margin: 0 auto;">
-  <h3 style="margin: 0 0 4px 0; font-size: 1.25rem; font-weight: 700;">NMSIS: The Profitable Safety Net</h3>
-  <p style="font-size: 0.875rem; margin: 0 0 24px 0; color: #24292F;">The micro-insurance division continues to print reliable trading profits year-over-year.</p>
-
-  <div style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
-    <div style="flex: 1; background: #F6F6F6; padding: 16px; border-radius: 8px; border-left: 4px solid #20C997;">
-      <div style="font-weight: 700; color: #151515; margin-bottom: 12px;">FY24</div>
-      <div style="margin-bottom: 8px;">
-        <div style="font-size: 0.75rem; color: #767676; text-transform: uppercase;">Revenue</div>
-        <div style="font-size: 1.125rem; font-weight: 700;">ZAR 1.0B</div>
-      </div>
-      <div>
-        <div style="font-size: 0.75rem; color: #20C997; text-transform: uppercase; font-weight: 600;">Trading Profit</div>
-        <div style="font-size: 1.125rem; font-weight: 700; color: #20C997;">ZAR 377M</div>
-      </div>
-    </div>
-    <div style="flex: 1; background: #F6F6F6; padding: 16px; border-radius: 8px; border-left: 4px solid #20C997;">
-      <div style="font-weight: 700; color: #151515; margin-bottom: 12px;">FY25</div>
-      <div style="margin-bottom: 8px;">
-        <div style="font-size: 0.75rem; color: #767676; text-transform: uppercase;">Revenue</div>
-        <div style="font-size: 1.125rem; font-weight: 700;">ZAR 1.1B</div>
-      </div>
-      <div>
-        <div style="font-size: 0.75rem; color: #20C997; text-transform: uppercase; font-weight: 600;">Trading Profit</div>
-        <div style="font-size: 1.125rem; font-weight: 700; color: #20C997;">ZAR 425M</div>
-      </div>
-    </div>
-  </div>
-
-  <div style="font-size: 0.75rem; color: #767676; margin-top: 16px;">Data: MultiChoice&#8217;s Financial Reports</div>
-  <div style="margin-top: 24px; font-size: 0.75rem; color: #767676; text-align: center; border-top: 1px solid #E3E8EF; padding-top: 12px;">TechCabal Tools</div>
-</div>
-
-
-
-<p><a href="https://kingmakers.com/" target="_blank" rel="noreferrer noopener nofollow">KingMakers</a>, MultiChoice’s partly-owned betting subsidiary behind the BetKing and SuperSportBet brands, <a href="https://webstir.jse.co.za/Downloads/File/?id=u5ZQiGMupTUqZeAu1%2fOtfQ%3d%3d" target="_blank" rel="noreferrer noopener nofollow">continues to struggle with currency volatility</a> despite growth in online sports betting.</p>
-
-
-
-<p>Though its Nigerian business is profitable, currency depreciation pressured KingMakers’ operations. The broader company, including Nigeria and South Africa, <a href="https://webstir.jse.co.za/Downloads/File/?id=%2fZGoH%2fXB6Psvwftx6cQ%2fmw%3d%3d" target="_blank" rel="noreferrer noopener nofollow">recorded $34 million loss after tax</a> in 2025.</p>
-
-
-
-<p></p>
-
-
-
-<div id="tc-tool-km" style="font-family: 'Open Sans', sans-serif; background: #FFFFFF; color: #151515; border: 1px solid #E3E8EF; border-radius: 8px; padding: 24px; max-width: 600px; margin: 0 auto;">
-  <style>
-    .tc-row { margin-bottom: 20px; }
-    .tc-year { font-weight: 700; font-size: 1rem; margin-bottom: 8px; color: #151515; border-bottom: 1px solid #F6F6F6; padding-bottom: 4px; }
-    .tc-bar-wrap { display: flex; align-items: center; margin-bottom: 4px; }
-    .tc-bar-label { width: 80px; font-size: 0.75rem; font-weight: 600; color: #767676; text-transform: uppercase; }
-    .tc-bar-track { flex-grow: 1; background: #F6F6F6; border-radius: 4px; height: 20px; overflow: hidden; position: relative; display: flex; align-items: center; }
-    .tc-bar-rev { background: #24292F; height: 100%; transition: 0.5s; }
-    .tc-bar-loss { background: #EA2D2E; height: 100%; transition: 0.5s; }
-    .tc-bar-val { font-size: 0.75rem; font-weight: 700; color: #151515; margin-left: 8px; width: 45px; }
-  </style>
-
-  <h3 style="margin: 0 0 4px 0; font-size: 1.25rem; font-weight: 700;">KingMakers: The Cost of Expansion</h3>
-  <p style="font-size: 0.875rem; margin: 0 0 24px 0; color: #24292F;">Revenue peaked in FY23, but currency depreciation has kept the betting subsidiary in a net loss position.</p>
-
-  <div class="tc-row">
-    <div class="tc-year">FY22</div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label">Revenue</div><div class="tc-bar-track"><div class="tc-bar-rev" style="width: 65.5%;"></div></div><div class="tc-bar-val">$131m</div></div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label" style="color: #EA2D2E;">Net Loss</div><div class="tc-bar-track"><div class="tc-bar-loss" style="width: 9.5%;"></div></div><div class="tc-bar-val" style="color: #EA2D2E;">-$19m</div></div>
-  </div>
-  <div class="tc-row">
-    <div class="tc-year">FY23</div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label">Revenue</div><div class="tc-bar-track"><div class="tc-bar-rev" style="width: 99%;"></div></div><div class="tc-bar-val">$198m</div></div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label" style="color: #EA2D2E;">Net Loss</div><div class="tc-bar-track"><div class="tc-bar-loss" style="width: 14%;"></div></div><div class="tc-bar-val" style="color: #EA2D2E;">-$28m</div></div>
-  </div>
-  <div class="tc-row">
-    <div class="tc-year">FY24</div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label">Revenue</div><div class="tc-bar-track"><div class="tc-bar-rev" style="width: 73.5%;"></div></div><div class="tc-bar-val">$147m</div></div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label" style="color: #EA2D2E;">Net Loss</div><div class="tc-bar-track"><div class="tc-bar-loss" style="width: 20%;"></div></div><div class="tc-bar-val" style="color: #EA2D2E;">-$40m</div></div>
-  </div>
-  <div class="tc-row">
-    <div class="tc-year">FY25</div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label">Revenue</div><div class="tc-bar-track"><div class="tc-bar-rev" style="width: 53%;"></div></div><div class="tc-bar-val">$106m</div></div>
-    <div class="tc-bar-wrap"><div class="tc-bar-label" style="color: #EA2D2E;">Net Loss</div><div class="tc-bar-track"><div class="tc-bar-loss" style="width: 17%;"></div></div><div class="tc-bar-val" style="color: #EA2D2E;">-$34m</div></div>
-  </div>
-
-  <div style="font-size: 0.75rem; color: #767676; margin-top: 16px;">Data: MultiChoice&#8217;s Financial Reports</div>
-  <div style="margin-top: 24px; font-size: 0.75rem; color: #767676; text-align: center; border-top: 1px solid #E3E8EF; padding-top: 12px;">TechCabal Tools</div>
-</div>
-
-
-
-<p>The company has also struggled to compete with dominant betting companies, such as <a href="https://betway.com/" target="_blank" rel="noreferrer noopener nofollow">Betway</a> and <a href="https://www.hollywoodbets.net/" target="_blank" rel="noreferrer noopener nofollow">Hollywoodbets</a> in South Africa’s rapidly growing gambling market, which is now <a href="https://www.ngb.org.za/wp-content/uploads/2025/10/National-Gambling-Statistics-Financial-Year-Ending-31-March-2025-09-October-2025-1.pdf" target="_blank" rel="noreferrer noopener nofollow">worth R74.5 billion ($4.5 billion)</a> in gross gambling revenue (GGR), according to 2025 data from the National Gambling Board.</p>
-
-
-
-<p>GGR is the amount these companies keep after paying out winnings to bettors.</p>
-
-
-
-<p>While Irdeto, NMSIS, and KingMakers remain relevant businesses to MultiChoice’s portfolio, they are not positioned to reshape its future in the way DStv Stream and Moment potentially could.</p>
-
-
-
-<p></p>
-
-
-
-<div id="tc-tool-2" style="font-family: 'Open Sans', sans-serif; background: #FFFFFF; color: #151515; border: 1px solid #E3E8EF; border-radius: 8px; padding: 24px; max-width: 600px; margin: 0 auto; text-align: center;">
-  <style>
-    .tc-eco-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
-    .tc-node { background: #F6F6F6; border: 1px solid #EA2D2E; color: #151515; border-radius: 8px; padding: 16px; cursor: pointer; transition: 0.2s; font-weight: 600; }
-    .tc-node:hover { background: #EA2D2E; color: #FFFFFF; }
-    .tc-insight-box { margin-top: 24px; background: #F6F6F6; color: #151515; padding: 16px; border-radius: 8px; text-align: left; min-height: 100px; display: flex; flex-direction: column; justify-content: center;}
-    .tc-insight-title { font-weight: 700; color: #EA2D2E; margin-bottom: 8px; font-size: 1.125rem; }
-    .tc-insight-text { font-size: 0.875rem; line-height: 1.6; }
-  </style>
-
-  <h3 style="margin: 0; font-size: 1.25rem; font-weight: 700;">The MultiChoice Ecosystem</h3>
-  <p style="font-size: 0.875rem; margin-top: 8px; color: #24292F;">Tap a unit to see its role in the new digital bundle.</p>
-
-  <div class="tc-eco-grid">
-    <div class="tc-node" onclick="updateInsight('stream')">DStv Stream</div>
-    <div class="tc-node" onclick="updateInsight('moment')">Moment (Fintech)</div>
-    <div class="tc-node" onclick="updateInsight('nmsis')">NMSIS (Insurance)</div>
-    <div class="tc-node" onclick="updateInsight('kingmakers')">KingMakers (Betting)</div>
-  </div>
-
-  <div class="tc-insight-box" id="tc-insight">
-    <div class="tc-insight-title">The Consumer</div>
-    <div class="tc-insight-text">Select a business unit above to see how MultiChoice bundles content, connectivity, and financial services to increase lifetime value without installing a physical dish.</div>
-  </div>
-
-  <div style="margin-top: 24px; font-size: 0.75rem; color: #767676; text-align: center; border-top: 1px solid #E3E8EF; padding-top: 12px;">TechCabal Tools</div>
-
-  <script>
-    const insights = {
-      stream: { title: "DStv Stream", text: "The anchor product. Replaced Showmax as the main broadband play. Brings in premium subscribers with no decoder subsidy costs. Saw 139% standalone base growth after relaunch." },
-      moment: { title: "Moment (Fintech)", text: "The payment engine. Processes 56% of MultiChoice's internal payments (saving $ millions in fees) and processed $635 million in Total Payment Volume in 2025." },
-      nmsis: { title: "NMSIS (Insurance)", text: "The safety net. Underwrites device insurance, funeral cover, and subscription debt waivers. The most stable subsidiary, generating $66 million in 2025 revenue." },
-      kingmakers: { title: "KingMakers (Sports Betting)", text: "The engagement hook. Allows fans to bet on the sports they are watching via SuperSport. Struggling with currency depreciation in Nigeria, but pushing into SA's $4.5B market." }
-    };
-
-    function updateInsight(key) {
-      document.getElementById('tc-insight').innerHTML = `
-        <div class="tc-insight-title">${insights[key].title}</div>
-        <div class="tc-insight-text">${insights[key].text}</div>
-      `;
-    }
-  </script>
-</div>
-
-
-
-<p>MultiChoice realised years ago that its 41-year-old legacy TV business needed anchors to survive. It has since built an ecosystem that looks like this: a new subscriber can either pay for DStv services with or without the decoder; make MultiChoice-related payments using Moment; insure their decoder; stream content using DStv Internet, its fixed wireless access (FWA) service; and earn an extra bit of income betting on their favourite sports teams, all as part of entertainment value-added services.&nbsp;</p>
-
-
-
-<p>Canal+, no stranger to this kind of play, will see a reason to bundle content, connectivity, and financial services for the same consumer.&nbsp;</p>
 ]]></content:encoded>
 					
 		
