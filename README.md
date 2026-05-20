@@ -89,6 +89,7 @@ python scripts/generate_html.py --force
 
 | 层级 | 信源 | 用途 |
 |------|------|------|
+| L1 官方/IR源 | Rakuten、Grab、MercadoLibre、Adyen、Sea、Zalando、Allegro、Kaspi.kz、Naver、Kakao、Jumia | 校准重点客户自身披露，优先保留财报、公告、战略和新闻稿 |
 | L5 Google News 补漏源 | 27 家重点公司关键词 | 只做公司动态雷达，每家公司最多 3 条，`other` 类默认最多 1 条 |
 
 每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`，用于后续把日报、周报、月报从“新闻摘要”升级为“客户拓展机会报告”。

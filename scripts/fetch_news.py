@@ -6,6 +6,7 @@
 import json, os, time, re, hashlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urljoin, urlparse
 import feedparser
 
 try:
@@ -784,6 +785,30 @@ HTML_SKIP_TITLE_PATTERNS = [
     ' Q4 ', ' Q1 ', ' Q2 ', ' Q3 ',  # 季度报告
 ]
 
+OFFICIAL_SOURCE_LINK_PATTERNS = [
+    '/news', '/press', '/media', '/investor', '/ir', '/financial', '/results',
+    '/release', '/announcements', '/disclosure', '/reports', '/stories',
+]
+
+OFFICIAL_SOURCE_TITLE_PATTERNS = [
+    'announces', 'announcement', 'launches', 'launched', 'partners', 'partnership',
+    'expands', 'expansion', 'acquires', 'acquisition', 'results', 'revenue',
+    'earnings', 'financial', 'quarter', 'annual', 'report', 'shareholder',
+    'investor', 'strategy', 'strategic', 'platform', 'payment', 'commerce',
+]
+
+OFFICIAL_SOURCE_SKIP_URL_PATTERNS = [
+    'category=', '/about', '/products/', '/investor$', '/investors/$',
+    '/quarterlyresults', '/annualreports', '/financial-information',
+    '/corporategovernance', '/current-reports', '#results-center',
+]
+
+OFFICIAL_SOURCE_NAV_TITLES = {
+    'investor relations', 'quarterly results', 'financial results',
+    'financial information', 'current reports', 'main/about kaspi.kz',
+    'kaspi.kz ecosystem', 'annual reports', 'corporate governance',
+}
+
 HTML_SOURCES = [
     # DealStreetAsia RSS 停用（"Temporarily Disabled"），主站为 JS SPA
     # 低频尝试：只采集新闻类页面，报告/评论页已过滤
@@ -794,7 +819,72 @@ HTML_SOURCES = [
     {'name': 'Grab IR', 'url': 'https://investors.grab.com/news-releases', 'source': 'Grab Holdings', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Grab', 'is_company': True, 'max': 4},
     {'name': 'MercadoLibre IR', 'url': 'https://investor.mercadolibre.com/news-events', 'source': 'MercadoLibre', 'region': '拉美', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'MercadoLibre', 'is_company': True, 'max': 4},
     {'name': 'Adyen IR', 'url': 'https://investors.adyen.com/news-and-events/press-releases', 'source': 'Adyen', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Adyen', 'is_company': True, 'max': 4},
+    {'name': 'Sea Newsroom', 'url': 'https://www.sea.com/media/news', 'source': 'Sea Limited', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Sea Limited', 'is_company': True, 'max': 4},
+    {'name': 'Zalando IR', 'url': 'https://www.zalando.com/en/investor-relations/news-stories/', 'source': 'Zalando', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Zalando', 'is_company': True, 'max': 4},
+    {'name': 'Allegro Newsroom', 'url': 'https://allegro.eu/newsroom', 'source': 'Allegro', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Allegro', 'is_company': True, 'max': 4},
+    {'name': 'Kaspi.kz IR', 'url': 'https://ir.kaspi.kz/news-releases/', 'source': 'Kaspi.kz', 'region': '中东', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Kaspi.kz', 'is_company': True, 'max': 4},
+    {'name': 'Naver Press', 'url': 'https://www.navercorp.com/en/media/pressReleases', 'source': 'Naver', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Naver', 'is_company': True, 'max': 4},
+    {'name': 'Kakao Press', 'url': 'https://www.kakaocorp.com/page/detail/pr?lang=en', 'source': 'Kakao', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Kakao', 'is_company': True, 'max': 4},
+    {'name': 'Jumia Newsroom', 'url': 'https://group.jumia.com/news', 'source': 'Jumia', 'region': '非洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Jumia', 'is_company': True, 'max': 4},
 ]
+
+def _is_official_cfg(cfg):
+    return cfg.get('source_tier') == 'L1 官方/IR源' or cfg.get('source_role') == 'official_ir'
+
+
+def _official_link_allowed(link, cfg):
+    link_lower = (link or '').lower().rstrip('/')
+    if any(pattern in link_lower for pattern in OFFICIAL_SOURCE_SKIP_URL_PATTERNS):
+        return False
+    patterns = [p.lower() for p in cfg.get('include_url_patterns', [])] or OFFICIAL_SOURCE_LINK_PATTERNS
+    return any(pattern in link_lower for pattern in patterns)
+
+
+def _official_title_allowed(title, cfg):
+    clean_title = ' '.join((title or '').split())
+    title_lower = clean_title.lower()
+    if not clean_title or title_lower in OFFICIAL_SOURCE_NAV_TITLES:
+        return False
+    if len(clean_title) < 18 or len(clean_title) > 180:
+        return False
+    company = cfg.get('company_name') or cfg.get('source') or cfg.get('name', '')
+    aliases = COMPANY_ALIASES.get(company, [company])
+    has_alias = _title_mentions_aliases(clean_title, aliases)
+    has_signal = any(pattern in title_lower for pattern in OFFICIAL_SOURCE_TITLE_PATTERNS)
+    has_year = bool(re.search(r'\\b20\\d{2}\\b', title_lower))
+    return has_alias or has_signal or has_year
+
+
+def _select_official_articles(soup, cfg):
+    selectors = [
+        'article', '[class*=news]', '[class*=press]', '[class*=release]',
+        '[class*=story]', '[class*=card]', '[class*=item]', 'a[href]'
+    ]
+    seen = set()
+    articles = []
+    base_host = urlparse(cfg['url']).netloc.lower().removeprefix('www.')
+    for sel in selectors:
+        for node in soup.select(sel):
+            link_node = node if getattr(node, 'name', '') == 'a' else node.select_one('a[href]')
+            href = (link_node.get('href') or '').strip() if link_node else ''
+            if not href or href.startswith('#') or href.startswith('javascript'):
+                continue
+            absolute = urljoin(cfg['url'], href)
+            parsed = urlparse(absolute)
+            host = parsed.netloc.lower().removeprefix('www.')
+            if not parsed.scheme.startswith('http') or not host or host != base_host:
+                continue
+            if not _official_link_allowed(absolute, cfg):
+                continue
+            text_value = ' '.join(node.get_text(' ', strip=True).split())
+            if not _official_title_allowed(text_value, cfg):
+                continue
+            if absolute in seen:
+                continue
+            seen.add(absolute)
+            articles.append(node)
+    return articles
+
 
 def _extract_date_from_url(url):
     """从 URL 提取日期兜底，如 /2026/04/15/"""
@@ -916,7 +1006,9 @@ def fetch_html(cfg):
 
     # 根据来源选择器定制
     source = cfg['source']
-    if source == 'DealStreetAsia':
+    if _is_official_cfg(cfg):
+        articles = _select_official_articles(soup, cfg)
+    elif source == 'DealStreetAsia':
         # DealStreetAsia: JS SPA，文章在特定 div 结构中
         # 尝试多种文章容器选择器
         selectors = [
@@ -979,7 +1071,7 @@ def fetch_html(cfg):
             break
         # 提取标题和链接
         title_el = art.select_one('h2,h3,h4,h5,.title,.entry-title,.post-title,.article-title') or art
-        title = title_el.get_text(strip=True)
+        title = title_el.get_text(' ', strip=True).lstrip('•·-–— ').strip()
         if len(title) < 15 or is_blacklisted(title): continue
 
         link_el = art.select_one('a') or (title_el if isinstance(title_el, object) else None)
