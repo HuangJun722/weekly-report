@@ -239,6 +239,8 @@ button, input, select { font: inherit; }
 .feedback-item p { margin: 7px 0 0; color: var(--muted); font-size: 12px; }
 .feedback-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 7px; }
 .feedback-output { margin-top: 14px; width: 100%; min-height: 160px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); padding: 12px; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; resize: vertical; }
+.feedback-sync-note { margin-top: 12px; padding: 11px 12px; border: 1px solid rgba(178, 94, 55, 0.26); border-radius: 8px; background: #fff7ed; color: #8a4b1d; font-size: 12px; line-height: 1.6; }
+.feedback-status { min-height: 18px; margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .filter-state {
   display: none; position: sticky; top: 0; z-index: 20; align-items: center; justify-content: space-between;
   gap: 14px; margin-top: 12px; padding: 12px 14px; border: 1px solid rgba(23,43,58,0.28);
@@ -4858,8 +4860,28 @@ button, input, select { font: inherit; }
       </section>
       <div class="ops-layout">
         <section class="content-block">
-          <div class="block-head"><h2>最近更新</h2><span>5 条记录</span></div>
+          <div class="block-head"><h2>最近更新</h2><span>6 条记录</span></div>
           <div class="timeline">
+
+            <article class="release-item">
+              <div class="release-date">
+                <span>2026-05-21</span>
+                <strong class="release-version">v0.8</strong>
+              </div>
+              <div>
+                <div class="label-row">
+                  <span class="label green">反馈机制</span>
+                  <span class="label">已上线</span>
+                </div>
+                <h3>反馈本地与远端状态区分</h3>
+                <p>明确反馈的本机保存和 GitHub 远端提交是两个动作，避免重要反馈只停留在某台电脑的浏览器缓存里。</p>
+
+                <ul class="release-list">
+                  <li>反馈页主说明、表单提示和本地记录区都标明本机保存不会跨设备同步</li><li>按钮文案改为“本机保存”和“提交到 GitHub”，降低误以为已进后台的风险</li><li>保存、复制、提交和清空动作增加状态提示，并保留已保存反馈标题用于 GitHub Issue 标题</li>
+                </ul>
+
+              </div>
+            </article>
 
             <article class="release-item">
               <div class="release-date">
@@ -4975,7 +4997,7 @@ button, input, select { font: inherit; }
       <section class="headline-area">
         <div class="label-row kicker"><span class="label dark">反馈</span><span class="label">想法与问题记录</span></div>
         <h2 class="main-title">把阅读中的想法和异常，变成下一轮优化线索。</h2>
-        <p class="lead">反馈会先保存在当前浏览器，也可以生成标准文本提交到仓库。</p>
+        <p class="lead">本机保存只留在当前浏览器；重要反馈请提交到 GitHub Issue，才会进入远端记录。</p>
       </section>
       <div class="feedback-layout">
         <form class="feedback-form" id="feedbackForm">
@@ -5000,15 +5022,18 @@ button, input, select { font: inherit; }
           <label class="field"><span>标题</span><input id="feedbackTitle" type="text" maxlength="80" placeholder="一句话说明问题或想法" required></label>
           <label class="field"><span>详情</span><textarea id="feedbackDetail" rows="7" placeholder="看到的位置、期望结果、实际情况、相关事件或链接" required></textarea></label>
           <label class="field"><span>联系方式</span><input id="feedbackContact" type="text" maxlength="80" placeholder="可选"></label>
+          <div class="feedback-sync-note">本机保存不会跨设备同步。换电脑前，请点击“提交到 GitHub”完成远端提交。</div>
           <div class="feedback-actions">
-            <button class="action-btn" type="submit">保存反馈</button>
+            <button class="action-btn" type="submit">本机保存</button>
             <button class="action-btn secondary" id="copyFeedback" type="button">复制文本</button>
-            <button class="action-btn secondary" id="openIssue" type="button">打开提交页</button>
+            <button class="action-btn secondary" id="openIssue" type="button">提交到 GitHub</button>
           </div>
+          <div class="feedback-status" id="feedbackStatus" aria-live="polite"></div>
           <textarea class="feedback-output" id="feedbackOutput" readonly placeholder="保存后会生成标准反馈文本"></textarea>
         </form>
         <section class="feedback-records">
           <div class="block-head"><h2>本地反馈记录</h2><span id="feedbackCount">0 条</span></div>
+          <div class="feedback-sync-note">这里显示的是本机浏览器缓存，不代表已经进入后台。</div>
           <div id="feedbackList" class="feedback-list"></div>
           <div class="feedback-actions">
             <button class="action-btn secondary" id="clearFeedback" type="button">清空记录</button>
@@ -5282,7 +5307,14 @@ function currentFeedbackDraft() {
 }
 function setFeedbackOutput(item) {
   var output = document.getElementById('feedbackOutput');
-  if (output) output.value = feedbackMarkdown(item);
+  if (output) {
+    output.value = feedbackMarkdown(item);
+    output.dataset.feedbackTitle = item && item.title ? item.title : '';
+  }
+}
+function setFeedbackStatus(text) {
+  var status = document.getElementById('feedbackStatus');
+  if (status) status.textContent = text || '';
 }
 var feedbackForm = document.getElementById('feedbackForm');
 if (feedbackForm) {
@@ -5294,6 +5326,7 @@ if (feedbackForm) {
     items.unshift(item);
     safeWriteFeedback(items.slice(0, 30));
     setFeedbackOutput(item);
+    setFeedbackStatus('已保存在本机，尚未同步到远端。重要反馈请继续点击“提交到 GitHub”。');
     feedbackForm.reset();
     renderFeedbackList();
   });
@@ -5311,6 +5344,7 @@ if (copyFeedback) {
       output.select();
       document.execCommand('copy');
     }
+    setFeedbackStatus('反馈文本已复制；如需跨设备留痕，请提交到 GitHub。');
   });
 }
 var openIssue = document.getElementById('openIssue');
@@ -5320,11 +5354,12 @@ if (openIssue) {
     var item = currentFeedbackDraft();
     if (item.title && item.detail) setFeedbackOutput(item);
     var body = output && output.value ? output.value : feedbackMarkdown(item);
-    var title = item.title || '网站反馈';
+    var title = item.title || (output && output.dataset.feedbackTitle) || '网站反馈';
     var url = new URL(feedbackIssueUrl);
     url.searchParams.set('title', '[反馈] ' + title);
     url.searchParams.set('body', body);
     window.open(url.toString(), '_blank');
+    setFeedbackStatus('已打开 GitHub 提交页；在新页面点提交后，反馈才会进入远端记录。');
   });
 }
 var clearFeedback = document.getElementById('clearFeedback');
@@ -5332,6 +5367,7 @@ if (clearFeedback) {
   clearFeedback.addEventListener('click', function(){
     safeWriteFeedback([]);
     setFeedbackOutput(null);
+    setFeedbackStatus('本机反馈记录已清空。');
     renderFeedbackList();
   });
 }
