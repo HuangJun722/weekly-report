@@ -18001,5 +18001,176 @@
       "analysis_source": "deepseek",
       "analysis_status": "complete"
     }
+  ],
+  "2026-05-22": [
+    {
+      "title": "Rakuten Bank hit its daily trading limit to the downside, as investors reacted to the disclosed details of its restructuring and concerns over its perceived overvaluation. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSGtYU015YkdtQlZQdDQ3N1BWMlQ4aHQwVEI3d1FNbzRyR3ZPbGRJT3ZnRzhhSmY0MmRQYUhfR0lZcFJyb2lwRERNYkJBOENlX3lQMFR0Vzk0MmxCQ2dZSVFhWlZCeW03VzJSZkZPZFlGYzRBMFBjRC03YlVrNU9UY2RaVF93VmZpM2RoVzRERlEwNnF4bHpiTTJ6MmRzZw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "乐天银行股价因重组与估值担忧触及跌停",
+      "reason": "日本乐天银行重组引发市场恐慌，数字银行估值泡沫风险显现，投资者需警惕日本FinTech板块回调",
+      "impact": "日本数字银行、金融科技投资者",
+      "insight_label": "警示信号",
+      "trend_topic": "日本FinTech估值回调",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "date": "2026-05-22",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "预算窗口",
+        "合规窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Convective Capital raises an $85 million fund to build disaster resilience",
+      "url": "https://techcrunch.com/2026/05/21/convective-capital-raises-an-85-million-fund-to-build-disaster-resilience/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Convective Capital募资$85M用于灾害韧性建设",
+      "reason": "全球灾害韧性科技赛道获大额基金，气候科技与应急通信、物联网监测系统需求将激增",
+      "impact": "气候科技初创、物联网传感器供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球气候科技投资升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-22",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/05/Convective-Team.webp?w=1067",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Oura files confidentially for US IPO as ring sales accelerate",
+      "url": "https://thenextweb.com/news/oura-ring-confidential-ipo-filing",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Oura秘密提交美国IPO申请",
+      "reason": "欧洲可穿戴健康设备龙头启动IPO，智能戒指供应链和健康数据平台合作机会显现",
+      "impact": "可穿戴设备代工厂、健康数据分析平台",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲健康科技IPO潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-22",
+      "image_url": "https://media.thenextweb.com/2026/05/Oura-rings.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Innovaccer Buys CaduceusHealth To Expand AI-Led Revenue Cycle Management",
+      "url": "https://inc42.com/buzz/innovaccer-buys-caduceushealth-to-expand-ai-led-revenue-cycle-management/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "ma",
+        "earnings",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Innovaccer收购CaduceusHealth",
+      "reason": "印度医疗AI公司并购拓展收入周期管理，医疗IT整合加速",
+      "impact": "印度医院IT系统商、医疗数据集成平台",
+      "insight_label": "资金流向",
+      "trend_topic": "印度医疗AI并购整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-22",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2024/05/Social-60.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口",
+        "整合窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Wakefit Q4: PAT Skyrockets To ₹122 Cr, Revenue Up 14% YoY",
+      "url": "https://inc42.com/buzz/wakefit-q4-pat-skyrockets-to-%e2%82%b9122-cr-revenue-up-14-yoy/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Wakefit Q4利润飙升至₹122Cr，营收同比+14%",
+      "reason": "印度家居品牌盈利强劲，供应链数字化和电商渠道合作需求持续",
+      "impact": "印度电商物流商、家居制造自动化方案商",
+      "insight_label": "背景补充",
+      "trend_topic": "印度消费品牌盈利增长",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-22",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2024/12/Wakefit_WTF-copy_social-1.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
   ]
 }
