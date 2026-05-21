@@ -87,8 +87,13 @@ RSS_SOURCES = [
     {'name': 'GamesIndustry.biz', 'url': 'https://www.gamesindustry.biz/rss',            'source': 'GamesIndustry.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'max_scan': 16, 'max': 4, 'signal_only': True},
     {'name': 'PocketGamer.biz',   'url': 'https://www.pocketgamer.biz/rss/',             'source': 'PocketGamer.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'max_scan': 16, 'max': 4, 'signal_only': True},
     {'name': 'Fintech News Singapore', 'url': 'https://fintechnews.sg/feed/',            'source': 'Fintech News Singapore', 'region': '亚太', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Finextra Payments', 'url': 'https://www.finextra.com/rss/channel.aspx?channel=payments', 'source': 'Finextra', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 20, 'max': 4, 'signal_only': True},
+    {'name': 'Payments Dive', 'url': 'https://www.paymentsdive.com/feeds/news/',         'source': 'Payments Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 12, 'max': 3, 'signal_only': True},
     {'name': 'EcommerceBytes',    'url': 'https://www.ecommercebytes.com/feed/',         'source': 'EcommerceBytes', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Retail Dive', 'url': 'https://www.retaildive.com/feeds/news/',             'source': 'Retail Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'max_scan': 12, 'max': 3, 'signal_only': True},
     {'name': 'Mobile World Live', 'url': 'https://www.mobileworldlive.com/feed/',         'source': 'Mobile World Live', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '文娱社交/移动生态', 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Social Media Today', 'url': 'https://www.socialmediatoday.com/feeds/news/', 'source': 'Social Media Today', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '社交平台', 'max_scan': 12, 'max': 3, 'signal_only': True},
+    {'name': 'Mobile Marketing Magazine', 'url': 'https://mobilemarketingmagazine.com/feed/', 'source': 'Mobile Marketing Magazine', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '移动生态/广告', 'max_scan': 12, 'max': 3, 'signal_only': True},
     # --- 中东/非洲 ---
     {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                     'source': 'WAMDA',         'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
     {'name': 'MENAbytes',        'url': 'https://www.menabytes.com/feed/',               'source': 'MENAbytes',     'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
@@ -152,8 +157,8 @@ COMPANY_SOURCES = [
 for _company_cfg in COMPANY_SOURCES:
     _company_cfg.setdefault('source_tier', 'L5 Google News 补漏源')
     _company_cfg.setdefault('source_role', 'company_radar')
-    _company_cfg.setdefault('max', 3)
-    _company_cfg.setdefault('max_other', 1)
+    _company_cfg.setdefault('max', 2)
+    _company_cfg.setdefault('max_other', 0)
 
 COMPANY_ALIASES = {
     'ByteDance/TikTok': ['ByteDance', 'TikTok', 'Douyin'],
@@ -204,11 +209,13 @@ COMPANY_BLACKLIST = [
     'free shipping', 'buy now', 'shop now', 'best price',
     'glossy photo paper', 'tone paper', 'photo paper',
     'coupon', 'discount', 'on sale', 'clearance ',
+    'promo:', 'bonus', 'points', 'earn up to',
     'order ', 'purchase ', 'delivery ',
     # 占位/无内容噪声
     '404', 'page not found', 'access denied', 'subscribe to',
     # 政治/非科技
-    'election', 'president', 'protest', 'poll ', 'voting',
+    'election', 'local elections', 'president', 'protest', 'poll ', 'voting',
+    'trial', 'arrested', 'prison', 'graft', 'corruption',
     # Google News 金融站/安全告警噪声
     'phishing', 'password reset', 'urgent alert', 'security alert',
     'analyst rating', 'analyst ratings', 'analyst price target',
@@ -216,6 +223,10 @@ COMPANY_BLACKLIST = [
     'nasdaqgs:', 'nyse:', 'otcmkts:', 'kr7 ', 'simply wall st',
     'tipranks', 'yahoo finance', 'ad hoc news', 'indexbox',
     'should you buy', 'is it time to buy', 'is it too late to buy',
+    'shares fall', 'shares jump', 'shares slide', 'stock price forecast',
+    'stock price', 'gf score', 'strong investment opportunity',
+    'xrp', 'crypto', 'token', 'stablecoin', 'crypto exchange',
+    'social media traffic', 'vs. stripe', 'comparison',
 ]
 
 COMPANY_LOW_SIGNAL_PATTERNS = [
@@ -232,6 +243,12 @@ COMPANY_LOW_SIGNAL_PATTERNS = [
     'zacks', 'motley fool', 'investing.com', 'insider monkey',
     'yahoo finance', 'tipranks', 'simply wall st', 'ad hoc news',
     'indexbox', 'phishing', 'password', 'urgent alert',
+    'promo:', 'bonus', 'points', 'earn up to', 'stock price',
+    'shares fall', 'shares jump', 'shares slide', 'stock price forecast',
+    'gf score', 'strong investment opportunity', 'xrp', 'crypto',
+    'token', 'stablecoin', 'crypto exchange', 'trial', 'arrested',
+    'prison', 'graft', 'corruption', 'local elections',
+    'social media traffic', 'comparison',
 ]
 
 TITLE_STOPWORDS = {

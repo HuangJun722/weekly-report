@@ -1560,7 +1560,7 @@ def generate_html(force=False, preview_mode=False):
         available_dates=available_dates,
         site_updates=site_updates,
         site_updates_json=json.dumps(site_updates, ensure_ascii=False),
-        feedback_issue_url='https://github.com/HuangJun722/weekly-report/issues/new?template=feedback.yml',
+        feedback_endpoint=os.getenv('FEEDBACK_ENDPOINT', ''),
     )
     html = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'
 

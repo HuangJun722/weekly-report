@@ -48,6 +48,20 @@ python scripts/encrypt_key.py
 # 豆包获取地址：https://console.volcengine.com/ark/
 ```
 
+### 2.1 配置反馈 API（可选）
+
+反馈表单应写入线上记录，而不是只保存在浏览器。可部署 `workers/feedback-worker.js`，由 Worker 持有 `GITHUB_TOKEN` 并创建内部 Issue：
+
+```bash
+# 站点生成时注入前端提交地址
+FEEDBACK_ENDPOINT=https://your-worker.example.workers.dev py -3 scripts/generate_html.py --force
+
+# Worker 侧配置 GitHub token，不要写进前端或仓库
+wrangler secret put GITHUB_TOKEN
+```
+
+未配置 `FEEDBACK_ENDPOINT` 时，页面会提示线上提交通道尚未配置，并保留本机草稿。
+
 ### 3. 安装依赖
 
 ```bash
@@ -79,6 +93,9 @@ python scripts/generate_html.py --force
 | L3 区域生态源 | The Recursive / The Next Web | 欧洲 | 欧洲区域生态与战略动态 |
 | L2 垂直交易源 | Tech in Asia / Inc42 | 亚太 | 亚洲与印度科技、融资、上市动态 |
 | L3 区域生态源 | TechWire Asia | 亚太 | 亚太科技生态动态 |
+| L4 垂直赛道精品源 | Finextra / Payments Dive | 全球 | 支付、金融科技、监管和商户网络信号 |
+| L4 垂直赛道精品源 | Retail Dive / EcommerceBytes | 全球 | 电商、零售科技、AI 购物和平台变化 |
+| L4 垂直赛道精品源 | Social Media Today / Mobile Marketing Magazine | 全球 | 社交平台、移动生态和广告商业化变化 |
 | L2 垂直交易源 | WAMDA / MENAbytes | 中东 | 中东北非创业、融资、合作动态 |
 | L2/L3 | Disrupt Africa / Ventureburn / TechCabal / Techpoint / WeeTracker | 非洲 | 非洲创业融资、平台经济、区域生态 |
 | L2 垂直交易源 | LatamList / LAVCA | 拉美 | 拉美融资、创投、私募与创业动态 |
@@ -90,7 +107,7 @@ python scripts/generate_html.py --force
 | 层级 | 信源 | 用途 |
 |------|------|------|
 | L1 官方/IR源 | Rakuten、Grab、MercadoLibre、Adyen、Sea、Zalando、Allegro、Kaspi.kz、Naver、Kakao、Jumia | 校准重点客户自身披露，优先保留财报、公告、战略和新闻稿 |
-| L5 Google News 补漏源 | 27 家重点公司关键词 | 只做公司动态雷达，每家公司最多 3 条，`other` 类默认最多 1 条 |
+| L5 Google News 补漏源 | 27 家重点公司关键词 | 只做公司动态雷达，每家公司最多 2 条，默认不保留 `other` 类 |
 
 每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`，用于后续把日报、周报、月报从“新闻摘要”升级为“客户拓展机会报告”。
 

@@ -1,15 +1,30 @@
 [
   {
     "date": "2026-05-21",
+    "version": "v0.9",
+    "type": "信源质量",
+    "status": "已上线",
+    "title": "Google News 补漏降噪与垂类源扩展",
+    "summary": "复盘近 14 天来源结构后，进一步压低 Google News 补漏量，并接入支付、电商、社交平台和移动广告生态的垂类信源。",
+    "changes": [
+      "Google News 公司雷达默认每家公司最多 2 条，且不再保留 other 类补量",
+      "新增 Finextra Payments、Payments Dive、Retail Dive、Social Media Today、Mobile Marketing Magazine 等垂类源",
+      "补充促销积分、股票预测、加密币、选举、诉讼等 Google News 噪声过滤词",
+      "记录 Twitter/X 作为发生渠道的处理策略：优先接二次沉淀源，后续再评估 X API 或官方变更入口"
+    ]
+  },
+  {
+    "date": "2026-05-21",
     "version": "v0.8",
     "type": "反馈机制",
     "status": "已上线",
-    "title": "反馈本地与远端状态区分",
-    "summary": "明确反馈的本机保存和 GitHub 远端提交是两个动作，避免重要反馈只停留在某台电脑的浏览器缓存里。",
+    "title": "反馈提交改为线上记录优先",
+    "summary": "修正反馈入口的产品边界：用户提交后应由系统自动写入线上记录，本机草稿只作为失败兜底。",
     "changes": [
-      "反馈页主说明、表单提示和本地记录区都标明本机保存不会跨设备同步",
-      "按钮文案改为“本机保存”和“提交到 GitHub”，降低误以为已进后台的风险",
-      "保存、复制、提交和清空动作增加状态提示，并保留已保存反馈标题用于 GitHub Issue 标题"
+      "反馈页主按钮改为“提交反馈”，不再要求反馈者理解或操作 GitHub",
+      "新增可配置的 FEEDBACK_ENDPOINT，前端可直接提交到受控反馈 API",
+      "提供 Cloudflare Worker 示例，由服务端密钥把反馈写入内部 Issue",
+      "本机保存降级为草稿和失败兜底，并明确不代表线上记录"
     ]
   },
   {

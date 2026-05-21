@@ -705,7 +705,7 @@ button, input, select { font: inherit; }
       <section class="headline-area">
         <div class="label-row kicker"><span class="label dark">反馈</span><span class="label">想法与问题记录</span></div>
         <h2 class="main-title">把阅读中的想法和异常，变成下一轮优化线索。</h2>
-        <p class="lead">本机保存只留在当前浏览器；重要反馈请提交到 GitHub Issue，才会进入远端记录。</p>
+        <p class="lead">提交后应自动进入线上记录；本机只保留草稿和失败兜底。</p>
       </section>
       <div class="feedback-layout">
         <form class="feedback-form" id="feedbackForm">
@@ -730,18 +730,18 @@ button, input, select { font: inherit; }
           <label class="field"><span>标题</span><input id="feedbackTitle" type="text" maxlength="80" placeholder="一句话说明问题或想法" required></label>
           <label class="field"><span>详情</span><textarea id="feedbackDetail" rows="7" placeholder="看到的位置、期望结果、实际情况、相关事件或链接" required></textarea></label>
           <label class="field"><span>联系方式</span><input id="feedbackContact" type="text" maxlength="80" placeholder="可选"></label>
-          <div class="feedback-sync-note">本机保存不会跨设备同步。换电脑前，请点击“提交到 GitHub”完成远端提交。</div>
+          <div class="feedback-sync-note">提交失败时会先保留本机草稿，避免内容丢失；草稿不等于线上记录。</div>
           <div class="feedback-actions">
-            <button class="action-btn" type="submit">本机保存</button>
+            <button class="action-btn" id="submitFeedback" type="submit">提交反馈</button>
+            <button class="action-btn secondary" id="saveDraftFeedback" type="button">保存草稿</button>
             <button class="action-btn secondary" id="copyFeedback" type="button">复制文本</button>
-            <button class="action-btn secondary" id="openIssue" type="button">提交到 GitHub</button>
           </div>
           <div class="feedback-status" id="feedbackStatus" aria-live="polite"></div>
-          <textarea class="feedback-output" id="feedbackOutput" readonly placeholder="保存后会生成标准反馈文本"></textarea>
+          <textarea class="feedback-output" id="feedbackOutput" readonly placeholder="提交或保存草稿后会生成标准反馈文本"></textarea>
         </form>
         <section class="feedback-records">
-          <div class="block-head"><h2>本地反馈记录</h2><span id="feedbackCount">0 条</span></div>
-          <div class="feedback-sync-note">这里显示的是本机浏览器缓存，不代表已经进入后台。</div>
+          <div class="block-head"><h2>草稿与提交记录</h2><span id="feedbackCount">0 条</span></div>
+          <div class="feedback-sync-note">这里用于恢复本机内容；线上是否记录成功，以提交状态为准。</div>
           <div id="feedbackList" class="feedback-list"></div>
           <div class="feedback-actions">
             <button class="action-btn secondary" id="clearFeedback" type="button">清空记录</button>
@@ -948,7 +948,7 @@ document.getElementById('clearFilter').addEventListener('click', function(){
   applyFilters();
 });
 var feedbackStorageKey = 'weekly-report-feedback-v1';
-var feedbackIssueUrl = '{{ feedback_issue_url }}';
+var feedbackEndpoint = '{{ feedback_endpoint }}';
 function safeReadFeedback() {
   try {
     var raw = localStorage.getItem(feedbackStorageKey);
@@ -971,6 +971,8 @@ function feedbackMarkdown(item) {
     '- 优先级：' + item.priority,
     '- 页面：' + item.page,
     '- 时间：' + item.createdAt,
+    item.submissionStatus ? '- 状态：' + item.submissionStatus : '',
+    item.remoteUrl ? '- 线上记录：' + item.remoteUrl : '',
     item.contact ? '- 联系方式：' + item.contact : '',
     '',
     '### 详情',
@@ -988,8 +990,10 @@ function renderFeedbackList() {
     return;
   }
   list.innerHTML = items.map(function(item){
+    var status = item.submissionStatus || '草稿';
+    var statusColor = status === '已提交' ? 'green' : '';
     return '<article class="feedback-item" data-id="' + escHtml(item.id) + '">' +
-      '<div class="feedback-meta">' + labelHtml(item.type, 'green') + labelHtml(item.priority, '') + '</div>' +
+      '<div class="feedback-meta">' + labelHtml(item.type, 'green') + labelHtml(item.priority, '') + labelHtml(status, statusColor) + '</div>' +
       '<h3>' + escHtml(item.title) + '</h3>' +
       '<p>' + escHtml(item.detail) + '</p>' +
       '<p>' + escHtml(item.createdAt) + '</p>' +
@@ -1024,19 +1028,66 @@ function setFeedbackStatus(text) {
   var status = document.getElementById('feedbackStatus');
   if (status) status.textContent = text || '';
 }
+function rememberFeedback(item) {
+  var items = safeReadFeedback();
+  items.unshift(item);
+  safeWriteFeedback(items.slice(0, 30));
+  renderFeedbackList();
+}
+async function submitFeedbackToBackend(item) {
+  if (!feedbackEndpoint) {
+    throw new Error('线上提交通道尚未配置');
+  }
+  var res = await fetch(feedbackEndpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(item)
+  });
+  var data = {};
+  try { data = await res.json(); } catch (e) {}
+  if (!res.ok || data.ok === false) {
+    throw new Error(data.error || '提交失败');
+  }
+  return data;
+}
 var feedbackForm = document.getElementById('feedbackForm');
 if (feedbackForm) {
-  feedbackForm.addEventListener('submit', function(e){
+  feedbackForm.addEventListener('submit', async function(e){
     e.preventDefault();
     var item = currentFeedbackDraft();
     if (!item.title || !item.detail) return;
-    var items = safeReadFeedback();
-    items.unshift(item);
-    safeWriteFeedback(items.slice(0, 30));
     setFeedbackOutput(item);
-    setFeedbackStatus('已保存在本机，尚未同步到远端。重要反馈请继续点击“提交到 GitHub”。');
-    feedbackForm.reset();
-    renderFeedbackList();
+    var submitBtn = document.getElementById('submitFeedback');
+    if (submitBtn) submitBtn.disabled = true;
+    setFeedbackStatus('正在提交反馈...');
+    try {
+      var result = await submitFeedbackToBackend(item);
+      item.submissionStatus = '已提交';
+      item.remoteId = result.id || result.number || '';
+      item.remoteUrl = result.url || result.html_url || '';
+      rememberFeedback(item);
+      setFeedbackOutput(item);
+      setFeedbackStatus('反馈已提交并写入线上记录。');
+      feedbackForm.reset();
+    } catch (err) {
+      item.submissionStatus = '待重试';
+      rememberFeedback(item);
+      setFeedbackOutput(item);
+      setFeedbackStatus((err && err.message ? err.message : '提交失败') + '，已保留本机草稿，请稍后重试或复制文本给维护者。');
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+}
+var saveDraftFeedback = document.getElementById('saveDraftFeedback');
+if (saveDraftFeedback) {
+  saveDraftFeedback.addEventListener('click', function(){
+    var item = currentFeedbackDraft();
+    if (!item.title || !item.detail) return;
+    item.submissionStatus = '草稿';
+    rememberFeedback(item);
+    setFeedbackOutput(item);
+    setFeedbackStatus('已保存为本机草稿，尚未写入线上记录。');
   });
 }
 var copyFeedback = document.getElementById('copyFeedback');
@@ -1052,22 +1103,7 @@ if (copyFeedback) {
       output.select();
       document.execCommand('copy');
     }
-    setFeedbackStatus('反馈文本已复制；如需跨设备留痕，请提交到 GitHub。');
-  });
-}
-var openIssue = document.getElementById('openIssue');
-if (openIssue) {
-  openIssue.addEventListener('click', function(){
-    var output = document.getElementById('feedbackOutput');
-    var item = currentFeedbackDraft();
-    if (item.title && item.detail) setFeedbackOutput(item);
-    var body = output && output.value ? output.value : feedbackMarkdown(item);
-    var title = item.title || (output && output.dataset.feedbackTitle) || '网站反馈';
-    var url = new URL(feedbackIssueUrl);
-    url.searchParams.set('title', '[反馈] ' + title);
-    url.searchParams.set('body', body);
-    window.open(url.toString(), '_blank');
-    setFeedbackStatus('已打开 GitHub 提交页；在新页面点提交后，反馈才会进入远端记录。');
+    setFeedbackStatus('反馈文本已复制。');
   });
 }
 var clearFeedback = document.getElementById('clearFeedback');
