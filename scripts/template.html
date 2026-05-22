@@ -108,6 +108,7 @@ button, input, select { font: inherit; }
 .rail { display: grid; gap: 14px; position: sticky; top: 18px; }
 .rail-card { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.78); box-shadow: var(--shadow); }
 .rail-title { margin: 0 0 12px; font-size: 13px; }
+.notice-line { margin: -4px 0 12px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .scoreboard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .score { padding: 12px; border-radius: 8px; background: rgba(238,242,243,0.82); border: 1px solid var(--line-cool); }
 .score strong { display: block; font-size: 22px; line-height: 1; }
@@ -442,6 +443,7 @@ button, input, select { font: inherit; }
         <aside class="rail">
           <section class="rail-card">
             <h2 class="rail-title">今日摘要</h2>
+            {% if batch_notice %}<div class="notice-line">{{ batch_notice }}</div>{% endif %}
             <div class="scoreboard">
               <div class="score"><strong id="statStories">{{ total_stories }}</strong><span>入选事件</span></div>
               <div class="score"><strong id="statRegions">{{ weekly.regions }}</strong><span>覆盖地区</span></div>

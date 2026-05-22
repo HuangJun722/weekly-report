@@ -1392,6 +1392,29 @@ def load_site_updates():
 
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
+MATURE_BATCH_MIN_EVENTS = 6
+
+def _select_mature_main_date(sorted_dates, all_events_for_list, events):
+    """Prefer a date with enough visible events; avoid showing a thin early-day batch."""
+    counts = {}
+    for event in all_events_for_list:
+        date_key = (event.get('date') or '')[:10]
+        if date_key:
+            counts[date_key] = counts.get(date_key, 0) + 1
+
+    latest_date = next((d for d in sorted_dates if d in counts), None)
+    main_date = latest_date
+    for date_key in sorted_dates:
+        if counts.get(date_key, 0) >= MATURE_BATCH_MIN_EVENTS:
+            main_date = date_key
+            break
+
+    latest_count = len(events.get(latest_date, [])) if latest_date else 0
+    notice = ''
+    if latest_date and main_date and latest_date != main_date:
+        notice = f'展示成熟批次，今日早盘 {latest_count} 条待汇入'
+    return main_date, latest_date, latest_count, notice
+
 def generate_html(force=False, preview_mode=False):
     events = load_events()
     sorted_dates = sorted(events.keys(), reverse=True)
@@ -1477,6 +1500,10 @@ def generate_html(force=False, preview_mode=False):
     all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
     enrich_frontend_fields(all_events_for_list)
     all_events_for_list = dedupe_display_events(all_events_for_list)
+    mature_main_date, latest_data_date, latest_visible_count, batch_notice = _select_mature_main_date(sorted_dates, all_events_for_list, events)
+    if mature_main_date:
+        main_date = mature_main_date
+        main_events = events.get(main_date, [])
     preset_company_list = build_company_cards(preset_company_list, main_date)
     company_groups = group_company_cards(preset_company_list)
 
@@ -1558,6 +1585,9 @@ def generate_html(force=False, preview_mode=False):
         date_panels_json=date_panels_json,
         available_dates_json=json.dumps(available_dates),
         available_dates=available_dates,
+        latest_data_date=latest_data_date,
+        latest_visible_count=latest_visible_count,
+        batch_notice=batch_notice,
         site_updates=site_updates,
         site_updates_json=json.dumps(site_updates, ensure_ascii=False),
         feedback_endpoint=os.getenv('FEEDBACK_ENDPOINT', ''),
