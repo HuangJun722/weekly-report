@@ -19698,5 +19698,145 @@
       "analysis_source": "deepseek",
       "analysis_status": "complete"
     }
+  ],
+  "2026-05-25": [
+    {
+      "title": "Naver and Kakao Deploy ChatGPT and Claude Code Together: Inside South Korea's Dual-Stack Enterprise AI Shift - Tech Times",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQTFVvUjFpdW56Zm5YNF9Uc09xcFRBZTBzQUxyYVNqMXhocTRjWktPZV9oRmRScm1BdmVyRVI1MU9ZTjB5Ul9DQ2x4ZG01a0dXbFcyekF0YXRrY2FBUGZWcjJWV2NLRG1qQUdfVkNjTGRCX2ZIN1ktUFFYdnF3YjlTOFBfd1hFRl9SUUJXb0thc2FSVk1LaWNKZGptOWtKRVhKQ3JHdkZURUdFdjJ1dklndHlJdEJ3N3lHalZLQWljV2tlazZ0UnJYU25hMGpnekRLSHJjMmRlUEw3c2hFU2Nr?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Naver and Kakao Deploy Ch",
+      "reason": "亚太Naver和Kakao部署ChatGPT与Claude Code",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "date": "2026-05-25",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver and Kakao, which received pleasant report cards in the first quarter of this year due to stron.. - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5veENXMkZpX1N6RklBWml6NGFJQzZhS2JTdzhPa0xrNFRfdHlMZU1TMUxHN2xobWQ5WThCSnRhN1RlcHFaMWRGQ2E4WQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Naver and Kakao, which re",
+      "reason": "亚太Naver和Kakao发布一季度业绩",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "date": "2026-05-25",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "India’s SolarSquare is raising $60M at a $500M valuation. It has powered 50,000 homes.",
+      "url": "https://thenextweb.com/news/solarsquare-series-c-60-million-india-rooftop-solar",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "印度SolarSquare获$60M C轮融资，已服务5万家庭",
+      "reason": "印度屋顶太阳能获大额融资，新能源基建与家庭能源管理市场扩大",
+      "impact": "印度太阳能设备商、家庭能源管理平台",
+      "insight_label": "资金流向",
+      "trend_topic": "印度新能源融资热",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-25",
+      "image_url": "https://media.thenextweb.com/2026/05/solarsquare-series-c-60-million-india-rooftop-solar.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Delivery Hero confirms takeover bid from Uber",
+      "url": "https://www.techinasia.com/uber-explores-full-takeover-germanys-delivery-hero",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Uber确认收购Delivery Hero",
+      "reason": "全球外卖平台整合加速，东南亚本地配送平台面临竞争压力",
+      "impact": "东南亚本地配送平台、外卖技术供应商",
+      "insight_label": "警示信号",
+      "trend_topic": "全球外卖平台整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "date": "2026-05-25",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/05/1779584501_Delivery-Hero.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
   ]
 }
