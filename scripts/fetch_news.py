@@ -248,7 +248,7 @@ COMPANY_LOW_SIGNAL_PATTERNS = [
     'gf score', 'strong investment opportunity', 'xrp', 'crypto',
     'token', 'stablecoin', 'crypto exchange', 'trial', 'arrested',
     'prison', 'graft', 'corruption', 'local elections',
-    'social media traffic', 'comparison',
+    'social media traffic', 'comparison', 'tech times',
 ]
 
 TITLE_STOPWORDS = {
@@ -376,6 +376,18 @@ def _strip_title_source(title):
             if right and len(right) <= 40:
                 return left.strip()
     return title
+
+
+def _extract_title_publisher(title):
+    """提取 Google News 标题尾部媒体名，保留真实来源用于控噪和展示。"""
+    title = (title or '').strip()
+    for sep in [' - ', ' | ', ' — ', ' – ', ' —']:
+        if sep in title:
+            left, right = title.rsplit(sep, 1)
+            right = right.strip()
+            if left.strip() and 1 < len(right) <= 40:
+                return right
+    return ''
 
 
 def _normalize_text(text):
@@ -936,6 +948,7 @@ def fetch_company_news(cfg):
 
     results = []
     seen_company_events = []
+    publisher_counts = {}
     max_items = cfg.get('max', 3)
     max_other = cfg.get('max_other', 1)
     other_count = 0
@@ -945,14 +958,17 @@ def fetch_company_news(cfg):
 
         title = (entry.get('title') or '').strip()
         if len(title) < 15: continue
+        publisher = _extract_title_publisher(title)
 
         if not _title_mentions_company(title, cfg):
             continue
 
         # 基础噪音过滤
-        title_lower = title.lower()
+        title_lower = f"{title} {publisher}".lower()
         if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
         if _is_low_signal_company_title(title):
+            continue
+        if publisher and publisher_counts.get(publisher.lower(), 0) >= 1:
             continue
 
         link = ''
@@ -998,6 +1014,8 @@ def fetch_company_news(cfg):
             'title': title,
             'url': link,
             'source': 'Google News',
+            'source_detail': publisher,
+            'publisher': publisher,
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
@@ -1009,6 +1027,9 @@ def fetch_company_news(cfg):
         if any(_is_same_event(item, existing) for existing in seen_company_events):
             continue
         seen_company_events.append(item)
+        if publisher:
+            publisher_key = publisher.lower()
+            publisher_counts[publisher_key] = publisher_counts.get(publisher_key, 0) + 1
         results.append(item)
     return results
 
@@ -2094,7 +2115,10 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             'companies': analysis.get('companies', []) or [],
             'is_company': item.get('is_company', False),
             'company_name': item.get('company_name', ''),
+            'article_date': item.get('article_date', ''),
             'date': item.get('article_date', _cn_today()),
+            'source_detail': item.get('source_detail', ''),
+            'publisher': item.get('publisher', ''),
             'image_url': item.get('image_url', ''),
         }
         attach_business_context(event, item, score)
@@ -2133,7 +2157,10 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'companies': [],
         'is_company': item.get('is_company', False),
         'company_name': item.get('company_name', ''),
+        'article_date': item.get('article_date', ''),
         'date': item.get('article_date', _cn_today()),
+        'source_detail': item.get('source_detail', ''),
+        'publisher': item.get('publisher', ''),
         'image_url': item.get('image_url', ''),
     }
     attach_business_context(event, item, score)
@@ -2419,7 +2446,7 @@ def main():
         if event['url']:
             existing_urls.add(event['url'])  # 同批次内也去重
         existing_events.append(event)
-        date_key = event.pop('article_date', None)  # 取出，写入 event 的 date 字段
+        date_key = event.get('article_date') or event.get('date')  # 保留文章日期，避免运行日覆盖真实日期
         event['date'] = date_key or today  # 保留 date 供 Market Pulse 使用
         if date_key:
             pubdate_ok += 1

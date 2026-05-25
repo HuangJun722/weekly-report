@@ -395,7 +395,7 @@ button, input, select { font: inherit; }
               {% if ev.needs_repair or ev.analysis_status == 'fallback' or ev.impact == '未知' or ev.score|default(0) < 2 %}
                 {% set _ = repair_events.append(ev) %}
               {% else %}
-              <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+              <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
                 <div class="intel-meta">
                   <span class="label green">{{ ev.region }}</span>
                   {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
@@ -413,7 +413,7 @@ button, input, select { font: inherit; }
                   </div>
                   {% endif %}
                 </div>
-                <div class="amount">{{ ev.display_amount or ev.source }}</div>
+                <div class="amount">{{ ev.display_amount or ev.display_source or ev.source }}</div>
               </a>
               {% endif %}
               {% endfor %}
@@ -424,7 +424,7 @@ button, input, select { font: inherit; }
             <div class="quality-box" id="qualityBox">
               <div class="intelligence-list">
                 {% for ev in repair_events %}
-                <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+                <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
                   <div class="intel-meta"><span class="label red">需复核</span><span class="label">{{ ev.region }}</span></div>
                   <div>
                     <h3>{{ ev.display_title or ev.title }}</h3>
@@ -637,7 +637,7 @@ button, input, select { font: inherit; }
             <div class="history-body">
               <div class="intelligence-list">
                 {% for ev in group.events %}
-                <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+                <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
                   <div class="intel-meta">
                     <span class="label green">{{ ev.region }}</span>
                     {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
@@ -649,7 +649,7 @@ button, input, select { font: inherit; }
                     {% if ev.reason %}<div class="intel-impact">为什么重要：{{ ev.reason }}</div>{% endif %}
                     {% if ev.display_impact %}<div class="intel-impact">影响：{{ ev.display_impact }}</div>{% endif %}
                   </div>
-                  <div class="amount">{{ ev.display_amount or ev.source }}</div>
+                  <div class="amount">{{ ev.display_amount or ev.display_source or ev.source }}</div>
                 </a>
                 {% endfor %}
               </div>
@@ -884,7 +884,7 @@ function labelHtml(text, cls) {
   return '<span class="label ' + (cls || '') + '">' + escHtml(text) + '</span>';
 }
 function eventCardHtml(ev) {
-  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.company_name||'');
+  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'');
   var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25) && ev.summary_short !== ev.reason)
     ? '<p>' + escHtml(ev.summary_short) + '</p>' : '';
   var displayTitle = ev.display_title || ev.summary_short || ev.title || '';
@@ -894,7 +894,7 @@ function eventCardHtml(ev) {
   return '<a class="intel event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
     '<div class="intel-meta">' + labelHtml(ev.region, 'green') + labelHtml(ev.insight_label, '') + (ev.company_name ? labelHtml(ev.company_name, '') : '') + '</div>' +
     '<div><h3>' + escHtml(displayTitle) + '</h3>' + original + sum + reason + imp + '</div>' +
-    '<div class="amount">' + escHtml(ev.display_amount || ev.source || '') + '</div></a>';
+    '<div class="amount">' + escHtml(ev.display_amount || ev.display_source || ev.source || '') + '</div></a>';
 }
 function navigateToDate(date) {
   var idx = availableDates.indexOf(date);
@@ -951,6 +951,13 @@ document.getElementById('clearFilter').addEventListener('click', function(){
 });
 var feedbackStorageKey = 'weekly-report-feedback-v1';
 var feedbackEndpoint = '{{ feedback_endpoint }}';
+if (!feedbackEndpoint) {
+  var submitFeedbackBtn = document.getElementById('submitFeedback');
+  if (submitFeedbackBtn) {
+    submitFeedbackBtn.textContent = '保存待提交';
+    submitFeedbackBtn.title = '线上提交通道未配置，本次只会保留本机草稿';
+  }
+}
 function safeReadFeedback() {
   try {
     var raw = localStorage.getItem(feedbackStorageKey);
@@ -1061,7 +1068,7 @@ if (feedbackForm) {
     setFeedbackOutput(item);
     var submitBtn = document.getElementById('submitFeedback');
     if (submitBtn) submitBtn.disabled = true;
-    setFeedbackStatus('正在提交反馈...');
+    setFeedbackStatus(feedbackEndpoint ? '正在提交反馈...' : '线上提交通道未配置，正在保存本机待提交记录...');
     try {
       var result = await submitFeedbackToBackend(item);
       item.submissionStatus = '已提交';
@@ -1072,10 +1079,10 @@ if (feedbackForm) {
       setFeedbackStatus('反馈已提交并写入线上记录。');
       feedbackForm.reset();
     } catch (err) {
-      item.submissionStatus = '待重试';
+      item.submissionStatus = feedbackEndpoint ? '待重试' : '未配置通道';
       rememberFeedback(item);
       setFeedbackOutput(item);
-      setFeedbackStatus((err && err.message ? err.message : '提交失败') + '，已保留本机草稿，请稍后重试或复制文本给维护者。');
+      setFeedbackStatus((err && err.message ? err.message : '提交失败') + '，已保留本机记录；这还不是线上记录，需要配置 FEEDBACK_ENDPOINT 后才能跨设备保存。');
     } finally {
       if (submitBtn) submitBtn.disabled = false;
     }

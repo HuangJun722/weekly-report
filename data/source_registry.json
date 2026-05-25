@@ -1,0 +1,157 @@
+{
+  "version": "2026-05-25",
+  "principles": [
+    "信源优先解决质量，而不是靠过滤弥补泛新闻噪声。",
+    "每个自动接入源都要标注赛道、信号类型、质量层级、抓取方式和风险。",
+    "官方、开发者、商户、广告、支付、市场政策类源优先于泛科技新闻流。",
+    "候选源先进入观察池，样本质量稳定后再进入自动采集。"
+  ],
+  "signal_types": {
+    "official_disclosure": "公司官方披露、新闻稿、IR 公告",
+    "developer_change": "开发者平台、API、SDK、政策和能力变更",
+    "merchant_product": "商户、卖家、店铺、履约和本地服务产品变化",
+    "ads_monetization": "广告商业化、创作者变现、流量分发规则变化",
+    "payment_infra": "支付、收单、风控、清结算、钱包和 BNPL",
+    "marketplace_policy": "电商、平台、应用商店和市场规则变化",
+    "funding_deal": "融资、并购、IPO、战略投资",
+    "regional_ecosystem": "区域生态、政策、创业和投资环境",
+    "industry_analysis": "产业分析、市场地图、数据报告",
+    "weekly_digest": "周报、简报、newsletter、二次沉淀"
+  },
+  "active_sources": [
+    {
+      "name": "TechCrunch VC",
+      "url": "https://techcrunch.com/category/venture/feed/",
+      "status": "active",
+      "tier": "L2",
+      "track": "全球融资",
+      "signal_types": ["funding_deal"],
+      "quality_note": "融资密度高，但泛创业噪声仍需按金额、赛道和区域筛选。"
+    },
+    {
+      "name": "Tech.eu",
+      "url": "https://tech.eu/feed/",
+      "status": "active",
+      "tier": "L2",
+      "track": "欧洲融资与科技生态",
+      "signal_types": ["funding_deal", "regional_ecosystem"],
+      "quality_note": "欧洲交易和政策信号较稳定。"
+    },
+    {
+      "name": "Inc42",
+      "url": "https://inc42.com/feed/",
+      "status": "active",
+      "tier": "L2",
+      "track": "印度互联网与创业生态",
+      "signal_types": ["funding_deal", "regional_ecosystem"],
+      "quality_note": "印度公司财报、融资和监管信号密集，但上市公司短线行情需过滤。"
+    },
+    {
+      "name": "Finextra Payments",
+      "url": "https://www.finextra.com/rss/channel.aspx?channel=payments",
+      "status": "active",
+      "tier": "L4",
+      "track": "支付",
+      "signal_types": ["payment_infra", "industry_analysis"],
+      "quality_note": "支付基础设施和银行科技信号较强。"
+    },
+    {
+      "name": "Payments Dive",
+      "url": "https://www.paymentsdive.com/feeds/news/",
+      "status": "active",
+      "tier": "L4",
+      "track": "支付",
+      "signal_types": ["payment_infra", "merchant_product"],
+      "quality_note": "适合观察支付网络、收单和监管变化。"
+    },
+    {
+      "name": "Retail Dive",
+      "url": "https://www.retaildive.com/feeds/news/",
+      "status": "active",
+      "tier": "L4",
+      "track": "零售与电商",
+      "signal_types": ["merchant_product", "marketplace_policy"],
+      "quality_note": "零售行业动作较多，需避免传统零售财务噪声。"
+    },
+    {
+      "name": "Social Media Today",
+      "url": "https://www.socialmediatoday.com/feeds/news/",
+      "status": "active",
+      "tier": "L4",
+      "track": "社交平台与广告",
+      "signal_types": ["ads_monetization", "marketplace_policy"],
+      "quality_note": "适合替代直接抓 X/Twitter 的二次沉淀源。"
+    }
+  ],
+  "candidate_sources": [
+    {
+      "name": "The Paypers",
+      "track": "支付",
+      "signal_types": ["payment_infra", "industry_analysis"],
+      "status": "candidate",
+      "next_check": "验证 RSS/页面可抓取性和近 10 条样本质量"
+    },
+    {
+      "name": "PYMNTS",
+      "track": "支付与商户",
+      "signal_types": ["payment_infra", "merchant_product"],
+      "status": "candidate",
+      "next_check": "验证是否有稳定 RSS，评估广告/赞助稿噪声"
+    },
+    {
+      "name": "Marketplace Pulse",
+      "track": "电商与 marketplace",
+      "signal_types": ["marketplace_policy", "industry_analysis"],
+      "status": "candidate",
+      "next_check": "验证公开文章更新频率和抓取稳定性"
+    },
+    {
+      "name": "Mobile Dev Memo",
+      "track": "移动广告与 app economy",
+      "signal_types": ["ads_monetization", "industry_analysis", "weekly_digest"],
+      "status": "candidate",
+      "next_check": "验证 newsletter/RSS 可抓取性"
+    },
+    {
+      "name": "AdExchanger",
+      "track": "广告技术",
+      "signal_types": ["ads_monetization", "industry_analysis"],
+      "status": "candidate",
+      "next_check": "评估广告技术信号和非互联网客户噪声"
+    },
+    {
+      "name": "GameDiscoverCo",
+      "track": "游戏与发行",
+      "signal_types": ["industry_analysis", "weekly_digest"],
+      "status": "candidate",
+      "next_check": "验证 newsletter 摘要是否适合低频采集"
+    },
+    {
+      "name": "CB Insights Research",
+      "track": "市场地图与产业分析",
+      "signal_types": ["industry_analysis"],
+      "status": "candidate",
+      "next_check": "只取免费公开内容，避免付费墙"
+    },
+    {
+      "name": "Stripe Newsroom / Docs changelog",
+      "track": "支付与开发者生态",
+      "signal_types": ["official_disclosure", "developer_change", "payment_infra"],
+      "status": "candidate",
+      "next_check": "验证官方 changelog/feed"
+    },
+    {
+      "name": "TikTok for Business",
+      "track": "广告商业化",
+      "signal_types": ["ads_monetization", "merchant_product"],
+      "status": "candidate",
+      "next_check": "验证官方 blog/feed 和地区覆盖"
+    }
+  ],
+  "promotion_rules": [
+    "近 10 条样本中，至少 4 条能对应明确业务信号。",
+    "可稳定抓取，不依赖登录态。",
+    "噪声类型可通过规则解释，而不是靠大模型猜。",
+    "能补足现有赛道缺口：支付、电商、广告商业化、开发者生态、区域生态。"
+  ]
+}

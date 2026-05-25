@@ -111,6 +111,8 @@ python scripts/generate_html.py --force
 
 每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`，用于后续把日报、周报、月报从“新闻摘要”升级为“客户拓展机会报告”。
 
+信源处理库维护在 `data/source_registry.json`。新增自动采集源前，先在处理库记录赛道、信号类型、质量层级、抓取方式和晋级判断；候选源样本稳定后再进入脚本配置。
+
 ### HTML 备用采集
 
 | 信源 | 覆盖区域 | 说明 |

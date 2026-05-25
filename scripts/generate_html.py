@@ -64,6 +64,16 @@ def _format_amount(amount):
         return f"${amount/1000:.0f}B"
     return f"${amount:.0f}M"
 
+def _extract_title_publisher(title):
+    title = (title or '').strip()
+    for sep in [' - ', ' | ', ' — ', ' – ']:
+        if sep in title:
+            left, right = title.rsplit(sep, 1)
+            right = right.strip()
+            if left.strip() and 1 < len(right) <= 40:
+                return right
+    return ''
+
 AMOUNT_BUCKETS = [
     (0,      5,    1),
     (5,      20,   2),
@@ -571,6 +581,15 @@ def enrich(event):
     event.setdefault('region', '未知')
     event.setdefault('companies', [])
     event.setdefault('source', '未知')
+    publisher = event.get('publisher') or event.get('source_detail')
+    if not publisher and event.get('source') == 'Google News':
+        publisher = _extract_title_publisher(title)
+    event['publisher'] = publisher or ''
+    event['source_detail'] = event.get('source_detail') or publisher or ''
+    if event.get('source') == 'Google News' and publisher:
+        event['display_source'] = publisher
+    else:
+        event['display_source'] = event.get('source', '未知')
     event['score'] = calculate_score(event)
     # 用于 Market Pulse 突出展示
     amt = _parse_amount(event.get('title', ''))
@@ -1148,10 +1167,10 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
     }
 
 
-def build_weekly_archives(events, main_date):
+def build_weekly_archives(events, reference_date):
     """按自然周生成独立周报档案，已结束周固定封存，当前周更新至最新日期。"""
     grouped = {}
-    main_dt = datetime.strptime(main_date, '%Y-%m-%d')
+    reference_dt = datetime.strptime(reference_date, '%Y-%m-%d')
     for event in events:
         date_key = (event.get('date') or '')[:10]
         if not date_key:
@@ -1171,26 +1190,26 @@ def build_weekly_archives(events, main_date):
             'natural_end': week_end_dt.strftime('%Y-%m-%d'),
             'end': week_end_dt.strftime('%Y-%m-%d'),
         })
-        if dt <= main_dt:
-            item['end'] = min(item['natural_end'], main_date)
+        if week_start_dt <= reference_dt <= week_end_dt:
+            item['end'] = reference_date
     archives = []
     for item in grouped.values():
-        status = 'open' if item['end'] == main_date and item['natural_end'] > main_date else 'closed'
+        status = 'open' if item['start'] <= reference_date <= item['natural_end'] else 'closed'
         label = item['label'] if status == 'closed' else f"{item['label']}（更新中）"
         archives.append(build_period_report(events, item['start'], item['end'], label, item['id'], status))
     archives.sort(key=lambda x: x['start'], reverse=True)
     return archives
 
 
-def build_monthly_archives(events, main_date):
+def build_monthly_archives(events, reference_date):
     """按自然月生成独立月报档案，已结束月份固定封存，当前月更新至最新日期。"""
     months = sorted({(e.get('date') or '')[:7] for e in events if (e.get('date') or '')[:7]}, reverse=True)
     archives = []
-    main_month = main_date[:7]
+    main_month = reference_date[:7]
     for month in months:
         start_date = f"{month}-01"
         if month == main_month:
-            end_date = main_date
+            end_date = reference_date
             status = 'open'
             label = f"{month} 月报（更新中）"
         else:
@@ -1402,7 +1421,7 @@ def _select_mature_main_date(sorted_dates, all_events_for_list, events):
         if date_key:
             counts[date_key] = counts.get(date_key, 0) + 1
 
-    latest_date = next((d for d in sorted_dates if d in counts), None)
+    latest_date = next((d for d in sorted_dates if events.get(d)), None)
     main_date = latest_date
     for date_key in sorted_dates:
         if counts.get(date_key, 0) >= MATURE_BATCH_MIN_EVENTS:
@@ -1501,6 +1520,7 @@ def generate_html(force=False, preview_mode=False):
     enrich_frontend_fields(all_events_for_list)
     all_events_for_list = dedupe_display_events(all_events_for_list)
     mature_main_date, latest_data_date, latest_visible_count, batch_notice = _select_mature_main_date(sorted_dates, all_events_for_list, events)
+    period_reference_date = latest_data_date or main_date or today_str
     if mature_main_date:
         main_date = mature_main_date
         main_events = events.get(main_date, [])
@@ -1551,11 +1571,12 @@ def generate_html(force=False, preview_mode=False):
         available_dates.append(d)
         date_panels[d] = build_date_panel(d, day_evs, events)
     date_panels_json = json.dumps(date_panels, ensure_ascii=False)
-    weekly_archives = build_weekly_archives(all_events_for_list, main_date)
-    monthly_archives = build_monthly_archives(all_events_for_list, main_date)
-    weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], main_date, main_date, '本周', 'empty', 'open')
-    monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], main_date, main_date, '本月', 'empty', 'open')
+    weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date)
+    monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date)
+    weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], period_reference_date, period_reference_date, '本周', 'empty', 'open')
+    monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], period_reference_date, period_reference_date, '本月', 'empty', 'open')
     site_updates = load_site_updates()
+    update_time = f"最新采集 {period_reference_date}｜展示 {main_date} 成熟批次"
 
     template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
@@ -1572,7 +1593,7 @@ def generate_html(force=False, preview_mode=False):
         company_events=company_events,
         company_list=preset_company_list,
         company_groups=company_groups,
-        update_time=main_date + ' 数据（每日02:00北京时间自动更新）',
+        update_time=update_time,
         trend_groups=trend_groups,
         daily_trend_judgment=daily_trend_judgment,
         daily_headline=daily_headline,
