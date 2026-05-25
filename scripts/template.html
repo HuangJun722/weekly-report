@@ -605,13 +605,13 @@ button, input, select { font: inherit; }
           <section class="company-region">
             <div class="company-region-head">
               <h3>{{ group.region }}</h3>
-              <span>{{ group.active }}/{{ group.total }} 家有记录，近 30 天 {{ group.recent_30 }} 条</span>
+              <span>{{ group.active }}/{{ group.total }} 家有记录，近 30 天 {{ group.recent_30 }} 条，优质 {{ group.quality_30 }} 条</span>
             </div>
             <div class="company-grid">
               {% for c in group.companies %}
               <button class="company company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
                 <strong>{{ c.name }}</strong>
-                <span>近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条</span>
+                <span>近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条</span>
                 <small>{{ c.signal }}：{{ c.latest_title|truncate(54) }}</small>
               </button>
               {% endfor %}

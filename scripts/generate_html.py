@@ -161,8 +161,9 @@ def _is_chinese_capital(event):
     """检测事件是否涉及中资出海公司"""
     title_lower = event.get('title', '').lower()
     reason_lower = event.get('why_important', '').lower()
+    company_lower = (event.get('company_name') or '').lower()
     companies_lower = [c.lower() for c in event.get('companies', [])]
-    combined = ' '.join([title_lower, reason_lower] + companies_lower)
+    combined = ' '.join([title_lower, reason_lower, company_lower] + companies_lower)
     return any(kw.lower() in combined for kw in CHINESE_CAPITAL_COMPANIES)
 
 def calculate_score(event):
@@ -177,7 +178,7 @@ def calculate_score(event):
     region = event.get('region', '')
     region_mult = REGION_WEIGHT.get(region, 1.0)
     industry_pts = 1 if _is_hot_industry(title_lower, event.get('why_important', '')) else 0
-    named_pts = 1 if event.get('companies') else 0
+    named_pts = 1 if event.get('companies') or event.get('company_name') else 0
     investor_pts = 1 if _has_top_investor(title_lower) else 0
 
     raw = (amt_pts + type_pts + industry_pts + named_pts + investor_pts) * region_mult
@@ -186,7 +187,7 @@ def calculate_score(event):
 # ─── 预设公司名单 ─────────────────────────────────────────────
 
 PRESET_COMPANIES = {
-    '亚太': ['Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek', 'VNG Group', 'Yahoo', 'Cyberagent'],
+    '亚太': ['Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek', 'VNG Group', 'Yahoo', 'Cyberagent', 'HKTVmall', 'U-NEXT', 'Square Enix'],
     '欧洲': ['Adyen', 'Zalando', 'Allegro', 'Trendyol'],
     '中东': ['Noon', 'Careem', 'Tabby', 'Kaspi.kz'],
     '非洲': ['Jumia', 'Konga'],
@@ -279,6 +280,7 @@ KNOWN_COMPANIES = {
     'swiggy', 'zomato', 'deliveroo', 'gorillas', 'getir',
     'ant group', 'alibaba', 'tencent', 'bytedance', 'tiktok',
     'jd.com', 'jd.com', 'kuaishou', 'shein', 'temu',
+    'hktvmall', 'hong kong technology venture', 'u-next', 'square enix',
     'mercadoli', 'nubank', 'dlocal', 'paystack', 'flutterwave',
     'uber', 'lyft', 'grab', 'ola', 'bolt', 'inDrive',
     'flipkart', 'amazon', 'shopee', 'lazada',
@@ -1340,6 +1342,12 @@ def build_company_cards(company_list, now_date):
         events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
         recent_7 = [e for e in events if (e.get('date') or '')[:10] >= start_7]
         recent_30 = [e for e in events if (e.get('date') or '')[:10] >= start_30]
+        quality_events = [
+            e for e in recent_30
+            if (e.get('score') or 0) >= 4
+            and not e.get('needs_repair')
+            and e.get('impact') != '未知'
+        ]
         latest = events[0] if events else {}
         latest_title = clean_display_title(latest.get('display_title') or latest.get('summary_short') or latest.get('title') or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
@@ -1349,6 +1357,7 @@ def build_company_cards(company_list, now_date):
             **company,
             'recent_7': len(recent_7),
             'recent_30': len(recent_30),
+            'quality_30': len(quality_events),
             'latest_title': latest_title,
             'latest_date': (latest.get('date') or '')[:10],
             'signal': signal,
@@ -1368,6 +1377,7 @@ def group_company_cards(company_list):
             'total': len(companies),
             'active': sum(1 for c in companies if c.get('count', 0) > 0),
             'recent_30': sum(c.get('recent_30', 0) for c in companies),
+            'quality_30': sum(c.get('quality_30', 0) for c in companies),
             'companies': companies,
         })
     return grouped
@@ -1434,7 +1444,33 @@ def _select_mature_main_date(sorted_dates, all_events_for_list, events):
         notice = f'展示成熟批次，今日早盘 {latest_count} 条待汇入'
     return main_date, latest_date, latest_count, notice
 
-def generate_html(force=False, preview_mode=False):
+
+def _quality_main_events(main_events):
+    """Build the quality-filtered main batch used as a fallback display list."""
+    seen_titles = set()
+    deduped = []
+    for e in main_events:
+        norm = re.sub(r'[^\w]', '', e.get('title', '').lower())
+        if norm in seen_titles or len(norm) <= 10:
+            continue
+        seen_titles.add(norm)
+
+        ev_type = e.get('event_types', ['other'])[0]
+        if ev_type == 'other':
+            continue
+
+        score = e.get('score', 0)
+        if score < 5:
+            continue
+
+        deduped.append(e)
+
+    deduped.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
+    return deduped
+
+
+def build_display_context():
+    """Return the same final event model used by the HTML dashboard and RSS feed."""
     events = load_events()
     sorted_dates = sorted(events.keys(), reverse=True)
 
@@ -1462,32 +1498,7 @@ def generate_html(force=False, preview_mode=False):
                     main_events = evs
                     break
 
-    # 标题去重 + 质量过滤 + 按时间排序
-    # 1. 排除other类型和低评分事件
-    # 2. 按时间倒序（最新的在前）
-    seen_titles = set()
-    deduped = []
-    for e in main_events:
-        norm = re.sub(r'[^\w]', '', e.get('title', '').lower())
-        if norm in seen_titles or len(norm) <= 10:
-            continue
-        seen_titles.add(norm)
-
-        # 排除other类型事件（低质量）
-        ev_type = e.get('event_types', ['other'])[0]
-        if ev_type == 'other':
-            continue
-
-        # 排除低评分事件（评分<5视为低质量）
-        score = e.get('score', 0)
-        if score < 5:
-            continue
-
-        deduped.append(e)
-
-    # 按时间倒序，同一天按评分排序
-    deduped.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
-    all_feed = deduped
+    all_feed = _quality_main_events(main_events)
 
     # 公司动态单独处理
     company_events, generic_events = split_company_events(events)
@@ -1524,6 +1535,53 @@ def generate_html(force=False, preview_mode=False):
     if mature_main_date:
         main_date = mature_main_date
         main_events = events.get(main_date, [])
+        all_feed = _quality_main_events(main_events)
+
+    # 今日要点 = what'll be displayed — 从 all_events_for_list 中取今天事件
+    today_events = [e for e in all_events_for_list if (e.get('date') or '')[:10] == main_date]
+    if not today_events:
+        today_events = all_feed
+
+    return {
+        'events': events,
+        'sorted_dates': sorted_dates,
+        'today_str': today_str,
+        'main_date': main_date,
+        'main_events': main_events,
+        'all_feed': all_feed,
+        'company_events': company_events,
+        'generic_events': generic_events,
+        'company_by_company': company_by_company,
+        'company_events_filtered': company_events_filtered,
+        'preset_company_list': preset_company_list,
+        'all_events_for_list': all_events_for_list,
+        'today_events': today_events,
+        'latest_data_date': latest_data_date,
+        'latest_visible_count': latest_visible_count,
+        'batch_notice': batch_notice,
+        'period_reference_date': period_reference_date,
+    }
+
+
+def generate_html(force=False, preview_mode=False):
+    context = build_display_context()
+    events = context['events']
+    sorted_dates = context['sorted_dates']
+    today_str = context['today_str']
+    main_date = context['main_date']
+    main_events = context['main_events']
+    all_feed = context['all_feed']
+    company_events = context['company_events']
+    generic_events = context['generic_events']
+    company_events_filtered = context['company_events_filtered']
+    preset_company_list = context['preset_company_list']
+    all_events_for_list = context['all_events_for_list']
+    today_events = context['today_events']
+    latest_data_date = context['latest_data_date']
+    latest_visible_count = context['latest_visible_count']
+    batch_notice = context['batch_notice']
+    period_reference_date = context['period_reference_date']
+
     preset_company_list = build_company_cards(preset_company_list, main_date)
     company_groups = group_company_cards(preset_company_list)
 
@@ -1531,11 +1589,6 @@ def generate_html(force=False, preview_mode=False):
     cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
     history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
     history = [(d, events.get(d, [])) for d in history_dates if events.get(d, [])]
-
-    # 今日要点 = what'll be displayed — 从 all_events_for_list 中取今天事件
-    today_events = [e for e in all_events_for_list if (e.get('date') or '')[:10] == main_date]
-    if not today_events:
-        today_events = all_feed
 
     signals = get_signal_events(events)
     # ⚠️ 关键：weekly 必须从 today_events 计数，不是 all_feed

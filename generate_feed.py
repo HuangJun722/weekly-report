@@ -1,21 +1,82 @@
-import json, datetime, html, hashlib, os, sys
+import datetime, html, hashlib, os, sys
+from pathlib import Path
 
-sys.path.insert(0, 'scripts')
-from generate_html import dedupe_display_events
+ROOT = Path(__file__).resolve().parent
+SCRIPTS_DIR = ROOT / 'scripts'
+os.chdir(ROOT)
+sys.path.insert(0, str(SCRIPTS_DIR))
+from generate_html import build_display_context
 
-with open('data/events.json', 'r', encoding='utf-8') as f:
-    events = json.load(f)
+context = build_display_context()
+feed_date = context['main_date']
 
-flattened = []
-for date_str, day_events in events.items():
-    for ev in day_events:
-        ev['date_str'] = date_str
-        flattened.append(ev)
 
-flattened.sort(key=lambda x: x['date_str'], reverse=True)
-latest_date = flattened[0]['date_str']
-flattened = [ev for ev in flattened if ev['date_str'] == latest_date]
-flattened = dedupe_display_events(flattened)
+def text_value(value):
+    return str(value or '').strip()
+
+
+def first_text(*values):
+    for value in values:
+        text = text_value(value)
+        if text:
+            return text
+    return ''
+
+
+def display_source(ev):
+    source = first_text(ev.get('display_source'), ev.get('source_detail'), ev.get('publisher'), ev.get('source'), '未知来源')
+    raw_source = text_value(ev.get('source'))
+    if raw_source and raw_source != source:
+        return f'{source}（{raw_source}）'
+    return source
+
+
+def entry_title(ev):
+    return first_text(ev.get('display_title'), ev.get('summary_short'), ev.get('reason'), ev.get('title'), '无标题')
+
+
+def is_high_value_feed_event(ev):
+    impact = text_value(ev.get('display_impact') or ev.get('impact'))
+    return (
+        ev.get('bd_priority') == '高'
+        and not ev.get('needs_repair')
+        and bool(text_value(ev.get('reason')))
+        and bool(impact)
+        and impact != '未知'
+    )
+
+
+feed_events = [ev for ev in context['today_events'] if is_high_value_feed_event(ev)]
+
+
+def entry_summary(ev):
+    parts = []
+    reason = text_value(ev.get('reason'))
+    impact = text_value(ev.get('display_impact') or ev.get('impact'))
+    if impact == '未知':
+        impact = ''
+    original_title = text_value(ev.get('original_title') or ev.get('title'))
+    title = entry_title(ev)
+
+    if original_title and original_title != title:
+        parts.append(f'<p><strong>原题：</strong>{html.escape(original_title)}</p>')
+    if reason:
+        parts.append(f'<p><strong>为什么重要：</strong>{html.escape(reason)}</p>')
+    if impact:
+        parts.append(f'<p><strong>影响：</strong>{html.escape(impact)}</p>')
+
+    meta = []
+    if ev.get('insight_label'):
+        meta.append(f'标签：{html.escape(text_value(ev.get("insight_label")))}')
+    if ev.get('event_types'):
+        meta.append(f'类型：{", ".join(html.escape(str(t)) for t in ev["event_types"])}')
+    if ev.get('region'):
+        meta.append(f'地区：{html.escape(text_value(ev.get("region")))}')
+    if ev.get('company_name'):
+        meta.append(f'公司：{html.escape(text_value(ev.get("company_name")))}')
+    meta.append(f'来源：{html.escape(display_source(ev))}')
+    parts.append(f'<p>{" | ".join(meta)}</p>')
+    return ''.join(parts)
 
 now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 feed_id = 'tag:weekly-report,2026:main'
@@ -23,7 +84,7 @@ feed_id = 'tag:weekly-report,2026:main'
 feed = f'''<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>全球互联网百晓生 · 事件流</title>
-  <subtitle>实时事件订阅源，基于情报站数据</subtitle>
+  <subtitle>高价值事件推送，复用情报站每日事件卡片</subtitle>
   <id>{feed_id}</id>
   <updated>{now}</updated>
   <link href="https://weekly-report.ai/" rel="alternate"/>
@@ -32,30 +93,15 @@ feed = f'''<?xml version="1.0" encoding="UTF-8"?>
   <rights>CC BY-NC 4.0</rights>
 '''
 
-for ev in flattened:
-    uid_base = ev.get('url', ev.get('title', '')) + ev['date_str']
+for ev in feed_events:
+    entry_date = (ev.get('date') or feed_date or '')[:10]
+    uid_base = ev.get('url', ev.get('title', '')) + entry_date
     uid_hash = hashlib.sha1(uid_base.encode('utf-8')).hexdigest()[:8]
     entry_id = f'tag:weekly-report,2026:event-{uid_hash}'
-    updated = ev['date_str'] + 'T00:00:00Z'
-    title = html.escape(ev.get('title', '无标题'))
+    updated = entry_date + 'T00:00:00Z'
+    title = html.escape(entry_title(ev))
     url = ev.get('url', '')
-    summary_parts = []
-    if ev.get('reason'):
-        summary_parts.append(f'<p>{html.escape(ev["reason"])}</p>')
-    tags = []
-    if ev.get('insight_label'):
-        tags.append(f'标签：{html.escape(ev["insight_label"])}')
-    if ev.get('event_types'):
-        tags.append(f'类型：{", ".join(html.escape(t) for t in ev["event_types"])}')
-    if ev.get('region'):
-        tags.append(f'地区：{html.escape(ev["region"])}')
-    if ev.get('level'):
-        tags.append(f'级别：{html.escape(ev["level"])}')
-    if tags:
-        summary_parts.append(f'<p>{" | ".join(tags)}</p>')
-    if ev.get('source'):
-        summary_parts.append(f'<p>来源：{html.escape(ev["source"])}</p>')
-    summary = ''.join(summary_parts)
+    summary = entry_summary(ev)
 
     entry = f'''
   <entry>
@@ -69,8 +115,8 @@ for ev in flattened:
 
 feed += '\n</feed>\n'
 
-feed_path = 'docs/feed.xml'
-os.makedirs(os.path.dirname(feed_path), exist_ok=True)
+feed_path = ROOT / 'docs' / 'feed.xml'
+os.makedirs(feed_path.parent, exist_ok=True)
 with open(feed_path, 'w', encoding='utf-8') as f:
     f.write(feed)
 print(f'Feed generated: {feed_path}')

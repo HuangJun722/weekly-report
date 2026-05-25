@@ -1,110 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>全球互联网百晓生 · 事件流</title>
-  <subtitle>实时事件订阅源，基于情报站数据</subtitle>
+  <subtitle>高价值事件推送，复用情报站每日事件卡片</subtitle>
   <id>tag:weekly-report,2026:main</id>
-  <updated>2026-05-25T12:42:47Z</updated>
+  <updated>2026-05-25T13:47:51Z</updated>
   <link href="https://weekly-report.ai/" rel="alternate"/>
   <link href="feed.xml" rel="self" type="application/atom+xml"/>
   <author><name>Global Internet Intelligence Station</name></author>
   <rights>CC BY-NC 4.0</rights>
 
   <entry>
-    <title>Naver and Kakao, which received pleasant report cards in the first quarter of this year due to stron.. - 매일경제</title>
-    <link href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5veENXMkZpX1N6RklBWml6NGFJQzZhS2JTdzhPa0xrNFRfdHlMZU1TMUxHN2xobWQ5WThCSnRhN1RlcHFaMWRGQ2E4WQ?oc=5"/>
-    <id>tag:weekly-report,2026:event-4d8cadfa</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>亚太Naver和Kakao发布一季度业绩</p><p>标签：合作机会 | 类型：strategy | 地区：亚太 | 级别：D</p><p>来源：Google News</p></summary>
+    <title>Fresha获8000万美元融资估值达10亿美元</title>
+    <link href="https://ventureburn.com/fresha-raises-80m-hits-1-billion-valuation/"/>
+    <id>tag:weekly-report,2026:event-1b54bf16</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>Fresha Raises $80M, Hits $1 Billion Valuation</p><p><strong>为什么重要：</strong>非洲美业SaaS平台晋级独角兽，中东和非洲SaaS赛道有集成和合作机会</p><p><strong>影响：</strong>非洲SaaS平台、美业技术服务商</p><p>标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn</p></summary>
   </entry>
   <entry>
-    <title>India’s SolarSquare is raising $60M at a $500M valuation. It has powered 50,000 homes.</title>
-    <link href="https://thenextweb.com/news/solarsquare-series-c-60-million-india-rooftop-solar"/>
-    <id>tag:weekly-report,2026:event-4b555251</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>印度屋顶太阳能获大额融资，新能源基建与家庭能源管理市场扩大</p><p>标签：资金流向 | 类型：funding | 地区：欧洲 | 级别：D</p><p>来源：The Next Web</p></summary>
+    <title>越南Dien May Xanh计划$546M IPO</title>
+    <link href="https://www.techinasia.com/vietnams-mobile-world-plans-2026-ipo-for-electronics-unit"/>
+    <id>tag:weekly-report,2026:event-c44db500</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>Vietnamese electronics retailer Dien May Xanh eyes $546m IPO</p><p><strong>为什么重要：</strong>越南电子零售巨头拟IPO，供应链和支付合作机会涌现</p><p><strong>影响：</strong>越南电子供应链、支付服务商</p><p>标签：资金流向 | 类型：funding, strategy | 地区：亚太 | 来源：Tech in Asia</p></summary>
   </entry>
   <entry>
-    <title>Delivery Hero confirms takeover bid from Uber</title>
-    <link href="https://www.techinasia.com/uber-explores-full-takeover-germanys-delivery-hero"/>
-    <id>tag:weekly-report,2026:event-0ce24abc</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>全球外卖平台整合加速，东南亚本地配送平台面临竞争压力</p><p>标签：警示信号 | 类型：ma | 地区：亚太 | 级别：D</p><p>来源：Tech in Asia</p></summary>
+    <title>Modal获$355M融资，AI基础设施需求激增</title>
+    <link href="https://ventureburn.com/modal-raises-355m-as-ai-infrastructure-demand-surges/"/>
+    <id>tag:weekly-report,2026:event-32e21e99</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>Modal Raises $355M as AI Infrastructure Demand Surges</p><p><strong>为什么重要：</strong>非洲AI基础设施获大额融资，云服务和算力合作机会显著增加</p><p><strong>影响：</strong>非洲云服务商、数据中心供应商</p><p>标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn</p></summary>
   </entry>
   <entry>
-    <title>Kakao Mobility becomes early test of Korea’s tougher listing rules - The Korea Herald</title>
-    <link href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE5hN0tOLUY0NFhsNWg2SUJyTDAtSENWZnhIWFRVZm5pM2p2OS04Tm05WVRBU3BRU1RfRC1oYnJsazBkaTFoWE1YN0tFZUlGVGlyelJqSk1TVQ?oc=5"/>
-    <id>tag:weekly-report,2026:event-8d2a2196</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>韩国出行科技公司面临更严上市审查，ICT企业需关注韩国资本市场合规门槛变化</p><p>标签：警示信号 | 类型：earnings, strategy | 地区：亚太 | 级别：D</p><p>来源：Google News</p></summary>
+    <title>BIG Fiber获$250M融资，Stonepeak领投</title>
+    <link href="https://ventureburn.com/big-fiber-raises-250m-in-funding-led-by-stonepeak/"/>
+    <id>tag:weekly-report,2026:event-29d19439</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>BIG Fiber Raises $250M in Funding Led by Stonepeak</p><p><strong>为什么重要：</strong>非洲光纤网络获大额融资，宽带基础设施建设和设备采购机会显著</p><p><strong>影响：</strong>非洲电信设备商、网络工程承包商</p><p>标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn</p></summary>
   </entry>
   <entry>
-    <title>Tequipy raises €3M+ to automate global IT operations across 180 countries</title>
-    <link href="https://tech.eu/2026/05/25/tequipy-raises-eur3m-to-automate-global-it-operations-across-180-countries/"/>
-    <id>tag:weekly-report,2026:event-202197f2</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>欧洲IT运维自动化初创融资，跨国企业IT管理工具需求增长</p><p>标签：资金流向 | 类型：funding | 地区：欧洲 | 级别：D</p><p>来源：Tech.eu</p></summary>
+    <title>EOS-X Space获$140M，Mistral收购Emmi AI，Bliq获爱沙尼亚全无人驾驶许可</title>
+    <link href="https://tech.eu/2026/05/22/eos-x-space-raises-140m-mistral-acquires-emmi-ai-and-bliq-approved-for-fully-driverless-road-operations-in-estonia/"/>
+    <id>tag:weekly-report,2026:event-ffb80897</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>EOS-X Space raises $140M, Mistral acquires Emmi AI, and Bliq approved for fully driverless road operations in Estonia</p><p><strong>为什么重要：</strong>欧洲太空科技获大额融资，AI模型并购加速，无人驾驶法规突破带来ICT集成机会</p><p><strong>影响：</strong>太空通信设备商、AI模型集成商、自动驾驶传感器商</p><p>标签：资金流向 | 类型：funding, ma | 地区：欧洲 | 来源：Tech.eu</p></summary>
   </entry>
   <entry>
-    <title>Perplant raises €1 million to equip tractors with AI “eyes” to cut herbicide use and boost profits for farmers</title>
-    <link href="https://www.eu-startups.com/2026/05/perplant-raises-e1-million-to-equip-tractors-with-ai-eyes-to-cut-herbicide-use-and-boost-profits-for-farmers/"/>
-    <id>tag:weekly-report,2026:event-081f5ae5</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>欧洲农业科技早期融资，AI视觉在精准农业中应用机会增加</p><p>标签：资金流向 | 类型：funding, earnings | 地区：欧洲 | 级别：D</p><p>来源：EU-Startups</p></summary>
+    <title>Quartermaster获$43M用于海洋追踪技术</title>
+    <link href="https://ventureburn.com/quartermaster-raises-43m-to-transform-ocean-tracking/"/>
+    <id>tag:weekly-report,2026:event-3e622c95</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>Quartermaster Raises $43M to Transform Ocean Tracking</p><p><strong>为什么重要：</strong>非洲海洋物流数字化获大额融资，供应链追踪技术合作机会显现</p><p><strong>影响：</strong>非洲物流平台、海事技术供应商</p><p>标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn</p></summary>
   </entry>
   <entry>
-    <title>Tequipy, founded by Revolut’s former IT chief, raises over €3 million to automate global device logistics</title>
-    <link href="https://www.eu-startups.com/2026/05/tequipy-founded-by-revoluts-former-it-chief-raises-over-e3-million-to-automate-global-device-logistics/"/>
-    <id>tag:weekly-report,2026:event-a4486142</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>欧洲企业IT物流自动化赛道获融资，设备管理SaaS有集成机会</p><p>标签：资金流向 | 类型：funding | 地区：欧洲 | 级别：D</p><p>来源：EU-Startups</p></summary>
-  </entry>
-  <entry>
-    <title>Finland’s Grundium acquires Denmark’s Visiopharm to build an end-to-end AI precision pathology platform</title>
-    <link href="https://www.eu-startups.com/2026/05/finlands-grundium-acquires-denmarks-visiopharm-to-build-an-end-to-end-ai-precision-pathology-platform/"/>
-    <id>tag:weekly-report,2026:event-d5446cea</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>欧洲数字病理领域并购整合，AI医疗影像供应链面临重组</p><p>标签：资金流向 | 类型：ma | 地区：欧洲 | 级别：D</p><p>来源：EU-Startups</p></summary>
-  </entry>
-  <entry>
-    <title>Awfis Q4: Profit Doubles YoY To ₹23 Cr, Revenue Up 23%</title>
-    <link href="https://inc42.com/buzz/awfis-q4-profit-doubles-yoy-to-%e2%82%b923-cr-revenue-up-23/"/>
-    <id>tag:weekly-report,2026:event-db37152e</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>印度灵活办公空间公司盈利强劲，亚太企业服务赛道需求稳定</p><p>标签：背景补充 | 类型：earnings | 地区：亚太 | 级别：D</p><p>来源：Inc42</p></summary>
-  </entry>
-  <entry>
-    <title>Exclusive: Yes Madam Bags ₹50 Cr In Maiden Funding Round From Info Edge</title>
-    <link href="https://inc42.com/buzz/exclusive-yes-madam-bags-%e2%82%b950-cr-in-maiden-funding-round-from-info-edge/"/>
-    <id>tag:weekly-report,2026:event-5c2d9e83</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>印度本地服务平台获战略投资，亚太本地生活科技赛道持续有资金流入</p><p>标签：资金流向 | 类型：funding | 地区：亚太 | 级别：D</p><p>来源：Inc42</p></summary>
-  </entry>
-  <entry>
-    <title>Fuel Crisis Hits Ride-Hailing, Cashfree’s Profit Puzzle &amp; More</title>
-    <link href="https://inc42.com/buzz/fuel-crisis-hits-ride-hailing-cashfrees-profit-puzzle-more/"/>
-    <id>tag:weekly-report,2026:event-7ad9b189</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>印度燃料价格上涨影响网约车运营成本，支付公司盈利模式面临挑战</p><p>标签：警示信号 | 类型：earnings | 地区：亚太 | 级别：D</p><p>来源：Inc42</p></summary>
-  </entry>
-  <entry>
-    <title>LinkedIn shares video creation tips based on platform trends</title>
-    <link href="https://www.socialmediatoday.com/news/linkedin-shares-video-creation-tips-based-on-platform-trends/821050/"/>
-    <id>tag:weekly-report,2026:event-4c141cb5</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>全球社交平台视频化趋势明确，ICT从业者可关注视频内容工具与AI剪辑技术合作机会</p><p>标签：合作机会 | 类型：earnings | 地区：全球 | 级别：D</p><p>来源：Social Media Today</p></summary>
-  </entry>
-  <entry>
-    <title>South Africa’s Altron declares $30 million special dividend after profit surge</title>
-    <link href="https://techcabal.com/2026/05/25/south-africa-alton-special-dividend/"/>
-    <id>tag:weekly-report,2026:event-b9f20ded</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>南非ICT集团盈利强劲，ICT从业者可关注其IT服务外包与基础设施采购需求</p><p>标签：背景补充 | 类型：earnings | 地区：非洲 | 级别：C</p><p>来源：TechCabal</p></summary>
-  </entry>
-  <entry>
-    <title>Branch lays off staff despite posting $30M profit</title>
-    <link href="https://techpoint.africa/insight/techpoint-digest-1351/"/>
-    <id>tag:weekly-report,2026:event-e82f8de0</id>
-    <updated>2026-05-25T00:00:00Z</updated>
-    <summary type="html"><p>非洲金融科技公司Branch盈利仍裁员，ICT从业者需警惕同类公司成本优化与业务收缩风险</p><p>标签：警示信号 | 类型：earnings | 地区：非洲 | 级别：C</p><p>来源：Techpoint</p></summary>
+    <title>August Robotics获$30M B轮融资</title>
+    <link href="https://ventureburn.com/august-robotics-raises-30m-series-b/"/>
+    <id>tag:weekly-report,2026:event-750646da</id>
+    <updated>2026-05-23T00:00:00Z</updated>
+    <summary type="html"><p><strong>原题：</strong>August Robotics Raises $30M to Scale Construction Automation Platform</p><p><strong>为什么重要：</strong>非洲建筑自动化平台获大额融资，机器人集成和施工软件合作机会增加</p><p><strong>影响：</strong>建筑机器人供应商、非洲工程承包商</p><p>标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn</p></summary>
   </entry>
 </feed>

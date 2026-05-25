@@ -81,6 +81,33 @@
       "track": "社交平台与广告",
       "signal_types": ["ads_monetization", "marketplace_policy"],
       "quality_note": "适合替代直接抓 X/Twitter 的二次沉淀源。"
+    },
+    {
+      "name": "HKTVmall IR News",
+      "url": "https://ir.hktv.com.hk/media-news",
+      "status": "active",
+      "tier": "L1",
+      "track": "香港电商与本地零售",
+      "signal_types": ["official_disclosure", "merchant_product", "marketplace_policy"],
+      "quality_note": "官方披露入口，适合跟踪 HKTVmall 与 Hong Kong Technology Venture 的业务调整。"
+    },
+    {
+      "name": "U-NEXT Holdings News",
+      "url": "https://unext-hd.co.jp/newsrelease/",
+      "status": "active",
+      "tier": "L1",
+      "track": "日本流媒体与数字内容",
+      "signal_types": ["official_disclosure", "merchant_product", "ads_monetization"],
+      "quality_note": "官方新闻入口，日文页面需靠标题信号过滤，避免普通活动公告。"
+    },
+    {
+      "name": "Square Enix IR News",
+      "url": "https://www.hd.square-enix.com/eng/ir/irnews/",
+      "status": "active",
+      "tier": "L1",
+      "track": "日本游戏与数字娱乐",
+      "signal_types": ["official_disclosure", "funding_deal", "marketplace_policy"],
+      "quality_note": "英文 IR 入口，适合跟踪财报、资本动作和全球发行战略。"
     }
   ],
   "candidate_sources": [

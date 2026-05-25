@@ -136,6 +136,9 @@ COMPANY_SOURCES = [
     {'name': 'VNG Group', 'query': 'VNG Group Vietnam', 'region': '亚太', 'priority': 1},
     {'name': 'Yahoo', 'query': 'Yahoo Tech APAC', 'region': '亚太', 'priority': 1},
     {'name': 'Cyberagent', 'query': 'CyberAgent Japan', 'region': '亚太', 'priority': 1},
+    {'name': 'HKTVmall', 'query': 'HKTVmall Hong Kong Technology Venture', 'region': '亚太', 'priority': 1},
+    {'name': 'U-NEXT', 'query': 'U-NEXT Holdings Japan', 'region': '亚太', 'priority': 1},
+    {'name': 'Square Enix', 'query': 'Square Enix Holdings', 'region': '亚太', 'priority': 1},
     # 欧洲
     {'name': 'Adyen', 'query': 'Adyen', 'region': '欧洲', 'priority': 2},
     {'name': 'Zalando', 'query': 'Zalando Germany', 'region': '欧洲', 'priority': 2},
@@ -177,6 +180,9 @@ COMPANY_ALIASES = {
     'VNG Group': ['VNG', 'VNG Group', 'Zalo'],
     'Yahoo': ['Yahoo'],
     'Cyberagent': ['CyberAgent', 'Cyberagent', 'ABEMA'],
+    'HKTVmall': ['HKTVmall', 'Hong Kong Technology Venture', 'HKTV'],
+    'U-NEXT': ['U-NEXT', 'U-NEXT HOLDINGS', 'U-NEXT Holdings', 'USEN-NEXT'],
+    'Square Enix': ['Square Enix', 'Square Enix Holdings', 'SQUARE ENIX'],
     'Adyen': ['Adyen'],
     'Zalando': ['Zalando'],
     'Allegro': ['Allegro'],
@@ -249,6 +255,16 @@ COMPANY_LOW_SIGNAL_PATTERNS = [
     'token', 'stablecoin', 'crypto exchange', 'trial', 'arrested',
     'prison', 'graft', 'corruption', 'local elections',
     'social media traffic', 'comparison', 'tech times',
+]
+
+CHINESE_OUTBOUND_PATTERNS = [
+    'overseas', 'international', 'global', 'abroad', 'offshore', 'foreign market',
+    'cross-border', 'cross border', 'southeast asia', 'middle east', 'europe',
+    'latin america', 'africa', 'india', 'japan', 'korea', 'singapore',
+    'malaysia', 'indonesia', 'thailand', 'vietnam', 'philippines', 'uae',
+    'saudi', 'dubai', 'kuwait', 'turkey', 'brazil', 'mexico',
+    'expands to', 'expands into', 'launches in', 'enters',
+    '海外', '出海', '国际', '跨境', '境外',
 ]
 
 TITLE_STOPWORDS = {
@@ -508,6 +524,11 @@ def _title_mentions_company(title, cfg):
 def _is_low_signal_company_title(title):
     title_lower = title.lower()
     return any(pattern in title_lower for pattern in COMPANY_LOW_SIGNAL_PATTERNS)
+
+
+def _is_chinese_outbound_title(title):
+    title_lower = (title or '').lower()
+    return any(pattern in title_lower for pattern in CHINESE_OUTBOUND_PATTERNS)
 
 
 def _is_official_company_source(item):
@@ -854,6 +875,9 @@ HTML_SOURCES = [
     {'name': 'Kaspi.kz IR', 'url': 'https://ir.kaspi.kz/news-releases/', 'source': 'Kaspi.kz', 'region': '中东', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Kaspi.kz', 'is_company': True, 'max': 4},
     {'name': 'Naver Press', 'url': 'https://www.navercorp.com/en/media/pressReleases', 'source': 'Naver', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Naver', 'is_company': True, 'max': 4},
     {'name': 'Kakao Press', 'url': 'https://www.kakaocorp.com/page/detail/pr?lang=en', 'source': 'Kakao', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Kakao', 'is_company': True, 'max': 4},
+    {'name': 'HKTVmall IR News', 'url': 'https://ir.hktv.com.hk/media-news', 'source': 'HKTVmall', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'HKTVmall', 'is_company': True, 'max': 4},
+    {'name': 'U-NEXT News', 'url': 'https://unext-hd.co.jp/newsrelease/', 'source': 'U-NEXT', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'U-NEXT', 'is_company': True, 'max': 4},
+    {'name': 'Square Enix IR News', 'url': 'https://www.hd.square-enix.com/eng/ir/irnews/', 'source': 'Square Enix', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Square Enix', 'is_company': True, 'max': 4},
     {'name': 'Jumia Newsroom', 'url': 'https://group.jumia.com/news', 'source': 'Jumia', 'region': '非洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Jumia', 'is_company': True, 'max': 4},
 ]
 
@@ -967,6 +991,8 @@ def fetch_company_news(cfg):
         title_lower = f"{title} {publisher}".lower()
         if any(kw in title_lower for kw in COMPANY_BLACKLIST): continue
         if _is_low_signal_company_title(title):
+            continue
+        if cfg.get('region') == '中资' and not _is_chinese_outbound_title(title):
             continue
         if publisher and publisher_counts.get(publisher.lower(), 0) >= 1:
             continue
@@ -1974,7 +2000,9 @@ def _calc_score(item):
     region_mult = {'非洲': 1.3, '中东': 1.25, '亚太': 1.2, '拉美': 1.15, '欧洲': 1.0}.get(item.get('region', ''), 1.0)
 
     # 有公司名
-    named_pts = 1 if item.get('companies') else 0
+    named_pts = 1 if item.get('companies') or item.get('company_name') else 0
+    if item.get('region') == '中资' and _is_chinese_outbound_title(title):
+        named_pts += 1
 
     raw = (amt_pts + type_pts + named_pts) * region_mult
     return max(min(int(raw), 10), 1)
