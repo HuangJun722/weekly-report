@@ -19717,6 +19717,42 @@
       "needs_repair": true,
       "analysis_source": "deepseek",
       "analysis_status": "fallback"
+    },
+    {
+      "title": "MercadoLibre Stock Fell 13% After Q1 2026 Earnings. Was the Selloff Justified? - TIKR.com",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcWxrQWNJRnRLZ1pYR2NLb3Q0LUd0b1hFdXEzRjcyQzRuWkdiYkU3YkszWFhnaG8tM09oUm1wYnJRZ01pd0s5dHVzNHlkOGhvTXRZaWZ4R0Y1MVl4dTVLdmVIUVFTWVpjdW44ZksyOElFNjVreDBMOS1aem9QcnE5QjBQQ3FiSXBXUFZ1bnFUeXE5OW9qcV9JSkVDLXd3Znl1eVFz?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre Q1财报后股价跌13%",
+      "reason": "拉美电商巨头股价下跌，市场对盈利预期转弱，供应链合作需谨慎",
+      "impact": "拉美电商物流商、支付服务商",
+      "insight_label": "警示信号",
+      "trend_topic": "拉美电商盈利承压",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-05-24",
+      "date": "2026-05-24",
+      "source_detail": "TIKR.com",
+      "publisher": "TIKR.com",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-05-25": [
@@ -20228,6 +20264,120 @@
       "needs_repair": true,
       "analysis_source": "deepseek",
       "analysis_status": "partial"
+    },
+    {
+      "title": "2026.05.25 株式会社U-NEXT HOLDINGS 株式会社GoHandsの株式取得による完全子会社化に関するお知らせ",
+      "url": "https://unext-hd.co.jp/newsrelease/2026/05/gohands.html",
+      "source": "U-NEXT",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "2026.05.25 株式会社U-NEXT HOL",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "U-NEXT",
+      "article_date": null,
+      "date": "2026-05-25",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Pine Labs Posts ₹59 Cr Profit In Q4, Revenue Up 15% YoY",
+      "url": "https://inc42.com/buzz/pine-labs-posts-%e2%82%b959-cr-profit-in-q4-revenue-up-15/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Pine Labs Q4利润₹59 Cr，营收增15%",
+      "reason": "印度支付科技公司盈利稳健，商户数字支付基础设施需求持续",
+      "impact": "印度支付终端商、银行科技合作方",
+      "insight_label": "背景补充",
+      "trend_topic": "印度FinTech盈利改善",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-25",
+      "date": "2026-05-25",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/01/Pinelabs-Financials-ftr.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "quality_flags": [
+        "generic_reason"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "partial"
+    },
+    {
+      "title": "Leading Crypto Calculators to Compare Prices, Profits, and Risk in 2026",
+      "url": "https://ventureburn.com/leading-crypto-calculators-to-compare-prices-profits-and-risk-in-2026/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "2026年领先加密货币计算器对比指南发布",
+      "reason": "非洲加密货币工具市场教育需求增长，为本地化金融科技工具开发提供机会",
+      "impact": "非洲加密货币交易平台、金融科技工具开发商",
+      "insight_label": "背景补充",
+      "trend_topic": "非洲加密工具需求增长",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-25",
+      "date": "2026-05-25",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/05/oavb2552026ft1.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ]
 }
