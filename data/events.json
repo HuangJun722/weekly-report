@@ -20378,6 +20378,79 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "IHS Towers board backs MTN buyout as shareholders prepare to vote",
+      "url": "https://techcabal.com/2026/05/25/ihs-shareholders-to-vote-on-mtn-buyout-proposal/",
+      "source": "TechCabal",
+      "region": "非洲",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "IHS Towers董事会支持MTN收购，股东将投票",
+      "reason": "非洲铁塔巨头IHS被MTN收购，电信基础设施整合加速，第三方运维和能源供应商面临洗牌",
+      "impact": "非洲电信塔运维商、基站能源供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲电信基建整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-25",
+      "date": "2026-05-25",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Copy-of-Tap-to-view-Story-Template-2026-05-25T144746.485.jpg",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "REPS Raises $23.6M to Turn Roads Into Power Plants",
+      "url": "https://ventureburn.com/reps-raises-23-6m-to-turn-roads-into-power-plants/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "REPS获$23.6M融资，将道路转化为发电设施",
+      "reason": "非洲新能源基建获大额融资，道路光伏技术为ICT能源解决方案提供新合作场景",
+      "impact": "非洲新能源技术商、智能电网集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲新能源基建加速",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-25",
+      "date": "2026-05-25",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/05/Reps-Raises-23.6M.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-05-26": []
 }
