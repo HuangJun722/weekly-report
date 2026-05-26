@@ -1469,6 +1469,26 @@ def _quality_main_events(main_events):
     return deduped
 
 
+def _is_review_candidate(event):
+    """Return whether a visible event should be tucked under the review drawer."""
+    ev_type = (event.get('event_types') or ['other'])[0]
+    return (
+        event.get('needs_repair')
+        or event.get('analysis_status') == 'fallback'
+        or event.get('impact') == '未知'
+        or (event.get('score') or 0) < 2
+        or ev_type == 'other'
+    )
+
+
+def build_review_events(today_events, limit=12):
+    """Build a deduped review list from the same display batch as high-value events."""
+    review_events = [e for e in today_events if _is_review_candidate(e)]
+    review_events = dedupe_display_events(review_events)
+    review_events.sort(key=lambda x: (x.get('score', 0), x.get('date', '')), reverse=True)
+    return review_events[:limit]
+
+
 def build_display_context():
     """Return the same final event model used by the HTML dashboard and RSS feed."""
     events = load_events()
@@ -1600,6 +1620,7 @@ def generate_html(force=False, preview_mode=False):
     weekly['company_list'] = preset_company_list
 
     trend_groups = build_trend_groups(today_events)
+    repair_events = build_review_events(today_events)
     daily_trend_judgment = weekly.get('summary', '')
     daily_headline, daily_lead = split_judgment(daily_trend_judgment, weekly.get('headline', '今日非中美互联网动态更新'))
     daily_headline, daily_lead = refine_daily_headline(daily_headline, daily_lead, trend_groups)
@@ -1648,6 +1669,7 @@ def generate_html(force=False, preview_mode=False):
         company_groups=company_groups,
         update_time=update_time,
         trend_groups=trend_groups,
+        repair_events=repair_events,
         daily_trend_judgment=daily_trend_judgment,
         daily_headline=daily_headline,
         daily_lead=daily_lead,
