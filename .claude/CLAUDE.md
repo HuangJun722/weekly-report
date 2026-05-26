@@ -10,7 +10,7 @@
 - **P0 Agent**：`build_daily_ai_summary()` 生成「今日判断」AI 趋势分析 → `data/summary.json` → HTML 读取；`rewrite_titles_for_display()` 改写程序层泛化描述；`ai_quality_judge()` 过滤低价值 other 事件
 - **API Key 加密**：`scripts/decrypt_key.py` — PBKDF2 + Fernet 解密本地加密的 API Key
 - **存量补跑**：`scripts/retrofit_events.py` — 扫描 events.json 中泛化描述事件，通过 AI 改写后写回（本地 DeepSeek / GHA 豆包自动切换）
-- **Feed 生成**：`generate_feed.py` — events.json → 最新一天全部事件 → `docs/feed.xml`（Atom XML），供外部 CLI 订阅
+- **Feed 生成**：`generate_feed.py` — 复用 `generate_html.build_display_context()` 的看板最终事件卡片，只推高价值且解释完整事件 → `docs/feed.xml`（Atom XML），供外部 CLI 订阅
 - **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
 - **部署**：GitHub Actions + GitHub Pages（`docs/` 目录）
 - **Feed 地址**：https://huangjun722.github.io/weekly-report/feed.xml

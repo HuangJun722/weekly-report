@@ -62,6 +62,21 @@ def _cn_now():
 def _cn_today():
     return _cn_now().strftime('%Y-%m-%d')
 
+
+def _parse_date(value):
+    try:
+        return datetime.strptime((value or '')[:10], '%Y-%m-%d').date()
+    except (TypeError, ValueError):
+        return None
+
+
+def _recent_article_date(article_date, days=2):
+    parsed = _parse_date(article_date)
+    if not parsed:
+        return True
+    cutoff = (_cn_now() - timedelta(days=days)).date()
+    return parsed >= cutoff
+
 # ============================================================
 # ���源：重点标注是否为融资专属源
 # ============================================================
@@ -354,7 +369,47 @@ def _source_meta(cfg):
 
 def _with_source_meta(item, cfg):
     item.update(_source_meta(cfg))
+    item['region'] = infer_event_region(item.get('title', ''), item.get('region', cfg.get('region', '未知')))
     return item
+
+
+REGION_TITLE_KEYWORDS = [
+    ('亚太', [
+        'india', 'indian', 'vietnam', 'vietnamese', 'singapore', 'malaysia',
+        'indonesia', 'philippines', 'thailand', 'japan', 'japanese', 'korea',
+        'korean', 'australia', 'australian', 'hong kong', 'taiwan',
+        '印度', '越南', '新加坡', '马来西亚', '印尼', '菲律宾', '泰国', '日本', '韩国', '澳大利亚', '香港', '台湾',
+    ]),
+    ('非洲', [
+        'africa', 'african', 'south africa', 'kenya', 'kenyan', 'nigeria',
+        'nigerian', 'egypt', 'egyptian', 'ghana', 'morocco',
+        '非洲', '南非', '肯尼亚', '尼日利亚', '埃及', '加纳', '摩洛哥',
+    ]),
+    ('拉美', [
+        'latin america', 'latam', 'brazil', 'brazilian', 'mexico', 'mexican',
+        'colombia', 'colombian', 'argentina', 'argentine', 'chile', 'chilean',
+        '拉美', '巴西', '墨西哥', '哥伦比亚', '阿根廷', '智利',
+    ]),
+    ('中东', [
+        'middle east', 'mena', 'uae', 'dubai', 'saudi', 'riyadh', 'kuwait',
+        'qatar', 'turkey', 'turkish',
+        '中东', '阿联酋', '迪拜', '沙特', '科威特', '卡塔尔', '土耳其',
+    ]),
+    ('欧洲', [
+        'europe', 'european', 'uk ', 'britain', 'british', 'germany', 'german',
+        'france', 'french', 'spain', 'spanish', 'italy', 'italian', 'finland',
+        'finnish', 'denmark', 'danish', 'sweden', 'swedish', 'norway',
+        '欧洲', '英国', '德国', '法国', '西班牙', '意大利', '芬兰', '丹麦', '瑞典', '挪威',
+    ]),
+]
+
+
+def infer_event_region(title, fallback):
+    text = f' {(title or "").lower()} '
+    for region, keywords in REGION_TITLE_KEYWORDS:
+        if any(keyword.lower() in text for keyword in keywords):
+            return region
+    return fallback or '未知'
 
 # 中美公司关键词（匹配标题中出现的公司名，排除不相关内容）
 # 用非贪婪匹配 + 上下文判断，避免误杀（如 "DeepMind raises" 才排除，纯叙述不排除）
@@ -772,6 +827,8 @@ def _parse_rss_text(cfg, text):
             article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
         if not article_date:
             article_date = _extract_date_from_url(link)
+        if article_date and not _recent_article_date(article_date, days=2):
+            continue
 
         # 图片：从 RSS media:content 或 media:thumbnail 提取
         image_url = ''
@@ -1806,7 +1863,7 @@ def rewrite_titles_for_display(events):
 # P0 Agent：每日AI趋势分析 — 基于今日信号事件生成专业判断
 # ============================================================
 
-def build_daily_ai_summary(today_events):
+def build_daily_ai_summary(today_events, summary_date=None):
     """
     基于今日信号事件，优先调用 DeepSeek 生成 2-4 句专业情报趋势分析。
     保存到 data/summary.json，供 generate_html.py 读取后覆盖模板摘要。
@@ -1818,7 +1875,7 @@ def build_daily_ai_summary(today_events):
         return None
 
     signal = signal[:15]
-    today = _cn_today()
+    today = summary_date or _cn_today()
 
     apis = _chat_api_candidates()
     if not apis:
@@ -2468,6 +2525,7 @@ def main():
     existing_events = [e for events in all_events.values() for e in events]
     existing_urls = {e['url'] for e in existing_events if e.get('url')}
     pubdate_ok, pubdate_fallback = 0, 0
+    added_events = []
     for event in today_events:
         if event['url'] in existing_urls or any(_is_same_event(event, existing) for existing in existing_events):
             continue  # 跨批次去重
@@ -2483,14 +2541,15 @@ def main():
             pubdate_fallback += 1
             # 没有 pubDate 的文章（如 HTML 降级采集），归入运行日
             all_events.setdefault(today, []).append(event)
+        added_events.append(event)
     # 确保今日槽位存在（即使 0 条也记录空日期，保持历史完整性）
     all_events.setdefault(today, [])
 
     # 输出统计
-    company_added = sum(1 for e in today_events if e.get('is_company'))
-    generic_added = len(today_events) - company_added
+    company_added = sum(1 for e in added_events if e.get('is_company'))
     print(f"  📅 pubDate 解析：{pubdate_ok} 条有日期 | {pubdate_fallback} 条无日期（归入今日）")
-    print(f"  🏢 公司动态：{company_added} 条 | 通用热点：{generic_added} 条")
+    print(f"  🏢 新增公司动态：{company_added} 条 | 新增通用热点：{len(added_events) - company_added} 条")
+    print(f"  🚫 历史重复跳过：{len(today_events) - len(added_events)} 条")
 
     # 清理 90 天前（避免数据无限膨胀，保留 3 个月）
     cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
@@ -2516,7 +2575,15 @@ def main():
     print(f"\n  共 {total} 条历史事件（公司 {company_total} 条），跨 {len(all_events)} 天）")
 
     # P0 Agent：每日AI趋势分析（生成2-4句专业判断）
-    build_daily_ai_summary(today_events)
+    summary_groups = {}
+    for event in added_events:
+        summary_date = (event.get('date') or today)[:10]
+        summary_groups.setdefault(summary_date, []).append(event)
+    if summary_groups:
+        for summary_date, summary_events in sorted(summary_groups.items()):
+            build_daily_ai_summary(summary_events, summary_date)
+    else:
+        print("  📊 今日无新增入库事件，跳过 AI 趋势分析")
 
 if __name__ == '__main__':
     main()

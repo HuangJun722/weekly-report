@@ -694,7 +694,7 @@ def get_signal_events(events):
 
     return result  # 已经在日期倒序遍历，返回即有序
 
-def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
+def build_weekly_summary(all_feed, signals, latest_date_events, all_events, summary_date=None):
     """生成周报摘要：排除中资出海，只展示真正的"非中美"动态"""
     # 排除中资出海（中资有独立标签页）
     non_chinese = [e for e in all_feed if not e.get('is_chinese_capital')]
@@ -795,7 +795,7 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events):
         if os.path.exists(summary_path):
             with open(summary_path, 'r', encoding='utf-8') as sf:
                 ai_summaries = json.load(sf)
-            today_s = _cn_today()
+            today_s = summary_date or _cn_today()
             if today_s in ai_summaries:
                 ai_text = ai_summaries[today_s].strip()
                 if len(ai_text) >= 20:
@@ -841,7 +841,7 @@ def build_trend_groups(events):
 def build_date_panel(date_str, day_events, all_events):
     """预计算某日期的今日面板数据（趋势分组 + 判断 + 统计），供 JS 翻页切换"""
     signals = get_signal_events(all_events)
-    weekly = build_weekly_summary(day_events, signals, day_events, all_events)
+    weekly = build_weekly_summary(day_events, signals, day_events, all_events, summary_date=date_str)
     trend_groups = build_trend_groups(day_events)
 
     dt = datetime.strptime(date_str, '%Y-%m-%d')
@@ -1387,7 +1387,7 @@ def load_site_updates():
     path = os.path.join('data', 'site_updates.json')
     fallback = [{
         'date': _cn_today(),
-        'version': 'v0.1',
+        'version': 'V0.1',
         'type': '系统',
         'status': '已上线',
         'title': '网站初始化',
@@ -1417,7 +1417,7 @@ def load_site_updates():
             'summary': item.get('summary') or '',
             'changes': [str(c) for c in changes if str(c).strip()],
         })
-    return sorted(cleaned or fallback, key=lambda x: x.get('date', ''), reverse=True)
+    return sorted(cleaned or fallback, key=lambda x: x.get('date', ''), reverse=True)[:10]
 
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
@@ -1594,7 +1594,7 @@ def generate_html(force=False, preview_mode=False):
     # ⚠️ 关键：weekly 必须从 today_events 计数，不是 all_feed
     # all_feed 过滤了 other 类型和低分事件，但页面上展示的是 today_events
     # 两个数据源不一致导致"共0条动态"而实际有 9 条的矛盾
-    weekly = build_weekly_summary(today_events, signals, main_events, events)
+    weekly = build_weekly_summary(today_events, signals, main_events, events, summary_date=main_date)
     # 公司动态也加入周报摘要
     weekly['company_count'] = len(company_events_filtered)
     weekly['company_list'] = preset_company_list
