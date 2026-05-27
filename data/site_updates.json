@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-05-27",
+    "version": "V1.1",
+    "type": "架构升级",
+    "status": "已上线",
+    "title": "Source Registry 和信号分类开始接管采集口径",
+    "summary": "把信源从 RSS 清单升级为可执行的 Source Registry，并引入最小版信号分类，为后续官方源、changelog、招聘和实体档案打基础。",
+    "changes": [
+      "source_registry.json 新增 source_schema、signal_taxonomy 和可执行 sources 配置",
+      "采集脚本开始读取 registry 中启用的 RSS/HTML 源，并保留 source_type、access_method、credibility_score 等元数据",
+      "事件新增 signal_taxonomy 字段，用 expansion、payment、commerce、ai_infra、capital 等信号维度辅助后续排序",
+      "首批 registry 源优先选择官方 newsroom、developer changelog 和低风险产业源，不接登录态或付费墙来源",
+      "修复候选/需复核事件跨日期不刷新的问题，并加强同主体跨媒体重复的展示去重"
+    ]
+  },
+  {
     "date": "2026-05-25",
     "version": "V1.0",
     "type": "公司监控",

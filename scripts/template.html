@@ -415,10 +415,9 @@ button, input, select { font: inherit; }
               {% endfor %}
               {% endfor %}
             </div>
-            {% if repair_events %}
-            <button class="quality-toggle" id="qualityToggle">显示 {{ repair_events|length }} 条原始候选/需复核事件</button>
+            <button class="quality-toggle" id="qualityToggle"{% if not repair_events %} style="display:none"{% endif %}>显示 {{ repair_events|length }} 条原始候选/需复核事件</button>
             <div class="quality-box" id="qualityBox">
-              <div class="intelligence-list">
+              <div class="intelligence-list" id="qualityList">
                 {% for ev in repair_events %}
                 <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
                   <div class="intel-meta"><span class="label red">需复核</span><span class="label">{{ ev.region }}</span></div>
@@ -432,7 +431,6 @@ button, input, select { font: inherit; }
                 {% endfor %}
               </div>
             </div>
-            {% endif %}
           </section>
         </div>
 
@@ -894,6 +892,29 @@ function eventCardHtml(ev) {
     '<div><h3>' + escHtml(displayTitle) + '</h3>' + original + sum + reason + imp + '</div>' +
     '<div class="amount">' + escHtml(ev.display_amount || ev.display_source || ev.source || '') + '</div></a>';
 }
+function reviewEventCardHtml(ev) {
+  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'');
+  var original = ev.original_title ? '<div class="source-title">原题：' + escHtml(ev.original_title) + '</div>' : '';
+  var reason = ev.reason ? '<p>' + escHtml(ev.reason) + '</p>' : '';
+  return '<a class="intel low event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
+    '<div class="intel-meta"><span class="label red">需复核</span>' + labelHtml(ev.region, '') + '</div>' +
+    '<div><h3>' + escHtml(ev.display_title || ev.title || '') + '</h3>' + original + reason + '</div>' +
+    '<div class="amount">候选</div></a>';
+}
+function eventKey(ev) {
+  return ev && (ev.url || ((ev.date || '') + '|' + (ev.title || '')));
+}
+function renderQualityBox(events) {
+  var toggle = document.getElementById('qualityToggle');
+  var box = document.getElementById('qualityBox');
+  var list = document.getElementById('qualityList');
+  var count = events ? events.length : 0;
+  if (!toggle || !box || !list) return;
+  toggle.style.display = count ? '' : 'none';
+  toggle.textContent = count ? ('显示 ' + count + ' 条原始候选/需复核事件') : '显示 0 条原始候选/需复核事件';
+  box.classList.remove('open');
+  list.innerHTML = count ? events.map(reviewEventCardHtml).join('') : '';
+}
 function navigateToDate(date) {
   var idx = availableDates.indexOf(date);
   if (idx >= 0) navigateDay(idx - currentDateIndex);
@@ -919,9 +940,15 @@ function navigateDay(dir) {
   var list = document.querySelector('#tab-today .content-block .intelligence-list');
   if (list) {
     var html = '';
-    panel.trend_groups.forEach(function(g){ g.events.forEach(function(ev){ html += eventCardHtml(ev); }); });
+    var reviewKeys = new Set((panel.repair_events || []).map(eventKey));
+    panel.trend_groups.forEach(function(g){
+      g.events.forEach(function(ev){
+        if (!reviewKeys.has(eventKey(ev))) html += eventCardHtml(ev);
+      });
+    });
     list.innerHTML = html;
   }
+  renderQualityBox(panel.repair_events || []);
   document.getElementById('statStories').textContent = panel.total_stories || 0;
   document.getElementById('statRegions').textContent = panel.regions || 0;
   document.getElementById('statFunding').textContent = panel.funding || 0;

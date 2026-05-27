@@ -286,6 +286,7 @@ KNOWN_COMPANIES = {
     'flipkart', 'amazon', 'shopee', 'lazada',
     'stc pay', 'urpay', 'tala', 'chime', 'klarna', 'marqeta',
     'allegro', 'olx', 'letgo', '不成',
+    'stord', 'openrouter', 'quantinuum',
 }
 
 # 中资出海关键词
@@ -314,7 +315,7 @@ def _extract_subject(title):
                 start -= 1
             # 往后取词
             end = idx + len(kw)
-            while end < len(title) and (title[end].isalnum() or title[end] in ' -'):
+            while end < len(title) and title[end].isalnum():
                 end += 1
             name = title[start:end].strip().rstrip(' -').strip()
             if len(name) >= 2:
@@ -843,10 +844,12 @@ def build_date_panel(date_str, day_events, all_events):
     signals = get_signal_events(all_events)
     weekly = build_weekly_summary(day_events, signals, day_events, all_events, summary_date=date_str)
     trend_groups = build_trend_groups(day_events)
+    repair_events = build_review_events(day_events)
 
     dt = datetime.strptime(date_str, '%Y-%m-%d')
     return {
         'trend_groups': trend_groups,
+        'repair_events': repair_events,
         'judgment': weekly.get('summary', ''),
         'top3': weekly.get('top3', []),
         'total_stories': len(day_events),
@@ -874,7 +877,9 @@ DISPLAY_ENTITY_STOPWORDS = {
     'inc', 'corp', 'corporation', 'company', 'co', 'ltd', 'limited', 'group',
     'holdings', 'holding', 'technologies', 'technology', 'tech', 'systems',
     'platform', 'platforms', 'analytics', 'computing', 'apps', 'app', 'software',
-    'ai', 'digital', 'global', 'online', 'the',
+    'ai', 'digital', 'global', 'online', 'the', 'amazon', 'fulfillment',
+    'competitor', 'more', 'than', 'korea', 'regional', 'local', 'studio',
+    'busan', 'cloud', 'hands', 'training', 'startups',
 }
 
 
@@ -891,6 +896,8 @@ def _title_subject_key(title):
         if key:
             return key
     patterns = [
+        r'\b([A-Z][A-Za-z0-9\.\-]{2,})\s+(?:raises?|raised|secures?|secured|closes?|closed)\b',
+        r'\b([A-Z][A-Za-z0-9\.\-]{2,})\s+(?:doubles?|doubled|hits?|hit|reaches?|reached|is\s+valued|was\s+valued|valued)\b',
         r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:raises?|raised|secures?|secured|closes?|closed|lands?|landed|bags?|bagged|gets?|got|receives?|received|attracts?|attracted)\b',
         r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:doubles?|doubled|hits?|hit|reaches?|reached|is\s+valued|was\s+valued|valued)\b',
         r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:acquires?|acquired|buys?|bought|merges?|merged|announces?|announced|reports?|reported|posts?|posted)\b',
@@ -934,7 +941,7 @@ def dedupe_display_events(events):
         event_type = (event.get('event_types') or ['other'])[0]
         subject_key = _display_subject_key(event)
         semantic_key = (date_key, event_type, subject_key)
-        if subject_key and event_type in {'funding', 'ma', 'earnings'}:
+        if subject_key and event_type in {'funding', 'ma', 'earnings', 'strategy'}:
             if semantic_key in seen_events:
                 continue
             seen_events.add(semantic_key)

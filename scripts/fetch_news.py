@@ -198,6 +198,9 @@ COMPANY_ALIASES = {
     'HKTVmall': ['HKTVmall', 'Hong Kong Technology Venture', 'HKTV'],
     'U-NEXT': ['U-NEXT', 'U-NEXT HOLDINGS', 'U-NEXT Holdings', 'USEN-NEXT'],
     'Square Enix': ['Square Enix', 'Square Enix Holdings', 'SQUARE ENIX'],
+    'Stord': ['Stord'],
+    'OpenRouter': ['OpenRouter'],
+    'Quantinuum': ['Quantinuum'],
     'Adyen': ['Adyen'],
     'Zalando': ['Zalando'],
     'Allegro': ['Allegro'],
@@ -293,7 +296,9 @@ EVENT_ENTITY_STOPWORDS = {
     'inc', 'corp', 'corporation', 'company', 'co', 'ltd', 'limited', 'group',
     'holdings', 'holding', 'technologies', 'technology', 'tech', 'systems',
     'platform', 'platforms', 'analytics', 'computing', 'apps', 'app', 'software',
-    'ai', 'digital', 'global', 'online', 'the',
+    'ai', 'digital', 'global', 'online', 'the', 'amazon', 'fulfillment',
+    'competitor', 'more', 'than', 'korea', 'regional', 'local', 'studio',
+    'busan', 'cloud', 'hands', 'training', 'startups',
 }
 
 # ============================================================
@@ -365,12 +370,122 @@ def _source_meta(cfg):
         'source_tier': cfg.get('source_tier', 'L3 区域生态源'),
         'source_role': cfg.get('source_role', 'regional_ecosystem'),
         'vertical': cfg.get('vertical', ''),
+        'source_type': cfg.get('source_type', ''),
+        'access_method': cfg.get('access_method', ''),
+        'signal_types': cfg.get('signal_types', []),
+        'source_id': cfg.get('id', cfg.get('name', '')),
+        'credibility_score': cfg.get('credibility_score', 0),
+        'noise_level': cfg.get('noise_level', ''),
     }
 
 def _with_source_meta(item, cfg):
     item.update(_source_meta(cfg))
     item['region'] = infer_event_region(item.get('title', ''), item.get('region', cfg.get('region', '未知')))
+    item['signal_taxonomy'] = infer_signal_taxonomy(item)
     return item
+
+
+SIGNAL_TAXONOMY = {
+    'expansion': ['expands', 'expansion', 'launches in', 'enters', 'new market', 'country', 'localization', 'regional'],
+    'partnership': ['partner', 'partnership', 'collaboration', 'alliance', 'mou', 'co-chair', 'joint'],
+    'payment': ['payment', 'payments', 'wallet', 'bnpl', 'remittance', 'acquiring', 'checkout', 'card', 'fintech'],
+    'commerce': ['commerce', 'ecommerce', 'e-commerce', 'marketplace', 'seller', 'merchant', 'logistics', 'fulfillment'],
+    'ai_infra': ['ai', 'agent', 'model', 'inference', 'gpu', 'cloud', 'data center', 'datacenter', 'compute'],
+    'developer_change': ['api', 'sdk', 'developer', 'changelog', 'release notes', 'platform update'],
+    'capital': ['funding', 'raises', 'raised', 'series ', 'acquires', 'acquisition', 'ipo', 'earnings', 'revenue', 'profit', 'valuation'],
+    'org_change': ['hiring', 'jobs', 'layoffs', 'appoints', 'ceo', 'executive', 'head of'],
+    'compliance': ['license', 'regulation', 'regulatory', 'compliance', 'approval', 'antitrust'],
+}
+
+
+def infer_signal_taxonomy(item):
+    text = ' '.join([
+        item.get('title', ''),
+        item.get('summary_short', ''),
+        item.get('reason', ''),
+        ' '.join(item.get('signal_types') or []),
+        ' '.join(item.get('event_types') or []),
+    ]).lower()
+    signals = []
+    for signal, keywords in SIGNAL_TAXONOMY.items():
+        if any(keyword in text for keyword in keywords):
+            signals.append(signal)
+    ev_type = (item.get('event_types') or ['other'])[0]
+    if ev_type in {'funding', 'ma', 'earnings'} and 'capital' not in signals:
+        signals.append('capital')
+    return signals or ['general']
+
+
+REGISTRY_TIER_MAP = {
+    'L1': 'L1 官方/IR源',
+    'L2': 'L2 垂直交易源',
+    'L3': 'L3 区域生态源',
+    'L4': 'L4 垂直赛道精品源',
+    'L5': 'L5 Google News 补漏源',
+}
+
+REGISTRY_ROLE_MAP = {
+    'newsroom': 'official_ir',
+    'ir': 'official_ir',
+    'changelog': 'developer_change',
+    'developer_changelog': 'developer_change',
+    'engineering_blog': 'industry_vertical',
+    'industry_media': 'industry_vertical',
+    'media': 'regional_ecosystem',
+}
+
+
+def _registry_source_to_cfg(src):
+    tier = REGISTRY_TIER_MAP.get(src.get('tier'), src.get('source_tier') or src.get('tier') or 'L3 区域生态源')
+    source_type = src.get('source_type') or 'media'
+    role = src.get('source_role') or REGISTRY_ROLE_MAP.get(source_type, 'regional_ecosystem')
+    cfg = {
+        'id': src.get('id') or src.get('name'),
+        'name': src.get('name'),
+        'url': src.get('url'),
+        'source': src.get('source') or src.get('name'),
+        'region': src.get('region', '全球'),
+        'priority': src.get('priority', 2),
+        'source_tier': tier,
+        'source_role': role,
+        'source_type': source_type,
+        'access_method': src.get('access_method') or src.get('method') or 'rss',
+        'signal_types': src.get('signal_types') or src.get('bd_signal_types') or [],
+        'vertical': src.get('track', ''),
+        'max_scan': src.get('max_scan', 12),
+        'max': src.get('max', 4),
+        'signal_only': src.get('signal_only', True),
+        'credibility_score': src.get('credibility_score', 0),
+        'noise_level': src.get('noise_level', ''),
+    }
+    for key in ('company_name', 'is_company', 'include_url_patterns'):
+        if key in src:
+            cfg[key] = src[key]
+    return cfg
+
+
+def load_registry_sources(path='data/source_registry.json'):
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            registry = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return [], []
+    sources = registry.get('sources') or registry.get('active_sources') or []
+    rss, html = [], []
+    existing_names = {cfg.get('name') for cfg in RSS_SOURCES + HTML_SOURCES}
+    existing_urls = {cfg.get('url') for cfg in RSS_SOURCES + HTML_SOURCES}
+    for src in sources:
+        if src.get('status') not in {'active', 'enabled'}:
+            continue
+        if not src.get('url') or src.get('name') in existing_names or src.get('url') in existing_urls:
+            continue
+        cfg = _registry_source_to_cfg(src)
+        method = cfg.get('access_method')
+        if method in {'rss', 'atom'}:
+            rss.append(cfg)
+        elif method in {'html', 'sitemap', 'pressroom', 'changelog'}:
+            html.append(cfg)
+    return rss, html
 
 
 REGION_TITLE_KEYWORDS = [
@@ -507,6 +622,8 @@ def _title_subject_key(title):
     clean = _strip_title_source(title or '').strip()
     clean = re.sub(r'^[^A-Za-z0-9\u4e00-\u9fff]{0,3}(?:[^:]{2,36}:\s*)', '', clean)
     patterns = [
+        r'\b([A-Z][A-Za-z0-9\.\-]{2,})\s+(?:raises?|raised|secures?|secured|closes?|closed)\b',
+        r'\b([A-Z][A-Za-z0-9\.\-]{2,})\s+(?:doubles?|doubled|hits?|hit|reaches?|reached|is\s+valued|was\s+valued|valued)\b',
         r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:raises?|raised|secures?|secured|closes?|closed|lands?|landed|bags?|bagged|gets?|got|receives?|received|attracts?|attracted|wins?|won)\b',
         r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:doubles?|doubled|hits?|hit|reaches?|reached|is\s+valued|was\s+valued|valued)\b',
         r'^([A-Z][A-Za-z0-9\s&\.,\'\-\u2019]+?)\s+(?:acquires?|acquired|buys?|bought|purchases?|purchased|merges?|merged)\b',
@@ -914,7 +1031,14 @@ OFFICIAL_SOURCE_NAV_TITLES = {
     'investor relations', 'quarterly results', 'financial results',
     'financial information', 'current reports', 'main/about kaspi.kz',
     'kaspi.kz ecosystem', 'annual reports', 'corporate governance',
+    'all stories business consumers & drivers people social impact & safety',
+    'download grab media content',
 }
+
+OFFICIAL_SOURCE_NAV_PREFIXES = (
+    'all stories business consumers',
+    'latest stories business consumers',
+)
 
 HTML_SOURCES = [
     # DealStreetAsia RSS 停用（"Temporarily Disabled"），主站为 JS SPA
@@ -954,6 +1078,8 @@ def _official_title_allowed(title, cfg):
     clean_title = ' '.join((title or '').split())
     title_lower = clean_title.lower()
     if not clean_title or title_lower in OFFICIAL_SOURCE_NAV_TITLES:
+        return False
+    if any(title_lower.startswith(prefix) for prefix in OFFICIAL_SOURCE_NAV_PREFIXES):
         return False
     if len(clean_title) < 18 or len(clean_title) > 180:
         return False
@@ -2171,9 +2297,21 @@ def infer_bd_context(item, score=None):
 def attach_business_context(event, item, score):
     event['source_tier'] = item.get('source_tier', 'L3 区域生态源')
     event['source_role'] = item.get('source_role', 'regional_ecosystem')
+    for key in (
+        'source_type',
+        'access_method',
+        'source_id',
+        'credibility_score',
+        'noise_level',
+    ):
+        if item.get(key) not in (None, '', []):
+            event[key] = item.get(key)
+    if item.get('signal_types'):
+        event['source_signal_types'] = item.get('signal_types')
     if item.get('vertical'):
         event['vertical'] = item.get('vertical')
     event.update(infer_bd_context({**item, **event}, score))
+    event['signal_taxonomy'] = infer_signal_taxonomy({**item, **event})
     return event
 
 
@@ -2317,18 +2455,24 @@ def main():
 
     # 采集（并行优化）
     _clear_old_cache()  # 清理旧缓存，确保���次都真实抓取
+    registry_rss_sources, registry_html_sources = load_registry_sources()
+    effective_rss_sources = RSS_SOURCES + registry_rss_sources
+    effective_html_sources = HTML_SOURCES + registry_html_sources
+    if registry_rss_sources or registry_html_sources:
+        print(f"🧭 Source Registry 启用：RSS {len(registry_rss_sources)} 个 | HTML {len(registry_html_sources)} 个")
+
     print("📡 采集 RSS 信源（并行）...")
     t0 = time.time()
 
     # Step 1: 并行抓取所有 RSS 源文本
-    rss_urls = [cfg['url'] for cfg in RSS_SOURCES]
+    rss_urls = [cfg['url'] for cfg in effective_rss_sources]
     fetched = asyncio.run(fetch_all_parallel(rss_urls))
 
     # Step 2: 解析每个返回的文本
     raw = []
     cache_hits = sum(1 for _, (_, cached) in fetched.items() if cached)
     source_stats = {}  # {name: (success, failed)}
-    for cfg in RSS_SOURCES:
+    for cfg in effective_rss_sources:
         body, cached = fetched.get(cfg['url'], (None, False))
         if not body:
             print(f"  ✗ [{cfg['name']}] 失败（{cfg['region']}）")
@@ -2346,13 +2490,13 @@ def main():
     print(f"  📊 信源统计（{len(raw)} 条）：{' | '.join(f'{k}: {v}' for k, v in source_stats.items() if v != '✗')}")
 
     # HTML 备用采集（降级方案）
-    if HTML_SOURCES:
+    if effective_html_sources:
         print("\n🌐 HTML 降级采集...")
-        for cfg in HTML_SOURCES:
+        for cfg in effective_html_sources:
             items = fetch_html(cfg)
             sig = sum(1 for it in items if it['event_types'][0] != 'other')
             if items:
-                print(f"  ⚡ [{cfg['name']}] {len(items)} 条（信号{sig} | 亚太）")
+                print(f"  ⚡ [{cfg['name']}] {len(items)} 条（信号{sig} | {cfg.get('region', '未知')}）")
             else:
                 print(f"  – [{cfg['name']}] 无内容")
             raw.extend(items)
