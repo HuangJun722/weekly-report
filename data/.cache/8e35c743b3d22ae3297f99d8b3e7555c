@@ -12,7 +12,7 @@
 	<atom:link href="https://ventureburn.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://ventureburn.com/</link>
 	<description>Startup news for emerging markets</description>
-	<lastBuildDate>Thu, 28 May 2026 11:05:02 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 28 May 2026 15:30:40 +0000</lastBuildDate>
 	<language>en-ZA</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,263 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Geordie Raises $30M to Secure Enterprise AI Agents</title>
+		<link>https://ventureburn.com/geordie-raises-30m-to-secure-enterprise-ai-agents/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Thu, 28 May 2026 15:30:40 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=201925</guid>
+
+					<description><![CDATA[<p>Geordie AI secures a $30m (€25m) Series A funding round, a record amount for a European cybersecurity startup at this stage in its development and putting the company at the</p>
+<p>The post <a href="https://ventureburn.com/geordie-raises-30m-to-secure-enterprise-ai-agents/" data-wpel-link="internal">Geordie Raises $30M to Secure Enterprise AI Agents</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.geordie.ai/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Geordie AI</span></a><span style="font-weight: 400"> secures a $30m (€25m) Series A </span><a href="https://ventureburn.com/transition-ventures-raises-150m-for-ai-startups/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">funding </span></a><span style="font-weight: 400">round, a record amount for a European cybersecurity startup at this stage in its development and putting the company at the leading edge of the fast-moving agentic AI governance industry.</span></p>
+<p><span style="font-weight: 400">The round was oversubscribed and was led by leading European venture fund Balderton Capital, with new investor Crosspoint Capital, with original pre-seed and seed investors General Catalyst and Ten Eleven Ventures also providing substantial support. The new fundraiser lifts total funding to date for Geordie AI to $36.5 million and valuation to $155 million.</span></p>
+<h2><span style="font-weight: 400">Managing the Shadow Sprawl of Autonomous Agents</span></h2>
+<p><span style="font-weight: 400">Founded by seasoned execs from Darktrace, a heavily funded all-in-one SaaS security company, and Snyka, a developer-focused cybersecurity startup, Geordie AI tackles one interesting operational risk that is more often lurking at the back: an unseen proliferation of non-human, autonomous digital workers.</span></p>
+<p><span style="font-weight: 400">As enterprises aggressively transition from passive generative AI chatbots to fully autonomous AI agents which can execute multi-step tasks, access private files, write code, and call external APIs, security teams are losing visibility over what these digital entities are actually doing. While an employee might manually query an app, an enterprise AI agent might autonomously interact with dozens of backend corporate databases, software integrations, and third-party cloud services in seconds.</span></p>
+<div id="attachment_201927" style="width: 1034px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-201927" class="size-large wp-image-201927" src="https://ventureburn.com/wp-content/uploads/2026/05/padlock-on-computer-1-1024x683.jpg" alt="padlock on computer" width="1024" height="683" /><p id="caption-attachment-201927" class="wp-caption-text">Source: Unsplash</p></div>
+<p><span style="font-weight: 400">&#8220;The core issue isn&#8217;t just building these agents; it&#8217;s understanding what they have access to and what they could potentially expose,&#8221; explained Henry Comfort, CEO and co-founder of Geordie AI. &#8220;Enterprises are rapidly deploying an entire workforce of digital employees that operate autonomously, meaning they make autonomous, real-time decisions. If left unchecked, over-privileged agents can trigger data leaks, silent operational failures, or cascading code errors.&#8221;</span></p>
+<p><span style="font-weight: 400">The market demand for specialised oversight is reflected in the company&#8217;s early metrics. Geordie AI reported an astounding 1,300% growth in annual recurring revenue (ARR) over the first five months of the year. The platform has already been integrated across approximately 30 live customer environments, including institutional financial data giant AlphaSense and Franco-American biotech researcher Owkin.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/transition-ventures-raises-150m-for-ai-startups/" data-wpel-link="internal"><span style="font-weight: 400">Transition Ventures Raises $150M for AI Startups</span></a></p>
+<h2><span style="font-weight: 400">Real-Time Posture Management and the Beam Mitigation Engine</span></h2>
+<p><span style="font-weight: 400">Geordie AI distinguishes itself from standard log-auditing software by operating as a runtime governance layer. The platform connects via cloud infrastructure, codebase, or endpoints to achieve full visibility across an entire corporate tech stack in under 10 minutes. </span></p>
+<p><span style="font-weight: 400">Once active, it continuously maps an enterprise&#8217;s agentic ecosystem, inventorying every internal and third-party AI agent, analysing their configuration postures, and identifying over-permissioned access paths. Beyond merely identifying risks, Geordie AI enables active intervention through its proprietary mitigation module, named Beam.</span></p>
+<p><span style="font-weight: 400">Beam serves as a proactive, real-time context-engineering engine. Instead of overloading an AI agent&#8217;s narrow context window with endless security rules, Beam dynamically monitors the agent&#8217;s behavioural traces and workflow decisions as they happen. If an agent attempts an off-goal manoeuvre, such as pulling restricted client records or misinterpreting a corrupted prompt, Beam intercepts and steers the agent back into compliance with strict corporate safety policies. This defence-in-depth approach prevents system exploits without forcing security teams to shut down the underlying AI tool entirely.</span></p>
+<h2><span style="font-weight: 400">Capitalizing on the RSAC Innovation Win</span></h2>
+<p><span style="font-weight: 400">The Series A investment concludes a string of marquee industry wins for the young London company: In March, Geordie AI was awarded first place at the 2026 RSA Conference (RSAC) Innovation Sandbox, long regarded as a stamp of approval for the market, defining cybersecurity firms prior to global scaling.</span></p>
+<p><span style="font-weight: 400">&#8220;The organisations today that can safely approve and deploy autonomous agents are the ones capturing a massive competitive advantage,&#8221; added Comfort. &#8220;Our goal is to act as the primary, immutable source of truth that turns AI agent governance from an IT roadblock into a safe growth lever.&#8221;</span></p>
+<p><span style="font-weight: 400">Management intends to deploy the $30 million to expand its global engineering core and aggressively scale its commercial footprint in the United States, cementing its role as the foundational security infrastructure for the era of autonomous enterprise software.</span></p>
+<p>The post <a href="https://ventureburn.com/geordie-raises-30m-to-secure-enterprise-ai-agents/" data-wpel-link="internal">Geordie Raises $30M to Secure Enterprise AI Agents</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Orbital Industries Raises $50M to Scale AI Hardware</title>
+		<link>https://ventureburn.com/orbital-industries-raises-50m-to-scale-ai-hardware/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Thu, 28 May 2026 15:12:48 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=201908</guid>
+
+					<description><![CDATA[<p>Orbital Industries has raised a $50 million in a Series B funding round. This investment will help accelerate the commercial launch of Orbital Industries&#8217; AI-optimised data centre cooling fluids and</p>
+<p>The post <a href="https://ventureburn.com/orbital-industries-raises-50m-to-scale-ai-hardware/" data-wpel-link="internal">Orbital Industries Raises $50M to Scale AI Hardware</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.orbitalindustries.com/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Orbital Industries</span></a><span style="font-weight: 400"> has raised a $50 million in a Series B </span><a href="https://ventureburn.com/capchase-raises-200m-to-expand-financing-platform/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">funding </span></a><span style="font-weight: 400">round. This investment will help accelerate the commercial launch of Orbital Industries&#8217; AI-optimised data centre cooling fluids and modular high-density compute platform, addressing the severe power and thermal obstacles faced by next-gen GPU clusters.</span></p>
+<p><span style="font-weight: 400">The round was led by European deep-tech growth fund Plural with strategic participation from Nvidia Ventures. Other institutions to increase their stake in the company include Radical Ventures, Compound and Fly Ventures. </span></p>
+<p><span style="font-weight: 400">In addition to the cash injection, the company published its newly revamped image from Orbital Materials to Orbital Industries to indicate its widened commercial emphasis to scale up industrial tech from the atom to fully scaled computing infrastructure.</span></p>
+<h2><span style="font-weight: 400">The Thermal and Spatial Bottleneck of Frontier AI</span></h2>
+<p><span style="font-weight: 400">As tech giants like OpenAI, Anthropic, and Meta race to deploy massive frontier models, they are running into severe physical walls. Next-generation AI chips generate extreme levels of heat inside increasingly dense environments, pushing standard water-based cooling systems past their physical limits. Simultaneously, traditional data centre permitting and construction timelines can drag out for three to seven years, creating a massive supply lag.</span></p>
+<div id="attachment_201923" style="width: 410px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201923" class="size-full wp-image-201923" src="https://ventureburn.com/wp-content/uploads/2026/05/orbital-industries.jpg" alt="orbital industries logo" width="400" height="400" /><p id="caption-attachment-201923" class="wp-caption-text">Source: orbital industries</p></div>
+<p><span style="font-weight: 400">Originally founded in 2022 by Chief Executive Officer Jonathan Godwin (formerly a machine learning researcher at Google DeepMind), Chief Technology Officer James Gin-Pollock, and Chief Operating Officer Daniel Miodovnik, the startup initially focused on using AI to discover materials for carbon capture and sustainable aviation fuels. However, intense market pull from the infrastructure sector led the founders to pivot toward solving the hardware constraints of advanced AI data centres.</span></p>
+<p><span style="font-weight: 400">&#8220;When people imagine a better future, they think about physical things: technologies that give them more freedom, more time, more life. AI will get us there faster,&#8221; said CEO Jonathan Godwin in a statement. &#8220;Frontier AI gives us PhD-level expertise across every discipline, meaning small, agile teams can move from materials discovery to commercial hardware in a way that simply wasn&#8217;t possible before. What used to take a decade, we can now do in months.&#8221;</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/capchase-raises-200m-to-expand-financing-platform/" data-wpel-link="internal"><span style="font-weight: 400">Capchase Raises $200M+ to Expand Financing Platform</span></a></p>
+<h2><span style="font-weight: 400">Molecular AI Meets Modular Engineering</span></h2>
+<p><span style="font-weight: 400">Orbital Industries separates itself from standard hardware manufacturers through its underlying technical asset: Orb, the company&#8217;s open-source AI model designed to simulate the quantum-mechanical behaviour of atoms. Instead of relying on a decade of trial-and-error laboratory experiments, Orbital uses its proprietary AI loop to design advanced chemical structures from scratch.</span></p>
+<p><span style="font-weight: 400">The capital from the Series B will scale two core product lines:</span></p>
+<ol>
+<li style="font-weight: 400"><b>PFAS-Free Cooling Fluid:</b><span style="font-weight: 400"> An AI-formulated, non-toxic, and non-hazardous liquid designed specifically for immersion cooling setups. This fluid protects high-density GPU architectures (such as Nvidia&#8217;s Blackwell chips) from overheating without relying on harmful forever chemicals. This line is supported by a multi-year partnership with Amazon Web Services (AWS) to optimise data centre decarbonisation and water utilisation.</span></li>
+<li style="font-weight: 400"><b>Modular Compute Infrastructure:</b><span style="font-weight: 400"> Prefabricated, off-site manufactured data centre units designed by AI algorithms to house ultra-dense computing clusters. Orbital claims this approach compresses traditional three-year construction pipelines down to just six months, allowing operators to deploy plug-and-play high-density facilities exactly when and where energy grids have available capacity.</span></li>
+</ol>
+<h2><span style="font-weight: 400">Institutional Validation</span></h2>
+<p><span style="font-weight: 400">The participation of Nvidia&#8217;s NVentures stands out as a strong industry validation. The chipmaker rarely backs physical infrastructure startups directly, signalling that Orbital&#8217;s molecularly designed cooling fluid is a highly plausible answer to the immense thermal output expected from upcoming chip generations.</span></p>
+<p><span style="font-weight: 400">&#8220;The capacity obstacle in AI is entirely real,&#8221; noted Plural partner Ian Hogarth, who led the investment. &#8220;Orbital is addressing the fundamental constraints of power, cooling, and speed of deployment. By bypassing traditional chemical development cycles using their Orb platform, they are establishing an entirely new category of automated industrial hardware design.&#8221;</span></p>
+<p><span style="font-weight: 400">With engineering hubs split between London and San Francisco, Orbital Industries plans to use the $50 million to rapidly expand its deployment team and continue upgrading its atomic simulation models, with an eye toward eventually applying its AI materials platform to semiconductors, critical minerals, and aerospace.</span></p>
+<p>The post <a href="https://ventureburn.com/orbital-industries-raises-50m-to-scale-ai-hardware/" data-wpel-link="internal">Orbital Industries Raises $50M to Scale AI Hardware</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Edged US Secures $2 Billion to Expand AI-Ready Data Infrastructure</title>
+		<link>https://ventureburn.com/edged-us-secures-2-billion/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Thu, 28 May 2026 14:37:25 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=201916</guid>
+
+					<description><![CDATA[<p>Large-Scale Financing Strengthens National Expansion Strategy Edged US has secured $2 billion in cumulative financing this year. This funding accelerates the expansion of its sustainable and AI-ready digital infrastructure across</p>
+<p>The post <a href="https://ventureburn.com/edged-us-secures-2-billion/" data-wpel-link="internal">Edged US Secures $2 Billion to Expand AI-Ready Data Infrastructure</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Large-Scale Financing Strengthens National Expansion Strategy</b></h2>
+<p><span style="font-weight: 400">Edged US has secured $2 billion in cumulative financing this year. This funding accelerates the expansion of its sustainable and AI-ready digital infrastructure across key United States markets. The milestone includes the successful pricing of a $1.3 billion Senior Secured Notes offering completed in April 2026. </span></p>
+<p><span style="font-weight: 400">The bond supports the simultaneous development of multiple data centre sites serving different customers under long-term </span><a href="https://www.merriam-webster.com/dictionary/lease" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">lease</span></a><span style="font-weight: 400"> agreements. The financing backs two major build-to-suit facilities within the company’s Atlanta and Chicago campuses. Morgan Stanley acted as Lead Left Bookrunner for the notes offering. </span></p>
+<p><span style="font-weight: 400">The execution reflects growing demand for high-performance, energy-efficient, and scalable digital infrastructure tailored to AI training and inference workloads. The construction loan supporting the 200 MW Council Bluffs campus complements the effort by securing continued development capacity. The company plans to expand across major U.S. hubs. </span></p>
+<p><span style="font-weight: 400">The strategy positions Edged US to meet rising enterprise and hyperscale AI requirements. The scale and pace of these developments show how the firm aims to meet future demand with sustainable systems. The financing momentum allows the company to move with speed and precision as market conditions evolve around AI growth and cloud acceleration.</span></p>
+<h2><b>Financing Momentum Supports AI-Ready Data Centre Design</b></h2>
+<p><span style="font-weight: 400">The year-to-date financing includes a construction loan for the Council Bluffs campus arranged by TD Securities and Crédit Agricole CIB. The company views these transactions as signals of market confidence. The demand for high-performance digital infrastructure continues to rise. </span></p>
+<p><span style="font-weight: 400">This trend drives strong investor interest in scalable platforms with clear sustainability strategies and fast deployment capabilities. Edged US designs its data centres to meet the next generation of compute environments. </span></p>
+<p><span style="font-weight: 400">The firm’s technology includes liquid-to-chip cooling and modular deployment options. These features support AI workloads without raising operational complexity for clients. The design also reduces resource consumption. This combination strengthens reliability and efficiency across the company’s portfolio.</span></p>
+<p><span style="font-weight: 400">The company’s build-to-suit approach gives customers predictable performance. It also gives them dedicated space for high-density racks and AI training clusters. This model helps large enterprises plan for long-term capacity. It also supports the broader shift from conventional data centre architecture to specialised AI infrastructure.</span></p>
+<h2><b>Sustainable Cooling and Efficiency Drive Market Differentiation<br />
+</b></h2>
+<div id="attachment_201919" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-201919" class="size-full wp-image-201919" src="https://ventureburn.com/wp-content/uploads/2026/05/a-futuristic-poster-showcases-an-advance_MzeCH9BjUzybSL0Ah_mxIw_1PM8nOrNTwmRzHx_eCljLg_hd.png" alt="Sustainable AI data center with waterless cooling and energy-efficient design" width="1312" height="736" /><p id="caption-attachment-201919" class="wp-caption-text">Edged US advances sustainable, high-performance data infrastructure for AI workloads. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">Edged US highlights sustainability as a core part of its value proposition. The firm’s ThermalWorks waterless cooling system eliminates water usage in daily operations. This approach helps customers scale AI workloads without high environmental costs.  The technology also supports regions facing water scarcity. </span></p>
+<p><span style="font-weight: 400">The focus on efficiency aligns with broader industry trends across cloud and AI operations. The company targets a design PUE of 1.15 across its portfolio. This efficiency target helps customers reduce energy waste. It also gives them predictability when modelling long-term costs. </span></p>
+<p><span style="font-weight: 400">The platform offers scalable deployment options that allow customers to add capacity in phases. This helps organisations grow at a realistic pace while maintaining operational stability. Edged US operates or develops campuses in strategic markets including Atlanta, Chicago, Columbus, Council Bluffs, Dallas, Des Moines, Kansas City and Phoenix. </span></p>
+<p><span style="font-weight: 400">Each market supports different customer needs. Some sites are built for hyperscalers. Others support technology firms or enterprise clients transitioning to AI-driven workflows. The combination of geographic spread and specialised design strengthens the company’s competitive position.</span></p>
+<p><span style="font-weight: 400">The company’s ability to pair sustainability with performance attracts strong investor support. This dynamic creates confidence in the long-term stability of its platform. It also aligns with industry expectations for responsible digital infrastructure development.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/countable-labs-raises-26-million/" data-wpel-link="internal"><span style="font-weight: 400">Countable Labs Raises $26 Million to Advance Single-Molecule PCR Technology</span></a></p>
+<h2><b>Expanding Platform to Meet AI and Cloud Growth</b></h2>
+<p><span style="font-weight: 400">Edged US continues to scale its infrastructure as cloud and AI workloads grow. The financing milestone reflects a market environment where speed, efficiency and sustainability influence decisions. Customers now require partners who can deliver capacity quickly. They also need assurance that the infrastructure supporting their AI models is resilient and resource-efficient.</span></p>
+<p><span style="font-weight: 400">According to the company, high-performance digital infrastructure sits at the centre of modern technology growth. AI workloads require dense power, strong cooling systems and stable environments. These needs shape the design of new campuses. They also influence long-term planning. Edged US aims to build facilities that match these requirements accurately.</span></p>
+<p><span style="font-weight: 400">The company’s leadership believes the financing will help it execute its development pipeline with confidence. It also ensures it can maintain a consistent pace of construction across several metro areas. The scale of the raise gives Edged US flexibility to refine its technologies and deliver improved services.</span></p>
+<p><span style="font-weight: 400">Customers increasingly expect partners to move rapidly. They expect strong performance without compromising environmental goals. Edged US continues to position itself as a reliable partner for long-term growth.</span></p>
+<p><span style="font-weight: 400">To support broader strategic goals, investors expect the firm to continue expanding its platform. This includes refining AI-ready design elements and enhancing liquid-to-chip cooling capabilities. It may also include additional financing to accelerate deployment.</span></p>
+<p><span style="font-weight: 400">The company’s mission focuses on building infrastructure for the digital economy. It aims to support AI growth by offering infrastructure that keeps pace with demand. This aligns with its expansion efforts across the United States.</span></p>
+<p><span style="font-weight: 400">To further inform readers on sustainable data centre strategies, the U.S. Department of Energy provides insight into energy-efficient infrastructure design (external source). Readers can explore broader trends shaping the sector. This helps them understand how environmental standards influence new infrastructure models.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span><b></b></p>
+<p>The post <a href="https://ventureburn.com/edged-us-secures-2-billion/" data-wpel-link="internal">Edged US Secures $2 Billion to Expand AI-Ready Data Infrastructure</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Countable Labs Raises $26 Million to Advance Single-Molecule PCR Technology</title>
+		<link>https://ventureburn.com/countable-labs-raises-26-million/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Thu, 28 May 2026 14:13:31 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=201904</guid>
+
+					<description><![CDATA[<p>Funding Backs Next-Generation Genomic Measurement Tools Countable Labs raises $26 million to accelerate the development and commercial rollout of its single-molecule PCR technology. The round was led by ARCH Venture</p>
+<p>The post <a href="https://ventureburn.com/countable-labs-raises-26-million/" data-wpel-link="internal">Countable Labs Raises $26 Million to Advance Single-Molecule PCR Technology</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Funding Backs Next-Generation Genomic Measurement Tools</b></h2>
+<p><span style="font-weight: 400">Countable Labs raises $26 million to accelerate the development and commercial rollout of its single-molecule PCR technology. The round was led by ARCH Venture Partners, with participation from F-Prime Capital and Primer Ventures. The raise strengthens its capacity to deliver genomic measurement tools.</span></p>
+<p><span style="font-weight: 400">The business developed Countable PCR, a platform that offers higher sensitivity and clarity than digital PCR. The method removes the need for Poisson correction. It also avoids standard curves. The approach aims to give laboratories more confidence when measuring rare biological signals. </span></p>
+<p><span style="font-weight: 400">The company said this clarity helps teams working in genomics make better decisions faster. Fit-for-purpose solutions that address cell and gene therapy, minimal residual disease testing, biomarker validation, and vaccine quality control are supported by the new capital. </span></p>
+<p><span style="font-weight: 400">These markets are in greater need of accuracy, and in this regard, the company views Countable PCR as a practical solution for labs looking for accuracy that accommodates a wider dynamic range and simpler workflows. </span></p>
+<p><span style="font-weight: 400">Countable Labs hired a new VP of Global Sales for their commercial rollout. The addition of the VP shows that the company is dedicated to increasing their reach in several major markets. The new hire has substantial experience in sales of tools for life sciences.</span></p>
+<h2><b>Countable PCR Targets Critical Genomic Applications</b></h2>
+<p><span style="font-weight: 400">Countable PCR is designed for sensitive applications where small biological signals matter. Its single-molecule approach captures information that traditional PCR and digital PCR miss. The company said this level of detail is essential for understanding genetic markers, detecting rare events, and validating biomarkers linked to disease.</span></p>
+<p><span style="font-weight: 400">The technology includes a 10-colour capability. This enables a wide range of multiplexing options that support complex genomic studies. The platform is purpose-built for research and industrial settings. It aims to help laboratories detect fusions, track markers of genome integrity, and measure inherited patterns across complex samples. </span></p>
+<p><span style="font-weight: 400">The company said these abilities help teams uncover insights that would remain hidden using standard tools. The method uses molecular linkage to understand genetic patterns. This capability allows scientists to see how different regions of the genome relate to each other. </span></p>
+<p><span style="font-weight: 400">That information strengthens research across oncology, diagnostics, and therapy development. The platform aims to open new possibilities in genomic science, providing the clarity needed for high-stakes decisions. Countable Labs believes 2026 will be a decisive year for the technology. </span></p>
+<p><span style="font-weight: 400">Early studies showed strong performance in clinical samples. These results validated the robustness of the platform. The company now prepares to scale production and introduce category-specific products for laboratories that demand precision and ease of use.</span></p>
+<h2><b>Funding Supports Global Expansion and Product Strategy<br />
+</b></h2>
+<div id="attachment_201914" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-201914" class="size-full wp-image-201914" src="https://ventureburn.com/wp-content/uploads/2026/05/create-a-futuristic-neon-lit-poster-the-_SeGu30OrXkOp2CTaEmWnoQ_RP6sBk5ESECXr4WvelGJew_cover.png" alt="Global expansion of PCR technology with interconnected genomic data systems." width="1312" height="736" /><p id="caption-attachment-201914" class="wp-caption-text">Countable Labs scales precision genomic tools for worldwide adoption. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">The company plans to use its new funding to expand commercial operations worldwide. It aims to ensure that laboratories seeking precision genomic tools can access Countable PCR without friction. The leadership team said that many segments still rely on digital PCR or next-generation sequencing. </span></p>
+<p><span style="font-weight: 400">These methods offer value but can introduce ambiguity. Countable Labs aims to remove this </span><a href="https://www.merriam-webster.com/dictionary/ambiguity" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">ambiguity</span></a><span style="font-weight: 400"> by providing a simple and sensitive alternative. The investment from ARCH Venture Partners reflects strong confidence in the platform’s technical foundation. The firm said PCR requires new solutions that offer speed, accuracy, and lower cost. </span></p>
+<p><span style="font-weight: 400">It added that Countable Labs reimagined PCR in a way that could support high-volume testing across many sectors. This includes translational science, industrial testing, and advanced research. F-Prime Capital highlighted the potential for broad adoption. </span></p>
+<p><span style="font-weight: 400">The firm said that making rare event detection widely accessible will support global health, oncology, and therapy manufacturing. It added that Countable PCR can replace existing methods in areas where cost, complexity, or ambiguity limit progress.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/secretome-raises-funding-series-a-stm01/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">Secretome Therapeutics Raises $30M Series A for Cardiac Cell Therapy Expansion</span></a></p>
+<h2><b>Positioning for Leadership in Genomic Measurement</b></h2>
+<p><span style="font-weight: 400">Countable Labs positions itself as a company redefining how biology is measured. It offers tools that deliver ten times the sensitivity of standard PCR. It also provides quantitative accuracy beyond what digital PCR and next-generation sequencing currently achieve. </span></p>
+<p><span style="font-weight: 400">The company believes these advantages will help laboratories detect rare genomic targets with new confidence. The business plans to grow its presence across oncology, cell and gene therapy, molecular diagnostics, and industrial testing. </span></p>
+<p><span style="font-weight: 400">Each segment requires high analytical performance. According to the company, its platform can fulfil these desires with an ease of access that comes naturally with straightforward technology. The company founders said that a simple, sensitive and yet affordable platform capable of enabling large-scale testing will be central to the future of genomic screening. </span></p>
+<p><span style="font-weight: 400">Countable PCR offers a perfect fit as a sensitive, yet straightforward, platform. There is clear demand in the market, including in the labs market, for a method that enables detection but does not depend on the use of cumbersome or expensive platforms. </span></p>
+<p><span style="font-weight: 400">This funding will also facilitate increased development within the team to create and launch a raft of specialised products targeting use-specific applications that will cement Countable PCR’s position as a go-to choice for ultra-sensitive measurement.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/countable-labs-raises-26-million/" data-wpel-link="internal">Countable Labs Raises $26 Million to Advance Single-Molecule PCR Technology</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Solstice Secures $21M Series A for Pharma Innovation</title>
+		<link>https://ventureburn.com/solstice-secures-21m-series-a-for-pharma-innovation/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Thu, 28 May 2026 13:51:11 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=201903</guid>
+
+					<description><![CDATA[<p>Getting a drug that might save lives through the development process and on to the market is a notoriously sluggish business, but a new software business in New York City</p>
+<p>The post <a href="https://ventureburn.com/solstice-secures-21m-series-a-for-pharma-innovation/" data-wpel-link="internal">Solstice Secures $21M Series A for Pharma Innovation</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Getting a drug that might save lives through the development process and on to the market is a notoriously sluggish business, but a new software business in New York City is hoping to speed things up. </span><a href="https://solsticewi.com/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Solstice</span></a><span style="font-weight: 400">, an AI-native marketing platform for the pharmaceutical and life sciences industries, announced that it has raised $21 million in Series A </span><a href="https://ventureburn.com/capchase-raises-200m-to-expand-financing-platform/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">financing</span></a><span style="font-weight: 400">.</span></p>
+<p><span style="font-weight: 400">The company raised a seed round, which was led by Transformation Capital, a leading growth equity venture firm focused on digital health. The round included participation by the company&#8217;s existing seed investors, Twelve Below and Virtue Ventures, as well as multiple strategic angel investors. The new round increased Solstice&#8217;s funding to roughly $25 million.</span></p>
+<p><span style="font-weight: 400">The capital will be used to fund the company&#8217;s go-to-market expansion, accelerate product engineering, and substantially grow the company&#8217;s own product and customer success teams.</span></p>
+<h2><span style="font-weight: 400">The Multi-Billion Dollar Bottleneck</span></h2>
+<p><span style="font-weight: 400">The global market for biopharmaceutical companies is forecasted to go above $100 billion in drug sales this year alone. The huge budget, however, has little impact; launching and promoting a therapy is still restrained by old workflows.</span></p>
+<p><span style="font-weight: 400">The most common offender is the Medical, Legal and Regulatory (MLR) review. Since the advertising of medicines is heavily controlled for reasons of patient safety, each piece of material – whether it is a complicated clinical take, an out-of-pamphlet aimed at health professionals or an introductory electronic message aimed at the wider world – has to be reviewed thoroughly for balance, medical content and legal validity.</span></p>
+<div id="attachment_201905" style="width: 410px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201905" class="wp-image-201905" src="https://ventureburn.com/wp-content/uploads/2026/05/Solstice_Health_Logo.jpg" alt="Solstice Health Logo" width="400" height="98" /><p id="caption-attachment-201905" class="wp-caption-text">Source: Solstice Health</p></div>
+<p><span style="font-weight: 400">The average time it takes to move a single marketing asset through prescribed internal MLR processes is three months and at least three cycles. With the time period for drug patents becoming more rigid, the consequence of an MLR review taking longer than expected is a delay in access to the drug for patients and a regression of profits. &#8220;Few business challenges are as high-stakes and time-sensitive as commercializing a new drug,&#8221; said Aris Saxena, co-founder and CEO of Solstice. &#8220;We built Solstice to ensure that we can substantiate all of a product&#8217;s marketing claims using clinical data before they even reach the MLR desk. While it used to take us three to five review cycles, we now merge that down to one or two, compressing months into just 10 days.&#8221;</span></p>
+<p><span style="font-weight: 400">More News:</span><a href="https://ventureburn.com/capchase-raises-200m-to-expand-financing-platform/" data-wpel-link="internal"><span style="font-weight: 400"> Capchase Raises $200M+ to Expand Financing Platform</span></a></p>
+<h2><span style="font-weight: 400">AI Built for Strict Compliance</span></h2>
+<p><span style="font-weight: 400">Set up in 2023 by Li Yiwen and Aris Saxena, Solstice sidesteps the trap of being a one-size-fits-all generative AI littered with &#8216;hallucinations&#8217; that aren&#8217;t appropriate in heavily regulated industries. Instead, Solstice is a kind of AI-native appliance that integrates its three most basic pillars of commercialization:</span></p>
+<ul>
+<li style="font-weight: 400"><b>Clinical Grounding</b><span style="font-weight: 400">: The system automatically queries drafted medical claims against dense clinical literature and trial data, fact-checking for non-compliant language or early regulatory risk.</span></li>
+<li style="font-weight: 400"><b>Unified Content Creation</b><span style="font-weight: 400">: It can help marketing teams create on-brand, very precise educational content created specifically for physicians or consumers.</span></li>
+<li style="font-weight: 400"><b>Performance Metrics</b><span style="font-weight: 400">: The platform tracks which compliant content is successfully driving physician adoption and patient engagement.</span></li>
+</ul>
+<p><span style="font-weight: 400">Through automating the otherwise time-consuming claim mapping when an ad marketer must manually match each sentence with a particular page of a clinical trial report, Solstice, for the first several corporate users, has eliminated up to 84% of operational inefficiencies.</span></p>
+<h2><span style="font-weight: 400">The Shift to &#8220;Speed-to-Market&#8221; Advantage</span></h2>
+<p><span style="font-weight: 400">With the pharmaceutical playing field increasingly crowded with niche biologics and rare, disease-specific companies, commercial agility has become a differentiator. For investors, Solstice&#8217;s specialist has become less a luxury and more a necessity.</span></p>
+<p><span style="font-weight: 400">With its new $21M balance sheet, Solstice is the one company that can really turn from a promising software vendor to the de facto OS for biopharma commercialization. By allowing brands to cut their regulatory turnaround times to less than 48 hours in some cases, Solstice has quietly defined the way forward for the delivery of modern medicine to the market.</span></p>
+<p>&nbsp;</p>
+<p>The post <a href="https://ventureburn.com/solstice-secures-21m-series-a-for-pharma-innovation/" data-wpel-link="internal">Solstice Secures $21M Series A for Pharma Innovation</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Transition Ventures Raises $150M for AI Startups</title>
+		<link>https://ventureburn.com/transition-ventures-raises-150m-for-ai-startups/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Thu, 28 May 2026 13:16:05 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=201899</guid>
+
+					<description><![CDATA[<p>Venture capital firm Transition Ventures has announced the final closing of its 2nd flagship fund at $150m. The oversubscribed fund expands the firm&#8217;s total assets under management (AUM) to above</p>
+<p>The post <a href="https://ventureburn.com/transition-ventures-raises-150m-for-ai-startups/" data-wpel-link="internal">Transition Ventures Raises $150M for AI Startups</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Venture capital firm </span><a href="https://transition.vc/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Transition Ventures</span></a><span style="font-weight: 400"> has announced the final closing of its 2nd flagship </span><a href="https://ventureburn.com/capchase-raises-200m-to-expand-financing-platform/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">fund </span></a><span style="font-weight: 400">at $150m. The oversubscribed fund expands the firm&#8217;s total assets under management (AUM) to above $300m and points to one of the biggest 2026 trends in venture capital output: the flow of equity from digital software into the physical infrastructure that will make modern AI possible.</span></p>
+<p><span style="font-weight: 400">Transition Ventures was established in 2021 by a team of well-known operators and investors. David Helgason, once the co-founder and former long-time CEO of gaming software giant Unity Technologies, led the firm. Transition Ventures initially launched with an early-stage climate technology mandate, but the exponential growth of generative AI has sent pressures into a whole new dimension on electrical grids that serve the world, vital material supplies, and hardware pipelines.</span></p>
+<p><span style="font-weight: 400">As a reflection, Transition Ventures has since changed its central thesis to &#8220;Physical AI&#8221;, which is the use of next-generation machine intelligence to rebuild, perfect, and safeguard essential real-world infrastructure. </span></p>
+<h2><span style="font-weight: 400">The Pivot to Physical Bottlenecks</span></h2>
+<p><span style="font-weight: 400">The company&#8217;s strategy is a literal solution to the &#8220;gigawatt-scale&#8221; data center bottleneck. With AI training models requiring exponential leaps in compute, the energy grid and computer chip supply chains have become the primary problems for tech hyperscalers.</span></p>
+<div id="attachment_201901" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201901" class="size-large wp-image-201901" src="https://ventureburn.com/wp-content/uploads/2026/05/Investment-1024x576.jpg" alt="Investment" width="1024" height="576" /><p id="caption-attachment-201901" class="wp-caption-text">Source: Unsplash</p></div>
+<p><span style="font-weight: 400">&#8220;The data center industry was already a huge market, but now the AI revolution is driving demand exponentially higher,&#8221; said David Helgason, Partner at Transition Ventures. &#8220;The fundamental challenge of our era has moved on to physical limitations. How to put more and more computing into the materials we have and the energy we can produce. The traditional venture model of funding continuous iterative software progress has reached a dead end.&#8221;</span></p>
+<p><span style="font-weight: 400">Transitions Fund II will make checks from pre-seed all the way through Series A and will focus on deep-tech startups that marry innovative software with physical engineering. This U.K./U.S. cross-Atlantic institution works out of major European and U.S. centers (namely London and New York), bringing deep tech research across the Atlantic into institutional deployments in the U.S.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/capchase-raises-200m-to-expand-financing-platform/?amp=1" data-wpel-link="internal"><span style="font-weight: 400">Capchase Raises $200M+ to Expand Financing Platform</span></a></p>
+<h2><span style="font-weight: 400">An Elite Operator Bench</span></h2>
+<p><span style="font-weight: 400">The funds raised reveal the strength of Transition&#8217;s core team. Together with the Helgason brothers (David Helgason &amp; Ari Helgason), Transition has strong institutional and venture experience:</span></p>
+<ul>
+<li style="font-weight: 400"><span style="font-weight: 400">Kristian Branaes was previously at Atomico and the Canada Pension Plan (CPP) Investment Board.</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">Clara Ricard (Investment Alumni from Balderton Capital).</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">Mona Alsubaei was a former investor at Union Square Ventures&#8217; climate sleeve NY anchor.</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">David Pacák already has hands-on experience with early-stage execution from Earlybird and Picus Capital.</span></li>
+</ul>
+<p><span style="font-weight: 400">All the team members have been either founding or scaling companies worth more than $15 billion, within software and deeptech ecosystems.</span></p>
+<h2><span style="font-weight: 400">A Battle-Tested Portfolio</span></h2>
+<p><span style="font-weight: 400">Transition&#8217;s pivot is also supported by a handful of superstar winners in its active portfolio. Transition backed Olix Computing early on, a photonics computing startup that replaces electricity with light to perform AI calculations. Olix has seen a valuation spike to an approaching $1 billion.</span></p>
+<p><span style="font-weight: 400">Other notable portfolios illustrating the physical AI thesis include:</span></p>
+<ul>
+<li style="font-weight: 400"><b>Applied Atomics</b><span style="font-weight: 400">: A business set up by ex-SpaceX engineers that is working on manufacturing a small modular reactor (SMR) that can productively supply colocation data centers with their own dedicated zero-carbon nuclear power.</span></li>
+<li style="font-weight: 400"><b>Seneca</b><span style="font-weight: 400">: A comprehensive ground and air autonomous drone network for ultra-fast AI-based forest fire abatement.</span></li>
+<li style="font-weight: 400"><b>Invisix</b><span style="font-weight: 400">: A dedicated hardware specialist in the field of semiconductor metrology (measurement &amp; inspection of microchips during manufacture).</span></li>
+</ul>
+<p><span style="font-weight: 400">Transition&#8217;s initial climate reports were high-profile, with the bankruptcy of ocean carbon-removal startup Running Tide in 2024 amid a collapse of voluntary carbon markets. However, Transition&#8217;s pivot into physical AI infrastructure has hit home with institutional LPs. Recasting climate resilience as power generation, data centre efficiency, and resource use efficiency has landed Transition as one of the most resilient late 2020s investment mandates.</span></p>
+<p>&nbsp;</p>
+<p>The post <a href="https://ventureburn.com/transition-ventures-raises-150m-for-ai-startups/" data-wpel-link="internal">Transition Ventures Raises $150M for AI Startups</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Secretome Therapeutics Raises $30M Series A for Cardiac Cell Therapy Expansion</title>
 		<link>https://ventureburn.com/secretome-raises-funding-series-a-stm01/</link>
 		
@@ -53,7 +310,7 @@
 <p><span style="font-weight: 400">In addition, the company is investigating application of the platform technology to address other forms of cardiac dysfunction such as dilated cardiomyopathy and heart failure with preserved ejection fraction, which, like Duchenne MD associated cardiomyopathy, have no effective treatments for the diseased population globally.</span></p>
 <h2><b>RA Capital Investment and Board Leadership Changes<br />
 </b></h2>
-<div id="attachment_201896" style="width: 1322px" class="wp-caption alignnone"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-201896" class="size-full wp-image-201896" src="https://ventureburn.com/wp-content/uploads/2026/05/a-futuristic-poster-showcases-a-sleek-pa_BLkb2himUkKKV0WP3hmQiw_Ljnjpd87Tb2zWnISiWn3Ig_cover.png" alt="Futuristic biotech governance and investment strategy visualised through holographic systems" width="1312" height="736" /><p id="caption-attachment-201896" class="wp-caption-text">Board changes and investor oversight highlight confidence in cellular therapy innovation. Source: Created by Ventureburn</p></div>
+<div id="attachment_201896" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-201896" class="size-full wp-image-201896" src="https://ventureburn.com/wp-content/uploads/2026/05/a-futuristic-poster-showcases-a-sleek-pa_BLkb2himUkKKV0WP3hmQiw_Ljnjpd87Tb2zWnISiWn3Ig_cover.png" alt="Futuristic biotech governance and investment strategy visualised through holographic systems" width="1312" height="736" /><p id="caption-attachment-201896" class="wp-caption-text">Board changes and investor oversight highlight confidence in cellular therapy innovation. Source: Created by Ventureburn</p></div>
 <p><span style="font-weight: 400">The Series A round was led exclusively by RA Capital Management. The firm is known for evidence-based investing in life sciences companies. It supports healthcare innovation across early and late development stages. Its participation signals strong confidence in Secretome’s scientific platform.</span></p>
 <p><span style="font-weight: 400">A partner from RA Capital will join as Board Observer. This role provides governance support and strategic oversight. The investor views STM-01 as a potentially best-in-class therapy. It also highlights strong belief in cellular therapy platforms.</span></p>
 <p><span style="font-weight: 400">Secretome announced several changes to its Board of Directors. A new director with extensive biotech leadership experience has joined. He brings decades of operational and financial expertise to the company. His background includes multiple successful biotechnology company exits.</span></p>
@@ -208,338 +465,7 @@
 		
 		
 			</item>
-		<item>
-		<title>Pace Raises $46 Million to Scale AI Insurance Operations</title>
-		<link>https://ventureburn.com/pace-raises-46-million-ai-insurance/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Wed, 27 May 2026 21:20:57 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=201828</guid>
-
-					<description><![CDATA[<p>Series B Funding Accelerates AI Adoption in Insurance Operations Pace has raised $46 million in Series B funding. The round was co-led by Thrive Capital and Sequoia Capital. Emergence Capital</p>
-<p>The post <a href="https://ventureburn.com/pace-raises-46-million-ai-insurance/" data-wpel-link="internal">Pace Raises $46 Million to Scale AI Insurance Operations</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>Series B Funding Accelerates AI Adoption in Insurance Operations</b></h2>
-<p><span style="font-weight: 400">Pace has raised $46 million in Series B funding. The round was co-led by Thrive Capital and Sequoia Capital. Emergence Capital and Pruven Capital also participated. The company builds AI systems for insurance operations. It focuses on automating complex back office workflows. The new capital will support global scaling.</span></p>
-<p><span style="font-weight: 400">Pace works with major insurers and brokers. These include The Mutual Group, Newfront, Prudential, and WTW. The company said it has already completed more than 250,000 workflows. These tasks were executed by AI agents. They include policy servicing, claims processing, and data entry operations.</span></p>
-<p><span style="font-weight: 400">Insurance operations remain highly manual. Many processes depend on documentation and human review. This slows down execution and increases cost. Pace said its AI system reduces these inefficiencies. It integrates directly into internal insurer systems. It also operates across documents, calls, and structured data.</span></p>
-<p><span style="font-weight: 400">The company said its mission is to close the global protection gap. It estimates this gap at $9 trillion. It believes AI-native operations can improve access to insurance. It also believes automation can reduce friction in claims and underwriting systems.</span></p>
-<h2><b>AI Agents Reshape Core Insurance Workflows</b></h2>
-<p><span style="font-weight: 400">Pace uses AI agents to execute insurance tasks. These agents can navigate internal applications. They can read documents and extract structured data. They can also make phone calls when needed. This allows them to complete end-to-end workflows.</span></p>
-<p><span style="font-weight: 400">The system supports core insurance functions. These include submission intake, policy servicing, claims handling, and renewals. Pace said these processes are often slow. It believes automation improves speed and accuracy. It also reduces dependency on manual operations teams.</span></p>
-<p><span style="font-weight: 400">Pace said its platform already delivers measurable impact. At Prudential, it automates thousands of hours of manual work. It supports policy issuance and customer acquisition workflows. At Ryze Claim Solutions, it reduces claim cycle times by 30 percent. At Convex US, it speeds up data ingestion for renewals.</span></p>
-<p><span style="font-weight: 400">The company said insurers face increasing operational pressure. Customer expectations for speed are rising. Costs remain high across legacy systems. AI-driven automation is becoming a competitive requirement. Pace positions its platform as a solution to this shift.</span></p>
-<p><span style="font-weight: 400">The company said its agents improve over time. Each completed workflow strengthens system performance. This creates a compounding intelligence loop. It improves both accuracy and execution speed. It also increases system reliability at scale.</span></p>
-<p><span style="font-weight: 400">Pace said traditional software is not enough. It argues that passive systems cannot solve operational complexity. Its platform is designed to actively execute tasks. This differentiates it from standard enterprise tools.</span></p>
-<h2><b>Investor Backing Signals Structural Shift in Insurance Tech<br />
-</b></h2>
-<div id="attachment_201859" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-201859" class="size-full wp-image-201859" src="https://ventureburn.com/wp-content/uploads/2026/05/a-cinematic-still-of-a-sprawling-futuris_I0MmwQlnWqOaDkYGTD-uPA_QDWAg7asRY6aaofNaTS2UQ.png" alt="AI systems automating insurance workflows including underwriting and claims across global networks" width="1312" height="736" /><p id="caption-attachment-201859" class="wp-caption-text">Agentic AI transforms insurance operations, improving efficiency, scalability, and global service delivery. Source: Created by Ventureburn</p></div>
-<p><span style="font-weight: 400">Investors see insurance as a key AI transformation sector. Thrive Capital said timing is critical. It believes high-value knowledge work is now being automated. It also said insurance is a major beneficiary of this shift.</span></p>
-<p><span style="font-weight: 400">Thrive Capital highlighted alignment between product and market need. It said the problem is large and urgent. It also said AI models are now capable of solving it. The firm believes agentic systems will reshape operations across industries.</span></p>
-<p><span style="font-weight: 400">Sequoia Capital also supported the investment. It sees long-term structural change in insurance workflows. It believes underwriting and claims will become more automated. It also expects improved customer outcomes through AI systems.</span></p>
-<p><span style="font-weight: 400">Emergence Capital and Pruven Capital also joined the round. Their participation reflects broader enterprise AI momentum. Investors believe agentic systems will become standard in regulated industries.</span></p>
-<p><span style="font-weight: 400">Pace founder Jamie Cuffe said the company aims to expand insurance coverage globally. He said closing the protection gap requires AI-native operations. He believes automation can scale access to insurance services.</span></p>
-<p><span style="font-weight: 400">He said the company is already seeing strong adoption. He highlighted faster cycle times and improved efficiency. He added that scaling operations is the next stage. The company plans expansion across the US, Europe, and global markets.</span></p>
-<p><span style="font-weight: 400">Insurance partners also reported early benefits. WTW said collaboration improves operational performance. It said the partnership strengthens long-term business models. It also said it improves client service delivery outcomes.</span></p>
-<p><span style="font-weight: 400">More News: <a href="https://ventureburn.com/olyzon-raises-10-million/" data-wpel-link="internal">Olyzon Raises $10 Million to Build Agentic AI Layer for CTV Media Buying</a></span></p>
-<h2><b>Global Expansion of AI Insurance Operations Platform</b></h2>
-<p><span style="font-weight: 400">Pace plans to scale its agentic workforce significantly. It aims to complete tens of millions of tasks this year. The company will expand across the United States and Europe. It also plans broader global deployment. The company said insurance systems remain fragmented. Many tools do not communicate effectively. </span></p>
-<p><span style="font-weight: 400">This creates inefficiencies across workflows. Pace aims to unify these processes through AI agents. It integrates with existing systems without replacing them. The platform improves execution speed and consistency. It reduces manual intervention in data handling. It also increases accuracy across insurance processes. </span></p>
-<p><span style="font-weight: 400">These improvements help insurers manage higher volumes. Pace believes insurance operations will become AI driven. Human teams will focus on oversight and exception handling. AI agents will manage repetitive and structured tasks. This shift will redefine operational roles in insurance firms.</span></p>
-<p><span style="font-weight: 400">The company continues to invest in infrastructure and engineering. It is expanding its product capabilities. It is also improving system <a href="https://dictionary.cambridge.org/dictionary/english/scalability" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external">scalability.</a> These upgrades support growing global demand. Pace said its long-term vision is an AI operations layer for insurance. It aims to become the execution engine for the industry. </span></p>
-<p><span style="font-weight: 400">It believes agentic systems will define the next phase of insurance infrastructure. Pace’s funding reflects accelerating adoption of AI automation in enterprise systems. Companies are shifting toward agentic workflows to improve efficiency and reduce operational cost.</span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/pace-raises-46-million-ai-insurance/" data-wpel-link="internal">Pace Raises $46 Million to Scale AI Insurance Operations</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Thea Energy Raises $100M to Scale Fusion Plants</title>
-		<link>https://ventureburn.com/thea-energy-raises-100m-to-scale-fusion-plants/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Wed, 27 May 2026 20:49:23 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=201848</guid>
-
-					<description><![CDATA[<p>Thea Energy Inc., a clean energy technology company specialising in magnetic confinement fusion, has announced the closing of an oversubscribed $100 million Series B raise. The new cash will be</p>
-<p>The post <a href="https://ventureburn.com/thea-energy-raises-100m-to-scale-fusion-plants/" data-wpel-link="internal">Thea Energy Raises $100M to Scale Fusion Plants</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><a href="https://thea.energy/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Thea Energy Inc.</span></a><span style="font-weight: 400">, a clean energy technology company specialising in magnetic confinement fusion, has announced the closing of an oversubscribed $100 million Series B </span><a href="https://ventureburn.com/focused-energy-raises-240m-to-advance-fusion-power/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">raise</span></a><span style="font-weight: 400">. The new cash will be a crucial step forward for the Princeton University spinout as it makes the transition from a laboratory experiment to a commercially scalable, grid-scale replacement for fossil fuels.</span></p>
-<p><span style="font-weight: 400">The US Innovative Technology Fund (USIT) of Thomas Tull headed the financing round. It comprised a diverse group of fresh and previous supporters. Those groups were General Innovation Capital Partners, Linse Capital, Emerald Technology Ventures, Lowercarbon Capital, Hitachi Ventures, Prelude Ventures, Alumni Ventures and Orion Industrial Ventures.</span></p>
-<p><span style="font-weight: 400">Established in 2022 as a PPPL spin-off, based in Kearny, New Jersey, the company has been rapidly growing around the idea of streamlined modernisation for the stellarator, a magnetic confinement device that employs sophisticated magnetic fields to manage a super-hot plasma state. The new funding will allow them to accelerate engineering schedules, increase manufacturing capabilities, and finalise a location for their next-generation integrated system.</span></p>
-<h2><span style="font-weight: 400">Reinventing the Stellarator with Software and Planar Magnets</span></h2>
-<p><span style="font-weight: 400">For most of the history of magnetic confinement fusion research, questions have rested firmly in the tokamak camp: donut-shaped reactors powered by enormous electrical currents flowing through the plasma. Although tokamaks have made many significant physics achievements, they have been limited by sudden disruptions in the plasma, which can damage the reactor. </span></p>
-<p><span style="font-weight: 400">A fundamentally different approach is to use a stellarator, a device which can operate continuously in a stable, steady-state mode without experiencing such disruptions. Unfortunately, until recently, they have suffered from almost unimaginable engineering difficulties in producing the twisted 3D magnetic coils they require.</span></p>
-<div id="attachment_201854" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201854" class="size-large wp-image-201854" src="https://ventureburn.com/wp-content/uploads/2026/05/Energy-representation-1024x683.jpg" alt="Energy representation" width="1024" height="683" /><p id="caption-attachment-201854" class="wp-caption-text">Source: Unsplash</p></div>
-<p><span style="font-weight: 400">Thea Energy avoids these manufacturing tools by dropping the enormously variable and warped modular coils in favour of a proprietary architecture of standardised stacks composed of uniformly flat, planar superconducting magnets. Instead of physically warping the field with twists in the metal, dynamic, software-driven algorithms control the magnetic fields in a three-dimensional motion.</span></p>
-<p><span style="font-weight: 400">This shift in technology changes the heart of the complexity of the reactor from precision mechanical fabrication and assembly to high-end computing and digital systems. This use of mass-produced planar magnets will enable the company to develop commercial fusion systems at a greatly reduced time scale and cost when compared to legacy stellarator designs.</span></p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/focused-energy-raises-240m-to-advance-fusion-power/" data-wpel-link="internal"><span style="font-weight: 400">Focused Energy Raises $240M to Advance Fusion Power</span></a></p>
-<h2><span style="font-weight: 400">Expanding Production and Siting the Eos System</span></h2>
-<p><span style="font-weight: 400">Thea Energy will use this investment for several of its most pressing operational needs. Chief among these will be increasing the company&#8217;s magnet manufacturing plant capacity by building a second manufacturing plant in Northern New Jersey to manufacture full-scale planar shaping magnets in high volumes.</span></p>
-<p>The funding will also directly aid the site selection and installation of Eos. The company built Eos, a large-scale integrated stellarator system. Eos demonstrates proof of principle, power plant, and relevant steady-state plasma conditions via the company&#8217;s simplified planar coil design. <span style="font-weight: 400">The system will be another important technical stepping stone, establishing the practical usefulness of software-defined magnetic controls for continuous operation.</span></p>
-<p><span style="font-weight: 400">To enable this scaling, the company will hire additional staff over the next several months, doubling its headcount. This growth will bring additional engineers, scientists, and manufacturing experts to existing New Jersey operations, as well as to the more than 15 academic and national laboratory partners.</span></p>
-<p>&nbsp;</p>
-<p>The post <a href="https://ventureburn.com/thea-energy-raises-100m-to-scale-fusion-plants/" data-wpel-link="internal">Thea Energy Raises $100M to Scale Fusion Plants</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Airis Labs Raises $60M to Transform Visual Intelligence</title>
-		<link>https://ventureburn.com/airis-labs-raises-60m-to-transform-visual-intelligence/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Wed, 27 May 2026 16:14:16 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=201844</guid>
-
-					<description><![CDATA[<p>Airis Labs, a startup specialising in artificial intelligence to build state-of-the-art platforms to interpret visual data, has raised $60 million in total funding. Total funds include a $31 million Series</p>
-<p>The post <a href="https://ventureburn.com/airis-labs-raises-60m-to-transform-visual-intelligence/" data-wpel-link="internal">Airis Labs Raises $60M to Transform Visual Intelligence</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">Airis Labs</span></a><span style="font-weight: 400">, a startup specialising in artificial intelligence to build state-of-the-art platforms to interpret visual data, has raised $60 million in total </span><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">funding</span></a><span style="font-weight: 400">. </span>Total funds include a $31 million Series B round to scale its presence in global defence and national security markets. PSG Equity led the Series B, with TLV Partners, Stepstone Group, Redseed Ventures, and angel investors including Eyal Waldman participating.</p>
-<h2><span style="font-weight: 400">Solving the Chaos of Unstructured Battlefield Data</span></h2>
-<p>Airis was founded in April 2023 by defence veterans Noam Friedman, Amos Lahav, and Rotem Abeles to address intelligence bottlenecks. Defence agencies and law enforcement encounter thousands of hours of disconnected video recordings but cannot process them at scale.</p>
-<div id="attachment_201846" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201846" class="size-large wp-image-201846" src="https://ventureburn.com/wp-content/uploads/2026/05/AI-10-1024x576.jpg" alt="AI" width="1024" height="576" /><p id="caption-attachment-201846" class="wp-caption-text">Source: Unsplash</p></div>
-<p><span style="font-weight: 400">The Airis platform functions as a source-agnostic visual analytics engine. It ingests fragmented feeds from drones, body cams, CCTV, dashboards, smartphones, and social media. Proprietary multimodal models synchronise these sources into a single, machine-readable intelligence picture. Human analysts and AI agents can query this picture in real time using natural language.</span></p>
-<p><span style="font-weight: 400">Automated indexes on video data sets remove the need for intelligence personnel to manually sit through terabytes of raw archive material as they are accustomed to doing. Airis suggests that its software package can dramatically speed up standard video analysis processes by a factor of 150, bringing together all the functions of numerous isolated digital forensic tools into one user-friendly dashboard.</span></p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" data-wpel-link="internal"><span style="font-weight: 400">Rightsline Secures $500M From Hg to Boost AI Growth</span></a></p>
-<h2><span style="font-weight: 400">From Battlefield Validation to Global Deployment</span></h2>
-<div>
-<div data-test-render-count="1">
-<div class="group">
-<div class="contents">
-<div class="group relative relative pb-3" data-is-streaming="false">
-<div class="font-claude-response relative leading-[1.65rem] [&amp;_pre&gt;div]:bg-bg-000/50 [&amp;_pre&gt;div]:border-0.5 [&amp;_pre&gt;div]:border-border-400 [&amp;_.ignore-pre-bg&gt;div]:bg-transparent [&amp;_.standard-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.standard-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8 [&amp;_.progressive-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.progressive-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8">
-<div>
-<div class="standard-markdown grid-cols-1 grid [&amp;_&gt;_*]:min-w-0 gap-3 standard-markdown">
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Unlike standard AI solutions built in isolated labs, the real world birthed the beating heart of Airis Labs. Within months of founding, the startup implanted its platform into operations, improving its neural network with low-res recordings from global flashpoints. These recordings were first-hand shots extracted from mass media after international crises.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p><span style="font-weight: 400">This rapid field trial has consequently been translated into a similarly quick commercial traction within the public sector. </span>Airis Labs offers enterprise cybersecurity solutions to federal governments, intelligence agencies, and customs operations globally via a subscription model. The startup has joined the Oracle Defence Ecosystem and is in a US Army acceleration program adopting commercial innovations in federal defence.</p>
-<p>The post <a href="https://ventureburn.com/airis-labs-raises-60m-to-transform-visual-intelligence/" data-wpel-link="internal">Airis Labs Raises $60M to Transform Visual Intelligence</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>AI Crypto Trading Platform Results in 2026: A 3-Week User Review</title>
-		<link>https://ventureburn.com/ai-crypto-trading-platform-results-in-2026-a-3-week-user-review/</link>
-		
-		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
-		<pubDate>Wed, 27 May 2026 15:57:09 +0000</pubDate>
-				<category><![CDATA[Cryptocurrency]]></category>
-		<category><![CDATA[News]]></category>
-		<category><![CDATA[Sponsored]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=201837</guid>
-
-					<description><![CDATA[<p>I approached the platform cautiously because of prior experiences with automated trading tools. When you&#8217;ve spent enough time in crypto spaces, you develop a radar for things that sound too</p>
-<p>The post <a href="https://ventureburn.com/ai-crypto-trading-platform-results-in-2026-a-3-week-user-review/" data-wpel-link="internal">AI Crypto Trading Platform Results in 2026: A 3-Week User Review</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><span style="font-weight: 400;">I approached the platform cautiously because of prior experiences with automated trading tools.</span></p>
-<p><span style="font-weight: 400;">When you&#8217;ve spent enough time in crypto spaces, you develop a radar for things that sound too good — </span><b>automated crypto trading strategies</b><span style="font-weight: 400;"> that promise passive income, bots that claim to beat the market, platforms that say &#8220;just deposit and relax.&#8221; I had previously seen similar claims from automated trading platforms and remained cautious about their reliability.</span></p>
-<p><img decoding="async" class="aligncenter wp-image-201842 size-full" src="https://ventureburn.com/wp-content/uploads/2026/05/image3.jpg" alt="AI Crypto Trading Platform Results in 2026: A 3-Week User Review" width="1168" height="784" /></p>
-<p><span style="font-weight: 400;">But a few weeks ago I decided to actually test one properly instead of dismissing it from the sidelines. I documented everything. This is that write-up.</span></p>
-<p><i><span style="font-weight: 400;">This review is based on my personal testing experience. Actual results may vary depending on market conditions and individual settings, so this article is for reference only.</span></i></p>
-<h2><b>Why I Tested an AI Crypto Trading Platform</b></h2>
-<p><span style="font-weight: 400;">My trading record through early 2026 was, honestly, embarrassing to look at. I was spending hours watching charts, making reactive decisions based on emotion, and ending most weeks roughly flat or slightly negative after fees. The effort-to-result ratio was terrible.</span></p>
-<p><span style="font-weight: 400;">I came across a thread discussing </span><b>automated trading bots for crypto beginners</b><span style="font-weight: 400;"> — the kind of discussion where half the comments are cynical and half are genuine curiosity. Someone mentioned they&#8217;d been testing a </span><b>no-code algorithmic trading platform</b><span style="font-weight: 400;"> for a few months and was posting their results publicly. The numbers were modest but consistent, which is actually what caught my attention. Not &#8220;I turned $500 into $50,000.&#8221; Just quiet, steady returns with documented drawdowns.</span></p>
-<p><img decoding="async" class="aligncenter wp-image-201840 size-full" src="https://ventureburn.com/wp-content/uploads/2026/05/image1.jpg" alt="Why I Tested an AI Crypto Trading Platform" width="1676" height="1014" /></p>
-<p><span style="font-weight: 400;">The emphasis on consistency rather than unusually high returns was one factor that influenced my decision to test the platform.</span></p>
-<p><span style="font-weight: 400;">After more research, I landed on</span><a href="https://saintquant.com/home?sf=x128" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"> <span style="font-weight: 400;">SaintQuant</span></a><span style="font-weight: 400;">, a platform built specifically around </span><b>AI-powered quantitative trading strategies</b><span style="font-weight: 400;"> that require no technical setup. The platform did not require API configuration, manual strategy creation, or constant position monitoring. The algorithms run continuously and manage execution automatically.</span></p>
-<p><span style="font-weight: 400;">I decided to treat it like a real experiment — phased deposits, documented performance, honest accounting.</span></p>
-<h2><b>How I Structured the Test</b></h2>
-<p><span style="font-weight: 400;">I didn&#8217;t go all-in immediately. My approach over roughly three weeks:</span></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Week 1:</b><span style="font-weight: 400;"> Started with the Starter plan (</span><a href="https://saintquant.com/register?sf=x128" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400;">$99 investment, using the free trial credit they offered new users</span></a><span style="font-weight: 400;">). Low stakes, getting familiar with how the platform executed strategies.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Week 2:</b><span style="font-weight: 400;"> Added $500 to test the Advanced tier alongside Starter. I watched both run in parallel.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Week 3:</b><span style="font-weight: 400;"> After seeing consistent behavior from both, moved the majority of capital into the Institutional Pro strategy at $35,000 deployed.</span></li>
-</ul>
-<p><span style="font-weight: 400;">My approach was to test lower-tier plans first before increasing capital allocation. If they fell apart, I&#8217;d lose a small amount, learning the lesson.</span></p>
-<h2><b>Performance Summary After 3 Weeks</b></h2>
-<p><span style="font-weight: 400;">After less than a month, here&#8217;s where things stand from my dashboard:</span></p>
-<table>
-<tbody>
-<tr>
-<td><b>Metric</b></td>
-<td><b>Value</b></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Total Deposited</span></td>
-<td><span style="font-weight: 400;">$35,500</span></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Total Invested (Active)</span></td>
-<td><span style="font-weight: 400;">$35,599</span></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Current Balance</span></td>
-<td><span style="font-weight: 400;">$710.90</span></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Total Profit (All Time)</span></td>
-<td><b>+$783.90</b></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Return vs. Deployed Capital</span></td>
-<td><b>+2.2%</b></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Active Strategies</span></td>
-<td><span style="font-weight: 400;">1 (Institutional Pro — Running)</span></td>
-</tr>
-<tr>
-<td><span style="font-weight: 400;">Withdrawn</span></td>
-<td><span style="font-weight: 400;">$580</span></td>
-</tr>
-</tbody>
-</table>
-<p><b>Breaking it down by strategy:</b></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Starter plan</b><span style="font-weight: 400;"> — $99 invested, $9.90 profit (idle now, used as my initial test)</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Advanced plan</b><span style="font-weight: 400;"> — $500 invested, $74 profit (idle, capital reallocated)</span></li>
-<li style="font-weight: 400;" aria-level="1"><a href="https://saintquant.com/strategy/tsoGb9waHmmfX1Uy?sf=x128" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><b>Institutional Pro</b></a><span style="font-weight: 400;"> — $35,000 deployed, </span><b>$700 in current daily profit</b><span style="font-weight: 400;">, actively running</span></li>
-</ul>
-<p><span style="font-weight: 400;">One notable result during the test period was a reported $700 single-day return from the Institutional Pro strategy — that&#8217;s one day&#8217;s output on an active session during a period of market movement.</span></p>
-<h2><img decoding="async" class="aligncenter wp-image-201841 size-full" src="https://ventureburn.com/wp-content/uploads/2026/05/image2.jpg" alt="How I Structured the Test" width="1920" height="928" /></h2>
-<h2><b>What &#8220;2.2% in Under a Month&#8221; Actually Means</b></h2>
-<p><span style="font-weight: 400;">I want to be precise here because </span><b>passive crypto income</b><span style="font-weight: 400;"> discussions often get sloppy with numbers.</span></p>
-<p><span style="font-weight: 400;">The 2.2% figure represents total profit against total capital ever invested — not annualized, not cherry-picked. That&#8217;s the honest cumulative number across the full testing period, including the quieter early days on Starter and Advanced before the bulk of capital was deployed.</span></p>
-<p><span style="font-weight: 400;">While the short-term return was positive, short testing periods may not reflect long-term performance consistency — but I&#8217;m not projecting that forward, because crypto conditions shift. The results were based on the test period and did not involve manual trade execution.</span></p>
-<p><span style="font-weight: 400;">For context: the Institutional Pro strategy alone generated $700 in a single active day. Across calmer sessions, returns were smaller. That variability is exactly what you should expect from any </span><b>quantitative trading strategy in crypto</b><span style="font-weight: 400;"> — volatility works both ways, and the risk management built into these strategies is what prevents one bad session from erasing prior gains.</span></p>
-<h2><b>Observations From Using the Platform</b></h2>
-<ol>
-<li><b> The platform required limited day-to-day user interaction during testing.</b></li>
-</ol>
-<p><span style="font-weight: 400;">This sounds obvious but it matters. I&#8217;ve tried platforms before that claimed to be automated but still required constant decisions — rebalancing triggers, manual confirmation of trades, monitoring alerts at 3am. SaintQuant&#8217;s strategies run without any of that. I checked the dashboard a few times a week, not out of necessity but curiosity.</span></p>
-<ol start="2">
-<li><b> The strategy tiers make sense as an escalation path.</b></li>
-</ol>
-<p><span style="font-weight: 400;">Starting at $99 and being able to observe real behavior before scaling is a reasonable structure. The Starter and Advanced plans gave me enough observable data within two weeks to make an informed decision about moving larger capital into Institutional Pro. A phased testing approach may help users evaluate platform behavior before allocating larger amounts of capital — you earn trust before deploying serious money.</span></p>
-<ol start="3">
-<li><b> Risk management tools are integrated into the platform’s strategy structure.</b></li>
-</ol>
-<p><span style="font-weight: 400;">One thing that separated this from other platforms I researched: the strategies have built-in risk management rather than treating it as an optional setting. For anyone asking </span><b>how to reduce risk in automated crypto trading</b><span style="font-weight: 400;">, this is the right architecture — the constraint is structural, not dependent on the user configuring something correctly.</span></p>
-<ol start="4">
-<li><b> The interface shows you exactly what&#8217;s happening.</b></li>
-</ol>
-<p><span style="font-weight: 400;">The performance overview, strategy-level breakdowns, profit vs. investment overlays — the dashboard provides visibility into strategy-level performance and account activity. You can see exactly which strategy generated what, when. No black-box mystery about where your returns are coming from.</span></p>
-<h2><b>What I&#8217;d Tell Someone Starting Out</b></h2>
-<p><span style="font-weight: 400;">A few honest observations for anyone considering </span><b>AI trading platforms for beginners</b><span style="font-weight: 400;">:</span></p>
-<p><b>Don&#8217;t skip the starter phase.</b><span style="font-weight: 400;"> The $99 entry point exists for a reason. Use it. Observe how the strategy executes before committing larger amounts. Even a week of watching a real (even small) position teaches you more than reading about how it works.</span></p>
-<p><b>Your returns will vary with market conditions.</b><span style="font-weight: 400;"> Anyone promising a fixed return percentage from </span><b>algorithmic crypto trading</b><span style="font-weight: 400;"> is misleading you. The strategies perform differently in trending markets versus ranging or choppy conditions. The goal is disciplined consistency, not daily jackpots.</span></p>
-<p><b>Automation doesn&#8217;t mean zero attention.</b><span style="font-weight: 400;"> I still reviewed my dashboard regularly. I wasn&#8217;t managing trades, but I was staying informed. That&#8217;s appropriate engagement — not obsessing, but not ignoring either.</span></p>
-<p><b>The passive income framing is partially true.</b><span style="font-weight: 400;"> You&#8217;re not actively working for the returns, but you&#8217;re still deploying real capital into a real market. Treat it with the seriousness that deserves. </span><b>Low-risk crypto passive income strategies</b><span style="font-weight: 400;"> still carry market risk.</span></p>
-<h2><b>Overall Assessment After Testing</b></h2>
-<p><span style="font-weight: 400;">Less than a month in: yes, with caveats.</span></p>
-<p><span style="font-weight: 400;">During the testing period, the platform functioned as described in its documentation. The strategies run automatically. The risk management holds. The returns are real and documented. For someone who wants </span><b>crypto trading automation without technical setup</b><span style="font-weight: 400;"> and is willing to start conservatively and scale based on observed performance, the testing experience was generally consistent with my expectations.</span></p>
-<p><span style="font-weight: 400;">The 2.2% cumulative return in under a month isn&#8217;t flashy. But consider what it replaced: hours of chart-watching, stress from manual positions, and a trading record that was, at best, break-even before fees. The automated approach reduced manual trading activity and produced positive results during the testing period — not just financially, but in terms of mental overhead.</span></p>
-<p><span style="font-weight: 400;">The test period included days with stronger performance, including one session showing approximately $700 in reported profit. The floor, on quieter days, is smaller but still positive — and that consistency is ultimately what I was testing for.</span></p>
-<h2><b>FAQ</b></h2>
-<h3><b>Does SaintQuant require any coding or technical knowledge?</b></h3>
-<p><span style="font-weight: 400;">No. The platform is designed specifically for </span><b>no-code automated trading</b><span style="font-weight: 400;"> — strategies are pre-built and optimized. You select a plan, deposit, and the system handles execution.</span></p>
-<h3><b>What&#8217;s the minimum to start?</b></h3>
-<p><span style="font-weight: 400;">The platform states that eligible new users may receive promotional trial credits, so you can experience live strategy execution without making an initial deposit. </span><b>The platform also advertises a registration bonus for new accounts.</b></p>
-<h3><b>How does SaintQuant handle risk management?</b></h3>
-<p><span style="font-weight: 400;">Risk controls are built directly into the strategy structure rather than relying on user configuration. This is a meaningful distinction from platforms that treat risk management as an optional layer.</span></p>
-<h3><b>Can I withdraw my profits?</b></h3>
-<p><span style="font-weight: 400;">Yes — withdrawals are available. My own records show $580 withdrawn during the testing period with no issues.</span></p>
-<h3><b>Is automated crypto trading safe for beginners?</b></h3>
-<p><span style="font-weight: 400;">&#8220;Safe&#8221; is relative to any market exposure. Some users may find platforms with automated execution and predefined risk settings easier to use. You&#8217;re still exposed to market conditions, but you&#8217;re not making reactive trades on emotion.</span></p>
-<h3><b>What kind of returns should I realistically expect?</b></h3>
-<p><span style="font-weight: 400;">It depends on market conditions, which strategy tier you use, and how long capital is deployed. My documented return is +2.2% on total deployed capital in under a month, with individual active sessions on Institutional Pro producing significantly higher single-day figures.</span></p>
-<p>The post <a href="https://ventureburn.com/ai-crypto-trading-platform-results-in-2026-a-3-week-user-review/" data-wpel-link="internal">AI Crypto Trading Platform Results in 2026: A 3-Week User Review</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Focused Energy Raises $240M to Advance Fusion Power</title>
-		<link>https://ventureburn.com/focused-energy-raises-240m-to-advance-fusion-power/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Wed, 27 May 2026 15:32:17 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=201834</guid>
-
-					<description><![CDATA[<p>Focused Energy has closed a $240m Series A financing round. The funds will be used to accelerate laser fusion industrialisation and to fund a unique power plant at Biblis, Germany.</p>
-<p>The post <a href="https://ventureburn.com/focused-energy-raises-240m-to-advance-fusion-power/" data-wpel-link="internal">Focused Energy Raises $240M to Advance Fusion Power</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><a href="https://www.focused-energy.co/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Focused Energy </span></a><span style="font-weight: 400">has closed a $240m Series A </span><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">financing </span></a><span style="font-weight: 400">round. The funds will be used to accelerate laser fusion industrialisation and to fund a unique power plant at Biblis, Germany.</span></p>
-<p>Principal players include RWE, which contributed $60 million; the Federal Agency for Breakthrough Innovation; and the European Innovation Council Fund. Previous lead investor Prime Movers Lab participated further with US, Asian, and Gulf region investors.</p>
-<h2><span style="font-weight: 400">The Biblis Blueprint: From Fission to Fusion</span></h2>
-<p><span style="font-weight: 400">The centrepiece of Focused Energy’s expansion strategy is the transformation of a former RWE nuclear power site in Biblis, Hesse. By using the existing nuclear-grade infrastructure, the company expects to cut the time and cost of putting a commercial fusion reactor in operation by a substantial factor.</span></p>
-<p><span style="font-weight: 400">&#8220;Germany and Europe are entering a new era of energy sovereignty,&#8221; said Thomas Forner, co-founder and CEO of Focused Energy. &#8220;This round is a vote of confidence in our science-based approach. We are no longer just a research startup; we are an industrial energy company scaling the technology that will power the next century.&#8221;</span></p>
-<div id="attachment_201836" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201836" class="size-large wp-image-201836" src="https://ventureburn.com/wp-content/uploads/2026/05/A-laptop-1024x683.jpg" alt="A laptop" width="1024" height="683" /><p id="caption-attachment-201836" class="wp-caption-text">Source: Unsplash</p></div>
-<p><span style="font-weight: 400">The project is strongly supported by all levels of government. </span>The company received a €18.4 million grant from Hesse&#8217;s Minister Kaweh Mansoori to fund the Biblis hub&#8217;s basic infrastructure, developing a global deep tech node.</p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" data-wpel-link="internal"><span style="font-weight: 400">Rightsline Secures $500M From Hg to Boost AI Growth</span></a></p>
-<h2><span style="font-weight: 400">Harnessing the Spark of the Sun</span></h2>
-<p><span style="font-weight: 400">Unlike magnetic confinement fusion (like most experiments which use giant magnets to keep the plasma in a donut shape), Focused Energy employs laser fusion (also known as inertial fusion energy). </span>Laser beams fire at a tiny fuel pellet consisting of deuterium and tritium. Compressing the pellet triggers a star-like fusion reaction, releasing a lot of energy.</p>
-<p>The firm uses a proprietary direct-drive architecture designed by co-founder Markus Roth, built for modularity and mass manufacturing. This integrates scientific innovations from Lawrence Livermore National Laboratory&#8217;s NIF, where several of Focused Energy&#8217;s founding scientists previously worked.</p>
-<p><span style="font-weight: 400">&#8220;Fusion is the ultimate solution to the climate crisis,&#8221; said Dr Markus Krebber, CEO of RWE AG. &#8220;With the decommissioning of our older sites, we have the expertise, infrastructure, and regulatory experience to give Germany a competitive advantage in the global fusion race.&#8221; </span></p>
-<p>The post <a href="https://ventureburn.com/focused-energy-raises-240m-to-advance-fusion-power/" data-wpel-link="internal">Focused Energy Raises $240M to Advance Fusion Power</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>NavigateAI Raises $25M to Build AI for Field Workers</title>
-		<link>https://ventureburn.com/navigateai-raises-25m-to-build-ai-for-field-workers/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Wed, 27 May 2026 15:11:37 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=201830</guid>
-
-					<description><![CDATA[<p>NavigateAI has raised a $25 million seed funding round. NavigateAI will develop an AI-powered field copilot for builders, contractors, and tradespeople, targeting the growing skilled labour shortage crisis. Elad Gil</p>
-<p>The post <a href="https://ventureburn.com/navigateai-raises-25m-to-build-ai-for-field-workers/" data-wpel-link="internal">NavigateAI Raises $25M to Build AI for Field Workers</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><a href="https://www.navigate.ai/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">NavigateAI </span></a><span style="font-weight: 400">has raised a $25 million seed </span><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" target="_blank" rel="nofollow noopener" data-wpel-link="internal"><span style="font-weight: 400">funding </span></a><span style="font-weight: 400">round. </span>NavigateAI will develop an AI-powered field copilot for builders, contractors, and tradespeople, targeting the growing skilled labour shortage crisis.</p>
-<p>Elad Gil and Dealmaker led the seed round, with support from Khosla Ventures, Tishman Speyer, Lennar, and Helix Electric. Angel investors include Tony Xu of DoorDash, Zach Frankel of Ramp, Dallas Tanner of Invitation Homes, Winston Weinberg, and Jesse Zhang.</p>
-<h2><span style="font-weight: 400">Bridging the Trillion-Dollar Labour Gap</span></h2>
-<p><span style="font-weight: 400">Founded in 2025, NavigateAI is led by co-founder and CEO Eric Wu, the prominent real estate tech entrepreneur who previously scaled the online real estate platform Opendoor from its infancy to a public company. To tackle the physical world&#8217;s inefficiencies, Wu assembled a founding team featuring veteran alumni from Stripe, DeepMind, Google, and Stanford.</span></p>
-<p><span style="font-weight: 400">The launch of this startup could not come at a more pivotal economic time. In the United States alone, about $2.2 trillion is spent on construction and infrastructure every year. Yet it is crippled by a profound structural crisis: the country is losing staggering numbers of construction workers every year, a deficit of hundreds of thousands.</span></p>
-<div id="attachment_201831" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-201831" class="size-large wp-image-201831" src="https://ventureburn.com/wp-content/uploads/2026/05/NavigateAI-1024x189.png" alt="NavigateAI" width="1024" height="189" /><p id="caption-attachment-201831" class="wp-caption-text">Source: NavigateAI</p></div>
-<p>The skill gap threatens critical infrastructure timelines, including data centres, low-cost accommodation, grid electrification, and manufacturing reshoring. &#8220;We have a generational opportunity to upskill millions of workers with AI, as the country needs to build more and faster,&#8221; Wu said. &#8220;We’re building the AI copilot that will enable this workforce transition.&#8221;</p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/rightsline-secures-500m-from-hg-to-boost-ai-growth/" data-wpel-link="internal"><span style="font-weight: 400">Rightsline Secures $500M From Hg to Boost AI Growth</span></a></p>
-<h2><span style="font-weight: 400">Field-Grade AI: How the Technology Works</span></h2>
-<p>Unlike typical chat assistants, NavigateAI&#8217;s platform is a rugged, field-grade system processing live physical environments in real time. The software operates on smartphones via camera, with a Meta partnership also enabling a hands-free experience via Meta Glasses.</p>
-<p><span style="font-weight: 400">Through smart eyewear, the AI copilot sees exactly what the worker sees, acting as a second set of expert eyes. The technology delivers critical assistance across four core areas:</span></p>
-<ul>
-<li style="font-weight: 400"><b>AI Upskilling and Real-Time Coaching:</b><span style="font-weight: 400"> Acts as a master craftsman on-site, providing on-the-job instructions with contextual scaffolding for less-experienced field workers doing physical installations.</span></li>
-<li style="font-weight: 400"><b>Real-Time Quality Control and Inspection: </b><span style="font-weight: 400">Through the use of a video feed that shows through the work area, the A.I. monitors the permanently present hands-on trade with their local codes, engineered blueprints, and original project specifications to detect any structural or material deficiencies as soon as they are fitted and not days after.</span></li>
-<li style="font-weight: 400"><b>On-Demand Technical Knowledge Base:</b><span style="font-weight: 400"> Workers can instantly query complex manufacturer manuals, intricate specification sheets, local regulatory codes, or custom company playbooks entirely through voice commands, receiving structured answers in seconds.</span></li>
-<li style="font-weight: 400"><b>AI Project Scoping and Dashboards:</b><span style="font-weight: 400"> The platform automatically captures and logs video site updates, structuring the physical visual data to generate comprehensive scopes of work, materials lists, and financial cost estimates. These insights are synced back to a centralised project dashboard for off-site asset managers.</span></li>
-</ul>
-<h2><span style="font-weight: 400">Powerful Commercial Partnerships</span></h2>
-<p>NavigateAI has already deployed its software with major design and operational partners across several real estate and trade verticals. Launch partners include Lennar, Tishman Speyer, Roofstock, and AIM, which uses the tool to accelerate student upskilling.</p>
-<p>&#8220;The Lennar and NavigateAI partnership puts modern technology alongside our trade partners as we build the homes America needs,&#8221; said Stuart Miller. &#8220;NavigateAI puts a quality-first AI copilot with our workforce in the field to raise the bar on quality.&#8221;</p>
-<p>The post <a href="https://ventureburn.com/navigateai-raises-25m-to-build-ai-for-field-workers/" data-wpel-link="internal">NavigateAI Raises $25M to Build AI for Field Workers</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
-<!-- plugin=object-cache-pro client=phpredis metric#hits=1727 metric#misses=30 metric#hit-ratio=98.3 metric#bytes=675961 metric#prefetches=122 metric#store-reads=26 metric#store-writes=2 metric#store-hits=132 metric#store-misses=4 metric#sql-queries=22 metric#ms-total=193.61 metric#ms-cache=6.67 metric#ms-cache-avg=0.2470 metric#ms-cache-ratio=3.5 -->
+<!-- plugin=object-cache-pro client=phpredis metric#hits=1708 metric#misses=30 metric#hit-ratio=98.3 metric#bytes=646641 metric#prefetches=113 metric#store-reads=23 metric#store-writes=2 metric#store-hits=120 metric#store-misses=4 metric#sql-queries=22 metric#ms-total=270.85 metric#ms-cache=7.61 metric#ms-cache-avg=0.3172 metric#ms-cache-ratio=2.8 -->
