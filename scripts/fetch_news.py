@@ -27,8 +27,10 @@ except Exception:
 
 try:
     from analysis_quality import annotate_event_quality, summarize_quality
+    from event_value import classify_bd_priority, follow_up_window_for_priority
 except ImportError:
     from scripts.analysis_quality import annotate_event_quality, summarize_quality
+    from scripts.event_value import classify_bd_priority, follow_up_window_for_priority
 
 # ============================================================
 # 并行采集优化：aiohttp
@@ -2275,15 +2277,8 @@ def infer_bd_context(item, score=None):
             opportunities.append(item_name)
 
     s = score if score is not None else _calc_score(item)
-    if s >= 7 or ev_type in {'funding', 'ma'}:
-        window = '7天内'
-        priority = '高'
-    elif s >= 4 or item.get('is_company'):
-        window = '30天内'
-        priority = '中'
-    else:
-        window = '持续观察'
-        priority = '观察'
+    priority = classify_bd_priority(item, s)
+    window = follow_up_window_for_priority(priority)
 
     if not triggers:
         triggers = ['持续观察']
@@ -2722,7 +2717,8 @@ def main():
     summary_groups = {}
     for event in added_events:
         summary_date = (event.get('date') or today)[:10]
-        summary_groups.setdefault(summary_date, []).append(event)
+        if event in all_events.get(summary_date, []):
+            summary_groups.setdefault(summary_date, []).append(event)
     if summary_groups:
         for summary_date, summary_events in sorted(summary_groups.items()):
             build_daily_ai_summary(summary_events, summary_date)

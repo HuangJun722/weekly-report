@@ -6,6 +6,7 @@ SCRIPTS_DIR = ROOT / 'scripts'
 os.chdir(ROOT)
 sys.path.insert(0, str(SCRIPTS_DIR))
 from generate_html import build_display_context
+from event_value import is_high_value_event
 
 context = build_display_context()
 feed_date = context['main_date']
@@ -36,14 +37,7 @@ def entry_title(ev):
 
 
 def is_high_value_feed_event(ev):
-    impact = text_value(ev.get('display_impact') or ev.get('impact'))
-    return (
-        ev.get('bd_priority') == '高'
-        and not ev.get('needs_repair')
-        and bool(text_value(ev.get('reason')))
-        and bool(impact)
-        and impact != '未知'
-    )
+    return is_high_value_event(ev)
 
 
 feed_events = [ev for ev in context['today_events'] if is_high_value_feed_event(ev)]
