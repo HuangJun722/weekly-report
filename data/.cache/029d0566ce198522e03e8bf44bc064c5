@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Fri, 29 May 2026 14:19:36 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 30 May 2026 12:19:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,1484 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>In a duplex in Lagos, Cowrywise is trying to build a cathedral with 11 priests</title>
+		<link>https://techcabal.com/2026/05/30/cowrywise-a-cathedral-with-11-priests/</link>
+		
+		<dc:creator><![CDATA[Muktar Oladunmade]]></dc:creator>
+		<pubDate>Sat, 30 May 2026 12:19:01 +0000</pubDate>
+				<category><![CDATA[Weekend Features]]></category>
+		<category><![CDATA[cowrywise]]></category>
+		<category><![CDATA[Feature]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=189217</guid>
+
+					<description><![CDATA[For a company of fewer than 80 people, it meant one in seven employees ended that day as a senior executive.]]></description>
+										<content:encoded><![CDATA[
+<p>One afternoon in February 2026, I went to Ikeja GRA, a highbrow neighbourhood in Lagos, to talk to a new crop of executives at Cowrywise, <a href="https://techcabal.com/tag/cowrywise/" id="https://techcabal.com/tag/cowrywise/" target="_blank" rel="noreferrer noopener">the wealth management fintech</a> that manages money for over two million Nigerians.&nbsp;</p>
+
+
+
+<p>Four weeks earlier, at a January retreat held at a business club in Victoria Island, a highbrow area on the southern side of Lagos, Cowrywise had promoted 11 people to the title of associate vice president (AVP), the type of move that earns the rare tag of ‘unprecedented’ in Nigeria’s tech ecosystem.</p>
+
+
+
+<p>For a company of fewer than 80 people, it meant one in seven employees ended that day as a senior executive.</p>
+
+
+
+<p>My visit to Cowrywise’s office was to figure out whether this was a genuine restructuring of a growing financial institution or inflated titles meant to appease employees. What I found was more complex than either explanation.</p>
+
+
+
+<div style="font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #F6F6F6; padding: clamp(16px, 5vw, 24px); border-radius: 8px; width: 100%; max-width: 600px; box-sizing: border-box; margin: 24px auto; color: #151515; border: 1px solid #E3E8EF; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <style>
+        .tc-risk-node {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: tc-float linear infinite alternate;
+        }
+        @keyframes tc-float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(var(--tx), var(--ty)) scale(1.2); }
+        }
+        input[type=range].tc-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #EA2D2E;
+            cursor: pointer;
+            margin-top: -7px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        input[type=range].tc-slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #D1D5DB;
+            border-radius: 3px;
+        }
+    </style>
+
+    <h3 style="margin-top: 0; font-size: clamp(1.125rem, 4vw, 1.25rem); font-weight: 700; color: #151515; line-height: 1.3;">The Scale of Systemic Risk</h3>
+    
+    <p style="font-size: clamp(0.875rem, 3vw, 1rem); line-height: 1.6; color: #24292F; margin-bottom: 24px;">
+        When a fintech has 10 users, risk is negligible. When it has 2 million, the complexity is systemic. <strong>Drag the slider</strong> to see why an 80-person company requires 11 Vice Presidents to survive.
+    </p>
+
+    <div style="background: #FFFFFF; padding: 20px 16px; border-radius: 8px; border: 1px solid #E3E8EF; margin-bottom: 24px;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
+            <span style="font-size: 0.875rem; font-weight: 700; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em;">Active Customers</span>
+            <span id="tc-user-count" style="font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 800; color: #151515;">10</span>
+        </div>
+
+        <input type="range" id="tc-risk-slider" class="tc-slider" min="0" max="100" value="0" oninput="updateRiskScale(this.value)" style="width: 100%; appearance: none; background: transparent; outline: none; margin-bottom: 8px;">
+        
+        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #6B7280; font-weight: 600;">
+            <span>Startup Day 1</span>
+            <span>2 Million (Today)</span>
+        </div>
+    </div>
+
+    <div style="position: relative; background-color: #24292F; border-radius: 8px; height: 220px; overflow: hidden; margin-bottom: 16px; border: 1px solid #151515; box-shadow: inset 0 4px 12px rgba(0,0,0,0.3);">
+        
+        <div style="position: absolute; top: 12px; left: 12px; z-index: 10;">
+            <span style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); color: #FFFFFF; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2);">
+                Risk Vectors: <span id="tc-vector-count">2</span>
+            </span>
+        </div>
+
+        <div id="tc-particle-box" style="width: 100%; height: 100%; position: relative;"></div>
+    </div>
+
+    <div id="tc-risk-status" style="background-color: #E8F5E9; padding: 16px; border-radius: 8px; border-left: 4px solid #20C997; transition: all 0.3s ease;">
+        <div id="tc-status-headline" style="font-size: 0.875rem; font-weight: 700; color: #0E7051; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Negligible Risk</div>
+        <div id="tc-status-desc" style="font-size: 0.95rem; line-height: 1.5; color: #151515;">
+            Transactions are sparse. The founders can manually review deposits, manage liquidity, and handle customer support directly.
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const minUsers = 10;
+            const maxUsers = 2000000;
+            
+            const colors = {
+                low: '#20C997',    
+                med: '#FFC52F',    
+                high: '#FF9800',   
+                critical: '#EA2D2E'
+            };
+
+            // Attach to global window object so the inline HTML oninput can find it
+            window.updateRiskScale = function(sliderValue) {
+                const scale = sliderValue / 100;
+                let currentUsers = Math.floor(minUsers * Math.pow((maxUsers / minUsers), scale));
+                
+                if (currentUsers > 1000) currentUsers = Math.round(currentUsers / 100) * 100;
+                if (currentUsers > 100000) currentUsers = Math.round(currentUsers / 1000) * 1000;
+                
+                document.getElementById('tc-user-count').innerText = currentUsers.toLocaleString('en-US');
+
+                let stateColor, headline, desc, boxBg, nodeCount, animationSpeed;
+
+                if (currentUsers < 10000) {
+                    stateColor = colors.low;
+                    boxBg = '#E8F5E9'; 
+                    headline = "Negligible Risk";
+                    desc = "Transactions are sparse. The founders can manually review deposits, manage liquidity, and handle customer support without dedicated governance.";
+                    nodeCount = Math.floor(2 + (scale * 20)); 
+                    animationSpeed = "4s";
+                } 
+                else if (currentUsers < 150000) {
+                    stateColor = colors.med;
+                    boxBg = '#FFF8E1'; 
+                    headline = "Operational Strain";
+                    desc = "Traffic spikes cause API limits to break. First automated fraud attempts appear. You need dedicated engineers and a compliance officer.";
+                    nodeCount = Math.floor(20 + (scale * 40)); 
+                    animationSpeed = "2.5s";
+                }
+                else if (currentUsers < 800000) {
+                    stateColor = colors.high;
+                    boxBg = '#FFF3E0'; 
+                    headline = "Regulatory Scrutiny";
+                    desc = "The SEC is watching. You must maintain strict liquidity ratios and submit monthly risk reports. A dedicated Risk Manager is now legally required.";
+                    nodeCount = Math.floor(40 + (scale * 60)); 
+                    animationSpeed = "1.5s";
+                }
+                else {
+                    stateColor = colors.critical;
+                    boxBg = '#FFE0E0'; 
+                    headline = "Systemic Complexity";
+                    desc = "10,000 withdrawal requests a minute. A single outage affects millions of lives. You cannot survive without an institutional governance structure (11 AVPs).";
+                    nodeCount = Math.floor(80 + (scale * 70)); 
+                    animationSpeed = "0.7s";
+                }
+
+                document.getElementById('tc-vector-count').innerText = nodeCount;
+                const statusBox = document.getElementById('tc-risk-status');
+                statusBox.style.backgroundColor = boxBg;
+                statusBox.style.borderLeftColor = stateColor;
+                
+                const hl = document.getElementById('tc-status-headline');
+                hl.innerText = headline;
+                hl.style.color = stateColor;
+                
+                document.getElementById('tc-status-desc').innerText = desc;
+
+                renderParticles(nodeCount, stateColor, animationSpeed);
+            };
+
+            function renderParticles(count, color, speed) {
+                const box = document.getElementById('tc-particle-box');
+                if (!box) return;
+                box.innerHTML = ''; 
+
+                for (let i = 0; i < count; i++) {
+                    const node = document.createElement('div');
+                    node.className = 'tc-risk-node';
+                    
+                    const size = Math.floor(Math.random() * 8) + 4;
+                    const startX = Math.floor(Math.random() * 100);
+                    const startY = Math.floor(Math.random() * 100);
+                    const moveX = (Math.random() * 80) - 40;
+                    const moveY = (Math.random() * 80) - 40;
+                    const delay = Math.random() * 2;
+
+                    node.style.width = size + 'px';
+                    node.style.height = size + 'px';
+                    node.style.backgroundColor = color;
+                    node.style.left = startX + '%';
+                    node.style.top = startY + '%';
+                    node.style.animationDuration = speed;
+                    node.style.animationDelay = '-' + delay + 's';
+                    
+                    node.style.setProperty('--tx', moveX + 'px');
+                    node.style.setProperty('--ty', moveY + 'px');
+
+                    box.appendChild(node);
+                }
+            }
+
+            // CMS Safe Initialization
+            function initTool() {
+                if (document.getElementById('tc-risk-slider')) {
+                    window.updateRiskScale(0);
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initTool);
+            } else {
+                initTool();
+            }
+        })();
+    </script>
+</div>
+
+
+
+<p>I was not alone in finding the promotions unusual. Abiola Sowemimo, a fintech human resources executive renowned for helping build Paystack's HR team and practices, told me her first reaction was caution rather than judgment.&nbsp;</p>
+
+
+
+<p>"This is unusual. Not that it is automatically wrong, just very unusual," she said. In a company of about 70 people, promoting 11 to AVP at once "would naturally raise questions."&nbsp;</p>
+
+
+
+<p>"It is a leadership promotion, so the concern becomes whether this is a real promotion," she added.&nbsp;</p>
+
+
+
+<p>But Sowemimo was equally clear that the nature of Cowrywise's business changes the equation. “It looks like an intentional organisational move rather than business as usual,” she said.</p>
+
+
+
+<p>Part of what changes the equation is that Cowrywise is regulated by Nigeria's Securities and Exchange Commission (SEC).&nbsp;</p>
+
+
+
+<p>A company licensed to manage other people's money faces scrutiny that an ordinary startup does not, because regulators want decision-making distributed among experienced people across important business units like risk, finance, and compliance.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async" width="1024" height="576" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7397_hero_1200x675-1024x576.jpg" alt="" class="wp-image-189220" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7397_hero_1200x675-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7397_hero_1200x675-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7397_hero_1200x675-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7397_hero_1200x675.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Cowrywise's founders and AVPs.</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading"><strong>What does Cowrywise do?&nbsp;</strong></h2>
+
+
+
+<p>To understand the promotions, you first have to understand Cowrywise’s business model and how it makes money.</p>
+
+
+
+<p>Founded in 2016 by Razaq Ahmed and Edward Popoola, Cowrywise is a wealth-management company. What it does, in the words of Omowonuola Tunde-Bello, the AVP of investment management, is "invest on behalf of our clients and charge management fees."&nbsp;</p>
+
+
+
+<p>Customers put their money in wallets via transfer or card payments; Cowrywise's portfolio team allocates it across savings products, mutual funds, fixed-income products like treasury bills and, more recently, equities on the Nigerian Exchange Group, and the company takes a management fee on those assets.&nbsp;</p>
+
+
+
+<p>It is the same way a traditional asset-management firm like Chapel Hill Denham makes its money.&nbsp;</p>
+
+
+
+<p>Today, to fund a ₦1,000 ($0.70) investment plan, a Cowrywise user will transfer ₦1,015 ($0.70), inclusive of processing fees or set up a direct debit. They can pick from Naira portfolios that have returned between 4.33% and 51.56% so far this year.&nbsp;</p>
+
+
+
+<p>When I invested ₦1,000 ($0.73) in the highest-returning option in March, the 29.36% equity portfolio that was significantly weighted towards stocks, only ₦989 ($0.72) was reflected in my balance, indicating an additional ₦11 deduction from the invested amount.</p>
+
+
+
+<p>By May, my initial ₦1,000 had grown to ₦1,156, a 16.9% gain in two months. It lost ₦20 in March, gained ₦159 in April, and has added ₦17.34 so far in May.</p>
+
+
+
+<p>Cowrywise also partners with older asset management firms, such as Meristem Wealth Management, Afrinvest, ARM Investment Managers, and United Capital Asset Management, serving as a distribution layer and tech infrastructure for their funds.&nbsp;</p>
+
+
+
+<p>These relationships help the company’s partners bring regulated products to its customers, while Cowrywise provides the technology and distribution that get those products in front of retail customers through its app. A win-win of sorts for both parties. Cowrywise declined to share how it shares fees with its partners.</p>
+
+
+
+<div style="font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #F6F6F6; padding: 5%; border-radius: 8px; width: 100%; max-width: 600px; box-sizing: border-box; margin: 24px auto; color: #151515; border: 1px solid #E3E8EF; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <h3 style="margin-top: 0; font-size: clamp(1.125rem, 4vw, 1.25rem); font-weight: 700; color: #151515; line-height: 1.3;">How much does it cost to grow your wealth?</h3>
+    
+    <p style="font-size: clamp(0.875rem, 3vw, 1rem); line-height: 1.6; color: #24292F; margin-bottom: 24px;">
+        Cowrywise sustains its operations by taking a small management fee on your investments. Play with the numbers below to see how fees and returns balance out in real-time.
+    </p>
+
+    <div style="margin-bottom: 20px;">
+        <label for="tc-investment" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 8px;">Initial Investment (₦)</label>
+        <input type="text" inputmode="numeric" id="tc-investment" value="1,000" oninput="handleInput(event)" style="width: 100%; padding: 14px 12px; border: 1px solid #D1D5DB; border-radius: 4px; font-size: 1.125rem; font-family: inherit; box-sizing: border-box; transition: border-color 0.2s;">
+    </div>
+
+    <div style="margin-bottom: 32px;">
+        <label for="tc-return" style="display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 600; margin-bottom: 12px;">
+            <span>Expected Return</span>
+            <span id="tc-return-label" style="color: #EA2D2E; font-weight: 700;">16.9%</span>
+        </label>
+        <input type="range" id="tc-return" value="16.9" min="1" max="50" step="0.1" oninput="calculateFees()" style="width: 100%; cursor: pointer; accent-color: #EA2D2E; box-sizing: border-box;">
+    </div>
+
+    <div id="tc-results" style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 8px; border: 1px solid #E3E8EF; box-sizing: border-box;">
+        
+        <div style="height: 12px; width: 100%; background-color: #F3F4F6; border-radius: 6px; overflow: hidden; display: flex; margin-bottom: 20px;">
+            <div id="tc-bar-profit" style="height: 100%; background-color: #20C997; width: 90%; transition: width 0.3s ease;"></div>
+            <div id="tc-bar-fee" style="height: 100%; background-color: #EA2D2E; width: 10%; transition: width 0.3s ease;"></div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
+            <span style="font-size: 0.875rem; display: flex; align-items: center;">
+                <span style="display: inline-block; width: 10px; height: 10px; background-color: #EA2D2E; border-radius: 50%; margin-right: 8px;"></span>
+                Estimated Platform Fee:
+            </span>
+            <strong id="tc-fee-output" style="color: #EA2D2E; font-size: 1rem;">₦15.00</strong>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+            <span style="font-size: 0.875rem; display: flex; align-items: center;">
+                <span style="display: inline-block; width: 10px; height: 10px; background-color: #20C997; border-radius: 50%; margin-right: 8px;"></span>
+                Your Net Profit:
+            </span>
+            <strong id="tc-profit-output" style="color: #20C997; font-size: 1rem;">₦154.00</strong>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px dashed #D1D5DB; flex-wrap: wrap;">
+            <span style="font-size: clamp(1rem, 3vw, 1.125rem); font-weight: 700; color: #151515;">Total Final Balance:</span>
+            <strong id="tc-total-output" style="font-size: clamp(1.125rem, 4vw, 1.25rem); color: #151515;">₦1,154.00</strong>
+        </div>
+    </div>
+    
+    <p style="font-size: 0.75rem; color: #6B7280; margin-top: 16px; text-align: center; line-height: 1.5; padding: 0 10px;">
+        *Note: This is a simplified calculation for educational purposes, based on a flat 1.5% management fee deduction model.
+    </p>
+
+    <script>
+        // Formats the input field with commas as the user types
+        function handleInput(event) {
+            let inputField = event.target;
+            
+            // Strip out all non-numeric characters except the decimal point
+            let unformatted = inputField.value.replace(/[^0-9.]/g, '');
+            
+            // Split by decimal to ensure we only format the integer part
+            let parts = unformatted.split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            
+            // Rejoin and set the value
+            inputField.value = parts.join('.');
+            
+            // Trigger calculation
+            calculateFees();
+        }
+
+        function calculateFees() {
+            // Get inputs and remove commas for math
+            const rawInvestment = document.getElementById('tc-investment').value.replace(/,/g, '');
+            const investment = parseFloat(rawInvestment);
+            const returnRate = parseFloat(document.getElementById('tc-return').value);
+            
+            // Update slider label
+            document.getElementById('tc-return-label').innerText = returnRate.toFixed(1) + '%';
+
+            if(isNaN(investment) || investment < 0) return;
+
+            // Math based on the article's context
+            const estimatedFeeRate = 0.015; 
+            const fee = investment * estimatedFeeRate;
+            const grossReturn = investment * (returnRate / 100);
+            const netProfit = grossReturn - fee;
+            const totalBalance = investment + netProfit;
+
+            // Formatter for outputs (commas + 2 decimal places)
+            const formatMoney = (amount) => {
+                return '₦' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            };
+
+            // Display outputs
+            document.getElementById('tc-fee-output').innerText = formatMoney(fee);
+            document.getElementById('tc-profit-output').innerText = formatMoney(netProfit > 0 ? netProfit : 0);
+            document.getElementById('tc-total-output').innerText = formatMoney(totalBalance);
+            
+            // Update the visual proportion bar
+            const totalGained = fee + (netProfit > 0 ? netProfit : 0);
+            let profitPercent = 0;
+            let feePercent = 0;
+
+            if (totalGained > 0) {
+                feePercent = (fee / totalGained) * 100;
+                profitPercent = 100 - feePercent;
+            }
+
+            document.getElementById('tc-bar-profit').style.width = profitPercent + '%';
+            document.getElementById('tc-bar-fee').style.width = feePercent + '%';
+        }
+
+        // Initialize on load
+        document.addEventListener("DOMContentLoaded", calculateFees);
+    </script>
+</div>
+
+
+
+<p>The startup’s digital-first model traces directly to Ahmed’s time as an investment analyst at firms like Vetiva and Meristem, where he observed that traditional wealth managers catered almost exclusively to high-net-worth clients, leaving the vast majority of Nigerians without access to investment products. In 2025, the director-general of the Securities and Exchange Commission (SEC), Dr Emomotimi Agama, said that less than <a href="https://www.vanguardngr.com/2025/10/less-than-4-of-nigerians-invest-in-capital-market-sec-dg/" target="_blank" rel="noreferrer noopener">4% of Nigerians </a>invest in the capital market.&nbsp;</p>
+
+
+
+<p>That digital path has also allowed Cowrywise to create products like Halal savings for Muslims that don't accrue interest; Stash (a digital wallet for receiving and sending money); Circles (group savings); Triggers (a feature that automatically saves or invests when preset conditions are met, like when your football club scores a goal); and Money Badges (gamified milestones celebrating savings achievements).</p>
+
+
+
+<p>It also runs <a href="https://cowrywise.com/blog/cowrywise-sprout/">Sprout</a>, a corporate treasury management tool leveraging technology and asset management solutions to help businesses invest idle cash.</p>
+
+
+
+<p>Cowrywise's business has also expanded beyond retail distribution. Over the past year, the company has built a proprietary investment capability, deploying capital across public markets and other financial assets with a focus on long-term, risk-adjusted returns and begun portfolio construction for select high-net-worth clients.</p>
+
+
+
+<p>Abdulrauf (Rufy) Bello, the AVP for investment management, who joined a year ago specifically to lead that capability, now manages the proprietary book alongside contributing to the firm's broader investment research and financial education output.</p>
+
+
+
+<p>This shift is one of the latest in the company’s efforts to move from a savings-focused platform to a full digital wealth platform, where users actively invest across diversified financial assets.</p>
+
+
+
+<p>Since its founding, Cowrywise has grown from a few thousand customers to over two million, a figure several employees mentioned to me with the pride of those who built the business from the ground up.</p>
+
+
+
+<p>That growth inevitably produces complexity. When a company has ten customers, the risk is negligible, but when it has a million, the risk is systemic and gigantic.&nbsp;</p>
+
+
+
+<p>Such a company needs people who think about liquidity ratios, credit exposure and what happens when 10,000 customers all hit the withdrawal button on the same afternoon. It needs someone whose job is managing risk. It needs the SEC to trust that those people exist and that they can do a good job.</p>
+
+
+
+<div style="font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #F6F6F6; padding: clamp(16px, 5vw, 24px); border-radius: 8px; width: 100%; max-width: 600px; box-sizing: border-box; margin: 24px auto; color: #151515; border: 1px solid #E3E8EF; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <h3 style="margin-top: 0; font-size: clamp(1.125rem, 4vw, 1.25rem); font-weight: 700; color: #151515; line-height: 1.3;">The Reality of Equity Returns</h3>
+    
+    <p style="font-size: clamp(0.875rem, 3vw, 1rem); line-height: 1.6; color: #24292F; margin-bottom: 24px;">
+        High-return portfolios don't move in a straight line. Use the slider or type an amount to see how the market fluctuations from March to May 2026 affect your money in real-time.
+    </p>
+
+    <div style="margin-bottom: 32px; background: #FFFFFF; padding: 16px; border-radius: 8px; border: 1px solid #E3E8EF;">
+        <label for="tc-vol-text" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 8px;">Initial Investment (₦)</label>
+        
+        <input type="text" inputmode="numeric" id="tc-vol-text" value="1,000" oninput="handleTextInput(event)" style="width: 100%; padding: 12px; border: 1px solid #D1D5DB; border-radius: 4px; font-size: 1.125rem; font-family: inherit; font-weight: 600; box-sizing: border-box; transition: border-color 0.2s; margin-bottom: 16px;">
+        
+        <input type="range" id="tc-vol-slider" min="1000" max="500000" step="1000" value="1000" oninput="handleSliderInput(event)" style="width: 100%; cursor: pointer; accent-color: #EA2D2E; box-sizing: border-box; height: 6px; border-radius: 3px; background: #E3E8EF; outline: none;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #6B7280; margin-top: 8px;">
+            <span>₦1,000</span>
+            <span>₦500,000+</span>
+        </div>
+    </div>
+
+    <div style="background-color: #FFFFFF; padding: 24px 12px; border-radius: 8px; border: 1px solid #E3E8EF; box-sizing: border-box;">
+        
+        <div style="text-align: center; margin-bottom: 32px;">
+            <span style="font-size: 0.75rem; color: #6B7280; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background-color: #F8FAFC; padding: 6px 12px; border-radius: 12px; border: 1px solid #E2E8F0;">2026 Performance</span>
+        </div>
+
+        <div style="position: relative; height: 200px; width: 100%; display: flex; justify-content: space-between; margin-bottom: 8px;">
+            
+            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background-color: #D1D5DB; z-index: 1;"></div>
+
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 2;">
+                </div>
+
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 2; height: 100%;">
+                <div style="height: 50%; width: 100%;"></div> <div id="tc-bar-mar" style="width: 30px; background-color: #EA2D2E; border-radius: 0 0 4px 4px; transition: height 0.2s ease-out; height: 12.5%;"></div>
+                <div id="tc-val-mar" style="margin-top: 8px; background-color: #FFFFFF; border: 1px solid #EA2D2E; color: #EA2D2E; padding: 4px; border-radius: 4px; font-size: clamp(0.65rem, 2vw, 0.75rem); font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: opacity 0.2s;">-₦20</div>
+            </div>
+
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; z-index: 2; height: 50%;">
+                <div id="tc-val-apr" style="margin-bottom: 8px; background-color: #FFFFFF; border: 1px solid #20C997; color: #20C997; padding: 4px; border-radius: 4px; font-size: clamp(0.65rem, 2vw, 0.75rem); font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: opacity 0.2s;">+₦159</div>
+                <div id="tc-bar-apr" style="width: 30px; background-color: rgba(32, 201, 151, 0.3); border-radius: 4px 4px 0 0; transition: height 0.2s ease-out; height: 99%;"></div>
+            </div>
+
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; z-index: 2; height: 50%;">
+                <div id="tc-val-may" style="margin-bottom: 8px; background-color: #FFFFFF; border: 1px solid #20C997; color: #20C997; padding: 4px; border-radius: 4px; font-size: clamp(0.65rem, 2vw, 0.75rem); font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: opacity 0.2s;">+₦17</div>
+                <div id="tc-bar-may" style="width: 30px; background-color: rgba(32, 201, 151, 0.3); border-radius: 4px 4px 0 0; transition: height 0.2s ease-out; height: 10.8%;"></div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; color: #6B7280; font-size: 0.875rem; margin-top: 12px; margin-bottom: 24px;">
+            <div style="flex: 1; text-align: center;">Feb</div>
+            <div style="flex: 1; text-align: center;">Mar</div>
+            <div style="flex: 1; text-align: center;">Apr</div>
+            <div style="flex: 1; text-align: center;">May</div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px dashed #D1D5DB; flex-wrap: wrap;">
+            <span style="font-size: clamp(0.875rem, 3vw, 1rem); font-weight: 600; color: #151515;">Current Value (May 2026):</span>
+            <strong id="tc-vol-total" style="font-size: clamp(1.25rem, 4vw, 1.5rem); color: #151515; font-weight: 700;">₦1,156.00</strong>
+        </div>
+    </div>
+    
+    <p style="font-size: 0.75rem; color: #6B7280; margin-top: 16px; text-align: center; line-height: 1.5; padding: 0 10px;">
+        *Calculations use exact figures from the article: -2.0% in March, +15.9% in April, and +1.73% in May.
+    </p>
+
+    <script>
+        const rates = { mar: -0.02, apr: 0.159, may: 0.01734 };
+        const maxAbsRate = 0.16; // Used to scale bar heights relative to container
+
+        function formatMoney(amount, isDifference = false) {
+            const prefix = isDifference ? (amount < 0 ? '-₦' : '+₦') : '₦';
+            return prefix + Math.abs(amount).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        }
+
+        function formatFullMoney(amount) {
+            return '₦' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        // Syncs Slider to Text Input
+        function handleSliderInput(event) {
+            const val = event.target.value;
+            const textInput = document.getElementById('tc-vol-text');
+            textInput.value = Number(val).toLocaleString('en-US');
+            calculateVolatility(Number(val));
+        }
+
+        // Syncs Text Input to Slider
+        function handleTextInput(event) {
+            let inputField = event.target;
+            let unformatted = inputField.value.replace(/[^0-9.]/g, '');
+            if(unformatted === '') unformatted = '0';
+            
+            let parts = unformatted.split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            inputField.value = parts.join('.');
+            
+            const numVal = parseFloat(unformatted);
+            const slider = document.getElementById('tc-vol-slider');
+            
+            // Allow slider to scale up if user types a huge number
+            if(numVal > slider.max) {
+                slider.max = numVal;
+            }
+            slider.value = numVal;
+
+            calculateVolatility(numVal);
+        }
+
+        function calculateVolatility(principal) {
+            if(isNaN(principal) || principal <= 0) {
+                document.getElementById('tc-val-mar').style.opacity = '0';
+                document.getElementById('tc-val-apr').style.opacity = '0';
+                document.getElementById('tc-val-may').style.opacity = '0';
+                document.getElementById('tc-bar-mar').style.height = '0%';
+                document.getElementById('tc-bar-apr').style.height = '0%';
+                document.getElementById('tc-bar-may').style.height = '0%';
+                document.getElementById('tc-vol-total').innerText = '₦0.00';
+                return;
+            }
+
+            const marVal = principal * rates.mar;
+            const aprVal = principal * rates.apr;
+            const mayVal = principal * rates.may;
+            const finalBalance = principal + marVal + aprVal + mayVal;
+
+            // Update Heights (Scaled to 100% of their half-containers)
+            document.getElementById('tc-bar-mar').style.height = ((Math.abs(rates.mar) / maxAbsRate) * 100) + '%';
+            document.getElementById('tc-bar-apr').style.height = ((Math.abs(rates.apr) / maxAbsRate) * 100) + '%';
+            document.getElementById('tc-bar-may').style.height = ((Math.abs(rates.may) / maxAbsRate) * 100) + '%';
+
+            // Update Labels
+            const valMar = document.getElementById('tc-val-mar');
+            const valApr = document.getElementById('tc-val-apr');
+            const valMay = document.getElementById('tc-val-may');
+
+            valMar.innerText = formatMoney(marVal, true);
+            valApr.innerText = formatMoney(aprVal, true);
+            valMay.innerText = formatMoney(mayVal, true);
+
+            valMar.style.opacity = '1';
+            valApr.style.opacity = '1';
+            valMay.style.opacity = '1';
+
+            // Update Total
+            document.getElementById('tc-vol-total').innerText = formatFullMoney(finalBalance);
+        }
+    </script>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Eleven seats&nbsp;</strong></h2>
+
+
+
+<p>At the January retreat, as Obi Uchenna David, the engineering AVP, told me, the serious business portion of the day had ended, lunch had been eaten, and everyone was expecting the fun part with team-bonding games and music.&nbsp;</p>
+
+
+
+<p>Instead, 11 seats were set at the front of the room. Names were called. Depending on who you ask, the AVPs were "pleasantly surprised,” “shocked, and "not expecting it to come this soon."</p>
+
+
+
+<p>By David’s account, the promotions are an attempt at formalisation. The single most repeated phrase in my interviews was some version of "I've been doing this already."</p>
+
+
+
+<p>"You have been dating your high school love for the last 10 years, and now you're getting married. No one should be surprised,” said David, who leads product engineering, security, and AI research.</p>
+
+
+
+<p>David has been at Cowrywise for eight years, joining in November 2018, and has worked on almost every product the company has ever owned.&nbsp;</p>
+
+
+
+<p>He started as a mobile and backend developer, migrated into cybersecurity, built the company's in-house fraud-detection system, and led the team that created one of Cowrywise's most recognisable products: the savings trigger that automatically sets aside money when your football team scores a goal. He is a Manchester City fan, so the damage in recent years has been significant.</p>
+
+
+
+<p>He also built the company's most commercially significant product almost by accident. The Cowrywise Investment Portfolio, its equities product, was born from a brief exchange: Ahmed, the CEO, walked in with an idea, and they discussed it for 15 minutes. David said he could build it, and it was live within hours.</p>
+
+
+
+<p>"It's one of the highest-grossing products right now," he said, pausing. "Which is now a problem because Razaq thinks all products can be like that." The process today, David was careful to note, would involve product managers, technical specifications, and review cycles—signs, he added, that the company has matured.&nbsp;</p>
+
+
+
+<p>But his words revealed that preferring speed and being uncomfortable with bureaucracy are not bugs in Cowrywise's culture but features that shaped it. I wondered whether the AVP structure is an attempt to preserve that instinct without letting it run unchecked.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6715_hero_1200x675-1024x576.jpg" alt="" class="wp-image-189224" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6715_hero_1200x675-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6715_hero_1200x675-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6715_hero_1200x675-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6715_hero_1200x675.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Einstein Yunusa, the finance AVP.</figcaption></figure>
+
+
+
+<p>Feyisayo Sonubi, the design AVP, who has been at Cowrywise even longer than David, helped put things in perspective. He joined in 2017 as a University of Lagos student, initially as a front-end engineer. When Cowrywise had no designer, his enthusiasm for the discipline pushed him to raise his hand at a meeting and volunteer for the role.</p>
+
+
+
+<p>"The rest is history," Sonubi said. You could tell he had told the origin story of Cowrywise’s design department and his role as the first designer many times.</p>
+
+
+
+<p>Nearly a decade later, Sonubi leads a team of four. He is responsible for every visual element of the Cowrywise brand: the logo, the product interfaces, and the colours. His fingerprints are all over the app that millions of people open. When I asked him how the promotion felt, he was honest: he hadn't expected the title this early in his career or life.&nbsp;</p>
+
+
+
+<p>"When I look at people who have the same title at bigger companies, they're always like these old people, 50-something years old," he said. "It's not someone in his twenties or thirties, you know, an associate vice president."</p>
+
+
+
+<p>At larger institutions where the AVP title (a rank borrowed from American banking) carries weight, an AVP is usually well into mid-career. At Cowrywise, a company younger than my first iPhone, it is being handed to people in their late twenties and early thirties.&nbsp;</p>
+
+
+
+<p>In more mature startup ecosystems, a sudden batch of executive promotions often signals an intention to raise significant capital, prepare for an acquisition, or list publicly, but Yunusa, the finance AVP, shut that notion down. "I'm 100% sure that there's no conversation about it," he said, adding that he doesn't think businesses are built properly from a finance standpoint by always thinking about fundraising.&nbsp;</p>
+
+
+
+<p>Still, Cowrywise has raised roughly $3.69 million across five rounds, and against that floor, it now looks, more than at any prior point, like a credible candidate for a large growth round, particularly given that the company says it is profitable, a magnet for investors. A fintech managing money for two million Nigerians under SEC regulation, with a risk framework, a formal governance structure, and now eleven AVPs, has made itself considerably more legible to institutional capital, whether or not that was the intention.</p>
+
+
+
+<div id="tc-org-tool" style="font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #F6F6F6; padding: clamp(16px, 5vw, 24px); border-radius: 8px; width: 100%; max-width: 600px; box-sizing: border-box; margin: 24px auto; color: #151515; border: 1px solid #E3E8EF; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <style>
+        .tc-pulse-red { animation: tc-pulse-r 1.5s infinite; }
+        .tc-pulse-green { animation: tc-pulse-g 1.5s infinite; }
+        @keyframes tc-pulse-r {
+            0% { box-shadow: 0 0 0 0 rgba(234, 45, 46, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(234, 45, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(234, 45, 46, 0); }
+        }
+        @keyframes tc-pulse-g {
+            0% { box-shadow: 0 0 0 0 rgba(32, 201, 151, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(32, 201, 151, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(32, 201, 151, 0); }
+        }
+        .tc-node { transition: all 0.3s ease; }
+        .tc-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    </style>
+
+    <h3 style="margin-top: 0; font-size: clamp(1.125rem, 4vw, 1.25rem); font-weight: 700; color: #151515; line-height: 1.3;">The Founder-Dependency Blast Radius</h3>
+    
+    <p style="font-size: clamp(0.875rem, 3vw, 1rem); line-height: 1.6; color: #24292F; margin-bottom: 24px;">
+        In Nigerian fintech, a single decision-maker can be a fatal bottleneck. Toggle the company structure below, then <strong>tap the CEO</strong> to simulate what happens when the founder is unavailable.
+    </p>
+
+    <div style="display: flex; background: #E3E8EF; border-radius: 8px; padding: 4px; margin-bottom: 24px; position: relative;">
+        <button id="btn-startup" onclick="setMode('startup')" class="tc-btn" style="flex: 1; padding: 10px; border: none; background: #FFFFFF; border-radius: 6px; font-weight: 700; font-size: 0.875rem; cursor: pointer; color: #151515; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.2s;">Typical Startup</button>
+        <button id="btn-cathedral" onclick="setMode('cathedral')" class="tc-btn" style="flex: 1; padding: 10px; border: none; background: transparent; border-radius: 6px; font-weight: 600; font-size: 0.875rem; cursor: pointer; color: #6B7280; transition: all 0.2s;">Cowrywise (Cathedral)</button>
+    </div>
+
+    <div style="background-color: #FFFFFF; padding: 32px 16px; border-radius: 8px; border: 1px solid #E3E8EF; text-align: center; margin-bottom: 24px; min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+        
+        <button id="node-ceo" onclick="triggerCrisis()" class="tc-node tc-pulse-red" style="background-color: #24292F; color: #FFFFFF; border: none; padding: 16px 24px; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; z-index: 10; margin-bottom: 16px; width: 200px;">
+            CEO (Tap to Remove)
+        </button>
+
+        <div id="arrow-1" class="tc-node" style="height: 24px; width: 2px; background-color: #D1D5DB; margin-bottom: 16px;"></div>
+
+        <div id="layer-governance" class="tc-node" style="display: none; width: 100%; max-width: 400px; background-color: #F8FAFC; border: 2px dashed #D1D5DB; padding: 12px; border-radius: 8px; margin-bottom: 16px;">
+            <span id="text-governance" style="font-weight: 700; font-size: 0.875rem; color: #6B7280;">11 Associate Vice Presidents</span>
+        </div>
+
+        <div id="arrow-2" class="tc-node" style="display: none; height: 24px; width: 2px; background-color: #D1D5DB; margin-bottom: 16px;"></div>
+
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; width: 100%; max-width: 400px;">
+            <div class="tc-node tc-op-node" style="flex: 1 1 40%; background: #F3F4F6; padding: 12px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: #24292F; border: 1px solid #E3E8EF;">Risk Management</div>
+            <div class="tc-node tc-op-node" style="flex: 1 1 40%; background: #F3F4F6; padding: 12px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: #24292F; border: 1px solid #E3E8EF;">Investment Portfolio</div>
+            <div class="tc-node tc-op-node" style="flex: 1 1 40%; background: #F3F4F6; padding: 12px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: #24292F; border: 1px solid #E3E8EF;">Product Engineering</div>
+            <div class="tc-node tc-op-node" style="flex: 1 1 40%; background: #F3F4F6; padding: 12px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: #24292F; border: 1px solid #E3E8EF;">Finance & Treasury</div>
+        </div>
+
+    </div>
+
+    <div id="tc-status-box" style="background-color: #E3E8EF; padding: 16px; border-radius: 8px; border-left: 4px solid #24292F; transition: all 0.3s;">
+        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; color: #6B7280;" id="tc-status-title">System Status</div>
+        <div style="font-size: 1rem; font-weight: 600; color: #151515;" id="tc-status-text">All decisions route through the CEO. System is functioning normally.</div>
+    </div>
+
+    <script>
+        let currentMode = 'startup';
+        let isCrisisActive = false;
+
+        const colors = {
+            primary: '#EA2D2E',
+            success: '#20C997',
+            dark: '#24292F',
+            grey: '#F3F4F6',
+            border: '#E3E8EF',
+            inactive: '#D1D5DB'
+        };
+
+        function setMode(mode) {
+            currentMode = mode;
+            isCrisisActive = false;
+            
+            // Update Toggle UI
+            const btnStartup = document.getElementById('btn-startup');
+            const btnCathedral = document.getElementById('btn-cathedral');
+            
+            if (mode === 'startup') {
+                btnStartup.style.background = '#FFFFFF';
+                btnStartup.style.color = '#151515';
+                btnStartup.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                btnStartup.style.fontWeight = '700';
+                
+                btnCathedral.style.background = 'transparent';
+                btnCathedral.style.color = '#6B7280';
+                btnCathedral.style.boxShadow = 'none';
+                btnCathedral.style.fontWeight = '600';
+
+                // Hide Governance Layer
+                document.getElementById('layer-governance').style.display = 'none';
+                document.getElementById('arrow-2').style.display = 'none';
+                
+            } else {
+                btnCathedral.style.background = '#FFFFFF';
+                btnCathedral.style.color = '#151515';
+                btnCathedral.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                btnCathedral.style.fontWeight = '700';
+                
+                btnStartup.style.background = 'transparent';
+                btnStartup.style.color = '#6B7280';
+                btnStartup.style.boxShadow = 'none';
+                btnStartup.style.fontWeight = '600';
+
+                // Show Governance Layer
+                document.getElementById('layer-governance').style.display = 'block';
+                document.getElementById('arrow-2').style.display = 'block';
+            }
+
+            resetUI();
+        }
+
+        function triggerCrisis() {
+            isCrisisActive = !isCrisisActive; // Toggle state
+
+            if (!isCrisisActive) {
+                resetUI();
+                return;
+            }
+
+            const ceoNode = document.getElementById('node-ceo');
+            const opNodes = document.querySelectorAll('.tc-op-node');
+            const statusBox = document.getElementById('tc-status-box');
+            const statusTitle = document.getElementById('tc-status-title');
+            const statusText = document.getElementById('tc-status-text');
+
+            ceoNode.innerText = "CEO Unavailable";
+            ceoNode.classList.remove('tc-pulse-red', 'tc-pulse-green');
+
+            if (currentMode === 'startup') {
+                // Startup Failure State
+                ceoNode.style.backgroundColor = colors.primary;
+                document.getElementById('arrow-1').style.backgroundColor = colors.primary;
+                
+                opNodes.forEach(node => {
+                    node.style.backgroundColor = '#FFE0E0';
+                    node.style.borderColor = colors.primary;
+                    node.style.color = colors.primary;
+                });
+
+                statusBox.style.backgroundColor = '#FFE0E0';
+                statusBox.style.borderLeftColor = colors.primary;
+                statusTitle.style.color = colors.primary;
+                statusTitle.innerText = "System Failure";
+                statusText.style.color = colors.primary;
+                statusText.innerText = "Critical bottleneck. Without the founder to sign off, operations stall and risk exposure increases.";
+
+            } else {
+                // Cathedral Resilient State
+                ceoNode.style.backgroundColor = colors.inactive;
+                document.getElementById('arrow-1').style.backgroundColor = colors.inactive;
+                
+                const govLayer = document.getElementById('layer-governance');
+                govLayer.style.backgroundColor = 'rgba(32, 201, 151, 0.1)';
+                govLayer.style.borderColor = colors.success;
+                govLayer.classList.add('tc-pulse-green');
+                document.getElementById('text-governance').style.color = colors.success;
+                document.getElementById('text-governance').innerText = "11 AVPs Step In";
+
+                document.getElementById('arrow-2').style.backgroundColor = colors.success;
+
+                opNodes.forEach(node => {
+                    node.style.backgroundColor = 'rgba(32, 201, 151, 0.1)';
+                    node.style.borderColor = colors.success;
+                    node.style.color = '#151515';
+                });
+
+                statusBox.style.backgroundColor = 'rgba(32, 201, 151, 0.1)';
+                statusBox.style.borderLeftColor = colors.success;
+                statusTitle.style.color = '#0E7051';
+                statusTitle.innerText = "System Resilient";
+                statusText.style.color = '#0E7051';
+                statusText.innerText = "Authority is distributed. The AVP layer absorbs the shock, allowing the company to function normally without the CEO.";
+            }
+        }
+
+        function resetUI() {
+            const ceoNode = document.getElementById('node-ceo');
+            const opNodes = document.querySelectorAll('.tc-op-node');
+            const statusBox = document.getElementById('tc-status-box');
+            const statusTitle = document.getElementById('tc-status-title');
+            const statusText = document.getElementById('tc-status-text');
+            const govLayer = document.getElementById('layer-governance');
+
+            ceoNode.innerText = "CEO (Tap to Remove)";
+            ceoNode.style.backgroundColor = colors.dark;
+            ceoNode.classList.add('tc-pulse-red');
+            ceoNode.classList.remove('tc-pulse-green');
+
+            document.getElementById('arrow-1').style.backgroundColor = colors.inactive;
+            document.getElementById('arrow-2').style.backgroundColor = colors.inactive;
+            
+            govLayer.style.backgroundColor = '#F8FAFC';
+            govLayer.style.borderColor = colors.inactive;
+            govLayer.classList.remove('tc-pulse-green');
+            document.getElementById('text-governance').style.color = '#6B7280';
+            document.getElementById('text-governance').innerText = "11 Associate Vice Presidents";
+
+            opNodes.forEach(node => {
+                node.style.backgroundColor = colors.grey;
+                node.style.borderColor = colors.border;
+                node.style.color = colors.dark;
+            });
+
+            statusBox.style.backgroundColor = colors.border;
+            statusBox.style.borderLeftColor = colors.dark;
+            statusTitle.style.color = '#6B7280';
+            statusTitle.innerText = "System Status";
+
+            if (currentMode === 'startup') {
+                statusText.style.color = colors.dark;
+                statusText.innerText = "All decisions route through the CEO. System is functioning normally.";
+            } else {
+                statusText.style.color = colors.dark;
+                statusText.innerText = "The founders lead, but the AVP layer manages domain-specific risks and operations.";
+            }
+        }
+    </script>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Cowrywise is decentralising</strong></h2>
+
+
+
+<p>Almost everyone I spoke to described the same problem in different words: Razaq Ahmed and Edward Popoola, Cowrywise cannot be everywhere. The CEO's calendar, one AVP told me, is booked for weeks without breaks. He attends events, meets regulators, and handles board conversations, and was (until recently) still somehow involved in product decisions and hiring calls.&nbsp;</p>
+
+
+
+<p>The company needed, as David put it, "people that can also drive the vision of the company" so that Cowrywise would not be "dependent on the CEO or just the founders to survive."</p>
+
+
+
+<p>Time has taught me that this is not a trivial concern. In Nigerian fintech, founder dependency is an existential risk. When a CEO is the sole authority on investment allocations or product launches, the business has a single point of failure.&nbsp;</p>
+
+
+
+<p>The starkest illustration of this risk is Patricia, the crypto company that <a href="https://techcabal.com/2023/05/27/patricia-loses-2m-to-hack/" target="_blank" rel="noreferrer noopener">lost $2 million to a hack</a> in 2023. Sources close to the company shared that CEO Hanu Fejiro Agbodje was the sole person authorised to move money and that the company lacked a board despite substantial revenue.&nbsp;</p>
+
+
+
+<p>When the hack hit, five C-level executives departed. Former employees said the hack alone did not cause the company’s problem, but mismanagement, with no board or leadership bench to absorb the pressure.</p>
+
+
+
+<p>Cowrywise, regulated by the SEC, cannot operate that way. The regulator has a direct interest in whether decision-making is concentrated in one person or distributed across experienced professionals, and that scrutiny certainly factored into the promotions.</p>
+
+
+
+<p>Ebenezer Akintomide, AVP for people and culture, made the regulator's likely view explicit. "If I were the regulator," he said, "I would look into the profiles of those people, and I would be proud."&nbsp;</p>
+
+
+
+<p>"Professionals at the highest levels in their field, with the right training, with the right knowledge, with very solid experience. People from the Big Four, people from global companies," Akintomide, the AVP for people and culture, said.</p>
+
+
+
+<p>Ibrahim Akintoye, the AVP for risk management who set up Cowrywise's risk management function, had spent six years at KPMG before leaving as an assistant manager. Tunde-Bello, who manages the investment portfolio, is a Chartered Financial Analyst (CFA) charterholder, a global certification for finance professionals, and previously worked at Leadway Pensions and Chapel Hill Denham as an investment manager and portfolio manager, respectively.&nbsp;</p>
+
+
+
+<p>Einstein Yunusa, the finance AVP, also came from KPMG, having spent six years and left as a manager. At these other companies, they would be mid-career professionals, but at Cowrywise, they own their part of the business with what seems like the authority to match.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7084_hero_1200x675-1024x576.jpg" alt="" class="wp-image-189225" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7084_hero_1200x675-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7084_hero_1200x675-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7084_hero_1200x675-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL7084_hero_1200x675.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Omowonuola Tunde-Bello, the AVP of investment management.</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading"><strong>How does Cowrywise define ownership?</strong></h2>
+
+
+
+<p>What does "ownership" actually mean for Cowrywise? This was the question I kept asking the AVPs, and their answers were instructive.</p>
+
+
+
+<p>Yunusa, who leads finance, told me his core responsibility is ensuring the company can "continue to exist into the future" by managing its cash reserve, eliminating any leakages in the company’s finances, and building long-term financial plans. Before the promotion, he said, he would sometimes do things that were helpful but technically outside his job description. Now, those things are formally his.&nbsp;</p>
+
+
+
+<p>Tunde-Bello, the portfolio manager, described her new role as ensuring that client funds are safe, that investments align with the company’s objectives, that Cowrywise remains profitable, and that regulatory reporting is delivered on time. She has two to three direct reports and has been at the company for only 7 months—the shortest tenure among the AVPs.&nbsp;</p>
+
+
+
+<p>"I didn't expect it to come this soon," she said about her promotion, which can be understood given her traditional background and the longer promotion cycles that exist in older firms.&nbsp;</p>
+
+
+
+<p>Akintoye, the AVP for risk management, who arrived about a year ago, told me a story that captures the texture of what "owning risk" looks like at a company that never had a formal risk function. When he joined from KPMG in 2024, he discovered that most Cowrywise employees had never interacted with risk management in a structured manner.&nbsp;</p>
+
+
+
+<p>There was, he said, a general fear at the company that his department would "drag them back." To assuage those fears, he did something unusual: he created a Google Form, titled after a trending meme (We listen, we don’t judge), and filled it with questions posed as a no-judgement risk-management quiz.&nbsp;</p>
+
+
+
+<p>Akintoye used the form to gauge his colleagues’ baseline understanding of risk before running a training session, appointing risk owners across every department, building a risk register with key risk indicators, and establishing monthly reporting to the board.&nbsp;</p>
+
+
+
+<p>"The beautiful thing,” he said, "is that risk management is best when it is being done before major decisions are being taken." Before the AVP title, he was already doing all of this. The title just meant that when he says something needs to stop, it carries formal weight.</p>
+
+
+
+<p>For Sowemimo, the fintech HR expert, fixating on the number misses the point. "The key question is not why it is 11 people. Even if it were 20 people, the question is, what do these people own now that they are AVPs? What has changed in the operating model of the business?"&nbsp;</p>
+
+
+
+<p>A mass promotion only means something, she said, if it comes with a real shift in how the company runs. "It cannot be business as usual with 11 new people in leadership positions. There has to be an intentional shift, and the question is whether that shift is actually happening."</p>
+
+
+
+<p>This is the question I kept putting to the AVPs.</p>
+
+
+
+<p>The case for absurdity is easy to make when there are eleven vice presidents in a seventy-person company.&nbsp;</p>
+
+
+
+<p>In corporate Nigeria, "vice president" conjures images of corner offices at Access Bank, not open-plan desks in a converted duplex. Eleven chiefs are a lot for a small tribe.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
+     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6550_hero_1200x675-1024x576.jpg" alt="" class="wp-image-189228" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6550_hero_1200x675-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6550_hero_1200x675-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6550_hero_1200x675-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/TRIL6550_hero_1200x675.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Obi Uchenna David, the engineering AVP.</figcaption></figure>
+
+
+
+<p>Several of the AVPs have teams of two to four people; Tunde-Bello, the investment management AVP, has two or three direct reports;&nbsp; Akintoye, the risk AVP, has none, but he said he is hiring. Sonubi, the design AVP, presides over a team of four.&nbsp;</p>
+
+
+
+<p>The case for sense requires understanding what Cowrywise is trying to build as it evolves from a small savings fintech to a multi-product financial institution where the word "governance" has to be a daily practice.&nbsp;</p>
+
+
+
+<p>This is the logic behind the promotions. According to recent history in Africa’s startup ecosystem, companies that fail almost always fail because of bad governance. By distributing authority across eleven people, each with a defined area of ownership, Cowrywise is building decentralisation into a business where it matters.&nbsp;</p>
+
+
+
+<p>If the CEO is unavailable, investment decisions still get made within the established framework. "Whether Razaq is here or not, that framework is still going to work on all investments," Tunde-Bello told me.</p>
+
+
+
+<p>The framework approach also extends to Rufy Bello, who now handles portfolio allocation and market-positioning decisions by himself. All he has to do is execute within an investment mandate already agreed with the founders and inform them “at a strategic level”.&nbsp;</p>
+
+
+
+<p>Because individual allocation calls no longer need the founders' sign-off, approvals that could stall at their desks now move independently, which sounds mundane but is what decentralisation looks like at a regulated financial institution. Now, if a regulator asks who is responsible for risk, there is a name, a face, a CFA charter, and a Big-Four pedigree.</p>
+
+
+
+<p>What struck me most during that afternoon in Cowrywise’s office was not the promotions themselves but the people. The AVPs were all young, and none came across as holders of such a serious title, but the company’s performance shows that. More than half of Cowrywise's engineers hold CFA certifications.&nbsp;</p>
+
+
+
+<p>The logic, as Akintomide, the AVP for people and culture, explained it, is that if you are building a stock-trading product, the people writing the code should understand what a liquidity ratio is. The result, by the company's own account, is its stock-trading platform, a product that went from concept to launch in hours and now accounts for a significant share of assets under management.</p>
+
+
+
+<div id="tc-cathedral-tool" style="font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #151515; padding: clamp(16px, 5vw, 32px); border-radius: 12px; width: 100%; max-width: 600px; box-sizing: border-box; margin: 24px auto; color: #FFFFFF; border: 1px solid #3A3F45; overflow: hidden; position: relative; box-shadow: inset 0 20px 40px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.2);">
+    
+    <style>
+        .tc-shake { animation: tc-shake-anim 0.4s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes tc-shake-anim {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+        .tc-falling-block { position: absolute; width: 60px; height: 60px; background: #EA2D2E; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(234, 45, 46, 0.4), inset 0 2px 0 rgba(255,255,255,0.3); z-index: 10; transition: top 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53), transform 0.5s ease; }
+        .tc-pillar { transition: all 0.3s ease; }
+        .tc-pillar.broken { transform: scaleY(0.2) rotate(15deg); background: #EA2D2E !important; opacity: 0.5; }
+        .tc-platform { transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .tc-platform.collapsed { transform: translateY(40px) rotate(-12deg); }
+        .tc-block-slide { transform: translateY(200px) rotate(-45deg) !important; opacity: 0; }
+    </style>
+    
+    <div style="text-align: center; margin-bottom: 24px; position: relative; z-index: 20;">
+        <span style="font-size: 0.75rem; color: #20C997; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background-color: rgba(32, 201, 151, 0.1); padding: 4px 12px; border-radius: 12px; border: 1px solid rgba(32, 201, 151, 0.2);">Physics Simulation</span>
+        <h3 style="margin-top: 12px; font-size: clamp(1.25rem, 5vw, 1.5rem); font-weight: 700; color: #FFFFFF; line-height: 1.2;">The Architecture of Collapse</h3>
+        <p style="font-size: clamp(0.875rem, 3vw, 1rem); line-height: 1.6; color: #E3E8EF; margin-top: 8px;">A founder is a single point of failure. Drop a market shock on the company and see if the structure holds.</p>
+    </div>
+
+    <div style="display: flex; background: #24292F; border-radius: 8px; padding: 4px; margin-bottom: 24px; position: relative; z-index: 20;">
+        <button id="tc-btn-ceo" onclick="window.tcSim.setMode('ceo')" style="flex: 1; padding: 12px; border: none; background: #FFFFFF; border-radius: 6px; font-weight: 700; font-size: 0.875rem; cursor: pointer; color: #151515; transition: all 0.2s;">Founder-Led</button>
+        <button id="tc-btn-cathedral" onclick="window.tcSim.setMode('cathedral')" style="flex: 1; padding: 12px; border: none; background: transparent; border-radius: 6px; font-weight: 600; font-size: 0.875rem; cursor: pointer; color: #E3E8EF; transition: all 0.2s;">The Cathedral (11 AVPs)</button>
+    </div>
+
+    <div id="tc-sandbox" style="position: relative; height: 300px; width: 100%; border-bottom: 4px solid #3A3F45; margin-bottom: 24px;">
+        <div id="tc-drop-zone" style="position: absolute; top: 0; left: 0; width: 100%; height: 200px;"></div>
+        <div id="tc-platform" class="tc-platform" style="position: absolute; bottom: 80px; left: 10%; width: 80%; height: 16px; background: #E3E8EF; border-radius: 4px; z-index: 5; box-shadow: 0 4px 0 #9CA3AF;">
+            <div style="text-align: center; width: 100%; font-size: 0.65rem; font-weight: 800; color: #151515; line-height: 16px; letter-spacing: 0.1em;">COWRYWISE (2,000,000 USERS)</div>
+        </div>
+        <div id="tc-supports" style="position: absolute; bottom: 0; left: 10%; width: 80%; height: 80px; display: flex; justify-content: center; align-items: flex-end; gap: 4px; z-index: 4;"></div>
+    </div>
+
+    <div style="display: flex; gap: 12px; position: relative; z-index: 20;">
+        <button id="tc-drop-btn" onclick="window.tcSim.drop()" style="flex: 2; background-color: #EA2D2E; color: #FFFFFF; border: none; padding: 16px; border-radius: 8px; font-weight: 800; font-size: 1rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em; transition: transform 0.1s, background 0.2s; box-shadow: 0 4px 0 #B22222;"><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/2b07.png" alt="⬇" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Drop Market Shock</button>
+        <button id="tc-reset-btn" onclick="window.tcSim.reset()" style="flex: 1; background-color: #24292F; color: #E3E8EF; border: 1px solid #3A3F45; padding: 16px; border-radius: 8px; font-weight: 700; font-size: 0.875rem; cursor: pointer; transition: all 0.2s;"><img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f504.png" alt="🔄" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Reset</button>
+    </div>
+
+    <div id="tc-status-msg" style="text-align: center; margin-top: 16px; font-size: 0.875rem; font-weight: 700; color: #20C997; min-height: 20px; transition: color 0.3s;">System stable. Ready for load testing.</div>
+
+    <script>
+        /* <![CDATA[ */
+        window.tcSim = {
+            mode: 'ceo',
+            shocks: 0,
+            collapsed: false,
+            maxLoad: 2,
+            setMode: function(mode) {
+                this.mode = mode;
+                var btnCeo = document.getElementById('tc-btn-ceo');
+                var btnCathedral = document.getElementById('tc-btn-cathedral');
+                if (mode === 'ceo') {
+                    if(btnCeo) { btnCeo.style.background = '#FFFFFF'; btnCeo.style.color = '#151515'; }
+                    if(btnCathedral) { btnCathedral.style.background = 'transparent'; btnCathedral.style.color = '#E3E8EF'; }
+                } else {
+                    if(btnCathedral) { btnCathedral.style.background = '#FFFFFF'; btnCathedral.style.color = '#151515'; }
+                    if(btnCeo) { btnCeo.style.background = 'transparent'; btnCeo.style.color = '#E3E8EF'; }
+                }
+                this.reset();
+            },
+            render: function() {
+                var container = document.getElementById('tc-supports');
+                if (!container) return;
+                if (this.mode === 'ceo') {
+                    container.innerHTML = '<div id="tc-pillar-main" class="tc-pillar" style="width: 40px; height: 100%; background: #FFC52F; border-radius: 4px 4px 0 0; box-shadow: inset -4px 0 rgba(0,0,0,0.2);"></div>';
+                } else {
+                    var html = '';
+                    for (var i = 0; i < 11; i++) {
+                        html += '<div class="tc-pillar tc-avp-pillar" style="flex: 1; max-width: 12px; height: 100%; background: #20C997; border-radius: 2px 2px 0 0; box-shadow: inset -2px 0 rgba(0,0,0,0.2);"></div>';
+                    }
+                    container.innerHTML = html;
+                }
+            },
+            drop: function() {
+                if (this.collapsed) return;
+                this.shocks++;
+                var dropZone = document.getElementById('tc-drop-zone');
+                var block = document.createElement('div');
+                block.className = 'tc-falling-block tc-block-item';
+                var randomLeft = 20 + Math.random() * 60;
+                block.style.left = randomLeft + '%';
+                block.style.top = '-80px';
+                block.innerText = "&#x1f4a5;";
+                if(dropZone) dropZone.appendChild(block);
+                var self = this;
+                setTimeout(function() {
+                    block.style.top = '144px';
+                    setTimeout(function() {
+                        var sandbox = document.getElementById('tc-sandbox');
+                        if(sandbox) {
+                            sandbox.classList.remove('tc-shake');
+                            void sandbox.offsetWidth;
+                            sandbox.classList.add('tc-shake');
+                        }
+                        self.check();
+                    }, 400);
+                }, 50);
+            },
+            check: function() {
+                var statusMsg = document.getElementById('tc-status-msg');
+                if (this.mode === 'ceo') {
+                    var pillar = document.getElementById('tc-pillar-main');
+                    if (this.shocks === 1) {
+                        if(pillar) pillar.style.background = '#FF9800';
+                        if(statusMsg){ statusMsg.style.color = '#FF9800'; statusMsg.innerText = "CEO under strain. Bottlenecks forming."; }
+                    } else if (this.shocks === 2) {
+                        if(pillar) pillar.style.background = '#EA2D2E';
+                        if(statusMsg){ statusMsg.style.color = '#EA2D2E'; statusMsg.innerText = "CRITICAL LOAD. A single point of failure is buckling."; }
+                    } else if (this.shocks > this.maxLoad) {
+                        this.collapse(pillar);
+                    }
+                } else {
+                    var pillars = document.querySelectorAll('.tc-avp-pillar');
+                    for (var i = 0; i < pillars.length; i++) {
+                        (function(p) {
+                            p.style.background = '#FFFFFF';
+                            setTimeout(function(){ p.style.background = '#20C997'; }, 200);
+                        })(pillars[i]);
+                    }
+                    if(statusMsg){ statusMsg.style.color = '#20C997'; statusMsg.innerText = "Shock absorbed. 11 AVPs distributed the load. (Load: " + this.shocks + ")"; }
+                }
+            },
+            collapse: function(pillar) {
+                this.collapsed = true;
+                if(pillar) pillar.classList.add('broken');
+                var platform = document.getElementById('tc-platform');
+                if(platform) platform.classList.add('collapsed');
+                var blocks = document.querySelectorAll('.tc-block-item');
+                for (var i = 0; i < blocks.length; i++) {
+                    (function(b, index) {
+                        setTimeout(function(){ b.classList.add('tc-block-slide'); }, index * 100);
+                    })(blocks[i], i);
+                }
+                var statusMsg = document.getElementById('tc-status-msg');
+                if(statusMsg){ statusMsg.style.color = '#EA2D2E'; statusMsg.innerText = "&#x1f6a8; SYSTEM FAILURE. The founder broke under scale."; }
+                var btnDrop = document.getElementById('tc-drop-btn');
+                if(btnDrop){ btnDrop.style.background = '#3A3F45'; btnDrop.style.boxShadow = 'none'; btnDrop.innerText = "System Offline"; btnDrop.style.cursor = 'not-allowed'; }
+            },
+            reset: function() {
+                this.collapsed = false;
+                this.shocks = 0;
+                var dropZone = document.getElementById('tc-drop-zone');
+                if(dropZone) dropZone.innerHTML = '';
+                var platform = document.getElementById('tc-platform');
+                if(platform) platform.classList.remove('collapsed');
+                var btnDrop = document.getElementById('tc-drop-btn');
+                if(btnDrop){ btnDrop.style.background = '#EA2D2E'; btnDrop.style.boxShadow = '0 4px 0 #B22222'; btnDrop.innerText = "&#x2b07; Drop Market Shock"; btnDrop.style.cursor = 'pointer'; }
+                var statusMsg = document.getElementById('tc-status-msg');
+                if(statusMsg){ statusMsg.style.color = '#20C997'; statusMsg.innerText = "System stable. Ready for load testing."; }
+                this.render();
+            }
+        };
+        setTimeout(function() { window.tcSim.render(); }, 100);
+        /* ]]&gt; */
+    </script>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>The cathedral</strong></h2>
+
+
+
+<p>There is a phrase that Tunde-Bello used, half-jokingly, to describe the company's ethos: "We call this place a cathedral. Building the cathedral, that's our goal."</p>
+
+
+
+<p>The cathedral metaphor is a little grandiose, but it captures something about what is happening at Cowrywise’s duplex in Ikeja GRA. Cathedrals take generations. They require stonemasons who may never see the spire completed. In Barcelona, the Sagrada Família, one of the oldest construction projects ever, has been under construction since 1882 and is still not completed.&nbsp;</p>
+
+
+
+<p>Cathedrals demand a kind of faith in the institution that outlasts the individual. In Nigerian tech, where the median startup lifespan is roughly that of a goldfish’s memory, building a cathedral is either an act of profound ambition or of profound delusion.</p>
+
+
+
+<p>Cowrywise is betting on ambition. The eleven vice presidents are not, in the end, about titles but about the company's wager that it can transition from a founder-led startup into a multi-generational and multi-product financial institution and it can move from the phase where Ahmed walks in with an idea and it's live by lunch to the phase where frameworks, risk registers, and distributed authority keep the business running whether the founders are in the room or not.</p>
+
+
+
+<p>If this works will depend on factors that titles alone cannot guarantee: whether the products keep performing, whether regulators remain satisfied, and whether two million customers continue to trust a duplex full of twenty-somethings and thirty-somethings with their money. But the structural bet is clear. Cowrywise has shifted from the path most Nigerian fintechs take by growing fast, depending solely on the founder, and hoping for the best.</p>
+
+
+
+<p>Cowrywise’s office is still a duplex. But inside, eleven people now own a piece of what comes next. In an ecosystem that needs more examples of corporate governance is, at a minimum, worth talking about.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Nigeria’s central bank expands PoS operating radius to 70 metres</title>
+		<link>https://techcabal.com/2026/05/30/nigerias-central-bank-expands-pos-operating-radius-to-70-metres/</link>
+		
+		<dc:creator><![CDATA[Temitayo Jaiyeola]]></dc:creator>
+		<pubDate>Sat, 30 May 2026 08:14:21 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[CBN]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[POS agents]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=189209</guid>
+
+					<description><![CDATA[The Central Bank of Nigeria (CBN) has expanded the permitted operating radius for Point of Sale (PoS) terminals to 70 metres from 10 metres after concerns that the original restriction was too rigid for merchants and agents.]]></description>
+										<content:encoded><![CDATA[
+<p>Nigeria’s central bank has expanded the permitted operating radius for Point of Sale (PoS) terminals from 10 metres to 70 metres after concerns that the original restriction was too rigid for agents and merchants.</p>
+
+
+
+<p>In a <a href="https://www.cbn.gov.ng/Out/2026/CCD/Revised%20Implementation%20Timeline%20and%20Enforcement%20on%20POS%20GEO-Fencing.pdf" target="_blank" rel="noreferrer noopener">May 29, 2026</a> circular, the CBN also extended the enforcement deadline for the geo-fencing policy to August 1, 2026, giving payment companies more time to comply with the directive first introduced in <a href="https://techcabal.com/2025/08/27/cbn-10-metre-rule-pos-agents/" target="_blank" rel="noreferrer noopener">August 2025</a>.</p>
+
+
+
+<p>The revision marks a partial retreat from one of the CBN’s strictest rules in Nigeria’s fast-growing agent banking market, which sought to tightly control where PoS terminals can operate.</p>
+
+
+
+<p>Under the rules, operators such as Moniepoint, OPay, and Palmpay must geo-tag all PoS terminals and tie them to precise GPS coordinates, allowing regulators to track where each transaction originates.</p>
+
+
+
+<p>The original framework limited terminals to operating within 10 metres of their registered business locations, a restriction designed to curb fraud, identity masking, and the movement of terminals outside registered addresses. The updated rules now expand that radius to 70 metres.&nbsp;</p>
+
+
+
+<p>“Evidence of compliance to the above should be addressed to the Director, Payments System Supervision Department via paymentdata@cbn.gov.ng not later than July 31, 2026,” the CBN said in its circular.&nbsp;</p>
+
+
+
+<p>The regulator’s push reflects growing concern over the scale and visibility of Nigeria’s PoS ecosystem. Since their 2013 introduction, PoS terminals have become Nigeria’s dominant cash access channel, with about<a href="https://www.bloomberg.com/news/features/2024-12-14/nigeria-s-dying-atms-leave-a-cash-shaped-hole-filled-by-agents?embedded-checkout=true" target="_blank" rel="noreferrer noopener"> 1,600</a> PoS agents per square kilometre. There were<a href="https://nibss-plc.com.ng/industry-stat/?category=pos-terminals" target="_blank" rel="noreferrer noopener"> 8.36 million</a> registered PoS terminals, with 5.90 million active or deployed as of March 2025.</p>
+
+
+
+<p>Transactions reached a record<a href="https://nibss-plc.com.ng/industry-stat/?category=point-of-sale---pos" target="_blank" rel="noreferrer noopener"> ₦10.51 trillion</a> in Q1 2025, a 301.67% increase from Q1 2024. The rapid growth, however, has heightened fraud and compliance concerns, with agents sometimes unknowingly serving as access points for illicit activity.</p>
+
+
+
+<p>In 2024,<a href="https://techcabal.com/2024/02/06/cbn-recertification-of-pos-terminals-fraud/" target="_blank" rel="noreferrer noopener"> TechCabal first reported</a> that the Nigerian Interbank Settlement System (NIBSS) had been tasked with developing a geofencing framework to prevent terminals from being used outside their registered deployment addresses.</p>
+
+
+
+<p>The 2025 rule required all payment terminals to be registered with a Payment Terminal Service Aggregator (PTSA), either NIBSS or Unified Payment Services Limited, with accurate latitude and longitude coordinates reflecting the merchant or agent’s place of business and operating status.</p>
+
+
+
+<p>Terminals not directly routed to a PTSA are not permitted to transact, and operators must ensure their devices and applications are certified by the National Central Switch (NCS).</p>
+
+
+
+<p>In its new circular, the CBN asked all financial institutions to resolve all operational issues with the NCS within the stipulated timeline.&nbsp;<br></p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>“I didn’t see it becoming a business”: Day 1 to 1000 of Startbutton Africa</title>
+		<link>https://techcabal.com/2026/05/30/day-1-to-1000-startbutton-africa/</link>
+		
+		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
+		<pubDate>Sat, 30 May 2026 06:32:43 +0000</pubDate>
+				<category><![CDATA[Day 1-1000]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Expansion]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=188165</guid>
+
+					<description><![CDATA[Lost law school fees, Twitter DMs, and a frozen account, have made Startbutton Africa into a system that helps businesses expand across African markets. ]]></description>
+										<content:encoded><![CDATA[
+<p>Mallick Bolakale laughed as he took me back to the early 2010s, when buying items from eBay in Nigeria required navigating an underground system.</p>
+
+
+
+<p>Then, a Nigerian needed a Virtual Private Network (VPN) to create an encrypted address and a broker with a foreign bank card and a shipping address in the United States to order items from the online marketplace, he recalled.</p>
+
+
+
+<p>Buyers would first send money to the broker’s naira account; the broker would convert it to dollars and pay for the item with his foreign card. The broker would then receive the items at his address before arranging their shipment to Nigeria.</p>
+
+
+
+<p>Bolakale, who at the time was studying law while repairing and reselling gadgets on the side to save money for law school, helped people buy electronics from eBay. Then he decided to risk the ₦500,000 (about $3,000 at the time) he had saved for law school.</p>
+
+
+
+<p>He used the money to buy gadgets like laptops from eBay, hoping to resell them at a profit before school resumed. The process worked the same way it always had until a friend, using his laptop, refreshed the eBay page without turning on a VPN.&nbsp;</p>
+
+
+
+<p>eBay detected the local Internet Protocol (IP) address—a unique numerical label assigned to every device connected to the internet—flagged the transaction as suspicious activity, and cancelled the order.&nbsp;</p>
+
+
+
+<p>That should have been the end of the story, but the broker refused to reconnect his card for the refund process, worried the card details could be misused while the refund was being processed.</p>
+
+
+
+<p>“Ladies and gentlemen,” Bolakale recalled, “that’s how I lost my law school fees.”&nbsp;</p>
+
+
+
+<p>More than a decade later, he co-founded a startup designed to solve the kind of cross-border friction that ruined that transaction.</p>
+
+
+
+<p>Founded in July 2023 with Kelechi Oti and Charles Idem, <a href="https://techcabal.com/2024/07/17/startbutton-makes-market-entry-easy-for-startups/" target="_blank" rel="noreferrer noopener">Startbutton Africa</a> operates a merchant of records (MOR) system that helps businesses expand across African markets without setting up local payment operations, compliance systems, tax processes, and regulatory relationships from scratch. The startup assists businesses in new countries with payment collections and tax compliance.</p>
+
+
+
+<p>Businesses entering new countries often have to rebuild banking relationships, secure licences, embed payment integrations, and set up other compliance structures. Startbutton wants to simplify that process by sitting underneath expansion across the continent. Today, the company says it operates across 15 African markets, including Nigeria, Ghana, Kenya, Senegal, South Africa, and Uganda.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Day 1: Interrupted vacations and Twitter DMs</strong></h2>
+
+
+
+<p>In 2022, Bolakale was in Rwanda, taking a break from work, when an unnamed company reached out to him, saying they were struggling to access Nigeria&#8217;s local payment infrastructure without local operational structures in place.&nbsp;</p>
+
+
+
+<p>A year earlier, the Central Bank of Nigeria had <a href="https://www.cbn.gov.ng/Out/2021/CCD/CBN%20Update%202021%20(July)%20.pdf" target="_blank" rel="noreferrer noopener nofollow">discontinued the sale</a> of foreign exchange to Bureau De Change operators, worsening dollar scarcity and disrupting how individuals and businesses accessed foreign currency.</p>
+
+
+
+<p>By then, Bolakale had spent the past decade working across law, compliance, and fintech; he worked on compliance at Stripe-owned fintech Paystack and advised payment companies navigating regulatory and operational challenges. He had also seen how difficult expansion became once businesses crossed into markets with different tax obligations and payment infrastructure. So, he started building a workaround.</p>
+
+
+
+<p>“I didn’t really see it as something that was going to be a business,” Bolakale said. “I just felt like it was something I was doing to help businesses.”</p>
+
+
+
+<p>He incorporated Startbutton in 2023 and began manually helping businesses create local structures, connect with payment providers, and receive payments locally. Because accessing foreign currency had become difficult and expensive due to CBN&#8217;s directive, Bolakale listed his house on Airbnb, an online marketplace that lets people rent out their homes, and used the dollar payouts from bookings to settle merchants while collecting naira locally from customers.</p>
+
+
+
+<p>“It’s almost like what you were doing on eBay,” I pointed out during our conversation. “Exactly,” Bolakale replied. “This time, it was me doing it as opposed to using a broker.”</p>
+
+
+
+<p>By 2023, Bolakale and his co-founders had begun building Startbutton into an actual product. Then came the tweet that validated the idea.&nbsp;</p>
+
+
+
+<p>Bolakale recalled seeing a post from the founder of Bible Buddy, a faith-based AI startup, complaining on Twitter (now x) that despite the existence of fintechs, he still could not accept international payments because his startup was based in the United States. “That’s exactly what we’re solving for,” he remembered thinking.&nbsp;</p>
+
+
+
+<p>He replied to the tweet and sent the founder a direct message. Bible Buddy eventually tested the platform, requested a few changes, then became Startbutton’s first customer.</p>
+
+
+
+<p>“It was the first time it dawned on me that this was actually starting,” Bolakale said.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Day 100: Frozen accounts and stablecoin settlements</strong></h2>
+
+
+
+<p>Weeks after Startbutton launched, it ran into its first major crisis. According to Bolakale, the company had just closed a $50,000 friends-and-family round to hire people and properly begin operations. But shortly after the funds landed in the company’s Wise account, the account was frozen.</p>
+
+
+
+<p>According to Bolakale, Wise flagged the account because Startbutton was using it for financial services and settlements, activities the platform did not expect the account to be used for. At the time, Startbutton was still a five-man team, trying to stabilise operations across its first markets: Nigeria, Rwanda, Ghana, South Africa, and the United States.</p>
+
+
+
+<p>&#8220;During that time, I self-funded the salaries,&#8221; he said. &#8220;The founders were not earning salaries.&#8221;</p>
+
+
+
+<p>In the two months that Wise held the account, Startbutton began settling merchants through stablecoin transactions, Bolakale said.&nbsp;</p>
+
+
+
+<p>By October 2023, Bolakale said that Wise released the funds, while Startbutton closed a $200,000 funding round.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Day 500: Scaling down and structuring</strong></h2>
+
+
+
+<p>In addition to its merchant-of-record operations, Startbutton helped businesses incorporate locally, set up operational structures, navigate compliance processes, and, in some cases, support physical-goods expansion into African markets.&nbsp;</p>
+
+
+
+<p>Bolakale explained that at first, the flexibility helped Startbutton grow. Still, over time, he questioned whether the company was building something scalable or simply becoming a collection of expansion services for customer requests.</p>
+
+
+
+<p>“We realised that if we continued doing some of these things, we were just going to become another company’s feature,” he said. &#8220;So, we focused on those core payments products and dropped the incorporation product.&#8221;</p>
+
+
+
+<p>In 2024, the startup underwent additional internal changes, such as setting up more structured teams with its 15-person team, including operations, engineering, sales, and customer-support departments, according to its CEO. Startbutton expanded further into Uganda, Tanzania, Zambia, Senegal, and Côte d’Ivoire to give businesses more market options across Africa.</p>
+
+
+
+<p>Following its $200,000 round, the startup expanded its fundraising efforts to $500,000 in 2024, Bolakale said. By day 500, Startbutton was no longer operating like a stitched-together workaround.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Day 1000: The years of growth and scale</strong></h2>
+
+
+
+<p>According to Bolakale, Startbutton&#8217;s revenue and total payment volume (TPV) in 2025 grew five times more than the previous year. He added that the startup also expanded its partnership network to about 70 partners across payments, treasury, compliance, and operational infrastructure.&nbsp;</p>
+
+
+
+<p>In 2025, Startbutton <a href="https://techcabal.com/2025/02/06/startbutton-francophone-launch/" target="_blank" rel="noreferrer noopener">launched</a> in seven Francophone African countries—Benin, Togo, Senegal, Mali, Guinea-Conakry, Burkina Faso, and Cameroon—to enable more companies to enter these markets and accept local payments.</p>
+
+
+
+<p>Bolakale said Startbutton now primarily generates revenue through commissions on transactions processed through its platform, adding that the startup currently generates annual revenue in the $2 million to $5 million range.&nbsp;</p>
+
+
+
+<p>Startbutton operates in a competitive market alongside startups such as Klasha, dLocal, Flocash, and Kyshi, which offer cross-border payments and expansion services across multiple markets. However, Bolakale had <a href="https://techcabal.com/2024/07/17/startbutton-makes-market-entry-easy-for-startups/" target="_blank" rel="noreferrer noopener">noted</a> that the startup’s grasp of compliance sets it apart from competitors.</p>
+
+
+
+<p>Now, according to him, the company is focused more on building the systems needed for long-term scale.</p>
+
+
+
+<p>&#8220;2025 was growth; this year is scale,&#8221; he said.&nbsp; &#8220;We&#8217;re focusing now on putting things in place that help us scale. We want to essentially achieve market dominance.&#8221;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Afolabi Oyebiyi on learning how to code what he cannot see </title>
 		<link>https://techcabal.com/2026/05/29/afolabi-oyebiyi-on-learning-how-to-code-what-he-cannot-see/</link>
 		
@@ -1194,7 +2672,7 @@
 
 
 
-<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="762" height="675" 
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="762" height="675" 
      	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/image-67.jpeg" alt="" class="wp-image-189128" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/image-67.jpeg 762w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/image-67-300x266.jpeg 300w" sizes="auto, (max-width: 762px) 100vw, 762px" /></figure>
 
 
@@ -1210,1112 +2688,6 @@
 
 
 <p>To help my listeners really catch my references and witness the greatness of my ingenuity, I asked my friend, Mitchel Edah-Ekubo (who’s a software developer), to work with me to unpack the lyrics of the song and track titles in a quiz format on a web app. From the curator’s perspective, I just think it’s an exciting way to challenge artists to think of their work not just as a message, but also as code. It’s not just even about marketing, for me, it’s more about bringing a more sane way to engage with listeners and fans. It’s why at the end of the day, I’m really curious to see who that super listener is that will take the $300 game prize off my hands.&nbsp;</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>👨🏿‍🚀TechCabal Daily – Going Yoco for M&#038;A</title>
-		<link>https://techcabal.com/2026/05/29/techcabal-daily-going-yoco-for-ma/</link>
-		
-		<dc:creator><![CDATA[Opeyemi Kareem]]></dc:creator>
-		<pubDate>Fri, 29 May 2026 06:00:25 +0000</pubDate>
-				<category><![CDATA[Newsletters]]></category>
-		<category><![CDATA[TC Daily]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[funding]]></category>
-		<category><![CDATA[Kenya]]></category>
-		<category><![CDATA[Nigeria]]></category>
-		<category><![CDATA[Quick Fire]]></category>
-		<category><![CDATA[South Africa]]></category>
-		<category><![CDATA[startups]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=189123</guid>
-
-					<description><![CDATA[In today's edition: Quick Fire 🔥 with John Eni-ibukun &#124;&#124; Yoco acquires Dyner AI &#124;&#124; Uber eyes full Delivery Hero takeover &#124;&#124; Who secured the bag? 💰]]></description>
-										<content:encoded><![CDATA[
-
-
-
-    
-    
-
-
-    <div id="wrapper" style="width:100%;max-width:600px;background-color: #FFFFFF;color:#000000;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin: 0 auto;padding:17px 0">
-            <div class="content_date" id="intro" style="padding: 0 12px 16px;width: 100%;background-color: white">
-                <div style="width: 100%;text-align: center;padding-bottom: 24px">
-                   
-                <div style="padding-bottom:24px">
-                    <div style="width: 100%">
-                        <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/tc-daily-banner.png" alt="" width="100%" height="167" style="object-fit:contain">
-                    </div>
-                     <div style="vertical-align: middle">
-                        <span style="padding-right: 8px;font-size:10px;font-weight:400">In partnership with</span>
-                    </div>
-                    <div style="vertical-align: middle">
-                        <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2025/01/Partner-with-TC.png" alt="Fincra logo" width="110px">
-                    </div>
-                </div>
-                    <div style="width:100%;padding: 12px;border-bottom:1px solid #18181833">
-                        
-                    </div>
-                </div>
-<div style="width: 100%;padding: 8px;height:47px;font-size: 10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 700;background-color: #fcf8fa;border-radius: 4px">
-                <div style="vertical-align:middle;text-align: left">
-                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=fr&amp;u=https://techcabal.com/2026/05/29/techcabal-daily-going-yoco-for-ma/" style="color: #28121f !important">Lire en Français</a>
-                </div>
-                <div style="vertical-align:middle;text-align: right">
-                    <a href="https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=ar&amp;u=https://techcabal.com/2026/05/29/techcabal-daily-going-yoco-for-ma/" style="color: #28121f !important">اقرأ هذا باللغة العربية</a>
-          </div>
-        </div>
-    </div>
-<div id="Story1" style="width:100%;background-color: transparent;padding: 0 12px 16px">
-<div style="width: 100%;padding-bottom:16px;text-align:left">
-<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin-top:0">
-                    
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0"><strong>TGIF. <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/2600.png" alt="☀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong></p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">We&rsquo;re thrilled to announce the official theme for Moonshot 2026: <strong>Courage &amp; Conviction: Building for a New World.</strong></p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">This year, we&rsquo;re calling on the African tech ecosystem to back bold ideas and dig deep to build an ecosystem that solves African problems on a global scale.</p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0">The continent&rsquo;s most ambitious founders, investors, LPs, operators, creatives, and policymakers will converge at Moonshot 2026 to chart Africa&rsquo;s next era. You don&rsquo;t want to be left out.</p>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0"><a>Secure your spot</a>.</p>
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-40.png" width="100%" height="auto" style="object-fit: cover"></a>
-</div>
-</div>
-</div>
-
-
-<div style="background-color:#FAE2E3;padding:16px 32px;border-radius:12px;margin:0 12px 10px">
-
-    <div style="margin:0;font-size:16px;line-height:25.6px;text-align:center">
-
-        <p style="padding:5px 0;margin:0">
-            Get smarter about Francophone Africa with our newsletter, Francophone Weekly—the startups, tech policies, and institutions building the pipelines for ecosystem growth.
-        </p>
-
-        <div style="text-align:center;margin-top:20px">
-
-            <a href="https://francophone-weekly-by-techcabal.beehiiv.com/" style="color:#ffffff !important;text-decoration:none;padding:8px 14px;border-radius:6px;background:#f23204;box-shadow:none">
-                Subscribe
-            </a>
-
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-             
-<div class="todays_edition" style="width:100%;background-color: transparent;text-align:center;padding:0 12px">
-    <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/today-edition-img-1.png" alt="today's edition image" style="width:100%;max-width:343px;height:auto;margin:0 auto">
-</div>
-
-<div style="background-color: #FAE2E3;padding:16px 32px">
-    <ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px">
-<li><a href="#Story1" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Quick Fire <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f525.png" alt="🔥" class="wp-smiley" style="height: 1em; max-height: 1em;" /> with John Eni-ibukun</a></li>
-<li><a href="#Story2" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Yoco acquires Dyner AI</a></li>
-<li><a href="#Story3" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Uber eyes full Delivery Hero takeover</a></li>
-<li><a href="#Story4" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Who secured the bag? <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f4b0.png" alt="💰" class="wp-smiley" style="height: 1em; max-height: 1em;" /></a></li>
-<li><a href="#Story5" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">World Wide Web 3</a></li>
-<li><a href="#Story6" style="font-family:Georgia, 'Times New Roman', Times, serif;font-style: normal;font-weight:400;text-decoration:underline  !important;color:#28121F !important">Job openings</a></li>
-    </ul>
-</div>
-
-            
-             <div id="Story1" style="padding:0 12px 16px">
-                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">features</h3>
-                </div>
-                <div style="width:100%;background-color: transparent">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">Quick Fire <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f525.png" alt="🔥" class="wp-smiley" style="height: 1em; max-height: 1em;" /> with John Eni-ibukun</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-<a href="https://techcabal.com/category/newsletters/tc-daily/">
-<img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-27.jpg" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">John Eni-ibukun, African Gospel and Afrobeats curator at Audiomack</figcaption>
-</figure>
-
-<p style="padding:5px 0;margin:0"><a style="text-decoration: underline;color: #b61313 !important" href="https://ng.linkedin.com/in/john-eni-ibukun-583a46199"><em>John Eni-ibukun</em></a><em> is an African Gospel and Afrobeats curator at Audiomack, one of the continent&rsquo;s foremost music streaming platforms, where he thinks about how music travels, gets discovered, and lands with audiences in a fragmented digital world. Before that, he ran a digital press platform for artists.&nbsp;</em></p>
-<p style="padding:5px 0;margin:0"><em>Under the alias &ldquo;June Sometimes,&rdquo; he channels that knowledge into something more personal. His debut project, </em><a style="text-decoration: underline;color: #b61313 !important" href="https://chasingnostalgia.vercel.app"><em>&ldquo;Memories with Nostalgic Flaws,&rdquo;</em></a><em> is an interactive web-based game built around the emotional texture of growing up in Lagos in the early-2000s;</em></p>
-<ul>
-<li style="padding:5px 0;margin:0"><strong>Explain your work to a five-year-old.</strong></li>
-</ul>
-<p style="padding:5px 0;margin:0">I put music in spaces they should be heard, performances at places they should be seen and I love to bring people together towards having memorable experiences.&nbsp;</p>
-<ul>
-<li style="padding:5px 0;margin:0"><strong>Did you stumble into curation or did you plan for it? How can anybody follow the same path?</strong></li>
-</ul>
-<p style="padding:5px 0;margin:0">I believe the foundation of curation for me has always been my taste. I believe that I have been putting my life together as one big curated project even before I got to know what curation means. I&rsquo;ve always loved to create art, and to create well, I consume a lot also. Choosing what to consume, how to consume it and making meaning of what it does to my senses has heavily influenced what I create, so I think it&rsquo;s fair to say that my consumption of various artforms is what made me the curator I am today. If you&rsquo;d like to be a curator, I&rsquo;d say, trust your taste and consume a lot. From doing these, you&rsquo;d be able to eliminate what doesn&rsquo;t work for you and also get a better understanding of what you have so much affinity towards.</p>
-<ul>
-<li style="padding:5px 0;margin:0"><strong>How do you apply technology to your work as a curator?</strong></li>
-</ul>
-<p style="padding:5px 0;margin:0">As much as taste informs what I like, I think data can point towards what other people like and that in so many ways makes my work easier as a tastemaker. I work with some digital data tools, curate music from various web dashboards and of course market creative products through digital services.&nbsp;</p>
-                </div>
-                    <div id="share_content" style="width: 100%;background-color: transparent">
-                        <div style="width: 100%">
-                            <div style="vertical-align:middle;text-align: left">
-                               <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/2025/05/13/spar-group-enters-the-mobile-space/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="bizdev1" style="padding: 24px 12px">
-                <div style="width:100%;background-color:transparent;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;font-weight:700;font-size:10px;color:#93888F;text-align:center">We Have Secured the  Bank of Ghana EPSP Licence.
-                </h5>
-                <a href="https://fincra.com/">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-13.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Fincra has officially secured its Enhanced Payment Service Provider licence. This regulatory milestone authorizes Fincra to directly collect, process, and settle payments in Ghanaian Cedis, offering a highly streamlined financial pipeline for businesses operating within the region. <a style="text-decoration: underline;color: #b61313 !important" href="https://fincra.com/">Start here</a>.</p>
-
-            </div>
-        </div>
-<div id="Story2" style="padding:0 12px">
-                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">companies</h3>
-                </div>
-                <div style="width:100%;background-color: transparent">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">South African tech company Yoco makes its first acquisition in four years</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/04/we-back-up-meme.gif" width="100%" height="auto" style="object-fit: cover"></a>
-                        <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: Tenor</figcaption>
-                    </figure>
-                        
-<p style="padding:5px 0;margin:0">The mergers and acquisitions (M&amp;A) machine may have reduced its intensity in announcing new deals, after a great start to the year with the <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/01/05/flutterwave-mono-acquisition/">Flutterwave-Mono deal</a>.&nbsp;</p>
-<p style="padding:5px 0;margin:0">However, Yoco, the South African technology company and former M&amp;A machine, is finding its footing again.</p>
-<p style="padding:5px 0;margin:0">On Thursday, it <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/05/28/yocos-dyner-ai-deal-ushers-in-new-ai-era-for-south-african-smes/">acquired Dyner AI</a> for an undisclosed amount; given how quiet the ecosystem was about it, it is likely a small deal, but a needed one, however.</p>
-<p style="padding:5px 0;margin:0">Yoco&#8217;s <a style="text-decoration: underline;color: #b61313 !important" href="https://disruptafrica.com/2022/03/15/sas-yoco-acquires-leading-fintech-web3-software-development-agency-nona-digital/">last acquisition</a> before this was Nona Digital, a fintech and Web3 software development agency, in March 2022, its third and largest acquisition at the time, following Cobi Interactive in 2019 and Dado in 2021. After that flurry, the M&amp;A activity stopped.&nbsp;</p>
-<p style="padding:5px 0;margin:0">The reasons were not hard to read: the funding environment tightened globally after 2022, startup valuations came under pressure, and Yoco itself went through a leadership transition. Founding CEO Katlego Maphai <a style="text-decoration: underline;color: #b61313 !important" href="https://techcentral.co.za/yoco-ceo-katlego-maphai-to-step-down/270464/">stepped down</a> in September 2025 after a decade, saying the skills that launch a company are not always the same ones needed to scale it.&nbsp;</p>
-<p style="padding:5px 0;margin:0">For a period, the company was in a holding pattern, led by two co-CEOs while it searched for a permanent replacement.</p>
-<p style="padding:5px 0;margin:0">Dyner AI is the answer to what comes next. Founded by two former actuaries, the startup has built an AI operating system for restaurants that plugs into point-of-sale, accounting, and supplier data to surface real-time insights on stock movement, pricing, fraud, and margins.&nbsp;</p>
-<p style="padding:5px 0;margin:0">For Yoco, which already sits on transaction data from over 200,000 merchants, owning an AI layer that can turn that data into actionable intelligence is precisely the kind of move that separates a payments company from a commerce platform.</p>
-<p style="padding:5px 0;margin:0">Yoco&#8217;s new CEO, Carsten H&ouml;ltkemeyer, <a style="text-decoration: underline;color: #b61313 !important" href="https://www.businessday.co.za/companies/2026-05-07-yoco-appoints-german-banker-carsten-holtkemeyer-as-ceo/">takes over on June 1</a>, following a global search process. He joins from Solaris, the Berlin-based embedded finance group, where he led a difficult turnaround before departing at the end of 2025, and prior to that spent a decade running Barclaycard&#8217;s German business.&nbsp;</p>
-<p style="padding:5px 0;margin:0">He inherits a company that has just made its first acquisition in over four years, with a clear signal of where it intends to go.</p>
-<div id="share_content" style="width: 100%;background-color: transparent">
-                        <div style="width: 100%">
-                            <div style="vertical-align:middle;text-align: left">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div id="bizdev2" style="padding: 24px 12px">
-                <div style="width:100%;background-color:transparent;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;font-weight:700;font-size:10px;color:#93888F;text-align:center">Payments for import, export, and commodity trade in emerging markets.</h5>
-                <a href="https://keyrails.com/">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-17.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">For African fintechs, banks, and trade operators, high-value supplier and commodity payments are still an execution problem. Stable OS 2.0 standardises these flows across 100+ markets and 75+ currencies through one unified RTGS-ready instruction/ through one unified instruction, with local RTGS reach. <a href="https://keyrails.com/" style="text-decoration: underline;color: #b61313 !important">Learn more</a>.</p>
-
-            </div>
-        </div>
-<div id="Story3" style="padding:0 12px">
-                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">companies</h3>
-                </div>
-                <div style="width:100%;background-color: transparent">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">Uber increases Delivery Hero stake after buying out Aspers</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/12/This-Is-Business-meme-template-of-Osita-Iheme-1024x576-1.webp" width="100%" height="auto" style="object-fit: cover"></a>
-                         <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: Zikoko memes</figcaption>
-                    </figure>
-                        
-<p style="padding:5px 0;margin:0">In the latest episode of Europe&rsquo;s hottest corporate custody battle,Uber, the ride-hailing company, has <a style="text-decoration: underline;color: #b61313 !important" href="https://www.bloomberg.com/news/articles/2026-05-27/uber-buys-aspex-s-stake-in-delivery-hero-after-takeover-offer">increased its stake</a> in Delivery Hero (DH), a German food delivery giant, after buying out Aspex Management&#8217;s shares. Uber now holds a 36.83% stake in DH.</p>
-<p style="padding:5px 0;margin:0"><strong>Why we&#8217;re watching:</strong> Remember Prosus, the investment firm owned by South African conglomerate Naspers? Prosus is now caught between a takeover battle for DH, where it is <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/05/12/techcabal-daily-delivery-hero-sell-down/#Story2">being forced to sell its stakes</a> in the German food delivery company to finance another acquisition in Just Eat Takeaway.com. As part of that deal, it <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/05/12/techcabal-daily-delivery-hero-sell-down/">sold 5% DH shares to Aspers</a> in May. Now, it seems Aspers mainly served as a pass-through medium. It has now sold its stakes in DH to Uber, leaving Prosus as the only other major shareholder in the German food delivery company.</p>
-<p style="padding:5px 0;margin:0"><strong>The Uber-reverse card:</strong> On Monday, Prosus made a plea to the European Union (EU), <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/2026/05/26/techcabal-daily-no-free-exits-in-kenya/#Story2">Bloomberg reported,</a> to soften or halt the requirement that forced it to sell its DH shares to both Uber&mdash;<a style="text-decoration: underline;color: #b61313 !important" href="https://www.prosus.com/news-insights/2026/prosus-sells-4-point-5-percent-stake-in-delivery-hero-to-uber">earlier in April</a>&mdash;and Aspers. We analysed that Prosus did it to save skin; if it is forced to sell stakes at today&#8217;s valuation, it would lose out on a lot more money by the time DH&rsquo;s value skyrockets to &euro;18 billion ($20 billion), as <a style="text-decoration: underline;color: #b61313 !important" href="https://www.bloomberg.com/news/articles/2026-05-23/uber-doordash-in-talks-to-buy-delivery-hero-stakes-ft-says">Bloomberg Intelligence analysts estimated</a>.</p>
-<p style="padding:5px 0;margin:0">Now, with Uber pulling off an Asper tag-team move, Prosus&rsquo; leverage is threatened, anyway.</p>
-<p style="padding:5px 0;margin:0"><strong>Between the lines: </strong>Uber now holds 24.99% voting rights in DH, just below the 30% threshold under German law that would trigger a mandatory offer to buy out all remaining shareholders.</p>
-<p style="padding:5px 0;margin:0">With Uber using Aspex as a pass-through to build its stake, Prosus could find itself squeezed. Even if the EU softens its sell-down requirement, the company it was forced to sell to is now its biggest rival shareholder in DH.</p>
-</div>
-<div id="share_content" style="width: 100%;background-color: transparent">
-                        <div style="width: 100%">
-                            <div style="vertical-align:middle;text-align: left">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-<div id="bizdev3" style="padding: 24px 12px">
-                <div style="width:100%;background-color:transparent;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;font-weight:700;font-size:10px;color:#93888F;text-align:center">Attend Cascador&#8217;s Pitch Day 2026</h5>
-                <a href="https://l.gourl.es/l/b2336888fa8f7c7037b1cf80c66da9835fcfcaa4?u=9836076">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-19.png" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Cascador Pitch Day returns June 3 in Lagos, convening founders, investors, lenders and ecosystem builders for live pitches, alumni spotlights and a panel on innovative capital deployment, backed by Cascador’s <b>annual $5M</b> commitment to <b>African</b> ventures. <a href="https://l.gourl.es/l/b2336888fa8f7c7037b1cf80c66da9835fcfcaa4?u=9836076" style="text-decoration: underline;color: #b61313 !important">Register here</a>.</p>
-
-            </div>
-        </div>
-
-
-<div id="Story4" style="padding:0 12px">
-                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
-                    <div id="web3" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
-                    </div>
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">insights</h3>
-                </div>
-                <div style="width:100%;background-color: transparent">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">Funding tracker</h3>
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
-<figure style="width: 100%;padding-bottom:16px;text-align:left;margin:0">
-
-
-                        <a href="https://techcabal.com/category/newsletters/tc-daily/">
-                             <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/unnamed-41.png" width="100%" height="auto" style="object-fit: cover"></a>
-                         <figcaption style="color:#808080;font-size:12px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:19.8px;padding-top:6px;font-weight:400">Image Source: TechCabal Insights</figcaption>
-                    </figure>
-                        
-<p style="padding:5px 0;margin:0">Sorted Wallet, a pan-African fintech startup, <a style="text-decoration: underline;color: #b61313 !important" href="https://www.startupresearcher.com/news/sorted-raises-usd4-4-million-seed-round-led-by-tether-and-gnosis?utm_source=africa.startupresearcher.com&amp;utm_medium=newsletter&amp;utm_campaign=week-21-2026&amp;_bhlid=6309680d8c1e89bc393a332d3d0f7a87a24bff07">raised $4.4 million</a> in seed funding. Tether and Gnosis led the round, with participation from Movement and Angel Invest. (May 22)</p>
-<p style="padding:5px 0;margin:0">Here is the other deal for the week:</p>
-<ul>
-<li style="padding:5px 0;margin:0">Mia Healthcare Technologies, a South African healthtech startup, <a style="text-decoration: underline;color: #b61313 !important" href="https://innovation-village.com/mia-healthcare-technologies-secures-funding-to-transform-dental-care-in-southern-africa/">raised R15 million ($910,000)</a> in growth funding from the Vumela Fund. (May 22)</li>
-</ul>
-<p style="padding:5px 0;margin:0">Follow us on <a style="text-decoration: underline;color: #b61313 !important" href="https://x.com/tc_insights_?s=11">Twitter</a>, <a style="text-decoration: underline;color: #b61313 !important" href="https://www.instagram.com/tc_insights/">Instagram</a>, and <a style="text-decoration: underline;color: #b61313 !important" href="https://ng.linkedin.com/showcase/tc-insights">LinkedIn</a> for more funding announcements. Before you go,<strong> what does it take to scale healthtech in Nigeria? We explored this at the State of Healthtech in Nigeria 2026 report launch. </strong><a style="text-decoration: underline;color: #b61313 !important" href="https://insights.techcabal.com/state-of-healthtech-in-nigeria-2026-recap-what-does-scale-actually-look-like/"><strong>Read the recap here.</strong></a></p>
-</div>
-<div id="share_content" style="width: 100%;background-color: transparent">
-                        <div style="width: 100%">
-                            <div style="vertical-align:middle;text-align: left">
-                                  <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
- 
-
-<div id="bizdev4" style="padding: 24px 12px">
-                <div style="width:100%;background-color:transparent;padding:12px;border: 0.6px solid #D3D3D3;border-radius:4px">
-                    <h5 style="margin:0;padding-top:0;padding-bottom:12px;font-weight:700;font-size:10px;color:#93888F;text-align:center">Naira Life 2026 is here!</h5>
-                <a href="https://nairalife.zikoko.com/">
-                    <img decoding="async" loading="lazy" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/NL-Announcement_Newsletter-1024-512.jpg" width="100%" height="auto" style="object-fit: cover" data-iml="31270830.700000003"></a>
-                <p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 14px;line-height:21px;font-style:italic;letter-spacing:-0.308px;margin-top:0">Join 2,000+ in Lagos on August 22 for unfiltered wealth strategies, investment clinics, pitch competitions, and real talk about building long-term financial power. <a href="https://nairalife.zikoko.com/" style="text-decoration: underline;color: #b61313 !important">Get 15% off early bird tickets</a>.</p>
-
-            </div>
-        </div>
-
-  <div id="Story5" style="padding:0 12px">
-                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
-                    <div id="crypto_tracker" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
-                    </div>
-                    
-                    
-                    <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#93888F;line-height:23.1px;text-align:left;margin:0;text-transform:uppercase">CRYPTO TRACKER</h3>
-                </div>
-                <div style="width:100%;background-color: transparent">
-                    <h3 style="width:100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;margin:0;padding-bottom:16px;font-weight:700;color:#28121F;line-height:20px;text-transform:capitalize;letter-spacing:-0.32px;text-align:left">The World Wide Web3</h3>
-                    
-                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:25.6px;margin:0;padding-bottom:16px">
-                        <div style="font-style: normal;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-bottom: 20px;width: 100%;font-size: 14px;font-weight: 700">
-                            <p style="padding:5px 0;vertical-align: middle;text-align:left">Source:</p>
-                            <span style="vertical-align:middle;text-align: right"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/07/CoinMarketCap-logo.png" alt="CoinMarketCap logo" style="width:96px;height: auto"></span>
-                        </div>
-                        <table style="width: 100%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;border-collapse: collapse">
-                            <colgroup>
-                                <col span="1" style="width: 25%">
-                                <col span="1" style="width: 25%">
-                                <col span="1" style="width: 25%">
-                                <col span="1" style="width: 25%">
-                            </colgroup>
-                            <tbody style="font-size: 12px;font-weight: 400;line-height: 15px">
-                            <tr style="width: 100%;border-bottom:1px dashed #C3C3C3;padding: 20px">
-                            <th>
-                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
-                            Coin Name
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
-                            Current Value
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
-                            Day
-                            </p>
-                            </th>
-                            <th>
-                            <p style="padding:5px 0;font-weight:400;padding-bottom: 10px;text-align: left">
-                            Month
-                            </p>
-                            </th>
-                            </tr>
-                            </tbody>
-                            <tbody style="font-size: 12px;font-weight: 700">
-                            <tr style="border-bottom: 1px dashed #C3C3C3">
-<td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Bitcoin</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$73,404</td>
-                                <td style="padding: 0">
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                        + 0.74                                   </p>
-                                </td>
-                               <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
-                                        &#8211; 4.94%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
-                            <tr style="border-bottom:1px dashed #C3C3C3">
-                                <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Ether</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$2,006</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-                                    + 1.59%
-                                    </p>
-                                </td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
-                                        &#8211; 13.70%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                        <tbody style="font-size: 12px;font-weight: 700;margin: 20px 0">
-                            <tr style="border-bottom:1px dashed #C3C3C3">
-    <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>XRP</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$1.30</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-
-                                        + 2.16%
-                                    </p>
-                                </td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">  
-                                        &#8211; 6.15%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-
-
-                        <tbody style="font-size: 12px;font-weight: 700">
-                            <tr style="border-bottom:1px dashed #C3C3C3;margin-bottom: 20px">
-                                <td><span style="padding-right:7px"><img decoding="async" 
-     	loading="lazy" src="./Polygon%201.svg" alt=""></span>Solana</td>
-                                <td style="text-align:right;padding-right:20px;font-weight:500">$81.77</td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#7ed957;border:1px solid #008037;border-radius: 38px;font-size:12px">
-     + 1.40%
-                                    </p>
-                                </td>
-                                <td>
-<p style="padding:5px 0;padding: 8px;margin: 8px 0;width:60px;text-align: center;background-color:#fbc2b5;border:1px solid #ef323d;border-radius: 38px;font-size:12px">
-                                        &#8211; 3.63%
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div style="width:100%;background-color: transparent">
-                        <p style="padding:5px 0;font-style: italic;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 400">
-                            * Data as of 06.38 AM WAT, May 29, 2026.
-                    </p>
-                            <div id="share_content" style="width: 100%;background-color: transparent;padding-bottom:20px">
-                                
-                                <div style="width: 100%">
-                                    <div style="vertical-align:middle;text-align: left">
-                            <a href="https://twitter.com/intent/tweet?url=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/Twitter.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://techcabal.com/category/newsletters/tc-daily/;summary=&amp;source=" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/LinkedIn.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-                                <a href="https://api.whatsapp.com/send?text=https://techcabal.com/category/newsletters/tc-daily/" rel="noopener" style="width:24px;height:24px;background-color:#eeeeee;text-align:center;vertical-align: middle;border-radius:2px;padding:5px;margin-right: 10px"><img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2023/05/WhatsApp.png" alt="" width="16px" height="auto" style="vertical-align: middle"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div id="Story7" style="padding:0 12px">
-                <div class="section_heading" style="width:100%;background-color: transparent;padding-bottom:12px">
-                    <div id="financial_education" style="width:100%;max-width:115px;height:1px;background-color:#D3D3D3;margin:24px auto">
-                    </div>
-                    <div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center">
-                       <h3 style="padding:0;width:100%;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:700;font-size:16px;color:#FFFFFF;line-height:23.1px;text-align: left;margin:0;text-transform:uppercase">JOB OPENINGS</h3>
-                </div>
-               
-                <div style="background-color:#F4FFF9;padding:16px 32px">
-                    <ul style="padding-left: 20px;margin:0;font-family:Georgia, 'Times New Roman', Times, serif;font-weight:400;font-size:16px;line-height:25.6px">
-<li><strong>Big Cabal Media <strong> &mdash; <a style="text-decoration: underline;color: #b61313 !important" href="https://noisy-van-d5b.notion.site/30b128a3cc018129af88d4c4cee2ebd4?pvs=105">Senior Motion Designer</a>, <a style="text-decoration: underline;color: #b61313 !important" href="https://noisy-van-d5b.notion.site/309128a3cc01814eb7d5cbc7545250f0?pvs=105">YouTube Growth Strategist</a>, <a style="text-decoration: underline;color: #b61313 !important" href="https://noisy-van-d5b.notion.site/30e128a3cc0180c1aad1e229a1130eab?pvs=105">Editor-in-Chief (TechCabal)</a>, <a style="text-decoration: underline;color: #b61313 !important" href="https://noisy-van-d5b.notion.site/341128a3cc018165a9a7c1aa784e7c64?pvs=105">Reporter, Enterprise &amp; Policy</a>, <a style="text-decoration: underline;color: #b61313 !important" href="https://noisy-van-d5b.notion.site/920128a3cc0183b99b2081ec36d271f3?pvs=105">Editor (Analytical)</a>, <a style="text-decoration: underline;color: #b61313 !important" href="https://noisy-van-d5b.notion.site/2ea128a3cc0181879c96cbb75a6ddf3b?pvs=105">Business Development Executive</a> &mdash; Lagos, Nigeria&nbsp;</strong></strong></li>
-<li><strong>Moniepoint <strong> &mdash;<a style="text-decoration: underline;color: #b61313 !important" href="https://bebee.com/ng/jobs/backend-engineer-women-in-tech-internship-moniepoint-group-lagos-lagos-state--bs-ng-f1131009-f48f-4daa-8670-3729d037b7cf?utm_campaign=google_jobs_apply&amp;utm_source=google_jobs_apply&amp;utm_medium=organic">Backend Engineer (Women in Tech Internship)</a> &mdash; Lagos, Nigeria</strong></strong></li>
-<li><strong>Airvend </strong>&mdash; <a style="text-decoration: underline;color: #b61313 !important" href="https://bebee.com/ng/jobs/b2b-technical-support-partnerships-airvend-formerly-callphone-lagos-lagos-state--theirstack-672720938?utm_campaign=google_jobs_apply&amp;utm_source=google_jobs_apply&amp;utm_medium=organic">B2B Technical Support</a> &mdash; Lagos, Nigeria</li>
-<li><strong>Bridgemax Technologies</strong> &mdash; <a style="text-decoration: underline;color: #b61313 !important" href="https://bebee.com/ng/jobs/cloud-administrator-bridgemax-technologies-limited-lagos-lagos-state--theirstack-672192893?utm_campaign=google_jobs_apply&amp;utm_source=google_jobs_apply&amp;utm_medium=organic">Cloud Administrator</a> &mdash; Lagos, Nigeria</li>
-<li><strong>Union Systems</strong> &mdash; <a style="text-decoration: underline;color: #b61313 !important" href="https://bebee.com/ng/jobs/software-technical-writer-union-systems-limited-lagos-lagos-state--theirstack-672939209?utm_campaign=google_jobs_apply&amp;utm_source=google_jobs_apply&amp;utm_medium=organic">Software Technical Writer</a> &mdash; Lagos, Nigeria</li>
-</ul>
-<p>There are more jobs on <a style="text-decoration: underline;color: #b61313 !important" href="https://techcabal.com/jobs/">TechCabal&rsquo;s job board</a>. If you have job opportunities to share, please submit them at <a style="text-decoration: underline;color: #b61313 !important" href="http://bit.ly/tcxjobs">bit.ly/tcxjobs</a>.</p>
-</ul></div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div style="width:100%;background-color: transparent;text-align:center;padding:0 12px">
-  <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/ion-img-1.png" alt="in other news image" style="width:100%;max-width:343px;height:auto;margin:0 auto">
-</div>
-
-<div style="background-color: #FAE2E3;padding:16px 32px">
-<ul style="padding-left: 20px;margin:0;font-size:16px;line-height:25.6px">
-   
-
-<li><a href="https://techcabal.com/2026/05/28/zipline-targets-100-million-nigerians-with-12-new-hubs-by-2028/" style="text-decoration: underline;color:#000000 !important">Zipline to build 12 new hubs as Nigeria becomes its biggest African market</a></li>
-<li><a href="https://techcabal.com/2026/05/28/nala-secures-50-million-credit-line-to-expand-stablecoin-payment-network/" style="text-decoration: underline;color:#000000 !important">Nala secures $50 million credit line to expand stablecoin payment network</a></li>
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-<div style="width:100%;background-color: transparent">
-<div style="width:100%;background-color:transparent;padding:0 12px;text-align:center">
-<div style="background-image:url(https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/credits-tcd-bg.png);background-repeat:no-repeat;max-width:343px;margin:0 auto;min-height:53px;padding: 12px 12px 0px 7px;background-size: cover;background-position: right center">
-<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0"><strong>Written by:</strong> Emmanuel Nwosu and Opeyemi Kareem</p>
-<p style="padding:5px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:12px;color:#ffffff;text-align:left;margin:0 0 3px;padding:0"><strong>Edited by: </strong>Emmanuel Nwosu and Ganiu Oloruntade</p>
- </div>
-</div>
-<div style="background-color:#F4FFF9;padding:16px 32px">
-<h6 style="text-align:center;font-size:16px;font-weight:700;line-height:23.1px;margin:0 0 10px">Want more of TechCabal?</h6>
-<p style="padding:5px 0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height:20px;margin:0;text-align:center">Sign up for our insightful newsletters on the business and economy of tech in Africa.</p>
-<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000"></div>
-<ul style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size:16px;line-height: 30px;margin:0;padding-left: 20px">
-<li><a href="https://techcabal.com/next-wave" style="text-decoration: none !important;font-style: normal !important;color:#F23204 !important;font-weight:700 !important">The Next Wave</a>: futuristic analysis of the business of tech in Africa. </li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfMR3ibg7a2IgUx_qGnx75IFIg1SQcpPIwQASTiFUSmENW1DA/viewform" style="text-decoration: none !important;font-style: normal !important;color:#F23204 !important;font-weight:700 !important">Francophone Weekly by TechCabal</a>: insider insights and analysis of Francophone’s tech ecosystem </li>
-</ul>
-<div style="width:100%;max-width:210px;margin:16px auto 24px;height:0.6px;background-color:#FF0000"></div>
-<p style="padding:5px 0;font-weight:400;font-size: 16px;text-align:center;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:23px;color:#000000">P:S If you’re often missing TC Daily in your inbox, check your Promotions folder and move any edition of TC Daily from “Promotions” to your “Main” or “Primary” folder and TC Daily will always come to you.</p>
-                </div>
-<a style="width:100%;text-align:center" href="mailto:ads@bigcabal.com">
-                <img decoding="async" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/07/email-us-tcd-1.png" alt="Email Us" width="100%" height="auto" style="max-width:343px;margin:0 auto;object-fit: cover"></a>
-            </div> 
-        </div>
-     </div> 
-   </div> 
- </div>
-
-
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Cheapest phones in Nigeria and their prices (Under ₦200,000)</title>
-		<link>https://techcabal.com/2026/05/28/cheapest-phones-in-nigeria-and-their-prices/</link>
-		
-		<dc:creator><![CDATA[Chukwuebuka Mgbojikwe]]></dc:creator>
-		<pubDate>Thu, 28 May 2026 16:14:10 +0000</pubDate>
-				<category><![CDATA[Consumer Tech]]></category>
-		<category><![CDATA[Cheap phones]]></category>
-		<category><![CDATA[cheapest phones in nigeria]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=189096</guid>
-
-					<description><![CDATA[Table of contents What to expect under ₦200,000 Under ₦120,000 (Entry level/Second phone) ₦120,000 to ₦150,000 (The sweet spot) ₦145,000 to ₦170,000 (Main recommendations) ₦170,000 to ₦200,000 (Premium budget) Which phone should you buy? This is a guide to the cheapest phones in Nigeria and their prices, covering everything under ₦200,000 that is worth your [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<div class="wp-block-group tc-toc has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<h2 class="wp-block-heading">Table of contents</h2>
-
-
-
-<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<p><a href="#What-to-expect-under-₦200,000" type="internal" id="#What-to-expect-under-₦200,000">What to expect under ₦200,000</a></p>
-
-
-
-<p><a href="#Under-₦120,000-Entry-level-Second-phone" type="internal" id="#Under-₦120,000-Entry-level-Second-phone">Under ₦120,000 (Entry level/Second phone)</a></p>
-
-
-
-<p><a href="#₦120,000-to-₦150,000-The-sweet-spot" type="internal" id="#₦120,000-to-₦150,000-The-sweet-spot">₦120,000 to ₦150,000 (The sweet spot)</a></p>
-
-
-
-<p><a href="#₦145,000-to-₦170,000-Main-recommendations" type="internal" id="#₦145,000-to-₦170,000-Main-recommendations">₦145,000 to ₦170,000 (Main recommendations)</a></p>
-
-
-
-<p><a href="#₦170,000-to-₦200,000-Premium-budget" type="internal" id="#₦170,000-to-₦200,000-Premium-budget">₦170,000 to ₦200,000 (Premium budget)</a></p>
-
-
-
-<p><a href="#Which-phone-should-you-buy" type="internal" id="#Which-phone-should-you-buy">Which phone should you buy?</a></p>
-</div>
-</div>
-
-
-
-<p>This is a guide to the cheapest phones in Nigeria and their prices, covering everything under ₦200,000 that is worth your money. The prices here are live listings pulled directly from Jumia Nigeria, Slot Nigeria, and Konga on May 27, 2026. To make this list, a phone had to be confirmed in stock with a live price on one of those three platforms, priced under ₦200,000, and genuinely useful for everyday tasks. Prices can shift week to week, so always confirm the current price on the product page before paying.</p>
-
-
-
-<h2 class="wp-block-heading" id="What-to-expect-under-₦200,000"><strong>What to expect under ₦200,000</strong></h2>
-
-
-
-<p>At the ₦200,000 ceiling in mid-2026, you are mostly looking at phones with 6.6- to 6.78-inch HD+ or 120Hz LCD screens, 4 to 8GB of RAM, 128GB of storage, a 5,000 to 5,200 mAh battery, and an Android 14 or 15 chipset. AMOLED panels, FHD+ resolution, and 45W or faster charging are starting to appear in this segment, but the Pro variants that offer these features are priced above ₦200,000 across every retailer checked.</p>
-
-
-
-<p>A few things are worth knowing before you decide:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Slot.ng prices are typically the lowest for Transsion brands like Tecno, Infinix, and Itel. Jumia tends to have the lowest prices on Samsung Galaxy A-series and Xiaomi Redmi A-series.</li>
-
-
-
-<li>Konga’s price of ₦165,000 for the Tecno Spark 40 is the best live deal on that configuration anywhere, as confirmed on May 27, 2026.</li>
-
-
-
-<li>Stock moves fast at this price range. Several phones targeted on Konga returned “Product Not Found” or “Out of Stock” on the day of this research. Every phone on this list was confirmed in stock on May 27, 2026.</li>
-
-
-
-<li>Cross-retailer pricing on the same phone varies widely. The Tecno Spark 40, for example, ranges from ₦165,000 on Konga (4+4GB / 128GB) to ₦184,600 on Slot (8GB / 256GB) to ₦173,699 on Jumia, where it is currently out of stock.</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="The-12-best-phones-under-₦200,000-right-now"><strong>The 12 best phones under ₦200,000 right now</strong></h2>
-
-
-
-<h3 class="wp-block-heading" id="Under-₦120,000-Entry-level-Second-phone"><strong>Under ₦120,000 (Entry level/Second phone)</strong></h3>
-
-
-
-<h4 class="wp-block-heading"><strong>1. POCO C71 (3GB / 64GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71-1024x576.jpg" alt=" POCO C71" class="wp-image-189098" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/POCO-C71.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Tech With Shaman on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦102,182 on Jumia (Flash Sale)</li>
-
-
-
-<li><strong>Live listing: </strong>https://www.jumia.com.ng/poco-c71-6.88-3gb-ram-64gb-rom-android-15-black-418501178.html</li>
-</ul>
-
-
-
-<p>The POCO C71 is the cheapest Android 15 phone with a 120Hz panel confirmed in stock on this list. You get a 6.88-inch HD+ 120Hz LCD, a MediaTek Helio G81-class chip, 3GB RAM, 64GB storage, dual-SIM 4G, and a large battery.</p>
-
-
-
-<p>It is the right pick for a parent phone, a secondary line, or anyone who mainly needs WhatsApp, banking apps, and calls. The 3GB RAM means it is not built for heavy games or running multiple demanding apps at once.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>2. Realme Note 50 (4GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50-1024x576.jpg" alt="Realme Note 50" class="wp-image-189100" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Realme-Note-50.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Valor Reviews on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦119,100 on Slot</li>
-
-
-
-<li><strong>Live listing: </strong>https://slot.ng/ (catalog search: Realme Note 50 4GB+128GB)</li>
-</ul>
-
-
-
-<p>You get a 6.74-inch HD+ 90Hz IPS screen, a UNISOC T612 octa-core chip, 4GB of RAM (expandable), 128GB of storage, a 5,000 mAh battery with 10W charging, Android 13, and an IP54 rating.</p>
-
-
-
-<p>The 128GB storage is the headline here. At this price tier, most phones ship with 64GB of storage, which fills up quickly when you store WhatsApp videos, photos, and apps. The Realme Note 50 gives you double that for under ₦120,000.</p>
-
-
-
-<h3 class="wp-block-heading" id="₦120,000-to-₦150,000-The-sweet-spot"><strong>₦120,000 to ₦150,000 (The sweet spot)</strong></h3>
-
-
-
-<h4 class="wp-block-heading"><strong>3. Samsung Galaxy A07 (4GB / 64GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07-1024x576.jpg" alt="Samsung Galaxy A07" class="wp-image-189102" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A07.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: GSMArena Official on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦135,489 on Jumia (Flash Sale) / ₦134,800 on Slot</li>
-
-
-
-<li><strong>Jumia listing: </strong>https://www.jumia.com.ng/samsung-galaxy-a07-6.7-4gb-ram64gbgb-rom-black-418619807.html</li>
-
-
-
-<li><strong>Slot listing: </strong>https://slot.ng/ (catalog: Samsung Galaxy A07 4GB + 64GB at ₦134,800)</li>
-</ul>
-
-
-
-<p>The Galaxy A07 runs on the MediaTek Helio G99, a 6nm chip that is meaningfully faster than the G81-class chips in almost every other phone on this list. The display is a 6.7-inch PLS LCD at 90Hz. The camera is 50MP dual rear and 8MP selfie. The battery is 5,000 mAh with 25W charging. It ships with Android 15 and One UI 7.</p>
-
-
-
-<p>The biggest reason to pick this phone is software support. Samsung confirmed the Galaxy A07 will receive six major Android OS upgrades and six years of security updates. That is far more than the one or two updates you get from Tecno, Infinix, or Xiaomi at this price. If you keep phones for three to five years, this matters a lot.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>4. Infinix Hot 50i (4GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i-1024x576.jpg" alt="Infinix Hot 50i" class="wp-image-189104" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50i.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Eugoson Quorch on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦135,400 on Slot (special price) / regular ₦141,400</li>
-
-
-
-<li><strong>Live listing: </strong>https://slot.ng/infinix-hot-50i-x6531b-128gb-4gb.html</li>
-</ul>
-
-
-
-<p>You get a 6.7-inch IPS LCD at 120Hz with 500 nits peak brightness, a MediaTek Helio G81 chip, 4GB RAM plus 4GB virtual RAM, 128GB storage, a 48MP rear camera and 8MP selfie, a 5,000 mAh battery with 18W charging, Android 14 with XOS 14.5, IP54 dust and splash resistance, a side fingerprint sensor, dual stereo speakers, FM radio, and USB-C.</p>
-
-
-
-<p>This is the best balance of screen quality, storage, and durability you will find under ₦140,000. The 5-metre LED flashlight is also a practical feature during power outages, which is a real consideration for daily use in Nigeria.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>5. Tecno Spark 30C (4GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C--1024x576.jpg" alt="Tecno Spark 30C " class="wp-image-189107" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C--1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C--300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C--768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C--1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C--1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-30C-.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Vaylen Tech Studios on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦135,600 on Slot (special price) / ₦145,000 on Konga</li>
-
-
-
-<li><strong>Slot listing: </strong>https://slot.ng/ (catalog: TECNO SPARK 30C 4GB+128GB, was ₦141,600, now -4%)</li>
-
-
-
-<li><strong>Konga listing: </strong>https://www.konga.com/product/tecno-spark-30c-6-67-128gb-rom-4-4gb-ram-4g-lte-dual-sim-fingerprint-5000mah-black-6549737 (Seller: Wholesale Phones, Pay on Delivery available)</li>
-</ul>
-
-
-
-<p>The Spark 30C comes with a 6.67-inch 120Hz IPS display, a MediaTek Helio G81 chip, 4GB RAM plus 4GB virtual, 128GB storage, a 50MP main camera and 8MP selfie, a 5,000 mAh battery with 18W charging, dual stereo speakers with DTS audio, a side fingerprint sensor, an infrared remote, and Android 14 with HiOS.</p>
-
-
-
-<p>The infrared remote is the standout feature here. It works with most Nigerian split-unit ACs and DStv decoders, which means one less remote to keep track of. Slot’s ₦135,600 is the cheapest confirmed live price for this configuration on May 27, 2026.</p>
-
-
-
-<h3 class="wp-block-heading" id="₦145,000-to-₦170,000-Main-recommendations"><strong>₦145,000 to ₦170,000 (Main recommendations)</strong></h3>
-
-
-
-<h4 class="wp-block-heading"><strong>6. Samsung Galaxy A06 (4GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06-1024x576.jpg" alt="Samsung Galaxy A06" class="wp-image-189109" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Samsung-Galaxy-A06.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Izzi Boye on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦146,005 on Jumia (Flash Sale)</li>
-
-
-
-<li><strong>Live listing: </strong>https://www.jumia.com.ng/samsung-galaxy-a06-6.7-4gb-ram128gb-rom-android-14-black-401614264.html</li>
-</ul>
-
-
-
-<p>You get a 6.7-inch PLS LCD at 90Hz, a MediaTek Helio G85 chip, 4GB of RAM, 128GB of storage with a dedicated microSD slot, a 50MP and 2MP dual rear camera and an 8MP selfie, a 5,000 mAh battery with 25W charging, Android 14, and One UI 6.1.</p>
-
-
-
-<p>One UI is noticeably smoother than HiOS or XOS at the same RAM level. You also get Samsung Knox security and Find My Device, which are the best-in-class tools at this price tier. The trade-off with the A06 compared to the A07 is that it receives only two major OS updates, whereas the A07 receives six. It is a good short-term buy but a weaker long-term one.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>7. Xiaomi Redmi 14C (6GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C-1024x576.jpg" alt="Xiaomi Redmi 14C" class="wp-image-189111" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-14C.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Izzi Boye on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦146,600 on Slot</li>
-
-
-
-<li><strong>Live listing: </strong>https://slot.ng/ (catalog: Xiaomi Redmi 14C 6GB+128GB)</li>
-</ul>
-
-
-
-<p>The Redmi 14C has the largest screen on this list at 6.88 inches, a 120Hz HD+ LCD, a MediaTek Helio G81 Ultra chip, 6GB RAM, 128GB storage with a dedicated microSD slot up to 1TB, a triple rear camera setup of 50MP, 2MP, and 0.08MP, a 13MP selfie camera with night mode, a 5,160 mAh battery with 18W USB-C charging, Android 14 with HyperOS, a side fingerprint sensor, and face unlock.</p>
-
-
-
-<p>The 6GB RAM is a meaningful step up for multitasking, and HyperOS is the lightest software skin among Chinese budget brands. The 13MP selfie camera with night mode is a genuine class above the 8MP front shooters found on most competitors at this price.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>8. Xiaomi Redmi A7 Pro (4GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro-1024x576.jpg" alt=" Xiaomi Redmi A7 Pro" class="wp-image-189113" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-A7-Pro.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Critical Tech on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦149,900 on Jumia (Flash Sale)</li>
-
-
-
-<li><strong>Live listing: </strong>https://www.jumia.com.ng/xiaomi-redmi-a7-pro-6.9-4gb-ram128gb-rom-black-419511167.html</li>
-</ul>
-
-
-
-<p>You get a 6.9-inch HD+ display, 4GB RAM, 128GB storage, Android 15 with HyperOS, and dual-SIM 4G.</p>
-
-
-
-<p>The Redmi A7 Pro is one of the very few phones under ₦150,000 confirmed to ship with Android 15 out of the box. The 6.9-inch panel is also the largest display available under ₦150,000 on this list.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>9. Xiaomi Redmi 15C (4GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C--1024x576.jpg" alt="Xiaomi Redmi 15C" class="wp-image-189114" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C--1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C--300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C--768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C--1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C--1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Xiaomi-Redmi-15C-.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Izzi Boye on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦153,404 on Jumia (-7% on listing)</li>
-
-
-
-<li><strong>Live listing: </strong>https://www.jumia.com.ng/xiaomi-redmi-15c-6.9-4gb-ram128gb-rom-android-15-midnight-black-418619710.html</li>
-</ul>
-
-
-
-<p>The Redmi 15C has a 6.9-inch 120Hz HD+ display, a Helio G81 Ultra-class chip, 4GB RAM, 128GB storage, dual-SIM 4G, and Android 15 with HyperOS.</p>
-
-
-
-<p>This is the newest Xiaomi C-series phone available in Nigeria. It ships with Android 15 and benefits from Xiaomi’s longer software support window compared to Tecno and Infinix phones at the same price.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>10. Tecno Spark 40 (4GB + 4GB Virtual / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40-1024x576.jpg" alt="Tecno Spark 40" class="wp-image-189116" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Tecno-Spark-40.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Eugoson Quorch on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦165,000 on Konga (same phone is listed at ₦173,699 on Jumia but currently out of stock)</li>
-
-
-
-<li><strong>Konga listing: </strong>https://www.konga.com/product/tecno-spark-40-6-67-128gb-rom-4-4gb-ram-4g-lte-dual-sim-fingerprint-5200mah-black-6778777 (Seller: Wholesale Phones, Pay on Delivery available)</li>
-</ul>
-
-
-
-<p>You get a 6.67-inch 120Hz HD+ punch-hole LCD, a MediaTek Helio G81 chip, 4GB RAM plus 4GB virtual RAM, 128GB storage, a 50MP dual-flash rear camera and 8MP selfie, a 5,200 mAh battery with 45W fast charging, IP54 dust and splash resistance, a side fingerprint sensor, dual speakers with Dolby Atmos and Hi-Res Audio, an IR remote, FreeLink off-network calling, and Android 14 with HiOS 15.</p>
-
-
-
-<p>The 45W charging is the standout feature. At ₦165,000, no other phone on this list supports charging this fast. The 5,200 mAh battery also sits above the 5,000 mAh standard for this price range. Konga’s ₦165,000 is the best confirmed live price for this configuration on May 27, 2026.</p>
-
-
-
-<h3 class="wp-block-heading" id="₦170,000-to-₦200,000-Premium-budget"><strong>₦170,000 to ₦200,000 (Premium budget)</strong></h3>
-
-
-
-<h4 class="wp-block-heading"><strong>11. Tecno Spark 40 (8GB / 256GB)</strong></h4>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦184,600 on Slot</li>
-
-
-
-<li><strong>Live listing: </strong>https://slot.ng/ (catalog: Tecno Spark 40 8GB+256GB)</li>
-</ul>
-
-
-
-<p>This is the same Spark 40 as in number 10 above, but in the higher-storage variant. The display is a 6.78-inch FHD+ with a resolution of 1080&#215;2460. Slot’s spec sheet lists it at 90Hz; Konga’s listing for the same model line lists it at 120Hz. Treat that with caution and verify in-store if the refresh rate is important to you. The chip is MediaTek, RAM is 8GB, storage is 256GB, the camera is 64MP main and 13MP selfie per the Slot’s spec sheet, and the battery is 5,000 mAh with 45W charging on Android 14.</p>
-
-
-
-<p>For about ₦20,000 more than the Konga 4GB/128GB variant, you get double the RAM and storage. If you plan to keep this phone for three or more years, the 8GB / 256GB version is the better long-term investment. Slot’s price for this SKU is the lowest confirmed live price found anywhere on May 27, 2026.</p>
-
-
-
-<p>Note on the 120Hz claim: Konga’s listing for the standard Spark 40 cites 120Hz; Slot’s spec sheet for the 8/256GB variant cites 90Hz. The Spark 40 Pro at ₦275,700 on Slot is the confirmed 120Hz AMOLED model. Verify in-store before buying if the refresh rate is the deciding factor for you.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>12. Infinix Hot 50 (8GB / 128GB)</strong></h4>
-
-
-
-<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="576" 
-     	loading="lazy" src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50-1024x576.jpg" alt="Infinix Hot 50" class="wp-image-189118" srcset="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50-1024x576.jpg 1024w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50-300x169.jpg 300w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50-768x432.jpg 768w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50-1536x864.jpg 1536w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50-1240x698.jpg 1240w, https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2026/05/Infinix-Hot-50.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Image source: Infinix Mobile on YouTube</figcaption></figure>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Price: </strong>₦198,000 on Slot (special price) / regular ₦210,000</li>
-
-
-
-<li><strong>Live listing: </strong>https://slot.ng/ (catalog: Infinix Hot 50 128GB+8GB, -5% off regular price)</li>
-</ul>
-
-
-
-<p>You get a 6.7-inch HD+ IPS display (the 6.78-inch AMOLED is reserved for the Hot 50 Pro+ which sits above ₦200,000), a MediaTek Dimensity 6300 chip on 6nm process that is 5G-capable, 8GB RAM extendable to 16GB, 128GB storage with microSD support up to 1TB, a 48MP Sony IMX582 main camera and depth sensor at the back, an 8MP selfie camera, a 5,000 mAh battery, Android 14 with XOS 14.5, and IP54 dust and splash resistance.</p>
-
-
-
-<p>The Dimensity 6300 is the only 5G-class chip on this entire list. In AnTuTu benchmark testing, it scores 375,411 points compared to 254,779 for the Helio G81, a 47.35% performance gap. That difference is large enough to feel in everyday use. The 8GB RAM also keeps WhatsApp, Chrome, and banking apps running in the background without constant reloading. If you want the fastest day-to-day experience under ₦200,000, this is your pick.</p>
-
-
-
-<h2 class="wp-block-heading" id="Which-phone-should-you-buy"><strong>Which phone should you buy?</strong></h2>
-
-
-
-<p><strong>Best overall buy under ₦200,000: </strong>Tecno Spark 40 (4+4GB / 128GB) at ₦165,000 on Konga. The combination of 45W charging, a 5,200 mAh battery, an IP54 rating, and a 120Hz screen at this price is unmatched. Step up to the Slot 8GB / 256GB variant at ₦184,600 if you store a lot of media or plan to keep the phone for three or more years.</p>
-
-
-
-<p><strong>Best performance under ₦200,000: </strong>Infinix Hot 50 (8GB / 128GB) at ₦198,000 on Slot. The Dimensity 6300 is the only 5G-grade chip on this list and benchmarks 47% faster than the Helio G81 family. Pick this if you want the smoothest multitasking and fastest overall experience.</p>
-
-
-
-<p><strong>Best pick under ₦150,000: </strong>Samsung Galaxy A06 (4GB / 128GB) at ₦146,005 on Jumia. One UI software polish, Knox security, and 25W charging give it an edge over the Tecno and Infinix equivalents in day-to-day usability. If you plan to keep the phone for four or more years, switch to the Samsung Galaxy A07 at ₦135,489 on Jumia for the faster Helio G99 chip and six years of OS updates instead.</p>
-
-
-
-<p><strong>Best budget pick: </strong>POCO C71 at ₦102,182 on Jumia. Android 15, a 120Hz screen, and a large battery make it genuinely usable for chats and banking. This is the lowest price point worth considering for a daily driver.</p>
-
-
-
-<p>Buying by use case:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Student, first phone, or WhatsApp and banking only: POCO C71 at ₦102,182 or Infinix Hot 50i at ₦135,400</li>
-
-
-
-<li>Daily driver or light gaming: Tecno Spark 40 (4GB / 128GB) at ₦165,000 on Konga or Samsung Galaxy A06 at ₦146,005 on Jumia</li>
-
-
-
-<li>Power user or three-year plan: Tecno Spark 40 (8GB / 256GB) at ₦184,600 on Slot or Infinix Hot 50 (8GB / 128GB) at ₦198,000 on Slot</li>
-</ul>
-
-
-
-<p>Prices that would change these recommendations:</p>
-
-
-
-<ul class="wp-block-list">
-<li>If the Tecno Spark 40 (4GB / 128GB) drops below ₦155,000 on Jumia, where it is currently out of stock at ₦173,699, it becomes the clear winner with no competition.</li>
-
-
-
-<li>If the Infinix Hot 50 Pro+ (AMOLED, 33W charging) returns to ₦200,000 or below anywhere, it replaces the standard Hot 50.</li>
-
-
-
-<li>If the Samsung Galaxy A17, currently at ₦205,500 on Slot and ₦219,882 on Jumia, drops below ₦200,000 during a flash sale, it will replace the Galaxy A06.</li>
-</ul>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Yoco’s Dyner.ai deal ushers in new AI era for South African SMEs</title>
-		<link>https://techcabal.com/2026/05/28/yocos-dyner-ai-deal-ushers-in-new-ai-era-for-south-african-smes/</link>
-		
-		<dc:creator><![CDATA[Phathisani Moyo]]></dc:creator>
-		<pubDate>Thu, 28 May 2026 15:56:00 +0000</pubDate>
-				<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[South Africa]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=189105</guid>
-
-					<description><![CDATA[South African fintech Yoco is banking on artificial intelligence (AI) to be the next major growth lever for small businesses. To advance that vision, the commerce platform has acquired Dyner.ai, an AI-native operating system built to help Small and Medium-sized Enterprises (SMEs), particularly restaurants, streamline operations. In an interview with TechCabal on Thursday, Carl Wazen, [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<p>South African fintech <a href="https://www.yoco.com/za/shop/?utm_source=bing&amp;utm_medium=paidsearch&amp;utm_id=570899362&amp;utm_campaign=ppcbrand_simplepaymentstest_v1&amp;utm_content=ppcbrand&amp;utm_term=yoco_multiprod_rsa_2602_cardmachinesbrandrsa_a&amp;msclkid=aeac68e9257712c41c6002f116108d92">Yoco </a>is banking on artificial intelligence (AI) to be the next major growth lever for small businesses. To advance that vision, the commerce platform has acquired <a href="http://dyner.ai">Dyner.ai</a>, an AI-native operating system built to help Small and Medium-sized Enterprises (SMEs), particularly restaurants, streamline operations.</p>
-
-
-
-<p>In an interview with <em>TechCabal</em> on Thursday, Carl Wazen, Co-Founder and Chief Business Officer at Yoco, hailed the acquisition as a major strategic evolution for the company, which has built its reputation helping small businesses accept digital payments. </p>
-
-
-
-<p>“This forms part of our ongoing plans of evolving into a broader commerce platform combining payments, software, financial services and AI-powered operational tools for more than 200 000 merchants across South Africa,” he said.</p>
-
-
-
-<p>The acquisition represents a maturing local tech ecosystem, with two South African startups joining forces to build enterprise-grade AI-powered tools for SMEs. Importantly, the AI empowerment deal marks a turning point for township entrepreneurs who operate with tight margins and limited administrative capacity. Wazen believes that it unlocks access to enterprise-grade technology previously reserved for large corporates.</p>
-
-
-
-<p>The Yoco co-founder highlighted that SMEs contribute an estimated <a href="https://www.dsbd.gov.za/sites/default/files/Final%20Gazetted%20SMMEs%20and%20Co-operatives%20Funding%20Policy.pdf" type="link" id="https://www.dsbd.gov.za/sites/default/files/Final%20Gazetted%20SMMEs%20and%20Co-operatives%20Funding%20Policy.pdf">35% to 40%</a> of South Africa’s economy and support roughly 60% of employment, yet many still struggle with stock losses, fraud, poor cash-flow visibility, and inefficient operations. Wazen believes AI can help bridge that gap by automating routine tasks, detecting inefficiencies and surfacing insights that help business owners make better decisions.</p>
-
-
-
-<p>“This is really about building the future for the independent business segment. The next big challenge is really about giving them capability, not just access to payments, but real capability that was otherwise reserved for enterprises and affluent consumers,” he said.</p>
-
-
-
-<p>Founded by former actuaries Thalentha Ngobeni and Chris du Plessis, Dyner.ai has quietly built an intelligent operating system for restaurants that helps owners manage stock, invoices, supplier relationships, reporting, margins and daily workflows. More importantly, the platform includes an embedded AI assistant capable of analysing business data and responding to operational questions in real time.</p>
-
-
-
-<p>Instead of spending hours sorting through spreadsheets or reconciling sales manually, business owners can ask simple questions such as why stock levels are inconsistent, why profits dipped, or which products are underperforming.</p>
-
-
-
-<p>“It plugs into the data from your point of sale, accounting and different business systems, giving merchants personalised insights in a way traditional software simply cannot,” said Wazen. “Imagine every day having a curated list of priorities surfaced to you automatically, whether it’s unusual stock movement, unreconciled payments or pricing issues.”</p>
-
-
-
-<p>For township businesses and smaller merchants, the value proposition may lie less in futuristic AI hype and more in cost savings. Wazen said Dyner has already demonstrated measurable profitability improvements among existing restaurant clients by helping businesses reduce waste, identify theft, detect fraud and optimise pricing. “It’s not a fluffy service but a very real business solution,” he stated.</p>
-
-
-
-<p>The acquisition also represents Yoco’s response to a maturing payments market. When the company launched, only around 200 000 South African merchants accepted card payments. Today, Yoco alone serves that number. “Payments were the starting point because getting paid is foundational,” said Wazen. “But merchants increasingly want one accountable partner to help them run their businesses.”</p>
-
-
-
-<p>Thalentha Ngobeni, Co-Founder and CEO of Dyner.ai said joining Yoco’s ecosystem dramatically expands their reach. “We founded Dyner with the belief that independent businesses deserve the same quality of operational technology and intelligence historically reserved for large enterprises,” said Thalentha Ngobeni, Co-Founder and CEO of Dyner.ai. “Joining Yoco gives us the infrastructure, reach and platform to accelerate that vision at a far greater scale.”</p>
 ]]></content:encoded>
 					
 		
