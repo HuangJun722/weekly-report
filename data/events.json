@@ -26526,6 +26526,48 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "XCENA Raises $135M Series B for Memory-Centric Computing",
+      "url": "https://ventureburn.com/xcena-raises-135m-series-b-for-memory-centric-computing/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "XCENA获1.35亿美元B轮融资用于内存计算技术",
+      "reason": "非洲芯片初创获大额融资，非洲半导体设计领域出现新的硬件合作机会",
+      "impact": "非洲芯片设计公司、数据中心设备供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲半导体投资升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-30",
+      "date": "2026-05-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/05/XCENA-Raises-135M.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-05-31": [
@@ -26570,6 +26612,138 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Naver Expands Nvidia Partnership from GPUs to Cloud - Seoul Economic Daily",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQVNyWlJGOTVvb2ItbzZpMVQ5VkYyczRrRkp3WmJwTTVud2UyT2hZbTVMb1d3X21EbDdfTzhiZlEtVGtKYzZ3MTYxcjRRU0hqemJDVkJseHBGdDcxazNUS0xFdmQ3TWstQnF5dkFsVFhDOVNZZzdFYmxaNHpPOEN6cGNmQVc1aHpiN3pvWHJLaEVVeElwRDlJZ0hLUWY?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Expands Nvidia Part",
+      "reason": "亚太Naver将英伟达合作从GPU扩展至云",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-05-31",
+      "date": "2026-05-31",
+      "source_detail": "Seoul Economic Daily",
+      "publisher": "Seoul Economic Daily",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "expansion",
+        "partnership",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "LG Electronics stock jumped 24% in a day after unveiling Google-based car tech that cuts automaker costs",
+      "url": "https://thenextweb.com/news/lg-electronics-stock-surge-google-android-automotive",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "LG电子股价因谷歌车载技术合作单日暴涨24%",
+      "reason": "韩国LG与谷歌合作降低汽车制造商成本，欧洲车联网市场出现新的车载系统集成机会",
+      "impact": "欧洲汽车制造商、车载系统供应商",
+      "insight_label": "合作机会",
+      "trend_topic": "全球车联网技术合作",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-31",
+      "date": "2026-05-31",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/05/lg-electronics-stock-surge-google-android-automotive.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "降本窗口",
+        "预算窗口"
+      ],
+      "opportunity_direction": "AI客服 / 自动化运营 / 外包服务 / 成本优化",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "China’s MiniMax begins domestic IPO preparations",
+      "url": "https://www.techinasia.com/chinas-zhipu-ai-unveils-560m-hong-kong-share-sale",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "中国MiniMax启动国内IPO准备",
+      "reason": "中国AI大模型公司启动IPO，亚太AI赛道资本退出路径清晰化，吸引投资者关注",
+      "impact": "亚太AI初创公司、港股承销商",
+      "insight_label": "资金流向",
+      "trend_topic": "中国AI资本化加速",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-31",
+      "date": "2026-05-31",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2025/11/1763951087_Minimax-laptopscreen.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-06-01": []
 }
