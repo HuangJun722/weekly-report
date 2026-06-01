@@ -72,6 +72,45 @@ def test_mature_date_selector_skips_thin_latest_batch():
     assert notice
 
 
+def test_mature_date_selector_counts_main_list_only():
+    latest_main = base_event(date='2026-06-01', url='https://example.com/latest-main')
+    latest_google_review = base_event(
+        date='2026-06-01',
+        url='https://news.google.com/rss/articles/latest-review',
+        source='Google News',
+        source_tier='L5 Google News 补漏源',
+        event_types=['strategy'],
+        score=5,
+    )
+    latest_low_google = base_event(
+        date='2026-06-01',
+        url='https://news.google.com/rss/articles/latest-low',
+        source='Google News',
+        source_tier='L5 Google News 补漏源',
+        event_types=['strategy'],
+        score=4,
+    )
+    mature = [
+        base_event(date='2026-05-31', url='https://example.com/a'),
+        base_event(date='2026-05-31', url='https://example.com/b'),
+        base_event(date='2026-05-31', url='https://example.com/c'),
+    ]
+    events_by_date = {
+        '2026-06-01': [latest_main, latest_google_review, latest_low_google],
+        '2026-05-31': mature,
+    }
+    visible = events_by_date['2026-06-01'] + mature
+    main_date, latest_date, latest_count, notice = select_mature_main_date(
+        ['2026-06-01', '2026-05-31'],
+        visible,
+        events_by_date,
+    )
+    assert main_date == '2026-05-31'
+    assert latest_date == '2026-06-01'
+    assert latest_count == 3
+    assert notice
+
+
 def test_review_selector_keeps_real_google_org_action_out_of_main():
     event = base_event(
         title='Naver Eyes Baemin Acquisition to Accelerate Super App Strategy',
@@ -91,5 +130,6 @@ if __name__ == '__main__':
     test_feed_selector_falls_back_to_latest_high_value_date()
     test_company_quality_selector_is_independent_from_rss_high_value()
     test_mature_date_selector_skips_thin_latest_batch()
+    test_mature_date_selector_counts_main_list_only()
     test_review_selector_keeps_real_google_org_action_out_of_main()
     print('view selector tests passed')

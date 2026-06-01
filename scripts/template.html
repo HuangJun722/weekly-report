@@ -208,10 +208,10 @@ button, input, select { font: inherit; }
 .company span { color: var(--muted); font-size: 13px; }
 .company small { display: block; margin-top: 9px; color: var(--quiet); font-size: 12px; line-height: 1.5; }
 .ops-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
-.release-head { grid-template-columns: minmax(0, 1fr) 92px; }
+.release-head { display: block; text-align: left; }
 .release-copy { min-width: 0; }
-.release-badge { display: grid; grid-template-columns: minmax(0, 1fr) 14px; gap: 8px; align-items: center; justify-items: end; min-width: 86px; }
-.release-version { display: block; margin: 0; color: var(--ink); font-size: 20px; font-weight: 760; line-height: 1; text-align: right; font-variant-numeric: tabular-nums; }
+.release-badge { display: flex; align-items: center; justify-content: flex-start; gap: 8px; margin-top: 8px; min-width: 0; }
+.release-version { display: block; margin: 0; color: var(--ink); font-size: 13px; font-weight: 760; line-height: 1; text-align: left; font-variant-numeric: tabular-nums; }
 .history-body p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
 .release-list { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; color: #38434d; font-size: 13px; }
 .release-list li { position: relative; padding-left: 16px; }

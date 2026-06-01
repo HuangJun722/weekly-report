@@ -67,6 +67,8 @@ def select_mature_main_date(sorted_dates, all_visible_events, events_by_date):
     """Prefer the newest date that has enough visible events for the homepage."""
     counts = {}
     for event in all_visible_events:
+        if not should_show_in_main_list(event):
+            continue
         date_key = event_date(event)
         if date_key:
             counts[date_key] = counts.get(date_key, 0) + 1
