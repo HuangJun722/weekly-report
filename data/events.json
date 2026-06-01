@@ -26743,7 +26743,227 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Germany's DAX 40: Frankfurt Benchmark Closes at 25,113, Rising 0.05% as SAP and Zalando Lead Month-End Advance - BBN Times",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZVBGcHNrbDVBOUVWaWk1OWRyZXZYSzBoRG5NREpVeFBmUlloZEk0bXExd09XMnh2NDlpTUFoem9UeS1jQjlQRUVWOWdpRUhna2hGdXB4UTczSzhrejB0c0pfTnZnR3p0RURSX2w5MGVjTUx4RFZsREpxdWYtTTBpem8wdktqQXVOYmxGa1A2N3k1NGN2WXlsLUc0UmtaVW82M2JBZE1GYTFOUGpiSFlfZDVUMlVtbi16M0F0Y0JFMU9ZM2o1YWtkeUg5bG45Mk11c2RNdDNGT2hjdw?oc=5",
+      "source": "Google News",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Germany's DAX 40: Frankfu",
+      "reason": "欧洲DAX 40指数收盘微涨0.05%",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 欧洲",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Zalando",
+      "article_date": "2026-05-31",
+      "date": "2026-05-31",
+      "source_detail": "BBN Times",
+      "publisher": "BBN Times",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Zalando",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Apple destroyed the mid-tier watch market. Now it’s coming for the $200 billion eyewear industry.",
+      "url": "https://thenextweb.com/news/apple-smart-glasses-eyewear-market-disruption-watch-playbook",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Apple destroyed the mid-t",
+      "reason": "欧洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 欧洲",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-05-31",
+      "date": "2026-05-31",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
     }
   ],
-  "2026-06-01": []
+  "2026-06-01": [
+    {
+      "title": "Kakao Union to Launch Four-Hour Partial Strike on June 10, Warns of Escalation - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE56WV9vaWR4MlA3dHJpOU1uS2VMbFl5S3Uxb3VndkZmTWd3eGE0NUdDSGcxTlpsNDVsSE5aWmthbFEyMDF2bGVUdV9wVGF5S2NNZkxwX0JsZnhrM0tidVBabTROcDBZTVBM?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Union to Launch Fou",
+      "reason": "亚太Kakao Union将发起四小时部分罢工",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-06-01",
+      "date": "2026-06-01",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Invests in Drone Specialist UVify to Expand Physical AI Ecosystem - Seoul Economic Daily",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbGZpV2pVaU1tcFJkR3d3VVZ6bWtCSno4WmliOGRHRFkxTURsbm5TSGpJQzM1bHVhZmFQOTFYNGZXVUxtdVRqMUJRMno2ZWUtakpuRWxoNVBtZDRrRk1raDdxenphM082V091UnZ3b3dUbjNld0d2dWdUWDF3RUtndFZjOVREbFpCSFVHRFpHUjVaMHFoYi0zdjBtdG16YVR4LUhTVEFR?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Invests in Drone Sp",
+      "reason": "亚太Naver投资无人机公司UVify",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-01",
+      "date": "2026-06-01",
+      "source_detail": "Seoul Economic Daily",
+      "publisher": "Seoul Economic Daily",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "生态窗口"
+      ],
+      "opportunity_direction": "联合解决方案 / 商户增长 / 开放平台合作 / 渠道共建",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Southeast Asia’s AI unicorn whisperer",
+      "url": "https://www.techinasia.com/southeast-asias-ai-unicorn-whisperer",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "东南亚AI独角兽孵化者引发关注",
+      "reason": "东南亚AI独角兽孵化模式成熟，亚太AI创业生态出现新的投资与合作机会",
+      "impact": "东南亚AI初创公司、风险投资机构",
+      "insight_label": "背景补充",
+      "trend_topic": "东南亚AI投资热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-01",
+      "date": "2026-06-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/05/1780039629_unicorn-AI.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
