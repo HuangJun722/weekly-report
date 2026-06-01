@@ -28,9 +28,11 @@ except Exception:
 try:
     from analysis_quality import annotate_event_quality, summarize_quality
     from event_value import classify_bd_priority, follow_up_window_for_priority
+    from run_metrics import write_run_metrics
 except ImportError:
     from scripts.analysis_quality import annotate_event_quality, summarize_quality
     from scripts.event_value import classify_bd_priority, follow_up_window_for_priority
+    from scripts.run_metrics import write_run_metrics
 
 # ============================================================
 # 并行采集优化：aiohttp
@@ -2435,6 +2437,13 @@ def fill_event_images(events):
 
 def main():
     today = _cn_today()
+    run_started = _cn_now()
+    run_metrics = {
+        'run_id': run_started.strftime('%Y%m%d-%H%M%S'),
+        'date': today,
+        'started_at': run_started.isoformat(),
+        'environment': 'github_actions' if os.environ.get('GITHUB_ACTIONS') == 'true' else 'local',
+    }
     ON_GHA = os.environ.get('GITHUB_ACTIONS') == 'true'
     if ON_GHA:
         print("  🤖 GHA 环境检测：DeepSeek 为主，失败后自动用豆包兜底")
@@ -2466,12 +2475,21 @@ def main():
     # Step 2: 解析每个返回的文本
     raw = []
     cache_hits = sum(1 for _, (_, cached) in fetched.items() if cached)
-    source_stats = {}  # {name: (success, failed)}
+    source_stats = {}  # human-readable source stats for logs
+    source_metrics = {}
     for cfg in effective_rss_sources:
         body, cached = fetched.get(cfg['url'], (None, False))
         if not body:
             print(f"  ✗ [{cfg['name']}] 失败（{cfg['region']}）")
             source_stats[cfg['name']] = '✗'
+            source_metrics[cfg['name']] = {
+                'method': 'rss',
+                'region': cfg.get('region', ''),
+                'status': 'failed',
+                'count': 0,
+                'signal_count': 0,
+                'cached': cached,
+            }
             continue
         cfg_copy = cfg.copy()
         items = _parse_rss_text(cfg_copy, body)
@@ -2479,14 +2497,30 @@ def main():
         sig = sum(1 for it in items if it['event_types'][0] != 'other')
         print(f"  {mark} [{cfg['name']}] {len(items)} 条（信号{sig} | {cfg['region']}）")
         source_stats[cfg['name']] = f'{len(items)} 条'
+        source_metrics[cfg['name']] = {
+            'method': 'rss',
+            'region': cfg.get('region', ''),
+            'status': 'ok',
+            'count': len(items),
+            'signal_count': sig,
+            'cached': cached,
+        }
         raw.extend(items)
 
     print(f"\n  ⏱  采集耗时 {time.time()-t0:.1f}s | 缓存命中 {cache_hits}/{len(rss_urls)}")
     print(f"  📊 信源统计（{len(raw)} 条）：{' | '.join(f'{k}: {v}' for k, v in source_stats.items() if v != '✗')}")
+    run_metrics['rss'] = {
+        'source_count': len(effective_rss_sources),
+        'raw_count': len(raw),
+        'cache_hits': cache_hits,
+        'source_stats': source_metrics,
+    }
 
     # HTML 备用采集（降级方案）
     if effective_html_sources:
         print("\n🌐 HTML 降级采集...")
+        html_source_metrics = {}
+        html_raw_count = 0
         for cfg in effective_html_sources:
             items = fetch_html(cfg)
             sig = sum(1 for it in items if it['event_types'][0] != 'other')
@@ -2494,13 +2528,33 @@ def main():
                 print(f"  ⚡ [{cfg['name']}] {len(items)} 条（信号{sig} | {cfg.get('region', '未知')}）")
             else:
                 print(f"  – [{cfg['name']}] 无内容")
+            html_source_metrics[cfg['name']] = {
+                'method': 'html',
+                'region': cfg.get('region', ''),
+                'status': 'ok' if items else 'empty',
+                'count': len(items),
+                'signal_count': sig,
+            }
+            html_raw_count += len(items)
             raw.extend(items)
             time.sleep(REQUEST_DELAY)
+        run_metrics['html'] = {
+            'source_count': len(effective_html_sources),
+            'raw_count': html_raw_count,
+            'source_stats': html_source_metrics,
+        }
+    else:
+        run_metrics['html'] = {
+            'source_count': 0,
+            'raw_count': 0,
+            'source_stats': {},
+        }
 
     # 27家公司监控（限当天/昨日，每公司最多3条）
     print("\n🏢 采集公司动态（限当天/昨日，每公司最多3条）...")
     t1 = time.time()
     company_raw = []
+    company_source_metrics = {}
     for cfg in COMPANY_SOURCES:
         items = fetch_company_news(cfg)
         sig = sum(1 for it in items if it['event_types'][0] != 'other')
@@ -2508,11 +2562,24 @@ def main():
             print(f"  🌐 [{cfg['name']}] {len(items)} 条（信号{sig}）")
         else:
             print(f"  – [{cfg['name']}] 无今日动态")
+        company_source_metrics[cfg['name']] = {
+            'method': 'company',
+            'region': cfg.get('region', ''),
+            'status': 'ok' if items else 'empty',
+            'count': len(items),
+            'signal_count': sig,
+        }
         company_raw.extend(items)
         time.sleep(0.5)  # 避免请求过快
 
     company_unique = company_raw  # fetch_company_news 内部已去重
     print(f"  ⏱  公司采集耗时 {time.time()-t1:.1f}s | {len(company_unique)} 条")
+    run_metrics['company'] = {
+        'source_count': len(COMPANY_SOURCES),
+        'raw_count': len(company_raw),
+        'unique_count': len(company_unique),
+        'source_stats': company_source_metrics,
+    }
 
     # 合并：公司新闻 + 通用新闻，按事件级指纹去重
     all_raw = company_unique + raw
@@ -2521,6 +2588,7 @@ def main():
         if any(_is_same_event(it, existing) for existing in unique):
             continue
         unique.append(it)
+    same_run_duplicate_skipped = len(all_raw) - len(unique)
 
     # 统计
     types = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
@@ -2531,17 +2599,36 @@ def main():
 
     print(f"\n📊 采集：{len(unique)} 条（融资{types['funding']} | 并购{types['ma']} | 财报{types['earnings']} | 战略{types['strategy']} | 其他{types['other']}）")
     print(f"   区域：{regions} | 公司动态：{company_count} 条")
+    run_metrics['collection'] = {
+        'raw_count': len(all_raw),
+        'unique_count': len(unique),
+        'same_run_duplicate_skipped': same_run_duplicate_skipped,
+        'company_count': company_count,
+        'type_counts': types.copy(),
+        'region_counts': regions.copy(),
+    }
 
     # 智能过滤（公司新闻单独处理，不做 smart_filter）
     filtered = smart_filter(unique)
+    smart_filtered_count = len(filtered)
     types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
     for it in filtered: types2[it['event_types'][0]] += 1
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
+    run_metrics['filtering'] = {
+        'smart_filtered_count': smart_filtered_count,
+        'smart_filter_dropped': len(unique) - smart_filtered_count,
+        'ai_filtered_count': smart_filtered_count,
+        'ai_filter_dropped': 0,
+        'type_counts_after_smart_filter': types2.copy(),
+    }
 
     # AI 情报价值评分：对 other 类事件豆包评分，过滤低价值
     if any(it['event_types'][0] == 'other' and not it.get('is_company') for it in filtered):
+        before_ai_filter = len(filtered)
         filtered = ai_quality_judge(filtered)
         print(f"   AI评分过滤后：{len(filtered)} 条")
+        run_metrics['filtering']['ai_filtered_count'] = len(filtered)
+        run_metrics['filtering']['ai_filter_dropped'] = before_ai_filter - len(filtered)
 
     # 评分前置：每个事件程序评分，分层决定是否送 AI
     print(f"\n  📊 评分前置，分层处理...")
@@ -2562,6 +2649,11 @@ def main():
             drop_count += 1
 
     print(f"    AI深度分析：{len(ai_tier)} 条 | 程序生成：{len(prog_tier)} 条 | 丢弃：{drop_count} 条")
+    run_metrics['scoring'] = {
+        'ai_tier_count': len(ai_tier),
+        'program_tier_count': len(prog_tier),
+        'dropped_count': drop_count,
+    }
 
     # 程序生成（中分事件 + 低分公司事件，零API成本）
     today_events = [build_event(item, analysis_source='program', analysis_status='fallback') for item in prog_tier]
@@ -2689,6 +2781,18 @@ def main():
     print(f"  📅 pubDate 解析：{pubdate_ok} 条有日期 | {pubdate_fallback} 条无日期（归入今日）")
     print(f"  🏢 新增公司动态：{company_added} 条 | 新增通用热点：{len(added_events) - company_added} 条")
     print(f"  🚫 历史重复跳过：{len(today_events) - len(added_events)} 条")
+    run_metrics['analysis'] = {
+        'event_count': len(today_events),
+        'quality': q,
+    }
+    run_metrics['storage'] = {
+        'added_count': len(added_events),
+        'duplicate_skipped': len(today_events) - len(added_events),
+        'company_added': company_added,
+        'generic_added': len(added_events) - company_added,
+        'pubdate_ok': pubdate_ok,
+        'pubdate_fallback': pubdate_fallback,
+    }
 
     # 清理 90 天前（避免数据无限膨胀，保留 3 个月）
     cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
@@ -2699,6 +2803,15 @@ def main():
 
     with open('data/events.json', 'w', encoding='utf-8') as f:
         json.dump(all_events, f, ensure_ascii=False, indent=2)
+    run_metrics['finished_at'] = _cn_now().isoformat()
+    run_metrics['history'] = {
+        'total_events': sum(len(v) for v in all_events.values()),
+        'company_total': sum(1 for v in all_events.values() for e in v if e.get('is_company')),
+        'day_count': len(all_events),
+        'removed_same_day_duplicates': removed_dups,
+    }
+    metrics_path = write_run_metrics(run_metrics)
+    print(f"  🧾 Run metrics：{metrics_path}")
 
     # 输出每个日期的分桶统计
     for date_key in sorted(all_events.keys(), reverse=True):

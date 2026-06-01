@@ -208,8 +208,10 @@ button, input, select { font: inherit; }
 .company span { color: var(--muted); font-size: 13px; }
 .company small { display: block; margin-top: 9px; color: var(--quiet); font-size: 12px; line-height: 1.5; }
 .ops-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
-.release-version { display: block; margin-top: 6px; color: var(--ink); font-size: 22px; font-weight: 760; line-height: 1; }
-.history-head .release-version { display: inline-block; margin-top: 0; vertical-align: middle; }
+.release-head { grid-template-columns: minmax(0, 1fr) 92px; }
+.release-copy { min-width: 0; }
+.release-badge { display: grid; grid-template-columns: minmax(0, 1fr) 14px; gap: 8px; align-items: center; justify-items: end; min-width: 86px; }
+.release-version { display: block; margin: 0; color: var(--ink); font-size: 20px; font-weight: 760; line-height: 1; text-align: right; font-variant-numeric: tabular-nums; }
 .history-body p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
 .release-list { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; color: #38434d; font-size: 13px; }
 .release-list li { position: relative; padding-left: 16px; }
@@ -668,12 +670,12 @@ button, input, select { font: inherit; }
           <div class="history-list">
             {% for update in site_updates %}
             <article class="history-card">
-              <button class="history-head" onclick="toggleDate(this)">
-                <span>
+              <button class="history-head release-head" onclick="toggleDate(this)">
+                <span class="release-copy">
                   <h3>{{ update.title }}</h3>
                   <small>{{ update.date }} · {{ update.type }} · {{ update.status }}</small>
                 </span>
-                <span><strong class="release-version">{{ update.version }}</strong> <span class="toggle-icon">›</span></span>
+                <span class="release-badge"><strong class="release-version">{{ update.version }}</strong> <span class="toggle-icon">›</span></span>
               </button>
               <div class="history-body">
                 <div class="label-row">

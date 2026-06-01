@@ -15,11 +15,17 @@ try:
         event_score,
         event_type,
         is_google_news_event,
-        is_high_value_event,
-        needs_quality_review,
-        should_show_in_main_list,
-        should_show_in_review,
         follow_up_window_for_priority,
+    )
+    from view_selectors import (
+        select_company_events,
+        select_company_quality_events,
+        select_homepage_events,
+        is_period_high_value_event,
+        select_main_list_events,
+        select_mature_main_date,
+        select_period_high_value_events,
+        select_review_events,
     )
 except ImportError:
     from scripts.event_value import (
@@ -27,11 +33,17 @@ except ImportError:
         event_score,
         event_type,
         is_google_news_event,
-        is_high_value_event,
-        needs_quality_review,
-        should_show_in_main_list,
-        should_show_in_review,
         follow_up_window_for_priority,
+    )
+    from scripts.view_selectors import (
+        select_company_events,
+        select_company_quality_events,
+        select_homepage_events,
+        is_period_high_value_event,
+        select_main_list_events,
+        select_mature_main_date,
+        select_period_high_value_events,
+        select_review_events,
     )
 
 try:
@@ -536,7 +548,7 @@ def ensure_business_fields(event):
     event.setdefault('source_role', SOURCE_ROLE_BY_TIER.get(source_tier, 'regional_ecosystem'))
     bd = infer_frontend_bd_context(event)
     for key, value in bd.items():
-        if not event.get(key):
+        if key in {'bd_priority', 'follow_up_window'} or not event.get(key):
             event[key] = value
     if isinstance(event.get('bd_triggers'), str):
         event['bd_triggers'] = [event['bd_triggers']]
@@ -647,29 +659,14 @@ def split_company_events(events):
     """
     将事件拆分为公司动态和通用热点
     - 公司动态只保留7天内，不过滤
-    - 通用热点：排除other类型和评分<5的事件
+    - 通用热点：排除 other 类型，保留可解释、可展示的信号事件
     """
     week_ago = (_cn_now() - timedelta(days=7)).strftime('%Y-%m-%d')
-    company_events = []
-    generic_events = []
-
-    for date_str, evs in events.items():
+    for evs in events.values():
         for e in evs:
-            if e.get('is_company') and date_str >= week_ago:
-                # 公司动态：只保留7天内的，不过滤
-                company_events.append(e)
-            elif not e.get('is_company'):
-                # 通用事件：排除other类型和低评分
-                score = e.get('score', 0)
-                ev_type = e.get('event_types', ['other'])[0]
-                if ev_type == 'other' or score < 5:
-                    continue
-                generic_events.append(e)
-
-    # 按时间倒序，同一天按评分排序
-    company_events.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
-    generic_events.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
-    return company_events, generic_events
+            if not e.get('is_company'):
+                ensure_business_fields(e)
+    return select_company_events(events, week_ago)
 
 def get_signal_events(events):
     """
@@ -1033,7 +1030,7 @@ def _build_regional_map(period_events, limit=6):
         })
         item['count'] += 1
         item['score_sum'] += event.get('score', 0)
-        if is_high_value_event(event):
+        if is_period_high_value_event(event):
             item['high'] += 1
         if event.get('company_name'):
             item['companies'].add(event['company_name'])
@@ -1093,7 +1090,7 @@ def _build_customer_tiers(period_events, limit=6):
         })
         item['count'] += 1
         item['score'] = max(item['score'], event.get('score', 0))
-        if is_high_value_event(event):
+        if is_period_high_value_event(event):
             item['high'] += 1
         if event.get('opportunity_direction'):
             item['direction'] = event['opportunity_direction']
@@ -1156,7 +1153,7 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
     actions = _build_actions(period_events, 5)
     customer_tiers = _build_customer_tiers(period_events, 6)
     themes = _build_themes(period_events, 6)
-    high_count = sum(1 for e in period_events if is_high_value_event(e))
+    high_count = len(select_period_high_value_events(period_events))
 
     if period_events:
         title = f"{label}客户拓展机会报告"
@@ -1367,10 +1364,7 @@ def build_company_cards(company_list, now_date):
         events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
         recent_7 = [e for e in events if (e.get('date') or '')[:10] >= start_7]
         recent_30 = [e for e in events if (e.get('date') or '')[:10] >= start_30]
-        quality_events = [
-            e for e in recent_30
-            if is_high_value_event(e)
-        ]
+        quality_events = select_company_quality_events(recent_30)
         latest = events[0] if events else {}
         latest_title = clean_display_title(latest.get('display_title') or latest.get('summary_short') or latest.get('title') or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
@@ -1444,29 +1438,6 @@ def load_site_updates():
 
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
-MATURE_BATCH_MIN_EVENTS = 6
-
-def _select_mature_main_date(sorted_dates, all_events_for_list, events):
-    """Prefer a date with enough visible events; avoid showing a thin early-day batch."""
-    counts = {}
-    for event in all_events_for_list:
-        date_key = (event.get('date') or '')[:10]
-        if date_key:
-            counts[date_key] = counts.get(date_key, 0) + 1
-
-    latest_date = next((d for d in sorted_dates if events.get(d)), None)
-    main_date = latest_date
-    for date_key in sorted_dates:
-        if counts.get(date_key, 0) >= MATURE_BATCH_MIN_EVENTS:
-            main_date = date_key
-            break
-
-    latest_count = len(events.get(latest_date, [])) if latest_date else 0
-    notice = ''
-    if latest_date and main_date and latest_date != main_date:
-        notice = f'展示成熟批次，今日早盘 {latest_count} 条待汇入'
-    return main_date, latest_date, latest_count, notice
-
 
 def _quality_main_events(main_events):
     """Build the quality-filtered main batch used as a fallback display list."""
@@ -1478,7 +1449,7 @@ def _quality_main_events(main_events):
             continue
         seen_titles.add(norm)
 
-        if not should_show_in_main_list(e):
+        if not select_main_list_events([e]):
             continue
 
         deduped.append(e)
@@ -1487,18 +1458,9 @@ def _quality_main_events(main_events):
     return deduped
 
 
-def _is_review_candidate(event):
-    """Return whether a visible event should be tucked under the review drawer."""
-    return (
-        needs_quality_review(event)
-        or not should_show_in_main_list(event)
-        or (is_google_news_event(event) and not is_high_value_event(event))
-    )
-
-
 def build_review_events(today_events, limit=12):
     """Build a deduped review list from the same display batch as high-value events."""
-    review_events = [e for e in today_events if _is_review_candidate(e) and should_show_in_review(e)]
+    review_events = select_review_events(today_events, limit=None)
     review_events = dedupe_display_events(review_events)
     review_events.sort(key=lambda x: (x.get('score', 0), x.get('date', '')), reverse=True)
     return review_events[:limit]
@@ -1565,7 +1527,7 @@ def build_display_context():
     all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
     enrich_frontend_fields(all_events_for_list)
     all_events_for_list = dedupe_display_events(all_events_for_list)
-    mature_main_date, latest_data_date, latest_visible_count, batch_notice = _select_mature_main_date(sorted_dates, all_events_for_list, events)
+    mature_main_date, latest_data_date, latest_visible_count, batch_notice = select_mature_main_date(sorted_dates, all_events_for_list, events)
     period_reference_date = latest_data_date or main_date or today_str
     if mature_main_date:
         main_date = mature_main_date
@@ -1577,12 +1539,7 @@ def build_display_context():
         e for e in all_events_for_list
         if (e.get('date') or '')[:10] == main_date
     ]
-    today_events = [
-        e for e in all_events_for_list
-        if (e.get('date') or '')[:10] == main_date and should_show_in_main_list(e)
-    ]
-    if not today_events:
-        today_events = all_feed
+    today_events = select_homepage_events(all_events_for_list, main_date, all_feed)
 
     return {
         'events': events,
@@ -1664,7 +1621,7 @@ def generate_html(force=False, preview_mode=False):
         if d < cutoff:
             continue
         raw_day_evs = [e for e in all_events_for_list if (e.get('date') or '')[:10] == d]
-        day_evs = [e for e in raw_day_evs if should_show_in_main_list(e)]
+        day_evs = select_main_list_events(raw_day_evs)
         if not day_evs and not raw_day_evs:
             continue
         available_dates.append(d)

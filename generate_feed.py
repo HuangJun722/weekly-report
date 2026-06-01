@@ -6,7 +6,7 @@ SCRIPTS_DIR = ROOT / 'scripts'
 os.chdir(ROOT)
 sys.path.insert(0, str(SCRIPTS_DIR))
 from generate_html import build_display_context
-from event_value import is_high_value_event
+from view_selectors import select_feed_events
 
 context = build_display_context()
 feed_date = context['main_date']
@@ -36,11 +36,12 @@ def entry_title(ev):
     return first_text(ev.get('display_title'), ev.get('summary_short'), ev.get('reason'), ev.get('title'), '无标题')
 
 
-def is_high_value_feed_event(ev):
-    return is_high_value_event(ev)
-
-
-feed_events = [ev for ev in context['today_events'] if is_high_value_feed_event(ev)]
+feed_events, fallback_feed_date = select_feed_events(
+    context['today_events'],
+    context.get('all_events_for_list', []),
+)
+if fallback_feed_date:
+    feed_date = fallback_feed_date
 
 
 def entry_summary(ev):

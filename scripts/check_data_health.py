@@ -1,0 +1,211 @@
+"""Check dashboard data health after events have been stored.
+
+This does not inspect crawler raw counts because those only exist in workflow
+logs today. It verifies the stored-data -> selector -> display contract.
+"""
+
+import argparse
+import re
+import sys
+from collections import Counter
+from datetime import datetime, timedelta
+
+try:
+    from generate_html import build_company_cards, build_display_context
+    from run_metrics import latest_run_metrics
+    from view_selectors import select_feed_events, select_main_list_events, select_review_events
+except ImportError:
+    from scripts.generate_html import build_company_cards, build_display_context
+    from scripts.run_metrics import latest_run_metrics
+    from scripts.view_selectors import select_feed_events, select_main_list_events, select_review_events
+
+
+def _event_date(event):
+    return (event.get('date') or '')[:10]
+
+
+def _norm_title(event):
+    title = (
+        event.get('display_title')
+        or event.get('summary_short')
+        or event.get('title')
+        or ''
+    ).lower()
+    return re.sub(r'[^\w]+', '', title)
+
+
+def _date_range(end_date, days):
+    end = datetime.strptime(end_date, '%Y-%m-%d')
+    return [
+        (end - timedelta(days=offset)).strftime('%Y-%m-%d')
+        for offset in range(days)
+    ]
+
+
+def _source_is_google(event):
+    source = (event.get('source') or '').lower()
+    tier = event.get('source_tier') or ''
+    url = (event.get('url') or '').lower()
+    return source == 'google news' or tier == 'L5 Google News 补漏源' or 'news.google.com' in url
+
+
+def _duplicate_ratio(events):
+    keys = [
+        _norm_title(event)
+        for event in events
+        if len(_norm_title(event)) > 10
+    ]
+    if not keys:
+        return 0.0, 0
+    counts = Counter(keys)
+    duplicate_items = sum(count - 1 for count in counts.values() if count > 1)
+    return duplicate_items / len(keys), duplicate_items
+
+
+def build_health_report(days=7):
+    context = build_display_context()
+    main_date = context['main_date']
+    all_visible = context['all_events_for_list']
+    today_events = context['today_events']
+    raw_today = context['raw_today_events']
+
+    feed_events, fallback_feed_date = select_feed_events(today_events, all_visible)
+    company_cards = build_company_cards(context['preset_company_list'], main_date)
+    company_quality_nonzero = sum(1 for card in company_cards if card.get('quality_30', 0) > 0)
+
+    dates = _date_range(context['latest_data_date'] or main_date, days)
+    daily = []
+    recent_events = []
+    for date_key in dates:
+        raw_day = [event for event in all_visible if _event_date(event) == date_key]
+        main_day = select_main_list_events(raw_day)
+        review_day = select_review_events(raw_day, limit=None)
+        recent_events.extend(raw_day)
+        daily.append({
+            'date': date_key,
+            'visible': len(raw_day),
+            'main': len(main_day),
+            'review': len(review_day),
+            'google': sum(1 for event in raw_day if _source_is_google(event)),
+        })
+
+    duplicate_ratio, duplicate_items = _duplicate_ratio(recent_events)
+    feed_google = sum(1 for event in feed_events if _source_is_google(event))
+    feed_google_ratio = feed_google / len(feed_events) if feed_events else 0.0
+    run_metrics = latest_run_metrics()
+
+    return {
+        'main_date': main_date,
+        'latest_data_date': context['latest_data_date'],
+        'run_metrics': run_metrics,
+        'today_events': len(today_events),
+        'raw_today_events': len(raw_today),
+        'all_visible_events': len(all_visible),
+        'company_quality_nonzero': company_quality_nonzero,
+        'feed_entries': len(feed_events),
+        'feed_google': feed_google,
+        'feed_google_ratio': feed_google_ratio,
+        'feed_fallback_date': fallback_feed_date,
+        'duplicate_ratio': duplicate_ratio,
+        'duplicate_items': duplicate_items,
+        'daily': daily,
+    }
+
+
+def print_report(report):
+    metrics = report.get('run_metrics') or {}
+    collection = metrics.get('collection') or {}
+    filtering = metrics.get('filtering') or {}
+    scoring = metrics.get('scoring') or {}
+    storage = metrics.get('storage') or {}
+    if metrics:
+        print(
+            "run | date={date} env={environment} raw={raw} unique={unique} "
+            "smart_filtered={smart_filtered} ai_filtered={ai_filtered} "
+            "ai_tier={ai_tier} program_tier={program_tier} dropped={dropped} "
+            "added={added} duplicate_skipped={duplicate_skipped}".format(
+                date=metrics.get('date', ''),
+                environment=metrics.get('environment', ''),
+                raw=collection.get('raw_count', 0),
+                unique=collection.get('unique_count', 0),
+                smart_filtered=filtering.get('smart_filtered_count', 0),
+                ai_filtered=filtering.get('ai_filtered_count', 0),
+                ai_tier=scoring.get('ai_tier_count', 0),
+                program_tier=scoring.get('program_tier_count', 0),
+                dropped=scoring.get('dropped_count', 0),
+                added=storage.get('added_count', 0),
+                duplicate_skipped=storage.get('duplicate_skipped', 0),
+            )
+        )
+    else:
+        print("run | no run_metrics.json found")
+    print(
+        "health | main_date={main_date} latest_data_date={latest_data_date} "
+        "today={today_events} raw_today={raw_today_events} visible={all_visible_events}".format(**report)
+    )
+    print(
+        "health | company_quality_nonzero={company_quality_nonzero} "
+        "feed_entries={feed_entries} feed_google={feed_google} "
+        "feed_google_ratio={feed_google_ratio:.1%} duplicate_ratio={duplicate_ratio:.1%} "
+        "duplicate_items={duplicate_items}".format(**report)
+    )
+    if report['feed_fallback_date']:
+        print(f"health | feed_fallback_date={report['feed_fallback_date']}")
+    print("date | visible | main | review | google")
+    for row in report['daily']:
+        print(
+            "{date} | {visible} | {main} | {review} | {google}".format(**row)
+        )
+
+
+def collect_failures(report, args):
+    failures = []
+    if report['today_events'] < args.min_today:
+        failures.append(f"today_events {report['today_events']} < {args.min_today}")
+    if report['company_quality_nonzero'] < args.min_company_quality_nonzero:
+        failures.append(
+            f"company_quality_nonzero {report['company_quality_nonzero']} "
+            f"< {args.min_company_quality_nonzero}"
+        )
+    if report['feed_entries'] < args.min_feed_entries:
+        failures.append(f"feed_entries {report['feed_entries']} < {args.min_feed_entries}")
+    if report['feed_google_ratio'] > args.max_feed_google_ratio:
+        failures.append(
+            f"feed_google_ratio {report['feed_google_ratio']:.1%} "
+            f"> {args.max_feed_google_ratio:.1%}"
+        )
+    if report['duplicate_ratio'] > args.max_duplicate_ratio:
+        failures.append(
+            f"duplicate_ratio {report['duplicate_ratio']:.1%} "
+            f"> {args.max_duplicate_ratio:.1%}"
+        )
+    metrics = report.get('run_metrics') or {}
+    if args.require_run_metrics and not metrics:
+        failures.append("run_metrics missing")
+    return failures
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--days', type=int, default=7)
+    parser.add_argument('--min-today', type=int, default=1)
+    parser.add_argument('--min-company-quality-nonzero', type=int, default=1)
+    parser.add_argument('--min-feed-entries', type=int, default=1)
+    parser.add_argument('--max-feed-google-ratio', type=float, default=0.5)
+    parser.add_argument('--max-duplicate-ratio', type=float, default=0.35)
+    parser.add_argument('--require-run-metrics', action='store_true')
+    parser.add_argument('--strict', action='store_true', help='Exit non-zero when health checks fail')
+    args = parser.parse_args()
+
+    report = build_health_report(args.days)
+    print_report(report)
+    failures = collect_failures(report, args)
+    for failure in failures:
+        print(f"WARNING: {failure}")
+    if args.strict and failures:
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

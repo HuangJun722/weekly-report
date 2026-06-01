@@ -1,5 +1,6 @@
 from event_value import (
     classify_bd_priority,
+    is_company_quality_signal,
     is_high_value_event,
     should_show_in_main_list,
     should_show_in_review,
@@ -26,7 +27,7 @@ def test_low_score_signal_is_not_high():
     event = base_event(score=2)
     assert classify_bd_priority(event) == '观察'
     assert not is_high_value_event(event)
-    assert not should_show_in_main_list(event)
+    assert should_show_in_main_list(event)
 
 
 def test_google_news_company_low_signal_stays_out():
@@ -67,9 +68,23 @@ def test_non_google_strong_signal_is_high_value():
     assert should_show_in_main_list(event)
 
 
+def test_company_quality_has_own_threshold():
+    event = base_event(
+        source='Google News',
+        source_tier='L5 Google News 补漏源',
+        url='https://news.google.com/rss/articles/example',
+        company_name='U-NEXT',
+        is_company=True,
+        event_types=['ma'],
+        score=3,
+    )
+    assert is_company_quality_signal(event)
+
+
 if __name__ == '__main__':
     test_low_score_signal_is_not_high()
     test_google_news_company_low_signal_stays_out()
     test_google_news_real_org_action_can_enter_review_not_main()
     test_non_google_strong_signal_is_high_value()
+    test_company_quality_has_own_threshold()
     print('event_value tests passed')

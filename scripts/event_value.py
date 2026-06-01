@@ -115,12 +115,30 @@ def is_high_value_event(event):
     )
 
 
+def is_company_quality_signal(event):
+    if not event.get('is_company'):
+        return False
+    if event_type(event) == 'other':
+        return False
+    if needs_quality_review(event):
+        return False
+    if is_google_news_event(event) and is_low_signal_google_news(event):
+        return False
+    if (event.get('source_tier') or '') == 'L1 官方/IR源':
+        return event_score(event) >= 2
+    return event_score(event) >= 3
+
+
 def should_show_in_main_list(event):
     if needs_quality_review(event):
         return False
     if is_high_value_event(event):
         return True
-    return classify_bd_priority(event) == '中' and not is_google_news_event(event) and event_score(event) >= 5
+    return (
+        event_type(event) in STRONG_EVENT_TYPES
+        and not is_google_news_event(event)
+        and event_score(event) >= 2
+    )
 
 
 def should_show_in_review(event):
