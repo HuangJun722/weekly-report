@@ -13,10 +13,12 @@ from datetime import datetime, timedelta
 try:
     from generate_html import build_company_cards, build_display_context
     from run_metrics import latest_run_metrics
+    from source_quality_report import build_source_quality_report
     from view_selectors import select_feed_events, select_main_list_events, select_review_events
 except ImportError:
     from scripts.generate_html import build_company_cards, build_display_context
     from scripts.run_metrics import latest_run_metrics
+    from scripts.source_quality_report import build_source_quality_report
     from scripts.view_selectors import select_feed_events, select_main_list_events, select_review_events
 
 
@@ -93,6 +95,7 @@ def build_health_report(days=7):
     feed_google = sum(1 for event in feed_events if _source_is_google(event))
     feed_google_ratio = feed_google / len(feed_events) if feed_events else 0.0
     run_metrics = latest_run_metrics()
+    source_report = build_source_quality_report(days=days)
 
     return {
         'main_date': main_date,
@@ -109,6 +112,7 @@ def build_health_report(days=7):
         'duplicate_ratio': duplicate_ratio,
         'duplicate_items': duplicate_items,
         'daily': daily,
+        'source_quality': source_report,
     }
 
 
@@ -156,6 +160,15 @@ def print_report(report):
         print(
             "{date} | {visible} | {main} | {review} | {google}".format(**row)
         )
+    source_rows = (report.get('source_quality') or {}).get('rows') or []
+    if source_rows:
+        print("top sources | source | visible | main | high | rss | google")
+        for row in source_rows[:8]:
+            print(
+                "{source} | {stored_visible} | {main} | {high_value} | {rss} | {google}".format(**row)
+                .encode(sys.stdout.encoding or 'utf-8', errors='replace')
+                .decode(sys.stdout.encoding or 'utf-8')
+            )
 
 
 def collect_failures(report, args):
@@ -191,7 +204,7 @@ def main():
     parser.add_argument('--min-today', type=int, default=1)
     parser.add_argument('--min-company-quality-nonzero', type=int, default=1)
     parser.add_argument('--min-feed-entries', type=int, default=1)
-    parser.add_argument('--max-feed-google-ratio', type=float, default=0.5)
+    parser.add_argument('--max-feed-google-ratio', type=float, default=0)
     parser.add_argument('--max-duplicate-ratio', type=float, default=0.35)
     parser.add_argument('--require-run-metrics', action='store_true')
     parser.add_argument('--strict', action='store_true', help='Exit non-zero when health checks fail')

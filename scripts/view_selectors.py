@@ -139,13 +139,16 @@ def select_period_high_value_events(events):
 
 def select_feed_events(today_events, all_visible_events):
     """Select RSS entries from homepage first, then latest date with high-value events."""
-    feed_events = [event for event in today_events if is_high_value_event(event)]
+    feed_events = [
+        event for event in today_events
+        if is_high_value_event(event) and not is_google_news_event(event)
+    ]
     if feed_events:
         return feed_events, ''
 
     by_date = {}
     for event in all_visible_events:
-        if not is_high_value_event(event):
+        if not is_high_value_event(event) or is_google_news_event(event):
             continue
         date_key = event_date(event)
         if date_key:

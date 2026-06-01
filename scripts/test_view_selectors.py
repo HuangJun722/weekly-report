@@ -38,6 +38,27 @@ def test_feed_selector_falls_back_to_latest_high_value_date():
     assert feed_date == '2026-05-31'
 
 
+def test_feed_selector_excludes_google_news_high_value():
+    google_high = base_event(
+        source='Google News',
+        source_tier='L5 Google News 补漏源',
+        url='https://news.google.com/rss/articles/high',
+        event_types=['ma'],
+        score=8,
+        company_name='Careem',
+        is_company=True,
+    )
+    direct_high = base_event(
+        source='TechCrunch',
+        source_tier='L2 垂直交易源',
+        url='https://example.com/direct',
+        score=7,
+    )
+    feed_events, feed_date = select_feed_events([google_high, direct_high], [google_high, direct_high])
+    assert feed_events == [direct_high]
+    assert feed_date == ''
+
+
 def test_company_quality_selector_is_independent_from_rss_high_value():
     company_signal = base_event(
         source='Google News',
@@ -128,6 +149,7 @@ def test_review_selector_keeps_real_google_org_action_out_of_main():
 if __name__ == '__main__':
     test_homepage_selector_allows_low_score_non_google_signal()
     test_feed_selector_falls_back_to_latest_high_value_date()
+    test_feed_selector_excludes_google_news_high_value()
     test_company_quality_selector_is_independent_from_rss_high_value()
     test_mature_date_selector_skips_thin_latest_batch()
     test_mature_date_selector_counts_main_list_only()

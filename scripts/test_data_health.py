@@ -8,7 +8,7 @@ class Args:
     min_today = 1
     min_company_quality_nonzero = 1
     min_feed_entries = 1
-    max_feed_google_ratio = 0.5
+    max_feed_google_ratio = 0
     max_duplicate_ratio = 0.35
     require_run_metrics = False
 

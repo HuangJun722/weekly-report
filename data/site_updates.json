@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-06-01",
+    "version": "V1.8",
+    "type": "信源质量",
+    "status": "已上线",
+    "title": "新增信源质量报表，RSS 不再推送 Google News",
+    "summary": "用近 7 天真实数据统计各信源对主列表、高价值事件和 RSS 的贡献，并进一步收紧订阅源口径。",
+    "changes": [
+      "新增 source_quality_report.py，按 source 汇总 raw、signals、visible、main、high、rss、google 和 company 指标",
+      "check_data_health.py 增加 top sources 摘要，便于同时观察采集漏斗和信源贡献",
+      "RSS selector 排除 Google News，高价值 Google News 只保留在看板或公司雷达，不进入订阅源",
+      "健康检查默认要求 RSS Google News 占比为 0，防止补漏源重新成为主动推送主体"
+    ]
+  },
+  {
+    "date": "2026-06-01",
     "version": "V1.7",
     "type": "展示口径",
     "status": "已上线",
