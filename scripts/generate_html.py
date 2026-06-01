@@ -17,6 +17,7 @@ try:
         is_google_news_event,
         follow_up_window_for_priority,
     )
+    from signal_clusters import build_signal_clusters
     from view_selectors import (
         select_company_events,
         select_company_quality_events,
@@ -35,6 +36,7 @@ except ImportError:
         is_google_news_event,
         follow_up_window_for_priority,
     )
+    from scripts.signal_clusters import build_signal_clusters
     from scripts.view_selectors import (
         select_company_events,
         select_company_quality_events,
@@ -860,6 +862,7 @@ def build_date_panel(date_str, day_events, all_events, raw_day_events=None):
     weekly = build_weekly_summary(day_events, signals, day_events, all_events, summary_date=date_str)
     trend_groups = build_trend_groups(day_events)
     repair_events = build_review_events(raw_day_events or day_events)
+    signal_clusters = build_signal_clusters(all_events, date_str)
 
     dt = datetime.strptime(date_str, '%Y-%m-%d')
     return {
@@ -867,6 +870,7 @@ def build_date_panel(date_str, day_events, all_events, raw_day_events=None):
         'repair_events': repair_events,
         'judgment': weekly.get('summary', ''),
         'top3': weekly.get('top3', []),
+        'signal_clusters': signal_clusters,
         'total_stories': len(day_events),
         'vol_label': f"VOL.{date_str}",
         'cn_date': f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}",
@@ -1255,6 +1259,7 @@ def clean_display_title(title):
 def split_judgment(text, fallback='今日非中美互联网动态更新'):
     """把长判断拆成适合头版展示的标题和正文。"""
     text = (text or '').strip()
+    text = text.replace('**', '')
     if not text:
         return fallback, ''
     title = ''
@@ -1606,6 +1611,7 @@ def generate_html(force=False, preview_mode=False):
     daily_headline, daily_lead = split_judgment(daily_trend_judgment, weekly.get('headline', '今日非中美互联网动态更新'))
     daily_headline, daily_lead = refine_daily_headline(daily_headline, daily_lead, trend_groups)
     daily_trend_signals = weekly.get('top3', [])
+    signal_clusters = build_signal_clusters(all_events_for_list, main_date)
     total_stories = len(today_events)
     dt = datetime.strptime(main_date, '%Y-%m-%d')
     vol_label = f"VOL.{main_date}"
@@ -1656,6 +1662,7 @@ def generate_html(force=False, preview_mode=False):
         daily_headline=daily_headline,
         daily_lead=daily_lead,
         daily_trend_signals=daily_trend_signals,
+        signal_clusters=signal_clusters,
         total_stories=total_stories,
         vol_label=vol_label,
         cn_date=cn_date,

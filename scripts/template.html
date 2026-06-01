@@ -105,6 +105,23 @@ button, input, select { font: inherit; }
 .brief { padding: 14px 0 0; border-top: 2px solid var(--navy); }
 .brief h3 { margin: 0; font-size: 14px; }
 .brief p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+.cluster-list { display: grid; gap: 12px; margin-top: 24px; }
+.cluster-card {
+  display: grid; gap: 12px; padding: 18px; border: 1px solid var(--line);
+  border-left: 4px solid var(--green); border-radius: var(--radius);
+  background: rgba(251,250,246,0.86); box-shadow: 0 12px 34px rgba(28,35,42,0.08);
+}
+.cluster-card h3 { margin: 0; font-size: 18px; line-height: 1.38; }
+.cluster-card p { margin: 0; color: #38434d; font-size: 13px; line-height: 1.65; }
+.cluster-meta, .cluster-tags { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.cluster-evidence { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.cluster-evidence li { display: grid; gap: 2px; padding-top: 7px; border-top: 1px solid rgba(217,209,196,0.72); }
+.cluster-evidence li:first-child { padding-top: 0; border-top: 0; }
+.cluster-evidence a { font-size: 13px; line-height: 1.45; }
+.cluster-evidence span { color: var(--quiet); font-size: 11px; }
+.cluster-action { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 2px; }
+.cluster-action strong { color: var(--green); font-size: 13px; }
+.cluster-action span { color: var(--muted); font-size: 12px; text-align: right; }
 .rail { display: grid; gap: 14px; position: sticky; top: 18px; }
 .rail-card { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.78); box-shadow: var(--shadow); }
 .rail-title { margin: 0 0 12px; font-size: 13px; }
@@ -282,6 +299,8 @@ button, input, select { font: inherit; }
   .slogan { align-items: flex-start; line-height: 1.5; }
   .lead { font-size: 15px; }
   .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
+  .cluster-action { align-items: flex-start; flex-direction: column; }
+  .cluster-action span { text-align: left; }
   .opportunity-layout { grid-template-columns: 1fr; }
   .action-row { grid-template-columns: 1fr; gap: 6px; }
   .company-region-head, .filter-state { align-items: stretch; flex-direction: column; }
@@ -372,13 +391,29 @@ button, input, select { font: inherit; }
             </div>
             <h2 class="main-title">{{ daily_headline }}</h2>
             {% if daily_lead or weekly.headline %}<p class="lead">{{ daily_lead or weekly.headline }}</p>{% endif %}
-            {% if daily_trend_signals %}
-            <div class="brief-grid judgment-signals">
-              {% for ev in daily_trend_signals[:3] %}
-              <a href="{{ ev.url }}" target="_blank" class="brief event-item signal-card" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.impact }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
-                <h3>{{ ev.region }} · {{ ev.insight_label or '重点信号' }}</h3>
-                <p class="signal-title">{{ ev.display_title or ev.summary_short or ev.title|truncate(64) }}</p>
-              </a>
+            {% if signal_clusters %}
+            <div class="cluster-list" id="signalClusterList">
+              {% for cluster in signal_clusters %}
+              <article class="cluster-card" data-filterable data-region="{{ cluster.region }}" data-company="{{ cluster.companies|join(' ') }}" data-text="{{ cluster.title }} {{ cluster.region }} {{ cluster.type_label }} {{ cluster.companies|join(' ') }} {{ cluster.signals|join(' ') }} {{ cluster.why }} {{ cluster.action }}">
+                <div class="cluster-meta">
+                  <span class="label dark">关注窗口</span>
+                  <span class="label green">{{ cluster.region }}</span>
+                  <span class="label">{{ cluster.type_label }}</span>
+                  <span class="label copper">信心：{{ cluster.confidence }}</span>
+                </div>
+                <h3>{{ cluster.title }}</h3>
+                {% if cluster.why %}<p>{{ cluster.why }}</p>{% endif %}
+                <div class="cluster-tags">
+                  {% for company in cluster.companies[:4] %}<span class="label">{{ company }}</span>{% endfor %}
+                  {% for signal in cluster.signals[:3] %}<span class="label">{{ signal }}</span>{% endfor %}
+                </div>
+                <ul class="cluster-evidence">
+                  {% for ev in cluster.evidence %}
+                  <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }}｜{{ ev.type }}｜{{ ev.source }}</span></li>
+                  {% endfor %}
+                </ul>
+                <div class="cluster-action"><strong>{{ cluster.action }}</strong><span>{{ cluster.watch_window }}｜{{ cluster.eligibility|join(' / ') }}</span></div>
+              </article>
               {% endfor %}
             </div>
             {% endif %}
@@ -386,8 +421,8 @@ button, input, select { font: inherit; }
 
           <section class="content-block">
             <div class="block-head">
-              <h2>高价值事件</h2>
-              <span>主列表只放可信、可读、可行动的信息</span>
+              <h2>证据事件</h2>
+              <span>用于支撑上方关注窗口的事实层</span>
             </div>
             <div class="intelligence-list">
               {% for group in trend_groups %}
@@ -903,6 +938,27 @@ function reviewEventCardHtml(ev) {
     '<div><h3>' + escHtml(ev.display_title || ev.title || '') + '</h3>' + original + reason + '</div>' +
     '<div class="amount">候选</div></a>';
 }
+function signalClusterHtml(cluster) {
+  var companies = cluster.companies || [];
+  var signals = cluster.signals || [];
+  var evidence = cluster.evidence || [];
+  var text = [cluster.title, cluster.region, cluster.type_label, cluster.why, cluster.action].concat(companies).concat(signals).join(' ');
+  var tags = companies.slice(0, 4).map(function(c){ return labelHtml(c, ''); })
+    .concat(signals.slice(0, 3).map(function(s){ return labelHtml(s, ''); })).join('');
+  var evidenceHtml = evidence.map(function(ev){
+    return '<li><a href="' + escHtml(ev.url) + '" target="_blank">' + escHtml(ev.title) + '</a><span>' +
+      escHtml(ev.date || '') + '｜' + escHtml(ev.type || '') + '｜' + escHtml(ev.source || '') + '</span></li>';
+  }).join('');
+  var eligibility = (cluster.eligibility || []).join(' / ');
+  return '<article class="cluster-card" data-filterable data-region="' + escHtml(cluster.region) + '" data-company="' + escHtml(companies.join(' ')) + '" data-text="' + escHtml(text) + '">' +
+    '<div class="cluster-meta"><span class="label dark">关注窗口</span>' + labelHtml(cluster.region, 'green') + labelHtml(cluster.type_label, '') + '<span class="label copper">信心：' + escHtml(cluster.confidence || '观察') + '</span></div>' +
+    '<h3>' + escHtml(cluster.title || '') + '</h3>' +
+    (cluster.why ? '<p>' + escHtml(cluster.why) + '</p>' : '') +
+    '<div class="cluster-tags">' + tags + '</div>' +
+    '<ul class="cluster-evidence">' + evidenceHtml + '</ul>' +
+    '<div class="cluster-action"><strong>' + escHtml(cluster.action || '加入观察名单') + '</strong><span>' + escHtml((cluster.watch_window || '') + (eligibility ? '｜' + eligibility : '')) + '</span></div>' +
+    '</article>';
+}
 function eventKey(ev) {
   return ev && (ev.url || ((ev.date || '') + '|' + (ev.title || '')));
 }
@@ -939,6 +995,8 @@ function navigateDay(dir) {
         '<h3>' + escHtml(ev.region) + ' · ' + escHtml(ev.insight_label || '重点信号') + '</h3><p class="signal-title">' + escHtml(ev.title) + '</p></a>';
     }).join('');
   }
+  var clusterList = document.getElementById('signalClusterList');
+  if (clusterList) clusterList.innerHTML = (panel.signal_clusters || []).map(signalClusterHtml).join('');
   var list = document.querySelector('#tab-today .content-block .intelligence-list');
   if (list) {
     var html = '';
