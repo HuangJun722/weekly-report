@@ -32127,6 +32127,92 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "SoftBank Offloads Lenskart Shares Worth ₹2,873 Cr",
+      "url": "https://inc42.com/buzz/softbank-offloads-lenskart-shares-worth-%e2%82%b92873-cr/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "软银减持Lenskart股份，价值₹2,873 Cr",
+      "reason": "印度电商独角兽遭软银减持，可能引发二级市场估值调整和资本退出信号",
+      "impact": "印度电商平台、私募股权投资者",
+      "insight_label": "警示信号",
+      "trend_topic": "印度电商资本退出",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-03",
+      "date": "2026-06-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2025/10/Lenskart-soc-1.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "合规窗口",
+        "预算窗口"
+      ],
+      "opportunity_direction": "合规科技 / 数据治理 / 安全风控 / 牌照合作",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Westmag Raises $11M to Expand Drone Motor Production",
+      "url": "https://ventureburn.com/westmag-raises-11m-to-expand-drone-motor-production/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Westmag获$11M融资，扩大无人机电机生产",
+      "reason": "非洲无人机硬件制造商获融资，物流和农业无人机供应链存在合作机会",
+      "impact": "非洲无人机物流平台、农业科技公司",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲无人机供应链",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-03",
+      "date": "2026-06-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/06/Westmag-Raises-11M.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-06-04": []
 }
