@@ -188,6 +188,21 @@ button, input, select { font: inherit; }
 .period-panel .report-cover { margin-top: 0; }
 .cover-stat strong { display: block; font-size: 24px; }
 .cover-stat span { color: rgba(244,241,234,0.68); font-size: 12px; }
+.weekly-window-list { display: grid; gap: 14px; margin-top: 12px; }
+.weekly-window {
+  display: grid; gap: 12px; padding: 18px; border: 1px solid var(--line);
+  border-left: 4px solid var(--navy); border-radius: 8px; background: rgba(238,242,243,0.52);
+}
+.weekly-window h3 { margin: 0; font-size: 18px; line-height: 1.35; }
+.weekly-window p { margin: 0; color: #38434d; font-size: 13px; line-height: 1.62; }
+.window-meta, .window-actions { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.window-evidence { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.window-evidence li { display: grid; gap: 2px; padding-top: 6px; border-top: 1px solid rgba(217,209,196,0.72); }
+.window-evidence li:first-child { padding-top: 0; border-top: 0; }
+.window-evidence a { font-size: 13px; line-height: 1.42; }
+.window-evidence span { color: var(--quiet); font-size: 11px; }
+.window-actions strong { color: var(--green); font-size: 13px; }
+.window-actions span { color: var(--muted); font-size: 12px; }
 .trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
 .trend { padding-top: 16px; border-top: 2px solid var(--navy); }
 .trend h3 { margin: 0; font-size: 15px; }
@@ -548,7 +563,7 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">2026-06-01 至 2026-06-03</span><span class="label green">更新中</span></div>
                 <h2>2026年第23周（更新中）客户拓展机会报告</h2>
-                <p>本周期共收录 70 条事件，其中 17 条为高优先级机会。当前优先看 非洲，主线机会集中在增长方案。</p>
+                <p>本周期共收录 70 条事件，其中 17 条为高优先级机会。周报先看 欧洲 的资金进入窗口，再回到证据事件确认。</p>
               </div>
               <div class="cover-stats">
                 <div class="cover-stat"><strong>70</strong><span>入选事件</span></div>
@@ -556,6 +571,77 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>7</strong><span>覆盖地区</span></div>
               </div>
             </article>
+
+            <section class="content-block">
+              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="weekly-window-list">
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">欧洲</span>
+                    <span class="label copper">19 条证据</span>
+                  </div>
+                  <h3>欧洲资金进入窗口</h3>
+                  <p>对象：HR SaaS公司Factorial...、Megaport融资A$827M建设...、Oxford Quantum Cir...、保加利亚金融科技Paypercut获...｜方向：资金进入窗口</p>
+                  <p>欧洲HR科技赛道持续吸金，中小企业数字化管理需求推动SaaS集成和本地化部署机会</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://tech.eu/2026/06/03/factorial-raises-150m-series-d-at-25b-valuation-to-expand-across-europe/" target="_blank">HR SaaS公司Factorial获1.5亿美元D轮融资，估值25亿美元，计划欧洲扩张</a><span>2026-06-03 · Tech.eu · 资金流向</span></li>
+
+                    <li><a href="https://thenextweb.com/news/megaport-ai-contracts-capital-raise" target="_blank">Megaport融资A$827M建设分布式AI云</a><span>2026-06-03 · The Next Web · 资金流向</span></li>
+
+                    <li><a href="https://www.eu-startups.com/2026/06/uks-oxford-quantum-circuits-raises-e301-million-series-c-to-scale-quantum-ai-data-centre-platform/" target="_blank">Oxford Quantum Circuits获€301M C轮，建设量子AI数据中心平台</a><span>2026-06-03 · EU-Startups · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">非洲</span>
+                    <span class="label copper">6 条证据</span>
+                  </div>
+                  <h3>非洲资金进入窗口</h3>
+                  <p>对象：Alphabet获$80B融资，伯克...、ZutaCore获$100M扩大无水...、DriveNets获$410M D轮...、Endra获$50M融资用于数据中心...｜方向：资金进入窗口</p>
+                  <p>全球AI巨头获巨额资本注入，非洲AI基础设施和云服务采购需求将增加</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://ventureburn.com/alphabet-80b-ai-equity-raise/" target="_blank">Alphabet获$80B融资，伯克希尔支持AI扩张</a><span>2026-06-02 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/zutacore-raises-100m-ai-cooling-expansion/" target="_blank">ZutaCore获$100M扩大无水AI冷却技术</a><span>2026-06-03 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/drivenets-secures-410m-series-d-for-ai-network-growth/" target="_blank">DriveNets获$410M D轮融资用于AI网络增长</a><span>2026-06-02 · Ventureburn · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">全球</span>
+                    <span class="label copper">5 条证据</span>
+                  </div>
+                  <h3>全球资金进入窗口</h3>
+                  <p>对象：新西兰游戏行业营收突破$1B、数据安全公司Cyera估值目标120...、前Anduril工程师获4200万美...、ZeroDrift获1000万美元融...｜方向：资金进入窗口</p>
+                  <p>新西兰游戏产业提前达标，亚太游戏开发外包和云服务需求持续增长</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://www.pocketgamer.biz/new-zealand-games-industry-surpasses-1bn-revenue-milestone-ahead-of-schedule/" target="_blank">新西兰游戏行业营收突破$1B</a><span>2026-06-02 · PocketGamer.biz · 背景补充</span></li>
+
+                    <li><a href="https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/" target="_blank">数据安全公司Cyera估值目标120亿美元，ARR倍数达80倍，仍处运营亏损</a><span>2026-06-02 · TechCrunch · 警示信号</span></li>
+
+                    <li><a href="https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/" target="_blank">前Anduril工程师获4200万美元融资，打造复合材料部件电商平台</a><span>2026-06-02 · TechCrunch · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+              </div>
+            </section>
+
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
@@ -644,7 +730,7 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">2026-05-25 至 2026-05-31</span><span class="label green">已封存</span></div>
                 <h2>2026年第22周客户拓展机会报告</h2>
-                <p>本周期共收录 86 条事件，其中 16 条为高优先级机会。当前优先看 非洲，主线机会集中在增长方案。</p>
+                <p>本周期共收录 86 条事件，其中 16 条为高优先级机会。周报先看 欧洲 的资金进入窗口，再回到证据事件确认。</p>
               </div>
               <div class="cover-stats">
                 <div class="cover-stat"><strong>86</strong><span>入选事件</span></div>
@@ -652,6 +738,75 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>7</strong><span>覆盖地区</span></div>
               </div>
             </article>
+
+            <section class="content-block">
+              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="weekly-window-list">
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">欧洲</span>
+                    <span class="label copper">2 条证据</span>
+                  </div>
+                  <h3>欧洲旅游科技整合资金进入窗口</h3>
+                  <p>对象：欧洲旅游科技整合｜方向：资金进入窗口</p>
+                  <p>欧洲冒险旅行平台获Airbnb战略投资，OTA与体验经济融合加速</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://www.eu-startups.com/2026/05/airbnb-leads-e49-million-series-c-in-italian-adventure-travel-company-weroad/" target="_blank">Airbnb领投WeRoad €49M C轮</a><span>2026-05-27 · EU-Startups · 资金流向</span></li>
+
+                    <li><a href="https://thenextweb.com/news/weroad-58m-airbnb-led-series-c-us-expansion" target="_blank">Airbnb领投WeRoad $58M C轮，CEO将负责酒店业务</a><span>2026-05-27 · The Next Web · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>观察后续采购、扩张和合作信号</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">欧洲</span>
+                    <span class="label copper">16 条证据</span>
+                  </div>
+                  <h3>欧洲资金进入窗口</h3>
+                  <p>对象：AtlasEdge获12亿美元债务融...、Focused Energy获$24...、Capchase获2亿美元融资，旨在...、前DeepMind研究员获$50M种...｜方向：资金进入窗口</p>
+                  <p>欧洲数据中心行业获大额融资，后续可能开放生态合作和设备采购</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://thenextweb.com/news/atlasedge-12bn-loan-european-data-centers" target="_blank">AtlasEdge获12亿美元债务融资，扩大欧洲数据中心规模</a><span>2026-05-28 · The Next Web · 资金流向</span></li>
+
+                    <li><a href="https://tech.eu/2026/05/29/focused-energy-raises-240m-truelayer-acquires-in3-london-regains-top-spot/" target="_blank">Focused Energy获$240M融资，TrueLayer收购In3，伦敦重夺榜首</a><span>2026-05-29 · Tech.eu · 资金流向</span></li>
+
+                    <li><a href="https://thenextweb.com/news/capchase-raises-200-million-to-replace-the-banks-slowing-down-enterprise-tech-deals" target="_blank">Capchase获2亿美元融资，旨在替代银行加速企业科技交易</a><span>2026-05-27 · The Next Web · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">非洲</span>
+                    <span class="label copper">7 条证据</span>
+                  </div>
+                  <h3>非洲资金进入窗口</h3>
+                  <p>对象：非洲Cognition获$10亿融资...、Edged US获20亿美元扩展AI...、Transition Venture...、Reactor获$59M构建实时AI...｜方向：资金进入窗口</p>
+                  <p>非洲软件行业获大额融资，有望推动自主软件工程发展并开放合作</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://ventureburn.com/cognition-raises-1-billion-autonomous-software-engineering/" target="_blank">非洲Cognition获$10亿融资用于扩展自主软件工程</a><span>2026-05-28 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/edged-us-secures-2-billion/" target="_blank">Edged US获20亿美元扩展AI就绪数据中心基础设施</a><span>2026-05-28 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/transition-ventures-raises-150m-for-ai-startups/" target="_blank">Transition Ventures募资$150M，投向AI初创</a><span>2026-05-28 · Ventureburn · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+              </div>
+            </section>
+
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
@@ -740,7 +895,7 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">2026-05-18 至 2026-05-24</span><span class="label green">已封存</span></div>
                 <h2>2026年第21周客户拓展机会报告</h2>
-                <p>本周期共收录 46 条事件，其中 28 条为高优先级机会。当前优先看 非洲，主线机会集中在增长方案。</p>
+                <p>本周期共收录 46 条事件，其中 28 条为高优先级机会。周报先看 非洲 的资金进入窗口，再回到证据事件确认。</p>
               </div>
               <div class="cover-stats">
                 <div class="cover-stat"><strong>46</strong><span>入选事件</span></div>
@@ -748,6 +903,77 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>5</strong><span>覆盖地区</span></div>
               </div>
             </article>
+
+            <section class="content-block">
+              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="weekly-window-list">
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">非洲</span>
+                    <span class="label copper">16 条证据</span>
+                  </div>
+                  <h3>非洲资金进入窗口</h3>
+                  <p>对象：Fresha获8000万美元融资估值...、RADAR获$170M融资，估值达$...、Farther获$150M D轮融资...、Modal获$355M融资，AI基础...｜方向：资金进入窗口</p>
+                  <p>非洲美业SaaS平台晋级独角兽，中东和非洲SaaS赛道有集成和合作机会</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://ventureburn.com/fresha-raises-80m-hits-1-billion-valuation/" target="_blank">Fresha获8000万美元融资估值达10亿美元</a><span>2026-05-23 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/radar-raises-170m-hits-1b-valuation-in-ai-retail-push/" target="_blank">RADAR获$170M融资，估值达$1B，主攻AI零售</a><span>2026-05-20 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/farther-raises-150m-series-d-led-by-general-atlantic/" target="_blank">Farther获$150M D轮融资由General Atlantic领投</a><span>2026-05-22 · Ventureburn · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">中</span>
+                    <span class="label">亚太</span>
+                    <span class="label copper">3 条证据</span>
+                  </div>
+                  <h3>亚太资金进入窗口</h3>
+                  <p>对象：Zepto计划7月$1.1B IPO、越南Dien May Xanh计划$...、Paymentology获1.75亿...｜方向：资金进入窗口</p>
+                  <p>印度即时配送平台启动IPO，物流技术和供应链合作商将受益于上市后扩张</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://www.techinasia.com/zepto-secures-450m-hits-7b-valuation" target="_blank">Zepto计划7月$1.1B IPO</a><span>2026-05-22 · Tech in Asia · 资金流向</span></li>
+
+                    <li><a href="https://www.techinasia.com/vietnams-mobile-world-plans-2026-ipo-for-electronics-unit" target="_blank">越南Dien May Xanh计划$546M IPO</a><span>2026-05-23 · Tech in Asia · 资金流向</span></li>
+
+                    <li><a href="https://fintechnews.sg/131734/payments/paymentology-fiona-tee-cfo-appointment/" target="_blank">Paymentology获1.75亿美元融资后任命首席财务官</a><span>2026-05-19 · Fintech News Singapore · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">中</span>
+                    <span class="label">全球</span>
+                    <span class="label copper">3 条证据</span>
+                  </div>
+                  <h3>全球资金进入窗口</h3>
+                  <p>对象：美容预订平台Fresha获$80M投...、Hark获$700M A轮融资，开发...、Mercury获$200M融资｜方向：资金进入窗口</p>
+                  <p>全球美容SaaS平台获KKR注资，显示垂直行业SaaS仍有高增长潜力，东南亚拉美市场可复制</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://techcrunch.com/2026/05/21/booking-platform-fresha-announces-80m-investment-unicorn-valuation/" target="_blank">美容预订平台Fresha获$80M投资，估值达$1B</a><span>2026-05-21 · TechCrunch · 资金流向</span></li>
+
+                    <li><a href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" target="_blank">Hark获$700M A轮融资，开发通用AI界面</a><span>2026-05-21 · TechCrunch · 资金流向</span></li>
+
+                    <li><a href="https://www.finextra.com/newsarticle/47791/mercury-raises-200-million?utm_medium=rssfinextra&utm_source=finextrafeed" target="_blank">Mercury获$200M融资</a><span>2026-05-21 · Finextra · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+              </div>
+            </section>
+
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
@@ -834,7 +1060,7 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">2026-05-11 至 2026-05-17</span><span class="label green">已封存</span></div>
                 <h2>2026年第20周客户拓展机会报告</h2>
-                <p>本周期共收录 54 条事件，其中 21 条为高优先级机会。当前优先看 非洲，主线机会集中在增长方案。</p>
+                <p>本周期共收录 54 条事件，其中 21 条为高优先级机会。周报先看 非洲 的资金进入窗口，再回到证据事件确认。</p>
               </div>
               <div class="cover-stats">
                 <div class="cover-stat"><strong>54</strong><span>入选事件</span></div>
@@ -842,6 +1068,77 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>5</strong><span>覆盖地区</span></div>
               </div>
             </article>
+
+            <section class="content-block">
+              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="weekly-window-list">
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">非洲</span>
+                    <span class="label copper">8 条证据</span>
+                  </div>
+                  <h3>非洲资金进入窗口</h3>
+                  <p>对象：Fractile获$220M推进AI...、Mind Robotics获$400...、Exaforce获$125M B轮融...、Elliptic获$120M融资｜方向：资金进入窗口</p>
+                  <p>非洲AI芯片赛道大额融资，加速技术研发与应用</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://ventureburn.com/fractile-raises-220m-ai-inference/" target="_blank">Fractile获$220M推进AI推理芯片开发</a><span>2026-05-14 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/mind-robotics-raises-400m/" target="_blank">Mind Robotics获$400M扩展AI工业机器人平台</a><span>2026-05-14 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/exaforce-raises-125m-series-b-to-scale-ai-native-security-operations-platform/" target="_blank">Exaforce获$125M B轮融资扩展AI安全平台</a><span>2026-05-12 · Ventureburn · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">欧洲</span>
+                    <span class="label copper">5 条证据</span>
+                  </div>
+                  <h3>欧洲资金进入窗口</h3>
+                  <p>对象：Euan Blair的Multive...、Nscale获得7.9亿美元融资，用...、捷克Exaforce获超€100M融...、Rivian分拆公司Mind Rob...｜方向：资金进入窗口</p>
+                  <p>欧洲教育科技获大额融资，后续可能开放生态合作和API采购</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://tech.eu/2026/05/15/euan-blair-s-multiverse-raises-70m-at-2-1bn-valuation/" target="_blank">Euan Blair的Multiverse获$70M融资，估值$21亿</a><span>2026-05-15 · Tech.eu · 资金流向</span></li>
+
+                    <li><a href="https://tech.eu/2026/05/11/nscale-snaps-up-major-us-data-centre-site-inks-ai-compute-deal-with-microsoft/" target="_blank">Nscale获得7.9亿美元融资，用于挪威数据中心建设</a><span>2026-05-11 · Tech.eu · 资金流向</span></li>
+
+                    <li><a href="https://therecursive.com/cee-startup-tech-weekly-czech-led-exaforce-raises-over-e100m/" target="_blank">捷克Exaforce获超€100M融资</a><span>2026-05-17 · The Recursive · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">中</span>
+                    <span class="label">拉美</span>
+                    <span class="label copper">3 条证据</span>
+                  </div>
+                  <h3>拉美资金进入窗口</h3>
+                  <p>对象：CloudWalk通过FIDC发行融...、Enter获$100M融资，晋级独角...、Addi获J.P. Morgan领投...｜方向：资金进入窗口</p>
+                  <p>拉美支付巨头通过结构化融资获取低成本资金，支付基础设施和信贷模型受关注</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://latamlist.com/cloudwalk-raises-1-1b-through-fidc-issuance/" target="_blank">CloudWalk通过FIDC发行融资$1.1B</a><span>2026-05-17 · LatamList · 资金流向</span></li>
+
+                    <li><a href="https://latamlist.com/enter-raises-100m-round-and-reaches-unicorn-status/" target="_blank">Enter获$100M融资，晋级独角兽</a><span>2026-05-17 · LatamList · 资金流向</span></li>
+
+                    <li><a href="https://latamlist.com/addi-secures-150m-credit-line-led-by-j-p-morgan/" target="_blank">Addi获J.P. Morgan领投$150M信贷额度</a><span>2026-05-17 · LatamList · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>进入下周观察名单，优先复核对象、预算和合作入口</span></div>
+                </article>
+
+              </div>
+            </section>
+
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
@@ -928,7 +1225,7 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">2026-05-04 至 2026-05-10</span><span class="label green">已封存</span></div>
                 <h2>2026年第19周客户拓展机会报告</h2>
-                <p>本周期共收录 42 条事件，其中 13 条为高优先级机会。当前优先看 非洲，主线机会集中在增长方案。</p>
+                <p>本周期共收录 42 条事件，其中 13 条为高优先级机会。周报先看 非洲 的资金进入窗口，再回到证据事件确认。</p>
               </div>
               <div class="cover-stats">
                 <div class="cover-stat"><strong>42</strong><span>入选事件</span></div>
@@ -936,6 +1233,73 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>4</strong><span>覆盖地区</span></div>
               </div>
             </article>
+
+            <section class="content-block">
+              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="weekly-window-list">
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">非洲</span>
+                    <span class="label copper">6 条证据</span>
+                  </div>
+                  <h3>增长方案资金进入窗口</h3>
+                  <p>对象：增长方案｜方向：资金进入窗口</p>
+                  <p>非洲科技行业获大额融资，后续可能开放生态合作和API采购</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://techcabal.com/2026/05/07/will-h1-2026-cross-the-1b-mark-funding-hits-887m-despite-deal-slump/" target="_blank">2026年上半年非洲融资达$887M，尽管交易低迷</a><span>2026-05-07 · TechCabal · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/hawkeye-360-raises-416m-in-landmark-space-ipo/" target="_blank">HawkEye 360通过太空IPO筹集4.16亿美元</a><span>2026-05-08 · Ventureburn · 资金流向</span></li>
+
+                    <li><a href="https://ventureburn.com/blitzy-raises-200m-to-advance-autonomous-software-development/" target="_blank">Blitzy获$200M融资用于推进自动驾驶软件开发</a><span>2026-05-05 · Ventureburn · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>观察后续采购、扩张和合作信号</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">欧洲</span>
+                    <span class="label copper">2 条证据</span>
+                  </div>
+                  <h3>增长方案资金进入窗口</h3>
+                  <p>对象：增长方案｜方向：资金进入窗口</p>
+                  <p>欧洲AI语音技术获大额融资，后续可能加大研发投入并拓展市场合作</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://tech.eu/2026/05/05/elevenlabs-adds-blackrock-nvidia-and-jamie-foxx-to-550m-series-d/" target="_blank">ElevenLabs获超$550M D轮融资，投资者包括BlackRock、Nvidia和Jamie Foxx</a><span>2026-05-05 · Tech.eu · 资金流向</span></li>
+
+                    <li><a href="https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" target="_blank">Sierra获$95亿融资角逐企业AI市场</a><span>2026-05-04 · TechCrunch · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>观察后续采购、扩张和合作信号</span></div>
+                </article>
+
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">高</span>
+                    <span class="label">亚太</span>
+                    <span class="label copper">2 条证据</span>
+                  </div>
+                  <h3>增长方案资金进入窗口</h3>
+                  <p>对象：增长方案｜方向：资金进入窗口</p>
+                  <p>亚太金融科技获融资，后续可能开放生态合作和市场拓展</p>
+                  <ul class="window-evidence">
+
+                    <li><a href="https://dealstreetasia.com/stories/atome-financial-capital-injection-481451/" target="_blank">Atome Financial获得母公司1.49亿美元资本注入</a><span>2026-05-06 · DealStreetAsia · 资金流向</span></li>
+
+                    <li><a href="https://dealstreetasia.com/stories/skyroot-fundraise-481532/" target="_blank">印度Skyroot获$60M融资进入独角兽俱乐部</a><span>2026-05-07 · DealStreetAsia · 资金流向</span></li>
+
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>观察后续采购、扩张和合作信号</span></div>
+                </article>
+
+              </div>
+            </section>
+
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
@@ -1022,7 +1386,7 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">2026-04-27 至 2026-05-03</span><span class="label green">已封存</span></div>
                 <h2>2026年第18周客户拓展机会报告</h2>
-                <p>本周期共收录 7 条事件，其中 3 条为高优先级机会。当前优先看 欧洲，主线机会集中在增长方案。</p>
+                <p>本周期共收录 7 条事件，其中 3 条为高优先级机会。本周先按优先机会和区域热度观察，不硬凑关注窗口。</p>
               </div>
               <div class="cover-stats">
                 <div class="cover-stat"><strong>7</strong><span>入选事件</span></div>
@@ -1030,6 +1394,7 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>3</strong><span>覆盖地区</span></div>
               </div>
             </article>
+
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
@@ -6545,6 +6910,28 @@ button, input, select { font: inherit; }
             <article class="history-card">
               <button class="history-head release-head" onclick="toggleDate(this)">
                 <span class="release-copy">
+                  <h3>周报新增本周关注窗口试点</h3>
+                  <small>2026-06-03 · 周报试点 · 已上线</small>
+                </span>
+                <span class="release-badge"><strong class="release-version">V2.4</strong> <span class="toggle-icon">›</span></span>
+              </button>
+              <div class="history-body">
+                <div class="label-row">
+                  <span class="label green">周报试点</span>
+                  <span class="label">已上线</span>
+                </div>
+                <p>在周报顶部试点展示由近 7 天独立证据聚合出的关注窗口，让周报承接“窗口和方向”的产品职责。</p>
+
+                <ul class="release-list">
+                  <li>周报顶部新增“本周关注窗口”，展示对象、方向、证据数和下周动作</li><li>关注窗口复用 Signal Cluster 规则，单条事件不会被硬升格为窗口</li><li>原本周优先机会列表继续保留在下方作为证据层和 fallback</li><li>月报暂不深改，仍等待周报试点稳定后再升级趋势和结构变化</li>
+                </ul>
+
+              </div>
+            </article>
+
+            <article class="history-card">
+              <button class="history-head release-head" onclick="toggleDate(this)">
+                <span class="release-copy">
                   <h3>日报改为对象和证据入口</h3>
                   <small>2026-06-03 · 日报定位 · 已上线</small>
                 </span>
@@ -6735,28 +7122,6 @@ button, input, select { font: inherit; }
 
                 <ul class="release-list">
                   <li>新增 VIEW_CONTRACT.md，明确采集、评分、选择、展示四层边界</li><li>新增 check_data_health.py，输出近 7 天主列表、复核区、Google News 占比、RSS 和公司优质统计</li><li>新增真实数据回归测试，防止首页为空、公司优质全 0、RSS 被 Google News 主导和重复率异常</li><li>周报/月报高价值统计改为通过 period selector 入口，减少页面直接复用评分函数</li><li>记录采集原始数和过滤数目前仍只在 workflow 日志中，后续需补 run metrics 文件</li>
-                </ul>
-
-              </div>
-            </article>
-
-            <article class="history-card">
-              <button class="history-head release-head" onclick="toggleDate(this)">
-                <span class="release-copy">
-                  <h3>新增展示选择器层，切断页面口径串用</h3>
-                  <small>2026-06-01 · 架构收敛 · 已上线</small>
-                </span>
-                <span class="release-badge"><strong class="release-version">V1.4</strong> <span class="toggle-icon">›</span></span>
-              </button>
-              <div class="history-body">
-                <div class="label-row">
-                  <span class="label green">架构收敛</span>
-                  <span class="label">已上线</span>
-                </div>
-                <p>把首页、RSS、公司索引和复核区的入选规则收束到独立 selector，避免评分规则调整时误伤不同展示面。</p>
-
-                <ul class="release-list">
-                  <li>新增 view_selectors.py，集中维护首页、RSS、公司优质线索、复核区和成熟批次选择规则</li><li>首页事件、每日面板和薄批次回退改为调用 selector，不再直接散落调用评分函数</li><li>RSS 推送改为通过 feed selector 选择，高价值事件缺失时回退到最近有效批次</li><li>公司索引优质统计改为通过 company quality selector 计算，和 RSS 高价值口径解耦</li><li>补充 selector 回归测试，覆盖低分非 Google 信号、RSS 回退、公司质量口径和薄批次选择</li>
                 </ul>
 
               </div>

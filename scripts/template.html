@@ -188,6 +188,21 @@ button, input, select { font: inherit; }
 .period-panel .report-cover { margin-top: 0; }
 .cover-stat strong { display: block; font-size: 24px; }
 .cover-stat span { color: rgba(244,241,234,0.68); font-size: 12px; }
+.weekly-window-list { display: grid; gap: 14px; margin-top: 12px; }
+.weekly-window {
+  display: grid; gap: 12px; padding: 18px; border: 1px solid var(--line);
+  border-left: 4px solid var(--navy); border-radius: 8px; background: rgba(238,242,243,0.52);
+}
+.weekly-window h3 { margin: 0; font-size: 18px; line-height: 1.35; }
+.weekly-window p { margin: 0; color: #38434d; font-size: 13px; line-height: 1.62; }
+.window-meta, .window-actions { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.window-evidence { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.window-evidence li { display: grid; gap: 2px; padding-top: 6px; border-top: 1px solid rgba(217,209,196,0.72); }
+.window-evidence li:first-child { padding-top: 0; border-top: 0; }
+.window-evidence a { font-size: 13px; line-height: 1.42; }
+.window-evidence span { color: var(--quiet); font-size: 11px; }
+.window-actions strong { color: var(--green); font-size: 13px; }
+.window-actions span { color: var(--muted); font-size: 12px; }
 .trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
 .trend { padding-top: 16px; border-top: 2px solid var(--navy); }
 .trend h3 { margin: 0; font-size: 15px; }
@@ -518,6 +533,31 @@ button, input, select { font: inherit; }
                 <div class="cover-stat"><strong>{{ report.regions }}</strong><span>覆盖地区</span></div>
               </div>
             </article>
+            {% if report.focus_windows %}
+            <section class="content-block">
+              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="weekly-window-list">
+                {% for window in report.focus_windows %}
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">{{ window.confidence }}</span>
+                    <span class="label">{{ window.region }}</span>
+                    <span class="label copper">{{ window.evidence_count }} 条证据</span>
+                  </div>
+                  <h3>{{ window.title }}</h3>
+                  <p>对象：{{ window.objects }}｜方向：{{ window.direction }}</p>
+                  {% if window.why %}<p>{{ window.why }}</p>{% endif %}
+                  <ul class="window-evidence">
+                    {% for ev in window.evidence %}
+                    <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                    {% endfor %}
+                  </ul>
+                  <div class="window-actions"><strong>下周动作</strong><span>{{ window.action }}</span></div>
+                </article>
+                {% endfor %}
+              </div>
+            </section>
+            {% endif %}
             <section class="content-block">
               <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
               <div class="opportunity-layout">
