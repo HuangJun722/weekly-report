@@ -1,7 +1,6 @@
 """Check dashboard data health after events have been stored.
 
-This does not inspect crawler raw counts because those only exist in workflow
-logs today. It verifies the stored-data -> selector -> display contract.
+It verifies the collection metrics -> stored-data -> selector -> display contract.
 """
 
 import argparse
@@ -11,11 +10,13 @@ from collections import Counter
 from datetime import datetime, timedelta
 
 try:
+    from collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from generate_html import build_company_cards, build_display_context
     from run_metrics import latest_run_metrics
     from source_quality_report import build_source_quality_report
     from view_selectors import select_feed_events, select_main_list_events, select_review_events
 except ImportError:
+    from scripts.collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from scripts.generate_html import build_company_cards, build_display_context
     from scripts.run_metrics import latest_run_metrics
     from scripts.source_quality_report import build_source_quality_report
@@ -95,12 +96,14 @@ def build_health_report(days=7):
     feed_google = sum(1 for event in feed_events if _source_is_google(event))
     feed_google_ratio = feed_google / len(feed_events) if feed_events else 0.0
     run_metrics = latest_run_metrics()
+    collection_timing = build_collection_timing_rows(limit=8)
     source_report = build_source_quality_report(days=days)
 
     return {
         'main_date': main_date,
         'latest_data_date': context['latest_data_date'],
         'run_metrics': run_metrics,
+        'collection_timing': collection_timing,
         'today_events': len(today_events),
         'raw_today_events': len(raw_today),
         'all_visible_events': len(all_visible),
@@ -155,6 +158,8 @@ def print_report(report):
     )
     if report['feed_fallback_date']:
         print(f"health | feed_fallback_date={report['feed_fallback_date']}")
+    if report.get('collection_timing'):
+        print_collection_timing_report(report['collection_timing'])
     print("date | visible | main | review | google")
     for row in report['daily']:
         print(

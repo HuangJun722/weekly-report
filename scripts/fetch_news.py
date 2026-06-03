@@ -2778,6 +2778,13 @@ def main():
 
     # 输出统计
     company_added = sum(1 for e in added_events if e.get('is_company'))
+    added_event_dates = {}
+    added_source_tiers = {}
+    for event in added_events:
+        event_date = (event.get('date') or today)[:10]
+        source_tier = event.get('source_tier') or '未标注'
+        added_event_dates[event_date] = added_event_dates.get(event_date, 0) + 1
+        added_source_tiers[source_tier] = added_source_tiers.get(source_tier, 0) + 1
     print(f"  📅 pubDate 解析：{pubdate_ok} 条有日期 | {pubdate_fallback} 条无日期（归入今日）")
     print(f"  🏢 新增公司动态：{company_added} 条 | 新增通用热点：{len(added_events) - company_added} 条")
     print(f"  🚫 历史重复跳过：{len(today_events) - len(added_events)} 条")
@@ -2792,6 +2799,8 @@ def main():
         'generic_added': len(added_events) - company_added,
         'pubdate_ok': pubdate_ok,
         'pubdate_fallback': pubdate_fallback,
+        'added_event_dates': added_event_dates,
+        'added_source_tiers': added_source_tiers,
     }
 
     # 清理 90 天前（避免数据无限膨胀，保留 3 个月）

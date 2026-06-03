@@ -18,6 +18,7 @@ try:
         follow_up_window_for_priority,
     )
     from signal_clusters import build_signal_clusters
+    from narratives import build_narrative
     from view_selectors import (
         select_company_events,
         select_company_quality_events,
@@ -37,6 +38,7 @@ except ImportError:
         follow_up_window_for_priority,
     )
     from scripts.signal_clusters import build_signal_clusters
+    from scripts.narratives import build_narrative
     from scripts.view_selectors import (
         select_company_events,
         select_company_quality_events,
@@ -856,30 +858,45 @@ def build_trend_groups(events):
     return result
 
 
-def build_date_panel(date_str, day_events, all_events, raw_day_events=None):
+def build_date_panel(date_str, day_events, all_events, raw_day_events=None, cluster_events=None):
     """预计算某日期的今日面板数据（趋势分组 + 判断 + 统计），供 JS 翻页切换"""
     signals = get_signal_events(all_events)
     weekly = build_weekly_summary(day_events, signals, day_events, all_events, summary_date=date_str)
     trend_groups = build_trend_groups(day_events)
     repair_events = build_review_events(raw_day_events or day_events)
-    signal_clusters = build_signal_clusters(all_events, date_str)
+    signal_clusters = build_signal_clusters(cluster_events or all_events, date_str)
+    narrative = build_narrative(signal_clusters, fallback_events=day_events)
 
     dt = datetime.strptime(date_str, '%Y-%m-%d')
     return {
         'trend_groups': trend_groups,
         'repair_events': repair_events,
-        'judgment': weekly.get('summary', ''),
+        'judgment': narrative.get('judgment') or weekly.get('summary', ''),
         'top3': weekly.get('top3', []),
-        'signal_clusters': signal_clusters,
+        'signal_clusters': strip_cluster_event_payloads(narrative.get('clusters', [])),
+        'evidence_events': narrative.get('evidence_events', []),
         'total_stories': len(day_events),
         'vol_label': f"VOL.{date_str}",
         'cn_date': f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}",
-        'headline': weekly.get('headline', ''),
+        'headline': narrative.get('title') or weekly.get('headline', ''),
         'funding': weekly.get('funding', 0),
         'ma': weekly.get('ma', 0),
         'earnings': weekly.get('earnings', 0),
         'regions': weekly.get('regions', 0),
     }
+
+
+def select_homepage_events_for_date(all_visible_events, date_str, fallback_events=None):
+    return select_homepage_events(all_visible_events, date_str, fallback_events)
+
+
+def strip_cluster_event_payloads(clusters):
+    public_clusters = []
+    for cluster in clusters or []:
+        public_cluster = dict(cluster)
+        public_cluster.pop('evidence_events', None)
+        public_clusters.append(public_cluster)
+    return public_clusters
 
 
 def group_events_by_date(events):
@@ -1607,11 +1624,14 @@ def generate_html(force=False, preview_mode=False):
 
     trend_groups = build_trend_groups(today_events)
     repair_events = build_review_events(raw_today_events)
-    daily_trend_judgment = weekly.get('summary', '')
-    daily_headline, daily_lead = split_judgment(daily_trend_judgment, weekly.get('headline', '今日非中美互联网动态更新'))
-    daily_headline, daily_lead = refine_daily_headline(daily_headline, daily_lead, trend_groups)
     daily_trend_signals = weekly.get('top3', [])
     signal_clusters = build_signal_clusters(all_events_for_list, main_date)
+    narrative = build_narrative(signal_clusters, fallback_events=today_events)
+    signal_clusters = strip_cluster_event_payloads(narrative.get('clusters', []))
+    evidence_events = narrative.get('evidence_events') or today_events[:5]
+    daily_headline = narrative.get('title') or weekly.get('headline', '今日非中美互联网动态更新')
+    daily_lead = narrative.get('judgment') or weekly.get('summary', '')
+    daily_trend_judgment = daily_lead
     total_stories = len(today_events)
     dt = datetime.strptime(main_date, '%Y-%m-%d')
     vol_label = f"VOL.{main_date}"
@@ -1627,11 +1647,17 @@ def generate_html(force=False, preview_mode=False):
         if d < cutoff:
             continue
         raw_day_evs = [e for e in all_events_for_list if (e.get('date') or '')[:10] == d]
-        day_evs = select_main_list_events(raw_day_evs)
+        day_evs = select_homepage_events_for_date(all_events_for_list, d)
         if not day_evs and not raw_day_evs:
             continue
         available_dates.append(d)
-        date_panels[d] = build_date_panel(d, day_evs, events, raw_day_evs)
+        date_panels[d] = build_date_panel(
+            d,
+            day_evs,
+            events,
+            raw_day_evs,
+            cluster_events=all_events_for_list,
+        )
     date_panels_json = json.dumps(date_panels, ensure_ascii=False)
     weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date)
     monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date)
@@ -1663,6 +1689,8 @@ def generate_html(force=False, preview_mode=False):
         daily_lead=daily_lead,
         daily_trend_signals=daily_trend_signals,
         signal_clusters=signal_clusters,
+        evidence_events=evidence_events,
+        narrative=narrative,
         total_stories=total_stories,
         vol_label=vol_label,
         cn_date=cn_date,

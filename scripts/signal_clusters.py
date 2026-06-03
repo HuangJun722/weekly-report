@@ -296,6 +296,7 @@ def _build_cluster(region, cluster_type, topic, events, focus_date):
         'companies': companies[:5],
         'signals': source_labels[:4],
         'evidence': evidence,
+        'evidence_events': events[:3],
         'evidence_count': len(events),
         'watch_window': '未来7天' if any(_event_date(e) == focus_date for e in events) else '未来30天',
         'confidence': _confidence(flags, events),

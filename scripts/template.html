@@ -425,8 +425,7 @@ button, input, select { font: inherit; }
               <span>用于支撑上方关注窗口的事实层</span>
             </div>
             <div class="intelligence-list">
-              {% for group in trend_groups %}
-              {% for ev in group.events %}
+              {% for ev in evidence_events %}
               {% if ev not in repair_events %}
               <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
                 <div class="intel-meta">
@@ -449,7 +448,6 @@ button, input, select { font: inherit; }
                 <div class="amount">{{ ev.display_amount or ev.display_source or ev.source }}</div>
               </a>
               {% endif %}
-              {% endfor %}
               {% endfor %}
             </div>
             <button class="quality-toggle" id="qualityToggle"{% if not repair_events %} style="display:none"{% endif %}>显示 {{ repair_events|length }} 条原始候选/需复核事件</button>
@@ -1001,10 +999,8 @@ function navigateDay(dir) {
   if (list) {
     var html = '';
     var reviewKeys = new Set((panel.repair_events || []).map(eventKey));
-    panel.trend_groups.forEach(function(g){
-      g.events.forEach(function(ev){
-        if (!reviewKeys.has(eventKey(ev))) html += eventCardHtml(ev);
-      });
+    (panel.evidence_events || []).forEach(function(ev){
+      if (!reviewKeys.has(eventKey(ev))) html += eventCardHtml(ev);
     });
     list.innerHTML = html;
   }

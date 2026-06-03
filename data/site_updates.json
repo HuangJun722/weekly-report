@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-03",
+    "version": "V2.0",
+    "type": "叙事层",
+    "status": "已上线",
+    "title": "新增 Narrative Layer 与采集时点对比表",
+    "summary": "把首页今日判断、关注窗口和证据事件收束到同一条叙事链，并补充采集时点诊断，区分运行日、事件日和入库来源。",
+    "changes": [
+      "新增 narratives.py，在 Signal Cluster 之上生成统一 Narrative",
+      "首页标题、判断、关注窗口和证据事件改为消费同一个 Narrative",
+      "证据事件只展示当前 Narrative 绑定的事实事件，不再独立从 Top3 或趋势组挑选",
+      "叙事层会去除同公司重复窗口，并只保留同区域或同主题的关注窗口",
+      "没有稳定关注窗口时降级为今日要点，不强行输出趋势判断",
+      "新增 collection_timing_report.py，按最近运行对比 run_date、event_date、入库数和 source_tier 分布"
+    ]
+  },
+  {
     "date": "2026-06-01",
     "version": "V1.9",
     "type": "产品结构",
