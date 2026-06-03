@@ -784,27 +784,13 @@ def build_weekly_summary(all_feed, signals, latest_date_events, all_events, summ
         parts.append(f"共{total}条动态，覆盖{', '.join(region_counts.keys()) if region_counts else '各地区'}。")
     summary = ' '.join(parts)
 
-    # ── Market Pulse：最近3天的优质信号事件─────
-    # 优先今天 > 昨天 > 前天，按评分排序
-    today_s = _cn_today()
-    now_cn = _cn_now()
-    yesterday_s = (now_cn - timedelta(days=1)).strftime('%Y-%m-%d')
-    two_days_ago_s = (now_cn - timedelta(days=2)).strftime('%Y-%m-%d')
-
-    # 按优先级分组
-    today_signals = [e for e in signals if e.get('date') == today_s]
-    yesterday_signals = [e for e in signals if e.get('date') == yesterday_s]
-    two_days_ago_signals = [e for e in signals if e.get('date') == two_days_ago_s]
-
-    # 今天优先，然后昨天，然后前天
-    mp_events = today_signals[:7]
-    if len(mp_events) < 7:
-        need = 7 - len(mp_events)
-        mp_events.extend(yesterday_signals[:need])
-    if len(mp_events) < 7:
-        need = 7 - len(mp_events)
-        mp_events.extend(two_days_ago_signals[:need])
-
+    # Market Pulse must be scoped to the displayed batch. Otherwise historical
+    # date panels show today's signals under an older date.
+    mp_events = [
+        e for e in non_chinese
+        if e.get('event_types', ['other'])[0] != 'other'
+    ]
+    mp_events.sort(key=lambda e: (event_score(e), e.get('date', '')), reverse=True)
     mp_events = mp_events[:7]
 
     # ── P0 Agent：读取 AI 趋势分析，覆盖程序摘要 ──
@@ -856,13 +842,20 @@ def build_trend_groups(events):
     return result
 
 
+def keep_focus_date_clusters(clusters, limit=3):
+    """Only keep rolling-window clusters that actually touch the selected date."""
+    return [cluster for cluster in clusters or [] if cluster.get('has_focus_date')][:limit]
+
+
 def build_date_panel(date_str, day_events, all_events, raw_day_events=None, cluster_events=None):
     """预计算某日期的今日面板数据（趋势分组 + 判断 + 统计），供 JS 翻页切换"""
     signals = get_signal_events(all_events)
     weekly = build_weekly_summary(day_events, signals, day_events, all_events, summary_date=date_str)
     trend_groups = build_trend_groups(day_events)
     repair_events = build_review_events(raw_day_events or day_events)
-    signal_clusters = build_signal_clusters(cluster_events or all_events, date_str)
+    signal_clusters = keep_focus_date_clusters(
+        build_signal_clusters(cluster_events or all_events, date_str, limit=12)
+    )
     narrative = build_narrative(signal_clusters, fallback_events=day_events)
 
     dt = datetime.strptime(date_str, '%Y-%m-%d')
@@ -1623,7 +1616,9 @@ def generate_html(force=False, preview_mode=False):
     trend_groups = build_trend_groups(today_events)
     repair_events = build_review_events(raw_today_events)
     daily_trend_signals = weekly.get('top3', [])
-    signal_clusters = build_signal_clusters(all_events_for_list, main_date)
+    signal_clusters = keep_focus_date_clusters(
+        build_signal_clusters(all_events_for_list, main_date, limit=12)
+    )
     narrative = build_narrative(signal_clusters, fallback_events=today_events)
     signal_clusters = strip_cluster_event_payloads(narrative.get('clusters', []))
     evidence_events = narrative.get('evidence_events') or today_events[:5]

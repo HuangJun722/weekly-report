@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from check_data_health import build_health_report, collect_failures
+from generate_html import build_date_panel
 from run_metrics import latest_run_metrics, write_run_metrics
 
 
@@ -36,7 +37,78 @@ def test_run_metrics_roundtrip():
     path.unlink()
 
 
+def _panel_event(date, title, url, company, topic):
+    return {
+        'title': title,
+        'display_title': title,
+        'summary_short': title,
+        'url': url,
+        'source': 'TechCrunch',
+        'source_tier': 'L2 垂直交易源',
+        'event_types': ['funding'],
+        'score': 7,
+        'region': '欧洲',
+        'company_name': company,
+        'companies': [company],
+        'reason': '欧洲AI基础设施公司融资，云和开发者生态出现预算窗口',
+        'impact': '云服务商、AI基础设施供应商',
+        'trend_topic': topic,
+        'date': date,
+    }
+
+
+def test_date_panel_does_not_leak_current_day_content():
+    old_events = [
+        _panel_event('2026-05-30', 'Old AI infra A raises funding', 'https://example.com/old-a', 'OldA', '欧洲AI基础设施'),
+        _panel_event('2026-05-30', 'Old AI infra B raises funding', 'https://example.com/old-b', 'OldB', '欧洲AI基础设施'),
+    ]
+    current_events = [
+        _panel_event('2026-06-03', 'Current AI infra A raises funding', 'https://example.com/new-a', 'NewA', '欧洲AI基础设施'),
+        _panel_event('2026-06-03', 'Current AI infra B raises funding', 'https://example.com/new-b', 'NewB', '欧洲AI基础设施'),
+    ]
+    events_by_date = {
+        '2026-05-30': old_events,
+        '2026-06-03': current_events,
+    }
+    panel = build_date_panel(
+        '2026-05-30',
+        old_events,
+        events_by_date,
+        old_events,
+        cluster_events=old_events + current_events,
+    )
+    assert all(event['date'] == '2026-05-30' for event in panel['top3'])
+    assert all(event['date'] == '2026-05-30' for event in panel['evidence_events'])
+    assert all(
+        event['date'] == '2026-05-30'
+        for cluster in panel['signal_clusters']
+        for event in cluster.get('evidence_events', [])
+    )
+    assert not any(event['date'] == '2026-06-03' for event in panel['top3'])
+
+
+def test_date_panel_suppresses_stale_rolling_clusters():
+    selected_day = [
+        _panel_event('2026-05-30', 'Selected day signal', 'https://example.com/selected', 'SelectedCo', '欧洲AI基础设施'),
+    ]
+    stale_cluster_events = [
+        _panel_event('2026-05-27', 'Stale cluster A', 'https://example.com/stale-a', 'StaleA', '欧洲旅游科技'),
+        _panel_event('2026-05-27', 'Stale cluster B', 'https://example.com/stale-b', 'StaleB', '欧洲旅游科技'),
+    ]
+    panel = build_date_panel(
+        '2026-05-30',
+        selected_day,
+        {'2026-05-30': selected_day, '2026-05-27': stale_cluster_events},
+        selected_day,
+        cluster_events=selected_day + stale_cluster_events,
+    )
+    assert panel['signal_clusters'] == []
+    assert [event['date'] for event in panel['evidence_events']] == ['2026-05-30']
+
+
 if __name__ == '__main__':
     test_current_data_health_contract()
     test_run_metrics_roundtrip()
+    test_date_panel_does_not_leak_current_day_content()
+    test_date_panel_suppresses_stale_rolling_clusters()
     print('data health tests passed')
