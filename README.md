@@ -109,7 +109,7 @@ python scripts/generate_html.py --force
 | L1 官方/IR源 | Rakuten、Grab、MercadoLibre、Adyen、Sea、Zalando、Allegro、Kaspi.kz、Naver、Kakao、HKTVmall、U-NEXT、Square Enix、Jumia | 校准重点客户自身披露，优先保留财报、公告、战略和新闻稿 |
 | L5 Google News 补漏源 | 30 家重点公司关键词 | 只做公司动态雷达，每家公司最多 2 条，默认不保留 `other` 类；中资公司只保留海外投资、跨境合作、海外市场和出海业务动向 |
 
-每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`，用于后续把日报、周报、月报从“新闻摘要”升级为“客户拓展机会报告”。
+每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`。日报用它们辅助判断“今天先看谁和哪些证据”，周报再收敛窗口和方向，月报看趋势与结构变化。
 
 信源处理库维护在 `data/source_registry.json`。新增自动采集源前，先在处理库记录赛道、信号类型、质量层级、抓取方式和晋级判断；候选源样本稳定后再进入脚本配置。
 
@@ -159,10 +159,10 @@ weekly-report/
 
 页面采用"极简克制 + 现代杂志风"设计：
 
-- **三层信息架构**：今日判断区（30秒扫读）→ 趋势分组事件（3分钟）→ 公司导航/搜索（需要时）
+- **四层产品职责**：日报看对象和证据 → 周报看窗口和方向 → 月报看趋势和结构变化 → 公司索引看单个对象时间线
 - **两 tab 统一卡片风格**：今日要点和全部事件使用一致的 `.daily-event` 卡片设计
-- **趋势主题分组**：事件不再按类型分类，而是按 AI 分析的趋势主题（如"中东FinTech赛道升温"）聚合
-- **今日判断区**：顶部展示 AI 每日趋势判断 + 3个关键信号卡片
+- **今日观察区**：顶部展示当日优先观察对象或方向，不把单日事件硬升格为趋势结论
+- **证据事件**：日报优先展示可解释的事实事件，关注窗口只在证据足够时辅助展示
 - **固定顶栏**：搜索和筛选始终可见
 - **事件图片**：左侧 100px×70px 缩略图（RSS media_content → og:image 两级兜底）
 - **事件标签**：资金流向 / 合作机会 / 警示信号 / 趋势信号 / 中资出海

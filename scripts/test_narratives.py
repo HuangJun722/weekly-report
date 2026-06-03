@@ -107,6 +107,8 @@ def test_downgrades_when_evidence_is_not_independent():
     assert narrative['mode'] == 'daily_brief'
     assert narrative['clusters'] == []
     assert not narrative['consistency']['promoted']
+    assert '稳定关注窗口' not in narrative['judgment']
+    assert '日报先看对象和证据' in narrative['judgment']
 
 
 def test_keeps_narrative_clusters_coherent():
@@ -152,8 +154,10 @@ def test_falls_back_to_daily_brief_without_clusters():
         }
     ])
     assert narrative['mode'] == 'daily_brief'
-    assert narrative['title'] == '今日要点'
+    assert narrative['title'] == '今日优先看韩国AI中心建设的新动作'
     assert narrative['evidence'][0]['title'] == '韩国AI中心建设'
+    assert '稳定关注窗口' not in narrative['judgment']
+    assert '日报先看对象和证据' in narrative['judgment']
 
 
 if __name__ == '__main__':

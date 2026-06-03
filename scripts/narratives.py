@@ -149,6 +149,68 @@ def _all_companies(clusters):
     return companies
 
 
+def _event_title(event):
+    return event.get('display_title') or event.get('summary_short') or event.get('title') or ''
+
+
+def _short_label(text, max_len=16):
+    text = ' '.join((text or '').split())
+    return text if len(text) <= max_len else text[:max_len].rstrip() + '...'
+
+
+def _event_focus_label(event):
+    if event.get('company_name'):
+        return event['company_name']
+    for company in event.get('companies') or []:
+        if company:
+            return company
+    topic = event.get('trend_topic') or event.get('front_trend_topic') or ''
+    if topic:
+        return _short_label(topic)
+    return _short_label(_event_title(event))
+
+
+def _daily_brief_title(events):
+    events = list(events or [])
+    labels = []
+    for event in events:
+        label = _event_focus_label(event)
+        if label and label not in labels:
+            labels.append(label)
+        if len(labels) >= 3:
+            break
+    if len(labels) >= 3:
+        return f"今日优先看{'、'.join(labels)}等对象"
+    if len(labels) == 2:
+        return f"今日优先看{'、'.join(labels)}"
+    if len(labels) == 1:
+        return f"今日优先看{labels[0]}的新动作"
+    return '今日观察主线'
+
+
+def _daily_brief_judgment(events):
+    events = list(events or [])
+    if not events:
+        return '今日暂无可进入主视图的高置信事件，先保留观察。'
+    regions = []
+    types = []
+    for event in events:
+        region = event.get('region') or ''
+        if region and region not in regions:
+            regions.append(region)
+        event_types = event.get('event_types') or []
+        event_type = event_types[0] if event_types else ''
+        if event_type and event_type not in types:
+            types.append(event_type)
+    parts = [f"今日新增{len(events)}条可读事件"]
+    if regions:
+        parts.append(f"覆盖{'、'.join(regions[:3])}")
+    if types:
+        type_labels = {'funding': '融资', 'ma': '并购', 'earnings': '财报', 'strategy': '战略'}
+        parts.append(f"重点类型为{'、'.join(type_labels.get(t, t) for t in types[:3])}")
+    return '，'.join(parts) + '；日报先看对象和证据，周报再收敛窗口和方向。'
+
+
 def _confidence(clusters, evidence_coverage):
     atoms = build_evidence_atoms(_unique_evidence_events(clusters))
     if clusters and not can_promote_to_narrative(atoms):
@@ -163,7 +225,7 @@ def _confidence(clusters, evidence_coverage):
 
 def _title(region, theme, clusters):
     if not clusters:
-        return '今日要点'
+        return '今日观察主线'
     if len(clusters) == 1:
         return clusters[0].get('title') or '今日关注窗口'
     if region and theme:
@@ -173,11 +235,11 @@ def _title(region, theme, clusters):
     return '今日关注窗口出现连续信号'
 
 
-def _judgment(title, clusters, evidence_count, downgraded):
+def _judgment(title, clusters, evidence_count, downgraded, fallback_events=None):
     if not clusters:
-        return '今日尚未形成稳定关注窗口，先查看已入库事件和需复核线索。'
+        return _daily_brief_judgment(fallback_events)
     if downgraded:
-        return '今日独立证据密度不足，尚未形成稳定关注窗口，先按要点跟踪。'
+        return _daily_brief_judgment(fallback_events)
     return f'{title}，由{len(clusters)}个关注窗口和{evidence_count}条证据事件支撑。'
 
 
@@ -202,14 +264,15 @@ def build_narrative(clusters, fallback_events=None, limit_clusters=3):
     confidence = _confidence(clusters, evidence_coverage)
     promoted = can_promote_to_narrative(evidence_atoms)
     downgraded = bool(clusters) and (evidence_coverage < 0.5 or not promoted)
-    title = '今日要点' if downgraded else _title(region, theme, clusters)
+    brief_events = list(fallback_events or evidence_events or [])
+    title = _daily_brief_title(brief_events) if (downgraded or not clusters) else _title(region, theme, clusters)
     display_clusters = [] if downgraded else clusters
 
-    if not clusters and fallback_events:
+    if (not clusters or downgraded) and brief_events:
         fallback_evidence = []
         fallback_evidence_events = []
         seen = set()
-        for event in fallback_events[:5]:
+        for event in brief_events[:5]:
             key = _event_key(event)
             if not key or key in seen:
                 continue
@@ -230,7 +293,7 @@ def build_narrative(clusters, fallback_events=None, limit_clusters=3):
         'theme': theme,
         'region': region,
         'companies': _all_companies(display_clusters),
-        'judgment': _judgment(title, clusters, len(evidence), downgraded),
+        'judgment': _judgment(title, clusters, len(evidence), downgraded, brief_events),
         'clusters': display_clusters,
         'evidence': evidence,
         'evidence_events': evidence_events,
