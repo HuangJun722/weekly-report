@@ -81,10 +81,39 @@ def test_company_quality_has_own_threshold():
     assert is_company_quality_signal(event)
 
 
+def test_out_of_scope_healthcare_does_not_enter_main_or_rss_value():
+    event = base_event(
+        title='Tavo Biotherapeutics secures $17M for ophthalmology therapies',
+        reason='眼科疗法和生物制药研发获融资',
+        impact='医疗器械供应商、临床试验服务商',
+        summary_short='Tavo Biotherapeutics获$17M融资开发眼科疗法',
+        score=8,
+    )
+    assert classify_bd_priority(event) == '高'
+    assert not is_high_value_event(event)
+    assert not should_show_in_main_list(event)
+    assert not should_show_in_review(event)
+
+
+def test_defense_tech_does_not_enter_main_even_when_large():
+    event = base_event(
+        title='Defense tech startup raises $500M for military drones',
+        reason='国防科技和军工AI融资',
+        impact='军工供应链企业',
+        summary_short='国防科技公司获$500M融资',
+        score=9,
+    )
+    assert not is_high_value_event(event)
+    assert not should_show_in_main_list(event)
+    assert not should_show_in_review(event)
+
+
 if __name__ == '__main__':
     test_low_score_signal_is_not_high()
     test_google_news_company_low_signal_stays_out()
     test_google_news_real_org_action_can_enter_review_not_main()
     test_non_google_strong_signal_is_high_value()
     test_company_quality_has_own_threshold()
+    test_out_of_scope_healthcare_does_not_enter_main_or_rss_value()
+    test_defense_tech_does_not_enter_main_even_when_large()
     print('event_value tests passed')

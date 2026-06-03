@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-06-03",
+    "version": "V2.1",
+    "type": "产品边界",
+    "status": "已上线",
+    "title": "新增互联网相关度与独立证据闸门",
+    "summary": "把首页、RSS 和关注窗口从广义科技收紧到全球互联网产业情报，并防止同质事件硬撑趋势判断。",
+    "changes": [
+      "新增 internet_relevance.py，将本站身份边界拆成 core_internet、adjacent_internet、edge_observation、out_of_scope",
+      "首页、RSS、公司优质统计和关注窗口默认要求 internet_relevance >= 2",
+      "军工、纯医疗器械、生物制药、医疗基金等不再进入主展示；医疗 SaaS、EHR、AI notetaker、云与 AI 基础设施保留",
+      "新增 evidence_atoms.py，将同来源、同地区、同动作、同主题的相似事件压成独立证据块",
+      "Narrative 独立证据不足时降级为今日要点，不再展示硬凑关注窗口"
+    ]
+  },
+  {
+    "date": "2026-06-03",
     "version": "V2.0",
     "type": "叙事层",
     "status": "已上线",

@@ -178,9 +178,7 @@ def _is_hot_industry(title_lower, reason_lower=''):
     combined = (title_lower + ' ' + reason_lower).lower()
     hot = {
         r'\bai\b', r'\bml\b', r'\bllm\b', r'\bgpt\b',
-        r'\bfintech\b', r'\bfintech\b', r'\bhealth ?tech\b',
-        r'\bbiotech\b', r'\bhealth ?tech\b',
-        r'\bagritech\b', r'\bagri ?tech\b',
+        r'\bfintech\b', r'\bfintech\b',
         r'\brobot\b', r'\bclimate ?tech\b',
         r'\bchips?\b', r'\bchipset\b',
     }

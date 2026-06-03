@@ -5,6 +5,11 @@ future period reports from composing separate summaries, windows, and evidence
 lists that do not prove each other.
 """
 
+try:
+    from evidence_atoms import build_evidence_atoms, can_promote_to_narrative, evidence_independence
+except ImportError:
+    from scripts.evidence_atoms import build_evidence_atoms, can_promote_to_narrative, evidence_independence
+
 
 def _event_key(event):
     if not event:
@@ -145,6 +150,9 @@ def _all_companies(clusters):
 
 
 def _confidence(clusters, evidence_coverage):
+    atoms = build_evidence_atoms(_unique_evidence_events(clusters))
+    if clusters and not can_promote_to_narrative(atoms):
+        return '观察'
     high = sum(1 for cluster in clusters if cluster.get('confidence') == '高')
     if len(clusters) >= 2 and high >= 1 and evidence_coverage >= 0.75:
         return '高'
@@ -169,7 +177,7 @@ def _judgment(title, clusters, evidence_count, downgraded):
     if not clusters:
         return '今日尚未形成稳定关注窗口，先查看已入库事件和需复核线索。'
     if downgraded:
-        return f'{title}，但证据覆盖仍需继续观察，今日先按要点跟踪。'
+        return '今日独立证据密度不足，尚未形成稳定关注窗口，先按要点跟踪。'
     return f'{title}，由{len(clusters)}个关注窗口和{evidence_count}条证据事件支撑。'
 
 
@@ -187,11 +195,15 @@ def build_narrative(clusters, fallback_events=None, limit_clusters=3):
     evidence = _unique_evidence(clusters)
     evidence_events = _unique_evidence_events(clusters)
     evidence_coverage = _coverage(clusters, evidence)
+    evidence_atoms = build_evidence_atoms(evidence_events)
+    independence = evidence_independence(evidence_atoms)
     region = _dominant_region(clusters)
     theme = _dominant_theme(clusters)
     confidence = _confidence(clusters, evidence_coverage)
-    downgraded = bool(clusters) and evidence_coverage < 0.5
-    title = _title(region, theme, clusters)
+    promoted = can_promote_to_narrative(evidence_atoms)
+    downgraded = bool(clusters) and (evidence_coverage < 0.5 or not promoted)
+    title = '今日要点' if downgraded else _title(region, theme, clusters)
+    display_clusters = [] if downgraded else clusters
 
     if not clusters and fallback_events:
         fallback_evidence = []
@@ -217,9 +229,9 @@ def build_narrative(clusters, fallback_events=None, limit_clusters=3):
         'title': title,
         'theme': theme,
         'region': region,
-        'companies': _all_companies(clusters),
+        'companies': _all_companies(display_clusters),
         'judgment': _judgment(title, clusters, len(evidence), downgraded),
-        'clusters': clusters,
+        'clusters': display_clusters,
         'evidence': evidence,
         'evidence_events': evidence_events,
         'recommended_action': _recommended_action(clusters),
@@ -229,5 +241,7 @@ def build_narrative(clusters, fallback_events=None, limit_clusters=3):
             'region_match': 1.0 if region and all((c.get('region') or '') == region for c in clusters) else 0.0,
             'company_match': 1.0,
             'evidence_coverage': round(evidence_coverage, 2),
+            'evidence_atoms': independence,
+            'promoted': promoted,
         },
     }

@@ -65,8 +65,35 @@ def test_google_only_cluster_requires_more_evidence():
     assert clusters == []
 
 
+def test_out_of_scope_healthcare_does_not_form_cluster():
+    events = [
+        event(
+            title='Tavo Biotherapeutics secures $17M for ophthalmology therapies',
+            summary_short='Tavo Biotherapeutics获$17M融资开发眼科疗法',
+            reason='眼科疗法和生物制药研发获融资',
+            impact='医疗器械供应商、临床试验服务商',
+            trend_topic='非洲医疗科技融资',
+            company_name='Tavo Biotherapeutics',
+            companies=['Tavo Biotherapeutics'],
+            url='https://example.com/health-a',
+        ),
+        event(
+            title='Secretome Therapeutics raises funding for cardiac therapy',
+            summary_short='Secretome获融资用于心脏细胞治疗',
+            reason='心脏细胞疗法和生物制药融资',
+            impact='医疗技术供应商',
+            trend_topic='非洲医疗科技融资',
+            company_name='Secretome Therapeutics',
+            companies=['Secretome Therapeutics'],
+            url='https://example.com/health-b',
+        ),
+    ]
+    assert build_signal_clusters(events, '2026-06-01') == []
+
+
 if __name__ == '__main__':
     test_builds_signal_cluster_from_repeated_regional_signals()
     test_single_event_is_not_promoted_to_cluster()
     test_google_only_cluster_requires_more_evidence()
+    test_out_of_scope_healthcare_does_not_form_cluster()
     print('signal cluster tests passed')

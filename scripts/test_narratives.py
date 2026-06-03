@@ -34,9 +34,25 @@ def cluster(**overrides):
                 'url': 'https://example.com/a',
                 'date': '2026-06-01',
                 'source': 'The National',
+                'source_tier': 'L2 垂直交易源',
                 'region': '中东',
+                'company_name': 'Careem',
+                'event_types': ['ma'],
+                'trend_topic': '中东出行平台整合',
                 'reason': '中东出行平台整合',
-            }
+            },
+            {
+                'display_title': 'Careem开放支付合作',
+                'url': 'https://example.com/b',
+                'date': '2026-06-02',
+                'source': 'Careem Press',
+                'source_tier': 'L1 官方/IR源',
+                'region': '中东',
+                'company_name': 'Careem',
+                'event_types': ['partnership'],
+                'trend_topic': '中东出行平台整合',
+                'reason': '中东出行生态出现官方合作信号',
+            },
         ],
     }
     base.update(overrides)
@@ -59,6 +75,38 @@ def test_dedupes_clusters_with_same_company():
         cluster(title='Careem生态开放窗口', cluster_type='partnership', type_label='生态合作窗口'),
     ])
     assert len(narrative['clusters']) == 1
+
+
+def test_downgrades_when_evidence_is_not_independent():
+    narrative = build_narrative([
+        cluster(evidence_events=[
+            {
+                'display_title': '非洲医疗科技公司A融资',
+                'url': 'https://example.com/health-a',
+                'date': '2026-06-01',
+                'source': 'Ventureburn',
+                'source_tier': 'L2 垂直交易源',
+                'region': '非洲',
+                'company_name': 'HealthA',
+                'event_types': ['funding'],
+                'trend_topic': '非洲医疗科技融资',
+            },
+            {
+                'display_title': '非洲医疗科技公司B融资',
+                'url': 'https://example.com/health-b',
+                'date': '2026-06-01',
+                'source': 'Ventureburn',
+                'source_tier': 'L2 垂直交易源',
+                'region': '非洲',
+                'company_name': 'HealthB',
+                'event_types': ['funding'],
+                'trend_topic': '非洲医疗科技融资',
+            },
+        ])
+    ])
+    assert narrative['mode'] == 'daily_brief'
+    assert narrative['clusters'] == []
+    assert not narrative['consistency']['promoted']
 
 
 def test_keeps_narrative_clusters_coherent():
@@ -111,6 +159,7 @@ def test_falls_back_to_daily_brief_without_clusters():
 if __name__ == '__main__':
     test_narrative_binds_judgment_clusters_and_evidence()
     test_dedupes_clusters_with_same_company()
+    test_downgrades_when_evidence_is_not_independent()
     test_keeps_narrative_clusters_coherent()
     test_falls_back_to_daily_brief_without_clusters()
     print('narrative tests passed')

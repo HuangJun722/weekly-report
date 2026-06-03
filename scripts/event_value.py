@@ -14,6 +14,17 @@ GOOGLE_NEWS_LOW_SIGNAL_TERMS = {
     'promotion', 'rewards', 'contest', 'profile', 'interview',
 }
 
+try:
+    from internet_relevance import (
+        internet_relevance_score,
+        is_mainline_internet_event,
+    )
+except ImportError:
+    from scripts.internet_relevance import (
+        internet_relevance_score,
+        is_mainline_internet_event,
+    )
+
 
 def event_type(event):
     types = event.get('event_types') or ['other']
@@ -110,6 +121,7 @@ def follow_up_window_for_priority(priority):
 def is_high_value_event(event):
     return (
         classify_bd_priority(event) == '高'
+        and is_mainline_internet_event(event)
         and not needs_quality_review(event)
         and event_type(event) in STRONG_EVENT_TYPES
     )
@@ -117,6 +129,8 @@ def is_high_value_event(event):
 
 def is_company_quality_signal(event):
     if not event.get('is_company'):
+        return False
+    if not is_mainline_internet_event(event):
         return False
     if event_type(event) == 'other':
         return False
@@ -130,6 +144,8 @@ def is_company_quality_signal(event):
 
 
 def should_show_in_main_list(event):
+    if not is_mainline_internet_event(event):
+        return False
     if needs_quality_review(event):
         return False
     if is_high_value_event(event):
@@ -143,6 +159,8 @@ def should_show_in_main_list(event):
 
 def should_show_in_review(event):
     if should_show_in_main_list(event):
+        return False
+    if internet_relevance_score(event) < 2:
         return False
     ev_type = event_type(event)
     s = event_score(event)

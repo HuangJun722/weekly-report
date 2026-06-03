@@ -16,6 +16,7 @@ try:
         is_google_news_event,
         needs_quality_review,
     )
+    from internet_relevance import is_mainline_internet_event
 except ImportError:
     from scripts.event_value import (
         classify_bd_priority,
@@ -24,6 +25,7 @@ except ImportError:
         is_google_news_event,
         needs_quality_review,
     )
+    from scripts.internet_relevance import is_mainline_internet_event
 
 
 CLUSTER_TYPE_LABELS = {
@@ -322,6 +324,7 @@ def build_signal_clusters(events, focus_date, days=7, limit=3):
         if _event_date(event) in selected_dates
         and event_type(event) != 'other'
         and not needs_quality_review(event)
+        and is_mainline_internet_event(event)
     ]
 
     grouped = defaultdict(list)
