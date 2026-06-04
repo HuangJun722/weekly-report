@@ -1577,6 +1577,7 @@ def group_company_cards(company_list):
 def load_site_updates():
     """读取网站更新日志。"""
     path = os.path.join('data', 'site_updates.json')
+    cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
     fallback = [{
         'date': _cn_today(),
         'version': 'V0.1',
@@ -1600,8 +1601,11 @@ def load_site_updates():
         if not isinstance(item, dict):
             continue
         changes = item.get('changes') if isinstance(item.get('changes'), list) else []
+        date_value = item.get('date') or ''
+        if date_value and date_value < cutoff:
+            continue
         cleaned.append({
-            'date': item.get('date') or '',
+            'date': date_value,
             'version': item.get('version') or '',
             'type': item.get('type') or '更新',
             'status': item.get('status') or '已记录',
@@ -1609,7 +1613,7 @@ def load_site_updates():
             'summary': item.get('summary') or '',
             'changes': [str(c) for c in changes if str(c).strip()],
         })
-    return sorted(cleaned or fallback, key=lambda x: x.get('date', ''), reverse=True)[:10]
+    return sorted(cleaned or fallback, key=lambda x: x.get('date', ''), reverse=True)
 
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
@@ -1794,6 +1798,7 @@ def generate_html(force=False, preview_mode=False):
 
     # 全部事件按日期分组
     date_grouped_events = group_events_by_date(all_events_for_list)
+    date_event_counts = {group['date']: len(group['events']) for group in date_grouped_events}
 
     # 预计算各日期面板数据（供 JS 翻页切换）
     date_panels = {}
@@ -1813,6 +1818,7 @@ def generate_html(force=False, preview_mode=False):
             raw_day_evs,
             cluster_events=all_events_for_list,
         )
+        date_panels[d]['event_list_count'] = date_event_counts.get(d, len(raw_day_evs))
     date_panels_json = json.dumps(date_panels, ensure_ascii=False)
     weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date)
     monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date)
@@ -1850,6 +1856,7 @@ def generate_html(force=False, preview_mode=False):
         vol_label=vol_label,
         cn_date=cn_date,
         date_panels=date_panels,
+        date_event_counts=date_event_counts,
         date_panels_json=date_panels_json,
         available_dates_json=json.dumps(available_dates),
         available_dates=available_dates,

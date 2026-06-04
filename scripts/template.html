@@ -436,7 +436,7 @@ button, input, select { font: inherit; }
 
           <section class="content-block">
             <div class="block-head">
-              <h2>今日证据</h2>
+              <h2>重要的事件</h2>
               <span>当天对象和事实事件，周报再收敛窗口和方向</span>
             </div>
             <div class="intelligence-list">
@@ -504,7 +504,7 @@ button, input, select { font: inherit; }
             <h2 class="rail-title">历史导航</h2>
             <div class="history-list">
               {% for d in available_dates[:5] %}
-              <button class="date-row{% if d == main_date %} active{% endif %}" onclick="navigateToDate('{{ d }}')"><span>{{ d }}</span><span>{{ date_panels[d].total_stories }} 条</span></button>
+              <button class="date-row{% if d == main_date %} active{% endif %}" onclick="navigateToDate('{{ d }}')"><span>{{ d }}</span><span>{{ date_event_counts.get(d, date_panels[d].event_list_count) }} 条</span></button>
               {% endfor %}
               <button class="date-row" onclick="switchTab('all')"><span>90 天历史</span><span>{{ history|length }} 天</span></button>
             </div>
@@ -739,7 +739,7 @@ button, input, select { font: inherit; }
       </section>
       <div class="ops-layout">
         <section class="content-block">
-          <div class="block-head"><h2>最近更新</h2><span>{{ site_updates|length }} 条记录</span></div>
+          <div class="block-head"><h2>90 天更新日志</h2><span>{{ site_updates|length }} 条记录，默认折叠</span></div>
           <div class="history-list">
             {% for update in site_updates %}
             <article class="history-card">
@@ -748,7 +748,7 @@ button, input, select { font: inherit; }
                   <h3>{{ update.title }}</h3>
                   <small>{{ update.date }} · {{ update.type }} · {{ update.status }}</small>
                 </span>
-                <span class="release-badge"><strong class="release-version">{{ update.version }}</strong> <span class="toggle-icon">›</span></span>
+                <span>{{ update.version }} <span class="toggle-icon">›</span></span>
               </button>
               <div class="history-body">
                 <div class="label-row">
