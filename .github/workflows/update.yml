@@ -6,9 +6,11 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  # 每天 18:00 UTC (= 次日 02:00 北京时间) 自动运行
+  # 每天两次采集：02:00 北京时间早采，09:00 北京时间补采
+  # 注意：workflow 运行时间只代表采集时点，页面展示仍按事件日期和成熟批次计算。
   schedule:
     - cron: '0 18 * * *'
+    - cron: '0 1 * * *'
   # 模板/脚本/workflow 变更时自动运行
   push:
     branches: [main]

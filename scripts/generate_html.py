@@ -849,6 +849,51 @@ def keep_focus_date_clusters(clusters, limit=3):
     return [cluster for cluster in clusters or [] if cluster.get('has_focus_date')][:limit]
 
 
+DAILY_EVENT_GROUPS = [
+    ('selected', '精选', '最先看，强信号、强相关、可直接进入判断'),
+    ('important', '重点', '值得继续跟，有明确对象或方向'),
+    ('watch', '观察', '保留事实，用于背景留档和后续跟踪'),
+]
+
+
+def _daily_event_group_key(event):
+    priority = classify_bd_priority(event)
+    if priority == '高':
+        return 'selected'
+    if priority == '中':
+        return 'important'
+    return 'watch'
+
+
+def build_daily_event_groups(events):
+    """Group qualified daily events without weakening the main-list gate."""
+    grouped = {key: [] for key, _, _ in DAILY_EVENT_GROUPS}
+    for event in events:
+        grouped[_daily_event_group_key(event)].append(event)
+    return [
+        {
+            'key': key,
+            'label': label,
+            'description': description,
+            'events': grouped[key],
+        }
+        for key, label, description in DAILY_EVENT_GROUPS
+        if grouped[key]
+    ]
+
+
+def build_daily_navigation_copy(groups):
+    """Build plain daily copy for the event-navigation layer."""
+    total = sum(len(group['events']) for group in groups)
+    if total <= 0:
+        return '今日事件导航', '当前没有通过本站边界和信源筛选的日报事件。'
+    counts = '，'.join(f"{group['label']} {len(group['events'])} 条" for group in groups)
+    return (
+        f"今日事件导航：{total} 条合格事件",
+        f"{counts}。信源筛选和产品边界仍是准入门槛，分层只负责帮你决定先看什么。",
+    )
+
+
 def build_date_panel(date_str, day_events, all_events, raw_day_events=None, cluster_events=None):
     """预计算某日期的今日面板数据（趋势分组 + 判断 + 统计），供 JS 翻页切换"""
     signals = get_signal_events(all_events)
@@ -859,19 +904,22 @@ def build_date_panel(date_str, day_events, all_events, raw_day_events=None, clus
         build_signal_clusters(cluster_events or all_events, date_str, limit=12)
     )
     narrative = build_narrative(signal_clusters, fallback_events=day_events)
+    daily_event_groups = build_daily_event_groups(day_events)
+    daily_headline, daily_judgment = build_daily_navigation_copy(daily_event_groups)
 
     dt = datetime.strptime(date_str, '%Y-%m-%d')
     return {
         'trend_groups': trend_groups,
         'repair_events': repair_events,
-        'judgment': narrative.get('judgment') or weekly.get('summary', ''),
+        'judgment': daily_judgment,
         'top3': weekly.get('top3', []),
         'signal_clusters': strip_cluster_event_payloads(narrative.get('clusters', [])),
         'evidence_events': narrative.get('evidence_events', []),
+        'daily_event_groups': daily_event_groups,
         'total_stories': len(day_events),
         'vol_label': f"VOL.{date_str}",
         'cn_date': f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}",
-        'headline': narrative.get('title') or weekly.get('headline', ''),
+        'headline': daily_headline,
         'funding': weekly.get('funding', 0),
         'ma': weekly.get('ma', 0),
         'earnings': weekly.get('earnings', 0),
@@ -1788,8 +1836,8 @@ def generate_html(force=False, preview_mode=False):
     narrative = build_narrative(signal_clusters, fallback_events=today_events)
     signal_clusters = strip_cluster_event_payloads(narrative.get('clusters', []))
     evidence_events = narrative.get('evidence_events') or today_events[:5]
-    daily_headline = narrative.get('title') or weekly.get('headline', '今日非中美互联网动态更新')
-    daily_lead = narrative.get('judgment') or weekly.get('summary', '')
+    daily_event_groups = build_daily_event_groups(today_events)
+    daily_headline, daily_lead = build_daily_navigation_copy(daily_event_groups)
     daily_trend_judgment = daily_lead
     total_stories = len(today_events)
     dt = datetime.strptime(main_date, '%Y-%m-%d')
@@ -1851,6 +1899,7 @@ def generate_html(force=False, preview_mode=False):
         daily_trend_signals=daily_trend_signals,
         signal_clusters=signal_clusters,
         evidence_events=evidence_events,
+        daily_event_groups=daily_event_groups,
         narrative=narrative,
         total_stories=total_stories,
         vol_label=vol_label,

@@ -20,10 +20,10 @@ body:
     attributes:
       label: 优先级
       options:
-        - P2 常规
-        - P1 重要
-        - P0 阻塞
-        - P3 观察
+        - 常规
+        - 重要
+        - 阻塞
+        - 观察
     validations:
       required: true
   - type: textarea

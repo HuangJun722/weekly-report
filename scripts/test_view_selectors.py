@@ -5,6 +5,7 @@ from view_selectors import (
     select_mature_main_date,
     select_review_events,
 )
+from generate_html import build_daily_event_groups
 
 
 def base_event(**overrides):
@@ -146,6 +147,19 @@ def test_review_selector_keeps_real_google_org_action_out_of_main():
     assert select_review_events([event]) == [event]
 
 
+def test_daily_event_groups_keep_all_homepage_events_visible():
+    selected = base_event(score=7, url='https://example.com/selected')
+    important = base_event(score=4, url='https://example.com/important', event_types=['strategy'])
+    watch = base_event(score=2, url='https://example.com/watch')
+    homepage_events = select_homepage_events([selected, important, watch], '2026-05-31')
+    groups = build_daily_event_groups(homepage_events)
+
+    grouped_total = sum(len(group['events']) for group in groups)
+    counts = {group['label']: len(group['events']) for group in groups}
+    assert grouped_total == len(homepage_events)
+    assert counts == {'精选': 1, '重点': 1, '观察': 1}
+
+
 if __name__ == '__main__':
     test_homepage_selector_allows_low_score_non_google_signal()
     test_feed_selector_falls_back_to_latest_high_value_date()
@@ -154,4 +168,5 @@ if __name__ == '__main__':
     test_mature_date_selector_skips_thin_latest_batch()
     test_mature_date_selector_counts_main_list_only()
     test_review_selector_keeps_real_google_org_action_out_of_main()
+    test_daily_event_groups_keep_all_homepage_events_visible()
     print('view selector tests passed')
