@@ -35308,6 +35308,137 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Nvidia's Jensen Huang has Korean BBQ with SK, Naver and LG chiefs - Myanmar International TV",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQnNlSXFNOGJyb3djVkNRY0dyTTdRQ1oxVXB1dHlhcDlGV1VrV3QzNFhhQVJDLUdVdGNMek9YaEF6dVBLZnczNjA1VnVpaFl5ek1PZnZGZ2xWeGhJOFV3NUNlb09JanFzbUlmNG5xN2JMVWg3RklCaGdlTEN0VDZHa01LTVBtZ2Uyd3REbEdSazRHeFlF?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Nvidia's Jensen Huang has",
+      "reason": "亚太Nvidia CEO与SK、Naver、LG高管共进韩式烧烤",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-06",
+      "date": "2026-06-06",
+      "source_detail": "Myanmar International TV",
+      "publisher": "Myanmar International TV",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Swiss startup GR3N raises €15.5M to build the world’s first microwave-powered PET recycling plant",
+      "url": "https://thenextweb.com/news/gr3n-pet-recycling-series-b-microwave",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "GR3N获€15.5M B轮，建全球首座微波PET回收厂",
+      "reason": "欧洲化学回收技术获资本支持，环保科技领域出现新的工业自动化与设备采购机会",
+      "impact": "工业自动化设备商、化工回收技术合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲绿色科技投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-06",
+      "date": "2026-06-06",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/06/gr3n-pet-recycling-series-b-microwave.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "[Update] Nazara Raises ₹474 Cr Via Preferential Issue",
+      "url": "https://inc42.com/buzz/nazara-to-raise-%e2%82%b9500-cr-via-preferential-issue/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Nazara通过优先发行融资4.74亿卢比",
+      "reason": "印度游戏科技公司持续融资，亚太游戏和电竞市场资本活跃，吸引内容和技术合作",
+      "impact": "印度游戏开发商、电竞平台",
+      "insight_label": "资金流向",
+      "trend_topic": "印度游戏科技融资热",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-06",
+      "date": "2026-06-06",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/02/Nazara_.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [
+        "generic_reason"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "partial"
     }
-  ]
+  ],
+  "2026-06-07": []
 }
