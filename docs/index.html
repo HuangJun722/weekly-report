@@ -7445,8 +7445,30 @@ button, input, select { font: inherit; }
       </section>
       <div class="ops-layout">
         <section class="content-block">
-          <div class="block-head"><h2>90 天更新日志</h2><span>26 条记录，默认折叠</span></div>
+          <div class="block-head"><h2>90 天更新日志</h2><span>27 条记录，默认折叠</span></div>
           <div class="history-list">
+
+            <article class="history-card">
+              <button class="history-head release-head" onclick="toggleDate(this)">
+                <span class="release-copy">
+                  <h3>新增信源转化和对象池治理</h3>
+                  <small>2026-06-08 · 治理工具 · 已上线</small>
+                </span>
+                <span>V2.7 <span class="toggle-icon">›</span></span>
+              </button>
+              <div class="history-body">
+                <div class="label-row">
+                  <span class="label green">治理工具</span>
+                  <span class="label">已上线</span>
+                </div>
+                <p>把信源是否工作、为什么没进首页，以及重点对象观察点是否接入，变成可统计的治理报表。</p>
+
+                <ul class="release-list">
+                  <li>新增 source_conversion_report.py，统计 raw、signal、入库、首页、复核和过滤原因</li><li>新增 entity_pool.json，建立首批重点对象及 newsroom/IR、jobs、changelog/product 观察点</li><li>新增 entity_signal_conversion_report.py，用现有事件统计对象覆盖和未接入观察点</li><li>check_data_health.py 增加信源转化摘要，方便日常巡检高 signal 低首页的来源</li>
+                </ul>
+
+              </div>
+            </article>
 
             <article class="history-card">
               <button class="history-head release-head" onclick="toggleDate(this)">

@@ -187,3 +187,45 @@
 - 近 7 天展示事件重复率是否异常。
 
 采集阶段指标写入 `data/run_metrics.json`，默认保留最近 30 次运行。`scripts/collection_timing_report.py` 可单独输出采集时点对比表；`scripts/check_data_health.py` 会同时打印最近 8 次。当前 workflow 未接入健康检查，仍需手动或后续确认后接入 CI。
+
+## 信源转化治理
+
+入口：`scripts/source_conversion_report.py`
+
+目标：把“这个源有没有干活”拆成可观察漏斗，而不是只看首页体感。
+
+当前字段：
+- `raw`：最近周期内原始抓取条目。
+- `signal`：采集阶段命中的候选信号。
+- `stored`：最终进入 `events.json` 的事件。
+- `main` / `review`：进入首页主列表或复核区的事件。
+- `out_of_scope`：入库后被本站产品边界排除。
+- `quality_review`：解释不完整、fallback、needs_repair 或 quality_flags。
+- `google_not_main`：Google News 补漏源未进入主列表。
+- `other_type` / `weak_signal`：类型或强度不足。
+- `lost_after_signal≈`：`signal - stored` 的近似损失，当前 run metrics 还没有逐条 drop reason，因此只能用于定位高 signal 低入库的源。
+
+用法：
+- 最近 7 天看近期异常：`python scripts/source_conversion_report.py --days 7`
+- 最近 15/30 天看长期有效性：`python scripts/source_conversion_report.py --days 30`
+- `check_data_health.py` 会输出轻量摘要和高 signal 低首页源，作为日常巡检入口。
+
+## 对象池与观察点治理
+
+入口：`data/entity_pool.json` / `scripts/entity_signal_conversion_report.py`
+
+目标：从 Source Pool 逐步转向 Entity Pool。对象池回答“我们长期观察谁”，观察点回答“从哪里看它的组织行为变化”。
+
+当前链路：
+
+```text
+Entity -> Observation Point -> Raw Signal -> Candidate Signal -> Qualified Signal -> Event -> Window
+```
+
+第一版原则：
+- 每个重点对象至少记录官方/IR、Jobs、Changelog/Developer/Product 三类观察点。
+- `active` 表示当前采集链路已有对应来源或公司监控；`candidate` 表示已进入治理池但尚未接入自动抓取。
+- `instrumented=false` 是刻意保守标记：目前大多数观察点还没有结构化 raw_signal 转化数据，不能假装已监控完整。
+- `entity_signal_conversion_report.py` 先用现有 `events.json` 统计对象覆盖、首页贡献、复核贡献和未接入观察点。
+
+后续接 jobs/changelog 时，必须把观察点也纳入转化监控，不能只把内容直接塞进事件库。

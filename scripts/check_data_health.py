@@ -13,12 +13,14 @@ try:
     from collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from generate_html import build_company_cards, build_display_context
     from run_metrics import latest_run_metrics
+    from source_conversion_report import build_source_conversion_report
     from source_quality_report import build_source_quality_report
     from view_selectors import select_feed_events, select_main_list_events, select_review_events
 except ImportError:
     from scripts.collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from scripts.generate_html import build_company_cards, build_display_context
     from scripts.run_metrics import latest_run_metrics
+    from scripts.source_conversion_report import build_source_conversion_report
     from scripts.source_quality_report import build_source_quality_report
     from scripts.view_selectors import select_feed_events, select_main_list_events, select_review_events
 
@@ -98,6 +100,7 @@ def build_health_report(days=7):
     run_metrics = latest_run_metrics()
     collection_timing = build_collection_timing_rows(limit=8)
     source_report = build_source_quality_report(days=days)
+    source_conversion = build_source_conversion_report(days=days)
 
     return {
         'main_date': main_date,
@@ -116,6 +119,7 @@ def build_health_report(days=7):
         'duplicate_items': duplicate_items,
         'daily': daily,
         'source_quality': source_report,
+        'source_conversion': source_conversion,
     }
 
 
@@ -171,6 +175,23 @@ def print_report(report):
         for row in source_rows[:8]:
             print(
                 "{source} | {stored_visible} | {main} | {high_value} | {rss} | {google}".format(**row)
+                .encode(sys.stdout.encoding or 'utf-8', errors='replace')
+                .decode(sys.stdout.encoding or 'utf-8')
+            )
+    conversion = report.get('source_conversion') or {}
+    conversion_totals = conversion.get('totals') or {}
+    if conversion_totals:
+        print(
+            "source conversion | raw={raw} signal={signal} stored={stored} main={main} "
+            "review={review} out_of_scope={out_of_scope} quality_review={quality_review} "
+            "lost_after_signal≈{lost_after_signal}".format(**conversion_totals)
+        )
+    high_signal_low_main = (conversion.get('high_signal_low_main') or [])[:5]
+    if high_signal_low_main:
+        print("source conversion watch | source | signal | stored | main | lost_after_signal≈")
+        for row in high_signal_low_main:
+            print(
+                "{source} | {signal} | {stored} | {main} | {lost_after_signal}".format(**row)
                 .encode(sys.stdout.encoding or 'utf-8', errors='replace')
                 .decode(sys.stdout.encoding or 'utf-8')
             )

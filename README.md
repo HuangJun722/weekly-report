@@ -113,6 +113,10 @@ python scripts/generate_html.py --force
 
 信源处理库维护在 `data/source_registry.json`。新增自动采集源前，先在处理库记录赛道、信号类型、质量层级、抓取方式和晋级判断；候选源样本稳定后再进入脚本配置。
 
+信源转化用 `scripts/source_conversion_report.py` 观察：原始抓取、信号命中、入库、首页展示、复核、边界外、质量复核、Google News 未进主列表等原因。它和 `source_health_report.py` 的区别是：前者看“转化漏斗”，后者看“生命周期健康”。
+
+重点对象池维护在 `data/entity_pool.json`。对象池不是媒体列表，而是 Grab、Shopee、MercadoLibre、Stripe 等长期观察对象及其 newsroom/IR、jobs、changelog/developer docs/product update 观察点。`scripts/entity_signal_conversion_report.py` 用现有事件先统计对象覆盖、首页贡献和未接入观察点；后续接入 jobs/changelog 时继续沿用同一套转化口径。
+
 ### HTML 备用采集
 
 | 信源 | 覆盖区域 | 说明 |
@@ -140,10 +144,14 @@ weekly-report/
 ├── .github/
 │   └── workflows/update.yml      # 自动更新工作流（北京时间 02:00 / 09:00）
 ├── data/
-│   └── events.json               # 事件数据（保留近 90 天）
+│   ├── events.json               # 事件数据（保留近 90 天）
+│   ├── source_registry.json      # 信源注册中心
+│   └── entity_pool.json          # 重点对象池与观察点
 ├── scripts/
 │   ├── fetch_news.py             # 爬取 + AI 分析
 │   ├── generate_html.py          # 生成 HTML
+│   ├── source_conversion_report.py # 信源转化漏斗
+│   ├── entity_signal_conversion_report.py # 对象/观察点转化治理
 │   ├── template.html             # HTML 模板（设计 SSOT）
 │   ├── decrypt_key.py            # API Key 解密（PBKDF2 + Fernet）
 │   └── DESIGN_WORKFLOW.md        # 设计变更流程
