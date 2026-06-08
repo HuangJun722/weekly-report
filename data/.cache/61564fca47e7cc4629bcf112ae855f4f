@@ -12,7 +12,7 @@
 	<atom:link href="https://techcrunch.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcrunch.com/</link>
 	<description>Startup and Technology News</description>
-	<lastBuildDate>Mon, 08 Jun 2026 13:57:08 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 08 Jun 2026 20:03:51 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,171 +28,375 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Eventbrite and Vimeo owner Bending Spoons files to go public</title>
-		<link>https://techcrunch.com/2026/06/08/eventbrite-and-vimeo-owner-bending-spoons-files-to-go-public/</link>
-		
-		<dc:creator><![CDATA[Ivan Mehta]]></dc:creator>
-		<pubDate>Mon, 08 Jun 2026 13:57:00 +0000</pubDate>
-				<category><![CDATA[Apps]]></category>
-		<category><![CDATA[Bending Spoons]]></category>
-		<category><![CDATA[IPO]]></category>
-		<category><![CDATA[Vimeo]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130357</guid>
-
-					<description><![CDATA[Bending Spoons say its app caters to a user base of over 500 million monthly active users.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Massachusetts votes to pass new privacy rights bill that bans sale of precise location data</title>
-		<link>https://techcrunch.com/2026/06/08/massachusetts-votes-to-pass-new-privacy-rights-bill-that-bans-sale-of-precise-location-data/</link>
+		<title>Microsoft&#8217;s open source tools were hacked to steal passwords of AI developers</title>
+		<link>https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/</link>
 		
 		<dc:creator><![CDATA[Zack Whittaker]]></dc:creator>
-		<pubDate>Mon, 08 Jun 2026 13:26:03 +0000</pubDate>
-				<category><![CDATA[Privacy]]></category>
-		<category><![CDATA[Security]]></category>
-		<category><![CDATA[cybersecurity]]></category>
-		<category><![CDATA[location data]]></category>
-		<category><![CDATA[massachusetts]]></category>
-		<category><![CDATA[privacy]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130358</guid>
-
-					<description><![CDATA[The bill is expected to blanket ban companies and startups from selling people's precise location data across the state. ]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Uber, Wayve and Waymo are headed towards a robotaxi showdown in London</title>
-		<link>https://techcrunch.com/2026/06/08/uber-wayve-and-waymo-are-headed-towards-a-robotaxi-showdown-in-london/</link>
-		
-		<dc:creator><![CDATA[Kirsten Korosec]]></dc:creator>
-		<pubDate>Mon, 08 Jun 2026 11:00:00 +0000</pubDate>
-				<category><![CDATA[Transportation]]></category>
-		<category><![CDATA[London]]></category>
-		<category><![CDATA[Uber]]></category>
-		<category><![CDATA[autonomous vehicles]]></category>
-		<category><![CDATA[Waymo]]></category>
-		<category><![CDATA[wayve]]></category>
-		<category><![CDATA[robotaxis]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130291</guid>
-
-					<description><![CDATA[Uber customers in the UK can now join an interest list to increase their chances of being matched with a Wayve robotaxi.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Is this the dawn of the Tokenpocalypse?</title>
-		<link>https://techcrunch.com/2026/06/07/is-this-the-dawn-of-the-tokenpocalypse/</link>
-		
-		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
-		<pubDate>Sun, 07 Jun 2026 20:26:13 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[Anthropic]]></category>
-		<category><![CDATA[Equity podcast]]></category>
-		<category><![CDATA[Microsoft]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130284</guid>
-
-					<description><![CDATA[We're likely to see more price increases as the big AI companies plan to go public.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Notion restores access to Anthropic after service disruption</title>
-		<link>https://techcrunch.com/2026/06/07/notion-restores-access-to-anthropic-after-service-disruption/</link>
-		
-		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
-		<pubDate>Sun, 07 Jun 2026 17:56:22 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[Anthropic]]></category>
-		<category><![CDATA[Notion]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130281</guid>
-
-					<description><![CDATA[Notion's head of product said he was "astonished" at “the amount of people RT-ing this."]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>OpenAI is still working on that ‘super app’</title>
-		<link>https://techcrunch.com/2026/06/07/openai-is-still-working-on-that-super-app/</link>
-		
-		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
-		<pubDate>Sun, 07 Jun 2026 16:23:22 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[ChatGPT]]></category>
-		<category><![CDATA[OpenAI]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130278</guid>
-
-					<description><![CDATA["Chat is dead" — at least, according to a senior OpenAI employee.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>TechCrunch Mobility: Inside GM&#8217;s $900M EV battery gamble</title>
-		<link>https://techcrunch.com/2026/06/07/inside-gms-900m-ev-battery-gamble/</link>
-		
-		<dc:creator><![CDATA[Kirsten Korosec]]></dc:creator>
-		<pubDate>Sun, 07 Jun 2026 16:05:00 +0000</pubDate>
-				<category><![CDATA[Transportation]]></category>
-		<category><![CDATA[SpaceX]]></category>
-		<category><![CDATA[Tesla]]></category>
-		<category><![CDATA[Uber]]></category>
-		<category><![CDATA[Carvana]]></category>
-		<category><![CDATA[General Motors]]></category>
-		<category><![CDATA[Subaru Solterra]]></category>
-		<category><![CDATA[techcrunch mobility]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130243</guid>
-
-					<description><![CDATA[Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation. ]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Hacked, leaked, and held for ransom: the worst breaches of 2026 so far</title>
-		<link>https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/</link>
-		
-		<dc:creator><![CDATA[Zack Whittaker]]></dc:creator>
-		<pubDate>Sun, 07 Jun 2026 14:00:00 +0000</pubDate>
+		<pubDate>Mon, 08 Jun 2026 20:03:44 +0000</pubDate>
 				<category><![CDATA[Security]]></category>
-		<category><![CDATA[hacks]]></category>
+		<category><![CDATA[Claude]]></category>
 		<category><![CDATA[cybersecurity]]></category>
 		<category><![CDATA[data breach]]></category>
-		<category><![CDATA[cyberattack]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3129047</guid>
+		<category><![CDATA[gemini]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[open source]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130725</guid>
 
-					<description><![CDATA[From a massive DOGE data breach and the hacking of critical energy and water systems to the hack of an FBI surveillance system, here are the most damaging security incidents and data breaches of 2026.]]></description>
+					<description><![CDATA[Microsoft shut down dozens of GitHub code repositories for Azure and AI coding tools after a reported hack.]]></description>
 		
 		
 		
 			</item>
 		<item>
-		<title>OpenAI unveils Lockdown Mode to protect sensitive data from prompt injection attacks</title>
-		<link>https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/</link>
+		<title>WWDC 2026: Everything announced on Siri AI, iOS 27, Apple Intelligence and more</title>
+		<link>https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/</link>
 		
-		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
-		<pubDate>Sat, 06 Jun 2026 20:32:24 +0000</pubDate>
+		<dc:creator><![CDATA[Morgan Little, Aisha Malik]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 19:41:32 +0000</pubDate>
 				<category><![CDATA[AI]]></category>
-		<category><![CDATA[Security]]></category>
-		<category><![CDATA[OpenAI]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130273</guid>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[siri]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130429</guid>
 
-					<description><![CDATA[Even with Lockdown Mode, ChatGPT could be still vulnerable to prompt injections, but the goal is to reduce the likelihood that sensitive data gets shared in the process.]]></description>
+					<description><![CDATA[Apple&#8217;s WWDC 2026 event kicked off this morning at 10 a.m. PT at Apple Park, starting a week full of expected announcements around Siri, iOS 27, Apple Intelligence and more, along with developer events and demos. This year&#8217;s event is particularly notable for a couple things. It marks CEO Tim Cook&#8217;s last with the company, [&#8230;]]]></description>
 		
 		
 		
 			</item>
 		<item>
-		<title>What to expect from WWDC 2026: Siri&#8217;s highly anticipated revamp and Apple Intelligence updates</title>
-		<link>https://techcrunch.com/2026/06/06/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/</link>
+		<title>Pentagon says Alibaba, Baidu, BYD and Unitree support China&#8217;s military</title>
+		<link>https://techcrunch.com/2026/06/08/pentagon-says-alibaba-baidu-byd-and-unitree-support-chinas-military/</link>
+		
+		<dc:creator><![CDATA[Sean O'Kane]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:57:49 +0000</pubDate>
+				<category><![CDATA[Government & Policy]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[alibaba]]></category>
+		<category><![CDATA[Baidu]]></category>
+		<category><![CDATA[BYD]]></category>
+		<category><![CDATA[nio]]></category>
+		<category><![CDATA[Unitree]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130519</guid>
+
+					<description><![CDATA[The Trump administration released the updated version of the list four months ago and then quickly pulled it without explaining why]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple just taught your iPhone to finish your sentences, your photos, and your workflows</title>
+		<link>https://techcrunch.com/2026/06/08/apple-just-taught-your-iphone-to-finish-your-sentences-your-photos-and-your-workflows/</link>
+		
+		<dc:creator><![CDATA[Ivan Mehta]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:48:45 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Apple Intelligence]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130551</guid>
+
+					<description><![CDATA[Apple is adding new AI-powered features to Safari, Shortcuts, and Password apps.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple will let you build workflows using AI in its new Shortcuts app</title>
+		<link>https://techcrunch.com/2026/06/08/apple-will-let-you-build-workflows-using-ai-in-its-new-shortcuts-app/</link>
+		
+		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:45:12 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Shortcuts]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130591</guid>
+
+					<description><![CDATA[Shortcuts gets an AI upgrade, letting you describe the workflow you want in a prompt.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple&#8217;s Image Playground doesn&#8217;t suck anymore</title>
+		<link>https://techcrunch.com/2026/06/08/apples-image-playground-doesnt-suck-anymore/</link>
+		
+		<dc:creator><![CDATA[Amanda Silberling]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:38:07 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[image playground]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130579</guid>
+
+					<description><![CDATA[Apple's AI image generator is getting a makeover that could make it more competitive.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple&#8217;s Photos app is getting new AI editing features</title>
+		<link>https://techcrunch.com/2026/06/08/apples-photos-app-is-getting-new-ai-editing-features/</link>
+		
+		<dc:creator><![CDATA[Aisha Malik]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:36:04 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130585</guid>
+
+					<description><![CDATA[A new spatial "Reframe" feature will let users use AI to adjust perspectives. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple gives Siri its own dedicated app</title>
+		<link>https://techcrunch.com/2026/06/08/apple-gives-siri-its-own-dedicated-app/</link>
+		
+		<dc:creator><![CDATA[Lucas Ropek]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:33:42 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[siri]]></category>
+		<category><![CDATA[siri app]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130410</guid>
+
+					<description><![CDATA[Siri is finally getting its own app. ]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple is fixing the headache of splitting the bill with its new Siri in Camera feature</title>
+		<link>https://techcrunch.com/2026/06/08/apple-is-fixing-the-headache-of-splitting-the-bill-with-its-new-siri-in-camera-feature/</link>
+		
+		<dc:creator><![CDATA[Amanda Silberling]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:23:04 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Gadgets]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[siri]]></category>
+		<category><![CDATA[siri in camera]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130462</guid>
+
+					<description><![CDATA["If you're grabbing a bite with friends and point your iPhone at the bill, then [you can] select what you ordered to split the tab with Apple Cash," said Apple VP of Software Sebastien Marineau-Mes.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple puts parents back in control of kids&#8217; iPhone use</title>
+		<link>https://techcrunch.com/2026/06/08/apple-puts-parents-back-in-control-of-kids-iphone-use/</link>
+		
+		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:07:32 +0000</pubDate>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Social]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[parental controls]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130504</guid>
+
+					<description><![CDATA[Apple is putting control back into the hands of parents with more granular screen time features.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple&#8217;s Health app can now tell you if you&#8217;re in perimenopause</title>
+		<link>https://techcrunch.com/2026/06/08/apples-health-app-can-now-tell-you-if-youre-in-perimenopause/</link>
+		
+		<dc:creator><![CDATA[Kirsten Korosec]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:03:05 +0000</pubDate>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Biotech & Health]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Apple WWDC]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130506</guid>
+
+					<description><![CDATA[Cycle tracker will now notify women when their cycle patterns are suggestive of perimenopause.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple introduces systemwide dictation</title>
+		<link>https://techcrunch.com/2026/06/08/apple-introduces-systemwide-dictation/</link>
+		
+		<dc:creator><![CDATA[Ivan Mehta]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 18:00:09 +0000</pubDate>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Apple Intelligence]]></category>
+		<category><![CDATA[Dictation]]></category>
+		<category><![CDATA[Wispr flow]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130514</guid>
+
+					<description><![CDATA[Apple's new dictation system could compete with Wispr Flow and others.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple&#8217;s long-awaited AI Siri overhaul is finally here</title>
+		<link>https://techcrunch.com/2026/06/08/apples-long-awaited-ai-siri-overhaul-is-finally-here/</link>
+		
+		<dc:creator><![CDATA[Aisha Malik]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 17:56:21 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[siri]]></category>
+		<category><![CDATA[siri ai]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130474</guid>
+
+					<description><![CDATA[The idea behind the new "Siri AI" is to turn the assistant from a voice controlled assistant into an AI companion that can do a lot more.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple says it&#8217;s fixed the awful search function for emails, photos</title>
+		<link>https://techcrunch.com/2026/06/08/apple-says-its-fixed-the-awful-search-function-for-emails-photos/</link>
+		
+		<dc:creator><![CDATA[Julie Bort]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 17:53:29 +0000</pubDate>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Gadgets]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130495</guid>
+
+					<description><![CDATA[Apple says a completely rebuilt Search function will competently find the emails, photos and other content you are searching for.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Apple is tweaking its controversial Liquid Glass design</title>
+		<link>https://techcrunch.com/2026/06/08/apple-is-tweaking-its-controversial-liquid-glass-design/</link>
+		
+		<dc:creator><![CDATA[Amanda Silberling]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 17:24:33 +0000</pubDate>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[liquid glass]]></category>
+		<category><![CDATA[wwdc]]></category>
+		<category><![CDATA[WWDC 2026]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130491</guid>
+
+					<description><![CDATA[While some users liked the sleek, transparent designs that look "glassy," others found Apple's design overhaul from last year to be hard to read.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>How to apply to Startup Battlefield 2026, what you need ahead of today&#8217;s June 8 deadline</title>
+		<link>https://techcrunch.com/2026/06/08/how-to-apply-to-startup-battlefield-2026-what-you-need-ahead-of-todays-june-8-deadline/</link>
+		
+		<dc:creator><![CDATA[Isabelle Johannessen]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 16:14:14 +0000</pubDate>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[TechCrunch Disrupt]]></category>
+		<category><![CDATA[Startup Battlefield]]></category>
+		<category><![CDATA[Startup Battlefield 200]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3107547</guid>
+
+					<description><![CDATA[Startup Battlefield applications are due tomorrow, so now's the time to put the finishing touches on your submission!]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>NotebookLM&#8217;s new update will help you build source repository from chat</title>
+		<link>https://techcrunch.com/2026/06/08/notebooklms-new-update-will-help-you-build-source-repository-from-chat/</link>
+		
+		<dc:creator><![CDATA[Ivan Mehta]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 16:00:00 +0000</pubDate>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[notebooklm]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130368</guid>
+
+					<description><![CDATA[Google is making Gemini 3.5 the default model in NotebookLM]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>Amazon now lets you design custom merch using AI</title>
+		<link>https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/</link>
+		
+		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 15:49:12 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Commerce]]></category>
+		<category><![CDATA[Alexa]]></category>
+		<category><![CDATA[Amazon]]></category>
+		<category><![CDATA[commerce]]></category>
+		<category><![CDATA[e-commerce]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130391</guid>
+
+					<description><![CDATA[A new feature in the Amazon Shopping app allows users to generate designs with Alexa, then print them on products like T-shirts, hoodies, and tumblers.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>WhatsApp says it caught new spyware attacks linked to NSO Group in violation of court order</title>
+		<link>https://techcrunch.com/2026/06/08/whatsapp-says-it-caught-new-spyware-attacks-linked-to-nso-group-in-violation-of-court-order/</link>
+		
+		<dc:creator><![CDATA[Lorenzo Franceschi-Bicchierai]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 15:37:31 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[cybersecurity]]></category>
+		<category><![CDATA[hackers]]></category>
+		<category><![CDATA[hacking]]></category>
+		<category><![CDATA[Meta]]></category>
+		<category><![CDATA[NSO]]></category>
+		<category><![CDATA[NSO Group]]></category>
+		<category><![CDATA[phishing]]></category>
+		<category><![CDATA[privacy]]></category>
+		<category><![CDATA[Spyware]]></category>
+		<category><![CDATA[surveillance]]></category>
+		<category><![CDATA[WhatsApp]]></category>
+		<guid isPermaLink="false">https://techcrunch.com/?p=3130375</guid>
+
+					<description><![CDATA[The messaging giant announced that it disrupted a phishing campaign targeting its users with NSO’s spyware.]]></description>
+		
+		
+		
+			</item>
+		<item>
+		<title>WWDC 2026: What to expect, from Siri&#8217;s highly anticipated revamp to Apple Intelligence and iOS 27</title>
+		<link>https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/</link>
 		
 		<dc:creator><![CDATA[Lauren Forristal]]></dc:creator>
-		<pubDate>Sat, 06 Jun 2026 18:13:36 +0000</pubDate>
+		<pubDate>Mon, 08 Jun 2026 15:34:59 +0000</pubDate>
 				<category><![CDATA[AI]]></category>
 		<category><![CDATA[Apps]]></category>
 		<category><![CDATA[Hardware]]></category>
@@ -204,200 +408,6 @@
 		<guid isPermaLink="false">https://techcrunch.com/?p=3129597</guid>
 
 					<description><![CDATA[Apple's WWDC nears: Here's what you can look forward to.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Sriram Krishnan is leaving his role as White House AI advisor</title>
-		<link>https://techcrunch.com/2026/06/06/sriram-krishnan-is-leaving-his-role-as-white-house-ai-advisor/</link>
-		
-		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
-		<pubDate>Sat, 06 Jun 2026 17:42:15 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[Government & Policy]]></category>
-		<category><![CDATA[Donald Trump]]></category>
-		<category><![CDATA[Sriram Krishnan]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130269</guid>
-
-					<description><![CDATA[Krishnan is reportedly starting a new institution to continue shaping Trump's AI policy.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>The Trump administration might take an equity stake in OpenAI</title>
-		<link>https://techcrunch.com/2026/06/06/the-trump-administration-might-take-an-equity-stake-in-openai/</link>
-		
-		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
-		<pubDate>Sat, 06 Jun 2026 16:17:21 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[Government & Policy]]></category>
-		<category><![CDATA[Donald Trump]]></category>
-		<category><![CDATA[OpenAI]]></category>
-		<category><![CDATA[sam altman]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130264</guid>
-
-					<description><![CDATA[President Donald Trump said he's discussing deals "where the American people can benefit from the success of AI."]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Beyond Instagram: Introducing the next generation of social apps</title>
-		<link>https://techcrunch.com/2026/06/06/beyond-instagram-introducing-the-next-generation-of-social-apps/</link>
-		
-		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
-		<pubDate>Sat, 06 Jun 2026 15:00:00 +0000</pubDate>
-				<category><![CDATA[TC]]></category>
-		<category><![CDATA[Startups]]></category>
-		<category><![CDATA[Apps]]></category>
-		<category><![CDATA[Social]]></category>
-		<category><![CDATA[social media]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3129207</guid>
-
-					<description><![CDATA[These newer social apps offer alternatives to Big Tech’s feeds, focusing on interests, creativity, and community.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Reid Hoffman is leaving Microsoft&#8217;s board to go &#8216;founder mode&#8217; with  startup Manus</title>
-		<link>https://techcrunch.com/2026/06/05/reid-hoffman-is-leaving-microsofts-board-to-go-founder-mode-with-startup-manus/</link>
-		
-		<dc:creator><![CDATA[Julie Bort]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 22:35:01 +0000</pubDate>
-				<category><![CDATA[TC]]></category>
-		<category><![CDATA[Venture]]></category>
-		<category><![CDATA[In Brief]]></category>
-		<category><![CDATA[Manus AI]]></category>
-		<category><![CDATA[Microsoft]]></category>
-		<category><![CDATA[Reid Hoffman]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130209</guid>
-
-					<description><![CDATA[After a very profitable decade on Microsoft's board, Reid Hoffman is stepping down to focus on his AI drug discovery startup Manus.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Founders share VC horror stories, and some are naming names</title>
-		<link>https://techcrunch.com/2026/06/05/founders-share-vc-horror-stories-and-some-are-naming-names/</link>
-		
-		<dc:creator><![CDATA[Julie Bort]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 21:47:56 +0000</pubDate>
-				<category><![CDATA[TC]]></category>
-		<category><![CDATA[Venture]]></category>
-		<category><![CDATA[Fundraising Advice]]></category>
-		<category><![CDATA[Matthew Prince]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130046</guid>
-
-					<description><![CDATA[A massive viral conversation sharing VC horror stories has taken place this week on X. Some are weird. Some are infuriating.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Former cyber executive turned whistleblower accuses IBM of covering up several data breaches</title>
-		<link>https://techcrunch.com/2026/06/05/former-cyber-executive-turned-whistleblower-accuses-ibm-of-covering-up-several-data-breaches/</link>
-		
-		<dc:creator><![CDATA[Lorenzo Franceschi-Bicchierai]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 20:31:04 +0000</pubDate>
-				<category><![CDATA[Security]]></category>
-		<category><![CDATA[AT&T]]></category>
-		<category><![CDATA[att]]></category>
-		<category><![CDATA[Chinese hackers]]></category>
-		<category><![CDATA[cybersecurity]]></category>
-		<category><![CDATA[espionage]]></category>
-		<category><![CDATA[hackers]]></category>
-		<category><![CDATA[hacking]]></category>
-		<category><![CDATA[IBM]]></category>
-		<category><![CDATA[lawsuit]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130083</guid>
-
-					<description><![CDATA[IBM and two of its subsidiary companies were allegedly breached during the mid-2010s — a lawsuit filed by a former cybersecurity executive accuses IBM of not disclosing and actively covering it up.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Startup Battlefield 200 applications officially close in 3 days</title>
-		<link>https://techcrunch.com/2026/06/05/startup-battlefield-200-applications-officially-close-in-3-days/</link>
-		
-		<dc:creator><![CDATA[TechCrunch Events]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 20:00:00 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[Biotech & Health]]></category>
-		<category><![CDATA[Climate]]></category>
-		<category><![CDATA[Fintech]]></category>
-		<category><![CDATA[Fundraising]]></category>
-		<category><![CDATA[Media & Entertainment]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Startups]]></category>
-		<category><![CDATA[TC]]></category>
-		<category><![CDATA[Startup Battlefield]]></category>
-		<category><![CDATA[TechCrunch Disrupt 2026]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130115</guid>
-
-					<description><![CDATA[Applications for Startup Battlefield 200 officially close on June 8, 11:59 p.m. PT. Don't wait any longer. Secure your shot at competing on the Disrupt Stage at TechCrunch Disrupt 2026 this October at San Francisco's Moscone West.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>Google will pay SpaceX $920M per month for compute</title>
-		<link>https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/</link>
-		
-		<dc:creator><![CDATA[Sean O'Kane]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 18:57:20 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[AI compute]]></category>
-		<category><![CDATA[Alphabet]]></category>
-		<category><![CDATA[Google]]></category>
-		<category><![CDATA[SpaceX]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3130087</guid>
-
-					<description><![CDATA[In a statement, a Google representative described the deal as a result of unexpected demand for its recently launched AI products. ]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>GM’s electric future depends on a new battery — and this facility</title>
-		<link>https://techcrunch.com/2026/06/05/gms-electric-future-depends-on-a-new-battery-and-this-building/</link>
-		
-		<dc:creator><![CDATA[Tim De Chant]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 17:44:18 +0000</pubDate>
-				<category><![CDATA[Climate]]></category>
-		<category><![CDATA[Transportation]]></category>
-		<category><![CDATA[battery manufacturing]]></category>
-		<category><![CDATA[Exclusive]]></category>
-		<category><![CDATA[GM]]></category>
-		<category><![CDATA[lithium ion batteries]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3129930</guid>
-
-					<description><![CDATA[GM wants to slash EV prices by deploying new battery tech up to a year earlier than planned. This building is key to making that happen.]]></description>
-		
-		
-		
-			</item>
-		<item>
-		<title>As VC-backed e-bike startups went bankrupt, bootstrapped Lectric grew</title>
-		<link>https://techcrunch.com/2026/06/05/as-vc-backed-e-bike-startups-went-bankrupt-bootstrapped-lectric-grew/</link>
-		
-		<dc:creator><![CDATA[Kirsten Korosec]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 17:38:06 +0000</pubDate>
-				<category><![CDATA[TC]]></category>
-		<category><![CDATA[Transportation]]></category>
-		<category><![CDATA[ebike]]></category>
-		<category><![CDATA[EVs]]></category>
-		<category><![CDATA[Exclusive]]></category>
-		<category><![CDATA[Juiced Bikes]]></category>
-		<category><![CDATA[Lectric]]></category>
-		<category><![CDATA[Monarc]]></category>
-		<guid isPermaLink="false">https://techcrunch.com/?p=3129011</guid>
-
-					<description><![CDATA[Lectric, which says the U.S. market is ripe for competition and choice, has launched three new brands in the past six months.]]></description>
 		
 		
 		

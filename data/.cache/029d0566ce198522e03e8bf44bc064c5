@@ -12,7 +12,7 @@
 	<atom:link href="https://techcabal.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://techcabal.com/</link>
 	<description>Leading Africa’s Tech Conversation</description>
-	<lastBuildDate>Mon, 08 Jun 2026 14:08:58 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 08 Jun 2026 17:16:30 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,363 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>The CBN has a big plan for payments by 2028. 13 things worth knowing.</title>
+		<link>https://techcabal.com/2026/06/08/cbn-has-a-big-plan-for-payments/</link>
+		
+		<dc:creator><![CDATA[Guest Author]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 17:16:27 +0000</pubDate>
+				<category><![CDATA[Opinion]]></category>
+		<category><![CDATA[CBN]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=189761</guid>
+
+					<description><![CDATA[PSV 2028 is the work of a central bank that's earned its confidence, and most of it is the right work. The rails are real, the fraud fight is serious, the identity backbone is solid, and the habit of building policy with the industry is the quiet superpower that holds the whole thing together. ]]></description>
+										<content:encoded><![CDATA[
+<p>Nigeria leads on payments and fintech in Africa, and that isn&#8217;t a conversation that needs an argument. It&#8217;s anchored on world-class payments system visions and the rigorous implementation that comes with them.</p>
+
+
+
+<p>The Central Bank of Nigeria has been at this for almost twenty years, and it&#8217;s genuinely good at it. The<a href="https://www.cbn.gov.ng/PaymentsSystem/PSV2020.html" target="_blank" rel="noreferrer noopener nofollow"> first vision came in the mid-2000s</a>; the<a href="https://www.cbn.gov.ng/PaymentsSystem/PSV2025.html" target="_blank" rel="noreferrer noopener"> last one launched in November 2022</a>, and between them they took a country where most adults had no bank account, and cash settled almost everything, and turned it into one of the few places on earth where you can send money to a stranger and watch it land in seconds. We built a real financial identity in the Bank Verification Number (BVN), an agent network of close to two million touchpoints, and an instant-payment system the rest of the continent studies, and we now move well over a quadrillion Naira a year through electronic channels.&nbsp;</p>
+
+
+
+<p>PSV 2028 is the next installment, and it&#8217;s ambitious, which is the polite way of saying the CBN has handed itself roughly thirty months to deliver a list that would stretch a far simpler country. There&#8217;s plenty to like, a few things I&#8217;d argue with gently, and a couple of things I wish were in it that aren&#8217;t. Thirteen points, in that order.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>The good</strong></h2>
+
+
+
+<h4 class="wp-block-heading"><strong>1. The National Payment Stack is the real deal</strong></h4>
+
+
+
+<p>The most important thing in the document is as flashy as the foundation of the Burj Khalifa, deep and invisible. The NPS is NIBSS&#8217;s full rebuild of the national rails, and it&#8217;s already gone live, with its<a href="https://businessday.ng/banking/article/nigeria-records-first-successful-transaction-on-national-payment-stack/" target="_blank" rel="noreferrer noopener nofollow"> first real transaction running between PalmPay and Wema Bank in November 2025</a>, and it&#8217;s now rolling out to the rest of the banks (pages 34 and 42). It replaces the NIBSS Instant Payments engine that&#8217;s carried us since 2011 and was<a href="https://www.ecofinagency.com/news-finances/1111-50352-nigeria-launches-national-payment-stack-targets-faster-digital-transactions" target="_blank" rel="noreferrer noopener nofollow"> processing more than nine billion transfers a year</a> before it ran out of room, and being built on ISO 20022, it finally gives us richer payment data, automated reconciliation, and the international compatibility we&#8217;ve lacked. If PSV 2028 shipped nothing else, this would earn its keep.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>2. The CBN builds policy with the industry</strong></h4>
+
+
+
+<p>This is the strength most people don&#8217;t appreciate, and it&#8217;s a big reason these documents are worth taking seriously. When the CBN wants to set national policy, it convenes the Nigerian experts who actually run the rails, the banks, the fintechs, the switches, the development partners, and the subject-matter experts, and it builds the thing with them rather than handing down an edict and daring everyone to comply.&nbsp;</p>
+
+
+
+<p>PSV 2028 says as much in its own acknowledgements, crediting financial institutions, industry associations, and fintech innovators for shaping the document (page 10), and anyone who&#8217;s sat through these working sessions knows how real that process is. When the industry pushed back on the<a href="https://www.ripplesnigeria.com/cbn-adjusts-anti-money-laundering-compliance-rule-for-banks-others/" target="_blank" rel="noreferrer noopener"> automated-AML timeline, the compliance window was stretched from twelve months to eighteen</a>, and when operators argued the 10-meter POS geo-fence was impossible to hit accurately, <a href="https://techcabal.com/2026/05/30/nigerias-central-bank-expands-pos-operating-radius-to-70-metres/" target="_blank" rel="noreferrer noopener">the CBN widened it to 70</a>. A regulator that consults and then actually adjusts is rarer than it sounds, and it&#8217;s a big part of why Nigerian payments policy tends to stick once it lands.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>3. Fraud and cybersecurity are finally first-class, and the work has already left the page</strong></h4>
+
+
+
+<p>For years, fraud was the thing everyone complained about, and everyone refused to kill. PSV 2028 puts it at the center, with AI-driven monitoring and predictive analytics (page 63), a stronger Anti-Money Laundering (AML) and Countering the Financing of Terrorism (CFT) posture (page 38), a national security operations center, and an industry fraud-intelligence sharing platform (pages 39 and 95 to 103).&nbsp;</p>
+
+
+
+<p>Why it matters is well documented, because<a href="https://techpoint.africa/insight/cbn-pos-geotagging-push/" target="_blank" rel="noreferrer noopener"> NIBSS data shows fraud losses jumped from about ₦11.6 billion in 2020 to 52.3 billion in 2024</a>. And unlike most vision-document promises, this one&#8217;s already moving across more than one CBN department at once.<a href="https://claude.ai/chat/DR-AKINWUNMI-LINKEDIN"> </a>The CBN’s Banking Supervision Department issued the<a href="https://www.thecable.ng/cbn-directs-banks-to-deploy-automated-anti-money-laundering-systems-within-18-months/" target="_blank" rel="noreferrer noopener"> baseline standards for automated AML in March 2026</a>, giving deposit banks 18 months and other institutions 24 months to run AI and machine-learning monitoring with annual accuracy testing. The Payments System Supervision Department<a href="https://businessday.ng/news/article/cbn-orders-gps-tracking-on-pos-terminals-to-curb-fraud-tighten-oversight/" target="_blank" rel="noreferrer noopener"> ordered GPS geo-tagging on every POS terminal</a> layered on<a href="https://www.vanguardngr.com/2026/03/cbn-restricts-mobile-banking-app-operation-to-one-device/" target="_blank" rel="noreferrer noopener nofollow"> device binding and a BVN fraud watchlist</a> on the instant-payment side. Whatever you make of any single rule, the direction&#8217;s crystal clear and it&#8217;s happening now.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>4. The BVN, and the reason NIN exists at all</strong></h4>
+
+
+
+<p>Give the CBN its due on identity. The BVN sits under more than 320 million accounts and became the backbone of digital Know Your Customer (KYC), and it&#8217;s the proof of concept that made the National Identification Number (NIN) program credible, so the two are a sequence and not rivals (pages 32 and 75 to 76). The document puts NIN coverage past 122 million as of late 2025, and it&#8217;s refreshingly blunt that enrollment is short of funding and field kits, which is the real reason it still trails the BVN. That candor matters, because<a href="https://businessday.ng/news/article/bank-account-nin-link-seen-as-hurdle-to-financial-inclusion/" target="_blank" rel="noreferrer noopener nofollow"> the forced bank-account-to-NIN linkage has itself been flagged as a risk that could push people back into the informal system</a> if the identity rails can&#8217;t keep pace.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>5. The compliance-automation ambition is genuinely modern</strong></h4>
+
+
+
+<p>PSV 2028 wants a national RegTech and SupTech capability, a machine-readable CBN rulebook in JSON and XML, and 90% of institutions feeding automated compliance data to the CBN by 2028 (page 63). This isn&#8217;t blue-sky talk, because the automated-AML baseline standards now in train are already the first concrete move toward supervision that reads structured data in near real time instead of chasing quarterly paper returns. Very few central banks anywhere have committed to this in writing, and it&#8217;s the sort of capability that compounds quietly for a decade.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>6. Consumer protection and inclusion, which I wish ranked higher</strong></h4>
+
+
+
+<p>The track record here is real, with the service-level rules that force ATM chargebacks to clear within a day and failed POS reversals within three (page 32), and formal inclusion did climb<a href="https://efina.org.ng/research/" target="_blank" rel="noreferrer noopener"> from 56% in 2020 to 64% in 2023 on EFInA&#8217;s numbers</a>, driven mostly by fintech and non-bank channels rather than the banks. My one honest wish is that this theme sat nearer the top of the CBN&#8217;s priorities rather than in the middle of the pile, because everything else in the document- the rails, the fraud controls, the new products- ultimately rests on whether ordinary people trust the system enough to keep their money inside it.</p>
+
+
+
+<p>Trust is the real asset all of us are building, and it deserves top billing.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>7. We still lead the continent, and the vision knows it</strong></h4>
+
+
+
+<p>PSV 2028 is clear-eyed about where Nigeria sits regionally, building on its participation in the Pan-African Payment and Settlement System<a href="https://www.cbn.gov.ng/AboutCBN/Reforms.html" target="_blank" rel="noreferrer noopener nofollow"> (PAPSS) for local-currency cross-border settlement</a> under the African Continental Free Trade Area (AfCFTA), and on a sensible push to widen the rails beyond cards and transfers into contactless, QR, and tap-to-phone (pages 71 to 74 and 84). Nigerian schemes and processors already reach well past our borders, and the document treats that lead as something to defend rather than take for granted.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>The bad</strong></h2>
+
+
+
+<h4 class="wp-block-heading"><strong>8. The plan is sweet on digital currency, and I&#8217;m not quite as smitten</strong></h4>
+
+
+
+<p>Let me declare my bias cheerfully, because the global case for central bank digital currency and regulated stablecoins is real, the rest of the world&#8217;s still arguing it out, and a central bank that ignored the question entirely would be asleep at the wheel. So I don&#8217;t fault the CBN for paying close attention. My quibble is proportion, because by my own count across the 132 pages, the Central Bank Digital Currency (CBDC), stablecoin, and eNaira family turns up close to 200times and gets a thematic area all to itself (pages 82 to 94), while open finance appears exactly once and lives as a sub-bullet (pages 62 to 64).&nbsp;</p>
+
+
+
+<p>For a document about how money will move in Nigeria for the next three years, that&#8217;s a lot of ink on the newest and least proven rail, and rather little on the one that connects everybody. If the pen were mine, I&#8217;d have shared it out differently, and I&#8217;ll happily lose this argument to anyone at the CBN who can show me the adoption curve that justifies the weighting. It&#8217;s a judgment call, but I own my own call.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>9. Routing every government payment through the eNaira is where the plan argues with itself</strong></h4>
+
+
+
+<p>This is the one spot where I push back a little harder, and I do it with respect, because the document is admirably honest about the problem itself. In its own words, it admits that eNaira adoption has been slow and that real-world uptake is a very small slice of the currency in circulation (pages 72, 84, and 89).&nbsp;</p>
+
+
+
+<p>The outside view is blunter, since the<a href="https://www.thecable.ng/98-5-of-wallets-unused-imf-says-enaira-adoption-disappointingly-low/" target="_blank" rel="noreferrer noopener nofollow"> International Monetary Fund (IMF) found that 98.5% of eNaira wallets had never once been used</a>, and three years on the<a href="https://www.thecable.ng/three-years-after-launch-enaira-battles-for-relevance-in-nigerias-financial-system/" target="_blank" rel="noreferrer noopener nofollow"> wallet app had quietly slipped off the Google Play Store while the USSD code stopped working</a>. And yet the plan still sets a target of routing 100% of government-to-person payments through the CBDC (page 64). I understand the instinct, because G2P is the obvious way to give an ambitious payments rail some traffic.&nbsp;</p>
+
+
+
+<p>My worry&#8217;s the order of operations, since hitching the lifeline of the poorest Nigerians to the one instrument they&#8217;ve so far declined to use is a heavy load for a young rail to carry. Get people wanting the eNaira first (not sure I want, Naira works!), and the G2P volumes will follow on their own.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>10. The headline targets are reachable, which is exactly why they should mean something</strong></h4>
+
+
+
+<p>My first instinct was to call 95% inclusion by 2028 a stretch. But then Nigeria&#8217;s already proved it can move at that speed when it has to. When the 2023 cash crunch pulled physical money out of the system,<a href="https://sbmintelligence.substack.com/p/low-current-2b1073487ac3" target="_blank" rel="noreferrer noopener nofollow"> NIP transaction volume jumped about 46% in a single month</a>, which tells you the rails and the public can swallow a huge shift in weeks. So the number&#8217;s reachable, and I won&#8217;t pretend otherwise. What gives me pause is what came next, because the moment cash returned, so did our old habits, and<a href="https://kolaking.substack.com/p/cash-outside-banks-hit-92-of-currency" target="_blank" rel="noreferrer noopener nofollow"> the share of currency sitting outside the banking system climbed back above 90%</a>.&nbsp;</p>
+
+
+
+<p>People go digital when nudged hard and drift back the instant the pressure lifts, which says the system hasn&#8217;t yet given them enough reason to stay. Those reasons are affordable services and real credit, and an account someone opened once and never touches again counts in a survey without counting for much in a life. The target&#8217;s within reach, but the biggest work is to make sure it sticks like gum.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>The missing</strong></h2>
+
+
+
+<h4 class="wp-block-heading"><strong>11. Payments data is the on-ramp to credit, and we haven&#8217;t built the ramp</strong></h4>
+
+
+
+<p>Let me be precise here, because credit isn&#8217;t payments and a payment vision isn&#8217;t a lending strategy. But the rails we&#8217;re building, and the transaction data they throw off every second, are the richest raw material for credit this country will ever have, and that&#8217;s the connection PSV 2028 doesn&#8217;t quite draw. The document handles payments beautifully and then stops at the water&#8217;s edge, leaving credit as a few scattered mentions, a line on credit scoring under fraud (page 63), and a nod to movable collateral (pages 72 to 73), rather than a deliberate path from a person&#8217;s payment history to a loan they can actually get.&nbsp;</p>
+
+
+
+<p>It matters because access to a rail isn&#8217;t what changes a trader&#8217;s life; access to capital is, and the figures from EFInA, the CBN&#8217;s own inclusion partner, show how much room we have, with<a href="https://www.thecable.ng/report-nigerias-financial-inclusion-rose-to-74-in-2023-northern-region-most-excluded/" target="_blank" rel="noreferrer noopener nofollow"> formal credit reaching only about 6% of adults</a> and<a href="https://efina.org.ng/wp-content/uploads/2025/09/Beyond-Access-Why-Financial-Health-Must-Be-Nigerias-Next-Inclusion-Goal.pdf" target="_blank" rel="noreferrer noopener nofollow"> the share of financially healthy Nigerians slipping from 28% in 2020 to 16% in 2023</a> even as accounts multiplied. This isn&#8217;t a knock on the work; it&#8217;s the prize sitting right next to the work, because we&#8217;ve already built the thing that generates the data, and the next move is simply to say out loud how that data becomes credit.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>12. Open finance deserves more than one line</strong></h4>
+
+
+
+<p>Full disclosure before I say a word, because I started Open Banking Nigeria back in 2017, so you can fairly say I&#8217;m talking about my own book here. With that on the table, the point still stands on its own. Open finance is the rail that turns the credit idea above into something real, the architecture that lets a lender see a person&#8217;s financial life across institutions, with their consent, and price a loan for them, and PSV 2028 mentions it exactly once and tucks it into a sub-bullet under innovation (pages 62 to 64), even while it sets a target of connecting 100% of financial-service providers to open banking APIs (page 64).&nbsp;</p>
+
+
+
+<p>The intent&#8217;s clearly there, which is exactly why I&#8217;d love to see it carried further, because the CBN <a href="https://techcabal.com/2025/04/29/cbn-launches-open-banking/" target="_blank" rel="noreferrer noopener">approved an August 1, 2025 go-live</a> for open banking and the date came and went, and as of early 2026 it&#8217;s still not live. Five years on from the first framework, the one piece of infrastructure that would unlock everything in the point before it is the piece that most needs a date, a budget, and a push. Of everything on this list, this is the one I&#8217;d put first.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>13. The one thing that would make all of this come to life</strong></h4>
+
+
+
+<p>PSV 2028 stands up a steering committee, technical working groups (page 104), and a stakeholder-engagement framework (pages 105 to 106), which is solid governance and very much how the CBN likes to work. The part that worries me as missing is the one that turns a good plan into delivered outcomes, a costed budget, a sequence that respects what depends on what, and a simple public scorecard that says what should be true by when.&nbsp;</p>
+
+
+
+<p>We&#8217;ve all watched strong plans kick the bucket without that backbone, with the open banking go-live that drifted past its own date being the freshest reminder, and with thirty months on the clock, a published budget and an annual scorecard would protect this vision more than any new initiative inside it. Guys, this is the part to lock down, because it&#8217;s what lets us point back at this document in 2028 and say we did what we said we would.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>The bottom line</strong></h3>
+
+
+
+<p>PSV 2028 is the work of a central bank that&#8217;s earned its confidence, and most of it is the right work. The rails are real, the fraud fight is serious, the identity backbone is solid, and the habit of building policy with the industry is the quiet superpower that holds the whole thing together.&nbsp;</p>
+
+
+
+<p>What I&#8217;d love to see in the thirty months ahead is the part that turns all this plumbing into prosperity: payment data that becomes credit, an open finance rail that finally switches on, and a costed scorecard that keeps everyone honest. Get those three right and PSV 2028 won&#8217;t just move money faster; it&#8217;ll be the plan that moves Nigeria from moving money to building wealth. I want it to work, which is the only reason I read all 132 pages so you didn&#8217;t have to.&nbsp;</p>
+
+
+
+<p>Now let&#8217;s go and build it.</p>
+
+
+
+<p><strong><em>_____</em></strong></p>
+
+
+
+<p><a href="https://www.linkedin.com/in/adedejiolowe/" target="_blank" rel="noreferrer noopener"><strong><em>Adedeji Olowe</em></strong></a><strong><em> is the founder of Lendsqr, a Lending-as-a-Service (LaaS) company that provides the infrastructure powering digital lending for banks, fintechs, credit unions, and financial institutions</em></strong>.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MTN revives streaming ambitions with new pan-African platform</title>
+		<link>https://techcabal.com/2026/06/08/mtn-group-launches-one-tv/</link>
+		
+		<dc:creator><![CDATA[Emmanuel Nwosu]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 15:30:25 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Ayoba]]></category>
+		<category><![CDATA[MTN]]></category>
+		<category><![CDATA[Synamedia]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=189751</guid>
+
+					<description><![CDATA[The move reflects a broader push by African telecom operators to expand beyond connectivity into digital services, content, and fintech. ]]></description>
+										<content:encoded><![CDATA[
+<p>MTN Group, Africa&#8217;s largest telecoms company, has <a href="https://www.mtn.com/mtn-one-tv-launched-to-expand-digital-entertainment-access-across-africa/" target="_blank" rel="noreferrer noopener nofollow">launched MTN One TV</a>, a streaming platform that gives the operator another shot at Africa&#8217;s video entertainment market nearly a decade after its South Africa-focused FrontRow service failed to gain traction.</p>
+
+
+
+<p>In a Monday statement, the company said MTN One TV will offer a mix of free-to-view, advertising-supported, pay-per-view, and subscription-based content models depending on local market conditions.</p>
+
+
+
+<p>The launch marks MTN&#8217;s most ambitious attempt yet to build a pan-African content business, one that could immediately tap into the group&#8217;s 307.2 million subscribers <a href="https://webstir.jse.co.za/Downloads/File/?id=cmKSTpTT0nynKPvGbKUY%2fQ%3d%3d" target="_blank" rel="noreferrer noopener nofollow">reported at the end of 2025</a>. While the company has not disclosed which markets will receive MTN One TV first, it operates across 16 African countries, giving the platform distribution scale that few regional streaming rivals can match.</p>
+
+
+
+<p>The platform, which combines live television, local content, and international programming, will be rolled out progressively across MTN&#8217;s markets as the company seeks to capture a larger share of Africa&#8217;s growing digital entertainment economy.</p>
+
+
+
+<p>“The proposition is designed to give customers greater choice in how they watch content, with viewing models that may vary by market and can include free-to-view content, advertising-funded experiences, pay-as-you-watch access, and subscription offerings,” MTN said “Depending on local availability, customers may also be able to pay through airtime, Mobile Money, and other locally supported payment methods, helping to reduce common barriers to streaming access.”</p>
+
+
+
+<p>The move reflects a broader push by African telecom operators to expand beyond connectivity into digital services, content, and fintech. In December 2025, Vodacom <a href="https://www.vodacom.com/news-article.php?articleID=16573" target="_blank" rel="noreferrer noopener nofollow">launched the Value News Network (VNN)</a> as part of a broader digital engagement strategy, and Safaricom has <a href="https://techcabal.com/2026/05/23/safaricom-updates-my-oneapp-to-support-airtel-roaming-users/" target="_blank" rel="noreferrer noopener">continued to deepen</a> the integration of content and digital services. </p>
+
+
+
+<p>MTN One TV extends that evolution into video entertainment, using the group&#8217;s network reach, mobile money infrastructure, and billing relationships to address barriers that have historically constrained streaming adoption across Africa, including payment friction, affordability, and limited access to international credit cards.</p>
+
+
+
+<p>The launch also comes as Africa&#8217;s streaming landscape undergoes significant change. Showmax, the subscription streaming service previously operated by Canal+-owned MultiChoice, <a href="https://techcabal.com/2026/03/05/multichoice-to-shut-down-showmax/" target="_blank" rel="noreferrer noopener">shut down</a> in April as the company <a href="https://techcabal.com/2026/05/18/after-showmax-multichoice-bets-on-dstv-stream/" target="_blank" rel="noreferrer noopener">shifted focus to DStv Stream</a>, its linear over-the-top (OTT) offering, creating an opening for telecom operators seeking to bundle content, connectivity, and payments into a single ecosystem.</p>
+
+
+
+<p>“Entertainment is increasingly becoming an important gateway to digital participation,” Selorm Adadevoh, MTN Group Chief Commercial, Strategy and Transformation Officer, said. “Through MTN One TV, we are leveraging the scale of our connectivity, fintech, and digital capabilities to make relevant content more accessible while creating new opportunities for Africa&#8217;s creative and digital economies. This is aligned with our ambition to deliver digital solutions for Africa&#8217;s progress.”</p>
+
+
+
+<p>The launch builds on <a href="https://www.mtn.com/mtn-group-and-synamedia-partner-to-develop-pan-african-streaming-platform/" target="_blank" rel="noreferrer noopener nofollow">MTN&#8217;s partnership with video software company Synamedia</a> in April 2025 to develop a pan-African streaming platform <a href="https://businessday.ng/news/article/why-mtn-groups-streaming-service-is-launching-first-in-nigeria/" target="_blank" rel="noreferrer noopener nofollow">initially targeted at Nigeria</a> before expanding across its footprint.</p>
+
+
+
+<p>MTN is no stranger to streaming. In December 2014, the operator <a href="https://businesstech.co.za/news/mobile/76505/mtn-launches-its-video-on-demand-service/?__cf_chl_rt_tk=64hwZDaz4yOVqy_e_7zuPCKSyNdKyFuOFRkYdQIQ_bM-1780929482-1.0.1.1-oSGx2n_uA23PQ__cxCQyJEFk_lSHINZ5.9Ojbnjz2GA" target="_blank" rel="noreferrer noopener nofollow">launched FrontRow</a>, later rebranded as VU, in South Africa. It was a Netflix-style video-on-demand service offering movies and television shows through subscriptions and pay-per-view rentals. The company later cut prices from R179 ($10.85) to R99 ($6) monthly in an effort to compete with Netflix and Showmax. </p>
+
+
+
+<p>The service ultimately failed to scale and was <a href="https://mybroadband.co.za/news/broadcasting/208894-mtn-vu-shutting-down.html" target="_blank" rel="noreferrer noopener nofollow">discontinued in 2017</a> as competition intensified and consumer adoption remained limited.</p>
+
+
+
+<p>In 2018, MTN <a href="https://www.itweb.co.za/article/mtn-launches-music-streaming-service-musictime/DZQ58MVJ5WGMzXy2" target="_blank" rel="noreferrer noopener nofollow">launched MusicTime, </a>a music streaming platform that gained modest traction across several markets by allowing users to stream and download music while managing data usage. Unlike FrontRow, however, MusicTime remained an audio product and never evolved into a broader entertainment platform. MTN also <a href="https://techcabal.com/2026/03/24/mtn-begins-shutdown-of-ayoba-as-it-shifts-to-unified-digital-platform/" target="_blank" rel="noreferrer noopener">discontinued Ayoba</a>, its instant messaging app, in March to consolidate its digital services ecosystem under its Ambition 2030 Strategy.</p>
+
+
+
+<p>In 2021, <a href="https://mybroadband.co.za/news/broadcasting/408800-evod-e-tvs-netflix-contender-launched.html?__cf_chl_rt_tk=qR_x6VlFtZSss6_BKQqJolhjBWDZryhTyW420zW1k5I-1780930101-1.0.1.1-DzoEBZ1wCRzvZi7EeGGXr6ac6PRUAorDUzjV51k1bSs" target="_blank" rel="noreferrer noopener nofollow">MTN partnered with South African broadcaster eMedia</a> on eVOD, providing technology and distribution support, though the service remained eMedia&#8217;s product rather than an MTN-owned platform.</p>
+
+
+
+<p>Those earlier efforts highlight the challenges of building sustainable streaming businesses in African markets, where content licencing costs, limited broadband penetration, and low consumer spending power have historically constrained growth.</p>
+
+
+
+<p>MTN One TV highlights the company&#8217;s first attempt to build a scaled, pan-African video entertainment proposition by combining content distribution, mobile payments, and telecom infrastructure.</p>
+
+
+
+<p>The company said the rollout will occur in phases, with content partnerships and viewing experiences tailored to individual markets before being consolidated under the MTN One TV brand over time.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Shuttlers brings bus routes to Google Maps after hitting 10 million trips</title>
+		<link>https://techcabal.com/2026/06/08/shuttlers-integrates-bus-routes-into-google-maps-transit/</link>
+		
+		<dc:creator><![CDATA[John Adoyi]]></dc:creator>
+		<pubDate>Mon, 08 Jun 2026 15:01:22 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Africa]]></category>
+		<category><![CDATA[Google Maps]]></category>
+		<category><![CDATA[Mobility]]></category>
+		<category><![CDATA[Nigeria]]></category>
+		<category><![CDATA[Shuttlers]]></category>
+		<category><![CDATA[startups]]></category>
+		<guid isPermaLink="false">https://techcabal.com/?p=189745</guid>
+
+					<description><![CDATA[Commuters using Shuttlers can now discover routes and book seats directly within Google Maps due to new integration.]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.shuttlers.co/" target="_blank" rel="noreferrer noopener nofollow">Shuttlers</a>, the Nigerian shared mobility startup, has integrated its bus routes into Google Maps Transit, bringing its services to the navigation platform after completing more than 10 million trips since launching in 2016.</p>
+
+
+
+<p>The integration brings Shuttlers’ scheduled routes into Google Maps’ transit layer, allowing commuters to discover routes and book seats directly within Google Maps while navigating Nigeria’s major cities.</p>
+
+
+
+<p>The move reflects how private mobility operators are increasingly filling gaps left by overstretched public transport systems in African cities. According to the World Bank, African cities are about <a href="https://www.weforum.org/stories/2018/06/Africa-urbanization-cities-double-population-2050-4%20ways-thrive/" target="_blank" rel="noreferrer noopener nofollow">29% more expensive</a> overall than cities at similar income levels, with residents paying roughly double the global average for transport.&nbsp;</p>
+
+
+
+<p>In Lagos, a study by the Danne Institute for Research found that the average commuter spends about <a href="https://danneinstitute.org/publications/always-go-with-a-smile-4/" target="_blank" rel="noreferrer noopener nofollow">2.21 hours in transit daily</a>, equivalent to roughly 11 hours in a five-day workweek. Private mobility operators have emerged as structured alternatives to informal buses and increasingly expensive ride-hailing services.</p>
+
+
+
+<p>&#8220;For millions of professionals, commuting is still unpredictable, exhausting and expensive,” said Damilola Olokesusi, CEO and co-founder of Shuttlers. “We have spent the last 10 years building technology and operational infrastructure that makes daily transportation more dependable for commuters, businesses that employ them, and the fleet operators who power our network.&#8221;</p>
+
+
+
+<p>Shuttlers said it integrated its route data, scheduling systems, and real-time operations with Google’s technical requirements to join Google Transit.</p>
+
+
+
+<p>Founded in 2016, Shuttlers operates a scheduled bus service for professionals and corporate employees across Nigeria’s major cities. The company said it currently serves 30,000 active users across more than 1,000 itineraries and runs a fleet of more than 430 buses daily across Lagos, Abuja and Port Harcourt.</p>
+
+
+
+<p>Shuttlers said it has completed more than 10 million trips since launch, maintains a 99% trip completion rate and a 99.94% incident-free record, and operates both a Business-to-Business-to-Consumer (B2B2C) model, allowing companies to fully or partially subsidise employee transport, and a direct-to-consumer option for individual commuters.</p>
+
+
+
+<p>&#8220;Reliable transit information helps people navigate cities more confidently and efficiently,&#8221; Olumide Balogun, Director for West Africa at Google, said. &#8220;As more Nigerians adopt digital tools for everyday mobility, integrations like these help make trusted transportation easier to discover and access.&#8221;</p>
+
+
+
+<p>As it expands its mobility offering, Shuttlers said it is integrating compressed natural gas (CNG) and electric buses into its fleet as part of efforts to reduce emissions from urban transport operations, with the company estimating emissions reductions of up to 60% compared to diesel alternatives. In April 2025, the company announced that it had introduced 20 CNG buses to its fleet.</p>
+
+
+
+<p>In 2023, Shuttlers <a href="https://www.shuttlers.co/blog/announcing-our-raise-of-4m-in-equity-funding-get-into-our-plans-to-accelerate-shared-mobility-in-nigeria" target="_blank" rel="noreferrer noopener">raised a $4 million equity round</a> led by Verod-Kepple Africa Ventures, following a previous <a href="https://techcabal.com/2021/11/17/shuttlers-raises-1-6-million-to-expand/" target="_blank" rel="noreferrer noopener">$1.6 million</a> seed round in 2021, led by VestedWorld, which also participated in the raise alongside SheEquity, CMC 21, Alsa, EchoVC, and VestedWorld.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Aions Ventures backs South Africa&#8217;s climate-tech ambition with $6 million fund</title>
 		<link>https://techcabal.com/2026/06/08/aions-launches-6-million-fund/</link>
 		
@@ -2611,902 +2968,6 @@ You received this email because you signed up on our website or made purchase fr
 
 
 <p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What to expect at Apple’s WWDC 2026 keynote on Monday</title>
-		<link>https://techcabal.com/2026/06/06/apple-wwdc-2026-what-to-expect/</link>
-		
-		<dc:creator><![CDATA[Chukwuebuka Mgbojikwe]]></dc:creator>
-		<pubDate>Sat, 06 Jun 2026 15:48:40 +0000</pubDate>
-				<category><![CDATA[Consumer Tech]]></category>
-		<category><![CDATA[apple wwdc 2026]]></category>
-		<category><![CDATA[WWDC 2026]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=189666</guid>
-
-					<description><![CDATA[ If you have ever skipped an Apple software event because it felt like a routine update show, this is the year to pay attention.]]></description>
-										<content:encoded><![CDATA[
-<div class="wp-block-group tc-toc has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<h2 class="wp-block-heading">Table of contents</h2>
-
-
-
-<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<p><a href="#When-and-how-to-watch-the-Apple-WWDC-2026" type="internal" id="#When-and-how-to-watch-the-Apple-WWDC-2026">When and how to watch the Apple WWDC 2026</a></p>
-
-
-
-<p><a href="#What-to-expect-at-the-Apple-WWDC-2026" type="internal" id="#What-to-expect-at-the-Apple-WWDC-2026">What to expect at the Apple WWDC 2026</a></p>
-
-
-
-<p><a href="#When-will-you-actually-get-these-features" type="internal" id="#When-will-you-actually-get-these-features">When will you actually get these features?</a></p>
-
-
-
-<p><a href="#One-more-thing-Tim-Cook's-farewell" type="internal" id="#One-more-thing-Tim-Cook's-farewell">One more thing: Tim Cook&#8217;s farewell</a></p>
-</div>
-</div>
-
-
-
-<p>Apple&#8217;s WWDC 2026 keynote will be held on&nbsp; Monday, June 8, at 10 a.m. PT (6:00 p.m. WAT). If you have ever skipped an Apple software event because it felt like a routine update show, this is the year to pay attention.</p>
-
-
-
-<p>Two things make this year’s Apple WWDC different from any keynote in the past decade. One, it is Tim Cook&#8217;s last keynote as Apple CEO. He <a href="https://www.apple.com/cm/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/">announced in April</a> that he would step down on September 1, with John Ternus taking the top job. Second, Apple has a lot to prove in AI. The company promised a smarter, more personal Siri back in 2024, advertised it heavily alongside the iPhone 16, and then repeatedly delayed it, resulting in a <a href="https://www.bbc.com/news/articles/c0j2nydnzy7o">$250 million settlement</a>. WWDC 2026 is where Apple has to show the rebuild is done.</p>
-
-
-
-<p>Here is everything you can expect to see.</p>
-
-
-
-<h2 class="wp-block-heading" id="When-and-how-to-watch-the-Apple-WWDC-2026"><strong>When and how to watch the Apple WWDC 2026</strong></h2>
-
-
-
-<p>The keynote starts Monday, June 8, at 10 a.m. PT (6:00 p.m. WAT). Here is what that looks like in your time zone:</p>
-
-
-
-<ul class="wp-block-list">
-<li>1 pm ET (US East Coast)</li>
-
-
-
-<li>6 pm BST (UK)</li>
-
-
-
-<li>6 pm WAT (Nigeria and West Africa)</li>
-
-
-
-<li>7 pm CEST (Central Europe)</li>
-</ul>
-
-
-
-<p>You can watch it live on Apple.com, the Apple TV app, or Apple&#8217;s YouTube channel. Apple pre-records its WWDC keynotes, so there is no live Q&amp;A. The Platforms State of the Union, which is more developer-focused, follows at 1 p.m. PT on the same day. WWDC runs from June 8 through June 12.</p>
-
-
-
-<h2 class="wp-block-heading" id="What-to-expect-at-the-Apple-WWDC-2026"><strong>What to expect at the Apple WWDC 2026</strong></h2>
-
-
-
-<h3 class="wp-block-heading"><strong>1. The new Siri:&nbsp;</strong></h3>
-
-
-
-<p>This is the centrepiece of the whole event. Apple is overhauling Siri from the ground up, and for the first time, it will work like a proper AI chatbot.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Powered by Google Gemini</strong></h4>
-
-
-
-<p>Bloomberg&#8217;s Mark Gurman <a href="https://www.bloomberg.com/news/articles/2025-11-05/apple-plans-to-use-1-2-trillion-parameter-google-gemini-model-to-power-new-siri">reported in November 2025</a> that Apple licenced a custom 1.2-trillion-parameter Gemini model from Google at roughly $1 billion per year. Apple and Google confirmed the partnership in a joint statement in January 2026. The deal means Apple&#8217;s new Siri runs on a model that is eight times larger than the one Apple built on its own.</p>
-
-
-
-<p>Google Cloud CEO Thomas Kurian confirmed the arrangement publicly at Google Cloud Next in April 2026, saying the companies are building “the next generation of Apple Foundation Models based on Gemini technology.&#8221; The financial terms and model size figures come from Bloomberg reporting, not from either company officially.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>A dedicated Siri app</strong></h4>
-
-
-
-<p>Siri is getting its own standalone app across iPhone, iPad, and Mac. It works like ChatGPT or Gemini: text and voice input, back-and-forth conversation, and saved chat history that syncs via iCloud. You can set history to expire after 30 days, a year, or never. The interface defaults to a dark theme and includes a button for uploading images and documents.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>The Dynamic Island glow</strong></h4>
-
-
-
-<p>When you activate Siri on your iPhone, the Dynamic Island will expand and glow. Swiping down from the top centre of the screen pulls up a “Search or Ask&#8221; bar that replaces Spotlight search. You can swipe down further to open a full conversation, which looks similar to an iMessage thread, with mini cards for weather, calendar entries, and notes appearing inline.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Context awareness and app actions</strong></h4>
-
-
-
-<p>This is what Apple actually promised in 2024 and never shipped. The new Siri is expected to:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Read what is on your screen and respond to it</li>
-
-
-
-<li>Access your emails, messages, calendar, contacts, and photos to give you personalised answers</li>
-
-
-
-<li>Take actions inside and across apps, such as booking a calendar event or sending a message, based on a single request</li>
-
-
-
-<li>Handle multi-step instructions in one sentence</li>
-</ul>
-
-
-
-<h4 class="wp-block-heading"><strong>You choose your AI model</strong></h4>
-
-
-
-<p>A new Extensions system will let you pick which AI handles Apple Intelligence features. The options are ChatGPT, Google Gemini, and Anthropic&#8217;s Claude. Each can have its own voice, so you know which model answered. This ends OpenAI&#8217;s exclusivity on the iPhone. If you never change your settings, you will be routed to Gemini by default.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Important: This is a preview, not a full launch</strong></h4>
-
-
-
-<p>Gurman has reported Apple is still labelling the new Siri a “beta&#8221; internally. Developer builds include a toggle to switch back to the old Siri. Apple may put some features behind a waitlist when iOS 27 ships in September. In February 2026, Apple engineers working on the iOS 26.5 test build reported that not all features were working reliably. Set your expectations accordingly.</p>
-
-
-
-<h3 class="wp-block-heading"><strong>2. iOS 27:&nbsp;</strong></h3>
-
-
-
-<p>Think of iOS 27 as a clean-up release. In the same way Apple released Mac OS X Snow Leopard in 2009, mostly to fix things rather than add features, iOS 27 is focused on making your iPhone faster and more reliable. iOS 26 shipped with complaints about overheating, battery drain, keyboard failures, UI glitches, and slow animations. iOS 27 is built to address that.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>Liquid Glass gets refined</strong></h4>
-
-
-
-<p>Apple is not removing its Liquid Glass design from iOS 27. The look introduced in iOS 26 remains, but Apple is adjusting the transparency and contrast to improve readability. There will reportedly be a system-wide slider you can use to dial back the effect. Tab bars in apps like Music, Podcasts, and Apple TV will also get updated.</p>
-
-
-
-<h4 class="wp-block-heading"><strong>AI features are spreading across apps</strong></h4>
-
-
-
-<p>Apple Intelligence is expanding into more built-in apps:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Camera:</strong> Visual Intelligence now appears in the Camera app as its own mode. You will be able to scan a nutrition label straight into the Health app or scan a phone number into Contacts.</li>
-
-
-
-<li><strong>Photos:</strong> New generative editing tools called Extend, Enhance, and Reframe are coming, though Gurman says some may not make the final cut if testing stays inconsistent.</li>
-
-
-
-<li><strong>Shortcuts:</strong> You will be able to create shortcuts by describing what you want in plain language.</li>
-
-
-
-<li><strong>Safari:</strong> A new feature called Organise Tabs will auto-sort your open tabs into topic groups.</li>
-
-
-
-<li><strong>Wallet</strong>: Tap the + button and scan any QR code or physical pass to create a digital pass for tickets, gym memberships, or gift cards, without needing the issuer to have PassKit support. There is also an AI bill-splitting feature for Apple Cash.</li>
-</ul>
-
-
-
-<h4 class="wp-block-heading"><strong>Which iPhones are getting iOS 27?</strong></h4>
-
-
-
-<p>A leaked compatibility list suggests iOS 27 will require an A14 Bionic chip or newer. That means:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Supported: iPhone 12 and newer, iPhone SE (3rd generation)</li>
-
-
-
-<li>Dropped: iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, iPhone SE (2nd generation)</li>
-</ul>
-
-
-
-<p>If your phone is on the dropped list, it will continue to receive iOS 26 security updates for roughly two more years, but it will not receive iOS 27. Apple confirms the official compatibility list at the keynote.</p>
-
-
-
-<p>For the Siri AI features headline, you need an iPhone 15 Pro or newer. That is a hardware requirement based on the chip and RAM, not a software switch Apple can flip later.</p>
-
-
-
-<h3 class="wp-block-heading"><strong>3. macOS 27:</strong></h3>
-
-
-
-<p>Apple confirmed at WWDC 2025 that macOS 26 (Tahoe) was the last version supporting Intel Macs. macOS 27 requires an M1 chip or later, which cuts off the 2019 16-inch MacBook Pro, the 2019 Mac Pro, the 2020 13-inch MacBook Pro, and the 2020 27-inch iMac.</p>
-
-
-
-<p>Rosetta 2, which lets older Intel apps run on Apple Silicon, stays in macOS 27 but is expected to be removed in macOS 28.</p>
-
-
-
-<p>On the new features side, macOS 27 gets the same refined Liquid Glass design coming to iOS 27, the new Siri app and Search or Ask interface, battery life improvements, and performance gains. Gurman also reports that macOS 27 will include code for a touch-optimised interface, hinting at a touchscreen MacBook Pro expected in 2027. Code-diggers may spot touch frameworks in the developer beta.</p>
-
-
-
-<h3 class="wp-block-heading"><strong>4. watchOS, iPadOS, tvOS, and visionOS 27</strong></h3>
-
-
-
-<p>Apple is updating all six of its operating systems at WWDC. Here is what to expect from the others:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>watchOS 27: </strong>Improved heart rate tracking and a new watch face based on the Apple Watch Ultra&#8217;s Modular Ultra layout, now available on standard Apple Watch models. A high blood pressure notification feature is reportedly still under FDA review and may not ship on day one.</li>
-
-
-
-<li><strong>iPadOS 27: </strong>More fixes and refinements to the windowing system introduced in iPadOS 26, which let you run up to 12 apps in free-floating windows. iPadOS 27 is less about new features and more about making what is already there work better.</li>
-
-
-
-<li><strong>tvOS and visionOS 27: </strong>Both get the Liquid Glass refinements and Siri updates coming across the whole OS family. tvOS gains a larger-text accessibility option. visionOS 27 is described by outlets as a light update.</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading"><strong>5. Hardware: nothing new on Monday</strong></h3>
-
-
-
-<p>Apple already had a busy first half of 2026. The company shipped the AirTag 2, iPhone 17e, M4 iPad Air, M5 MacBook Air, M5 MacBook Pro (Pro and Max), and a new MacBook Neo at $599. There is no room in the product calendar for new announcements at WWDC.</p>
-
-
-
-<p>A global memory chip shortage is also affecting Mac production. Gurman reported in April 2026 that the M5 Mac Studio has been delayed by roughly four months to around October 2026, and the touchscreen MacBook Pro has been pushed to early 2027. Both delays are attributed to supply chain problems tied to AI data centres consuming a large share of global DRAM supply.</p>
-
-
-
-<p>Apple&#8217;s new smart home products, including a HomePad display, a new Apple TV 4K, and a new HomePod mini, are reportedly ready but being held back until the new Siri ships in the fall. The CFO also signalled on Apple&#8217;s April earnings call that there would be no new iPad this quarter.</p>
-
-
-
-<p>So if you were hoping to buy something new on Monday, that is not happening. WWDC is a software event, and this year it is purely that.</p>
-
-
-
-<h2 class="wp-block-heading" id="When-will-you-actually-get-these-features"><strong>When will you actually get these features?</strong></h2>
-
-
-
-<p>Everything announced on Monday is a preview. Here is the rollout timeline:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Developer betas: June 8, 2026, same day as the keynote (released around 1 pm PT)</li>
-
-
-
-<li>Public betas: July 2026</li>
-
-
-
-<li>Full public release: September 2026, alongside the next iPhone lineup</li>
-</ul>
-
-
-
-<p>The new Siri specifically may arrive as a gated beta in September, with some features only available to users on a waitlist. Your phone will update, but the AI features may roll out gradually rather than all at once.</p>
-
-
-
-<h2 class="wp-block-heading" id="One-more-thing-Tim-Cook's-farewell"><strong>One more thing: Tim Cook&#8217;s farewell</strong></h2>
-
-
-
-<p>On April 20, Apple announced that Tim Cook will step down as CEO on September 1. John Ternus, who has run Apple&#8217;s hardware engineering since 2021 and overseen the Apple Silicon transition, becomes CEO the same day. Cook stays on as executive chairman.</p>
-
-
-
-<p>Cook has been CEO since 2011. This WWDC is his final keynote in that role. Analysts expect Ternus to co-present with Cook, with the handoff serving as a natural part of the show. Whether Apple makes it sentimental or keeps it businesslike will say something about how the company wants this transition to land.</p>
-
-
-
-<p>The real test is simpler: Apple promised a smarter Siri two years ago. On Monday, it has to show one that actually works.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Eric Asuma on childhood, ambition, and refusing to sell Kenyan Wall Street</title>
-		<link>https://techcabal.com/2026/06/05/eric-asuma-childhood-ambition-kenyan-wall-street/</link>
-		
-		<dc:creator><![CDATA[Adonijah Ndege]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 14:10:13 +0000</pubDate>
-				<category><![CDATA[People]]></category>
-		<category><![CDATA[Eric Asuma]]></category>
-		<category><![CDATA[Kenyan Wall Street]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=189640</guid>
-
-					<description><![CDATA[There is a type of entrepreneurs who start a company because they have seen a gap in the market. Then there is the kind who starts one because they are trying to make sense of the world around them. When I met Eric Asuma, founder of The Kenyan Wall Street, he struck me as belonging to the second group.]]></description>
-										<content:encoded><![CDATA[
-<p>There is a type of entrepreneurs who start a company because they have seen a gap in the market. Then there is the kind who start one because they are trying to make sense of the world around them. When <a href="https://techcabal.com/2023/08/15/eric-asuma-steps-down-from-hisa/" id="https://techcabal.com/2023/08/15/eric-asuma-steps-down-from-hisa/" target="_blank" rel="noreferrer noopener">I met Eric Asuma, founder of The Kenyan Wall Street,</a> he struck me as belonging to the second group.</p>
-
-
-
-<p>He grew up watching his parents run small businesses, where every shilling mattered, and every decision carried far-reaching consequences. Long before he became a founder, he had a front-row seat to the realities of building a company from scratch. He credits his parents with instilling the discipline and resilience that would later shape his own entrepreneurial journey.</p>
-
-
-
-<p>In 2014, while working at the Nairobi Securities Exchange (NSE), he started <a href="https://kenyanwallstreet.com/" id="https://kenyanwallstreet.com/" target="_blank" rel="noreferrer noopener">The Kenyan Wall Street </a>as a side project. At first, it was little more than a hobby—a platform to explain markets and provide investors with information that was often difficult to find or understand. More than a decade later, that hobby has evolved into Wall Street Africa, a financial intelligence business spanning media, data, and events, serving a growing community of investors across the continent.</p>
-
-
-
-<p>Over a video call, we talked about growing up around entrepreneurs, the early days of building a financial media company when few believed there was a market for it, the evolution from content to intelligence, and why he believes Africa&#8217;s investment ecosystem still suffers from an information problem. We also discussed legacy. Asuma says he wants to be remembered not simply as the founder of a company, but as someone who built critical infrastructure that helped investors better understand markets.</p>
-
-
-
-<p>The future, he says, looks promising. But like many founders, he seems less interested in the destination than in the work of building.</p>
-
-
-
-<p><strong><em>This interview has been edited for length and clarity.</em></strong></p>
-
-
-
-<p><strong>What experiences from your childhood shaped the way you think about money, opportunity, and economic mobility today?</strong></p>
-
-
-
-<p>It mostly comes down to upbringing. I grew up in a household where entrepreneurship wasn’t an abstract idea; it was daily life. My parents ran small businesses, and I watched closely how those businesses were started, sustained, and sometimes rebuilt after setbacks. It wasn’t glamorous, but it was formative.</p>
-
-
-
-<p>That environment shapes your thinking. You learn early that resources are limited, but imagination is not. You also learn that effort compounds slowly, often invisibly, before it produces any meaningful outcome. My parents didn’t frame this as a philosophy; it was simply how they lived. You start something small, you keep going, you adjust, you try again.</p>
-
-
-
-<p>What stayed with me most was the discipline behind entrepreneurship. Nothing was wasted—not time, not opportunity, not effort. That mindset creates a respect for work itself, regardless of scale.</p>
-
-
-
-<p>We came from a very humble background, so economic mobility was never assumed. It was something you had to actively work toward. But my parents instilled a belief: if you put in the work and stay persistent, opportunities eventually show up. Not always in predictable ways, but they do arrive. That belief has influenced how I think about building businesses and approaching setbacks. Even today, I return to that early conditioning: start small, stay consistent, and trust that compounding will eventually do its work.</p>
-
-
-
-<p><strong>Before the Kenyan Wall Street existed, what did you believe was missing from Africa’s financial and business information ecosystem?</strong></p>
-
-
-
-<p>It was less a grand idea and more an observation that accumulated over time. I was working at the stock exchange, with a front-row seat to how information moved—or didn’t move—through the system. What struck me was how fragmented and manual it all was.</p>
-
-
-
-<p>Africa’s markets had returns, activity, and real economic significance, but the information infrastructure lagged far behind more developed markets. Data wasn’t always accessible in real time. Sometimes it wasn’t structured at all. Even basic market functions—bond pricing, yields, calculations—were often handled through separate spreadsheets maintained by different institutions. There was no unified system of truth.</p>
-
-
-
-<p>Yet fixed income dominates African capital markets, accounting for more than 70% of activity in some markets. While global attention often gravitates toward equities, the real engine of the system was happening in a relatively opaque corner of finance. Institutions were making multi-million-dollar decisions with limited automation and inconsistent data pipelines. It was not a lack of intelligence; it was a lack of infrastructure.</p>
-
-
-
-<p>This shaped the direction of what we eventually built at the intersection of capital markets intelligence, financial media, and institutional tools. The thinking evolved from a media-first approach into something broader: you cannot build effective markets without first building the information layer that supports them.</p>
-
-
-
-<p><strong>What problem were you trying to solve when you launched The Kenyan Wall Street, and how has that vision evolved into Wall Street Africa?</strong></p>
-
-
-
-<p>When I started what later became The Kenyan Wall Street around 2014, it wasn’t originally a business idea, more a side project. I was working at the stock exchange, and friends constantly asked how they could access market information. That question kept coming up, and it exposed a gap I had taken for granted while inside the system.</p>
-
-
-
-<p>Inside the exchange, I also noticed something unusual: information flow was not automated. In more developed markets, announcements move through tightly integrated systems; everyone receives them simultaneously. In our case, information could physically arrive at the exchange and sit at reception for hours or even days before reaching the broader market. That delay, in finance, is not just inefficient; it is material.</p>
-
-
-
-<p>I started casually sharing snippets of information online. At first, it was curiosity-driven. I didn’t think of it as a product. But something interesting happened: the audience expanded quickly. I began receiving messages from investors—some in Dubai, others in Europe—asking for deeper insights into specific companies. These were not casual readers; they were institutional actors making real allocation decisions.</p>
-
-
-
-<p>I resisted the idea that this could become a formal business. I wasn’t trained as an analyst. But demand kept growing, and the feedback became consistent: build a platform where this information can live properly. That was the early seed. Over time, the media layer gave rise to data infrastructure and tools. The broader ambition became building the information infrastructure for African markets at scale.</p>
-
-
-
-<p><strong>Was there a defining moment when you realised you weren’t simply building a media platform, but a broader financial information company?</strong></p>
-
-
-
-<p>Yes, several moments made that clear. One of the earliest signals was the type of users engaging with the platform: decision-makers. Institutional investors began relying on the information to guide allocation decisions. In some cases, an investor would read a piece and reach out asking for deeper analysis or direct engagement with company leadership—sometimes requesting interviews with CEOs specifically because they needed more context before deploying capital.</p>
-
-
-
-<p>That shifted how I understood the platform’s role. It was no longer just about publishing information; it was about shaping decisions in real time. At that point, trust became central. In financial markets, information is only valuable if it is credible. If trust breaks, the entire system loses value. We realised we were not just building a media product; we were building a trust infrastructure. Accuracy, consistency, and integrity became the real product.</p>
-
-
-
-<p><strong>What were some of the toughest moments, and what kept you going?</strong></p>
-
-
-
-<p>The hardest moments are not always dramatic; they are often continuous. One of the most persistent challenges was resource constraints, especially in the early stages. We made a deliberate decision not to rely heavily on external funding. That meant building slowly, with limited resources, and focusing on sustainability from day one. It wasn’t easy, but it forced discipline.</p>
-
-
-
-<p>There were moments when larger media organisations entered the same space, creating competitive pressure. Instead of deterring us, it reinforced the importance of staying consistent. The guiding principle was simple: if we continued providing reliable intelligence, over time, the market would recognise the value. Even during difficult periods, we kept building. That consistency became the differentiator.</p>
-
-
-
-<p><strong>How did you fund the early years, and what personal sacrifices did you make?</strong></p>
-
-
-
-<p>The early years were largely self-funded. We relied on revenue from early customers and kept operations extremely lean. There was no external capital buffer, so every decision had to be made carefully. The focus was always on ensuring obligations to the team and core partners were met first. That meant making trade-offs elsewhere. Survival discipline matters more than scale ambition in the beginning. There were personal sacrifices, as in most early-stage ventures, but the underlying belief was that if the foundation is strong, the structure can be built later.</p>
-
-
-
-<p><strong>What part of building an African media and information company do people never see?</strong></p>
-
-
-
-<p>Consistency. That is the part that is often invisible. People see outcomes—published reports, events, announcements—but rarely the years of repetition that precede them. What has mattered most is showing up every day and staying focused on a specific domain: financial markets, capital flows, and information systems. Over time, that consistency compounds into credibility. And credibility, in this space, is everything. It determines whether institutions trust your data, whether investors rely on your analysis, and whether you are invited into decision-making rooms. Most of that is built long before anyone notices it.</p>
-
-
-
-<p><strong>Wall Street Africa now spans media, intelligence, data, events, and technology. How do all these pieces fit together?</strong></p>
-
-
-
-<p>They all sit within a single logic chain. Media is the entry point; it creates visibility and trust. From there, intelligence builds depth by structuring and interpreting data. Tools then operationalise that intelligence for decision-making. Events add a human layer, bringing together capital allocators, founders, and institutions. Technology then becomes the distribution and scaling layer. The idea is not fragmentation but integration. Each layer reinforces the other.</p>
-
-
-
-<p><strong>You have described a vision of building Africa’s equivalent of Bloomberg. What does that look like in practice?</strong></p>
-
-
-
-<p>The comparison is more directional than literal. Companies like Bloomberg have built deeply embedded systems for global markets, but Africa has historically been peripheral to that infrastructure. What is missing is not just data but context-specific infrastructure. African markets are fragmented, unevenly liquid, and often under-instrumented. Global systems do not always capture the nuance required for effective decision-making.</p>
-
-
-
-<p>The opportunity is not to replicate Bloomberg but to build something adapted to African realities—tools that serve mid-sized funds, local asset managers, and emerging institutional investors who cannot justify global terminal costs, as well as deeper sovereign and corporate datasets that are often missing. The ambition is to make African markets more intelligible and investable for local and global participants.</p>
-
-
-
-<p><strong>What have African capital markets taught you about the relationship between information, transparency, and economic development?</strong></p>
-
-
-
-<p>The relationship is direct. Capital flows toward confidence. Confidence is built on transparency. Transparency depends on information. When information is incomplete or fragmented, uncertainty increases. When uncertainty increases, capital becomes more expensive or withdraws entirely. Conversely, when information improves, markets become more efficient. Price discovery improves. Participation increases. That is the structural gap we are trying to address.</p>
-
-
-
-<p><strong>What is the biggest misconception global investors have about Africa’s financial markets?</strong></p>
-
-
-
-<p>One of the biggest misconceptions is that Africa is a single market. In reality, it is a collection of highly differentiated systems. Kenya, Nigeria, Tanzania, Uganda, Ethiopia—they all operate differently. Bond markets dominate in some countries, equities in others. Policy environments vary significantly.</p>
-
-
-
-<p>Another misconception relates to returns. There is a persistent belief that African markets do not generate competitive returns. But that is not accurate. In recent years, several African markets have delivered returns exceeding global benchmarks. The challenge is not performance; it is perception and access. Global investors often lack the granular information needed to understand these markets properly.</p>
-
-
-
-<p><strong>What personal decision had the greatest impact on Wall Street Africa’s growth?</strong></p>
-
-
-
-<p>One of the most important decisions was choosing not to sell the media business when the opportunity arose. There were offers on the table, and it would have been a simpler exit path. But we decided to hold on and expand the scope instead. Another key decision was bringing in the right people to help build the organisation—shifting from founder-led execution to team-driven scaling. Ultimately, the focus was on building something broader than media: a trust system, data infrastructure, and long-term institutional platform. That required patience over short-term gain.</p>
-
-
-
-<p><strong>If Wall Street Africa succeeds over the next decade, what role do you hope it will play in Africa’s economic transformation?</strong></p>
-
-
-
-<p>The goal is simple: to help build the infrastructure that makes African markets more transparent, more efficient, and more accessible. If we contribute to better capital allocation, improved investor understanding, and stronger market connectivity, we will have achieved what we set out to do.</p>
-
-
-
-<p><strong>What would you like Wall Street Africa’s legacy to be?</strong></p>
-
-
-
-<p>That we helped make financial information more accessible. For a long time, high-quality market intelligence was concentrated in a small number of institutions. Expanding that access—to entrepreneurs, students, investors, and policymakers—is central to the mission.</p>
-
-
-
-<p><strong>What advice would you give to a young African founder who wants to build an enduring institution rather than a successful startup?</strong></p>
-
-
-
-<p>Think long term. Most founders underestimate how long meaningful institution-building takes. It is not a short-cycle game. Focus on foundations rather than funding cycles. Build something that can survive periods of constraint. Markets change. Technologies evolve. But trust, once built consistently, compounds over time. The most durable companies are those that solve real problems and remain disciplined enough to stay relevant across cycles. That is the real work.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Nigeria licenced 46 telecom challengers to rival MTN and Airtel. Few have taken off.</title>
-		<link>https://techcabal.com/2026/06/05/why-nigerias-mvno-dream-is-struggling-to-connect/</link>
-		
-		<dc:creator><![CDATA[Frank Eleanya]]></dc:creator>
-		<pubDate>Fri, 05 Jun 2026 13:07:08 +0000</pubDate>
-				<category><![CDATA[Features]]></category>
-		<category><![CDATA[Africa]]></category>
-		<category><![CDATA[lebara]]></category>
-		<category><![CDATA[MVNOs]]></category>
-		<category><![CDATA[NCC]]></category>
-		<category><![CDATA[Telecom industry]]></category>
-		<guid isPermaLink="false">https://techcabal.com/?p=189622</guid>
-
-					<description><![CDATA[More than 40 MVNOs were licenced to disrupt Nigeria’s telecom market, but the sector remains far from delivering on its promise of greater competition.]]></description>
-										<content:encoded><![CDATA[
-<p>Every morning before Ewoma Okweni logs in to work from her apartment in Ajah, a suburban neighbourhood in Lagos, she calculates how much internet bandwidth the day will cost her.&nbsp;</p>
-
-
-
-<p>An audit officer at PwC Nigeria, Okweni spends between eight and ten hours online daily on days she works from home, moving between cloud-hosted spreadsheets, PowerPoint files, video meetings, and Chrome windows that multiply endlessly across her screen.&nbsp;</p>
-
-
-
-<p>Twenty gigabytes of data disappear in three or four days. She buys a weekly ₦5,000 ($3.65) bundle because, for her, the monthly plans no longer make economic sense for the kind of work she does.</p>
-
-
-
-<p>“I have like thirty tabs open on Chrome, multiple PowerPoint files open,” she told TechCabal in a telephone conversation. And I work on the cloud. Whatever you do has to be saved on the cloud.”</p>
-
-
-
-<p>On weekends, the data drain continues with Netflix, Instagram, and YouTube. Yet despite rising costs and persistent frustrations, Okweni has never seriously considered leaving MTN for one of Nigeria’s new Mobile Virtual Network Operators (MVNOs)&#8211;telecom providers that offer voice, data, and messaging services by leasing network capacity from established operators.&nbsp;</p>
-
-
-
-<p>The prospect feels like more hassle than it is worth: SIM registration, identity verification, and uncertainty over whether the service will be reliable enough to justify the switch.</p>
-
-
-
-<p>“I don’t think I really need another one,” she said. “And I’ll be concerned if they can maintain the service over time.”</p>
-
-
-
-<p>That quiet hesitation may explain one of the strangest stories unfolding inside Nigeria’s telecom sector.</p>
-
-
-
-<p>In October 2025, Vitel Wireless <a href="https://guardian.ng/news/vitel-wireless-becomes-first-mvno-to-complete-interconnectivity-with-all-major-nigerian-networks/">became the first MVNO</a> to officially launch operations in Nigeria, entering the market with the promise of innovation, flexibility, and new competition in an industry long dominated by MTN, Airtel, Globacom, and 9mobile.&nbsp;</p>
-
-
-
-<p>Between November 2025, when <a href="https://ncc.gov.ng/market-data-reports/industry-statistics" target="_blank" rel="noreferrer noopener">the NCC began tracking the company&#8217;s active subscriber base</a>, and March 2026, when the latest industry data was released, the company recorded no active subscribers.&nbsp;</p>
-
-
-
-<p>The only measurable growth the NCC has recorded has come through mobile number portability. The number of subscribers porting into Vitel&#8217;s network rose from five in November 2025 to 17 in March, suggesting a broader struggle to attract users at scale.</p>
-
-
-
-<iframe src='https://flo.uri.sh/visualisation/29217927/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-
-
-
-<p>However, Vitel Wireless disputes the picture painted by the NCC’s subscriber figures.</p>
-
-
-
-<p>“Vitel Wireless currently has the fifth-largest mobile subscriber base in Nigeria, although it remains well behind long-established operators such as MTN, Airtel, and Glo, which have operated in the market for more than three decades,” Chudi Nwabueze, the company’s chief operating officer, told TechCabal in an emailed response.</p>
-
-
-
-<p>For Vitel, the experience since launch has reinforced both the opportunity and difficulty of operating as an MVNO in Nigeria.</p>
-
-
-
-<p>“One of the biggest lessons for Vitel Wireless has been that Nigeria’s telecom market still presents enormous opportunities for customer-focused MVNOs despite being largely dominated by established MNOs,” Nwabueze added. “The market is highly competitive, but there is still significant room for operators that can innovate around affordability, service delivery, and market penetration.”</p>
-
-
-
-<p>The gap between Vitel’s claims and the NCC’s subscriber data highlights a broader challenge in Nigeria’s nascent MVNO market: accurately measuring commercial traction. While MVNOs acquire customers and scale operations in real time, the NCC relies on quarterly or biannual compliance reports submitted by operators, creating a reporting lag. As a result, subscriber gains from aggressive customer-acquisition campaigns may not appear in official industry statistics until months later, making it difficult to assess an operator’s true market position at any given time.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The promise of a telecom revolution</strong></h2>
-
-
-
-<p>When the NCC <a href="https://thenationonlineng.net/ncc-licenses-25-for-mobile-virtual-operations/">licenced</a> 25 MVNOs in June 2023, it envisioned a more competitive telecom market where smaller, agile operators could challenge the dominance of the big networks, expand connectivity in underserved areas, and build tailored services for niche customer segments. Interest in the model grew quickly, with the number of licenced MVNOs <a href="https://technext24.com/2026/01/23/ncc-licensed-46-mvnos-only-2-are-active/#:~:text=Fast%2Dforward%20to%20April%202023,others%20in%20the%20following%20months." target="_blank" rel="noreferrer noopener">rising to 46 by January 2024</a>.</p>
-
-
-
-<p>But before the sector had a chance to gain traction, the NCC hit the brakes. On May 17, 2024, <a href="https://technologytimes.ng/nigeria-halts-mvno-licensing-ncc-says/#:~:text=In%20a%20new%20twist%2C%20NCC,Image%20credit%3A%20NCC." target="_blank" rel="noreferrer noopener">the regulator placed a temporary freeze</a> on new MVNO licences alongside Interconnect Exchange and VAS Aggregator licences to avoid overcrowding a market still in its infancy.</p>
-
-
-
-<p>The ambition was not without precedent. Nigeria’s MVNO framework drew inspiration from the United Kingdom, widely regarded as the birthplace of the modern MVNO industry. What began in 1999, <a href="https://www.heraldscotland.com/news/12207003.virgin-mobile-launched/" target="_blank" rel="noreferrer noopener">when Richard Branson, founder of Virgin Group, launched Virgin Mobile</a> on the One2One network, has since evolved into a mature market <a href="https://www.mordorintelligence.com/industry-reports/uk-mobile-virtual-network-operator-mvno-market" target="_blank" rel="noreferrer noopener">worth more than $5.23 billion,</a> with over 110 MVNO brands competing across a wide range of customer segments.</p>
-
-
-
-<p><a href="https://www.mordorintelligence.com/industry-reports/uk-mobile-virtual-network-operator-mvno-market" target="_blank" rel="noreferrer noopener">As of 2025, about 20.19 million UK subscribers</a> use MVNOs such as giffgaff, Lyca Mobile, Tesco Mobile, Lebara, and VOXI—often without realising that these providers operate without owning telecom towers or spectrum licences.</p>
-
-
-
-<p>Instead, they buy wholesale network capacity from infrastructure owners such as EE, O2, and Vodafone, allowing them to focus on pricing, customer service, and niche market offerings. Tesco Mobile is considered the largest MVNO <a href="https://news.virginmediao2.co.uk/virgin-media-o2-and-tesco-agree-10-year-renewal-of-tesco-mobile-joint-venture/" target="_blank" rel="noreferrer noopener">in the UK with over 5.5 million subscribers.</a></p>
-
-
-
-<p>South Africa is the undisputed heavyweight of Africa’s MVNO market. <a href="https://www.mordorintelligence.com/industry-reports/south-africa-mno-mvno-market" target="_blank" rel="noreferrer noopener">The sector is a thriving $543 million (R8.6 billion) industry</a> with over 23 active virtual operators serving roughly 4.5 million subscribers.</p>
-
-
-
-<p>The appeal of the MVNO model lies in its lower barriers to entry. Without the enormous cost of building towers or acquiring spectrum licences, operators can focus on pricing, customer service, branding, or niche offerings tailored to specific user groups.</p>
-
-
-
-<p>On paper, Nigeria appeared ready for a similar transformation. The country has a young and increasingly digital population, rising smartphone penetration, growing data consumption, and an economy becoming more dependent on remote work, fintech, cloud services, and streaming platforms. Consumers are already frustrated by poor service quality and rising data costs, creating what looks like a strong appetite for alternatives.</p>
-
-
-
-<p>The NCC tried to kick-start the MVNO market in 2022 by <a href="https://ncc.gov.ng/media/1354/view" target="_blank" rel="noreferrer noopener">introducing a licencing framework</a> that outlined who could operate as an MVNO, the fees they would pay, and the rules they would follow. One key rule was that MVNOs could not own spectrum and would have to rely on existing mobile network operators for access.</p>
-
-
-
-<p>But the framework left out an important detail: it did not clearly define how MVNOs and network operators should negotiate access agreements.</p>
-
-
-
-<p>In May 2026, the NCC released <a href="https://ncc.gov.ng/sites/default/files/2026-05/Draft-Business-Rules-for-Mobile-Virtual-Network-Operations-in-Nigeria.pdf" target="_blank" rel="noreferrer noopener">Draft Business Rules for Mobile Virtual Network Operations</a> that set out how host network operators and MVNOs should negotiate commercial and technical agreements and introduced a 120-day deadline for concluding those talks. Its goal: stop dominant operators from dragging out negotiations and slowing the entry of new competitors into the market.</p>
-
-
-
-<p>“Host Network Operators shall conclude commercial and technical agreements with MVNOs within a maximum period of one hundred and twenty (120) days from the date of a formal request. Internal approval processes shall not override this timeline,” the NCC said in the rules.</p>
-
-
-
-<p>Yet regulation alone cannot overcome the deeper challenge facing Nigeria&#8217;s MVNO market: a highly concentrated telecom industry dominated by a handful of infrastructure owners. While the rules may accelerate negotiations, they do little to address the structural imbalance between MVNOs, which depend on access to existing networks, and the operators that control that access.</p>
-
-
-
-<p>The dominance of MTN Nigeria and Airtel Nigeria illustrates the scale of that imbalance. Both<a href="https://ncc.gov.ng/market-data-reports/industry-statistics" target="_blank" rel="noreferrer noopener"> operators account for 86.12% of Nigeria’s telecom subscribers</a> and command nearly every layer of the value chain—from network infrastructure and enterprise services to distribution channels, customer acquisition, and consumer trust.</p>
-
-
-
-<p>Their scale is reinforced by aggressive infrastructure spending: between January and March 2026 alone, <a href="https://techcabal.com/2026/04/30/mtn-nigeria-flags-102-million-profit-risk-as-fuel-costs-surge/" target="_blank" rel="noreferrer noopener">MTN invested ₦390.3 billion</a> ($284.22 million) while <a href="https://cdn-webportal.airtelstream.net/website/investor/main/pdf/Q4-2026/Press_release_FY'2026.pdf">Airtel Nigeria spent ₦260 billion</a> ($189.33 million), bringing their combined telecom infrastructure investment to roughly ₦650 billion in just one quarter. For any new entrant, competing at that scale creates an immediate disadvantage.</p>
-
-
-
-<p>The experience of Lebara highlights the challenge. The UK-based MVNO repeatedly postponed its Nigerian launch after initially <a href="https://techcabal.com/2026/01/14/lebara-nigeria-turns-to-agent-onboarding-after-missed-2025-launch/" target="_blank" rel="noreferrer noopener">targeting the third quarter of 2025</a>. Although it <a href="https://businessday.ng/companies/article/uks-lebara-enters-nigeria-market-pledges-affordable-innovative-services/" target="_blank" rel="noreferrer noopener">conducted a soft launch on March 2, 2026</a>, inviting prospective customers to reserve phone numbers, the company has yet to commence full commercial operations months later.</p>
-
-
-
-<p>The company did not respond to requests for comments.</p>
-
-
-
-<p>In countries like the UK, MVNO ecosystems evolved gradually over decades within mature regulatory environments and relatively stable wholesale markets. Nigeria attempted to compress that evolution into a much shorter timeframe.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The cost of being “virtual”</strong></h2>
-
-
-
-<p>One of the enduring misconceptions around MVNOs is embedded in the word itself: virtual. To outsiders, it suggests a lightweight business, a telecom startup without the crushing infrastructure costs associated with traditional operators.</p>
-
-
-
-<p>The reality is far more complicated.</p>
-
-
-
-<p>“For the MVNO, virtually all of them jumped into a market and industry they didn’t understand,” said Sadiq Mohammed, a Lagos-based telecom industry expert. “People thought that being an MVNO was just having an API call. But the investments required run into millions of dollars.”</p>
-
-
-
-<p>Even without towers, a serious MVNO still requires billing systems, customer relationship platforms, cybersecurity architecture, SIM provisioning systems, interconnect agreements, compliance infrastructure, technical integrations, and in some cases, its own core network.</p>
-
-
-
-<p>Tola Yusuf, CEO of Infratel Africa, a pan-African telecoms infrastructure company, described the situation as “a systems alignment issue.”</p>
-
-
-
-<p>“The network may belong to the mobile network operator (MNO),” he explained, “but the customer experience belongs to the MVNO.”</p>
-
-
-
-<p>The MVNO inherits nearly all the operational burdens of a telecom company without inheriting the structural advantages of owning infrastructure.</p>
-
-
-
-<p>In Nigeria, those structural disadvantages are amplified by macroeconomic instability. The naira’s volatility has pushed up the cost of imported telecom software and hardware. Energy costs, with diesel prices <a href="https://www.premiumtimesng.com/business/business-news/883628-average-price-of-petrol-rises-to-%E2%82%A61532-93-per-litre-in-april-up-18-97-nbs.html" target="_blank" rel="noreferrer noopener">rising more than 43.67% in one year</a>, remain punishing. Investors have become more cautious after years of economic turbulence.</p>
-
-
-
-<p>“The era of small startup telecom is largely gone,” Yusuf said.</p>
-
-
-
-<p>According to him, a nationally relevant MVNO in Nigeria could require between ₦5 billion ($3.64 million) and ₦20 billion ($14.5 million) in investment before achieving meaningful scale.</p>
-
-
-
-<p>Vitel said those financial pressures have been impossible to ignore. According to its COO, operating an MVNO in Nigeria involves substantial costs beyond network access, including distribution, customer acquisition, SIM registration, regulatory compliance, technology integration, and operational support systems.</p>
-
-
-
-<p>“A major challenge is that most of the software and hardware used by MVNOs in Nigeria is imported and paid for in U.S. dollars, while many cloud services are also billed in dollars,” Nwabueze said. “This creates pressure when ARPU remains below market levels, as revenues are earned in naira while key operating costs are paid in dollars.”</p>
-
-
-
-<p>While Vitel anticipated some of these challenges before launch, he said the pace of scaling operations in Nigeria has required continuous cost optimisation and long-term capital planning.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Understanding Nigeria’s MVNO tiers</strong></h2>
-
-
-
-<p>In its<a href="https://ncc.gov.ng/sites/default/files/2026-05/Draft-Business-Rules-for-Mobile-Virtual-Network-Operations-in-Nigeria.pdf" target="_blank" rel="noreferrer noopener"> May 2026 Draft Business Rules</a> for Mobile Virtual Network Operations in Nigeria, the NCC classifies MVNOs into a five-tier structure based on their technical capabilities and operational scope.</p>
-
-
-
-<p>At the entry level is the Tier 1 Service-Based MVNO (S-VNO), focusing mainly on branding and customer-facing services. Operators in this category can manage their brand identity, customer relationship management systems, applications, and digital content, but rely entirely on host operators for switching, interconnection, numbering resources, and core network infrastructure.</p>
-
-
-
-<p>The Tier 2 Simple-Facilities MVNO (SF-VNO) allows operators to own some service-layer infrastructure, including billing platforms, Intelligent Network systems, and subscriber databases such as the Home Location Register (HLR) or Home Subscriber Server (HSS). These operators can also issue their own SIM cards, although they still depend on host operators for transmission, switching, and numbering resources.</p>
-
-
-
-<p>Tier 3, known as the Core-Facilities MVNO (CF-VNO), gives operators greater control by allowing them to own and operate switching and interconnection infrastructure within the network. However, like every other tier, they are still prohibited from owning spectrum resources.</p>
-
-
-
-<p>At the wholesale layer, Tier 4 operators—known as Mobile Virtual Network Aggregators or Enablers (MVNA/MVNE)—provide shared infrastructure, OSS/BSS platforms, and operational support for lower-tier MVNOs.&nbsp;</p>
-
-
-
-<p>The highest category, Tier 5 Unified Virtual Network Operators (UVNOs), combines the capabilities of all lower tiers and can host or enable other MVNO categories.&nbsp;</p>
-
-
-
-<p>Across all tiers, however, one rule remains constant: no MVNO can operate independently without a host network arrangement, and none are permitted to own spectrum.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The gatekeepers</strong></h2>
-
-
-
-<p>Unlike conventional telecom operators, MVNOs cannot function independently. They must ride on the infrastructure of existing Mobile Network Operators. That means negotiating wholesale access agreements with companies they are simultaneously trying to compete against.</p>
-
-
-
-<p>The relationship is inherently awkward.</p>
-
-
-
-<p>“An MNO naturally asks, ‘Why should I empower a future competitor?’” Yusuf said.</p>
-
-
-
-<p>Even when agreements exist, the economics are often unfavourable. If the wholesale price of bandwidth leaves too little room for retail profit, the MVNO becomes commercially unviable before it can scale.</p>
-
-
-
-<p>“The viability of MVNOs in Nigeria depends heavily on the regulatory framework put in place by the NCC,” said Mukesh Chandra, a telecom infrastructure expert. “In my view, the current regulations do not provide enough flexibility for MVNO operators to build sustainable businesses. The MVNO model has historically struggled in many developing markets where regulations tend to favour the major telecom operators.”</p>
-
-
-
-<p>Chandra argued that the structure of the Nigerian market leaves MVNOs heavily dependent on existing telecom giants for infrastructure and operational systems.&nbsp;</p>
-
-
-
-<p>“In many cases, an MVNO operates almost like a franchise model, buying airtime and data in bulk at discounted rates from a host operator and reselling those services under its own brand,” he said. “That limits how much they can truly differentiate themselves.”</p>
-
-
-
-<p>MTN Nigeria, the country’s largest telecom operator, has largely become the gatekeeper of the experiment. Tobechukwu Okigbo, the company’s Chief Corporate Services and Sustainability Officer, said it remains the only operator to have onboarded an MVNO. Vitel Wireless relies on MTN Nigeria’s infrastructure.</p>
-
-
-
-<p>“We’re onboarding MVNOs based on their capacity,” Okigbo said during a meeting with journalists in May. “Some people just thought that being an MVNO is just having an API call. There is quite a significant investment that has to happen, and those investments are in millions of dollars.”</p>
-
-
-
-<h2 class="wp-block-heading"><strong>The Nigerian Internet user</strong></h2>
-
-
-
-<p>The tragedy of the MVNO crisis is that it unfolds in a country desperate for better connectivity.</p>
-
-
-
-<p>Frank Akogun, a Lagos-based remote software engineer, has built his life around telecom redundancy. He keeps active data subscriptions across Swift Networks, MTN Nigeria, and Airtel because he no longer trusts any single provider to remain consistently functional.</p>
-
-
-
-<p>“I don’t have the luxury of sticking to one provider,” he said. “Any can be down, and I need it to work remotely.”</p>
-
-
-
-<p>His monthly data consumption hovers around 50GB, driven mostly by Teams meetings, cloud-based code storage, and programming courses downloaded overnight during promotional data windows.</p>
-
-
-
-<p>Over the years, Akogun watched his internet bills climb steadily upward. Swift Networks, once his default provider, scrapped smaller plans and pushed him into a ₦45,000 ($32.75) monthly unlimited package that still delivered inconsistent quality. Eventually, he abandoned the service for Airtel’s ODU router.</p>
-
-
-
-<p>Yet even the word “unlimited,” he argued, has become misleading.</p>
-
-
-
-<p>“There is no real unlimited,” he said. “Once you get past 100GB, providers start truncating your speed.”</p>
-
-
-
-<p>The frustration extends beyond entertainment or convenience. For Akogun, unstable internet has become an obstacle to technological creativity itself.</p>
-
-
-
-<p>“If quality improved, people could host mini servers in their houses,” he said. “You could have a laptop in your apartment receiving requests from the internet. But the network is so capped and unstable, we don’t get to explore some cool frontiers.”</p>
-
-
-
-<p>That statement captures the deeper paradox haunting Nigeria’s telecom market. Demand for better internet has never been higher. Consumers are exhausted by expensive data plans, unreliable service, and restrictive fair-use policies. Remote work, streaming, cloud computing, and AI tools are driving bandwidth consumption upward every year.</p>
-
-
-
-<p>For operators like Vitel, that consumer frustration represents the opportunity MVNOs were supposed to capture.</p>
-
-
-
-<p>Nwabueze said the company has focused on expanding access through grassroots distribution, agency networks, partnerships, and digital onboarding channels designed to lower operating costs and reach underserved communities.</p>
-
-
-
-<p>“Vitel Wireless remains committed to expanding access to airtime and data services across Nigeria, particularly in underserved communities,” he said. “We believe collaboration, localised distribution, and technology-driven operations are essential to sustainably reaching rural and semi-urban communities.”</p>
-
-
-
-<p>The challenge is that serving those customers profitably remains difficult. Even as demand for connectivity rises, the economics of building distribution networks, acquiring subscribers, and competing against entrenched operators continue to test the viability of the MVNO model.</p>
 ]]></content:encoded>
 					
 		
