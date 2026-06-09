@@ -37432,6 +37432,48 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Cipher Digital raises $810 million in junk bonds to build another Amazon data centre in Texas",
+      "url": "https://thenextweb.com/news/cipher-digital-810m-junk-bond-amazon-data-center-texas",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Cipher Digital发$810M垃圾债建亚马逊数据中心",
+      "reason": "欧洲数据中心运营商Cipher Digital大规模举债建设，北美数据中心供应链与云基础设施合作机会增加",
+      "impact": "数据中心设备供应商、云服务集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "北美数据中心扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-08",
+      "date": "2026-06-08",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/06/cipher-digital-810m-junk-bond-amazon-data-center-texas.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-09": [
@@ -37512,6 +37554,132 @@
       "bd_priority": "高",
       "signal_taxonomy": [
         "general"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Mercor’s Brendan Foody calls out Sequoia, accusing it of ‘dual-pricing’ valuation tricks",
+      "url": "https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Mercor CEO指责红杉资本使用双重定价估值策略",
+      "reason": "全球顶级风投被指控估值不透明，可能影响初创公司融资条款和LP信任",
+      "impact": "全球风投机构、被投初创公司、LP投资者",
+      "insight_label": "警示信号",
+      "trend_topic": "风投估值透明度争议",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-1258486979.jpg?w=1024",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital",
+        "org_change"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Databricks eyes funding at up to $175b valuation: sources",
+      "url": "https://www.techinasia.com/databricks-secures-funding-at-134b-valuation",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "Databricks估值或达$175B",
+      "reason": "亚太大数据平台Databricks估值飙升，数据湖仓生态合作与亚太AI基础设施采购机会显著",
+      "impact": "云服务商、数据集成工具厂商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太AI基础设施热",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1780974599_1749700580_shutterstock_2408484007-scaled-1.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "DATA VANTAGE: Indonesia's McEasy raises $6m and other updates",
+      "url": "https://dealstreetasia.com/stories/mceasy-raises-funding-484893/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "印尼McEasy获600万美元融资",
+      "reason": "东南亚物流科技赛道持续获投，印尼车队管理SaaS市场有ICT集成机会",
+      "impact": "东南亚物流SaaS平台、车队管理技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚物流科技升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2021/06/2.png?fit=1920,1080",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
       ],
       "quality_flags": [],
       "needs_repair": false,
