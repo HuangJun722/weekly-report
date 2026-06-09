@@ -137,12 +137,31 @@ def select_period_high_value_events(events):
     return [event for event in events if is_period_high_value_event(event)]
 
 
-def select_feed_events(today_events, all_visible_events):
+def _unique_events(events, limit=None):
+    selected = []
+    seen = set()
+    for event in events:
+        key = event.get('url') or event.get('title') or id(event)
+        if key in seen:
+            continue
+        seen.add(key)
+        selected.append(event)
+        if limit is not None and len(selected) >= limit:
+            break
+    return selected
+
+
+def select_feed_events(today_events, all_visible_events, limit=5):
     """Select RSS entries from homepage first, then latest date with high-value events."""
-    feed_events = [
+    high_value = [
         event for event in today_events
         if is_high_value_event(event) and not is_google_news_event(event)
     ]
+    main_fill = [
+        event for event in today_events
+        if should_show_in_main_list(event) and not is_google_news_event(event)
+    ]
+    feed_events = _unique_events(high_value + main_fill, limit=limit)
     if feed_events:
         return feed_events, ''
 
@@ -158,4 +177,4 @@ def select_feed_events(today_events, all_visible_events):
         return [], ''
 
     feed_date = sorted(by_date.keys(), reverse=True)[0]
-    return by_date[feed_date], feed_date
+    return _unique_events(by_date[feed_date], limit=limit), feed_date

@@ -11,6 +11,7 @@ from datetime import datetime, timedelta
 
 try:
     from collection_timing_report import build_collection_timing_rows, print_collection_timing_report
+    from daily_coverage_report import build_daily_coverage_report
     from generate_html import build_company_cards, build_display_context
     from run_metrics import latest_run_metrics
     from source_conversion_report import build_source_conversion_report
@@ -18,6 +19,7 @@ try:
     from view_selectors import select_feed_events, select_main_list_events, select_review_events
 except ImportError:
     from scripts.collection_timing_report import build_collection_timing_rows, print_collection_timing_report
+    from scripts.daily_coverage_report import build_daily_coverage_report
     from scripts.generate_html import build_company_cards, build_display_context
     from scripts.run_metrics import latest_run_metrics
     from scripts.source_conversion_report import build_source_conversion_report
@@ -101,6 +103,7 @@ def build_health_report(days=7):
     collection_timing = build_collection_timing_rows(limit=8)
     source_report = build_source_quality_report(days=days)
     source_conversion = build_source_conversion_report(days=days)
+    daily_coverage = build_daily_coverage_report(days=days)
 
     return {
         'main_date': main_date,
@@ -120,6 +123,7 @@ def build_health_report(days=7):
         'daily': daily,
         'source_quality': source_report,
         'source_conversion': source_conversion,
+        'daily_coverage': daily_coverage,
     }
 
 
@@ -194,6 +198,34 @@ def print_report(report):
                 "{source} | {signal} | {stored} | {main} | {lost_after_signal}".format(**row)
                 .encode(sys.stdout.encoding or 'utf-8', errors='replace')
                 .decode(sys.stdout.encoding or 'utf-8')
+            )
+    governance_actions = conversion.get('governance_actions') or {}
+    if governance_actions:
+        print("source governance actions | action | source | signal | stored | main")
+        for action in (
+            'audit_raw_signal_quality',
+            'instrument_candidate_loss',
+            'audit_conversion_loss',
+            'downgrade_or_reclassify',
+            'promote_weight',
+        ):
+            for row in governance_actions.get(action, [])[:3]:
+                print(
+                    f"{action} | {row['source']} | {row['signal']} | "
+                    f"{row['stored']} | {row['main']}"
+                )
+    coverage = report.get('daily_coverage') or {}
+    coverage_totals = coverage.get('totals') or {}
+    if coverage_totals:
+        print(
+            "daily coverage | stored={stored_events} main={main_events} review={review_events} "
+            "status={status_counts} actions={action_counts}".format(**coverage_totals)
+        )
+        print("daily coverage rows | date | stored | main | entities | regions | tracks | google | company | status | action")
+        for row in (coverage.get('rows') or [])[:8]:
+            print(
+                "{date} | {stored_events} | {main_events} | {entities} | {regions} | "
+                "{tracks} | {google_events} | {company_events} | {status} | {action}".format(**row)
             )
 
 

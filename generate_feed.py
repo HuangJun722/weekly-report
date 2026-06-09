@@ -10,6 +10,7 @@ from view_selectors import select_feed_events
 
 context = build_display_context()
 feed_date = context['main_date']
+MAX_FEED_EVENTS = 5
 
 
 def text_value(value):
@@ -34,6 +35,14 @@ def display_source(ev):
 
 def entry_title(ev):
     return first_text(ev.get('display_title'), ev.get('summary_short'), ev.get('reason'), ev.get('title'), '无标题')
+
+
+def xml_attr(value):
+    return html.escape(text_value(value), quote=True)
+
+
+def xml_text(value):
+    return html.escape(text_value(value), quote=False)
 
 
 feed_events, fallback_feed_date = select_feed_events(
@@ -88,21 +97,21 @@ feed = f'''<?xml version="1.0" encoding="UTF-8"?>
   <rights>CC BY-NC 4.0</rights>
 '''
 
-for ev in feed_events:
+for ev in feed_events[:MAX_FEED_EVENTS]:
     entry_date = (ev.get('date') or feed_date or '')[:10]
     uid_base = ev.get('url', ev.get('title', '')) + entry_date
     uid_hash = hashlib.sha1(uid_base.encode('utf-8')).hexdigest()[:8]
     entry_id = f'tag:weekly-report,2026:event-{uid_hash}'
     updated = entry_date + 'T00:00:00Z'
-    title = html.escape(entry_title(ev))
-    url = ev.get('url', '')
-    summary = entry_summary(ev)
+    title = xml_text(entry_title(ev))
+    url = xml_attr(ev.get('url', ''))
+    summary = html.escape(entry_summary(ev), quote=False)
 
     entry = f'''
   <entry>
     <title>{title}</title>
     <link href="{url}"/>
-    <id>{entry_id}</id>
+    <id>{xml_text(entry_id)}</id>
     <updated>{updated}</updated>
     <summary type="html">{summary}</summary>
   </entry>'''

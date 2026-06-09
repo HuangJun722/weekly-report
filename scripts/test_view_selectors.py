@@ -32,11 +32,26 @@ def test_homepage_selector_allows_low_score_non_google_signal():
 
 
 def test_feed_selector_falls_back_to_latest_high_value_date():
-    low_today = base_event(score=2, date='2026-06-01')
+    low_today = base_event(score=1, event_types=['other'], date='2026-06-01')
     high_yesterday = base_event(score=7, date='2026-05-31')
     feed_events, feed_date = select_feed_events([low_today], [low_today, high_yesterday])
     assert feed_events == [high_yesterday]
     assert feed_date == '2026-05-31'
+
+
+def test_feed_selector_fills_with_today_main_events_up_to_limit():
+    events = [
+        base_event(score=7, url='https://example.com/high-1'),
+        base_event(score=2, url='https://example.com/main-1'),
+        base_event(score=2, url='https://example.com/main-2'),
+        base_event(score=2, url='https://example.com/main-3'),
+        base_event(score=2, url='https://example.com/main-4'),
+        base_event(score=2, url='https://example.com/main-5'),
+    ]
+    feed_events, feed_date = select_feed_events(events, events, limit=5)
+    assert len(feed_events) == 5
+    assert feed_events[0]['url'] == 'https://example.com/high-1'
+    assert feed_date == ''
 
 
 def test_feed_selector_excludes_google_news_high_value():
@@ -163,6 +178,7 @@ def test_daily_event_groups_keep_all_homepage_events_visible():
 if __name__ == '__main__':
     test_homepage_selector_allows_low_score_non_google_signal()
     test_feed_selector_falls_back_to_latest_high_value_date()
+    test_feed_selector_fills_with_today_main_events_up_to_limit()
     test_feed_selector_excludes_google_news_high_value()
     test_company_quality_selector_is_independent_from_rss_high_value()
     test_mature_date_selector_skips_thin_latest_batch()

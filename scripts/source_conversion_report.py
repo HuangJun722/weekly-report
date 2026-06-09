@@ -156,6 +156,7 @@ def _empty_row(source):
         'statuses': Counter(),
         'dates': set(),
         'reason_counts': Counter(),
+        'funnel': Counter(),
     }
     for reason in DROP_REASONS:
         row[reason] = 0
@@ -181,6 +182,10 @@ def _add_run_stats(rows, metrics, selected_dates):
                 row['statuses'][stats.get('status') or 'unknown'] += 1
                 if date_key:
                     row['dates'].add(date_key)
+        for name, funnel in (run.get('source_funnel') or {}).items():
+            row = rows[name]
+            row['source'] = name
+            row['funnel'].update(funnel or {})
     return selected_runs
 
 
@@ -217,6 +222,87 @@ def _finish_row(row):
     return row
 
 
+def _governance_action(row):
+    signal = row['signal']
+    stored = row['stored']
+    main = row['main']
+    raw = row['raw']
+    lost = row['lost_after_signal']
+
+    if row['source'] == 'Google News':
+        return 'keep_as_gap_fill'
+    if signal >= 50 and main == 0:
+        return 'audit_raw_signal_quality'
+    if signal >= 20 and stored == 0:
+        return 'instrument_candidate_loss'
+    if stored >= 20 and row['main_per_stored'] >= 0.4:
+        return 'promote_weight'
+    if main >= 10 or (main >= 5 and row['main_per_stored'] >= 0.35):
+        return 'keep_core'
+    if stored >= 5 and main == 0:
+        return 'downgrade_or_reclassify'
+    if raw == 0 and stored == 0:
+        return 'pause_or_low_frequency'
+    if lost >= 20 and row['stored_per_signal'] < 0.15:
+        return 'audit_conversion_loss'
+    return 'observe'
+
+
+def _governance_reason(row):
+    action = row.get('governance_action') or ''
+    if action == 'keep_as_gap_fill':
+        return 'Google News 只承担补漏，不作为主发现源'
+    if action == 'audit_raw_signal_quality':
+        return 'raw signal 很高但没有主展示贡献，先确认 signal 是否真是合格事件'
+    if action == 'instrument_candidate_loss':
+        return 'raw signal 不少但没有进入历史事件池，需补候选流失原因'
+    if action == 'promote_weight':
+        return '历史留存和主展示转化稳定'
+    if action == 'keep_core':
+        return '近期已有稳定主展示贡献'
+    if action == 'downgrade_or_reclassify':
+        return '有留存但无法进入主展示，需检查边界或源定位'
+    if action == 'pause_or_low_frequency':
+        return '近期没有抓取和留存贡献'
+    if action == 'audit_conversion_loss':
+        return 'signal 到 stored/main 的流失过高'
+    return '继续观察，暂不调整'
+
+
+def _build_governance_actions(rows, limit_per_action=8):
+    actions = defaultdict(list)
+    for row in rows:
+        action = row.get('governance_action') or 'observe'
+        if action == 'observe':
+            continue
+        actions[action].append(row)
+    result = {}
+    for action, items in actions.items():
+        items.sort(
+            key=lambda row: (
+                row['signal'],
+                row['lost_after_signal'],
+                row['stored'],
+                row['main'],
+                row['raw'],
+            ),
+            reverse=True,
+        )
+        result[action] = [
+            {
+                'source': row['source'],
+                'raw': row['raw'],
+                'signal': row['signal'],
+                'stored': row['stored'],
+                'main': row['main'],
+                'lost_after_signal': row['lost_after_signal'],
+                'reason': row.get('governance_reason') or '',
+            }
+            for row in items[:limit_per_action]
+        ]
+    return result
+
+
 def build_source_conversion_report(days=7, git_ref=None):
     events_data = _load_json('data/events.json', git_ref)
     metrics = _load_json('data/run_metrics.json', git_ref)
@@ -238,6 +324,9 @@ def build_source_conversion_report(days=7, git_ref=None):
             rows[name] = _empty_row(name)
 
     finished_rows = [_finish_row(row) for row in rows.values()]
+    for row in finished_rows:
+        row['governance_action'] = _governance_action(row)
+        row['governance_reason'] = _governance_reason(row)
     finished_rows.sort(
         key=lambda row: (
             row['signal'] > 0 and row['main'] == 0,
@@ -258,6 +347,8 @@ def build_source_conversion_report(days=7, git_ref=None):
         row for row in finished_rows
         if row['signal'] >= 5 and row['main'] <= 1
     ]
+    governance_counts = Counter(row['governance_action'] for row in finished_rows)
+    governance_actions = _build_governance_actions(finished_rows)
 
     return {
         'end_date': end_date,
@@ -268,6 +359,8 @@ def build_source_conversion_report(days=7, git_ref=None):
         'totals': totals,
         'rows': finished_rows,
         'high_signal_low_main': high_signal_low_main,
+        'governance_counts': dict(governance_counts),
+        'governance_actions': governance_actions,
     }
 
 
@@ -277,6 +370,7 @@ def _jsonable_row(row):
     result['statuses'] = dict(row.get('statuses') or {})
     result['dates'] = sorted(row.get('dates') or [])
     result['reason_counts'] = dict(row.get('reason_counts') or {})
+    result['funnel'] = dict(row.get('funnel') or {})
     return result
 
 
@@ -295,15 +389,35 @@ def print_report(report, limit=30):
     )
     _safe_print(
         "source | raw | signal | stored | main | review | out_of_scope | quality_review | "
-        "google_not_main | other_type | weak_signal | lost_after_signal≈ | signal_rate | main_per_signal | status"
+        "google_not_main | other_type | weak_signal | lost_after_signal≈ | signal_rate | main_per_signal | governance | funnel | status"
     )
     for row in report['rows'][:limit]:
+        funnel = row.get('funnel') or {}
+        funnel_text = ''
+        if funnel:
+            funnel_text = (
+                f"smart:{funnel.get('smart_kept', 0)},"
+                f"ai:{funnel.get('score_ai_tier', 0)},"
+                f"program:{funnel.get('score_program_tier', 0)},"
+                f"added:{funnel.get('added', 0)}"
+            )
         _safe_print(
             "{source} | {raw} | {signal} | {stored} | {main} | {review} | "
             "{out_of_scope} | {quality_review} | {google_not_main} | {other_type} | "
             "{weak_signal} | {lost_after_signal} | {signal_rate:.0%} | "
-            "{main_per_signal:.0%} | {statuses_text}".format(**row)
+            "{main_per_signal:.0%} | {governance_action} | ".format(**row)
+            + f"{funnel_text} | {row['statuses_text']}"
         )
+    if report.get('governance_counts'):
+        _safe_print(f"governance | {json.dumps(report['governance_counts'], ensure_ascii=False)}")
+    if report.get('governance_actions'):
+        _safe_print("governance actions | action | source | signal | stored | main | reason")
+        for action, items in report['governance_actions'].items():
+            for row in items[:5]:
+                _safe_print(
+                    f"{action} | {row['source']} | {row['signal']} | "
+                    f"{row['stored']} | {row['main']} | {row['reason']}"
+                )
     if report['high_signal_low_main']:
         _safe_print("high signal low/no main | source | signal | stored | main | primary_loss")
         for row in report['high_signal_low_main'][:10]:

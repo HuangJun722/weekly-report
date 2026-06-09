@@ -73,6 +73,9 @@ def test_conversion_aggregates_run_and_event_stats(tmp_path):
               "source_stats": {
                 "TechCrunch": {"count": 10, "signal_count": 4, "status": "ok", "method": "rss"}
               }
+            },
+            "source_funnel": {
+              "TechCrunch": {"raw": 10, "smart_kept": 4, "score_ai_tier": 1, "added": 1}
             }
           }
         ]
@@ -95,6 +98,42 @@ def test_conversion_aggregates_run_and_event_stats(tmp_path):
     assert row['stored'] == 1
     assert row['main'] == 1
     assert row['lost_after_signal'] == 3
+    assert row['governance_action'] == 'observe'
+    assert row['funnel']['smart_kept'] == 4
+    assert row['funnel']['score_ai_tier'] == 1
+
+
+def test_conversion_marks_high_signal_zero_main_for_governance(tmp_path):
+    data_path = tmp_path / 'data'
+    data_path.mkdir()
+    (data_path / 'events.json').write_text('{"2026-06-08": []}', encoding='utf-8')
+    (data_path / 'run_metrics.json').write_text(
+        """
+        [
+          {
+            "date": "2026-06-08",
+            "rss": {
+              "source_stats": {
+                "Stripe Changelog": {"count": 60, "signal_count": 60, "status": "ok", "method": "rss"}
+              }
+            }
+          }
+        ]
+        """,
+        encoding='utf-8',
+    )
+    (data_path / 'source_registry.json').write_text('{"sources": []}', encoding='utf-8')
+
+    old_cwd = __import__('os').getcwd()
+    try:
+        __import__('os').chdir(tmp_path)
+        report = build_source_conversion_report(days=1)
+    finally:
+        __import__('os').chdir(old_cwd)
+
+    row = report['rows'][0]
+    assert row['source'] == 'Stripe Changelog'
+    assert row['governance_action'] == 'audit_raw_signal_quality'
 
 
 if __name__ == '__main__':
@@ -105,4 +144,6 @@ if __name__ == '__main__':
     from pathlib import Path
     with TemporaryDirectory() as temp_dir:
         test_conversion_aggregates_run_and_event_stats(Path(temp_dir))
+    with TemporaryDirectory() as temp_dir:
+        test_conversion_marks_high_signal_zero_main_for_governance(Path(temp_dir))
     print('source conversion tests passed')

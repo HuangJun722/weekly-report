@@ -384,6 +384,9 @@ def _source_meta(cfg):
 
 def _with_source_meta(item, cfg):
     item.update(_source_meta(cfg))
+    company = item.get('company_name') or ''
+    if company and item.get('is_company') and not _title_mentions_aliases(item.get('title', ''), _get_company_aliases(company)):
+        item['title'] = f"{company}: {item.get('title', '')}"
     item['region'] = infer_event_region(item.get('title', ''), item.get('region', cfg.get('region', '未知')))
     item['signal_taxonomy'] = infer_signal_taxonomy(item)
     return item
@@ -465,7 +468,56 @@ def _registry_source_to_cfg(src):
     for key in ('company_name', 'is_company', 'include_url_patterns'):
         if key in src:
             cfg[key] = src[key]
+    if (
+        tier == 'L1 官方/IR源'
+        and source_type in {'changelog', 'developer_changelog', 'newsroom', 'ir'}
+        and not cfg.get('company_name')
+    ):
+        cfg['company_name'] = src.get('company_name') or _source_entity_name(src.get('source') or src.get('name'))
+        cfg['is_company'] = True
     return cfg
+
+
+def _source_entity_name(value):
+    name = (value or '').strip()
+    for suffix in (
+        ' Developer Changelog',
+        ' Changelog',
+        ' Newsroom',
+        ' IR News',
+        ' IR',
+        ' Press',
+        ' News',
+    ):
+        if name.endswith(suffix):
+            return name[:-len(suffix)].strip()
+    return name
+
+
+def _source_metric_key(item):
+    return item.get('source_id') or item.get('source') or item.get('display_source') or item.get('source_detail') or '未知来源'
+
+
+def _count_by_source(items):
+    counts = {}
+    for item in items:
+        key = _source_metric_key(item)
+        counts[key] = counts.get(key, 0) + 1
+    return counts
+
+
+def _source_funnel_stage(items, total_key):
+    rows = {}
+    for key, count in _count_by_source(items).items():
+        rows[key] = {total_key: count}
+    return rows
+
+
+def _merge_source_funnel(target, stage_counts):
+    for key, counts in stage_counts.items():
+        row = target.setdefault(key, {})
+        for metric, count in counts.items():
+            row[metric] = row.get(metric, 0) + count
 
 
 def load_registry_sources(path='data/source_registry.json'):
@@ -1446,6 +1498,12 @@ def dedupe_events_by_day(all_events):
     """清理历史 events.json 中同一天的重复/低信号事件，保持原始顺序。"""
     cleaned = {}
     removed = 0
+    reasons = {
+        'missing_company_alias': 0,
+        'low_signal_company_title': 0,
+        'same_day_duplicate': 0,
+        'company_daily_cap': 0,
+    }
     for date_key, events in all_events.items():
         kept = []
         company_counts = {}
@@ -1453,22 +1511,26 @@ def dedupe_events_by_day(all_events):
             event.setdefault('date', date_key)
             if event.get('is_company') and not _title_mentions_aliases(event.get('title', ''), _get_company_aliases(event.get('company_name', ''))):
                 removed += 1
+                reasons['missing_company_alias'] += 1
                 continue
             if event.get('is_company') and _is_low_signal_company_title(event.get('title', '')):
                 removed += 1
+                reasons['low_signal_company_title'] += 1
                 continue
             if any(_is_same_event(event, existing) for existing in kept):
                 removed += 1
+                reasons['same_day_duplicate'] += 1
                 continue
             company_name = event.get('company_name', '')
             if event.get('is_company') and company_name:
                 if company_counts.get(company_name, 0) >= 3:
                     removed += 1
+                    reasons['company_daily_cap'] += 1
                     continue
                 company_counts[company_name] = company_counts.get(company_name, 0) + 1
             kept.append(event)
         cleaned[date_key] = kept
-    return cleaned, removed
+    return cleaned, removed, reasons
 
 # ============================================================
 # MiniMax API（主力）
@@ -2444,6 +2506,7 @@ def main():
         'started_at': run_started.isoformat(),
         'environment': 'github_actions' if os.environ.get('GITHUB_ACTIONS') == 'true' else 'local',
     }
+    source_funnel = {}
     ON_GHA = os.environ.get('GITHUB_ACTIONS') == 'true'
     if ON_GHA:
         print("  🤖 GHA 环境检测：DeepSeek 为主，失败后自动用豆包兜底")
@@ -2583,12 +2646,14 @@ def main():
 
     # 合并：公司新闻 + 通用新闻，按事件级指纹去重
     all_raw = company_unique + raw
+    _merge_source_funnel(source_funnel, _source_funnel_stage(all_raw, 'raw'))
     unique = []
     for it in all_raw:
         if any(_is_same_event(it, existing) for existing in unique):
             continue
         unique.append(it)
     same_run_duplicate_skipped = len(all_raw) - len(unique)
+    _merge_source_funnel(source_funnel, _source_funnel_stage(unique, 'unique'))
 
     # 统计
     types = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
@@ -2610,6 +2675,7 @@ def main():
 
     # 智能过滤（公司新闻单独处理，不做 smart_filter）
     filtered = smart_filter(unique)
+    _merge_source_funnel(source_funnel, _source_funnel_stage(filtered, 'smart_kept'))
     smart_filtered_count = len(filtered)
     types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
     for it in filtered: types2[it['event_types'][0]] += 1
@@ -2626,6 +2692,7 @@ def main():
     if any(it['event_types'][0] == 'other' and not it.get('is_company') for it in filtered):
         before_ai_filter = len(filtered)
         filtered = ai_quality_judge(filtered)
+        _merge_source_funnel(source_funnel, _source_funnel_stage(filtered, 'ai_quality_kept'))
         print(f"   AI评分过滤后：{len(filtered)} 条")
         run_metrics['filtering']['ai_filtered_count'] = len(filtered)
         run_metrics['filtering']['ai_filter_dropped'] = before_ai_filter - len(filtered)
@@ -2647,6 +2714,11 @@ def main():
             prog_tier.append(it)
         else:
             drop_count += 1
+    _merge_source_funnel(source_funnel, _source_funnel_stage(ai_tier, 'score_ai_tier'))
+    _merge_source_funnel(source_funnel, _source_funnel_stage(prog_tier, 'score_program_tier'))
+    kept_score_ids = {id(it) for it in ai_tier + prog_tier}
+    dropped_items = [it for it in filtered if id(it) not in kept_score_ids]
+    _merge_source_funnel(source_funnel, _source_funnel_stage(dropped_items, 'score_dropped'))
 
     print(f"    AI深度分析：{len(ai_tier)} 条 | 程序生成：{len(prog_tier)} 条 | 丢弃：{drop_count} 条")
     run_metrics['scoring'] = {
@@ -2739,6 +2811,7 @@ def main():
 
     # AI标题改写：对程序层中仍为泛化描述的事件用豆包改写
     rewrite_titles_for_display(today_events)
+    _merge_source_funnel(source_funnel, _source_funnel_stage(today_events, 'analysis_events'))
     for event in today_events:
         annotate_event_quality(event)
 
@@ -2778,6 +2851,7 @@ def main():
 
     # 输出统计
     company_added = sum(1 for e in added_events if e.get('is_company'))
+    _merge_source_funnel(source_funnel, _source_funnel_stage(added_events, 'added'))
     added_event_dates = {}
     added_source_tiers = {}
     for event in added_events:
@@ -2802,11 +2876,12 @@ def main():
         'added_event_dates': added_event_dates,
         'added_source_tiers': added_source_tiers,
     }
+    run_metrics['source_funnel'] = source_funnel
 
     # 清理 90 天前（避免数据无限膨胀，保留 3 个月）
     cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
     all_events = {k: v for k, v in all_events.items() if k >= cutoff}
-    all_events, removed_dups = dedupe_events_by_day(all_events)
+    all_events, removed_dups, removed_reasons = dedupe_events_by_day(all_events)
     if removed_dups:
         print(f"  🧹 历史去重：清理 {removed_dups} 条同日重复事件")
 
@@ -2818,6 +2893,7 @@ def main():
         'company_total': sum(1 for v in all_events.values() for e in v if e.get('is_company')),
         'day_count': len(all_events),
         'removed_same_day_duplicates': removed_dups,
+        'removed_reasons': removed_reasons,
     }
     metrics_path = write_run_metrics(run_metrics)
     print(f"  🧾 Run metrics：{metrics_path}")

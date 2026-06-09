@@ -9,6 +9,7 @@ import argparse
 import json
 import re
 import sys
+from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -120,6 +121,43 @@ def _point_counts(entity):
     return counts
 
 
+def _point_type_counts(entity):
+    counts = defaultdict(lambda: {
+        'points': 0,
+        'active': 0,
+        'candidate': 0,
+        'instrumented': 0,
+        'entities': set(),
+    })
+    entity_name = entity.get('name') or ''
+    for point in entity.get('observation_points') or []:
+        point_type = point.get('type') or 'unknown'
+        row = counts[point_type]
+        row['points'] += 1
+        row['entities'].add(entity_name)
+        if point.get('status') == 'active':
+            row['active'] += 1
+        if point.get('status') == 'candidate':
+            row['candidate'] += 1
+        if point.get('instrumented'):
+            row['instrumented'] += 1
+    return counts
+
+
+def _recommended_action(row):
+    if row.get('instrumented_points') == 0 and row.get('points', 1) > 1:
+        return 'instrument_conversion'
+    if row['homepage_events'] >= 3:
+        return 'scale'
+    if row['stored_events'] >= 3 and row['homepage_events'] == 0:
+        return 'audit_quality'
+    if row['active_points'] and row['stored_events'] == 0:
+        return 'fix_or_lower_frequency'
+    if row['candidate_points'] and not row['active_points']:
+        return 'instrument_next'
+    return 'observe'
+
+
 def build_entity_signal_conversion_report(days=30, pool_path='data/entity_pool.json', events_path='data/events.json'):
     pool = _load_json(pool_path)
     events = _flatten_events(_load_json(events_path))
@@ -129,6 +167,17 @@ def build_entity_signal_conversion_report(days=30, pool_path='data/entity_pool.j
     selected_events = [event for event in events if _event_date(event) in selected_dates]
 
     rows = []
+    point_type_rows = defaultdict(lambda: {
+        'point_type': '',
+        'points': 0,
+        'active_points': 0,
+        'candidate_points': 0,
+        'instrumented_points': 0,
+        'entities': set(),
+        'stored_events': 0,
+        'homepage_events': 0,
+        'review_events': 0,
+    })
     for entity in pool.get('entities') or []:
         matched = [event for event in selected_events if event_matches_entity(event, entity)]
         main = [event for event in matched if should_show_in_main_list(event)]
@@ -147,7 +196,20 @@ def build_entity_signal_conversion_report(days=30, pool_path='data/entity_pool.j
             'instrumentation_status': 'not_instrumented'
             if point_counts['not_instrumented_points'] else 'instrumented',
         }
+        row['governance_action'] = _recommended_action(row)
         rows.append(row)
+
+        for point_type, point_row in _point_type_counts(entity).items():
+            target = point_type_rows[point_type]
+            target['point_type'] = point_type
+            target['points'] += point_row['points']
+            target['active_points'] += point_row['active']
+            target['candidate_points'] += point_row['candidate']
+            target['instrumented_points'] += point_row['instrumented']
+            target['entities'].update(point_row['entities'])
+            target['stored_events'] += len(matched)
+            target['homepage_events'] += len(main)
+            target['review_events'] += len(review)
 
     rows.sort(
         key=lambda row: (
@@ -168,12 +230,40 @@ def build_entity_signal_conversion_report(days=30, pool_path='data/entity_pool.j
         'homepage_events': sum(row['homepage_events'] for row in rows),
         'review_events': sum(row['review_events'] for row in rows),
     }
+    point_rows = []
+    for row in point_type_rows.values():
+        converted = dict(row)
+        converted['entities'] = len(row['entities'])
+        converted['homepage_per_entity'] = (
+            converted['homepage_events'] / converted['entities']
+            if converted['entities'] else 0
+        )
+        converted['governance_action'] = _recommended_action({
+            'points': converted['points'],
+            'instrumented_points': converted['instrumented_points'],
+            'homepage_events': converted['homepage_events'],
+            'stored_events': converted['stored_events'],
+            'active_points': converted['active_points'],
+            'candidate_points': converted['candidate_points'],
+        })
+        point_rows.append(converted)
+    point_rows.sort(
+        key=lambda row: (
+            row['homepage_events'],
+            row['stored_events'],
+            row['active_points'],
+            row['points'],
+        ),
+        reverse=True,
+    )
     return {
         'end_date': end_date,
         'days': days,
         'pool_version': pool.get('version') or '',
         'totals': totals,
         'rows': rows,
+        'point_rows': point_rows,
+        'governance_counts': dict(Counter(row['governance_action'] for row in rows)),
     }
 
 
@@ -188,13 +278,21 @@ def print_report(report, limit=50):
         "candidate={candidate_points} not_instrumented={not_instrumented_points} "
         "stored={stored_events} homepage={homepage_events} review={review_events}".format(**totals)
     )
-    _safe_print("entity | region | sector | points | active | candidate | stored | homepage | review | last_event | status")
+    _safe_print("entity | region | sector | points | active | candidate | stored | homepage | review | last_event | action | status")
     for row in report['rows'][:limit]:
         _safe_print(
             "{entity} | {region} | {sector} | {observation_points} | {active_points} | "
             "{candidate_points} | {stored_events} | {homepage_events} | {review_events} | "
-            "{last_event_date} | {instrumentation_status}".format(**row)
+            "{last_event_date} | {governance_action} | {instrumentation_status}".format(**row)
         )
+    if report.get('point_rows'):
+        _safe_print("observation point governance | type | points | active | candidate | entities | stored | homepage | review | action")
+        for row in report['point_rows']:
+            _safe_print(
+                "{point_type} | {points} | {active_points} | {candidate_points} | "
+                "{entities} | {stored_events} | {homepage_events} | {review_events} | "
+                "{governance_action}".format(**row)
+            )
 
 
 def main():
