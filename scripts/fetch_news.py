@@ -1183,7 +1183,71 @@ def _extract_date_from_url(url):
     m = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', url)
     if m:
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = re.search(r'(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)', url or '')
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
     return None
+
+
+_EN_MONTHS = {
+    'jan': 1, 'january': 1,
+    'feb': 2, 'february': 2,
+    'mar': 3, 'march': 3,
+    'apr': 4, 'april': 4,
+    'may': 5,
+    'jun': 6, 'june': 6,
+    'jul': 7, 'july': 7,
+    'aug': 8, 'august': 8,
+    'sep': 9, 'sept': 9, 'september': 9,
+    'oct': 10, 'october': 10,
+    'nov': 11, 'november': 11,
+    'dec': 12, 'december': 12,
+}
+
+
+def _format_date_parts(year, month, day):
+    try:
+        dt = datetime(int(year), int(month), int(day))
+    except (TypeError, ValueError):
+        return None
+    return dt.strftime('%Y-%m-%d')
+
+
+def _extract_date_from_text(text):
+    """Extract common official/IR date formats from titles or list text."""
+    clean = ' '.join((text or '').split())
+    if not clean:
+        return None
+    m = re.search(r'\b(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})\b', clean)
+    if m:
+        return _format_date_parts(m.group(1), m.group(2), m.group(3))
+    m = re.search(r'(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)', clean)
+    if m:
+        return _format_date_parts(m.group(1), m.group(2), m.group(3))
+    month_names = '|'.join(sorted(_EN_MONTHS, key=len, reverse=True))
+    m = re.search(
+        rf'\b({month_names})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?[,]?\s+(20\d{{2}})\b',
+        clean,
+        flags=re.I,
+    )
+    if m:
+        return _format_date_parts(m.group(3), _EN_MONTHS[m.group(1).lower()], m.group(2))
+    m = re.search(
+        rf'\b(\d{{1,2}})(?:st|nd|rd|th)?\s+({month_names})\.?\s+(20\d{{2}})\b',
+        clean,
+        flags=re.I,
+    )
+    if m:
+        return _format_date_parts(m.group(3), _EN_MONTHS[m.group(2).lower()], m.group(1))
+    return None
+
+
+def _extract_official_article_date(title, link, node_text=''):
+    return (
+        _extract_date_from_url(link)
+        or _extract_date_from_text(title)
+        or _extract_date_from_text(node_text)
+    )
 
 
 def fetch_company_news(cfg):
@@ -1397,6 +1461,13 @@ def fetch_html(cfg):
                 base = cfg['url'].split('/')[2]  # 提取域名
                 link = 'https://' + base + link
 
+        article_date = None
+        if _is_official_cfg(cfg):
+            node_text = ' '.join(art.get_text(' ', strip=True).split())
+            article_date = _extract_official_article_date(title, link, node_text)
+            if not article_date or not _recent_article_date(article_date, days=2):
+                continue
+
         types = detect_event_types(title)
         results.append(_with_source_meta({
             'title': title,
@@ -1405,7 +1476,7 @@ def fetch_html(cfg):
             'region': cfg['region'],
             'priority': cfg.get('priority', 1),
             'event_types': types,
-            'article_date': None,  # HTML 无 pubDate，归入运行日
+            'article_date': article_date,
             'is_company': cfg.get('is_company', False),
             'company_name': cfg.get('company_name', ''),
         }, cfg))
