@@ -37685,6 +37685,642 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "HKTVmall: Announcements & Circulars",
+      "url": "https://ir.hktv.com.hk/investors-notice",
+      "source": "HKTVmall",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "HKTVmall: Announcements &",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "HKTVmall",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "source_id": "HKTVmall IR News",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Rakuten: To Shareholders and Investors",
+      "url": "https://global.rakuten.com/corp/investors/policy/",
+      "source": "Rakuten Group",
+      "region": "亚太",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Rakuten: To Shareholders ",
+      "reason": "亚太科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "source_id": "Rakuten IR",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Payments US businesses now automatically benefit from reduced fraud and false declines from Stripe’s Enhanced Issuer Network.",
+      "url": "https://stripe.com/newsroom/news/enhanced-issuer-network",
+      "source": "Stripe Changelog",
+      "region": "全球",
+      "event_types": [
+        "other"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Payments US businesses no",
+      "reason": "全球科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Stripe",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "stripe-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "支付开发者生态",
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "payment",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Square Enix: May 14, 2026 Progress Report on the Medium-Term Business Plan (FY2025/3-FY2027/3) 4073KB",
+      "url": "https://www.hd.square-enix.com/eng/ir/pdf/20260514_01_en.pdf",
+      "source": "Square Enix",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Square Enix: May 14, 2026",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Square Enix",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "source_id": "Square Enix IR News",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Square Enix: Feb 5, 2026 Notice of Revisions to Full-Year Consolidated Financial Forecasts 199KB",
+      "url": "https://www.hd.square-enix.com/eng/ir/pdf/20260205_02_en.pdf",
+      "source": "Square Enix",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Square Enix: Feb 5, 2026 ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Square Enix",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "source_id": "Square Enix IR News",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Stripe: Treasury Launched a new beta that allows Treasury platforms to open multiple financial accounts associated with a single connected account.",
+      "url": "https://stripe.com/docs/treasury/account-management/financial-accounts",
+      "source": "Stripe Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Stripe: Treasury Launched",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Stripe",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "stripe-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "支付开发者生态",
+      "bd_triggers": [
+        "生态窗口"
+      ],
+      "opportunity_direction": "联合解决方案 / 商户增长 / 开放平台合作 / 渠道共建",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Stripe: Dashboard To speed up reconciliation, you can now include your custom metadata (such as a unique product ID or location code) when downloading financial reports.",
+      "url": "https://stripe.com/docs/reports",
+      "source": "Stripe Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Stripe: Dashboard To spee",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Stripe",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "stripe-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "支付开发者生态",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Zepto’s IPO filing reveals fast growth, bigger losses, and a valuation question nobody’s answered yet",
+      "url": "https://techcrunch.com/2026/06/08/zeptos-ipo-filing-reveals-fast-growth-bigger-losses-and-a-valuation-question-nobodys-answered-yet/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding",
+        "earnings"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Zepto IPO文件显示快速增长但亏损扩大，估值存疑",
+      "reason": "印度Zepto提交IPO文件，快商务赛道高增长伴随高亏损，为东南亚同类公司提供估值参考",
+      "impact": "印度快商务平台、东南亚即时配送公司、风险投资者",
+      "insight_label": "警示信号",
+      "trend_topic": "印度快商务IPO观察",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/06/zepto.jpg?resize=1200,800",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "降本窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Led by 20VC, fonio.ai raises $17M for omnichannel AI platform",
+      "url": "https://tech.eu/2026/06/09/led-by-20vc-fonioai-raises-17m-for-omnichannel-ai-platform/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "fonio.ai获1700万美元融资，用于全渠道AI平台",
+      "reason": "欧洲AI初创fonio.ai获1700万美元融资，全渠道AI平台为零售和电商提供集成机会",
+      "impact": "欧洲零售科技供应商、电商平台、AI集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲AI应用融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/06/fonioai-featured-941.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Cordon Technologies raises £1M to help farmers cut pesticide use through precision spraying",
+      "url": "https://tech.eu/2026/06/09/cordon-technologies-raises-1m-to-help-farmers-cut-pesticide-use-through-precision-spraying/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Cordon Technologies获100万英镑融资，用于精准喷洒减少农药",
+      "reason": "欧洲农业科技Cordon Technologies获早期融资，精准农业技术为ICT传感器和物联网供应商创造机会",
+      "impact": "农业物联网供应商、精准农业软件商、欧洲农场",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲农业科技早期投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/06/untitled-design-20-456.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Pitchdrive raises €60M to back Europe's AI-native founders",
+      "url": "https://tech.eu/2026/06/09/pitchdrive-raises-eur60m-to-back-europes-ai-native-founders/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Pitchdrive筹集6000万欧元，支持欧洲AI原生创始人",
+      "reason": "欧洲风投Pitchdrive募资6000万欧元，专注AI原生初创，为欧洲AI生态注入新资金",
+      "impact": "欧洲AI初创企业、AI技术供应商、风险投资机构",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲AI融资热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/06/pitchdrive-featured-928.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Zepto FY26: Loss Jumps 26% YoY To ₹5,905 Cr, Revenue Doubles",
+      "url": "https://inc42.com/buzz/zepto-fy26-loss-jumps-26-yoy-to-%e2%82%b95905-cr-revenue-doubles/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Zepto FY26亏损扩大26%至₹5905Cr，收入翻倍",
+      "reason": "印度快商平台亏损扩大，烧钱模式可持续性存疑，供应链合作风险上升",
+      "impact": "印度即时配送平台、物流技术供应商",
+      "insight_label": "警示信号",
+      "trend_topic": "印度电商烧钱竞争",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2025/12/Zepto-The-Outline-Newsletter-social.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "降本窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Rakuten: The First Quarter of Fiscal Year 2026 Financial Results have been released",
+      "url": "https://global.rakuten.com/corp/investors/documents/results/",
+      "source": "Rakuten Group",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "乐天发布2026财年Q1财报",
+      "reason": "日本乐天电商和金融科技业务表现影响亚太ICT服务采购，财报盈利稳定或亏损将决定其云和AI投入力度",
+      "impact": "日本电商技术供应商、云服务商",
+      "insight_label": "背景补充",
+      "trend_topic": "日本电商科技动态",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://global.rakuten.com/corp/assets/img/common/og_image_logo.png",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "source_id": "Rakuten IR",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Square Enix: May 14, 2026 Results Briefing Session for the Fiscal Year ended March 31, 2026 2994KB",
+      "url": "https://www.hd.square-enix.com/eng/ir/pdf/26q4slides.pdf",
+      "source": "Square Enix",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "史克威尔艾尼克斯发布2026财年财报",
+      "reason": "日本游戏巨头财报反映全球游戏行业趋势，ICT从业者可关注其云游戏和AI开发投入方向",
+      "impact": "游戏引擎供应商、云游戏平台",
+      "insight_label": "背景补充",
+      "trend_topic": "日本游戏科技动向",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Square Enix",
+      "article_date": null,
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "official_ir",
+      "source_id": "Square Enix IR News",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ]
 }
