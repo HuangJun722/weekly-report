@@ -39522,7 +39522,312 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Naver Pay Connect Payment Terminals to Debut at Korea's Largest Stationery Fair - thelec.net",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9BQmRaQ1RHdXZWLURGN3VVb1FGV0dCbTh4Q0xFNlJ5blJMWFB1cG1taFI3MXpzU1FfQUh0TWVqS2VlTmhHUkVLVkxTUVR4U2lNdW9yejFvenBHSUE1a2hkUmZSOUkxMGc?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Pay Connect Payment",
+      "reason": "韩国Naver Pay支付终端亮相文具展",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "thelec.net",
+      "publisher": "thelec.net",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "How Justin Ernest invested nearly $500M into hot startups without a traditional VC fund",
+      "url": "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-500m-into-hot-startups-without-a-traditional-vc-fund/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Justin Ernest以非传统方式投资近$500M",
+      "reason": "全球另类资本涌入科技初创，非传统LP结构可能改变早期融资生态",
+      "impact": "早期科技初创公司、风险投资机构",
+      "insight_label": "资金流向",
+      "trend_topic": "全球另类投资崛起",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/06/JustinErnest_TechCrunch.jpg?resize=1200,675",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Salesforce acquires m3ter to add consumption-based billing to Agentforce",
+      "url": "https://thenextweb.com/news/salesforce-acquires-m3ter-consumption-billing-agentforce",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Salesforce收购m3ter以增强消费计费能力",
+      "reason": "全球CRM巨头收购欧洲计费技术，Agentforce生态对API计费和云集成商产生新需求",
+      "impact": "云计费平台、Salesforce生态ISV",
+      "insight_label": "资金流向",
+      "trend_topic": "全球SaaS计费技术整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/06/salesforce-acquires-m3ter-consumption-billing-agentforce.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "SPAKIO raises $1.3M seed extension to expand storage platform",
+      "url": "https://latamlist.com/spakio-raises-1-3m-seed-extension-to-expand-storage-platform/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "SPAKIO获$1.3M种子轮扩展存储平台",
+      "reason": "拉美云存储早期融资，中小企业数字化需求推动本地存储服务机会",
+      "impact": "拉美云服务集成商、中小企业IT解决方案商",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美云服务早期投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-09",
+      "date": "2026-06-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2023/06/Santiago-Gonzalez-emprendedor-con-SPAKIO-2.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
-  "2026-06-10": []
+  "2026-06-10": [
+    {
+      "title": "[Breaking] Kakao Labor Union Launches First-Ever Strike Since Company’s Founding... March to Pangyo Station at 11:30 a.m. - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9lalM1czdkM1JfV1RMUlNqVng2Tmc5RXhKYmpQMjN2MGdXeGtOU01WY1Z2ZXJpcHp4bUhlXzNOX2ZsZW84RkJJdHNJQU5oNmpXeDJMSU43cXNYQkQ2T3B0Mi1DY3U?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "[Breaking] Kakao Labor Un",
+      "reason": "韩国Kakao工会发起公司史上首次罢工",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-06-10",
+      "date": "2026-06-10",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Mercado Libre unit to make Mexican bond debut - LatinFinance",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQVFoc0hmUllRYk9idUd4a0JhdU1LQ3Q3MkdhcWJuakloT3VHR0dHcFM5anpnUzgxV05rZWZZUEJYSTNUSkNGbGR1MXRjY2g3N2R6NFpFSEMtZG5RVVN4Y3JtbTBnaWd5QlVySFJhcGNrZFoybEhoX18xalpKVXhLVTZjcUZRRWpMcWNHVTlVNHZQVVFKWWsxRDFR?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Mercado Libre unit to mak",
+      "reason": "拉美Mercado Libre子公司首次发行墨西哥债券",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 拉美",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-06-10",
+      "date": "2026-06-10",
+      "source_detail": "LatinFinance",
+      "publisher": "LatinFinance",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "SK Telecom, NTT launch $500m Aion AI fund",
+      "url": "https://www.techinasia.com/sk-telecom-to-build-1-gw-hyperscale-ai-data-centers",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "SK Telecom与NTT推出$500M Aion AI基金",
+      "reason": "亚太电信巨头联合设立AI基金，超大规模数据中心和AI基础设施有大量采购与合作机会",
+      "impact": "AI芯片供应商、数据中心建设商、云服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太AI基础设施投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-10",
+      "date": "2026-06-10",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1781062104_1734059616_shutterstock_1825027088-scaled-1.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
