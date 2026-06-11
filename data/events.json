@@ -41155,6 +41155,91 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Even Jensen Huang Couldn't Save It: Why NAVER's Stock Reversed in Just One Day - 한국금융신문",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE53MGt3UzZaZUZFLThRRnFRTGRLV0JqQy0zZl91U3hZTkJnZEpJSWpyUVMxSlFLMmVtcmtnM3VNNzJDUC1XWnU3ekNWei03eFJmdnJwb3loVzJ1VEVtYVhwQTNrWngySWktLXVHU3FrektlU3JDdGlxaWR4aE8?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "NAVER股价一日逆转",
+      "reason": "韩国互联网巨头股价波动，AI战略落地不及预期可能影响技术采购节奏",
+      "impact": "韩国AI芯片供应商、云服务商",
+      "insight_label": "警示信号",
+      "trend_topic": "韩国AI投资降温",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-10",
+      "date": "2026-06-10",
+      "source_detail": "한국금융신문",
+      "publisher": "한국금융신문",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "F2 Raises $24M to Expand AI for Private Credit",
+      "url": "https://ventureburn.com/f2-raises-24m-to-expand-ai-for-private-credit/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "F2获$24M融资扩展AI私人信贷",
+      "reason": "非洲AI信贷技术获大额融资，私人信贷市场数字化加速，风控技术合作机会增加",
+      "impact": "非洲信贷技术供应商、金融数据公司",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲AI信贷扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-10",
+      "date": "2026-06-10",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/06/F2-Raises-24M.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-11": [
@@ -41194,6 +41279,306 @@
       "signal_taxonomy": [
         "ai_infra",
         "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Kakao Games Partners with MCST and KCDF to Develop Traditional Cultural Merchandise for 'Dokkaebi World' - Inven Global",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOa2t3eWNBc3RZV1A5OUZ3Y3hvNmtOQWI4SG5iYmZHelJacHEwVERkWFNJVTRuRWZNRmRsbDFHTnZUSFhCRkFLd0JmbnFHcmYxQ2pzdUdTQmJwRjY0WDhsOHRJMXZrNm5KNnFPb0Zjd0dKdnB6SHoyRHp5ZWs3eWFFai14a042N1lHZW5XS3VSTUtfUl9QWjl3WU9XZFVwSmZRa3VXVjl2MWtkaUtMdmZseWxuY2l2bW1Uek5EMXNIcFVyX2JrNEZ6NVI2NzBwVkhHXzBJY29BcGdNWDR2b1E?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Games Partners with",
+      "reason": "亚太Kakao Games合作开发传统文化商品",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-06-11",
+      "date": "2026-06-11",
+      "source_detail": "Inven Global",
+      "publisher": "Inven Global",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "partnership"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Partners with NVIDIA on AI Factory for Global Expansion - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOFJyTXNMUW45X0RvWGxmU3NMUURKWXRxajZZWHNzZ2wyQWEzV2dfTjFDRXdoWENSNmVBWW0wZkh4eVdOc3hIS09sT2RVbkhyLVRJRTF2YjZ1ZVo0Wk54WU9Lb3FXTHNIQnNYNzViZ2kybkFKN1VIWUcyTkxKNzdfbl85RXlnOU1D?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Partners with NVIDI",
+      "reason": "亚太Naver与NVIDIA共建AI工厂",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-11",
+      "date": "2026-06-11",
+      "source_detail": "조선일보",
+      "publisher": "조선일보",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "expansion",
+        "partnership",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Reading Vietnam tech giant VNG's profit through different lenses - Theinvestor",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSXpXbW96NEo5ci04RlllN0tGVm5JRU52WnNhRFV5RV9xT1ZHNDRhNmFseEN3S0hEb3hqZVJuVk1qVEhGWnhxY0tYeDYtQjh0VS1OQkY4amVlSFVTV1l0ZzNTdFptLVNFNE5XRmdXajMyd2d2N1czczZ5OGJsSkQxcmZtUkF2emJQUG9Dbmx2dEFnUDM2d05KRGFSWW1JcUk?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "越南VNG利润多角度解读",
+      "reason": "越南科技巨头盈利波动，游戏和金融科技业务面临本地化合规与竞争压力",
+      "impact": "越南游戏发行商、东南亚云服务商",
+      "insight_label": "背景补充",
+      "trend_topic": "东南亚科技盈利分化",
+      "companies": [],
+      "is_company": true,
+      "company_name": "VNG Group",
+      "article_date": "2026-06-11",
+      "date": "2026-06-11",
+      "source_detail": "Theinvestor",
+      "publisher": "Theinvestor",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "VNG Group",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "4baseCare Bags ₹38 Cr To Close Series B Round At ₹128 Cr",
+      "url": "https://inc42.com/buzz/4basecare-bags-%e2%82%b938-cr-to-close-series-b-round-at-%e2%82%b9128-cr/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "4baseCare获₹38Cr完成B轮，估值₹128Cr",
+      "reason": "印度数字健康早期融资持续，肿瘤精准医疗IT平台存在合作机会",
+      "impact": "印度医疗IT服务商、基因组学数据平台",
+      "insight_label": "资金流向",
+      "trend_topic": "印度数字健康融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-11",
+      "date": "2026-06-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/4basecare-funding-social-.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Grab Reportedly in Talks to Join Atome Financial’s Funding Round",
+      "url": "https://fintechnews.sg/132862/lending/grab-atome-funding/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Grab拟参与Atome Financial融资轮",
+      "reason": "东南亚超级App Grab与BNPL平台Atome合作，东南亚FinTech信贷市场整合加速，支付与信贷技术集成机会增加",
+      "impact": "东南亚金融科技平台、支付服务商",
+      "insight_label": "合作机会",
+      "trend_topic": "东南亚FinTech整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-11",
+      "date": "2026-06-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://fintechnews.sg/wp-content/uploads/2026/06/Grab-Reportedly-in-Talks-to-Join-Atome-Financials-Funding-Round.webp",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "payment",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Grab in talks to join over $100m funding of unicorn lending unit",
+      "url": "https://dealstreetasia.com/stories/grab-unicorn-lending-unit-485012/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Grab洽谈参与其贷款独角兽部门超1亿美元融资",
+      "reason": "东南亚超级App Grab旗下贷款业务获大额融资，东南亚金融科技信贷市场将加速扩张",
+      "impact": "东南亚数字信贷平台、金融科技基础设施供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚FinTech信贷扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-06-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2025/10/unicorn-3909694_1280.jpg?fit=1280,960",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Indonesian unicorn Akulaku preparing for Hong Kong IPO",
+      "url": "https://dealstreetasia.com/stories/akulaku-ipo-484982/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "印尼独角兽Akulaku筹备赴港IPO",
+      "reason": "东南亚金融科技独角兽Akulaku启动香港上市，东南亚数字信贷与电商金融赛道进入资本退出期",
+      "impact": "东南亚金融科技公司、香港交易所上市服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚FinTech上市潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-06-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2025/04/Rupiah-scaled-e1744820412117.jpg?fit=940,585",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
         "capital"
       ],
       "quality_flags": [],
