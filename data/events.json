@@ -42831,6 +42831,48 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Clip raises $500M",
+      "url": "https://latamlist.com/clip-raises-500m-and-launches-digital-wallet/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "墨西哥Clip获5亿美元融资并推出数字钱包",
+      "reason": "拉美Clip获巨额融资并推数字钱包，墨西哥支付赛道竞争加剧，金融科技基础设施供应商受益",
+      "impact": "拉美支付网关、数字钱包技术商、银行合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美FinTech融资热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-12",
+      "date": "2026-06-12",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2024/06/Untitled-design-6.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-13": [
@@ -42910,6 +42952,130 @@
       "bd_priority": "观察",
       "signal_taxonomy": [
         "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Rakuten Eagles 's Takayuki Kishi earns his first win of the season and his 20th consecutive win! Nomura praises him, saying, \"It's impressive that he was able to pitch seven innings despite three interruptions.\" - パ・リーグ.com",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RcGR2WUpWRnRVRmdMOGY4ekZDSlpaXzRyOHBEUldMSFVFVXBQVk9YbnpFeElWcGZFeFN5WHpMTDhMY29NTUhJdlRHNzBWU1NGT3VYN2U1bEVKS2NCNnc?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "乐天鹰队投手Kishi取得赛季首胜及20连胜",
+      "reason": "日本体育赛事新闻，与ICT行业无直接关联",
+      "impact": "无",
+      "insight_label": "背景补充",
+      "trend_topic": "无关事件",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": "2026-06-13",
+      "date": "2026-06-13",
+      "source_detail": "パ・リーグ.com",
+      "publisher": "パ・リーグ.com",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Rakuten",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "MercadoLibre (MELI) director receives 94 RSUs vesting at 2027 meeting - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcE5aRGtlblN4Q3MySXA4Y2t0UUhwV3RmS3UzV0dnZnI1SThMSlVqVEV4UndKM2gwTm9zb1JzVUpINUJDblJzbEpwelhiU3BaVl9JTG5BYlprdXl5VG5hajVWUGQtWTNzUjZXUEtCVjUzUjBTa2l5eEJ2YlR3MExVd3VReEVueGlOS2ZsQklBcXJmejFTbmVYR0xleUpmZ2hHOXI5aW03TV9UNHNfbjQw?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre董事获94个RSU，2027年归属",
+      "reason": "拉美电商巨头MercadoLibre股权激励计划，反映管理层长期信心",
+      "impact": "拉美电商平台、金融科技合作方",
+      "insight_label": "背景补充",
+      "trend_topic": "拉美电商基建加速",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-06-13",
+      "date": "2026-06-13",
+      "source_detail": "Stock Titan",
+      "publisher": "Stock Titan",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Uber explores Delivery Hero asset sales for takeover",
+      "url": "https://www.techinasia.com/uber-raises-delivery-hero-stake-36",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Uber增持Delivery Hero股份，探索资产出售",
+      "reason": "亚太外卖平台整合加速，Uber可能收购Delivery Hero资产，改变区域竞争格局",
+      "impact": "东南亚外卖平台、本地配送技术供应商",
+      "insight_label": "警示信号",
+      "trend_topic": "亚太外卖平台整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-13",
+      "date": "2026-06-13",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1780535167_1773702820_Uber.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
         "capital"
       ],
       "quality_flags": [],
