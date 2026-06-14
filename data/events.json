@@ -43126,5 +43126,92 @@
       "analysis_status": "complete"
     }
   ],
-  "2026-06-14": []
+  "2026-06-14": [
+    {
+      "title": "Meta reportedly moves to unwind $2B Manus deal after Beijing’s demand",
+      "url": "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Meta reportedly moves to ",
+      "reason": "全球Meta取消Manus交易",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-14",
+      "date": "2026-06-14",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Chinese AI chipmaker MetaX eyes Hong Kong listing",
+      "url": "https://www.techinasia.com/chinese-chipmakers-race-ipos-listing-surge",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "earnings",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "中国AI芯片公司MetaX拟赴港上市",
+      "reason": "中国AI芯片企业寻求港股融资，国产替代芯片供应链可能获得资本支持",
+      "impact": "中国AI芯片设计公司、香港交易所",
+      "insight_label": "资金流向",
+      "trend_topic": "中国AI芯片IPO潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-14",
+      "date": "2026-06-14",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1781399742_MetaX.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
