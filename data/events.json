@@ -44607,6 +44607,91 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "MercadoLibre (NASDAQ: MELI) SVP Marcelo Melamud buys 124.64 shares in open-market trade - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaWRiVE5sdV9uZ1A4YVp5V21tVHVIUEdWWC1jcmRFN2J1eDUxN1pxWWhacUttNGp5bG1KNHRNeTdCQVZ5QlQ3ei0tcVVkVE44UFVpY3Q5SkNGb1lhSHJPODJBR2I1QWF3amk3SUpodmplM0h3bzF2MVNtbGRHSmhvVGN4dmpSeVpiMWIyNm5idDZHWnlHWmdneWVfc3p2bjdybHBtVjdKRlZJSmdacl93?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "ma",
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre高管增持124.64股",
+      "reason": "拉美电商高管增持股票，释放内部信心信号，可能预示拉美电商平台业务扩张或新合作",
+      "impact": "拉美电商平台、支付服务商",
+      "insight_label": "背景补充",
+      "trend_topic": "拉美电商信心",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-06-15",
+      "date": "2026-06-15",
+      "source_detail": "Stock Titan",
+      "publisher": "Stock Titan",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Japan’s biggest taxi app raised $553 million in the country’s largest IPO this year",
+      "url": "https://thenextweb.com/news/go-inc-japan-taxi-app-ipo-tokyo-stock-exchange-goldman-sachs",
+      "source": "The Next Web",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "日本打车应用Go Inc. IPO募资$553M",
+      "reason": "日本出行平台大规模IPO，亚太出行科技赛道资金充裕，带动地图与支付合作机会",
+      "impact": "地图服务商、移动支付平台",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太出行科技IPO",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-15",
+      "date": "2026-06-15",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/06/go-inc-japan-taxi-app-ipo-tokyo-stock-exchange-goldman-sachs.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-16": [
@@ -44643,6 +44728,436 @@
       "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
       "follow_up_window": "7天内",
       "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Tencent Cloud sees Korea as benchmark for AI, gaming - The Korea Herald",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9KT2pBTlpVYzU0bGlVSlpmYTA1RjYtQ3lMRWF5cTRQMS1VUEotdUc0U1g4N1I5OFJxYzNnbWo4RDJGU3lIQk15TVIzNEY5LU54cWhuVEwwNA?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Tencent Cloud sees Korea ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Tencent",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "The Korea Herald",
+      "publisher": "The Korea Herald",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Tencent",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Ask AI Directly While Chatting on KakaoTalk... 'ChatGPT Chatbot' Launched - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8xWVB5d3F0MlZIWE1HWG1wdURvQkdtR01LU0MyYzM1eXptazZnZ1BFLU92R3Z5blo4LVkwTTlFUUJ6dHdxN0k4YWxUbHBMZm8yc1FvWXFmMElQdGJXVFhXazgtaWJXVG9CVzVVbTlNVQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Ask AI Directly While Cha",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Adyen set to power payments for Aritzia’s boutiques across North America and recently launched app - Retail Technology Innovation Hub",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNMDlCbXVYZmNpb3dsaEt5My1VT2xqdEdLZ2RsTE03MXRPeWlVYWFmU3VmWUpJSWk0U3RESFllRUVUNXYtcWRaYnZuV2s5SUNCRjh4WWFLTkxNRm1wZXZKU0hKb2NYalhVRzZETGVJampnZ3p0VjdObE1wUkdybWtYSS1yZ19hM3RDMkRMd0xHN19OTHJ6c1V1M2sxZXFmcjNaNEd6VTNaWkktUEhObFo1WlB4NWFYRjA2TzJRNHRramVQRnZQYXdDaFBiYWVqM2hRcmRZRlhQOGZVUjNtX3ctY0hDMmc?oc=5",
+      "source": "Google News",
+      "region": "欧洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Adyen set to power paymen",
+      "reason": "欧洲科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 欧洲",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "Retail Technology Innovation Hub",
+      "publisher": "Retail Technology Innovation Hub",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Adyen",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Paris-based Rocapine raises €11.2 million to scale wellness apps that “hold instead of hook”",
+      "url": "https://www.eu-startups.com/2026/06/paris-based-rocapine-raises-e11-2-million-to-scale-wellness-apps-that-hold-instead-of-hook/",
+      "source": "EU-Startups",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Rocapine获€11.2M融资，扩展健康应用",
+      "reason": "欧洲健康科技融资活跃，数字健康应用市场出现新的内容与平台合作机会",
+      "impact": "健康应用开发商、数字内容供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲健康科技升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://www.eu-startups.com/wp-content/uploads/2026/06/Untitled-design-2026-06-16T112704.765.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "EU-Startups",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Turtlemint IPO To Open On June 19, Price Band Set At ₹144-152",
+      "url": "https://inc42.com/buzz/turtlemint-ipo-to-open-on-june-19-price-band-set-at-%e2%82%b9144-152/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Turtlemint IPO定价₹144-152，6月19日开放",
+      "reason": "印度保险科技IPO启动，亚太保险科技赛道资本化加速，带动技术采购需求",
+      "impact": "保险科技平台、云服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度保险科技上市",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2018/08/default-social-share-image.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "合规窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Sarvam’s Unicorn Leap, Razorpay Files DRHP & More",
+      "url": "https://inc42.com/buzz/sarvams-unicorn-leap-razorpay-files-drhp-more/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Sarvam晋升独角兽，Razorpay提交DRHP",
+      "reason": "印度AI与支付双赛道资本化加速，独角兽涌现带来生态合作与集成机会",
+      "impact": "AI基础设施商、支付技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度AI支付双热",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/Social-Daily-Brief-2026-06-15T232852.523.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "SolarSquare Bags $53 Mn To Scale Its Rooftop Solar Solutions",
+      "url": "https://inc42.com/buzz/solarsquare-bags-53-mn-to-scale-its-rooftop-solar-solutions/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "SolarSquare获$53M融资，扩展屋顶太阳能方案",
+      "reason": "印度新能源融资大额，屋顶太阳能规模化带动能源管理与IoT集成需求",
+      "impact": "能源管理软件商、IoT设备供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度新能源扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/Solar-Square-social.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Exclusive: AI Startup ContraVault Raises $3.1 Mn To Expand In The US",
+      "url": "https://inc42.com/buzz/exclusive-ai-startup-contravault-raises-3-1-mn-to-expand-in-the-us/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "AI初创ContraVault获$3.1M融资拓展美国市场",
+      "reason": "美国AI安全赛道早期融资活跃，ContraVault产品可能涉及数据保护或合规，为美国企业安全软件集成商带来合作机会",
+      "impact": "美国企业安全软件集成商、云安全服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "美国AI安全融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/soc-21.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Nuvei to Acquire Payoneer in US$2.75 Billion Payments Deal",
+      "url": "https://fintechnews.sg/133050/payments/nuvei-payoneer-acquisition/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "Nuvei以$27.5亿收购Payoneer",
+      "reason": "全球支付行业大整合，Nuvei与Payoneer合并后形成跨境支付巨头，可能改变中小商户支付服务格局",
+      "impact": "跨境支付平台、电商平台、独立支付服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球支付行业整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-16",
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://fintechnews.sg/wp-content/uploads/2026/06/Nuvei-to-Acquire-Payoneer-in-US2.75-Billion-Payments-Deal.webp",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "payment"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "DATA VANTAGE: SG's BeeX raises funding and other updates",
+      "url": "https://dealstreetasia.com/stories/data-vantage-beex-funding-485585/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "新加坡BeeX获融资，其他更新",
+      "reason": "东南亚云安全初创BeeX获融资，反映亚太企业云安全需求增长，为云服务分销商和托管安全服务商带来合作机会",
+      "impact": "云服务分销商、托管安全服务商、东南亚企业客户",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚云安全融资升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-06-16",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2021/06/2.png?fit=1920,1080",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
       "signal_taxonomy": [
         "ai_infra",
         "capital"
