@@ -48921,7 +48921,349 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "AI inference startup Baseten reportedly raising $1.5B months after its last mega-round",
+      "url": "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "AI inference startup Base",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-18",
+      "date": "2026-06-18",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Seen Favoring Strategic Stake in Baemin Sale Process - thelec.net",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1OTmxocGxrbXh5YUdLeGxTUnRlZWp2ZkxiQnRyeXVPbFFxU0hGX1JkRm1HdFhUZm9RbVdia2d5MGV3M19FU0sxbWJ1eHB2U2FzLW5UVHQtU1Q5S04zLUp0QmV0aHRqRXM?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "ma",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Naver倾向战略入股Baemin出售案",
+      "reason": "韩国互联网巨头Naver战略入股韩国外卖平台Baemin，亚太外卖市场整合加速，ICT集成与支付合作机会显现",
+      "impact": "韩国外卖平台、本地支付服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太外卖市场整合",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-18",
+      "date": "2026-06-18",
+      "source_detail": "thelec.net",
+      "publisher": "thelec.net",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "MercadoLibre vs. Alibaba: Which E-Commerce Stock Holds an Edge? - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMDlocHJheGxxUUJMYVl1WmV0SFphN0J1TWRjMXh2NXZMWWdVNkxuZmpSUzFQbHl1ZjFzcGN5dVJNOW1fWlVfYTh3c0Vqci1FekRNbklVWVN2b0ZtQURqeWxUZ05wQmdfZnNoLVF1ZGdBa2dsUW1UMHVzZk9jYzNXY2xwampDWG4xU0MxMGdZUF9qd2FneURMYmUxcTZfUFhzMTBpcWY4cnN0dDFRalZvWDUxMndpb2s?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre与阿里巴巴电商股对比分析",
+      "reason": "拉美电商巨头MercadoLibre与阿里巴巴对比，拉美电商基建持续扩张，物流与支付技术供应商受益",
+      "impact": "拉美物流技术商、支付服务商",
+      "insight_label": "背景补充",
+      "trend_topic": "拉美电商基建加速",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-06-18",
+      "date": "2026-06-18",
+      "source_detail": "TradingView",
+      "publisher": "TradingView",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "commerce",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "MercadoLibre (MELI) 6.7% shareholder shifts 3.4M shares in trust deal - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPc0dPRFd1YnVaaTNaYjdCR3d2WEJZYW50VWo2UU1QS19lNmQycTA1dFl3X3lRTURaeDhSejBpdTNaaHF6V1ljTFc4Ull4QmhUejZkdFVoNnhLVE9MZDQ4VXU2bG9qWlZsZWkyb1J1ejJFZktIMnRoeUZnYzRRVmlmdjhSbmxkOVdCVmtnTS1TUFgxa3l6Q0NIbVZHb19rZkZtWVdOTWozRGhTcTdUdlhhX29mQ3N5cUpUVDVmWVZVaXFQUFE2?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre 6.7%股东转移340万股至信托",
+      "reason": "拉美电商MercadoLibre大股东股权结构调整，可能预示资本运作或减持，影响股价与投资者信心",
+      "impact": "MercadoLibre股东、拉美电商投资者",
+      "insight_label": "警示信号",
+      "trend_topic": "拉美电商资本动向",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-06-18",
+      "date": "2026-06-18",
+      "source_detail": "Stock Titan",
+      "publisher": "Stock Titan",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
-  "2026-06-19": []
+  "2026-06-19": [
+    {
+      "title": "Kakao Pay Launches Video Campaign to Prevent Illegal Gambling Among Teenagers - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ORlhSVE5TMlpoMXhzcmlER2tnQnlFZzBxbUJHRUNXOGdGSUZtVE1UOGJyNGpNYnNnZkhVTWpxeHJXR3h3dkdiODJaSkRhSjFzbzZDd1lFZVFfQjN6RHRLY09xTGc?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Pay Launches Video ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "HCLTech’s Sarvam Bet, Vetic Bags $40 Mn & More",
+      "url": "https://inc42.com/buzz/hcltechs-sarvam-bet-vetic-bags-40-mn-more/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Vetic获$40M融资，HCLTech投资Sarvam",
+      "reason": "印度AI与宠物科技获大额融资，企业AI集成和垂直SaaS存在合作机会",
+      "impact": "印度AI平台商、宠物医疗科技公司",
+      "insight_label": "资金流向",
+      "trend_topic": "印度AI与垂直科技融资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/Social-Daily-Brief-2026-06-19T000048.611.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Wise Acquires Expatica to Add Relocation and Expat Guidance",
+      "url": "https://fintechnews.sg/133253/payments/wise-expatica-acquisition/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Wise收购Expatica，增加外派与搬迁指导服务",
+      "reason": "欧洲跨境支付商Wise并购外派信息平台，金融科技与生活服务融合存在集成机会",
+      "impact": "跨境支付平台、外派服务技术商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲金融科技并购整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://fintechnews.sg/wp-content/uploads/2026/06/Wise-Acquires-Expatica-to-Add-Relocation-and-Expat-Guidance.webp",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Deluxe agrees $625m acquisition of payment processor Celero",
+      "url": "https://www.finextra.com/newsarticle/47956/deluxe-agrees-625m-acquisition-of-payment-processor-celero?utm_medium=rssfinextra&utm_source=finextrafeed",
+      "source": "Finextra",
+      "region": "全球",
+      "event_types": [
+        "ma"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Deluxe以$625M收购支付处理器Celero",
+      "reason": "北美支付处理领域大额并购，支付基础设施整合加速，技术供应商面临合作或替代机会",
+      "impact": "支付处理技术商、银行IT服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球支付处理整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Finextra Payments",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "payment",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
