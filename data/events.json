@@ -50205,6 +50205,50 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Franklin raises funds to bring agentic finance to e-commerce firms",
+      "url": "https://www.finextra.com/pressarticle/110194/franklin-raises-funds-to-bring-agentic-finance-to-e-commerce-firms?utm_medium=rssfinextra&utm_source=finextrafeed",
+      "source": "Finextra",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Franklin融资为电商企业提供代理金融",
+      "reason": "全球电商金融科技赛道获新融资，AI代理金融解决方案成为新热点",
+      "impact": "电商平台、金融科技SaaS供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球电商金融科技升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Finextra Payments",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "commerce",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-20": [
@@ -50336,6 +50380,92 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Rakuten Travel Launches \"Luxury Accommodations Special Offer\" Campaign in Japan - TRAICY Global",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1FTkVjbTY2OUVKdDZyQlB2cC1UM0xGLUpSTVZwMlpYUnRndC16YXA3WmJUSG9CSUNKbENtUXhsVHFEbk51Qmw3TXhGa05XbE9rUXlXbQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Rakuten Travel Launches \"",
+      "reason": "日本Rakuten Travel推出豪华住宿特惠活动",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": "2026-06-20",
+      "date": "2026-06-20",
+      "source_detail": "TRAICY Global",
+      "publisher": "TRAICY Global",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Rakuten",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Nigeria’s FMCG market hits $25 billion, yet only 18% of retailers have access to formal credit — FMCG Industry Report 2026",
+      "url": "https://techpoint.africa/coverage/omni-insights-forum-2026/",
+      "source": "Techpoint",
+      "region": "非洲",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "尼日利亚快消品市场达$250亿，仅18%零售商有正规信贷",
+      "reason": "非洲快消品市场信贷缺口巨大，金融科技和数字信贷平台有明确合作机会",
+      "impact": "非洲金融科技平台、数字信贷服务商",
+      "insight_label": "合作机会",
+      "trend_topic": "非洲FinTech信贷缺口",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-20",
+      "date": "2026-06-20",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techpoint.africa/wp-content/uploads/2026/06/J7A0425.jpg-1024x682.jpeg",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "Techpoint",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-06-21": []
 }
