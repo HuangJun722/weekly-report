@@ -50072,6 +50072,139 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Tencent Cloud and China CITIC Bank International Limited Sign Strategic Cooperation Agreement to Accelerate FinTech 2.0 Transformation - Fintech Finance",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQV21xTFh3eVIwb2ZBZU56QkQxeE9fcEhfNGlBNGczWlB2N05Sa0dmU3pjYnZvTWRueG0xMlNuUHRaV0tuZVJwc0g4eVVNYmlibXdmcThYemkxaER0TVBhVDV3ZFhPdG9aUUl0V3FBeWZObUF0YWk3T0Z2SlpfWjZVYTZPOUV6YUV2SG5KbjZWbHhvTTFlQWpCVUxaVFZ3RVZYQWFnQXJIOGNlSG5yRXhwWkVzaHpFelhJajU3ZXNhX3hURml3TEg4UGV0aEJraWp2Q2tCZ24wcDBua2F6WFJEaXpnMXZVSGtkVnVMcTVwU1VrN2VsM1RXbHJn?oc=5",
+      "source": "Google News",
+      "region": "中资",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Tencent Cloud and China C",
+      "reason": "中资科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 中资",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Tencent",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "Fintech Finance",
+      "publisher": "Fintech Finance",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Tencent",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "合规窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Go eyes robotaxis and acquisitions after Japan’s biggest IPO of 2026. Here’s why it matters",
+      "url": "https://techcrunch.com/2026/06/19/go-eyes-robotaxis-and-acquisitions-after-japans-biggest-ipo-of-2026-heres-why-it-matters/",
+      "source": "TechCrunch",
+      "region": "亚太",
+      "event_types": [
+        "ma",
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Go计划IPO后进军Robotaxi和并购",
+      "reason": "日本出行巨头Go通过IPO融资后，将加速自动驾驶和出行服务并购，为日本Robotaxi生态带来ICT集成机会",
+      "impact": "日本自动驾驶技术商、车载传感器供应商、出行平台合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "日本出行科技升级",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/06/Japan-Go-.png?resize=1200,785",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "整合窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "France Raises €13 Billion to Boost European Tech Investment",
+      "url": "https://ventureburn.com/france-raises-e13-billion-to-boost-european-tech-investment/",
+      "source": "Ventureburn",
+      "region": "欧洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "法国筹集130亿欧元推动欧洲科技投资",
+      "reason": "欧洲主权基金大规模注资科技领域，AI、网络安全等赛道将获资金涌入",
+      "impact": "欧洲AI初创公司、网络安全供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲科技投资热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-19",
+      "date": "2026-06-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/06/France.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-20": [
@@ -50111,6 +50244,92 @@
       "follow_up_window": "持续观察",
       "bd_priority": "观察",
       "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Japan taxi app Go raises $553m in biggest IPO this year",
+      "url": "https://www.techinasia.com/goldmanbacked-japan-taxi-app-prices-ipo-top",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "earnings"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "日本打车App Go IPO融资$553M",
+      "reason": "日本出行平台大额IPO，移动出行和地图技术供应商迎来合作窗口",
+      "impact": "日本出行技术供应商、地图数据服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "日本出行科技IPO",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-20",
+      "date": "2026-06-20",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1781920786_1780975219_unnamed.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "HD Hyundai secures $408m US data center power deal",
+      "url": "https://www.techinasia.com/south-korea-to-impose-duties-on-japan-china-robots",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "HD Hyundai获$408M美国数据中心电力合同",
+      "reason": "韩国重工切入美国数据中心电力市场，ICT从业者可关注数据中心基础设施供应链变化",
+      "impact": "美国数据中心运营商、电力设备供应商",
+      "insight_label": "合作机会",
+      "trend_topic": "亚太数据中心扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-20",
+      "date": "2026-06-20",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1781922186_company-photo1.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
         "capital"
       ],
       "quality_flags": [],
