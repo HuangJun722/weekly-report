@@ -50724,6 +50724,93 @@
       "needs_repair": true,
       "analysis_source": "deepseek",
       "analysis_status": "fallback"
+    },
+    {
+      "title": "[Rakuten Eagles] Manager Yoshihito Yoshii once again denies his first win; despite a series of pitching changes from the second inning, his strategy fails, resulting in a fifth consecutive loss and a season-worst deficit of 19 games - パ・リーグ.com",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBsaUZnT292Mmt4NkdpOXUzTTRMMlZYV21Vem1IZEZpUGFvc0lLWFRfUXFQS2pQcFZnM0xWUWd5T3NNbk9XM3pSUjJSNDR5Z2ZpMXM4WUxDQTR3ZmJnQ0E?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "乐天鹰队教练策略失误导致五连败",
+      "reason": "日本体育赛事管理策略失败，与ICT行业无直接关联",
+      "impact": "无",
+      "insight_label": "背景补充",
+      "trend_topic": "无",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": "2026-06-21",
+      "date": "2026-06-21",
+      "source_detail": "パ・リーグ.com",
+      "publisher": "パ・リーグ.com",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Rakuten",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "降本窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Can Cult.fit Clear The Profitability Bar With Its Retail Push?",
+      "url": "https://inc42.com/startups/can-cult-fit-clear-the-profitability-bar-with-its-retail-push/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cult.fit通过零售扩张寻求盈利",
+      "reason": "印度健康科技Cult.fit转向零售，为线下支付、SaaS和供应链技术供应商带来合作机会",
+      "impact": "印度零售科技供应商、支付服务商、健身设备制造商",
+      "insight_label": "合作机会",
+      "trend_topic": "印度健康科技转型",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-21",
+      "date": "2026-06-21",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/soc-22.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "降本窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-06-22": []
 }
