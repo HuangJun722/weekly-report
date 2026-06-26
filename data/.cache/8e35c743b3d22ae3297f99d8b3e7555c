@@ -3383,4 +3383,4 @@
 	</channel>
 </rss>
 
-<!-- plugin=object-cache-pro client=phpredis metric#hits=2823 metric#misses=30 metric#hit-ratio=99.0 metric#bytes=1326132 metric#prefetches=325 metric#store-reads=23 metric#store-writes=5 metric#store-hits=334 metric#store-misses=4 metric#sql-queries=26 metric#ms-total=366.21 metric#ms-cache=10.24 metric#ms-cache-avg=0.3791 metric#ms-cache-ratio=2.8 -->
+<!-- plugin=object-cache-pro client=phpredis metric#hits=2823 metric#misses=30 metric#hit-ratio=99.0 metric#bytes=1326129 metric#prefetches=325 metric#store-reads=23 metric#store-writes=2 metric#store-hits=334 metric#store-misses=4 metric#sql-queries=22 metric#ms-total=331.40 metric#ms-cache=9.18 metric#ms-cache-avg=0.3825 metric#ms-cache-ratio=2.8 -->
