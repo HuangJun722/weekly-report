@@ -59304,6 +59304,182 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Direct-to-consumer banks $17 billion and Google rolls out fee changes | Week in Mobile Games podcast",
+      "url": "https://www.pocketgamer.biz/direct-to-consumer-banks-17-billion-and-google-rolls-out-fee-changes-week-in-mobile-games-podcast/",
+      "source": "PocketGamer.biz",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Direct-to-consumer banks ",
+      "reason": "全球Google推出费用调整政策",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-28",
+      "date": "2026-06-28",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.pocketgamer.biz/images/140097/89277/week-in-mobile-games-95_l660.jpg",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "PocketGamer.biz",
+      "credibility_score": 0,
+      "vertical": "游戏",
+      "bd_triggers": [
+        "扩张窗口",
+        "合规窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "California will tax downloaded software for the first time as part of a $351.7 billion budget deal",
+      "url": "https://thenextweb.com/news/california-budget-software-tax-ipo-reserves",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "California will tax downl",
+      "reason": "欧洲科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 欧洲",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-28",
+      "date": "2026-06-28",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Baidu’s chip unit Kunlunxin is targeting a $50 billion Hong Kong IPO and asked investors to buy its semiconductors",
+      "url": "https://thenextweb.com/news/baidu-kunlunxin-ipo-50-billion-investors-buy-chips",
+      "source": "The Next Web",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "A",
+      "score": 8,
+      "summary_short": "百度昆仑芯拟赴港IPO估值$50B，并寻求投资者购买其芯片",
+      "reason": "中国AI芯片公司昆仑芯启动港股IPO，亚太半导体供应链出现新的投资与采购机会",
+      "impact": "亚太芯片代工厂、AI服务器集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "中国AI芯片IPO热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-28",
+      "date": "2026-06-28",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/06/baidu-kunlunxin-ipo-50-billion-investors-buy-chips.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Micron briefly surpassed Meta and Tesla in market value. Its stock is up 236% in a month.",
+      "url": "https://thenextweb.com/news/micron-1-27-trillion-valuation-ai-memory-wall-street",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "美光市值一度超越Meta和特斯拉，月内股价涨236%",
+      "reason": "美国存储芯片巨头美光市值飙升，全球AI内存需求爆发，亚太存储供应链受益",
+      "impact": "亚太存储芯片制造商、AI服务器厂商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球AI存储需求爆发",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-28",
+      "date": "2026-06-28",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/06/micron-1-27-trillion-valuation-ai-memory-wall-street.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-29": [
