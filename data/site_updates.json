@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-06-28",
+    "version": "V2.9",
+    "type": "供给治理",
+    "status": "已完成",
+    "title": "收紧融资准入并启动组织行为信号试点",
+    "summary": "把融资从日报主菜降级为趋势温度计，并用 Stripe、Shopify、Grab 验证 changelog/newsroom/IR 等组织行为观察点。",
+    "changes": [
+      "融资事件只有同时属于互联网主赛道并体现扩张、采购、生态合作、产品/API、区域进入等行动信号时才进入日报重点",
+      "军工、疗法/生物制药、纯医疗研发、纯航天和泛工业科技融资默认排除出首页与 RSS",
+      "信源转化报表新增 out_of_scope_industry 和 capital_only_low_actionability 原因，方便看清融资被降级的真实原因",
+      "Shopify Changelog 已能抓取近期开发者变更；Stripe Changelog 和 Grab Newsroom/IR 已接入观察，但近期窗口暂无合格新事件",
+      "对象观察点报表新增 partial 状态，区分完全未接入和部分接入，避免治理口径误判"
+    ]
+  },
+  {
     "date": "2026-06-09",
     "version": "V2.8",
     "type": "数据质量",

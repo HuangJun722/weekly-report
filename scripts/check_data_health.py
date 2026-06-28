@@ -187,7 +187,9 @@ def print_report(report):
     if conversion_totals:
         print(
             "source conversion | raw={raw} signal={signal} stored={stored} main={main} "
-            "review={review} out_of_scope={out_of_scope} quality_review={quality_review} "
+            "review={review} out_of_scope_industry={out_of_scope_industry} "
+            "capital_only_low_actionability={capital_only_low_actionability} "
+            "quality_review={quality_review} "
             "lost_after_signal≈{lost_after_signal}".format(**conversion_totals)
         )
     high_signal_low_main = (conversion.get('high_signal_low_main') or [])[:5]

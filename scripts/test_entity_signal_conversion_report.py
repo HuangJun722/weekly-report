@@ -62,7 +62,7 @@ def test_entity_signal_report_counts_points_and_events(tmp_path):
     assert row['not_instrumented_points'] == 1
     assert row['stored_events'] == 1
     assert row['homepage_events'] == 1
-    assert row['instrumentation_status'] == 'not_instrumented'
+    assert row['instrumentation_status'] == 'partial'
     assert row['governance_action'] == 'observe'
     point_rows = {row['point_type']: row for row in report['point_rows']}
     assert point_rows['newsroom']['active_points'] == 1

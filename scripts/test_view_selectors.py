@@ -1,4 +1,5 @@
 from view_selectors import (
+    select_company_events,
     select_company_quality_events,
     select_feed_events,
     select_homepage_events,
@@ -88,6 +89,23 @@ def test_company_quality_selector_is_independent_from_rss_high_value():
     assert select_company_quality_events([company_signal]) == [company_signal]
 
 
+def test_company_quality_selector_blocks_edge_company_noise():
+    edge_signal = base_event(
+        title='Final Fantasy XIV from Square Enix Holdings gets new expansion',
+        source='Google News',
+        source_tier='L5 Google News 补漏源',
+        url='https://news.google.com/rss/articles/edge',
+        company_name='Square Enix',
+        is_company=True,
+        event_types=['strategy'],
+        score=5,
+        reason='资料片更新',
+        impact='玩家',
+        summary_short='Square Enix资料片更新',
+    )
+    assert select_company_quality_events([edge_signal]) == []
+
+
 def test_mature_date_selector_skips_thin_latest_batch():
     events_by_date = {
         '2026-06-01': [base_event(date='2026-06-01')],
@@ -175,14 +193,34 @@ def test_daily_event_groups_keep_all_homepage_events_visible():
     assert counts == {'精选': 1, '重点': 1, '观察': 1}
 
 
+def test_old_out_of_scope_events_do_not_bypass_history_gate():
+    events_by_date = {
+        '2026-05-01': [
+            base_event(
+                date='2026-05-01',
+                title='Defense tech startup raises $500M for military drones',
+                summary_short='国防科技公司获融资',
+                reason='军工AI融资',
+                impact='军工供应链',
+                event_types=['funding'],
+                score=9,
+            )
+        ]
+    }
+    _, generic = select_company_events(events_by_date, '2026-06-01')
+    assert generic == []
+
+
 if __name__ == '__main__':
     test_homepage_selector_allows_low_score_non_google_signal()
     test_feed_selector_falls_back_to_latest_high_value_date()
     test_feed_selector_fills_with_today_main_events_up_to_limit()
     test_feed_selector_excludes_google_news_high_value()
     test_company_quality_selector_is_independent_from_rss_high_value()
+    test_company_quality_selector_blocks_edge_company_noise()
     test_mature_date_selector_skips_thin_latest_batch()
     test_mature_date_selector_counts_main_list_only()
     test_review_selector_keeps_real_google_org_action_out_of_main()
     test_daily_event_groups_keep_all_homepage_events_visible()
+    test_old_out_of_scope_events_do_not_bypass_history_gate()
     print('view selector tests passed')

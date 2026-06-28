@@ -121,6 +121,16 @@ def _point_counts(entity):
     return counts
 
 
+def _instrumentation_status(point_counts):
+    total = point_counts['observation_points']
+    not_instrumented = point_counts['not_instrumented_points']
+    if total and not_instrumented == 0:
+        return 'instrumented'
+    if total and not_instrumented < total:
+        return 'partial'
+    return 'not_instrumented'
+
+
 def _point_type_counts(entity):
     counts = defaultdict(lambda: {
         'points': 0,
@@ -193,8 +203,7 @@ def build_entity_signal_conversion_report(days=30, pool_path='data/entity_pool.j
             'homepage_events': len(main),
             'review_events': len(review),
             'last_event_date': max((_event_date(event) for event in matched), default=''),
-            'instrumentation_status': 'not_instrumented'
-            if point_counts['not_instrumented_points'] else 'instrumented',
+            'instrumentation_status': _instrumentation_status(point_counts),
         }
         row['governance_action'] = _recommended_action(row)
         rows.append(row)

@@ -38,9 +38,9 @@
       "sector": "mobility_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://investors.grab.com/news-releases", "status": "active", "instrumented": false, "expected_signals": ["earnings", "partnership", "payment"]},
+        {"type": "ir", "url": "https://investors.grab.com/news-releases", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
         {"type": "jobs", "url": "https://grab.careers/", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion", "org_change"]},
-        {"type": "product_update", "url": "https://www.grab.com/sg/press/", "status": "active", "instrumented": false, "expected_signals": ["partnership", "merchant_product", "payment"]}
+        {"type": "product_update", "url": "https://www.grab.com/sg/press/", "status": "active", "instrumented": true, "expected_signals": ["partnership", "merchant_product", "payment"]}
       ]
     },
     {
@@ -363,7 +363,7 @@
       "sector": "payment_developer_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "changelog", "url": "https://stripe.com/changelog", "status": "active", "instrumented": false, "expected_signals": ["api", "checkout", "payment"]},
+        {"type": "changelog", "url": "https://stripe.com/changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "checkout", "payment"]},
         {"type": "jobs", "url": "https://stripe.com/jobs", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "regional_launch"]},
         {"type": "developer_docs", "url": "https://docs.stripe.com/", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "platform_policy"]}
       ]
@@ -377,7 +377,7 @@
       "priority": "core",
       "observation_points": [
         {"type": "product_update", "url": "https://www.shopify.com/editions", "status": "candidate", "instrumented": false, "expected_signals": ["commerce", "seller", "developer_change"]},
-        {"type": "changelog", "url": "https://changelog.shopify.com/", "status": "candidate", "instrumented": false, "expected_signals": ["api", "marketplace_policy"]},
+        {"type": "changelog", "url": "https://changelog.shopify.com/", "status": "active", "instrumented": true, "expected_signals": ["api", "marketplace_policy"]},
         {"type": "jobs", "url": "https://www.shopify.com/careers", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai", "commerce"]}
       ]
     },

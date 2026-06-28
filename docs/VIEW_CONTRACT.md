@@ -26,13 +26,13 @@
 当前分级：
 - `3 core_internet`：电商、支付、游戏、广告、SaaS、云、AI infra、开发者工具、社交、本地生活平台等核心互联网信号。
 - `2 adjacent_internet`：明确指向软件、平台、数据基础设施、AI 应用或企业软件的相邻行业信号。
-- `1 edge_observation`：工业软件、机器人、能源软件、军工/国防等边缘观察信号，不进入主展示。
-- `0 out_of_scope`：生物制药、疗法、纯医疗器械、医疗基金、农业、建筑、矿业等不属于本站主赛道。
+- `1 edge_observation`：工业软件、机器人、能源软件等边缘观察信号，不进入主展示。
+- `0 out_of_scope`：军工/国防、生物制药、疗法、纯医疗器械、医疗基金、农业、建筑、矿业等不属于本站主赛道。
 
 规则：
 - 首页、RSS、关注窗口默认只允许 `internet_relevance >= 2`。
 - 医疗/工业/能源等相邻行业不能按行业名一刀切；只有明确是平台、SaaS、EHR/医疗 IT、AI notetaker、云或 AI 基础设施时才保留。
-- 军工/国防默认只进边缘观察，不得主导首页趋势。
+- 军工/国防默认不属于本站主赛道；即使命中 AI、云或融资，也不得进入主展示。
 - 不能用 `impact` 或泛化 `opportunity_direction` 反推产品边界，避免“影响到 IT 供应商”把任何行业都放进本站。
 
 ## 首页今日情报
@@ -199,7 +199,8 @@
 - `signal`：采集阶段命中的候选信号。
 - `stored`：最终进入 `events.json` 的事件。
 - `main` / `review`：进入首页主列表或复核区的事件。
-- `out_of_scope`：入库后被本站产品边界排除。
+- `out_of_scope_industry`：入库后被本站产品边界排除。
+- `capital_only_low_actionability`：融资事件属于主赛道但缺少明确预算、扩张、采购、生态合作或区域进入信号。
 - `quality_review`：解释不完整、fallback、needs_repair 或 quality_flags。
 - `google_not_main`：Google News 补漏源未进入主列表。
 - `other_type` / `weak_signal`：类型或强度不足。

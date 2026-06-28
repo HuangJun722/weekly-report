@@ -3,6 +3,7 @@ import fetch_news
 from fetch_news import (
     _extract_official_article_date,
     _registry_source_to_cfg,
+    _select_changelog_items,
     _title_mentions_aliases,
     _with_source_meta,
     _get_company_aliases,
@@ -83,9 +84,47 @@ def test_official_html_skips_stale_ir_items():
     assert items == []
 
 
+def test_changelog_items_extract_direct_dated_links():
+    soup = fetch_news.BeautifulSoup(
+        """
+        <html><body>
+          <nav><a href="/pricing">Pricing</a></nav>
+          <article>
+            <time>June 28, 2026</time>
+            <a href="/posts/custom-draft-order-discounts">
+              Custom draft order line item discounts now use presentment currency
+            </a>
+          </article>
+          <article>
+            <time>June 10, 2025</time>
+            <a href="/posts/old-api-update">Old API update</a>
+          </article>
+        </body></html>
+        """,
+        'html.parser',
+    )
+    cfg = _registry_source_to_cfg({
+        'id': 'shopify-changelog',
+        'name': 'Shopify Changelog',
+        'url': 'https://changelog.shopify.com/',
+        'tier': 'L1',
+        'source_type': 'changelog',
+        'access_method': 'html',
+        'region': '全球',
+        'priority': 3,
+    })
+    items = _select_changelog_items(soup, cfg)
+    assert len(items) == 1
+    assert items[0]['company_name'] == 'Shopify'
+    assert items[0]['article_date'] == '2026-06-28'
+    assert items[0]['event_types'] == ['strategy']
+    assert 'developer_change' in items[0]['signal_taxonomy']
+
+
 if __name__ == '__main__':
     test_official_company_title_gets_entity_prefix()
     test_l1_changelog_infers_entity_name_without_changelog_suffix()
     test_official_article_date_extracted_from_title_and_url()
     test_official_html_skips_stale_ir_items()
+    test_changelog_items_extract_direct_dated_links()
     print('fetch news source meta tests passed')

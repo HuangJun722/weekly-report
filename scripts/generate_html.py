@@ -1729,7 +1729,8 @@ def build_display_context():
 
     # 收集每家公司所有事件（时间窗口内，不过滤数量上限）
     company_by_company = {}
-    for e in company_events:
+    qualified_company_events = select_company_quality_events(company_events)
+    for e in qualified_company_events:
         name = e.get('company_name', '其他')
         company_by_company.setdefault(name, []).append(e)
 

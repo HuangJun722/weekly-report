@@ -411,7 +411,10 @@ def infer_signal_taxonomy(item):
         item.get('summary_short', ''),
         item.get('reason', ''),
         ' '.join(item.get('signal_types') or []),
+        ' '.join(item.get('source_signal_types') or []),
         ' '.join(item.get('event_types') or []),
+        item.get('source_role', ''),
+        item.get('source_type', ''),
     ]).lower()
     signals = []
     for signal, keywords in SIGNAL_TAXONOMY.items():
@@ -1077,6 +1080,14 @@ OFFICIAL_SOURCE_TITLE_PATTERNS = [
     'investor', 'strategy', 'strategic', 'platform', 'payment', 'commerce',
 ]
 
+CHANGELOG_SOURCE_TITLE_PATTERNS = [
+    'api', 'sdk', 'developer', 'changelog', 'release', 'released',
+    'update', 'updates', 'new', 'beta', 'ga', 'graphql', 'webhook',
+    'checkout', 'payments', 'merchant', 'admin', 'app', 'apps',
+    'support', 'supports', 'enabled', 'enables', 'default', 'custom',
+    'order', 'discount', 'import', 'duty', 'b2b',
+]
+
 OFFICIAL_SOURCE_SKIP_URL_PATTERNS = [
     'category=', '/about', '/products/', '/investor$', '/investors/$',
     '/quarterlyresults', '/annualreports', '/financial-information',
@@ -1122,10 +1133,16 @@ def _is_official_cfg(cfg):
     return cfg.get('source_tier') == 'L1 官方/IR源' or cfg.get('source_role') == 'official_ir'
 
 
+def _is_changelog_cfg(cfg):
+    return cfg.get('source_type') in {'changelog', 'developer_changelog'}
+
+
 def _official_link_allowed(link, cfg):
     link_lower = (link or '').lower().rstrip('/')
     if any(pattern in link_lower for pattern in OFFICIAL_SOURCE_SKIP_URL_PATTERNS):
         return False
+    if _is_changelog_cfg(cfg):
+        return True
     patterns = [p.lower() for p in cfg.get('include_url_patterns', [])] or OFFICIAL_SOURCE_LINK_PATTERNS
     return any(pattern in link_lower for pattern in patterns)
 
@@ -1139,6 +1156,8 @@ def _official_title_allowed(title, cfg):
         return False
     if len(clean_title) < 18 or len(clean_title) > 180:
         return False
+    if _is_changelog_cfg(cfg):
+        return any(pattern in title_lower for pattern in CHANGELOG_SOURCE_TITLE_PATTERNS)
     company = cfg.get('company_name') or cfg.get('source') or cfg.get('name', '')
     aliases = COMPANY_ALIASES.get(company, [company])
     has_alias = _title_mentions_aliases(clean_title, aliases)
@@ -1242,12 +1261,97 @@ def _extract_date_from_text(text):
     return None
 
 
+def _extract_recent_month_day_date(text):
+    clean = ' '.join((text or '').split())
+    if not clean:
+        return None
+    month_names = '|'.join(sorted(_EN_MONTHS, key=len, reverse=True))
+    m = re.search(
+        rf'\b({month_names})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?\b',
+        clean,
+        flags=re.I,
+    )
+    if not m:
+        return None
+    now = _cn_now().date()
+    month = _EN_MONTHS[m.group(1).lower()]
+    day = int(m.group(2))
+    for year in (now.year, now.year - 1):
+        candidate = _format_date_parts(year, month, day)
+        parsed = _parse_date(candidate)
+        if parsed and parsed <= now:
+            return candidate
+    return None
+
+
 def _extract_official_article_date(title, link, node_text=''):
     return (
         _extract_date_from_url(link)
         or _extract_date_from_text(title)
         or _extract_date_from_text(node_text)
+        or _extract_recent_month_day_date(node_text)
     )
+
+
+def _same_host_url(base_url, href):
+    absolute = urljoin(base_url, href or '')
+    base_host = urlparse(base_url).netloc.lower().replace('www.', '')
+    link_host = urlparse(absolute).netloc.lower().replace('www.', '')
+    if not absolute.startswith('http') or base_host != link_host:
+        return ''
+    return absolute
+
+
+def _select_changelog_items(soup, cfg):
+    """Extract dated changelog links directly; card selectors are often noisy."""
+    results = []
+    seen = set()
+    max_items = cfg.get('max', 4)
+    max_scan = max(cfg.get('max_scan', 40), 100)
+
+    for link_el in soup.select('a[href]')[:max_scan]:
+        if len(results) >= max_items:
+            break
+        link = _same_host_url(cfg['url'], link_el.get('href'))
+        if not link or link in seen:
+            continue
+        if any(p in link.lower() for p in HTML_SKIP_URL_PATTERNS):
+            continue
+        if any(p in link.lower() for p in OFFICIAL_SOURCE_SKIP_URL_PATTERNS):
+            continue
+
+        title = link_el.get_text(' ', strip=True).lstrip('•·-–— ').strip()
+        if not _official_title_allowed(title, cfg) or is_blacklisted(title):
+            continue
+
+        node_text = ''
+        article_date = None
+        for parent in [link_el] + list(link_el.parents)[:6]:
+            node_text = ' '.join(parent.get_text(' ', strip=True).split())
+            article_date = _extract_official_article_date(title, link, node_text)
+            if article_date:
+                break
+        if not article_date or not _recent_article_date(article_date, days=2):
+            continue
+
+        types = detect_event_types(title)
+        if types == ['other']:
+            types = ['strategy']
+
+        seen.add(link)
+        results.append(_with_source_meta({
+            'title': title,
+            'url': link,
+            'source': cfg.get('source', cfg.get('name', '')),
+            'region': cfg['region'],
+            'priority': cfg.get('priority', 1),
+            'event_types': types,
+            'article_date': article_date,
+            'is_company': cfg.get('is_company', False),
+            'company_name': cfg.get('company_name', ''),
+        }, cfg))
+
+    return results
 
 
 def fetch_company_news(cfg):
@@ -1373,6 +1477,8 @@ def fetch_html(cfg):
 
     # 根据来源选择器定制
     source = cfg['source']
+    if _is_changelog_cfg(cfg):
+        return _select_changelog_items(soup, cfg)
     if _is_official_cfg(cfg):
         articles = _select_official_articles(soup, cfg)
     elif source == 'DealStreetAsia':

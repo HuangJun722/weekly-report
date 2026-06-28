@@ -64,20 +64,38 @@ OUT_OF_SCOPE_TERMS = {
     '医疗基金', '医疗器械', '农业', '建筑材料', '矿业',
 }
 
+HARD_OUT_OF_SCOPE_TERMS = {
+    'defense', 'defence', 'military', 'weapon', 'missile', 'ammunition',
+    'army', 'battlefield', '国防', '军工', '军事', '武器', '导弹', '弹药', '战场',
+}
+
+SPACE_OUT_OF_SCOPE_TERMS = {
+    'space ipo', 'space company', 'space startup', 'spacetech', 'space tech',
+    'satellite imagery', 'earth observation', 'geospatial intelligence',
+    '航天', '卫星影像', '地球观测', '地理空间情报',
+}
+
 HEALTH_BIO_OUT_OF_SCOPE_TERMS = {
     'healthtech', 'health tech', 'healthcare', 'medical',
     'biotech', 'biotherapeutics', 'therapeutics', 'pharma', 'pharmaceutical',
     'drug', 'therapy', 'therapies', 'clinical trial', 'ophthalmology',
     'glaucoma', 'retinal', 'cardiac', 'oncology', 'cancer', 'diagnostics',
     'disease diagnosis', 'healthcare fund', 'medical device',
+    'biomanufacturing', 'low-carbon construction material', 'construction material',
+    'construction materials', 'agriculture', 'agritech', 'mining',
     '医疗科技', '医疗健康', '医疗行业', '生物科技', '生物制药', '制药', '药物', '疗法', '治疗', '临床试验',
     '眼科', '青光眼', '视网膜', '心脏', '肿瘤', '癌症', '诊断',
-    '医疗基金', '医疗器械',
+    '医疗基金', '医疗器械', '生物制造', '低碳建材', '建筑材料', '农业', '矿业',
 }
 
-OUT_OF_SCOPE_CAP_TO_EDGE_TERMS = {
-    'defense', 'defence', 'military', '国防', '军工', '军事',
+HEALTH_PLATFORM_EXCEPTION_TERMS = {
+    'openai', 'anthropic', 'nvidia', 'model', 'llm',
+    'ai infrastructure', 'ai infra', 'cloud', 'gpu', 'data center', 'datacenter',
+    'platform api',
+    '模型', '云', '算力', '数据中心',
 }
+
+OUT_OF_SCOPE_CAP_TO_EDGE_TERMS = HARD_OUT_OF_SCOPE_TERMS
 
 
 def _event_text(event):
@@ -87,6 +105,18 @@ def _event_text(event):
         event.get('summary_short') or '',
         event.get('reason') or '',
         event.get('trend_topic') or '',
+        event.get('source') or '',
+        event.get('company_name') or '',
+        ' '.join(event.get('companies') or []),
+    ]
+    return ' '.join(parts).lower()
+
+
+def _event_fact_text(event):
+    parts = [
+        event.get('title') or '',
+        event.get('display_title') or '',
+        event.get('summary_short') or '',
         event.get('source') or '',
         event.get('company_name') or '',
         ' '.join(event.get('companies') or []),
@@ -116,19 +146,40 @@ def assess_internet_relevance(event):
     - 0: out of scope for the main internet intelligence product
     """
     text = _event_text(event)
+    fact_text = _event_fact_text(event)
     has_core = _contains_any(text, CORE_INTERNET_TERMS)
     has_adjacent = _contains_any(text, ADJACENT_INTERNET_TERMS)
-    has_strong_health_it = _contains_any(text, STRONG_ADJACENT_HEALTH_IT_TERMS)
+    has_fact_core = _contains_any(fact_text, CORE_INTERNET_TERMS)
+    has_strong_health_it = _contains_any(fact_text, STRONG_ADJACENT_HEALTH_IT_TERMS)
     has_edge = _contains_any(text, EDGE_TERMS)
     has_out = _contains_any(text, OUT_OF_SCOPE_TERMS)
-    has_health_bio_out = _contains_any(text, HEALTH_BIO_OUT_OF_SCOPE_TERMS)
-    capped_edge = _contains_any(text, OUT_OF_SCOPE_CAP_TO_EDGE_TERMS)
+    has_health_bio_out = _contains_any(fact_text, HEALTH_BIO_OUT_OF_SCOPE_TERMS)
+    capped_edge = _contains_any(fact_text, OUT_OF_SCOPE_CAP_TO_EDGE_TERMS)
+    has_space_out = _contains_any(fact_text, SPACE_OUT_OF_SCOPE_TERMS)
+    has_health_exception = (
+        has_strong_health_it
+        or (has_fact_core and _contains_any(fact_text, HEALTH_PLATFORM_EXCEPTION_TERMS))
+    )
 
-    if capped_edge and not has_core:
+    if capped_edge:
         return {
-            'score': 1,
-            'label': 'edge_observation',
-            'reason': '军工/国防相关事件默认不进入主展示，只保留观察价值',
+            'score': 0,
+            'label': 'out_of_scope',
+            'reason': '军工/国防相关事件默认不属于本站主赛道',
+        }
+
+    if has_health_bio_out and not has_health_exception:
+        return {
+            'score': 0,
+            'label': 'out_of_scope',
+            'reason': '生物制药、疗法、诊断或医疗器械事件默认不属于本站主赛道',
+        }
+
+    if has_space_out and not has_fact_core:
+        return {
+            'score': 0,
+            'label': 'out_of_scope',
+            'reason': '纯航天、卫星影像或地理空间资本事件默认不属于本站主赛道',
         }
 
     if has_core:
@@ -151,9 +202,9 @@ def assess_internet_relevance(event):
     if has_out and score >= 2:
         if capped_edge:
             return {
-                'score': 1,
-                'label': 'edge_observation',
-                'reason': '军工/国防相关事件默认不进入主展示，只保留观察价值',
+                'score': 0,
+                'label': 'out_of_scope',
+                'reason': '军工/国防相关事件默认不属于本站主赛道',
             }
         if has_core:
             return {
@@ -161,7 +212,7 @@ def assess_internet_relevance(event):
                 'label': 'adjacent_internet',
                 'reason': '相邻行业事件，因包含互联网平台、软件或AI基础设施能力而保留',
             }
-        if has_health_bio_out and not has_strong_health_it:
+        if has_health_bio_out and not has_health_exception:
             return {
                 'score': 0,
                 'label': 'out_of_scope',

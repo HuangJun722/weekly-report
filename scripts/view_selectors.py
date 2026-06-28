@@ -54,10 +54,7 @@ def select_company_events(events_by_date, week_ago):
             if event.get('is_company'):
                 continue
 
-            if date_str >= week_ago:
-                if should_show_in_main_list(event) or should_show_in_review(event):
-                    generic_events.append(event)
-            elif event_type(event) != 'other' and event_score(event) >= 5:
+            if should_show_in_main_list(event) or should_show_in_review(event):
                 generic_events.append(event)
 
     return _sort_events(company_events), _sort_events(generic_events)

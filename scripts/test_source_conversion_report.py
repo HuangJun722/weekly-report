@@ -29,7 +29,18 @@ def test_filter_reason_out_of_scope_before_quality():
         reason='临床试验融资。',
         impact='未知',
     )
-    assert classify_filter_reason(event) == 'out_of_scope'
+    assert classify_filter_reason(event) == 'out_of_scope_industry'
+
+
+def test_filter_reason_capital_only_low_actionability():
+    event = _event(
+        title='SaaS startup raises funding from global investors',
+        summary_short='SaaS startup raises funding.',
+        reason='资本进入但没有明确业务动作。',
+        impact='投资机构',
+        score=7,
+    )
+    assert classify_filter_reason(event) == 'capital_only_low_actionability'
 
 
 def test_filter_reason_quality_review():
@@ -139,6 +150,7 @@ def test_conversion_marks_high_signal_zero_main_for_governance(tmp_path):
 if __name__ == '__main__':
     test_filter_reason_main()
     test_filter_reason_out_of_scope_before_quality()
+    test_filter_reason_capital_only_low_actionability()
     test_filter_reason_quality_review()
     from tempfile import TemporaryDirectory
     from pathlib import Path

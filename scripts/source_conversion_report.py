@@ -15,6 +15,7 @@ from pathlib import Path
 
 try:
     from event_value import (
+        event_filter_reason,
         event_type,
         is_google_news_event,
         needs_quality_review,
@@ -24,6 +25,7 @@ try:
     from internet_relevance import internet_relevance_score
 except ImportError:
     from scripts.event_value import (
+        event_filter_reason,
         event_type,
         is_google_news_event,
         needs_quality_review,
@@ -36,7 +38,8 @@ except ImportError:
 DROP_REASONS = (
     'main',
     'review',
-    'out_of_scope',
+    'out_of_scope_industry',
+    'capital_only_low_actionability',
     'quality_review',
     'google_not_main',
     'other_type',
@@ -128,17 +131,11 @@ def classify_filter_reason(event):
     """Return the first product reason explaining stored-event visibility."""
     if should_show_in_main_list(event):
         return 'main'
+    if event_filter_reason(event) == 'capital_only_low_actionability':
+        return 'capital_only_low_actionability'
     if should_show_in_review(event):
         return 'review'
-    if internet_relevance_score(event) < 2:
-        return 'out_of_scope'
-    if needs_quality_review(event):
-        return 'quality_review'
-    if is_google_news_event(event):
-        return 'google_not_main'
-    if event_type(event) == 'other':
-        return 'other_type'
-    return 'weak_signal'
+    return event_filter_reason(event)
 
 
 def _empty_row(source):
@@ -383,12 +380,15 @@ def print_report(report, limit=30):
     )
     _safe_print(
         "totals | raw={raw} signal={signal} stored={stored} main={main} review={review} "
-        "out_of_scope={out_of_scope} quality_review={quality_review} "
+        "out_of_scope_industry={out_of_scope_industry} "
+        "capital_only_low_actionability={capital_only_low_actionability} "
+        "quality_review={quality_review} "
         "google_not_main={google_not_main} other_type={other_type} "
         "weak_signal={weak_signal} lost_after_signal≈{lost_after_signal}".format(**totals)
     )
     _safe_print(
-        "source | raw | signal | stored | main | review | out_of_scope | quality_review | "
+        "source | raw | signal | stored | main | review | out_of_scope_industry | "
+        "capital_only_low_actionability | quality_review | "
         "google_not_main | other_type | weak_signal | lost_after_signal≈ | signal_rate | main_per_signal | governance | funnel | status"
     )
     for row in report['rows'][:limit]:
@@ -403,7 +403,8 @@ def print_report(report, limit=30):
             )
         _safe_print(
             "{source} | {raw} | {signal} | {stored} | {main} | {review} | "
-            "{out_of_scope} | {quality_review} | {google_not_main} | {other_type} | "
+            "{out_of_scope_industry} | {capital_only_low_actionability} | "
+            "{quality_review} | {google_not_main} | {other_type} | "
             "{weak_signal} | {lost_after_signal} | {signal_rate:.0%} | "
             "{main_per_signal:.0%} | {governance_action} | ".format(**row)
             + f"{funnel_text} | {row['statuses_text']}"
