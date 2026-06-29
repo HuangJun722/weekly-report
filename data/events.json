@@ -59536,6 +59536,181 @@
       "needs_repair": true,
       "analysis_source": "deepseek",
       "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Pay Launches 'Smart Pass' Facial Recognition Departure Service at Incheon International Airport - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1xM2ZoamlseThqbE1SNWk1dzlMTmlSOC1pdkVXWGlHUnBaOGlTMzVTNXRMN2g5U3Fycklobi01NDJPVjU5ZXM2dlBkYnA3RFluRGdrbktmd09oTWxfUmtoNUE1ckpPeVJG?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Pay Launches 'Smart",
+      "reason": "亚太Naver Pay在仁川机场推出人脸识别服务",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-06-29",
+      "date": "2026-06-29",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Turtlemint Shares Make Muted Debut, List At Over 11% Discount",
+      "url": "https://inc42.com/buzz/turtlemint-shares-make-muted-debut-list-at-over-11-discount/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "印度保险科技Turtlemint上市首日破发，跌幅超11%",
+      "reason": "印度保险科技公司Turtlemint上市表现不佳，反映市场对保险科技估值趋于谨慎，同类公司融资可能承压",
+      "impact": "印度保险科技初创公司、保险科技投资者",
+      "insight_label": "警示信号",
+      "trend_topic": "印度保险科技估值回调",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-29",
+      "date": "2026-06-29",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [
+        "generic_reason"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "partial"
+    },
+    {
+      "title": "Canadian fintech Float raises C$85m",
+      "url": "https://www.finextra.com/newsarticle/48002/canadian-fintech-float-raises-c85m?utm_medium=rssfinextra&utm_source=finextrafeed",
+      "source": "Finextra",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "加拿大金融科技Float获C$85M融资",
+      "reason": "加拿大金融科技Float获大额融资，北美企业支付赛道持续升温，ICT服务商可关注其技术集成与API合作机会",
+      "impact": "北美企业支付平台、金融科技API供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "北美企业支付融资热",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-29",
+      "date": "2026-06-29",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Finextra Payments",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Singapore's Biobot Surgical raises $15.5m in funding led by ClavystBio",
+      "url": "https://dealstreetasia.com/stories/biobot-surgical-clavystbio-2-487064/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "新加坡手术机器人公司Biobot Surgical获$15.5M融资，由ClavystBio领投",
+      "reason": "新加坡手术机器人Biobot Surgical获融资，东南亚医疗科技赛道活跃，ICT厂商可探索机器人控制与AI诊断合作",
+      "impact": "东南亚医疗机器人供应链、AI诊断软件商",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚医疗科技投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-06-29",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2026/01/Cells_National-Cancer-Institute.png?fit=1952,1296",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ]
 }
