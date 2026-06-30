@@ -60773,6 +60773,105 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Cloudflare: stable releases downloads page",
+      "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/cloudflare-one-client/download/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: stable releas",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-06-29",
+      "date": "2026-06-29",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Chamath Palihapitiya raises $135M Series A for his AI coding startup, takes CEO role",
+      "url": "https://techcrunch.com/2026/06/29/chamath-palihapitiya-raises-135m-series-a-for-his-ai-coding-startup-takes-ceo-role/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Chamath Palihapitiya的AI编程初创获$135M A轮",
+      "reason": "全球AI编程赛道大额融资，代码生成工具需求爆发，云和API供应商受益",
+      "impact": "云服务商、AI模型提供商、开发者工具平台",
+      "insight_label": "资金流向",
+      "trend_topic": "全球AI编程工具热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-29",
+      "date": "2026-06-29",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2015/10/chamath_palihapitiya_techcrunch_disrupt.jpg?resize=1200,800",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "developer_change",
+        "capital",
+        "org_change"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-06-30": [
@@ -60852,6 +60951,223 @@
       "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
       "follow_up_window": "7天内",
       "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Kakao Signs MOU with Law&Company and Hana Financial TI to Expand Legal Electronic Document Services - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9RdG5Jc0ZOeVpBbmlSckRtUC1lMUU4WUtjTGM5dG16MUVCTzdnZFNuS1FJaEN1ZHVmU0NLdFlmNlhkM2JyQXlrUnVFZktSQVY2VjZQRVRPN0FhaVVnSERUZmVDSXVPU1Fs?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Signs MOU with Law&",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-06-30",
+      "date": "2026-06-30",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "生态窗口"
+      ],
+      "opportunity_direction": "联合解决方案 / 商户增长 / 开放平台合作 / 渠道共建",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "partnership"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "SG insurtech firm Igloo buys Eazy Digital for regional push",
+      "url": "https://www.techinasia.com/israeli-hotel-tech-startup-duve-nets-60m-series-b",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "新加坡保险科技Igloo收购Eazy Digital拓展区域业务",
+      "reason": "亚太保险科技并购整合加速，Igloo通过收购强化泰国市场技术栈和渠道",
+      "impact": "东南亚保险科技平台、泰国本地保险分销商",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚保险科技整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-30",
+      "date": "2026-06-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/06/1782785138_unnamed.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Ecommerce’s Logistics Game, Nua Eyes $25 Mn & More",
+      "url": "https://inc42.com/buzz/ecommerces-logistics-game-nua-eyes-25-mn-more/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "电商物流公司Nua寻求$25M融资",
+      "reason": "亚太电商物流赛道持续吸引资本，物流技术供应商和仓储自动化方案商受益",
+      "impact": "东南亚电商物流平台、仓储自动化技术商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太电商物流扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-30",
+      "date": "2026-06-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/Social-Daily-Brief-2026-06-30T003417.745.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "commerce",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Kapture CX Bags $10 Mn To Take Its AI-Powered CRM Tools Global",
+      "url": "https://inc42.com/buzz/kapture-cx-bags-10-mn-to-take-its-ai-powered-crm-tools-global/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kapture CX获$10M融资推动AI CRM全球化",
+      "reason": "亚太AI CRM工具获资本加持，全球扩张将带动云基础设施和AI模型合作需求",
+      "impact": "亚太云服务商、AI模型供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太AI SaaS出海",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-30",
+      "date": "2026-06-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/kapture-CX-funding-social-.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "预算窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Igloo Acquires Eazy Digital to Expand Insurtech Stack in Thailand",
+      "url": "https://fintechnews.sg/133785/thailand/igloo-acquires-eazy-digital-insurtech/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "ma",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Igloo收购Eazy Digital扩展泰国保险科技栈",
+      "reason": "东南亚保险科技并购加速，Igloo通过收购强化泰国市场技术栈和渠道",
+      "impact": "东南亚保险科技平台、泰国本地保险分销商",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚保险科技整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-06-30",
+      "date": "2026-06-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://fintechnews.sg/wp-content/uploads/2026/06/Igloo-acquires-Eazy-Digital.webp",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
       "signal_taxonomy": [
         "ai_infra",
         "capital"
