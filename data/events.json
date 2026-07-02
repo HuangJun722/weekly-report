@@ -64191,6 +64191,326 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Cloudflare: Fix redirect URL fragment encoding for single-page applications",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-07-01-spa-redirect-fragment-fix/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: Fix redirect ",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Wilson Sonsini Advises Adyen on Acquisition of Orb - Wilson Sonsini",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNT1pSY01wdlQyWlpjWDduV1NSbTZIUUJlOERpOWFlU3NIbTNQdmRXckxYUGxEc09yS1doZFlfcFEwTXNyNFVGZU9tekk3VHl4a3BWY1pQSUpUa3lUeGJ5TTJoQ1pGbk1oUWcyX2VsNkZxeE4xUGo2ZWhfWWFtUjRYanlWNUNBZkRPR0VSN3BHUGlkQQ?oc=5",
+      "source": "Google News",
+      "region": "欧洲",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Adyen收购Orb，Wilson Sonsini提供法律顾问",
+      "reason": "欧洲支付巨头Adyen收购Orb，强化支付技术栈，为欧洲金融科技集成商带来新合作机会",
+      "impact": "欧洲支付技术供应商、金融科技集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲支付整合加速",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Adyen",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "Wilson Sonsini",
+      "publisher": "Wilson Sonsini",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Adyen",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Together AI raises 800 million dollars in Series C as open-source cloud demand surges",
+      "url": "https://thenextweb.com/news/together-ai-800m-series-c-aramco-ventures",
+      "source": "The Next Web",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Together AI获$800M C轮融资，开源云需求激增",
+      "reason": "欧洲开源AI云平台获巨额融资，云基础设施和GPU供应商受益",
+      "impact": "GPU供应商、云服务商、开源AI社区",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲AI融资热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.thenextweb.com/2026/07/together-ai-800m-series-c-aramco-ventures.avif",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Next Web",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Loopia raises $1.2M seed round",
+      "url": "https://latamlist.com/loopia-raises-1-2m-seed-round/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Loopia获120万美元种子轮融资",
+      "reason": "拉美初创企业获早期融资，显示拉美科技投资活跃，为本地支付和物流技术供应商带来合作机会",
+      "impact": "拉美金融科技平台、物流技术公司",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美早期科技融资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2026/07/Loopia-logo.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Jota raises $30M Series A at $185M valuation",
+      "url": "https://latamlist.com/jota-raises-30m-series-a-at-185m-valuation/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Jota获$30M A轮融资，估值$185M",
+      "reason": "拉美金融科技赛道持续吸金，Jota作为新兴支付平台将加速商户收单和数字银行服务落地",
+      "impact": "拉美支付服务商、商户收单技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美FinTech融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2026/07/Jota-logo.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Addi raises $86M Series D",
+      "url": "https://latamlist.com/addi-raises-86m-series-d/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Addi获$86M D轮融资",
+      "reason": "拉美先买后付赛道头部玩家获大额融资，将推动BNPL基础设施和信用评估技术升级",
+      "impact": "拉美电商平台、信用评分技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美BNPL赛道升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2025/09/Addi-logo.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Kroger is back in growth mode with Giant Eagle acquisition",
+      "url": "https://www.modernretail.co/operations/kroger-is-back-in-growth-mode-with-giant-eagle-acquisition/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+      "source": "Modern Retail",
+      "region": "全球",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kroger is back in growth ",
+      "reason": "全球科技公司并购/收购",
+      "impact": "未知",
+      "insight_label": "资金流向",
+      "trend_topic": "资金流向 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-01",
+      "date": "2026-07-01",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://www.modernretail.co/wp-content/uploads/sites/5/2025/03/connected-commerce-digiday.webp",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "source_id": "modern-retail",
+      "credibility_score": 7,
+      "noise_level": "medium",
+      "source_signal_types": [
+        "merchant_product",
+        "marketplace_policy",
+        "industry_analysis"
+      ],
+      "vertical": "电商/零售",
+      "bd_triggers": [
+        "预算窗口",
+        "整合窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "commerce",
+        "capital"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "failed"
     }
   ],
   "2026-09-15": [
@@ -64250,5 +64570,308 @@
       "analysis_status": "fallback"
     }
   ],
-  "2026-07-02": []
+  "2026-07-02": [
+    {
+      "title": "Kakao Launches 'Chaegieum Card' for Library Access via KakaoTalk - Seoul Economic Daily",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV1FiVl80clMtUDZsUWRUcThFc1B5NUN1dm9yUTJWbGxTVmFlUjN3TTIxRUthUi1HbUN0VFhONlpsLVRGTkdxUXdNWkUxcXJqazRqbllsMldwaE1YNWpSbnhwWUROTG4wMlI1WlUydXhjczBrLXNMbzFiQ3YwUFk1MTh4QWhidFpUN043STRyd1JfMEtUcUd1YXRZU3RQUQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Launches 'Chaegieum",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-02",
+      "date": "2026-07-02",
+      "source_detail": "Seoul Economic Daily",
+      "publisher": "Seoul Economic Daily",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Shopping launches full AI agent, accelerates Korea’s chat commerce - CHOSUNBIZ - Chosunbiz",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5aUVNEdDlpa2hGY0JTdHk3SllNMjZyYzdiRTBERV9teENCalp5QlMySTVoN3FZdE55Uzl4aVVRbXBCTnloN1MyREtoeFlBeWRsZG96Z2RSYnRaZFJnbVV2Z3VLdGNPSFdjMlB1VVU3NkFRa0JxSDlPZldB0gGOAUFVX3lxTE1ZMENwb3FEbm5LbTYzSFFvV0VRQ256X190MzhJaHItcEo0WHlNQy1MRi1ET2hvZkl2ZllXX1VsTWNNUkJZNmZrSEwxVXQ5aV9LY2FOV0tXT2o3X28yd3lueVZqaXZPLUlJUGdySnZnN0lpRi1reHhUY2h5UnNzVlJiT2RYVmlqUHRMUlJ6bEE?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Shopping launches f",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-02",
+      "date": "2026-07-02",
+      "source_detail": "Chosunbiz",
+      "publisher": "Chosunbiz",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "commerce",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Insilico secures $600m AI drug deal with Takeda",
+      "url": "https://www.techinasia.com/eli-lilly-taps-insilico-for-2-7b-ai-drug-discovery-deal",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Insilico与武田达成$600M AI药物研发交易",
+      "reason": "亚太AI制药获大额合作，AI药物发现技术集成需求上升",
+      "impact": "AI制药平台、生物科技IT供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太AI制药升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-02",
+      "date": "2026-07-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2025/03/1741832069_DSC7188.webp",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Ex-Intel exec’s startup OXMIQ secures $35m series A",
+      "url": "https://www.techinasia.com/ex-intel-execs-chip-startup-launches-licensable-gpu-tech",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "前英特尔高管创企OXMIQ获$35M A轮融资",
+      "reason": "亚太GPU芯片设计初创获融资，可授权GPU技术带来芯片设计合作机会",
+      "impact": "芯片设计服务商、半导体IP授权方",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太芯片设计投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-02",
+      "date": "2026-07-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2025/08/1754381374_FL1kjhlUcA8ABhX.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Aramco leads $800m series C in Together AI",
+      "url": "https://www.techinasia.com/nvidia-servers-boost-chinas-moonshoot-ai-models-10x",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Aramco领投Together AI $800M C轮",
+      "reason": "中东主权基金投资欧洲AI云平台，中东与欧洲AI合作机会增加",
+      "impact": "中东主权基金、欧洲AI云服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "中东欧洲AI合作",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-02",
+      "date": "2026-07-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2023/12/1703671602_Aramco.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Templewater builds multi-strategy alt asset platform from venture to buyout",
+      "url": "https://dealstreetasia.com/stories/templewater-multi-strategy-platform-487320/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Templewater构建多策略另类资产平台",
+      "reason": "亚太另类投资平台扩张，将推动私募股权和风险投资在科技、新能源等领域的布局",
+      "impact": "亚太科技初创公司、私募股权基金",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太另类投资扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-07-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2025/11/2025-11-03T051651Z_2_LYNXMPELA2036_RTROPTP_4_HONGKONG-SECURITY-e1764846641583.jpg?fit=940,582",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Green Climate Fund commits $50m to Mekong Capital's climate fund",
+      "url": "https://dealstreetasia.com/stories/green-climate-fund-commits-50m-to-mekong-capitals-climate-fund-487573/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "绿色气候基金承诺$50M给Mekong Capital气候基金",
+      "reason": "亚太气候科技投资获国际资金注入，将加速东南亚可再生能源和碳减排技术落地",
+      "impact": "东南亚新能源项目开发商、碳交易技术平台",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚气候科技投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-07-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2026/07/thophilong-soil-8080788-scaled.jpg?fit=2560,1707",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
