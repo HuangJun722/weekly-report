@@ -3,12 +3,33 @@
   <title>全球互联网百晓生 · 事件流</title>
   <subtitle>高价值事件推送，复用情报站每日事件卡片</subtitle>
   <id>tag:weekly-report,2026:main</id>
-  <updated>2026-07-08T04:15:41Z</updated>
+  <updated>2026-07-08T19:57:23Z</updated>
   <link href="https://weekly-report.ai/" rel="alternate"/>
   <link href="feed.xml" rel="self" type="application/atom+xml"/>
   <author><name>Global Internet Intelligence Station</name></author>
   <rights>CC BY-NC 4.0</rights>
 
+  <entry>
+    <title>General Atlantic领投SambaNova $1B融资</title>
+    <link href="https://www.techinasia.com/intel-invest-15m-ai-chip-startup-sambanova"/>
+    <id>tag:weekly-report,2026:event-3a4b8620</id>
+    <updated>2026-07-08T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;General Atlantic leads AI chip firm SambaNova’s $1b round&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;亚太AI芯片独角兽获巨额融资，AI推理芯片竞争加剧，数据中心采购格局可能变化&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;AI芯片设计公司、云服务商、数据中心运营商&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>SambaNova获$1B融资，估值$11B</title>
+    <link href="https://ventureburn.com/nvidia-chip-challenger-sambanova-raises-1-billion/"/>
+    <id>tag:weekly-report,2026:event-e3071177</id>
+    <updated>2026-07-08T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;NVIDIA Chip Challenger SambaNova Raises $1 Billion At $11 Billion Valuation&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;美国AI芯片挑战者获巨额融资，全球AI算力供应链竞争加剧，非洲数据中心可能受益&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;非洲数据中心运营商、AI芯片分销商&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>ElevenLabs CEO称营收约$600M</title>
+    <link href="https://thenextweb.com/news/elevenlabs-mati-staniszewski-raise-summit-revenue-ai-labs"/>
+    <id>tag:weekly-report,2026:event-0fb455f3</id>
+    <updated>2026-07-08T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;ElevenLabs’ CEO on hitting ~$600m revenue and outrunning the AI labs&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;欧洲AI语音合成独角兽营收爆发，语音API和AI音频技术集成需求持续增长&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;AI语音技术集成商、内容创作平台&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：earnings, strategy | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
+  </entry>
   <entry>
     <title>印度Sundaram Alternates募资1.27亿美元</title>
     <link href="https://dealstreetasia.com/stories/sudaram-alternates-credit-fund-488224/"/>
@@ -17,17 +38,10 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;India&amp;#x27;s Sundaram Alternates raises $127m fund, largely backed by domestic LPs&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;印度另类信贷基金获国内LP支持，企业融资和债务科技平台需求增加&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;印度金融科技平台、信贷服务商&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：亚太 | 来源：DealStreetAsia&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Danantara完成四家国有资管公司合并</title>
-    <link href="https://dealstreetasia.com/stories/danantara-merges-four-state-owned-asset-managers-488249/"/>
-    <id>tag:weekly-report,2026:event-437aba2f</id>
+    <title>Payhawk年收入超$100M成为Centaur</title>
+    <link href="https://www.therecursive.com/payhawk-becomes-a-centaur-after-surpassing-100m-in-arr/"/>
+    <id>tag:weekly-report,2026:event-d343932b</id>
     <updated>2026-07-08T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Danantara completes merger of four state-owned asset managers&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;印尼国有资管整合，IT系统统一和数字化转型带来外包机会&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;印尼IT系统集成商、云服务商&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：ma | 地区：亚太 | 来源：DealStreetAsia&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>蚂蚁集团收购Boohee 28%股份布局AI健康服务</title>
-    <link href="https://www.techinasia.com/ant-group-profit-estimated-to-rise-10-to-1-2b"/>
-    <id>tag:weekly-report,2026:event-5d488cb7</id>
-    <updated>2026-07-08T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Ant acquires 28% Boohee stake for AI health services&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;中国金融科技巨头战略投资AI健康，亚太健康科技赛道出现资本合作机会&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;亚太健康科技平台、AI医疗数据服务商&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：ma | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Payhawk becomes a Centaur after surpassing $100M in ARR&lt;/p&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt;欧洲企业支出管理SaaS达到规模化里程碑，验证了B2B FinTech在区域市场的盈利能力&lt;/p&gt;&lt;p&gt;&lt;strong&gt;影响：&lt;/strong&gt;欧洲企业软件集成商、支付技术合作方&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：funding | 地区：欧洲 | 来源：The Recursive&lt;/p&gt;</summary>
   </entry>
 </feed>
