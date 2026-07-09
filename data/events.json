@@ -72888,6 +72888,49 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Tilt acquires Blipay to expand into Brazil’s consumer lending market",
+      "url": "https://latamlist.com/tilt-acquires-blipay-to-expand-into-brazils-consumer-lending-market/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "ma",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Tilt收购Blipay进入巴西消费贷款市场",
+      "reason": "拉美消费信贷市场并购活跃，巴西BNPL和数字信贷领域出现整合窗口",
+      "impact": "巴西消费金融公司、信贷数据服务商、支付处理商",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美消费信贷整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-08",
+      "date": "2026-07-08",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2026/07/Tilt-logo.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "payment",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-08-10": [
@@ -73201,6 +73244,1782 @@
       "bd_priority": "观察",
       "signal_taxonomy": [
         "payment",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Korean police launch probe into Kakao Pay’s customer data transfer to Alipay - The Korea Economic Daily Global Edition",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4tRTBiSnFzYjRxazlDOG9kbjQwV3Y5am9oUUVaVThPdjMzTm1wUG9INjEtZlJGZlMzN2xSY3ZyazhOX3FRTEdDa3F2eGMtazdjUU5xa1h1WWRTOVVwYnZUYWhRNDhWd1lwSmc?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Korean police launch prob",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "The Korea Economic Daily Global Edition",
+      "publisher": "The Korea Economic Daily Global Edition",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "合规窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Kakao Ent. Launches Tomb Raider King Sequel Across Webtoon, Web Novel - Anime News Network",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTTFoN2s5Y3lFR0dJUVV5dm9GaHFkbkU2Y25FbUhld01adG4tOS1XcTI0b3dDVnZ3VWszWmlWRkJrWlIyNzlQeUx2UkhrQVVCZmw1SDc1MUw0b1VkTW5uU2lxdEg4SGd4MTdXS1VQc1hnUkZHTlg4M0l3OXJmdzhiQ1BIWDlCd2F1MGY4WTNIYnJPS3VfUVdKZ1pwWWpKcFNrUC0wVmtaSG1EQzZqcS11UjktNEk4OHdJblhoYndlVUVJQQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Ent. Launches Tomb ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "Anime News Network",
+      "publisher": "Anime News Network",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "NH Investment Says Naver’s Post-AI Data Center Plunge Is Overdone, Keeps ₩320,000 Target - finance.biggo.com",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB6bjBFSldjZl9NQUFuam1VYkx4MUVOSGJqUXJ2eC1CZFNBVGZSaXFBVVRqdVN3RWVzbWhaNWF6RVZxZ2IxaERyQ28yMGRSb05FV29lSEMzbk5oOHdGZVRCd0F5LWRIeFNqMk9OampRWFZxdGo2cEE?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "NH Investment Says Naver’",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "finance.biggo.com",
+      "publisher": "finance.biggo.com",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Med.TV among global streamer Rakuten's top-performing launches of 2026 - Times of Malta",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMEEtZThvLWJidk1QUmRrMzl3V3M1R2kxQmMwbHFlWXc2TlREZXp1amx1LVZKRktPSFlCOUZabk90X2ZnN3F4V0pVeDk2TUdjR1hvMEp0T1h1RWNqRk84TEdFMUtORDhHNWlfSDdaMlUtRUVZX3VYa2RlR0xjLUJGZEl6Q2pGcUg0ZG9NdXc5RkQwTFdtdEJVb3puektDQzgwVmRVV3Mxcw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Med.TV among global strea",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "Times of Malta",
+      "publisher": "Times of Malta",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Rakuten",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "KDDI launches TikTok Shop with Nippon TV and CyberAgent - Telecompaper",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTXdrZU5GNzFxVXBFazlETjVSSEJ2bnBmV0NlZThYWVZVYWhVZHZNeVBTODhWaHNwSzYwRUlFSWxJWkJ2YXoxN05ERU41VUxIT05EUFVFTEJvN1FiYmVVYjVuUzE4S0k4ckNrelhzVjRLcVkzS1NWZzFqaHBBQ1p0S1laMWVJOTBVakRxTkE5STlBa0M2ZmdKWWNMamlCNzQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "KDDI launches TikTok Shop",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cyberagent",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "Telecompaper",
+      "publisher": "Telecompaper",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Cyberagent",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "The truth behind mobile gaming's $17bn D2C market",
+      "url": "https://www.pocketgamer.biz/the-truth-behind-mobile-gamings-17bn-d2c-market/",
+      "source": "PocketGamer.biz",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "The truth behind mobile g",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://media.pocketgamer.biz/images/140355/89373/pgbiz-podcast_l660.jpg",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "PocketGamer.biz",
+      "credibility_score": 0,
+      "vertical": "游戏",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Micron ups US investment pledge to $250B",
+      "url": "https://www.mobileworldlive.com/ai-cloud/micron-ups-us-investment-pledge-to-250b/",
+      "source": "Mobile World Live",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Micron ups US investment ",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Mobile World Live",
+      "credibility_score": 0,
+      "vertical": "文娱社交/移动生态",
+      "bd_triggers": [
+        "预算窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Meta pumps $9B into first Canadian data centre",
+      "url": "https://www.mobileworldlive.com/meta/meta-pumps-9b-into-first-canadian-data-centre/",
+      "source": "Mobile World Live",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Meta pumps $9B into first",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Mobile World Live",
+      "credibility_score": 0,
+      "vertical": "文娱社交/移动生态",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Cloudflare: Workflows now supports delay functions when retrying",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-07-09-dynamic-retry-delays/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: Workflows now",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Cloudflare: New DNS Firewall UX with more dashboard settings",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-07-09-new-dns-firewall-ux/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: New DNS Firew",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Mirae Asset clears Korbit takeover as Naver-Dunamu tie-up stalls - 디지털투데이",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMlRYZkdTYWREVFk0ODRXcGx4WEhDLXVIa3dHZEk2bXN4a2JvODBOZkprZUFzUVNHNHRXdVl4d1pkdDI4RndUS3Y3VUJRNEdUd1ljX3VCTTFZa0dEOTdJaUdMZ2tqdDNudE1IeS1YV0dlekN3N053WHNMVjRtN1B4R3dEMXNBVTZ0c2xlN2daOFB3THp5S1l6R243UmxNZ0NMOXd1MHQzYzhxQXVoMWUw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Mirae Asset完成对Korbit的收购，Naver-Dunamu合作停滞",
+      "reason": "韩国加密交易所Korbit被收购，韩国数字资产市场整合加速，ICT服务商可关注合规与托管机会",
+      "impact": "韩国加密交易所、区块链技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "韩国加密市场整合",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "디지털투데이",
+      "publisher": "디지털투데이",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Square Enix stock stays grounded by its game pipeline - Ad-hoc-news.de",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaVF1ejE4UmlkcGVkeFBpcDdTdVNTckdCOUhnRm5aUFBSY29XcnNrRXJBNVRrYXNyMmlFbkFGTmpLUUNGeWFwS2t4X0xJVEtfQkllTFFQeVdzdWFRaWI0eHhXWnYtREhBQXB2Zmt2WFhGOVhvcXJTMHlGTU9lZ1cxZGZkM2lJb2hPQ0tiVHJMSXpucGk2d2lEM3BkNUpHV1lPWjJuSFY0SHZkS0JHcFI4Y0JB?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Square Enix股价受游戏管线拖累",
+      "reason": "日本游戏巨头Square Enix因游戏管线疲软股价承压，日本游戏行业面临内容创新压力，云游戏和AI工具供应商可寻求合作",
+      "impact": "日本游戏开发商、云游戏平台、AI内容工具商",
+      "insight_label": "警示信号",
+      "trend_topic": "日本游戏行业调整",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Square Enix",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "Ad-hoc-news.de",
+      "publisher": "Ad-hoc-news.de",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Square Enix",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Down 35%, is MercadoLibre stock a better buy than SpaceX and the \"Magnificent Seven\" stocks in July? - MSN",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPRC1URFdiVmlfQlp4dWZ6TlRLNnFKU1Q3S09JVUtJWGhsa1pwT1Znc1R4TzZ3Zk1yVnFQMGdUbXh4SDRoWFV6c2x4c1RuRFdOeThiWjA1dnduZmFkeExxX2VYZHV5VjRrSGVzcHU4Y0lmamV4SncyeUJGZXdhdEFNZlU0c2tQS3pUeHB1VGd3d3hBaF9fVFZvNnJlbm84Mm9VMk5oaGxZMDc4aDgzVWFmSzF6TFUzYzI0aTNLNnFBYl9kR0ZhMWRJR1dTeDRnUGhNZWxoZGFSbnNubjFXUVFkY0hrS3MtT0E1akhaaVRJRFNEcU9nN0FOY1R6a0h2TmkxMGF5TG9n?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre股价下跌35%，被指不如SpaceX和美股七巨头",
+      "reason": "拉美电商巨头MercadoLibre股价回调，拉美电商基建投资可能放缓，但长期增长逻辑未变，支付和物流技术商可关注抄底合作",
+      "impact": "拉美电商平台、拉美支付服务商、物流技术供应商",
+      "insight_label": "警示信号",
+      "trend_topic": "拉美电商估值调整",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "MSN",
+      "publisher": "MSN",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Charles Hudson shares the common mistakes he’s seen after investing in 500+ startups",
+      "url": "https://techcrunch.com/2026/07/09/charles-hudson-shares-the-common-mistakes-hes-seen-after-investing-in-500-startups/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "投资人Charles Hudson分享500+初创公司常见错误",
+      "reason": "全球顶级投资人总结初创公司失败教训，全球创投生态进入理性期，ICT创业者可借鉴避免融资陷阱",
+      "impact": "全球初创公司、风险投资机构",
+      "insight_label": "背景补充",
+      "trend_topic": "全球创投理性化",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/07/BMs3e1-featured.png?resize=1200,675",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Mercor is in talks for a $20B valuation",
+      "url": "https://techcrunch.com/2026/07/09/mercor-is-in-talks-for-a-20b-valuation/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "AI招聘平台Mercor洽谈200亿美元估值",
+      "reason": "全球AI招聘平台Mercor估值或达200亿美元，全球HR科技赛道升温，亚太和拉美HR SaaS供应商可寻求技术合作",
+      "impact": "HR科技公司、AI人才匹配平台、企业软件集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球HR科技升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/54888410931_c37fed4674_k.jpg?resize=1200,800",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Paris-based AI voice startup Gradium raises $100M seed, backed by Nvidia",
+      "url": "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "巴黎AI语音初创Gradium获1亿美元种子轮，Nvidia参投",
+      "reason": "欧洲AI语音初创Gradium获Nvidia领投1亿美元种子轮，欧洲AI语音赛道爆发，云服务和语音技术集成商可关注合作",
+      "impact": "AI语音技术商、云服务提供商、Nvidia生态合作伙伴",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲AI语音爆发",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2024/02/GettyImages-1424498694.jpg?resize=1200,800",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Nandan Nilekani leaves GP role at Fundamentum as it launches $200M third fund",
+      "url": "https://techcrunch.com/2026/07/09/nandan-nilekani-leaves-gp-role-at-his-vc-firm-as-it-launches-third-200m-fund/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Nandan Nilekani离开Fundamentum GP职位，基金启动第三期2亿美元",
+      "reason": "印度知名VC Fundamentum启动第三期2亿美元基金，印度科技创投持续活跃，企业软件和数字基建初创可寻求融资",
+      "impact": "印度科技初创公司、企业软件供应商、数字基建服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度科技创投活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/07/nandan-nilekani-1251752057.jpg?resize=1200,800",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch VC",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口",
+        "预算窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "AI writing startup co-founded by DeepMind creative lead raises $13M seed investment",
+      "url": "https://tech.eu/2026/07/09/ai-writing-startup-co-founded-by-deepmind-creative-lead-raises-13m-seed-investment/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "AI写作初创公司获$13M种子轮",
+      "reason": "欧洲AI内容生成赛道早期融资活跃，DeepMind背景团队吸引资本关注",
+      "impact": "AI写作工具开发商、自然语言处理技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲AI内容生成升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/07/marker-541.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Maritime defence startup Kraken Technology hits unicorn status",
+      "url": "https://tech.eu/2026/07/09/maritime-defence-startup-kraken-technology-hits-unicorn-status/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Kraken Technology成为海洋防务独角兽",
+      "reason": "欧洲海洋防务科技估值突破十亿美元，国防ICT采购和自主系统集成需求增长",
+      "impact": "国防电子供应商、自主航行系统开发商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲防务科技崛起",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/07/kraken-560.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "German AI workforce management startup Sherpa raises $2.2M pre-seed",
+      "url": "https://tech.eu/2026/07/09/german-ai-workforce-management-startup-sherpa-raises-22m-pre-seed/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Sherpa获$2.2M预种子轮融资",
+      "reason": "德国AI劳动力管理早期融资，欧洲企业SaaS和HR技术赛道持续有资金流入",
+      "impact": "企业人力资源管理软件集成商、AI算法供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲企业SaaS投资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/07/sherpa-featured-824.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Pixel-Flo lands £5.25M seed round for MicroLED manufacturing",
+      "url": "https://tech.eu/2026/07/09/pixel-flo-lands-ps525m-seed-round-for-microled-manufacturing/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Pixel-Flo获£5.25M种子轮用于MicroLED制造",
+      "reason": "欧洲MicroLED制造早期融资，显示技术供应链上游设备商迎来合作机会",
+      "impact": "MicroLED设备供应商、显示面板材料厂商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲先进显示技术投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/07/pixelflo-featured-463.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Lissi raises €3.5M to power Europe's sovereign digital identity future",
+      "url": "https://tech.eu/2026/07/09/lissi-raises-eur35m-to-power-europes-sovereign-digital-identity-future/",
+      "source": "Tech.eu",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Lissi获€3.5M推动欧洲主权数字身份",
+      "reason": "欧洲数字身份主权化趋势明确，区块链和身份验证技术集成需求上升",
+      "impact": "数字身份解决方案商、政府IT系统集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲数字主权基建加速",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.tech.eu/uploads/2026/07/lissi-featured-739.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech.eu",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Alchemab Therapeutics extends Series A with £25m investment",
+      "url": "https://www.uktech.news/biotech/alchemab-therapeutics-extends-series-a-with-25m-investment-20260709",
+      "source": "UKTN",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Alchemab Therapeutics获£25m A轮扩展融资",
+      "reason": "欧洲生物技术早期融资活跃，抗体发现平台吸引资本，ICT工具和数据分析合作机会增加",
+      "impact": "生物信息学软件商、AI药物发现平台",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲生物科技融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://www.uktech.news/wp-content/uploads/2026/07/antibodies-immune-system-biotech-1.webp",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "UKTN",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Maritime defence firm Kraken Technology raises £130m",
+      "url": "https://www.uktech.news/defence-tech/maritime-defence-firm-kraken-technology-raises-130m-20260709",
+      "source": "UKTN",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Kraken Technology获£130m融资",
+      "reason": "欧洲海事防务技术获大额融资，无人舰艇和自主系统供应链需求上升",
+      "impact": "防务电子供应商、自主导航技术商",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲防务科技投资升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://www.uktech.news/wp-content/uploads/2026/07/kraken-technology-k3-scout-1.webp",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "UKTN",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Green Unicorns Don't Fail. They Run Out of Factory",
+      "url": "https://www.therecursive.com/green-unicorns-dont-fail-they-run-out-of-factory/",
+      "source": "The Recursive",
+      "region": "欧洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "绿色独角兽因工厂产能不足而失败",
+      "reason": "欧洲绿色科技公司面临制造瓶颈，供应链和工业自动化合作机会凸显",
+      "impact": "工业自动化设备商、清洁技术制造外包方",
+      "insight_label": "警示信号",
+      "trend_topic": "欧洲绿色制造瓶颈",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://storage.ghost.io/c/b8/ae/b8aee878-7ddc-40ad-8f68-92a28c560560/content/images/2026/07/enterprise-1.png",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "The Recursive",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [
+        "generic_reason"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "partial"
+    },
+    {
+      "title": "SK hynix’s US listing 7x oversubscribed, source says",
+      "url": "https://www.techinasia.com/sk-hynix-hits-1t-valuation-as-kospi-reaches-record",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "earnings",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "SK hynix美国上市获7倍超额认购",
+      "reason": "亚太存储芯片巨头受资本追捧，AI算力需求驱动HBM供应链扩张",
+      "impact": "半导体设备商、AI芯片封装测试厂",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太半导体资本热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/07/1783587887_1781840236_1780387053_1776646070_1738311773_shutterstock_1655750428-scaled-1-1.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Aria raises €7m and launches €240m debt facility to scale invoice financing",
+      "url": "https://www.finextra.com/newsarticle/48067/aria-raises-7m-and-launches-240m-debt-facility-to-scale-invoice-financing?utm_medium=rssfinextra&utm_source=finextrafeed",
+      "source": "Finextra",
+      "region": "全球",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Aria获€7M股权融资并启动€240M债务融资扩大发票融资",
+      "reason": "欧洲发票融资平台获大额债务融资，供应链金融科技赛道资金充裕",
+      "impact": "中小企业融资平台、欧洲金融科技合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "欧洲供应链金融扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Finextra Payments",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "预算窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "AVELIN AI closes $3.7 million pre-seed to expand sovereign AI platform",
+      "url": "http://wamda.com/2026/07/avelin-ai-closes-3-7-million-pre-seed-expand-sovereign-ai-platform",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "AVELIN AI获$3.7M种子前融资扩展主权AI平台",
+      "reason": "中东主权AI平台获早期融资，政府AI基础设施采购需求上升",
+      "impact": "中东政府IT供应商、AI模型部署服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "中东主权AI布局",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.wamda.com/feature-images/56b268ea49e0cb5.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "WAMDA",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "生态窗口",
+        "预算窗口"
+      ],
+      "opportunity_direction": "联合解决方案 / 商户增长 / 开放平台合作 / 渠道共建",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Keyper raises $11 million Series A to digitise UAE rental market",
+      "url": "http://wamda.com/2026/07/keyper-raises-11-million-series-digitise-uae-rental-market",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Keyper获$11M A轮融资数字化阿联酋租赁市场",
+      "reason": "中东房地产科技获融资，阿联酋租赁数字化存在系统集成机会",
+      "impact": "中东房地产科技平台、支付技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "中东房地产科技升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.wamda.com/feature-images/9041cfe9cd49a6b.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "WAMDA",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Uvera attracts Morgan Stanley, LAB7 and Core Vision in seed round",
+      "url": "http://wamda.com/2026/07/uvera-attracts-morgan-stanley-lab7-core-vision-seed-round",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Uvera获Morgan Stanley等机构种子轮融资",
+      "reason": "中东初创获顶级投行支持，食品科技赛道吸引战略资本",
+      "impact": "中东食品科技初创、冷链技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "中东食品科技投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.wamda.com/feature-images/21e117e60a17d99.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "WAMDA",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Rubrik Raises £375M to Expand UK Operations and EMEA Presence",
+      "url": "https://ventureburn.com/rubrik-raises-375m-expand-uk-emea-operations/",
+      "source": "Ventureburn",
+      "region": "欧洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Rubrik获£375M融资扩展英国及EMEA业务",
+      "reason": "美国数据安全公司大额融资扩张欧洲，数据保护与云安全市场存在合作机会",
+      "impact": "欧洲云服务商、网络安全渠道伙伴",
+      "insight_label": "资金流向",
+      "trend_topic": "全球数据安全扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/07/Dominion-Dynamics-Raises-139M-CAD-9.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Ollama Raises $65M to Expand Open AI Developer Platform",
+      "url": "https://ventureburn.com/ollama-raises-65m-expand-open-ai-platform/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Ollama获$65M融资扩展开放AI开发者平台",
+      "reason": "全球开源AI平台获大额融资，本地化部署和开发者工具生态存在集成机会",
+      "impact": "AI开发者社区、云基础设施提供商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球开源AI投资热",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/07/Dominion-Dynamics-Raises-139M-CAD-7.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Databento Raises $97M in Series B To Expand Institutional-Grade Market Data To Crypto",
+      "url": "https://ventureburn.com/databento-raises-97m-series-b-crypto-market-data/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Databento获$97M B轮融资，拓展机构级加密市场数据",
+      "reason": "美国加密数据基础设施获大额融资，非洲机构投资者对合规加密数据需求上升",
+      "impact": "非洲加密交易所、机构投资者、数据聚合商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球加密数据基建升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/07/Dominion-Dynamics-Raises-139M-CAD-6.jpeg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Ethiopian Startup Better Auth Acquired by Vercel After USD 5 M Seed Round",
+      "url": "https://weetracker.com/2026/07/09/better-auth-acquired-vercel-ethiopian-startup/",
+      "source": "WeeTracker",
+      "region": "非洲",
+      "event_types": [
+        "funding",
+        "ma"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "埃塞俄比亚Better Auth被Vercel收购",
+      "reason": "非洲身份验证初创被全球云平台收购，非洲开发者生态和开源项目获得国际资本关注",
+      "impact": "非洲开发者社区、身份验证技术供应商、Vercel生态合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲开发者生态国际化",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://weetracker.com/wp-content/uploads/2026/07/image-8-2.webp",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "WeeTracker",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "整合窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "QI Tech acquires Autobanking",
+      "url": "https://latamlist.com/qi-tech-acquires-autobanking/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "QI Tech收购Autobanking",
+      "reason": "拉美金融科技基础设施整合加速，巴西开放银行和支付基建出现并购机会",
+      "impact": "巴西银行、支付处理商、金融科技集成商",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美金融科技整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2023/11/Untitled-design-2.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "合规窗口",
+        "整合窗口"
+      ],
+      "opportunity_direction": "合规科技 / 数据治理 / 安全风控 / 牌照合作",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Infinia raises $13.5M Series A led by Bain Capital and Variant Fund",
+      "url": "https://latamlist.com/infinia-raises-13-5m-series-a-led-by-bain-capital-and-variant-fund/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Infinia获$13.5M A轮融资，由Bain Capital和Variant Fund领投",
+      "reason": "拉美早期金融科技获顶级风投注资，巴西消费信贷和支付创新赛道持续活跃",
+      "impact": "巴西消费金融平台、信贷技术供应商、支付网关",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美FinTech早期投资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2026/07/Infinia-logo.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Mercado Bitcoin raises $20M Series C from Tether",
+      "url": "https://latamlist.com/mercado-bitcoin-raises-20m-series-c-from-tether/",
+      "source": "LatamList",
+      "region": "拉美",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Mercado Bitcoin获Tether $20M C轮融资",
+      "reason": "拉美最大加密交易所获稳定币发行方注资，巴西加密合规和稳定币应用场景扩大",
+      "impact": "巴西加密交易所、稳定币发行方、合规技术供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "拉美加密合规加速",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://latamlist.com/wp-content/uploads/2026/07/Mercado-Bitcoin.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "LatamList",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ],
+  "2026-10-05": [
+    {
+      "title": "Cloudflare: Zero Trust Networks API",
+      "url": "https://developers.cloudflare.com/api/resources/zero_trust/subresources/networks/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: Zero Trust Ne",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-10-05",
+      "date": "2026-10-05",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Cloudflare Tunnel API",
+      "url": "https://developers.cloudflare.com/api/resources/zero_trust/subresources/tunnels/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare Tunnel API",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-10-05",
+      "date": "2026-10-05",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    }
+  ],
+  "2026-07-10": [
+    {
+      "title": "Vietnam's F88 seeks $660m post-IPO valuation, eyes $1b market cap by year-end",
+      "url": "https://dealstreetasia.com/stories/f88-ipo-valuation-488538/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "earnings",
+        "strategy"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "越南F88寻求$660M IPO估值",
+      "reason": "东南亚消费金融公司高估值IPO，越南金融科技市场吸引资本关注",
+      "impact": "东南亚消费金融平台、信贷技术合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚FinTech升温",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-07-10",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2026/07/Thuong-hieu-1-scaled.jpg?fit=2560,1441",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
         "capital"
       ],
       "quality_flags": [],
