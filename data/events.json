@@ -77080,6 +77080,52 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "SK Hynix’s Nasdaq listing raises $26.5 billion to fund Korea’s AI memory expansion",
+      "url": "https://techwireasia.com/2026/07/sk-hynix-nasdaq-listing-record/",
+      "source": "TechWire Asia",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "earnings",
+        "strategy"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "SK海力士纳斯达克上市融资$26.5B，用于韩国AI内存扩张",
+      "reason": "韩国SK海力士巨额融资扩产AI内存，全球HBM供应链将面临产能与价格变化",
+      "impact": "全球AI芯片设计商、服务器制造商、内存封装设备商",
+      "insight_label": "资金流向",
+      "trend_topic": "韩国AI内存产能扩张",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-10",
+      "date": "2026-07-10",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techwireasia.com/wp-content/uploads/2022/05/000_8ZR628-scaled.jpg",
+      "source_tier": "L3 区域生态源",
+      "source_role": "regional_ecosystem",
+      "source_id": "TechWire Asia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-07-11": [
@@ -77167,6 +77213,177 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Kakao Expands Tomb Raider King with Sequel Before Anime Launch | Outlook Respawn - Outlook Respawn",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONkdHMkNKRG55eXZ4SVBHTEpTZy1mdXBEOTNQSmdRODM1V0dFcEN5eEpiLTllaklCOFAxWUhMaXVwcHVWMjdLQ3lVdDZJekg2aFVzZ3dwTldJUkpNbVhVUURIN3dLdWJKMG5LU3lUNUFmcXZta3VTVlRVS1ItVGk4eGFYbXRyZFBDZFZ4VVFUSnB1ekYyTnlhcXF5RnpzdEJUSzFOQlVmaWktRmdERDVaUFB3ZGVVNjc5ZGhtWjFKYmppd9IBzwFBVV95cUxOTEpvVnptOGlnUkdLYVN4SnNCR1ZIdjFHeUREUWtfbWZLRDJZbjhEYk9RdHVaYWRNTzhLYjlRc0t1ZnVHU3ZoU0ltdG5fTUNkc2lJbkdxVVBoRVE1OC1nUWVQT0tqYnVaRlRvai01Qk1IQy1mZjg3dk4zVW1CVFBIQ280UnJNMEZjV0YzZ0hscE1lNDYwaW9jdW5yVHY4TERnQ2FwT3owQndidi1lZjJhclozNjJVNURqTVpIMGJpVGxGeDVGdnQ1LXN0elo0Zk0?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao Expands Tomb Raider",
+      "reason": "亚太Kakao推出续作扩展《古墓丽影之王》",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-11",
+      "date": "2026-07-11",
+      "source_detail": "Outlook Respawn",
+      "publisher": "Outlook Respawn",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "MercadoLibre (MELI) Stock Rallies on Major Mexican Distribution Hub Announcement - Blockonomi",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQa2tWNFRadHp1Z3Z5Sjl4bTlFQVE1OW1wUG9fTUNHcC11WEtVVThaeV8xWFpOMlZKWlZuMzlQNFFUVldyWXFyRHMzUnNyZU1kVDJsSUtkV29rSFJjOXhhYU16OU4tYUtmTmh4WWUyOEtWdlB5MWN2YktTYVduUTQ0MGIwTF9fa090bjV1MFZENmxMR1pJM0RoOFExN01QLWFPSTIzNw?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre因墨西哥配送中心消息股价上涨",
+      "reason": "拉美MercadoLibre宣布墨西哥大型配送中心，显示其物流基建持续扩张，为物流技术和仓储设备供应商带来合作机会",
+      "impact": "拉美物流技术供应商、仓储自动化设备商",
+      "insight_label": "合作机会",
+      "trend_topic": "拉美电商基建加速",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-07-11",
+      "date": "2026-07-11",
+      "source_detail": "Blockonomi",
+      "publisher": "Blockonomi",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "ideaForge Raises ₹500 Cr Via QIP; Allots 62.9 Lakh Shares",
+      "url": "https://inc42.com/buzz/ideaforge-raises-%e2%82%b9500-cr-via-qip-allots-62-9-lakh-shares/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "ideaForge通过QIP融资₹500Cr，配发629万股",
+      "reason": "印度无人机公司通过QIP融资，显示印度国防与工业无人机赛道资本活跃",
+      "impact": "印度无人机供应链、国防科技合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "印度无人机融资活跃",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-11",
+      "date": "2026-07-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/06/ideaForge-social.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Zoho-Backed Genrobotics’ Revenue Jumps 35% YoY In FY26, Eyes ₹150 Cr Series B Round",
+      "url": "https://inc42.com/buzz/zoho-backed-genrobotics-posts-%e2%82%b92-6-cr-profit-in-fy26-eyes-%e2%82%b9150-cr-series-b-round/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "earnings"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Zoho支持的Genrobotics营收增35%，盈利₹2.6Cr，拟启动₹150Cr B轮",
+      "reason": "印度机器人公司盈利增长并计划B轮融资，表明印度工业机器人商业化加速",
+      "impact": "印度工业自动化集成商、机器人零部件供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度机器人商业化加速",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-11",
+      "date": "2026-07-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/07/Artboard-1-copy.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-07-12": []
 }
