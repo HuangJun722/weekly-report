@@ -75038,6 +75038,61 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Cloudflare: New Durable Object namespaces must use the SQLite storage backend",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-07-09-restrict-new-kv-backed-namespaces/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: New Durable O",
+      "reason": "全球科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-07-09",
+      "date": "2026-07-09",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
     }
   ],
   "2026-10-05": [
@@ -76851,6 +76906,180 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Sea’s e-commerce arm Shopee cuts jobs as reorganization continues - MSN",
+      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPSEVYR0tsbnlLbnVmMDk3NjdUQ1gwY214N3FXb05OYmFSNGJ6VUZtelduOEtOSDZCRUl3a1NJMmJrY05HU2xrd18tVUxPOVNnOE40MUdiUnBmZTJsOFVUWjVYaTVrbEd5UlF1NF94a3VPeXI1UGlGbUNpSmgtMUFqZUVKRXJQdG00Y0s3WXZpYzBhSFVGTHRwczg3TjFsaWVKRG8tb0g2SURNLWpVRFFNTGFqZUxkLS1ieVZWUGlUZVhTSkU2SVRtalVSU3A5TWpLUlI1czUxdUx3d2Q3WTRiVkZBaURnZUdMRjg5TUpRbjdWSVRIR01jMk5zMDNBLW1LQ1FVbEM3c2ZVYjV3OHpka3hRV2R3bmw1ZjZra09TMkdlRl8wcUFaMmpvUDNDLTE3VVVPVGNjT2JNblVYRUN5RURDcnh6N3Y5T0ZGT3dnYw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Sea’s e-commerce arm Shop",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Sea Limited",
+      "article_date": "2026-07-10",
+      "date": "2026-07-10",
+      "source_detail": "MSN",
+      "publisher": "MSN",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Sea Limited",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "降本窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "AI客服 / 自动化运营 / 外包服务 / 成本优化",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "commerce",
+        "org_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "MercadoLibre Shares Rise 4% as Investors Revisit Growth Story Ahead of Earnings - Quiver Quantitative",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVEVBS2I1OHRvbER4MUZ1RXU1SG50RkFlUmoyTDBjVUFuV01XVzkzZVNwMHNxeTFUdVdyN3Rna1I4cGl4UDdVX241dl85TlZVdi1OdHFueFhmaDYwT19kQUdqaWdYTno1RWhNaHdsWnVvZTZwbXR3UmMwWE00VHlQQjRjRWxhV0k0dWV4ZDJEblc3T1VGSU1jVGZKLUJCenplaHlHUENnWTg0eW1FaUdfcC1XVk4?oc=5",
+      "source": "Google News",
+      "region": "拉美",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "MercadoLibre股价上涨4%，投资者关注财报前增长故事",
+      "reason": "拉美电商巨头股价走强，市场预期业绩增长，拉美电商基础设施和物流技术合作机会增加",
+      "impact": "拉美物流服务商、电商SaaS供应商",
+      "insight_label": "背景补充",
+      "trend_topic": "拉美电商增长预期",
+      "companies": [],
+      "is_company": true,
+      "company_name": "MercadoLibre",
+      "article_date": "2026-07-10",
+      "date": "2026-07-10",
+      "source_detail": "Quiver Quantitative",
+      "publisher": "Quiver Quantitative",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "MercadoLibre",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital",
+        "org_change"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Justdial Posts ₹166 Cr Profit In Q1, CEO VSS Mani To Step Down After 30 Years",
+      "url": "https://inc42.com/buzz/justdial-posts-%e2%82%b9166-cr-profit-in-q1-ceo-vss-mani-to-step-down-after-30-years/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Justdial Q1利润₹166Cr，CEO将卸任",
+      "reason": "印度本地搜索平台Justdial盈利稳定，CEO交接可能带来战略调整，ICT服务商可关注其数字化转型合作",
+      "impact": "印度数字广告平台、本地商户SaaS供应商、IT咨询公司",
+      "insight_label": "背景补充",
+      "trend_topic": "印度数字平台盈利稳定",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-10",
+      "date": "2026-07-10",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/07/JustDial-social.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital",
+        "org_change"
+      ],
+      "quality_flags": [
+        "generic_reason"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "partial"
+    },
+    {
+      "title": "TAC Infosec Q1: Profit Zooms 137% YoY To ₹8 Cr, Revenue Up 102%",
+      "url": "https://inc42.com/buzz/tac-infosec-q1-profit-zooms-137-yoy-to-%e2%82%b98-cr-revenue-up-102/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "TAC Infosec Q1利润同比增137%至₹8Cr",
+      "reason": "印度网络安全公司TAC Infosec高速增长，显示印度企业安全需求爆发，ICT安全供应商可拓展合作",
+      "impact": "印度网络安全集成商、企业安全软件供应商、托管安全服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度网络安全市场爆发",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-10",
+      "date": "2026-07-10",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/07/social-4.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-07-11": [
@@ -76891,6 +77120,47 @@
       "bd_priority": "观察",
       "signal_taxonomy": [
         "expansion",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Phia accused of ‘cookie stuffing,’ taking affiliate credit on purchases it didn’t earn",
+      "url": "https://techcrunch.com/2026/07/10/phia-accused-of-cookie-stuffing-taking-affiliate-credit-on-purchases-it-didnt-earn/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Phia被指控进行cookie填充欺诈，窃取联盟营销佣金",
+      "reason": "全球数字广告欺诈事件曝光，联盟营销行业信任受损，广告技术合规和反欺诈解决方案需求上升",
+      "impact": "广告技术平台、反欺诈服务商",
+      "insight_label": "警示信号",
+      "trend_topic": "全球广告技术合规",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-11",
+      "date": "2026-07-11",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/2243869768.jpg?resize=1200,800",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
         "capital"
       ],
       "quality_flags": [],
