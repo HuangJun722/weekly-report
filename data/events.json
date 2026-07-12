@@ -77385,5 +77385,51 @@
       "analysis_status": "complete"
     }
   ],
-  "2026-07-12": []
+  "2026-07-12": [
+    {
+      "title": "Naver's Search Engine Market Share Rebounds in First Half... Will 'AI Tab' Make an Impact? - asiae.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9vX3V6a0JRWXdGWFhjOFRZYkY0ejV1WjdNOWNmdFd1dUFLOHNScVNfVjBaQjZWSXotaF9xQS1QdlRsRUgxX0VWc01wSnFpYUE2WFlKWk41WTlPMlBnbElFeU9zaWQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver's Search Engine Mar",
+      "reason": "亚太Naver搜索引擎市场份额上半年回升",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-12",
+      "date": "2026-07-12",
+      "source_detail": "asiae.co.kr",
+      "publisher": "asiae.co.kr",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "竞争窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "竞品替代 / 差异化增长 / 市场进入策略 / 客户防守",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    }
+  ]
 }
