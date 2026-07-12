@@ -77430,6 +77430,136 @@
       "needs_repair": true,
       "analysis_source": "deepseek",
       "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver's startup investment organization D2SF (center director Yang Sang-hwan, photo) has already inv.. - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMakhrZzFNWUZBRzVkQXJ4MUZDTzRxaXU3U0pUeDFVMVI2b0ZNbjVFQlV6NEdvbVoxTnZyeXNnekpkalVjWEVGcks3Yw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver's startup investmen",
+      "reason": "亚太Naver D2SF投资初创企业",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-12",
+      "date": "2026-07-12",
+      "source_detail": "매일경제",
+      "publisher": "매일경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Invests, Kakao Trims as Profits Diverge - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUk9MUmRJaXluZEQtUU5sWExubllFNk0tQnRTT0FOMWdZZHpQTkNhdFVUaVVQWExDTXdMWHIxaHpKcUhSdVVXSFhTQTlyQkd5RHloaXFtZjRNQUtCNl9tU0NXVGZpVklwRUN0RFRSeHBDNjFJYWE1V1Z3VFpnYV9udHVjbkdTanBn?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 3,
+      "summary_short": "Naver投资扩张，Kakao缩减开支，利润分化",
+      "reason": "韩国两大科技巨头战略分化，Naver加大投资预示云和AI业务扩张机会，Kakao削减成本可能释放外包需求",
+      "impact": "韩国云服务商、AI技术供应商、IT外包商",
+      "insight_label": "资金流向",
+      "trend_topic": "韩国科技巨头分化",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-12",
+      "date": "2026-07-12",
+      "source_detail": "조선일보",
+      "publisher": "조선일보",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Unicorn Founders Go AI Native",
+      "url": "https://inc42.com/features/unicorn-founders-go-ai-native/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "印度独角兽创始人全面转向AI原生战略",
+      "reason": "印度科技创业生态加速AI化，现有独角兽转型将带动AI基础设施和人才服务采购",
+      "impact": "印度AI云服务商、GPU算力供应商、AI人才培训平台",
+      "insight_label": "资金流向",
+      "trend_topic": "印度AI原生转型",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-12",
+      "date": "2026-07-12",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/07/Outline-Design-social-1.jpg",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
-  ]
+  ],
+  "2026-07-13": []
 }
