@@ -77561,5 +77561,94 @@
       "analysis_status": "complete"
     }
   ],
-  "2026-07-13": []
+  "2026-07-13": [
+    {
+      "title": "MENA startups raise $1.7 billion in H1 2026 despite regional uncertainty",
+      "url": "http://wamda.com/2026/07/mena-startups-raise-1-7-billion-h1-2026-despite-regional-uncertainty",
+      "source": "WAMDA",
+      "region": "中东",
+      "event_types": [
+        "other"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "MENA startups raise $1.7 ",
+      "reason": "中东科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 中东",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-13",
+      "date": "2026-07-13",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "WAMDA",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "expansion",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Indonesia's JULO raises fresh capital from existing investors",
+      "url": "https://dealstreetasia.com/stories/julo-fresh-capital-488708/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "印尼数字信贷平台JULO获现有投资者追加融资",
+      "reason": "印尼数字信贷赛道持续获资本注入，金融科技基础设施和风控技术供应商受益",
+      "impact": "印尼金融科技SaaS商、信用评估技术公司、银行合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚FinTech融资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": null,
+      "date": "2026-07-13",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2026/07/JULO.png?fit=1600,900",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
+        "developer_change",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
