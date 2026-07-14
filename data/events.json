@@ -78878,6 +78878,93 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Tabby launches fee-free UAE spending account with cashback card and international transfers - Arabian Business",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvSUhtc3J2UmUxRzQweURlX1pZdDVSLXhGcXBzMnJJUjVIa2dSQkZaTlYzd0JOTjdWdXB1YnpxV1lGUDRIeE9LWnNCMHJhZko1OVNkTnU2OGZ0SGFFNmFHbTUyUVNGUVBMNnJDMlpFSWc3QXZEeVZCNm1XWQ?oc=5",
+      "source": "Google News",
+      "region": "中东",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Tabby launches fee-free U",
+      "reason": "中东科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 中东",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Tabby",
+      "article_date": "2026-07-13",
+      "date": "2026-07-13",
+      "source_detail": "Arabian Business",
+      "publisher": "Arabian Business",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Tabby",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Hermes agent maker Nous Research in talks for new funding at $1.5B valuation",
+      "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "AI代理公司Nous Research洽谈融资，估值达15亿美元",
+      "reason": "全球AI代理赛道持续升温，企业自动化领域将出现新的集成和部署机会",
+      "impact": "企业自动化软件商、AI代理平台、云服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "全球AI代理融资潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-13",
+      "date": "2026-07-13",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/02/GjsjauvbsAAgUtD.jpeg?w=900",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
     }
   ],
   "2026-07-14": [
@@ -78960,6 +79047,265 @@
       "bd_priority": "观察",
       "signal_taxonomy": [
         "payment",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "\"Are you getting paid by Naver to work for Kakao?\"... The absurd bargaining method of the chemical union [24 Hours with a Reporter] - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBtdUJXVkg1VTBuaHUyUHBQS3FaZTNjVlVBZ2stR2RYWEpnMVdsNWxiNm5mQVJCWkNBS3U1RElxdUJLUUVScnVTaEg0amtFQ1lXbXpR?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "\"Are you getting paid by ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-14",
+      "date": "2026-07-14",
+      "source_detail": "매일경제",
+      "publisher": "매일경제",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Rakuten Symphony Deploys Maritime Cybersecurity Solution with Hanwha Ocean - The Fast Mode",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYTZCdGNMWkRxV0NmM3VIWGV3Zlo5UFFQUlpIamhBVjA2b0hPeWY5VEVWZk1INGpDbGZJMnAtR0lhUVhDVDdkbm9UZURsZUxPMFNtNXFVYUNTTUstTURqSmlQMVJYZFRZd1I1c3ZMcjQyOFhweTBaRW1tb0txczF3d1hBZnhSYVU1Nmg4MHJmTTQ0M1RVWDhJM2V5VGxwMi1yeU14a0NHUVdleEdpMXVxdlhlN0NYdXMzaW52VnNvWU5KWEFVLXp1Sw?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Rakuten Symphony Deploys ",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Rakuten",
+      "article_date": "2026-07-14",
+      "date": "2026-07-14",
+      "source_detail": "The Fast Mode",
+      "publisher": "The Fast Mode",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Rakuten",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Algorix Raises Pre-Seed Funding From Kakao Ventures to Build Unified Data Layer for Enterprise AI - Wowtale",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0tME40aENqQUZ5dGJXQVppOV9sMktpNDlNaGk0VzVhM3d1aFhpd3BoTnBMNUQ1RS1LWFZmYXJWQUtqUjZPSXpMLVh3TFYwdFlVYU9Z?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Algorix获Kakao Ventures种子轮融资，构建企业AI统一数据层",
+      "reason": "韩国AI基础设施初创获本土风投支持，亚太企业AI数据层赛道出现新集成机会",
+      "impact": "韩国企业AI平台、数据中台供应商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太AI基础设施投资",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-14",
+      "date": "2026-07-14",
+      "source_detail": "Wowtale",
+      "publisher": "Wowtale",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Indonesia’s jailing of Gojek founder raises fears for investor confidence - Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdDBUa0NNbUlzNzNnRV90OERXVHNmaFliLUZEanNnd2NZdFR5ZVV0VFM1U1owQzNRNm15QkgzWk0wSGozVVlCRkNjTnNZSERmVXNKcVNMUDF5NDByOHhxVlB0R2g4Q0x2NExENXpsZi1uM0RVXzIwTW5WUWx3N1NDdGJRTzlISUFvenAwa2ZvVFZ4VEd1Z01lYVNreV9oNVZ4aUNZVkR6RlZxWlFrT3BvbDRNNEtIMm_SAbwBQVVfeXFMUElqcGVGcVFUMmliWEs5Q2s0OFMtZ2NVOUF4WUtXZmVINmlnRHZUakZjMUdSNWc4bFhBcHFsdmFSMWZzNVFUZGJueVEtYWFvMzI3MmlRSXI1aHJQLUtLd21TRHFiVmxxVEhXR1N2b3dIZjVFN203ZEVtZkVrMDFWRjk3a1F0dUprSXZaQi10WTR1N0w0R0lMZDhrRzlpNTgybG1KUVQ1QUsyaWRZMnp2anFwSUlSMkx0ZzNsN2Q?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Gojek创始人入狱引发印尼投资者信心担忧",
+      "reason": "印尼标志性科技公司创始人法律风险上升，东南亚科技投资环境出现警示信号",
+      "impact": "印尼科技初创企业、东南亚风投机构",
+      "insight_label": "警示信号",
+      "trend_topic": "东南亚科技投资风险",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Gojek",
+      "article_date": "2026-07-14",
+      "date": "2026-07-14",
+      "source_detail": "Al Jazeera",
+      "publisher": "Al Jazeera",
+      "image_url": "",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Gojek",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [
+        "generic_reason"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "partial"
+    },
+    {
+      "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
+      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "视频生成初创PixVerse获4.39亿美元融资，估值超20亿美元",
+      "reason": "全球AI视频生成赛道获巨额融资，内容创作和影视制作领域将出现大量技术集成机会",
+      "impact": "AI视频工具开发商、云GPU供应商、影视后期制作公司",
+      "insight_label": "资金流向",
+      "trend_topic": "全球AI视频生成热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-14",
+      "date": "2026-07-14",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2026/07/69c14912d8f2b4b74d7b13ba_Copy-of-Red-Yellow-Retro-Vibrant-2025-Monthly-Calendar-1280-x-720-px-1200-x-630-px-8.jpeg?w=1200",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Yotta’s AI Infra Play, BUILT Bags $2 Mn & More",
+      "url": "https://inc42.com/buzz/yottas-ai-infra-play-built-bags-2-mn-more/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "D",
+      "score": 1,
+      "summary_short": "Yotta布局AI基础设施，BUILT获$2M",
+      "reason": "印度AI基础设施投资加速，数据中心和算力服务商迎来合作窗口",
+      "impact": "印度数据中心运营商、AI芯片分销商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度AI基建投资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-14",
+      "date": "2026-07-14",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/07/Social-Daily-Brief-2026-07-13T224116.897.png",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra",
         "capital"
       ],
       "quality_flags": [],
