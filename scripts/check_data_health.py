@@ -4,6 +4,7 @@ It verifies the collection metrics -> stored-data -> selector -> display contrac
 """
 
 import argparse
+import json
 import re
 import sys
 from collections import Counter
@@ -12,6 +13,7 @@ from datetime import datetime, timedelta
 try:
     from collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from daily_coverage_report import build_daily_coverage_report
+    from event_dates import is_display_date
     from generate_html import build_company_cards, build_display_context
     from run_metrics import latest_run_metrics
     from source_conversion_report import build_source_conversion_report
@@ -20,6 +22,7 @@ try:
 except ImportError:
     from scripts.collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from scripts.daily_coverage_report import build_daily_coverage_report
+    from scripts.event_dates import is_display_date
     from scripts.generate_html import build_company_cards, build_display_context
     from scripts.run_metrics import latest_run_metrics
     from scripts.source_conversion_report import build_source_conversion_report
@@ -69,6 +72,21 @@ def _duplicate_ratio(events):
     return duplicate_items / len(keys), duplicate_items
 
 
+def _future_event_count(path='data/events.json', now=None):
+    try:
+        with open(path, encoding='utf-8') as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return 0
+    count = 0
+    for bucket, events in (data or {}).items():
+        for event in events or []:
+            value = event.get('published_at') or event.get('article_date') or event.get('date') or bucket
+            if value and not is_display_date(value, now=now or datetime.now().astimezone()):
+                count += 1
+    return count
+
+
 def build_health_report(days=7):
     context = build_display_context()
     main_date = context['main_date']
@@ -77,7 +95,11 @@ def build_health_report(days=7):
     raw_today = context['raw_today_events']
 
     feed_events, fallback_feed_date = select_feed_events(today_events, all_visible)
-    company_cards = build_company_cards(context['preset_company_list'], main_date)
+    company_cards = build_company_cards(
+        context['preset_company_list'],
+        main_date,
+        context.get('entity_observation_ledger'),
+    )
     company_quality_nonzero = sum(1 for card in company_cards if card.get('quality_30', 0) > 0)
 
     dates = _date_range(context['latest_data_date'] or main_date, days)
@@ -104,6 +126,7 @@ def build_health_report(days=7):
     source_report = build_source_quality_report(days=days)
     source_conversion = build_source_conversion_report(days=days)
     daily_coverage = build_daily_coverage_report(days=days)
+    future_event_count = _future_event_count()
 
     return {
         'main_date': main_date,
@@ -124,6 +147,7 @@ def build_health_report(days=7):
         'source_quality': source_report,
         'source_conversion': source_conversion,
         'daily_coverage': daily_coverage,
+        'future_event_count': future_event_count,
     }
 
 
@@ -164,6 +188,7 @@ def print_report(report):
         "feed_google_ratio={feed_google_ratio:.1%} duplicate_ratio={duplicate_ratio:.1%} "
         "duplicate_items={duplicate_items}".format(**report)
     )
+    print(f"health | future_event_count={report.get('future_event_count', 0)}")
     if report['feed_fallback_date']:
         print(f"health | feed_fallback_date={report['feed_fallback_date']}")
     if report.get('collection_timing'):
@@ -233,6 +258,8 @@ def print_report(report):
 
 def collect_failures(report, args):
     failures = []
+    if report.get('future_event_count', 0):
+        failures.append(f"future_event_count {report['future_event_count']} > 0")
     if report['today_events'] < args.min_today:
         failures.append(f"today_events {report['today_events']} < {args.min_today}")
     if report['company_quality_nonzero'] < args.min_company_quality_nonzero:

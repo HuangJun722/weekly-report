@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-07-15",
+    "version": "V3.0",
+    "type": "观测系统",
+    "status": "已完成",
+    "title": "恢复日期可信度并上线公司观察账本",
+    "summary": "拆分发布日期与发现时间，阻断未来日期污染；公司索引开始展示采集是否工作、对象是否安静及变化为何未升格为情报。",
+    "changes": [
+      "新增 published_at、observed_at、date_source、date_confidence 和 date_parse_warning，未来日期不再进入发布日期和首页时间桶",
+      "清理 Cloudflare Changelog 误解析产生的 4 条未来日期事件，健康检查新增 future_event_count 硬性校验",
+      "新增 entity_observation_ledger.json，区分近期有动作、已检查无显著变化、有变化未达门槛、接入失效、部分覆盖和待接入",
+      "公司索引以可解释观察状态为主，事件数量退为辅助信息",
+      "接通 Grab、Stripe、Shopify Jobs 快照差分试点，单个职位不进入事件库，只有招聘结构变化才形成候选信号",
+      "MercadoLibre Eightfold 与 Careem 动态职位站保留为待适配，不将页面可访问误记为采集已接通"
+    ]
+  },
+  {
     "date": "2026-06-28",
     "version": "V2.9",
     "type": "供给治理",

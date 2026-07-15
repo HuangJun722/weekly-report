@@ -215,6 +215,26 @@
 
 入口：`data/entity_pool.json` / `scripts/entity_signal_conversion_report.py`
 
+### 公司观察账本
+
+入口：`data/entity_observation_ledger.json` / `scripts/entity_observation_ledger.py`
+
+公司索引不再把所有“0 条优质事件”视为同一种空状态。每个观察点必须尽量回答：最近是否检查、是否成功访问、是否观察到变化，以及变化是否形成合格事件。
+
+- `active`：近期形成合格组织行为事件。
+- `quiet`：采集成功，近期没有显著变化。
+- `changed_below_threshold`：观察到变化，但未达到情报门槛。
+- `failed`：最近一次采集失败。
+- `partial`：对象只有部分观察点具备可信运行状态。
+- `pending`：观察点已登记但采集器尚未接入。
+- `unverified`：旧运行数据缺少成功/失败证据，等待新采集确认。
+
+Jobs 观察点采用“快照 -> 差分 -> 职能聚类 -> 候选信号”的口径。单个职位不是事件，首次快照只建立基线，不产生变化候选。
+
+### 日期语义
+
+事件的 `published_at`、`observed_at` 与 `scheduled_at` 分开记录。`date` 继续作为兼容现有页面的展示桶，但必须标注 `date_basis`；未来计划或正文生效日期不得写入 `published_at`。健康检查发现未来发布日期时必须失败。
+
 目标：从 Source Pool 逐步转向 Entity Pool。对象池回答“我们长期观察谁”，观察点回答“从哪里看它的组织行为变化”。
 
 当前链路：

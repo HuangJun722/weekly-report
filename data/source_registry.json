@@ -467,6 +467,48 @@
       "track": "日本游戏与数字娱乐",
       "signal_types": ["official_disclosure", "funding_deal", "marketplace_policy"],
       "quality_note": "英文 IR 入口，适合跟踪财报、资本动作和全球发行战略。"
+    },
+    {
+      "id": "grab-jobs",
+      "name": "Grab Jobs",
+      "url": "https://www.grab.careers/en/jobs/",
+      "status": "active",
+      "tier": "L1",
+      "source_type": "jobs",
+      "access_method": "html_snapshot",
+      "region": "亚太",
+      "track": "东南亚本地生活与支付组织投入",
+      "signal_types": ["hiring", "expansion", "org_change"],
+      "company_name": "Grab",
+      "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
+    },
+    {
+      "id": "stripe-jobs",
+      "name": "Stripe Jobs",
+      "url": "https://stripe.com/jobs/search",
+      "status": "active",
+      "tier": "L1",
+      "source_type": "jobs",
+      "access_method": "html_snapshot",
+      "region": "全球",
+      "track": "支付开发者平台组织投入",
+      "signal_types": ["hiring", "regional_launch", "org_change"],
+      "company_name": "Stripe",
+      "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
+    },
+    {
+      "id": "shopify-jobs",
+      "name": "Shopify Jobs",
+      "url": "https://www.shopify.com/careers",
+      "status": "active",
+      "tier": "L1",
+      "source_type": "jobs",
+      "access_method": "html_snapshot",
+      "region": "全球",
+      "track": "电商平台、支付与合作伙伴生态组织投入",
+      "signal_types": ["hiring", "ai", "commerce", "partnership"],
+      "company_name": "Shopify",
+      "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
     }
   ],
   "candidate_sources": [

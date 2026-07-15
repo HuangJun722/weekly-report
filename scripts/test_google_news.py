@@ -23,10 +23,10 @@ def test_google_news():
         try:
             r = requests.get(url, headers=HEADERS, timeout=10)
             results[url] = {'status': r.status_code, 'length': len(r.text)}
-            print(f"✅ {url}: HTTP {r.status_code}, {len(r.text)} bytes")
+            print(f"OK {url}: HTTP {r.status_code}, {len(r.text)} bytes")
         except Exception as e:
             results[url] = {'error': str(e)}
-            print(f"❌ {url}: {e}")
+            print(f"FAIL {url}: {e}")
     # 输出结果供 Actions 日志查看
     print("\n--- SUMMARY ---")
     print(json.dumps(results, indent=2))

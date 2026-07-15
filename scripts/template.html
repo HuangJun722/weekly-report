@@ -241,10 +241,13 @@ button, input, select { font: inherit; }
 .company { min-height: 128px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.82); text-align: left; cursor: pointer; }
 .company:hover { border-color: var(--navy); background: var(--surface); }
 .company.active { border-color: var(--navy); background: rgba(23,43,58,0.08); box-shadow: inset 0 0 0 1px rgba(23,43,58,0.16); }
-.company.empty { opacity: 0.58; cursor: default; }
+.company.empty { cursor: default; }
 .company strong { display: block; margin-bottom: 9px; font-size: 17px; }
 .company span { color: var(--muted); font-size: 13px; }
 .company small { display: block; margin-top: 9px; color: var(--quiet); font-size: 12px; line-height: 1.5; }
+.company-status { display: inline-flex; width: fit-content; margin-bottom: 8px; padding-bottom: 3px; border-bottom: 2px solid var(--line); color: var(--ink) !important; font-size: 12px !important; font-weight: 720; }
+.company.status-active .company-status { border-color: var(--green); }
+.company.status-failed .company-status { border-color: var(--rust); }
 .ops-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
 .release-head { display: block; text-align: left; }
 .release-copy { min-width: 0; }
@@ -666,14 +669,15 @@ button, input, select { font: inherit; }
           <section class="company-region">
             <div class="company-region-head">
               <h3>{{ group.region }}</h3>
-              <span>{{ group.active }}/{{ group.total }} 家有记录，近 30 天 {{ group.recent_30 }} 条，优质 {{ group.quality_30 }} 条</span>
+              <span>{{ group.active }}/{{ group.total }} 家近期有动作，{{ group.observed }}/{{ group.total }} 家已有可解释状态</span>
             </div>
             <div class="company-grid">
               {% for c in group.companies %}
-              <button class="company company-nav-btn{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
+              <button class="company company-nav-btn status-{{ c.observation_status }}{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
                 <strong>{{ c.name }}</strong>
-                <span>近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条</span>
-                <small>{{ c.signal }}：{{ c.latest_title|truncate(54) }}</small>
+                <span class="company-status">{{ c.observation_label }}</span>
+                <span>{{ c.observation_detail }}</span>
+                <small>近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
               </button>
               {% endfor %}
             </div>

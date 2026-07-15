@@ -1,0 +1,929 @@
+{
+  "version": 1,
+  "generated_at": "2026-07-15T16:10:17.260824+08:00",
+  "entities": {
+    "grab": {
+      "entity": "Grab",
+      "observed_at": "2026-07-15T16:10:17.260824+08:00",
+      "jobs": [
+        {
+          "id": "744000137808584",
+          "title": "Integration Engineer, Orchestration",
+          "url": "https://www.grab.careers/en/jobs/744000137808584/integration-engineer-orchestration/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000137801819",
+          "title": "Assistant Manager, Country Business Development",
+          "url": "https://www.grab.careers/en/jobs/744000137801819/assistant-manager-country-business-development/",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "744000137800429",
+          "title": "Team Lead, Merchant Strategy",
+          "url": "https://www.grab.careers/en/jobs/744000137800429/team-lead-merchant-strategy/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137795629",
+          "title": "Lead, Community Engagement Surabaya",
+          "url": "https://www.grab.careers/en/jobs/744000137795629/lead-community-engagement-surabaya/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137791699",
+          "title": "Senior Software Engineer, Backend (AI)",
+          "url": "https://www.grab.careers/en/jobs/744000137791699/senior-software-engineer-backend-ai/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000137791349",
+          "title": "Kios Agent Freelance Ecosystem Lead",
+          "url": "https://www.grab.careers/en/jobs/744000137791349/kios-agent-freelance-ecosystem-lead/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "744000137661872",
+          "title": "Partner Acquisition & Partner Engagement Associate",
+          "url": "https://www.grab.careers/en/jobs/744000137661872/partner-acquisition-partner-engagement-associate/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "744000137634849",
+          "title": "Senior Solution Specialist, People Systems",
+          "url": "https://www.grab.careers/en/jobs/744000137634849/senior-solution-specialist-people-systems/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000137615004",
+          "title": "Associate, Collections Analytics and QC",
+          "url": "https://www.grab.careers/en/jobs/744000137615004/associate-collections-analytics-and-qc/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137594679",
+          "title": "Specialist, Account Management - GrabFood",
+          "url": "https://www.grab.careers/en/jobs/744000137594679/specialist-account-management-grabfood/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137590254",
+          "title": "Privacy Counsel, Vietnam",
+          "url": "https://www.grab.careers/en/jobs/744000137590254/privacy-counsel-vietnam/",
+          "function_tags": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "744000137590399",
+          "title": "Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000137590399/software-engineer-backend/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000137581435",
+          "title": "Senior Sales Operations Analyst (Deal Desk)",
+          "url": "https://www.grab.careers/en/jobs/744000137581435/senior-sales-operations-analyst-deal-desk/",
+          "function_tags": [
+            "sales",
+            "operations"
+          ]
+        },
+        {
+          "id": "744000137557749",
+          "title": "Country Head of People Operations, Vietnam",
+          "url": "https://www.grab.careers/en/jobs/744000137557749/country-head-of-people-operations-vietnam/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000137520034",
+          "title": "Head of People Experience, Delivery & Compliance",
+          "url": "https://www.grab.careers/en/jobs/744000137520034/head-of-people-experience-delivery-compliance/",
+          "function_tags": [
+            "compliance",
+            "operations"
+          ]
+        },
+        {
+          "id": "744000137419209",
+          "title": "Associate, Business Projects",
+          "url": "https://www.grab.careers/en/jobs/744000137419209/associate-business-projects/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137400002",
+          "title": "Senior Software Engineer, Fullstack",
+          "url": "https://www.grab.careers/en/jobs/744000137400002/senior-software-engineer-fullstack/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000137401125",
+          "title": "Senior Data Analyst",
+          "url": "https://www.grab.careers/en/jobs/744000137401125/senior-data-analyst/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137366879",
+          "title": "Senior Strategy Manager, Financial Services & Omnicommerce",
+          "url": "https://www.grab.careers/en/jobs/744000137366879/senior-strategy-manager-financial-services-omnicommerce/",
+          "function_tags": [
+            "payments"
+          ]
+        },
+        {
+          "id": "744000137363369",
+          "title": "Senior Program Manager, Tech Financial Operations & Automation",
+          "url": "https://www.grab.careers/en/jobs/744000137363369/senior-program-manager-tech-financial-operations-automation/",
+          "function_tags": [
+            "operations"
+          ]
+        }
+      ]
+    },
+    "stripe": {
+      "entity": "Stripe",
+      "observed_at": "2026-07-15T16:10:17.260824+08:00",
+      "jobs": [
+        {
+          "id": "7993151",
+          "title": "Account Executive - Enterprise, Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-grower/7993151",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7997146",
+          "title": "Account Executive - Enterprise, Growth",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-growth/7997146",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8040874",
+          "title": "Account Executive - Startups, Hunter ANZ",
+          "url": "https://stripe.com/jobs/listing/account-executive-startups-hunter-anz/8040874",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7954688",
+          "title": "Account Executive, AI Sales (Grower)",
+          "url": "https://stripe.com/jobs/listing/account-executive-ai-sales-grower/7954688",
+          "function_tags": [
+            "ai",
+            "sales"
+          ]
+        },
+        {
+          "id": "8042978",
+          "title": "Account Executive, Commercial Grower (Japanese Fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-commercial-grower-japanese-fluency/8042978",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7893199",
+          "title": "Account Executive, Cross Border China",
+          "url": "https://stripe.com/jobs/listing/account-executive-cross-border-china/7893199",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7997555",
+          "title": "Account Executive, Enterprise - Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-grower/7997555",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8054695",
+          "title": "Account Executive, Enterprise - Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-grower/8054695",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7994330",
+          "title": "Account Executive, Enterprise - Hunter",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter/7994330",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7717676",
+          "title": "Account Executive, Enterprise Grower (Australia)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-grower-australia/7717676",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7458833",
+          "title": "Account Executive, Enterprise Hunter (French fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter-french-fluency/7458833",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7528816",
+          "title": "Account Executive, Enterprise Hunter (Japanese fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter-japanese-fluency/7528816",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7576967",
+          "title": "Account Executive, Enterprise Platforms (Grower)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-grower/7576967",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "7961609",
+          "title": "Account Executive, Enterprise Platforms, Hunter",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-hunter/7961609",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "8041894",
+          "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-tier-2-grower/8041894",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "8048193",
+          "title": "Account Executive, Financial Services, Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-financial-services-grower/8048193",
+          "function_tags": [
+            "payments",
+            "sales"
+          ]
+        },
+        {
+          "id": "8017336",
+          "title": "Account Executive, Funded Startups - Expansion",
+          "url": "https://stripe.com/jobs/listing/account-executive-funded-startups-expansion/8017336",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8024368",
+          "title": "Account Executive, Funded Startups - Expansion",
+          "url": "https://stripe.com/jobs/listing/account-executive-funded-startups-expansion/8024368",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8022645",
+          "title": "Account Executive, FX and Multi-Currency",
+          "url": "https://stripe.com/jobs/listing/account-executive-fx-and-multi-currency/8022645",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7908925",
+          "title": "Account Executive, Hunter, Iberia",
+          "url": "https://stripe.com/jobs/listing/account-executive-hunter-iberia/7908925",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7863714",
+          "title": "Account Executive, Mid Market (Hunter)",
+          "url": "https://stripe.com/jobs/listing/account-executive-mid-market-hunter/7863714",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7451366",
+          "title": "Account Executive, Platforms",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms/7451366",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "7298935",
+          "title": "Account Executive, Platforms (New Business)",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms-new-business/7298935",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "7680548",
+          "title": "Account Executive, Platforms Grower (AUNZ)",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms-grower-aunz/7680548",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "7857010",
+          "title": "Account Executive, Platforms Hunter (French fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms-hunter-french-fluency/7857010",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "8049828",
+          "title": "Account Executive, Product - Link",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-link/8049828",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8047510",
+          "title": "Account Executive, Product (Link and Financial Connections)",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-link-and-financial-connections/8047510",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7728365",
+          "title": "Account Executive, Product Sales - Capital",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-capital/7728365",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7456716",
+          "title": "Account Executive, Product Sales (BaaS)",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-baas/7456716",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7984339",
+          "title": "Account Executive, Product Sales (Billing)",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-billing/7984339",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7940059",
+          "title": "Account Executive, Product Sales (Tax)",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-tax/7940059",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8040876",
+          "title": "Account Executive, Product Sales (Tax)",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-tax/8040876",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7393169",
+          "title": "Account Executive, Product Sales, Billing",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-billing/7393169",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7866501",
+          "title": "Account Executive, SMB (Grower)",
+          "url": "https://stripe.com/jobs/listing/account-executive-smb-grower/7866501",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7277406",
+          "title": "Account Executive, SMB (Hunter)",
+          "url": "https://stripe.com/jobs/listing/account-executive-smb-hunter/7277406",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7931247",
+          "title": "Account Executive, SMB (Hunter)",
+          "url": "https://stripe.com/jobs/listing/account-executive-smb-hunter/7931247",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8007641",
+          "title": "Account Executive, SMB Hunter (French Fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-smb-hunter-french-fluency/8007641",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8045554",
+          "title": "Account Executive, SSMB - Existing Business (French Fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-ssmb-existing-business-french-fluency/8045554",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7891728",
+          "title": "Account Executive, Startup Platforms",
+          "url": "https://stripe.com/jobs/listing/account-executive-startup-platforms/7891728",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "7875540",
+          "title": "Accounting Technical Solutions Lead",
+          "url": "https://stripe.com/jobs/listing/accounting-technical-solutions-lead/7875540",
+          "function_tags": []
+        },
+        {
+          "id": "7118945",
+          "title": "Accounts Receivable Manager",
+          "url": "https://stripe.com/jobs/listing/accounts-receivable-manager/7118945",
+          "function_tags": []
+        },
+        {
+          "id": "8050878",
+          "title": "Administrative Business Partner, Office of the CEO",
+          "url": "https://stripe.com/jobs/listing/administrative-business-partner-office-of-the-ceo/8050878",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "7434713",
+          "title": "Administrative Coordinator",
+          "url": "https://stripe.com/jobs/listing/administrative-coordinator/7434713",
+          "function_tags": []
+        },
+        {
+          "id": "7863507",
+          "title": "Administrative Coordinator",
+          "url": "https://stripe.com/jobs/listing/administrative-coordinator/7863507",
+          "function_tags": []
+        },
+        {
+          "id": "7844214",
+          "title": "AEO and GEO Marketing Manager",
+          "url": "https://stripe.com/jobs/listing/aeo-and-geo-marketing-manager/7844214",
+          "function_tags": []
+        },
+        {
+          "id": "8044460",
+          "title": "AI Engineer",
+          "url": "https://stripe.com/jobs/listing/ai-engineer/8044460",
+          "function_tags": [
+            "ai",
+            "engineering"
+          ]
+        },
+        {
+          "id": "8064526",
+          "title": "AI Product Manager, Professional Services",
+          "url": "https://stripe.com/jobs/listing/ai-product-manager-professional-services/8064526",
+          "function_tags": [
+            "ai"
+          ]
+        },
+        {
+          "id": "7947074",
+          "title": "AI Specialist, Treasury Finance Operations",
+          "url": "https://stripe.com/jobs/listing/ai-specialist-treasury-finance-operations/7947074",
+          "function_tags": [
+            "ai",
+            "payments",
+            "operations"
+          ]
+        },
+        {
+          "id": "8060391",
+          "title": "Air Cleaning Technologies Associate",
+          "url": "https://stripe.com/jobs/listing/air-cleaning-technologies-associate/8060391",
+          "function_tags": []
+        },
+        {
+          "id": "8012497",
+          "title": "Analyst Relations Manager",
+          "url": "https://stripe.com/jobs/listing/analyst-relations-manager/8012497",
+          "function_tags": []
+        },
+        {
+          "id": "7896404",
+          "title": "Analyst, Product Pricing",
+          "url": "https://stripe.com/jobs/listing/analyst-product-pricing/7896404",
+          "function_tags": []
+        },
+        {
+          "id": "7543559",
+          "title": "Android Engineer, Terminal",
+          "url": "https://stripe.com/jobs/listing/android-engineer-terminal/7543559",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7557403",
+          "title": "Android Engineer, Terminal OS Platform",
+          "url": "https://stripe.com/jobs/listing/android-engineer-terminal-os-platform/7557403",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7764914",
+          "title": "APAC Executive Marketing",
+          "url": "https://stripe.com/jobs/listing/apac-executive-marketing/7764914",
+          "function_tags": []
+        },
+        {
+          "id": "7823683",
+          "title": "Art Director",
+          "url": "https://stripe.com/jobs/listing/art-director/7823683",
+          "function_tags": []
+        },
+        {
+          "id": "7737237",
+          "title": "Backend / API Engineer, Billing",
+          "url": "https://stripe.com/jobs/listing/backend-api-engineer-billing/7737237",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7369543",
+          "title": "Backend / API Engineer, Payouts",
+          "url": "https://stripe.com/jobs/listing/backend-api-engineer-payouts/7369543",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7826765",
+          "title": "Backend Engineer, AI Security",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-ai-security/7826765",
+          "function_tags": [
+            "ai",
+            "engineering"
+          ]
+        },
+        {
+          "id": "6042172",
+          "title": "Backend Engineer, Core Technology",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-core-technology/6042172",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7913700",
+          "title": "Backend Engineer, Data",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-data/7913700",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7557899",
+          "title": "Backend Engineer, Developer SDKs (Golang)",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-developer-sdks-golang/7557899",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "8062299",
+          "title": "Backend Engineer, Financial Connections",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-financial-connections/8062299",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "6163230",
+          "title": "Backend Engineer, Payments and Risk",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-payments-and-risk/6163230",
+          "function_tags": [
+            "engineering",
+            "payments",
+            "compliance"
+          ]
+        }
+      ]
+    },
+    "shopify": {
+      "entity": "Shopify",
+      "observed_at": "2026-07-15T16:10:17.260824+08:00",
+      "jobs": [
+        {
+          "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
+          "title": "Director, EU Public Affairs (Brussels) Remote - Brussels",
+          "url": "https://www.shopify.com/careers/director-eu-public-affairs-brussels_fa199960-670b-4dcd-9798-c8bcbbeea3db",
+          "function_tags": []
+        },
+        {
+          "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
+          "title": "Senior Lead, UK Public Affairs Remote - United Kingdom",
+          "url": "https://www.shopify.com/careers/senior-lead-uk-public-affairs_a4b8357e-2849-4ef4-80da-459e232f9f16",
+          "function_tags": []
+        },
+        {
+          "id": "9b6c9aa9-1ae9-4da0-ba51-39d9700e803d",
+          "title": "Merchandising & Brand Strategy Manager, Shopify Supply Remote - Americas",
+          "url": "https://www.shopify.com/careers/merchandising-brand-strategy-manager-shopify-supply_9b6c9aa9-1ae9-4da0-ba51-39d9700e803d",
+          "function_tags": []
+        },
+        {
+          "id": "ae4a3af7-a254-4a14-8e2d-e493ca8d1c6a",
+          "title": "Social Lead - Developer Remote - Americas",
+          "url": "https://www.shopify.com/careers/social-lead-developer_ae4a3af7-a254-4a14-8e2d-e493ca8d1c6a",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "103b3bdf-35f7-4199-8a61-195d1eeed88d",
+          "title": "Social Lead, Product Remote - Americas",
+          "url": "https://www.shopify.com/careers/social-lead-product_103b3bdf-35f7-4199-8a61-195d1eeed88d",
+          "function_tags": []
+        },
+        {
+          "id": "78e6e7f3-f0a4-4522-bcb9-ed9165c9196c",
+          "title": "Staff Brand Designer Remote - Americas",
+          "url": "https://www.shopify.com/careers/staff-brand-designer_78e6e7f3-f0a4-4522-bcb9-ed9165c9196c",
+          "function_tags": []
+        },
+        {
+          "id": "a5116d45-536d-4d56-815e-73a10c9fe927",
+          "title": "Lead, Risk & Internal Audit Remote - Americas",
+          "url": "https://www.shopify.com/careers/lead-risk-internal-audit_a5116d45-536d-4d56-815e-73a10c9fe927",
+          "function_tags": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "5df30cc8-d4dc-4183-a2d8-1eba0108dccc",
+          "title": "SEC Reporting Manager Remote - Americas",
+          "url": "https://www.shopify.com/careers/sec-reporting-manager_5df30cc8-d4dc-4183-a2d8-1eba0108dccc",
+          "function_tags": []
+        },
+        {
+          "id": "40ef1cb0-5c56-4963-84fe-946708e5d74a",
+          "title": "Senior Financial Analyst - Multiple Roles Remote - Americas",
+          "url": "https://www.shopify.com/careers/senior-financial-analyst-multiple-roles_40ef1cb0-5c56-4963-84fe-946708e5d74a",
+          "function_tags": []
+        },
+        {
+          "id": "c49bee91-d6d8-405c-8367-2fa7c42ecf3d",
+          "title": "Senior Indirect Tax Analyst Remote - Americas",
+          "url": "https://www.shopify.com/careers/senior-indirect-tax-analyst_c49bee91-d6d8-405c-8367-2fa7c42ecf3d",
+          "function_tags": []
+        },
+        {
+          "id": "b83d465d-45d0-444c-99a6-419de5a8b944",
+          "title": "Treasury Manager, Payments Remote - Americas",
+          "url": "https://www.shopify.com/careers/treasury-manager-payments_b83d465d-45d0-444c-99a6-419de5a8b944",
+          "function_tags": [
+            "payments"
+          ]
+        },
+        {
+          "id": "1fc767ce-3657-4756-8e42-ba30d7d65e6c",
+          "title": "Head of Partner Management, Affiliate Channel Remote - Americas",
+          "url": "https://www.shopify.com/careers/head-of-partner-management-affiliate-channel_1fc767ce-3657-4756-8e42-ba30d7d65e6c",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "b7099239-aecb-4cdb-a7da-dd49f0a34342",
+          "title": "Lead Editor, Content Performance Remote - Americas",
+          "url": "https://www.shopify.com/careers/lead-editor-content-performance_b7099239-aecb-4cdb-a7da-dd49f0a34342",
+          "function_tags": []
+        },
+        {
+          "id": "c63835a4-3b4b-4591-8b88-7417339bb03d",
+          "title": "Marketing Lead, Growth Marketing Remote - Americas",
+          "url": "https://www.shopify.com/careers/marketing-lead-growth-marketing_c63835a4-3b4b-4591-8b88-7417339bb03d",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "5de9add2-829e-4307-8d9e-20ee3353d237",
+          "title": "Associate General Council, Partnerships Remote - Americas",
+          "url": "https://www.shopify.com/careers/associate-general-council-partnerships_5de9add2-829e-4307-8d9e-20ee3353d237",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "9582ff03-4538-4efe-8406-437956ab2c73",
+          "title": "Associate General Counsel, Privacy Remote - Americas, United Kingdom, Ireland",
+          "url": "https://www.shopify.com/careers/associate-general-counsel-privacy_9582ff03-4538-4efe-8406-437956ab2c73",
+          "function_tags": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "99cdb469-2b33-49ae-a11e-95daab6ab948",
+          "title": "Associate General Counsel, Product Remote - Americas",
+          "url": "https://www.shopify.com/careers/associate-general-counsel-product_99cdb469-2b33-49ae-a11e-95daab6ab948",
+          "function_tags": []
+        },
+        {
+          "id": "7ad50cf9-4f0f-4c5f-8f79-7d397caeff8e",
+          "title": "Head of Risk & Compliance and Authorised Manager Remote - Luxembourg",
+          "url": "https://www.shopify.com/careers/head-of-risk-compliance-and-authorised-manager_7ad50cf9-4f0f-4c5f-8f79-7d397caeff8e",
+          "function_tags": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "c7c76dd6-5e57-41fe-8e8a-39ce72385cfa",
+          "title": "Money Laundering Reporting Officer (MLRO) Remote - Luxembourg",
+          "url": "https://www.shopify.com/careers/money-laundering-reporting-officer-mlro_c7c76dd6-5e57-41fe-8e8a-39ce72385cfa",
+          "function_tags": []
+        },
+        {
+          "id": "5d736d32-f16c-4a40-8adf-e6379943017a",
+          "title": "Senior Lead, Product Operations, Growth Remote - Americas",
+          "url": "https://www.shopify.com/careers/senior-lead-product-operations-growth_5d736d32-f16c-4a40-8adf-e6379943017a",
+          "function_tags": [
+            "sales",
+            "operations"
+          ]
+        },
+        {
+          "id": "6738f2e2-3da3-4dd5-a6b2-ccbe2ecd3863",
+          "title": "Senior Project Manager, Real Estate (18-month Contract) Toronto",
+          "url": "https://www.shopify.com/careers/senior-project-manager-real-estate-18-month-contract_6738f2e2-3da3-4dd5-a6b2-ccbe2ecd3863",
+          "function_tags": []
+        },
+        {
+          "id": "8d702014-1023-4e7f-9d68-08c4a8659aa6",
+          "title": "Product Partner Manager, Cross Border Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partner-manager-cross-border_8d702014-1023-4e7f-9d68-08c4a8659aa6",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "d5eeed11-7711-42d2-a2fd-1abd8865d012",
+          "title": "Product Partner Manager, Shopify Payments Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partner-manager-shopify-payments_d5eeed11-7711-42d2-a2fd-1abd8865d012",
+          "function_tags": [
+            "payments",
+            "partnerships"
+          ]
+        },
+        {
+          "id": "8d283b6a-d5d1-470a-ae7b-b9967f157eed",
+          "title": "Product Partner Manager, Strategic Portfolio Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partner-manager-strategic-portfolio_8d283b6a-d5d1-470a-ae7b-b9967f157eed",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "d9993b7d-d973-409c-9da3-0c8d48cff776",
+          "title": "Product Partnerships Lead Remote - Japan",
+          "url": "https://www.shopify.com/careers/product-partnerships-lead_d9993b7d-d973-409c-9da3-0c8d48cff776",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "023fa124-6cc8-4d1c-9857-0ea20ecb443a",
+          "title": "Product Partnerships Lead, GTM Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partnerships-lead-gtm_023fa124-6cc8-4d1c-9857-0ea20ecb443a",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "07e96176-03d1-4904-973a-b5f5ad204e9a",
+          "title": "Product Partnerships Lead, Marketplaces & Sales Channels Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partnerships-lead-marketplaces-sales-channels_07e96176-03d1-4904-973a-b5f5ad204e9a",
+          "function_tags": [
+            "partnerships",
+            "sales"
+          ]
+        },
+        {
+          "id": "96e5389e-9b7d-49a1-89b8-8d38ac22145c",
+          "title": "Live Site Operations Specialist (PST) Remote - Americas, Canada",
+          "url": "https://www.shopify.com/careers/live-site-operations-specialist-pst_96e5389e-9b7d-49a1-89b8-8d38ac22145c",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "a547ae99-1811-479b-9901-df0eedf661bb",
+          "title": "Manager, IAM Security Operations, Trust & Safety Remote - Canada , Americas",
+          "url": "https://www.shopify.com/careers/manager-iam-security-operations-trust-safety_a547ae99-1811-479b-9901-df0eedf661bb",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "062c9a47-4f38-45ed-b6c1-76aadec734e2",
+          "title": "Merchant Support Advisor, Ireland Remote - Ireland",
+          "url": "https://www.shopify.com/careers/merchant-support-advisor-ireland_062c9a47-4f38-45ed-b6c1-76aadec734e2",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "b1406750-be9c-425e-86dd-92b8f971b920",
+          "title": "Overnight Merchant Support Advisor, Canada Remote - Canada",
+          "url": "https://www.shopify.com/careers/overnight-merchant-support-advisor-canada_b1406750-be9c-425e-86dd-92b8f971b920",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "2a55896c-971b-496b-a7f4-20eb92b818c1",
+          "title": "Senior Credit Risk Analyst Remote - Americas",
+          "url": "https://www.shopify.com/careers/senior-credit-risk-analyst_2a55896c-971b-496b-a7f4-20eb92b818c1",
+          "function_tags": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "0dedbaa5-739f-4c6b-9025-bbf26f7cf908",
+          "title": "Sr. Manager, Account Security Remote - Americas",
+          "url": "https://www.shopify.com/careers/sr-manager-account-security_0dedbaa5-739f-4c6b-9025-bbf26f7cf908",
+          "function_tags": []
+        },
+        {
+          "id": "f12820dc-3c96-4815-b4d2-506d680d034f",
+          "title": "Workplace Technology Manager Toronto",
+          "url": "https://www.shopify.com/careers/workplace-technology-manager_f12820dc-3c96-4815-b4d2-506d680d034f",
+          "function_tags": []
+        }
+      ]
+    }
+  }
+}

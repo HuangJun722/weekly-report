@@ -27,10 +27,12 @@ except Exception:
 
 try:
     from analysis_quality import annotate_event_quality, summarize_quality
+    from event_dates import apply_event_date_metadata, publication_metadata
     from event_value import classify_bd_priority, follow_up_window_for_priority
     from run_metrics import write_run_metrics
 except ImportError:
     from scripts.analysis_quality import annotate_event_quality, summarize_quality
+    from scripts.event_dates import apply_event_date_metadata, publication_metadata
     from scripts.event_value import classify_bd_priority, follow_up_window_for_priority
     from scripts.run_metrics import write_run_metrics
 
@@ -953,6 +955,25 @@ def _parse_rss_date(item):
     # 已废弃：feedparser 自动标准化日期，保留接口兼容
     return None
 
+
+def _rss_date_metadata(entry, link, observed_at=None):
+    candidates = []
+    if entry.get('published_parsed'):
+        candidates.append((datetime(*entry['published_parsed'][:3]).strftime('%Y-%m-%d'), 'rss_published', 'high'))
+    if entry.get('updated_parsed'):
+        candidates.append((datetime(*entry['updated_parsed'][:3]).strftime('%Y-%m-%d'), 'rss_updated', 'medium'))
+    candidates.append((_extract_date_from_url(link), 'url_path', 'high'))
+    rejected = None
+    for candidate, source, confidence in candidates:
+        if not candidate:
+            continue
+        metadata = publication_metadata(candidate, source, confidence, observed_at=observed_at)
+        if metadata['published_at']:
+            return metadata
+        if metadata.get('scheduled_at') and rejected is None:
+            rejected = metadata
+    return rejected or publication_metadata('', 'observed_at', 'observed', observed_at=observed_at)
+
 # ============================================================
 # 采集
 # ============================================================
@@ -997,12 +1018,8 @@ def _parse_rss_text(cfg, text):
             continue
 
         # 日期：feedparser 标准化时间，URL 日期兜底
-        article_date = None
-        tp = entry.get('published_parsed') or entry.get('updated_parsed')
-        if tp:
-            article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
-        if not article_date:
-            article_date = _extract_date_from_url(link)
+        date_meta = _rss_date_metadata(entry, link)
+        article_date = date_meta['published_at'] or None
         if article_date and not _recent_article_date(article_date, days=2):
             continue
 
@@ -1036,6 +1053,7 @@ def _parse_rss_text(cfg, text):
             'event_types': types,
             'article_date': article_date,
             'image_url': image_url,
+            **date_meta,
         }, cfg))
     return results
 
@@ -1202,6 +1220,9 @@ def _extract_date_from_url(url):
     m = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', url)
     if m:
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = re.search(r'(?<!\d)(20\d{2})[-_.](\d{2})[-_.](\d{2})(?!\d)', url or '')
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
     m = re.search(r'(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)', url or '')
     if m:
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
@@ -1284,13 +1305,28 @@ def _extract_recent_month_day_date(text):
     return None
 
 
+def _extract_official_article_date_meta(title, link, node_text='', observed_at=None):
+    node_full_date = _extract_date_from_text(node_text)
+    candidates = [
+        (_extract_date_from_url(link), 'url_path', 'high'),
+        (_extract_date_from_text(title), 'title_text', 'medium'),
+        (node_full_date, 'body_text', 'low'),
+        (_extract_recent_month_day_date(node_text) if not node_full_date else None, 'body_month_day', 'low'),
+    ]
+    rejected = None
+    for candidate, source, confidence in candidates:
+        if not candidate:
+            continue
+        metadata = publication_metadata(candidate, source, confidence, observed_at=observed_at)
+        if metadata['published_at']:
+            return metadata
+        if metadata.get('scheduled_at') and rejected is None:
+            rejected = metadata
+    return rejected or publication_metadata('', 'observed_at', 'observed', observed_at=observed_at)
+
+
 def _extract_official_article_date(title, link, node_text=''):
-    return (
-        _extract_date_from_url(link)
-        or _extract_date_from_text(title)
-        or _extract_date_from_text(node_text)
-        or _extract_recent_month_day_date(node_text)
-    )
+    return _extract_official_article_date_meta(title, link, node_text)['published_at'] or None
 
 
 def _same_host_url(base_url, href):
@@ -1325,10 +1361,12 @@ def _select_changelog_items(soup, cfg):
             continue
 
         node_text = ''
+        date_meta = publication_metadata('', 'observed_at', 'observed')
         article_date = None
         for parent in [link_el] + list(link_el.parents)[:6]:
             node_text = ' '.join(parent.get_text(' ', strip=True).split())
-            article_date = _extract_official_article_date(title, link, node_text)
+            date_meta = _extract_official_article_date_meta(title, link, node_text)
+            article_date = date_meta['published_at'] or None
             if article_date:
                 break
         if not article_date or not _recent_article_date(article_date, days=2):
@@ -1349,6 +1387,7 @@ def _select_changelog_items(soup, cfg):
             'article_date': article_date,
             'is_company': cfg.get('is_company', False),
             'company_name': cfg.get('company_name', ''),
+            **date_meta,
         }, cfg))
 
     return results
@@ -1363,6 +1402,7 @@ def fetch_company_news(cfg):
     query = urllib.parse.quote(cfg['query'])
     url = f'https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en'
     body = fetch_url(url)
+    cfg['_last_fetch_status'] = 'success' if body else 'failed'
     if not body: return []
 
     if not any(body.strip().startswith(x) or x in body[:300] for x in ['<?xml', '<rss', '<feed']):
@@ -1415,12 +1455,8 @@ def fetch_company_news(cfg):
         if not link: continue
 
         # 日期过滤：RSS日期优先，URL日期兜底
-        article_date = None
-        tp = entry.get('published_parsed') or entry.get('updated_parsed')
-        if tp:
-            article_date = datetime(*tp[:3]).strftime('%Y-%m-%d')
-        if not article_date:
-            article_date = _extract_date_from_url(link)
+        date_meta = _rss_date_metadata(entry, link)
+        article_date = date_meta['published_at'] or None
         if article_date and article_date not in allowed_dates:
             continue
 
@@ -1456,6 +1492,7 @@ def fetch_company_news(cfg):
             'is_company': True,
             'company_name': cfg['name'],
             'image_url': image_url,
+            **date_meta,
         }, cfg)
         if any(_is_same_event(item, existing) for existing in seen_company_events):
             continue
@@ -1470,6 +1507,7 @@ def fetch_company_news(cfg):
 def fetch_html(cfg):
     """从 HTML 页面提取文章列表（降级方案，针对各站点结构定制）"""
     body = fetch_url(cfg['url'])
+    cfg['_last_fetch_status'] = 'success' if body else 'failed'
     if not body: return []
 
     soup = BeautifulSoup(body, 'html.parser')
@@ -1567,10 +1605,12 @@ def fetch_html(cfg):
                 base = cfg['url'].split('/')[2]  # 提取域名
                 link = 'https://' + base + link
 
+        date_meta = publication_metadata('', 'observed_at', 'observed')
         article_date = None
         if _is_official_cfg(cfg):
             node_text = ' '.join(art.get_text(' ', strip=True).split())
-            article_date = _extract_official_article_date(title, link, node_text)
+            date_meta = _extract_official_article_date_meta(title, link, node_text)
+            article_date = date_meta['published_at'] or None
             if not article_date or not _recent_article_date(article_date, days=2):
                 continue
 
@@ -1585,6 +1625,7 @@ def fetch_html(cfg):
             'article_date': article_date,
             'is_company': cfg.get('is_company', False),
             'company_name': cfg.get('company_name', ''),
+            **date_meta,
         }, cfg))
 
     return results
@@ -2551,6 +2592,20 @@ def attach_business_context(event, item, score):
     return event
 
 
+def attach_date_context(event, item):
+    for key in (
+        'published_at',
+        'observed_at',
+        'date_source',
+        'date_confidence',
+        'date_parse_warning',
+        'scheduled_at',
+    ):
+        if item.get(key) not in (None, ''):
+            event[key] = item[key]
+    return apply_event_date_metadata(event, fallback_observed_at=_cn_now())
+
+
 def build_event(item, analysis=None, analysis_source=None, analysis_status=None):
     """构建事件对象：程序评分始终生效，AI 只补充 reason/impact/insight_label"""
     # 程序评分（确定性，始终运行）
@@ -2580,6 +2635,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             'publisher': item.get('publisher', ''),
             'image_url': item.get('image_url', ''),
         }
+        attach_date_context(event, item)
         attach_business_context(event, item, score)
         return annotate_event_quality(
             event,
@@ -2622,6 +2678,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'publisher': item.get('publisher', ''),
         'image_url': item.get('image_url', ''),
     }
+    attach_date_context(event, item)
     attach_business_context(event, item, score)
     return annotate_event_quality(
         event,
@@ -2726,6 +2783,7 @@ def main():
                 'method': 'rss',
                 'region': cfg.get('region', ''),
                 'status': 'failed',
+                'fetch_status': 'failed',
                 'count': 0,
                 'signal_count': 0,
                 'cached': cached,
@@ -2741,6 +2799,7 @@ def main():
             'method': 'rss',
             'region': cfg.get('region', ''),
             'status': 'ok',
+            'fetch_status': 'success',
             'count': len(items),
             'signal_count': sig,
             'cached': cached,
@@ -2771,7 +2830,8 @@ def main():
             html_source_metrics[cfg['name']] = {
                 'method': 'html',
                 'region': cfg.get('region', ''),
-                'status': 'ok' if items else 'empty',
+                'status': 'ok' if items else ('failed' if cfg.get('_last_fetch_status') == 'failed' else 'empty'),
+                'fetch_status': cfg.get('_last_fetch_status') or 'unknown',
                 'count': len(items),
                 'signal_count': sig,
             }
@@ -2805,7 +2865,8 @@ def main():
         company_source_metrics[cfg['name']] = {
             'method': 'company',
             'region': cfg.get('region', ''),
-            'status': 'ok' if items else 'empty',
+            'status': 'ok' if items else ('failed' if cfg.get('_last_fetch_status') == 'failed' else 'empty'),
+            'fetch_status': cfg.get('_last_fetch_status') or 'unknown',
             'count': len(items),
             'signal_count': sig,
         }
@@ -2820,6 +2881,20 @@ def main():
         'unique_count': len(company_unique),
         'source_stats': company_source_metrics,
     }
+
+    try:
+        from job_observation import collect_job_observations, write_job_observation_metrics, write_job_snapshots
+    except ImportError:
+        from scripts.job_observation import collect_job_observations, write_job_observation_metrics, write_job_snapshots
+    jobs_metrics, job_snapshots = collect_job_observations(observed_at=run_started.isoformat())
+    write_job_snapshots(job_snapshots)
+    write_job_observation_metrics(jobs_metrics)
+    run_metrics['jobs'] = jobs_metrics
+    print(
+        f"  🧑‍💻 Jobs 快照：{jobs_metrics['source_count']} 个对象 | "
+        f"{jobs_metrics['raw_count']} 个职位 | "
+        f"{len(jobs_metrics['candidate_signals'])} 个结构变化候选"
+    )
 
     # 合并：公司新闻 + 通用新闻，按事件级指纹去重
     all_raw = company_unique + raw
@@ -3008,20 +3083,19 @@ def main():
     pubdate_ok, pubdate_fallback = 0, 0
     added_events = []
     for event in today_events:
+        apply_event_date_metadata(event, fallback_observed_at=run_started)
         if event['url'] in existing_urls or any(_is_same_event(event, existing) for existing in existing_events):
             continue  # 跨批次去重
         if event['url']:
             existing_urls.add(event['url'])  # 同批次内也去重
         existing_events.append(event)
-        date_key = event.get('article_date') or event.get('date')  # 保留文章日期，避免运行日覆盖真实日期
-        event['date'] = date_key or today  # 保留 date 供 Market Pulse 使用
-        if date_key:
+        date_key = event.get('date') or today
+        if event.get('published_at'):
             pubdate_ok += 1
             all_events.setdefault(date_key, []).append(event)
         else:
             pubdate_fallback += 1
-            # 没有 pubDate 的文章（如 HTML 降级采集），归入运行日
-            all_events.setdefault(today, []).append(event)
+            all_events.setdefault(date_key, []).append(event)
         added_events.append(event)
     # 确保今日槽位存在（即使 0 条也记录空日期，保持历史完整性）
     all_events.setdefault(today, [])
@@ -3074,6 +3148,13 @@ def main():
     }
     metrics_path = write_run_metrics(run_metrics)
     print(f"  🧾 Run metrics：{metrics_path}")
+    try:
+        from entity_observation_ledger import build_entity_observation_ledger, write_entity_observation_ledger
+    except ImportError:
+        from scripts.entity_observation_ledger import build_entity_observation_ledger, write_entity_observation_ledger
+    ledger = build_entity_observation_ledger(as_of=today)
+    ledger_path = write_entity_observation_ledger(ledger)
+    print(f"  🧭 观察点账本：{ledger_path} | {ledger['status_counts']}")
 
     # 输出每个日期的分桶统计
     for date_key in sorted(all_events.keys(), reverse=True):

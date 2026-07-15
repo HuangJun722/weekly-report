@@ -1,7 +1,9 @@
 import fetch_news
+from datetime import datetime
 
 from fetch_news import (
     _extract_official_article_date,
+    _extract_official_article_date_meta,
     _registry_source_to_cfg,
     _select_changelog_items,
     _title_mentions_aliases,
@@ -54,6 +56,30 @@ def test_official_article_date_extracted_from_title_and_url():
         'Notice of Revisions to Full-Year Consolidated Financial Forecasts',
         'https://www.hd.square-enix.com/eng/ir/pdf/20260205_02_en.pdf',
     ) == '2026-02-05'
+
+
+def test_official_date_prefers_dashed_url_over_future_body_date():
+    meta = _extract_official_article_date_meta(
+        'Cloudflare: New options to manage AI traffic',
+        'https://developers.cloudflare.com/changelog/post/2026-07-01-ai-traffic-options/',
+        'This option becomes effective on September 15, 2026.',
+        observed_at='2026-07-15T14:30:00+08:00',
+    )
+    assert meta['published_at'] == '2026-07-01'
+    assert meta['date_source'] == 'url_path'
+    assert meta['date_parse_warning'] == ''
+
+
+def test_future_body_date_is_not_used_as_publication_date():
+    meta = _extract_official_article_date_meta(
+        'Cloudflare Tunnel API',
+        'https://developers.cloudflare.com/api/resources/zero_trust/subresources/tunnels/',
+        'The change is scheduled for October 5, 2026.',
+        observed_at='2026-07-15T14:30:00+08:00',
+    )
+    assert meta['published_at'] == ''
+    assert meta['scheduled_at'] == '2026-10-05'
+    assert meta['date_parse_warning'] == 'future_published_at_reclassified'
 
 
 def test_official_html_skips_stale_ir_items():
@@ -113,7 +139,12 @@ def test_changelog_items_extract_direct_dated_links():
         'region': '全球',
         'priority': 3,
     })
-    items = _select_changelog_items(soup, cfg)
+    old_cn_now = fetch_news._cn_now
+    try:
+        fetch_news._cn_now = lambda: datetime.fromisoformat('2026-06-29T12:00:00+08:00')
+        items = _select_changelog_items(soup, cfg)
+    finally:
+        fetch_news._cn_now = old_cn_now
     assert len(items) == 1
     assert items[0]['company_name'] == 'Shopify'
     assert items[0]['article_date'] == '2026-06-28'
@@ -125,6 +156,8 @@ if __name__ == '__main__':
     test_official_company_title_gets_entity_prefix()
     test_l1_changelog_infers_entity_name_without_changelog_suffix()
     test_official_article_date_extracted_from_title_and_url()
+    test_official_date_prefers_dashed_url_over_future_body_date()
+    test_future_body_date_is_not_used_as_publication_date()
     test_official_html_skips_stale_ir_items()
     test_changelog_items_extract_direct_dated_links()
     print('fetch news source meta tests passed')

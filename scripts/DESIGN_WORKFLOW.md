@@ -17,7 +17,7 @@
 ### 2. 本地预览
 
 ```bash
-cd C:\Users\16120\Documents\claude-workspace\weekly-report-repo
+cd "D:\共享文件\AI协作工作区\01_工作文件区\weekly-report-repo"
 
 # 生成本地预览文件（不覆盖 index.html）
 py -3 scripts/generate_html.py --preview

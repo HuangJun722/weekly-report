@@ -17,7 +17,9 @@
 
 ## 使用指南
 
-详细的使用说明、设计背景、技术架构和踩坑记录请见 [docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)。
+- 快速理解产品目标和整体架构：[docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md)
+- 详细使用说明和踩坑记录：[docs/USAGE_GUIDE.md](docs/USAGE_GUIDE.md)
+- 首页、RSS、公司和周期报告展示契约：[docs/VIEW_CONTRACT.md](docs/VIEW_CONTRACT.md)
 
 ---
 

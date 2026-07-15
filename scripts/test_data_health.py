@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from check_data_health import build_health_report, collect_failures
-from generate_html import build_date_panel
+from check_data_health import _future_event_count, build_health_report, collect_failures
+from generate_html import build_company_cards, build_date_panel
 from run_metrics import latest_run_metrics, write_run_metrics
 
 
@@ -35,6 +35,34 @@ def test_run_metrics_roundtrip():
     assert latest['run_id'] == 'test-run'
     assert latest['collection']['raw_count'] == 10
     path.unlink()
+
+
+def test_future_event_count_detects_polluted_publication_dates(tmp_path):
+    path = tmp_path / 'events.json'
+    path.write_text(
+        '{"2026-07-15": [{"date": "2026-07-15"}], "2026-09-15": [{"published_at": "2026-09-15"}]}',
+        encoding='utf-8',
+    )
+    assert _future_event_count(str(path), now='2026-07-15T14:30:00+08:00') == 1
+
+
+def test_company_card_uses_observation_status_when_no_event_exists():
+    cards = build_company_cards(
+        [{'name': 'Stripe', 'region': '全球', 'count': 0, 'events': []}],
+        '2026-07-15',
+        {'entities': [{
+            'entity': 'Stripe',
+            'status': 'quiet',
+            'status_label': '已检查，暂无显著变化',
+            'last_checked_at': '2026-07-15T12:00:00+08:00',
+            'raw_change_count_7d': 0,
+            'qualified_event_count_30d': 0,
+            'observation_points': [{'instrumented': True}],
+        }]},
+    )
+    assert cards[0]['observation_status'] == 'quiet'
+    assert cards[0]['observation_label'] == '已检查，暂无显著变化'
+    assert cards[0]['observation_detail'] == '采集正常，近期没有显著组织行为变化'
 
 
 def _panel_event(date, title, url, company, topic):
@@ -109,6 +137,10 @@ def test_date_panel_suppresses_stale_rolling_clusters():
 if __name__ == '__main__':
     test_current_data_health_contract()
     test_run_metrics_roundtrip()
+    from tempfile import TemporaryDirectory
+    with TemporaryDirectory() as temp_dir:
+        test_future_event_count_detects_polluted_publication_dates(Path(temp_dir))
+    test_company_card_uses_observation_status_when_no_event_exists()
     test_date_panel_does_not_leak_current_day_content()
     test_date_panel_suppresses_stale_rolling_clusters()
     print('data health tests passed')

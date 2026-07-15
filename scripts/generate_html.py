@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, timezone
 from jinja2 import Template
 
 try:
+    from event_dates import is_display_date
     from event_value import (
         classify_bd_priority,
         event_score,
@@ -31,6 +32,7 @@ try:
         select_review_events,
     )
 except ImportError:
+    from scripts.event_dates import is_display_date
     from scripts.event_value import (
         classify_bd_priority,
         event_score,
@@ -228,6 +230,7 @@ def calculate_score(event):
 # ─── 预设公司名单 ─────────────────────────────────────────────
 
 PRESET_COMPANIES = {
+    '全球': ['Stripe', 'Shopify', 'Cloudflare'],
     '亚太': ['Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek', 'VNG Group', 'Yahoo', 'Cyberagent', 'HKTVmall', 'U-NEXT', 'Square Enix'],
     '欧洲': ['Adyen', 'Zalando', 'Allegro', 'Trendyol'],
     '中东': ['Noon', 'Careem', 'Tabby', 'Kaspi.kz'],
@@ -656,7 +659,11 @@ def load_events():
             date = event.get('date', _cn_today())[:10]
             grouped.setdefault(date, []).append(enrich(event))
         return grouped
-    return {k: [enrich(e) for e in v] for k, v in data.items()}
+    return {
+        k: [enrich(e) for e in v]
+        for k, v in data.items()
+        if is_display_date(k, now=_cn_now())
+    }
 
 
 def split_company_events(events):
@@ -1577,11 +1584,16 @@ def refine_daily_headline(headline, lead, trend_groups):
     return headline, lead
 
 
-def build_company_cards(company_list, now_date):
+def build_company_cards(company_list, now_date, observation_ledger=None):
     """生成公司索引里的追踪摘要。"""
     start_7 = (datetime.strptime(now_date, '%Y-%m-%d') - timedelta(days=6)).strftime('%Y-%m-%d')
     start_30 = (datetime.strptime(now_date, '%Y-%m-%d') - timedelta(days=29)).strftime('%Y-%m-%d')
     result = []
+    ledger_by_entity = {
+        row.get('entity'): row
+        for row in (observation_ledger or {}).get('entities') or []
+        if row.get('entity')
+    }
     for company in company_list:
         events = company.get('events') or []
         events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
@@ -1593,6 +1605,50 @@ def build_company_cards(company_list, now_date):
         signal = latest.get('insight_label') or '观察'
         if signal in {'背景补充', '其他'}:
             signal = '观察'
+        observation = ledger_by_entity.get(company.get('name')) or {}
+        point_rows = observation.get('observation_points') or []
+        connected_points = sum(
+            1 for row in point_rows
+            if row.get('status') not in {'pending', 'unverified'}
+        )
+        total_points = len(point_rows)
+        observation_status = observation.get('status') or 'unverified'
+        coverage_status = observation.get('coverage_status') or observation_status
+        observation_label = observation.get('status_label') or '状态待确认'
+        if observation_status == 'active':
+            observation_detail = f"近30天形成 {observation.get('qualified_event_count_30d', 0)} 条合格事件"
+            if coverage_status in {'partial', 'pending', 'unverified'}:
+                observation_detail += '，直接观察点仍待完善'
+        elif observation_status == 'quiet':
+            observation_detail = '采集正常，近期没有显著组织行为变化'
+        elif observation_status == 'changed_below_threshold':
+            observation_detail = f"近7天发现 {observation.get('raw_change_count_7d', 0)} 次变化，尚未升格为情报"
+        elif observation_status == 'failed':
+            observation_detail = '最近一次采集失败，需要修复接入'
+        elif observation_status == 'partial':
+            point_type_labels = {
+                'jobs': '招聘',
+                'changelog': '更新日志',
+                'product_update': '产品更新',
+                'newsroom': '新闻中心',
+                'ir': '投资者关系',
+                'developer_docs': '开发者文档',
+            }
+            notable = [
+                f"{point_type_labels.get(row.get('point_type'), row.get('point_type') or '观察点')}：{row.get('status_label')}"
+                for row in point_rows
+                if row.get('status') not in {'pending', 'unverified'}
+            ]
+            if notable:
+                observation_detail = '；'.join(notable[:2])
+            elif any(row.get('status') == 'unverified' for row in point_rows):
+                observation_detail = '已执行检查，但旧记录不足以确认采集是否成功'
+            else:
+                observation_detail = f"已有 {connected_points}/{total_points} 个观察点产生运行证据"
+        elif observation_status == 'pending':
+            observation_detail = '观察对象已登记，采集器尚未接入'
+        else:
+            observation_detail = '历史运行记录不足，等待下一次采集确认'
         result.append({
             **company,
             'recent_7': len(recent_7),
@@ -1601,6 +1657,13 @@ def build_company_cards(company_list, now_date):
             'latest_title': latest_title,
             'latest_date': (latest.get('date') or '')[:10],
             'signal': signal,
+            'observation_status': observation_status,
+            'observation_label': observation_label,
+            'observation_detail': observation_detail,
+            'coverage_status': coverage_status,
+            'last_checked_at': (observation.get('last_checked_at') or '')[:10],
+            'connected_points': connected_points,
+            'total_points': total_points,
         })
     return result
 
@@ -1615,7 +1678,8 @@ def group_company_cards(company_list):
         grouped.append({
             'region': region,
             'total': len(companies),
-            'active': sum(1 for c in companies if c.get('count', 0) > 0),
+            'active': sum(1 for c in companies if c.get('observation_status') == 'active'),
+            'observed': sum(1 for c in companies if c.get('coverage_status') not in {'pending', 'unverified'}),
             'recent_30': sum(c.get('recent_30', 0) for c in companies),
             'quality_30': sum(c.get('quality_30', 0) for c in companies),
             'companies': companies,
@@ -1662,6 +1726,16 @@ def load_site_updates():
             'changes': [str(c) for c in changes if str(c).strip()],
         })
     return sorted(cleaned or fallback, key=lambda x: x.get('date', ''), reverse=True)
+
+
+def load_entity_observation_ledger():
+    path = os.path.join('data', 'entity_observation_ledger.json')
+    try:
+        with open(path, 'r', encoding='utf-8') as handle:
+            data = json.load(handle)
+        return data if isinstance(data, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        return {}
 
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
@@ -1788,6 +1862,7 @@ def build_display_context():
         'latest_visible_count': latest_visible_count,
         'batch_notice': batch_notice,
         'period_reference_date': period_reference_date,
+        'entity_observation_ledger': load_entity_observation_ledger(),
     }
 
 
@@ -1810,8 +1885,9 @@ def generate_html(force=False, preview_mode=False):
     latest_visible_count = context['latest_visible_count']
     batch_notice = context['batch_notice']
     period_reference_date = context['period_reference_date']
+    entity_observation_ledger = context['entity_observation_ledger']
 
-    preset_company_list = build_company_cards(preset_company_list, main_date)
+    preset_company_list = build_company_cards(preset_company_list, main_date, entity_observation_ledger)
     company_groups = group_company_cards(preset_company_list)
 
     # 历史tab：90天内除主tab批次之外的所有有内容日期
