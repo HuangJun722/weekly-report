@@ -1,25 +1,53 @@
 {
   "version": 1,
-  "generated_at": "2026-07-15T16:42:43.123265+08:00",
+  "generated_at": "2026-07-16T03:24:00.584899+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-15T16:42:43.123265+08:00",
+      "observed_at": "2026-07-16T03:24:00.584899+08:00",
       "jobs": [
+        {
+          "id": "744000137922823",
+          "title": "Senior Product Designer, Support",
+          "url": "https://www.grab.careers/en/jobs/744000137922823/senior-product-designer-support/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000137923709",
+          "title": "Senior Product Designer, Integrity",
+          "url": "https://www.grab.careers/en/jobs/744000137923709/senior-product-designer-integrity/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137916495",
+          "title": "Head, People Science",
+          "url": "https://www.grab.careers/en/jobs/744000137916495/head-people-science/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000137876590",
+          "title": "Finance Associate, RTR - General Ledger",
+          "url": "https://www.grab.careers/en/jobs/744000137876590/finance-associate-rtr-general-ledger/",
+          "function_tags": []
+        },
+        {
+          "id": "744000137836764",
+          "title": "Assistant Manager, Country Business Development",
+          "url": "https://www.grab.careers/en/jobs/744000137836764/assistant-manager-country-business-development/",
+          "function_tags": [
+            "sales"
+          ]
+        },
         {
           "id": "744000137808584",
           "title": "Integration Engineer, Orchestration",
           "url": "https://www.grab.careers/en/jobs/744000137808584/integration-engineer-orchestration/",
           "function_tags": [
             "engineering"
-          ]
-        },
-        {
-          "id": "744000137801819",
-          "title": "Assistant Manager, Country Business Development",
-          "url": "https://www.grab.careers/en/jobs/744000137801819/assistant-manager-country-business-development/",
-          "function_tags": [
-            "sales"
           ]
         },
         {
@@ -125,42 +153,12 @@
           "title": "Associate, Business Projects",
           "url": "https://www.grab.careers/en/jobs/744000137419209/associate-business-projects/",
           "function_tags": []
-        },
-        {
-          "id": "744000137400002",
-          "title": "Senior Software Engineer, Fullstack",
-          "url": "https://www.grab.careers/en/jobs/744000137400002/senior-software-engineer-fullstack/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000137401125",
-          "title": "Senior Data Analyst",
-          "url": "https://www.grab.careers/en/jobs/744000137401125/senior-data-analyst/",
-          "function_tags": []
-        },
-        {
-          "id": "744000137366879",
-          "title": "Senior Strategy Manager, Financial Services & Omnicommerce",
-          "url": "https://www.grab.careers/en/jobs/744000137366879/senior-strategy-manager-financial-services-omnicommerce/",
-          "function_tags": [
-            "payments"
-          ]
-        },
-        {
-          "id": "744000137363369",
-          "title": "Senior Program Manager, Tech Financial Operations & Automation",
-          "url": "https://www.grab.careers/en/jobs/744000137363369/senior-program-manager-tech-financial-operations-automation/",
-          "function_tags": [
-            "operations"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-15T16:42:43.123265+08:00",
+      "observed_at": "2026-07-16T03:24:00.584899+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -493,6 +491,14 @@
           ]
         },
         {
+          "id": "7597490",
+          "title": "Account Executive, Startups Hunter (India)",
+          "url": "https://stripe.com/jobs/listing/account-executive-startups-hunter-india/7597490",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
           "id": "7875540",
           "title": "Accounting Technical Solutions Lead",
           "url": "https://stripe.com/jobs/listing/accounting-technical-solutions-lead/7875540",
@@ -556,12 +562,6 @@
             "payments",
             "operations"
           ]
-        },
-        {
-          "id": "8060391",
-          "title": "Air Cleaning Technologies Associate",
-          "url": "https://stripe.com/jobs/listing/air-cleaning-technologies-associate/8060391",
-          "function_tags": []
         },
         {
           "id": "8012497",
@@ -653,14 +653,6 @@
           ]
         },
         {
-          "id": "8062299",
-          "title": "Backend Engineer, Financial Connections",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-financial-connections/8062299",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
           "id": "6163230",
           "title": "Backend Engineer, Payments and Risk",
           "url": "https://stripe.com/jobs/listing/backend-engineer-payments-and-risk/6163230",
@@ -669,12 +661,31 @@
             "payments",
             "compliance"
           ]
+        },
+        {
+          "id": "7232592",
+          "title": "Backend Engineer, Payments and Risk",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-payments-and-risk/7232592",
+          "function_tags": [
+            "engineering",
+            "payments",
+            "compliance"
+          ]
+        },
+        {
+          "id": "7895287",
+          "title": "Backend Engineer, Payments Experiences",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-payments-experiences/7895287",
+          "function_tags": [
+            "engineering",
+            "payments"
+          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-15T16:42:43.123265+08:00",
+      "observed_at": "2026-07-16T03:24:00.584899+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -713,14 +724,6 @@
           "title": "Staff Brand Designer Remote - Americas",
           "url": "https://www.shopify.com/careers/staff-brand-designer_78e6e7f3-f0a4-4522-bcb9-ed9165c9196c",
           "function_tags": []
-        },
-        {
-          "id": "a5116d45-536d-4d56-815e-73a10c9fe927",
-          "title": "Lead, Risk & Internal Audit Remote - Americas",
-          "url": "https://www.shopify.com/careers/lead-risk-internal-audit_a5116d45-536d-4d56-815e-73a10c9fe927",
-          "function_tags": [
-            "compliance"
-          ]
         },
         {
           "id": "5df30cc8-d4dc-4183-a2d8-1eba0108dccc",
