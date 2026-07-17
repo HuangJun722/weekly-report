@@ -1,11 +1,19 @@
 {
   "version": 1,
-  "generated_at": "2026-07-17T03:23:42.057050+08:00",
+  "generated_at": "2026-07-17T11:58:00.602520+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-17T03:23:42.057050+08:00",
+      "observed_at": "2026-07-17T11:58:00.602520+08:00",
       "jobs": [
+        {
+          "id": "744000138211389",
+          "title": "Lead Software Engineer, Mobile (iOS|Flutter)",
+          "url": "https://www.grab.careers/en/jobs/744000138211389/lead-software-engineer-mobile-ios-flutter/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000138121215",
           "title": "Solutions Specialist (EPM), Finance Systems",
@@ -148,18 +156,12 @@
           "title": "Team Lead, Merchant Strategy",
           "url": "https://www.grab.careers/en/jobs/744000137800429/team-lead-merchant-strategy/",
           "function_tags": []
-        },
-        {
-          "id": "744000137795629",
-          "title": "Lead, Community Engagement Surabaya",
-          "url": "https://www.grab.careers/en/jobs/744000137795629/lead-community-engagement-surabaya/",
-          "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-17T03:23:42.057050+08:00",
+      "observed_at": "2026-07-17T11:58:00.602520+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -516,6 +518,12 @@
           ]
         },
         {
+          "id": "8064702",
+          "title": "Account Manager, Privy",
+          "url": "https://stripe.com/jobs/listing/account-manager-privy/8064702",
+          "function_tags": []
+        },
+        {
           "id": "7875540",
           "title": "Accounting Technical Solutions Lead",
           "url": "https://stripe.com/jobs/listing/accounting-technical-solutions-lead/7875540",
@@ -670,22 +678,12 @@
             "payments",
             "compliance"
           ]
-        },
-        {
-          "id": "7232592",
-          "title": "Backend Engineer, Payments and Risk",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-payments-and-risk/7232592",
-          "function_tags": [
-            "engineering",
-            "payments",
-            "compliance"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-17T03:23:42.057050+08:00",
+      "observed_at": "2026-07-17T11:58:00.602520+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",

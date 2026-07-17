@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-07-17T03:23:42.057050+08:00",
+  "observed_at": "2026-07-17T11:58:00.602520+08:00",
   "source_count": 3,
   "raw_count": 118,
   "source_stats": {
@@ -8,39 +8,31 @@
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 20,
+      "count": 2,
       "inventory_count": 20,
-      "signal_count": 1,
-      "added_count": 10,
-      "removed_count": 10,
+      "signal_count": 0,
+      "added_count": 1,
+      "removed_count": 1,
       "clusters": {
-        "engineering": 5,
-        "operations": 4,
-        "sales": 1,
-        "compliance": 1
+        "engineering": 1
       },
-      "removed_clusters": {
-        "engineering": 4,
-        "operations": 2,
-        "partnerships": 2,
-        "compliance": 1
-      }
+      "removed_clusters": {}
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 4,
+      "count": 2,
       "inventory_count": 65,
-      "signal_count": 1,
-      "added_count": 2,
-      "removed_count": 2,
-      "clusters": {
-        "sales": 2
-      },
+      "signal_count": 0,
+      "added_count": 1,
+      "removed_count": 1,
+      "clusters": {},
       "removed_clusters": {
-        "engineering": 1
+        "engineering": 1,
+        "payments": 1,
+        "compliance": 1
       }
     },
     "Shopify Jobs": {
@@ -57,36 +49,5 @@
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [
-    {
-      "entity": "Grab",
-      "observed_at": "2026-07-17T03:23:42.057050+08:00",
-      "added_count": 10,
-      "removed_count": 10,
-      "clusters": {
-        "engineering": 5,
-        "operations": 4,
-        "sales": 1,
-        "compliance": 1
-      },
-      "removed_clusters": {
-        "engineering": 4,
-        "operations": 2,
-        "partnerships": 2,
-        "compliance": 1
-      }
-    },
-    {
-      "entity": "Stripe",
-      "observed_at": "2026-07-17T03:23:42.057050+08:00",
-      "added_count": 2,
-      "removed_count": 2,
-      "clusters": {
-        "sales": 2
-      },
-      "removed_clusters": {
-        "engineering": 1
-      }
-    }
-  ]
+  "candidate_signals": []
 }
