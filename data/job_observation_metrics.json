@@ -1,39 +1,50 @@
 {
-  "observed_at": "2026-07-17T11:58:00.602520+08:00",
+  "observed_at": "2026-07-18T03:21:35.937248+08:00",
   "source_count": 3,
-  "raw_count": 118,
+  "raw_count": 119,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
+      "count": 26,
       "inventory_count": 20,
-      "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 1,
+      "signal_count": 1,
+      "added_count": 13,
+      "removed_count": 13,
       "clusters": {
-        "engineering": 1
+        "ai": 2,
+        "engineering": 6,
+        "operations": 5,
+        "payments": 1
       },
-      "removed_clusters": {}
+      "removed_clusters": {
+        "engineering": 2,
+        "operations": 4,
+        "compliance": 1,
+        "ai": 1,
+        "partnerships": 1,
+        "sales": 1
+      }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
-      "inventory_count": 65,
+      "count": 3,
+      "inventory_count": 66,
       "signal_count": 0,
-      "added_count": 1,
+      "added_count": 2,
       "removed_count": 1,
-      "clusters": {},
-      "removed_clusters": {
+      "clusters": {
+        "sales": 1,
         "engineering": 1,
         "payments": 1,
         "compliance": 1
-      }
+      },
+      "removed_clusters": {}
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
@@ -49,5 +60,26 @@
       "removed_clusters": {}
     }
   },
-  "candidate_signals": []
+  "candidate_signals": [
+    {
+      "entity": "Grab",
+      "observed_at": "2026-07-18T03:21:35.937248+08:00",
+      "added_count": 13,
+      "removed_count": 13,
+      "clusters": {
+        "ai": 2,
+        "engineering": 6,
+        "operations": 5,
+        "payments": 1
+      },
+      "removed_clusters": {
+        "engineering": 2,
+        "operations": 4,
+        "compliance": 1,
+        "ai": 1,
+        "partnerships": 1,
+        "sales": 1
+      }
+    }
+  ]
 }
