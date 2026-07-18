@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-07-18T03:21:35.937248+08:00",
+  "generated_at": "2026-07-18T11:52:39.252999+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-18T03:21:35.937248+08:00",
+      "observed_at": "2026-07-18T11:52:39.252999+08:00",
       "jobs": [
         {
           "id": "744000138323608",
@@ -168,7 +168,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-18T03:21:35.937248+08:00",
+      "observed_at": "2026-07-18T11:52:39.252999+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -702,7 +702,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-18T03:21:35.937248+08:00",
+      "observed_at": "2026-07-18T11:52:39.252999+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -911,6 +911,14 @@
           "id": "062c9a47-4f38-45ed-b6c1-76aadec734e2",
           "title": "Merchant Support Advisor, Ireland Remote - Ireland",
           "url": "https://www.shopify.com/careers/merchant-support-advisor-ireland_062c9a47-4f38-45ed-b6c1-76aadec734e2",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "663c880c-ba78-464a-a48b-10d4a256c2f9",
+          "title": "Merchant Support Advisor, Singapore Remote - Singapore",
+          "url": "https://www.shopify.com/careers/merchant-support-advisor-singapore_663c880c-ba78-464a-a48b-10d4a256c2f9",
           "function_tags": [
             "operations"
           ]

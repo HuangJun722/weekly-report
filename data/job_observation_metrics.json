@@ -1,49 +1,32 @@
 {
-  "observed_at": "2026-07-18T03:21:35.937248+08:00",
+  "observed_at": "2026-07-18T11:52:39.252999+08:00",
   "source_count": 3,
-  "raw_count": 119,
+  "raw_count": 120,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 26,
+      "count": 0,
       "inventory_count": 20,
-      "signal_count": 1,
-      "added_count": 13,
-      "removed_count": 13,
-      "clusters": {
-        "ai": 2,
-        "engineering": 6,
-        "operations": 5,
-        "payments": 1
-      },
-      "removed_clusters": {
-        "engineering": 2,
-        "operations": 4,
-        "compliance": 1,
-        "ai": 1,
-        "partnerships": 1,
-        "sales": 1
-      }
+      "signal_count": 0,
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 3,
+      "count": 0,
       "inventory_count": 66,
       "signal_count": 0,
-      "added_count": 2,
-      "removed_count": 1,
-      "clusters": {
-        "sales": 1,
-        "engineering": 1,
-        "payments": 1,
-        "compliance": 1
-      },
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
       "removed_clusters": {}
     },
     "Shopify Jobs": {
@@ -51,35 +34,16 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
-      "inventory_count": 33,
+      "count": 1,
+      "inventory_count": 34,
       "signal_count": 0,
-      "added_count": 0,
+      "added_count": 1,
       "removed_count": 0,
-      "clusters": {},
+      "clusters": {
+        "operations": 1
+      },
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [
-    {
-      "entity": "Grab",
-      "observed_at": "2026-07-18T03:21:35.937248+08:00",
-      "added_count": 13,
-      "removed_count": 13,
-      "clusters": {
-        "ai": 2,
-        "engineering": 6,
-        "operations": 5,
-        "payments": 1
-      },
-      "removed_clusters": {
-        "engineering": 2,
-        "operations": 4,
-        "compliance": 1,
-        "ai": 1,
-        "partnerships": 1,
-        "sales": 1
-      }
-    }
-  ]
+  "candidate_signals": []
 }
