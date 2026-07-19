@@ -86098,6 +86098,55 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Lee Won-ju exit from DKT puts Kakao Enterprise leadership, cloud plan at risk - CHOSUNBIZ - Chosunbiz",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOeWRTQ01QTWt4Sk9tUjBtdWlFZFIwU2MxTW9zaU1rdlVickxhMTRjeVp0dW1QeVFrMmFzRUF4ODVBU3pTdDdQUzRTRlhxamJmNFZScWlzMFY5ZGhJdDI5cEtFeGJaNnBBZ0dwRTJHdFozX2sxM21laHc3Wm1aQXhZcUtrUWJjeTJFZUFZc0530gGOAUFVX3lxTE55ZFNDTVBNa3hKT21SMG11aUVkUjBTYzFNb3NpTWt2VWJyTGExNGN5WnR1bVB5UWsyYXNFQXg4NUFTelN0N1BTNFNGWHFqYmY0VlJxaXMwVjlkaEl0MjlwS0V4Ylo2cEFnR3BFMkd0WjNfazEzbWVodzdabVpBeFlxS2tRYmN5MkVlQVlzTnc?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Lee Won-ju exit from DKT ",
+      "reason": "亚太Kakao Enterprise因高管离职面临云计划风险",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-18",
+      "date": "2026-07-18",
+      "source_detail": "Chosunbiz",
+      "publisher": "Chosunbiz",
+      "image_url": "",
+      "published_at": "2026-07-18",
+      "observed_at": "2026-07-19T04:20:40.564982+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
     }
   ],
   "2026-07-19": []
