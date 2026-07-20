@@ -86481,7 +86481,302 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Netflix paid $587M for Ben Affleck’s AI filmmaking startup",
+      "url": "https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/",
+      "source": "TechCrunch",
+      "region": "全球",
+      "event_types": [
+        "other"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Netflix paid $587M for Be",
+      "reason": "全球科技行业动态",
+      "impact": "未知",
+      "insight_label": "背景补充",
+      "trend_topic": "背景补充 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-19",
+      "date": "2026-07-19",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-07-19",
+      "observed_at": "2026-07-20T04:34:03.250729+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "TechCrunch",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "持续观察"
+      ],
+      "opportunity_direction": "持续观察",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
     }
   ],
-  "2026-07-20": []
+  "2026-07-20": [
+    {
+      "title": "Kakao launches AI pet letters event in South Korea through Aug 14 - CHOSUNBIZ - Chosunbiz",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVng0cjh4cWNxQkN4eWlVTGJ4dGtjdmdiaWhvMFBVRWJqcmZZdGJ4bDhiY3E1QW5JWjBwc1RJdWJ2TGlBMVdWclUzX2QxWW4wYTd5QWRlQmw3OEdxdWRUMGZkVTFWR2lUQkgwdDY1NFNJTFhERFJlMmxSaEFBRGc0OEFBVjJMdGN2Zzg2YVVB0gGOAUFVX3lxTFBWeDRyOHhxY3FCQ3h5aVVMYnh0a2N2Z2JpaG8wUFVFYmpyZll0YnhsOGJjcTVBbklaMHBzVEl1YnZMaUExV1ZyVTNfZDFZbjBhN3lBZGVCbDc4R3F1ZFQwZmRVMVZHaVRCSDB0NjU0U0lMWEREUmUybFJoQUFEZzQ4QUFWMkx0Y3ZnODZhVUE?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Kakao launches AI pet let",
+      "reason": "韩国Kakao推出AI宠物信件活动，截止8月14日。",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-07-20",
+      "date": "2026-07-20",
+      "source_detail": "Chosunbiz",
+      "publisher": "Chosunbiz",
+      "image_url": "",
+      "published_at": "2026-07-20",
+      "observed_at": "2026-07-20T04:35:23.443247+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "Naver Launches Blogger Discovery Project, Featuring Nucksal as First Highlight - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1sZ3VNN2ZYaGtJR2JKODk2cG1UZWZfdmdUV3Rnc0V4RUFyTFh2RmhkX1BHdWxIbl9XaV9qTUM0bGl5TlBhQWExcmRlUTdrWHpHQXc0Vi04Ny1kakNBY1I0OU9UN3BnOHl4?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Naver Launches Blogger Di",
+      "reason": "韩国Naver启动博主发现项目，首推Nucksal。",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-20",
+      "date": "2026-07-20",
+      "source_detail": "아시아경제",
+      "publisher": "아시아경제",
+      "image_url": "",
+      "published_at": "2026-07-20",
+      "observed_at": "2026-07-20T04:35:24.434298+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback"
+    },
+    {
+      "title": "SBI Holdings Finalises Coinhako Majority Stake Acquisition After MAS Approval",
+      "url": "https://fintechnews.sg/134523/crypto/sbi-coinhako-acquisition/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "ma"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "SBI Holdings获MAS批准收购Coinhako多数股权",
+      "reason": "日本金融巨头收购新加坡合规加密交易所，亚太合规加密交易基础设施需求上升",
+      "impact": "亚太合规加密交易平台、区块链安全服务商",
+      "insight_label": "资金流向",
+      "trend_topic": "亚太加密合规整合",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-20",
+      "date": "2026-07-20",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://fintechnews.sg/wp-content/uploads/2026/07/SBI-Holdings-Finalises-Coinhako-Majority-Stake-Acquisition-After-MAS-Approval-2.webp",
+      "published_at": "2026-07-20",
+      "observed_at": "2026-07-20T04:34:03.653678+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "整合窗口"
+      ],
+      "opportunity_direction": "系统整合 / 数据迁移 / 组织协同工具 / 生态打通",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital",
+        "compliance"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "Malaysia turns into IPO factory, but can it produce long-term winners?",
+      "url": "https://dealstreetasia.com/stories/malaysia-se-asias-ipo-factory-489311/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "马来西亚IPO市场活跃，但长期赢家存疑",
+      "reason": "东南亚IPO市场活跃，马来西亚交易所成为区域融资中心，ICT企业上市和资本退出机会增加",
+      "impact": "东南亚投行、律所、审计机构",
+      "insight_label": "资金流向",
+      "trend_topic": "东南亚IPO热潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "",
+      "date": "2026-07-20",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2025/10/2025-10-22T071624Z_1_LYNXMPEL9L097_RTROPTP_4_MALAYSIA-BUDGET-scaled-e1773155639189.jpg?fit=2560,1604",
+      "observed_at": "2026-07-20T04:34:05.833204+00:00",
+      "date_source": "observed_at",
+      "date_confidence": "observed",
+      "date_parse_warning": "missing_published_at",
+      "published_at": "",
+      "date_basis": "observed_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    },
+    {
+      "title": "India: IFC invests $100m in L&T Finance to boost micro-loan portfolio",
+      "url": "https://dealstreetasia.com/stories/ifc-lt-finance-489271/",
+      "source": "DealStreetAsia",
+      "region": "亚太",
+      "event_types": [
+        "funding"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "IFC向L&T Finance投资$1亿扩大小额贷款组合",
+      "reason": "印度金融科技获国际资本注入，小额贷款数字化和风控技术需求上升",
+      "impact": "印度金融科技平台、信贷评分技术商",
+      "insight_label": "资金流向",
+      "trend_topic": "印度金融科技融资",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "",
+      "date": "2026-07-20",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.dealstreetasia.com/uploads/2018/07/small-business-reu-e1531893753796.jpg?fit=979,543",
+      "observed_at": "2026-07-20T04:34:05.833672+00:00",
+      "date_source": "observed_at",
+      "date_confidence": "observed",
+      "date_parse_warning": "missing_published_at",
+      "published_at": "",
+      "date_basis": "observed_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "DealStreetAsia",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete"
+    }
+  ]
 }
