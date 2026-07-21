@@ -1,11 +1,20 @@
 {
   "version": 1,
-  "generated_at": "2026-07-21T03:51:45.019118+08:00",
+  "generated_at": "2026-07-21T12:13:17.077311+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-21T03:51:45.019118+08:00",
+      "observed_at": "2026-07-21T12:13:17.077311+08:00",
       "jobs": [
+        {
+          "id": "744000138772750",
+          "title": "Senior Sales Operations Analyst",
+          "url": "https://www.grab.careers/en/jobs/744000138772750/senior-sales-operations-analyst/",
+          "function_tags": [
+            "sales",
+            "operations"
+          ]
+        },
         {
           "id": "744000138612228",
           "title": "Senior Software Engineer, Backend",
@@ -131,21 +140,12 @@
           "title": "Deal Desk, Senior Analyst",
           "url": "https://www.grab.careers/en/jobs/744000138323608/deal-desk-senior-analyst/",
           "function_tags": []
-        },
-        {
-          "id": "744000138301739",
-          "title": "Principal Machine Learning Engineer",
-          "url": "https://www.grab.careers/en/jobs/744000138301739/principal-machine-learning-engineer/",
-          "function_tags": [
-            "ai",
-            "engineering"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-21T03:51:45.019118+08:00",
+      "observed_at": "2026-07-21T12:13:17.077311+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -200,6 +200,14 @@
           "id": "7789539",
           "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
           "url": "https://stripe.com/jobs/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7893199",
+          "title": "Account Executive, Cross Border China",
+          "url": "https://stripe.com/jobs/listing/account-executive-cross-border-china/7893199",
           "function_tags": [
             "sales"
           ]
@@ -339,15 +347,6 @@
           ]
         },
         {
-          "id": "7680548",
-          "title": "Account Executive, Platforms Grower (AUNZ)",
-          "url": "https://stripe.com/jobs/listing/account-executive-platforms-grower-aunz/7680548",
-          "function_tags": [
-            "engineering",
-            "sales"
-          ]
-        },
-        {
           "id": "7857010",
           "title": "Account Executive, Platforms Hunter (French fluency)",
           "url": "https://stripe.com/jobs/listing/account-executive-platforms-hunter-french-fluency/7857010",
@@ -381,17 +380,18 @@
           ]
         },
         {
-          "id": "8040940",
-          "title": "Account Executive, Product Sales - Optimised Checkout",
-          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-optimised-checkout/8040940",
+          "id": "7456716",
+          "title": "Account Executive, Product Sales - Issuing and Treasury",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-issuing-and-treasury/7456716",
           "function_tags": [
+            "payments",
             "sales"
           ]
         },
         {
-          "id": "7456716",
-          "title": "Account Executive, Product Sales (BaaS)",
-          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-baas/7456716",
+          "id": "8040940",
+          "title": "Account Executive, Product Sales - Optimised Checkout",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-optimised-checkout/8040940",
           "function_tags": [
             "sales"
           ]
@@ -663,20 +663,12 @@
             "engineering",
             "payments"
           ]
-        },
-        {
-          "id": "7235875",
-          "title": "Backend Engineer, Privy",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-privy/7235875",
-          "function_tags": [
-            "engineering"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-21T03:51:45.019118+08:00",
+      "observed_at": "2026-07-21T12:13:17.077311+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -898,9 +890,9 @@
           ]
         },
         {
-          "id": "b1406750-be9c-425e-86dd-92b8f971b920",
+          "id": "d4bb473e-1be7-4774-93b3-075ed67077f4",
           "title": "Overnight Merchant Support Advisor, Canada Remote - Canada",
-          "url": "https://www.shopify.com/careers/overnight-merchant-support-advisor-canada_b1406750-be9c-425e-86dd-92b8f971b920",
+          "url": "https://www.shopify.com/careers/overnight-merchant-support-advisor-canada_d4bb473e-1be7-4774-93b3-075ed67077f4",
           "function_tags": [
             "operations"
           ]
