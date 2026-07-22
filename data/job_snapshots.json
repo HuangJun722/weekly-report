@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-07-22T03:43:32.854272+08:00",
+  "generated_at": "2026-07-22T12:14:48.532732+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-22T03:43:32.854272+08:00",
+      "observed_at": "2026-07-22T12:14:48.532732+08:00",
       "jobs": [
         {
           "id": "744000138878441",
@@ -154,7 +154,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-22T03:43:32.854272+08:00",
+      "observed_at": "2026-07-22T12:14:48.532732+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -663,29 +663,12 @@
             "payments",
             "compliance"
           ]
-        },
-        {
-          "id": "7895287",
-          "title": "Backend Engineer, Payments Experiences",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-payments-experiences/7895287",
-          "function_tags": [
-            "engineering",
-            "payments"
-          ]
-        },
-        {
-          "id": "7235875",
-          "title": "Backend Engineer, Privy",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-privy/7235875",
-          "function_tags": [
-            "engineering"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-22T03:43:32.854272+08:00",
+      "observed_at": "2026-07-22T12:14:48.532732+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -723,6 +706,12 @@
           "id": "78e6e7f3-f0a4-4522-bcb9-ed9165c9196c",
           "title": "Staff Brand Designer Remote - Americas",
           "url": "https://www.shopify.com/careers/staff-brand-designer_78e6e7f3-f0a4-4522-bcb9-ed9165c9196c",
+          "function_tags": []
+        },
+        {
+          "id": "e1c60e78-e451-4242-8473-5b8217394c36",
+          "title": "Lead, Electronic Money Accounting Remote - United Kingdom",
+          "url": "https://www.shopify.com/careers/lead-electronic-money-accounting_e1c60e78-e451-4242-8473-5b8217394c36",
           "function_tags": []
         },
         {
@@ -802,12 +791,6 @@
           "function_tags": [
             "compliance"
           ]
-        },
-        {
-          "id": "c7c76dd6-5e57-41fe-8e8a-39ce72385cfa",
-          "title": "Money Laundering Reporting Officer (MLRO) Remote - Luxembourg",
-          "url": "https://www.shopify.com/careers/money-laundering-reporting-officer-mlro_c7c76dd6-5e57-41fe-8e8a-39ce72385cfa",
-          "function_tags": []
         },
         {
           "id": "5d736d32-f16c-4a40-8adf-e6379943017a",
