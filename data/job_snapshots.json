@@ -1,11 +1,57 @@
 {
   "version": 1,
-  "generated_at": "2026-07-23T12:12:52.951122+08:00",
+  "generated_at": "2026-07-24T03:38:00.717177+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-23T12:12:52.951122+08:00",
+      "observed_at": "2026-07-24T03:38:00.717177+08:00",
       "jobs": [
+        {
+          "id": "744000139286050",
+          "title": "IT Executive",
+          "url": "https://www.grab.careers/en/jobs/744000139286050/it-executive/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139266530",
+          "title": "KAM GrabFood, Associate",
+          "url": "https://www.grab.careers/en/jobs/744000139266530/kam-grabfood-associate/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139250539",
+          "title": "Intern, Regional Public Affairs",
+          "url": "https://www.grab.careers/en/jobs/744000139250539/intern-regional-public-affairs/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139243869",
+          "title": "Associate, Collections Analytics and QC",
+          "url": "https://www.grab.careers/en/jobs/744000139243869/associate-collections-analytics-and-qc/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139236119",
+          "title": "Senior Engineering Manager, Defence",
+          "url": "https://www.grab.careers/en/jobs/744000139236119/senior-engineering-manager-defence/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000139213779",
+          "title": "Specialist, Account Management - GrabFood",
+          "url": "https://www.grab.careers/en/jobs/744000139213779/specialist-account-management-grabfood/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139198379",
+          "title": "GrabSupport Operations Team Lead",
+          "url": "https://www.grab.careers/en/jobs/744000139198379/grabsupport-operations-team-lead/",
+          "function_tags": [
+            "operations"
+          ]
+        },
         {
           "id": "744000139193219",
           "title": "Manager, GrabForBusiness Partnerships",
@@ -106,62 +152,12 @@
           "function_tags": [
             "sales"
           ]
-        },
-        {
-          "id": "744000138988249",
-          "title": "Software Engineer, Flutter",
-          "url": "https://www.grab.careers/en/jobs/744000138988249/software-engineer-flutter/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000138988149",
-          "title": "Senior Software Engineer, Mobile (Flutter)",
-          "url": "https://www.grab.careers/en/jobs/744000138988149/senior-software-engineer-mobile-flutter/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000138852686",
-          "title": "GrabFin Process Management and Data Analyst Associate",
-          "url": "https://www.grab.careers/en/jobs/744000138852686/grabfin-process-management-and-data-analyst-associate/",
-          "function_tags": []
-        },
-        {
-          "id": "744000138837871",
-          "title": "Regional Manager, Category Management",
-          "url": "https://www.grab.careers/en/jobs/744000138837871/regional-manager-category-management/",
-          "function_tags": []
-        },
-        {
-          "id": "744000138814189",
-          "title": "Merchant Sales Executive, OmniCommerce",
-          "url": "https://www.grab.careers/en/jobs/744000138814189/merchant-sales-executive-omnicommerce/",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "744000138807562",
-          "title": "Project Manager & GTM, Self-Serve Business",
-          "url": "https://www.grab.careers/en/jobs/744000138807562/project-manager-gtm-self-serve-business/",
-          "function_tags": []
-        },
-        {
-          "id": "744000138802949",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000138802949/senior-software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-23T12:12:52.951122+08:00",
+      "observed_at": "2026-07-24T03:38:00.717177+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -253,14 +249,6 @@
           ]
         },
         {
-          "id": "7717676",
-          "title": "Account Executive, Enterprise Grower (Australia)",
-          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-grower-australia/7717676",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
           "id": "7458833",
           "title": "Account Executive, Enterprise Hunter (French fluency)",
           "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter-french-fluency/7458833",
@@ -316,14 +304,6 @@
           "id": "8024368",
           "title": "Account Executive, Funded Startups - Expansion",
           "url": "https://stripe.com/jobs/listing/account-executive-funded-startups-expansion/8024368",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "8022645",
-          "title": "Account Executive, FX and Multi-Currency",
-          "url": "https://stripe.com/jobs/listing/account-executive-fx-and-multi-currency/8022645",
           "function_tags": [
             "sales"
           ]
@@ -677,12 +657,54 @@
             "engineering",
             "payments"
           ]
+        },
+        {
+          "id": "7235875",
+          "title": "Backend Engineer, Privy",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-privy/7235875",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "4921361",
+          "title": "Backend Engineer/API, Payments and Risk",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-api-payments-and-risk/4921361",
+          "function_tags": [
+            "engineering",
+            "payments",
+            "compliance"
+          ]
+        },
+        {
+          "id": "6176758",
+          "title": "Backend/API Engineer, Money as a Service",
+          "url": "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service/6176758",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7369543",
+          "title": "Backend/API Engineer, Money as a Service",
+          "url": "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service/7369543",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "7957302",
+          "title": "Bridge Operations Associate",
+          "url": "https://stripe.com/jobs/listing/bridge-operations-associate/7957302",
+          "function_tags": [
+            "operations"
+          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-23T12:12:52.951122+08:00",
+      "observed_at": "2026-07-24T03:38:00.717177+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -808,14 +830,6 @@
           "function_tags": []
         },
         {
-          "id": "7ad50cf9-4f0f-4c5f-8f79-7d397caeff8e",
-          "title": "Head of Risk & Compliance and Authorised Manager Remote - Luxembourg",
-          "url": "https://www.shopify.com/careers/head-of-risk-compliance-and-authorised-manager_7ad50cf9-4f0f-4c5f-8f79-7d397caeff8e",
-          "function_tags": [
-            "compliance"
-          ]
-        },
-        {
           "id": "5d736d32-f16c-4a40-8adf-e6379943017a",
           "title": "Senior Lead, Product Operations, Growth Remote - Americas",
           "url": "https://www.shopify.com/careers/senior-lead-product-operations-growth_5d736d32-f16c-4a40-8adf-e6379943017a",
@@ -878,14 +892,6 @@
           "function_tags": [
             "partnerships",
             "sales"
-          ]
-        },
-        {
-          "id": "96e5389e-9b7d-49a1-89b8-8d38ac22145c",
-          "title": "Live Site Operations Specialist (PST) Remote - Americas, Canada",
-          "url": "https://www.shopify.com/careers/live-site-operations-specialist-pst_96e5389e-9b7d-49a1-89b8-8d38ac22145c",
-          "function_tags": [
-            "operations"
           ]
         },
         {
