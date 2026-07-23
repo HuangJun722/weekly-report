@@ -1,11 +1,27 @@
 {
   "version": 1,
-  "generated_at": "2026-07-23T03:37:55.224141+08:00",
+  "generated_at": "2026-07-23T12:12:52.951122+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-23T03:37:55.224141+08:00",
+      "observed_at": "2026-07-23T12:12:52.951122+08:00",
       "jobs": [
+        {
+          "id": "744000139193219",
+          "title": "Manager, GrabForBusiness Partnerships",
+          "url": "https://www.grab.careers/en/jobs/744000139193219/manager-grabforbusiness-partnerships/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "744000139193179",
+          "title": "Manager, GrabForBusiness Partnerships",
+          "url": "https://www.grab.careers/en/jobs/744000139193179/manager-grabforbusiness-partnerships/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
         {
           "id": "744000139048980",
           "title": "Product Operations Assistant Manager",
@@ -140,24 +156,12 @@
           "function_tags": [
             "engineering"
           ]
-        },
-        {
-          "id": "744000138801559",
-          "title": "Senior Solution Specialist, Finance Systems",
-          "url": "https://www.grab.careers/en/jobs/744000138801559/senior-solution-specialist-finance-systems/",
-          "function_tags": []
-        },
-        {
-          "id": "744000138796726",
-          "title": "Senior Solution Specialist, Finance Systems",
-          "url": "https://www.grab.careers/en/jobs/744000138796726/senior-solution-specialist-finance-systems/",
-          "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-23T03:37:55.224141+08:00",
+      "observed_at": "2026-07-23T12:12:52.951122+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -305,14 +309,6 @@
           "url": "https://stripe.com/jobs/listing/account-executive-financial-services-grower/8048193",
           "function_tags": [
             "payments",
-            "sales"
-          ]
-        },
-        {
-          "id": "8017336",
-          "title": "Account Executive, Funded Startups - Expansion",
-          "url": "https://stripe.com/jobs/listing/account-executive-funded-startups-expansion/8017336",
-          "function_tags": [
             "sales"
           ]
         },
@@ -686,7 +682,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-23T03:37:55.224141+08:00",
+      "observed_at": "2026-07-23T12:12:52.951122+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -731,6 +727,15 @@
           "title": "Lead, Electronic Money Accounting Remote - United Kingdom",
           "url": "https://www.shopify.com/careers/lead-electronic-money-accounting_e1c60e78-e451-4242-8473-5b8217394c36",
           "function_tags": []
+        },
+        {
+          "id": "622368b1-217f-4cce-a2d4-117d74ffe339",
+          "title": "Lead Financial Analyst, AI Infrastructure Remote - Americas",
+          "url": "https://www.shopify.com/careers/lead-financial-analyst-ai-infrastructure_622368b1-217f-4cce-a2d4-117d74ffe339",
+          "function_tags": [
+            "ai",
+            "engineering"
+          ]
         },
         {
           "id": "5df30cc8-d4dc-4183-a2d8-1eba0108dccc",
