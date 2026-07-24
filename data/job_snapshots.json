@@ -1,11 +1,45 @@
 {
   "version": 1,
-  "generated_at": "2026-07-24T03:38:00.717177+08:00",
+  "generated_at": "2026-07-24T12:11:44.634438+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-24T03:38:00.717177+08:00",
+      "observed_at": "2026-07-24T12:11:44.634438+08:00",
       "jobs": [
+        {
+          "id": "744000139461894",
+          "title": "Lead Product Manager, Customer Lifecycle Management",
+          "url": "https://www.grab.careers/en/jobs/744000139461894/lead-product-manager-customer-lifecycle-management/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139453527",
+          "title": "Senior Data Scientist (Analytics)",
+          "url": "https://www.grab.careers/en/jobs/744000139453527/senior-data-scientist-analytics/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139456037",
+          "title": "Data Scientist (Analytics), OmniCommerce",
+          "url": "https://www.grab.careers/en/jobs/744000139456037/data-scientist-analytics-omnicommerce/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139436093",
+          "title": "Senior Engineering Manager, Consumer Experience",
+          "url": "https://www.grab.careers/en/jobs/744000139436093/senior-engineering-manager-consumer-experience/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000139433819",
+          "title": "Intern, Software Engineer Mobile",
+          "url": "https://www.grab.careers/en/jobs/744000139433819/intern-software-engineer-mobile/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000139286050",
           "title": "IT Executive",
@@ -111,53 +145,12 @@
           "title": "Financial Planning & Analysis Assistant Manager",
           "url": "https://www.grab.careers/en/jobs/744000139003505/financial-planning-analysis-assistant-manager/",
           "function_tags": []
-        },
-        {
-          "id": "744000139003029",
-          "title": "Grab Support Governance Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000139003029/grab-support-governance-specialist/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000139001680",
-          "title": "Grab Support Governance Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000139001680/grab-support-governance-specialist/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000138995401",
-          "title": "Senior Software Engineer, Mobile (iOS)",
-          "url": "https://www.grab.careers/en/jobs/744000138995401/senior-software-engineer-mobile-ios/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000138989472",
-          "title": "Senior Platform Developer, Commercial Systems - Salesforce",
-          "url": "https://www.grab.careers/en/jobs/744000138989472/senior-platform-developer-commercial-systems-salesforce/",
-          "function_tags": [
-            "engineering",
-            "sales"
-          ]
-        },
-        {
-          "id": "744000138988359",
-          "title": "Associate, Sales (Omnicommerce)",
-          "url": "https://www.grab.careers/en/jobs/744000138988359/associate-sales-omnicommerce/",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-24T03:38:00.717177+08:00",
+      "observed_at": "2026-07-24T12:11:44.634438+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -555,6 +548,14 @@
           "function_tags": []
         },
         {
+          "id": "8074125",
+          "title": "Android BSP Engineer",
+          "url": "https://stripe.com/jobs/listing/android-bsp-engineer/8074125",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
           "id": "7543559",
           "title": "Android Engineer, Terminal",
           "url": "https://stripe.com/jobs/listing/android-engineer-terminal/7543559",
@@ -691,20 +692,12 @@
           "function_tags": [
             "engineering"
           ]
-        },
-        {
-          "id": "7957302",
-          "title": "Bridge Operations Associate",
-          "url": "https://stripe.com/jobs/listing/bridge-operations-associate/7957302",
-          "function_tags": [
-            "operations"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-24T03:38:00.717177+08:00",
+      "observed_at": "2026-07-24T12:11:44.634438+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
