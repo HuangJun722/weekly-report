@@ -1,25 +1,25 @@
 {
-  "observed_at": "2026-07-24T12:11:44.634438+08:00",
+  "observed_at": "2026-07-25T03:40:45.361043+08:00",
   "source_count": 3,
-  "raw_count": 120,
+  "raw_count": 118,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 10,
+      "count": 14,
       "inventory_count": 20,
       "signal_count": 1,
-      "added_count": 5,
-      "removed_count": 5,
+      "added_count": 7,
+      "removed_count": 7,
       "clusters": {
-        "engineering": 2
+        "engineering": 2,
+        "operations": 1
       },
       "removed_clusters": {
-        "operations": 2,
-        "engineering": 2,
-        "sales": 2
+        "engineering": 3,
+        "operations": 2
       }
     },
     "Stripe Jobs": {
@@ -27,16 +27,14 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
-      "inventory_count": 67,
-      "signal_count": 0,
+      "count": 3,
+      "inventory_count": 66,
+      "signal_count": 1,
       "added_count": 1,
-      "removed_count": 1,
-      "clusters": {
-        "engineering": 1
-      },
+      "removed_count": 2,
+      "clusters": {},
       "removed_clusters": {
-        "operations": 1
+        "engineering": 2
       }
     },
     "Shopify Jobs": {
@@ -44,28 +42,40 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
-      "inventory_count": 33,
+      "count": 1,
+      "inventory_count": 32,
       "signal_count": 0,
       "added_count": 0,
-      "removed_count": 0,
+      "removed_count": 1,
       "clusters": {},
-      "removed_clusters": {}
+      "removed_clusters": {
+        "operations": 1
+      }
     }
   },
   "candidate_signals": [
     {
       "entity": "Grab",
-      "observed_at": "2026-07-24T12:11:44.634438+08:00",
-      "added_count": 5,
-      "removed_count": 5,
+      "observed_at": "2026-07-25T03:40:45.361043+08:00",
+      "added_count": 7,
+      "removed_count": 7,
       "clusters": {
-        "engineering": 2
+        "engineering": 2,
+        "operations": 1
       },
       "removed_clusters": {
-        "operations": 2,
-        "engineering": 2,
-        "sales": 2
+        "engineering": 3,
+        "operations": 2
+      }
+    },
+    {
+      "entity": "Stripe",
+      "observed_at": "2026-07-25T03:40:45.361043+08:00",
+      "added_count": 1,
+      "removed_count": 2,
+      "clusters": {},
+      "removed_clusters": {
+        "engineering": 2
       }
     }
   ]
