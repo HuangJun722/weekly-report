@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-07-25T03:40:45.361043+08:00",
+  "generated_at": "2026-07-25T12:07:00.939958+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-25T03:40:45.361043+08:00",
+      "observed_at": "2026-07-25T12:07:00.939958+08:00",
       "jobs": [
         {
           "id": "744000139556001",
@@ -145,7 +145,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-25T03:40:45.361043+08:00",
+      "observed_at": "2026-07-25T12:07:00.939958+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -616,6 +616,14 @@
           ]
         },
         {
+          "id": "8084195",
+          "title": "Backend Engineer, Credit Decisions",
+          "url": "https://stripe.com/jobs/listing/backend-engineer-credit-decisions/8084195",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
           "id": "7913700",
           "title": "Backend Engineer, Data",
           "url": "https://stripe.com/jobs/listing/backend-engineer-data/7913700",
@@ -667,22 +675,12 @@
           "function_tags": [
             "engineering"
           ]
-        },
-        {
-          "id": "4921361",
-          "title": "Backend Engineer/API, Payments and Risk",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-api-payments-and-risk/4921361",
-          "function_tags": [
-            "engineering",
-            "payments",
-            "compliance"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-25T03:40:45.361043+08:00",
+      "observed_at": "2026-07-25T12:07:00.939958+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -870,14 +868,6 @@
           "function_tags": [
             "partnerships",
             "sales"
-          ]
-        },
-        {
-          "id": "a547ae99-1811-479b-9901-df0eedf661bb",
-          "title": "Manager, IAM Security Operations, Trust & Safety Remote - Canada , Americas",
-          "url": "https://www.shopify.com/careers/manager-iam-security-operations-trust-safety_a547ae99-1811-479b-9901-df0eedf661bb",
-          "function_tags": [
-            "operations"
           ]
         },
         {
