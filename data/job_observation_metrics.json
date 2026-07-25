@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-07-25T12:07:00.939958+08:00",
+  "observed_at": "2026-07-26T03:20:16.167191+08:00",
   "source_count": 3,
   "raw_count": 117,
   "source_stats": {
@@ -21,34 +21,26 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
+      "count": 0,
       "inventory_count": 66,
       "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 1,
-      "clusters": {
-        "engineering": 1
-      },
-      "removed_clusters": {
-        "engineering": 1,
-        "payments": 1,
-        "compliance": 1
-      }
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 1,
+      "count": 0,
       "inventory_count": 31,
       "signal_count": 0,
       "added_count": 0,
-      "removed_count": 1,
+      "removed_count": 0,
       "clusters": {},
-      "removed_clusters": {
-        "operations": 1
-      }
+      "removed_clusters": {}
     }
   },
   "candidate_signals": []

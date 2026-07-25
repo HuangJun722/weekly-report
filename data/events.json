@@ -96716,6 +96716,58 @@
       "needs_repair": true,
       "analysis_source": "doubao",
       "analysis_status": "partial"
+    },
+    {
+      "title": "NAVER, NVIDIA and Brookfield to Expand Korea’s National AI Factory Infrastructure Buildout - GlobeNewswire",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOOE1jX25lR0NiRHAxMWFfRHZxbUR1MzJ4Sm16UXE0dzlRbkVzeXRjS0dvbG9NZkdCLTlwSVBRcWRuQ1lPVnE3azZYeWNiSmVsTXBSenNBUHVsak5BdTFFWmN4NXhISk9lYkFTLWV4TE1KejdzTHdoZXFtbGtXa3RhdlFSMnpTLTA0amtmR21JOEcyU09pVU5NeEgyT2RCcEZCVHF5bklMSXhVd1Y5ZG0yX0ZFX3ZfeUNLOTh1MWhYU1NJaWNUWnA5Y0hhTWYyNV9QcWRreThTdE9UcnZIcHU4RUFCRmFTUWdKb1Fza2NGQXJHMnM?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "NAVER, NVIDIA and Brookfi",
+      "reason": "亚太科技公司战略动态",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Naver",
+      "article_date": "2026-07-25",
+      "date": "2026-07-25",
+      "source_detail": "GlobeNewswire",
+      "publisher": "GlobeNewswire",
+      "image_url": "",
+      "published_at": "2026-07-25",
+      "observed_at": "2026-07-25T19:21:37.140075+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Naver",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "generic_reason",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "fallback"
     }
-  ]
+  ],
+  "2026-07-26": []
 }
