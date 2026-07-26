@@ -1,11 +1,27 @@
 {
   "version": 1,
-  "generated_at": "2026-07-26T12:23:33.109132+08:00",
+  "generated_at": "2026-07-27T03:22:59.357209+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-26T12:23:33.109132+08:00",
+      "observed_at": "2026-07-27T03:22:59.357209+08:00",
       "jobs": [
+        {
+          "id": "744000139872109",
+          "title": "Senior Engineering Manager - Fraud",
+          "url": "https://www.grab.careers/en/jobs/744000139872109/senior-engineering-manager-fraud/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000139864399",
+          "title": "Software Engineer, Mobile (Android)",
+          "url": "https://www.grab.careers/en/jobs/744000139864399/software-engineer-mobile-android/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000139556001",
           "title": "Manager, Rewards",
@@ -104,14 +120,6 @@
           "function_tags": []
         },
         {
-          "id": "744000139236119",
-          "title": "Senior Engineering Manager, Defence",
-          "url": "https://www.grab.careers/en/jobs/744000139236119/senior-engineering-manager-defence/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
           "id": "744000139213779",
           "title": "Specialist, Account Management - GrabFood",
           "url": "https://www.grab.careers/en/jobs/744000139213779/specialist-account-management-grabfood/",
@@ -132,20 +140,12 @@
           "function_tags": [
             "partnerships"
           ]
-        },
-        {
-          "id": "744000139193179",
-          "title": "Manager, GrabForBusiness Partnerships",
-          "url": "https://www.grab.careers/en/jobs/744000139193179/manager-grabforbusiness-partnerships/",
-          "function_tags": [
-            "partnerships"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-26T12:23:33.109132+08:00",
+      "observed_at": "2026-07-27T03:22:59.357209+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -680,7 +680,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-26T12:23:33.109132+08:00",
+      "observed_at": "2026-07-27T03:22:59.357209+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
