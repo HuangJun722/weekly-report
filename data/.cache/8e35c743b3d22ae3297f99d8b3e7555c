@@ -4530,4 +4530,4 @@
 	</channel>
 </rss>
 
-<!-- plugin=object-cache-pro client=phpredis metric#hits=3070 metric#misses=42 metric#hit-ratio=98.7 metric#bytes=1630713 metric#prefetches=358 metric#store-reads=35 metric#store-writes=2 metric#store-hits=368 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=340.23 metric#ms-cache=10.71 metric#ms-cache-avg=0.2976 metric#ms-cache-ratio=3.2 -->
+<!-- plugin=object-cache-pro client=phpredis metric#hits=3068 metric#misses=42 metric#hit-ratio=98.7 metric#bytes=1630593 metric#prefetches=356 metric#store-reads=35 metric#store-writes=2 metric#store-hits=366 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=420.06 metric#ms-cache=11.54 metric#ms-cache-avg=0.3205 metric#ms-cache-ratio=2.8 -->
