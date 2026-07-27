@@ -1,11 +1,39 @@
 {
   "version": 1,
-  "generated_at": "2026-07-27T03:22:59.357209+08:00",
+  "generated_at": "2026-07-27T12:34:16.752242+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-27T03:22:59.357209+08:00",
+      "observed_at": "2026-07-27T12:34:16.752242+08:00",
       "jobs": [
+        {
+          "id": "744000139910669",
+          "title": "Data Analyst",
+          "url": "https://www.grab.careers/en/jobs/744000139910669/data-analyst/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139909100",
+          "title": "Assistant Manager - Performance Marketing & Paid Media",
+          "url": "https://www.grab.careers/en/jobs/744000139909100/assistant-manager-performance-marketing-paid-media/",
+          "function_tags": []
+        },
+        {
+          "id": "744000139908579",
+          "title": "Senior Network Platform Engineer, Cloud Infrastructure",
+          "url": "https://www.grab.careers/en/jobs/744000139908579/senior-network-platform-engineer-cloud-infrastructure/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000139908529",
+          "title": "Senior Network Platform Engineer, Cloud Infrastructure",
+          "url": "https://www.grab.careers/en/jobs/744000139908529/senior-network-platform-engineer-cloud-infrastructure/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000139872109",
           "title": "Senior Engineering Manager - Fraud",
@@ -112,40 +140,12 @@
           "title": "Intern, Regional Public Affairs",
           "url": "https://www.grab.careers/en/jobs/744000139250539/intern-regional-public-affairs/",
           "function_tags": []
-        },
-        {
-          "id": "744000139243869",
-          "title": "Associate, Collections Analytics and QC",
-          "url": "https://www.grab.careers/en/jobs/744000139243869/associate-collections-analytics-and-qc/",
-          "function_tags": []
-        },
-        {
-          "id": "744000139213779",
-          "title": "Specialist, Account Management - GrabFood",
-          "url": "https://www.grab.careers/en/jobs/744000139213779/specialist-account-management-grabfood/",
-          "function_tags": []
-        },
-        {
-          "id": "744000139198379",
-          "title": "GrabSupport Operations Team Lead",
-          "url": "https://www.grab.careers/en/jobs/744000139198379/grabsupport-operations-team-lead/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000139193219",
-          "title": "Manager, GrabForBusiness Partnerships",
-          "url": "https://www.grab.careers/en/jobs/744000139193219/manager-grabforbusiness-partnerships/",
-          "function_tags": [
-            "partnerships"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-27T03:22:59.357209+08:00",
+      "observed_at": "2026-07-27T12:34:16.752242+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -680,7 +680,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-27T03:22:59.357209+08:00",
+      "observed_at": "2026-07-27T12:34:16.752242+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
