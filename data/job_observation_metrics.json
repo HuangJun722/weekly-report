@@ -1,15 +1,15 @@
 {
-  "observed_at": "2026-07-28T11:58:12.629081+08:00",
+  "observed_at": "2026-07-29T03:44:30.120421+08:00",
   "source_count": 3,
-  "raw_count": 117,
+  "raw_count": 96,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
-      "status": "ok",
-      "fetch_status": "success",
+      "status": "failed",
+      "fetch_status": "failed",
       "count": 0,
-      "inventory_count": 20,
+      "inventory_count": 0,
       "signal_count": 0,
       "added_count": 0,
       "removed_count": 0,
@@ -27,13 +27,10 @@
       "added_count": 1,
       "removed_count": 1,
       "clusters": {
-        "engineering": 1,
-        "sales": 1
+        "engineering": 1
       },
       "removed_clusters": {
-        "engineering": 1,
-        "payments": 1,
-        "compliance": 1
+        "sales": 1
       }
     },
     "Shopify Jobs": {
@@ -42,7 +39,7 @@
       "status": "ok",
       "fetch_status": "success",
       "count": 1,
-      "inventory_count": 31,
+      "inventory_count": 30,
       "signal_count": 0,
       "added_count": 0,
       "removed_count": 1,
