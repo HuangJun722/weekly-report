@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-07-28T03:46:32.240140+08:00",
+  "generated_at": "2026-07-28T11:58:12.629081+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-28T03:46:32.240140+08:00",
+      "observed_at": "2026-07-28T11:58:12.629081+08:00",
       "jobs": [
         {
           "id": "744000140061339",
@@ -158,7 +158,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-28T03:46:32.240140+08:00",
+      "observed_at": "2026-07-28T11:58:12.629081+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -287,6 +287,15 @@
           "id": "8041894",
           "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
           "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-tier-2-grower/8041894",
+          "function_tags": [
+            "engineering",
+            "sales"
+          ]
+        },
+        {
+          "id": "8075473",
+          "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-tier-2-grower/8075473",
           "function_tags": [
             "engineering",
             "sales"
@@ -675,22 +684,12 @@
           "function_tags": [
             "engineering"
           ]
-        },
-        {
-          "id": "6163230",
-          "title": "Backend Engineer, Payments and Risk",
-          "url": "https://stripe.com/jobs/listing/backend-engineer-payments-and-risk/6163230",
-          "function_tags": [
-            "engineering",
-            "payments",
-            "compliance"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-28T03:46:32.240140+08:00",
+      "observed_at": "2026-07-28T11:58:12.629081+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -778,12 +777,6 @@
           "function_tags": [
             "partnerships"
           ]
-        },
-        {
-          "id": "b7099239-aecb-4cdb-a7da-dd49f0a34342",
-          "title": "Lead Editor, Content Performance Remote - Americas",
-          "url": "https://www.shopify.com/careers/lead-editor-content-performance_b7099239-aecb-4cdb-a7da-dd49f0a34342",
-          "function_tags": []
         },
         {
           "id": "c63835a4-3b4b-4591-8b88-7417339bb03d",
