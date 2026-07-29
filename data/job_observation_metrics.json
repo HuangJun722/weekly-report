@@ -1,33 +1,33 @@
 {
-  "observed_at": "2026-07-29T12:09:17.241389+08:00",
+  "observed_at": "2026-07-30T03:35:40.825398+08:00",
   "source_count": 3,
-  "raw_count": 118,
+  "raw_count": 52,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 20,
+      "count": 8,
       "inventory_count": 20,
       "signal_count": 1,
-      "added_count": 10,
-      "removed_count": 10,
+      "added_count": 4,
+      "removed_count": 4,
       "clusters": {
-        "engineering": 5,
-        "operations": 1
+        "engineering": 1
       },
       "removed_clusters": {
-        "engineering": 6
+        "engineering": 1,
+        "compliance": 2
       }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
-      "status": "ok",
-      "fetch_status": "success",
+      "status": "failed",
+      "fetch_status": "parse_failed",
       "count": 0,
-      "inventory_count": 66,
+      "inventory_count": 0,
       "signal_count": 0,
       "added_count": 0,
       "removed_count": 0,
@@ -42,24 +42,26 @@
       "count": 2,
       "inventory_count": 32,
       "signal_count": 0,
-      "added_count": 2,
-      "removed_count": 0,
+      "added_count": 1,
+      "removed_count": 1,
       "clusters": {},
-      "removed_clusters": {}
+      "removed_clusters": {
+        "operations": 1
+      }
     }
   },
   "candidate_signals": [
     {
       "entity": "Grab",
-      "observed_at": "2026-07-29T12:09:17.241389+08:00",
-      "added_count": 10,
-      "removed_count": 10,
+      "observed_at": "2026-07-30T03:35:40.825398+08:00",
+      "added_count": 4,
+      "removed_count": 4,
       "clusters": {
-        "engineering": 5,
-        "operations": 1
+        "engineering": 1
       },
       "removed_clusters": {
-        "engineering": 6
+        "engineering": 1,
+        "compliance": 2
       }
     }
   ]
