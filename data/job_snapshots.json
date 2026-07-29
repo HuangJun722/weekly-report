@@ -1,11 +1,83 @@
 {
   "version": 1,
-  "generated_at": "2026-07-29T03:44:30.120421+08:00",
+  "generated_at": "2026-07-29T12:09:17.241389+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-28T11:58:12.629081+08:00",
+      "observed_at": "2026-07-29T12:09:17.241389+08:00",
       "jobs": [
+        {
+          "id": "744000140372529",
+          "title": "Intern, Software Engineer Mobile (September Intake)",
+          "url": "https://www.grab.careers/en/jobs/744000140372529/intern-software-engineer-mobile-september-intake/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000140282844",
+          "title": "Assistant Manager, CRM",
+          "url": "https://www.grab.careers/en/jobs/744000140282844/assistant-manager-crm/",
+          "function_tags": []
+        },
+        {
+          "id": "744000140235849",
+          "title": "Software Engineer, Mobile (Android)",
+          "url": "https://www.grab.careers/en/jobs/744000140235849/software-engineer-mobile-android/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000140224356",
+          "title": "Lead Technical Program Manager",
+          "url": "https://www.grab.careers/en/jobs/744000140224356/lead-technical-program-manager/",
+          "function_tags": []
+        },
+        {
+          "id": "744000140209925",
+          "title": "Software Engineer, ios",
+          "url": "https://www.grab.careers/en/jobs/744000140209925/software-engineer-ios/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000140200692",
+          "title": "Senior Security Engineer - Threat Detection",
+          "url": "https://www.grab.careers/en/jobs/744000140200692/senior-security-engineer-threat-detection/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000140200559",
+          "title": "Senior Data Scientist (Business Transaction Platform)",
+          "url": "https://www.grab.careers/en/jobs/744000140200559/senior-data-scientist-business-transaction-platform/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000140189410",
+          "title": "Assistant Manager, Insurance Operations",
+          "url": "https://www.grab.careers/en/jobs/744000140189410/assistant-manager-insurance-operations/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000140182149",
+          "title": "Fleet Quality Associate",
+          "url": "https://www.grab.careers/en/jobs/744000140182149/fleet-quality-associate/",
+          "function_tags": []
+        },
+        {
+          "id": "744000140146559",
+          "title": "Senior Oracle Integration Specialist, Finance Systems",
+          "url": "https://www.grab.careers/en/jobs/744000140146559/senior-oracle-integration-specialist-finance-systems/",
+          "function_tags": []
+        },
         {
           "id": "744000140061339",
           "title": "Senior Software Engineer, Backend",
@@ -81,84 +153,12 @@
           "function_tags": [
             "compliance"
           ]
-        },
-        {
-          "id": "744000139915349",
-          "title": "Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000139915349/software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000139913120",
-          "title": "Lead Software Engineer, Mobile (Android)",
-          "url": "https://www.grab.careers/en/jobs/744000139913120/lead-software-engineer-mobile-android/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000139910669",
-          "title": "Data Analyst",
-          "url": "https://www.grab.careers/en/jobs/744000139910669/data-analyst/",
-          "function_tags": []
-        },
-        {
-          "id": "744000139909100",
-          "title": "Assistant Manager - Performance Marketing & Paid Media",
-          "url": "https://www.grab.careers/en/jobs/744000139909100/assistant-manager-performance-marketing-paid-media/",
-          "function_tags": []
-        },
-        {
-          "id": "744000139908579",
-          "title": "Senior Network Platform Engineer, Cloud Infrastructure",
-          "url": "https://www.grab.careers/en/jobs/744000139908579/senior-network-platform-engineer-cloud-infrastructure/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000139908529",
-          "title": "Senior Network Platform Engineer, Cloud Infrastructure",
-          "url": "https://www.grab.careers/en/jobs/744000139908529/senior-network-platform-engineer-cloud-infrastructure/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000139872109",
-          "title": "Senior Engineering Manager - Fraud",
-          "url": "https://www.grab.careers/en/jobs/744000139872109/senior-engineering-manager-fraud/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000139864399",
-          "title": "Software Engineer, Mobile (Android)",
-          "url": "https://www.grab.careers/en/jobs/744000139864399/software-engineer-mobile-android/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000139556001",
-          "title": "Manager, Rewards",
-          "url": "https://www.grab.careers/en/jobs/744000139556001/manager-rewards/",
-          "function_tags": []
-        },
-        {
-          "id": "744000139550697",
-          "title": "Manager, Talent Acquisition, Vietnam",
-          "url": "https://www.grab.careers/en/jobs/744000139550697/manager-talent-acquisition-vietnam/",
-          "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-07-29T03:44:30.120421+08:00",
+      "observed_at": "2026-07-29T12:09:17.241389+08:00",
       "jobs": [
         {
           "id": "7993151",
@@ -689,7 +689,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-29T03:44:30.120421+08:00",
+      "observed_at": "2026-07-29T12:09:17.241389+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -800,6 +800,18 @@
           "id": "99cdb469-2b33-49ae-a11e-95daab6ab948",
           "title": "Associate General Counsel, Product Remote - Americas",
           "url": "https://www.shopify.com/careers/associate-general-counsel-product_99cdb469-2b33-49ae-a11e-95daab6ab948",
+          "function_tags": []
+        },
+        {
+          "id": "32132c55-3c8c-4695-b117-477fe97629aa",
+          "title": "Professional Services Delivery Manager Remote - Americas",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
+          "function_tags": []
+        },
+        {
+          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
+          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
           "function_tags": []
         },
         {

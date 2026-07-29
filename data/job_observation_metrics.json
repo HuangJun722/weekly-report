@@ -1,51 +1,66 @@
 {
-  "observed_at": "2026-07-29T03:44:30.120421+08:00",
+  "observed_at": "2026-07-29T12:09:17.241389+08:00",
   "source_count": 3,
-  "raw_count": 96,
+  "raw_count": 118,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
-      "status": "failed",
-      "fetch_status": "failed",
-      "count": 0,
-      "inventory_count": 0,
-      "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
-      "clusters": {},
-      "removed_clusters": {}
+      "status": "ok",
+      "fetch_status": "success",
+      "count": 20,
+      "inventory_count": 20,
+      "signal_count": 1,
+      "added_count": 10,
+      "removed_count": 10,
+      "clusters": {
+        "engineering": 5,
+        "operations": 1
+      },
+      "removed_clusters": {
+        "engineering": 6
+      }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
+      "count": 0,
       "inventory_count": 66,
       "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 1,
-      "clusters": {
-        "engineering": 1
-      },
-      "removed_clusters": {
-        "sales": 1
-      }
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 1,
-      "inventory_count": 30,
+      "count": 2,
+      "inventory_count": 32,
       "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 1,
+      "added_count": 2,
+      "removed_count": 0,
       "clusters": {},
       "removed_clusters": {}
     }
   },
-  "candidate_signals": []
+  "candidate_signals": [
+    {
+      "entity": "Grab",
+      "observed_at": "2026-07-29T12:09:17.241389+08:00",
+      "added_count": 10,
+      "removed_count": 10,
+      "clusters": {
+        "engineering": 5,
+        "operations": 1
+      },
+      "removed_clusters": {
+        "engineering": 6
+      }
+    }
+  ]
 }
