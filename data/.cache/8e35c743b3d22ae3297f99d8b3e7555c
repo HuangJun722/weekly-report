@@ -1,150 +1,623 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <script>
-      (function(){
-          setTimeout(function(){
-              window.location.reload();
-          }, 5000);
-      }())
-  </script>
-  <link rel="icon" href="data:,">
-  <title>One moment, please...</title>
-  <style>
-.spinner {
-    -webkit-animation: spin 1s ease-out;
-    animation: spin 1s ease-out;
-}
-@keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-#outer-container {
-    text-align: center;
-}
-#container {
-        display: inline-block;
-        height: 100px;
-    }
-#text {
-    float: left;
-    height: 100px;
-    line-height: 100px;
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    padding: 0 .4em 0 .2em;
-    letter-spacing: 0.06em;
-    color: rgba(38, 122, 72, 0.86);
-}
-@media (min-height: 180px) {
-    #outer-container {
-        margin-top: 0;
-    }
-}
-@media (min-height: 360px) {
-    #outer-container {
-        margin-top: 5%;
-    }
-}
-@media (min-height: 540px) {
-    #outer-container {
-        margin-top: 10%;
-    }
-}
-@media (min-height: 720px) {
-    #outer-container {
-        margin-top: 20%;
-    }
-}
-@media (min-width: 1450px) {
-    .throbber {
-        width: 90px;
-        height: 90px;
-        float: left;
-        padding: 5px 0 5px 5px;
-        opacity: 0.86;
-    }
-    #container {
-        display: inline-block;
-        border: 3px solid rgb(38, 122, 72, 0.86);
-        border-radius: 51px;
-        height: 100px;
-    }
-}
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
 
-  </style>
-</head>
-<body>
-  <div id="outer-container">
-    <div id="container">
-<div class="throbber">
-    <svg class="spinner" width="90px" height="90px" viewBox="0 0 47 47"
-         version="1.1"
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Loader</title>
-        <defs>
-            <polygon id="path-1"
-                     points="0 0.375484146 0 15.7255695 15.7013244 15.7255695 15.7013244 0.375484146 0 0.375484146"></polygon>
-        </defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none"
-           fill-rule="evenodd">
-            <g id="Logo" transform="translate(-5.000000, -2.000000)">
-                <g id="Group-2" transform="translate(5.000000, 2.000000)">
-                    <path d="M22.6150244,4.52988293 C23.1538049,3.06256585 23.6031707,1.59582195 24.231939,0.158882927 C25.1902805,2.22459024 25.8190488,4.43989512 26.7768171,6.47579756 C29.1417195,7.40376098 31.7164024,7.7929439 34.1116829,8.69110244 C28.9623171,11.2663585 23.7229634,13.7510537 18.4836098,16.176139 C19.7709512,12.2545049 21.2382683,8.4217122 22.6150244,4.52988293 L22.6150244,4.52988293 Z"
-                          id="Fill-1" fill="#467C45"></path>
-                    <path d="M13.7718598,8.94461585 C16.1424939,7.68077439 18.4500793,6.28968902 20.8207134,5.02527439 C18.9240915,10.8412378 16.7747012,16.5614817 14.8465549,22.3774451 C12.7292622,18.3950549 10.895689,14.2544695 8.9044939,10.2090305 C8.27228659,8.85004268 7.5455061,7.55353049 7.00844512,6.16359146 C9.31545732,6.95342073 11.4648476,8.24935976 13.7718598,8.94461585"
-                          id="Fill-3" fill="#467C45"></path>
-                    <path d="M24.2134256,15.0745049 C29.4602305,12.4969561 34.7379866,9.91940732 40.0157427,7.4031878 C39.1565598,9.61276098 38.1747183,11.7300537 37.2232549,13.9086756 C38.4504134,16.2099561 39.9544134,18.388578 41.0898646,20.7511878 C35.4435598,18.9405415 29.8287793,17.0381878 24.2134256,15.0745049"
-                          id="Fill-5" fill="#467C45"></path>
-                    <g id="Group-9"
-                       transform="translate(0.000000, 11.919659)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <g id="Clip-8"></g>
-                        <path d="M8.34869024,0.375484146 C9.93064146,3.33419146 11.2781659,6.43963049 12.7426171,9.45622805 C13.7387878,11.5362646 14.793422,13.5876427 15.7013244,15.7255695 C10.4579585,13.9091915 5.21401951,12.03435 -0.000114634146,10.0718134 C2.05069024,9.1341061 4.21842195,8.4898622 6.29845854,7.61119146 C6.97193415,5.17980122 7.67521463,2.77706951 8.34869024,0.375484146"
-                              id="Fill-7" fill="#467C45"
-                              mask="url(#mask-2)"></path>
-                    </g>
-                    <path d="M29.1793195,18.0496049 C33.5600634,19.4670561 37.9081366,21.0776659 42.2888805,22.5593122 C43.6742341,23.0745927 45.1558805,23.4609098 46.5085634,24.1372512 C44.2216122,25.039422 41.9025634,25.9100683 39.6477098,26.8110927 C38.8103073,29.4195927 38.2302585,32.1261049 37.3607585,34.7346049 C35.5890878,31.4497634 34.0432463,28.0353854 32.3684415,24.6852024 C31.3052098,22.4945439 30.1456854,20.3044585 29.1793195,18.0496049"
-                          id="Fill-10" fill="#467C45"></path>
-                    <path d="M28.9972232,29.3489207 C29.5789915,27.69475 30.0684793,26.0113476 30.7419549,24.3887012 C31.538089,25.7660305 32.1811866,27.2356402 32.9154183,28.6444939 C34.7220524,32.4709817 36.68115,36.205189 38.4568329,40.0316768 C36.2827963,39.1449817 34.1402841,38.1654329 31.9364427,37.2460671 C29.6403207,38.4709329 27.4662841,39.9405427 25.1094061,41.1035061 C26.3033207,37.1549329 27.7419793,33.2671159 28.9972232,29.3489207"
-                          id="Fill-12" fill="#467C45"></path>
-                    <path d="M4.97133902,25.64555 C9.93385122,27.1873793 14.7737049,29.036428 19.6748878,30.6705378 C20.4148512,30.9170012 21.1542415,31.1944159 21.8328756,31.5337329 C16.5304732,33.9685622 11.3214976,36.6498549 5.95776585,38.99355 C6.82096098,36.8355622 7.89966829,34.7698549 8.7319122,32.581489 C7.68358293,30.1764646 6.11194878,28.01905 4.97133902,25.64555"
-                          id="Fill-14" fill="#467C45"></path>
-                    <path d="M15.4549183,35.8770488 C19.4671134,33.9317073 23.4483573,31.8952317 27.4915037,30.0433171 C26.4110768,33.6542927 25.0222841,37.203939 23.8186256,40.8143415 C23.1090402,42.7275854 22.5530646,44.7033049 21.7511988,46.5855976 C20.7630524,44.4866463 20.0534671,42.2650366 19.1277963,40.1351341 C16.6276256,39.2094634 14.0042232,38.684439 11.4736744,37.9748537 C12.6773329,37.0801341 14.1584061,36.586061 15.4549183,35.8770488"
-                          id="Fill-16" fill="#467C45"></path>
-                </g>
-            </g>
-        </g>
-    </svg>
-</div>
-      <div id="text">
-        Please wait while your request is being verified...
-      </div>
-    </div>
-  </div>
-  <div id="hqkbjy866wgv"></div>
-  <script>
-(function(v,s){var a0K={v:0xe1,s:0xf2,c:0xdb,C:0xed,S:0xd5,R:0xec},l=a0C,c=v();while(!![]){try{var C=parseInt(l(a0K.v))/0x1+parseInt(l(0xd6))/0x2*(-parseInt(l(a0K.s))/0x3)+-parseInt(l(a0K.c))/0x4+-parseInt(l(a0K.C))/0x5*(-parseInt(l(0xd7))/0x6)+-parseInt(l(0xe0))/0x7+-parseInt(l(0xd0))/0x8+-parseInt(l(a0K.S))/0x9*(-parseInt(l(a0K.R))/0xa);if(C===s)break;else c['push'](c['shift']());}catch(S){c['push'](c['shift']());}}}(a0c,0xaa600));var a0S=window['navigator'],a0R={'webdriverCheck':function(){var a0H={v:0xe6},x=a0C;return x(a0H.v)in window||!!a0S['webdriver'];},'userAgentCheck':function(){var a0q={v:0xd8},n=a0C;return/headless|bytespider/i[n(0xf5)](a0S[n(a0q.v)]);},'appVersionCheck':function(){var N=a0C;return/headless/i[N(0xf5)](a0S[N(0xd1)]);},'pluginArraySpoofing':function(){var b=a0C;let v=PluginArray['prototype']===a0S[b(0x10a)][b(0xdd)];if(a0S['plugins']['length']>0x0)v&=Plugin[b(0xcf)]===a0S['plugins'][0x0][b(0xdd)];return!v;},'mimeTypeArraySpoofing':function(){var a0z={v:0xcf,s:0xdd,c:0xe8},T=a0C;let v=MimeTypeArray[T(a0z.v)]===a0S['mimeTypes'][T(a0z.s)];if(a0S[T(0xe8)][T(0xf9)]>0x0)v&=MimeType[T(a0z.v)]===a0S[T(a0z.c)][0x0][T(0xdd)];return!v;},'noLanguage':function(){var a0W={v:0xce,s:0xda,c:0xf9},A=a0C;return!a0S[A(a0W.v)]||a0S[A(a0W.s)][A(a0W.c)]===0x0;},'zeroOuterDimensions':function(){var Z=a0C;return window[Z(0xe4)+'t']===0x0&&window[Z(0xea)]===0x0;}},a0d=function(c,C){var a0u={v:0x106,s:0xeb,c:0x109,C:0xf7,S:0xe7,R:0xe5},a0D={v:0x10b},k=a0C,S=(function(){var d=!![];return function(F,Q){var V=d?function(){var E=a0C;if(Q){var p=Q[E(0xdc)](F,arguments);return Q=null,p;}}:function(){};return d=![],V;};}()),R=S(this,function(){var j=a0C;return R[j(0x105)]()[j(0xfd)](j(a0D.v)+'+$')['toString']()[j(0xf6)+'r'](R)[j(0xfd)](j(0x10b)+'+$');});R(),window[k(0xf8)+k(a0u.v)]?window['document']['addEventLi'+k(a0u.v)](k(a0u.s)+k(a0u.c),c,C):window[k(0xd9)][k(a0u.C)+'t'](k(a0u.S)+k(a0u.R),c);};function a0C(v,s){var c=a0c();return a0C=function(C,S){C=C-0xce;var R=c[C];return R;},a0C(v,s);}function a0c(){var h=['2GaHRIc','8360382aaZnhm','userAgent','document','languages','4943408RaHVik','apply','__proto__','forEach','type','867489guOUfB','228986LDWiNf','ent','60b54a2be4','outerHeigh','techange','webdriver','onreadysta','mimeTypes','style','outerWidth','DOMContent','10884780BnOrNR','5mUZvfi','action','name','filter','7fa3b767c4','758097TGvJWt','createElem','appendChil','test','constructo','attachEven','addEventLi','length','a6105c0a61','submit','send','search','1b41b08f12','append','method','open','hidden','input','entries','toString','stener','value','ne;','Loaded','plugins','(((.+)+)+)','language','prototype','3204216zPXOkd','appVersion','ById','GET','cttl','9IBrEId'];a0c=function(){return h;};return a0c();}a0d(function(){var a0y={v:0x103,s:0xd9,c:0xf3,C:0x103,S:0x104,R:0xff,d:0xff,F:0xd4,Q:0xd3,V:0x105,p:0x108,B:0x100,o:0xee,X:0xef,i:0x107,M:0xf1,U:0xdf,f:0xf4,m:0xf4,I:0xfb};setTimeout(function(){var a=a0C,v=window[a(0xd9)]['getElement'+a(0xd2)]('hqkbjy866wgv'),s=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(+!+[]+!![]+[])+(+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+![])),c=window['document'][a(0xf3)+'ent']('form'),C=window['document'][a(0xf3)+a(0xe2)]('input'),S=window['document'][a(0xf3)+a(0xe2)](a(a0y.v)),R=window[a(0xd9)]['createElem'+a(0xe2)](a(0x103)),d=window[a(a0y.s)][a(a0y.c)+a(0xe2)](a(0x103)),F=window[a(0xd9)][a(a0y.c)+a(0xe2)](a(a0y.C)),Q=+((+!+[]+!![]+!![]+!![]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![])),V='wsidchk',p='pdata',B='https%3A%2F%2Fventureburn.com%2Ffeed%2F',o='/z0f76a1d14fd21a8fb5fd0d03e0fdc3d3cedae52f',X='failedChecks',i=Object[a(a0y.S)](a0R)['map'](([m,I])=>{try{return I()?m:null;}catch(g){return null;}})[a(0xf0)](m=>m!==null),M=i['length']>0x0;if(M){var U=new URLSearchParams();U['append']('id',a(0xfa)+a(0xfe)+'0950635027'+'9e'),U[a(0xff)]('ts','1785353742'),U[a(a0y.R)](V,s+Q),U[a(a0y.d)](p,B),U[a(a0y.R)](a(a0y.F),'0'),i[a(0xde)](m=>U[a(0xff)](X,m));var f=new XMLHttpRequest();f[a(0x101)](a(a0y.Q),o+'?'+U[a(a0y.V)]()),f[a(0xfc)](null);}else c['id']='hqkbjy866wgv',c[a(0xe9)]='display:no'+a(a0y.p),c[a(a0y.B)]=a(0xd3),c[a(a0y.o)]=o,C['id']='f5l4d9fy95r1',C[a(a0y.X)]=V,C[a(a0y.i)]=s+Q,C[a(0xdf)]=a(0x102),R[a(0xef)]='id',R[a(0x107)]=a(a0y.M)+a(0xe3)+'d49030b349'+'c7',R['type']='hidden',d[a(0xef)]='ts',d['value']='1785353742',d[a(a0y.U)]='hidden',S['id']='j4ybe2hegixd',S[a(a0y.X)]=p,S[a(0x107)]=B,S[a(0xdf)]=a(0x102),F[a(0xef)]='cttl',F[a(a0y.i)]='0',F[a(0xdf)]='hidden',c[a(a0y.f)+'d'](C),c['appendChil'+'d'](S),c[a(a0y.m)+'d'](R),c[a(0xf4)+'d'](d),c['appendChil'+'d'](F),v['appendChil'+'d'](c),c[a(a0y.I)]();},0x3e8);},![]);
-  </script>
-</body>
-</html>
+<channel>
+	<title>Ventureburn</title>
+	<atom:link href="https://ventureburn.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ventureburn.com/</link>
+	<description>Startup news for emerging markets</description>
+	<lastBuildDate>Wed, 29 Jul 2026 22:08:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.0.2</generator>
+
+<image>
+	<url>https://ventureburn.com/wp-content/uploads/2025/09/favicon-150x150.png</url>
+	<title>Ventureburn</title>
+	<link>https://ventureburn.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>groundcover Raises $100 Million To Expand AI-Era Observability Platform</title>
+		<link>https://ventureburn.com/groundcover-raises-100-million/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2026 22:08:29 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203842</guid>
+
+					<description><![CDATA[<p>groundcover Raises $100 Million To Scale AI Observability groundcover has raised $100 million. The new funding round was co-led by new investors One Peak and Morgan Stanley Expansion Capital. Zeev</p>
+<p>The post <a href="https://ventureburn.com/groundcover-raises-100-million/" data-wpel-link="internal">groundcover Raises $100 Million To Expand AI-Era Observability Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>groundcover Raises $100 Million To Scale AI Observability</b></h2>
+<p><span style="font-weight: 400">groundcover has raised $100 million. The new funding round was co-led by new investors One Peak and Morgan Stanley Expansion Capital. Zeev Ventures, Angular Ventures, Heavybit, and Jibe also took part in the funding.</span></p>
+<p><span style="font-weight: 400">The funding rounds bring the total the Tel Aviv, Israel-based company has raised to $160 million. groundcover announced it would use the funding for its worldwide rollout, deepen collaboration agreements with top cloud suppliers, accelerate and speed up product innovation. </span></p>
+<p><span style="font-weight: 400">It serves clients in more than 250 enterprises &#8211; many of themFortune 5 companies alongside fast-starting startups- and tripled its </span><a href="https://www.investopedia.com/terms/r/revenue.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">revenue</span></a><span style="font-weight: 400"> while doubling its worldwide employees to 130 workers throughout the world during the last year.</span></p>
+<h2><b>AI Growth Drives Demand For Modern Observability</b></h2>
+<p><span style="font-weight: 400">Given the growing amount of workloads deployed that utilize AI or run as autonomous systems, engineering teams need increased insight into the infrastructure, applications and the AI workloads within them, without compromising on the cost or data security/privacy.</span></p>
+<p><span style="font-weight: 400">groundcover brings to combine adaptive eBPF sensors with an off-the-shelf OpenTelemetry support to produce complete telemetry across infrastructure, applications and AI workloads, with no data sampling. </span></p>
+<p><span style="font-weight: 400">&#8220;We are entering the era of AI, and that requires a new model of observability, different from the one that we have today,&#8221; said CEO Shahar Azulay, founder of groundcover. We leverage eBPF and our BYOC infrastructure to give our customers a platform that has the ability to serve engineers andAutonomous AI agents that run in production environments.</span></p>
+<h2><b>Platform Supports Autonomous Operations<br />
+</b></h2>
+<div id="attachment_203844" style="width: 1322px" class="wp-caption alignnone"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-203844" class="size-full wp-image-203844" src="https://ventureburn.com/wp-content/uploads/2026/07/remove_4-v-vQJyXK-Ky53LAEUhXQ_aKr_5m4VRBGKbTfw0ahd-A_cover.png" alt="A neon futuristic visual showing AI observability systems with full data visibility and autonomous monitoring agents." width="1312" height="736" /><p id="caption-attachment-203844" class="wp-caption-text">groundcover enables full-data observability and autonomous issue resolution for AI-native cloud environments. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">Unlike traditional observability platforms that reduce or sample telemetry data to manage costs, groundcover captures full-fidelity operational data while keeping it within customers&#8217; own cloud environments. This approach enables organisations to maintain privacy, reduce operational overhead, and improve AI-driven decision-making.</span></p>
+<p><span style="font-weight: 400">The company&#8217;s Agent Mode further extends these capabilities by helping engineering teams automatically identify, troubleshoot, and remediate production issues. By providing complete operational visibility, groundcover aims to create the data foundation required for autonomous software operations.</span></p>
+<p><span style="font-weight: 400">One Peak said the company has developed an observability platform specifically designed for AI-native environments. The investment firm believes groundcover&#8217;s architecture positions it to define the next generation of observability infrastructure as enterprises increasingly rely on AI-powered applications.</span></p>
+<p><span style="font-weight: 400">The platform has gained traction across organisations seeking greater control over operational data while reducing dependence on legacy monitoring solutions that struggle with rapidly growing telemetry volumes.</span></p>
+<p><span style="font-weight: 400">More News: <a href="https://ventureburn.com/investifi-raises-20-million/" data-wpel-link="internal">InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</a></span></p>
+<h2><b>Funding To Accelerate Global Expansion</b></h2>
+<p><span style="font-weight: 400">groundcover plans to use the new funding to strengthen its commercial operations, particularly across North America, where it continues to win customers from established observability providers. The company also intends to expand into additional international markets while deepening its co-sell programmes with leading cloud providers.</span></p>
+<p><span style="font-weight: 400">Investment will also support the continued expansion of the product roadmap, including new AI-powered capabilities and additional observability use cases. The company aims to build a platform that enables engineers and autonomous AI agents to work together more effectively while maintaining full control over operational data.</span></p>
+<p><span style="font-weight: 400">As enterprises continue adopting AI across critical business systems, observability is becoming an increasingly important layer of cloud infrastructure. groundcover is positioning itself to capitalise on this shift by delivering scalable monitoring, privacy-first architecture, and AI-enabled automation for modern software environments.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/groundcover-raises-100-million/" data-wpel-link="internal">groundcover Raises $100 Million To Expand AI-Era Observability Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</title>
+		<link>https://ventureburn.com/investifi-raises-20-million/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2026 21:52:30 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203838</guid>
+
+					<description><![CDATA[<p>InvestiFi Raises Funding To Expand Digital Investing Platform InvestiFi has raised $20 million to accelerate the growth of its embedded digital investing platform for American credit unions and community banks.</p>
+<p>The post <a href="https://ventureburn.com/investifi-raises-20-million/" data-wpel-link="internal">InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>InvestiFi Raises Funding To Expand Digital Investing Platform</b></h2>
+<p><span style="font-weight: 400">InvestiFi has raised $20 million to accelerate the growth of its embedded digital investing platform for American credit unions and community banks. It represents the largest investment made into a fintech company dedicated exclusively to providing digital investing capabilities for credit unions and community banks. </span></p>
+<p><span style="font-weight: 400">The investment round was led by Vibe Credit Union, with participation from BankTech Ventures, Idaho Central Credit Union (ICCU), Navari, United Financial Credit Union, Coastal Credit Union, Mid Minnesota Credit Union, Truity Credit Union, and Southpoint Credit Union.</span></p>
+<p><span style="font-weight: 400">InvestiFi plans to use the capital to expand its platform, accelerate product development, and increase adoption among financial institutions seeking to retain customer deposits within their own digital banking ecosystems.</span></p>
+<h2><b>Platform Helps Community Banks Retain Customers</b></h2>
+<p><span style="font-weight: 400">Founded by CEO Kian Sarreshteh, InvestiFi operates as a Credit Union Service Organization (CUSO) that enables financial institutions to integrate investing services directly into their online banking platforms. Instead of transferring funds to external brokerages or investment apps, customers can invest directly from their checking or savings accounts.</span></p>
+<p><span style="font-weight: 400">The company&#8217;s patent-pending &#8220;Investing from Checking&#8221; technology simplifies the investment process while helping financial institutions maintain stronger customer relationships. The platform currently supports fractional stock and ETF investing, guided investing, IRAs, cryptocurrency trading, and stablecoins, with additional investment products planned for future releases.</span></p>
+<p><span style="font-weight: 400">According to Cornerstone Advisors research, nearly half of Gen Z and Millennial consumers actively invest, while 43% have transferred money to third-party investment platforms. InvestiFi believes embedded investing gives community banks and </span><a href="https://www.investopedia.com/terms/c/creditunion.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">credit unions</span></a><span style="font-weight: 400"> an opportunity to compete more effectively with larger financial institutions, fintech companies, and digital brokerages.</span></p>
+<h2><b>Rapid Growth Demonstrates Market Demand<br />
+</b></h2>
+<div id="attachment_203840" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203840" class="size-full wp-image-203840" src="https://ventureburn.com/wp-content/uploads/2026/07/remove_1n-Qiqv5WXi819o2a8Mg6A_egp7ji4ETY2zt_AUbPujTg_cover.png" alt="A neon futuristic visual showing digital banking platforms with integrated investing and connected financial institutions." width="1312" height="736" /><p id="caption-attachment-203840" class="wp-caption-text">InvestiFi drives growth by enabling embedded investing across community banks and credit unions. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">InvestiFi has experienced significant customer growth over the past two years. The company expanded from just four clients in 2024 to more than 60 signed financial institutions by July 2026, reflecting increasing demand for integrated digital investing services.</span></p>
+<p><span style="font-weight: 400">Sarreshteh said the latest funding validates both the platform and the company&#8217;s long-term mission. He noted that many of the investors are also existing customers, demonstrating confidence in InvestiFi&#8217;s technology and its ability to help community financial institutions compete in an increasingly digital financial landscape.</span></p>
+<p><span style="font-weight: 400">Vibe Credit Union said the investment aligns with its goal of supporting members throughout every stage of their financial journey. The organisation believes digital wealth-building services have become an essential extension of traditional banking products.</span></p>
+<p><span style="font-weight: 400">BankTech Ventures also highlighted InvestiFi&#8217;s rapid customer growth and growing market opportunity, stating that the company is addressing an important challenge faced by community financial institutions as digital investing becomes an expected consumer feature.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/encore-ai-raises-30m-series-a-enterprise-ai/" data-wpel-link="internal"><span style="font-weight: 400">Encore AI Raises $30M to Expand Revenue-Focused Enterprise AI Platform</span></a></p>
+<h2><b>Expansion Plans Focus On Product Innovation</b></h2>
+<p><span style="font-weight: 400">The new capital will support platform expansion, product innovation, and wider deployment across the United States. InvestiFi aims to increase adoption among existing financial institution partners while attracting additional banks and credit unions seeking embedded investment capabilities.</span></p>
+<p><span style="font-weight: 400">As digital investing continues to become a standard feature across financial services, InvestiFi is positioning itself as a technology partner that allows smaller financial institutions to offer investment services without requiring customers to leave their trusted banking platforms.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/investifi-raises-20-million/" data-wpel-link="internal">InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Encore AI Raises $30M to Expand Revenue-Focused Enterprise AI Platform</title>
+		<link>https://ventureburn.com/encore-ai-raises-30m-series-a-enterprise-ai/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2026 21:27:19 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203834</guid>
+
+					<description><![CDATA[<p>Encore AI Raises Funding To Expand Enterprise Growth Encore AI has raised $30M of Series A funding to help scale its enterprise AI platform globally. Team8 led the round along</p>
+<p>The post <a href="https://ventureburn.com/encore-ai-raises-30m-series-a-enterprise-ai/" data-wpel-link="internal">Encore AI Raises $30M to Expand Revenue-Focused Enterprise AI Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Encore AI Raises Funding To Expand Enterprise Growth</b></h2>
+<p><span style="font-weight: 400">Encore AI has raised $30M of Series A funding to help scale its enterprise AI platform globally. Team8 led the round along with Planven and The Garage and was also joined by Lukatz along with a set of commercial banks and insurance companies who had already used the platform before investing in the company.</span></p>
+<p><span style="font-weight: 400">The funding will enable Encore AI to develop its products and scale its operations globally, by increasing deployments across large enterprises and also by further expansion into financial services and other highly regulated industries with high importance placed on customer engagement and compliance.</span></p>
+<p><span style="font-weight: 400">Encore AI was founded in 2022 by Dr. Dvir Ginzburg to solve the revenue generation challenge rather than operating cost reduction challenge as other customer service AI does, which reduces the amount of human interaction. It achieves this by teaching intelligent agents to mimic your top-performing sales and customer service people.</span></p>
+<h2><b>AI Learns From Top Performers To Increase Revenue<br />
+</b></h2>
+<div id="attachment_203836" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203836" class="size-full wp-image-203836" src="https://ventureburn.com/wp-content/uploads/2026/07/remove_cgjTjUCJWai8DfrK1mIrjw_0UrMjSQDSiKCs-dEMZaIsw_cover.png" alt="A neon futuristic visual showing AI agents analysing customer interactions and generating real-time business insights." width="1312" height="736" /><p id="caption-attachment-203836" class="wp-caption-text">Encore AI transforms customer interaction data into revenue-driving AI agents for enterprise growth. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">At the core of Encore AI&#8217;s technology is its unique Interaction Mining engine, a patented method for dissecting how and what behaviors reliably generate the most desired results in conversations with customers in various channels. </span></p>
+<p><span style="font-weight: 400">The platform translates these behaviors into AI agents designed to conduct interactions or augment agents in real time. Encore&#8217;s capabilities span voice, chat, interactive voice response and live </span><a href="https://www.lawinsider.com/dictionary/digital-channels" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">digital channels</span></a><span style="font-weight: 400"> and meet strict regulations and compliance standards needed to operate safely in industries such as banking and insurance.</span></p>
+<p><span style="font-weight: 400">Chief Executive Officer Dr. Dvir Ginzburg said most enterprise AI platforms focus primarily on reducing costs. He explained that Encore AI instead helps organisations unlock the value already contained within years of customer interaction data by teaching AI agents to replicate the actions of their best employees.</span></p>
+<p><span style="font-weight: 400">The company says its platform can be deployed within weeks without requiring lengthy implementation projects. One major lending customer reportedly achieved a tenfold return on investment only months after deploying the technology.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/dwelly-raises-170m-series-b-ai-property-management/" data-wpel-link="internal"><span style="font-weight: 400">Dwelly Raises $170M to Accelerate AI-Led Property Management</span></a></p>
+<h2><b>Funding Supports Global Expansion And Product Development</b></h2>
+<p><span style="font-weight: 400">Encore AI currently serves more than 40 enterprise customers worldwide, with financial institutions representing the majority of its client base. According to the company, annual recurring revenue has grown more than fivefold since its previous funding round less than 18 months ago.</span></p>
+<p><span style="font-weight: 400">The new capital will primarily support expansion of the company&#8217;s United States sales operations while increasing deployments among larger financial organisations. Encore AI also plans to continue enhancing its proprietary AI models and enterprise capabilities.</span></p>
+<p><span style="font-weight: 400">Team8 Partner Hadar Siterman Norris said many organisations possess years of valuable customer interaction data but have yet to convert it into measurable business value. She believes Encore AI has created a platform capable of transforming that information into sustained revenue growth while maintaining the compliance architecture required by regulated industries.</span></p>
+<p><span style="font-weight: 400">Planven Managing Partner Eran Westman added that successful enterprise AI companies will be defined by the long-term value they create rather than automation alone. He described Encore AI&#8217;s combination of proprietary data analysis and industry expertise as a strong foundation for building a category-leading platform.</span></p>
+<p><span style="font-weight: 400">As businesses increasingly seek practical applications for artificial intelligence, the company aims to help organisations improve sales performance, strengthen customer engagement, and scale the expertise of their highest-performing employees through intelligent automation.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/encore-ai-raises-30m-series-a-enterprise-ai/" data-wpel-link="internal">Encore AI Raises $30M to Expand Revenue-Focused Enterprise AI Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Freehand Raises $75 Million as AI Agents Take Up Meta and Unilever’s Supply Chains</title>
+		<link>https://ventureburn.com/freehand-raises-75-million-ai-agents-supply-chain/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2026 17:59:17 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[AI agents]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Freehand]]></category>
+		<category><![CDATA[Freehand AI]]></category>
+		<category><![CDATA[Meta]]></category>
+		<category><![CDATA[Series A]]></category>
+		<category><![CDATA[supply chain]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203830</guid>
+
+					<description><![CDATA[<p>As enterprises scale, they often run into problems in manual supply-chain spend management and financial leakage. Freehand raises $75 million to put AI agents in supply chains to solve this</p>
+<p>The post <a href="https://ventureburn.com/freehand-raises-75-million-ai-agents-supply-chain/" data-wpel-link="internal">Freehand Raises $75 Million as AI Agents Take Up Meta and Unilever’s Supply Chains</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">As enterprises scale, they often run into problems in manual supply-chain spend management and financial leakage. Freehand </span><a href="https://x.com/freehand_ai/status/2082510919960281594" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">raises $75 million</span></a><span style="font-weight: 400"> to put AI agents in supply chains to solve this problem. The round was co-led by Battery Ventures and NewRoad Capital Partners.</span></p>
+<p><span style="font-weight: 400">PSP Growth, the firm chaired by former US Commerce Secretary Penny Pritzker and Nexus Venture Partners also joined the round. Nitin Jayakrishnan, Freehand’s co-founder and CEO says that the funding is the beginning of true autonomy in the enterprise. </span></p>
+<h2><span style="font-weight: 400">Why Enterprises Are Paying Attention</span></h2>
+<p><span style="font-weight: 400">According to the Bureau of Economic </span><a href="https://www.bea.gov/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Analysis</span></a><span style="font-weight: 400">, American businesses spend more than $20 trillion every year on goods, logistics, technology and services. Freehand believes that model is becoming too expensive to maintain. </span></p>
+<p><span style="font-weight: 400">The company estimates businesses spend billions on software while spending far more on manual processes. Freehand’s pitch: enterprises spend $16 billion a year on that software and another $348 billion paying people to do what it can’t. </span></p>
+<p><span style="font-weight: 400">Tariffs, new taxes, and shifting immigration policy are squeezing the outsourcing model further, which is exactly the gap Freehand is chasing.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/qureight-raises-20m-series-b-ai-lung-heart-clinical-trials/" data-wpel-link="internal"><b><i>Qureight Raises $20M for AI-powered Lung and Heart Clinical Trials</i></b></a></p>
+<h2><span style="font-weight: 400">How the Freehand Agents Actually Work</span></h2>
+<div id="attachment_203832" style="width: 810px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203832" class="size-full wp-image-203832" src="https://ventureburn.com/wp-content/uploads/2026/07/Freehand-founders.jpg" alt="A protrait image of the founders of Nitin Jayakrishnan and Abhijeet Manohar in a dual toen background" width="800" height="418" /><p id="caption-attachment-203832" class="wp-caption-text">Freehand Founders</p></div>
+<p><span style="font-weight: 400">Freehand was founded in 2024 by Nitin Jayakrishnan and Abhijeet Manohar. Jayakrishnan and Manohar previously built logistics at Pando, where they watched procurement and finance teams lose hours of work to manual assignments. </span></p>
+<p><span style="font-weight: 400">That experience shaped their bet: software should replace the work, not just assist with it. The agents run on what Freehand calls a Category Context Graph, blending structured enterprise data with contracts and emails so agents have context before acting. </span></p>
+<p><span style="font-weight: 400">Instead of suggesting answers like a chatbot, they read supplier contracts, negotiate rates, approve invoices, and reconcile records directly inside enterprise systems. </span></p>
+<p><span style="font-weight: 400">“The difference between an agent that acts and a chatbot that suggests is context,” says Manohar. Freehand is competing against well-funded rivals such as Harvey, Norm AI, Abridge, and Writer, who have all raised nine-figure rounds this year as investors chase enterprise AI agents. </span></p>
+<p><span style="font-weight: 400">What sets Freehand apart is a narrow focus on procurement and supply-chain finance, plus full production deployments at major companies within roughly two years of founding, not just pilots.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/cor-raises-30m-ai-profitability-agencies-consultancies/" data-wpel-link="internal"><b><i>COR Raises $30M To Boost AI-Driven Profitability</i></b></a></p>
+<h2><span style="font-weight: 400">Results So Far, and What’s Next for Freehand</span></h2>
+<p><span style="font-weight: 400">“Freehand marks one of the first full-scale agentic deployments at Unilever and is an early anchor in the shift from software that assists to software that runs our supply chain,” says Matt Algar, Unilever’s global vice president of supply chain.</span></p>
+<p><span style="font-weight: 400">According to Grand View Research, the supply-chain management market was about $32.9 billion in 2024. With automation taking over logistics and procurement, it’s on track to more than double to over $76 billion by 2030. </span></p>
+<p><span style="font-weight: 400">Freehand plans to use the new funding to expand past invoice processing into direct materials and maintenance, repair, and operations spend. This will push to become embedded infrastructure inside supply chains rather than another software layer on top.</span></p>
+<p><span style="font-weight: 400">For years, enterprises modernized supply chains by stacking new software on top of outsourced labor. Freehand is betting the next move is removing both at once.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/greyparrot-secures-27-million-series-b-ai-waste-intelligence/" data-wpel-link="internal"><b><i>Greyparrot Secures $27M To Scale AI Waste Intelligence Platform</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/freehand-raises-75-million-ai-agents-supply-chain/" data-wpel-link="internal">Freehand Raises $75 Million as AI Agents Take Up Meta and Unilever’s Supply Chains</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>PrimeXBT: What &#8220;Accumulation&#8221; Really Tells You About Bitcoin and Gold Right Now</title>
+		<link>https://ventureburn.com/primexbt-what-accumulation-really-tells-you-about-bitcoin-and-gold-right-now/</link>
+		
+		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2026 13:45:11 +0000</pubDate>
+				<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203817</guid>
+
+					<description><![CDATA[<p>By Jonatan Randin, Senior Market Analyst, PrimeXBT A figure went round earlier this year claiming whales had bought roughly 270,000 BTC inside thirty days. It got picked up everywhere. It</p>
+<p>The post <a href="https://ventureburn.com/primexbt-what-accumulation-really-tells-you-about-bitcoin-and-gold-right-now/" data-wpel-link="internal">PrimeXBT: What &#8220;Accumulation&#8221; Really Tells You About Bitcoin and Gold Right Now</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">By Jonatan Randin, Senior Market Analyst, PrimeXBT</span></p>
+<p><span style="font-weight: 400;">A figure went round earlier this year claiming whales had bought roughly 270,000 BTC inside thirty days. It got picked up everywhere. It also resurfaced at least three times over several months with a different date attached each time, and tracing it back leads to an aggregator nobody would cite for anything else. No named wallet size. No methodology. Just a large number that confirmed what people already wanted to believe.</span></p>
+<p><span style="font-weight: 400;">That is roughly the state of accumulation coverage in both of the markets worth examining here.</span></p>
+<p><span style="font-weight: 400;">Bitcoin (BTC) is down around 54% from its October 2025 peak above $125,000. Gold (XAU) is off roughly 29% from the intraday record of $5,595.47 set on 29 January. Two very different assets, both having a difficult year, and in both cases the reassurance offered against the price action is identical. The patient money is still buying.</span></p>
+<p><span style="font-weight: 400;">It probably is. That isn&#8217;t really the issue. The issue is how little of it anyone can actually see.</span></p>
+<div id="attachment_203819" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203819" class="wp-image-203819 size-full" src="https://ventureburn.com/wp-content/uploads/2026/07/oavb29720261.jpg" alt="Bitcoin weekly, showing the drawdown from the October 2025 peak. " width="512" height="277" /><p id="caption-attachment-203819" class="wp-caption-text">Image from TradingView.</p></div>
+<div id="attachment_203822" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203822" class="wp-image-203822 size-full" src="https://ventureburn.com/wp-content/uploads/2026/07/29720265.jpg" alt="Gold weekly, showing the drawdown from the January 2026 record. " width="512" height="277" /><p id="caption-attachment-203822" class="wp-caption-text">Image from TradingView.</p></div>
+<h2><b>The Comparison Everyone Reaches For</b></h2>
+<p><span style="font-weight: 400;">The gold roadmap argument has become hard to avoid. It runs something like this.</span></p>
+<p><span style="font-weight: 400;">Central banks became the dominant buyer of gold from 2022 onwards. They buy to meet reserve targets rather than to make a return, so their demand is largely indifferent to price. Early on, buyers who did care about price sold into that demand and kept a lid on things. Once that selling dried up, the price moved.</span></p>
+<p><span style="font-weight: 400;">Applied to Bitcoin, spot exchange-traded funds (ETFs) and corporate treasuries take the central bank role, which places the market somewhere mid-process with the acceleration still ahead.</span></p>
+<p><span style="font-weight: 400;">The mechanism holds up. The harder questions are whether Bitcoin has the buyer this requires, and whether gold’s buyer is as steady as the framework needs it to be.</span></p>
+<h2><b>Who Is Actually Buying Bitcoin</b></h2>
+<p><span style="font-weight: 400;">Long-term holders, meaning wallets that have held coins for at least 155 days under Glassnode&#8217;s definition, have moved from net selling back to net buying. The 30-day net position change is positive, somewhere in the region of 50,000 to 100,000 BTC.</span></p>
+<p><span style="font-weight: 400;">Worth setting against the comparable phases in November 2024 and May 2025, when the same measure ran close to 400,000 BTC.</span></p>
+<p><span style="font-weight: 400;">The breakdown by wallet size is where it gets more interesting. Glassnode&#8217;s Accumulation Trend Score rates each group of holders by balance and recent buying on a scale of zero to one:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>Under 1 BTC: </b><span style="font-weight: 400;">around 0.8 to 0.9</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>100 to 1,000 BTC: </b><span style="font-weight: 400;">around 0.8 to 0.9</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>1 to 10 BTC and 10 to 100 BTC: </b><span style="font-weight: 400;">around 0.6 to 0.7</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>1,000 to 10,000 BTC: </b><span style="font-weight: 400;">around 0.5 to 0.6</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Above 10,000 BTC: </b><span style="font-weight: 400;">close to neutral</span></li>
+</ul>
+<div id="attachment_203820" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203820" class="wp-image-203820 size-full" src="https://ventureburn.com/wp-content/uploads/2026/07/oavb39720262.jpg" alt="Accumulation Trend Score by wallet size. " width="512" height="288" /><p id="caption-attachment-203820" class="wp-caption-text">Image from Glassnode.</p></div>
+<p><span style="font-weight: 400;">The buying weakens as the wallets get larger. The addresses that actually justify the word whale have been more or less sitting on their hands, and the accumulation drawing the headlines is coming mostly from the smallest wallets on the network. That is a different story. Arguably a better one, depending on the value placed on retail conviction. It just isn&#8217;t the one being reported.</span></p>
+<h2><b>The ETF Channel Is Not a Patient Buyer</b></h2>
+<p><span style="font-weight: 400;">June was the worst month on record for US spot Bitcoin ETFs, with roughly $4.5 billion pulled. Citi cut its twelve-month inflow forecast to zero.</span></p>
+<p><span style="font-weight: 400;">Then it turned. By late July, Glassnode was describing ETF flows as positive again, in what it called the strongest positioning shift of the year, with shorts closing out and hedges coming off alongside.</span></p>
+<div id="attachment_203821" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203821" class="wp-image-203821 size-full" src="https://ventureburn.com/wp-content/uploads/2026/07/oavb29720263.jpg" alt="Spot Bitcoin ETF net flows against price. " width="512" height="153" /><p id="caption-attachment-203821" class="wp-caption-text">Image from CoinGlass</p></div>
+<p><span style="font-weight: 400;">Both readings are accurate, a few weeks apart, and that is the difficulty with placing ETFs in the central bank role. Reserve managers do not behave this way. A source of demand that swings from record outflow to the year’s strongest inflow shift inside a month is following price rather than absorbing it.</span></p>
+<h2><b>Gold&#8217;s Price-Insensitive Buyer Sold 129 Tonnes</b></h2>
+<p><span style="font-weight: 400;">The gold side of the comparison has a problem of its own.</span></p>
+<p><span style="font-weight: 400;">In Q1 2026, central banks sold 129 tonnes. Türkiye accounted for 60 of that in March alone. Net reported purchases across every reporting institution came to 16 tonnes.</span></p>
+<p><span style="font-weight: 400;">Sixteen.</span></p>
+<p><span style="font-weight: 400;">The World Gold Council&#8217;s own estimate for the same quarter is 244 tonnes of net buying, up from 208 tonnes in Q4 2025. So which figure is real?</span></p>
+<p><span style="font-weight: 400;">Both are technically true. Reporting purchases to the International Monetary Fund (IMF) is voluntary. There is no obligation, a good deal goes undeclared, and the World Gold Council builds the higher number by working backwards from London over-the-counter (OTC) activity and trade flows through the Swiss refineries. That is a defensible method and it is probably closer to the truth than 16 tonnes. It remains a reconstruction, and it circulates as though somebody counted.</span></p>
+<h2><b>Nobody Mentions That Central Banks Used to Sell</b></h2>
+<p><span style="font-weight: 400;">The other omission in the roadmap version concerns what central banks were doing before 2022.</span></p>
+<p><span style="font-weight: 400;">Selling. Consistently, for around two decades. Enough of it that fifteen European central banks signed the Washington Agreement in September 1999 purely to cap collective sales at 400 tonnes a year, because uncoordinated disposals were driving the price into the floor. Gold bottomed near $250 an ounce in that period. Not until 2010 did central banks become reliable annual net buyers.</span></p>
+<div id="attachment_203823" style="width: 514px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203823" class="wp-image-203823 size-full" src="https://ventureburn.com/wp-content/uploads/2026/07/29720264.jpg" alt="Central bank gold demand, 1992 to 2022" width="504" height="512" /><p id="caption-attachment-203823" class="wp-caption-text">Image from Visual Capitalist. Data: Metals Focus, Refinitiv GFMS, World Gold Council, as at 31 December 2022.</p></div>
+<p><span style="font-weight: 400;">So the institutions now credited with putting a floor under gold are the same ones that spent twenty years holding the ceiling down. Nothing about the institutions changed. Their reserve policy did.</span></p>
+<p><span style="font-weight: 400;">For anyone using gold&#8217;s ownership as a model for Bitcoin&#8217;s, that is the part of the model that matters most, and it is the part that gets left out.</span></p>
+<h2><b>Two Markets, Two Different Blind Spots</b></h2>
+<p><span style="font-weight: 400;">The two markets fail to show the buyer in completely opposite ways, which is easy to miss when they get compared.</span></p>
+<p><span style="font-weight: 400;">Gold settles privately, through dealers and vaults, so the transaction itself is hidden and flows have to be worked out afterwards from refinery throughput and OTC activity. Bitcoin settles in public, so every transaction is visible permanently and it still isn&#8217;t possible to say with confidence who sits behind any of it, because the groupings shift when exchanges reshuffle wallets, when custodians consolidate addresses, or when an address gets relabelled. One market hides the trade. The other hides the trader.</span></p>
+<p><span style="font-weight: 400;">A smaller version of the same problem shows up in the price data. Gold prices for about 23 hours a day, five days a week, while Bitcoin never stops, so any comparison between the two depends on how you treat the hours when one of them is closed. Bitcoin&#8217;s weekend moves have no gold counterpart to be measured against.</span></p>
+<p><span style="font-weight: 400;">That is beginning to change. Gold 24/7 pricing has appeared across a growing number of venues, which means exposure can be adjusted while the traditional market is shut rather than waiting for Sunday’s reopening and accepting whatever level appears. It does not make the Monday gap disappear, since the underlying market still reprices when it returns and weekend conditions are typically thinner than weekday ones. But a market long defined by its opening hours is gradually becoming one that never fully closes, which narrows a structural difference between gold and Bitcoin that used to be taken for granted.</span></p>
+<p><a href="https://primexbt.com/platforms/pxtrader/?utm_source=ventureburn&amp;utm_medium=pr&amp;utm_campaign=gold-24-7&amp;utm_content=primexbt_pxtrader" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400;">PrimeXBT</span></a><span style="font-weight: 400;"> is among the brokers offering 24/7 Gold trading, allowing traders to move between Bitcoin and Gold within the same platform while keeping a crypto-native workflow through crypto-denominated accounts. For traders comparing the two assets as complementary stores of value, the ability to trade both on a similar schedule removes one of the practical differences that historically separated them.</span></p>
+<h2><b>What This Adds Up To</b></h2>
+<p><span style="font-weight: 400;">Accumulation data tells you selling has stopped. It does not tell you a bottom is in. The two get conflated constantly, and Glassnode&#8217;s own framing is careful on the point: shifts from selling to buying tend to appear during periods of weakness, as long-term investors build while shorter-term participants reduce risk. That describes exhausted sellers. It says nothing about who arrives next, or when, or at what price.</span></p>
+<p><span style="font-weight: 400;">None of this amounts to a call. The absorption through June appears real and both markets may well be building a base. The narrower point is that the accumulation story is being asked to carry more weight than the underlying data can hold, in both of them.</span></p>
+<p><span style="font-weight: 400;">When the next headline of this kind goes past, three questions are worth asking. Which size of holder. Measured how. And set against what flows moving the other way.</span></p>
+<p><span style="font-weight: 400;">The answer is usually less impressive than the headline.</span></p>
+<p><b>Trade Bitcoin and Gold 24/7 with </b><a href="https://primexbt.com/platforms/pxtrader/?utm_source=ventureburn&amp;utm_medium=pr&amp;utm_campaign=gold-24-7&amp;utm_content=primexbt_pxtrader" data-wpel-link="external" rel="external noopener noreferrer"><b>PrimeXBT</b></a><b>.</b></p>
+<h2><b>About PrimeXBT</b></h2>
+<p><span style="font-weight: 400;">PrimeXBT is a global multi-asset broker and crypto asset service provider trusted by traders in more than 150 countries. The platform bridges traditional and digital markets within one integrated environment, redefining versatility and innovation in online trading. Clients can access Forex, CFDs on indices, commodities, shares, crypto, and Crypto Futures, as well as buy, store and exchange cryptocurrencies. This unified experience extends across both the native PXTrader 2.0 platform and MetaTrader 5, supported by advanced risk-management tools and a wide range of funding options in crypto, fiat and local payment methods. Since 2018, PrimeXBT has focused on empowering traders through broad multi-asset access, fair and transparent conditions, professional-grade technology and dedicated human support. By combining expertise, trust and a client-first approach, PrimeXBT sets a benchmark of excellence in the financial industry and provides traders with the tools they need to trade, grow and succeed with confidence.</span></p>
+<p><b>Disclaimer:</b><span style="font-weight: 400;"> The content provided here is for informational purposes only and is not intended as personal investment advice and does not constitute a solicitation or invitation to engage in any financial transactions, investments, or related activities. Past performance is not a reliable indicator of future results. The financial products offered by the Company are complex and come with a high risk of losing money rapidly due to leverage. These products may not be suitable for all investors. Before engaging, you should consider whether you understand how these leveraged products work and whether you can afford the high risk of losing your money. The Company does not accept clients from the Restricted Jurisdictions as indicated on its website / T&amp;Cs. Some products and services, including MT5, may not be available in your jurisdiction. The applicable legal entity and its respective products and services depend on the client’s country of residence and the entity with which the client has established a contractual relationship during registration.</span></p>
+<p>The post <a href="https://ventureburn.com/primexbt-what-accumulation-really-tells-you-about-bitcoin-and-gold-right-now/" data-wpel-link="internal">PrimeXBT: What &#8220;Accumulation&#8221; Really Tells You About Bitcoin and Gold Right Now</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Qureight Raises $20M for AI-powered Lung and Heart Clinical Trials</title>
+		<link>https://ventureburn.com/qureight-raises-20m-series-b-ai-lung-heart-clinical-trials/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2026 11:58:40 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[AI hardware]]></category>
+		<category><![CDATA[AI imaging]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[medicine]]></category>
+		<category><![CDATA[Qureight]]></category>
+		<category><![CDATA[Series B]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203812</guid>
+
+					<description><![CDATA[<p>Qureight just raised $20 million to fix how to read a chest scan. The Cambridge company builds AI imaging tools for lung and heart clinical trials, and its Series B</p>
+<p>The post <a href="https://ventureburn.com/qureight-raises-20m-series-b-ai-lung-heart-clinical-trials/" data-wpel-link="internal">Qureight Raises $20M for AI-powered Lung and Heart Clinical Trials</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Qureight just raised $20 million to fix how to read a chest scan. The Cambridge company builds AI imaging tools for lung and heart clinical trials, and its Series B was led by </span><a href="https://www.moltenventures.com/news/accelerating-the-future-of-lung-disease-trials-molten-leads-qureights-20m-series-b" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400">Molten Ventures</span></a><span style="font-weight: 400">, with backers Hargreave Hale AIM VCT, XTX Ventures, Guinness Ventures, Meltwind, and Ascension all returning.</span></p>
+<h2><span style="font-weight: 400">From a CT Scan To An AI Company</span></h2>
+<div id="attachment_203814" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203814" class="size-large wp-image-203814" src="https://ventureburn.com/wp-content/uploads/2026/07/Team-1024x668.jpg" alt="" width="1024" height="668" /><p id="caption-attachment-203814" class="wp-caption-text">Qureight AI Team</p></div>
+<p><span style="font-weight: 400">Without an engineering background, Dr Muhunthan Thillai co-founded Qureight in 2018 with Dr Alessandro Ruggiero. Thillai calls it one of the biggest early hurdles. The idea came from his own work as a chest physician, after a case where he couldn’t confidently interpret a CT scan. </span></p>
+<p><span style="font-weight: 400">“There was an area to go and help these pharma companies do better clinical trials, and so that’s how the company started,” he told Tech Funding News. Thillai still sees patients part-time in Cambridge. “It’s very difficult to be a founder and grow a company and still see patients, but I love seeing patients,” he says. </span></p>
+<p><span style="font-weight: 400">To cover the engineering gap, Qureight hired a CTO who was global head of platform at Hewlett Packard, a CMO who led research at CMR Surgical, and a CSO who used to teach machine learning at Imperial College London.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/cor-raises-30m-ai-profitability-agencies-consultancies/" data-wpel-link="internal"><b><i>COR Raises $30M To Boost AI-Driven Profitability</i></b></a></p>
+<h2><span style="font-weight: 400">Two Products, One Foundation Model</span></h2>
+<p><span style="font-weight: 400">Qureight runs two products for pharma clients. Workflow cuts imaging decision time from about two weeks to 48 hours. AI Lung models the airways and blood vessels, showing exactly how a drug affects disease progression.</span></p>
+<p><span style="font-weight: 400">Both sit on a general-purpose foundation model of the chest. The disease-specific model now takes one or two months to build, rather than one year. The funding covers an in-house AI imaging lab. </span></p>
+<p><span style="font-weight: 400">It also pushes into asthma, lung cancer, pulmonary hypertension, bronchiectasis, and drug-induced lung toxicity. Qureight currently carries out global trials with AstraZeneca, Bristol Myers Squibb, and several biotech partners.</span></p>
+<p><span style="font-weight: 400">The lung and heart clinical trials market is projected to hit $27.5 billion by 2030, growing 6.9% a year. Oxford’s Brainomix is the closest European rival. It features an FDA-cleared e-Lung platform used in pulmonary fibrosis trials. </span></p>
+<p><span style="font-weight: 400">However, the overlap is smaller than it looks: Brainomix sells diagnostic software to hospitals, while Qureight works on trial design and imaging contract research. The platform was recently picked by Boehringer Ingelheim for a Phase 3 trial. </span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/greyparrot-secures-27-million-series-b-ai-waste-intelligence/" data-wpel-link="internal"><b><i>Greyparrot Secures $27M To Scale AI Waste Intelligence Platform</i></b></a></p>
+<h2><span style="font-weight: 400">Why Molten, and What’s Next</span></h2>
+<p><span style="font-weight: 400">Qureight approached Molten two years ago and got turned down. This time, three lead investors sent term sheets within six weeks, and Qureight could have raised more than it did. It chose Molten anyway, for the relationship and to keep the round anchored to a London fund over competing US offers. </span></p>
+<p><span style="font-weight: 400">Molten’s healthtech bets include Deciphex and CoachHub, which closed a $200 million round. Dr Inga Deakin, the Molten partner joining Qureight’s board, says: “Qureight demonstrates how AI, powered by real-world data, can accelerate discovery and transform clinical research.”</span></p>
+<p><span style="font-weight: 400">Qureight plans to double headcount to 100 by December, open a second London office next month, and get asthma, lung cancer, and pulmonary hypertension trials running before the end of the year. </span></p>
+<p><span style="font-weight: 400">Whether it becomes the default imaging layer for pharma trials or stays a specialist player depends on what it announces next. Either way, the scan Thillai couldn’t quite read now has three investors fighting to back it.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/hush-security-raises-30m-ai-agent-governance-gap/" data-wpel-link="internal"><b><i>Hush Security Raises $30M for Governance AI Agents</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/qureight-raises-20m-series-b-ai-lung-heart-clinical-trials/" data-wpel-link="internal">Qureight Raises $20M for AI-powered Lung and Heart Clinical Trials</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>COR Raises $30M To Boost AI-Driven Profitability For Agencies And Consultancies</title>
+		<link>https://ventureburn.com/cor-raises-30m-ai-profitability-agencies-consultancies/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Tue, 28 Jul 2026 22:28:38 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[AI banking]]></category>
+		<category><![CDATA[COR]]></category>
+		<category><![CDATA[FTV Capital]]></category>
+		<category><![CDATA[Series A]]></category>
+		<category><![CDATA[startup]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=203802</guid>
+
+					<description><![CDATA[<p>Running a creative agency or consulting firm is harder than ever. Client demands keep rising quickly. At the same time, operating budgets stay tight. Leaders often guess whether individual projects</p>
+<p>The post <a href="https://ventureburn.com/cor-raises-30m-ai-profitability-agencies-consultancies/" data-wpel-link="internal">COR Raises $30M To Boost AI-Driven Profitability For Agencies And Consultancies</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Running a creative agency or consulting firm is harder than ever. Client demands keep rising quickly. At the same time, operating budgets stay tight. Leaders often guess whether individual projects actually make money. Traditional project software just cannot handle modern operational workloads.</span></p>
+<p><span style="font-weight: 400">In an effort to address this specific challenge in the industry, COR raises $30m Series A growth funding round led by </span><a href="https://ftvcapital.com/2026/cor-secures-30-million-investment-from-ftv-capital/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">FTV Capital</span></a><span style="font-weight: 400">. The deal will enable the firm to further develop its AI-powered profitability platform. This tool provides professional service companies with a full project budget, team capacity and accurate financial margins.</span></p>
+<p><span style="font-weight: 400">As agencies bring artificial intelligence tools into daily workflows, traditional work structures change. Teams now combine human employees with autonomous digital AI assistants. COR helps business leaders navigate this shift smoothly without losing track of bottom-line profits.</span></p>
+<h2><span style="font-weight: 400">COR Is Solving the Agency Profitability Crisis</span></h2>
+<p><span style="font-weight: 400">For decades, consultancies and agencies relied on manual timesheets. Employees hated filling them out. Managers constantly struggled to calculate true project costs in real time. Standard project management tools track tasks, but they rarely reveal true profit margins behind those tasks.</span></p>
+<p><span style="font-weight: 400">When projects run over budget unnoticed, service firms lose revenue silently. COR solves this issue by eliminating manual tracking completely. Its platform monitors project resources automatically.</span></p>
+<p><span style="font-weight: 400">COR turns everyday task data into clear financial insights. Agency executives can finally see which clients drive real growth and which ones drain cash flow.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/greyparrot-secures-27-million-series-b-ai-waste-intelligence/" data-wpel-link="internal"><b><i>Greyparrot Secures $27M To Scale AI Waste Intelligence Platform</i></b></a></p>
+<h2><span style="font-weight: 400">How COR’s AI Platform Operates</span></h2>
+<p><span style="font-weight: 400">COR offers a single operational system for professional service businesses. The unified platform combines task management, automated time tracking, and resource planning. </span></p>
+<p><span style="font-weight: 400">COR also delivers real-time financial analytics on one clear dashboard. Firm leaders get immediate answers about team efficiency. The software truly shines when managing modern hybrid workforces. </span></p>
+<p><span style="font-weight: 400">As companies deploy AI agents alongside human specialists, tracking total costs becomes complex. COR calculates the exact return on investment for human labor hours and AI computational power. </span></p>
+<p><span style="font-weight: 400">This transparency lets agency leaders hold honest pricing conversations with clients while protecting healthy profit margins.The new $30 million capital injection will speed up product development significantly. </span></p>
+<p><span style="font-weight: 400">COR plans to build deeper autonomous AI capabilities into its operating platform. It will also expand into new geographic markets and adjacent service industries over the coming months.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/hush-security-raises-30m-ai-agent-governance-gap/" data-wpel-link="internal"><b><i>Hush Security Raises $30M for Governance AI Agents</i></b></a></p>
+<h2><span style="font-weight: 400">Rapid Growth and Market Traction</span></h2>
+<div id="attachment_203804" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203804" class="size-large wp-image-203804" src="https://ventureburn.com/wp-content/uploads/2026/07/Santi-Bibiloni-Jose-Gettas-and-Gabriel-Marin-1024x505.jpg" alt="A portriat image of the co-founders of COR Santi Bibiloni, Jose Gettas, and Gabriel Marin, with a COR logo in the background." width="1024" height="505" /><p id="caption-attachment-203804" class="wp-caption-text">Co-Founders: COR</p></div>
+<p><span style="font-weight: 400">COR was established in 2017 by Santi Bibiloni, Jose Gettas, and Gabriel Marin and has already gained significant momentum around the world. The company’s year-over-year revenue growth reached 51% at the end of 2025, marking its performance in the San Francisco startup market.</span></p>
+<p><span style="font-weight: 400">COR is now active in thousands of teams throughout 38 countries. Major enterprise agencies rely on the platform to run daily operations. FTV Capital recognized this strong market performance and stepped in with growth equity. </span></p>
+<p><span style="font-weight: 400">As part of the investment deal, FTV Partner Alex Malvone and Principal Tommy Tighe will join COR’s board of directors to help guide future expansion. The core mission remains simple and focused. </span></p>
+<p><span style="font-weight: 400">COR wants to become the essential operating platform for every modern agency and consulting firm. By giving leaders total control over project economics, the platform helps service businesses stay healthy, competitive, and highly profitable.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/multiverse-computing-raises-570-million-for-expansion/" data-wpel-link="internal"><b><i>Multiverse Computing Raises $570M for Global Expansion</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/cor-raises-30m-ai-profitability-agencies-consultancies/" data-wpel-link="internal">COR Raises $30M To Boost AI-Driven Profitability For Agencies And Consultancies</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What Is Cryptocurrency Mining &#038; How Does It Work?</title>
+		<link>https://ventureburn.com/what-is-cryptocurrency-mining/</link>
+		
+		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
+		<pubDate>Tue, 28 Jul 2026 22:00:43 +0000</pubDate>
+				<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=199849</guid>
+
+					<description><![CDATA[<p>If you&#8217;ve spent any time around crypto, you&#8217;ve probably heard people throw around terms like mining, hashing, or mining rigs like it&#8217;s common knowledge. However, it may be confusing to</p>
+<p>The post <a href="https://ventureburn.com/what-is-cryptocurrency-mining/" data-wpel-link="internal">What Is Cryptocurrency Mining &#038; How Does It Work?</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">If you&#8217;ve spent any time around crypto, you&#8217;ve probably heard people throw around terms like mining, hashing, or mining rigs like it&#8217;s common knowledge. However, it may be confusing to some. What is cryptocurrency mining then?</span></p>
+<p><span style="font-weight: 400;">Whether you are a curious investor or a tech-savvy hobbyist, it&#8217;s important to understand what mining entails to help you navigate the digital economy. This guide will break the technical barrier down, and in simple terms, you will understand what mining is, how it works and the pros and cons of mining.</span></p>
+<h2><span style="font-weight: 400;">What is Cryptocurrency Mining?</span></h2>
+<p><span style="font-weight: 400;">Cryptocurrency mining, in the simplest of terms, is the validation of transactions and their connection to a network of blockchains. Let&#8217;s use this example. Whenever an individual sends a crypto transfer (like Bitcoin), the transfer should be confirmed. </span></p>
+<p><span style="font-weight: 400;">Miners intervene to verify such transactions and package them into blocks. The block is added to the blockchain when it is validated. Mining companies compensate this labor by giving miners new coins and part of the commission paid by people.</span></p>
+<p><span style="font-weight: 400;">So when people ask &#8220;what is crypto mining?&#8221;, the simple answer is: It is how decentralized networks can be kept safe and how new coins are brought into the market. The procedure is not centralized and thus the banks or middlemen do not get involved. A network of competing computers that maintains a blockchain.</span></p>
+<h3><span style="font-weight: 400;">How Does Crypto Mining Work? (PoW &amp; Hashing)</span></h3>
+<div id="attachment_199854" style="width: 1510px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-199854" class="wp-image-199854 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Crypto-Mining-2026.jpg" alt="How Does Crypto Mining Work? (PoW &amp; Hashing)" width="1500" height="1000" /><p id="caption-attachment-199854" class="wp-caption-text">Crypto Mining. Image Credit: FinanceFeeds</p></div>
+<p><span style="font-weight: 400;">In order to know how does crypto mining work, you need to get your hands on the hood of the Proof of Work (PoW) consensus mechanism. The majority of large cryptocurrencies (such as Bitcoin) use this <a class="ng-star-inserted" href="https://www.investopedia.com/terms/p/proof-work.asp" target="_blank" rel="nofollow noopener external noreferrer" data-hveid="0" data-ved="0CAAQ_4QMahgKEwitsan2ne-TAxUAAAAAHQAAAAAQ0wI" data-wpel-link="external">Proof of Work (PoW) consensus mechanism</a>. And it should be noted that crypto mining is mostly limited to Proof-of-Work cryptos.</span></p>
+<p><span style="font-weight: 400;">PoW blockchains consist of </span><b>blocks</b><span style="font-weight: 400;"> with data on transactions. A challenging mathematical problem must be solved by the miners to add a new block to the chain. This puzzle is related to a hashing process. A hash is a unique digital signature generated by a signed algorithm (Bitcoin SHA-256).</span></p>
+<p><span style="font-weight: 400;">Miners guess a specific number, also referred to as the </span><b>nonce</b><span style="font-weight: 400;"> (number used once) with their computers. This nonce, together with the information in the block, should yield a hash that satisfies some specific requirements.</span></p>
+<p><span style="font-weight: 400;">Since it is impossible to determine the output of a hash, miners have to make trillions of guesses per second. It is this work that makes the network secure. It authenticates a blockchain against bad actors who would like to alter its history. To complete this task, the network that the miners keep secure rewards them with cryptocurrencies.</span></p>
+<h2><span style="font-weight: 400;">How to Mine Crypto: Hardware, Pools &amp; Cloud Mining</span></h2>
+<p><span style="font-weight: 400;">If you&#8217;re wondering how to mine crypto, there are three main paths you can take:</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><b>Hardware Mining:</b><span style="font-weight: 400;"> You purchase dedicated hardware (typically GPUs or ASICs). Then install crypto mining software and begin to mine</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Mining Pools: </b><span style="font-weight: 400;">A cryptocurrency mining pool is formed by a group of miners who pool their computing capabilities together to get a higher chance of solving a block. </span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Cloud Mining: </b><span style="font-weight: 400;">Cryptocurrency cloud mining is where a remote data center rents out the computing power. You pay an upfront fee and get a portion of mining power and rewards. Check the best crypto mining platforms to get the best deals.</span></li>
+</ol>
+<h3><span style="font-weight: 400;">What is a Cryptocurrency Mining Rig?</span></h3>
+<p><span style="font-weight: 400;">A cryptocurrency mining rig is a specially designed computer system that is used to perform the hashing activity. These rigs are not just regular PCs but emphasize raw processing power and cooling.</span></p>
+<p><span style="font-weight: 400;">A proper mining rig includes:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Graphics cards (GPUs) or ASIC miners</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Power supply unit (PSU)</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Cooling system</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Motherboard &amp; processor</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Crypto mining software</span></li>
+</ul>
+<p><span style="font-weight: 400;">When a person inquires, what is a cryptocurrency mining rig, simply imagine: It is the engine that drives your mining process. Rigs can be of two types:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>GPU Rigs:</b><span style="font-weight: 400;"> GPU Rigs are based on mining high-end graphics cards (from NVIDIA or AMD) to mine altcoins such as Monero or Ravencoin. You can also use GPU rigs for gaming and video editing.</span></li>
+</ul>
+<div id="attachment_199856" style="width: 1930px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-199856" class="wp-image-199856 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Cryptomining-Graphics-Cards.jpg" alt="What is a Cryptocurrency Mining Rig?" width="1920" height="1200" /><p id="caption-attachment-199856" class="wp-caption-text">Crypto Mining Graphics Cards. Image Credit: Greggio</p></div>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>ASIC (Application-Specific Integrated Circuit) Miners:</b><span style="font-weight: 400;"> An ASIC miner has been designed to mine a single algorithm (like Bitcoin&#8217;s SHA-256 hash). They are more efficient since they focus on one algorithm. </span></li>
+</ul>
+<div id="attachment_199853" style="width: 702px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-199853" class="wp-image-199853 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/ASIC.jpg" alt="What is a Cryptocurrency Mining Rig?" width="692" height="459" /><p id="caption-attachment-199853" class="wp-caption-text">Crypto Mining ASIC. Image Credit: BiTBO</p></div>
+<h3><span style="font-weight: 400;">Solo Mining vs. What is a Cryptocurrency Mining Pool?</span></h3>
+<p><span style="font-weight: 400;">As the name implies, in solo mining, you mine alone. The advantages are that you can control all of your setup and you retain 100% of the profit. Nevertheless, due to increasing network difficulty, there is an extremely small probability that a single machine will solve a block.</span></p>
+<p><span style="font-weight: 400;">This is the reason why majority of miners enter a cryptocurrency mining pool. In this case, you unite with other people. To find solutions more often, many miners unite or aggregate their computing power. The advantages include regular payouts and decreased entry point. The payouts are far less since you have to share with people in the pool, and fees are very high, depending on the platform you use.</span></p>
+<h3><span style="font-weight: 400;">What is Cryptocurrency Cloud Mining?</span></h3>
+<div id="attachment_199857" style="width: 1290px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-199857" class="wp-image-199857 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Mining-Farm.jpeg" alt="Image Credit: Tokize" width="1280" height="800" /><p id="caption-attachment-199857" class="wp-caption-text">Crypto Mining Farm. Image Credit: Tokize</p></div>
+<p><span style="font-weight: 400;">Cryptocurrency cloud mining is an option for those who wish to avoid the noise and heat, as well as electricity bills of a physical rig. In this model, you pay a fee to a company that owns massive farms of mining equipment. </span></p>
+<p><span style="font-weight: 400;">You essentially rent a portion of their hashing power for a set period. It is the easiest form of mining as it doesn&#8217;t require owning or managing a rig. While this lowers the barrier to entry, it comes with risks. The profits are usually not as advertised by operators, and they usually require long contracts.</span></p>
+<h2><span style="font-weight: 400;">Pros of Cryptocurrency Mining</span></h2>
+<p><span style="font-weight: 400;">Now we know how to mine crypto, let&#8217;s look at the upsides it presents.</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>Passive Income:</b><span style="font-weight: 400;"> Once set up, a rig can generate rewards 24/7.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Potential for High ROI:</b><span style="font-weight: 400;"> If you mine a coin while it&#8217;s cheap and its value later explodes, the returns can be astronomical. Miners often research </span><a href="https://ventureburn.com/category/trade-crypto/price-predictions/" data-wpel-link="internal"><span style="font-weight: 400;">coin price prediction</span></a><span style="font-weight: 400;"> before they begin mining.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Supports Decentralization:</b><span style="font-weight: 400;"> Miners are the core of the blockchain, making it safe and inaccessible to a central authority.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Hardware Value:</b><span style="font-weight: 400;"> GPU rigs have a tendency to be resold in the secondary gaming market with some value.</span></li>
+</ul>
+<h2><span style="font-weight: 400;">Cons of Cryptocurrency Mining</span></h2>
+<p><span style="font-weight: 400;">Next, we will discuss the possible negative aspects of cryptocurrency mining.</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>Expensive Electricity:</b><span style="font-weight: 400;"> Mining is power-hungry- this will take up profits quickly.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Hardware Depreciation:</b><span style="font-weight: 400;"> Technology is a fast-paced thing. The state-of-the-art ASIC today could be a paperweight in just two years.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Volatility: </b><span style="font-weight: 400;">Overnight, the price of the coins you mined can go down, making a good business a loss.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>Regulatory Scrutiny:</b><span style="font-weight: 400;"> Governments are putting an increasing emphasis on the tax consequences and the impact of mining on the environment.</span></li>
+</ul>
+<h2><span style="font-weight: 400;">Conclusion: Should You Start Mining Crypto?</span></h2>
+<p><span style="font-weight: 400;">In comparison to the early days, crypto mining is not the plug and play money maker that drew masses. And now it is an efficiency game. Nevertheless, due to the necessity of mining to the operation of cryptocurrencies, the practice is still a profitable business. </span></p>
+<p><span style="font-weight: 400;">To the hobbyist, getting into a pool or mining less-competitive altcoins is the most realistic. Calculate your electricity rate and hardware cost before expanding into mining, and use a profitability calculator in mining. This will give you a fair idea of how much to expect.</span></p>
+<p><a href="https://ventureburn.com/what-is-cex/" data-wpel-link="internal"><em><span style="text-decoration: underline;"><strong>&gt;&gt;&gt; Read More: What Is CEX in Crypto? Guide to Centralized Exchanges</strong></span></em></a></p>
+<h2><span style="font-weight: 400;">FAQs About Cryptocurrency Mining</span></h2>
+<h3><span style="font-weight: 400;">Is mining Bitcoin illegal?</span></h3>
+<p><span style="font-weight: 400;">Most developed nations have legalized Bitcoin mining. But certain nations, such as China and others, have prohibited it owing to either capital flight or energy use. In any case, consult your local regulator.</span></p>
+<h3><span style="font-weight: 400;">What is crypto mining?</span></h3>
+<p><span style="font-weight: 400;">It&#8217;s the process of verifying transactions on a blockchain and earning rewards in the form of new coins.</span></p>
+<h3><span style="font-weight: 400;">How much can I earn from crypto mining?</span></h3>
+<p><span style="font-weight: 400;">Profitability is determined by three factors. The current price of the coin, how much you pay per kilowatt-hour of electricity (kWH), and the hash rate of your equipment. Provided you do your research, crypto mining can be highly profitable.</span></p>
+<h3><span style="font-weight: 400;">Are crypto mining rewards taxable?</span></h3>
+<p><span style="font-weight: 400;">Yes. Many other tax authorities tax crypto rewards as gross income when you receive them. You can also pay capital gains tax in case you sell those coins later at a profit.</span></p>
+<h3><span style="font-weight: 400;">What is the most profitable coin to mine?</span></h3>
+<p><span style="font-weight: 400;">This changes daily. Bitcoin is the most well-known, but numerous miners get higher margins when working on the altcoins, such as Ravencoin, Ergo, or Litecoin. </span></p>
+<p>The post <a href="https://ventureburn.com/what-is-cryptocurrency-mining/" data-wpel-link="internal">What Is Cryptocurrency Mining &#038; How Does It Work?</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What is DeFi? A Beginner&#8217;s Guide to Decentralized Finance</title>
+		<link>https://ventureburn.com/what-is-defi/</link>
+		
+		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
+		<pubDate>Tue, 28 Jul 2026 22:00:41 +0000</pubDate>
+				<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=200138</guid>
+
+					<description><![CDATA[<p>When learning what is DeFi, you will find that decentralized finance is very different from the traditional financial system. There&#8217;s no middleman. Just you, your crypto, and a piece of</p>
+<p>The post <a href="https://ventureburn.com/what-is-defi/" data-wpel-link="internal">What is DeFi? A Beginner&#8217;s Guide to Decentralized Finance</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>When learning what is DeFi, you will find that decentralized finance is very different from the traditional financial system. There&#8217;s no middleman. Just you, your crypto, and a piece of code running on a blockchain.</p>
+<p><span style="font-weight: 400;">The numbers back up the massive adoption of this industry. The DeFi sector ended 2024 with $133.6 billion in total value locked. This is 2.5 times more than the $50 billion reported in December 2023.</span></p>
+<p><span style="font-weight: 400;">By late 2025, that figure had increased to $172 billion.</span></p>
+<h2><span style="font-weight: 400;">What Does DeFi Stand For? (DeFi Meaning Explained)</span></h2>
+<p><span style="font-weight: 400;">DeFi stands for decentralized finance. It refers to a collection of financial services, lending, trading, saving, and earning, built on public blockchains instead of banks or corporations.</span></p>
+<p><span style="font-weight: 400;">The DeFi meaning goes deeper than just removing banks. It means anyone with a crypto wallet and an internet connection can access financial services that were previously gated by geography, credit scores, or income levels.</span></p>
+<p><span style="font-weight: 400;">Anyone can borrow against their crypto holdings, earn yield, or make a </span><a href="https://ventureburn.com/category/trade-crypto/price-predictions/" data-wpel-link="internal"><span style="font-weight: 400;">coin price prediction</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The term what does DeFi stand for started gaining real traction around 2018 when Ethereum developers began building open financial tools on the blockchain. </span></p>
+<h2><span style="font-weight: 400;">DeFi vs. Traditional Finance (Banking): Key Differences</span></h2>
+<p><span style="font-weight: 400;">Most people are used to traditional finance. For example, banks hold your money, set the interest rates, and decide who gets a loan. DeFi flips that model entirely.</span></p>
+<p><span style="font-weight: 400;">Here&#8217;s how what is a DeFi protocol compares:</span></p>
+<p><span style="font-weight: 400;">In traditional banking, a central authority controls your funds. In DeFi, smart contracts, which are self-executing pieces of code, handle everything automatically. Banks operate during business hours. DeFi runs 24 hours a day, 7 days a week, 365 days a year. Traditional finance requires identity verification and approval. DeFi only requires a crypto wallet. Banks keep their internal rules and processes private. DeFi protocols are open-source and auditable by anyone on the internet.</span></p>
+<p><span style="font-weight: 400;">There&#8217;s also the question of access. Around </span><a href="https://www.worldbank.org/ext/en/topic/financial-sector/financial-inclusion" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400;">1.4 billion adults globally remain unbanked</span></a><span style="font-weight: 400;">, according to World Bank data. For what is a DeFi protocol, it doesn&#8217;t care about your credit history or what country you live in. If you have a phone and a wallet, you&#8217;re in.</span></p>
+<p><span style="font-weight: 400;">Nevertheless, there are still massive issues with DeFi. For instance, banks offer consumer protection, fraud recovery, and deposit insurance. </span></p>
+<p><span style="font-weight: 400;">DeFi offers none of that. If you make a mistake or get exploited, there&#8217;s no helpline to call. That makes understanding what is DeFi and how it actually works critically important before putting any money in.</span></p>
+<h2>How Does the Technology Work?</h2>
+<p><span style="font-weight: 400;">You can&#8217;t talk about what is DeFi yield farming or the term itself without smart contracts? Smart contracts are the engine that makes the entire system run.</span></p>
+<p><span style="font-weight: 400;">A smart contract is like a computer program that is stored on a blockchain. It does things on its own when certain things happen.</span></p>
+<p><span style="font-weight: 400;">Think of it like a vending machine. You put in the amount of money and it gives you what you paid for. You do not need someone to help you.</span></p>
+<p><span style="font-weight: 400;">The machine does not care who you are. It just does what the program tells it to do.</span></p>
+<p><span style="font-weight: 400;">Smart contracts are programs that run by themselves. They help people make agreements and do what they say they will do without needing someone in the middle. Smart contracts are good because they are fair and everyone can see what is happening. Smart contracts are, like programs that make sure everything is done correctly and that is what smart contracts do.</span></p>
+<p><span style="font-weight: 400;">Users interact with these contracts through decentralized applications, or dApps. These look like regular websites or mobile apps, but instead of connecting to a company&#8217;s server, they connect directly to the blockchain through your personal wallet. </span></p>
+<p><span style="font-weight: 400;">For example, in the case of what is DeFi yield farming, you don&#8217;t hand over your personal data or create an account like in the bank. </span></p>
+<p><span style="font-weight: 400;">Ethereum is the top blockchain within the DeFi sector because it has </span><a href="https://coinlaw.io/decentralized-finance-market-statistics/" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400;">more than</span></a><span style="font-weight: 400;"> 68% of total value locked.</span></p>
+<div id="attachment_200139" style="width: 2570px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-200139" class="wp-image-200139 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Image-from-DefiLlama-scaled.jpg" alt="How Does the Technology Work?" width="2560" height="1435" /><p id="caption-attachment-200139" class="wp-caption-text">Image from DeFiLlama</p></div>
+<p><span style="font-weight: 400;">But other chains like Solana, BNB Chain, and Avalanche have some of the market share too. And for some of them, they even offer faster transactions or lower fees than the Ethereum network.</span></p>
+<p><span style="font-weight: 400;">On Ethereum alone, smart contract interactions </span><a href="https://tradersunion.com/interesting-articles/smart-contracts/defi/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400;">account</span></a><span style="font-weight: 400;"> for nearly 62% of all daily transactions, with DeFi protocols contributing roughly 25% of the network&#8217;s transaction volume.</span> <span style="font-weight: 400;">The code is doing the work, constantly, automatically, without a single human approving anything.</span></p>
+<h2><span style="font-weight: 400;">What Can You Do With DeFi? Top Crypto Use Cases</span></h2>
+<p><span style="font-weight: 400;">This is where decentralized finance gets practical. Here are the main things people actually do inside DeFi every day.</span></p>
+<h3><span style="font-weight: 400;">Decentralized Exchanges (DEXs)</span></h3>
+<p>A decentralized exchange (DEX) allows users to swap cryptocurrencies directly from their personal wallets, eliminating the need for account creation, KYC verification, or corporate-imposed withdrawal limits.</p>
+<p><span style="font-weight: 400;">Instead of a traditional order book matching buyers and sellers, DEXs use liquidity pools. Users deposit pairs of coins into a shared pool. </span></p>
+<p><span style="font-weight: 400;">At the same time, an algorithm called an Automated Market Maker (AMM) sets prices based on supply and demand. Uniswap is the largest DEX by volume while Curve is the top choice for many investors for stablecoin swaps.</span></p>
+<p><span style="font-weight: 400;">If you&#8217;re looking for somewhere to start, exploring the </span><a href="https://ventureburn.com/best-decentralized-crypto-exchanges/" data-wpel-link="internal"><span style="font-weight: 400;">best decentralized crypto exchanges</span></a><span style="font-weight: 400;"> will show you what&#8217;s available. This applies to different blockchains and fee structures.</span></p>
+<h3><span style="font-weight: 400;">What is DeFi Lending and Borrowing?</span></h3>
+<p><span style="font-weight: 400;">DeFi lending works like a bank loan, except that the process is less stressful than what happens in the bank. For what is DeFi lending, you deposit crypto into a protocol like Aave or Compound. Then what happens is that other users can borrow against that pool. </span></p>
+<p><span style="font-weight: 400;">The smart contract handles interest rates, collateral requirements, and repayments automatically, in real time.</span></p>
+<div id="attachment_200141" style="width: 2570px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-200141" class="wp-image-200141 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Image-from-Uniswap-scaled.jpg" alt="What is DeFi Lending and Borrowing?" width="2560" height="1435" /><p id="caption-attachment-200141" class="wp-caption-text">Image from Uniswap</p></div>
+<p><span style="font-weight: 400;">Borrowers must usually put up more crypto than they borrow. This overcollateralization protects lenders if prices drop sharply. In return, lenders earn interest paid directly to their wallets. Apparently, these rates are usually bigger than what you might get at the bank.</span></p>
+<p><span style="font-weight: 400;">What is DeFi lending biggest advantage? For many people, it is the fact that you stay in control the entire time. The smart contract holds the funds, and every rule is written in publicly visible code. There&#8217;s no loan officer making subjective decisions about your eligibility.</span></p>
+<h3><span style="font-weight: 400;">What is DeFi Staking &amp; Yield Farming?</span></h3>
+<p><span style="font-weight: 400;">What is DeFi staking means locking your coins into a protocol to support its operations and earning rewards in return. On proof-of-stake blockchains like Ethereum, stakers help validate transactions and earn a portion of network fees for doing so.</span></p>
+<p><span style="font-weight: 400;">Protocols like Lido have made this accessible without technical knowledge. Instead of running your own validator node, you deposit ETH and receive stETH — a liquid token representing your staked position — while still earning staking rewards. Lido currently holds around $27.5 billion in TVL, making it the largest single DeFi protocol by that metric.</span></p>
+<div id="attachment_200140" style="width: 2570px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-200140" class="wp-image-200140 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Image-from-Pancakeswap-1-scaled.jpg" alt="What is DeFi Staking &amp; Yield Farming?" width="2560" height="1435" /><p id="caption-attachment-200140" class="wp-caption-text">Image from Pancakeswap</p></div>
+<p><span style="font-weight: 400;">What is DeFi yield farming? It takes things further. Yield farmers do something smart with their money. Traders shift their crypto across various platforms to secure the highest yields. They typically deposit capital into liquidity pools, earning special reward tokens in return. Afterward, they stake these newly acquired assets in other decentralized applications to maximize their overall profits.</span></p>
+<p><span style="font-weight: 400;">The returns can look really good, especially when the market is doing well. There are also some big risks that yield farmers have to think about. They might lose some of their money because of something called impermanent loss. They also have to worry about people finding ways to cheat the system and steal their money. Sometimes the whole thing can be a scam. These are all risks that come with being a yield farmer.</span></p>
+<h3><span style="font-weight: 400;">What is a DeFi Wallet?</span></h3>
+<p><span style="font-weight: 400;">To know what is a DeFi wallet, it is basically what you use to access the whole crypto market. Unlike wallets held on centralized exchanges, where the exchange technically controls your coins, a DeFi wallet gives you full, direct control.</span></p>
+<p><span style="font-weight: 400;">For what is a DeFi wallet, MetaMask is the most widely used option for Ethereum and EVM-compatible chains. Trust Wallet supports multiple blockchains in one app. Phantom is popular among Solana users.</span></p>
+<h2><span style="font-weight: 400;">Benefits and Risks of Decentralized Finance</span></h2>
+<p><span style="font-weight: 400;">DeFi has produced many benefits for millions of people. It&#8217;s open to anyone and gives users control that traditional banks never offered. Moreover, it has created entirely new ways to earn yield on crypto that simply didn&#8217;t exist five years ago.</span></p>
+<p><span style="font-weight: 400;">For example, the amount of people who are now using DeFi has increased over the years. increased to over 83 million by August 2024</span><a href="https://socialcapitalmarkets.net/crypto-trading/defi-statistics/" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400;"> </span></a></p>
+<p><span style="font-weight: 400;">The earning potential is a major benefit. Yield farming, liquidity provision, and staking can generate returns above what savings accounts or government bonds offer. </span></p>
+<p><span style="font-weight: 400;">For example, there are many people who became millionaires by entering the DeFi sector. You can make free money from airdrops. You can join presales and turn a small amount of money into hundreds or thousands of dollars. That&#8217;s why many people keep coming into this sector.</span></p>
+<p><span style="font-weight: 400;">However, there are still security risks. Smart contract bugs, exit scams, and extreme market volatility have wiped out funds overnight. Even experienced users have lost money to poorly audited protocols or sudden price crashes that triggered liquidations.</span></p>
+<p><span style="font-weight: 400;">At the same time, most jurisdictions are still figuring out how to treat what is DeFi crypto activity for tax and legal purposes. What&#8217;s permissible today may look different in two years.</span></p>
+<h2><span style="font-weight: 400;">Conclusion: Is DeFi the Future of Finance?</span></h2>
+<p><span style="font-weight: 400;">So, what is DeFi crypto? It is a financial system that runs on code instead of institutions, accessible to anyone with a wallet and an internet connection, operating without permission from any central authority.</span></p>
+<p><span style="font-weight: 400;">It won&#8217;t replace banks overnight because regulation is still catching up. The user experience still has a learning curve that can intimidate newcomers. Smart contract risk is real and permanent. But the growth is hard to ignore.</span></p>
+<p>The post <a href="https://ventureburn.com/what-is-defi/" data-wpel-link="internal">What is DeFi? A Beginner&#8217;s Guide to Decentralized Finance</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What Is a Crypto Wallet &#038; How Does It Work? (Guide)</title>
+		<link>https://ventureburn.com/what-is-a-crypto-wallet/</link>
+		
+		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
+		<pubDate>Tue, 28 Jul 2026 22:00:25 +0000</pubDate>
+				<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=200217</guid>
+
+					<description><![CDATA[<p>If you are wondering what is a crypto wallet, it essentially acts as your personal bank account on the decentralized web. Without one, you cannot interact with decentralized applications or</p>
+<p>The post <a href="https://ventureburn.com/what-is-a-crypto-wallet/" data-wpel-link="internal">What Is a Crypto Wallet &#038; How Does It Work? (Guide)</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>If you are wondering <b data-path-to-node="6,0" data-index-in-node="21">what is a crypto wallet</b>, it essentially acts as your personal bank account on the decentralized web. Without one, you cannot interact with decentralized applications or safely store your tokens over time. Moreover, they come in two different types: hot and cold wallets. Continue reading to explore how they work and which one is right for you.</p>
+<h2><span style="font-weight: 400;">What Is a Crypto Wallet? (Definition &amp; Purpose)</span></h2>
+<p><span style="font-weight: 400;">Decentralized finance operates entirely on cryptography, meaning traditional centralized bank accounts are not important here.</span></p>
+<p><span style="font-weight: 400;">As you begin your journey, understanding the fundamental infrastructure is essential. As adoption increases, mastering these foundational concepts becomes mandatory. The core purpose of this guide is to explain these concepts clearly and formally for everyday investors, ensuring you can manage your crypto with confidence.</span></p>
+<h2><span style="font-weight: 400;">Why Are Crypto Wallets Important?</span></h2>
+<p>When setting up your digital storage, you must recognize its role as your permanent crypto identity. Superior security prevents unauthorized access and thoroughly protects your coins from cyber threats. Understanding this digital infrastructure helps you realize why true ownership matters.</p>
+<p><span style="font-weight: 400;">If you are searching for top recommendations and detailed platform reviews, be sure to actively explore our guide on the</span><a href="https://ventureburn.com/best-crypto-wallet/" data-wpel-link="internal"> <span style="font-weight: 400;">Best Crypto Wallet</span></a><span style="font-weight: 400;"> available today.</span></p>
+<h2><span style="font-weight: 400;">How Do Crypto Wallets Work?</span></h2>
+<p><span style="font-weight: 400;">Many new investors eagerly ask how do crypto wallets work under the surface. They do not actually store physical coins; instead, they store cryptographic keys that prove your ownership on the blockchain. </span></p>
+<p>Think of them as specialized keychains rather than actual coin purses. Practically, the process involves communicating directly with the global blockchain network to update your token balances.</p>
+<p><span style="font-weight: 400;">The blockchain is a </span><a href="https://www.investopedia.com/terms/d/distributed-ledgers.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400;">distributed public ledger</span></a><span style="font-weight: 400;"> maintained by thousands of independent computers globally. Your personal software simply acts as a secure window, allowing you to view and interact with your specific portion of that ledger securely.</span></p>
+<h3><span style="font-weight: 400;">Public Keys vs. Private Keys Explained</span></h3>
+<p><span style="font-weight: 400;">Your public key is similar to your bank account number, which you share openly to receive coins. Your private key is like your secret PIN code, which you must never share with anyone under any circumstances. The core of what is a crypto wallet lies entirely in securely managing these two specific cryptographic keys. </span></p>
+<p><span style="font-weight: 400;">Think of the blockchain as a vast network of transparent lockers. If malicious actors acquire your private key, they gain total control over your tokens instantly.</span></p>
+<h3><span style="font-weight: 400;">What is a Crypto Wallet Address?</span></h3>
+<p>To receive tokens properly, you must understand your wallet address. It is a mathematically hashed, shorter version of your public key.</p>
+<p>You can explain it to a friend as an alphanumeric string they use to send you coins safely across the network. Understanding this unique identifier prevents transaction errors.</p>
+<h2><span style="font-weight: 400;">Types of Crypto Wallets: Hot vs. Cold Storage</span></h2>
+<p>The market offers various storage solutions. Understanding online software compared to offline physical options is vital for proper risk management.</p>
+<p>A common technical question compares physical devices to their convenient online counterparts. Online software helps active day traders immensely by providing instant market access. Similarly, offline storage benefits long-term holders seeking absolute peace of mind. Discovering these distinct methods is essential for ultimate safety and complete digital sovereignty over your coins.</p>
+<h3><span style="font-weight: 400;">What is a Hot Wallet in Crypto? (Web, Mobile, Desktop)</span></h3>
+<div id="attachment_200220" style="width: 2570px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-200220" class="wp-image-200220 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Image-from-Webopedia-scaled.jpg" alt="What is a Hot Wallet in Crypto? (Web, Mobile, Desktop)" width="2560" height="1435" /><p id="caption-attachment-200220" class="wp-caption-text">Image from Webopedia</p></div>
+<p><span style="font-weight: 400;">These are software applications connected directly to the internet. If you are asking what is a hot wallet crypto, it is the most convenient tool for </span><a href="https://www.investopedia.com/articles/trading/05/011705.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400;">daily active trading</span></a><span style="font-weight: 400;"> and sending tokens. </span></p>
+<p><span style="font-weight: 400;">They come as simple browser extensions or mobile applications. However, this convenience reduces overall crypto wallet security. Because they are always online, they are vulnerable to hackers and phishing scams. When defining exactly what is a hot wallet crypto, you must highlight this inherent vulnerability. Proper crypto wallet security practices are necessary.</span></p>
+<h3><span style="font-weight: 400;">What is a Cold Wallet for Crypto? (Hardware &amp; Paper)</span></h3>
+<p><span style="font-weight: 400;">These are physical electronic devices completely disconnected from the internet. If you wonder what is a cold wallet for crypto, it is a USB-like hardware device storing your private keys offline safely. When experts discuss what is a crypto cold wallet, they are referring to this maximum physical protection method. </span></p>
+<p><span style="font-weight: 400;">Understanding exactly what is a cold wallet for crypto helps secure massive crypto portfolios effectively. Ultimately, grasping what is a crypto cold wallet prevents remote thefts entirely.</span></p>
+<h2><span style="font-weight: 400;">What is a Non-Custodial Crypto Wallet vs. Custodial?</span></h2>
+<p><span style="font-weight: 400;">Control is a defining factor in this industry. Understanding what is a non custodial crypto wallet changes how you fundamentally view asset ownership. Knowing exactly what is a self custody crypto wallet empowers true financial independence. </span></p>
+<p><span style="font-weight: 400;">People frequently ask what is a crypto exchange vs wallet regarding fund control and legal ownership over their tokens. If you ask what is a non custodial crypto wallet, it means you alone hold the secret private keys to your coins. Similarly, knowing what is a self custody crypto wallet ensures you are your own private bank completely.</span></p>
+<h3><span style="font-weight: 400;">Custodial Wallets (What is a Crypto Exchange vs Wallet?)</span></h3>
+<p><span style="font-weight: 400;">Custodial platforms hold your private keys securely on their central corporate servers. To answer what is a crypto exchange vs wallet, consider who legally controls the tokens. A centralized exchange is custodial, meaning they can freeze your account instantly if required by law. </span></p>
+<p><span style="font-weight: 400;">When users debate what is a crypto exchange vs wallet, they are actively debating convenience versus pure security. Fully understanding exactly what is a crypto exchange vs wallet prevents unexpected financial losses if the platform goes bankrupt.</span></p>
+<h3><span style="font-weight: 400;">Self-Custody (Non-Custodial Wallets)</span></h3>
+<div id="attachment_200219" style="width: 2570px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-200219" class="wp-image-200219 size-full" src="https://ventureburn.com/wp-content/uploads/2026/04/Image-from-Brave-scaled.jpg" alt="Self-Custody (Non-Custodial Wallets)" width="2560" height="1435" /><p id="caption-attachment-200219" class="wp-caption-text">Image from Brave</p></div>
+<p>These applications give you absolute cryptographic control over your funds. When exploring these solutions, you quickly realize the personal responsibility involved. If you lose your recovery phrase, your coins are gone forever without recourse.<br />
+Embracing personal responsibility is vital for maintaining the ethos of decentralization. Properly managing your funds involves securing your backup phrases physically. This approach means removing risky corporate third parties entirely. This is the true essence of digital asset independence, empowering you to manage your tokens safely.</p>
+<h2><span style="font-weight: 400;">How to Set Up and Use a Crypto Wallet</span></h2>
+<p><span style="font-weight: 400;">Setting up a secure account to hold your tokens is surprisingly easy today. Beginners often wonder how to get a crypto wallet safely online without falling for scams. The entire process of learning how to get a crypto wallet takes mere minutes. </span></p>
+<p><span style="font-weight: 400;">Simply download a reputable software application or purchase a secure hardware device from an official manufacturer. Knowing exactly how to get a crypto wallet is your initial entry point to decentralized finance. </span></p>
+<p><span style="font-weight: 400;">Asking how to get a crypto wallet and following proper protocols ensures your initial foray into the crypto ecosystem is smooth. Also, remember to review how do crypto wallets work to ensure you transact safely and confidently.</span></p>
+<h3><span style="font-weight: 400;">Step-by-Step Setup &amp; Backing Up Your Wallet</span></h3>
+<p><span style="font-weight: 400;">First, generate your new account within the chosen application. The final step involves writing down your secret recovery seed phrase carefully. </span></p>
+<p><span style="font-weight: 400;">Take your time during this step; ensure no cameras or other people are watching you as you write down the words. This twelve-to-twenty-four word phrase is your backup. </span></p>
+<p><span style="font-weight: 400;">You must store this paper safely offline in a secure location. Never store your seed phrase digitally or take screenshots. This strict physical backup process defines coin storage safety. </span></p>
+<h3><span style="font-weight: 400;">How to Send and Receive Crypto</span></h3>
+<p><span style="font-weight: 400;">Transacting is very simple once properly configured. To receive, copy your public alphanumeric address and provide it safely to the sender. To send, carefully input the recipient&#8217;s exact address, specify the required coin amount, and approve the network transaction fee. </span></p>
+<p><span style="font-weight: 400;">This simple interaction explains the utility of tokens in everyday modern commerce globally. Always verify the network blockchain you are utilizing; sending </span><a href="https://coinmarketcap.com/view/ethereum-ecosystem/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400;">Ethereum tokens</span></a><span style="font-weight: 400;"> to a Bitcoin network address will immediately destroy your transferred crypto permanently.</span></p>
+<h2><span style="font-weight: 400;">Conclusion: Which Wallet is Right for You?</span></h2>
+<p><span style="font-weight: 400;">Selecting the appropriate storage mechanism depends on your specific lifestyle needs and how you manage your coins. For large, long-term holdings, strict offline hardware storage is highly recommended. </span></p>
+<p><span style="font-weight: 400;">For daily active trading and quick application access, convenient software applications work wonderfully well.</span></p>
+<h2><span style="font-weight: 400;">FAQs About Cryptocurrency Wallets</span></h2>
+<h3><span style="font-weight: 400;">Are these accounts completely free?</span></h3>
+<p><span style="font-weight: 400;">Yes, software applications for holding your coins are generally completely free to download and use actively. Hardware devices, however, require a physical purchase from the manufacturer.</span></p>
+<h3><span style="font-weight: 400;">Can I store multiple different coins?</span></h3>
+<p><span style="font-weight: 400;">Yes, most modern multi-currency applications actively support thousands of different tokens across various blockchains efficiently within a single interface.</span></p>
+<h3><span style="font-weight: 400;">What happens if I lose my phone?</span></h3>
+<p><span style="font-weight: 400;">Simply restore your account on a new secure device using your secret recovery seed phrase carefully.</span></p>
+<h3><span style="font-weight: 400;">Can a bank freeze my account?</span></h3>
+<p><span style="font-weight: 400;">Understanding exactly how decentralized systems operate guarantees you know no central authority can ever freeze a true self-custody account. </span></p>
+<p>The post <a href="https://ventureburn.com/what-is-a-crypto-wallet/" data-wpel-link="internal">What Is a Crypto Wallet &#038; How Does It Work? (Guide)</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!-- plugin=object-cache-pro client=phpredis metric#hits=2096 metric#misses=42 metric#hit-ratio=98.0 metric#bytes=791610 metric#prefetches=161 metric#store-reads=35 metric#store-writes=3 metric#store-hits=169 metric#store-misses=16 metric#sql-queries=24 metric#ms-total=390.63 metric#ms-cache=9.96 metric#ms-cache-avg=0.2692 metric#ms-cache-ratio=2.6 -->

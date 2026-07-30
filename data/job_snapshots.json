@@ -1,11 +1,29 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T03:35:40.825398+08:00",
+  "generated_at": "2026-07-30T11:54:25.067025+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-30T03:35:40.825398+08:00",
+      "observed_at": "2026-07-30T11:54:25.067025+08:00",
       "jobs": [
+        {
+          "id": "744000140592669",
+          "title": "Head of People Experience, Delivery & Compliance",
+          "url": "https://www.grab.careers/en/jobs/744000140592669/head-of-people-experience-delivery-compliance/",
+          "function_tags": [
+            "compliance",
+            "operations"
+          ]
+        },
+        {
+          "id": "744000140592420",
+          "title": "Head of People Experience, Delivery & Compliance",
+          "url": "https://www.grab.careers/en/jobs/744000140592420/head-of-people-experience-delivery-compliance/",
+          "function_tags": [
+            "compliance",
+            "operations"
+          ]
+        },
         {
           "id": "744000140439239",
           "title": "Credit Operation Associate",
@@ -135,20 +153,6 @@
           "function_tags": [
             "engineering"
           ]
-        },
-        {
-          "id": "744000139928285",
-          "title": "Partner Operation Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000139928285/partner-operation-specialist/",
-          "function_tags": [
-            "partnerships"
-          ]
-        },
-        {
-          "id": "744000139924939",
-          "title": "Manager, Omnicommerce Operational Excellence and API",
-          "url": "https://www.grab.careers/en/jobs/744000139924939/manager-omnicommerce-operational-excellence-and-api/",
-          "function_tags": []
         }
       ]
     },
@@ -685,7 +689,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-30T03:35:40.825398+08:00",
+      "observed_at": "2026-07-30T11:54:25.067025+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
