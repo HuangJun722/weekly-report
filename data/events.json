@@ -105324,6 +105324,120 @@
       "needs_repair": false,
       "analysis_source": "deepseek",
       "analysis_status": "complete"
+    },
+    {
+      "title": "Cloudflare: Node.js 24 is now the default for Workers Builds",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-07-30-workers-builds-nodejs-24/",
+      "source": "Cloudflare Changelog",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "D",
+      "score": 2,
+      "summary_short": "Cloudflare: Node.js 24 is",
+      "reason": "Cloudflare发布产品更新，可验证其产品、平台或生态能力发生变化",
+      "impact": "开发者、集成商和生态合作伙伴",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Cloudflare",
+      "article_date": "2026-07-30",
+      "date": "2026-07-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-07-30",
+      "observed_at": "2026-07-31T00:55:04.655354+00:00",
+      "date_source": "url_path",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L1 官方/IR源",
+      "source_role": "developer_change",
+      "source_type": "changelog",
+      "access_method": "html",
+      "source_id": "cloudflare-changelog",
+      "credibility_score": 10,
+      "noise_level": "low",
+      "source_signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
+      "vertical": "AI infra/边缘云",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment",
+        "ai_infra",
+        "developer_change"
+      ],
+      "quality_flags": [
+        "title_prefix_summary"
+      ],
+      "needs_repair": true,
+      "analysis_source": "program",
+      "analysis_status": "partial",
+      "observation_type": "changelog",
+      "view_status": "main",
+      "view_reason": "qualified_main",
+      "view_priority": "important"
+    },
+    {
+      "title": "K2 Space Raises $500 Million At $6.8B Valuation To Scale Large, High-Power Satellites",
+      "url": "https://ventureburn.com/k2-space-raises-500m-6-8-billion-valuation/",
+      "source": "Ventureburn",
+      "region": "非洲",
+      "event_types": [
+        "funding"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "K2 Space获5亿美元融资，估值68亿美元",
+      "reason": "非洲航天科技获巨额融资，大型卫星制造和太空基础设施供应链合作机会显著",
+      "impact": "卫星组件供应商、非洲航天技术合作方",
+      "insight_label": "资金流向",
+      "trend_topic": "非洲航天科技崛起",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-07-30",
+      "date": "2026-07-30",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://ventureburn.com/wp-content/uploads/2026/07/Dominion-Dynamics-Raises-139M-CAD-30.jpeg",
+      "published_at": "2026-07-30",
+      "observed_at": "2026-07-31T00:53:58.942980+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Ventureburn",
+      "credibility_score": 0,
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "ai_infra",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete",
+      "view_status": "filtered",
+      "view_reason": "out_of_scope_industry",
+      "view_priority": "selected"
     }
   ],
   "2026-07-31": []

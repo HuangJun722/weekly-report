@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-07-31T03:44:00.539928+08:00",
+  "generated_at": "2026-07-31T08:53:54.726814+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-31T03:44:00.539928+08:00",
+      "observed_at": "2026-07-31T08:53:54.726814+08:00",
       "jobs": [
         {
           "id": "744000140733130",
@@ -681,7 +681,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-31T03:44:00.539928+08:00",
+      "observed_at": "2026-07-31T08:53:54.726814+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
@@ -720,15 +720,6 @@
           "title": "Lead, Electronic Money Accounting Remote - United Kingdom",
           "url": "https://www.shopify.com/careers/lead-electronic-money-accounting_e1c60e78-e451-4242-8473-5b8217394c36",
           "function_tags": []
-        },
-        {
-          "id": "622368b1-217f-4cce-a2d4-117d74ffe339",
-          "title": "Lead Financial Analyst, AI Infrastructure Remote - Americas",
-          "url": "https://www.shopify.com/careers/lead-financial-analyst-ai-infrastructure_622368b1-217f-4cce-a2d4-117d74ffe339",
-          "function_tags": [
-            "ai",
-            "engineering"
-          ]
         },
         {
           "id": "5df30cc8-d4dc-4183-a2d8-1eba0108dccc",
@@ -810,15 +801,15 @@
           ]
         },
         {
-          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
-          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
-          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
-          "function_tags": []
-        },
-        {
           "id": "32132c55-3c8c-4695-b117-477fe97629aa",
           "title": "Professional Services Delivery Manager Remote - Americas",
           "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
+          "function_tags": []
+        },
+        {
+          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
+          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
           "function_tags": []
         },
         {
