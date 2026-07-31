@@ -14,6 +14,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 try:
+    from event_contract import prepare_event_contract
     from event_value import (
         event_filter_reason,
         event_type,
@@ -23,7 +24,9 @@ try:
         should_show_in_review,
     )
     from internet_relevance import internet_relevance_score
+    from view_selectors import is_main_view_event, is_review_view_event
 except ImportError:
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_value import (
         event_filter_reason,
         event_type,
@@ -33,6 +36,7 @@ except ImportError:
         should_show_in_review,
     )
     from scripts.internet_relevance import internet_relevance_score
+    from scripts.view_selectors import is_main_view_event, is_review_view_event
 
 
 DROP_REASONS = (
@@ -111,9 +115,14 @@ def _registry_aliases(registry):
 
 def _source_names(event, aliases=None):
     aliases = aliases or {}
+    origin_source_id = event.get('origin_source_id') or event.get('observation_entity_id')
+    if origin_source_id:
+        return [aliases.get(origin_source_id, origin_source_id)]
     source_id = event.get('source_id')
     if source_id and source_id in aliases:
         return [aliases[source_id]]
+    if source_id and event.get('is_company') and source_id.lower() not in {'google-news', 'google news'}:
+        return [source_id]
     source = event.get('source')
     if source and source in aliases:
         return [aliases[source]]
@@ -129,11 +138,11 @@ def _source_names(event, aliases=None):
 
 def classify_filter_reason(event):
     """Return the first product reason explaining stored-event visibility."""
-    if should_show_in_main_list(event):
+    if is_main_view_event(event):
         return 'main'
     if event_filter_reason(event) == 'capital_only_low_actionability':
         return 'capital_only_low_actionability'
-    if should_show_in_review(event):
+    if is_review_view_event(event):
         return 'review'
     return event_filter_reason(event)
 
@@ -189,6 +198,7 @@ def _add_run_stats(rows, metrics, selected_dates):
 def _add_event_stats(rows, events, selected_dates, aliases):
     selected_events = []
     for event in events:
+        event = prepare_event_contract(dict(event))
         date_key = _event_date(event)
         if date_key not in selected_dates:
             continue

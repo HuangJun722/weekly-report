@@ -11,6 +11,7 @@ from jinja2 import Template
 
 try:
     from event_dates import is_display_date
+    from event_contract import prepare_event_contract
     from event_value import (
         classify_bd_priority,
         event_score,
@@ -20,11 +21,14 @@ try:
     )
     from signal_clusters import build_signal_clusters
     from narratives import build_narrative
+    from period_themes import build_monthly_trends, build_weekly_themes
+    from entity_signal_conversion_report import event_matches_entity
     from internet_relevance import is_mainline_internet_event
     from view_selectors import (
         select_company_events,
         select_company_quality_events,
         select_homepage_events,
+        is_main_view_event,
         is_period_high_value_event,
         select_main_list_events,
         select_mature_main_date,
@@ -33,6 +37,7 @@ try:
     )
 except ImportError:
     from scripts.event_dates import is_display_date
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_value import (
         classify_bd_priority,
         event_score,
@@ -42,11 +47,14 @@ except ImportError:
     )
     from scripts.signal_clusters import build_signal_clusters
     from scripts.narratives import build_narrative
+    from scripts.period_themes import build_monthly_trends, build_weekly_themes
+    from scripts.entity_signal_conversion_report import event_matches_entity
     from scripts.internet_relevance import is_mainline_internet_event
     from scripts.view_selectors import (
         select_company_events,
         select_company_quality_events,
         select_homepage_events,
+        is_main_view_event,
         is_period_high_value_event,
         select_main_list_events,
         select_mature_main_date,
@@ -229,15 +237,58 @@ def calculate_score(event):
 
 # ─── 预设公司名单 ─────────────────────────────────────────────
 
-PRESET_COMPANIES = {
-    '全球': ['Stripe', 'Shopify', 'Cloudflare'],
-    '亚太': ['Kakao', 'Naver', 'Rakuten', 'Sea Limited', 'Grab', 'Gojek', 'VNG Group', 'Yahoo', 'Cyberagent', 'HKTVmall', 'U-NEXT', 'Square Enix'],
-    '欧洲': ['Adyen', 'Zalando', 'Allegro', 'Trendyol'],
-    '中东': ['Noon', 'Careem', 'Tabby', 'Kaspi.kz'],
-    '非洲': ['Jumia', 'Konga'],
-    '拉美': ['MercadoLibre', 'Rappi'],
-    '中资': ['ByteDance/TikTok', 'Tencent', 'Alibaba', 'JD.com', 'Kuaishou', 'Ant Group', 'Meituan'],
-}
+REGION_ORDER = ['全球', '亚太', '欧洲', '中东', '拉美', '非洲', '中资']
+
+
+def load_entity_pool(path='data/entity_pool.json'):
+    try:
+        with open(path, encoding='utf-8') as handle:
+            return json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return {'entities': [], 'portfolio': {}}
+
+
+def _portfolio_by_entity(pool):
+    result = {}
+    for tier, rows in (pool.get('portfolio') or {}).items():
+        for row in rows or []:
+            result[row.get('entity_id')] = {
+                'portfolio_tier': tier,
+                'decision_use': row.get('decision_use') or '',
+            }
+    return result
+
+
+def build_entity_event_timelines(events_by_date, entities):
+    """Map every qualified event to the object aliases it actually describes."""
+    candidates = [
+        event
+        for rows in (events_by_date or {}).values()
+        for event in rows or []
+        if is_main_view_event(event)
+    ]
+    timelines = {}
+    for entity in entities or []:
+        matched = []
+        seen = set()
+        entity_name = entity.get('name') or ''
+        for event in candidates:
+            if not event_matches_entity(event, entity):
+                continue
+            key = event.get('url') or f"{event.get('date', '')}|{event.get('title', '')}"
+            if key in seen:
+                continue
+            seen.add(key)
+            matched.append(event)
+            names = event.setdefault('matched_entities', [])
+            if entity_name and entity_name not in names:
+                names.append(entity_name)
+        timelines[entity.get('id') or entity_name] = sorted(
+            matched,
+            key=lambda row: ((row.get('date') or '')[:10], event_score(row)),
+            reverse=True,
+        )
+    return timelines
 
 # ─── BD opportunity fallback ────────────────────────────────
 
@@ -630,7 +681,8 @@ def enrich(event):
         event['display_source'] = publisher
     else:
         event['display_source'] = event.get('source', '未知')
-    event['score'] = calculate_score(event)
+    if event.get('score') in (None, ''):
+        event['score'] = calculate_score(event)
     # 用于 Market Pulse 突出展示
     amt = _parse_amount(event.get('title', ''))
     event['display_amount'] = _format_amount(amt) if amt > 0 else ''
@@ -642,7 +694,7 @@ def enrich(event):
         ev_type = event.get('event_types', ['other'])[0]
         event['insight_label'] = '中资出海'
 
-    for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important', 'level'):
+    for old_key in ('summary', 'category', 'impact_range', 'impact_scope', 'why_important'):
         event.pop(old_key, None)
     # 保留 date 字段用于 Market Pulse 日期权重
     if not event.get('date'):
@@ -657,10 +709,10 @@ def load_events():
         grouped = {}
         for event in data:
             date = event.get('date', _cn_today())[:10]
-            grouped.setdefault(date, []).append(enrich(event))
+            grouped.setdefault(date, []).append(enrich(prepare_event_contract(dict(event))))
         return grouped
     return {
-        k: [enrich(e) for e in v]
+        k: [enrich(prepare_event_contract(dict(e))) for e in v]
         for k, v in data.items()
         if is_display_date(k, now=_cn_now())
     }
@@ -864,6 +916,9 @@ DAILY_EVENT_GROUPS = [
 
 
 def _daily_event_group_key(event):
+    frozen = event.get('view_priority')
+    if frozen in {'selected', 'important', 'watch'}:
+        return frozen
     priority = classify_bd_priority(event)
     if priority == '高':
         return 'selected'
@@ -1306,32 +1361,17 @@ def _build_broad_weekly_focus_windows(period_events, limit=3):
     return windows[:limit]
 
 
-def _build_weekly_focus_windows(period_events, end_date, limit=3):
-    clusters = build_signal_clusters(period_events, end_date, days=7, limit=limit)
-    windows = []
-    for cluster in clusters:
-        evidence = cluster.get('evidence') or []
-        windows.append({
-            'title': cluster.get('title') or '本周关注窗口',
-            'region': cluster.get('region') or '多地区',
-            'objects': _cluster_objects(cluster),
-            'direction': cluster.get('type_label') or '方向待观察',
-            'confidence': cluster.get('confidence') or '观察',
-            'evidence_count': cluster.get('evidence_count') or len(evidence),
-            'action': cluster.get('action') or '加入观察名单，等待二次确认信号',
-            'why': cluster.get('why') or '',
-            'evidence': evidence[:3],
-        })
-    if len(windows) < limit:
-        seen_titles = {window['title'] for window in windows}
-        for window in _build_broad_weekly_focus_windows(period_events, limit):
-            if window['title'] in seen_titles:
-                continue
-            windows.append(window)
-            seen_titles.add(window['title'])
-            if len(windows) >= limit:
-                break
-    return windows
+def _entity_region_map():
+    pool = load_entity_pool()
+    return {
+        entity.get('name'): entity.get('region') or '全球'
+        for entity in pool.get('entities') or []
+        if entity.get('name')
+    }
+
+
+def _build_weekly_focus_windows(period_events, end_date, limit=6):
+    return build_weekly_themes(period_events, _entity_region_map(), limit=limit)
 
 
 def build_period_report(events, start_date, end_date, label, period_id=None, status='closed', focus_windows_enabled=False):
@@ -1365,34 +1405,44 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
     regional_map = _build_regional_map(period_events, 6)
     actions = _build_actions(period_events, 5)
     customer_tiers = _build_customer_tiers(period_events, 6)
-    themes = _build_themes(period_events, 6)
-    focus_windows = _build_weekly_focus_windows(period_events, end_date, 3) if focus_windows_enabled else []
+    focus_windows = _build_weekly_focus_windows(period_events, end_date, 6) if focus_windows_enabled else []
+    monthly_trends = (
+        build_monthly_trends(events, start_date, end_date, _entity_region_map(), limit=6)
+        if not focus_windows_enabled else []
+    )
+    themes = focus_windows if focus_windows_enabled else monthly_trends
     high_count = len(select_period_high_value_events(period_events))
 
     if period_events:
-        title = f"{label}客户拓展机会报告"
+        title = f"{label}{'关注主题周报' if focus_windows_enabled else '趋势与结构月报'}"
         leading_region = regional_map[0]['region'] if regional_map else '多地区'
         if focus_windows_enabled:
             if focus_windows:
                 leading_theme = focus_windows[0]['direction']
                 leading_region = focus_windows[0]['region']
                 summary = (
-                    f"本周期共收录 {len(period_events)} 条事件，其中 {high_count} 条为高优先级机会。"
-                    f"周报先看 {leading_region} 的{leading_theme}，再回到证据事件确认。"
+                    f"本周期从 {len(period_events)} 条合格事实中形成 {len(focus_windows)} 个主题。"
+                    f"本周主线是{leading_theme}，再回到独立事实确认。"
                 )
             else:
                 summary = (
-                    f"本周期共收录 {len(period_events)} 条事件，其中 {high_count} 条为高优先级机会。"
-                    f"本周先按优先机会和区域热度观察，不硬凑关注窗口。"
+                    f"本周期收录 {len(period_events)} 条合格事实，但尚未形成满足独立证据门槛的主题。"
+                    f"本周只保留事件导航，不硬凑结论。"
                 )
         else:
-            leading_theme = themes[0]['name'] if themes else (top_opportunities[0]['direction'] if top_opportunities else '持续观察')
-            summary = (
-                f"本周期共收录 {len(period_events)} 条事件，其中 {high_count} 条为高优先级机会。"
-                f"当前优先看 {leading_region}，主线机会集中在{leading_theme}。"
-            )
+            if monthly_trends:
+                leading_theme = monthly_trends[0]['title']
+                summary = (
+                    f"本周期从 {len(period_events)} 条合格事件中形成 {len(monthly_trends)} 个跨周趋势。"
+                    f"本月主线是{leading_theme}，每个判断均可回到独立证据。"
+                )
+            else:
+                summary = (
+                    f"本周期共收录 {len(period_events)} 条事件，但尚未形成跨周、可比较的结构趋势。"
+                    f"先保留事实，不用默认标签填充月报。"
+                )
     else:
-        title = f"{label}客户拓展机会报告"
+        title = f"{label}{'关注主题周报' if focus_windows_enabled else '趋势与结构月报'}"
         summary = "当前周期事件数量较少，先保留为观察入口。"
     date_label = start_date if start_date == end_date else f"{start_date} 至 {end_date}"
 
@@ -1416,6 +1466,7 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         'actions': actions,
         'customer_tiers': customer_tiers,
         'themes': themes,
+        'period_themes': themes,
         'high_priority': high_count,
     }
 
@@ -1599,7 +1650,7 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
         recent_7 = [e for e in events if (e.get('date') or '')[:10] >= start_7]
         recent_30 = [e for e in events if (e.get('date') or '')[:10] >= start_30]
-        quality_events = select_company_quality_events(recent_30)
+        quality_events = [event for event in recent_30 if is_main_view_event(event)]
         latest = events[0] if events else {}
         latest_title = clean_display_title(latest.get('display_title') or latest.get('summary_short') or latest.get('title') or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
@@ -1613,6 +1664,9 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         )
         total_points = len(point_rows)
         observation_status = observation.get('status') or 'unverified'
+        activity_status = observation.get('activity_status') or (
+            'active' if observation_status == 'active' else 'unknown'
+        )
         coverage_status = observation.get('coverage_status') or observation_status
         observation_label = observation.get('status_label') or '状态待确认'
         if observation_status == 'active':
@@ -1659,6 +1713,23 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
             'signal': signal,
             'observation_status': observation_status,
             'observation_label': observation_label,
+            'activity_status': activity_status,
+            'activity_label': {
+                'active': '近期有动作',
+                'candidate': '有候选，待晋级',
+                'changed_below_threshold': '有变化，未达门槛',
+                'quiet': '近期安静',
+                'unknown': '活动未知',
+            }.get(activity_status, '活动未知'),
+            'coverage_label': {
+                'active': '完整覆盖',
+                'quiet': '有效覆盖',
+                'changed_below_threshold': '有效覆盖',
+                'partial': '部分覆盖',
+                'failed': '接入失效',
+                'pending': '待接入',
+                'unverified': '待确认',
+            }.get(coverage_status, '待确认'),
             'observation_detail': observation_detail,
             'coverage_status': coverage_status,
             'last_checked_at': (observation.get('last_checked_at') or '')[:10],
@@ -1670,7 +1741,7 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
 def group_company_cards(company_list):
     """按预设区域顺序组织公司索引，避免全局排序后用户找不到区域。"""
     grouped = []
-    for region in PRESET_COMPANIES.keys():
+    for region in REGION_ORDER:
         companies = [c for c in company_list if c.get('region') == region]
         if not companies:
             continue
@@ -1678,7 +1749,7 @@ def group_company_cards(company_list):
         grouped.append({
             'region': region,
             'total': len(companies),
-            'active': sum(1 for c in companies if c.get('observation_status') == 'active'),
+            'active': sum(1 for c in companies if c.get('activity_status') == 'active'),
             'observed': sum(1 for c in companies if c.get('coverage_status') not in {'pending', 'unverified'}),
             'recent_30': sum(c.get('recent_30', 0) for c in companies),
             'quality_30': sum(c.get('quality_30', 0) for c in companies),
@@ -1810,15 +1881,22 @@ def build_display_context():
 
     # 按事件数量排序，有事件的排前面
     preset_company_list = []
-    for region, companies in PRESET_COMPANIES.items():
-        for company_name in companies:
-            evs = company_by_company.get(company_name, [])
-            preset_company_list.append({
-                'name': company_name,
-                'region': region,
-                'count': len(evs),
-                'events': evs
-            })
+    entity_pool = load_entity_pool()
+    portfolio = _portfolio_by_entity(entity_pool)
+    entity_timelines = build_entity_event_timelines(events, entity_pool.get('entities') or [])
+    for entity in entity_pool.get('entities') or []:
+        company_name = entity.get('name') or ''
+        evs = entity_timelines.get(entity.get('id') or company_name, [])
+        preset_company_list.append({
+            'entity_id': entity.get('id') or '',
+            'name': company_name,
+            'region': entity.get('region') or '全球',
+            'sector': entity.get('sector') or '',
+            'priority': entity.get('priority') or 'watch',
+            **portfolio.get(entity.get('id'), {'portfolio_tier': 'experiment', 'decision_use': ''}),
+            'count': len(evs),
+            'events': evs,
+        })
 
     # 按事件数量排序，有事件的排前面
     preset_company_list.sort(key=lambda x: x['count'], reverse=True)

@@ -8,7 +8,9 @@ another surface's product contract by accident.
 try:
     from event_value import (
         event_score,
+        event_filter_reason,
         event_type,
+        classify_bd_priority,
         is_company_quality_signal,
         is_google_news_event,
         is_high_value_event,
@@ -19,7 +21,9 @@ try:
 except ImportError:
     from scripts.event_value import (
         event_score,
+        event_filter_reason,
         event_type,
+        classify_bd_priority,
         is_company_quality_signal,
         is_google_news_event,
         is_high_value_event,
@@ -30,6 +34,38 @@ except ImportError:
 
 
 MATURE_BATCH_MIN_EVENTS = 3
+
+
+def derive_view_status(event):
+    if should_show_in_main_list(event):
+        return 'main'
+    if should_show_in_review(event):
+        return 'review'
+    return 'filtered'
+
+
+def apply_view_contract(event):
+    """Freeze the display decision before presentation enrichment mutates text."""
+    status = derive_view_status(event)
+    priority = classify_bd_priority(event)
+    event['view_status'] = status
+    event['view_reason'] = 'qualified_main' if status == 'main' else (
+        'qualified_review' if status == 'review' else event_filter_reason(event)
+    )
+    event['view_priority'] = {
+        '高': 'selected',
+        '中': 'important',
+        '观察': 'watch',
+    }.get(priority, 'watch')
+    return event
+
+
+def is_main_view_event(event):
+    return event.get('view_status') == 'main' if event.get('view_status') else should_show_in_main_list(event)
+
+
+def is_review_view_event(event):
+    return event.get('view_status') == 'review' if event.get('view_status') else should_show_in_review(event)
 
 
 def event_date(event):
@@ -54,7 +90,7 @@ def select_company_events(events_by_date, week_ago):
             if event.get('is_company'):
                 continue
 
-            if should_show_in_main_list(event) or should_show_in_review(event):
+            if is_main_view_event(event) or is_review_view_event(event):
                 generic_events.append(event)
 
     return _sort_events(company_events), _sort_events(generic_events)
@@ -64,7 +100,7 @@ def select_mature_main_date(sorted_dates, all_visible_events, events_by_date):
     """Prefer the newest date that has enough visible events for the homepage."""
     counts = {}
     for event in all_visible_events:
-        if not should_show_in_main_list(event):
+        if not is_main_view_event(event):
             continue
         date_key = event_date(event)
         if date_key:
@@ -86,14 +122,14 @@ def select_mature_main_date(sorted_dates, all_visible_events, events_by_date):
 
 def select_main_list_events(events):
     """Select events that can appear as normal dashboard cards."""
-    return [event for event in events if should_show_in_main_list(event)]
+    return [event for event in events if is_main_view_event(event)]
 
 
 def select_homepage_events(all_visible_events, main_date, fallback_events=None):
     """Select homepage cards for a date, with a caller-provided fallback."""
     selected = [
         event for event in all_visible_events
-        if event_date(event) == main_date and should_show_in_main_list(event)
+        if event_date(event) == main_date and is_main_view_event(event)
     ]
     if not selected and fallback_events:
         return list(fallback_events)
@@ -104,7 +140,7 @@ def is_review_candidate(event):
     """Return whether a visible event belongs in the review drawer."""
     return (
         needs_quality_review(event)
-        or not should_show_in_main_list(event)
+        or not is_main_view_event(event)
         or (is_google_news_event(event) and not is_high_value_event(event))
     )
 
@@ -112,7 +148,7 @@ def is_review_candidate(event):
 def select_review_events(events, limit=12):
     review_events = [
         event for event in events
-        if is_review_candidate(event) and should_show_in_review(event)
+        if is_review_candidate(event) and is_review_view_event(event)
     ]
     review_events.sort(key=lambda x: (event_score(x), x.get('date', '')), reverse=True)
     if limit is None:
@@ -126,6 +162,8 @@ def select_company_quality_events(events):
 
 def is_period_high_value_event(event):
     """Return whether an event counts as high priority in period reports."""
+    if event.get('view_status'):
+        return event.get('view_status') == 'main' and event.get('view_priority') == 'selected'
     return is_high_value_event(event)
 
 
@@ -152,11 +190,11 @@ def select_feed_events(today_events, all_visible_events, limit=5):
     """Select RSS entries from homepage first, then latest date with high-value events."""
     high_value = [
         event for event in today_events
-        if is_high_value_event(event) and not is_google_news_event(event)
+        if is_period_high_value_event(event) and not is_google_news_event(event)
     ]
     main_fill = [
         event for event in today_events
-        if should_show_in_main_list(event) and not is_google_news_event(event)
+        if is_main_view_event(event) and not is_google_news_event(event)
     ]
     feed_events = _unique_events(high_value + main_fill, limit=limit)
     if feed_events:

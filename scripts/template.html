@@ -178,6 +178,9 @@ button, input, select { font: inherit; }
 .report-cover .label { border-color: rgba(244,241,234,0.28); color: rgba(244,241,234,0.82); background: rgba(244,241,234,0.08); }
 .report-cover h2 { margin: 18px 0 0; max-width: 760px; font-size: 38px; line-height: 1.17; }
 .report-cover p { max-width: 650px; color: rgba(244,241,234,0.72); font-size: 15px; }
+.report-mainline { margin-top: 16px; max-width: 700px; }
+.report-mainline strong { color: rgba(244,241,234,0.92); font-size: 12px; }
+.report-mainline p { margin: 5px 0 0; }
 .cover-stats { display: grid; gap: 10px; }
 .cover-stat { padding: 14px; border: 1px solid rgba(244,241,234,0.22); border-radius: 8px; }
 .period-shell { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 26px; align-items: start; margin-top: 28px; }
@@ -207,6 +210,7 @@ button, input, select { font: inherit; }
 .window-evidence li:first-child { padding-top: 0; border-top: 0; }
 .window-evidence a { font-size: 13px; line-height: 1.42; }
 .window-evidence span { color: var(--quiet); font-size: 11px; }
+.evidence-title { margin: 2px 0 0; color: var(--ink); font-size: 12px; }
 .window-actions strong { color: var(--green); font-size: 13px; }
 .window-actions span { color: var(--muted); font-size: 12px; }
 .trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
@@ -434,7 +438,7 @@ button, input, select { font: inherit; }
                 </div>
                 <div class="intelligence-list">
                   {% for ev in group.events %}
-                  <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
+                  <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
                     <div class="intel-meta">
                       <span class="label dark">{{ group.label }}</span>
                       <span class="label green">{{ ev.region }}</span>
@@ -520,17 +524,17 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">周报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ '更新中' if report.status == 'open' else '已封存' }}</span></div>
                 <h2>{{ report.title }}</h2>
-                <p>{{ report.summary }}</p>
+                <div class="report-mainline"><strong>本期主线</strong><p>{{ report.summary }}</p></div>
               </div>
               <div class="cover-stats">
-                <div class="cover-stat"><strong>{{ report.total }}</strong><span>入选事件</span></div>
-                <div class="cover-stat"><strong>{{ report.companies }}</strong><span>重点公司</span></div>
-                <div class="cover-stat"><strong>{{ report.regions }}</strong><span>覆盖地区</span></div>
+                <div class="cover-stat"><strong>{{ report.focus_windows|length }}</strong><span>本周主题</span></div>
+                <div class="cover-stat"><strong>{{ report.high_priority }}</strong><span>重要事件</span></div>
+                <div class="cover-stat"><strong>{{ report.total }}</strong><span>合格事实</span></div>
               </div>
             </article>
             {% if report.focus_windows %}
             <section class="content-block">
-              <div class="block-head"><h2>本周关注窗口</h2><span>由近 7 天独立证据聚合，先看方向再查事件</span></div>
+              <div class="block-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
               <div class="weekly-window-list">
                 {% for window in report.focus_windows %}
                 <article class="weekly-window">
@@ -540,50 +544,21 @@ button, input, select { font: inherit; }
                     <span class="label copper">{{ window.evidence_count }} 条证据</span>
                   </div>
                   <h3>{{ window.title }}</h3>
-                  <p>对象：{{ window.objects }}｜方向：{{ window.direction }}</p>
+                  <p>对象：{{ window.objects }}｜主要区域：{{ window.region }}</p>
                   {% if window.why %}<p>{{ window.why }}</p>{% endif %}
+                  <h4 class="evidence-title">证据事件</h4>
                   <ul class="window-evidence">
                     {% for ev in window.evidence %}
                     <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
                     {% endfor %}
                   </ul>
-                  <div class="window-actions"><strong>下周动作</strong><span>{{ window.action }}</span></div>
+                  <div class="window-actions"><strong>后续观察</strong><span>{{ window.action }}</span></div>
                 </article>
                 {% endfor %}
               </div>
             </section>
             {% endif %}
-            <section class="content-block">
-              <div class="block-head"><h2>本周优先机会</h2><span>按优先级、评分和信源质量排序</span></div>
-              <div class="opportunity-layout">
-                <div class="opportunity-list">
-                  {% for item in report.top_opportunities %}
-                  <a class="opportunity" href="{{ item.url }}" target="_blank">
-                    <div class="opportunity-meta">
-                      <span class="label green">{{ item.priority }}</span>
-                      <span class="label">{{ item.region }}</span>
-                      <span class="label copper">{{ item.window }}</span>
-                    </div>
-                    <h3>{{ item.title }}</h3>
-                    <p>{{ item.company }}｜{{ item.trigger }}｜{{ item.direction }}</p>
-                  </a>
-                  {% endfor %}
-                </div>
-                <div class="mini-stack">
-                  {% for r in report.regional_map[:4] %}
-                  <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，{{ r.companies }} 家重点公司</span></div>
-                  {% endfor %}
-                </div>
-              </div>
-            </section>
-            <section class="content-block">
-              <div class="block-head"><h2>下周跟进行动</h2><span>由事件窗口自动归类</span></div>
-              <div class="action-list">
-                {% for a in report.actions %}
-                <div class="action-row"><div class="action-window">{{ a.window }}</div><div><strong>{{ a.action }}</strong><span>{{ a.count }} 条线索，代表事件：{{ a.event }}</span></div></div>
-                {% endfor %}
-              </div>
-            </section>
+            {% if not report.focus_windows %}<div class="empty-state">本周尚未形成满足独立证据门槛的主题，先查看日报事实。</div>{% endif %}
           </div>
           {% endfor %}
         </div>
@@ -609,37 +584,38 @@ button, input, select { font: inherit; }
               <div>
                 <div class="label-row"><span class="label">月报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ '更新中' if report.status == 'open' else '已封存' }}</span></div>
                 <h2>{{ report.title }}</h2>
-                <p>{{ report.summary }}</p>
+                <div class="report-mainline"><strong>本月主线</strong><p>{{ report.summary }}</p></div>
               </div>
               <div class="cover-stats">
-                <div class="cover-stat"><strong>{{ report.total }}</strong><span>月度事件</span></div>
-                <div class="cover-stat"><strong>{{ report.companies }}</strong><span>重点公司</span></div>
-                <div class="cover-stat"><strong>{{ report.regions }}</strong><span>覆盖地区</span></div>
+                <div class="cover-stat"><strong>{{ report.period_themes|length }}</strong><span>结构趋势</span></div>
+                <div class="cover-stat"><strong>{{ report.total }}</strong><span>合格事实</span></div>
+                <div class="cover-stat"><strong>{{ report.companies }}</strong><span>涉及对象</span></div>
               </div>
             </article>
+            {% if report.period_themes %}
             <section class="content-block">
-              <div class="block-head"><h2>月度市场优先级</h2><span>区域、客户与机会主题</span></div>
-              <div class="opportunity-layout">
-                <div class="mini-stack">
-                  {% for r in report.regional_map[:6] %}
-                  <div class="mini-panel"><strong>{{ r.region }}：{{ r.direction }}</strong><span>{{ r.count }} 条事件，{{ r.high }} 条高优先级，平均评分 {{ r.avg_score }}</span></div>
-                  {% endfor %}
-                </div>
-                <div class="mini-stack">
-                  {% for theme in report.themes[:6] %}
-                  <div class="mini-panel"><strong>{{ theme.name }}</strong><span>{{ theme.count }} 条线索沉淀</span></div>
-                  {% endfor %}
-                </div>
-              </div>
-            </section>
-            <section class="content-block">
-              <div class="block-head"><h2>客户分层建议</h2><span>用于 BD 跟进优先级</span></div>
-              <div class="trend-columns">
-                {% for c in report.customer_tiers[:6] %}
-                <div class="trend"><h3>{{ c.company }}</h3><p>{{ c.tier }}｜{{ c.region }}｜{{ c.direction }}</p></div>
+              <div class="block-head"><h2>本月结构变化</h2><span>至少跨两个周次，并与前一周期比较</span></div>
+              <div class="weekly-window-list">
+                {% for theme in report.period_themes %}
+                <article class="weekly-window">
+                  <div class="window-meta">
+                    <span class="label green">{{ theme.change }}</span>
+                    <span class="label">{{ theme.region }}</span>
+                    <span class="label copper">{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实</span>
+                  </div>
+                  <h3>{{ theme.title }}</h3>
+                  <p>{{ theme.summary }}</p>
+                  <h4 class="evidence-title">代表证据</h4>
+                  <ul class="window-evidence">
+                    {% for ev in theme.evidence %}
+                    <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </article>
                 {% endfor %}
               </div>
             </section>
+            {% else %}<div class="empty-state">本月尚未形成跨周且可比较的结构趋势，先保留事实。</div>{% endif %}
           </div>
           {% endfor %}
         </div>
@@ -673,11 +649,11 @@ button, input, select { font: inherit; }
             </div>
             <div class="company-grid">
               {% for c in group.companies %}
-              <button class="company company-nav-btn status-{{ c.observation_status }}{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
+              <button class="company company-nav-btn status-{{ c.coverage_status }}{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
                 <strong>{{ c.name }}</strong>
-                <span class="company-status">{{ c.observation_label }}</span>
+                <span class="company-status">活动：{{ c.activity_label }}｜覆盖：{{ c.coverage_label }}</span>
                 <span>{{ c.observation_detail }}</span>
-                <small>近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
+                <small>{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '实验对象' }}｜近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
               </button>
               {% endfor %}
             </div>
@@ -702,7 +678,7 @@ button, input, select { font: inherit; }
             <div class="history-body">
               <div class="intelligence-list">
                 {% for ev in group.events %}
-                <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
+                <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
                   <div class="intel-meta">
                     <span class="label green">{{ ev.region }}</span>
                     {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
@@ -951,7 +927,7 @@ function labelHtml(text, cls) {
   return '<span class="label ' + (cls || '') + '">' + escHtml(text) + '</span>';
 }
 function eventCardHtml(ev, groupLabel) {
-  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'');
+  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'') + ' ' + ((ev.matched_entities||[]).join(' '));
   var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25) && ev.summary_short !== ev.reason)
     ? '<p>' + escHtml(ev.summary_short) + '</p>' : '';
   var displayTitle = ev.display_title || ev.summary_short || ev.title || '';

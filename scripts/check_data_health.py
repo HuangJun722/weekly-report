@@ -87,6 +87,51 @@ def _future_event_count(path='data/events.json', now=None):
     return count
 
 
+def _load_json(path, default):
+    try:
+        with open(path, encoding='utf-8') as handle:
+            return json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return default
+
+
+def _observation_health(ledger, pool, jobs, candidates):
+    must_ids = {
+        row.get('entity_id')
+        for row in (pool.get('portfolio') or {}).get('must') or []
+        if row.get('entity_id')
+    }
+    rows = ledger.get('entities') or []
+    must_rows = [row for row in rows if row.get('entity_id') in must_ids]
+    effective = [
+        row for row in must_rows
+        if row.get('last_success_at')
+        and row.get('coverage_status') not in {'pending', 'failed', 'unverified'}
+    ]
+    failed_points = [
+        f"{row.get('entity')}:{point.get('point_type')}"
+        for row in must_rows
+        for point in row.get('observation_points') or []
+        if point.get('status') == 'failed'
+    ]
+    jobs_failed = [
+        source for source, stats in (jobs.get('source_stats') or {}).items()
+        if stats.get('fetch_status') in {'failed', 'parse_failed'}
+    ]
+    candidate_rows = candidates.get('candidates') or []
+    status_counts = Counter(row.get('status') or 'unknown' for row in candidate_rows)
+    return {
+        'must_total': len(must_rows),
+        'must_effective': len(effective),
+        'must_coverage_ratio': len(effective) / len(must_rows) if must_rows else 0,
+        'failed_observation_points': failed_points,
+        'jobs_failed': jobs_failed,
+        'candidate_status_counts': dict(status_counts),
+        'candidate_backlog': sum(status_counts.get(status, 0) for status in ('new', 'accumulating', 'qualified')),
+        'candidate_promoted': status_counts.get('promoted', 0),
+    }
+
+
 def build_health_report(days=7):
     context = build_display_context()
     main_date = context['main_date']
@@ -127,6 +172,12 @@ def build_health_report(days=7):
     source_conversion = build_source_conversion_report(days=days)
     daily_coverage = build_daily_coverage_report(days=days)
     future_event_count = _future_event_count()
+    observation_health = _observation_health(
+        context.get('entity_observation_ledger') or {},
+        _load_json('data/entity_pool.json', {}),
+        _load_json('data/job_observation_metrics.json', {}),
+        _load_json('data/signal_candidates.json', {}),
+    )
 
     return {
         'main_date': main_date,
@@ -148,6 +199,7 @@ def build_health_report(days=7):
         'source_conversion': source_conversion,
         'daily_coverage': daily_coverage,
         'future_event_count': future_event_count,
+        'observation_health': observation_health,
     }
 
 
@@ -189,6 +241,20 @@ def print_report(report):
         "duplicate_items={duplicate_items}".format(**report)
     )
     print(f"health | future_event_count={report.get('future_event_count', 0)}")
+    observation = report.get('observation_health') or {}
+    print(
+        "observation | must={must_effective}/{must_total} coverage={must_coverage_ratio:.1%} "
+        "failed_points={failed} jobs_failed={jobs_failed_count} candidate_backlog={candidate_backlog} "
+        "promoted={candidate_promoted}".format(
+            failed=len(observation.get('failed_observation_points') or []),
+            jobs_failed_count=len(observation.get('jobs_failed') or []),
+            **observation,
+        )
+    )
+    if observation.get('failed_observation_points'):
+        print("observation failures | " + ', '.join(observation['failed_observation_points']))
+    if observation.get('jobs_failed'):
+        print("jobs failures | " + ', '.join(observation['jobs_failed']))
     if report['feed_fallback_date']:
         print(f"health | feed_fallback_date={report['feed_fallback_date']}")
     if report.get('collection_timing'):
@@ -282,6 +348,21 @@ def collect_failures(report, args):
     metrics = report.get('run_metrics') or {}
     if args.require_run_metrics and not metrics:
         failures.append("run_metrics missing")
+    observation = report.get('observation_health') or {}
+    min_must_coverage = getattr(args, 'min_must_coverage', 0)
+    max_failed_points = getattr(args, 'max_failed_observation_points', 999)
+    if observation.get('must_total') and observation.get('must_coverage_ratio', 0) < min_must_coverage:
+        failures.append(
+            f"must_coverage_ratio {observation.get('must_coverage_ratio', 0):.1%} "
+            f"< {min_must_coverage:.1%}"
+        )
+    if len(observation.get('failed_observation_points') or []) > max_failed_points:
+        failures.append(
+            f"failed_observation_points {len(observation.get('failed_observation_points') or [])} "
+            f"> {max_failed_points}"
+        )
+    if observation.get('jobs_failed') and getattr(args, 'fail_on_jobs_error', False):
+        failures.append('jobs_failed ' + ','.join(observation['jobs_failed']))
     return failures
 
 
@@ -294,6 +375,9 @@ def main():
     parser.add_argument('--max-feed-google-ratio', type=float, default=0)
     parser.add_argument('--max-duplicate-ratio', type=float, default=0.35)
     parser.add_argument('--require-run-metrics', action='store_true')
+    parser.add_argument('--min-must-coverage', type=float, default=0)
+    parser.add_argument('--max-failed-observation-points', type=int, default=999)
+    parser.add_argument('--fail-on-jobs-error', action='store_true')
     parser.add_argument('--strict', action='store_true', help='Exit non-zero when health checks fail')
     args = parser.parse_args()
 

@@ -1,5 +1,5 @@
 {
-  "version": "2026-06-08",
+  "version": "2026-07-30",
   "principles": [
     "对象池不是新闻源列表，而是长期观察对象资产。",
     "每个对象至少区分官方披露、招聘/组织动作、产品/API/开发者变更三类观察点。",
@@ -28,6 +28,46 @@
     "qualified_signal": "通过本站边界、质量和去重后的合格信号",
     "event": "进入 events.json 的结构化事件",
     "window": "在周报/关注窗口中形成跨事件解释"
+  },
+  "portfolio": {
+    "must": [
+      {"entity_id": "stripe", "decision_use": "全球支付、API与合规能力"},
+      {"entity_id": "shopify", "decision_use": "全球电商、商家与开发者生态"},
+      {"entity_id": "cloudflare", "decision_use": "云、安全与开发者基础设施"},
+      {"entity_id": "grab", "decision_use": "东南亚本地生活、支付与运营扩张"},
+      {"entity_id": "sea", "decision_use": "东南亚电商、物流、游戏与支付"},
+      {"entity_id": "mercadolibre", "decision_use": "拉美电商、物流与金融科技"},
+      {"entity_id": "nubank", "decision_use": "拉美数字金融、产品与监管"},
+      {"entity_id": "careem", "decision_use": "中东本地生活与区域扩张"},
+      {"entity_id": "noon", "decision_use": "中东电商、商家与物流"},
+      {"entity_id": "naver", "decision_use": "东亚AI、云与平台生态"},
+      {"entity_id": "adyen", "decision_use": "欧洲支付、企业产品与合规"},
+      {"entity_id": "jumia", "decision_use": "非洲电商、支付与物流"}
+    ],
+    "strategic": [
+      {"entity_id": "goto", "decision_use": "东南亚超级应用与金融科技"},
+      {"entity_id": "momo", "decision_use": "越南钱包与商户生态"},
+      {"entity_id": "vng", "decision_use": "越南社交、游戏与支付"},
+      {"entity_id": "kakao", "decision_use": "韩国社交与支付平台"},
+      {"entity_id": "rakuten", "decision_use": "日本电商与金融科技"},
+      {"entity_id": "tabby", "decision_use": "中东BNPL与支付"},
+      {"entity_id": "tamara", "decision_use": "中东BNPL与风控"},
+      {"entity_id": "rappi", "decision_use": "拉美配送与金融科技"},
+      {"entity_id": "dlocal", "decision_use": "拉美跨境支付"},
+      {"entity_id": "flutterwave", "decision_use": "非洲支付基础设施"},
+      {"entity_id": "opay", "decision_use": "非洲钱包与代理网络"},
+      {"entity_id": "mpesa_safaricom", "decision_use": "非洲移动支付基本盘"},
+      {"entity_id": "openai", "decision_use": "全球AI平台与开发者生态"},
+      {"entity_id": "anthropic", "decision_use": "全球企业AI与安全治理"}
+    ],
+    "experiment": [
+      {"entity_id": "traveloka", "decision_use": "验证旅游平台观察模板"},
+      {"entity_id": "unext", "decision_use": "验证流媒体产品观察点"},
+      {"entity_id": "square_enix", "decision_use": "验证游戏IR与产品信号"},
+      {"entity_id": "hktvmall", "decision_use": "验证区域电商IR信号"},
+      {"entity_id": "stc", "decision_use": "验证数字基础设施观察点"},
+      {"entity_id": "databricks", "decision_use": "验证开发者文档与企业AI信号"}
+    ]
   },
   "entities": [
     {

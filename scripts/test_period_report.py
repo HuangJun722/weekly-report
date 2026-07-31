@@ -35,11 +35,25 @@ def test_weekly_report_builds_focus_windows_from_repeated_signals():
 
     assert report['focus_windows']
     window = report['focus_windows'][0]
-    assert window['direction'] == '资金进入窗口'
+    assert window['direction'] == 'AI与云基础设施'
     assert window['evidence_count'] == 2
     assert 'ExampleAI' in window['objects']
     assert 'CloudBox' in window['objects']
     assert len(window['evidence']) == 2
+
+
+def test_monthly_trend_requires_cross_week_evidence_and_comparison():
+    report = build_period_report([
+        event(date='2026-06-03', url='https://example.com/a', company_name='ExampleAI', companies=['ExampleAI']),
+        event(date='2026-06-10', url='https://example.com/b', company_name='CloudBox', companies=['CloudBox']),
+        event(date='2026-06-18', url='https://example.com/c', company_name='InfraCo', companies=['InfraCo']),
+    ], '2026-06-01', '2026-06-30', '6 月报', '2026-06', 'closed')
+
+    assert report['period_themes']
+    trend = report['period_themes'][0]
+    assert trend['week_count'] >= 2
+    assert trend['count'] >= 3
+    assert trend['change'] in {'新增', '升温', '延续', '降温'}
 
 
 def test_weekly_report_does_not_promote_single_event_to_focus_window():
@@ -95,5 +109,6 @@ if __name__ == '__main__':
     test_weekly_report_builds_focus_windows_from_repeated_signals()
     test_weekly_report_does_not_promote_single_event_to_focus_window()
     test_monthly_report_does_not_enable_weekly_focus_windows_by_default()
+    test_monthly_trend_requires_cross_week_evidence_and_comparison()
     test_weekly_broad_window_keeps_out_of_scope_events_out()
     print('period report tests passed')

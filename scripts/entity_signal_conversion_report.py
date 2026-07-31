@@ -75,14 +75,27 @@ def _event_company_tokens(event):
     return {_norm(value) for value in values if _norm(value)}
 
 
-def _event_text_token(event):
-    text = ' '.join([
+def _event_text(event):
+    return ' '.join([
         event.get('title') or '',
         event.get('display_title') or '',
         event.get('summary_short') or '',
         event.get('reason') or '',
-    ])
-    return _norm(text)
+    ]).lower()
+
+
+def _alias_in_text(alias, text):
+    alias = (alias or '').strip().lower()
+    if not alias:
+        return False
+    if re.search(r'[\u4e00-\u9fff]', alias):
+        return alias in text
+    alias_tokens = re.findall(r'[a-z0-9]+', alias)
+    text_tokens = ' '.join(re.findall(r'[a-z0-9]+', text))
+    if not alias_tokens:
+        return False
+    phrase = re.escape(' '.join(alias_tokens))
+    return bool(re.search(rf'(?<![a-z0-9]){phrase}(?![a-z0-9])', text_tokens))
 
 
 def _entity_alias_tokens(entity):
@@ -98,8 +111,9 @@ def event_matches_entity(event, entity):
     company_tokens = _event_company_tokens(event)
     if aliases & company_tokens:
         return True
-    text = _event_text_token(event)
-    return any(alias and alias in text for alias in aliases)
+    text = _event_text(event)
+    names = [entity.get('name') or ''] + list(entity.get('aliases') or [])
+    return any(_alias_in_text(name, text) for name in names)
 
 
 def _point_counts(entity):

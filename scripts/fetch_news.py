@@ -28,11 +28,13 @@ except Exception:
 try:
     from analysis_quality import annotate_event_quality, summarize_quality
     from event_dates import apply_event_date_metadata, publication_metadata
+    from event_contract import prepare_event_contract
     from event_value import classify_bd_priority, follow_up_window_for_priority
     from run_metrics import write_run_metrics
 except ImportError:
     from scripts.analysis_quality import annotate_event_quality, summarize_quality
     from scripts.event_dates import apply_event_date_metadata, publication_metadata
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_value import classify_bd_priority, follow_up_window_for_priority
     from scripts.run_metrics import write_run_metrics
 
@@ -1491,6 +1493,10 @@ def fetch_company_news(cfg):
             'article_date': article_date,
             'is_company': True,
             'company_name': cfg['name'],
+            'origin_source_id': cfg.get('id') or cfg['name'],
+            'observation_entity_id': cfg.get('entity_id') or cfg.get('id') or cfg['name'],
+            'discovery_source': 'google_news',
+            'publisher_source': publisher,
             'image_url': image_url,
             **date_meta,
         }, cfg)
@@ -2580,6 +2586,10 @@ def attach_business_context(event, item, score):
         'source_id',
         'credibility_score',
         'noise_level',
+        'origin_source_id',
+        'observation_entity_id',
+        'discovery_source',
+        'publisher_source',
     ):
         if item.get(key) not in (None, '', []):
             event[key] = item.get(key)
@@ -2637,11 +2647,11 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         }
         attach_date_context(event, item)
         attach_business_context(event, item, score)
-        return annotate_event_quality(
+        return prepare_event_contract(annotate_event_quality(
             event,
             source=analysis_source or 'ai',
             status=analysis_status,
-        )
+        ))
     # 无 AI 分析时的 fallback
     ev_type = item.get('event_types', ['other'])[0]
     default_label = {
@@ -2680,11 +2690,11 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
     }
     attach_date_context(event, item)
     attach_business_context(event, item, score)
-    return annotate_event_quality(
+    return prepare_event_contract(annotate_event_quality(
         event,
         source=analysis_source or 'program',
         status=analysis_status or 'fallback',
-    )
+    ))
 
 # ============================================================
 # og:image 补抓 — 为没有 RSS 图片的事件获取文章配图
@@ -2883,12 +2893,25 @@ def main():
     }
 
     try:
-        from job_observation import collect_job_observations, write_job_observation_metrics, write_job_snapshots
+        from job_observation import (
+            collect_job_observations,
+            write_job_observation_metrics,
+            write_job_snapshots,
+            write_signal_candidates,
+        )
     except ImportError:
-        from scripts.job_observation import collect_job_observations, write_job_observation_metrics, write_job_snapshots
-    jobs_metrics, job_snapshots = collect_job_observations(observed_at=run_started.isoformat())
+        from scripts.job_observation import (
+            collect_job_observations,
+            write_job_observation_metrics,
+            write_job_snapshots,
+            write_signal_candidates,
+        )
+    jobs_metrics, job_snapshots, signal_candidates = collect_job_observations(observed_at=run_started.isoformat())
+    promoted_job_events = jobs_metrics.pop('promoted_events', [])
+    jobs_metrics['promoted_count'] = len(promoted_job_events)
     write_job_snapshots(job_snapshots)
     write_job_observation_metrics(jobs_metrics)
+    write_signal_candidates(signal_candidates)
     run_metrics['jobs'] = jobs_metrics
     print(
         f"  🧑‍💻 Jobs 快照：{jobs_metrics['source_count']} 个对象 | "
@@ -3060,6 +3083,8 @@ def main():
                         )
                     )
             time.sleep(0.5)
+
+    today_events.extend(prepare_event_contract(event) for event in promoted_job_events)
 
     # AI标题改写：对程序层中仍为泛化描述的事件用豆包改写
     rewrite_titles_for_display(today_events)

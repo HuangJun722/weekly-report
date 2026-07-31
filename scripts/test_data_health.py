@@ -1,6 +1,8 @@
+import io
+from contextlib import redirect_stdout
 from pathlib import Path
 
-from check_data_health import _future_event_count, build_health_report, collect_failures
+from check_data_health import _future_event_count, build_health_report, collect_failures, print_report
 from generate_html import build_company_cards, build_date_panel
 from run_metrics import latest_run_metrics, write_run_metrics
 
@@ -18,6 +20,14 @@ def test_current_data_health_contract():
     report = build_health_report(days=7)
     failures = collect_failures(report, Args)
     assert failures == []
+
+
+def test_health_report_prints_observation_failures():
+    report = build_health_report(days=7)
+    output = io.StringIO()
+    with redirect_stdout(output):
+        print_report(report)
+    assert 'observation | must=' in output.getvalue()
 
 
 def test_run_metrics_roundtrip():
@@ -136,6 +146,7 @@ def test_date_panel_suppresses_stale_rolling_clusters():
 
 if __name__ == '__main__':
     test_current_data_health_contract()
+    test_health_report_prints_observation_failures()
     test_run_metrics_roundtrip()
     from tempfile import TemporaryDirectory
     with TemporaryDirectory() as temp_dir:

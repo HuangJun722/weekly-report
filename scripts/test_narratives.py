@@ -81,26 +81,26 @@ def test_downgrades_when_evidence_is_not_independent():
     narrative = build_narrative([
         cluster(evidence_events=[
             {
-                'display_title': '非洲医疗科技公司A融资',
-                'url': 'https://example.com/health-a',
+                'display_title': 'Careem完成新一轮融资',
+                'url': 'https://example.com/careem-a',
                 'date': '2026-06-01',
                 'source': 'Ventureburn',
                 'source_tier': 'L2 垂直交易源',
-                'region': '非洲',
-                'company_name': 'HealthA',
+                'region': '中东',
+                'company_name': 'Careem',
                 'event_types': ['funding'],
-                'trend_topic': '非洲医疗科技融资',
+                'trend_topic': '中东平台融资',
             },
             {
-                'display_title': '非洲医疗科技公司B融资',
-                'url': 'https://example.com/health-b',
+                'display_title': 'Careem获新资金支持',
+                'url': 'https://example.com/careem-b',
                 'date': '2026-06-01',
-                'source': 'Ventureburn',
+                'source': 'ZAWYA',
                 'source_tier': 'L2 垂直交易源',
-                'region': '非洲',
-                'company_name': 'HealthB',
+                'region': '中东',
+                'company_name': 'Careem',
                 'event_types': ['funding'],
-                'trend_topic': '非洲医疗科技融资',
+                'trend_topic': '中东平台融资',
             },
         ])
     ])

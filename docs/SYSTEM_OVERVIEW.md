@@ -1,6 +1,6 @@
 # 全球互联网情报站：整体设计与架构
 
-> 更新基线：2026-07-15。本文是理解项目的第一入口；具体展示规则见 [VIEW_CONTRACT.md](VIEW_CONTRACT.md)，详细使用说明见 [USAGE_GUIDE.md](USAGE_GUIDE.md)。
+> 更新基线：2026-07-31。本文是理解项目的第一入口；具体展示规则见 [VIEW_CONTRACT.md](VIEW_CONTRACT.md)，详细使用说明见 [USAGE_GUIDE.md](USAGE_GUIDE.md)。
 
 ## 1. 产品目标
 
@@ -38,14 +38,15 @@
 ```mermaid
 flowchart TD
     A["供给层\n媒体源 + 官方/IR + Changelog + Jobs"] --> B["采集与日期归一化\nRSS / HTML / Google News / 快照差分"]
-    B --> C["产品边界与质量闸门\nInternet Relevance + 去重 + 质量 + 行动性"]
-    C --> D["Event 事件库"]
-    D --> E["日报\n全部合格事件 + 精选/重点/观察"]
-    D --> F["Evidence Atom\n独立证据去重"]
+    B --> C["变化事实与候选信号\nSnapshot Diff + Candidate Pool"]
+    C --> D["产品边界与质量闸门\nInternet Relevance + 去重 + 质量 + 行动性"]
+    D --> E0["Qualified Event\n冻结 view_status / reason / priority"]
+    E0 --> E["日报\n全部合格事件 + 精选/重点/观察"]
+    E0 --> F["Evidence Atom\n独立事实去重"]
     F --> G["Signal Cluster\n关注窗口"]
     G --> H["Narrative\n统一判断、证据和动作"]
-    H --> I["周报 / 月报"]
-    D --> J["Entity Timeline\n公司对象时间线"]
+    H --> I["周报主题 / 月报跨周趋势"]
+    E0 --> J["Entity Timeline\n公司对象时间线"]
     A --> K["Observation Ledger\n检查、成功、变化、转化状态"]
     K --> J
     L["Governance\nSource / Coverage / Health Reports"] --> A
@@ -72,12 +73,13 @@ flowchart TD
 
 ### Entity Pool
 
-对象池记录重点公司及其观察点，例如 Newsroom、IR、Jobs、Changelog、Developer Docs 和 Product Update。
+对象池记录重点公司及其观察点，并按决策用途分为 `must` 12 家、`strategic` 14 家、`experiment` 6 家。公司索引只由对象池生成，不再维护另一套公司名单。
 
 当前 Jobs 试点：
 
 - Grab、Stripe、Shopify 已接入快照差分。
-- 单个职位不是事件；只有集中新增、集中撤下或职能结构变化才形成候选信号。
+- 单个职位不是事件；只有集中新增、集中撤下或职能结构变化才进入 `data/signal_candidates.json`。
+- 候选保留快照窗口、变化数量、职能簇、职位证据、状态和拒绝原因；来源重置不会晋级事件。
 - MercadoLibre Eightfold、Careem 动态职位站仍待专用适配器。
 
 ## 5. 三道核心闸门
@@ -95,15 +97,14 @@ flowchart TD
 ## 6. 认知对象
 
 ```text
-Event
-  -> Evidence Atom
-  -> Signal Cluster
-  -> Narrative
-  -> 周报窗口 / 月报趋势
+Observation -> Snapshot -> Diff Fact -> Candidate Signal
+  -> Qualified Event -> Evidence Atom
+  -> Weekly Theme -> Monthly Trend
 ```
 
 - `Event`：可验证的单条事实。
-- `Evidence Atom`：把同对象、同动作、同来源的相似报道压成独立证据。
+- `Candidate Signal`：变化事实与正式事件之间的可审计缓冲层。
+- `Evidence Atom`：把同对象、同动作、相近日期的转载压成一个独立事实。
 - `Signal Cluster`：至少由多个独立证据支持的关注窗口。
 - `Narrative`：统一主题、对象、判断、证据、建议动作和置信度。
 
@@ -164,11 +165,14 @@ Event
 | `scripts/internet_relevance.py` | 本站产品边界 |
 | `scripts/event_value.py` | 事件价值、融资准入和展示资格 |
 | `scripts/view_selectors.py` | 首页、RSS、公司、周期报告统一选择入口 |
+| `scripts/event_contract.py` | 统一补齐并冻结事件展示资格 |
 | `scripts/evidence_atoms.py` | 独立证据归并 |
+| `scripts/period_themes.py` | 周报主题与跨周月报趋势 |
 | `scripts/signal_clusters.py` | 关注窗口聚合 |
 | `scripts/narratives.py` | 统一叙事层 |
 | `scripts/entity_observation_ledger.py` | 公司与观察点运行账本 |
 | `scripts/job_observation.py` | Jobs 快照、差分和职能聚类 |
+| `data/signal_candidates.json` | 可追溯候选信号池 |
 | `scripts/generate_html.py` | 页面数据模型和静态页面生成 |
 | `scripts/template.html` | 页面设计唯一真相来源 |
 | `scripts/check_data_health.py` | 全链路健康检查 |
@@ -177,13 +181,13 @@ Event
 
 ## 11. 当前边界与下一阶段
 
-已经形成的底座：事件库、产品边界、统一选择器、证据/窗口/叙事层、信源转化治理、对象池、观察账本、三家公司 Jobs 试点。
+已经形成的底座：统一事件契约、候选信号池、独立事实去重、周报主题、跨周月报趋势、三级对象组合、观察账本和三家公司 Jobs 试点。
 
 下一阶段优先级：
 
-1. 让自动运行持续积累观察账本和 Jobs 差分数据。
-2. 为 Careem 和 MercadoLibre Jobs 增加动态站适配器。
-3. 治理高 signal 低转化的官方源、Changelog 和垂类源。
-4. 组织行为信号稳定后，再深化周报窗口和月报结构趋势。
+1. 观察候选池能否持续产生少量、可解释、可晋级的组织行为信号。
+2. 优先提高 `must` 对象的真实高频源、低频确认源和新鲜覆盖率。
+3. 修复 Stripe Jobs 等已接入但失败的观察点，再按适配器复用价值扩面。
+4. 用健康报告持续检查候选积压、观察点失败和周/月报独立事实质量。
 
 暂不做：继续堆媒体源、把 Google News 当主发现、把单个职位当事件、在日报强行生成趋势、未经确认修改 workflow。

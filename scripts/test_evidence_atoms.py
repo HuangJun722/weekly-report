@@ -17,10 +17,29 @@ def event(**overrides):
     return base
 
 
-def test_similar_events_collapse_into_one_atom():
+def test_different_objects_remain_independent_atoms():
     atoms = build_evidence_atoms([
         event(url='https://example.com/a', company_name='HealthCo'),
         event(url='https://example.com/b', company_name='BioCo'),
+    ])
+    assert len(atoms) == 2
+    assert can_promote_to_narrative(atoms)
+
+
+def test_duplicate_acquisition_reports_collapse_into_one_atom():
+    atoms = build_evidence_atoms([
+        event(
+            title='Oxford spinout Wild Bio acquires F1 Seed to create precision-bred wheat',
+            source='UKTN',
+            event_types=['ma'],
+            company_name='',
+        ),
+        event(
+            title="Wild Bio acquires F1 Seed to create Britain's first precision-breeding wheat business",
+            source='EU-Startups',
+            event_types=['ma'],
+            company_name='',
+        ),
     ])
     assert len(atoms) == 1
     assert not can_promote_to_narrative(atoms)
@@ -54,6 +73,7 @@ def test_independent_evidence_can_promote():
 
 
 if __name__ == '__main__':
-    test_similar_events_collapse_into_one_atom()
+    test_different_objects_remain_independent_atoms()
+    test_duplicate_acquisition_reports_collapse_into_one_atom()
     test_independent_evidence_can_promote()
     print('evidence atom tests passed')

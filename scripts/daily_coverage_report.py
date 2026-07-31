@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 try:
+    from event_contract import prepare_event_contract
     from event_value import (
         classify_bd_priority,
         event_type,
@@ -19,7 +20,9 @@ try:
         should_show_in_main_list,
         should_show_in_review,
     )
+    from view_selectors import is_main_view_event, is_review_view_event
 except ImportError:
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_value import (
         classify_bd_priority,
         event_type,
@@ -27,6 +30,7 @@ except ImportError:
         should_show_in_main_list,
         should_show_in_review,
     )
+    from scripts.view_selectors import is_main_view_event, is_review_view_event
 
 
 def _safe_print(text):
@@ -128,17 +132,17 @@ def _coverage_action(row):
 
 
 def build_daily_coverage_report(days=15, events_path='data/events.json'):
-    events = _flatten_events(_load_json(events_path))
+    events = [prepare_event_contract(event) for event in _flatten_events(_load_json(events_path))]
     dates = sorted({_event_date(event) for event in events if _event_date(event)})
     end_date = dates[-1] if dates else ''
     selected_dates = _period_dates(end_date, days)
     rows = []
     for date_key in selected_dates:
         day_events = [event for event in events if _event_date(event) == date_key]
-        main_events = [event for event in day_events if should_show_in_main_list(event)]
+        main_events = [event for event in day_events if is_main_view_event(event)]
         review_events = [
             event for event in day_events
-            if should_show_in_review(event) and not should_show_in_main_list(event)
+            if is_review_view_event(event) and not is_main_view_event(event)
         ]
         entities = {_event_entity(event) for event in day_events if _event_entity(event)}
         regions = {event.get('region') for event in day_events if event.get('region')}

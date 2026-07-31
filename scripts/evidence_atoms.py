@@ -1,4 +1,7 @@
-"""Collapse similar events into independent evidence atoms."""
+"""Collapse duplicate reporting into independent evidence atoms."""
+
+import re
+from datetime import datetime
 
 
 def _event_date(event):
@@ -38,24 +41,63 @@ def _source_family(event):
 def atom_key(event):
     """Return a product-level evidence key.
 
-    Events with the same region, action type, source family, and topic are
-    treated as one evidence atom. Different articles can still be useful
-    support, but they should not inflate trend confidence.
+    The key describes the fact, not the publisher. Source independence is
+    measured after duplicate articles have been collapsed.
     """
     return (
-        event.get('region') or '',
         _event_type(event),
-        _source_family(event),
+        tuple(sorted(name.lower() for name in _event_companies(event))),
         _event_topic(event),
     )
 
 
+FACT_STOP_WORDS = {
+    'the', 'a', 'an', 'to', 'for', 'of', 'in', 'on', 'and', 'with', 'from',
+    'raises', 'raised', 'funding', 'acquires', 'acquire', 'acquisition',
+    'launches', 'launch', 'announces', 'new', 'company', 'startup', 'report',
+}
+
+
+def _fact_tokens(event):
+    title = event.get('title') or event.get('display_title') or event.get('summary_short') or ''
+    tokens = re.findall(r'[a-z0-9][a-z0-9.+-]*|[\u4e00-\u9fff]{2,}', title.lower())
+    return {token for token in tokens if token not in FACT_STOP_WORDS and len(token) > 1}
+
+
+def _dates_close(left, right, max_days=2):
+    try:
+        a = datetime.strptime(_event_date(left), '%Y-%m-%d')
+        b = datetime.strptime(_event_date(right), '%Y-%m-%d')
+    except (TypeError, ValueError):
+        return True
+    return abs((a - b).days) <= max_days
+
+
+def events_describe_same_fact(left, right):
+    if _event_type(left) != _event_type(right) or not _dates_close(left, right):
+        return False
+    left_companies = {name.lower() for name in _event_companies(left)}
+    right_companies = {name.lower() for name in _event_companies(right)}
+    if left_companies and right_companies:
+        return bool(left_companies & right_companies)
+    left_tokens = _fact_tokens(left)
+    right_tokens = _fact_tokens(right)
+    overlap = left_tokens & right_tokens
+    union = left_tokens | right_tokens
+    return len(overlap) >= 3 and len(overlap) / max(len(union), 1) >= 0.35
+
+
 def build_evidence_atoms(events):
     atoms = []
-    by_key = {}
     for event in events or []:
         key = atom_key(event)
-        atom = by_key.get(key)
+        atom = next(
+            (
+                existing for existing in atoms
+                if events_describe_same_fact(existing['events'][0], event)
+            ),
+            None,
+        )
         if atom is None:
             atom = {
                 'key': key,
@@ -68,7 +110,6 @@ def build_evidence_atoms(events):
                 'dates': set(),
                 'events': [],
             }
-            by_key[key] = atom
             atoms.append(atom)
         atom['source_families'].add(_source_family(event))
         atom['sources'].add(event.get('source') or event.get('display_source') or '')
@@ -120,7 +161,12 @@ def can_promote_to_narrative(atoms):
     stats = evidence_independence(atoms)
     if stats['atom_count'] < 2:
         return False
-    if stats['source_concentration'] > 0.75 and stats['source_count'] < 2:
+    if (
+        stats['source_concentration'] > 0.75
+        and stats['source_count'] < 2
+        and stats['company_count'] < 2
+        and stats['date_count'] < 2
+    ):
         return False
     return (
         stats['company_count'] >= 2

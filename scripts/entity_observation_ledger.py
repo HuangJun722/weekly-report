@@ -10,10 +10,12 @@ from urllib.parse import urlsplit, urlunsplit
 try:
     from entity_signal_conversion_report import event_matches_entity
     from event_dates import is_display_date
+    from event_contract import prepare_event_contract
     from event_value import should_show_in_main_list
 except ImportError:
     from scripts.entity_signal_conversion_report import event_matches_entity
     from scripts.event_dates import is_display_date
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_value import should_show_in_main_list
 
 
@@ -132,11 +134,13 @@ def build_entity_observation_ledger(
     events_path='data/events.json',
     as_of=None,
     job_metrics_path='data/job_observation_metrics.json',
+    candidate_path='data/signal_candidates.json',
 ):
     pool = _load(pool_path, {})
     registry = _load(registry_path, {})
     records = _load(metrics_path, [])
     latest_job_metrics = _load(job_metrics_path, {})
+    candidate_pool = _load(candidate_path, {'candidates': []})
     events = _flatten_events(_load(events_path, {}))
     as_of = as_of or datetime.now().strftime('%Y-%m-%d')
     if latest_job_metrics.get('source_stats'):
@@ -151,7 +155,7 @@ def build_entity_observation_ledger(
     start_30 = (datetime.strptime(as_of, '%Y-%m-%d') - timedelta(days=29)).strftime('%Y-%m-%d')
     registry_sources = list(registry.get('sources') or []) + list(registry.get('active_sources') or [])
     valid_events = [
-        event for event in events
+        prepare_event_contract(event) for event in events
         if start_30 <= (event.get('date') or '')[:10] <= as_of
         and is_display_date(event.get('date'), now=f'{as_of}T23:59:59+08:00')
     ]
@@ -164,6 +168,15 @@ def build_entity_observation_ledger(
     for entity in pool.get('entities') or []:
         entity_events = [event for event in valid_events if event_matches_entity(event, entity)]
         qualified_entity_events = [event for event in entity_events if should_show_in_main_list(event)]
+        entity_candidates = [
+            row for row in candidate_pool.get('candidates') or []
+            if row.get('entity_id') == entity.get('id')
+        ]
+        recent_candidates = [
+            row for row in entity_candidates
+            if (row.get('detected_at') or '')[:10] >= start_7
+        ]
+        promoted_candidates = [row for row in entity_candidates if row.get('status') == 'promoted']
         point_rows = []
         for point in entity.get('observation_points') or []:
             source = _registry_match(point, registry_sources)
@@ -210,6 +223,16 @@ def build_entity_observation_ledger(
         point_statuses = [row['status'] for row in point_rows]
         coverage_status = _entity_status(point_statuses)
         status = 'active' if qualified_entity_events else coverage_status
+        if qualified_entity_events or promoted_candidates:
+            activity_status = 'active'
+        elif recent_candidates:
+            activity_status = 'candidate'
+        elif any(row['raw_change_count_7d'] for row in point_rows):
+            activity_status = 'changed_below_threshold'
+        elif coverage_status in {'quiet', 'partial'}:
+            activity_status = 'quiet'
+        else:
+            activity_status = 'unknown'
         entity_rows.append({
             'entity_id': entity.get('id') or '',
             'entity': entity.get('name') or '',
@@ -218,12 +241,16 @@ def build_entity_observation_ledger(
             'status': status,
             'status_label': STATUS_LABELS[status],
             'coverage_status': coverage_status,
+            'activity_status': activity_status,
             'last_checked_at': max((row['last_checked_at'] for row in point_rows), default=''),
             'last_success_at': max((row['last_success_at'] for row in point_rows), default=''),
             'last_change_at': max((row['last_change_at'] for row in point_rows), default=''),
             'raw_change_count_7d': sum(row['raw_change_count_7d'] for row in point_rows),
             'qualified_event_count_30d': len(qualified_entity_events),
             'last_qualified_event_at': max(((event.get('date') or '')[:10] for event in qualified_entity_events), default=''),
+            'candidate_signal_count_7d': len(recent_candidates),
+            'last_candidate_at': max(((row.get('detected_at') or '') for row in entity_candidates), default=''),
+            'last_promoted_at': max(((row.get('detected_at') or '') for row in promoted_candidates), default=''),
             'observation_points': point_rows,
         })
     return {
@@ -250,9 +277,11 @@ def main():
     parser.add_argument('--events-path', default='data/events.json')
     parser.add_argument('--as-of')
     parser.add_argument('--json-out', default='data/entity_observation_ledger.json')
+    parser.add_argument('--candidate-path', default='data/signal_candidates.json')
     args = parser.parse_args()
     report = build_entity_observation_ledger(
         args.pool_path, args.registry_path, args.metrics_path, args.events_path, args.as_of,
+        candidate_path=args.candidate_path,
     )
     write_entity_observation_ledger(report, args.json_out)
     print(f"entity observation ledger | as_of={report['as_of']} status={report['status_counts']}")

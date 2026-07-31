@@ -1,4 +1,10 @@
-from job_observation import diff_job_snapshots, extract_job_links
+from job_observation import (
+    build_job_candidate,
+    diff_job_snapshots,
+    extract_job_links,
+    merge_candidate_pool,
+    source_reset_suspected,
+)
 
 
 def test_extract_job_links_for_three_pilot_shapes():
@@ -39,8 +45,47 @@ def test_snapshot_diff_detects_contraction_cluster():
     assert diff['candidate_signal'] is True
 
 
+def test_full_board_refresh_is_rejected_as_source_reset():
+    previous = [
+        {'id': f'old-{index}', 'title': f'AI Engineer {index}', 'url': f'https://example.com/old/{index}', 'function_tags': ['ai']}
+        for index in range(20)
+    ]
+    current = [
+        {'id': f'new-{index}', 'title': f'AI Engineer {index}', 'url': f'https://example.com/new/{index}', 'function_tags': ['ai']}
+        for index in range(20)
+    ]
+    diff = diff_job_snapshots(previous, current)
+    assert source_reset_suspected(previous, current, diff)
+    candidate = build_job_candidate(
+        {'id': 'example', 'name': 'Example', 'region': '全球', 'sector': 'ai_platform'},
+        diff, previous, current, '2026-07-30T12:00:00+08:00',
+    )
+    assert candidate['status'] == 'rejected'
+    assert candidate['rejection_reason'] == 'source_reset_suspected'
+
+
+def test_qualified_candidate_is_persisted_and_promoted_with_evidence():
+    previous = []
+    current = [
+        {'id': f'ai-{index}', 'title': f'AI Platform Engineer {index}', 'url': f'https://example.com/{index}', 'function_tags': ['ai', 'engineering']}
+        for index in range(3)
+    ]
+    diff = diff_job_snapshots(previous, current)
+    candidate = build_job_candidate(
+        {'id': 'stripe', 'name': 'Stripe', 'region': '全球', 'sector': 'payment_developer_platform'},
+        diff, previous, current, '2026-07-30T12:00:00+08:00',
+    )
+    pool, events = merge_candidate_pool({'candidates': []}, [candidate], '2026-07-30T12:00:00+08:00')
+    assert pool['candidates'][0]['status'] == 'promoted'
+    assert len(pool['candidates'][0]['evidence_refs']) == 3
+    assert events[0]['candidate_id'] == candidate['candidate_id']
+    assert events[0]['source'] == 'Stripe Jobs'
+
+
 if __name__ == '__main__':
     test_extract_job_links_for_three_pilot_shapes()
     test_snapshot_diff_clusters_structure_changes()
     test_snapshot_diff_detects_contraction_cluster()
+    test_full_board_refresh_is_rejected_as_source_reset()
+    test_qualified_candidate_is_persisted_and_promoted_with_evidence()
     print('job observation tests passed')

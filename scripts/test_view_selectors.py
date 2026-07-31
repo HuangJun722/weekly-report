@@ -1,4 +1,5 @@
 from view_selectors import (
+    apply_view_contract,
     select_company_events,
     select_company_quality_events,
     select_feed_events,
@@ -30,6 +31,20 @@ def test_homepage_selector_allows_low_score_non_google_signal():
     event = base_event(score=2)
     selected = select_homepage_events([event], '2026-05-31')
     assert selected == [event]
+
+
+def test_view_contract_does_not_change_after_presentation_enrichment():
+    event = base_event(
+        title='SaaS startup raises funding from investors',
+        summary_short='SaaS startup raises funding.',
+        reason='资本进入但没有明确业务动作。',
+        impact='投资机构',
+    )
+    apply_view_contract(event)
+    assert event['view_status'] == 'filtered'
+    event['reason'] = '融资将用于扩张云平台、开发者生态和新市场。'
+    event['score'] = 10
+    assert select_homepage_events([event], '2026-05-31') == []
 
 
 def test_feed_selector_falls_back_to_latest_high_value_date():
