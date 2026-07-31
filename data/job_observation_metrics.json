@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-07-31T08:53:54.726814+08:00",
+  "observed_at": "2026-07-31T12:19:58.290242+08:00",
   "source_count": 3,
   "raw_count": 52,
   "source_stats": {
@@ -8,13 +8,15 @@
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
+      "count": 2,
       "inventory_count": 20,
       "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
+      "added_count": 1,
+      "removed_count": 1,
       "clusters": {},
-      "removed_clusters": {}
+      "removed_clusters": {
+        "operations": 1
+      }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
@@ -34,16 +36,13 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 1,
+      "count": 0,
       "inventory_count": 32,
       "signal_count": 0,
       "added_count": 0,
-      "removed_count": 1,
+      "removed_count": 0,
       "clusters": {},
-      "removed_clusters": {
-        "ai": 1,
-        "engineering": 1
-      }
+      "removed_clusters": {}
     }
   },
   "candidate_signals": [],

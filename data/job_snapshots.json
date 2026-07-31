@@ -1,11 +1,17 @@
 {
   "version": 1,
-  "generated_at": "2026-07-31T08:53:54.726814+08:00",
+  "generated_at": "2026-07-31T12:19:58.290242+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-07-31T08:53:54.726814+08:00",
+      "observed_at": "2026-07-31T12:19:58.290242+08:00",
       "jobs": [
+        {
+          "id": "744000140818949",
+          "title": "Manager, Portfolio and Projects",
+          "url": "https://www.grab.careers/en/jobs/744000140818949/manager-portfolio-and-projects/",
+          "function_tags": []
+        },
         {
           "id": "744000140733130",
           "title": "Assistant Manager, Credit Risk & Collections",
@@ -136,14 +142,6 @@
           "url": "https://www.grab.careers/en/jobs/744000140200559/senior-data-scientist-business-transaction-platform/",
           "function_tags": [
             "engineering"
-          ]
-        },
-        {
-          "id": "744000140189410",
-          "title": "Assistant Manager, Insurance Operations",
-          "url": "https://www.grab.careers/en/jobs/744000140189410/assistant-manager-insurance-operations/",
-          "function_tags": [
-            "operations"
           ]
         }
       ]
@@ -681,7 +679,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-07-31T08:53:54.726814+08:00",
+      "observed_at": "2026-07-31T12:19:58.290242+08:00",
       "jobs": [
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",

@@ -1,502 +1,150 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script>
+      (function(){
+          setTimeout(function(){
+              window.location.reload();
+          }, 5000);
+      }())
+  </script>
+  <link rel="icon" href="data:,">
+  <title>One moment, please...</title>
+  <style>
+.spinner {
+    -webkit-animation: spin 1s ease-out;
+    animation: spin 1s ease-out;
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+#outer-container {
+    text-align: center;
+}
+#container {
+        display: inline-block;
+        height: 100px;
+    }
+#text {
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 .4em 0 .2em;
+    letter-spacing: 0.06em;
+    color: rgba(38, 122, 72, 0.86);
+}
+@media (min-height: 180px) {
+    #outer-container {
+        margin-top: 0;
+    }
+}
+@media (min-height: 360px) {
+    #outer-container {
+        margin-top: 5%;
+    }
+}
+@media (min-height: 540px) {
+    #outer-container {
+        margin-top: 10%;
+    }
+}
+@media (min-height: 720px) {
+    #outer-container {
+        margin-top: 20%;
+    }
+}
+@media (min-width: 1450px) {
+    .throbber {
+        width: 90px;
+        height: 90px;
+        float: left;
+        padding: 5px 0 5px 5px;
+        opacity: 0.86;
+    }
+    #container {
+        display: inline-block;
+        border: 3px solid rgb(38, 122, 72, 0.86);
+        border-radius: 51px;
+        height: 100px;
+    }
+}
 
-<channel>
-	<title>Ventureburn</title>
-	<atom:link href="https://ventureburn.com/feed/" rel="self" type="application/rss+xml" />
-	<link>https://ventureburn.com/</link>
-	<description>Startup news for emerging markets</description>
-	<lastBuildDate>Thu, 30 Jul 2026 19:53:59 +0000</lastBuildDate>
-	<language>en-US</language>
-	<sy:updatePeriod>
-	hourly	</sy:updatePeriod>
-	<sy:updateFrequency>
-	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=7.0.2</generator>
-
-<image>
-	<url>https://ventureburn.com/wp-content/uploads/2025/09/favicon-150x150.png</url>
-	<title>Ventureburn</title>
-	<link>https://ventureburn.com/</link>
-	<width>32</width>
-	<height>32</height>
-</image> 
-	<item>
-		<title>K2 Space Raises $500 Million At $6.8B Valuation To Scale Large, High-Power Satellites</title>
-		<link>https://ventureburn.com/k2-space-raises-500m-6-8-billion-valuation/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 19:53:59 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Gravitas]]></category>
-		<category><![CDATA[K2]]></category>
-		<category><![CDATA[K2 Space]]></category>
-		<category><![CDATA[Satellites]]></category>
-		<category><![CDATA[Series D]]></category>
-		<category><![CDATA[space]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203883</guid>
-
-					<description><![CDATA[<p>K2 Space raises $500 million to beat other satellite companies in their own game. The Series D round has increased the company’s value to $6.8 billion. This is notably more</p>
-<p>The post <a href="https://ventureburn.com/k2-space-raises-500m-6-8-billion-valuation/" data-wpel-link="internal">K2 Space Raises $500 Million At $6.8B Valuation To Scale Large, High-Power Satellites</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><span style="font-weight: 400">K2 Space raises $500 million to beat other satellite companies in their own game. The <a href="https://x.com/K2SpaceCo/status/2082822358268809611" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external">S</a></span><a href="https://x.com/K2SpaceCo/status/2082822358268809611" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">eries </span><span style="font-weight: 400">D round</span></a><span style="font-weight: 400"> has increased the company’s value to $6.8 billion. This is notably more than twice what it was worth after its Series C round in December.</span></p>
-<p><span style="font-weight: 400">Karan Kunjur is the company’s co-founder and CEO. He started the company four years ago with his brother, Neel. Their idea was quite on point: that bigger satellites would end up being the hot topic in space missions rather than smaller satellites.</span></p>
-<h2><span style="font-weight: 400">From Pitch Deck to Orbit</span></h2>
-<div id="attachment_203885" style="width: 945px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-203885" class="size-full wp-image-203885" src="https://ventureburn.com/wp-content/uploads/2026/07/K2-Space-team.jpg" alt="K2 Space executives met with Lt. Gen. Dennis Bythewood, Commander, U.S. Space Forces – Space (S4S) at the company’s manufacturing facility in Torrance, California. Credit: K2 Space" width="935" height="545" /><p id="caption-attachment-203885" class="wp-caption-text">K2 Team &amp; Lt. Gen. Dennis Bythewood</p></div>
-<p><a href="https://www.k2space.com/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">K2 Space</span></a><span style="font-weight: 400">’s argument has left the theoretical phase. The company has a Gravitas satellite which is already running a 20-kilowatt Hall-effect thruster on orbit. It says the satellite is very powerful. </span></p>
-<p><span style="font-weight: 400">That would be the proof point behind the pitch: heavier satellites can handle communications needing data and defense missions that smaller platforms simply can’t. Backing that up requires 100% manufacturing power, and K2 built for it early. </span></p>
-<p><span style="font-weight: 400">The company’s factory in Torrence is a 180,000-square-foot facility, capable of producing up to 100 satellites a year. More than 85% of each satellite’s platform was built in the factory. </span></p>
-<p><span style="font-weight: 400">This is a major reason investors think K2 can go from a handful of satellites to dozens, then hundreds, without the challenges in production that have slowed other manufacturers.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/cisco-backed-eliyan-raises-145m-at-1b-valuation/" data-wpel-link="internal"><b><i>Eliyan Raises $145M to Fix AI’s Data Bottleneck</i></b></a></p>
-<h2><span style="font-weight: 400">The Contracts Behind the Valuation</span></h2>
-<p><span style="font-weight: 400">The Space Force picked K2 as a satellite-bus provider for its Protected Tactical Satcom-Global program, the company’s first program of record with the Pentagon. </span></p>
-<p><span style="font-weight: 400">Commercial satellite operator SES has requested an initial batch of 30 satellites for its meoSphere network. Also, defense contractor Anduril has agreed for K2 to build satellites for the Golden Dome missile-defense program.</span></p>
-<p><span style="font-weight: 400">Following proper calculations, K2 says it’s holding more than $1 billion in signed commercial and government contracts. The company’s next mission is set to launch multiple satellites in the second quarter of 2027 and a large 100-kilowatt “Giga-class” satellite in the second half of 2028.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/onyx-security-raises-113-million-series-b-ai-agent-governance/" data-wpel-link="internal"><b><i>Onyx Raises $113M To Scale Next-Gen AI Governance Models</i></b></a></p>
-<h2><span style="font-weight: 400">K2 Space is Riding a Bigger Wave</span></h2>
-<p><span style="font-weight: 400">Space companies raised about $7.5 billion across 141 venture deals in the second quarter of this year, following a record of $8 billion across 159 deals in the first quarter.</span></p>
-<p><span style="font-weight: 400">Investors backing K2 are framing the round as a bet on infrastructure. “Every important mission in space comes back to power and mass, and K2 recognized that before anyone else,” said Lucas Oliveira, a principal at Kleiner Perkins. </span></p>
-<p><span style="font-weight: 400">ICONIQ general partner Tengbo Li put it more broadly: “We believe space will be one of the defining frontiers of the coming century, and K2 is building the platform to power the next generation of the space economy.”</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/tech-giants-commit-265-million-on-electricians-data-centers/" data-wpel-link="internal"><b><i>Tech Giants Commit $265M To Data Center Electricians</i></b></a></p>
-<p>The post <a href="https://ventureburn.com/k2-space-raises-500m-6-8-billion-valuation/" data-wpel-link="internal">K2 Space Raises $500 Million At $6.8B Valuation To Scale Large, High-Power Satellites</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Binance Alpha GRVT Airdrop: Deposit GRVT and Share $20K Worth of Rewards</title>
-		<link>https://ventureburn.com/binance-alpha-grvt-airdrop/</link>
-		
-		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 15:55:44 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Trade Crypto]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203878</guid>
-
-					<description><![CDATA[<p>Binance Wallet is excited to launch the Binance Alpha GRVT Deposit Campaign! During the Promotion Period, deposit GRVT tokens by following the campaign rules to share exclusive token rewards. This</p>
-<p>The post <a href="https://ventureburn.com/binance-alpha-grvt-airdrop/" data-wpel-link="internal">Binance Alpha GRVT Airdrop: Deposit GRVT and Share $20K Worth of Rewards</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Binance Wallet is excited to launch the </span><b>Binance Alpha GRVT Deposit Campaign</b><span style="font-weight: 400;">! During the Promotion Period, deposit GRVT tokens by following the campaign rules to share exclusive token rewards. This campaign is </span><b>only eligible for GRVT community airdrop users</b><span style="font-weight: 400;"> who received the official GRVT airdrop on BNB Smart Chain (BSC).</span></p>
-<h2><b>1. Deposit Grvt (GRVT) and Share $20K Worth of Rewards</b></h2>
-<p><img decoding="async" class="aligncenter size-full wp-image-203879" src="https://ventureburn.com/wp-content/uploads/2026/07/2026-07-30-23.34.43.jpg" alt="GRVT Airdrop Source: Binance" width="1280" height="720" /></p>
-<p><span style="font-weight: 400;">To participate and claim your share of the reward pool, make sure to take note of the campaign&#8217;s core schedules and reward criteria:</span></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Promotion Period:</b><span style="font-weight: 400;"> 2026-07-30 13:00 (UTC) to 2026-08-01 13:00 (UTC).</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Total Reward Pool:</b><span style="font-weight: 400;"> 66,640 GRVT (worth approximately $20,000 USD).</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Eligible Winners:</b><span style="font-weight: 400;"> The first 1,666 qualifying participants.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Reward Per User:</b><span style="font-weight: 400;"> 40 GRVT per user.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Minimum Requirement:</b><span style="font-weight: 400;"> Deposit and transfer </span><b>at least 300 GRVT</b><span style="font-weight: 400;"> in a </span><b>single transaction</b><span style="font-weight: 400;">.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Distribution Model:</b><span style="font-weight: 400;"> First-come, first-served basis.</span></li>
-</ul>
-<p><span style="font-weight: 400;"><div class="b-cta-wrapper"><div class="b-cta b-cta--referral"><div class="b-cta__image"><a href="/recommends/binance/" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="internal"><img decoding="async" width="300" height="300" src="https://ventureburn.com/wp-content/uploads/2025/09/binance-logo-6219389_1280-300x300.webp" class="image-fit image-fit--center wp-post-image" alt="binance-logo-6219389_1280" /></a></div><div class="b-cta__meta"><div class="promotion"><p class="title">Binance Referral Code</p><p class="value">Get $100 USDT Sign-Up Bonus</p><p>-20% Trading Fees</p><p>Code Valid: July 2026</p></div><div class="referral-code"><input type="text" value="VB2025" class="referral-code__input" readonly><button type="button" class="referral-code__btn btn btn-primary">Copy</button></div></div><div class="b-cta__btn d-flex flex-column align-items-center justify-content-center"><a href="/recommends/binance/" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary" data-wpel-link="internal"><span>Claim Reward Now</span></a></div></div><!-- /.b-cta --></div></span></p>
-<h2><b>2. How to Participate</b></h2>
-<p><span style="font-weight: 400;">Follow these steps to complete your deposit and transfer tasks successfully:</span></p>
-<h3><b>Step 1: Deposit Tokens to Binance Wallet (Keyless)</b></h3>
-<ol>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Open your Binance App and navigate to </span><b>[My Wallets]</b><span style="font-weight: 400;">.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Select </span><b>[Binance Wallet (Keyless)]</b><span style="font-weight: 400;">.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Tap </span><b>[Receive]</b><span style="font-weight: 400;"> and deposit at least 300 GRVT from your official GRVT community airdrop receiving wallet address.</span></li>
-</ol>
-<h3><b>Step 2: Transfer Tokens to Binance Alpha 2.0 Account</b></h3>
-<ol>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Switch to the </span><b>[Exchange]</b><span style="font-weight: 400;"> tab in your Binance App.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Go to </span><b>[Asset]</b><span style="font-weight: 400;"> -&gt; </span><b>[Alpha]</b><span style="font-weight: 400;"> to view your </span><b>Binance Alpha 2.0 Account page</b><span style="font-weight: 400;">.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Select </span><b>[Transfer In]</b><span style="font-weight: 400;"> and transfer the eligible GRVT tokens.</span></li>
-</ol>
-<h2><b>3. Important Notes:</b></h2>
-<p><span style="font-weight: 400;">Please carefully review these eligibility parameters and rules before initiating your transfers:</span></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Target Audience:</b><span style="font-weight: 400;"> This campaign is exclusively open to users who received their official GRVT community airdrop on BSC.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Sequential Requirement:</b><span style="font-weight: 400;"> You must complete Step 1 </span><b>before</b><span style="font-weight: 400;"> Step 2 during the active Promotion Period.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Direct Wallet Exception:</b><span style="font-weight: 400;"> If you received the GRVT airdrop directly in your Binance Wallet (Keyless), you may skip Step 1 and proceed directly to Step 2. Eligibility will be determined based on the completion time of Step 2.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Address Verification:</b><span style="font-weight: 400;"> The external on-chain address used for the deposit in Step 1 </span><b>must be the exact same address</b><span style="font-weight: 400;"> that received the GRVT community airdrop. Deposits from any other wallet address will </span><b>not</b><span style="font-weight: 400;"> qualify.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Reward Distribution:</b><span style="font-weight: 400;"> All rewards will be paid in GRVT tokens and credited directly to winning users&#8217; Binance Alpha Accounts or Binance Wallet (Keyless) before </span><b>2026-08-15 13:00 (UTC)</b><span style="font-weight: 400;">.</span></li>
-</ul>
-<h2><b>4. What Is GRVT?</b></h2>
-<p><b>GRVT</b><span style="font-weight: 400;"> (Gravity) is a hybrid decentralized exchange (HEX) designed to combine the self-custodial security of DEXs with the high performance and user experience of centralized exchanges. By utilizing zero-knowledge rollups, GRVT offers high-throughput trading, privacy protection, and a seamless onboarding experience for Web3 traders.</span></p>
-<p><span style="font-weight: 400;">As part of the </span><b>Binance Wallet Alpha</b><span style="font-weight: 400;"> ecosystem, bringing GRVT into the deposit campaign allows early community members and airdrop recipients to effortlessly transfer their assets onto Binance Alpha 2.0.</span></p>
-<h2><b>5. Tokenomics &amp; Official Project Links</b></h2>
-<p><span style="font-weight: 400;">Before trading or holding assets, it is important to review project tokenomics and rely on official documentation.</span></p>
-<h3><b>Token Utility</b></h3>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Token Ticker:</b><span style="font-weight: 400;"> GRVT</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Network:</b><span style="font-weight: 400;"> BNB Smart Chain (BSC)</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Core Utilities:</b><span style="font-weight: 400;"> Protocol governance, trading fee discounts, liquidity incentives, and ecosystem rewards.</span></li>
-</ul>
-<h3><b>Official Project Links</b></h3>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Official Website:</b> <a href="https://grvt.io/" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400;">GRVT Official Website</span></a></li>
-<li style="font-weight: 400;" aria-level="1"><b>Official X (Twitter):</b> <a href="https://x.com/grvt_io" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400;">@GRVT_io</span></a></li>
-<li style="font-weight: 400;" aria-level="1"><b>Official Telegram:</b> <a href="https://t.me/grvt_io" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400;">Grvt Exchange Official</span></a></li>
-</ul>
-<h2><b>6. Final Thoughts</b></h2>
-<p><span style="font-weight: 400;">The </span><b>Binance Wallet Alpha GRVT Deposit Campaign</b><span style="font-weight: 400;"> gives GRVT community airdrop holders a great opportunity to unlock an additional 40 GRVT reward. Because the promotion operates strictly on a </span><b>first-come, first-served</b><span style="font-weight: 400;"> basis for the first 1,666 users, acting quickly during the promotion window is key!</span></p>
-<p><span style="font-weight: 400;">Make sure your external wallet address matches, complete your transfer steps, and claim your share of the $20K reward pool today!</span></p>
-<p>&nbsp;</p>
-<p>The post <a href="https://ventureburn.com/binance-alpha-grvt-airdrop/" data-wpel-link="internal">Binance Alpha GRVT Airdrop: Deposit GRVT and Share $20K Worth of Rewards</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Cisco-Backed Startup Eliyan Raises $145M at $1B Valuation to Fix AI&#8217;s Data Bottleneck</title>
-		<link>https://ventureburn.com/cisco-backed-eliyan-raises-145m-at-1b-valuation/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 14:42:57 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Agentic AI]]></category>
-		<category><![CDATA[Agents]]></category>
-		<category><![CDATA[AI hardware]]></category>
-		<category><![CDATA[artificial intelligence]]></category>
-		<category><![CDATA[Cisco]]></category>
-		<category><![CDATA[Eliyan]]></category>
-		<category><![CDATA[Eliyan AI]]></category>
-		<category><![CDATA[GPU]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203871</guid>
-
-					<description><![CDATA[<p>Everyone&#8217;s watching chip speed. Almost nobody&#8217;s watching what happens between the chips and that&#8217;s exactly where the industry is losing the most performance. In dense AI clusters, GPUs typically run</p>
-<p>The post <a href="https://ventureburn.com/cisco-backed-eliyan-raises-145m-at-1b-valuation/" data-wpel-link="internal">Cisco-Backed Startup Eliyan Raises $145M at $1B Valuation to Fix AI&#8217;s Data Bottleneck</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><span style="font-weight: 400">Everyone&#8217;s watching chip speed. Almost nobody&#8217;s watching what happens between the chips and that&#8217;s exactly where the industry is losing the most performance. In dense AI clusters, GPUs typically run at just 30 to 40% utilization, which means most of the time even top-tier chips are sitting there waiting on data instead of processing it.</span></p>
-<p><span style="font-weight: 400">Cisco-backed startup </span><a href="https://eliyan.com/news/eliyan-achieves-unicorn-status-with-145-million-series-c/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">Eliyan raises $145M</span></a><span style="font-weight: 400"> at a $1B valuation to solve this problem. With clusters larger than a certain size, data simply can&#8217;t move quick enough. Simply shoving more of it down the ordinary copper wire consumes more power and generates more heat and ultimately slows down chips. Eliyan is solving this problem.</span></p>
-<h2><span style="font-weight: 400">The Problem Eliyan Actually Solves</span></h2>
-<div id="attachment_203874" style="width: 810px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203874" class="size-full wp-image-203874" src="https://ventureburn.com/wp-content/uploads/2026/07/Eliyan-founders-.jpg" alt="A group photograph showing the three founders of Eliyan Ramin Farjadrad, Patrick Soheili, and Syrus Ziai" width="800" height="418" /><p id="caption-attachment-203874" class="wp-caption-text">Eliyan Founders</p></div>
-<p><span style="font-weight: 400">Eliyan doesn&#8217;t make chips. It makes the connections between them. Founded in Santa Clara by Ramin Farjadrad, Patrick Soheili, and Syrus Ziai, the company&#8217;s NuLink PHY cores move data between dies on the same package and across separately packaged chips.</span></p>
-<p><span style="font-weight: 400">Its NuGear chiplets handle memory expansion and rack-to-rack scaling. The detail that matters most for chipmakers is packaging. Competing approaches often need expensive silicon interposers to hit high bandwidth. </span></p>
-<p><span style="font-weight: 400">Eliyan&#8217;s chiplets hit similar numbers on standard organic substrates, which means a chip designer can push more throughput without redesigning the physical chip from scratch.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/onyx-security-raises-113-million-series-b-ai-agent-governance/" data-wpel-link="internal"><b><i>Onyx Raises $113M To Scale Next-Gen AI Governance Models</i></b></a></p>
-<h2><span style="font-weight: 400">Why Cisco and Lumentum Are Backing Eliyan</span></h2>
-<div id="attachment_203873" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203873" class="size-large wp-image-203873" src="https://ventureburn.com/wp-content/uploads/2026/07/Eliyan-Delivers-Industrys-Highest-Performing-Chiplet-Interconnect-PHY-at-64Gbps-in-3nm-Process-1-1024x538.jpg" alt="Eliyan’s electro-optical interconnect tech fixes data bottlenecks between AI chips." width="1024" height="538" /><p id="caption-attachment-203873" class="wp-caption-text">Eliyan Chipset</p></div>
-<p><span style="font-weight: 400">Seligman Ventures led the round with Umesh Padval, Seligman&#8217;s managing partner, joining the board of directors for Eliyan. He was a former board member at Mellanox prior to its $6.9 billion acquisition by Nvidia which changed the way the industry views networking. </span></p>
-<p><span style="font-weight: 400">Both are new strategic investors: Cisco has a spin-out dedicated to optics and silicon, and Lumentum is making the lasers and optical modules that hyperscale data centers will purchase. This comes in addition to a list of industry chip industry leaders backing Eliyan. </span></p>
-<p><span style="font-weight: 400">Before this round, AMD, Arm, Meta, Coherent, Intel Capital and Samsung Catalyst Fund had all invested in Eliyan. If anyone is investing so early, they are typically looking to be a part of what&#8217;s being constructed next and not just for a return.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/tech-giants-commit-265-million-on-electricians-data-centers/" data-wpel-link="internal"><b><i>Tech Giants Commit $265M To Data Center Electricians</i></b></a></p>
-<h2><span style="font-weight: 400">The Scale Eliyan Is Betting On</span></h2>
-<p><span style="font-weight: 400">Eliyan plans to start delivering its first chiplets later this year and will reach hundreds of millions of dollars by 2027, the company said. It&#8217;s also sitting on more than 100 patents. </span></p>
-<p><span style="font-weight: 400">Their bet is that the interconnect is the bottleneck for chiplets, and they own the IP to solve it. That gives it breathing room as bigger players like Nvidia and Intel start paying attention to the same problem.</span></p>
-<p><span style="font-weight: 400">The next stretch of the AI race won&#8217;t be decided by whoever ships the single fastest chip. It&#8217;ll come down to who can move data across a warehouse full of them without melting the power bill, and that&#8217;s the fight Eliyan just raised $145 million to win.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/freehand-raises-75-million-ai-agents-supply-chain/" data-wpel-link="internal"><b><i>Freehand Raises $75M for AI Agents in Supply Chains</i></b></a></p>
-<p>The post <a href="https://ventureburn.com/cisco-backed-eliyan-raises-145m-at-1b-valuation/" data-wpel-link="internal">Cisco-Backed Startup Eliyan Raises $145M at $1B Valuation to Fix AI&#8217;s Data Bottleneck</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>CAIS Raises $170M At $2 Billion Valuation To Expand Alternative Investment Platform</title>
-		<link>https://ventureburn.com/cais-raises-170m/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 13:52:01 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203865</guid>
-
-					<description><![CDATA[<p>Funding Fuels Platform Expansion And AI Development The New York-based alternative investment platform CAIS secured $170 million in Series D financing that will support the enhancement of the firm&#8217;s technology</p>
-<p>The post <a href="https://ventureburn.com/cais-raises-170m/" data-wpel-link="internal">CAIS Raises $170M At $2 Billion Valuation To Expand Alternative Investment Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>Funding Fuels Platform Expansion And AI Development</b></h2>
-<p><span style="font-weight: 400">The New York-based alternative investment platform CAIS secured $170 million in Series D financing that will support the enhancement of the firm&#8217;s technology platform and fuel expansion. The investment values the firm at $2 billion and brings its total funds raised to almost $600 million.</span></p>
-<p><span style="font-weight: 400">The round was conducted with Vista Equity Partners as the lead investor along with AllianzBernstein, Blue Owl Capital, Carlyle, Fortress Investment Group, Golub Capital, Lord Abbett, and the Royal Bank of Canada. </span></p>
-<p><span style="font-weight: 400">The proceeds will be used to scale the CAIS platform, enhance its AI capabilities, pursue additional strategic growth opportunities, and continue building tools to simplify financial advisor access and allocation to alternatives.</span></p>
-<h2><b>Platform Growth Reflects Rising Advisor Demand</b></h2>
-<p><span style="font-weight: 400">Since its founding in 2009, CAIS has established an end-to-end infrastructure and operating system that can support alternative investments throughout the entire life cycle-from an initial investment assessment and commitment through reporting and management. </span></p>
-<p><span style="font-weight: 400">In total, CAIS&#8217; platform powersmore than2,500 wealth management firms, amounting to more than 65,000 financial advisors. The advisory firms that work with CAIS manage on average about $8.5 trillion in client assets, indicating the breadth of the CAIS network.</span></p>
-<p><span style="font-weight: 400">The company reported substantial operating strength over the first half of 2026, with transaction volume increasing 53% year-over-year and total platform assets increasing 55%. 2026&#8217;s first-half organic revenue growth rate three-year average was 37%.</span></p>
-<h2><b>AI And Technology Drive Future Strategy<br />
-</b></h2>
-<div id="attachment_203869" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203869" class="size-full wp-image-203869" src="https://ventureburn.com/wp-content/uploads/2026/07/a-futuristic-poster-depicting-a-holograp_X0ziWUCTVsml12Wsf95o5Q_2nKRFO2xSXmJPyqXclwkrw.png" alt="A neon futuristic visual showing an AI-powered platform for managing alternative investments and advisor workflows." width="1312" height="736" /><p id="caption-attachment-203869" class="wp-caption-text">CAIS integrates AI to simplify alternative investing and boost advisor productivity. Source: Created by Ventureburn</p></div>
-<p><span style="font-weight: 400">CAIS aims to serve as the platform of choice for advisors on alternative investing. Stretching from Funds Marketplace and Custom Funds to Capital Markets, it creates a single digital space for advisors to source, assess, invest in, and service private market private equity products.</span></p>
-<p><span style="font-weight: 400">AI is an increasingly central pillar of that effort. The organization is integrating AI into its advisor workflow, aiming to save time and increase advisor productivity, and automate tasks involved in how advisors analyze an investment in the first place.</span></p>
-<p><span style="font-weight: 400">The growing adoption of private market assets among wealth managers has created increasing demand for platforms capable of handling complex investment products while maintaining compliance and operational efficiency. CAIS aims to address that need through continued technology development and product expansion.</span></p>
-<p><span style="font-weight: 400">More News: <a href="https://ventureburn.com/commonwealth-fusion-systems-raises-1-billion/" data-wpel-link="internal">Commonwealth Fusion Systems Raises $1 Billion To Advance Commercial Fusion Power</a></span></p>
-<h2><b>Investors Back Long-Term Alternative Investment Infrastructure</b></h2>
-<p><span style="font-weight: 400">The new funding reveals a large increase in institutional belief in alternative infrastructure over and above the assets. As more and more independents use alternatives such as private equity, private credit, </span><a href="https://www.investopedia.com/terms/h/hedgefund.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">hedge funds</span></a><span style="font-weight: 400"> and alternative assets, platforms that streamline investment workflows have been deemed more critical to them.</span></p>
-<p><span style="font-weight: 400">The new $170m financing represents one of the biggest Series D funds in the U.S over the last few years, the industry said. Also significant is that large global asset managers are still eager to support tech firms enabling the ever-growing private wealth industry.</span></p>
-<p><span style="font-weight: 400">CAIS aims to use the money to continue developing and funding infrastructure and artificial intelligence features and further drive business growth as it remains a key technology partner for wealth managers. CAIS is backed with over $600m in capital.</span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/cais-raises-170m/" data-wpel-link="internal">CAIS Raises $170M At $2 Billion Valuation To Expand Alternative Investment Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Commonwealth Fusion Systems Raises $1 Billion To Advance Commercial Fusion Power</title>
-		<link>https://ventureburn.com/commonwealth-fusion-systems-raises-1-billion/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 13:30:27 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203861</guid>
-
-					<description><![CDATA[<p>Funding Strengthens Commercial Fusion Ambitions Commonwealth Fusion Systems raises $1 billion to make fusion power real Boston, United States, Commonwealth Fusion Systems raises $1 billion in new equity funding for</p>
-<p>The post <a href="https://ventureburn.com/commonwealth-fusion-systems-raises-1-billion/" data-wpel-link="internal">Commonwealth Fusion Systems Raises $1 Billion To Advance Commercial Fusion Power</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>Funding Strengthens Commercial Fusion Ambitions</b></h2>
-<p><span style="font-weight: 400">Commonwealth Fusion Systems raises $1 billion to make fusion power real Boston, United States, Commonwealth Fusion Systems raises $1 billion in new equity funding for “commercially operating a full-scale power plant soon.</span></p>
-<p><span style="font-weight: 400">The funding round brought together a diverse set of institutional investors, including pension funds, sovereign wealth funds, infrastructure investors, and strategic industrial investors. The fresh infusion of capital comes just more than one year after it raised $863 million.</span></p>
-<p><span style="font-weight: 400">To date, the year-old start-up has raised a total of $4 billion since being established in 2018, which the company described as accounting for about 30% of all capital invested globally by fusion companies.</span></p>
-<p><span style="font-weight: 400">CFS also is by far the most prolific of these privately held entities. Our steady technological advancements now show that moving commercial fusion is no longer just a long-term aspiration in physics; we&#8217;re entering a practical energy delivery era.</span></p>
-<h2><b>Capital Supports SPARC And ARC Development</b></h2>
-<p><span style="font-weight: 400">The funding will primarily support construction of the company&#8217;s SPARC fusion demonstration machine in Devens, Massachusetts, USA. SPARC aims to prove a compact fusion reactor can generate </span><a href="https://www.dsaarch.com/zero-net-positive-energy" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">net positive energy</span></a><span style="font-weight: 400"> for commercial applications globally. </span></p>
-<p><span style="font-weight: 400">The demonstration supports CFS&#8217;s long-term goal of commercialising reliable grid-scale fusion power generation across energy markets. CFS is also developing another fusion power plant called ARC in Chesterfield County, Virginia, United States. </span></p>
-<p><span style="font-weight: 400">ARC is expected to become one of the world&#8217;s first commercial grid-scale fusion power plants successfully. CFS has submitted an application to PJM Interconnection, supporting future integration into regional electricity transmission networks nationwide. </span></p>
-<p><span style="font-weight: 400">The company is among the earliest fusion developers applying for grid interconnection approval in the United States. Google and Eni will jointly purchase over half the plant&#8217;s projected electricity through a power agreement. </span></p>
-<h2><b>Fusion Industry Gains Momentum<br />
-</b></h2>
-<div id="attachment_203863" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203863" class="size-full wp-image-203863" src="https://ventureburn.com/wp-content/uploads/2026/07/create-a-futuristic-neon-lit-poster-with_RNWCs3yFUIeIy2ZFNJEClg_ChVekZREQAaoIz5IbVsz1w_cover.png" alt="A neon futuristic visual showing a compact fusion reactor generating clean energy using superconducting magnets." width="1312" height="736" /><p id="caption-attachment-203863" class="wp-caption-text">Fusion technology promises clean, reliable energy through advanced superconducting reactor systems. Source: Created by Ventureburn</p></div>
-<p><span style="font-weight: 400">Fusion combines hydrogen isotopes at temperatures similar to the sun to generate clean energy through nuclear reactions. The company says fusion produces no long-term radioactive waste and avoids catastrophic nuclear meltdown safety risks.</span></p>
-<p><span style="font-weight: 400">It believes fusion technology offers significant promise for powering future electricity grids with reliable clean energy globally. CFS develops advanced magnet technology supporting fusion energy systems and electric mobility applications through superconducting innovations. </span></p>
-<p><span style="font-weight: 400">The company builds smaller tokamaks using superconducting magnets to improve efficiency and enable more compact reactor designs. CFS said SPARC&#8217;s physical demonstration marks the next major engineering milestone toward commercial fusion electricity generation worldwide. </span></p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/highland-europe-raises-1-25-billion/" data-wpel-link="internal"><span style="font-weight: 400">Highland Europe Raises $1.25 Billion To Back Growth-Stage Tech Companies</span></a></p>
-<h2><b>Investment Reflects Growing Confidence In Fusion</b></h2>
-<p><span style="font-weight: 400">The new funding is in keeping with a wider trend playing out in the fusion industry as long-term institutional investors pour money into the industry with rising technical progress diminishing development risk. </span></p>
-<p><span style="font-weight: 400">The earliest investment rounds into the industry were led by venture funds; now infrastructure and industrial investors looking to stake a claim in burgeoning future clean energy markets are funding progress.</span></p>
-<p><span style="font-weight: 400">In addition to delivering SPARC, CFS has ambitions to speed up engineering, manufacturing and commercial readiness for ARC. Strategic partnerships with a raft of energy providers and technology firms will be crucial.</span></p>
-<p><span style="font-weight: 400">The need for and the growing interest in delivering commercial clean baseload power to meet the continuing demand for electricity across the world. And CFS will be aiming to lead that transition through technology, infrastructure and commercial engagement.</span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/commonwealth-fusion-systems-raises-1-billion/" data-wpel-link="internal">Commonwealth Fusion Systems Raises $1 Billion To Advance Commercial Fusion Power</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Highland Europe Raises $1.25 Billion To Back Growth-Stage Tech Companies</title>
-		<link>https://ventureburn.com/highland-europe-raises-1-25-billion/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 12:53:26 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203857</guid>
-
-					<description><![CDATA[<p>Highland Europe Closes €1.1 Billion Growth Fund Highland Europe raises $1.25bn fund Highland Europe has raised a total of $1.25 billion in its latest fundraising round to strengthen its standing</p>
-<p>The post <a href="https://ventureburn.com/highland-europe-raises-1-25-billion/" data-wpel-link="internal">Highland Europe Raises $1.25 Billion To Back Growth-Stage Tech Companies</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>Highland Europe Closes €1.1 Billion Growth Fund</b></h2>
-<p><span style="font-weight: 400">Highland Europe raises $1.25bn fund Highland Europe has raised a total of $1.25 billion in its latest fundraising round to strengthen its standing as a go-to growth-stage European tech investor globally. </span></p>
-<p><span style="font-weight: 400">Fund VI caps off a remarkable run with the company having returned over $1bn to its limited partners through multiple major exits of its portfolio companies within a year. Highland Europe has now closed six funds raising in the region of €3.75bn since its founding in 2012.</span></p>
-<p><span style="font-weight: 400">The investment will pursue its strategy of investing in technology businesses with product-market fit. Investors include existing LP&#8217;s and the company said the fund will invest across enterprise software, FinTech, healthcare, AI and consumer technology companies.</span></p>
-<h2><b>Major Portfolio Exits Fuel Investor Confidence</b></h2>
-<p><span style="font-weight: 400">Highland Europe&#8217;s latest fundraising comes after a strong year of portfolio realisations. Among its most notable exits was the approximately $3 billion sale of digital employee experience platform Nexthink. </span></p>
-<p><span style="font-weight: 400">The firm&#8217;s portfolio company Bending Spoons also reached an estimated market capitalisation of more than $18 billion following its Nasdaq listing, highlighting the increasing global profile of European technology companies.</span></p>
-<p><span style="font-weight: 400">Highland Europe has backed over 80 businesses and has completed around 30 exits since it started. Portfolio companies generate more than $6 billion in annual revenues and employ in excess of 15,000 people across the globe.</span></p>
-<p><span style="font-weight: 400">Partner Sam Brooks stated, “Ongoing commitments from our limited partners allow us to continue supporting promising European founders in the midst of transformational developments in the use of AI across global economic industries.”</span></p>
-<h2><b>Fund VI Targets AI And Global Expansion<br />
-</b></h2>
-<div id="attachment_203859" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203859" class="size-full wp-image-203859" src="https://ventureburn.com/wp-content/uploads/2026/07/a-futuristic-poster-depicts-a-sprawling-_OkUekmrTVg6_68sWGOztXw_tvC60s3xSyqFpqULB0TvlQ.png" alt="A neon futuristic visual showing venture capital funding flowing into AI-driven global technology companies." width="1312" height="736" /><p id="caption-attachment-203859" class="wp-caption-text">Highland Europe backs AI-driven companies scaling across industries and global markets. Source: Created by Ventureburn</p></div>
-<p><span style="font-weight: 400">Highland Europe specialises in investing after companies have established stable revenues and customer demand, providing capital that helps businesses expand internationally, strengthen leadership teams, and accelerate product innovation.</span></p>
-<p><span style="font-weight: 400">Recent investments illustrate this strategy. The firm recently led funding rounds for legal AI platform Wordsmith and enterprise AI workflow company Unframe. It also participated in a major financing round for </span><a href="https://www.britannica.com/science/precision-measurement" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">precision</span></a><span style="font-weight: 400"> agriculture technology company Ecorobotix.</span></p>
-<p><span style="font-weight: 400">Highland believes artificial intelligence will continue creating significant opportunities across enterprise software and industry-specific technology. The firm also intends to back companies using AI to transform established sectors such as healthcare, financial services, and industrial operations.</span></p>
-<p><span style="font-weight: 400">This approach has also supported previous investments in companies including n8n, Nabla, 9fin, Nothing, Camunda, and Zwift, all of which operate in rapidly growing technology markets. Consumer nutrition brand Huel also agreed to an acquisition by Danone. </span></p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/groundcover-raises-100-million/" data-wpel-link="internal"><span style="font-weight: 400">groundcover Raises $100 Million To Expand AI-Era Observability Platform</span></a></p>
-<h2><b>Leadership Promotions Support Long-Term Strategy</b></h2>
-<p><span style="font-weight: 400">Alongside the new fund, Highland Europe promoted Helena Richardson and Jacob Bernstein to partner positions. Richardson joined the firm in 2016 and has worked closely with consumer and fintech businesses, including Huel, Modulr, ME+EM, and Ffern.</span></p>
-<p><span style="font-weight: 400">Bernstein, who joined in 2017, focuses primarily on enterprise technology investments, including Unframe, Zero Networks, Oritain, and Descartes Underwriting. Their promotions expand Highland&#8217;s senior leadership while maintaining its equal partnership structure.</span></p>
-<p><span style="font-weight: 400">With fresh capital available through Fund VI, Highland Europe plans to continue supporting growth-stage technology companies as they scale internationally and compete in increasingly AI-driven markets. </span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/highland-europe-raises-1-25-billion/" data-wpel-link="internal">Highland Europe Raises $1.25 Billion To Back Growth-Stage Tech Companies</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Onyx Security Raises $113 Million Series B To Scale Next-Gen AI Agent Governance Models</title>
-		<link>https://ventureburn.com/onyx-security-raises-113-million-series-b-ai-agent-governance/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 09:27:51 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<category><![CDATA[Agentic AI]]></category>
-		<category><![CDATA[AI agents]]></category>
-		<category><![CDATA[Bessemer Venture]]></category>
-		<category><![CDATA[Onyx]]></category>
-		<category><![CDATA[Onyx Security]]></category>
-		<category><![CDATA[Series B]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203853</guid>
-
-					<description><![CDATA[<p>Just four months after its $35 million Series A round, Onyx raises in a $113 million Series B round to bring its valuation to $640. The investment round was led</p>
-<p>The post <a href="https://ventureburn.com/onyx-security-raises-113-million-series-b-ai-agent-governance/" data-wpel-link="internal">Onyx Security Raises $113 Million Series B To Scale Next-Gen AI Agent Governance Models</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><span style="font-weight: 400">Just four months after its $35 million </span><a href="https://ventureburn.com/onyx-security-raises-40m-to-expand-cybersecurity-platform/" data-wpel-link="internal"><span style="font-weight: 400">Series A round</span></a><span style="font-weight: 400">, Onyx raises in a $113 million Series B round to bring its valuation to $640. The investment round was led by Bessemer Venture Partners. Additional backing came from Cyberstarts, TCV, Conviction, FirstMark, Vintage, QuantumLight, and G Squared.</span></p>
-<p><span style="font-weight: 400">Organizations are adopting powerful autonomous agents for complex internal workflows. However, these tools often operate without clear boundary lines or safety guardrails. The latest funding will help Onyx scale its services to solve that exact problem for enterprises.</span></p>
-<h2><span style="font-weight: 400">Onyx Security is Taming Autonomous AI in the Enterprise</span></h2>
-<div id="attachment_203855" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203855" class="size-large wp-image-203855" src="https://ventureburn.com/wp-content/uploads/2026/07/Onyx-1024x618.jpeg" alt="A hero style image showing Security Raises $113M and all the partners led by Bessemer Venture Partners and joined by Cyberstarts, TCV, Conviction, FirstMark, Vintage, QuantumLight, and G Squared" width="1024" height="618" /><p id="caption-attachment-203855" class="wp-caption-text">Onyx Security Raises $113M</p></div>
-<p><span style="font-weight: 400">Artificial intelligence is moving beyond basic chatbots to fully autonomous agents. Now employees have direct access to sensitive data and core operational tasks, as well as critical systems, by granting AI agents direct access to these systems. </span></p>
-<p><span style="font-weight: 400">While these agents boost productivity, they present a massive governance challenge. Autonomous actors perform complex actions without standard human accountability or oversight. In 2025, AI agents handled less than one percent of digital tasks in most organizations. </span></p>
-<p><span style="font-weight: 400">That figure is set to explode as companies adopt next-generation reasoning models like Mythos and Fable. As of now, most of the enterprise actions are carried out by autonomous actors, </span><a href="https://www.onyx.security/blog/onyx-113m-series-b-keeping-humans-in-control-as-ai-becomes-smarter" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">pointed out</span></a><span style="font-weight: 400"> by Onyx co-founder and CEO Maxim Bar Kogan. </span></p>
-<p><span style="font-weight: 400">If there’s no governance, businesses can suffer data breaches, unapproved code releases, and unexpected system issues. Onyx provides teams with the visibility they need to avoid those problems from happening.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/tech-giants-commit-265-million-on-electricians-data-centers/" data-wpel-link="internal"><b><i>Tech Giants Commit $265M To Data Center Electricians</i></b></a></p>
-<h2><span style="font-weight: 400">How Onyx’s Control Plane Operates</span></h2>
-<p><span style="font-weight: 400">Onyx acts as a dedicated control layer for artificial intelligence. The startup uses proprietary security models to track each step of an AI agent’s reasoning process. If an agent attempts an unauthorized, unexpected, or malicious step, the system intervenes instantly. </span></p>
-<p><span style="font-weight: 400">This runtime intervention allows security and IT teams to monitor autonomous behavior without blocking productivity. The platform works seamlessly across both custom internal tools and third-party commercial agents. </span></p>
-<p><span style="font-weight: 400">Organizations can enforce internal compliance rules, set strict operational parameters, and block risky behavior in real time. Uros Solar, Head of Security Engineering at Revolut, highlighted how Onyx helps evaluate and stop threats during execution. </span></p>
-<p><span style="font-weight: 400">That capability gives security leaders the confidence to roll out AI tools across critical software development and operational environments.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/freehand-raises-75-million-ai-agents-supply-chain/" data-wpel-link="internal"><b><i>Freehand Raises $75M for AI Agents in Supply Chains</i></b></a></p>
-<h2><span style="font-weight: 400">Rapid Revenue Growth and Global Expansion</span></h2>
-<p><span style="font-weight: 400">Demand for AI governance has pushed Onyx into rapid growth mode. The company quadrupled its revenue in just four months after leaving stealth mode. </span></p>
-<p><span style="font-weight: 400">A major milestone arrived in June, when Anthropic partnered with Onyx to secure enterprise deployments of its models. Dozens of other leading AI developers have integrated their systems into the Onyx platform as well.</span></p>
-<p><span style="font-weight: 400">Onyx is used by Fortune 500 companies in banking, technology, insurance, and energy today for AI security. Trust and accountability are essential for the successful adoption of AI, and Bessemer Venture Partners saw this early on.</span></p>
-<p><span style="font-weight: 400">With $113 in new capital, Onyx plans to advance its proprietary machine learning models. The startup will also expand its sales and engineering operations across North America and international markets.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/qureight-raises-20m-series-b-ai-lung-heart-clinical-trials/" data-wpel-link="internal"><b><i>Qureight Raises $20M for AI-powered Lung and Heart Clinical Trials</i></b></a></p>
-<p>The post <a href="https://ventureburn.com/onyx-security-raises-113-million-series-b-ai-agent-governance/" data-wpel-link="internal">Onyx Security Raises $113 Million Series B To Scale Next-Gen AI Agent Governance Models</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Meta and Google Commit $265 Million on Electricians, Carpenters Building Data Centers</title>
-		<link>https://ventureburn.com/tech-giants-commit-265-million-on-electricians-data-centers/</link>
-		
-		<dc:creator><![CDATA[Ekemini]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 07:41:00 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[News]]></category>
-		<category><![CDATA[Agentic AI]]></category>
-		<category><![CDATA[AI hardware]]></category>
-		<category><![CDATA[artificial intelligence]]></category>
-		<category><![CDATA[BlackRock]]></category>
-		<category><![CDATA[Carpenters]]></category>
-		<category><![CDATA[Data Centers]]></category>
-		<category><![CDATA[Electricians]]></category>
-		<category><![CDATA[Google]]></category>
-		<category><![CDATA[Meta]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203849</guid>
-
-					<description><![CDATA[<p>Behind every chatbot is a building with heavy machinery, power lines, and cooling units. That physical side is hitting a wall, which is why thousands of electricians and carpenters are</p>
-<p>The post <a href="https://ventureburn.com/tech-giants-commit-265-million-on-electricians-data-centers/" data-wpel-link="internal">Meta and Google Commit $265 Million on Electricians, Carpenters Building Data Centers</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<p><span style="font-weight: 400">Behind every chatbot is a building with heavy machinery, power lines, and cooling units. That physical side is hitting a wall, which is why thousands of electricians and carpenters are recruited to build AI data centers across the country today.</span></p>
-<p><span style="font-weight: 400">If someone isn’t on-site pulling cable, running pipe, and building walls, the tech companies can’t launch a single new model. As a result, the big names building data centers are collectively committing more than $265 million on electricians, carpenters, and other construction workers.</span></p>
-<h2><span style="font-weight: 400">Why Tech Is Tilting Towards Skilled Trades</span></h2>
-<p><span style="font-weight: 400">It takes much more to build a data center. It requires an insane amount of electricity and industrial cooling loops to keep the servers from overheating.</span></p>
-<p><span style="font-weight: 400">Contractors often feel pressured to finish these builds quickly. As a result, demand for skilled trade labor has increased over the last few years. In high-density build areas, it’s no surprise seeing electricians work 10-hour shifts, seven days a week, just to keep things moving.</span></p>
-<h2><span style="font-weight: 400">Why Workers Are Switching</span></h2>
-<div id="attachment_203851" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-203851" class="size-large wp-image-203851" src="https://ventureburn.com/wp-content/uploads/2026/07/Electrician-working-on-a-data-center-1024x683.jpg" alt="An Electricians working on electrical parts inside a massive AI data center construction site" width="1024" height="683" /><p id="caption-attachment-203851" class="wp-caption-text">Data Center Engineer</p></div>
-<p><span style="font-weight: 400">At the end of the day, people go where the money is. Industrial data center work pays way more than standard home-building or local commercial jobs. Electricians putting in heavy overtime on these sites are pulling down hundreds of thousands of dollars every year.</span></p>
-<p><span style="font-weight: 400">That kind of pay shifts the whole job market. Experienced workers are walking away from home-building sites to jump onto data center contracts. </span></p>
-<p><span style="font-weight: 400">At the same time, folks leaving jobs in retail or teaching are signing up for trade apprenticeships. The side effect? Local homebuilders are left scrambling for help, putting everyday housing projects behind schedule.</span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/freehand-raises-75-million-ai-agents-supply-chain/" data-wpel-link="internal"><b><i>Freehand Raises $75M for AI Agents in Supply Chains</i></b></a></p>
-<h2><span style="font-weight: 400">Who’s Really Building the Tech World?</span></h2>
-<p><span style="font-weight: 400">Capital and software code aren’t the main things slowing tech companies down right now, it’s having enough qualified people to do the physical work. Whenever local red tape or construction pauses hit, trade workers take the financial brunt of it first. </span></p>
-<p><span style="font-weight: 400">To make sure they don’t run out of labor, major tech firms are dropping real money straight into community colleges and local union halls to train the next wave of workers themselves. The numbers backing this surge tell the whole story. </span></p>
-<p><span style="font-weight: 400">Demand for skilled trade positions has grown nearly 30% over the last three years, outpacing typical commercial roles. Specialized data center labor carries a 32% pay premium, with electricians logging heavy overtime to bring home between $114,000 and $280,000 annually in major tech hubs like Texas and Virginia. </span></p>
-<p><span style="font-weight: 400">Meanwhile, the broader U.S. construction industry is sitting on a severe gap of roughly 439,000 workers. Tech companies are stepping in directly, committing hundreds of millions of dollars to local trade programs to plug the deficit.</span></p>
-<p><span style="font-weight: 400">To close the gap, tech giants are committing massive capital to short-term training. Meta </span><a href="https://about.fb.com/news/2026/06/americas-workforce-academy-free-skilled-trade-training/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">launched</span></a><span style="font-weight: 400"> its $115 million America’s Workforce Academy while Google pledged $10 million to the Electrical Training Alliance. Meanwhile, applications for commercial electrical apprenticeships surged over 70% between 2022 and 2024. </span></p>
-<p><span style="font-weight: 400">The NY Times </span><a href="https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">reported</span></a><span style="font-weight: 400"> that big tech has committed $265 million to recruit and train electricians, carpenters, and other construction workers building data centers. As one industry report put it, “A finished data center takes way fewer workers to run than to build.&#8221; AI may be code, but data centers are built by hand. </span></p>
-<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/qureight-raises-20m-series-b-ai-lung-heart-clinical-trials/" data-wpel-link="internal"><b><i>Qureight Raises $20M for AI-powered Lung and Heart Clinical Trials</i></b></a></p>
-<p>The post <a href="https://ventureburn.com/tech-giants-commit-265-million-on-electricians-data-centers/" data-wpel-link="internal">Meta and Google Commit $265 Million on Electricians, Carpenters Building Data Centers</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>groundcover Raises $100 Million To Expand AI-Era Observability Platform</title>
-		<link>https://ventureburn.com/groundcover-raises-100-million/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Wed, 29 Jul 2026 22:08:29 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203842</guid>
-
-					<description><![CDATA[<p>groundcover Raises $100 Million To Scale AI Observability groundcover has raised $100 million. The new funding round was co-led by new investors One Peak and Morgan Stanley Expansion Capital. Zeev</p>
-<p>The post <a href="https://ventureburn.com/groundcover-raises-100-million/" data-wpel-link="internal">groundcover Raises $100 Million To Expand AI-Era Observability Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>groundcover Raises $100 Million To Scale AI Observability</b></h2>
-<p><span style="font-weight: 400">groundcover has raised $100 million. The new funding round was co-led by new investors One Peak and Morgan Stanley Expansion Capital. Zeev Ventures, Angular Ventures, Heavybit, and Jibe also took part in the funding.</span></p>
-<p><span style="font-weight: 400">The funding rounds bring the total the Tel Aviv, Israel-based company has raised to $160 million. groundcover announced it would use the funding for its worldwide rollout, deepen collaboration agreements with top cloud suppliers, accelerate and speed up product innovation. </span></p>
-<p><span style="font-weight: 400">It serves clients in more than 250 enterprises &#8211; many of themFortune 5 companies alongside fast-starting startups- and tripled its </span><a href="https://www.investopedia.com/terms/r/revenue.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">revenue</span></a><span style="font-weight: 400"> while doubling its worldwide employees to 130 workers throughout the world during the last year.</span></p>
-<h2><b>AI Growth Drives Demand For Modern Observability</b></h2>
-<p><span style="font-weight: 400">Given the growing amount of workloads deployed that utilize AI or run as autonomous systems, engineering teams need increased insight into the infrastructure, applications and the AI workloads within them, without compromising on the cost or data security/privacy.</span></p>
-<p><span style="font-weight: 400">groundcover brings to combine adaptive eBPF sensors with an off-the-shelf OpenTelemetry support to produce complete telemetry across infrastructure, applications and AI workloads, with no data sampling. </span></p>
-<p><span style="font-weight: 400">&#8220;We are entering the era of AI, and that requires a new model of observability, different from the one that we have today,&#8221; said CEO Shahar Azulay, founder of groundcover. We leverage eBPF and our BYOC infrastructure to give our customers a platform that has the ability to serve engineers andAutonomous AI agents that run in production environments.</span></p>
-<h2><b>Platform Supports Autonomous Operations<br />
-</b></h2>
-<div id="attachment_203844" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203844" class="size-full wp-image-203844" src="https://ventureburn.com/wp-content/uploads/2026/07/remove_4-v-vQJyXK-Ky53LAEUhXQ_aKr_5m4VRBGKbTfw0ahd-A_cover.png" alt="A neon futuristic visual showing AI observability systems with full data visibility and autonomous monitoring agents." width="1312" height="736" /><p id="caption-attachment-203844" class="wp-caption-text">groundcover enables full-data observability and autonomous issue resolution for AI-native cloud environments. Source: Created by Ventureburn</p></div>
-<p><span style="font-weight: 400">Unlike traditional observability platforms that reduce or sample telemetry data to manage costs, groundcover captures full-fidelity operational data while keeping it within customers&#8217; own cloud environments. This approach enables organisations to maintain privacy, reduce operational overhead, and improve AI-driven decision-making.</span></p>
-<p><span style="font-weight: 400">The company&#8217;s Agent Mode further extends these capabilities by helping engineering teams automatically identify, troubleshoot, and remediate production issues. By providing complete operational visibility, groundcover aims to create the data foundation required for autonomous software operations.</span></p>
-<p><span style="font-weight: 400">One Peak said the company has developed an observability platform specifically designed for AI-native environments. The investment firm believes groundcover&#8217;s architecture positions it to define the next generation of observability infrastructure as enterprises increasingly rely on AI-powered applications.</span></p>
-<p><span style="font-weight: 400">The platform has gained traction across organisations seeking greater control over operational data while reducing dependence on legacy monitoring solutions that struggle with rapidly growing telemetry volumes.</span></p>
-<p><span style="font-weight: 400">More News: <a href="https://ventureburn.com/investifi-raises-20-million/" data-wpel-link="internal">InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</a></span></p>
-<h2><b>Funding To Accelerate Global Expansion</b></h2>
-<p><span style="font-weight: 400">groundcover plans to use the new funding to strengthen its commercial operations, particularly across North America, where it continues to win customers from established observability providers. The company also intends to expand into additional international markets while deepening its co-sell programmes with leading cloud providers.</span></p>
-<p><span style="font-weight: 400">Investment will also support the continued expansion of the product roadmap, including new AI-powered capabilities and additional observability use cases. The company aims to build a platform that enables engineers and autonomous AI agents to work together more effectively while maintaining full control over operational data.</span></p>
-<p><span style="font-weight: 400">As enterprises continue adopting AI across critical business systems, observability is becoming an increasingly important layer of cloud infrastructure. groundcover is positioning itself to capitalise on this shift by delivering scalable monitoring, privacy-first architecture, and AI-enabled automation for modern software environments.</span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/groundcover-raises-100-million/" data-wpel-link="internal">groundcover Raises $100 Million To Expand AI-Era Observability Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</title>
-		<link>https://ventureburn.com/investifi-raises-20-million/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Wed, 29 Jul 2026 21:52:30 +0000</pubDate>
-				<category><![CDATA[News]]></category>
-		<category><![CDATA[Startup]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=203838</guid>
-
-					<description><![CDATA[<p>InvestiFi Raises Funding To Expand Digital Investing Platform InvestiFi has raised $20 million to accelerate the growth of its embedded digital investing platform for American credit unions and community banks.</p>
-<p>The post <a href="https://ventureburn.com/investifi-raises-20-million/" data-wpel-link="internal">InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>InvestiFi Raises Funding To Expand Digital Investing Platform</b></h2>
-<p><span style="font-weight: 400">InvestiFi has raised $20 million to accelerate the growth of its embedded digital investing platform for American credit unions and community banks. It represents the largest investment made into a fintech company dedicated exclusively to providing digital investing capabilities for credit unions and community banks. </span></p>
-<p><span style="font-weight: 400">The investment round was led by Vibe Credit Union, with participation from BankTech Ventures, Idaho Central Credit Union (ICCU), Navari, United Financial Credit Union, Coastal Credit Union, Mid Minnesota Credit Union, Truity Credit Union, and Southpoint Credit Union.</span></p>
-<p><span style="font-weight: 400">InvestiFi plans to use the capital to expand its platform, accelerate product development, and increase adoption among financial institutions seeking to retain customer deposits within their own digital banking ecosystems.</span></p>
-<h2><b>Platform Helps Community Banks Retain Customers</b></h2>
-<p><span style="font-weight: 400">Founded by CEO Kian Sarreshteh, InvestiFi operates as a Credit Union Service Organization (CUSO) that enables financial institutions to integrate investing services directly into their online banking platforms. Instead of transferring funds to external brokerages or investment apps, customers can invest directly from their checking or savings accounts.</span></p>
-<p><span style="font-weight: 400">The company&#8217;s patent-pending &#8220;Investing from Checking&#8221; technology simplifies the investment process while helping financial institutions maintain stronger customer relationships. The platform currently supports fractional stock and ETF investing, guided investing, IRAs, cryptocurrency trading, and stablecoins, with additional investment products planned for future releases.</span></p>
-<p><span style="font-weight: 400">According to Cornerstone Advisors research, nearly half of Gen Z and Millennial consumers actively invest, while 43% have transferred money to third-party investment platforms. InvestiFi believes embedded investing gives community banks and </span><a href="https://www.investopedia.com/terms/c/creditunion.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">credit unions</span></a><span style="font-weight: 400"> an opportunity to compete more effectively with larger financial institutions, fintech companies, and digital brokerages.</span></p>
-<h2><b>Rapid Growth Demonstrates Market Demand<br />
-</b></h2>
-<div id="attachment_203840" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-203840" class="size-full wp-image-203840" src="https://ventureburn.com/wp-content/uploads/2026/07/remove_1n-Qiqv5WXi819o2a8Mg6A_egp7ji4ETY2zt_AUbPujTg_cover.png" alt="A neon futuristic visual showing digital banking platforms with integrated investing and connected financial institutions." width="1312" height="736" /><p id="caption-attachment-203840" class="wp-caption-text">InvestiFi drives growth by enabling embedded investing across community banks and credit unions. Source: Created by Ventureburn</p></div>
-<p><span style="font-weight: 400">InvestiFi has experienced significant customer growth over the past two years. The company expanded from just four clients in 2024 to more than 60 signed financial institutions by July 2026, reflecting increasing demand for integrated digital investing services.</span></p>
-<p><span style="font-weight: 400">Sarreshteh said the latest funding validates both the platform and the company&#8217;s long-term mission. He noted that many of the investors are also existing customers, demonstrating confidence in InvestiFi&#8217;s technology and its ability to help community financial institutions compete in an increasingly digital financial landscape.</span></p>
-<p><span style="font-weight: 400">Vibe Credit Union said the investment aligns with its goal of supporting members throughout every stage of their financial journey. The organisation believes digital wealth-building services have become an essential extension of traditional banking products.</span></p>
-<p><span style="font-weight: 400">BankTech Ventures also highlighted InvestiFi&#8217;s rapid customer growth and growing market opportunity, stating that the company is addressing an important challenge faced by community financial institutions as digital investing becomes an expected consumer feature.</span></p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/encore-ai-raises-30m-series-a-enterprise-ai/" data-wpel-link="internal"><span style="font-weight: 400">Encore AI Raises $30M to Expand Revenue-Focused Enterprise AI Platform</span></a></p>
-<h2><b>Expansion Plans Focus On Product Innovation</b></h2>
-<p><span style="font-weight: 400">The new capital will support platform expansion, product innovation, and wider deployment across the United States. InvestiFi aims to increase adoption among existing financial institution partners while attracting additional banks and credit unions seeking embedded investment capabilities.</span></p>
-<p><span style="font-weight: 400">As digital investing continues to become a standard feature across financial services, InvestiFi is positioning itself as a technology partner that allows smaller financial institutions to offer investment services without requiring customers to leave their trusted banking platforms.</span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/investifi-raises-20-million/" data-wpel-link="internal">InvestiFi Raises $20 Million To Expand Digital Investing For Credit Unions</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-	</channel>
-</rss>
-
-<!-- plugin=object-cache-pro client=phpredis metric#hits=2192 metric#misses=42 metric#hit-ratio=98.1 metric#bytes=799313 metric#prefetches=178 metric#store-reads=35 metric#store-writes=2 metric#store-hits=186 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=417.28 metric#ms-cache=9.71 metric#ms-cache-avg=0.2698 metric#ms-cache-ratio=2.3 -->
+  </style>
+</head>
+<body>
+  <div id="outer-container">
+    <div id="container">
+<div class="throbber">
+    <svg class="spinner" width="90px" height="90px" viewBox="0 0 47 47"
+         version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Loader</title>
+        <defs>
+            <polygon id="path-1"
+                     points="0 0.375484146 0 15.7255695 15.7013244 15.7255695 15.7013244 0.375484146 0 0.375484146"></polygon>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+           fill-rule="evenodd">
+            <g id="Logo" transform="translate(-5.000000, -2.000000)">
+                <g id="Group-2" transform="translate(5.000000, 2.000000)">
+                    <path d="M22.6150244,4.52988293 C23.1538049,3.06256585 23.6031707,1.59582195 24.231939,0.158882927 C25.1902805,2.22459024 25.8190488,4.43989512 26.7768171,6.47579756 C29.1417195,7.40376098 31.7164024,7.7929439 34.1116829,8.69110244 C28.9623171,11.2663585 23.7229634,13.7510537 18.4836098,16.176139 C19.7709512,12.2545049 21.2382683,8.4217122 22.6150244,4.52988293 L22.6150244,4.52988293 Z"
+                          id="Fill-1" fill="#467C45"></path>
+                    <path d="M13.7718598,8.94461585 C16.1424939,7.68077439 18.4500793,6.28968902 20.8207134,5.02527439 C18.9240915,10.8412378 16.7747012,16.5614817 14.8465549,22.3774451 C12.7292622,18.3950549 10.895689,14.2544695 8.9044939,10.2090305 C8.27228659,8.85004268 7.5455061,7.55353049 7.00844512,6.16359146 C9.31545732,6.95342073 11.4648476,8.24935976 13.7718598,8.94461585"
+                          id="Fill-3" fill="#467C45"></path>
+                    <path d="M24.2134256,15.0745049 C29.4602305,12.4969561 34.7379866,9.91940732 40.0157427,7.4031878 C39.1565598,9.61276098 38.1747183,11.7300537 37.2232549,13.9086756 C38.4504134,16.2099561 39.9544134,18.388578 41.0898646,20.7511878 C35.4435598,18.9405415 29.8287793,17.0381878 24.2134256,15.0745049"
+                          id="Fill-5" fill="#467C45"></path>
+                    <g id="Group-9"
+                       transform="translate(0.000000, 11.919659)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-8"></g>
+                        <path d="M8.34869024,0.375484146 C9.93064146,3.33419146 11.2781659,6.43963049 12.7426171,9.45622805 C13.7387878,11.5362646 14.793422,13.5876427 15.7013244,15.7255695 C10.4579585,13.9091915 5.21401951,12.03435 -0.000114634146,10.0718134 C2.05069024,9.1341061 4.21842195,8.4898622 6.29845854,7.61119146 C6.97193415,5.17980122 7.67521463,2.77706951 8.34869024,0.375484146"
+                              id="Fill-7" fill="#467C45"
+                              mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M29.1793195,18.0496049 C33.5600634,19.4670561 37.9081366,21.0776659 42.2888805,22.5593122 C43.6742341,23.0745927 45.1558805,23.4609098 46.5085634,24.1372512 C44.2216122,25.039422 41.9025634,25.9100683 39.6477098,26.8110927 C38.8103073,29.4195927 38.2302585,32.1261049 37.3607585,34.7346049 C35.5890878,31.4497634 34.0432463,28.0353854 32.3684415,24.6852024 C31.3052098,22.4945439 30.1456854,20.3044585 29.1793195,18.0496049"
+                          id="Fill-10" fill="#467C45"></path>
+                    <path d="M28.9972232,29.3489207 C29.5789915,27.69475 30.0684793,26.0113476 30.7419549,24.3887012 C31.538089,25.7660305 32.1811866,27.2356402 32.9154183,28.6444939 C34.7220524,32.4709817 36.68115,36.205189 38.4568329,40.0316768 C36.2827963,39.1449817 34.1402841,38.1654329 31.9364427,37.2460671 C29.6403207,38.4709329 27.4662841,39.9405427 25.1094061,41.1035061 C26.3033207,37.1549329 27.7419793,33.2671159 28.9972232,29.3489207"
+                          id="Fill-12" fill="#467C45"></path>
+                    <path d="M4.97133902,25.64555 C9.93385122,27.1873793 14.7737049,29.036428 19.6748878,30.6705378 C20.4148512,30.9170012 21.1542415,31.1944159 21.8328756,31.5337329 C16.5304732,33.9685622 11.3214976,36.6498549 5.95776585,38.99355 C6.82096098,36.8355622 7.89966829,34.7698549 8.7319122,32.581489 C7.68358293,30.1764646 6.11194878,28.01905 4.97133902,25.64555"
+                          id="Fill-14" fill="#467C45"></path>
+                    <path d="M15.4549183,35.8770488 C19.4671134,33.9317073 23.4483573,31.8952317 27.4915037,30.0433171 C26.4110768,33.6542927 25.0222841,37.203939 23.8186256,40.8143415 C23.1090402,42.7275854 22.5530646,44.7033049 21.7511988,46.5855976 C20.7630524,44.4866463 20.0534671,42.2650366 19.1277963,40.1351341 C16.6276256,39.2094634 14.0042232,38.684439 11.4736744,37.9748537 C12.6773329,37.0801341 14.1584061,36.586061 15.4549183,35.8770488"
+                          id="Fill-16" fill="#467C45"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+      <div id="text">
+        Please wait while your request is being verified...
+      </div>
+    </div>
+  </div>
+  <div id="hqkbjy866wgv"></div>
+  <script>
+(function(v,s){var a0K={v:0xe1,s:0xf2,c:0xdb,C:0xed,S:0xd5,R:0xec},l=a0C,c=v();while(!![]){try{var C=parseInt(l(a0K.v))/0x1+parseInt(l(0xd6))/0x2*(-parseInt(l(a0K.s))/0x3)+-parseInt(l(a0K.c))/0x4+-parseInt(l(a0K.C))/0x5*(-parseInt(l(0xd7))/0x6)+-parseInt(l(0xe0))/0x7+-parseInt(l(0xd0))/0x8+-parseInt(l(a0K.S))/0x9*(-parseInt(l(a0K.R))/0xa);if(C===s)break;else c['push'](c['shift']());}catch(S){c['push'](c['shift']());}}}(a0c,0xaa600));var a0S=window['navigator'],a0R={'webdriverCheck':function(){var a0H={v:0xe6},x=a0C;return x(a0H.v)in window||!!a0S['webdriver'];},'userAgentCheck':function(){var a0q={v:0xd8},n=a0C;return/headless|bytespider/i[n(0xf5)](a0S[n(a0q.v)]);},'appVersionCheck':function(){var N=a0C;return/headless/i[N(0xf5)](a0S[N(0xd1)]);},'pluginArraySpoofing':function(){var b=a0C;let v=PluginArray['prototype']===a0S[b(0x10a)][b(0xdd)];if(a0S['plugins']['length']>0x0)v&=Plugin[b(0xcf)]===a0S['plugins'][0x0][b(0xdd)];return!v;},'mimeTypeArraySpoofing':function(){var a0z={v:0xcf,s:0xdd,c:0xe8},T=a0C;let v=MimeTypeArray[T(a0z.v)]===a0S['mimeTypes'][T(a0z.s)];if(a0S[T(0xe8)][T(0xf9)]>0x0)v&=MimeType[T(a0z.v)]===a0S[T(a0z.c)][0x0][T(0xdd)];return!v;},'noLanguage':function(){var a0W={v:0xce,s:0xda,c:0xf9},A=a0C;return!a0S[A(a0W.v)]||a0S[A(a0W.s)][A(a0W.c)]===0x0;},'zeroOuterDimensions':function(){var Z=a0C;return window[Z(0xe4)+'t']===0x0&&window[Z(0xea)]===0x0;}},a0d=function(c,C){var a0u={v:0x106,s:0xeb,c:0x109,C:0xf7,S:0xe7,R:0xe5},a0D={v:0x10b},k=a0C,S=(function(){var d=!![];return function(F,Q){var V=d?function(){var E=a0C;if(Q){var p=Q[E(0xdc)](F,arguments);return Q=null,p;}}:function(){};return d=![],V;};}()),R=S(this,function(){var j=a0C;return R[j(0x105)]()[j(0xfd)](j(a0D.v)+'+$')['toString']()[j(0xf6)+'r'](R)[j(0xfd)](j(0x10b)+'+$');});R(),window[k(0xf8)+k(a0u.v)]?window['document']['addEventLi'+k(a0u.v)](k(a0u.s)+k(a0u.c),c,C):window[k(0xd9)][k(a0u.C)+'t'](k(a0u.S)+k(a0u.R),c);};function a0C(v,s){var c=a0c();return a0C=function(C,S){C=C-0xce;var R=c[C];return R;},a0C(v,s);}function a0c(){var h=['2GaHRIc','8360382aaZnhm','userAgent','document','languages','4943408RaHVik','apply','__proto__','forEach','type','867489guOUfB','228986LDWiNf','ent','60b54a2be4','outerHeigh','techange','webdriver','onreadysta','mimeTypes','style','outerWidth','DOMContent','10884780BnOrNR','5mUZvfi','action','name','filter','7fa3b767c4','758097TGvJWt','createElem','appendChil','test','constructo','attachEven','addEventLi','length','a6105c0a61','submit','send','search','1b41b08f12','append','method','open','hidden','input','entries','toString','stener','value','ne;','Loaded','plugins','(((.+)+)+)','language','prototype','3204216zPXOkd','appVersion','ById','GET','cttl','9IBrEId'];a0c=function(){return h;};return a0c();}a0d(function(){var a0y={v:0x103,s:0xd9,c:0xf3,C:0x103,S:0x104,R:0xff,d:0xff,F:0xd4,Q:0xd3,V:0x105,p:0x108,B:0x100,o:0xee,X:0xef,i:0x107,M:0xf1,U:0xdf,f:0xf4,m:0xf4,I:0xfb};setTimeout(function(){var a=a0C,v=window[a(0xd9)]['getElement'+a(0xd2)]('hqkbjy866wgv'),s=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(+!+[]+!![]+!![]+!![]+[])+(+!+[])+(+!+[]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])),c=window['document'][a(0xf3)+'ent']('form'),C=window['document'][a(0xf3)+a(0xe2)]('input'),S=window['document'][a(0xf3)+a(0xe2)](a(a0y.v)),R=window[a(0xd9)]['createElem'+a(0xe2)](a(0x103)),d=window[a(a0y.s)][a(a0y.c)+a(0xe2)](a(0x103)),F=window[a(0xd9)][a(a0y.c)+a(0xe2)](a(a0y.C)),Q=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![])+(+!+[]+[])+(+!+[]+!![]+!![])+(+!+[]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![])),V='wsidchk',p='pdata',B='https%3A%2F%2Fventureburn.com%2Ffeed%2F',o='/z0f76a1d14fd21a8fb5fd0d03e0fdc3d3cedae52f',X='failedChecks',i=Object[a(a0y.S)](a0R)['map'](([m,I])=>{try{return I()?m:null;}catch(g){return null;}})[a(0xf0)](m=>m!==null),M=i['length']>0x0;if(M){var U=new URLSearchParams();U['append']('id',a(0xfa)+a(0xfe)+'0950635027'+'9e'),U[a(0xff)]('ts','1785471599'),U[a(a0y.R)](V,s+Q),U[a(a0y.d)](p,B),U[a(a0y.R)](a(a0y.F),'0'),i[a(0xde)](m=>U[a(0xff)](X,m));var f=new XMLHttpRequest();f[a(0x101)](a(a0y.Q),o+'?'+U[a(a0y.V)]()),f[a(0xfc)](null);}else c['id']='hqkbjy866wgv',c[a(0xe9)]='display:no'+a(a0y.p),c[a(a0y.B)]=a(0xd3),c[a(a0y.o)]=o,C['id']='f5l4d9fy95r1',C[a(a0y.X)]=V,C[a(a0y.i)]=s+Q,C[a(0xdf)]=a(0x102),R[a(0xef)]='id',R[a(0x107)]=a(a0y.M)+a(0xe3)+'d49030b349'+'c7',R['type']='hidden',d[a(0xef)]='ts',d['value']='1785471599',d[a(a0y.U)]='hidden',S['id']='j4ybe2hegixd',S[a(a0y.X)]=p,S[a(0x107)]=B,S[a(0xdf)]=a(0x102),F[a(0xef)]='cttl',F[a(a0y.i)]='0',F[a(0xdf)]='hidden',c[a(a0y.f)+'d'](C),c['appendChil'+'d'](S),c[a(a0y.m)+'d'](R),c[a(0xf4)+'d'](d),c['appendChil'+'d'](F),v['appendChil'+'d'](c),c[a(a0y.I)]();},0x3e8);},![]);
+  </script>
+</body>
+</html>
