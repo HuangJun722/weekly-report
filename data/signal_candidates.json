@@ -1,5 +1,261 @@
 {
   "version": 1,
-  "generated_at": "2026-07-31T12:19:58.290242+08:00",
-  "candidates": []
+  "generated_at": "2026-08-02T03:20:47.436782+08:00",
+  "candidates": [
+    {
+      "candidate_id": "jobs-5bba20eeb004e07d",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "operations",
+      "window": "2026-W31",
+      "window_start": "2026-08-02",
+      "window_end": "2026-08-02",
+      "detected_at": "2026-08-02T03:20:47.436782+08:00",
+      "baseline_count": 20,
+      "current_count": 20,
+      "added_count": 12,
+      "removed_count": 12,
+      "clusters": {
+        "ai": 1,
+        "engineering": 2,
+        "operations": 3,
+        "partnerships": 1,
+        "sales": 1
+      },
+      "removed_clusters": {
+        "compliance": 2,
+        "operations": 2,
+        "engineering": 5
+      },
+      "evidence_refs": [
+        {
+          "job_id": "744000141078449",
+          "title": "Lead AI Analytics Engineer, Trust & Safety",
+          "url": "https://www.grab.careers/en/jobs/744000141078449/lead-ai-analytics-engineer-trust-safety/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140956539",
+          "title": "Senior Product Designer, Search and Personalisation",
+          "url": "https://www.grab.careers/en/jobs/744000140956539/senior-product-designer-search-and-personalisation/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140943120",
+          "title": "Assistant Manager, Technology Sourcing",
+          "url": "https://www.grab.careers/en/jobs/744000140943120/assistant-manager-technology-sourcing/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140894729",
+          "title": "Head of CX Operations Excellence",
+          "url": "https://www.grab.careers/en/jobs/744000140894729/head-of-cx-operations-excellence/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140890687",
+          "title": "Head of CX Operations Excellence",
+          "url": "https://www.grab.careers/en/jobs/744000140890687/head-of-cx-operations-excellence/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140890379",
+          "title": "Intern, Software Engineer, Mobile (Android)",
+          "url": "https://www.grab.careers/en/jobs/744000140890379/intern-software-engineer-mobile-android/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140887219",
+          "title": "Mobility and Supply Strategy Analyst",
+          "url": "https://www.grab.careers/en/jobs/744000140887219/mobility-and-supply-strategy-analyst/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140875449",
+          "title": "Lead Product Designer, Grab For Business",
+          "url": "https://www.grab.careers/en/jobs/744000140875449/lead-product-designer-grab-for-business/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140864574",
+          "title": "Associate, Fleet Operations (Autonomous Vehicles)",
+          "url": "https://www.grab.careers/en/jobs/744000140864574/associate-fleet-operations-autonomous-vehicles/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140826259",
+          "title": "Associate, Strategy & Special Project - GrabFood (Food Locker and Local Partnership)",
+          "url": "https://www.grab.careers/en/jobs/744000140826259/associate-strategy-special-project-grabfood-food-locker-and-local-partnership/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140826024",
+          "title": "Associate, Strategy & Special project - GrabFood [User segmentation strategy and user growth]",
+          "url": "https://www.grab.careers/en/jobs/744000140826024/associate-strategy-special-project-grabfood-user-segmentation-strategy-and-user-growth/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140826019",
+          "title": "Manager, Public Affairs",
+          "url": "https://www.grab.careers/en/jobs/744000140826019/manager-public-affairs/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140592669",
+          "title": "Head of People Experience, Delivery & Compliance",
+          "url": "https://www.grab.careers/en/jobs/744000140592669/head-of-people-experience-delivery-compliance/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140592420",
+          "title": "Head of People Experience, Delivery & Compliance",
+          "url": "https://www.grab.careers/en/jobs/744000140592420/head-of-people-experience-delivery-compliance/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140439239",
+          "title": "Credit Operation Associate",
+          "url": "https://www.grab.careers/en/jobs/744000140439239/credit-operation-associate/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140419180",
+          "title": "Finance Associate, RTR - General Ledger",
+          "url": "https://www.grab.careers/en/jobs/744000140419180/finance-associate-rtr-general-ledger/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140389140",
+          "title": "Software Engineer Intern",
+          "url": "https://www.grab.careers/en/jobs/744000140389140/software-engineer-intern/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140377749",
+          "title": "Lead Product Manager - Content & Discovery (Contract)",
+          "url": "https://www.grab.careers/en/jobs/744000140377749/lead-product-manager-content-discovery-contract/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140372529",
+          "title": "Intern, Software Engineer Mobile (September Intake)",
+          "url": "https://www.grab.careers/en/jobs/744000140372529/intern-software-engineer-mobile-september-intake/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140282844",
+          "title": "Assistant Manager, CRM",
+          "url": "https://www.grab.careers/en/jobs/744000140282844/assistant-manager-crm/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140235849",
+          "title": "Software Engineer, Mobile (Android)",
+          "url": "https://www.grab.careers/en/jobs/744000140235849/software-engineer-mobile-android/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140224356",
+          "title": "Lead Technical Program Manager",
+          "url": "https://www.grab.careers/en/jobs/744000140224356/lead-technical-program-manager/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140200692",
+          "title": "Senior Security Engineer - Threat Detection",
+          "url": "https://www.grab.careers/en/jobs/744000140200692/senior-security-engineer-threat-detection/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140200559",
+          "title": "Senior Data Scientist (Business Transaction Platform)",
+          "url": "https://www.grab.careers/en/jobs/744000140200559/senior-data-scientist-business-transaction-platform/",
+          "change": "removed"
+        }
+      ],
+      "status": "rejected",
+      "rejection_reason": "source_reset_suspected",
+      "promoted_event_id": ""
+    },
+    {
+      "candidate_id": "jobs-79402c98df3cc6bf",
+      "entity_id": "shopify",
+      "entity": "Shopify",
+      "region": "全球",
+      "sector": "commerce_saas",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "mixed",
+      "window": "2026-W31",
+      "window_start": "2026-08-02",
+      "window_end": "2026-08-02",
+      "detected_at": "2026-08-02T03:20:47.436782+08:00",
+      "baseline_count": 32,
+      "current_count": 30,
+      "added_count": 3,
+      "removed_count": 5,
+      "clusters": {},
+      "removed_clusters": {
+        "partnerships": 3,
+        "sales": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "059c7d72-aed5-43a3-ab5b-1129adeef356",
+          "title": "Technical Account Manager, Enterprise East Remote - Americas",
+          "url": "https://www.shopify.com/careers/technical-account-manager-enterprise-east_059c7d72-aed5-43a3-ab5b-1129adeef356",
+          "change": "added"
+        },
+        {
+          "job_id": "b7099239-aecb-4cdb-a7da-dd49f0a34342",
+          "title": "Lead Editor, Content Performance Remote - Americas",
+          "url": "https://www.shopify.com/careers/lead-editor-content-performance_b7099239-aecb-4cdb-a7da-dd49f0a34342",
+          "change": "added"
+        },
+        {
+          "job_id": "f46db5ed-331d-417e-8d5d-593b76bff8a0",
+          "title": "Manager, AML Transaction Monitoring FCC Remote - Americas",
+          "url": "https://www.shopify.com/careers/manager-aml-transaction-monitoring-fcc_f46db5ed-331d-417e-8d5d-593b76bff8a0",
+          "change": "added"
+        },
+        {
+          "job_id": "9b6c9aa9-1ae9-4da0-ba51-39d9700e803d",
+          "title": "Merchandising & Brand Strategy Manager, Shopify Supply Remote - Americas",
+          "url": "https://www.shopify.com/careers/merchandising-brand-strategy-manager-shopify-supply_9b6c9aa9-1ae9-4da0-ba51-39d9700e803d",
+          "change": "removed"
+        },
+        {
+          "job_id": "8d283b6a-d5d1-470a-ae7b-b9967f157eed",
+          "title": "Product Partner Manager, Strategic Portfolio Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partner-manager-strategic-portfolio_8d283b6a-d5d1-470a-ae7b-b9967f157eed",
+          "change": "removed"
+        },
+        {
+          "job_id": "023fa124-6cc8-4d1c-9857-0ea20ecb443a",
+          "title": "Product Partnerships Lead, GTM Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partnerships-lead-gtm_023fa124-6cc8-4d1c-9857-0ea20ecb443a",
+          "change": "removed"
+        },
+        {
+          "job_id": "07e96176-03d1-4904-973a-b5f5ad204e9a",
+          "title": "Product Partnerships Lead, Marketplaces & Sales Channels Remote - Americas",
+          "url": "https://www.shopify.com/careers/product-partnerships-lead-marketplaces-sales-channels_07e96176-03d1-4904-973a-b5f5ad204e9a",
+          "change": "removed"
+        },
+        {
+          "job_id": "f12820dc-3c96-4815-b4d2-506d680d034f",
+          "title": "Workplace Technology Manager Toronto",
+          "url": "https://www.shopify.com/careers/workplace-technology-manager_f12820dc-3c96-4815-b4d2-506d680d034f",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    }
+  ]
 }
