@@ -1,11 +1,17 @@
 {
   "version": 1,
-  "generated_at": "2026-08-02T12:21:15.029886+08:00",
+  "generated_at": "2026-08-03T03:21:48.680468+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-02T12:21:15.029886+08:00",
+      "observed_at": "2026-08-03T03:21:48.680468+08:00",
       "jobs": [
+        {
+          "id": "744000141128359",
+          "title": "Assistant Manager, Technology Sourcing",
+          "url": "https://www.grab.careers/en/jobs/744000141128359/assistant-manager-technology-sourcing/",
+          "function_tags": []
+        },
         {
           "id": "744000141078449",
           "title": "Lead AI Analytics Engineer, Trust & Safety",
@@ -19,12 +25,6 @@
           "id": "744000140956539",
           "title": "Senior Product Designer, Search and Personalisation",
           "url": "https://www.grab.careers/en/jobs/744000140956539/senior-product-designer-search-and-personalisation/",
-          "function_tags": []
-        },
-        {
-          "id": "744000140943120",
-          "title": "Assistant Manager, Technology Sourcing",
-          "url": "https://www.grab.careers/en/jobs/744000140943120/assistant-manager-technology-sourcing/",
           "function_tags": []
         },
         {
@@ -678,7 +678,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-02T12:21:15.029886+08:00",
+      "observed_at": "2026-08-03T03:21:48.680468+08:00",
       "jobs": [
         {
           "id": "059c7d72-aed5-43a3-ab5b-1129adeef356",
