@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-08-03T03:21:48.680468+08:00",
+  "observed_at": "2026-08-03T12:27:08.896445+08:00",
   "source_count": 3,
   "raw_count": 50,
   "source_stats": {
@@ -8,12 +8,16 @@
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
+      "count": 6,
       "inventory_count": 20,
-      "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 1,
-      "clusters": {},
+      "signal_count": 1,
+      "added_count": 3,
+      "removed_count": 3,
+      "clusters": {
+        "partnerships": 1,
+        "operations": 1,
+        "payments": 2
+      },
       "removed_clusters": {}
     },
     "Stripe Jobs": {
@@ -43,6 +47,72 @@
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [],
-  "promoted_count": 0
+  "candidate_signals": [
+    {
+      "candidate_id": "jobs-a67deb3349b45d9d",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "payments",
+      "window": "2026-W32",
+      "window_start": "2026-08-03",
+      "window_end": "2026-08-03",
+      "detected_at": "2026-08-03T12:27:08.896445+08:00",
+      "baseline_count": 20,
+      "current_count": 20,
+      "added_count": 3,
+      "removed_count": 3,
+      "clusters": {
+        "partnerships": 1,
+        "operations": 1,
+        "payments": 2
+      },
+      "removed_clusters": {},
+      "evidence_refs": [
+        {
+          "job_id": "744000141169339",
+          "title": "Senior People Operations Business Partner",
+          "url": "https://www.grab.careers/en/jobs/744000141169339/senior-people-operations-business-partner/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141167699",
+          "title": "Head, Product Marketing, Financial Services",
+          "url": "https://www.grab.careers/en/jobs/744000141167699/head-product-marketing-financial-services/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141167689",
+          "title": "Head, Product Marketing, Financial Services",
+          "url": "https://www.grab.careers/en/jobs/744000141167689/head-product-marketing-financial-services/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000140624500",
+          "title": "Merchant Account Manager, F&B",
+          "url": "https://www.grab.careers/en/jobs/744000140624500/merchant-account-manager-fb/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140607319",
+          "title": "Senior Merchant Account Manager, F&B",
+          "url": "https://www.grab.careers/en/jobs/744000140607319/senior-merchant-account-manager-fb/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140602929",
+          "title": "IT Executive",
+          "url": "https://www.grab.careers/en/jobs/744000140602929/it-executive/",
+          "change": "removed"
+        }
+      ],
+      "status": "qualified",
+      "rejection_reason": "",
+      "promoted_event_id": ""
+    }
+  ],
+  "promoted_count": 1
 }
