@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-08-03T12:27:08.896445+08:00",
+  "observed_at": "2026-08-03T15:59:44.277326+08:00",
   "source_count": 3,
-  "raw_count": 50,
+  "raw_count": 62,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
@@ -9,29 +9,38 @@
       "status": "ok",
       "fetch_status": "success",
       "count": 6,
-      "inventory_count": 20,
+      "inventory_count": 18,
       "signal_count": 1,
-      "added_count": 3,
-      "removed_count": 3,
+      "added_count": 2,
+      "removed_count": 4,
       "clusters": {
-        "partnerships": 1,
-        "operations": 1,
-        "payments": 2
+        "engineering": 1
       },
-      "removed_clusters": {}
+      "removed_clusters": {
+        "payments": 1,
+        "operations": 1,
+        "partnerships": 1,
+        "sales": 1
+      }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
-      "status": "failed",
-      "fetch_status": "parse_failed",
-      "count": 0,
-      "inventory_count": 0,
-      "signal_count": 0,
+      "status": "ok",
+      "fetch_status": "success",
+      "count": 52,
+      "inventory_count": 14,
+      "signal_count": 1,
       "added_count": 0,
-      "removed_count": 0,
+      "removed_count": 52,
       "clusters": {},
-      "removed_clusters": {}
+      "removed_clusters": {
+        "sales": 33,
+        "engineering": 19,
+        "payments": 2,
+        "partnerships": 3,
+        "ai": 1
+      }
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
@@ -49,70 +58,224 @@
   },
   "candidate_signals": [
     {
-      "candidate_id": "jobs-a67deb3349b45d9d",
+      "candidate_id": "jobs-a1fe75b669c371f5",
       "entity_id": "grab",
       "entity": "Grab",
       "region": "亚太",
       "sector": "mobility_payment",
       "source_type": "jobs_snapshot",
       "signal_type": "function_buildout",
-      "cluster": "payments",
+      "cluster": "engineering",
       "window": "2026-W32",
       "window_start": "2026-08-03",
       "window_end": "2026-08-03",
-      "detected_at": "2026-08-03T12:27:08.896445+08:00",
+      "detected_at": "2026-08-03T15:59:44.277326+08:00",
       "baseline_count": 20,
-      "current_count": 20,
-      "added_count": 3,
-      "removed_count": 3,
+      "current_count": 18,
+      "added_count": 2,
+      "removed_count": 4,
       "clusters": {
-        "partnerships": 1,
-        "operations": 1,
-        "payments": 2
+        "engineering": 1
       },
-      "removed_clusters": {},
+      "removed_clusters": {
+        "payments": 1,
+        "operations": 1,
+        "partnerships": 1,
+        "sales": 1
+      },
       "evidence_refs": [
         {
-          "job_id": "744000141169339",
-          "title": "Senior People Operations Business Partner",
-          "url": "https://www.grab.careers/en/jobs/744000141169339/senior-people-operations-business-partner/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000141167699",
-          "title": "Head, Product Marketing, Financial Services",
-          "url": "https://www.grab.careers/en/jobs/744000141167699/head-product-marketing-financial-services/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000141167689",
-          "title": "Head, Product Marketing, Financial Services",
-          "url": "https://www.grab.careers/en/jobs/744000141167689/head-product-marketing-financial-services/",
+          "job_id": "744000141180159",
+          "title": "Software Engineer, Backend - GrabDefence",
+          "url": "https://www.grab.careers/en/jobs/744000141180159/software-engineer-backend-grabdefence/",
           "change": "added"
         },
         {
           "job_id": "744000140624500",
           "title": "Merchant Account Manager, F&B",
           "url": "https://www.grab.careers/en/jobs/744000140624500/merchant-account-manager-fb/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141167689",
+          "title": "Head, Product Marketing, Financial Services",
+          "url": "https://www.grab.careers/en/jobs/744000141167689/head-product-marketing-financial-services/",
           "change": "removed"
         },
         {
-          "job_id": "744000140607319",
-          "title": "Senior Merchant Account Manager, F&B",
-          "url": "https://www.grab.careers/en/jobs/744000140607319/senior-merchant-account-manager-fb/",
+          "job_id": "744000140890687",
+          "title": "Head of CX Operations Excellence",
+          "url": "https://www.grab.careers/en/jobs/744000140890687/head-of-cx-operations-excellence/",
           "change": "removed"
         },
         {
-          "job_id": "744000140602929",
-          "title": "IT Executive",
-          "url": "https://www.grab.careers/en/jobs/744000140602929/it-executive/",
+          "job_id": "744000140826259",
+          "title": "Associate, Strategy & Special Project - GrabFood (Food Locker and Local Partnership)",
+          "url": "https://www.grab.careers/en/jobs/744000140826259/associate-strategy-special-project-grabfood-food-locker-and-local-partnership/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140826024",
+          "title": "Associate, Strategy & Special project - GrabFood [User segmentation strategy and user growth]",
+          "url": "https://www.grab.careers/en/jobs/744000140826024/associate-strategy-special-project-grabfood-user-segmentation-strategy-and-user-growth/",
           "change": "removed"
         }
       ],
-      "status": "qualified",
-      "rejection_reason": "",
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    },
+    {
+      "candidate_id": "jobs-df8c38a704818a09",
+      "entity_id": "stripe",
+      "entity": "Stripe",
+      "region": "全球",
+      "sector": "payment_developer_platform",
+      "source_type": "jobs_snapshot",
+      "signal_type": "organizational_contraction",
+      "cluster": "sales",
+      "window": "2026-W32",
+      "window_start": "2026-08-03",
+      "window_end": "2026-08-03",
+      "detected_at": "2026-08-03T15:59:44.277326+08:00",
+      "baseline_count": 66,
+      "current_count": 14,
+      "added_count": 0,
+      "removed_count": 52,
+      "clusters": {},
+      "removed_clusters": {
+        "sales": 33,
+        "engineering": 19,
+        "payments": 2,
+        "partnerships": 3,
+        "ai": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "8029128",
+          "title": "Account Executive, Billing",
+          "url": "https://stripe.com/jobs/listing/account-executive-billing/8029128",
+          "change": "removed"
+        },
+        {
+          "job_id": "7997555",
+          "title": "Account Executive, Enterprise - Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-grower/7997555",
+          "change": "removed"
+        },
+        {
+          "job_id": "7994330",
+          "title": "Account Executive, Enterprise - Hunter",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter/7994330",
+          "change": "removed"
+        },
+        {
+          "job_id": "7458833",
+          "title": "Account Executive, Enterprise Hunter (French fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter-french-fluency/7458833",
+          "change": "removed"
+        },
+        {
+          "job_id": "7528816",
+          "title": "Account Executive, Enterprise Hunter (Japanese fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-hunter-japanese-fluency/7528816",
+          "change": "removed"
+        },
+        {
+          "job_id": "7576967",
+          "title": "Account Executive, Enterprise Platforms (Grower)",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-grower/7576967",
+          "change": "removed"
+        },
+        {
+          "job_id": "7961609",
+          "title": "Account Executive, Enterprise Platforms, Hunter",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-hunter/7961609",
+          "change": "removed"
+        },
+        {
+          "job_id": "8041894",
+          "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-tier-2-grower/8041894",
+          "change": "removed"
+        },
+        {
+          "job_id": "8075473",
+          "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-enterprise-platforms-tier-2-grower/8075473",
+          "change": "removed"
+        },
+        {
+          "job_id": "8048193",
+          "title": "Account Executive, Financial Services, Grower",
+          "url": "https://stripe.com/jobs/listing/account-executive-financial-services-grower/8048193",
+          "change": "removed"
+        },
+        {
+          "job_id": "8024368",
+          "title": "Account Executive, Funded Startups - Expansion",
+          "url": "https://stripe.com/jobs/listing/account-executive-funded-startups-expansion/8024368",
+          "change": "removed"
+        },
+        {
+          "job_id": "7863714",
+          "title": "Account Executive, Mid Market (Hunter)",
+          "url": "https://stripe.com/jobs/listing/account-executive-mid-market-hunter/7863714",
+          "change": "removed"
+        },
+        {
+          "job_id": "7451366",
+          "title": "Account Executive, Platforms",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms/7451366",
+          "change": "removed"
+        },
+        {
+          "job_id": "7298935",
+          "title": "Account Executive, Platforms (New Business)",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms-new-business/7298935",
+          "change": "removed"
+        },
+        {
+          "job_id": "7857010",
+          "title": "Account Executive, Platforms Hunter (French fluency)",
+          "url": "https://stripe.com/jobs/listing/account-executive-platforms-hunter-french-fluency/7857010",
+          "change": "removed"
+        },
+        {
+          "job_id": "8049828",
+          "title": "Account Executive, Product - Link",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-link/8049828",
+          "change": "removed"
+        },
+        {
+          "job_id": "8047510",
+          "title": "Account Executive, Product (Link and Financial Connections)",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-link-and-financial-connections/8047510",
+          "change": "removed"
+        },
+        {
+          "job_id": "7728365",
+          "title": "Account Executive, Product Sales - Capital",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-capital/7728365",
+          "change": "removed"
+        },
+        {
+          "job_id": "7456716",
+          "title": "Account Executive, Product Sales - Issuing and Treasury",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-issuing-and-treasury/7456716",
+          "change": "removed"
+        },
+        {
+          "job_id": "8068746",
+          "title": "Account Executive, Product Sales - Money Management ASEAN",
+          "url": "https://stripe.com/jobs/listing/account-executive-product-sales-money-management-asean/8068746",
+          "change": "removed"
+        }
+      ],
+      "status": "rejected",
+      "rejection_reason": "source_reset_suspected",
       "promoted_event_id": ""
     }
   ],
-  "promoted_count": 1
+  "promoted_count": 0
 }

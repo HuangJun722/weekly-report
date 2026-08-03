@@ -105627,6 +105627,269 @@
       "view_status": "main",
       "view_reason": "qualified_main",
       "view_priority": "watch"
+    },
+    {
+      "title": "Kakao's Gangnam Self-Driving Taxi Surpasses 1,000 Cumulative Rides Just 80 Days After Paid Launch - finance.biggo.com",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14M1d2bkV0OEpKU1VOakR4eE9ELWJsSTJ2blZ3UURFUUpHSlFKSy1KVHRjTTh1dnJ0eVQ1Yl9Mb1VQbm10djhNVlBFYWNaQzlwUTVqMTg5eWc2MWRSX2FzYjJPQ1ZQTUV2NWNJUThFQ1Ywd2sxLUE?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Kakao's Gangnam Self-Driv",
+      "reason": "Kakao自动驾驶出租车在首尔江南区累计服务超千次",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-08-02",
+      "date": "2026-08-02",
+      "source_detail": "finance.biggo.com",
+      "publisher": "finance.biggo.com",
+      "image_url": "",
+      "published_at": "2026-08-02",
+      "observed_at": "2026-08-03T08:01:02.490384+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "origin_source_id": "Kakao",
+      "observation_entity_id": "Kakao",
+      "discovery_source": "google_news",
+      "publisher_source": "finance.biggo.com",
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "company_action",
+      "scope_industries": [
+        "payments",
+        "ads_social"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "source_contract",
+      "vertical": "social_payment",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "filtered",
+      "view_reason": "out_of_scope_industry",
+      "view_priority": "important"
+    },
+    {
+      "title": "eBay to Operate Depop as It Seeks Synergies",
+      "url": "https://www.ecommercebytes.com/2026/08/02/ebay-to-operate-depop-as-it-seeks-synergies/",
+      "source": "EcommerceBytes",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "eBay to Operate Depop as ",
+      "reason": "eBay运营Depop以寻求协同效应",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-02",
+      "date": "2026-08-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-08-02",
+      "observed_at": "2026-08-03T07:59:47.679114+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "EcommerceBytes",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "company_action",
+      "scope_industries": [
+        "commerce"
+      ],
+      "scope_regions": [
+        "全球"
+      ],
+      "scope_match_basis": "source_contract",
+      "vertical": "电商",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "general"
+      ],
+      "quality_flags": [
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "filtered",
+      "view_reason": "out_of_scope_industry",
+      "view_priority": "important"
+    },
+    {
+      "title": "Reddit’s user base grows to more than 130 million daily actives",
+      "url": "https://www.socialmediatoday.com/news/reddits-user-base-grows-to-more-than-130-million-daily-actives/826783/",
+      "source": "Social Media Today",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Reddit’s user base grows ",
+      "reason": "Reddit日活用户突破1.3亿",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-02",
+      "date": "2026-08-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-08-02",
+      "observed_at": "2026-08-03T07:59:47.753803+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Social Media Today",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "industry_change",
+      "scope_industries": [
+        "ads_social"
+      ],
+      "scope_regions": [
+        "全球"
+      ],
+      "scope_match_basis": "source_contract",
+      "vertical": "社交平台",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "important"
+    },
+    {
+      "title": "Snapchat will no longer recommend AI slop",
+      "url": "https://www.socialmediatoday.com/news/snapchat-will-no-longer-recommend-ai-slop/826782/",
+      "source": "Social Media Today",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Snapchat will no longer r",
+      "reason": "Snapchat停止推荐AI生成低质内容",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-02",
+      "date": "2026-08-02",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-08-02",
+      "observed_at": "2026-08-03T07:59:47.755358+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Social Media Today",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "company_action",
+      "scope_industries": [
+        "ai_infra"
+      ],
+      "scope_regions": [
+        "全球"
+      ],
+      "scope_match_basis": "fact",
+      "vertical": "社交平台",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "important"
     }
   ],
   "2026-08-03": [
@@ -105929,6 +106192,599 @@
       "date_confidence": "observed",
       "date_parse_warning": "missing_published_at",
       "article_date": ""
+    },
+    {
+      "title": "Daiso launches Kakao Pay promotion offering up to 50% rewards - 헤럴드경제",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBYWFR0YU15VU1JZUlyQ29qalc3RDFRZC1aOXp3ZUtEMXJaT1dic0RXaFQ4OUl0ZzFuRGhfS3dLbzdQTXBGR1JGc3BHTnJxdDJqTHBNUERERQ?oc=5",
+      "source": "Google News",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Daiso launches Kakao Pay ",
+      "reason": "大创与Kakao Pay合作推出最高50%返现促销",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": true,
+      "company_name": "Kakao",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "헤럴드경제",
+      "publisher": "헤럴드경제",
+      "image_url": "",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T08:01:02.491101+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L5 Google News 补漏源",
+      "source_role": "company_radar",
+      "source_id": "Kakao",
+      "credibility_score": 0,
+      "origin_source_id": "Kakao",
+      "observation_entity_id": "Kakao",
+      "discovery_source": "google_news",
+      "publisher_source": "헤럴드경제",
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "company_action",
+      "scope_industries": [
+        "payments",
+        "ads_social"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "source_contract",
+      "vertical": "social_payment",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "filtered",
+      "view_reason": "out_of_scope_industry",
+      "view_priority": "watch"
+    },
+    {
+      "title": "Pluang launches limited AI trading beta in Indonesia",
+      "url": "https://www.techinasia.com/robinhood-to-enter-indonesia-with-crypto-trader-broker-acquisition",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Pluang launches limited A",
+      "reason": "Pluang在印尼推出AI交易测试版",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/08/1785738810_Pluang.jpg",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.178939+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "regional_policy",
+      "scope_industries": [
+        "ai_infra"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "filtered",
+      "view_reason": "out_of_scope_industry",
+      "view_priority": "important"
+    },
+    {
+      "title": "Alibaba rolls out Qwen3.8-Max AI model globally",
+      "url": "https://www.techinasia.com/alibaba-cloud-holds-401-chinas-ai-cloud-market",
+      "source": "Tech in Asia",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Alibaba rolls out Qwen3.8",
+      "reason": "阿里云全球发布Qwen3.8-Max AI模型",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://cdn.techinasia.com/wp-content/uploads/2026/05/1779184437_1776917171_1749253067_shutterstock_2579204427-scaled-1.jpg",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.184120+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Tech in Asia",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "industry_change",
+      "scope_industries": [
+        "ai_infra"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "important"
+    },
+    {
+      "title": "Singapore Rolls Out Voluntary Payments Code Targeting Hidden Costs, Fraud",
+      "url": "https://fintechnews.sg/135262/payments/singapore-payments-code/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "Singapore Rolls Out Volun",
+      "reason": "新加坡推出自愿支付守则打击隐藏费用与欺诈",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.617169+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "industry_change",
+      "scope_industries": [
+        "payments"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "扩张窗口",
+        "降本窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "important"
+    },
+    {
+      "title": "NTT Data Launches Adaptis Payment Platform in India",
+      "url": "https://fintechnews.sg/135239/fintech-india/ntt-data-adaptis-india-launch/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "NTT Data Launches Adaptis",
+      "reason": "NTT Data在印度推出Adaptis支付平台",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 亚太",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.628522+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "company_action",
+      "scope_industries": [
+        "payments"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "扩张窗口",
+        "生态窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "payment"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "important"
+    },
+    {
+      "title": "Retail’s new operating model centers on leaner teams, smarter data and physical community",
+      "url": "https://www.modernretail.co/operations/what-retail-leaders-are-actually-doing-with-ai-modern-retail/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+      "source": "Modern Retail",
+      "region": "全球",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "C",
+      "score": 5,
+      "summary_short": "Retail’s new operating mo",
+      "reason": "零售业新运营模式聚焦精简团队与数据驱动",
+      "impact": "未知",
+      "insight_label": "合作机会",
+      "trend_topic": "合作机会 — 全球",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:48.112094+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "source_id": "modern-retail",
+      "credibility_score": 7,
+      "noise_level": "medium",
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "industry_change",
+      "scope_industries": [
+        "ai_infra",
+        "payments"
+      ],
+      "scope_regions": [
+        "全球"
+      ],
+      "scope_match_basis": "fact",
+      "source_signal_types": [
+        "merchant_product",
+        "marketplace_policy",
+        "industry_analysis"
+      ],
+      "vertical": "电商/零售",
+      "bd_triggers": [
+        "扩张窗口"
+      ],
+      "opportunity_direction": "本地化合作 / 渠道伙伴 / 跨境支付 / 云服务",
+      "follow_up_window": "30天内",
+      "bd_priority": "中",
+      "signal_taxonomy": [
+        "expansion",
+        "commerce",
+        "ai_infra"
+      ],
+      "quality_flags": [
+        "title_prefix_summary",
+        "unknown_impact"
+      ],
+      "needs_repair": true,
+      "analysis_source": "deepseek",
+      "analysis_status": "fallback",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "important"
+    },
+    {
+      "title": "Shiprocket IPO Likely This Month At ₹7,000 Cr Valuation: Report",
+      "url": "https://inc42.com/buzz/shiprocket-ipo-likely-this-month-at-%e2%82%b97000-cr-valuation-report/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "funding",
+        "earnings",
+        "strategy"
+      ],
+      "level": "C",
+      "score": 4,
+      "summary_short": "Shiprocket拟本月IPO，估值₹7000 Cr",
+      "reason": "印度电商物流平台Shiprocket启动IPO，物流SaaS和电商基础设施赛道获得资本市场认可，供应链数字化服务商迎来估值锚点",
+      "impact": "印度电商物流SaaS、仓储自动化供应商、D2C品牌",
+      "insight_label": "资金流向",
+      "trend_topic": "印度物流IPO潮",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2025/12/Shiprocket-ipo-soc.jpg",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.438266+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "industry_change",
+      "scope_industries": [
+        "commerce"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "持续观察",
+      "bd_priority": "观察",
+      "signal_taxonomy": [
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete",
+      "view_status": "review",
+      "view_reason": "qualified_review",
+      "view_priority": "watch"
+    },
+    {
+      "title": "MobiKwik Posts ₹7.6 Cr Profit In Q1, Revenue Up 3.7% YoY",
+      "url": "https://inc42.com/buzz/mobikwik-posts-%e2%82%b97-6-cr-profit-in-q1-revenue-up-3-7-yoy/",
+      "source": "Inc42",
+      "region": "亚太",
+      "event_types": [
+        "earnings"
+      ],
+      "level": "B",
+      "score": 6,
+      "summary_short": "MobiKwik Q1盈利₹7.6 Cr，营收同比+3.7%",
+      "reason": "印度数字支付公司MobiKwik实现盈利，支付与信贷科技商业模式验证成功，印度FinTech盈利拐点信号明确",
+      "impact": "印度数字支付平台、消费信贷科技公司",
+      "insight_label": "背景补充",
+      "trend_topic": "印度FinTech盈利拐点",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/08/Mobikwik-cto-social.jpg",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.439745+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L2 垂直交易源",
+      "source_role": "venture_media",
+      "source_id": "Inc42",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "industry_change",
+      "scope_industries": [
+        "payments"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "bd_triggers": [
+        "预算窗口"
+      ],
+      "opportunity_direction": "增长方案 / 云与AI基础设施 / 广告商业化 / 支付与风控",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "payment",
+        "capital"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete",
+      "view_status": "main",
+      "view_reason": "qualified_main",
+      "view_priority": "selected"
+    },
+    {
+      "title": "Eight Central Banks Test Tokenised Cross-Border Payments Under Project Agorá",
+      "url": "https://fintechnews.sg/135250/payments/project-agora/",
+      "source": "Fintech News Singapore",
+      "region": "亚太",
+      "event_types": [
+        "strategy"
+      ],
+      "level": "B",
+      "score": 7,
+      "summary_short": "八家央行测试Project Agorá代币化跨境支付",
+      "reason": "全球八家央行联合测试代币化跨境支付，国际清算银行主导的区块链支付网络将重塑跨境结算基础设施，银行IT系统升级需求爆发",
+      "impact": "跨境支付技术商、银行核心系统供应商、稳定币发行方",
+      "insight_label": "资金流向",
+      "trend_topic": "央行代币化支付竞赛",
+      "companies": [],
+      "is_company": false,
+      "company_name": "",
+      "article_date": "2026-08-03",
+      "date": "2026-08-03",
+      "source_detail": "",
+      "publisher": "",
+      "image_url": "https://fintechnews.sg/wp-content/uploads/2026/08/Eight-Central-Banks-Test-Tokenised-Cross-Border-Payments-Under-Project-Agora.webp",
+      "published_at": "2026-08-03",
+      "observed_at": "2026-08-03T07:59:47.620147+00:00",
+      "date_source": "rss_published",
+      "date_confidence": "high",
+      "date_parse_warning": "",
+      "date_basis": "published_at",
+      "source_tier": "L4 垂直赛道精品源",
+      "source_role": "industry_vertical",
+      "source_id": "Fintech News Singapore",
+      "credibility_score": 0,
+      "scope_enforced": true,
+      "scope_status": "qualified",
+      "scope_reason": "scope_target_change",
+      "scope_layer": "regional_policy",
+      "scope_industries": [
+        "payments"
+      ],
+      "scope_regions": [
+        "亚太"
+      ],
+      "scope_match_basis": "fact",
+      "vertical": "Fintech/支付",
+      "bd_triggers": [
+        "合规窗口",
+        "扩张窗口"
+      ],
+      "opportunity_direction": "合规科技 / 数据治理 / 安全风控 / 牌照合作",
+      "follow_up_window": "7天内",
+      "bd_priority": "高",
+      "signal_taxonomy": [
+        "payment"
+      ],
+      "quality_flags": [],
+      "needs_repair": false,
+      "analysis_source": "deepseek",
+      "analysis_status": "complete",
+      "view_status": "main",
+      "view_reason": "qualified_main",
+      "view_priority": "selected"
     }
   ]
 }
