@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-03T15:59:44.277326+08:00",
+  "generated_at": "2026-08-04T03:47:31.373993+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
@@ -136,7 +136,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-03T15:59:44.277326+08:00",
+      "observed_at": "2026-08-04T03:47:31.373993+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -252,14 +252,8 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-03T15:59:44.277326+08:00",
+      "observed_at": "2026-08-04T03:47:31.373993+08:00",
       "jobs": [
-        {
-          "id": "059c7d72-aed5-43a3-ab5b-1129adeef356",
-          "title": "Technical Account Manager, Enterprise East Remote - Americas",
-          "url": "https://www.shopify.com/careers/technical-account-manager-enterprise-east_059c7d72-aed5-43a3-ab5b-1129adeef356",
-          "function_tags": []
-        },
         {
           "id": "fa199960-670b-4dcd-9798-c8bcbbeea3db",
           "title": "Director, EU Public Affairs (Brussels) Remote - Brussels",
@@ -463,6 +457,12 @@
           "id": "0dedbaa5-739f-4c6b-9025-bbf26f7cf908",
           "title": "Sr. Manager, Account Security Remote - Americas",
           "url": "https://www.shopify.com/careers/sr-manager-account-security_0dedbaa5-739f-4c6b-9025-bbf26f7cf908",
+          "function_tags": []
+        },
+        {
+          "id": "059c7d72-aed5-43a3-ab5b-1129adeef356",
+          "title": "Technical Account Manager, Enterprise East Remote - Americas",
+          "url": "https://www.shopify.com/careers/technical-account-manager-enterprise-east_059c7d72-aed5-43a3-ab5b-1129adeef356",
           "function_tags": []
         }
       ]
