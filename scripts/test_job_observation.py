@@ -10,7 +10,7 @@ from job_observation import (
 def test_extract_job_links_for_three_pilot_shapes():
     cases = [
         ('Grab', 'https://www.grab.careers/en/jobs/', '<a href="/en/jobs/7440001/senior-software-engineer-backend-ai/">Senior Software Engineer, Backend AI</a>'),
-        ('Stripe', 'https://stripe.com/jobs/search', '<a href="/jobs/listing/account-executive-ai-sales/7954688">Account Executive, AI Sales</a>'),
+        ('Stripe', 'https://stripe.com/careers/search', '<a href="/careers/listing/account-executive-ai-sales/7954688">Account Executive, AI Sales</a>'),
         ('Shopify', 'https://www.shopify.com/careers', '<a href="/careers/product-partner-manager-shopify-payments_12345678-1234-1234-1234-123456789abc">Product Partner Manager, Shopify Payments</a>'),
     ]
     for entity, base_url, html in cases:
@@ -18,6 +18,15 @@ def test_extract_job_links_for_three_pilot_shapes():
         assert len(jobs) == 1
         assert jobs[0]['url'].startswith('https://')
         assert jobs[0]['title']
+
+
+def test_extract_job_links_deduplicates_reposted_title_ids():
+    html = '''
+        <a href="/en/jobs/744000141167699/head-product-marketing-financial-services/">Head, Product Marketing, Financial Services</a>
+        <a href="/en/jobs/744000141167689/head-product-marketing-financial-services/">Head, Product Marketing, Financial Services</a>
+    '''
+    jobs = extract_job_links('Grab', 'https://www.grab.careers/en/jobs/', html)
+    assert len(jobs) == 1
 
 
 def test_snapshot_diff_clusters_structure_changes():
@@ -84,6 +93,7 @@ def test_qualified_candidate_is_persisted_and_promoted_with_evidence():
 
 if __name__ == '__main__':
     test_extract_job_links_for_three_pilot_shapes()
+    test_extract_job_links_deduplicates_reposted_title_ids()
     test_snapshot_diff_clusters_structure_changes()
     test_snapshot_diff_detects_contraction_cluster()
     test_full_board_refresh_is_rejected_as_source_reset()

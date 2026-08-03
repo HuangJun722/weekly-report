@@ -48,11 +48,13 @@ try:
         internet_relevance_score,
         is_mainline_internet_event,
     )
+    from scope_gate import is_scope_qualified, scope_filter_reason
 except ImportError:
     from scripts.internet_relevance import (
         internet_relevance_score,
         is_mainline_internet_event,
     )
+    from scripts.scope_gate import is_scope_qualified, scope_filter_reason
 
 
 def event_type(event):
@@ -128,6 +130,9 @@ def is_actionable_funding_event(event):
 
 
 def event_filter_reason(event):
+    scope_reason = scope_filter_reason(event)
+    if scope_reason:
+        return scope_reason
     if internet_relevance_score(event) < 2:
         return 'out_of_scope_industry'
     if event_type(event) == 'funding' and not is_actionable_funding_event(event):
@@ -164,6 +169,9 @@ def classify_bd_priority(event, score=None):
     is_company = bool(event.get('is_company'))
     source_tier = event.get('source_tier') or ''
 
+    if not is_scope_qualified(event):
+        return '观察'
+
     if ev_type == 'other':
         return '中' if is_company and source_tier == 'L1 官方/IR源' and s >= 4 else '观察'
     if ev_type == 'funding' and not is_actionable_funding_event(event):
@@ -196,6 +204,8 @@ def follow_up_window_for_priority(priority):
 
 def is_high_value_event(event):
     return (
+        is_scope_qualified(event)
+        and
         classify_bd_priority(event) == '高'
         and is_mainline_internet_event(event)
         and not needs_quality_review(event)
@@ -206,6 +216,8 @@ def is_high_value_event(event):
 
 def is_company_quality_signal(event):
     if not event.get('is_company'):
+        return False
+    if not is_scope_qualified(event):
         return False
     if not is_mainline_internet_event(event):
         return False
@@ -221,6 +233,8 @@ def is_company_quality_signal(event):
 
 
 def should_show_in_main_list(event):
+    if not is_scope_qualified(event):
+        return False
     if not is_mainline_internet_event(event):
         return False
     if needs_quality_review(event):
@@ -238,6 +252,8 @@ def should_show_in_main_list(event):
 
 def should_show_in_review(event):
     if should_show_in_main_list(event):
+        return False
+    if not is_scope_qualified(event):
         return False
     if internet_relevance_score(event) < 2:
         return False

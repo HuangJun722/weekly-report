@@ -78,7 +78,7 @@
       "sector": "mobility_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://investors.grab.com/news-releases", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
+        {"type": "ir", "url": "https://investors.grab.com/news-releases", "source_id": "grab-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
         {"type": "jobs", "url": "https://www.grab.careers/en/jobs/", "source_id": "grab-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "expansion", "org_change"]},
         {"type": "product_update", "url": "https://www.grab.com/sg/press/", "status": "active", "instrumented": true, "expected_signals": ["partnership", "merchant_product", "payment"]}
       ]
@@ -104,7 +104,7 @@
       "sector": "commerce_gaming_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.sea.com/media/news", "status": "active", "instrumented": false, "expected_signals": ["earnings", "commerce", "gaming"]},
+        {"type": "newsroom", "url": "https://www.sea.com/media/news", "source_id": "sea-newsroom", "status": "active", "instrumented": true, "expected_signals": ["earnings", "commerce", "gaming"]},
         {"type": "product_update", "url": "https://newsroom.shopee.com/", "status": "active", "instrumented": false, "expected_signals": ["commerce", "logistics", "ads"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]}
       ]
@@ -156,7 +156,7 @@
       "sector": "search_ai_cloud",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.navercorp.com/en/media/pressReleases", "status": "active", "instrumented": false, "expected_signals": ["ai", "cloud", "partnership"]},
+        {"type": "newsroom", "url": "https://www.navercorp.com/en/media/pressReleases", "source_id": "naver-press", "status": "active", "instrumented": true, "expected_signals": ["ai", "cloud", "partnership"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai_infra"]},
         {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["api", "developer_change"]}
       ]
@@ -299,7 +299,7 @@
       "sector": "commerce_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://investor.mercadolibre.com/news-events", "status": "active", "instrumented": false, "expected_signals": ["earnings", "commerce", "payment"]},
+        {"type": "ir", "url": "https://investor.mercadolibre.com/news-and-events", "source_id": "mercadolibre-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "commerce", "payment"]},
         {"type": "newsroom", "url": "https://news.mercadolibre.com/", "status": "active", "instrumented": false, "expected_signals": ["commerce", "payment", "logistics"]},
         {"type": "jobs", "url": "https://mercadolibre.eightfold.ai/careers", "status": "candidate", "instrumented": false, "adapter_status": "pending_dynamic_adapter", "expected_signals": ["hiring", "regional_launch"]}
       ]
@@ -351,7 +351,7 @@
       "sector": "commerce_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://group.jumia.com/news", "status": "active", "instrumented": false, "expected_signals": ["commerce", "payment", "logistics"]},
+        {"type": "newsroom", "url": "https://group.jumia.com/news", "source_id": "jumia-newsroom", "status": "active", "instrumented": true, "expected_signals": ["commerce", "payment", "logistics"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "market_exit", "expansion"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["seller", "fulfillment"]}
       ]
@@ -404,7 +404,7 @@
       "priority": "core",
       "observation_points": [
         {"type": "changelog", "url": "https://stripe.com/changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "checkout", "payment"]},
-        {"type": "jobs", "url": "https://stripe.com/jobs/search", "source_id": "stripe-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "regional_launch"]},
+        {"type": "jobs", "url": "https://stripe.com/careers/search", "source_id": "stripe-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "regional_launch"]},
         {"type": "developer_docs", "url": "https://docs.stripe.com/", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "platform_policy"]}
       ]
     },
@@ -481,7 +481,7 @@
       "sector": "payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://investors.adyen.com/news-and-events/press-releases", "status": "active", "instrumented": false, "expected_signals": ["earnings", "payment", "partnership"]},
+        {"type": "ir", "url": "https://www.adyen.com/press-and-media", "source_id": "adyen-press", "status": "active", "instrumented": true, "expected_signals": ["earnings", "payment", "partnership"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "regional_launch"]},
         {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["api", "checkout"]}
       ]

@@ -48,6 +48,9 @@ DROP_REASONS = (
     'google_not_main',
     'other_type',
     'weak_signal',
+    'scope_no_target_industry',
+    'scope_change_not_explicit',
+    'scope_editorial_without_explicit_change',
 )
 
 
@@ -349,6 +352,11 @@ def build_source_conversion_report(days=7, git_ref=None):
         for key in ('raw', 'signal', 'stored', 'lost_after_signal', *DROP_REASONS):
             totals[key] += row[key]
     _finish_row(totals)
+    scope_totals = Counter()
+    for row in finished_rows:
+        scope_totals['qualified'] += row['funnel'].get('scope_qualified', 0)
+        scope_totals['candidate'] += row['funnel'].get('scope_candidate', 0)
+        scope_totals['filtered'] += row['funnel'].get('scope_filtered', 0)
 
     high_signal_low_main = [
         row for row in finished_rows
@@ -364,6 +372,7 @@ def build_source_conversion_report(days=7, git_ref=None):
         'run_count': len(selected_runs),
         'event_count': len(selected_events),
         'totals': totals,
+        'scope_totals': dict(scope_totals),
         'rows': finished_rows,
         'high_signal_low_main': high_signal_low_main,
         'governance_counts': dict(governance_counts),
@@ -396,6 +405,12 @@ def print_report(report, limit=30):
         "google_not_main={google_not_main} other_type={other_type} "
         "weak_signal={weak_signal} lost_after_signal≈{lost_after_signal}".format(**totals)
     )
+    scope = report.get('scope_totals') or {}
+    if any(scope.values()):
+        _safe_print(
+            f"scope | qualified={scope.get('qualified', 0)} "
+            f"candidate={scope.get('candidate', 0)} filtered={scope.get('filtered', 0)}"
+        )
     _safe_print(
         "source | raw | signal | stored | main | review | out_of_scope_industry | "
         "capital_only_low_actionability | quality_review | "
@@ -406,6 +421,9 @@ def print_report(report, limit=30):
         funnel_text = ''
         if funnel:
             funnel_text = (
+                f"scope:{funnel.get('scope_qualified', 0)}/"
+                f"{funnel.get('scope_candidate', 0)}/"
+                f"{funnel.get('scope_filtered', 0)},"
                 f"smart:{funnel.get('smart_kept', 0)},"
                 f"ai:{funnel.get('score_ai_tier', 0)},"
                 f"program:{funnel.get('score_program_tier', 0)},"

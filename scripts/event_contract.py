@@ -2,8 +2,10 @@
 
 try:
     from view_selectors import apply_view_contract
+    from scope_gate import apply_scope_contract
 except ImportError:
     from scripts.view_selectors import apply_view_contract
+    from scripts.scope_gate import apply_scope_contract
 
 
 OFFICIAL_BEHAVIOR_TYPES = {'changelog', 'developer_docs', 'product_update'}
@@ -63,6 +65,7 @@ def normalize_official_behavior_event(event):
 def prepare_event_contract(event):
     """Normalize a stored event and freeze its product-view decision."""
     normalize_official_behavior_event(event)
+    if event.get('scope_enforced') and not event.get('scope_status'):
+        apply_scope_contract(event)
     apply_view_contract(event)
     return event
-

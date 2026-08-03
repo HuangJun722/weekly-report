@@ -132,6 +132,71 @@ def _observation_health(ledger, pool, jobs, candidates):
     }
 
 
+def build_quick_health_report(
+    events_path='data/events.json',
+    metrics_path='data/run_metrics.json',
+    ledger_path='data/entity_observation_ledger.json',
+    pool_path='data/entity_pool.json',
+    jobs_path='data/job_observation_metrics.json',
+    candidates_path='data/signal_candidates.json',
+    now=None,
+):
+    """Read the latest persisted health facts without rebuilding report views."""
+    events = _load_json(events_path, {})
+    valid_dates = sorted(
+        date_key for date_key in events
+        if events.get(date_key) and is_display_date(date_key, now=now)
+    )
+    latest_data_date = valid_dates[-1] if valid_dates else ''
+    records = _load_json(metrics_path, [])
+    latest_metrics = records[-1] if isinstance(records, list) and records else {}
+    filtering = latest_metrics.get('filtering') or {}
+    storage = latest_metrics.get('storage') or {}
+    observation = _observation_health(
+        _load_json(ledger_path, {}),
+        _load_json(pool_path, {}),
+        _load_json(jobs_path, {}),
+        _load_json(candidates_path, {}),
+    )
+    return {
+        'latest_data_date': latest_data_date,
+        'latest_bucket_events': len(events.get(latest_data_date) or []) if latest_data_date else 0,
+        'future_event_count': _future_event_count(events_path, now=now),
+        'run_metrics': latest_metrics,
+        'run_date': latest_metrics.get('date') or '',
+        'scope_qualified': filtering.get('scope_qualified_count', 0),
+        'scope_candidate': filtering.get('scope_candidate_count', 0),
+        'scope_filtered': filtering.get('scope_filtered_count', 0),
+        'added_count': storage.get('added_count', 0),
+        'observation_health': observation,
+    }
+
+
+def print_quick_report(report):
+    observation = report.get('observation_health') or {}
+    print(
+        "quick health | latest_data_date={latest_data_date} latest_events={latest_bucket_events} "
+        "future={future_event_count} run_date={run_date} added={added_count}".format(**report)
+    )
+    print(
+        "scope | qualified={scope_qualified} candidate={scope_candidate} "
+        "filtered={scope_filtered}".format(**report)
+    )
+    print(
+        "observation | must={must_effective}/{must_total} coverage={must_coverage_ratio:.1%} "
+        "failed_points={failed} jobs_failed={jobs_failed_count} candidate_backlog={candidate_backlog} "
+        "promoted={candidate_promoted}".format(
+            failed=len(observation.get('failed_observation_points') or []),
+            jobs_failed_count=len(observation.get('jobs_failed') or []),
+            **observation,
+        )
+    )
+    if observation.get('failed_observation_points'):
+        print("observation failures | " + ', '.join(observation['failed_observation_points']))
+    if observation.get('jobs_failed'):
+        print("jobs failures | " + ', '.join(observation['jobs_failed']))
+
+
 def build_health_report(days=7):
     context = build_display_context()
     main_date = context['main_date']
@@ -366,8 +431,31 @@ def collect_failures(report, args):
     return failures
 
 
+def collect_quick_failures(report, args):
+    failures = []
+    if report.get('future_event_count', 0):
+        failures.append(f"future_event_count {report['future_event_count']} > 0")
+    if args.require_run_metrics and not report.get('run_metrics'):
+        failures.append('run_metrics missing')
+    observation = report.get('observation_health') or {}
+    if observation.get('must_total') and observation.get('must_coverage_ratio', 0) < args.min_must_coverage:
+        failures.append(
+            f"must_coverage_ratio {observation.get('must_coverage_ratio', 0):.1%} "
+            f"< {args.min_must_coverage:.1%}"
+        )
+    if len(observation.get('failed_observation_points') or []) > args.max_failed_observation_points:
+        failures.append(
+            f"failed_observation_points {len(observation.get('failed_observation_points') or [])} "
+            f"> {args.max_failed_observation_points}"
+        )
+    if observation.get('jobs_failed') and args.fail_on_jobs_error:
+        failures.append('jobs_failed ' + ','.join(observation['jobs_failed']))
+    return failures
+
+
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--quick', action='store_true', help='Read persisted health facts without rebuilding reports')
     parser.add_argument('--days', type=int, default=7)
     parser.add_argument('--min-today', type=int, default=1)
     parser.add_argument('--min-company-quality-nonzero', type=int, default=1)
@@ -381,9 +469,14 @@ def main():
     parser.add_argument('--strict', action='store_true', help='Exit non-zero when health checks fail')
     args = parser.parse_args()
 
-    report = build_health_report(args.days)
-    print_report(report)
-    failures = collect_failures(report, args)
+    if args.quick:
+        report = build_quick_health_report()
+        print_quick_report(report)
+        failures = collect_quick_failures(report, args)
+    else:
+        report = build_health_report(args.days)
+        print_report(report)
+        failures = collect_failures(report, args)
     for failure in failures:
         print(f"WARNING: {failure}")
     if args.strict and failures:

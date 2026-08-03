@@ -17,7 +17,7 @@ HEADERS = {'User-Agent': 'Mozilla/5.0 (compatible; WeeklyReportObserver/1.0)'}
 
 JOB_PATHS = {
     'Grab': re.compile(r'/en/jobs/\d+/[^/?#]+/?$', re.I),
-    'Stripe': re.compile(r'/jobs/listing/[^/?#]+/\d+/?$', re.I),
+    'Stripe': re.compile(r'/careers/listing/[^/?#]+/\d+/?$', re.I),
     'Shopify': re.compile(r'/careers/[^/?#]+_[0-9a-f-]{36}/?$', re.I),
 }
 
@@ -44,6 +44,10 @@ def _function_tags(title):
     return [tag for tag, keywords in FUNCTION_KEYWORDS.items() if any(keyword in text for keyword in keywords)]
 
 
+def _job_fingerprint(title):
+    return re.sub(r'[^a-z0-9]+', '', (title or '').lower())
+
+
 def extract_job_links(entity, base_url, html, limit=120):
     pattern = JOB_PATHS.get(entity)
     if not pattern or not html:
@@ -51,6 +55,7 @@ def extract_job_links(entity, base_url, html, limit=120):
     soup = BeautifulSoup(html, 'html.parser')
     jobs = []
     seen = set()
+    seen_titles = set()
     for link in soup.select('a[href]'):
         absolute = urljoin(base_url, link.get('href') or '')
         if not pattern.search(urlparse(absolute).path):
@@ -61,7 +66,11 @@ def extract_job_links(entity, base_url, html, limit=120):
         title = ' '.join(link.get_text(' ', strip=True).split())
         if not title:
             title = urlparse(absolute).path.rstrip('/').rsplit('/', 1)[-1].replace('-', ' ')
+        title_fingerprint = _job_fingerprint(title)
+        if title_fingerprint in seen_titles:
+            continue
         seen.add(identifier)
+        seen_titles.add(title_fingerprint)
         jobs.append({
             'id': identifier,
             'title': title,

@@ -38,8 +38,9 @@
 ```mermaid
 flowchart TD
     A["供给层\n媒体源 + 官方/IR + Changelog + Jobs"] --> B["采集与日期归一化\nRSS / HTML / Google News / 快照差分"]
-    B --> C["变化事实与候选信号\nSnapshot Diff + Candidate Pool"]
-    C --> D["产品边界与质量闸门\nInternet Relevance + 去重 + 质量 + 行动性"]
+    B --> C["观察范围准入\n既定区域 + 既定行业/AI + 明确变化"]
+    C --> C1["变化事实与候选信号\nSnapshot Diff + Candidate Pool"]
+    C1 --> D["产品边界与质量闸门\nInternet Relevance + 去重 + 质量 + 行动性"]
     D --> E0["Qualified Event\n冻结 view_status / reason / priority"]
     E0 --> E["日报\n全部合格事件 + 精选/重点/观察"]
     E0 --> F["Evidence Atom\n独立事实去重"]
@@ -80,19 +81,25 @@ flowchart TD
 - Grab、Stripe、Shopify 已接入快照差分。
 - 单个职位不是事件；只有集中新增、集中撤下或职能结构变化才进入 `data/signal_candidates.json`。
 - 候选保留快照窗口、变化数量、职能簇、职位证据、状态和拒绝原因；来源重置不会晋级事件。
+- 同一快照内按标准化职位标题保守去重；缺少地点等结构字段时，不把不同 ID 的同名职位重复计为扩张信号。
 - MercadoLibre Eightfold、Careem 动态职位站仍待专用适配器。
 
-## 5. 三道核心闸门
+## 5. 四道核心闸门
 
 每条内容进入主展示前必须分别回答三个问题：
 
 | 维度 | 问题 | 典型实现 |
 |---|---|---|
+| 观察范围 | 是否同时命中既定行业/AI范围并描述明确变化？ | `scope_gate.py` |
 | 互联网相关度 | 是否属于全球互联网产业？ | `internet_relevance.py` |
 | 事件价值 | 是否重要、可信、可解释？ | `event_value.py` / `analysis_quality.py` |
 | 行动性 | 是否影响预算、扩张、采购、合作或组织？ | BD priority / signal taxonomy |
 
 融资不是默认高价值。只有属于互联网主赛道，并明确体现预算、扩张、采购、生态合作、区域进入或产品/API 动作时，才进入日报重点；其余融资最多作为观察或趋势温度信号。
+
+观察范围先于价值评分。系统只跟踪既定行业，以及目标区域中与 AI 或既定行业直接相关的政策、行业变化和公司动作。范围外内容不能因金额大或来源权威进入；范围内但变化不明确的内容只记为候选，不进入 AI 分析和日报。
+
+范围迁移采用向前生效：新事件冻结范围结论，旧事件不依赖生成式描述反向补判，并在 30 天周期窗口内自然退出。Source Registry 同时是观察账本识别现有采集器的依据；已经运行的官方源必须登记并绑定 `source_id`，否则不能把“账本不可见”误报成“采集器未接入”。
 
 ## 6. 认知对象
 
@@ -163,6 +170,7 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 | `data/entity_pool.json` | 重点对象及观察点 |
 | `data/events.json` | 90 天结构化事件库 |
 | `scripts/internet_relevance.py` | 本站产品边界 |
+| `scripts/scope_gate.py` | 既定区域、行业/AI与变化事实的范围准入 |
 | `scripts/event_value.py` | 事件价值、融资准入和展示资格 |
 | `scripts/view_selectors.py` | 首页、RSS、公司、周期报告统一选择入口 |
 | `scripts/event_contract.py` | 统一补齐并冻结事件展示资格 |

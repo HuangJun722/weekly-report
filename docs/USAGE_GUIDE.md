@@ -703,11 +703,11 @@ GitHub Pages 需要部署时间。发布后应核对远端提交、Actions、Pag
 优先级从高到低：
 
 1. 用 `scripts/source_conversion_report.py` 跟踪信源转化，而不是只靠首页体感判断源是否工作。优先排查高 signal 但低入库/低首页的源，例如官方/IR、changelog 和垂类源。
-2. 先保证 12 家必须覆盖对象的高频行为源、低频确认源和新鲜覆盖，再按适配器复用价值扩展战略观察层。
+2. 先保证 12 家必须覆盖对象的高频行为源、低频确认源和新鲜覆盖，再按适配器复用价值扩展战略观察层。已经运行的官方 HTML 源必须登记进 Source Registry 并绑定对象 `source_id`，不能只存在于采集脚本中。
 3. 观察 `signal_candidates.json`：候选必须能回到快照和职位证据，拒绝、积累和晋级原因都可查询。
 4. 用真实案例复核周报主题和月报趋势，重点检查转载是否合并、地域是否来自对象/事实、趋势是否真的跨周。
 5. 历史旧事件只做小批量修复，优先处理最近 30 天内影响首页、周报、月报判断的高价值事件。
-6. `check_data_health.py` 接入 GitHub Actions 仍需单独确认。workflow 属红线，本地诊断链路先观察 1-2 周。
+6. 日常先运行 `python scripts/check_data_health.py --quick`；完整 `check_data_health.py` 用于发布前验收。接入 GitHub Actions 仍需单独确认，workflow 属红线。
 7. 配置 `FEEDBACK_ENDPOINT` 并部署 `workers/feedback-worker.js` 或等价服务，让反馈默认进入远端。
 
 已降级或撤掉的旧遗留：

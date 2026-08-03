@@ -31,12 +31,14 @@ try:
     from event_contract import prepare_event_contract
     from event_value import classify_bd_priority, follow_up_window_for_priority
     from run_metrics import write_run_metrics
+    from scope_gate import apply_scope_contract
 except ImportError:
     from scripts.analysis_quality import annotate_event_quality, summarize_quality
     from scripts.event_dates import apply_event_date_metadata, publication_metadata
     from scripts.event_contract import prepare_event_contract
     from scripts.event_value import classify_bd_priority, follow_up_window_for_priority
     from scripts.run_metrics import write_run_metrics
+    from scripts.scope_gate import apply_scope_contract
 
 # ============================================================
 # 并行采集优化：aiohttp
@@ -107,16 +109,16 @@ RSS_SOURCES = [
     # e27 已移除：Cloudflare 全面拦截，无法绕过
     # Google News RSS 不可用：链接为 Google 内部跳转，非原始来源
     # --- 垂直赛道精品源：只保留高信号内容，避免泛资讯噪声 ---
-    {'name': 'GamesIndustry.biz', 'url': 'https://www.gamesindustry.biz/rss',            'source': 'GamesIndustry.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'max_scan': 16, 'max': 4, 'signal_only': True},
-    {'name': 'PocketGamer.biz',   'url': 'https://www.pocketgamer.biz/rss/',             'source': 'PocketGamer.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'max_scan': 16, 'max': 4, 'signal_only': True},
-    {'name': 'Fintech News Singapore', 'url': 'https://fintechnews.sg/feed/',            'source': 'Fintech News Singapore', 'region': '亚太', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 16, 'max': 4, 'signal_only': True},
-    {'name': 'Finextra Payments', 'url': 'https://www.finextra.com/rss/channel.aspx?channel=payments', 'source': 'Finextra', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 20, 'max': 4, 'signal_only': True},
-    {'name': 'Payments Dive', 'url': 'https://www.paymentsdive.com/feeds/news/',         'source': 'Payments Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'max_scan': 12, 'max': 3, 'signal_only': True},
-    {'name': 'EcommerceBytes',    'url': 'https://www.ecommercebytes.com/feed/',         'source': 'EcommerceBytes', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'max_scan': 16, 'max': 4, 'signal_only': True},
-    {'name': 'Retail Dive', 'url': 'https://www.retaildive.com/feeds/news/',             'source': 'Retail Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'max_scan': 12, 'max': 3, 'signal_only': True},
-    {'name': 'Mobile World Live', 'url': 'https://www.mobileworldlive.com/feed/',         'source': 'Mobile World Live', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '文娱社交/移动生态', 'max_scan': 16, 'max': 4, 'signal_only': True},
-    {'name': 'Social Media Today', 'url': 'https://www.socialmediatoday.com/feeds/news/', 'source': 'Social Media Today', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '社交平台', 'max_scan': 12, 'max': 3, 'signal_only': True},
-    {'name': 'Mobile Marketing Magazine', 'url': 'https://mobilemarketingmagazine.com/feed/', 'source': 'Mobile Marketing Magazine', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '移动生态/广告', 'max_scan': 12, 'max': 3, 'signal_only': True},
+    {'name': 'GamesIndustry.biz', 'url': 'https://www.gamesindustry.biz/rss',            'source': 'GamesIndustry.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'scope_industries': ['gaming_content'], 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'PocketGamer.biz',   'url': 'https://www.pocketgamer.biz/rss/',             'source': 'PocketGamer.biz', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '游戏', 'scope_industries': ['gaming_content'], 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Fintech News Singapore', 'url': 'https://fintechnews.sg/feed/',            'source': 'Fintech News Singapore', 'region': '亚太', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'scope_industries': ['payments'], 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Finextra Payments', 'url': 'https://www.finextra.com/rss/channel.aspx?channel=payments', 'source': 'Finextra', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'scope_industries': ['payments'], 'max_scan': 20, 'max': 4, 'signal_only': True},
+    {'name': 'Payments Dive', 'url': 'https://www.paymentsdive.com/feeds/news/',         'source': 'Payments Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'scope_industries': ['payments'], 'max_scan': 12, 'max': 3, 'signal_only': True},
+    {'name': 'EcommerceBytes',    'url': 'https://www.ecommercebytes.com/feed/',         'source': 'EcommerceBytes', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'scope_industries': ['commerce'], 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Retail Dive', 'url': 'https://www.retaildive.com/feeds/news/',             'source': 'Retail Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'scope_industries': ['commerce'], 'max_scan': 12, 'max': 3, 'signal_only': True},
+    {'name': 'Mobile World Live', 'url': 'https://www.mobileworldlive.com/feed/',         'source': 'Mobile World Live', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '文娱社交/移动生态', 'scope_industries': ['ads_social', 'cloud_saas_developer'], 'max_scan': 16, 'max': 4, 'signal_only': True},
+    {'name': 'Social Media Today', 'url': 'https://www.socialmediatoday.com/feeds/news/', 'source': 'Social Media Today', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '社交平台', 'scope_industries': ['ads_social'], 'max_scan': 12, 'max': 3, 'signal_only': True},
+    {'name': 'Mobile Marketing Magazine', 'url': 'https://mobilemarketingmagazine.com/feed/', 'source': 'Mobile Marketing Magazine', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '移动生态/广告', 'scope_industries': ['ads_social'], 'max_scan': 12, 'max': 3, 'signal_only': True},
     # --- 中东/非洲 ---
     {'name': 'WAMDA',           'url': 'https://www.wamda.com/feed',                     'source': 'WAMDA',         'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
     {'name': 'MENAbytes',        'url': 'https://www.menabytes.com/feed/',               'source': 'MENAbytes',     'region': '中东', 'priority': 3, 'source_tier': 'L2 垂直交易源', 'source_role': 'venture_media', 'max_scan': 20, 'max': 8},
@@ -309,6 +311,80 @@ EVENT_ENTITY_STOPWORDS = {
     'busan', 'cloud', 'hands', 'training', 'startups',
 }
 
+SECTOR_SCOPE_MAP = {
+    'ai_platform': ['ai_infra'],
+    'data_ai_platform': ['ai_infra', 'cloud_saas_developer'],
+    'cloud_ai_infra': ['ai_infra', 'cloud_saas_developer'],
+    'search_ai_cloud': ['ai_infra', 'cloud_saas_developer'],
+    'telco_digital_infra': ['cloud_saas_developer'],
+    'payment': ['payments'],
+    'payment_wallet': ['payments'],
+    'payment_developer_platform': ['payments', 'cloud_saas_developer'],
+    'cross_border_payment': ['payments'],
+    'digital_bank': ['payments'],
+    'bnpl_payment': ['payments'],
+    'commerce': ['commerce'],
+    'commerce_payment': ['commerce', 'payments'],
+    'commerce_fintech': ['commerce', 'payments'],
+    'commerce_saas': ['commerce', 'cloud_saas_developer'],
+    'commerce_logistics': ['commerce', 'local_services_logistics'],
+    'commerce_gaming_fintech': ['commerce', 'gaming_content', 'payments'],
+    'gaming': ['gaming_content'],
+    'streaming_media': ['gaming_content'],
+    'social_payment': ['ads_social', 'payments'],
+    'social_payment_gaming': ['ads_social', 'payments', 'gaming_content'],
+    'mobility_payment': ['local_services_logistics', 'payments'],
+    'mobility_super_app': ['local_services_logistics'],
+    'super_app_fintech': ['local_services_logistics', 'payments'],
+    'delivery_fintech': ['local_services_logistics', 'payments'],
+    'travel_local_services': ['local_services_logistics'],
+}
+
+
+def _load_company_scope_contracts(path='data/entity_pool.json'):
+    try:
+        with open(path, encoding='utf-8') as f:
+            pool = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    contracts = {}
+    for entity in pool.get('entities') or []:
+        industries = SECTOR_SCOPE_MAP.get(entity.get('sector'), [])
+        contract = {
+            'scope_industries': industries,
+            'scope_regions': [entity['region']] if entity.get('region') else [],
+            'vertical': entity.get('sector', ''),
+        }
+        for name in [entity.get('name'), *(entity.get('aliases') or [])]:
+            if name:
+                contracts[name.lower()] = contract
+    return contracts
+
+
+COMPANY_SCOPE_CONTRACTS = _load_company_scope_contracts()
+
+
+def _apply_company_scope_contract(cfg):
+    names = [
+        cfg.get('company_name'),
+        cfg.get('name'),
+        *(COMPANY_ALIASES.get(cfg.get('company_name'), [])),
+        *(COMPANY_ALIASES.get(cfg.get('name'), [])),
+    ]
+    for name in names:
+        contract = COMPANY_SCOPE_CONTRACTS.get((name or '').lower())
+        if not contract:
+            continue
+        for key, value in contract.items():
+            if value and not cfg.get(key):
+                cfg[key] = value
+        break
+    return cfg
+
+
+for _company_cfg in COMPANY_SOURCES:
+    _apply_company_scope_contract(_company_cfg)
+
 # ============================================================
 # 关键词检测（宽松模式，宁多不漏）
 # ============================================================
@@ -339,7 +415,7 @@ def detect_event_types(title):
                        'fiscal year', 'ipo ', 'listing', 'goes public',
                        'files to go public', 'quarterly profit', 'quarterly loss',
                        'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results',
-                       'goes live', 'shares ', 'stock ']):
+                       'goes live', 'stock ']):
         types.append('earnings')
     # 战略/市场（出海、全球化、产品发布）
     if any(k in t for k in ['partners with', 'partnership', 'strategic',
@@ -384,6 +460,8 @@ def _source_meta(cfg):
         'source_id': cfg.get('id', cfg.get('name', '')),
         'credibility_score': cfg.get('credibility_score', 0),
         'noise_level': cfg.get('noise_level', ''),
+        'scope_industries': cfg.get('scope_industries', []),
+        'scope_regions': cfg.get('scope_regions', []),
     }
 
 def _with_source_meta(item, cfg):
@@ -471,8 +549,10 @@ def _registry_source_to_cfg(src):
         'signal_only': src.get('signal_only', True),
         'credibility_score': src.get('credibility_score', 0),
         'noise_level': src.get('noise_level', ''),
+        'scope_industries': src.get('scope_industries') or [],
+        'scope_regions': src.get('scope_regions') or [],
     }
-    for key in ('company_name', 'is_company', 'include_url_patterns'):
+    for key in ('company_name', 'is_company', 'include_url_patterns', 'allowed_scope_layers'):
         if key in src:
             cfg[key] = src[key]
     if (
@@ -993,12 +1073,23 @@ def _parse_rss_text(cfg, text):
         return []
 
     results = []
+    qualified_results = []
+    candidate_results = []
     max_items = cfg.get('max', 8)
     max_scan = cfg.get('max_scan', max_items)
     scanned = 0
+    scope_managed = _is_vertical_source(cfg) or cfg.get('source_role') == 'deep_trend'
+    scope_stats = {
+        'feed_entries': len(parsed.entries),
+        'recent_items': 0,
+        'qualified': 0,
+        'candidate': 0,
+        'filtered': 0,
+        'filter_reasons': {},
+    }
 
     for entry in parsed.entries:
-        if len(results) >= max_items: break
+        if not scope_managed and len(results) >= max_items: break
         if scanned >= max_scan: break
         scanned += 1
 
@@ -1024,6 +1115,7 @@ def _parse_rss_text(cfg, text):
         article_date = date_meta['published_at'] or None
         if article_date and not _recent_article_date(article_date, days=2):
             continue
+        scope_stats['recent_items'] += 1
 
         # 图片：从 RSS media:content 或 media:thumbnail 提取
         image_url = ''
@@ -1039,14 +1131,9 @@ def _parse_rss_text(cfg, text):
                 image_url = mt[0]['url']
 
         types = detect_event_types(title)
-        if _is_vertical_source(cfg):
-            if not _is_high_signal_vertical_title(title):
-                continue
-            if types[0] == 'other':
-                types = ['strategy']
-        if cfg.get('signal_only') and types[0] == 'other':
-            continue
-        results.append(_with_source_meta({
+        summary_html = entry.get('summary') or entry.get('description') or ''
+        source_excerpt = BeautifulSoup(summary_html, 'html.parser').get_text(' ', strip=True)[:600]
+        item = _with_source_meta({
             'title': title,
             'url': link,
             'source': cfg.get('source', cfg.get('name', 'Google News')),
@@ -1055,9 +1142,45 @@ def _parse_rss_text(cfg, text):
             'event_types': types,
             'article_date': article_date,
             'image_url': image_url,
+            'source_excerpt': source_excerpt,
             **date_meta,
-        }, cfg))
+        }, cfg)
+        apply_scope_contract(item)
+        if scope_managed:
+            status = item.get('scope_status')
+            if status == 'filtered':
+                scope_stats['filtered'] += 1
+                reason = item.get('scope_reason') or 'scope_filtered'
+                reasons = scope_stats['filter_reasons']
+                reasons[reason] = reasons.get(reason, 0) + 1
+                continue
+            if status == 'candidate':
+                candidate_results.append(item)
+                scope_stats['candidate'] += 1
+                reason = item.get('scope_reason') or 'scope_candidate'
+                reasons = scope_stats['filter_reasons']
+                reasons[reason] = reasons.get(reason, 0) + 1
+                continue
+            if types[0] == 'other':
+                item['event_types'] = ['strategy']
+            qualified_results.append(item)
+            scope_stats['qualified'] += 1
+            continue
+        if cfg.get('signal_only') and types[0] == 'other':
+            continue
+        results.append(item)
+    if scope_managed:
+        results = qualified_results[:max_items] + candidate_results[:max_items]
+    cfg['_scope_stats'] = scope_stats
     return results
+
+
+def _qualified_signal_count(items):
+    return sum(
+        1 for item in items
+        if item.get('scope_status') == 'qualified'
+        and (item.get('event_types') or ['other'])[0] != 'other'
+    )
 
 
 def fetch_rss(cfg):
@@ -1135,8 +1258,8 @@ HTML_SOURCES = [
     # 官方/IR源：用于校准重点客户自身披露，低频但高可信
     {'name': 'Rakuten IR', 'url': 'https://global.rakuten.com/corp/news/press/?category=ir', 'source': 'Rakuten Group', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Rakuten', 'is_company': True, 'max': 4},
     {'name': 'Grab IR', 'url': 'https://investors.grab.com/news-releases', 'source': 'Grab Holdings', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Grab', 'is_company': True, 'max': 4},
-    {'name': 'MercadoLibre IR', 'url': 'https://investor.mercadolibre.com/news-events', 'source': 'MercadoLibre', 'region': '拉美', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'MercadoLibre', 'is_company': True, 'max': 4},
-    {'name': 'Adyen IR', 'url': 'https://investors.adyen.com/news-and-events/press-releases', 'source': 'Adyen', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Adyen', 'is_company': True, 'max': 4},
+    {'name': 'MercadoLibre IR', 'url': 'https://investor.mercadolibre.com/news-and-events', 'source': 'MercadoLibre', 'region': '拉美', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'MercadoLibre', 'is_company': True, 'max': 4},
+    {'name': 'Adyen IR', 'url': 'https://www.adyen.com/press-and-media', 'source': 'Adyen', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Adyen', 'is_company': True, 'max': 4},
     {'name': 'Sea Newsroom', 'url': 'https://www.sea.com/media/news', 'source': 'Sea Limited', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Sea Limited', 'is_company': True, 'max': 4},
     {'name': 'Zalando IR', 'url': 'https://www.zalando.com/en/investor-relations/news-stories/', 'source': 'Zalando', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Zalando', 'is_company': True, 'max': 4},
     {'name': 'Allegro Newsroom', 'url': 'https://allegro.eu/newsroom', 'source': 'Allegro', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Allegro', 'is_company': True, 'max': 4},
@@ -2442,7 +2565,8 @@ def ai_quality_judge(events):
 
 
 def _calc_score(item):
-    """程序评分：基于金额、事件类型、区域权重计算确定性分数"""
+    """Score only scope-qualified facts by capital and causal impact."""
+    apply_scope_contract(item)
     title = item.get('title', '')
     ev_type = item.get('event_types', ['other'])[0]
 
@@ -2466,8 +2590,19 @@ def _calc_score(item):
     elif amount >= 5: amt_pts = 1
     else: amt_pts = 0
 
-    # 事件类型分
+    # 事件类型分。金额只服务资本事件，不再决定政策/行业/公司动作价值。
     type_pts = {'ma': 2, 'earnings': 2, 'funding': 1, 'strategy': 1, 'other': 0}.get(ev_type, 0)
+
+    scope_layer_pts = {
+        'regional_policy': 3,
+        'industry_change': 2,
+        'company_action': 1,
+    }.get(item.get('scope_layer'), 0)
+    scope_breadth_pts = 1 if item.get('scope_industries') else 0
+    source_pts = 1 if (
+        item.get('source_tier') in {'L1 官方/IR源', 'L4 垂直赛道精品源'}
+        or item.get('source_role') in {'official_ir', 'developer_change', 'industry_vertical'}
+    ) else 0
 
     # 区域权重
     region_mult = {'非洲': 1.3, '中东': 1.25, '亚太': 1.2, '拉美': 1.15, '欧洲': 1.0}.get(item.get('region', ''), 1.0)
@@ -2477,7 +2612,10 @@ def _calc_score(item):
     if item.get('region') == '中资' and _is_chinese_outbound_title(title):
         named_pts += 1
 
-    raw = (amt_pts + type_pts + named_pts) * region_mult
+    raw = (
+        amt_pts + type_pts + named_pts
+        + scope_layer_pts + scope_breadth_pts + source_pts
+    ) * region_mult
     return max(min(int(raw), 10), 1)
 
 BD_TRIGGER_RULES = [
@@ -2590,6 +2728,13 @@ def attach_business_context(event, item, score):
         'observation_entity_id',
         'discovery_source',
         'publisher_source',
+        'scope_enforced',
+        'scope_status',
+        'scope_reason',
+        'scope_layer',
+        'scope_industries',
+        'scope_regions',
+        'scope_match_basis',
     ):
         if item.get(key) not in (None, '', []):
             event[key] = item.get(key)
@@ -2801,8 +2946,9 @@ def main():
             continue
         cfg_copy = cfg.copy()
         items = _parse_rss_text(cfg_copy, body)
+        scope_stats = cfg_copy.get('_scope_stats') or {}
         mark = "📦" if cached else "🌐"
-        sig = sum(1 for it in items if it['event_types'][0] != 'other')
+        sig = _qualified_signal_count(items)
         print(f"  {mark} [{cfg['name']}] {len(items)} 条（信号{sig} | {cfg['region']}）")
         source_stats[cfg['name']] = f'{len(items)} 条'
         source_metrics[cfg['name']] = {
@@ -2813,6 +2959,7 @@ def main():
             'count': len(items),
             'signal_count': sig,
             'cached': cached,
+            'scope_stats': scope_stats,
         }
         raw.extend(items)
 
@@ -2831,8 +2978,11 @@ def main():
         html_source_metrics = {}
         html_raw_count = 0
         for cfg in effective_html_sources:
+            _apply_company_scope_contract(cfg)
             items = fetch_html(cfg)
-            sig = sum(1 for it in items if it['event_types'][0] != 'other')
+            for item in items:
+                apply_scope_contract(item)
+            sig = _qualified_signal_count(items)
             if items:
                 print(f"  ⚡ [{cfg['name']}] {len(items)} 条（信号{sig} | {cfg.get('region', '未知')}）")
             else:
@@ -2867,7 +3017,9 @@ def main():
     company_source_metrics = {}
     for cfg in COMPANY_SOURCES:
         items = fetch_company_news(cfg)
-        sig = sum(1 for it in items if it['event_types'][0] != 'other')
+        for item in items:
+            apply_scope_contract(item)
+        sig = _qualified_signal_count(items)
         if items:
             print(f"  🌐 [{cfg['name']}] {len(items)} 条（信号{sig}）")
         else:
@@ -2948,8 +3100,24 @@ def main():
         'region_counts': regions.copy(),
     }
 
+    # 范围准入先于价值评分。候选仅留在运行指标中，不送 AI、不入事件库。
+    scope_qualified, scope_candidates, scope_filtered = [], [], []
+    for item in unique:
+        apply_scope_contract(item)
+        if item.get('scope_status') == 'qualified':
+            if (item.get('event_types') or ['other'])[0] == 'other':
+                item['event_types'] = ['strategy']
+            scope_qualified.append(item)
+        elif item.get('scope_status') == 'candidate':
+            scope_candidates.append(item)
+        else:
+            scope_filtered.append(item)
+    _merge_source_funnel(source_funnel, _source_funnel_stage(scope_qualified, 'scope_qualified'))
+    _merge_source_funnel(source_funnel, _source_funnel_stage(scope_candidates, 'scope_candidate'))
+    _merge_source_funnel(source_funnel, _source_funnel_stage(scope_filtered, 'scope_filtered'))
+
     # 智能过滤（公司新闻单独处理，不做 smart_filter）
-    filtered = smart_filter(unique)
+    filtered = smart_filter(scope_qualified)
     _merge_source_funnel(source_funnel, _source_funnel_stage(filtered, 'smart_kept'))
     smart_filtered_count = len(filtered)
     types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
@@ -2957,7 +3125,14 @@ def main():
     print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
     run_metrics['filtering'] = {
         'smart_filtered_count': smart_filtered_count,
-        'smart_filter_dropped': len(unique) - smart_filtered_count,
+        'smart_filter_dropped': len(scope_qualified) - smart_filtered_count,
+        'scope_qualified_count': len(scope_qualified),
+        'scope_candidate_count': len(scope_candidates),
+        'scope_filtered_count': len(scope_filtered),
+        'scope_reason_counts': {
+            reason: sum(1 for item in scope_candidates + scope_filtered if item.get('scope_reason') == reason)
+            for reason in sorted({item.get('scope_reason') for item in scope_candidates + scope_filtered if item.get('scope_reason')})
+        },
         'ai_filtered_count': smart_filtered_count,
         'ai_filter_dropped': 0,
         'type_counts_after_smart_filter': types2.copy(),

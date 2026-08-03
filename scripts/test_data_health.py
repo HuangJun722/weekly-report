@@ -1,8 +1,16 @@
 import io
 from contextlib import redirect_stdout
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
-from check_data_health import _future_event_count, build_health_report, collect_failures, print_report
+from check_data_health import (
+    _future_event_count,
+    build_health_report,
+    build_quick_health_report,
+    collect_failures,
+    print_quick_report,
+    print_report,
+)
 from generate_html import build_company_cards, build_date_panel
 from run_metrics import latest_run_metrics, write_run_metrics
 
@@ -28,6 +36,37 @@ def test_health_report_prints_observation_failures():
     with redirect_stdout(output):
         print_report(report)
     assert 'observation | must=' in output.getvalue()
+
+
+def test_quick_health_uses_persisted_facts(tmp_path):
+    (tmp_path / 'events.json').write_text(
+        '{"2026-08-02": [{"title": "one"}], "2026-08-03": [], "2026-09-01": [{"title": "future"}]}',
+        encoding='utf-8',
+    )
+    (tmp_path / 'run_metrics.json').write_text(
+        '[{"date":"2026-08-02","filtering":{"scope_qualified_count":4,"scope_candidate_count":1,"scope_filtered_count":3},"storage":{"added_count":2}}]',
+        encoding='utf-8',
+    )
+    (tmp_path / 'ledger.json').write_text('{"entities":[]}', encoding='utf-8')
+    (tmp_path / 'pool.json').write_text('{"portfolio":{"must":[]}}', encoding='utf-8')
+    (tmp_path / 'jobs.json').write_text('{"source_stats":{}}', encoding='utf-8')
+    (tmp_path / 'candidates.json').write_text('{"candidates":[]}', encoding='utf-8')
+    report = build_quick_health_report(
+        str(tmp_path / 'events.json'),
+        str(tmp_path / 'run_metrics.json'),
+        str(tmp_path / 'ledger.json'),
+        str(tmp_path / 'pool.json'),
+        str(tmp_path / 'jobs.json'),
+        str(tmp_path / 'candidates.json'),
+        now='2026-08-03T12:00:00+08:00',
+    )
+    assert report['latest_data_date'] == '2026-08-02'
+    assert report['future_event_count'] == 1
+    assert report['scope_qualified'] == 4
+    output = io.StringIO()
+    with redirect_stdout(output):
+        print_quick_report(report)
+    assert 'scope | qualified=4 candidate=1 filtered=3' in output.getvalue()
 
 
 def test_run_metrics_roundtrip():
@@ -147,8 +186,9 @@ def test_date_panel_suppresses_stale_rolling_clusters():
 if __name__ == '__main__':
     test_current_data_health_contract()
     test_health_report_prints_observation_failures()
+    with TemporaryDirectory() as temp_dir:
+        test_quick_health_uses_persisted_facts(Path(temp_dir))
     test_run_metrics_roundtrip()
-    from tempfile import TemporaryDirectory
     with TemporaryDirectory() as temp_dir:
         test_future_event_count_detects_polluted_publication_dates(Path(temp_dir))
     test_company_card_uses_observation_status_when_no_event_exists()

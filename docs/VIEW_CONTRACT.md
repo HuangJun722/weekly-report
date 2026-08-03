@@ -9,6 +9,7 @@
 ```
 
 - 采集层负责拿到候选事件，不决定最终展示。
+- 范围准入层只允许既定行业，以及目标区域中与 AI 或既定行业直接相关的政策、行业和公司变化继续流转。
 - 分析/评分层负责事件类型、分数、解释完整度和 BD 优先级。
 - 产品边界层负责判断事件是否属于全球互联网产业情报站，而不是广义科技新闻站。
 - 展示选择层负责首页、RSS、公司索引、复核区、周报/月报各自的产品口径。
@@ -32,6 +33,14 @@
 ## 产品边界
 
 入口：`scripts/internet_relevance.py`
+
+范围入口：`scripts/scope_gate.py`。范围判断先于价值评分，并只使用原始标题、摘要和信源观察契约，不使用生成式 `reason` 或 `impact` 反推相关性。范围结果分为：
+
+- `qualified`：明确属于既定行业/AI范围，并存在政策、行业结构或公司动作变化；
+- `candidate`：行业相关但变化不明确，只记审计指标，不进入 AI 和日报；
+- `filtered`：未命中既定行业/AI范围，直接过滤。
+
+迁移口径：范围闸门只对带 `scope_enforced=true` 的新事件形成强约束。历史事件缺少 `source_excerpt` 等原始事实字段，不使用生成式 `reason`、`impact` 或旧标签反推范围，也不做机械批量回填；旧事件随 30 天周期窗口自然滚出。
 
 目标：回答“这条事件是否属于本站”，独立于信源可信度和事件金额大小。
 
@@ -208,7 +217,7 @@
 - 近 7 天展示事件重复率是否异常。
 - `must` 对象有效覆盖率、失败观察点、Jobs 失败、候选积压和已晋级候选数。
 
-采集阶段指标写入 `data/run_metrics.json`，默认保留最近 30 次运行。`scripts/collection_timing_report.py` 可单独输出采集时点对比表；`scripts/check_data_health.py` 会同时打印最近 8 次。当前 workflow 未接入健康检查，仍需手动或后续确认后接入 CI。
+采集阶段指标写入 `data/run_metrics.json`，默认保留最近 30 次运行。`scripts/collection_timing_report.py` 可单独输出采集时点对比表；`scripts/check_data_health.py` 会同时打印最近 8 次。当前 workflow 未接入健康检查，仍需手动或后续确认后接入 CI。日常巡检可先运行 `python scripts/check_data_health.py --quick`，只读取持久化事实，不重建页面和历史来源转化；发布前仍运行完整检查。
 
 ## 信源转化治理
 
