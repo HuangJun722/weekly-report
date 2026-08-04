@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-04T03:47:31.373993+08:00",
+  "generated_at": "2026-08-04T12:10:26.943796+08:00",
   "candidates": [
     {
       "candidate_id": "jobs-a1fe75b669c371f5",
@@ -13,20 +13,21 @@
       "cluster": "engineering",
       "window": "2026-W32",
       "window_start": "2026-08-03",
-      "window_end": "2026-08-03",
-      "detected_at": "2026-08-03T15:59:44.277326+08:00",
-      "baseline_count": 20,
+      "window_end": "2026-08-04",
+      "detected_at": "2026-08-04T12:10:26.943796+08:00",
+      "baseline_count": 18,
       "current_count": 18,
-      "added_count": 2,
-      "removed_count": 4,
+      "added_count": 11,
+      "removed_count": 11,
       "clusters": {
-        "engineering": 1
+        "engineering": 3,
+        "partnerships": 2,
+        "operations": 3
       },
       "removed_clusters": {
-        "payments": 1,
-        "operations": 1,
         "partnerships": 1,
-        "sales": 1
+        "operations": 2,
+        "compliance": 1
       },
       "evidence_refs": [
         {
@@ -64,10 +65,142 @@
           "title": "Associate, Strategy & Special project - GrabFood [User segmentation strategy and user growth]",
           "url": "https://www.grab.careers/en/jobs/744000140826024/associate-strategy-special-project-grabfood-user-segmentation-strategy-and-user-growth/",
           "change": "removed"
+        },
+        {
+          "job_id": "744000141402439",
+          "title": "Assistant Manager, Platform Safety",
+          "url": "https://www.grab.careers/en/jobs/744000141402439/assistant-manager-platform-safety/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141375064",
+          "title": "Senior People Business Partner",
+          "url": "https://www.grab.careers/en/jobs/744000141375064/senior-people-business-partner/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141232684",
+          "title": "Grab Support Senior Operations Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141232684/grab-support-senior-operations-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141223895",
+          "title": "Associate, Strategy & Special Project - GrabFood (Food Locker and Local Partnership)",
+          "url": "https://www.grab.careers/en/jobs/744000141223895/associate-strategy-special-project-grabfood-food-locker-and-local-partnership/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141223730",
+          "title": "Content Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141223730/content-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141224049",
+          "title": "Software Engineer, ios",
+          "url": "https://www.grab.careers/en/jobs/744000141224049/software-engineer-ios/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141222569",
+          "title": "Assistant Manager, Operations Command Centre (Autonomous Vehicles)",
+          "url": "https://www.grab.careers/en/jobs/744000141222569/assistant-manager-operations-command-centre-autonomous-vehicles/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141222139",
+          "title": "Specialist, End User Computing",
+          "url": "https://www.grab.careers/en/jobs/744000141222139/specialist-end-user-computing/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141210999",
+          "title": "Large Area Associate (Contract)",
+          "url": "https://www.grab.careers/en/jobs/744000141210999/large-area-associate-contract/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141203278",
+          "title": "Lead Product Manager, Transaction Platform",
+          "url": "https://www.grab.careers/en/jobs/744000141203278/lead-product-manager-transaction-platform/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141190469",
+          "title": "Intern, Occupational Health & Safety",
+          "url": "https://www.grab.careers/en/jobs/744000141190469/intern-occupational-health-safety/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141169339",
+          "title": "Senior People Operations Business Partner",
+          "url": "https://www.grab.careers/en/jobs/744000141169339/senior-people-operations-business-partner/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140887219",
+          "title": "Mobility and Supply Strategy Analyst",
+          "url": "https://www.grab.careers/en/jobs/744000140887219/mobility-and-supply-strategy-analyst/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140875449",
+          "title": "Lead Product Designer, Grab For Business",
+          "url": "https://www.grab.careers/en/jobs/744000140875449/lead-product-designer-grab-for-business/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140864574",
+          "title": "Associate, Fleet Operations (Autonomous Vehicles)",
+          "url": "https://www.grab.careers/en/jobs/744000140864574/associate-fleet-operations-autonomous-vehicles/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140826019",
+          "title": "Manager, Public Affairs",
+          "url": "https://www.grab.careers/en/jobs/744000140826019/manager-public-affairs/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140818949",
+          "title": "Manager, Portfolio and Projects",
+          "url": "https://www.grab.careers/en/jobs/744000140818949/manager-portfolio-and-projects/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140733130",
+          "title": "Assistant Manager, Credit Risk & Collections",
+          "url": "https://www.grab.careers/en/jobs/744000140733130/assistant-manager-credit-risk-collections/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140656898",
+          "title": "Head, Business Process Transformation",
+          "url": "https://www.grab.careers/en/jobs/744000140656898/head-business-process-transformation/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140655350",
+          "title": "Senior Associate, Key Account Management (FMCG)",
+          "url": "https://www.grab.careers/en/jobs/744000140655350/senior-associate-key-account-management-fmcg/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140625829",
+          "title": "Country IT & Automation Manager",
+          "url": "https://www.grab.careers/en/jobs/744000140625829/country-it-automation-manager/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000140624500",
+          "title": "Merchant Account Manager, F&B",
+          "url": "https://www.grab.careers/en/jobs/744000140624500/merchant-account-manager-fb/",
+          "change": "removed"
         }
       ],
-      "status": "accumulating",
-      "rejection_reason": "insufficient_cluster_strength",
+      "status": "rejected",
+      "rejection_reason": "source_reset_suspected",
       "promoted_event_id": ""
     },
     {
