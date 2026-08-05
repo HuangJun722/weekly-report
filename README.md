@@ -146,7 +146,7 @@ weekly-report/
 ├── .github/
 │   └── workflows/update.yml      # 自动更新工作流（北京时间 02:00 / 09:00）
 ├── data/
-│   ├── events.json               # 事件数据（保留近 90 天）
+│   ├── events.json               # 完整结构化事件历史
 │   ├── source_registry.json      # 信源注册中心
 │   └── entity_pool.json          # 重点对象池与观察点
 ├── scripts/

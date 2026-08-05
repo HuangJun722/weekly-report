@@ -70,6 +70,18 @@ def test_feed_selector_fills_with_today_main_events_up_to_limit():
     assert feed_date == ''
 
 
+def test_feed_selector_default_returns_all_qualified_events():
+    events = [
+        base_event(score=7, url=f'https://example.com/event-{index}')
+        for index in range(6)
+    ]
+
+    feed_events, feed_date = select_feed_events(events, events)
+
+    assert len(feed_events) == 6
+    assert feed_date == ''
+
+
 def test_feed_selector_excludes_google_news_high_value():
     google_high = base_event(
         source='Google News',
@@ -230,6 +242,7 @@ if __name__ == '__main__':
     test_homepage_selector_allows_low_score_non_google_signal()
     test_feed_selector_falls_back_to_latest_high_value_date()
     test_feed_selector_fills_with_today_main_events_up_to_limit()
+    test_feed_selector_default_returns_all_qualified_events()
     test_feed_selector_excludes_google_news_high_value()
     test_company_quality_selector_is_independent_from_rss_high_value()
     test_company_quality_selector_blocks_edge_company_noise()

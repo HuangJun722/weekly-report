@@ -186,7 +186,7 @@ def _unique_events(events, limit=None):
     return selected
 
 
-def select_feed_events(today_events, all_visible_events, limit=5):
+def select_feed_events(today_events, all_visible_events, limit=None):
     """Select RSS entries from homepage first, then latest date with high-value events."""
     high_value = [
         event for event in today_events

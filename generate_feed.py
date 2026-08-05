@@ -10,7 +10,7 @@ from view_selectors import select_feed_events
 
 context = build_display_context()
 feed_date = context['main_date']
-MAX_FEED_EVENTS = 5
+SITE_URL = 'https://huangjun722.github.io/weekly-report/'
 
 
 def text_value(value):
@@ -48,6 +48,7 @@ def xml_text(value):
 feed_events, fallback_feed_date = select_feed_events(
     context['today_events'],
     context.get('all_events_for_list', []),
+    limit=None,
 )
 if fallback_feed_date:
     feed_date = fallback_feed_date
@@ -88,16 +89,16 @@ feed_id = 'tag:weekly-report,2026:main'
 feed = f'''<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>全球互联网百晓生 · 事件流</title>
-  <subtitle>高价值事件推送，复用情报站每日事件卡片</subtitle>
+  <subtitle>高价值事件推送，日报日期：{feed_date or '暂无'}</subtitle>
   <id>{feed_id}</id>
   <updated>{now}</updated>
-  <link href="https://weekly-report.ai/" rel="alternate"/>
+  <link href="{SITE_URL}" rel="alternate"/>
   <link href="feed.xml" rel="self" type="application/atom+xml"/>
   <author><name>Global Internet Intelligence Station</name></author>
   <rights>CC BY-NC 4.0</rights>
 '''
 
-for ev in feed_events[:MAX_FEED_EVENTS]:
+for ev in feed_events:
     entry_date = (ev.get('date') or feed_date or '')[:10]
     uid_base = ev.get('url', ev.get('title', '')) + entry_date
     uid_hash = hashlib.sha1(uid_base.encode('utf-8')).hexdigest()[:8]
@@ -112,6 +113,7 @@ for ev in feed_events[:MAX_FEED_EVENTS]:
     <title>{title}</title>
     <link href="{url}"/>
     <id>{xml_text(entry_id)}</id>
+    <published>{updated}</published>
     <updated>{updated}</updated>
     <summary type="html">{summary}</summary>
   </entry>'''

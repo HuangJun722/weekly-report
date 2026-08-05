@@ -168,7 +168,7 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 | `scripts/fetch_news.py` | 采集、归一化、分析、入库和运行指标 |
 | `data/source_registry.json` | 信源注册与属性 |
 | `data/entity_pool.json` | 重点对象及观察点 |
-| `data/events.json` | 90 天结构化事件库 |
+| `data/events.json` | 完整结构化事件库；页面展示按时间窗口裁剪 |
 | `scripts/internet_relevance.py` | 本站产品边界 |
 | `scripts/scope_gate.py` | 既定区域、行业/AI与变化事实的范围准入 |
 | `scripts/event_value.py` | 事件价值、融资准入和展示资格 |

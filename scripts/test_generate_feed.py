@@ -9,11 +9,15 @@ def test_generated_feed_is_valid_atom():
     root = ET.fromstring(feed_path.read_text(encoding='utf-8'))
     assert root.tag == '{http://www.w3.org/2005/Atom}feed'
     entries = root.findall('{http://www.w3.org/2005/Atom}entry')
-    assert len(entries) <= 5
+    assert entries
+    alternate = root.find("{http://www.w3.org/2005/Atom}link[@rel='alternate']")
+    assert alternate is not None
+    assert alternate.get('href') == 'https://huangjun722.github.io/weekly-report/'
     for entry in entries:
         link = entry.find('{http://www.w3.org/2005/Atom}link')
         assert link is not None
         assert link.get('href')
+        assert entry.find('{http://www.w3.org/2005/Atom}published') is not None
 
 
 if __name__ == '__main__':

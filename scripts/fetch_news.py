@@ -1056,6 +1056,62 @@ def _rss_date_metadata(entry, link, observed_at=None):
             rejected = metadata
     return rejected or publication_metadata('', 'observed_at', 'observed', observed_at=observed_at)
 
+
+RSS_URL_STOPWORDS = {
+    'www', 'com', 'org', 'net', 'html', 'htm', 'amp', 'article', 'news',
+    'post', 'posts', 'the', 'and', 'for', 'with', 'from', 'into', 'after',
+}
+
+
+def _rss_candidate_links(entry):
+    candidates = []
+
+    def add(value):
+        value = (value or '').strip()
+        if value.startswith(('http://', 'https://')) and value not in candidates:
+            candidates.append(value)
+
+    link_value = entry.get('link', '')
+    if isinstance(link_value, dict):
+        add(link_value.get('href'))
+    else:
+        add(link_value)
+    for link in entry.get('links', []) or []:
+        if isinstance(link, dict):
+            add(link.get('href'))
+    add(entry.get('id'))
+    add(entry.get('guid'))
+    return candidates
+
+
+def _rss_url_match_score(title, url):
+    title_tokens = {
+        token for token in re.findall(r'[a-z0-9]{3,}', (title or '').lower())
+        if token not in RSS_URL_STOPWORDS
+    }
+    path_tokens = {
+        token for token in re.findall(r'[a-z0-9]{3,}', urlparse(url).path.lower())
+        if token not in RSS_URL_STOPWORDS
+    }
+    return len(title_tokens & path_tokens)
+
+
+def _select_rss_entry_link(entry, title):
+    candidates = _rss_candidate_links(entry)
+    if not candidates:
+        return '', {}
+    preferred = candidates[0]
+    scored = [(url, _rss_url_match_score(title, url)) for url in candidates]
+    best_url, best_score = max(scored, key=lambda item: item[1])
+    preferred_score = dict(scored)[preferred]
+    if best_url != preferred and best_score >= 2 and best_score > preferred_score:
+        return best_url, {
+            'source_url_original': preferred,
+            'source_url_repaired': True,
+            'source_url_repair_reason': 'rss_guid_title_match',
+        }
+    return preferred, {}
+
 # ============================================================
 # 采集
 # ============================================================
@@ -1098,15 +1154,8 @@ def _parse_rss_text(cfg, text):
         if len(title) < 15 or is_blacklisted(title):
             continue
 
-        # 链接：优先 href 属性，其次纯文本 link
-        link = ''
-        link_val = entry.get('link', '')
-        if isinstance(link_val, dict):
-            link = (link_val.get('href') or '').strip()
-        else:
-            link = (link_val or '').strip()
-        if not link:
-            link = (entry.get('id') or '').strip()
+        # 链接：优先主链接；若 guid/id 与标题明显更匹配则自动修复。
+        link, link_repair = _select_rss_entry_link(entry, title)
         if not link:
             continue
 
@@ -1143,6 +1192,7 @@ def _parse_rss_text(cfg, text):
             'article_date': article_date,
             'image_url': image_url,
             'source_excerpt': source_excerpt,
+            **link_repair,
             **date_meta,
         }, cfg)
         apply_scope_contract(item)
@@ -1569,14 +1619,7 @@ def fetch_company_news(cfg):
         if publisher and publisher_counts.get(publisher.lower(), 0) >= 1:
             continue
 
-        link = ''
-        link_val = entry.get('link', '')
-        if isinstance(link_val, dict):
-            link = (link_val.get('href') or '').strip()
-        else:
-            link = (link_val or '').strip()
-        if not link:
-            link = (entry.get('id') or '').strip()
+        link, link_repair = _select_rss_entry_link(entry, title)
         if not link: continue
 
         # 日期过滤：RSS日期优先，URL日期兜底
@@ -1621,6 +1664,7 @@ def fetch_company_news(cfg):
             'discovery_source': 'google_news',
             'publisher_source': publisher,
             'image_url': image_url,
+            **link_repair,
             **date_meta,
         }, cfg)
         if any(_is_same_event(item, existing) for existing in seen_company_events):
@@ -1878,6 +1922,11 @@ def dedupe_events_by_day(all_events):
             kept.append(event)
         cleaned[date_key] = kept
     return cleaned, removed, reasons
+
+
+def apply_event_storage_policy(all_events):
+    """Keep the complete event archive; presentation applies its own windows."""
+    return all_events
 
 # ============================================================
 # MiniMax API（主力）
@@ -2735,6 +2784,9 @@ def attach_business_context(event, item, score):
         'scope_industries',
         'scope_regions',
         'scope_match_basis',
+        'source_url_original',
+        'source_url_repaired',
+        'source_url_repair_reason',
     ):
         if item.get(key) not in (None, '', []):
             event[key] = item.get(key)
@@ -3329,9 +3381,8 @@ def main():
     }
     run_metrics['source_funnel'] = source_funnel
 
-    # 清理 90 天前（避免数据无限膨胀，保留 3 个月）
-    cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
-    all_events = {k: v for k, v in all_events.items() if k >= cutoff}
+    # 事件库不再按时间裁剪；首页、周报和月报分别使用展示窗口。
+    all_events = apply_event_storage_policy(all_events)
     all_events, removed_dups, removed_reasons = dedupe_events_by_day(all_events)
     if removed_dups:
         print(f"  🧹 历史去重：清理 {removed_dups} 条同日重复事件")

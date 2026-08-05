@@ -1,4 +1,17 @@
-[
+[{
+    "date": "2026-08-05",
+    "version": "V3.2",
+    "type": "RSS 与存储治理",
+    "status": "已完成",
+    "title": "取消 RSS 条数上限并自动修复错配来源链接",
+    "summary": "RSS 推送当天全部合格事件，保留日报日期与发布时间；采集入口在证据充分时修复 RSS 标题与来源链接错配，同时完整保留事件历史。",
+    "changes": [
+      "取消 RSS 最多 5 条限制，继续复用首页最终事件资格；Google News 和低质量补漏项不进入 RSS",
+      "RSS subtitle 标明实际日报日期，每个 entry 保留 published，alternate URL 统一指向 GitHub Pages",
+      "比较 RSS link、guid/id 等候选链接与标题语义，明显匹配时自动修复并记录原链接、修复标记和原因；无法确认时不猜测",
+      "取消 events.json 的 90 天存储裁剪，首页历史导航仍独立使用近 90 天展示窗口"
+    ]
+  },
   {
     "date": "2026-07-31",
     "version": "V3.1",

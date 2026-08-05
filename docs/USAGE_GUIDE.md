@@ -4,6 +4,8 @@
 > 在线访问：[https://huangjun722.github.io/weekly-report/](https://huangjun722.github.io/weekly-report/)
 > 订阅地址：[https://huangjun722.github.io/weekly-report/feed.xml](https://huangjun722.github.io/weekly-report/feed.xml)
 
+RSS 是每日摘要：推送当天全部合格事件，并在摘要中标明实际日报日期；完整分层展示仍以首页为准。
+
 ---
 
 ## 1. 这个网站现在解决什么问题
@@ -211,7 +213,7 @@ Google News 已加强噪声过滤，重点过滤：
 
 - GitHub Actions 每天自动更新。
 - 页面使用 `docs/index.html` 静态生成。
-- 事件数据保留近 90 天。
+- 事件数据持续保留；首页历史导航仍默认展示近 90 天，避免静态页面无限膨胀。
 - 首页默认展示最近一次有内容的采集批次。
 - 周报按最近 7 天聚合。
 - 月报按当月聚合。
@@ -291,7 +293,7 @@ Google News ─┘                              │
 6. AI 或程序生成 `reason`、`summary_short`、`impact`、`insight_label`、`trend_topic` 等字段。
 7. `analysis_quality.py` 标注 `quality_flags` 和 `needs_repair`。
 8. Jobs 等行为源先写快照和候选池；合格候选才晋级事件。
-9. 事件写入前冻结 `view_status / view_reason / view_priority`，`data/events.json` 保留近 90 天。
+9. 事件写入前冻结 `view_status / view_reason / view_priority`，`data/events.json` 持续保留完整事件历史；展示层按日报、周报、月报分别使用时间窗口。
 10. `scripts/generate_html.py` 读取冻结资格，构建日报、独立事实周报、跨周月报和对象时间线。
 11. GitHub Pages 从 `docs/` 发布静态网站。
 
@@ -299,7 +301,7 @@ Google News ─┘                              │
 
 | 文件 | 作用 |
 |------|------|
-| `data/events.json` | 近 90 天事件数据 |
+| `data/events.json` | 完整结构化事件历史 |
 | `data/signal_candidates.json` | Jobs 等变化事实的候选与晋级记录 |
 | `data/entity_observation_ledger.json` | 对象与观察点运行账本 |
 | `data/summary.json` | 每日趋势判断缓存 |
