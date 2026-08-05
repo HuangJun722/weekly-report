@@ -7,8 +7,12 @@ synonym for "funding/MA-shaped title".
 import re
 
 
-STRONG_EVENT_TYPES = {'funding', 'ma', 'earnings', 'strategy'}
+STRONG_EVENT_TYPES = {
+    'funding', 'ma', 'earnings', 'strategy',
+    'industry_report', 'model_release', 'regional_policy',
+}
 HIGH_VALUE_SIGNAL_TYPES = {'funding', 'ma', 'earnings'}
+FIRST_CLASS_CONTENT_TYPES = {'industry_report', 'model_release', 'regional_policy'}
 ACTIONABLE_FUNDING_TERMS = {
     'ai', 'artificial intelligence', 'agent', 'model', 'llm', 'inference',
     'cloud', 'data center', 'datacenter', 'gpu', 'compute', 'infrastructure',
@@ -67,6 +71,20 @@ def event_score(event):
         return float(event.get('score') or 0)
     except (TypeError, ValueError):
         return 0
+
+
+def signal_score(event, field):
+    try:
+        return float(event.get(field) or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def content_type(event):
+    value = event.get('content_type')
+    if value in FIRST_CLASS_CONTENT_TYPES:
+        return value
+    return ''
 
 
 def is_google_news_event(event):
@@ -151,6 +169,12 @@ def needs_quality_review(event):
         return True
     if event.get('analysis_status') in {'fallback', 'failed'}:
         return True
+    if content_type(event) == 'industry_report':
+        access = event.get('report_access_level') or event.get('access_level')
+        if access in {'paid', 'restricted'} and not (
+            event.get('source_excerpt') or event.get('interpretation_basis')
+        ):
+            return True
     if not has_explainable_analysis(event):
         return True
     return False
@@ -172,10 +196,23 @@ def classify_bd_priority(event, score=None):
     if not is_scope_qualified(event):
         return '观察'
 
-    if ev_type == 'other':
-        return '中' if is_company and source_tier == 'L1 官方/IR源' and s >= 4 else '观察'
     if ev_type == 'funding' and not is_actionable_funding_event(event):
         return '观察'
+
+    typed = content_type(event)
+    if typed:
+        attention = signal_score(event, 'attention_score')
+        confidence = signal_score(event, 'confidence_score')
+        if needs_quality_review(event):
+            return '观察'
+        if attention >= 70 and confidence >= 65:
+            return '高'
+        if attention >= 50 and confidence >= 50:
+            return '中'
+        return '观察'
+
+    if ev_type == 'other':
+        return '中' if is_company and source_tier == 'L1 官方/IR源' and s >= 4 else '观察'
 
     high_threshold = 7
     if source_tier == 'L1 官方/IR源':
@@ -203,13 +240,19 @@ def follow_up_window_for_priority(priority):
 
 
 def is_high_value_event(event):
+    typed = content_type(event)
+    typed_value = (
+        typed in FIRST_CLASS_CONTENT_TYPES
+        and signal_score(event, 'attention_score') >= 70
+        and signal_score(event, 'confidence_score') >= 65
+    )
     return (
         is_scope_qualified(event)
         and
         classify_bd_priority(event) == '高'
         and is_mainline_internet_event(event)
         and not needs_quality_review(event)
-        and event_type(event) in STRONG_EVENT_TYPES
+        and (event_type(event) in STRONG_EVENT_TYPES or typed_value)
         and is_actionable_funding_event(event)
     )
 
@@ -243,6 +286,12 @@ def should_show_in_main_list(event):
         return True
     if event_type(event) == 'funding' and not is_actionable_funding_event(event):
         return False
+    if content_type(event):
+        return (
+            not is_google_news_event(event)
+            and signal_score(event, 'attention_score') >= 50
+            and signal_score(event, 'confidence_score') >= 50
+        )
     return (
         event_type(event) in STRONG_EVENT_TYPES
         and not is_google_news_event(event)
@@ -259,6 +308,12 @@ def should_show_in_review(event):
         return False
     ev_type = event_type(event)
     s = event_score(event)
+    if content_type(event):
+        return (
+            signal_score(event, 'attention_score') >= 40
+            and signal_score(event, 'confidence_score') >= 45
+            and not needs_quality_review(event)
+        )
     if is_google_news_event(event):
         return (
             ev_type in STRONG_EVENT_TYPES

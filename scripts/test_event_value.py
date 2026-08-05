@@ -139,6 +139,79 @@ def test_defense_tech_does_not_enter_main_even_when_large():
     assert event_filter_reason(event) == 'out_of_scope_industry'
 
 
+def test_research_report_can_enter_main_with_signal_scores():
+    event = base_event(
+        title='IDC publishes China cloud market share forecast report',
+        source='IDC Research',
+        source_tier='L4 垂直赛道精品源',
+        source_type='research_report',
+        event_types=['other'],
+        score=6,
+        summary_short='IDC发布中国云计算市场份额预测',
+        reason='研报公开摘要显示云计算市场结构和区域分布变化',
+        impact='云服务商、数据中心和企业软件供应商',
+        scope_enforced=True,
+        scope_status='qualified',
+        scope_industries=['ai_infra', 'cloud_saas_developer'],
+        content_type='industry_report',
+        confidence_score=88,
+        attention_score=82,
+        trend_weight=78,
+    )
+    assert classify_bd_priority(event) == '高'
+    assert is_high_value_event(event)
+    assert should_show_in_main_list(event)
+
+
+def test_model_release_is_separate_from_performance_claim():
+    event = base_event(
+        title='Open source multimodal model launches with API access',
+        source='Model Lab',
+        source_tier='L1 官方/IR源',
+        event_types=['model_release'],
+        score=5,
+        summary_short='开放多模态模型并提供 API',
+        reason='模型发布事实明确，API 可获得性可直接验证',
+        impact='AI 应用开发者、云服务商和集成商',
+        scope_enforced=True,
+        scope_status='qualified',
+        scope_industries=['ai_infra'],
+        content_type='model_release',
+        subject_type='ai_model',
+        claim_type='release_fact',
+        confidence_score=90,
+        attention_score=80,
+        trend_weight=75,
+    )
+    assert classify_bd_priority(event) == '高'
+    assert should_show_in_main_list(event)
+
+
+def test_paid_report_without_public_basis_needs_review():
+    event = base_event(
+        title='IDC publishes a paid cloud market outlook',
+        source='IDC Research',
+        source_tier='L4 垂直赛道精品源',
+        source_type='research_report',
+        event_types=['other'],
+        score=7,
+        summary_short='IDC发布付费云市场展望',
+        reason='报告判断可能影响云服务商',
+        impact='云服务商',
+        scope_enforced=True,
+        scope_status='qualified',
+        scope_industries=['ai_infra', 'cloud_saas_developer'],
+        content_type='industry_report',
+        report_access_level='paid',
+        source_excerpt='',
+        interpretation_basis='',
+        confidence_score=90,
+        attention_score=90,
+    )
+    assert event_filter_reason(event) == 'quality_review'
+    assert not should_show_in_main_list(event)
+
+
 if __name__ == '__main__':
     test_low_score_signal_is_not_high()
     test_google_news_company_low_signal_stays_out()
@@ -149,4 +222,7 @@ if __name__ == '__main__':
     test_company_quality_has_own_threshold()
     test_out_of_scope_healthcare_does_not_enter_main_or_rss_value()
     test_defense_tech_does_not_enter_main_even_when_large()
+    test_research_report_can_enter_main_with_signal_scores()
+    test_model_release_is_separate_from_performance_claim()
+    test_paid_report_without_public_basis_needs_review()
     print('event_value tests passed')

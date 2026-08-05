@@ -1,10 +1,11 @@
 {
-  "version": "2026-05-25",
+  "version": "2026-08-05",
   "principles": [
     "信源优先解决质量，而不是靠过滤弥补泛新闻噪声。",
     "每个自动接入源都要标注赛道、信号类型、质量层级、抓取方式和风险。",
     "官方、开发者、商户、广告、支付、市场政策类源优先于泛科技新闻流。",
-    "候选源先进入观察池，样本质量稳定后再进入自动采集。"
+    "候选源先进入观察池，样本质量稳定后再进入自动采集。",
+    "研报源只承载可核验的发布事实和有归属的机构判断，不因来源名称自动放宽范围门槛。"
   ],
   "source_schema": {
     "id": "稳定唯一标识",
@@ -12,7 +13,7 @@
     "url": "公开入口地址",
     "status": "active / candidate / paused",
     "tier": "L1 / L2 / L3 / L4 / L5",
-    "source_type": "newsroom / ir / changelog / jobs / engineering_blog / industry_media / media",
+    "source_type": "newsroom / ir / changelog / jobs / engineering_blog / research_report / industry_media / media",
     "access_method": "rss / atom / html / api / sitemap",
     "region": "主要地区",
     "track": "赛道",
@@ -27,7 +28,12 @@
     "freshness_speed": "early / same_day / lagging",
     "dedupe_strategy": "url / title / semantic / entity-time",
     "crawl_cost": "low / medium / expensive",
-    "anti_bot_risk": "low / medium / high"
+    "anti_bot_risk": "low / medium / high",
+    "publisher_type": "official / research_institution / industry_vertical / venture_media / regional_ecosystem / aggregator",
+    "authority_domains": "该源可直接支持的主题域，例如市场规模、政策、产品发布",
+    "claim_roles": "release_fact / institutional_assessment / performance_claim / policy_change / company_action",
+    "access_level": "open / abstract_only / paid / restricted",
+    "methodology_visibility": "visible / partial / hidden"
   },
   "signal_types": {
     "official_disclosure": "公司官方披露、新闻稿、IR 公告",

@@ -1,4 +1,4 @@
-from fetch_news import _apply_company_scope_contract, _calc_score
+from fetch_news import _apply_company_scope_contract, _calc_score, detect_event_types
 from scope_gate import apply_scope_contract, assess_scope
 
 
@@ -144,6 +144,11 @@ def test_company_scope_contract_comes_from_existing_entity_pool():
     assert 'cloud_saas_developer' in naver['scope_industries']
 
 
+def test_report_and_model_are_not_collapsed_into_strategy():
+    assert detect_event_types('IDC publishes China cloud market share forecast report') == ['industry_report']
+    assert detect_event_types('Open source multimodal model launches with API access') == ['model_release']
+
+
 if __name__ == '__main__':
     test_ai_policy_is_qualified_as_regional_policy()
     test_unrelated_regional_policy_is_filtered()
@@ -156,4 +161,5 @@ if __name__ == '__main__':
     test_scope_contract_is_auditable()
     test_policy_and_industry_changes_do_not_need_capital_amount_to_score()
     test_company_scope_contract_comes_from_existing_entity_pool()
+    test_report_and_model_are_not_collapsed_into_strategy()
     print('scope gate tests passed')

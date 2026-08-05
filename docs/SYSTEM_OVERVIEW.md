@@ -1,6 +1,6 @@
 # 全球互联网情报站：整体设计与架构
 
-> 更新基线：2026-07-31。本文是理解项目的第一入口；具体展示规则见 [VIEW_CONTRACT.md](VIEW_CONTRACT.md)，详细使用说明见 [USAGE_GUIDE.md](USAGE_GUIDE.md)。
+> 更新基线：2026-08-05。本文是理解项目的第一入口；具体展示规则见 [VIEW_CONTRACT.md](VIEW_CONTRACT.md)，详细使用说明见 [USAGE_GUIDE.md](USAGE_GUIDE.md)。
 
 ## 1. 产品目标
 
@@ -9,7 +9,7 @@
 系统不是新闻聚合器，也不替用户做最终决策。它负责：
 
 ```text
-发现事实 -> 判断是否属于本站 -> 评估价值 -> 关联对象
+发现事实 -> 判断是否属于本站 -> 评估证据与价值 -> 关联对象
 -> 组织证据 -> 帮用户排序 -> 保留可审计依据
 ```
 
@@ -54,7 +54,7 @@ flowchart TD
     L --> C
 ```
 
-日报直接消费合格事件，不依赖 Narrative 才能展示。Narrative 主要服务周报、月报和窗口解释。
+日报直接消费合格事件，不依赖 Narrative 才能展示。Narrative 主要服务周报、月报和窗口解释。研报发布事实可以进入日报；研报判断必须保留机构归属，周报/月报只有在独立证据积累后才表达系统综合趋势。
 
 ## 4. 供给体系
 
@@ -62,7 +62,7 @@ flowchart TD
 
 `Source` 是主抽象，不是 RSS。一个信源可以通过 RSS、HTML、API、Sitemap、Newsroom、IR、Changelog 或 Jobs 接入。
 
-信源分层解决“可信度”：
+信源分层解决“可信度”，但不替代事件证据评分：
 
 | 层级 | 定位 |
 |---|---|
@@ -148,9 +148,27 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 | 待接入 | 已登记但尚无采集器 |
 | 状态待确认 | 旧运行记录不足以判断成功或失败 |
 
-目标不是让每家公司每天都有新闻，而是让每家公司都有可信、可解释的观察状态。
+目标不是让每家公司每天都有新闻，而是让每家公司都有可信、可解释的观察状态。公司之外，行业变化和区域 AI/互联网政策也是正式观察对象；区域政策必须同时命中既定行业/AI范围，不能因“政策”二字泛化采集。
 
-## 9. 治理与健康检查
+## 9. 多类型事件评分
+
+事件先过范围和质量闸门，再应用统一评分契约：
+
+```text
+范围门槛：是否纳入
+证据可信度：能信多少
+注意力分：日报先看什么
+趋势权重：周报/月报贡献多少
+```
+
+事件保存 `content_type`、`subject_type`、`claim_type`、`confidence_score`、`attention_score`、`trend_weight` 和 `score_breakdown`。支持研报、AI 模型发布、公司动作、区域政策、融资和一般行业变化。
+
+- 研报发布是日报事实；公开摘要、新闻稿或公开二次解读不可替代付费全文，事件必须记录 `interpretation_basis` 和 `report_access_level`。
+- AI 模型的发布事实与厂商性能自述分开，后者标记 `performance_claim`，不直接当作客观 benchmark。
+- 中国公司重大 AI/互联网动作可以进入；普通国内经营、营销和泛宣传不进入。中国只记录 `origin_region`，海外影响另记 `impact_regions`，不自动加分。
+- 评分只改变 `精选 / 重点 / 观察` 排序，不能救回 `scope_status=filtered` 或质量不合格事件。
+
+## 10. 治理与健康检查
 
 系统通过四类报告定位问题：
 
@@ -161,7 +179,7 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 
 排查原则：先区分“没有内容、没有抓到、抓到但未入选”，再决定修信源、修解析器还是调整产品门槛。
 
-## 10. 关键文件
+## 11. 关键文件
 
 | 文件 | 职责 |
 |---|---|
@@ -172,6 +190,7 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 | `scripts/internet_relevance.py` | 本站产品边界 |
 | `scripts/scope_gate.py` | 既定区域、行业/AI与变化事实的范围准入 |
 | `scripts/event_value.py` | 事件价值、融资准入和展示资格 |
+| `scripts/signal_scoring.py` | 多类型内容识别与可信度/注意力/趋势评分 |
 | `scripts/view_selectors.py` | 首页、RSS、公司、周期报告统一选择入口 |
 | `scripts/event_contract.py` | 统一补齐并冻结事件展示资格 |
 | `scripts/evidence_atoms.py` | 独立证据归并 |
@@ -187,7 +206,7 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 
 `docs/index.html` 和 `docs/feed.xml` 都是生成物，不应手工长期维护。
 
-## 11. 当前边界与下一阶段
+## 12. 当前边界与下一阶段
 
 已经形成的底座：统一事件契约、候选信号池、独立事实去重、周报主题、跨周月报趋势、三级对象组合、观察账本和三家公司 Jobs 试点。
 

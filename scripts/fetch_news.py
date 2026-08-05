@@ -417,6 +417,33 @@ def detect_event_types(title):
                        'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results',
                        'goes live', 'stock ']):
         types.append('earnings')
+    # 精品研报/行业数据：先单独标记，避免被普通 strategy 吞掉。
+    is_report = any(k in t for k in [
+        'report', 'forecast', 'market size', 'market share', 'market outlook',
+        'market map', 'benchmark', 'ranking', 'rankings', 'consumer spend',
+        'consumer spending', 'monthly active users', 'subscribers', 'gmv',
+        'gross merchandise', 'payment volume', 'gaming market',
+        'mobile games market', 'games market', '行业报告', '市场预测',
+        '市场规模', '市场份额', '基准测试',
+    ])
+    if is_report:
+        types.append('industry_report')
+
+    # AI 模型发布：事实进入日报，性能结论另存 claim_type。
+    is_model_release = (
+        any(k in t for k in [
+            'foundation model', 'language model', 'large language model',
+            'multimodal model', 'ai model', 'open-source model',
+            'open source model', '模型发布', '大模型', '多模态模型', '开源模型',
+        ])
+        and any(k in t for k in [
+            'launch', 'launches', 'launched', 'release', 'released', 'unveils',
+            'available', '推出', '发布', '上线', '开放',
+        ])
+    )
+    if is_model_release:
+        types.append('model_release')
+
     # 战略/市场（出海、全球化、产品发布）
     if any(k in t for k in ['partners with', 'partnership', 'strategic',
                        'joint venture', 'expands to', 'flagship store',
@@ -438,14 +465,15 @@ def detect_event_types(title):
                        'turnaround', 'restructure', 'reorganization',
                        'cloud service', 'cloud expansion', 'data center',
                        'partners with', 'signs MOU', 'joint venture',
-                       # 垂直赛道：报告、市场规模、用户/收入变化也有情报价值
-                       'report', 'forecast', 'market size', 'market share',
+                        # 垂直赛道报告词已单独归类，这里保留其余市场动作词
+                        'report', 'forecast', 'market size', 'market share',
                        'ranking', 'rankings', 'benchmark', 'consumer spend',
                        'consumer spending', 'downloads', 'monthly active users',
                        'subscribers', 'gmv', 'gross merchandise', 'payment volume',
-                       'digital payments', 'mobile wallet', 'social commerce',
-                       'gaming market', 'mobile games market', 'games market']):
-        types.append('strategy')
+                        'digital payments', 'mobile wallet', 'social commerce',
+                        'gaming market', 'mobile games market', 'games market']):
+        if not is_report and not is_model_release:
+            types.append('strategy')
     return types if types else ['other']
 
 def _source_meta(cfg):
@@ -462,6 +490,13 @@ def _source_meta(cfg):
         'noise_level': cfg.get('noise_level', ''),
         'scope_industries': cfg.get('scope_industries', []),
         'scope_regions': cfg.get('scope_regions', []),
+        'publisher_type': cfg.get('publisher_type', ''),
+        'authority_domains': cfg.get('authority_domains', []),
+        'claim_roles': cfg.get('claim_roles', []),
+        'access_level': cfg.get('access_level', ''),
+        'report_access_level': cfg.get('report_access_level', cfg.get('access_level', '')),
+        'methodology_visibility': cfg.get('methodology_visibility', ''),
+        'report_methodology_visible': cfg.get('report_methodology_visible', False),
     }
 
 def _with_source_meta(item, cfg):
@@ -2640,7 +2675,11 @@ def _calc_score(item):
     else: amt_pts = 0
 
     # 事件类型分。金额只服务资本事件，不再决定政策/行业/公司动作价值。
-    type_pts = {'ma': 2, 'earnings': 2, 'funding': 1, 'strategy': 1, 'other': 0}.get(ev_type, 0)
+    type_pts = {
+        'ma': 2, 'earnings': 2, 'funding': 1, 'strategy': 1,
+        'industry_report': 2, 'model_release': 2,
+        'regional_policy': 2, 'other': 0,
+    }.get(ev_type, 0)
 
     scope_layer_pts = {
         'regional_policy': 3,
@@ -2787,6 +2826,24 @@ def attach_business_context(event, item, score):
         'source_url_original',
         'source_url_repaired',
         'source_url_repair_reason',
+        'source_excerpt',
+        'original_title',
+        'evidence_refs',
+        'origin_region',
+        'impact_regions',
+        'publisher_type',
+        'authority_domains',
+        'claim_roles',
+        'access_level',
+        'report_access_level',
+        'methodology_visibility',
+        'report_methodology_visible',
+        'report_published_at',
+        'model_card_url',
+        'interpretation_basis',
+        'claim_type',
+        'content_type',
+        'subject_type',
     ):
         if item.get(key) not in (None, '', []):
             event[key] = item.get(key)
@@ -2856,12 +2913,18 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'ma': '资金流向',
         'earnings': '背景补充',
         'strategy': '合作机会',
+        'industry_report': '趋势信号',
+        'model_release': '产品能力',
+        'regional_policy': '政策变化',
     }.get(ev_type, '背景补充')
     why_fallback = {
         'funding': f"{item['region']}科技公司融资事件，金额待确认",
         'ma': f"{item['region']}科技公司并购/收购",
         'earnings': f"{item['region']}科技公司财报披露",
         'strategy': f"{item['region']}科技公司战略动态",
+        'industry_report': f"{item['region']}行业研究报告发布，观点待交叉验证",
+        'model_release': f"{item['region']}AI模型发布，发布事实与性能自述分开观察",
+        'regional_policy': f"{item['region']}AI/互联网相关政策变化",
     }.get(ev_type, f"{item['region']}科技行业动态")
     event = {
         'title': item['title'],

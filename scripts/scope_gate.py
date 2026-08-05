@@ -76,7 +76,10 @@ ACTION_TERMS = {
     '并购', '投资', '融资', '建设', '招聘', '任命', '重组', '关闭', '限制',
 }
 
-STRONG_EVENT_TYPES = {'funding', 'ma', 'earnings', 'strategy', 'partnership'}
+STRONG_EVENT_TYPES = {
+    'funding', 'ma', 'earnings', 'strategy', 'partnership',
+    'industry_report', 'model_release', 'regional_policy',
+}
 
 EDITORIAL_TITLE_PATTERNS = (
     r'^why\b', r'^how\b', r'^what\b', r'^a guide\b', r'^guide\b',

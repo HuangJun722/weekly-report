@@ -28,6 +28,8 @@
 - `view_reason`：入选、复核或过滤原因。
 - `view_priority`：`selected / important / watch`。
 
+统一信号字段同时冻结在事件上：`content_type`、`subject_type`、`claim_type`、`confidence_score`、`attention_score`、`trend_weight` 和 `score_breakdown`。它们分别回答内容是什么、对象是谁、主张属于哪一类、证据有多可信、日报应先看什么以及对周期趋势贡献多少。
+
 页面、RSS、覆盖报表和信源转化报表必须读取这些字段；渲染阶段可以补展示文案，但不能重新改变事件是否合格。官方 Changelog、Developer Docs 和 Product Update 可使用确定性规则补齐事实说明，再冻结资格。
 
 ## 产品边界
@@ -65,6 +67,7 @@
 允许进入：
 - 高价值事件。
 - 非 Google News 的低分但可解释强信号事件，例如融资、并购、财报、战略。
+- 通过范围和质量闸门的 `industry_report`、`model_release`、`regional_policy`。研报以“研报观点”标明机构归属；模型发布把发布事实与性能自述分开。
 - `internet_relevance >= 2` 的本站主线事件。
 
 不进入：
@@ -72,6 +75,7 @@
 - 需要质量修复的事件。
 - 低信号 Google News 补漏。
 - 缺少摘要、原因或影响说明的事件。
+- 只有付费全文才能证明、但公开页面没有可核验依据的研报解读。
 
 前台分层：
 - `精选`：最先看，强信号、强相关、可直接进入判断。
@@ -175,6 +179,8 @@
 - 今日无高价值事件时，回退到最近一个有高价值事件的批次。
 - RSS 只推 `internet_relevance >= 2` 的事件。
 - RSS 不承担补漏和候选展示功能。
+
+研报、模型发布和区域政策若已进入首页合格事件，遵循同一 RSS 资格；RSS 不新增一套内容类型白名单。
 
 ## 周报/月报
 

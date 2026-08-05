@@ -1,5 +1,20 @@
 [{
     "date": "2026-08-05",
+    "version": "V3.3",
+    "type": "多类型信号评分",
+    "status": "已完成",
+    "title": "研报、AI模型与区域政策接入统一评分契约",
+    "summary": "在不放松信源筛选和范围闸门的前提下，日报开始识别并排序行业研报、AI模型发布和区域AI/互联网政策；周报/月报使用趋势权重等待独立证据积累。",
+    "changes": [
+      "新增 content_type、subject_type、claim_type、confidence_score、attention_score、trend_weight 和 score_breakdown",
+      "研报发布事实可进入日报，付费全文不可见时只基于公开摘要、目录、新闻稿或公开二次解读",
+      "AI模型发布事实与性能自述分开，模型厂商自报性能不直接视为客观 benchmark",
+      "中国公司重大AI/互联网动作可纳入，但中国地域不自动加分；海外影响记录 origin_region 和 impact_regions",
+      "Source Registry 支持 research_report 及 publisher、权限和方法透明度字段"
+    ]
+  },
+  {
+    "date": "2026-08-05",
     "version": "V3.2",
     "type": "RSS 与存储治理",
     "status": "已完成",
