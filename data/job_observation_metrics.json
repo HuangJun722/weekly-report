@@ -1,21 +1,25 @@
 {
-  "observed_at": "2026-08-05T11:57:50.413840+08:00",
+  "observed_at": "2026-08-05T16:24:36.308471+08:00",
   "source_count": 3,
-  "raw_count": 62,
+  "raw_count": 61,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 4,
-      "inventory_count": 20,
-      "signal_count": 0,
-      "added_count": 2,
-      "removed_count": 2,
-      "clusters": {},
+      "count": 13,
+      "inventory_count": 19,
+      "signal_count": 1,
+      "added_count": 6,
+      "removed_count": 7,
+      "clusters": {
+        "operations": 1
+      },
       "removed_clusters": {
-        "engineering": 1
+        "engineering": 1,
+        "partnerships": 1,
+        "operations": 3
       }
     },
     "Stripe Jobs": {
@@ -45,6 +49,116 @@
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [],
+  "candidate_signals": [
+    {
+      "candidate_id": "jobs-55e62c84380421b1",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "operations",
+      "window": "2026-W32",
+      "window_start": "2026-08-05",
+      "window_end": "2026-08-05",
+      "detected_at": "2026-08-05T16:24:36.308471+08:00",
+      "baseline_count": 20,
+      "current_count": 19,
+      "added_count": 6,
+      "removed_count": 7,
+      "clusters": {
+        "operations": 1
+      },
+      "removed_clusters": {
+        "engineering": 1,
+        "partnerships": 1,
+        "operations": 3
+      },
+      "evidence_refs": [
+        {
+          "job_id": "744000141658109",
+          "title": "Lead Product Marketing Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141658109/lead-product-marketing-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141656189",
+          "title": "Assistant Manager - Performance Marketing & Paid Media",
+          "url": "https://www.grab.careers/en/jobs/744000141656189/assistant-manager-performance-marketing-paid-media/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141647849",
+          "title": "Lead Technical Program Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141647849/lead-technical-program-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141645040",
+          "title": "Assistant Marketing Manager, Mobility",
+          "url": "https://www.grab.careers/en/jobs/744000141645040/assistant-marketing-manager-mobility/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141644625",
+          "title": "Manager, Driver Core Operations",
+          "url": "https://www.grab.careers/en/jobs/744000141644625/manager-driver-core-operations/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141643594",
+          "title": "Assistant Marketing Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141643594/assistant-marketing-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141631629",
+          "title": "Assistant Marketing Manager (Deliveries)",
+          "url": "https://www.grab.careers/en/jobs/744000141631629/assistant-marketing-manager-deliveries/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141403699",
+          "title": "Manager, Deliveries Marketplace",
+          "url": "https://www.grab.careers/en/jobs/744000141403699/manager-deliveries-marketplace/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141402439",
+          "title": "Assistant Manager, Platform Safety",
+          "url": "https://www.grab.careers/en/jobs/744000141402439/assistant-manager-platform-safety/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141375064",
+          "title": "Senior People Business Partner",
+          "url": "https://www.grab.careers/en/jobs/744000141375064/senior-people-business-partner/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141232684",
+          "title": "Grab Support Senior Operations Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141232684/grab-support-senior-operations-manager/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141223730",
+          "title": "Content Manager",
+          "url": "https://www.grab.careers/en/jobs/744000141223730/content-manager/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141222569",
+          "title": "Assistant Manager, Operations Command Centre (Autonomous Vehicles)",
+          "url": "https://www.grab.careers/en/jobs/744000141222569/assistant-manager-operations-command-centre-autonomous-vehicles/",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    }
+  ],
   "promoted_count": 0
 }
