@@ -1,11 +1,23 @@
 {
   "version": 1,
-  "generated_at": "2026-08-05T11:07:27.489229+08:00",
+  "generated_at": "2026-08-05T11:57:50.413840+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-05T11:07:27.489229+08:00",
+      "observed_at": "2026-08-05T11:57:50.413840+08:00",
       "jobs": [
+        {
+          "id": "744000141631629",
+          "title": "Assistant Marketing Manager (Deliveries)",
+          "url": "https://www.grab.careers/en/jobs/744000141631629/assistant-marketing-manager-deliveries/",
+          "function_tags": []
+        },
+        {
+          "id": "744000141629929",
+          "title": "Lead Product Manager, GrabMart Fulfilment",
+          "url": "https://www.grab.careers/en/jobs/744000141629929/lead-product-manager-grabmart-fulfilment/",
+          "function_tags": []
+        },
         {
           "id": "744000141629239",
           "title": "Lead Data Engineer, Analytic Platform",
@@ -132,26 +144,12 @@
           "function_tags": [
             "operations"
           ]
-        },
-        {
-          "id": "744000141210999",
-          "title": "Large Area Associate (Contract)",
-          "url": "https://www.grab.careers/en/jobs/744000141210999/large-area-associate-contract/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141203278",
-          "title": "Lead Product Manager, Transaction Platform",
-          "url": "https://www.grab.careers/en/jobs/744000141203278/lead-product-manager-transaction-platform/",
-          "function_tags": [
-            "engineering"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-05T11:07:27.489229+08:00",
+      "observed_at": "2026-08-05T11:57:50.413840+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -258,7 +256,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-05T11:07:27.489229+08:00",
+      "observed_at": "2026-08-05T11:57:50.413840+08:00",
       "jobs": [
         {
           "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
