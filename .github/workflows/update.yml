@@ -126,6 +126,9 @@ jobs:
 
       - name: Generate HTML
         run: python scripts/generate_html.py --force
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
 
       - name: Generate RSS feed
         run: python generate_feed.py

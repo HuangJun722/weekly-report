@@ -1374,6 +1374,68 @@ def _build_weekly_focus_windows(period_events, end_date, limit=6):
     return build_weekly_themes(period_events, _entity_region_map(), limit=limit)
 
 
+def build_period_narrative(themes, period_id):
+    """AI 编辑层：把周期主题写成叙事导读。失败返回 None，调用方走模板降级。"""
+    if not themes:
+        return None
+    try:
+        from fetch_news import _post_chat, _chat_api_candidates
+    except ImportError:
+        try:
+            from scripts.fetch_news import _post_chat, _chat_api_candidates
+        except ImportError:
+            return None
+    apis = _chat_api_candidates()
+    if not apis:
+        return None
+
+    theme_brief = []
+    for t in themes:
+        evs = [e.get('title', '') for e in (t.get('evidence') or [])][:2]
+        theme_brief.append({
+            'key': t.get('key', ''),
+            'title': t.get('title') or t.get('direction', ''),
+            'region': t.get('region', ''),
+            'objects': t.get('objects', ''),
+            'why': t.get('why', ''),
+            'evidence_titles': evs,
+        })
+
+    prompt = f"""你是全球互联网科技情报编辑，受众是出海 BD、战略和投资从业者（周期标识：{period_id}）。
+
+以下是本周期聚类出的主题（每主题含代表事件标题）。请把它们编辑成一份可读的周期报告：
+
+1. 写一段"本期主线"（mainline，60-90字）：把本周最值得关注的 1-2 个方向串成一段叙事，说明发生了什么、为什么值得关注、指向什么判断。要像编辑写导读，不要罗列统计数字。
+2. 为每个主题写一段叙事导读（narrative，40-70字）：把该主题的事件串成一条故事线，说明这些事件合起来意味着什么。不要重复事件标题，不要用"本周XX公司融资"这类清单式表达。
+
+主题列表：
+{json.dumps(theme_brief, ensure_ascii=False, indent=2)}
+
+只输出 JSON，不要输出其他内容，格式：
+{{"mainline": "本期主线", "themes": [{{"key": "主题key", "narrative": "该主题导读"}}]}}"""
+
+    for api in apis:
+        try:
+            resp = _post_chat(api, prompt, max_tokens=1200, temperature=0.3, timeout=(10, 30))
+            if resp.status_code != 200:
+                print(f"  ⚠️  周报编辑 {api['name']} 返回 {resp.status_code}，尝试下一个")
+                continue
+            text = resp.json()['choices'][0]['message']['content'].strip()
+            text = re.sub(r'^```(?:json)?\s*', '', text).strip().rstrip('`').strip()
+            data = json.loads(text)
+            mainline = (data.get('mainline') or '').strip()
+            tmap = {t.get('key'): (t.get('narrative') or '').strip() for t in data.get('themes') or []}
+            if len(mainline) < 20 or not tmap:
+                print(f"  ⚠️  周报编辑 {api['name']} 结果不完整，尝试下一个")
+                continue
+            print(f"  📝 周报编辑已生成（{api['name']}，{len(tmap)} 个主题导读）: {mainline[:40]}...")
+            return {'mainline': mainline, 'themes': tmap}
+        except Exception as e:
+            print(f"  ⚠️  周报编辑 {api['name']} 失败: {type(e).__name__}")
+            continue
+    return None
+
+
 def build_period_report(events, start_date, end_date, label, period_id=None, status='closed', focus_windows_enabled=False):
     """按 BD 机会视角聚合周报/月报。"""
     period_events = [
@@ -1413,17 +1475,25 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
     themes = focus_windows if focus_windows_enabled else monthly_trends
     high_count = len(select_period_high_value_events(period_events))
 
+    # AI 编辑层：周报主题叙事导读（失败降级回模板，不影响页面）
+    narrative_result = None
+    if focus_windows_enabled and themes:
+        narrative_result = build_period_narrative(themes, period_id)
+
     if period_events:
         title = f"{label}{'关注主题周报' if focus_windows_enabled else '趋势与结构月报'}"
         leading_region = regional_map[0]['region'] if regional_map else '多地区'
         if focus_windows_enabled:
             if focus_windows:
-                leading_theme = focus_windows[0]['direction']
-                leading_region = focus_windows[0]['region']
-                summary = (
-                    f"本周期从 {len(period_events)} 条合格事实中形成 {len(focus_windows)} 个主题。"
-                    f"本周主线是{leading_theme}，再回到独立事实确认。"
-                )
+                if narrative_result:
+                    summary = narrative_result['mainline']
+                else:
+                    leading_theme = focus_windows[0]['direction']
+                    leading_region = focus_windows[0]['region']
+                    summary = (
+                        f"本周期从 {len(period_events)} 条合格事实中形成 {len(focus_windows)} 个主题。"
+                        f"本周主线是{leading_theme}，再回到独立事实确认。"
+                    )
             else:
                 summary = (
                     f"本周期收录 {len(period_events)} 条合格事实，但尚未形成满足独立证据门槛的主题。"
@@ -1445,6 +1515,11 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         title = f"{label}{'关注主题周报' if focus_windows_enabled else '趋势与结构月报'}"
         summary = "当前周期事件数量较少，先保留为观察入口。"
     date_label = start_date if start_date == end_date else f"{start_date} 至 {end_date}"
+
+    if narrative_result:
+        for t in themes:
+            if t.get('key') in narrative_result['themes']:
+                t['narrative'] = narrative_result['themes'][t['key']]
 
     return {
         'id': period_id or f"{start_date}_{end_date}",

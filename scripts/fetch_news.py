@@ -3318,6 +3318,10 @@ def main():
     _merge_source_funnel(source_funnel, _source_funnel_stage(today_events, 'analysis_events'))
     for event in today_events:
         annotate_event_quality(event)
+    # 重新冻结展示资格：annotate 可能把 needs_repair 从 False 翻 True，
+    # 不重冻结会让 needs_repair=True 的事件仍以 view_status='main' 混入日报
+    for event in today_events:
+        prepare_event_contract(event)
 
     q = summarize_quality(today_events)
     if q['total']:

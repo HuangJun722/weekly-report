@@ -1,4 +1,13 @@
+import json
+import re
+import unittest.mock as mock
+
 from generate_html import build_period_report
+import fetch_news  # noqa: F401 — 确保模块已导入，便于 patch
+
+# 模块级保护：默认不调真实 LLM，避免测试依赖 API key 或污染线上
+_patch_api = mock.patch('fetch_news._chat_api_candidates', return_value=[])
+_patch_api.start()
 
 
 def event(**overrides):
@@ -105,10 +114,60 @@ def test_weekly_broad_window_keeps_out_of_scope_events_out():
     assert report['focus_windows'] == []
 
 
+def _fake_apis():
+    return [{'id': 'test', 'name': 'Test', 'url': 'http://fake', 'key': 'k' * 10, 'model': 'm'}]
+
+
+def test_weekly_narrative_overrides_mainline_when_llm_succeeds():
+    def fake_post_chat(api, prompt, **kw):
+        keys = [m.group(1) for m in re.finditer(r'"key": "([^"]+)"', prompt)] or ['ai_infra']
+        content = json.dumps({
+            'mainline': '本周AI与云基础设施成为主线，资本同步加码算力与支付赛道。',
+            'themes': [{'key': k, 'narrative': f'{k}主题的叙事导读'} for k in keys],
+        }, ensure_ascii=False)
+        return mock.Mock(status_code=200, json=lambda: {'choices': [{'message': {'content': content}}]})
+
+    ctx_api = mock.patch('fetch_news._chat_api_candidates', return_value=_fake_apis())
+    ctx_llm = mock.patch('fetch_news._post_chat', side_effect=fake_post_chat)
+    ctx_api.start()
+    ctx_llm.start()
+    try:
+        report = build_period_report([
+            event(url='https://example.com/a', company_name='ExampleAI', companies=['ExampleAI']),
+            event(url='https://example.com/b', company_name='CloudBox', companies=['CloudBox']),
+        ], '2026-06-01', '2026-06-07', '2026年第23周', '2026-W23', 'open', focus_windows_enabled=True)
+    finally:
+        ctx_llm.stop()
+        ctx_api.stop()
+
+    assert '叙事导读' in report['summary'] or 'AI' in report['summary']
+    assert all(w.get('narrative') for w in report['focus_windows'])
+
+
+def test_weekly_narrative_falls_back_to_template_when_llm_fails():
+    ctx_api = mock.patch('fetch_news._chat_api_candidates', return_value=_fake_apis())
+    ctx_llm = mock.patch('fetch_news._post_chat', side_effect=Exception('boom'))
+    ctx_api.start()
+    ctx_llm.start()
+    try:
+        report = build_period_report([
+            event(url='https://example.com/a', company_name='ExampleAI', companies=['ExampleAI']),
+            event(url='https://example.com/b', company_name='CloudBox', companies=['CloudBox']),
+        ], '2026-06-01', '2026-06-07', '2026年第23周', '2026-W23', 'open', focus_windows_enabled=True)
+    finally:
+        ctx_llm.stop()
+        ctx_api.stop()
+
+    assert '本周期从' in report['summary']
+    assert not any('narrative' in w for w in report['focus_windows'])
+
+
 if __name__ == '__main__':
     test_weekly_report_builds_focus_windows_from_repeated_signals()
     test_weekly_report_does_not_promote_single_event_to_focus_window()
     test_monthly_report_does_not_enable_weekly_focus_windows_by_default()
     test_monthly_trend_requires_cross_week_evidence_and_comparison()
     test_weekly_broad_window_keeps_out_of_scope_events_out()
+    test_weekly_narrative_overrides_mainline_when_llm_succeeds()
+    test_weekly_narrative_falls_back_to_template_when_llm_fails()
     print('period report tests passed')
