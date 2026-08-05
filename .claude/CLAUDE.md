@@ -4,12 +4,10 @@
 
 ## 核心架构
 
-- **数据采集**：`scripts/fetch_news.py` — RSS 并行采集 + HTML 降级 + 27家公司监控
-- **AI 分析管线**：GHA 直走豆包（跳过结构性不可达的 DeepSeek）；本地 DeepSeek 优先 → 豆包降级 → 程序降级
+- **数据采集**：`scripts/fetch_news.py` — RSS 并行采集 + HTML 降级 + 31 家公司监控
+- **AI 分析管线**：DeepSeek 主力（GHA 已可达）→ 豆包降级 → 程序降级；本周实际 68% 由 DeepSeek 完成
 - **评分前置分流**：`_calc_score()` 评分后，高分（≥7 或 funding/ma/earnings）走 AI，中分（≥4 或 is_company）程序生成，低分（<4）丢弃
 - **P0 Agent**：`build_daily_ai_summary()` 生成「今日判断」AI 趋势分析 → `data/summary.json` → HTML 读取；`rewrite_titles_for_display()` 改写程序层泛化描述；`ai_quality_judge()` 过滤低价值 other 事件
-- **API Key 加密**：`scripts/decrypt_key.py` — PBKDF2 + Fernet 解密本地加密的 API Key
-- **存量补跑**：`scripts/retrofit_events.py` — 扫描 events.json 中泛化描述事件，通过 AI 改写后写回（本地 DeepSeek / GHA 豆包自动切换）
 - **Feed 生成**：`generate_feed.py` — 复用 `generate_html.build_display_context()` 的看板最终事件卡片，只推高价值且解释完整事件 → `docs/feed.xml`（Atom XML），供外部 CLI 订阅
 - **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
 - **部署**：GitHub Actions + GitHub Pages（`docs/` 目录）
@@ -56,6 +54,6 @@
 
 ## 环境注意事项
 
-- **工作区位置**：`C:\Users\16120\Documents\claude-workspace\weekly-report-repo\`（不是 `C:\Users\16120\weekly-report-web\`，后者是过期的旧副本）
+- **工作区位置**：`D:\共享文件\AI协作工作区\01_工作文件区\weekly-report-repo\`（2026-08 确认的唯一真实仓库；C 盘 `Documents\claude-workspace\weekly-report-repo` 和 `weekly-report-web` 都是过期的旧副本，不要用）
 - **Python 路径**：`C:\Users\16120\AppData\Local\Python\bin\python`（WindowsApps 的 `python`/`python3` 是 Microsoft Store 重定向器，不可用）
 - **生成 HTML 命令**：`/c/Users/16120/AppData/Local/Python/bin/python scripts/generate_html.py --force`

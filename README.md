@@ -35,16 +35,8 @@ cd weekly-report
 ### 2. 配置 API Key
 
 ```bash
-# 方式一（推荐）：加密存储
-# 1. 创建 .env 文件
-cp .env.example .env
-# 2. 编辑 .env，填入你的 DeepSeek API Key
-# 3. 运行加密脚本（将 key 加密存储到 .env.encrypted）
-python scripts/encrypt_key.py
-
-# 方式二（开发调试）：直接使用 .env 文件
 # 编辑 .env 填入 DEEPSEEK_API_KEY=sk-xxx
-# fetch_news.py 会优先读取 .env
+# fetch_news.py 会通过 dotenv 优先读取 .env；GHA 中通过 Secrets 注入
 
 # DeepSeek 获取地址：https://platform.deepseek.com/
 # 豆包获取地址：https://console.volcengine.com/ark/
@@ -109,7 +101,7 @@ python scripts/generate_html.py --force
 | 层级 | 信源 | 用途 |
 |------|------|------|
 | L1 官方/IR源 | Rakuten、Grab、MercadoLibre、Adyen、Sea、Zalando、Allegro、Kaspi.kz、Naver、Kakao、HKTVmall、U-NEXT、Square Enix、Jumia | 校准重点客户自身披露，优先保留财报、公告、战略和新闻稿 |
-| L5 Google News 补漏源 | 30 家重点公司关键词 | 只做公司动态雷达，每家公司最多 2 条，默认不保留 `other` 类；中资公司只保留海外投资、跨境合作、海外市场和出海业务动向 |
+| L5 Google News 补漏源 | 31 家重点公司关键词 | 只做公司动态雷达，每家公司最多 2 条，默认不保留 `other` 类；中资公司只保留海外投资、跨境合作、海外市场和出海业务动向 |
 
 每条事件会写入 `source_tier`、`source_role`、`bd_triggers`、`opportunity_direction`、`follow_up_window`、`bd_priority`。日报用它们辅助判断“今天先看谁和哪些证据”，周报再收敛窗口和方向，月报看趋势与结构变化。
 
@@ -130,7 +122,7 @@ python scripts/generate_html.py --force
 ## 技术栈
 
 - **数据采集**：Python + aiohttp + BeautifulSoup（异步 RSS + HTML 降级采集）
-- **AI 分析**：评分前置分流 → DeepSeek API（本地主力，GHA 不可达）+ 豆包 API（GHA 实际主力）+ 程序降级
+- **AI 分析**：评分前置分流 → DeepSeek API（主力，GHA 可用）+ 豆包 API（降级）+ 程序降级
 - **API Key 安全**：PBKDF2 + Fernet 加密存储
 - **页面生成**：Jinja2 模板
 - **部署**：GitHub Actions + GitHub Pages
@@ -155,7 +147,6 @@ weekly-report/
 │   ├── source_conversion_report.py # 信源转化漏斗
 │   ├── entity_signal_conversion_report.py # 对象/观察点转化治理
 │   ├── template.html             # HTML 模板（设计 SSOT）
-│   ├── decrypt_key.py            # API Key 解密（PBKDF2 + Fernet）
 │   └── DESIGN_WORKFLOW.md        # 设计变更流程
 ├── docs/
 │   └── index.html                # 生成的页面

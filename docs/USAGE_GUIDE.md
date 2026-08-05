@@ -538,7 +538,7 @@ Google News 默认配置：
 
 ## 12. 踩过的坑与排障记录
 
-### DeepSeek 在 GitHub Actions 曾经结构性不可达
+### DeepSeek 在 GitHub Actions 曾经结构性不可达（已解决）
 
 症状：
 
@@ -549,11 +549,12 @@ Google News 默认配置：
 
 - GitHub Actions runner 到 `api.deepseek.com` 的网络不稳定或不可达。
 
-当前处理：
+处理（2026-08 已验证恢复）：
 
 - 当前逻辑是 DeepSeek 主力，失败后快速降级豆包。
 - 不再因为 DeepSeek 单点失败拖垮整轮采集。
 - Workflow 中会先检测 DeepSeek，再检测豆包。
+- 近 7 天实际 68% 事件由 DeepSeek 完成，豆包已回退为纯降级备用。
 
 ### 豆包 API 返回非 JSON
 
