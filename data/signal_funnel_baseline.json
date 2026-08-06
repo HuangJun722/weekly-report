@@ -1,0 +1,145 @@
+{
+  "end_date": "2026-08-05",
+  "days": 15,
+  "window_events": 497,
+  "pipeline": {
+    "raw": 143,
+    "unique": 141,
+    "scope_qualified": 78,
+    "smart_kept": 78,
+    "tier_kept": 70,
+    "analysis_events": 70,
+    "added": 16,
+    "scope_candidate": 29,
+    "scope_filtered": 34,
+    "score_dropped": 8
+  },
+  "pipeline_runs": 1,
+  "pipeline_date": "2026-08-05",
+  "totals": {
+    "pool": 497,
+    "signal": 496,
+    "scope_explicit": 151,
+    "main": 212,
+    "review": 48,
+    "drop": 237,
+    "main_trend_sum": 6714.0,
+    "trend_sum": 15554.0,
+    "trend_avg": 31.295774647887324,
+    "main_rate": 0.42655935613682094
+  },
+  "rows": [
+    {
+      "content_type": "industry_report",
+      "pool": 1,
+      "signal": 1,
+      "scope_explicit": 1,
+      "main": 0,
+      "review": 0,
+      "drop": 1,
+      "signal_rate": 1.0,
+      "main_rate": 0.0,
+      "trend_sum": 50.0,
+      "trend_avg": 50.0,
+      "main_trend_sum": 0.0,
+      "top_drop_reason": "out_of_scope_industry",
+      "drop_reasons": {
+        "out_of_scope_industry": 1
+      }
+    },
+    {
+      "content_type": "regional_policy",
+      "pool": 14,
+      "signal": 14,
+      "scope_explicit": 14,
+      "main": 5,
+      "review": 0,
+      "drop": 9,
+      "signal_rate": 1.0,
+      "main_rate": 0.35714285714285715,
+      "trend_sum": 720.0,
+      "trend_avg": 51.42857142857143,
+      "main_trend_sum": 250.0,
+      "top_drop_reason": "out_of_scope_industry",
+      "drop_reasons": {
+        "out_of_scope_industry": 5,
+        "quality_review": 4
+      }
+    },
+    {
+      "content_type": "company_action",
+      "pool": 81,
+      "signal": 80,
+      "scope_explicit": 19,
+      "main": 27,
+      "review": 0,
+      "drop": 54,
+      "signal_rate": 0.9876543209876543,
+      "main_rate": 0.3333333333333333,
+      "trend_sum": 2272.0,
+      "trend_avg": 28.049382716049383,
+      "main_trend_sum": 744.0,
+      "top_drop_reason": "out_of_scope_industry",
+      "drop_reasons": {
+        "quality_review": 24,
+        "out_of_scope_industry": 30
+      }
+    },
+    {
+      "content_type": "capital_event",
+      "pool": 330,
+      "signal": 330,
+      "scope_explicit": 60,
+      "main": 171,
+      "review": 16,
+      "drop": 143,
+      "signal_rate": 1.0,
+      "main_rate": 0.5181818181818182,
+      "trend_sum": 9690.0,
+      "trend_avg": 29.363636363636363,
+      "main_trend_sum": 5382.0,
+      "top_drop_reason": "out_of_scope_industry",
+      "drop_reasons": {
+        "out_of_scope_industry": 92,
+        "quality_review": 6,
+        "weak_signal": 19,
+        "google_not_main": 17,
+        "capital_only_low_actionability": 9
+      }
+    },
+    {
+      "content_type": "generic_industry_change",
+      "pool": 71,
+      "signal": 71,
+      "scope_explicit": 57,
+      "main": 9,
+      "review": 32,
+      "drop": 30,
+      "signal_rate": 1.0,
+      "main_rate": 0.1267605633802817,
+      "trend_sum": 2822.0,
+      "trend_avg": 39.74647887323944,
+      "main_trend_sum": 338.0,
+      "top_drop_reason": "out_of_scope_industry",
+      "drop_reasons": {
+        "out_of_scope_industry": 30
+      }
+    },
+    {
+      "content_type": "model_release",
+      "pool": 0,
+      "signal": 0,
+      "scope_explicit": 0,
+      "main": 0,
+      "review": 0,
+      "drop": 0,
+      "signal_rate": 0,
+      "main_rate": 0,
+      "trend_sum": 0.0,
+      "trend_avg": 0,
+      "main_trend_sum": 0.0,
+      "top_drop_reason": "",
+      "drop_reasons": {}
+    }
+  ]
+}

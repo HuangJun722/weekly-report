@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 try:
     from collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from daily_coverage_report import build_daily_coverage_report
+    from event_contract import prepare_event_contract
     from event_dates import is_display_date
     from generate_html import build_company_cards, build_display_context
     from run_metrics import latest_run_metrics
@@ -22,6 +23,7 @@ try:
 except ImportError:
     from scripts.collection_timing_report import build_collection_timing_rows, print_collection_timing_report
     from scripts.daily_coverage_report import build_daily_coverage_report
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_dates import is_display_date
     from scripts.generate_html import build_company_cards, build_display_context
     from scripts.run_metrics import latest_run_metrics
@@ -72,12 +74,13 @@ def _duplicate_ratio(events):
     return duplicate_items / len(keys), duplicate_items
 
 
-def _future_event_count(path='data/events.json', now=None):
-    try:
-        with open(path, encoding='utf-8') as handle:
-            data = json.load(handle)
-    except (OSError, json.JSONDecodeError):
-        return 0
+def _future_event_count(path='data/events.json', now=None, data=None):
+    if data is None:
+        try:
+            with open(path, encoding='utf-8') as handle:
+                data = json.load(handle)
+        except (OSError, json.JSONDecodeError):
+            return 0
     count = 0
     for bucket, events in (data or {}).items():
         for event in events or []:
@@ -85,6 +88,22 @@ def _future_event_count(path='data/events.json', now=None):
             if value and not is_display_date(value, now=now or datetime.now().astimezone()):
                 count += 1
     return count
+
+
+def _load_prepared_events(path='data/events.json'):
+    """Load full events.json and prepare every event once for shared reuse.
+
+    Unlike load_events() (display window, filtered by is_display_date), this
+    keeps all dates so reports counting stored events see the full set.
+    """
+    with open(path, encoding='utf-8') as handle:
+        data = json.load(handle)
+    if isinstance(data, list):
+        return [prepare_event_contract(dict(event)) for event in data]
+    return {
+        date_key: [prepare_event_contract(dict(event)) for event in events or []]
+        for date_key, events in data.items()
+    }
 
 
 def _load_json(path, default):
@@ -161,7 +180,7 @@ def build_quick_health_report(
     return {
         'latest_data_date': latest_data_date,
         'latest_bucket_events': len(events.get(latest_data_date) or []) if latest_data_date else 0,
-        'future_event_count': _future_event_count(events_path, now=now),
+        'future_event_count': _future_event_count(events_path, now=now, data=events),
         'run_metrics': latest_metrics,
         'run_date': latest_metrics.get('date') or '',
         'scope_qualified': filtering.get('scope_qualified_count', 0),
@@ -233,10 +252,11 @@ def build_health_report(days=7):
     feed_google_ratio = feed_google / len(feed_events) if feed_events else 0.0
     run_metrics = latest_run_metrics()
     collection_timing = build_collection_timing_rows(limit=8)
-    source_report = build_source_quality_report(days=days)
-    source_conversion = build_source_conversion_report(days=days)
-    daily_coverage = build_daily_coverage_report(days=days)
-    future_event_count = _future_event_count()
+    source_report = build_source_quality_report(days=days, context=context)
+    all_events = _load_prepared_events()
+    source_conversion = build_source_conversion_report(days=days, events=all_events)
+    daily_coverage = build_daily_coverage_report(days=days, events=all_events)
+    future_event_count = _future_event_count(data=all_events)
     observation_health = _observation_health(
         context.get('entity_observation_ledger') or {},
         _load_json('data/entity_pool.json', {}),

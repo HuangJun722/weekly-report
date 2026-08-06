@@ -6,11 +6,11 @@ from datetime import datetime, timedelta
 
 try:
     from evidence_atoms import build_evidence_atoms, can_promote_to_narrative, evidence_independence
-    from event_value import classify_bd_priority, event_score, event_type, is_google_news_event
+    from event_value import classify_bd_priority, event_score, event_type, is_google_news_event, signal_score
     from internet_relevance import is_mainline_internet_event
 except ImportError:
     from scripts.evidence_atoms import build_evidence_atoms, can_promote_to_narrative, evidence_independence
-    from scripts.event_value import classify_bd_priority, event_score, event_type, is_google_news_event
+    from scripts.event_value import classify_bd_priority, event_score, event_type, is_google_news_event, signal_score
     from scripts.internet_relevance import is_mainline_internet_event
 
 
@@ -79,10 +79,17 @@ def _eligible(events):
     ]
 
 
+def _avg_trend_weight(events):
+    if not events:
+        return 0
+    return sum(signal_score(event, 'trend_weight') for event in events) // len(events)
+
+
 def _event_rank(event):
     return (
         {'高': 3, '中': 2, '观察': 1}.get(classify_bd_priority(event), 0),
         event_score(event),
+        signal_score(event, 'trend_weight'),
         (event.get('date') or '')[:10],
     )
 
@@ -139,7 +146,7 @@ def build_weekly_themes(events, entity_regions=None, limit=6):
             'action': '继续跟踪对象动作和第二来源确认',
             'why': f'{why}。本周由 {stats["atom_count"]} 个独立事实支持。',
             'evidence': [_evidence(event) for event in representatives[:4]],
-            'score': stats['atom_count'] * 4 + stats['source_count'] * 2 + stats['company_count'],
+            'score': stats['atom_count'] * 4 + stats['source_count'] * 2 + stats['company_count'] + _avg_trend_weight(grouped_events) // 10,
         })
     themes.sort(key=lambda row: row['score'], reverse=True)
     return themes[:limit]
@@ -199,7 +206,7 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
             'previous_count': previous_count,
             'summary': f'本月在 {len(weeks)} 个周次持续出现，共 {current_count} 个独立事实；{comparison}。',
             'evidence': [_evidence(event) for event in representatives[:4]],
-            'score': current_count * 4 + len(weeks) * 3 + max(delta, 0),
+            'score': current_count * 4 + len(weeks) * 3 + max(delta, 0) + _avg_trend_weight(grouped_events) // 10,
         })
     trends.sort(key=lambda row: row['score'], reverse=True)
     return trends[:limit]

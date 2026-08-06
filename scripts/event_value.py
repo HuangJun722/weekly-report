@@ -5,6 +5,7 @@ synonym for "funding/MA-shaped title".
 """
 
 import re
+from functools import lru_cache
 
 
 STRONG_EVENT_TYPES = {
@@ -116,11 +117,19 @@ def is_low_signal_google_news(event):
     return any(term in text for term in GOOGLE_NEWS_LOW_SIGNAL_TERMS)
 
 
+@lru_cache(maxsize=None)
+def _term_matcher(term):
+    lowered = term.lower()
+    if re.search(r'[a-z0-9]', lowered):
+        return re.compile(rf'(?<![a-z0-9]){re.escape(lowered)}(?![a-z0-9])'), None
+    return None, lowered
+
+
 def _contains_term(text, term):
-    term = term.lower()
-    if re.search(r'[a-z0-9]', term):
-        return bool(re.search(rf'(?<![a-z0-9]){re.escape(term)}(?![a-z0-9])', text))
-    return term in text
+    pattern, lowered = _term_matcher(term)
+    if pattern is None:
+        return lowered in text
+    return bool(pattern.search(text))
 
 
 def _funding_fact_text(event):

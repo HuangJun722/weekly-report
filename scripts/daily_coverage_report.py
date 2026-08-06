@@ -131,8 +131,11 @@ def _coverage_action(row):
     return 'observe'
 
 
-def build_daily_coverage_report(days=15, events_path='data/events.json'):
-    events = [prepare_event_contract(event) for event in _flatten_events(_load_json(events_path))]
+def build_daily_coverage_report(days=15, events_path='data/events.json', events=None):
+    if events is None:
+        events = [prepare_event_contract(event) for event in _flatten_events(_load_json(events_path))]
+    else:
+        events = _flatten_events(events)
     dates = sorted({_event_date(event) for event in events if _event_date(event)})
     end_date = dates[-1] if dates else ''
     selected_dates = _period_dates(end_date, days)

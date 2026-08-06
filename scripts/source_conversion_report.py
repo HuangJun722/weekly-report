@@ -198,10 +198,11 @@ def _add_run_stats(rows, metrics, selected_dates):
     return selected_runs
 
 
-def _add_event_stats(rows, events, selected_dates, aliases):
+def _add_event_stats(rows, events, selected_dates, aliases, prepared=False):
     selected_events = []
     for event in events:
-        event = prepare_event_contract(dict(event))
+        if not prepared:
+            event = prepare_event_contract(dict(event))
         date_key = _event_date(event)
         if date_key not in selected_dates:
             continue
@@ -313,12 +314,17 @@ def _build_governance_actions(rows, limit_per_action=8):
     return result
 
 
-def build_source_conversion_report(days=7, git_ref=None):
-    events_data = _load_json('data/events.json', git_ref)
+def build_source_conversion_report(days=7, git_ref=None, events=None):
+    if events is None:
+        events_data = _load_json('data/events.json', git_ref)
+        events = _flatten_events(events_data)
+        prepared = False
+    else:
+        events = _flatten_events(events)
+        prepared = True
     metrics = _load_json('data/run_metrics.json', git_ref)
     registry = _load_json('data/source_registry.json', git_ref)
 
-    events = _flatten_events(events_data)
     event_dates = sorted({_event_date(event) for event in events if _event_date(event)})
     run_dates = sorted({_run_date(run) for run in (metrics if isinstance(metrics, list) else []) if _run_date(run)})
     end_date = (event_dates or run_dates or [''])[-1]
@@ -327,7 +333,7 @@ def build_source_conversion_report(days=7, git_ref=None):
     rows = defaultdict(lambda: _empty_row(''))
 
     selected_runs = _add_run_stats(rows, metrics, selected_dates)
-    selected_events = _add_event_stats(rows, events, selected_dates, aliases)
+    selected_events = _add_event_stats(rows, events, selected_dates, aliases, prepared=prepared)
     for source in registry.get('sources') or []:
         name = source.get('name') or source.get('id') or ''
         if name and name not in rows:

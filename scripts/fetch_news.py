@@ -58,6 +58,8 @@ except ImportError:
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/122.0 Safari/537.36',
+    'Accept': 'application/rss+xml,application/atom+xml,application/xml;q=0.9,text/html;q=0.8,*/*;q=0.7',
+    'Accept-Language': 'en-US,en;q=0.9',
     'Referer': 'https://www.google.com/',
 }
 
@@ -557,6 +559,7 @@ REGISTRY_ROLE_MAP = {
     'changelog': 'developer_change',
     'developer_changelog': 'developer_change',
     'engineering_blog': 'industry_vertical',
+    'research_report': 'industry_vertical',
     'industry_media': 'industry_vertical',
     'media': 'regional_ecosystem',
 }
@@ -588,6 +591,9 @@ def _registry_source_to_cfg(src):
         'scope_regions': src.get('scope_regions') or [],
     }
     for key in ('company_name', 'is_company', 'include_url_patterns', 'allowed_scope_layers'):
+        if key in src:
+            cfg[key] = src[key]
+    for key in ('access_level', 'report_access_level', 'methodology_visibility', 'report_methodology_visible'):
         if key in src:
             cfg[key] = src[key]
     if (
@@ -1342,7 +1348,6 @@ HTML_SOURCES = [
     # e27：Angular JS + Cloudflare 双层保护，RSS + HTML 均无法采集，已移除
     # 官方/IR源：用于校准重点客户自身披露，低频但高可信
     {'name': 'Rakuten IR', 'url': 'https://global.rakuten.com/corp/news/press/?category=ir', 'source': 'Rakuten Group', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Rakuten', 'is_company': True, 'max': 4},
-    {'name': 'Grab IR', 'url': 'https://investors.grab.com/news-releases', 'source': 'Grab Holdings', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Grab', 'is_company': True, 'max': 4},
     {'name': 'MercadoLibre IR', 'url': 'https://investor.mercadolibre.com/news-and-events', 'source': 'MercadoLibre', 'region': '拉美', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'MercadoLibre', 'is_company': True, 'max': 4},
     {'name': 'Adyen IR', 'url': 'https://www.adyen.com/press-and-media', 'source': 'Adyen', 'region': '欧洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Adyen', 'is_company': True, 'max': 4},
     {'name': 'Sea Newsroom', 'url': 'https://www.sea.com/media/news', 'source': 'Sea Limited', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Sea Limited', 'is_company': True, 'max': 4},

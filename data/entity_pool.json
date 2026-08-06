@@ -78,7 +78,7 @@
       "sector": "mobility_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://investors.grab.com/news-releases", "source_id": "grab-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
+        {"type": "ir", "url": "https://www.grab.com/sg/press/feed/", "source_id": "grab-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
         {"type": "jobs", "url": "https://www.grab.careers/en/jobs/", "source_id": "grab-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "expansion", "org_change"]},
         {"type": "product_update", "url": "https://www.grab.com/sg/press/", "status": "active", "instrumented": true, "expected_signals": ["partnership", "merchant_product", "payment"]}
       ]
@@ -105,7 +105,7 @@
       "priority": "core",
       "observation_points": [
         {"type": "newsroom", "url": "https://www.sea.com/media/news", "source_id": "sea-newsroom", "status": "active", "instrumented": true, "expected_signals": ["earnings", "commerce", "gaming"]},
-        {"type": "product_update", "url": "https://newsroom.shopee.com/", "status": "active", "instrumented": false, "expected_signals": ["commerce", "logistics", "ads"]},
+        {"type": "product_update", "url": "https://newsroom.shopee.com/", "status": "paused", "instrumented": false, "expected_signals": ["commerce", "logistics", "ads"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]}
       ]
     },
@@ -234,7 +234,7 @@
       "sector": "mobility_super_app",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.careem.com/newsroom/", "status": "active", "instrumented": false, "expected_signals": ["partnership", "payment", "merchant_product"]},
+        {"type": "newsroom", "url": "https://www.careem.com/newsroom/", "status": "paused", "instrumented": false, "expected_signals": ["partnership", "payment", "merchant_product"]},
         {"type": "jobs", "url": "https://jobs.careem.com/", "status": "candidate", "instrumented": false, "adapter_status": "pending_dynamic_adapter", "expected_signals": ["hiring", "expansion"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["super_app", "payment"]}
       ]

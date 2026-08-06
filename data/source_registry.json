@@ -48,15 +48,67 @@
     "weekly_digest": "周报、简报、newsletter、二次沉淀"
   },
   "signal_taxonomy": {
-    "expansion": ["country", "partner", "localization", "regional_launch"],
-    "partnership": ["strategic_partner", "ecosystem", "channel", "joint_solution"],
-    "payment": ["acquiring", "wallet", "remittance", "bnpl", "checkout", "risk"],
-    "commerce": ["seller", "merchant", "logistics", "fulfillment", "ads", "marketplace"],
-    "ai_infra": ["agent", "model", "inference", "gpu", "cloud", "datacenter"],
-    "developer_change": ["api", "sdk", "release_note", "platform_policy"],
-    "capital": ["funding", "ma", "earnings", "ipo", "strategic_investment"],
-    "org_change": ["hiring", "layoffs", "executive", "reorg"],
-    "compliance": ["license", "regulation", "policy", "antitrust"]
+    "expansion": [
+      "country",
+      "partner",
+      "localization",
+      "regional_launch"
+    ],
+    "partnership": [
+      "strategic_partner",
+      "ecosystem",
+      "channel",
+      "joint_solution"
+    ],
+    "payment": [
+      "acquiring",
+      "wallet",
+      "remittance",
+      "bnpl",
+      "checkout",
+      "risk"
+    ],
+    "commerce": [
+      "seller",
+      "merchant",
+      "logistics",
+      "fulfillment",
+      "ads",
+      "marketplace"
+    ],
+    "ai_infra": [
+      "agent",
+      "model",
+      "inference",
+      "gpu",
+      "cloud",
+      "datacenter"
+    ],
+    "developer_change": [
+      "api",
+      "sdk",
+      "release_note",
+      "platform_policy"
+    ],
+    "capital": [
+      "funding",
+      "ma",
+      "earnings",
+      "ipo",
+      "strategic_investment"
+    ],
+    "org_change": [
+      "hiring",
+      "layoffs",
+      "executive",
+      "reorg"
+    ],
+    "compliance": [
+      "license",
+      "regulation",
+      "policy",
+      "antitrust"
+    ]
   },
   "sources": [
     {
@@ -69,7 +121,11 @@
       "access_method": "html",
       "region": "亚太",
       "track": "东南亚本地生活/支付",
-      "signal_types": ["official_disclosure", "payment_infra", "merchant_product"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "merchant_product"
+      ],
       "entity_focus": "company",
       "credibility_score": 9,
       "signal_density": "high",
@@ -93,7 +149,11 @@
       "access_method": "html",
       "region": "亚太",
       "track": "印尼平台生态/金融",
-      "signal_types": ["official_disclosure", "payment_infra", "merchant_product"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "merchant_product"
+      ],
       "entity_focus": "company",
       "credibility_score": 9,
       "signal_density": "high",
@@ -111,13 +171,17 @@
       "id": "shopee-newsroom",
       "name": "Shopee Newsroom",
       "url": "https://newsroom.shopee.com/",
-      "status": "active",
+      "status": "paused",
       "tier": "L1",
       "source_type": "newsroom",
       "access_method": "html",
       "region": "亚太",
       "track": "东南亚电商/物流",
-      "signal_types": ["official_disclosure", "merchant_product", "marketplace_policy"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product",
+        "marketplace_policy"
+      ],
       "entity_focus": "commerce",
       "credibility_score": 9,
       "signal_density": "high",
@@ -141,7 +205,11 @@
       "access_method": "html",
       "region": "亚太",
       "track": "OTA/本地消费",
-      "signal_types": ["official_disclosure", "merchant_product", "regional_ecosystem"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product",
+        "regional_ecosystem"
+      ],
       "entity_focus": "company",
       "credibility_score": 9,
       "signal_density": "medium",
@@ -159,13 +227,17 @@
       "id": "careem-newsroom",
       "name": "Careem Newsroom",
       "url": "https://www.careem.com/newsroom/",
-      "status": "active",
+      "status": "paused",
       "tier": "L1",
       "source_type": "newsroom",
       "access_method": "html",
       "region": "中东",
       "track": "中东本地服务/支付",
-      "signal_types": ["official_disclosure", "payment_infra", "merchant_product"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "merchant_product"
+      ],
       "entity_focus": "company",
       "credibility_score": 9,
       "signal_density": "high",
@@ -189,7 +261,11 @@
       "access_method": "html",
       "region": "中东",
       "track": "BNPL/支付",
-      "signal_types": ["official_disclosure", "payment_infra", "merchant_product"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "merchant_product"
+      ],
       "entity_focus": "fintech",
       "credibility_score": 8,
       "signal_density": "medium",
@@ -213,7 +289,12 @@
       "access_method": "html",
       "region": "拉美",
       "track": "拉美电商/支付",
-      "signal_types": ["official_disclosure", "payment_infra", "merchant_product", "marketplace_policy"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "merchant_product",
+        "marketplace_policy"
+      ],
       "entity_focus": "commerce",
       "credibility_score": 9,
       "signal_density": "high",
@@ -237,7 +318,11 @@
       "access_method": "html",
       "region": "拉美",
       "track": "跨境支付",
-      "signal_types": ["official_disclosure", "payment_infra", "funding_deal"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "funding_deal"
+      ],
       "entity_focus": "fintech",
       "credibility_score": 9,
       "signal_density": "high",
@@ -261,7 +346,11 @@
       "access_method": "html",
       "region": "非洲",
       "track": "非洲支付",
-      "signal_types": ["official_disclosure", "payment_infra", "merchant_product"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra",
+        "merchant_product"
+      ],
       "entity_focus": "fintech",
       "credibility_score": 8,
       "signal_density": "medium",
@@ -285,7 +374,10 @@
       "access_method": "html",
       "region": "全球",
       "track": "支付开发者生态",
-      "signal_types": ["developer_change", "payment_infra"],
+      "signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
       "entity_focus": "fintech",
       "credibility_score": 10,
       "signal_density": "high",
@@ -307,7 +399,10 @@
       "access_method": "html",
       "region": "全球",
       "track": "AI infra/边缘云",
-      "signal_types": ["developer_change", "payment_infra"],
+      "signal_types": [
+        "developer_change",
+        "payment_infra"
+      ],
       "entity_focus": "infra",
       "credibility_score": 10,
       "signal_density": "high",
@@ -329,7 +424,11 @@
       "access_method": "html",
       "region": "全球",
       "track": "电商开发者生态",
-      "signal_types": ["developer_change", "merchant_product", "marketplace_policy"],
+      "signal_types": [
+        "developer_change",
+        "merchant_product",
+        "marketplace_policy"
+      ],
       "entity_focus": "commerce",
       "credibility_score": 10,
       "signal_density": "high",
@@ -351,14 +450,26 @@
       "access_method": "rss",
       "region": "全球",
       "track": "电商/零售",
-      "signal_types": ["merchant_product", "marketplace_policy", "industry_analysis"],
+      "signal_types": [
+        "merchant_product",
+        "marketplace_policy",
+        "industry_analysis"
+      ],
       "entity_focus": "commerce",
       "credibility_score": 7,
       "signal_density": "medium",
       "noise_level": "medium",
-      "scope_industries": ["commerce"],
-      "scope_regions": ["全球"],
-      "allowed_scope_layers": ["regional_policy", "industry_change", "company_action"],
+      "scope_industries": [
+        "commerce"
+      ],
+      "scope_regions": [
+        "全球"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
       "freshness_speed": "same_day",
       "dedupe_strategy": "semantic",
       "crawl_cost": "low",
@@ -369,15 +480,21 @@
     {
       "id": "grab-ir",
       "name": "Grab IR",
-      "url": "https://investors.grab.com/news-releases",
+      "url": "https://www.grab.com/sg/press/feed/",
       "status": "active",
       "tier": "L1",
       "source_type": "ir",
-      "access_method": "html",
+      "access_method": "rss",
       "region": "亚太",
       "track": "东南亚本地生活与支付",
-      "signal_types": ["official_disclosure", "payment_infra"],
-      "scope_industries": ["payments", "local_services_logistics"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra"
+      ],
+      "scope_industries": [
+        "payments",
+        "local_services_logistics"
+      ],
       "company_name": "Grab"
     },
     {
@@ -390,8 +507,15 @@
       "access_method": "html",
       "region": "亚太",
       "track": "东南亚电商、支付与游戏",
-      "signal_types": ["official_disclosure", "merchant_product"],
-      "scope_industries": ["commerce", "payments", "gaming_content"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product"
+      ],
+      "scope_industries": [
+        "commerce",
+        "payments",
+        "gaming_content"
+      ],
       "company_name": "Sea Limited"
     },
     {
@@ -404,8 +528,14 @@
       "access_method": "html",
       "region": "亚太",
       "track": "东亚 AI、云与平台生态",
-      "signal_types": ["official_disclosure", "developer_change"],
-      "scope_industries": ["ai_infra", "cloud_saas_developer"],
+      "signal_types": [
+        "official_disclosure",
+        "developer_change"
+      ],
+      "scope_industries": [
+        "ai_infra",
+        "cloud_saas_developer"
+      ],
       "company_name": "Naver"
     },
     {
@@ -418,8 +548,15 @@
       "access_method": "html",
       "region": "拉美",
       "track": "拉美电商、物流与支付",
-      "signal_types": ["official_disclosure", "merchant_product", "payment_infra"],
-      "scope_industries": ["commerce", "payments"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product",
+        "payment_infra"
+      ],
+      "scope_industries": [
+        "commerce",
+        "payments"
+      ],
       "company_name": "MercadoLibre"
     },
     {
@@ -432,8 +569,13 @@
       "access_method": "html",
       "region": "欧洲",
       "track": "欧洲企业支付与合规",
-      "signal_types": ["official_disclosure", "payment_infra"],
-      "scope_industries": ["payments"],
+      "signal_types": [
+        "official_disclosure",
+        "payment_infra"
+      ],
+      "scope_industries": [
+        "payments"
+      ],
       "company_name": "Adyen"
     },
     {
@@ -446,8 +588,16 @@
       "access_method": "html",
       "region": "非洲",
       "track": "非洲电商、支付与物流",
-      "signal_types": ["official_disclosure", "merchant_product", "payment_infra"],
-      "scope_industries": ["commerce", "payments", "local_services_logistics"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product",
+        "payment_infra"
+      ],
+      "scope_industries": [
+        "commerce",
+        "payments",
+        "local_services_logistics"
+      ],
       "company_name": "Jumia"
     },
     {
@@ -460,20 +610,83 @@
       "access_method": "rss",
       "region": "全球",
       "track": "支付",
-      "signal_types": ["payment_infra", "industry_analysis"],
+      "signal_types": [
+        "payment_infra",
+        "industry_analysis"
+      ],
       "entity_focus": "fintech",
       "credibility_score": 7,
       "signal_density": "medium",
       "noise_level": "medium",
-      "scope_industries": ["payments"],
-      "scope_regions": ["全球"],
-      "allowed_scope_layers": ["regional_policy", "industry_change", "company_action"],
+      "scope_industries": [
+        "payments"
+      ],
+      "scope_regions": [
+        "全球"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
       "freshness_speed": "same_day",
       "dedupe_strategy": "semantic",
       "crawl_cost": "low",
       "anti_bot_risk": "low",
       "priority": 2,
       "max": 3
+    },
+    {
+      "id": "e27-research",
+      "name": "e27 东南亚科技产业分析",
+      "url": "https://e27.co/feed/",
+      "status": "active",
+      "tier": "L4",
+      "source_type": "research_report",
+      "access_method": "rss",
+      "region": "东南亚",
+      "track": "区域科技与AI",
+      "signal_types": [
+        "industry_analysis",
+        "regional_ecosystem",
+        "funding_deal"
+      ],
+      "entity_focus": "ai",
+      "credibility_score": 7,
+      "signal_density": "medium",
+      "noise_level": "medium",
+      "scope_industries": [
+        "ai",
+        "fintech",
+        "commerce"
+      ],
+      "scope_regions": [
+        "东南亚",
+        "亚太"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "research_institution",
+      "authority_domains": [
+        "市场规模",
+        "产业分析",
+        "区域趋势"
+      ],
+      "claim_roles": [
+        "institutional_assessment"
+      ],
+      "access_level": "open",
+      "methodology_visibility": "visible",
+      "report_methodology_visible": true,
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "medium",
+      "priority": 2,
+      "max": 4
     }
   ],
   "active_sources": [
@@ -483,7 +696,9 @@
       "status": "active",
       "tier": "L2",
       "track": "全球融资",
-      "signal_types": ["funding_deal"],
+      "signal_types": [
+        "funding_deal"
+      ],
       "quality_note": "融资密度高，但泛创业噪声仍需按金额、赛道和区域筛选。"
     },
     {
@@ -492,7 +707,10 @@
       "status": "active",
       "tier": "L2",
       "track": "欧洲融资与科技生态",
-      "signal_types": ["funding_deal", "regional_ecosystem"],
+      "signal_types": [
+        "funding_deal",
+        "regional_ecosystem"
+      ],
       "quality_note": "欧洲交易和政策信号较稳定。"
     },
     {
@@ -501,7 +719,10 @@
       "status": "active",
       "tier": "L2",
       "track": "印度互联网与创业生态",
-      "signal_types": ["funding_deal", "regional_ecosystem"],
+      "signal_types": [
+        "funding_deal",
+        "regional_ecosystem"
+      ],
       "quality_note": "印度公司财报、融资和监管信号密集，但上市公司短线行情需过滤。"
     },
     {
@@ -510,7 +731,10 @@
       "status": "active",
       "tier": "L4",
       "track": "支付",
-      "signal_types": ["payment_infra", "industry_analysis"],
+      "signal_types": [
+        "payment_infra",
+        "industry_analysis"
+      ],
       "quality_note": "支付基础设施和银行科技信号较强。"
     },
     {
@@ -519,7 +743,10 @@
       "status": "active",
       "tier": "L4",
       "track": "支付",
-      "signal_types": ["payment_infra", "merchant_product"],
+      "signal_types": [
+        "payment_infra",
+        "merchant_product"
+      ],
       "quality_note": "适合观察支付网络、收单和监管变化。"
     },
     {
@@ -528,7 +755,10 @@
       "status": "active",
       "tier": "L4",
       "track": "零售与电商",
-      "signal_types": ["merchant_product", "marketplace_policy"],
+      "signal_types": [
+        "merchant_product",
+        "marketplace_policy"
+      ],
       "quality_note": "零售行业动作较多，需避免传统零售财务噪声。"
     },
     {
@@ -537,7 +767,10 @@
       "status": "active",
       "tier": "L4",
       "track": "社交平台与广告",
-      "signal_types": ["ads_monetization", "marketplace_policy"],
+      "signal_types": [
+        "ads_monetization",
+        "marketplace_policy"
+      ],
       "quality_note": "适合替代直接抓 X/Twitter 的二次沉淀源。"
     },
     {
@@ -546,7 +779,11 @@
       "status": "active",
       "tier": "L1",
       "track": "香港电商与本地零售",
-      "signal_types": ["official_disclosure", "merchant_product", "marketplace_policy"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product",
+        "marketplace_policy"
+      ],
       "quality_note": "官方披露入口，适合跟踪 HKTVmall 与 Hong Kong Technology Venture 的业务调整。"
     },
     {
@@ -555,7 +792,11 @@
       "status": "active",
       "tier": "L1",
       "track": "日本流媒体与数字内容",
-      "signal_types": ["official_disclosure", "merchant_product", "ads_monetization"],
+      "signal_types": [
+        "official_disclosure",
+        "merchant_product",
+        "ads_monetization"
+      ],
       "quality_note": "官方新闻入口，日文页面需靠标题信号过滤，避免普通活动公告。"
     },
     {
@@ -564,7 +805,11 @@
       "status": "active",
       "tier": "L1",
       "track": "日本游戏与数字娱乐",
-      "signal_types": ["official_disclosure", "funding_deal", "marketplace_policy"],
+      "signal_types": [
+        "official_disclosure",
+        "funding_deal",
+        "marketplace_policy"
+      ],
       "quality_note": "英文 IR 入口，适合跟踪财报、资本动作和全球发行战略。"
     },
     {
@@ -577,7 +822,11 @@
       "access_method": "html_snapshot",
       "region": "亚太",
       "track": "东南亚本地生活与支付组织投入",
-      "signal_types": ["hiring", "expansion", "org_change"],
+      "signal_types": [
+        "hiring",
+        "expansion",
+        "org_change"
+      ],
       "company_name": "Grab",
       "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
     },
@@ -591,7 +840,11 @@
       "access_method": "html_snapshot",
       "region": "全球",
       "track": "支付开发者平台组织投入",
-      "signal_types": ["hiring", "regional_launch", "org_change"],
+      "signal_types": [
+        "hiring",
+        "regional_launch",
+        "org_change"
+      ],
       "company_name": "Stripe",
       "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
     },
@@ -605,7 +858,12 @@
       "access_method": "html_snapshot",
       "region": "全球",
       "track": "电商平台、支付与合作伙伴生态组织投入",
-      "signal_types": ["hiring", "ai", "commerce", "partnership"],
+      "signal_types": [
+        "hiring",
+        "ai",
+        "commerce",
+        "partnership"
+      ],
       "company_name": "Shopify",
       "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
     }
@@ -614,63 +872,91 @@
     {
       "name": "The Paypers",
       "track": "支付",
-      "signal_types": ["payment_infra", "industry_analysis"],
+      "signal_types": [
+        "payment_infra",
+        "industry_analysis"
+      ],
       "status": "candidate",
       "next_check": "验证 RSS/页面可抓取性和近 10 条样本质量"
     },
     {
       "name": "PYMNTS",
       "track": "支付与商户",
-      "signal_types": ["payment_infra", "merchant_product"],
+      "signal_types": [
+        "payment_infra",
+        "merchant_product"
+      ],
       "status": "candidate",
       "next_check": "验证是否有稳定 RSS，评估广告/赞助稿噪声"
     },
     {
       "name": "Marketplace Pulse",
       "track": "电商与 marketplace",
-      "signal_types": ["marketplace_policy", "industry_analysis"],
+      "signal_types": [
+        "marketplace_policy",
+        "industry_analysis"
+      ],
       "status": "candidate",
       "next_check": "验证公开文章更新频率和抓取稳定性"
     },
     {
       "name": "Mobile Dev Memo",
       "track": "移动广告与 app economy",
-      "signal_types": ["ads_monetization", "industry_analysis", "weekly_digest"],
+      "signal_types": [
+        "ads_monetization",
+        "industry_analysis",
+        "weekly_digest"
+      ],
       "status": "candidate",
       "next_check": "验证 newsletter/RSS 可抓取性"
     },
     {
       "name": "AdExchanger",
       "track": "广告技术",
-      "signal_types": ["ads_monetization", "industry_analysis"],
+      "signal_types": [
+        "ads_monetization",
+        "industry_analysis"
+      ],
       "status": "candidate",
       "next_check": "评估广告技术信号和非互联网客户噪声"
     },
     {
       "name": "GameDiscoverCo",
       "track": "游戏与发行",
-      "signal_types": ["industry_analysis", "weekly_digest"],
+      "signal_types": [
+        "industry_analysis",
+        "weekly_digest"
+      ],
       "status": "candidate",
       "next_check": "验证 newsletter 摘要是否适合低频采集"
     },
     {
       "name": "CB Insights Research",
       "track": "市场地图与产业分析",
-      "signal_types": ["industry_analysis"],
+      "signal_types": [
+        "industry_analysis"
+      ],
       "status": "candidate",
       "next_check": "只取免费公开内容，避免付费墙"
     },
     {
       "name": "Stripe Newsroom / Docs changelog",
       "track": "支付与开发者生态",
-      "signal_types": ["official_disclosure", "developer_change", "payment_infra"],
+      "signal_types": [
+        "official_disclosure",
+        "developer_change",
+        "payment_infra"
+      ],
       "status": "candidate",
       "next_check": "验证官方 changelog/feed"
     },
     {
       "name": "TikTok for Business",
       "track": "广告商业化",
-      "signal_types": ["ads_monetization", "merchant_product"],
+      "signal_types": [
+        "ads_monetization",
+        "merchant_product"
+      ],
       "status": "candidate",
       "next_check": "验证官方 blog/feed 和地区覆盖"
     }

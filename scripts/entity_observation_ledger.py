@@ -26,6 +26,7 @@ STATUS_LABELS = {
     'failed': '接入失效',
     'partial': '部分覆盖',
     'pending': '待接入',
+    'paused': '已暂停接入',
     'unverified': '状态待确认',
 }
 
@@ -94,6 +95,8 @@ def _point_events(events, entity, source):
 
 
 def _point_status(point, source, latest_metric, qualified_count, raw_change_count):
+    if point.get('status') == 'paused':
+        return 'paused'
     if not point.get('instrumented') and latest_metric is None:
         return 'pending'
     if not source or latest_metric is None:

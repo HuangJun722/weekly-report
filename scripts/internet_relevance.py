@@ -124,13 +124,41 @@ def _event_fact_text(event):
     return ' '.join(parts).lower()
 
 
+def _compile_term_matcher(terms):
+    alnum = [term.lower() for term in terms if re.search(r'[a-z0-9]', term)]
+    plain = [term.lower() for term in terms if not re.search(r'[a-z0-9]', term)]
+    pattern = None
+    if alnum:
+        pattern = re.compile(
+            r'(?<![a-z0-9])(?:' + '|'.join(re.escape(term) for term in alnum) + r')(?![a-z0-9])'
+        )
+    return pattern, tuple(plain)
+
+
+_TERM_SETS = [
+    CORE_INTERNET_TERMS,
+    ADJACENT_INTERNET_TERMS,
+    STRONG_ADJACENT_HEALTH_IT_TERMS,
+    EDGE_TERMS,
+    OUT_OF_SCOPE_TERMS,
+    HARD_OUT_OF_SCOPE_TERMS,
+    SPACE_OUT_OF_SCOPE_TERMS,
+    HEALTH_BIO_OUT_OF_SCOPE_TERMS,
+    HEALTH_PLATFORM_EXCEPTION_TERMS,
+    OUT_OF_SCOPE_CAP_TO_EDGE_TERMS,
+]
+
+_COMPILED_MATCHERS = {id(terms): _compile_term_matcher(terms) for terms in _TERM_SETS}
+
+
 def _contains_any(text, terms):
-    for term in terms:
-        term = term.lower()
-        if re.search(r'[a-z0-9]', term):
-            if re.search(rf'(?<![a-z0-9]){re.escape(term)}(?![a-z0-9])', text):
-                return True
-            continue
+    matcher = _COMPILED_MATCHERS.get(id(terms))
+    if matcher is None:
+        matcher = _compile_term_matcher(terms)
+    pattern, plain = matcher
+    if pattern is not None and pattern.search(text):
+        return True
+    for term in plain:
         if term in text:
             return True
     return False

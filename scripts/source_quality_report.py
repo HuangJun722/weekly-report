@@ -49,8 +49,9 @@ def _latest_run_source_stats():
     return result
 
 
-def build_source_quality_report(days=7):
-    context = build_display_context()
+def build_source_quality_report(days=7, context=None):
+    if context is None:
+        context = build_display_context()
     end_date = context['latest_data_date'] or context['main_date']
     selected_dates = _date_range(end_date, days)
     all_visible = [
