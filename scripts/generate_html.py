@@ -68,6 +68,12 @@ try:
 except Exception:
     SHANGHAI_TZ = timezone(timedelta(hours=8))
 
+# Windows 控制台默认 GBK，emoji 打印会抛 UnicodeEncodeError；统一 UTF-8 输出
+import sys
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 
 def _cn_now():
     return datetime.now(SHANGHAI_TZ)
@@ -1374,8 +1380,8 @@ def _build_weekly_focus_windows(period_events, end_date, limit=6):
     return build_weekly_themes(period_events, _entity_region_map(), limit=limit)
 
 
-def build_period_narrative(themes, period_id):
-    """AI 编辑层：把周期主题写成叙事导读。失败返回 None，调用方走模板降级。"""
+def build_weekly_editorial(themes, period_id):
+    """AI 编辑层：把周报主题写成当期标题与叙事导读。失败返回 None，调用方走模板降级。"""
     if not themes:
         return None
     try:
@@ -1403,16 +1409,17 @@ def build_period_narrative(themes, period_id):
 
     prompt = f"""你是全球互联网科技情报编辑，受众是出海 BD、战略和投资从业者（周期标识：{period_id}）。
 
-以下是本周期聚类出的主题（每主题含代表事件标题）。请把它们编辑成一份可读的周期报告：
+以下是本周期聚类出的主题（每主题含代表事件标题）。请把它们编辑成一份可读的周报：
 
-1. 写一段"本期主线"（mainline，60-90字）：把本周最值得关注的 1-2 个方向串成一段叙事，说明发生了什么、为什么值得关注、指向什么判断。要像编辑写导读，不要罗列统计数字。
-2. 为每个主题写一段叙事导读（narrative，40-70字）：把该主题的事件串成一条故事线，说明这些事件合起来意味着什么。不要重复事件标题，不要用"本周XX公司融资"这类清单式表达。
+1. 写一个"本期编辑标题"（editorial_title，10-20字）：概括本期最值得关注的方向，像一期周刊的封面标题，不要使用"周报"字样，不要罗列数字。
+2. 写一段"本期主线"（mainline，60-90字）：把本周最值得关注的 1-2 个方向串成一段叙事，说明发生了什么、为什么值得关注、指向什么判断。要像编辑写导读，不要罗列统计数字。
+3. 为每个主题写一段叙事导读（narrative，40-70字）：把该主题的事件串成一条故事线，说明这些事件合起来意味着什么。不要重复事件标题，不要用"本周XX公司融资"这类清单式表达。
 
 主题列表：
 {json.dumps(theme_brief, ensure_ascii=False, indent=2)}
 
 只输出 JSON，不要输出其他内容，格式：
-{{"mainline": "本期主线", "themes": [{{"key": "主题key", "narrative": "该主题导读"}}]}}"""
+{{"editorial_title": "本期编辑标题", "mainline": "本期主线", "themes": [{{"key": "主题key", "narrative": "该主题导读"}}]}}"""
 
     for api in apis:
         try:
@@ -1424,20 +1431,105 @@ def build_period_narrative(themes, period_id):
             text = re.sub(r'^```(?:json)?\s*', '', text).strip().rstrip('`').strip()
             data = json.loads(text)
             mainline = (data.get('mainline') or '').strip()
+            editorial_title = (data.get('editorial_title') or '').strip()
             tmap = {t.get('key'): (t.get('narrative') or '').strip() for t in data.get('themes') or []}
             if len(mainline) < 20 or not tmap:
                 print(f"  ⚠️  周报编辑 {api['name']} 结果不完整，尝试下一个")
                 continue
             print(f"  📝 周报编辑已生成（{api['name']}，{len(tmap)} 个主题导读）: {mainline[:40]}...")
-            return {'mainline': mainline, 'themes': tmap}
+            return {'editorial_title': editorial_title, 'mainline': mainline, 'themes': tmap}
         except Exception as e:
             print(f"  ⚠️  周报编辑 {api['name']} 失败: {type(e).__name__}")
             continue
     return None
 
 
-def build_period_report(events, start_date, end_date, label, period_id=None, status='closed', focus_windows_enabled=False):
-    """按 BD 机会视角聚合周报/月报。"""
+def build_monthly_editorial(trends, period_id):
+    """AI 编辑层：把月报趋势写成月度标题与结构变化导读。失败返回 None，调用方走模板降级。"""
+    if not trends:
+        return None
+    try:
+        from fetch_news import _post_chat, _chat_api_candidates
+    except ImportError:
+        try:
+            from scripts.fetch_news import _post_chat, _chat_api_candidates
+        except ImportError:
+            return None
+    apis = _chat_api_candidates()
+    if not apis:
+        return None
+
+    trend_brief = []
+    for t in trends:
+        evs = [e.get('title', '') for e in (t.get('evidence') or [])][:2]
+        trend_brief.append({
+            'key': t.get('key', ''),
+            'title': t.get('title') or t.get('name', ''),
+            'change': t.get('change', ''),
+            'region': t.get('region', ''),
+            'summary': t.get('summary', ''),
+            'week_count': t.get('week_count', 0),
+            'count': t.get('count', 0),
+            'previous_count': t.get('previous_count', 0),
+            'evidence_titles': evs,
+        })
+
+    prompt = f"""你是全球互联网科技情报编辑，受众是出海 BD、战略和投资从业者（周期标识：{period_id}）。
+
+以下是本月聚类出的结构趋势（每趋势含代表事件标题、变化类型、周次跨度和事实数对比）。请把它们编辑成一份可读的月报：
+
+1. 写一个"月度编辑标题"（editorial_title，10-20字）：概括本月最值得关注的结构变化方向，像一期月刊的封面标题，不要使用"月报"字样，不要罗列数字。
+2. 写一段"本期主线"（mainline，100-160字）：把本月最重要的 1-2 个结构变化串成一段叙事，与上月对照，说明发生了什么、为什么发生、指向什么判断。
+3. 为每个趋势写：
+   - narrative（40-80字）：该趋势本月到底发生了什么变化，为什么值得关注。
+   - drivers（最多3条）：驱动该变化的因素，只能基于证据标题/摘要中已出现的事实，不要编造。
+   - uncertainty（20-50字）：当前判断的不确定性或反证。
+   - next_validation（20-50字）：下月应验证什么才能确认该趋势继续成立。
+
+硬约束：不得提及证据中不存在的公司、区域或动作；不要凭空增加事实。
+
+趋势列表：
+{json.dumps(trend_brief, ensure_ascii=False, indent=2)}
+
+只输出 JSON，不要输出其他内容，格式：
+{{"editorial_title": "月度编辑标题", "mainline": "本期主线", "themes": [{{"key": "趋势key", "narrative": "...", "drivers": ["..."], "uncertainty": "...", "next_validation": "..."}}]}}"""
+
+    for api in apis:
+        try:
+            resp = _post_chat(api, prompt, max_tokens=1600, temperature=0.3, timeout=(10, 30))
+            if resp.status_code != 200:
+                print(f"  ⚠️  月报编辑 {api['name']} 返回 {resp.status_code}，尝试下一个")
+                continue
+            text = resp.json()['choices'][0]['message']['content'].strip()
+            text = re.sub(r'^```(?:json)?\s*', '', text).strip().rstrip('`').strip()
+            data = json.loads(text)
+            mainline = (data.get('mainline') or '').strip()
+            editorial_title = (data.get('editorial_title') or '').strip()
+            tmap = {}
+            for t in data.get('themes') or []:
+                key = t.get('key')
+                if not key:
+                    continue
+                tmap[key] = {
+                    'narrative': (t.get('narrative') or '').strip(),
+                    'drivers': [str(d).strip() for d in (t.get('drivers') or []) if str(d).strip()][:3],
+                    'uncertainty': (t.get('uncertainty') or '').strip(),
+                    'next_validation': (t.get('next_validation') or '').strip(),
+                }
+            if len(mainline) < 30 or not tmap:
+                print(f"  ⚠️  月报编辑 {api['name']} 结果不完整，尝试下一个")
+                continue
+            print(f"  📝 月报编辑已生成（{api['name']}，{len(tmap)} 个趋势导读）: {mainline[:40]}...")
+            return {'editorial_title': editorial_title, 'mainline': mainline, 'themes': tmap}
+        except Exception as e:
+            print(f"  ⚠️  月报编辑 {api['name']} 失败: {type(e).__name__}")
+            continue
+    return None
+
+
+def build_period_report(events, start_date, end_date, label, period_id=None, status='closed',
+                        focus_windows_enabled=False, require_editorial=False):
+    """按 BD 机会视角聚合周报/月报；生产档案可要求 AI 编辑成功后才输出。"""
     period_events = [
         e for e in events
         if start_date <= (e.get('date') or '')[:10] <= end_date
@@ -1475,10 +1567,19 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
     themes = focus_windows if focus_windows_enabled else monthly_trends
     high_count = len(select_period_high_value_events(period_events))
 
-    # AI 编辑层：周报主题叙事导读（失败降级回模板，不影响页面）
+    # AI 编辑层：生产档案要求成功生成；单元测试可显式允许模板降级
     narrative_result = None
+    editorial_title = ''
+    editorial_required = bool(themes) and (focus_windows_enabled or status != 'preview')
     if focus_windows_enabled and themes:
-        narrative_result = build_period_narrative(themes, period_id)
+        narrative_result = build_weekly_editorial(themes, period_id)
+    elif (not focus_windows_enabled) and monthly_trends and status != 'preview':
+        narrative_result = build_monthly_editorial(monthly_trends, period_id)
+    if require_editorial and editorial_required and not narrative_result:
+        period_type = '周报' if focus_windows_enabled else '月报'
+        raise RuntimeError(f'{period_type} {period_id or label} 的 AI 编辑层生成失败，已终止页面生成，拒绝发布降级版')
+    if narrative_result:
+        editorial_title = narrative_result.get('editorial_title') or ''
 
     if period_events:
         title = f"{label}{'关注主题周报' if focus_windows_enabled else '趋势与结构月报'}"
@@ -1500,12 +1601,20 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
                     f"本周只保留事件导航，不硬凑结论。"
                 )
         else:
-            if monthly_trends:
-                leading_theme = monthly_trends[0]['title']
+            if status == 'preview':
                 summary = (
-                    f"本周期从 {len(period_events)} 条合格事件中形成 {len(monthly_trends)} 个跨周趋势。"
-                    f"本月主线是{leading_theme}，每个判断均可回到独立证据。"
+                    f"当前月尚在观察期，已收录 {len(period_events)} 条合格事件。"
+                    f"趋势结论待积累完整观察周后输出，先保留事实。"
                 )
+            elif monthly_trends:
+                if narrative_result:
+                    summary = narrative_result['mainline']
+                else:
+                    leading_theme = monthly_trends[0]['title']
+                    summary = (
+                        f"本周期从 {len(period_events)} 条合格事件中形成 {len(monthly_trends)} 个跨周趋势。"
+                        f"本月主线是{leading_theme}，每个判断均可回到独立证据。"
+                    )
             else:
                 summary = (
                     f"本周期共收录 {len(period_events)} 条事件，但尚未形成跨周、可比较的结构趋势。"
@@ -1515,11 +1624,23 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         title = f"{label}{'关注主题周报' if focus_windows_enabled else '趋势与结构月报'}"
         summary = "当前周期事件数量较少，先保留为观察入口。"
     date_label = start_date if start_date == end_date else f"{start_date} 至 {end_date}"
+    status_label = {'preview': '观察中', 'mature': '更新中', 'open': '更新中', 'closed': '已封存'}.get(status, '已封存')
 
     if narrative_result:
+        theme_details = narrative_result.get('themes') or {}
         for t in themes:
-            if t.get('key') in narrative_result['themes']:
-                t['narrative'] = narrative_result['themes'][t['key']]
+            detail = theme_details.get(t.get('key'))
+            if detail:
+                if isinstance(detail, dict):
+                    t['narrative'] = detail.get('narrative') or t.get('narrative') or ''
+                    if detail.get('drivers'):
+                        t['drivers'] = detail['drivers']
+                    if detail.get('uncertainty'):
+                        t['uncertainty'] = detail['uncertainty']
+                    if detail.get('next_validation'):
+                        t['next_validation'] = detail['next_validation']
+                else:
+                    t['narrative'] = detail
 
     return {
         'id': period_id or f"{start_date}_{end_date}",
@@ -1529,7 +1650,9 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         'month': start_date[:7],
         'label': label,
         'status': status,
+        'status_label': status_label,
         'title': title,
+        'editorial_title': editorial_title,
         'summary': summary,
         'total': len(period_events),
         'companies': len(companies),
@@ -1575,7 +1698,10 @@ def build_weekly_archives(events, reference_date):
     for item in grouped.values():
         status = 'open' if item['start'] <= reference_date <= item['natural_end'] else 'closed'
         label = item['label'] if status == 'closed' else f"{item['label']}（更新中）"
-        archives.append(build_period_report(events, item['start'], item['end'], label, item['id'], status, focus_windows_enabled=True))
+        archives.append(build_period_report(
+            events, item['start'], item['end'], label, item['id'], status,
+            focus_windows_enabled=True, require_editorial=True,
+        ))
     archives.sort(key=lambda x: x['start'], reverse=True)
     return archives
 
@@ -1589,15 +1715,24 @@ def build_monthly_archives(events, reference_date):
         start_date = f"{month}-01"
         if month == main_month:
             end_date = reference_date
-            status = 'open'
-            label = f"{month} 月报（更新中）"
+            first_day = datetime.strptime(f"{month}-01", '%Y-%m-%d')
+            reference_dt = datetime.strptime(reference_date, '%Y-%m-%d')
+            if (reference_dt - first_day).days >= 14:
+                status = 'mature'
+                label = f"{month} 月度趋势更新"
+            else:
+                status = 'preview'
+                label = f"{month} 月度观察"
         else:
             y, m = [int(x) for x in month.split('-')]
             next_month = datetime(y + (1 if m == 12 else 0), 1 if m == 12 else m + 1, 1)
             end_date = (next_month - timedelta(days=1)).strftime('%Y-%m-%d')
             status = 'closed'
             label = f"{month} 月报"
-        archives.append(build_period_report(events, start_date, end_date, label, month, status))
+        archives.append(build_period_report(
+            events, start_date, end_date, label, month, status,
+            require_editorial=True,
+        ))
     return archives
 
 

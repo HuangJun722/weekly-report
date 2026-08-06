@@ -213,6 +213,21 @@ button, input, select { font: inherit; }
 .evidence-title { margin: 2px 0 0; color: var(--ink); font-size: 12px; }
 .window-actions strong { color: var(--green); font-size: 13px; }
 .window-actions span { color: var(--muted); font-size: 12px; }
+.editorial-title { margin: 14px 0 0; color: rgba(244,241,234,0.95); font-size: 26px; line-height: 1.3; letter-spacing: 0.01em; }
+.report-cover h2 { margin-top: 6px; }
+.theme-narrative { color: #38434d; font-size: 13.5px; line-height: 1.7; }
+.window-details { margin: 2px 0 0; padding: 12px 14px; border: 1px solid rgba(217,209,196,0.72); border-radius: 8px; background: rgba(238,242,243,0.4); }
+.window-details summary { cursor: pointer; color: var(--navy); font-size: 13px; font-weight: 600; }
+.window-details p { margin: 0; }
+.window-details .evidence-title { margin-top: 10px; }
+.window-details .window-actions { margin-top: 10px; }
+.period-toc { display: grid; gap: 6px; margin: 16px 0 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: rgba(238,242,243,0.4); }
+.period-toc strong { font-size: 12px; color: var(--muted); }
+.period-toc a { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 5px 0; border-bottom: 1px solid rgba(217,209,196,0.5); text-decoration: none; color: var(--ink); }
+.period-toc a:last-child { border-bottom: 0; }
+.period-toc a:hover { color: var(--green); }
+.period-toc .toc-num { font-size: 12px; color: var(--navy); font-weight: 700; }
+.period-toc em { font-style: normal; color: var(--quiet); font-size: 11px; }
 .trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
 .trend { padding-top: 16px; border-top: 2px solid var(--navy); }
 .trend h3 { margin: 0; font-size: 15px; }
@@ -522,7 +537,8 @@ button, input, select { font: inherit; }
           <div class="period-panel{% if loop.first %} active{% endif %}" id="weekly-{{ report.id }}">
             <article class="report-cover">
               <div>
-                <div class="label-row"><span class="label">周报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ '更新中' if report.status == 'open' else '已封存' }}</span></div>
+                <div class="label-row"><span class="label">周报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ report.status_label }}</span></div>
+                {% if report.editorial_title %}<p class="editorial-title">{{ report.editorial_title }}</p>{% endif %}
                 <h2>{{ report.title }}</h2>
                 <div class="report-mainline"><strong>本期主线</strong><p>{{ report.summary }}</p></div>
               </div>
@@ -533,27 +549,36 @@ button, input, select { font: inherit; }
               </div>
             </article>
             {% if report.focus_windows %}
+            <nav class="period-toc" aria-label="本期看点">
+              <strong>本期看点</strong>
+              {% for window in report.focus_windows %}
+              <a href="#weekly-theme-{{ report.id }}-{{ window.key }}"><span class="toc-num">{{ '%02d'|format(loop.index) }}</span>{{ window.title }}<em>{{ window.evidence_count }} 条</em></a>
+              {% endfor %}
+            </nav>
             <section class="content-block">
               <div class="block-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
               <div class="weekly-window-list">
                 {% for window in report.focus_windows %}
-                <article class="weekly-window">
-                  <div class="window-meta">
-                    <span class="label green">{{ window.confidence }}</span>
-                    <span class="label">{{ window.region }}</span>
-                    <span class="label copper">{{ window.evidence_count }} 条证据</span>
-                  </div>
+                <article class="weekly-window" id="weekly-theme-{{ report.id }}-{{ window.key }}">
                   <h3>{{ window.title }}</h3>
-                  {% if window.narrative %}<p class="theme-narrative">{{ window.narrative }}</p>{% endif %}
-                  <p>对象：{{ window.objects }}｜主要区域：{{ window.region }}</p>
-                  {% if window.why %}<p>{{ window.why }}</p>{% endif %}
-                  <h4 class="evidence-title">证据事件</h4>
-                  <ul class="window-evidence">
-                    {% for ev in window.evidence %}
-                    <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
-                    {% endfor %}
-                  </ul>
-                  <div class="window-actions"><strong>后续观察</strong><span>{{ window.action }}</span></div>
+                  {% if window.narrative %}<p class="theme-narrative">{{ window.narrative }}</p>{% elif window.why %}<p>{{ window.why }}</p>{% endif %}
+                  <details class="window-details">
+                    <summary>判断依据</summary>
+                    <div class="window-meta">
+                      <span class="label green">{{ window.confidence }}</span>
+                      <span class="label">{{ window.region }}</span>
+                      <span class="label copper">{{ window.evidence_count }} 条证据</span>
+                    </div>
+                    <p>对象：{{ window.objects }}｜主要区域：{{ window.region }}</p>
+                    {% if window.why %}<p>{{ window.why }}</p>{% endif %}
+                    <h4 class="evidence-title">证据事件</h4>
+                    <ul class="window-evidence">
+                      {% for ev in window.evidence %}
+                      <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                      {% endfor %}
+                    </ul>
+                    <div class="window-actions"><strong>后续观察</strong><span>{{ window.action }}</span></div>
+                  </details>
                 </article>
                 {% endfor %}
               </div>
@@ -569,7 +594,7 @@ button, input, select { font: inherit; }
           <button class="period-btn{% if loop.first %} active{% endif %}" data-period-target="weekly-{{ report.id }}" type="button">
             <strong>{{ report.label }}</strong>
             <span>{{ report.date_label }}</span>
-            <em class="period-status">{{ '更新中' if report.status == 'open' else '已封存' }}</em>
+            <em class="period-status">{{ report.status_label }}</em>
           </button>
           {% endfor %}
         </aside>
@@ -583,7 +608,8 @@ button, input, select { font: inherit; }
           <div class="period-panel{% if loop.first %} active{% endif %}" id="monthly-{{ report.id }}">
             <article class="report-cover">
               <div>
-                <div class="label-row"><span class="label">月报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ '更新中' if report.status == 'open' else '已封存' }}</span></div>
+                <div class="label-row"><span class="label">月报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ report.status_label }}</span></div>
+                {% if report.editorial_title %}<p class="editorial-title">{{ report.editorial_title }}</p>{% endif %}
                 <h2>{{ report.title }}</h2>
                 <div class="report-mainline"><strong>本月主线</strong><p>{{ report.summary }}</p></div>
               </div>
@@ -594,25 +620,37 @@ button, input, select { font: inherit; }
               </div>
             </article>
             {% if report.period_themes %}
+            <nav class="period-toc" aria-label="本月看点">
+              <strong>本月看点</strong>
+              {% for theme in report.period_themes %}
+              <a href="#monthly-theme-{{ report.id }}-{{ theme.key }}"><span class="toc-num">{{ '%02d'|format(loop.index) }}</span>{{ theme.title }}<em>{{ theme.change }} · {{ theme.count }} 个独立事实</em></a>
+              {% endfor %}
+            </nav>
             <section class="content-block">
               <div class="block-head"><h2>本月结构变化</h2><span>至少跨两个周次，并与前一周期比较</span></div>
               <div class="weekly-window-list">
                 {% for theme in report.period_themes %}
-                <article class="weekly-window">
+                <article class="weekly-window" id="monthly-theme-{{ report.id }}-{{ theme.key }}">
                   <div class="window-meta">
                     <span class="label green">{{ theme.change }}</span>
                     <span class="label">{{ theme.region }}</span>
-                    <span class="label copper">{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实</span>
                   </div>
                   <h3>{{ theme.title }}</h3>
                   {% if theme.narrative %}<p class="theme-narrative">{{ theme.narrative }}</p>{% endif %}
                   <p>{{ theme.summary }}</p>
-                  <h4 class="evidence-title">代表证据</h4>
-                  <ul class="window-evidence">
-                    {% for ev in theme.evidence %}
-                    <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
-                    {% endfor %}
-                  </ul>
+                  <details class="window-details">
+                    <summary>变化详情</summary>
+                    <p><strong>跨周</strong>：{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实{% if theme.previous_count %}（前一周期 {{ theme.previous_count }} 个）{% endif %}</p>
+                    {% if theme.drivers %}<p><strong>驱动因素</strong>：{{ theme.drivers|join('；') }}</p>{% endif %}
+                    {% if theme.uncertainty %}<p><strong>不确定性</strong>：{{ theme.uncertainty }}</p>{% endif %}
+                    {% if theme.next_validation %}<p><strong>下月验证</strong>：{{ theme.next_validation }}</p>{% endif %}
+                    <h4 class="evidence-title">代表证据</h4>
+                    <ul class="window-evidence">
+                      {% for ev in theme.evidence %}
+                      <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                      {% endfor %}
+                    </ul>
+                  </details>
                 </article>
                 {% endfor %}
               </div>
@@ -627,7 +665,7 @@ button, input, select { font: inherit; }
           <button class="period-btn{% if loop.first %} active{% endif %}" data-period-target="monthly-{{ report.id }}" type="button">
             <strong>{{ report.label }}</strong>
             <span>{{ report.date_label }}</span>
-            <em class="period-status">{{ '更新中' if report.status == 'open' else '已封存' }}</em>
+            <em class="period-status">{{ report.status_label }}</em>
           </button>
           {% endfor %}
         </aside>

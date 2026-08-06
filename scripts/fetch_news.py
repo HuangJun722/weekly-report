@@ -15,6 +15,11 @@ try:
 except ImportError:
     pass
 
+import sys
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 import warnings; warnings.filterwarnings('ignore')
 import requests
 from bs4 import BeautifulSoup
@@ -2408,7 +2413,11 @@ def _post_chat(api, prompt, max_tokens=1024, temperature=0.1, timeout=(10, 20)):
         "Authorization": "Bearer " + api['key'],
         "Content-Type": "application/json"
     }
-    return requests.post(api['url'], headers=headers, json=payload, timeout=timeout)
+    # DeepSeek/豆包均为国内 API，直连即可；trust_env=False 忽略系统代理（含 ALL_PROXY），
+    # 避免依赖 socks 库且更快
+    session = requests.Session()
+    session.trust_env = False
+    return session.post(api['url'], headers=headers, json=payload, timeout=timeout)
 
 # ============================================================
 # P0 Agent：AI 标题改写 — 对程序层泛化事件用 AI 改写描述

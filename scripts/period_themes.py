@@ -170,7 +170,7 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
     current = [event for event in _eligible(all_events) if start_date <= (event.get('date') or '')[:10] <= end_date]
     previous = [event for event in _eligible(all_events) if previous_start <= (event.get('date') or '')[:10] <= previous_end]
     current_groups = {}
-    previous_counts = Counter()
+    previous_groups = {}
     for event in current:
         key = theme_key(event)
         if key:
@@ -178,7 +178,7 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
     for event in previous:
         key = theme_key(event)
         if key:
-            previous_counts[key] += 1
+            previous_groups.setdefault(key, []).append(event)
     trends = []
     for key, grouped_events in current_groups.items():
         weeks = {_week_key(event) for event in grouped_events if _week_key(event)}
@@ -186,9 +186,18 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
         if len(weeks) < 2 or len(atoms) < 3 or not can_promote_to_narrative(atoms):
             continue
         current_count = len(atoms)
-        previous_count = previous_counts[key]
+        # 前一周期也按 Evidence Atom 去重，与当前周期同口径，避免原始条数虚增比较
+        previous_atoms = build_evidence_atoms(previous_groups.get(key, []))
+        previous_count = len(previous_atoms)
         ratio = current_count / max(previous_count, 1)
-        change = '新增' if previous_count == 0 else '升温' if ratio >= 1.25 else '降温' if ratio <= 0.75 else '延续'
+        if previous_count == 0:
+            change = '新增'
+        elif current_count >= previous_count + 2 and ratio >= 1.25:
+            change = '升温'
+        elif current_count <= previous_count - 2 and ratio <= 0.75:
+            change = '降温'
+        else:
+            change = '延续'
         representatives = _representative_events(atoms)
         regions = Counter(resolved_region(event, entity_regions) for event in representatives)
         region = regions.most_common(1)[0][0] if regions else '全球'
