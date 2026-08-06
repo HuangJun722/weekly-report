@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-06T19:41:48.993955+08:00",
+  "generated_at": "2026-08-06T22:36:29.089725+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
@@ -130,7 +130,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-06T19:41:48.993955+08:00",
+      "observed_at": "2026-08-06T22:36:29.089725+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -237,7 +237,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-06T19:41:48.993955+08:00",
+      "observed_at": "2026-08-06T22:36:29.089725+08:00",
       "jobs": [
         {
           "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
@@ -357,15 +357,15 @@
           ]
         },
         {
-          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
-          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
-          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
-          "function_tags": []
-        },
-        {
           "id": "32132c55-3c8c-4695-b117-477fe97629aa",
           "title": "Professional Services Delivery Manager Remote - Americas",
           "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
+          "function_tags": []
+        },
+        {
+          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
+          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
           "function_tags": []
         },
         {
