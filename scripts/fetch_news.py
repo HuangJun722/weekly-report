@@ -3212,14 +3212,16 @@ def main():
     same_run_duplicate_skipped = len(all_raw) - len(unique)
     _merge_source_funnel(source_funnel, _source_funnel_stage(unique, 'unique'))
 
-    # 统计
-    types = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
-    for it in unique: types[it['event_types'][0]] += 1
+    # 统计（event_type 会随 AI 输出出现 industry_report/model_release 等扩展类型，用 get 容错）
+    types = {}
+    for it in unique:
+        t = (it.get('event_types') or ['other'])[0]
+        types[t] = types.get(t, 0) + 1
     regions = {}
     for it in unique: regions[it['region']] = regions.get(it['region'],0) + 1
     company_count = sum(1 for it in unique if it.get('is_company'))
 
-    print(f"\n📊 采集：{len(unique)} 条（融资{types['funding']} | 并购{types['ma']} | 财报{types['earnings']} | 战略{types['strategy']} | 其他{types['other']}）")
+    print(f"\n📊 采集：{len(unique)} 条（融资{types.get('funding',0)} | 并购{types.get('ma',0)} | 财报{types.get('earnings',0)} | 战略{types.get('strategy',0)} | 其他{types.get('other',0)}）")
     print(f"   区域：{regions} | 公司动态：{company_count} 条")
     run_metrics['collection'] = {
         'raw_count': len(all_raw),
@@ -3250,9 +3252,11 @@ def main():
     filtered = smart_filter(scope_qualified)
     _merge_source_funnel(source_funnel, _source_funnel_stage(filtered, 'smart_kept'))
     smart_filtered_count = len(filtered)
-    types2 = {'funding':0,'ma':0,'earnings':0,'strategy':0,'other':0}
-    for it in filtered: types2[it['event_types'][0]] += 1
-    print(f"   过滤后：{len(filtered)} 条（融资{types2['funding']} | 并购{types2['ma']} | 财报{types2['earnings']} | 战略{types2['strategy']} | 其他{types2['other']}）")
+    types2 = {}
+    for it in filtered:
+        t = (it.get('event_types') or ['other'])[0]
+        types2[t] = types2.get(t, 0) + 1
+    print(f"   过滤后：{len(filtered)} 条（融资{types2.get('funding',0)} | 并购{types2.get('ma',0)} | 财报{types2.get('earnings',0)} | 战略{types2.get('strategy',0)} | 其他{types2.get('other',0)}）")
     run_metrics['filtering'] = {
         'smart_filtered_count': smart_filtered_count,
         'smart_filter_dropped': len(scope_qualified) - smart_filtered_count,
@@ -3269,7 +3273,7 @@ def main():
     }
 
     # AI 情报价值评分：对 other 类事件豆包评分，过滤低价值
-    if any(it['event_types'][0] == 'other' and not it.get('is_company') for it in filtered):
+    if any((it.get('event_types') or ['other'])[0] == 'other' and not it.get('is_company') for it in filtered):
         before_ai_filter = len(filtered)
         filtered = ai_quality_judge(filtered)
         _merge_source_funnel(source_funnel, _source_funnel_stage(filtered, 'ai_quality_kept'))
@@ -3287,7 +3291,7 @@ def main():
     drop_count = 0
     for it in filtered:
         score = it['_prescore']
-        ev_type = it['event_types'][0]
+        ev_type = (it.get('event_types') or ['other'])[0]
         if score >= 7 or ev_type in ('funding', 'ma', 'earnings'):
             ai_tier.append(it)
         elif score >= 4 or it.get('is_company'):
