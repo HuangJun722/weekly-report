@@ -148,6 +148,8 @@ RSS_SOURCES = [
     # --- 深度趋势源：只保留高信号，不参与普通新闻补量 ---
     {'name': 'Rest of World Money', 'url': 'https://restofworld.org/feed/money/',        'source': 'Rest of World', 'region': '全球', 'priority': 2, 'source_tier': 'L4 深度趋势源', 'source_role': 'deep_trend', 'max_scan': 20, 'max': 4, 'signal_only': True},
     {'name': 'Rest of World Ecommerce', 'url': 'https://restofworld.org/feed/e-commerce/', 'source': 'Rest of World', 'region': '全球', 'priority': 2, 'source_tier': 'L4 深度趋势源', 'source_role': 'deep_trend', 'max_scan': 20, 'max': 4, 'signal_only': True},
+    # 2026-08 补缺：Cyberagent 官方 RSS（/en/news/ HTML 页只有分类导航，RSS 才含文章）
+    {'name': 'Cyberagent News', 'url': 'https://www.cyberagent.co.jp/en/news/rss/data_format=xml', 'source': 'Cyberagent', 'region': '亚太', 'priority': 1, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Cyberagent', 'is_company': True, 'max_scan': 20, 'max': 4},
 ]
 
 # ============================================================
@@ -156,13 +158,13 @@ RSS_SOURCES = [
 
 COMPANY_SOURCES = [
     # 中国企业海外
-    {'name': 'ByteDance/TikTok', 'query': 'ByteDance overseas', 'region': '中资', 'priority': 3},
+    {'name': 'ByteDance/TikTok', 'query': 'ByteDance', 'region': '中资', 'priority': 3},
     {'name': 'Tencent', 'query': 'Tencent international', 'region': '中资', 'priority': 2},
     {'name': 'Alibaba', 'query': 'Alibaba international overseas', 'region': '中资', 'priority': 2},
     {'name': 'JD.com', 'query': 'JD.com international overseas', 'region': '中资', 'priority': 2},
-    {'name': 'Kuaishou', 'query': 'Kuaishou overseas international', 'region': '中资', 'priority': 1},
-    {'name': 'Ant Group', 'query': 'Ant Group international overseas', 'region': '中资', 'priority': 2},
-    {'name': 'Meituan', 'query': 'Meituan international overseas', 'region': '中资', 'priority': 1},
+    {'name': 'Kuaishou', 'query': 'Kuaishou', 'region': '中资', 'priority': 1},
+    {'name': 'Ant Group', 'query': 'Ant Group', 'region': '中资', 'priority': 2},
+    {'name': 'Meituan', 'query': 'Meituan', 'region': '中资', 'priority': 1},
     # 亚太
     {'name': 'Kakao', 'query': 'Kakao', 'region': '亚太', 'priority': 2},
     {'name': 'Naver', 'query': 'Naver', 'region': '亚太', 'priority': 2},
@@ -170,27 +172,27 @@ COMPANY_SOURCES = [
     {'name': 'Sea Limited', 'query': 'Sea Limited Shopee', 'region': '亚太', 'priority': 2},
     {'name': 'Grab', 'query': 'Grab holdings Singapore', 'region': '亚太', 'priority': 2},
     {'name': 'Gojek', 'query': 'Gojek', 'region': '亚太', 'priority': 2},
-    {'name': 'VNG Group', 'query': 'VNG Group Vietnam', 'region': '亚太', 'priority': 1},
+    {'name': 'VNG Group', 'query': 'VNG', 'region': '亚太', 'priority': 1},
     {'name': 'Yahoo', 'query': 'Yahoo Tech APAC', 'region': '亚太', 'priority': 1},
-    {'name': 'Cyberagent', 'query': 'CyberAgent Japan', 'region': '亚太', 'priority': 1},
+    {'name': 'Cyberagent', 'query': 'CyberAgent', 'region': '亚太', 'priority': 1},
     {'name': 'HKTVmall', 'query': 'HKTVmall Hong Kong Technology Venture', 'region': '亚太', 'priority': 1},
-    {'name': 'U-NEXT', 'query': 'U-NEXT Holdings Japan', 'region': '亚太', 'priority': 1},
-    {'name': 'Square Enix', 'query': 'Square Enix Holdings', 'region': '亚太', 'priority': 1},
+    {'name': 'U-NEXT', 'query': 'U-NEXT', 'region': '亚太', 'priority': 1},
+    {'name': 'Square Enix', 'query': 'Square Enix', 'region': '亚太', 'priority': 1},
     # 欧洲
     {'name': 'Adyen', 'query': 'Adyen', 'region': '欧洲', 'priority': 2},
     {'name': 'Zalando', 'query': 'Zalando Germany', 'region': '欧洲', 'priority': 2},
-    {'name': 'Allegro', 'query': 'Allegro Polish ecommerce', 'region': '欧洲', 'priority': 2},
+    {'name': 'Allegro', 'query': 'Allegro ecommerce', 'region': '欧洲', 'priority': 2},
     {'name': 'Trendyol', 'query': 'Trendyol', 'region': '欧洲', 'priority': 1},
     # 拉美
     {'name': 'MercadoLibre', 'query': 'MercadoLibre', 'region': '拉美', 'priority': 3},
-    {'name': 'Rappi', 'query': 'Rappi Colombia', 'region': '拉美', 'priority': 1},
+    {'name': 'Rappi', 'query': 'Rappi', 'region': '拉美', 'priority': 1},
     # 中东
     {'name': 'Noon', 'query': 'Noon ecommerce UAE Dubai', 'region': '中东', 'priority': 2},
     {'name': 'Careem', 'query': 'Careem UAE', 'region': '中东', 'priority': 2},
-    {'name': 'Tabby', 'query': 'Tabby UAE fintech', 'region': '中东', 'priority': 2},
-    {'name': 'Kaspi.kz', 'query': 'Kaspi.kz super app', 'region': '中东', 'priority': 2},
+    {'name': 'Tabby', 'query': 'Tabby fintech', 'region': '中东', 'priority': 2},
+    {'name': 'Kaspi.kz', 'query': 'Kaspi.kz', 'region': '中东', 'priority': 2},
     # 非洲
-    {'name': 'Jumia', 'query': 'Jumia Africa ecommerce', 'region': '非洲', 'priority': 2},
+    {'name': 'Jumia', 'query': 'Jumia', 'region': '非洲', 'priority': 2},
     {'name': 'Konga', 'query': 'Konga Nigeria', 'region': '非洲', 'priority': 1},
 ]
 
@@ -305,6 +307,47 @@ CHINESE_OUTBOUND_PATTERNS = [
     'saudi', 'dubai', 'kuwait', 'turkey', 'brazil', 'mexico',
     'expands to', 'expands into', 'launches in', 'enters',
     '海外', '出海', '国际', '跨境', '境外',
+]
+
+# 传统持牌商业银行主体名单。Fintech 源的编辑视野覆盖整个金融服务业，
+# 但这些机构主体不是互联网/科技公司，不属于情报站定位，排除。
+TRADITIONAL_BANKS = [
+    # 亚太
+    'DBS', 'United Overseas Bank', 'UOB', 'OCBC', 'Maybank', 'CIMB',
+    'RHB Bank', 'Public Bank', 'Bank Rakyat', 'BDO Unibank',
+    'Bank of the Philippine Islands', 'Bank Central Asia', 'Bank Mandiri',
+    'Bank Rakyat Indonesia', 'Bank BRI', 'Kaspi Bank', 'HDFC Bank',
+    'ICICI Bank', 'State Bank of India', 'Axis Bank',
+    # 欧美
+    'HSBC', 'Standard Chartered', 'Citibank', 'JPMorgan', 'JP Morgan',
+    'Bank of America', 'Wells Fargo', 'Goldman Sachs', 'Morgan Stanley',
+    'Barclays', 'Deutsche Bank', 'BNP Paribas', 'Societe Generale',
+    'Société Générale', 'ING Group', 'ING Bank', 'Santander', 'BBVA',
+    'UBS', 'Credit Suisse', 'Lloyds Bank', 'NatWest', 'Bank of England',
+    'Royal Bank of Canada',
+    # 中东
+    'First Abu Dhabi Bank', 'Emirates NBD', 'Qatar National Bank', 'QNB',
+    'Saudi National Bank', 'National Bank of Kuwait', 'Al Rajhi Bank',
+    'Abu Dhabi Commercial Bank', 'Dubai Islamic Bank', 'Mashreq Bank',
+    # 非洲
+    'Standard Bank', 'Absa', 'Nedbank', 'Ecobank', 'GTBank',
+    'Guaranty Trust Bank', 'Zenith Bank', 'First Bank of Nigeria',
+    'Access Bank', 'KCB Bank', 'Equity Bank',
+    # 拉美
+    'Itau', 'Itaú', 'Banco do Brasil', 'Bradesco',
+    # 中文
+    '工商银行', '建设银行', '农业银行', '中国银行', '招商银行', '汇丰银行',
+]
+
+# 名字含 bank/banking 但属于科技/互联网公司或数字银行（用户监控对象），保留。
+# 在传统银行匹配中优先豁免，防误杀。
+BANK_PROTECTED_FINTECH = [
+    '10x Banking', 'GXS Bank', 'Trust Bank', 'Revolut', 'Nubank',
+    'Nu Holdings', 'Monzo', 'Starling Bank', 'Chime', 'Varo', 'N26',
+    'Tinkoff', 'WeBank', 'Alipay', 'Ant Group', 'Paytm', 'GoPay',
+    'Grab', 'GoTo', 'KakaoBank', 'Kakao', 'Klarna', 'Pine Labs',
+    'Razorpay', 'Juspay', 'Flutterwave', 'Kaspi', 'SeaMoney',
+    'Shopee', 'Lazada', 'MercadoPago', 'Mercado Pago',
 ]
 
 TITLE_STOPWORDS = {
@@ -892,6 +935,22 @@ def _is_low_signal_company_title(title):
     return any(pattern in title_lower for pattern in COMPANY_LOW_SIGNAL_PATTERNS)
 
 
+def _is_traditional_bank_item(item):
+    """Fintech 源会带回传统商业银行事件（财报/贷款/资产出售），
+    这些机构主体不是互联网/科技公司，不属于情报站定位，排除。
+    数字银行/金融科技公司（名字含 bank 但属于科技）优先豁免。"""
+    if item.get('is_company') or _is_official_company_source(item):
+        return False
+    text = ' '.join([
+        item.get('title', ''),
+        item.get('company_name', ''),
+        item.get('publisher', ''),
+    ]).lower()
+    if any(p.lower() in text for p in BANK_PROTECTED_FINTECH):
+        return False
+    return any(b.lower() in text for b in TRADITIONAL_BANKS)
+
+
 def _is_chinese_outbound_title(title):
     title_lower = (title or '').lower()
     return any(pattern in title_lower for pattern in CHINESE_OUTBOUND_PATTERNS)
@@ -1243,6 +1302,8 @@ def _parse_rss_text(cfg, text):
             'article_date': article_date,
             'image_url': image_url,
             'source_excerpt': source_excerpt,
+            'is_company': cfg.get('is_company', False),
+            'company_name': cfg.get('company_name', ''),
             **link_repair,
             **date_meta,
         }, cfg)
@@ -1370,6 +1431,10 @@ HTML_SOURCES = [
     {'name': 'U-NEXT News', 'url': 'https://unext-hd.co.jp/newsrelease/', 'source': 'U-NEXT', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'U-NEXT', 'is_company': True, 'max': 4},
     {'name': 'Square Enix IR News', 'url': 'https://www.hd.square-enix.com/eng/ir/irnews/', 'source': 'Square Enix', 'region': '亚太', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Square Enix', 'is_company': True, 'max': 4},
     {'name': 'Jumia Newsroom', 'url': 'https://group.jumia.com/news', 'source': 'Jumia', 'region': '非洲', 'priority': 3, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Jumia', 'is_company': True, 'max': 4},
+    # 2026-08 补缺：JD/Yahoo/Tabby/Cyberagent 官方源（Google News 两路都空，补官方披露）
+    {'name': 'JD.com IR', 'url': 'https://ir.jd.com/news-releases', 'source': 'JD.com', 'region': '中资', 'priority': 2, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'JD.com', 'is_company': True, 'max': 4},
+    {'name': 'Yahoo Press', 'url': 'https://www.yahooinc.com/press/', 'source': 'Yahoo', 'region': '亚太', 'priority': 1, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Yahoo', 'is_company': True, 'max': 4},
+    {'name': 'Tabby Press', 'url': 'https://www.tabby.ai/press/', 'source': 'Tabby', 'region': '中东', 'priority': 2, 'source_tier': 'L1 官方/IR源', 'source_role': 'official_ir', 'company_name': 'Tabby', 'is_company': True, 'max': 4},
 ]
 
 def _is_official_cfg(cfg):
@@ -1594,7 +1659,8 @@ def _select_changelog_items(soup, cfg):
             article_date = date_meta['published_at'] or None
             if article_date:
                 break
-        if not article_date or not _recent_article_date(article_date, days=2):
+        # changelog 列表页同官方源：提取不到日期视为最新条目保留，能提取到且旧才滤
+        if article_date and not _recent_article_date(article_date, days=2):
             continue
 
         types = detect_event_types(title)
@@ -1624,7 +1690,7 @@ def fetch_company_news(cfg):
     只取当天/昨天的 + 有信号的事件 + 每公司最多3条
     """
     import urllib.parse
-    query = urllib.parse.quote(cfg['query'])
+    query = urllib.parse.quote(cfg['query'] + ' when:2d')
     url = f'https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en'
     body = fetch_url(url)
     cfg['_last_fetch_status'] = 'success' if body else 'failed'
@@ -1834,7 +1900,8 @@ def fetch_html(cfg):
             node_text = ' '.join(art.get_text(' ', strip=True).split())
             date_meta = _extract_official_article_date_meta(title, link, node_text)
             article_date = date_meta['published_at'] or None
-            if not article_date or not _recent_article_date(article_date, days=2):
+            # 官方源列表页第一屏即最新：能提取到日期才按窗口过滤，提取不到视为新稿保留
+            if article_date and not _recent_article_date(article_date, days=2):
                 continue
 
         types = detect_event_types(title)
@@ -3247,6 +3314,18 @@ def main():
     _merge_source_funnel(source_funnel, _source_funnel_stage(scope_qualified, 'scope_qualified'))
     _merge_source_funnel(source_funnel, _source_funnel_stage(scope_candidates, 'scope_candidate'))
     _merge_source_funnel(source_funnel, _source_funnel_stage(scope_filtered, 'scope_filtered'))
+
+    # 传统银行主体过滤：Fintech 源编辑视野含整个金融业，排除商业银行事件
+    bank_filtered = []
+    kept_after_bank = []
+    for it in scope_qualified:
+        if _is_traditional_bank_item(it):
+            bank_filtered.append(it)
+        else:
+            kept_after_bank.append(it)
+    scope_qualified = kept_after_bank
+    _merge_source_funnel(source_funnel, _source_funnel_stage(bank_filtered, 'bank_filtered'))
+    run_metrics['bank_filtered_count'] = len(bank_filtered)
 
     # 智能过滤（公司新闻单独处理，不做 smart_filter）
     filtered = smart_filter(scope_qualified)
