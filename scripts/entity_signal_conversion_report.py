@@ -14,8 +14,10 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 try:
+    from event_contract import prepare_event_contract
     from event_value import should_show_in_main_list, should_show_in_review
 except ImportError:
+    from scripts.event_contract import prepare_event_contract
     from scripts.event_value import should_show_in_main_list, should_show_in_review
 
 
@@ -188,7 +190,10 @@ def build_entity_signal_conversion_report(days=30, pool_path='data/entity_pool.j
     dates = sorted({_event_date(event) for event in events if _event_date(event)})
     end_date = dates[-1] if dates else ''
     selected_dates = _period_dates(end_date, days)
-    selected_events = [event for event in events if _event_date(event) in selected_dates]
+    selected_events = [
+        prepare_event_contract(event) for event in events
+        if _event_date(event) in selected_dates
+    ]
 
     rows = []
     point_type_rows = defaultdict(lambda: {
