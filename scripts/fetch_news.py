@@ -24,6 +24,11 @@ import warnings; warnings.filterwarnings('ignore')
 import requests
 from bs4 import BeautifulSoup
 
+# DeepSeek/豆包均为国内 API，直连即可；trust_env=False 忽略系统代理（含 ALL_PROXY），
+# 避免依赖 socks 库且更快。所有 AI 通道共用此 session（新闻抓取仍走系统代理，不受影响）。
+_LLM_SESSION = requests.Session()
+_LLM_SESSION.trust_env = False
+
 try:
     from zoneinfo import ZoneInfo
     SHANGHAI_TZ = ZoneInfo('Asia/Shanghai')
@@ -2152,7 +2157,7 @@ def analyze_events_deepseek(items):
 
     for attempt in range(2):
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 20))
+            resp = _LLM_SESSION.post(url, headers=headers, json=payload, timeout=(10, 20))
             if resp.status_code == 429:
                 wait = (attempt + 1) * 10
                 print("  ⚠️  DeepSeek API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
@@ -2284,7 +2289,7 @@ def analyze_events_doubao(items):
 
     for attempt in range(2):  # 最多重试1次（快速降级到程序生成）
         try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=(10, 90))  # 90s 超时（给冷启动留足时间）
+            resp = _LLM_SESSION.post(url, headers=headers, json=payload, timeout=(10, 90))  # 90s 超时（给冷启动留足时间）
             if resp.status_code == 429:
                 wait = (attempt + 1) * 10
                 print("  ⚠️  豆包 API 配额耗尽（429），等待 " + str(wait) + "s 后重试...")
@@ -2413,11 +2418,7 @@ def _post_chat(api, prompt, max_tokens=1024, temperature=0.1, timeout=(10, 20)):
         "Authorization": "Bearer " + api['key'],
         "Content-Type": "application/json"
     }
-    # DeepSeek/豆包均为国内 API，直连即可；trust_env=False 忽略系统代理（含 ALL_PROXY），
-    # 避免依赖 socks 库且更快
-    session = requests.Session()
-    session.trust_env = False
-    return session.post(api['url'], headers=headers, json=payload, timeout=timeout)
+    return _LLM_SESSION.post(api['url'], headers=headers, json=payload, timeout=timeout)
 
 # ============================================================
 # P0 Agent：AI 标题改写 — 对程序层泛化事件用 AI 改写描述
