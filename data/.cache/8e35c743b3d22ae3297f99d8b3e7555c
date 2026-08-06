@@ -1,150 +1,507 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <script>
-      (function(){
-          setTimeout(function(){
-              window.location.reload();
-          }, 5000);
-      }())
-  </script>
-  <link rel="icon" href="data:,">
-  <title>One moment, please...</title>
-  <style>
-.spinner {
-    -webkit-animation: spin 1s ease-out;
-    animation: spin 1s ease-out;
-}
-@keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-#outer-container {
-    text-align: center;
-}
-#container {
-        display: inline-block;
-        height: 100px;
-    }
-#text {
-    float: left;
-    height: 100px;
-    line-height: 100px;
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    padding: 0 .4em 0 .2em;
-    letter-spacing: 0.06em;
-    color: rgba(38, 122, 72, 0.86);
-}
-@media (min-height: 180px) {
-    #outer-container {
-        margin-top: 0;
-    }
-}
-@media (min-height: 360px) {
-    #outer-container {
-        margin-top: 5%;
-    }
-}
-@media (min-height: 540px) {
-    #outer-container {
-        margin-top: 10%;
-    }
-}
-@media (min-height: 720px) {
-    #outer-container {
-        margin-top: 20%;
-    }
-}
-@media (min-width: 1450px) {
-    .throbber {
-        width: 90px;
-        height: 90px;
-        float: left;
-        padding: 5px 0 5px 5px;
-        opacity: 0.86;
-    }
-    #container {
-        display: inline-block;
-        border: 3px solid rgb(38, 122, 72, 0.86);
-        border-radius: 51px;
-        height: 100px;
-    }
-}
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
 
-  </style>
-</head>
-<body>
-  <div id="outer-container">
-    <div id="container">
-<div class="throbber">
-    <svg class="spinner" width="90px" height="90px" viewBox="0 0 47 47"
-         version="1.1"
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Loader</title>
-        <defs>
-            <polygon id="path-1"
-                     points="0 0.375484146 0 15.7255695 15.7013244 15.7255695 15.7013244 0.375484146 0 0.375484146"></polygon>
-        </defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none"
-           fill-rule="evenodd">
-            <g id="Logo" transform="translate(-5.000000, -2.000000)">
-                <g id="Group-2" transform="translate(5.000000, 2.000000)">
-                    <path d="M22.6150244,4.52988293 C23.1538049,3.06256585 23.6031707,1.59582195 24.231939,0.158882927 C25.1902805,2.22459024 25.8190488,4.43989512 26.7768171,6.47579756 C29.1417195,7.40376098 31.7164024,7.7929439 34.1116829,8.69110244 C28.9623171,11.2663585 23.7229634,13.7510537 18.4836098,16.176139 C19.7709512,12.2545049 21.2382683,8.4217122 22.6150244,4.52988293 L22.6150244,4.52988293 Z"
-                          id="Fill-1" fill="#467C45"></path>
-                    <path d="M13.7718598,8.94461585 C16.1424939,7.68077439 18.4500793,6.28968902 20.8207134,5.02527439 C18.9240915,10.8412378 16.7747012,16.5614817 14.8465549,22.3774451 C12.7292622,18.3950549 10.895689,14.2544695 8.9044939,10.2090305 C8.27228659,8.85004268 7.5455061,7.55353049 7.00844512,6.16359146 C9.31545732,6.95342073 11.4648476,8.24935976 13.7718598,8.94461585"
-                          id="Fill-3" fill="#467C45"></path>
-                    <path d="M24.2134256,15.0745049 C29.4602305,12.4969561 34.7379866,9.91940732 40.0157427,7.4031878 C39.1565598,9.61276098 38.1747183,11.7300537 37.2232549,13.9086756 C38.4504134,16.2099561 39.9544134,18.388578 41.0898646,20.7511878 C35.4435598,18.9405415 29.8287793,17.0381878 24.2134256,15.0745049"
-                          id="Fill-5" fill="#467C45"></path>
-                    <g id="Group-9"
-                       transform="translate(0.000000, 11.919659)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <g id="Clip-8"></g>
-                        <path d="M8.34869024,0.375484146 C9.93064146,3.33419146 11.2781659,6.43963049 12.7426171,9.45622805 C13.7387878,11.5362646 14.793422,13.5876427 15.7013244,15.7255695 C10.4579585,13.9091915 5.21401951,12.03435 -0.000114634146,10.0718134 C2.05069024,9.1341061 4.21842195,8.4898622 6.29845854,7.61119146 C6.97193415,5.17980122 7.67521463,2.77706951 8.34869024,0.375484146"
-                              id="Fill-7" fill="#467C45"
-                              mask="url(#mask-2)"></path>
-                    </g>
-                    <path d="M29.1793195,18.0496049 C33.5600634,19.4670561 37.9081366,21.0776659 42.2888805,22.5593122 C43.6742341,23.0745927 45.1558805,23.4609098 46.5085634,24.1372512 C44.2216122,25.039422 41.9025634,25.9100683 39.6477098,26.8110927 C38.8103073,29.4195927 38.2302585,32.1261049 37.3607585,34.7346049 C35.5890878,31.4497634 34.0432463,28.0353854 32.3684415,24.6852024 C31.3052098,22.4945439 30.1456854,20.3044585 29.1793195,18.0496049"
-                          id="Fill-10" fill="#467C45"></path>
-                    <path d="M28.9972232,29.3489207 C29.5789915,27.69475 30.0684793,26.0113476 30.7419549,24.3887012 C31.538089,25.7660305 32.1811866,27.2356402 32.9154183,28.6444939 C34.7220524,32.4709817 36.68115,36.205189 38.4568329,40.0316768 C36.2827963,39.1449817 34.1402841,38.1654329 31.9364427,37.2460671 C29.6403207,38.4709329 27.4662841,39.9405427 25.1094061,41.1035061 C26.3033207,37.1549329 27.7419793,33.2671159 28.9972232,29.3489207"
-                          id="Fill-12" fill="#467C45"></path>
-                    <path d="M4.97133902,25.64555 C9.93385122,27.1873793 14.7737049,29.036428 19.6748878,30.6705378 C20.4148512,30.9170012 21.1542415,31.1944159 21.8328756,31.5337329 C16.5304732,33.9685622 11.3214976,36.6498549 5.95776585,38.99355 C6.82096098,36.8355622 7.89966829,34.7698549 8.7319122,32.581489 C7.68358293,30.1764646 6.11194878,28.01905 4.97133902,25.64555"
-                          id="Fill-14" fill="#467C45"></path>
-                    <path d="M15.4549183,35.8770488 C19.4671134,33.9317073 23.4483573,31.8952317 27.4915037,30.0433171 C26.4110768,33.6542927 25.0222841,37.203939 23.8186256,40.8143415 C23.1090402,42.7275854 22.5530646,44.7033049 21.7511988,46.5855976 C20.7630524,44.4866463 20.0534671,42.2650366 19.1277963,40.1351341 C16.6276256,39.2094634 14.0042232,38.684439 11.4736744,37.9748537 C12.6773329,37.0801341 14.1584061,36.586061 15.4549183,35.8770488"
-                          id="Fill-16" fill="#467C45"></path>
-                </g>
-            </g>
-        </g>
-    </svg>
-</div>
-      <div id="text">
-        Please wait while your request is being verified...
-      </div>
-    </div>
-  </div>
-  <div id="fyt3137f5528"></div>
-  <script>
-var a0f=a0O;(function(e,E){var a0k={e:0xcc,E:0xa8,i:0xcb,O:0xbf,d:0xa4,J:0xc2},Z=a0O,i=e();while(!![]){try{var O=parseInt(Z(0x9c))/0x1*(-parseInt(Z(0x94))/0x2)+-parseInt(Z(a0k.e))/0x3*(parseInt(Z(0xa0))/0x4)+parseInt(Z(0xd0))/0x5*(-parseInt(Z(a0k.E))/0x6)+parseInt(Z(a0k.i))/0x7+-parseInt(Z(0xd1))/0x8*(parseInt(Z(a0k.O))/0x9)+parseInt(Z(a0k.d))/0xa+-parseInt(Z(0xa9))/0xb*(-parseInt(Z(a0k.J))/0xc);if(O===E)break;else i['push'](i['shift']());}catch(d){i['push'](i['shift']());}}}(a0i,0x36ea5));function a0i(){var w=['techange','input','1252335rmhrdF','33387YVipbq','60b54a2be4','webdriver','type','5bCDpYx','870752NYMxuk','append','6wDOOjm','length','stener','languages','addEventLi','ne;','appVersion','outerWidth','118623tCbnNp','apply','userAgent','action','124MmZOzl','language','7fa3b767c4','mimeTypes','671140NtWzij','document','send','a6105c0a61','1862118HlvdVA','11lyjywe','toString','GET','__proto__','ById','entries','d49030b349','hidden','constructo','plugins','display:no','navigator','outerHeigh','createElem','name','cttl','form','test','(((.+)+)+)','filter','prototype','open','9rkWAnx','appendChil','submit','13187748zXQEko','search','DOMContent','value','ent','forEach','Loaded'];a0i=function(){return w;};return a0i();}var a0d=window[a0f(0xb4)],a0J={'webdriverCheck':function(){var a0W={e:0xce},Q=a0f;return Q(a0W.e)in window||!!a0d[Q(0xce)];},'userAgentCheck':function(){var a0u={e:0x9e},r=a0f;return/headless|bytespider/i['test'](a0d[r(a0u.e)]);},'appVersionCheck':function(){var a0P={e:0xba},V=a0f;return/headless/i[V(a0P.e)](a0d[V(0x9a)]);},'pluginArraySpoofing':function(){var a0t={e:0xb2,E:0xac},N=a0f;let e=PluginArray['prototype']===a0d[N(a0t.e)][N(a0t.E)];if(a0d[N(0xb2)]['length']>0x0)e&=Plugin['prototype']===a0d[N(0xb2)][0x0][N(0xac)];return!e;},'mimeTypeArraySpoofing':function(){var a0x={e:0xbd,E:0x95,i:0xa3,O:0xac},L=a0f;let e=MimeTypeArray[L(a0x.e)]===a0d['mimeTypes'][L(0xac)];if(a0d[L(0xa3)][L(a0x.E)]>0x0)e&=MimeType[L(0xbd)]===a0d[L(a0x.i)][0x0][L(a0x.O)];return!e;},'noLanguage':function(){var a0p={e:0xa1},T=a0f;return!a0d[T(a0p.e)]||a0d[T(0x97)][T(0x95)]===0x0;},'zeroOuterDimensions':function(){var a0q={e:0xb5,E:0x9b},v=a0f;return window[v(a0q.e)+'t']===0x0&&window[v(a0q.E)]===0x0;}},a0b=function(i,O){var a0S={e:0x96},a0K={e:0xaa,E:0xc3,i:0xaa,O:0xb1},y=a0f,d=(function(){var b=!![];return function(c,I){var a0g={e:0x9d},a=b?function(){var s=a0O;if(I){var U=I[s(a0g.e)](c,arguments);return I=null,U;}}:function(){};return b=![],a;};}()),J=d(this,function(){var F=a0O;return J[F(a0K.e)]()[F(a0K.E)]('(((.+)+)+)'+'+$')[F(a0K.i)]()[F(a0K.O)+'r'](J)[F(0xc3)](F(0xbb)+'+$');});J(),window['addEventLi'+y(a0S.e)]?window['document'][y(0x98)+y(0x96)](y(0xc4)+y(0xc8),i,O):window['document']['attachEven'+'t']('onreadysta'+y(0xc9),i);};function a0O(e,E){var i=a0i();return a0O=function(O,d){O=O-0x93;var J=i[O];return J;},a0O(e,E);}a0b(function(){var a0M={e:0xad,E:0xa5,i:0xb6,O:0xb6,d:0xc6,J:0xca,b:0xa5,c:0xb6,I:0xb6,a:0xca,U:0xca,C:0xae,Y:0xbc,A:0x95,X:0x93,l:0xa7,R:0xa6,z:0x99,h:0xab,D:0x9f,m:0xb7,f:0xc5,k:0xc5,W:0xa2,u:0xb0,P:0xb7,t:0xc5,x:0xb0,p:0xc0,q:0xc0};setTimeout(function(){var n=a0O,e=window[n(0xa5)]['getElement'+n(a0M.e)]('fyt3137f5528'),E=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![])+(+!+[]+[])+(+!+[]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![])),i=window[n(a0M.E)][n(a0M.i)+'ent'](n(0xb9)),O=window['document'][n(a0M.O)+n(a0M.d)](n(a0M.J)),d=window[n(a0M.b)][n(0xb6)+'ent'](n(0xca)),J=window[n(a0M.E)][n(a0M.c)+n(a0M.d)]('input'),b=window['document'][n(a0M.I)+n(a0M.d)](n(a0M.a)),c=window[n(0xa5)]['createElem'+n(0xc6)](n(a0M.U)),I=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(+!+[]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![])),a='wsidchk',U='pdata',C='https%3A%2F%2Fventureburn.com%2Ffeed%2F',Y='/z0f76a1d14fd21a8fb5fd0d03e0fdc3d3cedae52f',A='failedChecks',X=Object[n(a0M.C)](a0J)['map'](([h,D])=>{try{return D()?h:null;}catch(m){return null;}})[n(a0M.Y)](h=>h!==null),l=X[n(a0M.A)]>0x0;if(l){var R=new URLSearchParams();R[n(a0M.X)]('id',n(a0M.l)+'1b41b08f12'+'0950635027'+'9e'),R[n(a0M.X)]('ts','1785989324'),R['append'](a,E+I),R[n(0x93)](U,C),R['append'](n(0xb8),'0'),X[n(0xc7)](h=>R[n(0x93)](A,h));var z=new XMLHttpRequest();z[n(0xbe)]('GET',Y+'?'+R[n(0xaa)]()),z[n(a0M.R)](null);}else i['id']='fyt3137f5528',i['style']=n(0xb3)+n(a0M.z),i['method']=n(a0M.h),i[n(a0M.D)]=Y,O['id']='x7ohe5b0sdto',O[n(a0M.m)]=a,O[n(a0M.f)]=E+I,O[n(0xcf)]='hidden',J['name']='id',J[n(a0M.k)]=n(a0M.W)+n(0xcd)+n(0xaf)+'c7',J[n(0xcf)]=n(0xb0),b[n(a0M.m)]='ts',b['value']='1785989324',b[n(0xcf)]=n(a0M.u),d['id']='brzd4cxpz91e',d['name']=U,d['value']=C,d[n(0xcf)]='hidden',c[n(a0M.P)]='cttl',c[n(a0M.t)]='0',c[n(0xcf)]=n(a0M.x),i[n(0xc0)+'d'](O),i[n(a0M.p)+'d'](d),i[n(a0M.p)+'d'](J),i[n(0xc0)+'d'](b),i['appendChil'+'d'](c),e[n(a0M.q)+'d'](i),i[n(0xc1)]();},0x3e8);},![]);
-  </script>
-</body>
-</html>
+<channel>
+	<title>Ventureburn</title>
+	<atom:link href="https://ventureburn.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ventureburn.com/</link>
+	<description>Startup news for emerging markets</description>
+	<lastBuildDate>Wed, 05 Aug 2026 17:48:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.0.2</generator>
+
+<image>
+	<url>https://ventureburn.com/wp-content/uploads/2025/09/favicon-150x150.png</url>
+	<title>Ventureburn</title>
+	<link>https://ventureburn.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Aurelius Systems Raises $40M To Advance Autonomous Defense Platform</title>
+		<link>https://ventureburn.com/aurelius-systems-raises-40m-to-advance-autonomous-defense-platform/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 17:48:07 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204067</guid>
+
+					<description><![CDATA[<p>Funding Accelerates Directed-Energy Defence Expansion  Aurelius Systems raises $40 million in Series A for growth The company plans to use capital to increase manufacturing, expand operations and support U.S.-based supply</p>
+<p>The post <a href="https://ventureburn.com/aurelius-systems-raises-40m-to-advance-autonomous-defense-platform/" data-wpel-link="internal">Aurelius Systems Raises $40M To Advance Autonomous Defense Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Funding Accelerates Directed-Energy Defence Expansion</b><span style="font-weight: 400"> </span></h2>
+<p><span style="font-weight: 400">Aurelius Systems raises $40 million in Series A for growth The company plans to use capital to increase manufacturing, expand operations and support U.S.-based supply chain as demand for high-performance counter-drone solutions rises. </span></p>
+<p><span style="font-weight: 400">Draper Associates and KAS Venture Partners co-led the round, joined by General Catalyst, Hanwha Defense USA, Outlander, Alumni Ventures, Bravo Victor Venture Capital, Detroit Venture Partners, Decisive Point and more.</span></p>
+<p><span style="font-weight: 400">The new investment reflects growing demand for autonomous defence technologies as governments increase spending on counter-drone capabilities. Defence organisations are seeking systems that can respond quickly to evolving aerial threats while reducing operational costs and improving mission readiness. </span></p>
+<h2><b>Aurelius Systems Expands Archimedes Platform</b></h2>
+<p><span style="font-weight: 400">The funding will accelerate technical development and increase production capacity for Aurelius&#8217; flagship Archimedes defence platform. Aurelius also plans vertical integration strengthening manufacturing readiness while reducing long-term supply chain disruption risks significantly.</span></p>
+<p><span style="font-weight: 400">The strategy improves access to essential materials supporting reliable manufacturing and future production expansion across defence markets. Beyond Archimedes, the company plans expanding its product portfolio while entering additional defence industry market segments globally.</span></p>
+<p><span style="font-weight: 400">Chief executive Michael LaFramboise said coordinated drone attacks have fundamentally changed today&#8217;s modern defence landscape worldwide significantly. He said Archimedes was designed as a scalable platform protecting people, infrastructure, assets, and critical defence targets.</span></p>
+<h2><b>AI And Directed Energy Drive Defence Innovation</b></h2>
+<p><span style="font-weight: 400">San Francisco-based Aurelius Systems develops artificial intelligence-powered sensing, robotics, and directed-energy systems for autonomous aerial defence. Its technologies detect, track, and defeat aerial threats without requiring continuous human intervention during active operations worldwide.</span></p>
+<p><span style="font-weight: 400">Archimedes is an autonomous laser-based counter-drone system designed to protect military forces and critical infrastructure from attacks. The platform offers faster response times and lower operating costs than many conventional air defence systems today.</span></p>
+<p><span style="font-weight: 400">Its autonomous directed-energy technology provides continuous protection against increasingly sophisticated and rapidly evolving </span><a href="https://builtin.com/drones" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">drone</span></a><span style="font-weight: 400"> threats worldwide effectively. Draper Associate, Andy Tang praised Aurelius for demonstrating core technologies and building strategic deployment partnerships successfully.</span></p>
+<h2><b>Recent Milestones Strengthen Growth Strategy</b></h2>
+<div id="attachment_204070" style="width: 1322px" class="wp-caption alignnone"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-204070" class="size-full wp-image-204070" src="https://ventureburn.com/wp-content/uploads/2026/08/Aurelius-2.png" alt="Illustration of an autonomous directed-energy defence platform integrated with AI command-and-control systems, manufacturing expansion, and strategic defence partnerships." width="1312" height="736" /><p id="caption-attachment-204070" class="wp-caption-text">Recent operational milestones, strategic partnerships, and successful defence testing are strengthening confidence in autonomous directed-energy platforms as manufacturing and deployment capabilities continue to expand. Source: Created by Ventureburn.</p></div>
+<p><span style="font-weight: 400">The funding follows several important operational milestones for Aurelius. He said those achievements position Aurelius leading autonomous directed-energy systems from concept through commercial deployment and adoption.</span></p>
+<p><span style="font-weight: 400">The company recently formed an integration partnership with American Rheinmetall to expand deployment opportunities for the Archimedes platform. It also completed interoperability testing with command-and-control systems during Operation Jailbreak and successfully validated its platform during the Technology Readiness Experimentation (T-REX) 26-2 programme.</span></p>
+<p><span style="font-weight: 400">These achievements have strengthened confidence in the platform&#8217;s readiness for future defence deployments while supporting continued investment in manufacturing capabilities. Aurelius currently employs 19 people and expects to grow its workforce to more than 40 employees before the end of 2026 as production scales.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/faye-raises-50m-series-c-funding/" data-wpel-link="internal"><span style="font-weight: 400">Faye Raises $50M In Series C To Expand AI Travel Protection Platform</span></a></p>
+<h2><b>Investment Supports Manufacturing And Market Expansion</b></h2>
+<p><span style="font-weight: 400">The Series A funding positions Aurelius to increase production while supporting long-term manufacturing resilience in the United States. The company is investing in domestic supply chain infrastructure alongside strategic partnerships to improve delivery timelines and reduce dependence on external suppliers.</span></p>
+<p><span style="font-weight: 400">As autonomous aerial threats become more common across military and critical infrastructure environments, Aurelius aims to provide scalable AI-powered defensive systems that can be deployed rapidly across multiple sectors.</span></p>
+<p><span style="font-weight: 400">The latest investment provides the resources needed to expand the company&#8217;s manufacturing footprint, strengthen its technology platform, and accelerate customer deliveries as the market for autonomous defence technologies continues to grow.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/aurelius-systems-raises-40m-to-advance-autonomous-defense-platform/" data-wpel-link="internal">Aurelius Systems Raises $40M To Advance Autonomous Defense Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Faye Raises $50M In Series C To Expand AI Travel Protection Platform</title>
+		<link>https://ventureburn.com/faye-raises-50m-series-c-funding/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 17:29:20 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204062</guid>
+
+					<description><![CDATA[<p>Faye Expands AI Travel Services With New Funding  Travel protection platform Faye raises $50 million in Series C funding, to bolster market expansion Faye&#8217;s AI-powered travel protection platform has raised</p>
+<p>The post <a href="https://ventureburn.com/faye-raises-50m-series-c-funding/" data-wpel-link="internal">Faye Raises $50M In Series C To Expand AI Travel Protection Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Faye Expands AI Travel Services With New Funding </b></h2>
+<p><span style="font-weight: 400">Travel protection platform Faye raises $50 million in Series C funding, to bolster market expansion Faye&#8217;s AI-powered travel protection platform has raised $50 million in Series C funding in order to accelerate growth. </span></p>
+<p><span style="font-weight: 400">The funds will be used to enter new markets, strengthen alliances throughout the industry and boost automation capabilities for customer support and claims. The funding round was led by Madrona.</span></p>
+<p><span style="font-weight: 400">Participants included BRM, Portage, F2 Venture Capital, Viola Ventures, and Lumir Ventures alongside Madrona successfully. Following this latest investment, Faye has now raised $100 million since beginning operations in 2022 successfully.</span></p>
+<h2><b>Faye Expands AI-Powered Travel Protection</b></h2>
+<p><span style="font-weight: 400">Founded in 2022, Faye provides an AI-first travel protection platform through one integrated mobile application globally. Faye combines insurance, financial services, traveller support, and real-time travel insights within one integrated platform globally.</span></p>
+<p><span style="font-weight: 400">The funding will scale global operations while strengthening partnerships across online travel and mobility companies worldwide successfully. Faye plans investing heavily in artificial intelligence automating claims processing, </span><a href="https://www.investopedia.com/terms/u/underwriting.asp" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">underwriting</span></a><span style="font-weight: 400">, and customer support services efficiently.</span></p>
+<p><span style="font-weight: 400">The company expects artificial intelligence to handle more than fifty percent of claims automatically during this year successfully. Seventy-five percent of remaining claims should be resolved during the customer&#8217;s first support interaction through artificial intelligence.</span></p>
+<h2><b>Funding Supports Fintech And Platform Growth</b></h2>
+<p><span style="font-weight: 400">Alongside its AI investments, Faye will continue expanding its travel fintech capabilities. The company plans to further develop Faye Wallet, allowing travellers to receive reimbursements quickly and manage travel-related expenses through a digital wallet while abroad.</span></p>
+<p><span style="font-weight: 400">Its mobile platform already enables customers to purchase travel protection in about one minute, submit digital claims within minutes, and receive approved payouts directly to their mobile wallets. Additional services include telemedicine access, eSIM connectivity, airport lounge access, concierge assistance, and real-time travel updates.</span></p>
+<p><span style="font-weight: 400">Madrona Managing Director Steve Singh said Faye is helping rebuild the travel experience around travellers instead of traditional insurance products. He added that the company has positioned itself to become a long-term leader in modern travel protection.</span></p>
+<h2><b>Strong Growth Drives Investor Confidence</b></h2>
+<div id="attachment_204064" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204064" class="size-full wp-image-204064" src="https://ventureburn.com/wp-content/uploads/2026/08/Faye-2.png" alt="Illustration of a digital travel insurance platform connecting travellers, airlines, agencies, and cruise operators through AI-powered claims processing and travel protection." width="1312" height="736" /><p id="caption-attachment-204064" class="wp-caption-text">Digital-first travel protection platforms are driving investor confidence by combining AI-powered insurance services, rapid customer growth, and expanding partnerships across the global travel ecosystem. Source: Created by Ventureburn.</p></div>
+<p><span style="font-weight: 400">Faye recently opened its new United States headquarters in Richmond, Virginia. Faye earned recognition as a TIME Best Invention and a U.S. News top travel insurance provider. The company said digital-first travel protection revenue more than doubled during the past year through strong adoption.</span></p>
+<p><span style="font-weight: 400">Its online marketplace platform has received more than twenty industry awards since launching successfully several years ago. Investor interest followed a year of rapid business growth and increasing customer adoption across multiple travel markets.</span></p>
+<p><span style="font-weight: 400">Faye continues expanding partnerships with travel agencies, distribution platforms, airlines, and cruise operators serving customers globally. These partnerships simplify insurance management, claims processing, and customer service across the wider travel industry ecosystem effectively.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/ordway-secures-20m-funding/" data-wpel-link="internal"><span style="font-weight: 400">Ordway Secures $20M To Expand AI Billing And Revenue Platform</span></a></p>
+<h2><b>AI Strategy Positions Faye For Future Growth</b></h2>
+<p><span style="font-weight: 400">For Faye’s long-term goals, AI will continue to be at the very heart of the operation, not just insurance; they are building the holistic travel platform which places all aspects like protection, finance, and traveller care together. </span></p>
+<p><span style="font-weight: 400">The funding will fuel their push for product enhancement, scale up the company’s AI functionality, enhance overseas development, and nurture new and existing travel industry partnerships. </span></p>
+<p><span style="font-weight: 400">With all the travel ventures, looking for automating the consumer and speeding up claims, Faye will help their partners maintain a satisfying customer service and ease of operational processes via its system.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/faye-raises-50m-series-c-funding/" data-wpel-link="internal">Faye Raises $50M In Series C To Expand AI Travel Protection Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Ordway Secures $20M To Expand AI Billing And Revenue Platform</title>
+		<link>https://ventureburn.com/ordway-secures-20m-funding/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 17:22:00 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204056</guid>
+
+					<description><![CDATA[<p>Ordway Secures $20M To Accelerate AI Finance Platform Ordway has secured $20 million in new equity and debt funding to expand its AI-powered monetisation and billing platform. The round was</p>
+<p>The post <a href="https://ventureburn.com/ordway-secures-20m-funding/" data-wpel-link="internal">Ordway Secures $20M To Expand AI Billing And Revenue Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Ordway Secures $20M To Accelerate AI Finance Platform</b></h2>
+<p><span style="font-weight: 400">Ordway has secured $20 million in new equity and debt funding to expand its AI-powered monetisation and billing platform. The round was led by Harbert Growth Partners, while Western Alliance Bank&#8217;s Innovation Banking Group provided the debt financing.</span></p>
+<p><span style="font-weight: 400">Ordway will use the funding supporting artificial intelligence initiatives, reporting enhancements, and overall business growth globally. Founded in Washington, DC, Ordway develops billing and revenue management software for technology-focused subscription businesses worldwide.</span></p>
+<p><span style="font-weight: 400">Its platform automates quote-to-cash workflows, simplifying subscriptions, billing, payments, revenue recognition, and financial reporting processes together. Ordway helps finance teams manage every revenue operation through one centralised platform improving efficiency and operational accuracy.</span></p>
+<p><span style="font-weight: 400">The funding reflects growing investor confidence in AI-powered financial operations software as businesses adopt increasingly flexible </span><a href="https://dealhub.io/glossary/pricing-models/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">pricing models</span></a><span style="font-weight: 400">. Companies offering subscription, usage-based, and hybrid services require platforms that can manage complex billing while maintaining financial accuracy and compliance. </span></p>
+<h2><b>AI Investments Target Finance Automation</b></h2>
+<p><span style="font-weight: 400">Ordway plans to use the funds to double its research and development funding and broaden its AI roadmaps for finance professionals with new automation solutions including the release of AI-enhanced cash reconciliation that reconciles payments from any number of bank accounts with invoices.</span></p>
+<p><span style="font-weight: 400">The platform also features AI contract data extraction, allowing businesses to automatically capture billing and revenue recognition information from subscription agreements. The company has also introduced MCP integration for Claude, extending AI-assisted capabilities across its platform.</span></p>
+<p><span style="font-weight: 400">Future development will focus on AI agents that automate routine financial tasks. These include updating billing records, accounting workflows, investor metrics, and contract modifications such as renewals or subscription pauses.</span></p>
+<h2><b>Platform Expands Beyond Billing Into Payments</b></h2>
+<div id="attachment_204060" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204060" class="size-full wp-image-204060" src="https://ventureburn.com/wp-content/uploads/2026/08/Ordway-2.png" alt="Illustration of an AI-powered revenue management platform integrating payment processing, invoice reconciliation, and enterprise financial systems into a unified digital infrastructure." width="1312" height="736" /><p id="caption-attachment-204060" class="wp-caption-text">AI-powered revenue management platforms are transforming enterprise finance by unifying payment processing, invoice reconciliation, and automated financial operations within a single intelligent system. Source: Created by Ventureburn.</p></div>
+<p><span style="font-weight: 400">Alongside its AI investments, Ordway is expanding into payment processing through the launch of Ordway Payments. The new offering is designed to simplify payment collection, invoice matching, and revenue reconciliation.</span></p>
+<p><span style="font-weight: 400">According to the company, businesses increasingly require integrated finance systems as pricing models become more complex. Enterprise customers often operate across multiple legal entities, accounting systems, and reporting jurisdictions, increasing demand for automated financial infrastructure.</span></p>
+<p><span style="font-weight: 400">Chief Executive Officer Sameer Gulati said finance teams continue to face operational challenges after sales teams complete new customer agreements. Ordway said automation from point-of-sale systems into financial platforms remains a major industry trend driving adoption.</span></p>
+<p><span style="font-weight: 400">The company believes customers increasingly prefer unified revenue management instead of multiple disconnected financial software solutions. Ordway said its growth reflects demand for one platform managing every revenue-related business process efficiently together.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/convex-raises-57m-series-b/" data-wpel-link="internal"><span style="font-weight: 400">Convex Raises $57M To Build Reliable AI-Native Backend Platform</span></a></p>
+<h2><b>Funding Supports Long-Term Product Growth</b></h2>
+<p><span style="font-weight: 400">Ordway plans enhancing reporting with artificial intelligence forecasting tools covering churn, cash flow, and revenue growth. These tools help finance teams make faster decisions while reducing repetitive manual financial analysis and reporting tasks.</span></p>
+<p><span style="font-weight: 400">The platform targets artificial intelligence, software-as-a-service, cloud, and subscription businesses managing recurring revenue efficiently worldwide. It also supports organisations using usage-based pricing models alongside traditional recurring subscription billing structures successfully together.</span></p>
+<p><span style="font-weight: 400">Harbert Growth Partners said artificial intelligence is increasing the complexity of pricing, billing, and monetisation strategies for technology businesses. The investor believes Ordway is well positioned to help finance teams adapt through automation and intelligent financial infrastructure.</span></p>
+<p><span style="font-weight: 400">Ordway combines payment processing, self-service checkout, subscriber management, investor management, and usage-based billing within one platform. With fresh funding and continued profitability, Ordway aims to strengthen its position as businesses seek more efficient ways to manage increasingly sophisticated revenue operations.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/ordway-secures-20m-funding/" data-wpel-link="internal">Ordway Secures $20M To Expand AI Billing And Revenue Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>River Mobility Raises $120 Million To Scale India’s Utility EV Market</title>
+		<link>https://ventureburn.com/river-mobility-raises-120-million-to-scale-indias-utility-ev-market/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 15:11:11 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[electric vehicles]]></category>
+		<category><![CDATA[EVs]]></category>
+		<category><![CDATA[River]]></category>
+		<category><![CDATA[River Mobility]]></category>
+		<category><![CDATA[Series C]]></category>
+		<category><![CDATA[startup]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204051</guid>
+
+					<description><![CDATA[<p>India’s electric two-wheeler race has been loud. Ola, Ather, Bajaj, TVS — everyone launched multiple scooters, fought for lifestyle buyers, and burned cash on marketing. But River took the opposite</p>
+<p>The post <a href="https://ventureburn.com/river-mobility-raises-120-million-to-scale-indias-utility-ev-market/" data-wpel-link="internal">River Mobility Raises $120 Million To Scale India’s Utility EV Market</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">India’s electric two-wheeler race has been loud. Ola, Ather, Bajaj, TVS — everyone launched multiple scooters, fought for lifestyle buyers, and burned cash on marketing. But River took the opposite bet and it paid off. </span></p>
+<p><span style="font-weight: 400">The Bengaluru-based startup, River Mobility raises $120 million in Series C led by Indian investors Elev8 Venture Partners and Claypond Capital. Singularity AMC, Anicut, 360 ONE, JIF, HDFC AMC joined, along with existing backers Yamaha Motor, Al-Futtaim, and Mitsui. Less than 12% was debt. All of it was the primary capital. Total raised is now $144 million.</span></p>
+<h2><span style="font-weight: 400">The Problem River Mobility Solves</span></h2>
+<div id="attachment_204053" style="width: 1034px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-204053" class="size-large wp-image-204053" src="https://ventureburn.com/wp-content/uploads/2026/08/River-Mobility-bike-1024x573.jpg" alt="A photo of the River Indie inside the River Mobility shop " width="1024" height="573" /><p id="caption-attachment-204053" class="wp-caption-text">River Indie</p></div>
+<p><span style="font-weight: 400">India’s biggest EV adoption story so far has been 2-wheelers. But most startups chased urban consumers with premium features, connected dashboards, and sporty designs.</span></p>
+<p><a href="https://www.rideriver.com/stories" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">River Mobility</span></a><span style="font-weight: 400"> CEO Aravind Mani saw a different gap. Self-employed people, delivery riders, small business owners, tradespeople, who ride 60-80 km a day and care about cost per kilometer and uptime.</span></p>
+<p><span style="font-weight: 400">In 2023, River launched just one product: the Indie. It’s a utility electric moped built for work. It costs $1,630, claims a 99-mile range, and comes with cargo accessories.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/happyrobot-150m-series-c-six-models-enterprise-ai-agents/" data-wpel-link="internal"><b><i>HappyRobot Raises $150M To Fix Enterprise AI Agents</i></b></a></p>
+<h2><span style="font-weight: 400">Traction that Got Investors’ Attention</span></h2>
+<p><span style="font-weight: 400">River is moving about 6,000 vehicles every month through 75+ stores. They’ve crossed 50,000 total sales. And monthly revenue is around $11 million, with full-year revenue up 330% through March 2026.</span></p>
+<p><span style="font-weight: 400">The typical buyer is 28-35, self-employed, and using the Indie to make a living. For them, EV is about margins. But the real achievement, Mani says, was manufacturing, there was a point when we were making 20 vehicles a day. </span></p>
+<p><span style="font-weight: 400">Today, River make 300 EVs a day, and that scale-up has not been easy. This is the steepest learning curve for any company out there. Their first factory outside Bengaluru now does 10,000 vehicles per month after upgrades. It will be maxed out by early next year.</span></p>
+<p><span style="font-weight: 400">River can’t launch its next products until it has more factory space. So the funding will be divided into three categories: </span></p>
+<ol>
+<li style="font-weight: 400"><span style="font-weight: 400">New factory: Building starts in two months. The first phase goes live mid-2027 with 700,000 to 800,000 vehicles per year. That’s 60x today’s output.</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">Two new models: Launching from next year. River hasn’t revealed details, but expect them to stay in the utility lane.</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">Retail scale: Over two hundred stores by March 2027 and four hundred outlets by March 2028.</span></li>
+</ol>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/volta-raises-300-million-ai-infrastructure-costs/" data-wpel-link="internal"><b><i>Volta Raises $300M To Tackle Soaring AI Infrastructure Cost</i></b></a></p>
+<h2><span style="font-weight: 400">Why Indian Investors Led This Round</span></h2>
+<p><span style="font-weight: 400">This round looks different from River’s earlier ones. The first checks funded R&amp;D and the Indie. This one funds execution. Mani pointed to a disconnect he’s seen, “Silicon Valley investors had long recognized India’s EV opportunity. What they don’t understand is the customer behavior. </span></p>
+<p><span style="font-weight: 400">Indian funds like Elev8 and Claypond, plus strategics like Yamaha, are betting River has figured out both product and production. River is competing in a crowded market, but its single-model approach gave it an advantage. </span></p>
+<p><span style="font-weight: 400">Instead of splitting engineering and supply chain across 4 scooters, everything went into making Indie reliable and cheap to build. That’s how they jumped from 20 to 300 per day. The risk now is the opposite. Can they keep that discipline while adding 2 models and 10x-ing factories?</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/quanthealth-raises-45m-series-b-ai-clinical-trial-simulations/" data-wpel-link="internal"><b><i>QuantHealth Raises $45M for AI Pharm Clinical Trials</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/river-mobility-raises-120-million-to-scale-indias-utility-ev-market/" data-wpel-link="internal">River Mobility Raises $120 Million To Scale India’s Utility EV Market</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>HappyRobot Raises $150 Million At $1.2B To Fix Enterprise AI Agents</title>
+		<link>https://ventureburn.com/happyrobot-150m-series-c-six-models-enterprise-ai-agents/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 13:05:24 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[AI agents]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Enterprise AI]]></category>
+		<category><![CDATA[HappyRobot]]></category>
+		<category><![CDATA[HappyRobot AI]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204046</guid>
+
+					<description><![CDATA[<p>Most enterprise AI demos look great in a lab. But when you put them on a real phone call with a freight broker, a pricing dispute, and three systems to</p>
+<p>The post <a href="https://ventureburn.com/happyrobot-150m-series-c-six-models-enterprise-ai-agents/" data-wpel-link="internal">HappyRobot Raises $150 Million At $1.2B To Fix Enterprise AI Agents</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Most enterprise AI demos look great in a lab. But when you put them on a real phone call with a freight broker, a pricing dispute, and three systems to update, they fall apart. HappyRobot </span><a href="https://x.com/HappyRobot/status/2084620670219268440" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">raises $150 million</span></a><span style="font-weight: 400"> in Series C at a $1.2 billion valuation to prove there’s a better way. </span></p>
+<p><span style="font-weight: 400">a16z, Base10, and YC also doubled down. New strategics include Koch, Orange, Deutsche Telekom’s T.Capital, and Bankinter. That takes total funding to $200M in 20 months. But the number investors care about more is net dollar retention: over 150%. Customers are expanding 5x to 10x.</span></p>
+<h2><span style="font-weight: 400">Why 40% of Enterprise AI Agents Will Fail</span></h2>
+<p><span style="font-weight: 400">Gartner predicts 40% of enterprises will shut down autonomous AI agents by 2027. Not because models are bad, but because of governance and workflow failures. Data from ChatSee.ai on 10,000+ failures: </span></p>
+<ul>
+<li style="font-weight: 400"><span style="font-weight: 400">31.1% = resolution/escalation breakdowns. The agent answered but didn’t complete the task or route to a human</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">&lt;10% = hallucinations</span></li>
+</ul>
+<p><span style="font-weight: 400">Most startups build single-task chatbots. Enterprises need agents that can handle multi-step workflows across calls, emails, and systems. That’s where they break.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/volta-raises-300-million-ai-infrastructure-costs/" data-wpel-link="internal"><b><i>Volta Raises $300M To Tackle Soaring AI Infrastructure Cost</i></b></a></p>
+<h2><span style="font-weight: 400">Six Models, One Phone Call</span></h2>
+<p><span style="font-weight: 400">HappyRobot doesn’t rely on one LLM. Every voice call runs 6 coordinated AI models on Kubernetes across AWS, GCP, Azure: voice detection, ASR, end-of-turn detection, LLM, TTS, and Proprietary cleanup filters. </span></p>
+<p><span style="font-weight: 400">All six must finish within human-level latency. So they built separate SIP gateways for voice, GPU autoscaling, and real-time traffic handling. The platform has 3 layers:</span></p>
+<ul>
+<li style="font-weight: 400"><span style="font-weight: 400">●</span> <span style="font-weight: 400">Tactical agents: calls, emails, SMS, WhatsApp, OCR, browser </span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">●</span> <span style="font-weight: 400">Workflow layer: orchestrates multi-step processes with conditional logic</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">●</span> <span style="font-weight: 400">Orchestrating intelligence: shared memory so learnings from one agent help all others</span></li>
+</ul>
+<p><span style="font-weight: 400">Wave-X exec Thomas Muscher described it best: “It’s not replacing one task. It’s an entire chain: seven phone calls, emails, calculations, then a decision.”</span></p>
+<p><span style="font-weight: 400">To avoid the failures Gartner flagged, HappyRobot built:</span></p>
+<ul>
+<li style="font-weight: 400"><span style="font-weight: 400">Adversarial agents &#8211; AI that tries to break production agents during testing</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">Northstars &#8211; Quality standards checked on every interaction</span></li>
+<li style="font-weight: 400"><span style="font-weight: 400">Post-call audits &#8211; Tracks interruptions, latency, accuracy, escalation rate, and resolution rate</span></li>
+</ul>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/quanthealth-raises-45m-series-b-ai-clinical-trial-simulations/" data-wpel-link="internal"><b><i>QuantHealth Raises $45M for AI Pharm Clinical Trials</i></b></a></p>
+<h2><span style="font-weight: 400">What Comes Next</span></h2>
+<div id="attachment_204048" style="width: 666px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-204048" class="size-full wp-image-204048" src="https://ventureburn.com/wp-content/uploads/2026/08/HappyRobot-Founders.jpg" alt="The founders of HappyRobot Founders, Pablo Palafox (CEO), his brother Javier (Javi) Palafox (COO), and their childhood friend Luis Paarup (CTO)" width="656" height="433" /><p id="caption-attachment-204048" class="wp-caption-text">HappyRobot Founders</p></div>
+<p><span style="font-weight: 400">HappyRobot is moving from logistics into telecom, insurance, energy, and banking. They’ve opened 8 global offices since Series B. The $150M funds engineering, GTM, and expansion into those verticals.</span></p>
+<p><span style="font-weight: 400">CEO Pablo Palafox, PhD in computer vision and ex-Meta Reality Labs, frames the goal as “enterprise superintelligence” — a system where every workflow an agent runs makes the next agent better.</span></p>
+<p><span style="font-weight: 400">The enterprise agent market is projected to hit $295B by 2035. Gartner says 40% of enterprise apps will embed task-specific agents by the end of 2026, up from 5% last year.</span></p>
+<p><span style="font-weight: 400">HappyRobot is betting that operational depth in multi-step workflows is where the real value accumulates. If they’re right, the next wave of enterprise AI won’t be about who has the smartest model. </span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/valar-atomics-raises-1-billion-integrated-nuclear/" data-wpel-link="internal"><b><i>Valar Atomics Raises $1B To Build Vertically Integrated Nuclear Firm</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/happyrobot-150m-series-c-six-models-enterprise-ai-agents/" data-wpel-link="internal">HappyRobot Raises $150 Million At $1.2B To Fix Enterprise AI Agents</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How to Build a Complete Product Marketing Campaign with Pollo AI</title>
+		<link>https://ventureburn.com/how-to-build-a-complete-product-marketing-campaign-with-pollo-ai/</link>
+		
+		<dc:creator><![CDATA[Staff Reporter]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 12:41:57 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204040</guid>
+
+					<description><![CDATA[<p>A product marketing campaign rarely relies on one video alone. A business may need a primary ad to introduce the product, shorter clips for social media, and product visuals for</p>
+<p>The post <a href="https://ventureburn.com/how-to-build-a-complete-product-marketing-campaign-with-pollo-ai/" data-wpel-link="internal">How to Build a Complete Product Marketing Campaign with Pollo AI</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">A product marketing campaign rarely relies on one video alone. A business may need a primary ad to introduce the product, shorter clips for social media, and product visuals for a landing page or online store.</span></p>
+<p><span style="font-weight: 400;">These assets are often created separately, which can make the process slower and harder to keep consistent. Pollo AI groups its tools into three areas. Marketing Studio is designed for ads and promotional videos, Commerce Studio focuses on product and e-commerce visuals, and Creative Studio provides image and video generation tools for campaigns that begin with an idea rather than finished assets.</span></p>
+<p><span style="font-weight: 400;">The workflow below shows how a team can use these tools to create a connected set of campaign materials without producing more content than the campaign actually needs.</span></p>
+<h2><span style="font-weight: 400;">How Can You Create a Main Product Ad in Pollo AI?</span></h2>
+<div id="attachment_204044" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-204044" class="wp-image-204044 size-full" src="https://ventureburn.com/wp-content/uploads/2026/08/oavb5820261.jpg" alt="How Can You Create a Main Product Ad in Pollo AI?" width="512" height="290" /><p id="caption-attachment-204044" class="wp-caption-text">Image from Pollo AI</p></div>
+<p><span style="font-weight: 400;">The best starting point depends on what the team already has. After opening </span><a href="https://pollo.ai/" data-wpel-link="exclude"><span style="font-weight: 400;">Pollo AI</span></a><span style="font-weight: 400;">, go to Marketing Studio and select a workflow based on the available material.</span></p>
+<p><span style="font-weight: 400;">URL to Video Ads is useful when the product already has a complete online page. Photo to Video Ads is a better fit when there are product images but no video footage. If the campaign copy has already been approved, Script to Ad Video can turn that message into a video.</span></p>
+<p><span style="font-weight: 400;">These tools serve as different entry points. A campaign normally needs only one of them to create its main ad.</span></p>
+<h3><span style="font-weight: 400;">Add the Source Material and Generate the First Version</span></h3>
+<p><span style="font-weight: 400;">Paste the product URL, upload the product images, or enter the script, depending on the selected workflow. Then choose the available creative settings and generate the video. If the campaign requires a particular visual approach, users can also explore available models such as the </span><a href="https://pollo.ai/m/goenhance-ai" data-wpel-link="exclude"><span style="font-weight: 400;">GoEnhance AI video generator</span></a><span style="font-weight: 400;"> on Pollo AI and select the option that best fits the intended content.</span></p>
+<p><span style="font-weight: 400;">The source material matters. A product page with outdated details or a group of photos showing different product versions can make the result less consistent. It is worth checking these materials before starting rather than correcting the same issue in several generated versions.</span></p>
+<p><span style="font-weight: 400;">For a short ad, one clear benefit is usually enough. If the product has several important selling points, separate videos can give each one more room instead of forcing everything into a single script.</span></p>
+<h3><span style="font-weight: 400;">Create a Second Version with a Different Hook</span></h3>
+<p><span style="font-weight: 400;">Once the first ad is ready, generate another version with a different opening.</span></p>
+<p><span style="font-weight: 400;">For example, one video could begin with a common customer problem, while another could show the product being used immediately. The main message can remain the same.</span></p>
+<p><span style="font-weight: 400;">Keeping most of the content unchanged makes it easier to see whether the opening affects how the video performs.</span></p>
+<h2><span style="font-weight: 400;">How Can You Create Supporting Product Assets?</span></h2>
+<div id="attachment_204042" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-204042" class="wp-image-204042 size-full" src="https://ventureburn.com/wp-content/uploads/2026/08/oavb5820262.jpg" alt="How Can You Create Supporting Product Assets?" width="512" height="254" /><p id="caption-attachment-204042" class="wp-caption-text">Image from Pollo AI</p></div>
+<p><span style="font-weight: 400;">The main ad may attract attention, but customers often need clearer product information before they decide to buy. Product images and showcase videos can fill that gap on product pages, online stores, and social channels.</span></p>
+<p><span style="font-weight: 400;">Open Commerce Studio and select the tool that matches the asset needed. AI Product Shot can create clean product-focused images, while Product Staging can place a product in a lifestyle scene or campaign setting.</span></p>
+<h3><span style="font-weight: 400;">Create Product Images and Showcase Videos</span></h3>
+<p><span style="font-weight: 400;">Upload the product image, choose or describe the intended presentation, and generate the visual.</span></p>
+<p><span style="font-weight: 400;">A simple product shot may work better for an online listing, while a lifestyle image can give social content more context. The images do not need to use the same layout, but the product should look consistent throughout the campaign.</span></p>
+<p><span style="font-weight: 400;">If the product page would benefit from motion, select Product Showcase Video. This can provide a closer look at the product’s design or key features without repeating the main ad.</span></p>
+<h2><span style="font-weight: 400;">How Can You Create a Campaign Without Existing Assets?</span></h2>
+<p><span style="font-weight: 400;">Some campaigns begin before product photos or video footage are available. In this situation, Creative Studio can be used to develop visual concepts from written descriptions.</span></p>
+<h3><span style="font-weight: 400;">Develop Concepts with Text to Image or Text to Video</span></h3>
+<p><span style="font-weight: 400;">Select Text to Image to explore a campaign’s visual direction. Describe the product, setting, style, and composition, then generate an image that can be used to evaluate the concept.</span></p>
+<p><span style="font-weight: 400;">Select Text to Video when the campaign is built around a scenario or product use case. Describing the main action and environment gives the model a clearer idea of what the scene should show.</span></p>
+<p><span style="font-weight: 400;">These tools can be useful for testing ideas before arranging a photoshoot or filming. For a real product, however, concept visuals should not be treated as final product images unless the generated details match the item being sold.</span></p>
+<h2><span style="font-weight: 400;">How Can You Adapt the Campaign for Different Platforms?</span></h2>
+<p><span style="font-weight: 400;">After creating the main ad and supporting visuals, return to Marketing Studio and choose the platform-specific workflow needed for the campaign. Pollo AI includes tools for channels such as TikTok, Instagram, Facebook, and YouTube.</span></p>
+<h3><span style="font-weight: 400;">Create Short-Form and UGC-Style Content</span></h3>
+<p><span style="font-weight: 400;">For TikTok or Instagram, use the main campaign message as a starting point, but shorten the setup and bring the product into the video earlier. A quick demonstration, a familiar customer problem, or a strong opening visual can help establish the message.</span></p>
+<p><span style="font-weight: 400;">If a more personal presentation suits the product, UGC Video Ads can provide another content format. It is not necessary to create content for every platform. The campaign should focus on the channels most relevant to its audience.</span></p>
+<p><span style="font-weight: 400;">The campaign materials do not need to look identical, but they should support the same product message. The main ad can introduce the product, short videos can focus on individual benefits, and product visuals can provide the details customers need on a landing page or online store. Giving each asset a different purpose helps avoid publishing several versions of the same idea.</span></p>
+<h2><span style="font-weight: 400;">Conclusion</span></h2>
+<p><span style="font-weight: 400;">Pollo AI can be used across several parts of a product marketing campaign. Marketing Studio provides starting points for creating ads from product URLs, images, or scripts. Commerce Studio supports product images and showcase videos, while Creative Studio offers Text to Image and Text to Video tools for campaigns that begin with an idea.</span></p>
+<p><span style="font-weight: 400;">By choosing a workflow based on the materials already available, teams can create a set of related campaign assets without having to build every image and video separately.</span></p>
+<p>The post <a href="https://ventureburn.com/how-to-build-a-complete-product-marketing-campaign-with-pollo-ai/" data-wpel-link="internal">How to Build a Complete Product Marketing Campaign with Pollo AI</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Volta Raises $300 Million To Tackle Soaring Cost Of Building AI Infrastructure</title>
+		<link>https://ventureburn.com/volta-raises-300-million-ai-infrastructure-costs/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2026 10:17:52 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<category><![CDATA[Agentic AI]]></category>
+		<category><![CDATA[AI hardware]]></category>
+		<category><![CDATA[Anthropic]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Volta]]></category>
+		<category><![CDATA[Volta AI]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204033</guid>
+
+					<description><![CDATA[<p>Building modern artificial intelligence requires massive amounts of capital. Standard server setups are no longer enough. Today, AI companies must buy thousands of costly chips, secure huge plots of land,</p>
+<p>The post <a href="https://ventureburn.com/volta-raises-300-million-ai-infrastructure-costs/" data-wpel-link="internal">Volta Raises $300 Million To Tackle Soaring Cost Of Building AI Infrastructure</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Building modern artificial intelligence requires massive amounts of capital. Standard server setups are no longer enough. Today, AI companies must buy thousands of costly chips, secure huge plots of land, and sign giant power contracts just to train models. </span></p>
+<p><span style="font-weight: 400">These upfront costs make it difficult for smaller teams to take on the challenge. It also requires startups to spend money before they can get their products to market. </span></p>
+<p><span style="font-weight: 400">To solve this exact funding problem, Volta </span><a href="https://x.com/a16z/status/2084700958429507945" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">raises</span></a><span style="font-weight: 400"> $300 million in another round, valuing itself at $2.4 billion. The company is set to change the way tech companies finance, develop and operate important computing infrastructure.</span></p>
+<h2><span style="font-weight: 400">Volta Rethinking How AI Hardware Gets Financed</span></h2>
+<p><span style="font-weight: 400">Volta operates as a specialized cloud provider, often referred to in the tech industry as a neocloud. Most conventional cloud platforms rent server capacity on short leases or rigid contracts. </span></p>
+<p><span style="font-weight: 400">In contrast, Volta treats compute deployment as a large-scale infrastructure finance project. Founders Ricard Boada and Sofia Gumuzio spent years managing real-world physical assets at global investment firm Brookfield. They built Volta to manage data centers much like energy grids or toll roads. </span></p>
+<p><span style="font-weight: 400">Instead of forcing AI teams to purchase expensive chips outright, Volta structures long-term asset deals that spread expenses out predictably over several years. This model allows young AI labs to focus capital on research.</span></p>
+<p><b><i>More Updates:</i></b> <a href="https://ventureburn.com/quanthealth-raises-45m-series-b-ai-clinical-trial-simulations/" data-wpel-link="internal"><b><i>QuantHealth Raises $45M for AI Pharm Clinical Trials</i></b></a></p>
+<h2><span style="font-weight: 400">Heavyweight Backers and a $5 Billion Credit Line</span></h2>
+<p><span style="font-weight: 400">Top investment firms Andreessen Horowitz and Altimeter Capital co-led the $300 million equity round. Key technology leaders joined the investment, including artificial intelligence chip pioneer Nvidia and tech legend Michael Dell. </span></p>
+<p><span style="font-weight: 400">Alongside this fresh equity capital, Volta secured an impressive $5 billion financing facility arranged by global asset manager Azora. Supported by a syndicate of international banks, this massive capital pool directly finances hardware purchases for Volta’s corporate clients. </span></p>
+<p><span style="font-weight: 400">By pairing venture equity with structured debt, Volta buys top-tier servers at scale while giving AI developers flexible options to access hardware without destroying their balance sheets.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/valar-atomics-raises-1-billion-integrated-nuclear/" data-wpel-link="internal"><b><i>Valar Atomics Raises $1B To Build Vertically Integrated Nuclear Firm</i></b></a></p>
+<h2><span style="font-weight: 400">Landing Mega-Deals with Anthropic and Bitdeer</span></h2>
+<div id="attachment_204035" style="width: 681px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-204035" class="size-full wp-image-204035" src="https://ventureburn.com/wp-content/uploads/2026/08/Volta-A16z.jpg" alt="An orange themed official post showing the Volta x A16Z Partnership" width="671" height="334" /><p id="caption-attachment-204035" class="wp-caption-text">Volta x A16Z Partnership</p></div>
+<p><span style="font-weight: 400">Volta is accelerating the pace at which it can prove its model is viable for the entire world. The cloud deal, which brings the company to the $10 billion mark, was inked by the young startup in a six-year agreement with AI powerhouse Anthropic. </span></p>
+<p><span style="font-weight: 400">To provide this enormous computing power, Volta joined forces with bitcoin mining company Bitdeer. The contract makes use of Bitdeer’s data center site in Norway with 133 megawatts of capacity. High power connections and cooling systems are already in place at crypto mining sites.</span></p>
+<p><span style="font-weight: 400">Teaming up with Bitdeer allows Volta to install Nvidia hardware rapidly without waiting years to construct facilities. Volta is already preparing additional expansion projects across Texas and Wyoming.</span></p>
+<h2><span style="font-weight: 400">What This Means for the Future of AI Compute</span></h2>
+<p><span style="font-weight: 400">The price of training frontier models will keep rising as artificial intelligence advances. Excessive upfront hardware costs have threatened to turn tech innovation into an exclusive market for mega-corporations. </span></p>
+<p><span style="font-weight: 400">Volta provides a practical alternative by combining Wall Street project finance with specialized server hosting. By removing heavy financial barriers for emerging software teams, the company ensures more research groups can train competitive models. </span></p>
+<p><span style="font-weight: 400">If Volta’s model spreads across the industry, future AI breakthroughs will depend less on who owns the largest treasury and more on who builds the most efficient compute networks.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/ore-energy-raises-43-million-series-a-for-iron-air-batteries/" data-wpel-link="internal"><b><i>Ore Energy Raises $43M To Build Lasting Rust Batteries</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/volta-raises-300-million-ai-infrastructure-costs/" data-wpel-link="internal">Volta Raises $300 Million To Tackle Soaring Cost Of Building AI Infrastructure</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Convex Raises $57M To Build Reliable AI-Native Backend Platform</title>
+		<link>https://ventureburn.com/convex-raises-57m-series-b/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Tue, 04 Aug 2026 21:30:33 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204022</guid>
+
+					<description><![CDATA[<p>Convex Raises $57M To Advance AI Backend Infrastructure Convex has raised $57 million in Series B funding and plans to utilize the new capital to scale development on its AI-native</p>
+<p>The post <a href="https://ventureburn.com/convex-raises-57m-series-b/" data-wpel-link="internal">Convex Raises $57M To Build Reliable AI-Native Backend Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Convex Raises $57M To Advance AI Backend Infrastructure</b></h2>
+<p><span style="font-weight: 400">Convex has raised $57 million in Series B funding and plans to utilize the new capital to scale development on its AI-native backend platform. Insight Partners led the financing round, which included a contribution from Etna Labs and all previous investors a16z, and Spark Capital.</span></p>
+<p><span style="font-weight: 400">With the Series B, Convex has raised $110.5 million of total funding-it says it will use the cash to mature its core platform, improve its agentic development tooling, and grow its staffing levels at its San Francisco-headquartered business.</span></p>
+<p><span style="font-weight: 400">Convex-which was founded in 2021 by former Dropbox infrastructure engineers-provides a fully-integrated backend platform for developers, combining databases, functions, workflows, search, synchronization, authentication and file storage in a single platform built for software development.</span></p>
+<p><span style="font-weight: 400">The funding round is part of a trend to AI-assisted coding and autonomous development tooling, and Convex thinks developers need an infrastructure that scales their application&#8217;s complexity while maintaining high reliability.</span></p>
+<h2><b>Platform Targets Reliable AI-Generated Applications</p>
+<p></b></h2>
+<p><span style="font-weight: 400">Convex believes traditional backend infrastructure struggles to support the growing use of AI coding agents. According to the company, AI-generated applications built on conventional databases can silently introduce data errors that only appear after deployment.</span></p>
+<p><span style="font-weight: 400">The company said internal testing found that 90% of AI-built applications running on traditional databases experienced data corruption during real-world use. By comparison, applications built on Convex&#8217;s platform completed the same tests without failures.</span></p>
+<p><span style="font-weight: 400">Its backend includes built-in ACID transactions, end-to-end type safety, real-time subscriptions, and TypeScript support. These features reduce the need for developers to manually integrate multiple services while improving application reliability.</span></p>
+<p><span style="font-weight: 400">Convex also packages search capabilities, workflow automation, authentication, file storage, and retrieval-augmented generation features that extend AI applications with organisation-specific knowledge.</span></p>
+<h2><b>Customer Base Continues To Grow<br />
+</b></h2>
+<div id="attachment_204027" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204027" class="size-full wp-image-204027" src="https://ventureburn.com/wp-content/uploads/2026/08/a-vibrant-futuristic-poster-depicts-a-sp__JVLeiopVhKvK3C92UPi0A_2hRrQ5_nRzCD4c40bPlpnA.png" alt="A neon futuristic visual showing AI-powered backend systems supporting large-scale application development." width="1312" height="736" /><p id="caption-attachment-204027" class="wp-caption-text">Convex powers scalable and reliable backend infrastructure for AI-driven applications worldwide. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">The platform has gained significant adoption among developers building AI-powered software. Convex now supports nearly two million applications created by almost 500,000 developers worldwide. The company also reported more than 1.2 million weekly npm downloads.</span></p>
+<p><span style="font-weight: 400">Customers include OpenAI, Tripadvisor, Solana, Zapier, and Reducto. These organisations use Convex to simplify backend development while supporting applications that require dependable performance at scale.</span></p>
+<p><span style="font-weight: 400">Insight Partners said the growing use of AI coding assistants has exposed weaknesses in traditional software infrastructure. The investment firm believes Convex offers developers a more reliable foundation where backend components work together without extensive configuration.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/delightree-raises-25m-funding/" data-wpel-link="internal"><span style="font-weight: 400">Delightree Raises $25M To Expand AI Operating System For Franchise Businesses</span></a></p>
+<h2><b>Funding Supports Product Innovation And Expansion</b></h2>
+<p><span style="font-weight: 400">Convex plans to use the new funding to accelerate product innovation as AI transforms software engineering. Convex will fund new tools simplifying application development for developers and artificial intelligence agents building software.</span></p>
+<p><span style="font-weight: 400">The company will continue providing highly reliable </span><a href="https://community.d2l.com/brightspace/kb/articles/25616-products-backend" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">backend products</span></a><span style="font-weight: 400"> supporting increasingly complex artificial intelligence-powered applications worldwide. Convex believes stable backend infrastructure becomes increasingly essential as artificial intelligence generates larger amounts of application code.</span></p>
+<p><span style="font-weight: 400">Instead of combining separate components, Convex provides one unified platform reducing complexity and preventing software bugs efficiently. The funding will strengthen Convex&#8217;s engineering team while expanding its global developer ecosystem and platform capabilities significantly.</span></p>
+<p><span style="font-weight: 400">With fresh capital and a growing customer base, Convex aims to strengthen its position in the emerging AI development infrastructure market by making reliable software engineering faster and easier for both human developers and AI agents.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/convex-raises-57m-series-b/" data-wpel-link="internal">Convex Raises $57M To Build Reliable AI-Native Backend Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Delightree Raises $25M To Expand AI Operating System For Franchise Businesses</title>
+		<link>https://ventureburn.com/delightree-raises-25m-funding/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Tue, 04 Aug 2026 21:08:50 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204018</guid>
+
+					<description><![CDATA[<p>Delightree Raises $25M To Scale AI Operations Platform Delightree, which is developing an AI-driven operating system for the multi-unit industry (e.g., franchises), has raised $25 million in funding to accelerate</p>
+<p>The post <a href="https://ventureburn.com/delightree-raises-25m-funding/" data-wpel-link="internal">Delightree Raises $25M To Expand AI Operating System For Franchise Businesses</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Delightree Raises $25M To Scale AI Operations Platform</b></h2>
+<p><span style="font-weight: 400">Delightree, which is developing an AI-driven operating system for the multi-unit industry (e.g., franchises), has raised $25 million in funding to accelerate the growth of its engineering, product, and company team. </span></p>
+<p><span style="font-weight: 400">An investment round was led by Accel along with support from existing investors Emergent, Timber Grove Ventures, and Innovius. Founded in Denver, the company’s fresh infusion of cash will also be invested in expanding its AI platform and entering new vertical markets in restaurants, fitness, wellness, retail, healthcare and home services.</span></p>
+<p><span style="font-weight: 400">The delightree platform integrates training, </span><a href="https://www.merriam-webster.com/dictionary/compliance" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">compliance</span></a><span style="font-weight: 400">, communications, audits, and location-launch processes for greater central team cohesion over all front-line activities with uniform execution across a chain of businesses.</span></p>
+<p><span style="font-weight: 400">Franchise enterprises have enthusiastically adopted artificial intelligence to assist with all, many are relying on it to bring together disparate processes for training, communication, compliance and the reporting required.</span></p>
+<h2><b>AI Platform Gains Rapid Adoption Across Industries</b></h2>
+<p><span style="font-weight: 400">Demand for Delightree&#8217;s platform has grown rapidly since its launch just over two years ago worldwide. The company said revenue increased nearly twentyfold during that period, reflecting strong customer adoption and growth.</span></p>
+<p><span style="font-weight: 400">Its software is now deployed across more than 6,000 locations throughout the United States. Customers include solidcore, Dunn Brothers Coffee, JETSET, Five Star Franchising, MOOYAH Burgers, and Beem Light Sauna.</span></p>
+<p><span style="font-weight: 400">The platform replaces multiple standalone systems with one operational layer. Businesses use it to manage employee training, operational standards, communications, inspections, compliance, and new location openings.</span></p>
+<p><span style="font-weight: 400">Delightree will continue strengthening its artificial intelligence capabilities across operational management and business automation platforms globally. Future AI assistants will identify issues, assign tasks, track progress, and recommend operational improvements automatically everywhere.</span></p>
+<h2><b>Funding Will Accelerate Product Development<br />
+</b></h2>
+<div id="attachment_204020" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204020" class="size-full wp-image-204020" src="https://ventureburn.com/wp-content/uploads/2026/08/a-futuristic-poster-showcases-a-holograp_Yaa-bK5MX1qOtRuTChnO0A_-ZjRD21RQ1C3-0LMLlup0w.png" alt="A neon futuristic visual showing AI automating operations across franchise business locations." width="1312" height="736" /><p id="caption-attachment-204020" class="wp-caption-text">Delightree enables faster expansion and streamlined operations through AI-powered automation. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">The new funding will support further investment in product innovation and artificial intelligence. Delightree intends to develop new features that reduce operational complexity for growing franchise businesses.</span></p>
+<p><span style="font-weight: 400">The company believes AI can help operators launch new locations faster while reducing administrative workloads. According to Delightree, customers using its platform can open locations two to three months sooner than traditional processes, representing a reduction of more than 25% in launch timelines.</span></p>
+<p><span style="font-weight: 400">The business also reports that frontline employees reclaim up to 30% of their working time through workflow automation and centralised operations.</span></p>
+<p><span style="font-weight: 400">Co-founder Madhulika Mukherjee said the company&#8217;s long-term goal is to give smaller franchise operators access to sophisticated operational technology that has traditionally only been available to large enterprise chains.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/multiplier-raises-35-million-series-b/" data-wpel-link="internal"><span style="font-weight: 400">Multiplier Raises $35 Million To Expand AI-Powered Professional Services Platform</span></a></p>
+<h2><b>Delightree Targets Expansion Across Multi-Unit Businesses</b></h2>
+<p><span style="font-weight: 400">The company sees significant growth opportunities across industries employing millions of frontline workers. Its platform is designed to simplify management for businesses operating numerous locations while improving operational visibility.</span></p>
+<p><span style="font-weight: 400">The company believes artificial intelligence can transform growth without adding extra management layers across distributed businesses.Artificial intelligence automates back-office operations while maintaining consistent operational standards across every business location efficiently today.</span></p>
+<p><span style="font-weight: 400">Delightree aims to strengthen partnerships with franchise brands seeking standardised operations across rapidly expanding business networks globally. Its platform combines artificial intelligence automation with operational workflows reducing management complexity and improving location consistency significantly.</span></p>
+<p><span style="font-weight: 400">The company will use funding adding artificial intelligence operational intelligence for franchise owners, managers, and frontline workers. Delightree aims to become the operating system for multi-location businesses embracing faster, smarter, and more efficient automation globally.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/delightree-raises-25m-funding/" data-wpel-link="internal">Delightree Raises $25M To Expand AI Operating System For Franchise Businesses</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Multiplier Raises $35 Million To Expand AI-Powered Professional Services Platform</title>
+		<link>https://ventureburn.com/multiplier-raises-35-million-series-b/</link>
+		
+		<dc:creator><![CDATA[Clinton]]></dc:creator>
+		<pubDate>Tue, 04 Aug 2026 20:46:57 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204014</guid>
+
+					<description><![CDATA[<p>Multiplier Raises $35 Million To Accelerate AI Growth Multiplier has raised $35 million in Series B funding to expand its AI-powered professional services platform. The round was led by The</p>
+<p>The post <a href="https://ventureburn.com/multiplier-raises-35-million-series-b/" data-wpel-link="internal">Multiplier Raises $35 Million To Expand AI-Powered Professional Services Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2><b>Multiplier Raises $35 Million To Accelerate AI Growth</b></h2>
+<p><span style="font-weight: 400">Multiplier has raised $35 million in Series B funding to expand its AI-powered professional services platform. The round was led by The General Partnership. Existing investors Ribbit Capital and Lightspeed Venture Partners also participated.</span></p>
+<p><span style="font-weight: 400">The funding will support additional acquisitions of specialist professional services firms. It will also help the company grow its technology and operations teams as demand for AI-enabled business services increases.</span></p>
+<p><span style="font-weight: 400">Multiplier operates a permanent holding company model.The company purchases existing companies but lets them keep their names, management, and much of their autonomy. Rather than substituting AI for people it is instead building AI-powered products that boost their efficiency and service to clients.</span></p>
+<p><span style="font-weight: 400">AI should be used to empower working professionals, not replace them, Founder and CEO Noah Pepper argued in a company blog post outlining the technology. He believes AI tools enable them to allocate their time to “judgment based work,” while weeding out menial tasks.</span></p>
+<h2><b>Company Expands AI Capabilities Across Professional Firms</b></h2>
+<p><span style="font-weight: 400">Multiplier embeds its engineering teams directly within acquired firms. It has also employed more than 30 technologists, whose work with subject matter experts leads to AI tools designed around the needs of a specific business. </span></p>
+<p><span style="font-weight: 400">Since the businesses that use their technology are not solely owned by third party software companies, multiplier employees have access to customer and supplier databases and, in the words of its founders, &#8220;access to customers, products and processes. </span></p>
+<p><span style="font-weight: 400">The company&#8217;s model targets industries where expert capacity limits growth. Many professional services firms rely heavily on experienced practitioners and manage information across disconnected systems. Multiplier believes AI can automate preparation and routine tasks while leaving final decisions to qualified professionals.</span></p>
+<p><span style="font-weight: 400">The company has completed eight acquisitions since launch. Five of those deals closed during the past year. It also has four additional firms under signed term sheets. Together, its network now serves clients in more than 10 countries.</span></p>
+<h2><b>Funding Supports Expansion And Leadership Growth<br />
+</b></h2>
+<div id="attachment_204016" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204016" class="size-full wp-image-204016" src="https://ventureburn.com/wp-content/uploads/2026/08/a-futuristic-poster-showcases-a-vibrant-_vAYGCKGTWqeCE7wZ1IRkdA_terKSRWEQTagMXjH0CHxTw.png" alt="A neon futuristic visual showing AI-powered tools supporting professionals across business operations." width="1312" height="736" /><p id="caption-attachment-204016" class="wp-caption-text">Multiplier scales AI-driven operations to enhance professional services efficiency and growth. Source: Created by Ventureburn</p></div>
+<p><span style="font-weight: 400">The latest investment also coincides with a major executive appointment.  At Multiplier, he will oversee finance, operations, partnerships, people and the company&#8217;s expanding San Francisco office. The company believes this approach scales more effectively while preserving valuable client relationships and professional expertise over time.</span></p>
+<p><span style="font-weight: 400">Allen Shim, former Slack CFO, now serves as President and Chief Financial Officer at Multiplier successfully. The company will use the funding to build scalable technology, people, and operational process architecture efficiently.</span></p>
+<p><span style="font-weight: 400">Multiplier aims supporting long-term growth while preserving each acquired business&#8217;s autonomy and specialised professional </span><a href="https://dictionary.cambridge.org/dictionary/english/expertise" target="_blank" rel="nofollow noopener sponsored external noreferrer" data-wpel-link="external"><span style="font-weight: 400">expertise</span></a><span style="font-weight: 400"> independently. Shim previously guided Slack through its successful initial public offering before the company&#8217;s Salesforce acquisition successfully completed.</span></p>
+<p><span style="font-weight: 400">According to The General Partnership, accounting and other professional services markets continue to face capacity challenges despite growing demand. The investment firm believes Multiplier&#8217;s approach enables trusted professionals to serve more clients without reducing service quality.</span></p>
+<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/horizon3-raises-250-million/" data-wpel-link="internal"><span style="font-weight: 400">Horizon3 Raises $250 Million to Expand AI-Powered Cybersecurity Platform</span></a></p>
+<h2><b>Multiplier Focuses On Long-Term Industry Transformation</b></h2>
+<p><span style="font-weight: 400">The new capital will primarily fund additional acquisitions and continued development of proprietary AI solutions. Multiplier is set to grow its specialist firms and to enhance its technological capabilities. </span></p>
+<p><span style="font-weight: 400">Multiplier&#8217;s investment approach differs from traditional buy-and-build strategies that fully replace company founders after acquisitions. Instead, founders remain in senior leadership positions while receiving long-term capital and operational management expertise continuously.</span></p>
+<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
+<p>The post <a href="https://ventureburn.com/multiplier-raises-35-million-series-b/" data-wpel-link="internal">Multiplier Raises $35 Million To Expand AI-Powered Professional Services Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!-- plugin=object-cache-pro client=phpredis metric#hits=2029 metric#misses=42 metric#hit-ratio=98.0 metric#bytes=715265 metric#prefetches=139 metric#store-reads=35 metric#store-writes=2 metric#store-hits=147 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=327.35 metric#ms-cache=7.19 metric#ms-cache-avg=0.1997 metric#ms-cache-ratio=2.2 -->

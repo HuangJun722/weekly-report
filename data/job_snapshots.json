@@ -1,11 +1,53 @@
 {
   "version": 1,
-  "generated_at": "2026-08-06T12:08:43.297382+08:00",
+  "generated_at": "2026-08-06T16:30:24.719533+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-06T03:46:43.498956+08:00",
+      "observed_at": "2026-08-06T16:30:24.719533+08:00",
       "jobs": [
+        {
+          "id": "744000141862641",
+          "title": "Data Scientist (Analytics)",
+          "url": "https://www.grab.careers/en/jobs/744000141862641/data-scientist-analytics/",
+          "function_tags": []
+        },
+        {
+          "id": "744000141860199",
+          "title": "Senior Data Scientist (Integrity)",
+          "url": "https://www.grab.careers/en/jobs/744000141860199/senior-data-scientist-integrity/",
+          "function_tags": []
+        },
+        {
+          "id": "744000141855753",
+          "title": "Assistant Manager, Regional Credit Risk, Consumer Lending",
+          "url": "https://www.grab.careers/en/jobs/744000141855753/assistant-manager-regional-credit-risk-consumer-lending/",
+          "function_tags": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "744000141850676",
+          "title": "Senior Solution Specialist, Finance Systems",
+          "url": "https://www.grab.careers/en/jobs/744000141850676/senior-solution-specialist-finance-systems/",
+          "function_tags": []
+        },
+        {
+          "id": "744000141834989",
+          "title": "Lead Software Engineer, Backend - Service Mesh",
+          "url": "https://www.grab.careers/en/jobs/744000141834989/lead-software-engineer-backend-service-mesh/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000141831739",
+          "title": "Principal Product Manager, AI Enablement",
+          "url": "https://www.grab.careers/en/jobs/744000141831739/principal-product-manager-ai-enablement/",
+          "function_tags": [
+            "ai"
+          ]
+        },
         {
           "id": "744000141678821",
           "title": "Assistant Manager, Merchant Core Operations - Onboarding",
@@ -83,62 +125,12 @@
           "title": "Senior Product Designer, Online Deliveries",
           "url": "https://www.grab.careers/en/jobs/744000141424459/senior-product-designer-online-deliveries/",
           "function_tags": []
-        },
-        {
-          "id": "744000141416100",
-          "title": "ID Food Demand Strategy Analytics & Automation Lead",
-          "url": "https://www.grab.careers/en/jobs/744000141416100/id-food-demand-strategy-analytics-automation-lead/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141413759",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000141413759/senior-software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000141410469",
-          "title": "Platform Governance Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000141410469/platform-governance-specialist/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000141410159",
-          "title": "Assistant Manager, 4W Mobility Core Business - Supply",
-          "url": "https://www.grab.careers/en/jobs/744000141410159/assistant-manager-4w-mobility-core-business-supply/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141409609",
-          "title": "Senior Data Scientist (Analytics) - Country & Marketing Analytics",
-          "url": "https://www.grab.careers/en/jobs/744000141409609/senior-data-scientist-analytics-country-marketing-analytics/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141408859",
-          "title": "Lead, Business Development - OneGrab",
-          "url": "https://www.grab.careers/en/jobs/744000141408859/lead-business-development-onegrab/",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "744000141404659",
-          "title": "Grab Support Senior Customer Operation Excellence Manager",
-          "url": "https://www.grab.careers/en/jobs/744000141404659/grab-support-senior-customer-operation-excellence-manager/",
-          "function_tags": [
-            "operations"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-06T12:08:43.297382+08:00",
+      "observed_at": "2026-08-06T16:30:24.719533+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -245,7 +237,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-06T12:08:43.297382+08:00",
+      "observed_at": "2026-08-06T16:30:24.719533+08:00",
       "jobs": [
         {
           "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
@@ -271,6 +263,12 @@
           "id": "e1c60e78-e451-4242-8473-5b8217394c36",
           "title": "Lead, Electronic Money Accounting Remote - United Kingdom",
           "url": "https://www.shopify.com/careers/lead-electronic-money-accounting_e1c60e78-e451-4242-8473-5b8217394c36",
+          "function_tags": []
+        },
+        {
+          "id": "787da03c-eedf-4bcf-a8d0-0fc96054dd27",
+          "title": "Recovery Analyst, Merchant Lending Credit Remote - Americas",
+          "url": "https://www.shopify.com/careers/recovery-analyst-merchant-lending-credit_787da03c-eedf-4bcf-a8d0-0fc96054dd27",
           "function_tags": []
         },
         {
