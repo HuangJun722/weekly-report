@@ -26,5 +26,8 @@ data/.cache/
 *.log
 *.bak
 
+# test_rss 本地运行输出
+rss_test_results.md
+
 # 开发临时文件
 docs/hero-carousel-*.html
