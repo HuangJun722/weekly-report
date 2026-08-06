@@ -1,7 +1,84 @@
 {
   "version": 1,
-  "generated_at": "2026-08-06T16:30:24.719533+08:00",
+  "generated_at": "2026-08-06T19:41:48.993955+08:00",
   "candidates": [
+    {
+      "candidate_id": "jobs-afa757cead1c53d8",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "partnerships",
+      "window": "2026-W32",
+      "window_start": "2026-08-06",
+      "window_end": "2026-08-06",
+      "detected_at": "2026-08-06T19:41:48.993955+08:00",
+      "baseline_count": 18,
+      "current_count": 18,
+      "added_count": 4,
+      "removed_count": 4,
+      "clusters": {
+        "partnerships": 1
+      },
+      "removed_clusters": {
+        "engineering": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "744000141888699",
+          "title": "2W Partner Acquisition and Engagement Associate",
+          "url": "https://www.grab.careers/en/jobs/744000141888699/2w-partner-acquisition-and-engagement-associate/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141887339",
+          "title": "Product Owner, GrabAds Solutions",
+          "url": "https://www.grab.careers/en/jobs/744000141887339/product-owner-grabads-solutions/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141887064",
+          "title": "Associate, OmniCommerce",
+          "url": "https://www.grab.careers/en/jobs/744000141887064/associate-omnicommerce/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141866829",
+          "title": "FP&A Lead",
+          "url": "https://www.grab.careers/en/jobs/744000141866829/fpa-lead/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000141629929",
+          "title": "Lead Product Manager, GrabMart Fulfilment",
+          "url": "https://www.grab.careers/en/jobs/744000141629929/lead-product-manager-grabmart-fulfilment/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141629239",
+          "title": "Lead Data Engineer, Analytic Platform",
+          "url": "https://www.grab.careers/en/jobs/744000141629239/lead-data-engineer-analytic-platform/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141454379",
+          "title": "IT Executive",
+          "url": "https://www.grab.careers/en/jobs/744000141454379/it-executive/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000141424459",
+          "title": "Senior Product Designer, Online Deliveries",
+          "url": "https://www.grab.careers/en/jobs/744000141424459/senior-product-designer-online-deliveries/",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    },
     {
       "candidate_id": "jobs-3e0c614b29a29ab1",
       "entity_id": "grab",

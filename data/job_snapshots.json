@@ -1,11 +1,37 @@
 {
   "version": 1,
-  "generated_at": "2026-08-06T16:30:24.719533+08:00",
+  "generated_at": "2026-08-06T19:41:48.993955+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-06T16:30:24.719533+08:00",
+      "observed_at": "2026-08-06T19:41:48.993955+08:00",
       "jobs": [
+        {
+          "id": "744000141888699",
+          "title": "2W Partner Acquisition and Engagement Associate",
+          "url": "https://www.grab.careers/en/jobs/744000141888699/2w-partner-acquisition-and-engagement-associate/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "744000141887339",
+          "title": "Product Owner, GrabAds Solutions",
+          "url": "https://www.grab.careers/en/jobs/744000141887339/product-owner-grabads-solutions/",
+          "function_tags": []
+        },
+        {
+          "id": "744000141887064",
+          "title": "Associate, OmniCommerce",
+          "url": "https://www.grab.careers/en/jobs/744000141887064/associate-omnicommerce/",
+          "function_tags": []
+        },
+        {
+          "id": "744000141866829",
+          "title": "FP&A Lead",
+          "url": "https://www.grab.careers/en/jobs/744000141866829/fpa-lead/",
+          "function_tags": []
+        },
         {
           "id": "744000141862641",
           "title": "Data Scientist (Analytics)",
@@ -99,38 +125,12 @@
           "title": "Assistant Marketing Manager",
           "url": "https://www.grab.careers/en/jobs/744000141643594/assistant-marketing-manager/",
           "function_tags": []
-        },
-        {
-          "id": "744000141629929",
-          "title": "Lead Product Manager, GrabMart Fulfilment",
-          "url": "https://www.grab.careers/en/jobs/744000141629929/lead-product-manager-grabmart-fulfilment/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141629239",
-          "title": "Lead Data Engineer, Analytic Platform",
-          "url": "https://www.grab.careers/en/jobs/744000141629239/lead-data-engineer-analytic-platform/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000141454379",
-          "title": "IT Executive",
-          "url": "https://www.grab.careers/en/jobs/744000141454379/it-executive/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141424459",
-          "title": "Senior Product Designer, Online Deliveries",
-          "url": "https://www.grab.careers/en/jobs/744000141424459/senior-product-designer-online-deliveries/",
-          "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-06T16:30:24.719533+08:00",
+      "observed_at": "2026-08-06T19:41:48.993955+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -237,7 +237,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-06T16:30:24.719533+08:00",
+      "observed_at": "2026-08-06T19:41:48.993955+08:00",
       "jobs": [
         {
           "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
