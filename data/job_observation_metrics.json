@@ -1,21 +1,19 @@
 {
-  "observed_at": "2026-08-06T03:46:43.498956+08:00",
+  "observed_at": "2026-08-06T12:08:43.297382+08:00",
   "source_count": 3,
-  "raw_count": 61,
+  "raw_count": 43,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
-      "status": "ok",
-      "fetch_status": "success",
-      "count": 4,
-      "inventory_count": 19,
+      "status": "failed",
+      "fetch_status": "failed",
+      "count": 0,
+      "inventory_count": 0,
       "signal_count": 0,
-      "added_count": 2,
-      "removed_count": 2,
-      "clusters": {
-        "operations": 1
-      },
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
       "removed_clusters": {}
     },
     "Stripe Jobs": {
@@ -36,15 +34,67 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
-      "inventory_count": 29,
-      "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
-      "clusters": {},
-      "removed_clusters": {}
+      "count": 3,
+      "inventory_count": 30,
+      "signal_count": 1,
+      "added_count": 2,
+      "removed_count": 1,
+      "clusters": {
+        "compliance": 2
+      },
+      "removed_clusters": {
+        "compliance": 1
+      }
     }
   },
-  "candidate_signals": [],
+  "candidate_signals": [
+    {
+      "candidate_id": "jobs-445e599b9aff358f",
+      "entity_id": "shopify",
+      "entity": "Shopify",
+      "region": "全球",
+      "sector": "commerce_saas",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "compliance",
+      "window": "2026-W32",
+      "window_start": "2026-08-06",
+      "window_end": "2026-08-06",
+      "detected_at": "2026-08-06T12:08:43.297382+08:00",
+      "baseline_count": 29,
+      "current_count": 30,
+      "added_count": 2,
+      "removed_count": 1,
+      "clusters": {
+        "compliance": 2
+      },
+      "removed_clusters": {
+        "compliance": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "36f8a594-ba0e-45c2-b2e2-8aaa05db9ca2",
+          "title": "Credit Risk Analyst Remote - Americas",
+          "url": "https://www.shopify.com/careers/credit-risk-analyst_36f8a594-ba0e-45c2-b2e2-8aaa05db9ca2",
+          "change": "added"
+        },
+        {
+          "job_id": "8c9a75bc-2919-45da-a980-ff38453e6472",
+          "title": "Senior Credit Risk Analyst Remote - Americas",
+          "url": "https://www.shopify.com/careers/senior-credit-risk-analyst_8c9a75bc-2919-45da-a980-ff38453e6472",
+          "change": "added"
+        },
+        {
+          "job_id": "2a55896c-971b-496b-a7f4-20eb92b818c1",
+          "title": "Senior Credit Risk Analyst Remote - Americas",
+          "url": "https://www.shopify.com/careers/senior-credit-risk-analyst_2a55896c-971b-496b-a7f4-20eb92b818c1",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    }
+  ],
   "promoted_count": 0
 }
