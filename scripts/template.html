@@ -78,6 +78,7 @@ button, input, select { font: inherit; }
 }
 .tab-btn:hover { color: var(--ink); }
 .tab-btn.active { color: var(--ink); border-bottom-color: var(--navy); }
+.nav-more { display: none; position: relative; }
 .controls { display: flex; align-items: center; gap: 8px; }
 .search, .select { border: 1px solid var(--line); background: rgba(251,250,246,0.82); color: var(--ink); border-radius: 8px; }
 .search { width: 280px; display: flex; align-items: center; gap: 8px; padding: 8px 11px; }
@@ -335,8 +336,22 @@ button, input, select { font: inherit; }
   .timestamp-wrap { justify-content: flex-start; }
   .identity h1 { font-size: 24px; }
   .seal { width: 42px; height: 42px; }
-  .nav { overflow-x: auto; }
+  .nav { overflow-x: visible; flex-wrap: wrap; }
   .tab-btn { flex: 0 0 auto; }
+  .tab-secondary { display: none; }
+  .nav-more { display: inline-flex; align-items: center; }
+  .nav-more-panel {
+    display: none; position: absolute; top: 100%; right: 0; z-index: 30;
+    min-width: 172px; margin-top: 2px; padding: 6px;
+    border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); box-shadow: var(--shadow);
+  }
+  .nav-more-panel.open { display: grid; gap: 2px; }
+  .nav-more-panel .tab-btn {
+    display: block; width: 100%; text-align: left;
+    padding: 11px 12px; border-bottom: 0; border-radius: 6px;
+  }
+  .nav-more-panel .tab-btn:hover { background: var(--surface-cool); }
   .search, .select { width: 100%; }
   .main-title { font-size: 30px; }
   .slogan { align-items: flex-start; line-height: 1.5; }
@@ -351,8 +366,13 @@ button, input, select { font: inherit; }
   .field-grid { grid-template-columns: 1fr; }
   .rail-card:first-child { grid-column: auto; }
   .content-block { padding: 18px; }
-  .intel { grid-template-columns: 1fr; gap: 10px; }
-  .amount { justify-self: start; text-align: left; }
+  .intel { display: flex; flex-direction: column; gap: 8px; }
+  .intel-meta { flex-direction: row; flex-wrap: wrap; }
+  .intel > div:nth-child(2) { order: 1; }
+  .amount { order: 2; align-self: flex-start; text-align: left; }
+  .source-title { display: none; }
+  .intel h3 { font-size: 17px; line-height: 1.45; }
+  .intel p, .intel-impact { font-size: 15px; }
   .report-cover { padding: 24px; }
   .report-cover h2 { font-size: 28px; }
 }
@@ -390,11 +410,20 @@ button, input, select { font: inherit; }
       <nav class="nav" aria-label="主导航">
         <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日情报</button>
         <button class="tab-btn" data-tab="weekly" onclick="switchTab('weekly')">周报</button>
-        <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
+        <button class="tab-btn tab-secondary" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
         <button class="tab-btn" data-tab="companies" onclick="switchTab('companies')">公司索引</button>
-        <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
-        <button class="tab-btn" data-tab="updates" onclick="switchTab('updates')">更新日志</button>
-        <button class="tab-btn" data-tab="feedback" onclick="switchTab('feedback')">反馈</button>
+        <button class="tab-btn tab-secondary" data-tab="all" onclick="switchTab('all')">全部事件</button>
+        <button class="tab-btn tab-secondary" data-tab="updates" onclick="switchTab('updates')">更新日志</button>
+        <button class="tab-btn tab-secondary" data-tab="feedback" onclick="switchTab('feedback')">反馈</button>
+        <div class="nav-more">
+          <button class="tab-btn nav-more-btn" type="button" aria-haspopup="true" aria-expanded="false">更多<span class="nav-more-caret" aria-hidden="true"> ▾</span></button>
+          <div class="nav-more-panel" id="navMorePanel">
+            <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
+            <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
+            <button class="tab-btn" data-tab="updates" onclick="switchTab('updates')">更新日志</button>
+            <button class="tab-btn" data-tab="feedback" onclick="switchTab('feedback')">反馈</button>
+          </div>
+        </div>
       </nav>
       <div class="controls">
         <label class="search"><span>⌕</span><input type="text" id="searchBox" placeholder="搜索公司、地区、关键词" autocomplete="off"></label>
@@ -514,7 +543,7 @@ button, input, select { font: inherit; }
             <a class="report-entry" href="#" onclick="switchTab('weekly');return false;"><strong>本周报告</strong><span>{{ weekly_report.total }} 条事件，{{ weekly_report.companies }} 家重点公司</span></a>
             <a class="report-entry" href="#" onclick="switchTab('monthly');return false;"><strong>本月报告</strong><span>{{ monthly_report.total }} 条事件，{{ monthly_report.companies }} 家重点公司</span></a>
           </section>
-          <section class="rail-card">
+          <section class="rail-card history-nav">
             <h2 class="rail-title">历史导航</h2>
             <div class="history-list">
               {% for d in available_dates[:5] %}
@@ -840,13 +869,97 @@ button, input, select { font: inherit; }
 </div>
 
 <script>
+function activateTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-tab') === name);
+  });
+  document.querySelectorAll('.tab-panel').forEach(function(p){
+    p.classList.toggle('active', p.id === 'tab-' + name);
+  });
+}
+function tabNameFromHash(hash) {
+  var m = (hash || '').match(/^#tab-(today|weekly|monthly|companies|all|updates|feedback)$/);
+  return m ? m[1] : null;
+}
 function switchTab(name) {
-  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
-  document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
-  var btn = document.querySelector('.tab-btn[data-tab="'+name+'"]');
-  var panel = document.getElementById('tab-'+name);
-  if (btn) btn.classList.add('active');
-  if (panel) panel.classList.add('active');
+  var target = '#tab-' + name;
+  if (location.hash === target) {
+    activateTab(name);
+    window.scrollTo(0, 0);
+  } else {
+    location.hash = target;
+  }
+}
+window.addEventListener('hashchange', function(){
+  var h = location.hash || '';
+  var name = tabNameFromHash(h);
+  if (name) {
+    activateTab(name);
+    window.scrollTo(0, 0);
+    return;
+  }
+  if (!h) {
+    activateTab('today');
+    window.scrollTo(0, 0);
+    return;
+  }
+  if (h.indexOf('#weekly-theme-') === 0) {
+    activateTab('weekly');
+  } else if (h.indexOf('#monthly-theme-') === 0) {
+    activateTab('monthly');
+  }
+  var target = document.getElementById(h.replace(/^#/, ''));
+  if (target) {
+    setTimeout(function(){ try { target.scrollIntoView(); } catch (e) {} }, 0);
+  }
+});
+(function initTabRoute(){
+  var h = location.hash || '#tab-today';
+  var name = tabNameFromHash(h);
+  if (name) { activateTab(name); return; }
+  if (h.indexOf('#weekly-theme-') === 0) {
+    activateTab('weekly');
+  } else if (h.indexOf('#monthly-theme-') === 0) {
+    activateTab('monthly');
+  }
+})();
+var navMoreBtn = document.querySelector('.nav-more-btn');
+var navMorePanel = document.getElementById('navMorePanel');
+if (navMoreBtn && navMorePanel) {
+  navMoreBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = !navMorePanel.classList.contains('open');
+    navMorePanel.classList.toggle('open', open);
+    navMoreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e){
+    if (navMorePanel.classList.contains('open') && !navMorePanel.contains(e.target) && e.target !== navMoreBtn) {
+      navMorePanel.classList.remove('open');
+      navMoreBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+  navMorePanel.addEventListener('click', function(){
+    navMorePanel.classList.remove('open');
+    navMoreBtn.setAttribute('aria-expanded', 'false');
+  });
+}
+var historyNavCard = document.querySelector('.issue-layout .rail .history-nav');
+var issueContentCol = document.querySelector('.issue-layout > div:first-child');
+var issueRail = document.querySelector('.issue-layout .rail');
+function arrangeMobileRail() {
+  if (!historyNavCard || !issueContentCol || !issueRail) return;
+  var isMobile = window.matchMedia('(max-width: 760px)').matches;
+  if (isMobile) {
+    if (historyNavCard.parentNode !== issueContentCol) {
+      issueContentCol.insertBefore(historyNavCard, issueContentCol.firstChild);
+    }
+  } else if (historyNavCard.parentNode === issueContentCol) {
+    issueRail.appendChild(historyNavCard);
+  }
+}
+if (window.matchMedia) {
+  arrangeMobileRail();
+  window.addEventListener('resize', arrangeMobileRail);
 }
 document.querySelectorAll('.period-btn').forEach(function(btn){
   btn.addEventListener('click', function(){
@@ -953,9 +1066,9 @@ function updateFilterState(visible) {
   if (title) title.textContent = active ? '正在查看筛选结果' : '全部情报';
   text.textContent = active ? (parts.join(' / ') + '，当前显示 ' + visible + ' 条结果') : '当前筛选：全部情报';
 }
-var availableDates = {{ available_dates_json }};
-var datePanels = {{ date_panels_json }};
-var currentDateIndex = availableDates.indexOf('{{ main_date }}');
+var availableDates = {{ available_dates|tojson }};
+var datePanels = {{ date_panels|tojson }};
+var currentDateIndex = availableDates.indexOf({{ main_date|tojson }});
 function escHtml(s) {
   if (!s) return '';
   var d = document.createElement('div');
@@ -1084,7 +1197,7 @@ document.getElementById('clearFilter').addEventListener('click', function(){
   applyFilters();
 });
 var feedbackStorageKey = 'weekly-report-feedback-v1';
-var feedbackEndpoint = '{{ feedback_endpoint }}';
+var feedbackEndpoint = {{ feedback_endpoint|tojson }};
 if (!feedbackEndpoint) {
   var submitFeedbackBtn = document.getElementById('submitFeedback');
   if (submitFeedbackBtn) {

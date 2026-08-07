@@ -2126,7 +2126,7 @@ def analyze_events_minimax(items):
                     break
             result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
             if isinstance(result, list):
-                result = [r for r in result if r.get('url') and r.get('summary_short')]
+                result = [r for r in result if _is_http_url(r.get('url')) and r.get('summary_short')]
             print(f"  ✅ MiniMax 分析成功，{len(result) if isinstance(result, list) else 0} 条")
             return result
         except requests.exceptions.Timeout:
@@ -2141,7 +2141,7 @@ def analyze_events_minimax(items):
                 if match:
                     try:
                         result = json.loads(match.group())
-                        result = [r for r in result if isinstance(r, dict) and r.get('url')]
+                        result = [r for r in result if isinstance(r, dict) and _is_http_url(r.get('url'))]
                         if result:
                             print(f"  ✅ 修正解析成功，提取 {len(result)} 条")
                             return result
@@ -2249,7 +2249,7 @@ def analyze_events_deepseek(items):
                     break
             result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
             if isinstance(result, list):
-                result = [r for r in result if r.get('url') and r.get('summary_short')]
+                result = [r for r in result if _is_http_url(r.get('url')) and r.get('summary_short')]
             return result
         except requests.exceptions.Timeout:
             print(f"  ⚠️  DeepSeek API 超时（30s），快速失败，跳过该批次")
@@ -2263,7 +2263,7 @@ def analyze_events_deepseek(items):
                 if match:
                     try:
                         result = json.loads(match.group())
-                        result = [r for r in result if isinstance(r, dict) and r.get('url')]
+                        result = [r for r in result if isinstance(r, dict) and _is_http_url(r.get('url'))]
                         if result:
                             print(f"  ✅ 修正解析成功，提取 {len(result)} 条")
                             return result
@@ -2381,7 +2381,7 @@ def analyze_events_doubao(items):
                     break
             result = json.loads(re.sub(r'^json\s*', '', text, flags=re.I))
             if isinstance(result, list):
-                result = [r for r in result if r.get('url') and r.get('summary_short')]
+                result = [r for r in result if _is_http_url(r.get('url')) and r.get('summary_short')]
             return result
         except requests.exceptions.Timeout:
             if attempt < 1:  # 重试一次（网络抖动场景）
@@ -2400,7 +2400,7 @@ def analyze_events_doubao(items):
                 if match:
                     try:
                         result = json.loads(match.group())
-                        result = [r for r in result if isinstance(r, dict) and r.get('url')]
+                        result = [r for r in result if isinstance(r, dict) and _is_http_url(r.get('url'))]
                         if result:
                             print(f"  ✅ 修正解析成功，提取 {len(result)} 条")
                             return result
@@ -2440,13 +2440,17 @@ def analyze_single_event_doubao(item):
         return None
 
 
+def _is_http_url(url):
+    return isinstance(url, str) and url.startswith(('http://', 'https://'))
+
+
 def _results_by_url(results):
     if not isinstance(results, list):
         return {}
     return {
         r.get('url'): r
         for r in results
-        if isinstance(r, dict) and r.get('url')
+        if isinstance(r, dict) and _is_http_url(r.get('url'))
     }
 
 
@@ -2548,7 +2552,7 @@ def rewrite_titles_for_display(events):
                 for r in results:
                     url = r.get('url', '')
                     new_reason = r.get('reason', '')
-                    if url and new_reason and len(new_reason) >= 8:
+                    if _is_http_url(url) and new_reason and len(new_reason) >= 8:
                         for e in batch:
                             if e['url'] == url:
                                 e['reason'] = new_reason
@@ -3051,7 +3055,7 @@ def fill_event_images(events):
     import asyncio
     async def fetch_one(session, ev):
         try:
-            async with session.get(ev['url'], timeout=aiohttp.ClientTimeout(total=4), ssl=False) as resp:
+            async with session.get(ev['url'], timeout=aiohttp.ClientTimeout(total=4)) as resp:
                 if resp.status != 200:
                     return
                 html = await resp.text()

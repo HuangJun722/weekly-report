@@ -7,7 +7,7 @@ import json
 import os
 import re
 from datetime import datetime, timedelta, timezone
-from jinja2 import Template
+from jinja2 import Environment, select_autoescape
 
 try:
     from event_dates import is_display_date
@@ -2232,7 +2232,6 @@ def generate_html(force=False, preview_mode=False):
             cluster_events=all_events_for_list,
         )
         date_panels[d]['event_list_count'] = date_event_counts.get(d, len(raw_day_evs))
-    date_panels_json = json.dumps(date_panels, ensure_ascii=False)
     weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date)
     monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date)
     weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], period_reference_date, period_reference_date, '本周', 'empty', 'open')
@@ -2240,7 +2239,8 @@ def generate_html(force=False, preview_mode=False):
     site_updates = load_site_updates()
     update_time = f"最新采集 {period_reference_date}｜展示 {main_date} 成熟批次"
 
-    template = Template(open('scripts/template.html', 'r', encoding='utf-8').read())
+    env = Environment(autoescape=select_autoescape(['html', 'htm', 'xml']))
+    template = env.from_string(open('scripts/template.html', 'r', encoding='utf-8').read())
     html = template.render(
         weekly=weekly,
         weekly_report=weekly_report,
@@ -2271,14 +2271,11 @@ def generate_html(force=False, preview_mode=False):
         cn_date=cn_date,
         date_panels=date_panels,
         date_event_counts=date_event_counts,
-        date_panels_json=date_panels_json,
-        available_dates_json=json.dumps(available_dates),
         available_dates=available_dates,
         latest_data_date=latest_data_date,
         latest_visible_count=latest_visible_count,
         batch_notice=batch_notice,
         site_updates=site_updates,
-        site_updates_json=json.dumps(site_updates, ensure_ascii=False),
         feedback_endpoint=os.getenv('FEEDBACK_ENDPOINT', ''),
     )
     html = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'
