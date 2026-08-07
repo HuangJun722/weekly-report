@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-07T23:14:38.927899+08:00",
+  "generated_at": "2026-08-08T03:07:07.428551+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
@@ -128,7 +128,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-07T23:14:38.927899+08:00",
+      "observed_at": "2026-08-08T03:07:07.428551+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -219,14 +219,8 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-07T23:14:38.927899+08:00",
+      "observed_at": "2026-08-08T03:07:07.428551+08:00",
       "jobs": [
-        {
-          "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
-          "title": "Senior Lead, UK Public Affairs Remote - United Kingdom",
-          "url": "https://www.shopify.com/careers/senior-lead-uk-public-affairs_a4b8357e-2849-4ef4-80da-459e232f9f16",
-          "function_tags": []
-        },
         {
           "id": "e00d6002-7069-41cd-bf85-f3ef7119bba7",
           "title": "Senior Event Producer New York City",
