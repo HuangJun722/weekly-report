@@ -58,6 +58,52 @@ POLICY_TERMS = {
     '反垄断', '隐私', '数据保护', '合规', '央行', '税收', '关税',
 }
 
+# 阶段1 窄通道词表（仅在行业词缺失时启用，详见 assess_scope 注释）
+# Leg A：标题级强政策/监管动作词。刻意窄于 POLICY_TERMS：排除 approval/compliance/license/
+# policy 这类高频业务词，避免把"公司琐事里的用词"误当政策事件放行。
+REGIONAL_POLICY_TITLE_TERMS = {
+    'regulation', 'regulatory', 'regulator', 'legislation', 'antitrust',
+    'central bank', 'rules', 'fined', 'fines', 'bars', 'bans', 'ban', 'banned',
+    'orders', 'tax', 'taxes', 'taxable', 'tariff', 'tariffs', 'sanction',
+    'sanctions', 'tribunal', 'ruling',
+    '监管', '法规', '法案', '反垄断', '央行', '牌照', '关税', '制裁',
+}
+# Leg B：区域性结构/行业变化词。需配合"信源区域可判"（非全球综合源）判定。
+REGIONAL_STRUCTURAL_TITLE_TERMS = {
+    'changing', 'shift', 'shifts', 'shifted', 'battle', 'consolidation',
+    '变革', '转变', '洗牌',
+}
+# 全球综合源标签：此类信源的标题无法判定具体区域影响，Leg B 不放行。
+GLOBAL_REGION_LABELS = {'全球', 'global'}
+
+# 数字产业相关性词。窄通道的保险闸：政策/结构变化事件必须命中这些词才放行，
+# 防止"建筑建材税率调整""油气价格战"这类与互联网/AI 产业无关的政策被误收。
+DIGITAL_RELEVANCE_TERMS = {
+    # 技术/平台
+    'tech', 'technology', 'internet', 'online', 'platform', 'app', 'apps',
+    'software', 'digital', 'data', 'cloud', 'ai', 'artificial intelligence',
+    'model', 'algorithm', 'developer', 'api',
+    # 金融科技/支付/数字金融
+    'fintech', 'payment', 'payments', 'bank', 'banks', 'banking', 'lending',
+    'loan', 'loans', 'credit', 'crypto', 'cryptocurrency', 'blockchain',
+    'stablecoin', 'token', 'wallet', 'financial', 'e-wallet', 'neobank',
+    # 通信/数字基础设施
+    'telecom', 'telecommunications', 'mobile', 'network', 'carrier', '5g',
+    'data center', 'datacenter', 'semiconductor', 'chip', 'chips',
+    # 电商/内容/游戏
+    'ecommerce', 'e-commerce', 'commerce', 'retail', 'marketplace', 'seller',
+    'gaming', 'game', 'streaming', 'social', 'creator', 'merchant',
+    # 安全/设备
+    'cyber', 'cybersecurity', 'cybercrime', 'hacker', 'hackers', 'spyware',
+    'device', 'devices', 'gadget', 'smartphone',
+    # 初创/风险资本生态
+    'startup', 'startups', 'start-up', 'start-ups', 'venture', 'unicorn',
+    'esop', 'ipo', 'investor', 'investors', 'funding', 'vc', 'capital gains',
+    # 平台治理/用户保护（监管对象多指向平台）
+    'teen', 'teens', 'minor', 'minors', 'children', 'online safety',
+    'digital payments', 'digital economy',
+}
+
 INDUSTRY_CHANGE_TERMS = {
     'market', 'market share', 'revenue', 'gmv', 'volume', 'users', 'user base',
     'adoption', 'growth', 'grows', 'decline', 'forecast', 'benchmark', 'report',
@@ -184,6 +230,9 @@ def assess_scope(event):
     has_industry_change = _matches(text, INDUSTRY_CHANGE_TERMS)
     has_action = _matches(text, ACTION_TERMS) or event_type in STRONG_EVENT_TYPES
     title_has_policy = _matches(title_text, POLICY_TERMS)
+    title_has_policy_action = _matches(title_text, REGIONAL_POLICY_TITLE_TERMS)
+    title_has_structural_change = _matches(title_text, REGIONAL_STRUCTURAL_TITLE_TERMS)
+    title_has_digital_relevance = _matches(title_text, DIGITAL_RELEVANCE_TERMS)
     title_has_action = _matches(title_text, ACTION_TERMS)
     title_has_quantified_change = (
         _matches(title_text, QUANTIFIED_CHANGE_TERMS)
@@ -199,6 +248,34 @@ def assess_scope(event):
 
     industries = direct_industries or (contracted_industries if source_confirmed else [])
     if not industries:
+        # 阶段1 窄通道：行业词缺失时抢救区域政策/监管/结构变化信号。
+        # 两条腿都必须命中数字产业相关性词（DIGITAL_RELEVANCE_TERMS），
+        # 防"建筑建材税率调整"这类与互联网/AI 产业无关的政策被误收。
+        # Leg A：标题命中强政策/监管动作词 → 政策变化事件。
+        #   政策词本身足够强，不作区域限定（"欧盟出台 AI 新规"这类全球源报道也值得保留）。
+        # Leg B：标题命中结构/行业变化词，且信源区域可判（非全球综合源）→ 行业变化事件。
+        if (title_has_policy_action and title_has_digital_relevance) or event_type == 'regional_policy':
+            return {
+                'status': 'qualified',
+                'reason': 'scope_regional_policy_title',
+                'layer': 'regional_policy',
+                'industries': [],
+                'match_basis': 'regional_policy_title',
+            }
+        region = (event.get('region') or '').strip()
+        if (
+            region
+            and region not in GLOBAL_REGION_LABELS
+            and title_has_structural_change
+            and title_has_digital_relevance
+        ):
+            return {
+                'status': 'qualified',
+                'reason': 'scope_regional_structural_change',
+                'layer': 'industry_change',
+                'industries': [],
+                'match_basis': 'regional_structural_title',
+            }
         return {
             'status': 'filtered',
             'reason': 'scope_no_target_industry',

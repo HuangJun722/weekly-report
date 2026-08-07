@@ -135,6 +135,14 @@ def build_weekly_themes(events, entity_regions=None, limit=6):
                     companies.append(company)
         label = THEMES[key][0]
         why = representatives[0].get('reason') or representatives[0].get('summary_short') or ''
+        change_brief = [
+            {
+                'title': e.get('display_title') or e.get('title') or '',
+                'date': (e.get('date') or '')[:10],
+                'type': e.get('insight_label') or event_type(e),
+            }
+            for e in representatives[:4]
+        ]
         themes.append({
             'key': key,
             'title': label,
@@ -144,7 +152,8 @@ def build_weekly_themes(events, entity_regions=None, limit=6):
             'confidence': '高' if stats['atom_count'] >= 4 and stats['source_count'] >= 2 else '中',
             'evidence_count': stats['atom_count'],
             'action': '继续跟踪对象动作和第二来源确认',
-            'why': f'{why}。本周由 {stats["atom_count"]} 个独立事实支持。',
+            'why': why,
+            'change_brief': change_brief,
             'evidence': [_evidence(event) for event in representatives[:4]],
             'score': stats['atom_count'] * 4 + stats['source_count'] * 2 + stats['company_count'] + _avg_trend_weight(grouped_events) // 10,
         })

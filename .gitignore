@@ -12,6 +12,7 @@ build/
 # 数据文件
 data/archive/
 data/.cache/
+scripts/data/.cache/
 
 # macOS
 .DS_Store

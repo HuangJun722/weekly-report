@@ -16,6 +16,7 @@ try:
         classify_bd_priority,
         event_score,
         event_type,
+        is_company_quality_signal,
         is_google_news_event,
         follow_up_window_for_priority,
     )
@@ -42,6 +43,7 @@ except ImportError:
         classify_bd_priority,
         event_score,
         event_type,
+        is_company_quality_signal,
         is_google_news_event,
         follow_up_window_for_priority,
     )
@@ -266,12 +268,17 @@ def _portfolio_by_entity(pool):
 
 
 def build_entity_event_timelines(events_by_date, entities):
-    """Map every qualified event to the object aliases it actually describes."""
+    """Map every qualified event to the object aliases it actually describes.
+
+    公司卡门槛 = 主列表事件 或 公司质量信号。主列表刻意整体排除 Google News
+    聚合源（防全局 feed 被重复聚合噪声淹没），但公司卡应显示自家公司的强事件，
+    哪怕来自 Google News（如 Adyen 无专属 RSS，覆盖面主要靠聚合源）。
+    """
     candidates = [
         event
         for rows in (events_by_date or {}).values()
         for event in rows or []
-        if is_main_view_event(event)
+        if is_main_view_event(event) or is_company_quality_signal(event)
     ]
     timelines = {}
     for entity in entities or []:
@@ -1397,7 +1404,10 @@ def build_weekly_editorial(themes, period_id):
 
     theme_brief = []
     for t in themes:
-        evs = [e.get('title', '') for e in (t.get('evidence') or [])][:2]
+        evs = [e.get('title', '') for e in (t.get('evidence') or [])][:4]
+        change_events = t.get('change_brief') or [
+            {'title': title, 'date': '', 'type': ''} for title in evs
+        ]
         theme_brief.append({
             'key': t.get('key', ''),
             'title': t.get('title') or t.get('direction', ''),
@@ -1405,25 +1415,31 @@ def build_weekly_editorial(themes, period_id):
             'objects': t.get('objects', ''),
             'why': t.get('why', ''),
             'evidence_titles': evs,
+            'change_events': change_events,
         })
 
     prompt = f"""你是全球互联网科技情报编辑，受众是出海 BD、战略和投资从业者（周期标识：{period_id}）。
 
-以下是本周期聚类出的主题（每主题含代表事件标题）。请把它们编辑成一份可读的周报：
+以下是本周期聚类出的主题（每主题含代表事件标题与日期）。请把它们编辑成一份可读的周报：
 
 1. 写一个"本期编辑标题"（editorial_title，10-20字）：概括本期最值得关注的方向，像一期周刊的封面标题，不要使用"周报"字样，不要罗列数字。
 2. 写一段"本期主线"（mainline，60-90字）：把本周最值得关注的 1-2 个方向串成一段叙事，说明发生了什么、为什么值得关注、指向什么判断。要像编辑写导读，不要罗列统计数字。
 3. 为每个主题写一段叙事导读（narrative，40-70字）：把该主题的事件串成一条故事线，说明这些事件合起来意味着什么。不要重复事件标题，不要用"本周XX公司融资"这类清单式表达。
 
+反格式化硬约束（必须遵守）：
+- 每个主题的标题（theme_title）必须是具体变化描述，不能直接套用大类标签（如"AI与云基础设施"）。例如"拉美支付基建加速，本地收单商集体扩网"或"欧洲AI算力转向推理部署"。10-25字，含具体对象或区域，体现本周发生了什么变化。
+- 禁止套话：不要写"本周…预示…"、"资本涌动"、"开启新篇章"、"值得关注"这类空话；不要用"由 N 条事实支持"这类元描述。每句话都要有可验证的信息。
+- 叙事要写"变化"，不写"存在哪些话题"：说明本周在某个方向实际发生了什么（谁做了什么动作、市场怎么变），而不是罗列本周有哪些主题。
+
 主题列表：
 {json.dumps(theme_brief, ensure_ascii=False, indent=2)}
 
 只输出 JSON，不要输出其他内容，格式：
-{{"editorial_title": "本期编辑标题", "mainline": "本期主线", "themes": [{{"key": "主题key", "narrative": "该主题导读"}}]}}"""
+{{"editorial_title": "本期编辑标题", "mainline": "本期主线", "themes": [{{"key": "主题key", "theme_title": "具体标题", "narrative": "该主题导读"}}]}}"""
 
     for api in apis:
         try:
-            resp = _post_chat(api, prompt, max_tokens=1200, temperature=0.3, timeout=(10, 30))
+            resp = _post_chat(api, prompt, max_tokens=1400, temperature=0.3, timeout=(10, 30))
             if resp.status_code != 200:
                 print(f"  ⚠️  周报编辑 {api['name']} 返回 {resp.status_code}，尝试下一个")
                 continue
@@ -1433,11 +1449,12 @@ def build_weekly_editorial(themes, period_id):
             mainline = (data.get('mainline') or '').strip()
             editorial_title = (data.get('editorial_title') or '').strip()
             tmap = {t.get('key'): (t.get('narrative') or '').strip() for t in data.get('themes') or []}
+            titles = {t.get('key'): (t.get('theme_title') or '').strip() for t in data.get('themes') or []}
             if len(mainline) < 20 or not tmap:
                 print(f"  ⚠️  周报编辑 {api['name']} 结果不完整，尝试下一个")
                 continue
             print(f"  📝 周报编辑已生成（{api['name']}，{len(tmap)} 个主题导读）: {mainline[:40]}...")
-            return {'editorial_title': editorial_title, 'mainline': mainline, 'themes': tmap}
+            return {'editorial_title': editorial_title, 'mainline': mainline, 'themes': tmap, 'theme_titles': titles}
         except Exception as e:
             print(f"  ⚠️  周报编辑 {api['name']} 失败: {type(e).__name__}")
             continue
@@ -1461,7 +1478,7 @@ def build_monthly_editorial(trends, period_id):
 
     trend_brief = []
     for t in trends:
-        evs = [e.get('title', '') for e in (t.get('evidence') or [])][:2]
+        evs = [e.get('title', '') for e in (t.get('evidence') or [])][:4]
         trend_brief.append({
             'key': t.get('key', ''),
             'title': t.get('title') or t.get('name', ''),
@@ -1481,10 +1498,15 @@ def build_monthly_editorial(trends, period_id):
 1. 写一个"月度编辑标题"（editorial_title，10-20字）：概括本月最值得关注的结构变化方向，像一期月刊的封面标题，不要使用"月报"字样，不要罗列数字。
 2. 写一段"本期主线"（mainline，100-160字）：把本月最重要的 1-2 个结构变化串成一段叙事，与上月对照，说明发生了什么、为什么发生、指向什么判断。
 3. 为每个趋势写：
+   - theme_title（10-25字）：该趋势本月具体发生了什么变化的具体标题，不能直接套用大类标签（如"支付与金融科技"）。含具体对象、区域或动作。
    - narrative（40-80字）：该趋势本月到底发生了什么变化，为什么值得关注。
    - drivers（最多3条）：驱动该变化的因素，只能基于证据标题/摘要中已出现的事实，不要编造。
    - uncertainty（20-50字）：当前判断的不确定性或反证。
    - next_validation（20-50字）：下月应验证什么才能确认该趋势继续成立。
+
+反格式化硬约束（必须遵守）：
+- 禁止套话：不要写"资本涌动"、"开启新篇章"、"值得关注"这类空话；不要用"由 N 条事实支持"这类元描述。每句话都要有可验证的信息。
+- 叙事写"变化"，不写"存在哪些话题"：说明本月在某个方向实际发生了什么变化，而不是罗列本月有哪些趋势。
 
 硬约束：不得提及证据中不存在的公司、区域或动作；不要凭空增加事实。
 
@@ -1492,11 +1514,11 @@ def build_monthly_editorial(trends, period_id):
 {json.dumps(trend_brief, ensure_ascii=False, indent=2)}
 
 只输出 JSON，不要输出其他内容，格式：
-{{"editorial_title": "月度编辑标题", "mainline": "本期主线", "themes": [{{"key": "趋势key", "narrative": "...", "drivers": ["..."], "uncertainty": "...", "next_validation": "..."}}]}}"""
+{{"editorial_title": "月度编辑标题", "mainline": "本期主线", "themes": [{{"key": "趋势key", "theme_title": "具体标题", "narrative": "...", "drivers": ["..."], "uncertainty": "...", "next_validation": "..."}}]}}"""
 
     for api in apis:
         try:
-            resp = _post_chat(api, prompt, max_tokens=1600, temperature=0.3, timeout=(10, 30))
+            resp = _post_chat(api, prompt, max_tokens=1700, temperature=0.3, timeout=(10, 30))
             if resp.status_code != 200:
                 print(f"  ⚠️  月报编辑 {api['name']} 返回 {resp.status_code}，尝试下一个")
                 continue
@@ -1506,6 +1528,7 @@ def build_monthly_editorial(trends, period_id):
             mainline = (data.get('mainline') or '').strip()
             editorial_title = (data.get('editorial_title') or '').strip()
             tmap = {}
+            titles = {}
             for t in data.get('themes') or []:
                 key = t.get('key')
                 if not key:
@@ -1516,11 +1539,13 @@ def build_monthly_editorial(trends, period_id):
                     'uncertainty': (t.get('uncertainty') or '').strip(),
                     'next_validation': (t.get('next_validation') or '').strip(),
                 }
+                if (t.get('theme_title') or '').strip():
+                    titles[key] = (t.get('theme_title') or '').strip()
             if len(mainline) < 30 or not tmap:
                 print(f"  ⚠️  月报编辑 {api['name']} 结果不完整，尝试下一个")
                 continue
             print(f"  📝 月报编辑已生成（{api['name']}，{len(tmap)} 个趋势导读）: {mainline[:40]}...")
-            return {'editorial_title': editorial_title, 'mainline': mainline, 'themes': tmap}
+            return {'editorial_title': editorial_title, 'mainline': mainline, 'themes': tmap, 'theme_titles': titles}
         except Exception as e:
             print(f"  ⚠️  月报编辑 {api['name']} 失败: {type(e).__name__}")
             continue
@@ -1628,6 +1653,7 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
 
     if narrative_result:
         theme_details = narrative_result.get('themes') or {}
+        theme_titles = narrative_result.get('theme_titles') or {}
         for t in themes:
             detail = theme_details.get(t.get('key'))
             if detail:
@@ -1641,6 +1667,10 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
                         t['next_validation'] = detail['next_validation']
                 else:
                     t['narrative'] = detail
+            specific_title = theme_titles.get(t.get('key'))
+            if specific_title:
+                t['title'] = specific_title
+                t['direction'] = specific_title
 
     return {
         'id': period_id or f"{start_date}_{end_date}",
@@ -1860,7 +1890,7 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
         recent_7 = [e for e in events if (e.get('date') or '')[:10] >= start_7]
         recent_30 = [e for e in events if (e.get('date') or '')[:10] >= start_30]
-        quality_events = [event for event in recent_30 if is_main_view_event(event)]
+        quality_events = [event for event in recent_30 if is_main_view_event(event) or is_company_quality_signal(event)]
         latest = events[0] if events else {}
         latest_title = clean_display_title(latest.get('display_title') or latest.get('summary_short') or latest.get('title') or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
@@ -1911,6 +1941,8 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
                 observation_detail = f"已有 {connected_points}/{total_points} 个观察点产生运行证据"
         elif observation_status == 'pending':
             observation_detail = '观察对象已登记，采集器尚未接入'
+        elif company.get('portfolio_tier') == 'mention' and company.get('decision_use'):
+            observation_detail = company.get('decision_use')
         else:
             observation_detail = '历史运行记录不足，等待下一次采集确认'
         result.append({
@@ -1970,7 +2002,6 @@ def group_company_cards(company_list):
 def load_site_updates():
     """读取网站更新日志。"""
     path = os.path.join('data', 'site_updates.json')
-    cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
     fallback = [{
         'date': _cn_today(),
         'version': 'V0.1',
@@ -1995,8 +2026,6 @@ def load_site_updates():
             continue
         changes = item.get('changes') if isinstance(item.get('changes'), list) else []
         date_value = item.get('date') or ''
-        if date_value and date_value < cutoff:
-            continue
         cleaned.append({
             'date': date_value,
             'version': item.get('version') or '',
@@ -2111,6 +2140,93 @@ def build_display_context():
     # 按事件数量排序，有事件的排前面
     preset_company_list.sort(key=lambda x: x['count'], reverse=True)
 
+    # 阶段2：实体池拆分 Watchlist / Mention。
+    # Watchlist = entity_pool（人工关注对象）；Mention = 监控雷达（COMPANY_SOURCES）
+    # 中未纳入 Watchlist 的公司 + 事件中自动发现的公司。07-31 实体池重构把 14 家
+    # 被监控公司（Zalando/Allegro/Trendyol/Kaspi.kz/中资7家等）从索引里丢掉，
+    # 此处让"在监控"的公司持久出现：有近 7 天合格事件就带事件，没有就显示
+    # "监控中"状态而非直接消失。
+    try:
+        from fetch_news import COMPANY_ALIASES as _RADAR_ALIASES
+        from fetch_news import COMPANY_SOURCES as _RADAR_SOURCES
+    except Exception:
+        _RADAR_ALIASES = {}
+        _RADAR_SOURCES = []
+    watchlist_name_lower = {
+        (entity.get('name') or '').lower()
+        for entity in (entity_pool.get('entities') or [])
+        if entity.get('name')
+    }
+    watchlist_alias_lower = {
+        alias.lower()
+        for entity in (entity_pool.get('entities') or [])
+        for alias in (entity.get('aliases') or [])
+        if alias
+    }
+    watch_all = watchlist_name_lower | watchlist_alias_lower
+
+    def _mention_events_for(radar_name):
+        """收集公司近 7 天合格事件：公司名 + 别名命中 company_by_company。"""
+        names = [radar_name] + list(_RADAR_ALIASES.get(radar_name, []))
+        found = []
+        for n in names:
+            evs = company_by_company.get(n)
+            if evs:
+                found.extend(evs)
+        seen = set()
+        dedup = []
+        for e in found:
+            key = e.get('url') or f"{e.get('date')}|{e.get('title')}"
+            if key in seen:
+                continue
+            seen.add(key)
+            dedup.append(e)
+        return dedup
+
+    mention_names = set()
+    # 1) 监控雷达公司：持久卡片
+    for _cfg in _RADAR_SOURCES:
+        radar_name = _cfg.get('name') or ''
+        if not radar_name or radar_name.lower() in watch_all:
+            continue
+        evs = _mention_events_for(radar_name)
+        mention_names.add(radar_name.lower())
+        preset_company_list.append({
+            'entity_id': '',
+            'name': radar_name,
+            'region': _cfg.get('region') or '全球',
+            'sector': '',
+            'priority': 'mention',
+            'portfolio_tier': 'mention',
+            'decision_use': '监控中：公司雷达覆盖，未纳入人工观察清单',
+            'count': len(evs),
+            'events': evs,
+        })
+    # 2) 自动发现：事件中出现、既不在 Watchlist 也不在雷达配置的公司
+    for name, evs in company_by_company.items():
+        if not name or name == '其他':
+            continue
+        key = name.lower()
+        if key in watch_all or key in mention_names:
+            continue
+        region_counts = {}
+        for e in evs:
+            r = e.get('region') or ''
+            if r:
+                region_counts[r] = region_counts.get(r, 0) + 1
+        region = max(region_counts, key=region_counts.get) if region_counts else '全球'
+        preset_company_list.append({
+            'entity_id': '',
+            'name': name,
+            'region': region,
+            'sector': '',
+            'priority': 'mention',
+            'portfolio_tier': 'mention',
+            'decision_use': '自动发现：出现在公司源事件中，未纳入人工观察清单',
+            'count': len(evs),
+            'events': evs,
+        })
+
     # 全部事件 = 通用热点 + 公司动态（筛选后），统一按时间排序
     company_events_filtered = [e for evs in company_by_company.values() for e in evs]
     all_events_for_list = list(generic_events) + company_events_filtered
@@ -2178,9 +2294,8 @@ def generate_html(force=False, preview_mode=False):
     preset_company_list = build_company_cards(preset_company_list, main_date, entity_observation_ledger)
     company_groups = group_company_cards(preset_company_list)
 
-    # 历史tab：90天内除主tab批次之外的所有有内容日期
-    cutoff = (_cn_now() - timedelta(days=90)).strftime('%Y-%m-%d')
-    history_dates = [d for d in sorted_dates if d >= cutoff and d != main_date]
+    # 历史tab：除主tab批次之外的所有有内容日期
+    history_dates = [d for d in sorted_dates if d != main_date]
     history = [(d, events.get(d, [])) for d in history_dates if events.get(d, [])]
 
     signals = get_signal_events(events)
@@ -2217,8 +2332,6 @@ def generate_html(force=False, preview_mode=False):
     date_panels = {}
     available_dates = []
     for d in sorted_dates:
-        if d < cutoff:
-            continue
         raw_day_evs = [e for e in all_events_for_list if (e.get('date') or '')[:10] == d]
         day_evs = select_homepage_events_for_date(all_events_for_list, d)
         if not day_evs and not raw_day_evs:

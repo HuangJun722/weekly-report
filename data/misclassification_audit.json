@@ -1,0 +1,588 @@
+{
+  "generated_at": "2026-08-07 16:31",
+  "per_source": {
+    "TechCrunch": {
+      "raw_scan": 20,
+      "qualified": 4,
+      "filtered": 11
+    },
+    "TechCrunch VC": {
+      "raw_scan": 19,
+      "qualified": 2,
+      "filtered": 4
+    },
+    "Tech.eu": {
+      "raw_scan": 20,
+      "qualified": 4,
+      "filtered": 6
+    },
+    "EU-Startups": {
+      "raw_scan": 10,
+      "qualified": 4,
+      "filtered": 6
+    },
+    "The Recursive": {
+      "raw_scan": 15,
+      "qualified": 0,
+      "filtered": 4
+    },
+    "Tech in Asia": {
+      "raw_scan": 24,
+      "qualified": 11,
+      "filtered": 8
+    },
+    "Inc42": {
+      "raw_scan": 24,
+      "qualified": 6,
+      "filtered": 18
+    },
+    "TechWire Asia": {
+      "raw_scan": 0,
+      "qualified": 0,
+      "filtered": 0
+    },
+    "Fintech News Singapore": {
+      "raw_scan": 10,
+      "qualified": 10,
+      "filtered": 0
+    },
+    "Payments Dive": {
+      "raw_scan": 10,
+      "qualified": 3,
+      "filtered": 1
+    },
+    "EcommerceBytes": {
+      "raw_scan": 10,
+      "qualified": 2,
+      "filtered": 0
+    },
+    "Retail Dive": {
+      "raw_scan": 10,
+      "qualified": 4,
+      "filtered": 5
+    },
+    "Mobile World Live": {
+      "raw_scan": 16,
+      "qualified": 8,
+      "filtered": 4
+    },
+    "Social Media Today": {
+      "raw_scan": 10,
+      "qualified": 6,
+      "filtered": 2
+    },
+    "Mobile Marketing Magazine": {
+      "raw_scan": 10,
+      "qualified": 0,
+      "filtered": 0
+    },
+    "MENAbytes": {
+      "raw_scan": 10,
+      "qualified": 0,
+      "filtered": 0
+    },
+    "TechCabal": {
+      "raw_scan": 10,
+      "qualified": 6,
+      "filtered": 4
+    },
+    "Disrupt Africa": {
+      "raw_scan": 10,
+      "qualified": 0,
+      "filtered": 0
+    },
+    "Ventureburn": {
+      "raw_scan": 10,
+      "qualified": 9,
+      "filtered": 1
+    },
+    "WeeTracker": {
+      "raw_scan": 8,
+      "qualified": 1,
+      "filtered": 2
+    },
+    "LatamList": {
+      "raw_scan": 10,
+      "qualified": 0,
+      "filtered": 0
+    },
+    "Contxto": {
+      "raw_scan": 24,
+      "qualified": 1,
+      "filtered": 0
+    },
+    "Cyberagent News": {
+      "raw_scan": 20,
+      "qualified": 0,
+      "filtered": 1
+    }
+  },
+  "filtered_count": 77,
+  "qualified_count": 81,
+  "by_reason": {
+    "scope_no_target_industry": [
+      {
+        "title": "Your table awaits: Exhibit at TechCrunch Disrupt 2026 to be seen by thousands",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/your-table-awaits-exhibit-at-techcrunch-disrupt-2026-to-be-seen-by-thousands/"
+      },
+      {
+        "title": "Vogue just gave another nod of approval to the tech world",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/vogue-just-gave-another-nod-of-approval-to-the-tech-world/"
+      },
+      {
+        "title": "Get up to $400 off your TechCrunch Disrupt 2026 pass until tomorrow",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/get-up-to-400-off-your-techcrunch-disrupt-2026-pass-until-friday/"
+      },
+      {
+        "title": "Google says hackers are calling financial firm employees to hack and extort victims",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/google-says-hackers-are-calling-financial-firm-employees-to-hack-and-extort-victims/"
+      },
+      {
+        "title": "China-linked LightSpy spyware caught targeting victims in 13 countries, including the US",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/china-linked-lightspy-spyware-caught-targeting-victims-in-13-countries-including-the-us/"
+      },
+      {
+        "title": "Defense tech Hadrian raises $1.37B at $8B valuation",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/defense-tech-hadrian-raises-1-37b-at-8b-valuation/"
+      },
+      {
+        "title": "Bumble teases a swipe-free future as it doubles down on IRL meetups",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/bumble-teases-a-swipe-free-future-as-it-doubles-down-on-irl-meetups/"
+      },
+      {
+        "title": "Naïve raises $28.5M to automate the grunt work of setting up and running a company",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+      },
+      {
+        "title": "eBay continues to bet on live shopping after record quarter",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/ebay-continues-to-bet-on-live-shopping-after-record-quarter/"
+      },
+      {
+        "title": "Amid legal battles, Suno says it will start watermarking songs",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/amid-legal-battles-suno-says-it-will-start-watermarking-songs/"
+      },
+      {
+        "title": "Ford’s new electric truck, ‘Fathom,’ starts at $28,350",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/06/fords-new-electric-truck-fathom-starts-at-28350/"
+      },
+      {
+        "title": "Moove raises $250M to become the backbone of the robotaxi industry",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/"
+      },
+      {
+        "title": "Lightspeed is building its edge on followers, not just funds",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/video/why-lightspeed-is-going-all-in-on-creator-led-venture-capital/"
+      },
+      {
+        "title": "Why Lightspeed is going all-in on creator-led venture capital",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/podcast/why-lightspeed-is-going-all-in-on-creator-led-venture-capital/"
+      },
+      {
+        "title": "Robinhood to list a fund that lets anyone back Y Combinator startups",
+        "source": "TechCrunch",
+        "region": "全球",
+        "url": "https://techcrunch.com/2026/08/05/robinhood-to-list-a-fund-that-lets-anyone-back-y-combinator-startups/"
+      },
+      {
+        "title": "The UK's top-funded tech companies in H1 2026",
+        "source": "Tech.eu",
+        "region": "欧洲",
+        "url": "https://tech.eu/2026/08/06/the-uks-top-funded-tech-companies-in-h1-2026/"
+      },
+      {
+        "title": "Mobilise launches investment arm to scale telecom software companies through strategic partnerships",
+        "source": "Tech.eu",
+        "region": "欧洲",
+        "url": "https://tech.eu/2026/08/06/mobilise-launches-investment-arm-to-scale-telecom-software-companies-through-strategic-partnerships/"
+      },
+      {
+        "title": "Meet the photonics scaleups building tomorrow's critical technologies",
+        "source": "Tech.eu",
+        "region": "欧洲",
+        "url": "https://tech.eu/2026/08/06/meet-the-photonics-scaleups-building-tomorrow-s-critical-technologies/"
+      },
+      {
+        "title": "FuVeX raises €3M to scale dual-use drone technology across Europe",
+        "source": "Tech.eu",
+        "region": "欧洲",
+        "url": "https://tech.eu/2026/08/05/fuvex-raises-eur3m-to-scale-dual-use-drone-technology-across-europe/"
+      },
+      {
+        "title": "White Star Capital closes $250M Fund IV to back global startups from Series A to B",
+        "source": "Tech.eu",
+        "region": "欧洲",
+        "url": "https://tech.eu/2026/08/05/white-star-capital-closes-250m-fund-iv-to-back-global-startups-from-series-a-to-b/"
+      },
+      {
+        "title": "Scaleup Europe Fund makes first investment, co-leading Iceye's €1BN round",
+        "source": "Tech.eu",
+        "region": "欧洲",
+        "url": "https://tech.eu/2026/08/05/scale-up-europe-fund-makes-first-investment-co-leading-iceyes-eur1bn-round/"
+      },
+      {
+        "title": "Cyprus-based enterprise agentic CX company Omilia secures €58.1 million in Series B funding",
+        "source": "EU-Startups",
+        "region": "欧洲",
+        "url": "https://www.eu-startups.com/2026/08/cyprus-based-enterprise-agentic-cx-company-omilia-secures-e58-1-million-in-series-b-funding/"
+      },
+      {
+        "title": "The chink in Europe’s innovation armour",
+        "source": "EU-Startups",
+        "region": "欧洲",
+        "url": "https://www.eu-startups.com/2026/08/the-chink-in-europes-innovation-armour/"
+      },
+      {
+        "title": "Finland’s SeeTrue Technologies raises €2.2 million to commercialise low-power eye-sensing architecture",
+        "source": "EU-Startups",
+        "region": "欧洲",
+        "url": "https://www.eu-startups.com/2026/08/finlands-seetrue-technologies-raises-e2-2-million-to-commercialise-low-power-eye-sensing-architecture/"
+      },
+      {
+        "title": "Crawley-based Naked Energy secures €10.35 million to build UK solar-thermal technology manufacturing facility",
+        "source": "EU-Startups",
+        "region": "欧洲",
+        "url": "https://www.eu-startups.com/2026/08/crawley-based-naked-energy-secures-e10-35-million-to-build-uk-solar-thermal-technology-manufacturing-facility/"
+      },
+      {
+        "title": "The EU-Startups Podcast | Interview with Jekaterina Romanova, founder & CEO of PrintyMed",
+        "source": "EU-Startups",
+        "region": "欧洲",
+        "url": "https://www.eu-startups.com/2026/08/the-eu-startups-podcast-interview-with-jekaterina-romanova-founder-ceo-of-printymed/"
+      },
+      {
+        "title": "Aix-en-Provence-based Chargepoly secures €23 million to accelerate heavy-duty fleet electrification",
+        "source": "EU-Startups",
+        "region": "欧洲",
+        "url": "https://www.eu-startups.com/2026/08/aix-en-provence-based-chargepoly-secures-e23-million-to-accelerate-heavy-duty-fleet-electrification/"
+      },
+      {
+        "title": "How Did the CEE Get Its First Insurtech Unicorn?",
+        "source": "The Recursive",
+        "region": "欧洲",
+        "url": "https://www.therecursive.com/how-did-the-cee-get-its-first-insurtech-unicorn/"
+      },
+      {
+        "title": "What the Balkans Taught Me About Its Next Growth Story",
+        "source": "The Recursive",
+        "region": "欧洲",
+        "url": "https://www.therecursive.com/what-the-balkans-taught-me-about-its-next-growth-story/"
+      },
+      {
+        "title": "Why Employees Still Choose Salary Over Ownership",
+        "source": "The Recursive",
+        "region": "欧洲",
+        "url": "https://www.therecursive.com/why-employees-still-choose-salary-over-ownership/"
+      },
+      {
+        "title": "Europe's Innovation Landscape in 2026",
+        "source": "The Recursive",
+        "region": "欧洲",
+        "url": "https://www.therecursive.com/europes-innovation-landscape-in-2026/"
+      },
+      {
+        "title": "50 rising startups in Vietnam",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/top-50-rising-startups-vietnam"
+      },
+      {
+        "title": "Taiwan chipmaker Nanya plans $10.7b fab investment",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/news/taiwan-chipmaker-nanya-plans-107b-fab-investment"
+      },
+      {
+        "title": "Weekly funding: Israel’s Onyx banks $113m",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/visual-story/weekly-startup-funding"
+      },
+      {
+        "title": "A cheat sheet of M&As in Korea",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/visual-story/cheat-sheet-mas-korea"
+      },
+      {
+        "title": "Airbnb tops Q2 estimates, forecasts strong Q3",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/news/airbnb-tops-q2-estimates-forecasts-strong-q3"
+      },
+      {
+        "title": "LionsBot eyes EBITDA profit, potential listing by 2027",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/lionsbot-eyes-ebitda-profit-potential-listing-2027"
+      },
+      {
+        "title": "Indian logistics firm Shiprocket targets $170m IPO",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/news/indian-logistics-firm-shiprocket-targets-170m-ipo"
+      },
+      {
+        "title": "50 most active investors in Southeast Asian, Indian greentech firms",
+        "source": "Tech in Asia",
+        "region": "亚太",
+        "url": "https://www.techinasia.com/50-active-investors-southeast-asian-indian-greentech-firms"
+      },
+      {
+        "title": "Exclusive: Peak XV’s Vice President Kriti Gupta To Leave VC Firm After Five Years",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/peak-xvs-vice-president-kriti-gupta-to-leave-vc-firm-after-five-years/"
+      },
+      {
+        "title": "D2CX Converge Kolkata Unpacks The Playbook For Scaling India’s Next Generation Of Consumer Brands",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/d2cx-converge-kolkata-unpacks-the-playbook-for-scaling-indias-next-generation-of-consumer-brands/"
+      },
+      {
+        "title": "BlissClub Raises ₹160 Cr To Fuel Offline Expansion, Enter New Categories",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/blissclub-raises-%e2%82%b9160-cr-to-fuel-offline-expansion-enter-new-categories/"
+      },
+      {
+        "title": "Edtech Klassroom’s Shares List At 7% Premium To Issue Price",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/edtech-klassrooms-shares-list-at-7-premium-to-issue-price/"
+      },
+      {
+        "title": "Instant Help’s Fight Against Cash Burn, Pixxel’s Next Upgrade & More",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/instant-helps-fight-against-cash-burn-pixxels-next-upgrade-more/"
+      },
+      {
+        "title": "PE Giant TPG Offloads Shadowfax Shares In ₹301 Cr Bulk Deal",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/pe-giant-tpg-offloads-shadowfax-shares-in-%e2%82%b9301-cr-bulk-deal/"
+      },
+      {
+        "title": "Mitti Labs Bags $9.5 Mn To Make Rice Cultivation Water-Efficient",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/mitti-labs-bags-9-5-mn-to-make-rice-cultivation-water-efficient/"
+      },
+      {
+        "title": "IPO-Bound LEAP India Nets ₹744 Cr From Anchor Investors",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/ipo-bound-leap-india-nets-%e2%82%b9744-cr-from-anchor-investors/"
+      },
+      {
+        "title": "Fisdom Cofounders Set To Exit Groww A Year After $150 Mn Acquisition",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/fisdom-cofounders-set-to-exit-groww-a-year-after-150-mn-acquisition/"
+      },
+      {
+        "title": "Wakefit Q1 Profit Increases 19% YoY To ₹23.4 Cr, Revenue Crosses ₹400 Cr",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/wakefit-q1-profit-increases-19-yoy-to-%e2%82%b923-4-cr-revenue-crosses-%e2%82%b9400-cr/"
+      },
+      {
+        "title": "Reliance Brands Brings Kim Kardashian’s SKIMS to India",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/reliance-brands-brings-kim-kardashians-skims-to-india/"
+      },
+      {
+        "title": "AAP Chief Alleges Meta Restricted His Account; Sources Say Action Limited To A Post",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/aap-chief-alleges-meta-restricted-his-account-sources-say-action-limited-to-a-post/"
+      },
+      {
+        "title": "ixigo Q1 Profit Surges 81% YoY To ₹34.2 Cr, Revenue Up 13%",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/ixigo-q1-profit-surges-81-yoy-to-%e2%82%b934-2-cr-revenue-up-13/"
+      },
+      {
+        "title": "Solinas Integrity Snags $5.5 Mn To Scale Robotics Solutions Across Global Markets",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/solinas-integrity-snags-5-5-mn-to-scale-robotics-solutions-across-global-markets/"
+      },
+      {
+        "title": "IPO-Bound Shiprocket FY26 Loss Widened 7%YoY To ₹79 Cr",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/ipo-bound-shiprocket-fy26-loss-widened-7yoy-to-%e2%82%b979-cr/"
+      },
+      {
+        "title": "Inside The Economics That May Make Or Break Instant Home Services",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/features/inside-the-economics-that-may-make-or-break-instant-home-services/"
+      },
+      {
+        "title": "From Firefly To Honeybee: How India’s Pixxel Is Widening What Satellites Can See",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/startups/from-firefly-to-honeybee-how-indias-pixxel-is-widening-what-satellites-can-see/"
+      },
+      {
+        "title": "Dronetech Startup Garuda Aerospace Gets SEBI Nod For ₹750 Cr+ IPO",
+        "source": "Inc42",
+        "region": "亚太",
+        "url": "https://inc42.com/buzz/dronetech-startup-garuda-aerospace-gets-sebi-nod-for-%e2%82%b9750-cr-ipo/"
+      },
+      {
+        "title": "Visa, Mastercard join another stablecoin group",
+        "source": "Payments Dive",
+        "region": "全球",
+        "url": "https://www.paymentsdive.com/news/visa-mastercard-join-another-stablecoin-group/827078/"
+      },
+      {
+        "title": "Digital Brands Group weighs shareholder cash deal",
+        "source": "Retail Dive",
+        "region": "全球",
+        "url": "https://www.retaildive.com/news/digital-brands-group-weighs-shareholder-cash-deal/827208/"
+      },
+      {
+        "title": "Home Depot reshuffles leadership to accelerate tech innovation",
+        "source": "Retail Dive",
+        "region": "全球",
+        "url": "https://www.retaildive.com/news/home-depot-leadership-tech-innovation/827161/"
+      },
+      {
+        "title": "Claire’s revamps iconic piercing experience",
+        "source": "Retail Dive",
+        "region": "全球",
+        "url": "https://www.retaildive.com/news/claires-revamps-in-store-piercing-experience/826321/"
+      },
+      {
+        "title": "Barbie is ready to be a ‘fashion icon’",
+        "source": "Retail Dive",
+        "region": "全球",
+        "url": "https://www.retaildive.com/news/barbie-mattel-q2-earnings/827067/"
+      },
+      {
+        "title": "Best Buy picks Nordstrom alum for CFO",
+        "source": "Retail Dive",
+        "region": "全球",
+        "url": "https://www.retaildive.com/news/best-buy-picks-nordstrom-alum-for-cfo/827051/"
+      },
+      {
+        "title": "China takes aim at Palo Alto Networks as US row deepens",
+        "source": "Mobile World Live",
+        "region": "全球",
+        "url": "https://www.mobileworldlive.com/regulation/china-takes-aim-at-palo-alto-networks-as-us-row-deepens/"
+      },
+      {
+        "title": "Czech trial elevates flying base station ambitions",
+        "source": "Mobile World Live",
+        "region": "全球",
+        "url": "https://www.mobileworldlive.com/industry/czech-trial-elevates-flying-base-station-ambitions/"
+      },
+      {
+        "title": "Optus, Nokia detail upper 6GHz test outcomes",
+        "source": "Mobile World Live",
+        "region": "全球",
+        "url": "https://www.mobileworldlive.com/nokia/optus-nokia-detail-upper-6ghz-test-outcomes/"
+      },
+      {
+        "title": "OCUDU group signs-up Intel to boost open RAN push",
+        "source": "Mobile World Live",
+        "region": "全球",
+        "url": "https://www.mobileworldlive.com/network-tech/ocudu-group-signs-up-intel-to-boost-open-ran-push/"
+      },
+      {
+        "title": "Head of Product at X steps down",
+        "source": "Social Media Today",
+        "region": "全球",
+        "url": "https://www.socialmediatoday.com/news/head-of-product-at-x-steps-down/827289/"
+      },
+      {
+        "title": "Instagram shares tips on video creation",
+        "source": "Social Media Today",
+        "region": "全球",
+        "url": "https://www.socialmediatoday.com/news/instagram-shares-tips-on-video-creation/827172/"
+      },
+      {
+        "title": "As African newsrooms shrink, powerful companies face less scrutiny",
+        "source": "TechCabal",
+        "region": "非洲",
+        "url": "https://techcabal.com/2026/08/06/as-african-newsrooms-shrink-face-less-scrutiny/"
+      },
+      {
+        "title": "Google Pixel 11 Pro Fold: Release date, price, and specs",
+        "source": "TechCabal",
+        "region": "非洲",
+        "url": "https://techcabal.com/2026/08/06/google-pixel-11-pro-fold-release-date-price-specs/"
+      },
+      {
+        "title": "Google Pixel 11 Pro XL: Release date, price, and specs",
+        "source": "TechCabal",
+        "region": "非洲",
+        "url": "https://techcabal.com/2026/08/06/google-pixel-11-pro-xl-release-date-price-specs/"
+      },
+      {
+        "title": "Why Spiro deployed 22,000 electric motorcycles in Rwanda but only 5,000 in Nigeria",
+        "source": "TechCabal",
+        "region": "非洲",
+        "url": "https://techcabal.com/2026/08/06/why-spiro-deployed-22000-electric-motorcycles-in-rwanda-but-only-5000-in-nigeria/"
+      },
+      {
+        "title": "Aurelius Systems Raises $40M To Advance Autonomous Defense Platform",
+        "source": "Ventureburn",
+        "region": "非洲",
+        "url": "https://ventureburn.com/aurelius-systems-raises-40m-to-advance-autonomous-defense-platform/"
+      },
+      {
+        "title": "Yellow Card Raises USD 40 M To Expand Global Stablecoin Infrastructure",
+        "source": "WeeTracker",
+        "region": "非洲",
+        "url": "https://weetracker.com/2026/08/06/yellow-card-raises-40m-stablecoin-funding/"
+      },
+      {
+        "title": "Moove Raises USD 250 M At USD 2.1 B Valuation To Expand Autonomous Vehicle Business",
+        "source": "WeeTracker",
+        "region": "非洲",
+        "url": "https://weetracker.com/2026/08/06/moove-raises-250m-2-1b-valuation/"
+      },
+      {
+        "title": "CyberAgent Releases Q3 FY 2026 Financial Results",
+        "source": "Cyberagent",
+        "region": "亚太",
+        "url": "https://www.cyberagent.co.jp/news/detail/id=33691"
+      }
+    ]
+  }
+}

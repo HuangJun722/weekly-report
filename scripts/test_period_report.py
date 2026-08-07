@@ -318,6 +318,125 @@ def test_monthly_editorial_falls_back_to_template_when_llm_fails():
     assert not report['editorial_title']
 
 
+def test_weekly_theme_title_overrides_fixed_category_label():
+    """反格式化：AI 返回具体 theme_title 时，主题标题不再是固定大类标签。"""
+    def fake_post_chat(api, prompt, **kw):
+        keys = [m.group(1) for m in re.finditer(r'"key": "([^"]+)"', prompt)] or ['ai_infra']
+        content = json.dumps({
+            'editorial_title': '算力走向区域部署',
+            'mainline': '本周AI基础设施资本转向区域推理节点，支付进入商户入口争夺。',
+            'themes': [{'key': k, 'theme_title': f'{k}区域推理部署加速', 'narrative': f'{k}主题叙事'} for k in keys],
+        }, ensure_ascii=False)
+        return mock.Mock(status_code=200, json=lambda: {'choices': [{'message': {'content': content}}]})
+
+    ctx_api = mock.patch('fetch_news._chat_api_candidates', return_value=_fake_apis())
+    ctx_llm = mock.patch('fetch_news._post_chat', side_effect=fake_post_chat)
+    ctx_api.start()
+    ctx_llm.start()
+    try:
+        report = build_period_report([
+            event(url='https://example.com/a', company_name='ExampleAI', companies=['ExampleAI']),
+            event(url='https://example.com/b', company_name='CloudBox', companies=['CloudBox']),
+        ], '2026-06-01', '2026-06-07', '2026年第23周', '2026-W23', 'open', focus_windows_enabled=True)
+    finally:
+        ctx_llm.stop()
+        ctx_api.stop()
+
+    assert report['focus_windows']
+    window = report['focus_windows'][0]
+    assert '区域推理部署加速' in window['title']
+    assert window['title'] != 'AI与云基础设施'  # 不再是固定大类
+
+
+def test_weekly_why_has_no_meta_boilerplate():
+    """反格式化：主题 why 不再带'本周由 N 个独立事实支持'这类元描述套话。"""
+    report = build_period_report([
+        event(url='https://example.com/a', company_name='ExampleAI', companies=['ExampleAI'],
+              reason='欧洲AI基础设施公司融资，云和数据中心出现预算窗口'),
+        event(url='https://example.com/b', company_name='CloudBox', companies=['CloudBox'],
+              reason='CloudBox扩张区域数据中心'),
+    ], '2026-06-01', '2026-06-07', '2026年第23周', '2026-W23', 'open', focus_windows_enabled=True)
+
+    assert report['focus_windows']
+    window = report['focus_windows'][0]
+    assert window['why']
+    assert '由' not in window['why'] and '独立事实支持' not in window['why']
+
+
+def test_weekly_editorial_fed_four_evidence_events():
+    """反格式化：AI 编辑 prompt 应收到每条主题最多 4 条代表事件，而非仅 2 条。"""
+    seen = {}
+
+    def fake_post_chat(api, prompt, **kw):
+        seen['prompt'] = prompt
+        keys = [m.group(1) for m in re.finditer(r'"key": "([^"]+)"', prompt)] or ['ai_infra']
+        content = json.dumps({
+            'mainline': '本周主线叙事内容足够长以通过长度校验，继续输出主题导读。',
+            'themes': [{'key': k, 'theme_title': '具体变化标题', 'narrative': '叙事'} for k in keys],
+        }, ensure_ascii=False)
+        return mock.Mock(status_code=200, json=lambda: {'choices': [{'message': {'content': content}}]})
+
+    ctx_api = mock.patch('fetch_news._chat_api_candidates', return_value=_fake_apis())
+    ctx_llm = mock.patch('fetch_news._post_chat', side_effect=fake_post_chat)
+    ctx_api.start()
+    ctx_llm.start()
+    try:
+        build_period_report([
+            event(url='https://example.com/a', company_name='ExampleAI', companies=['ExampleAI'],
+                  display_title='ExampleAI 获融资扩张欧洲推理集群', summary_short='A公司融资', reason='AI基础设施扩张'),
+            event(url='https://example.com/b', company_name='CloudBox', companies=['CloudBox'],
+                  display_title='CloudBox 启动中东区域数据中心', summary_short='B公司扩张', reason='数据中心布局'),
+            event(url='https://example.com/c', company_name='NebulaAI', companies=['NebulaAI'],
+                  display_title='NebulaAI 上线推理 API 服务', summary_short='C公司上线', reason='推理服务发布'),
+            event(url='https://example.com/d', company_name='InfraCo', companies=['InfraCo'],
+                  display_title='InfraCo 锁定推理 GPU 供应', summary_short='D公司采购', reason='GPU采购'),
+        ], '2026-06-01', '2026-06-07', '2026年第23周', '2026-W23', 'open', focus_windows_enabled=True)
+    finally:
+        ctx_llm.stop()
+        ctx_api.stop()
+
+    # 4 条事件应进入 prompt（change_events 携带 display_title）
+    assert '"change_events"' in seen['prompt']
+    for ident in ('ExampleAI 获融资扩张欧洲推理集群', 'CloudBox 启动中东区域数据中心',
+                  'NebulaAI 上线推理 API 服务', 'InfraCo 锁定推理 GPU 供应'):
+        assert ident in seen['prompt']
+
+
+def test_monthly_theme_title_overrides_fixed_category_label():
+    """反格式化：月报趋势标题同样被具体变化标题覆盖。"""
+    def fake_post_chat(api, prompt, **kw):
+        keys = [m.group(1) for m in re.finditer(r'"key": "([^"]+)"', prompt)] or ['ai_infra']
+        content = json.dumps({
+            'editorial_title': '算力转向推理部署',
+            'mainline': '本月AI基础设施资本转向推理与区域节点，支付行业同步进入商户入口争夺。',
+            'themes': [
+                {'key': k, 'theme_title': f'{k}推理部署转向',
+                 'narrative': '叙事', 'drivers': ['区域数据中心扩张'], 'uncertainty': '部分扩张仍处规划',
+                 'next_validation': '观察数据中心是否进入运营披露'}
+                for k in keys
+            ],
+        }, ensure_ascii=False)
+        return mock.Mock(status_code=200, json=lambda: {'choices': [{'message': {'content': content}}]})
+
+    ctx_api = mock.patch('fetch_news._chat_api_candidates', return_value=_fake_apis())
+    ctx_llm = mock.patch('fetch_news._post_chat', side_effect=fake_post_chat)
+    ctx_api.start()
+    ctx_llm.start()
+    try:
+        report = build_period_report([
+            event(url='https://example.com/c1', company_name='ExampleAI', companies=['ExampleAI'], date='2026-07-03'),
+            event(url='https://example.com/c2', company_name='CloudBox', companies=['CloudBox'], date='2026-07-10'),
+            event(url='https://example.com/c3', company_name='InfraCo', companies=['InfraCo'], date='2026-07-18'),
+        ], '2026-07-01', '2026-07-31', '7 月报', '2026-07', 'mature')
+    finally:
+        ctx_llm.stop()
+        ctx_api.stop()
+
+    trend = report['period_themes'][0]
+    assert '推理部署转向' in trend['title']
+    assert trend['title'] != trend['key'] and '金融科技' not in trend['title']
+
+
 if __name__ == '__main__':
     test_weekly_report_builds_focus_windows_from_repeated_signals()
     test_weekly_report_does_not_promote_single_event_to_focus_window()
@@ -332,4 +451,8 @@ if __name__ == '__main__':
     test_monthly_preview_outputs_observation_summary()
     test_monthly_editorial_overrides_mainline_when_llm_succeeds()
     test_monthly_editorial_falls_back_to_template_when_llm_fails()
+    test_weekly_theme_title_overrides_fixed_category_label()
+    test_weekly_why_has_no_meta_boilerplate()
+    test_weekly_editorial_fed_four_evidence_events()
+    test_monthly_theme_title_overrides_fixed_category_label()
     print('period report tests passed')

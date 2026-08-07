@@ -549,7 +549,7 @@ button, input, select { font: inherit; }
               {% for d in available_dates[:5] %}
               <button class="date-row{% if d == main_date %} active{% endif %}" onclick="navigateToDate('{{ d }}')"><span>{{ d }}</span><span>{{ date_panels[d].total_stories }} 条</span></button>
               {% endfor %}
-              <button class="date-row" onclick="switchTab('all')"><span>90 天历史</span><span>{{ history|length }} 天</span></button>
+              <button class="date-row" onclick="switchTab('all')"><span>全部历史</span><span>{{ history|length }} 天</span></button>
             </div>
           </section>
         </aside>
@@ -722,7 +722,7 @@ button, input, select { font: inherit; }
                 <strong>{{ c.name }}</strong>
                 <span class="company-status">活动：{{ c.activity_label }}｜覆盖：{{ c.coverage_label }}</span>
                 <span>{{ c.observation_detail }}</span>
-                <small>{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '实验对象' }}｜近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
+                <small>{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '关注中' if c.portfolio_tier == 'mention' else '实验对象' }}｜近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
               </button>
               {% endfor %}
             </div>
@@ -736,7 +736,7 @@ button, input, select { font: inherit; }
     <section class="tab-panel" id="tab-all">
       {% if date_grouped_events %}
       <section class="content-block">
-        <div class="block-head"><h2>90 天事件库</h2><span>按日期折叠，支持搜索和地区/公司筛选</span></div>
+        <div class="block-head"><h2>全部事件库</h2><span>按日期折叠，支持搜索和地区/公司筛选</span></div>
         <div id="feed-list">
           {% for group in date_grouped_events %}
           <div class="history-card" data-date="{{ group.date }}">
@@ -780,7 +780,7 @@ button, input, select { font: inherit; }
       </section>
       <div class="ops-layout">
         <section class="content-block">
-          <div class="block-head"><h2>90 天更新日志</h2><span>{{ site_updates|length }} 条记录，默认折叠</span></div>
+          <div class="block-head"><h2>全部更新日志</h2><span>{{ site_updates|length }} 条记录，默认折叠</span></div>
           <div class="history-list">
             {% for update in site_updates %}
             <article class="history-card">
