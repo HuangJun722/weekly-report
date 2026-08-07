@@ -12,7 +12,7 @@
 	<atom:link href="https://ventureburn.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://ventureburn.com/</link>
 	<description>Startup news for emerging markets</description>
-	<lastBuildDate>Thu, 06 Aug 2026 18:17:26 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 07 Aug 2026 12:13:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,53 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Lumilens Raises $900 Million To Build Optical Chips For AI Data Centers</title>
+		<link>https://ventureburn.com/lumilens-900-million-funding-optical-chips-ai-data-centers/</link>
+		
+		<dc:creator><![CDATA[Ekemini]]></dc:creator>
+		<pubDate>Fri, 07 Aug 2026 12:13:26 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Startup]]></category>
+		<category><![CDATA[AI Chip]]></category>
+		<category><![CDATA[AI hardware]]></category>
+		<category><![CDATA[artificial intelligence]]></category>
+		<category><![CDATA[Data Centers]]></category>
+		<category><![CDATA[Lumilens]]></category>
+		<category><![CDATA[optical chips]]></category>
+		<category><![CDATA[Series C]]></category>
+		<guid isPermaLink="false">https://ventureburn.com/?p=204130</guid>
+
+					<description><![CDATA[<p>Lumilens Inc. is known for providing optical networking chips for AI clusters. Recently, Lumilens raises $900 million to scale up and scale out. The bulk came from a $700 million</p>
+<p>The post <a href="https://ventureburn.com/lumilens-900-million-funding-optical-chips-ai-data-centers/" data-wpel-link="internal">Lumilens Raises $900 Million To Build Optical Chips For AI Data Centers</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">Lumilens Inc. is known for providing optical networking chips for AI clusters. Recently, Lumilens raises $900 million to scale up and scale out. The bulk came from a </span><a href="https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding" data-wpel-link="external" rel="external noopener noreferrer"><span style="font-weight: 400">$700 million Series C</span></a><span style="font-weight: 400"> that valued the two-year-old company at $5.51 billion. </span></p>
+<p><span style="font-weight: 400">The round was jointly led by Atreides Management, Bain Capital Ventures, Meritech, Seligman Ventures and Spark Capital. Qualcomm and more than a dozen other investors also participated. The company is led by co-founder and CEO Ankur Singla. His last two networking startups, Contrail Systems and Volterra, were sold for a combined $676 million. </span></p>
+<h2><span style="font-weight: 400">Why Data Centers are Leaving Copper for Optics</span></h2>
+<p><span style="font-weight: 400">Historically, data centers used copper wires to move data between processors. That works at lower speeds, but AI clusters are pushing past those limits. At 1.6 terabits per second, copper can only go about one meter. That keeps you inside a single rack.</span></p>
+<p><span style="font-weight: 400">Lumilens’ chips replace copper with fiber-optic cabling. Fiber can carry more data over longer distances with less power. For companies building thousand-GPU clusters, that’s becoming essential.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/google-ai-leadership-shuffle-hassabis-jeff-dean/" data-wpel-link="internal"><b><i>Google Shakes Up AI, Demis Steps Down As DeepMind CEO</i></b></a></p>
+<h2><span style="font-weight: 400">Scale-up: Connecting Chips Inside the Rack</span></h2>
+<div id="attachment_204132" style="width: 922px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-204132" class="size-full wp-image-204132" src="https://ventureburn.com/wp-content/uploads/2026/08/Lumilens.jpg" alt="Macro photo of a Lumilens optical microchip on a server board with glowing light pathways connecting processors inside a modern AI facility." width="912" height="537" /><p id="caption-attachment-204132" class="wp-caption-text">Lumilens Photonic Chip</p></div>
+<p><span style="font-weight: 400">Lumilens is targeting scale-up networking with two product families. First is Co-Packaged Optics, or CPO, that are integrated directly into GPUs. Because they sit closer to the processor, data travels a shorter distance and power efficiency goes up. </span></p>
+<p><span style="font-weight: 400">Lumilens says CPO can link thousands of GPUs. Second is Near-Packaged Optics, or NPO. These sit on the motherboard next to the GPU instead of inside it. They’re less efficient than CPO but easier to deploy today.</span></p>
+<p><span style="font-weight: 400">Signgla believes that we’re still about two to three years away when it comes to large-scale volume deployment of co-packaged optics. Lumilens taped out its first chip in 2024. Its second-generation chip is taped out and heading for commercial deployment next year.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/moove-250-million-to-lead-robotaxi-industry/" data-wpel-link="internal"><b><i>Moove Raises $250M To Lead the Robotaxi Industry</i></b></a></p>
+<h2><span style="font-weight: 400">Scale-out: Connecting Racks Together</span></h2>
+<p><span style="font-weight: 400">For scale-out networking, Lumilens makes chips for pluggable transceivers that attach to switches. These connect entire racks of GPUs.</span></p>
+<p><span style="font-weight: 400">The technology supports 800 gigabits per second, 1.6 terabits per second, and beyond. Because it uses optics, it doesn’t have the distance limits that make copper impractical outside a rack. Singla said that in order to get outside of the rack, companies need to get to optics.</span></p>
+<h2><span style="font-weight: 400">LumiCore and What’s Next</span></h2>
+<p><span style="font-weight: 400">All Lumilens chips are built on LumiCore, a common set of building blocks. It includes photonic components, mixed-signal ICs, and interposers that act as the base layer for optical and electronic parts.</span></p>
+<p><span style="font-weight: 400">The company says LumiCore cuts development time from years to months. The interposer design also makes assembly easier. Lumilens has built a custom manufacturing workflow with robots and AI software to support scale.</span></p>
+<p><span style="font-weight: 400">Lumilens will use the $900 million funding to accelerate chip development and manufacturing. With AI labs racing to build bigger clusters, Lumilens is betting that optical networking becomes the backbone of next-gen AI infrastructure.</span></p>
+<p><b><i>More Updates: </i></b><a href="https://ventureburn.com/hadrian-raises-1-37-billion-us-defense-production/" data-wpel-link="internal"><b><i>Hadrian Raises $1.37B for US Defense Production</i></b></a></p>
+<p>The post <a href="https://ventureburn.com/lumilens-900-million-funding-optical-chips-ai-data-centers/" data-wpel-link="internal">Lumilens Raises $900 Million To Build Optical Chips For AI Data Centers</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Omilia Secures $67M To Expand AI Customer Experience Platform</title>
 		<link>https://ventureburn.com/omilia-secures-67m-series-b-funding/</link>
 		
@@ -52,7 +99,7 @@
 <p><span style="font-weight: 400">Omilia has increased its annual recurring revenue by more than tenfold to over $60 million. The company attributed its growth to rising adoption of its Self-Learning Agentic CX platform and pricing models that eliminate unpredictable token-based costs.</span></p>
 <h2><b>Platform Adoption Continues Across Large Enterprises<br />
 </b></h2>
-<div id="attachment_204115" style="width: 1322px" class="wp-caption alignnone"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-204115" class="size-full wp-image-204115" src="https://ventureburn.com/wp-content/uploads/2026/08/a-futuristic-poster-showcases-a-sprawlin_eTrqIltBXf2Li1iqgQiYDw_BgjLxtzJSQS83cIelRcbLQ_cover.png" alt="A neon futuristic visual showing AI voice systems handling large-scale customer interactions." width="1312" height="736" /><p id="caption-attachment-204115" class="wp-caption-text">Omilia powers enterprise-scale AI voice platforms for automated and compliant customer engagement. Source: Created by Ventureburn</p></div>
+<div id="attachment_204115" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204115" class="size-full wp-image-204115" src="https://ventureburn.com/wp-content/uploads/2026/08/a-futuristic-poster-showcases-a-sprawlin_eTrqIltBXf2Li1iqgQiYDw_BgjLxtzJSQS83cIelRcbLQ_cover.png" alt="A neon futuristic visual showing AI voice systems handling large-scale customer interactions." width="1312" height="736" /><p id="caption-attachment-204115" class="wp-caption-text">Omilia powers enterprise-scale AI voice platforms for automated and compliant customer engagement. Source: Created by Ventureburn</p></div>
 <p><span style="font-weight: 400">Omilia currently powers some of the largest AI voice deployments in production. These include a major US bank handling more than one million calls daily and an insurance provider processing over 600,000 agent-assisted interactions every day.</span></p>
 <p><span style="font-weight: 400">The platform is designed to support regulated industries that require strict compliance standards, including FedRAMP, PCI-DSS, SOC 2, HIPAA and GDPR. In contrast with a purely generative AI based strategy, it blends tailored AI capabilities.</span></p>
 <p><span style="font-weight: 400">The company recently expanded its partnership with Taco Bell, where its voice AI technology now supports ordering across more than 1,000 drive-thru locations in 38 US states. Omilia also introduced Lexis, a generative text-to-speech model built specifically for enterprise contact centres.</span></p>
@@ -652,49 +699,7 @@
 		
 		
 			</item>
-		<item>
-		<title>Ordway Secures $20M To Expand AI Billing And Revenue Platform</title>
-		<link>https://ventureburn.com/ordway-secures-20m-funding/</link>
-		
-		<dc:creator><![CDATA[Clinton]]></dc:creator>
-		<pubDate>Wed, 05 Aug 2026 17:22:00 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[News]]></category>
-		<category><![CDATA[Venture Capital]]></category>
-		<guid isPermaLink="false">https://ventureburn.com/?p=204056</guid>
-
-					<description><![CDATA[<p>Ordway Secures $20M To Accelerate AI Finance Platform Ordway has secured $20 million in new equity and debt funding to expand its AI-powered monetisation and billing platform. The round was</p>
-<p>The post <a href="https://ventureburn.com/ordway-secures-20m-funding/" data-wpel-link="internal">Ordway Secures $20M To Expand AI Billing And Revenue Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[<h2><b>Ordway Secures $20M To Accelerate AI Finance Platform</b></h2>
-<p><span style="font-weight: 400">Ordway has secured $20 million in new equity and debt funding to expand its AI-powered monetisation and billing platform. The round was led by Harbert Growth Partners, while Western Alliance Bank&#8217;s Innovation Banking Group provided the debt financing.</span></p>
-<p><span style="font-weight: 400">Ordway will use the funding supporting artificial intelligence initiatives, reporting enhancements, and overall business growth globally. Founded in Washington, DC, Ordway develops billing and revenue management software for technology-focused subscription businesses worldwide.</span></p>
-<p><span style="font-weight: 400">Its platform automates quote-to-cash workflows, simplifying subscriptions, billing, payments, revenue recognition, and financial reporting processes together. Ordway helps finance teams manage every revenue operation through one centralised platform improving efficiency and operational accuracy.</span></p>
-<p><span style="font-weight: 400">The funding reflects growing investor confidence in AI-powered financial operations software as businesses adopt increasingly flexible </span><a href="https://dealhub.io/glossary/pricing-models/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external"><span style="font-weight: 400">pricing models</span></a><span style="font-weight: 400">. Companies offering subscription, usage-based, and hybrid services require platforms that can manage complex billing while maintaining financial accuracy and compliance. </span></p>
-<h2><b>AI Investments Target Finance Automation</b></h2>
-<p><span style="font-weight: 400">Ordway plans to use the funds to double its research and development funding and broaden its AI roadmaps for finance professionals with new automation solutions including the release of AI-enhanced cash reconciliation that reconciles payments from any number of bank accounts with invoices.</span></p>
-<p><span style="font-weight: 400">The platform also features AI contract data extraction, allowing businesses to automatically capture billing and revenue recognition information from subscription agreements. The company has also introduced MCP integration for Claude, extending AI-assisted capabilities across its platform.</span></p>
-<p><span style="font-weight: 400">Future development will focus on AI agents that automate routine financial tasks. These include updating billing records, accounting workflows, investor metrics, and contract modifications such as renewals or subscription pauses.</span></p>
-<h2><b>Platform Expands Beyond Billing Into Payments</b></h2>
-<div id="attachment_204060" style="width: 1322px" class="wp-caption alignnone"><img decoding="async" aria-describedby="caption-attachment-204060" class="size-full wp-image-204060" src="https://ventureburn.com/wp-content/uploads/2026/08/Ordway-2.png" alt="Illustration of an AI-powered revenue management platform integrating payment processing, invoice reconciliation, and enterprise financial systems into a unified digital infrastructure." width="1312" height="736" /><p id="caption-attachment-204060" class="wp-caption-text">AI-powered revenue management platforms are transforming enterprise finance by unifying payment processing, invoice reconciliation, and automated financial operations within a single intelligent system. Source: Created by Ventureburn.</p></div>
-<p><span style="font-weight: 400">Alongside its AI investments, Ordway is expanding into payment processing through the launch of Ordway Payments. The new offering is designed to simplify payment collection, invoice matching, and revenue reconciliation.</span></p>
-<p><span style="font-weight: 400">According to the company, businesses increasingly require integrated finance systems as pricing models become more complex. Enterprise customers often operate across multiple legal entities, accounting systems, and reporting jurisdictions, increasing demand for automated financial infrastructure.</span></p>
-<p><span style="font-weight: 400">Chief Executive Officer Sameer Gulati said finance teams continue to face operational challenges after sales teams complete new customer agreements. Ordway said automation from point-of-sale systems into financial platforms remains a major industry trend driving adoption.</span></p>
-<p><span style="font-weight: 400">The company believes customers increasingly prefer unified revenue management instead of multiple disconnected financial software solutions. Ordway said its growth reflects demand for one platform managing every revenue-related business process efficiently together.</span></p>
-<p><span style="font-weight: 400">More News: </span><a href="https://ventureburn.com/convex-raises-57m-series-b/" data-wpel-link="internal"><span style="font-weight: 400">Convex Raises $57M To Build Reliable AI-Native Backend Platform</span></a></p>
-<h2><b>Funding Supports Long-Term Product Growth</b></h2>
-<p><span style="font-weight: 400">Ordway plans enhancing reporting with artificial intelligence forecasting tools covering churn, cash flow, and revenue growth. These tools help finance teams make faster decisions while reducing repetitive manual financial analysis and reporting tasks.</span></p>
-<p><span style="font-weight: 400">The platform targets artificial intelligence, software-as-a-service, cloud, and subscription businesses managing recurring revenue efficiently worldwide. It also supports organisations using usage-based pricing models alongside traditional recurring subscription billing structures successfully together.</span></p>
-<p><span style="font-weight: 400">Harbert Growth Partners said artificial intelligence is increasing the complexity of pricing, billing, and monetisation strategies for technology businesses. The investor believes Ordway is well positioned to help finance teams adapt through automation and intelligent financial infrastructure.</span></p>
-<p><span style="font-weight: 400">Ordway combines payment processing, self-service checkout, subscriber management, investor management, and usage-based billing within one platform. With fresh funding and continued profitability, Ordway aims to strengthen its position as businesses seek more efficient ways to manage increasingly sophisticated revenue operations.</span></p>
-<p><span style="font-weight: 400">To stay updated on crypto venture capital funding and market trends, visit our </span><a href="https://ventureburn.com/category/news/venture-capital/" data-wpel-link="internal"><span style="font-weight: 400">venture capital news section</span></a><span style="font-weight: 400"> for more insights.</span></p>
-<p>The post <a href="https://ventureburn.com/ordway-secures-20m-funding/" data-wpel-link="internal">Ordway Secures $20M To Expand AI Billing And Revenue Platform</a> appeared first on <a href="https://ventureburn.com" data-wpel-link="internal">Ventureburn</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
-<!-- plugin=object-cache-pro client=phpredis metric#hits=2186 metric#misses=42 metric#hit-ratio=98.1 metric#bytes=824994 metric#prefetches=178 metric#store-reads=35 metric#store-writes=3 metric#store-hits=186 metric#store-misses=16 metric#sql-queries=24 metric#ms-total=416.91 metric#ms-cache=8.89 metric#ms-cache-avg=0.2402 metric#ms-cache-ratio=2.1 -->
+<!-- plugin=object-cache-pro client=phpredis metric#hits=2212 metric#misses=42 metric#hit-ratio=98.1 metric#bytes=831122 metric#prefetches=183 metric#store-reads=35 metric#store-writes=3 metric#store-hits=191 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=322.07 metric#ms-cache=9.02 metric#ms-cache-avg=0.2438 metric#ms-cache-ratio=2.8 sample#redis-hits=2452303191 sample#redis-misses=135092652 sample#redis-hit-ratio=94.8 sample#redis-ops-per-sec=64 sample#redis-evicted-keys=0 sample#redis-used-memory=398286656 sample#redis-used-memory-rss=493858816 sample#redis-memory-fragmentation-ratio=1.2 sample#redis-connected-clients=1 sample#redis-tracking-clients=0 sample#redis-rejected-connections=0 sample#redis-keys=162447 -->
