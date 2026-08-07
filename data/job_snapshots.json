@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-08-07T08:09:41.974718+08:00",
+  "generated_at": "2026-08-07T11:47:22.067628+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-07T08:09:41.974718+08:00",
+      "observed_at": "2026-08-07T11:47:22.067628+08:00",
       "jobs": [
         {
           "id": "744000141888699",
@@ -130,7 +130,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-07T08:09:41.974718+08:00",
+      "observed_at": "2026-08-07T11:47:22.067628+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -216,20 +216,12 @@
           "function_tags": [
             "sales"
           ]
-        },
-        {
-          "id": "7789539",
-          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
-          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-07T08:09:41.974718+08:00",
+      "observed_at": "2026-08-07T11:47:22.067628+08:00",
       "jobs": [
         {
           "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",

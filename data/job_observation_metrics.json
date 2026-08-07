@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-08-07T08:09:41.974718+08:00",
+  "observed_at": "2026-08-07T11:47:22.067628+08:00",
   "source_count": 3,
-  "raw_count": 61,
+  "raw_count": 60,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
@@ -22,7 +22,7 @@
       "status": "ok",
       "fetch_status": "success",
       "count": 1,
-      "inventory_count": 12,
+      "inventory_count": 11,
       "signal_count": 0,
       "added_count": 0,
       "removed_count": 1,
