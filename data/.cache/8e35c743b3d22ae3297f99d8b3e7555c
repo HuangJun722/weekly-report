@@ -700,4 +700,4 @@
 	</channel>
 </rss>
 
-<!-- plugin=object-cache-pro client=phpredis metric#hits=2216 metric#misses=42 metric#hit-ratio=98.1 metric#bytes=830529 metric#prefetches=183 metric#store-reads=35 metric#store-writes=2 metric#store-hits=191 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=277.99 metric#ms-cache=8.23 metric#ms-cache-avg=0.2286 metric#ms-cache-ratio=3.0 -->
+<!-- plugin=object-cache-pro client=phpredis metric#hits=2216 metric#misses=42 metric#hit-ratio=98.1 metric#bytes=830529 metric#prefetches=183 metric#store-reads=35 metric#store-writes=2 metric#store-hits=191 metric#store-misses=16 metric#sql-queries=22 metric#ms-total=239.61 metric#ms-cache=8.32 metric#ms-cache-avg=0.2312 metric#ms-cache-ratio=3.5 -->
