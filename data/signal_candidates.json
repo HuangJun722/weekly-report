@@ -1,7 +1,46 @@
 {
   "version": 1,
-  "generated_at": "2026-08-08T03:07:07.428551+08:00",
+  "generated_at": "2026-08-08T10:52:51.549920+08:00",
   "candidates": [
+    {
+      "candidate_id": "jobs-7b8fa399465f6e8a",
+      "entity_id": "stripe",
+      "entity": "Stripe",
+      "region": "全球",
+      "sector": "payment_developer_platform",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "sales",
+      "window": "2026-W32",
+      "window_start": "2026-08-08",
+      "window_end": "2026-08-08",
+      "detected_at": "2026-08-08T10:52:51.549920+08:00",
+      "baseline_count": 11,
+      "current_count": 13,
+      "added_count": 2,
+      "removed_count": 0,
+      "clusters": {
+        "sales": 2
+      },
+      "removed_clusters": {},
+      "evidence_refs": [
+        {
+          "job_id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "change": "added"
+        },
+        {
+          "job_id": "7893199",
+          "title": "Account Executive, Cross Border China",
+          "url": "https://stripe.com/careers/listing/account-executive-cross-border-china/7893199",
+          "change": "added"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    },
     {
       "candidate_id": "jobs-a1fe75b669c371f5",
       "entity_id": "grab",
