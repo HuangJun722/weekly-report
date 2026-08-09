@@ -171,6 +171,8 @@ def build_quick_health_report(
     latest_metrics = records[-1] if isinstance(records, list) and records else {}
     filtering = latest_metrics.get('filtering') or {}
     storage = latest_metrics.get('storage') or {}
+    analysis = latest_metrics.get('analysis') or {}
+    quality = analysis.get('quality') or {}
     observation = _observation_health(
         _load_json(ledger_path, {}),
         _load_json(pool_path, {}),
@@ -187,6 +189,9 @@ def build_quick_health_report(
         'scope_candidate': filtering.get('scope_candidate_count', 0),
         'scope_filtered': filtering.get('scope_filtered_count', 0),
         'added_count': storage.get('added_count', 0),
+        'repair_ratio': quality.get('repair_ratio', 0),
+        'fallback_or_failed': quality.get('fallback_or_failed', 0),
+        'analysis_total': quality.get('total', 0),
         'observation_health': observation,
     }
 
@@ -200,6 +205,10 @@ def print_quick_report(report):
     print(
         "scope | qualified={scope_qualified} candidate={scope_candidate} "
         "filtered={scope_filtered}".format(**report)
+    )
+    print(
+        "analysis | total={analysis_total} repair_ratio={repair_ratio:.1%} "
+        "fallback_or_failed={fallback_or_failed}".format(**report)
     )
     print(
         "observation | must={must_effective}/{must_total} coverage={must_coverage_ratio:.1%} "
@@ -470,6 +479,12 @@ def collect_quick_failures(report, args):
         )
     if observation.get('jobs_failed') and args.fail_on_jobs_error:
         failures.append('jobs_failed ' + ','.join(observation['jobs_failed']))
+    max_repair_ratio = getattr(args, 'max_repair_ratio', 0.9)
+    if report.get('repair_ratio', 0) > max_repair_ratio:
+        failures.append(
+            f"repair_ratio {report.get('repair_ratio', 0):.1%} "
+            f"> {max_repair_ratio:.1%}"
+        )
     return failures
 
 
@@ -486,6 +501,8 @@ def main():
     parser.add_argument('--min-must-coverage', type=float, default=0)
     parser.add_argument('--max-failed-observation-points', type=int, default=999)
     parser.add_argument('--fail-on-jobs-error', action='store_true')
+    parser.add_argument('--max-repair-ratio', type=float, default=0.9,
+                        help='AI 修复失败率上限（repair_ratio 超过即报警，默认 0.9）')
     parser.add_argument('--strict', action='store_true', help='Exit non-zero when health checks fail')
     args = parser.parse_args()
 

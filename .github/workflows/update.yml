@@ -56,6 +56,31 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # push 代码时门控：跑全部离线测试，任一失败阻断，不进入采集
+      - name: Run offline tests (gate on code change)
+        if: github.event_name == 'push'
+        run: |
+          echo "=== 运行离线测试（push 门控）==="
+          FAILED=0
+          for test in scripts/test_*.py; do
+            case "$test" in
+              scripts/test_rss.py|scripts/test_google_news.py)
+                echo "跳过网络测试: $test"
+                continue
+                ;;
+            esac
+            echo "--- 运行 $test ---"
+            if ! python "$test"; then
+              echo "❌ 测试失败: $test"
+              FAILED=1
+            fi
+          done
+          if [ "$FAILED" -eq 1 ]; then
+            echo "离线测试存在失败，阻断进入采集流程"
+            exit 1
+          fi
+          echo "全部离线测试通过 ✅"
+
       - name: Fetch and analyze news
         if: github.event_name != 'workflow_dispatch' || inputs.mode != 'html-only'
         run: |
@@ -182,8 +207,31 @@ jobs:
       - name: Test Google News RSS
         run: python scripts/test_rss.py
 
-  notify-failure:
+  # 采集后自动健康检查：必须等 update 采集完，否则读的是旧数据会误报
+  health-check:
     needs: update
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # html-only 模式不采集新数据，跳过健康检查
+    if: github.event_name != 'workflow_dispatch' || inputs.mode != 'html-only'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run health check
+        run: |
+          echo "=== 数据健康检查（strict）==="
+          python scripts/check_data_health.py --quick --strict \
+            --min-must-coverage 0.75 \
+            --max-failed-observation-points 2 \
+            --max-repair-ratio 0.9
+          echo "健康检查通过 ✅"
+
+  notify-failure:
+    needs: [update, health-check]
     if: failure()
     runs-on: ubuntu-latest
     steps:
