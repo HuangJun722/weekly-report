@@ -485,15 +485,13 @@ button, input, select { font: inherit; }
                   <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
                     <div class="intel-meta">
                       <span class="label dark">{{ group.label }}</span>
-                      <span class="label green">{{ ev.region }}</span>
-                      {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
                       {% if ev.is_company and ev.company_name %}<span class="label">{{ ev.company_name }}</span>{% endif %}
                     </div>
                     <div>
                       <h3>{{ ev.display_title or ev.title }}</h3>
                       {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
-                      {% if ev.reason %}<div class="intel-impact">为什么重要：{{ ev.reason }}</div>{% endif %}
-                      {% if ev.display_impact %}<div class="intel-impact">影响：{{ ev.display_impact }}</div>{% endif %}
+                      {% if ev.front_overview %}<div class="intel-impact">内容概要：{{ ev.front_overview }}</div>{% endif %}
+                      {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
                       {% if ev.related_links %}
                       <div class="related-links">
                         {% for rl in ev.related_links[:3] %}<span class="related-link">{{ rl|truncate(40, True) }}</span>{% endfor %}
@@ -748,15 +746,13 @@ button, input, select { font: inherit; }
                 {% for ev in group.events %}
                 <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
                   <div class="intel-meta">
-                    <span class="label green">{{ ev.region }}</span>
-                    {% if ev.insight_label %}<span class="label">{{ ev.insight_label }}</span>{% endif %}
                     {% if ev.is_company and ev.company_name %}<span class="label">{{ ev.company_name }}</span>{% endif %}
                   </div>
                   <div>
                     <h3>{{ ev.display_title or ev.title }}</h3>
                     {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
-                    {% if ev.reason %}<div class="intel-impact">为什么重要：{{ ev.reason }}</div>{% endif %}
-                    {% if ev.display_impact %}<div class="intel-impact">影响：{{ ev.display_impact }}</div>{% endif %}
+                    {% if ev.front_overview %}<div class="intel-impact">内容概要：{{ ev.front_overview }}</div>{% endif %}
+                    {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
                   </div>
                   <div class="amount">{{ ev.display_amount or ev.display_source or ev.source }}</div>
                 </a>
@@ -1078,15 +1074,13 @@ function labelHtml(text, cls) {
 }
 function eventCardHtml(ev, groupLabel) {
   var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'') + ' ' + ((ev.matched_entities||[]).join(' '));
-  var sum = (ev.summary_short && ev.summary_short.length >= 8 && ev.summary_short.slice(0, 25) !== (ev.title||'').slice(0, 25) && ev.summary_short !== ev.reason)
-    ? '<p>' + escHtml(ev.summary_short) + '</p>' : '';
   var displayTitle = ev.display_title || ev.summary_short || ev.title || '';
   var original = ev.original_title ? '<div class="source-title">原题：' + escHtml(ev.original_title) + '</div>' : '';
-  var reason = ev.reason ? '<div class="intel-impact">为什么重要：' + escHtml(ev.reason) + '</div>' : '';
-  var imp = (ev.display_impact || (ev.impact && ev.impact !== '未知' ? ev.impact : '')) ? '<div class="intel-impact">影响：' + escHtml(ev.display_impact || ev.impact) + '</div>' : '';
+  var overview = ev.front_overview ? '<div class="intel-impact">内容概要：' + escHtml(ev.front_overview) + '</div>' : '';
+  var reason = ev.reason ? '<div class="intel-impact">点评：' + escHtml(ev.reason) + '</div>' : '';
   return '<a class="intel event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
-    '<div class="intel-meta">' + labelHtml(groupLabel, 'dark') + labelHtml(ev.region, 'green') + labelHtml(ev.insight_label, '') + (ev.company_name ? labelHtml(ev.company_name, '') : '') + '</div>' +
-    '<div><h3>' + escHtml(displayTitle) + '</h3>' + original + sum + reason + imp + '</div>' +
+    '<div class="intel-meta">' + labelHtml(groupLabel, 'dark') + (ev.company_name ? labelHtml(ev.company_name, '') : '') + '</div>' +
+    '<div><h3>' + escHtml(displayTitle) + '</h3>' + original + overview + reason + '</div>' +
     '<div class="amount">' + escHtml(ev.display_amount || ev.display_source || ev.source || '') + '</div></a>';
 }
 function dailyGroupHtml(group) {

@@ -245,7 +245,7 @@ def calculate_score(event):
 
 # ─── 预设公司名单 ─────────────────────────────────────────────
 
-REGION_ORDER = ['全球', '亚太', '欧洲', '中东', '拉美', '非洲', '中资']
+REGION_ORDER = ['全球', '北美', '亚太', '欧洲', '中东', '拉美', '非洲', '中资']
 
 
 def load_entity_pool(path='data/entity_pool.json'):
@@ -1856,7 +1856,18 @@ def enrich_frontend_fields(events):
         event['original_title'] = original_title if original_title and original_title != display_title else ''
         event['front_trend_topic'] = _front_trend_topic(event)
         event['display_impact'] = '' if event.get('impact') == '未知' else event.get('impact', '')
+        event['front_overview'] = _front_overview(event, title, summary, reason, display_title)
     return events
+
+
+def _front_overview(event, title, summary, reason, display_title):
+    """内容概要：优先 AI 扩写的 content_overview；存量数据缺省时用 summary_short 兜底，避免与标题重复。"""
+    overview = (event.get('content_overview') or '').strip()
+    if _is_good_summary(overview, title, reason) and overview != (summary or '').strip():
+        return overview
+    if _is_good_summary(summary, title, reason) and (summary or '').strip() != display_title:
+        return (summary or '').strip()
+    return ''
 
 
 def refine_daily_headline(headline, lead, trend_groups):

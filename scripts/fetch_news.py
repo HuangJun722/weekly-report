@@ -753,14 +753,27 @@ REGION_TITLE_KEYWORDS = [
         'finnish', 'denmark', 'danish', 'sweden', 'swedish', 'norway',
         '欧洲', '英国', '德国', '法国', '西班牙', '意大利', '芬兰', '丹麦', '瑞典', '挪威',
     ]),
+    # 注意：不用裸 "us"（子串会误伤 focus/campus/status/august 等），"us" 由 infer_event_region 按单词边界匹配
+    ('北美', [
+        'north america', 'united states', 'u.s.', 'us', 'usa', 'american', 'america',
+        'canada', 'canadian', 'silicon valley',
+        '美国', '北美', '加拿大', '硅谷',
+    ]),
 ]
 
 
 def infer_event_region(title, fallback):
     text = f' {(title or "").lower()} '
     for region, keywords in REGION_TITLE_KEYWORDS:
-        if any(keyword.lower() in text for keyword in keywords):
-            return region
+        for keyword in keywords:
+            kw = keyword.lower()
+            # ASCII 短缩写关键词（"us"/"uae"）按单词边界匹配，避免子串误伤 focus/campus/status 等；
+            # "uk " 这类带尾空格的和中文关键词保持子串匹配（中文连排字符间无词边界）
+            if len(kw) <= 3 and not kw.endswith(' ') and kw.isascii():
+                if re.search(rf'\b{re.escape(kw)}\b', text):
+                    return region
+            elif kw in text:
+                return region
     return fallback or '未知'
 
 # 中美公司关键词（匹配标题中出现的公司名，排除不相关内容）
@@ -2289,8 +2302,9 @@ def analyze_events_deepseek(items):
 # ============================================================
 
 AI_SYSTEM_PROMPT = """你是全球互联网科技情报分析师。受众是ICT从业者，关注：合作机会、供应链变化、预算流向。
-每条事件输出5个字段：summary_short（事实）、reason（为什么重要，ICT视角）、impact（影响谁）、insight_label（资金流向/合作机会/警示信号/背景补充）、trend_topic（所属趋势主题，如"中东FinTech赛道升温""拉美电商基建加速""欧洲AI融资热潮""东南亚新能源布局"等，15字以内）。
+每条事件输出6个字段：content_overview（内容概要，1-2句客观复述事件本身发生了什么）、summary_short（一句话事实摘要）、reason（点评/为什么重要，ICT视角）、impact（影响谁）、insight_label（资金流向/合作机会/警示信号/背景补充）、trend_topic（所属趋势主题，如"中东FinTech赛道升温""拉美电商基建加速""欧洲AI融资热潮""东南亚新能源布局"等，15字以内）。
 
+content_overview 要求：用1-2句话客观描述事件本身——谁、做了什么、金额/数据、进展，必须从标题提炼事实，禁止写成价值判断或"为什么重要"式的话。比 summary_short 更完整，可含背景或后续进展，两者不得相同。
 reason 要求：必须从标题提取公司名/产品名/技术名，组合地区+行业+具体机会描述，格式固定为"[地区][行业]具体描述"。禁止出现"无法判断""无法确定""待确认""相关"等模糊词。
 impact 要求：指明具体受益方或受损方，如"东南亚电商平台""海湾主权基金""非洲移动支付商"，禁止"相关行业"。
 非中美公司融资≥$100M → score 9；融资≥$20M → score 7-8；并购 → score 7-8；财报盈利稳定 → score 5-6；亏损/下滑 → score 7-9；战略扩张 → score 6-7；裁员/关停 → score 6-8。
@@ -2299,31 +2313,31 @@ impact 要求：指明具体受益方或受损方，如"东南亚电商平台""�
 AI_EXAMPLES = """
 示例1（融资大额）：
 标题: "Mistral raises $830M, 9fin hits unicorn status"
-输出: {"url":"","summary_short":"Mistral获$830M融资，9fin晋级独角兽","reason":"欧洲AI独角兽获顶级融资，后续可能开放生态合作和API采购","impact":"AI基础设施供应商、云服务商、API集成商","insight_label":"资金流向","trend_topic":"欧洲AI融资热潮","score":9}
+输出: {"url":"","content_overview":"法国AI公司Mistral完成8.3亿美元融资，金融科技公司9fin同期晋级独角兽","summary_short":"Mistral获$830M融资，9fin晋级独角兽","reason":"欧洲AI独角兽获顶级融资，后续可能开放生态合作和API采购","impact":"AI基础设施供应商、云服务商、API集成商","insight_label":"资金流向","trend_topic":"欧洲AI融资热潮","score":9}
 
 示例2（融资中等）：
 标题: "Wearable Robotics closes €5M Series A"
-输出: {"url":"","summary_short":"可穿戴机器人公司获€5M A轮","reason":"欧洲硬科技早期融资，B2B机器人赛道持续有资金流入","impact":"机器人供应链、工业软件合作方","insight_label":"资金流向","trend_topic":"欧洲硬科技投资活跃","score":6}
+输出: {"url":"","content_overview":"可穿戴机器人公司Wearable Robotics完成500万欧元A轮融资","summary_short":"可穿戴机器人公司获€5M A轮","reason":"欧洲硬科技早期融资，B2B机器人赛道持续有资金流入","impact":"机器人供应链、工业软件合作方","insight_label":"资金流向","trend_topic":"欧洲硬科技投资活跃","score":6}
 
 示例3（并购）：
 标题: "Cafeyn acquires Readly non-Nordic operations"
-输出: {"url":"","summary_short":"Cafeyn收购Readly非北欧业务","reason":"欧洲数字出版整合加速，中小媒体可能面临挤压或被整合","impact":"数字媒体公司、内容分发合作方","insight_label":"资金流向","trend_topic":"欧洲数字出版整合","score":7}
+输出: {"url":"","content_overview":"数字出版平台Cafeyn收购Readly的北欧以外业务，整合全球发行版图","summary_short":"Cafeyn收购Readly非北欧业务","reason":"欧洲数字出版整合加速，中小媒体可能面临挤压或被整合","impact":"数字媒体公司、内容分发合作方","insight_label":"资金流向","trend_topic":"欧洲数字出版整合","score":7}
 
 示例4（战略合作）：
 标题: "Arabic.AI partners with Qistas to deliver sovereign Arabic legal AI"
-输出: {"url":"","summary_short":"Arabic.AI与Qistas合作推阿拉伯语法务AI","reason":"中东主权AI战略落地，法律科技出现新的ICT集成机会","impact":"法律科技集成商、中东政府IT合作方","insight_label":"合作机会","trend_topic":"中东主权AI落地","score":6}
+输出: {"url":"","content_overview":"Arabic.AI与Qistas达成合作，推出面向主权客户的法语系AI产品","summary_short":"Arabic.AI与Qistas合作推阿拉伯语法务AI","reason":"中东主权AI战略落地，法律科技出现新的ICT集成机会","impact":"法律科技集成商、中东政府IT合作方","insight_label":"合作机会","trend_topic":"中东主权AI落地","score":6}
 
 示例5（战略裁员）：
 标题: "Telecom Italia cuts 2000 jobs amid network upgrade"
-输出: {"url":"","summary_short":"意大利电信裁员2000人","reason":"传统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","trend_topic":"欧洲电信转型","score":7}
+输出: {"url":"","content_overview":"意大利电信在推进网络升级的同时宣布裁员2000人","summary_short":"意大利电信裁员2000人","reason":"传统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","trend_topic":"欧洲电信转型","score":7}
 
 示例6（财报盈利）：
 标题: "Nubank Q1 revenue up 34% to $2.8B"
-输出: {"url":"","summary_short":"Nubank营收$2.8B，同比+34%","reason":"拉美数字银行持续高增长，东南亚复制模式具有参考价值","impact":"拉美金融科技合作方、银行科技供应商","insight_label":"背景补充","trend_topic":"拉美FinTech高增长","score":6}
+输出: {"url":"","content_overview":"巴西数字银行Nubank一季度营收28亿美元，同比增长34%","summary_short":"Nubank营收$2.8B，同比+34%","reason":"拉美数字银行持续高增长，东南亚复制模式具有参考价值","impact":"拉美金融科技合作方、银行科技供应商","insight_label":"背景补充","trend_topic":"拉美FinTech高增长","score":6}
 
 示例7（财报亏损）：
 标题: "Gorillas files for insolvency amid funding crunch"
-输出: {"url":"","summary_short":"欧洲快送平台Gorillas申请破产保护","reason":"即时配送赛道资金耗尽，同类公司需警惕融资环境恶化信号","impact":"同类快送平台、物流技术供应商","insight_label":"警示信号","trend_topic":"欧洲即时配送洗牌","score":8}
+输出: {"url":"","content_overview":"欧洲即时配送平台Gorillas在融资困境中申请破产保护","summary_short":"欧洲快送平台Gorillas申请破产保护","reason":"即时配送赛道资金耗尽，同类公司需警惕融资环境恶化信号","impact":"同类快送平台、物流技术供应商","insight_label":"警示信号","trend_topic":"欧洲即时配送洗牌","score":8}
 """
 
 def analyze_events_doubao(items):
@@ -2972,6 +2986,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             'level': level,
             'score': score,
             'summary_short': analysis.get('summary_short', item['title'][:25]),
+            'content_overview': analysis.get('content_overview', ''),
             'reason': analysis.get('reason', '待分析'),
             'impact': analysis.get('impact', '未知'),
             'insight_label': analysis.get('insight_label', '背景补充'),
@@ -3021,6 +3036,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'level': level,
         'score': score,
         'summary_short': item['title'][:25],
+        'content_overview': '',
         'reason': why_fallback,
         'impact': '未知',
         'insight_label': default_label,

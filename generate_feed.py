@@ -57,18 +57,16 @@ if fallback_feed_date:
 def entry_summary(ev):
     parts = []
     reason = text_value(ev.get('reason'))
-    impact = text_value(ev.get('display_impact') or ev.get('impact'))
-    if impact == '未知':
-        impact = ''
+    overview = text_value(ev.get('front_overview') or ev.get('content_overview') or ev.get('summary_short'))
     original_title = text_value(ev.get('original_title') or ev.get('title'))
     title = entry_title(ev)
 
     if original_title and original_title != title:
         parts.append(f'<p><strong>原题：</strong>{html.escape(original_title)}</p>')
+    if overview and overview != title:
+        parts.append(f'<p><strong>内容概要：</strong>{html.escape(overview)}</p>')
     if reason:
-        parts.append(f'<p><strong>为什么重要：</strong>{html.escape(reason)}</p>')
-    if impact:
-        parts.append(f'<p><strong>影响：</strong>{html.escape(impact)}</p>')
+        parts.append(f'<p><strong>点评：</strong>{html.escape(reason)}</p>')
 
     meta = []
     if ev.get('insight_label'):
