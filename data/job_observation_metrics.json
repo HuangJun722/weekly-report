@@ -1,19 +1,22 @@
 {
-  "observed_at": "2026-08-09T11:00:20.149531+08:00",
+  "observed_at": "2026-08-10T02:52:23.273084+08:00",
   "source_count": 3,
-  "raw_count": 44,
+  "raw_count": 63,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
-      "status": "failed",
-      "fetch_status": "failed",
-      "count": 0,
-      "inventory_count": 0,
+      "status": "ok",
+      "fetch_status": "success",
+      "count": 3,
+      "inventory_count": 19,
       "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
-      "clusters": {},
+      "added_count": 2,
+      "removed_count": 1,
+      "clusters": {
+        "engineering": 1,
+        "operations": 1
+      },
       "removed_clusters": {}
     },
     "Stripe Jobs": {
