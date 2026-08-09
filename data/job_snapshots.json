@@ -1,11 +1,91 @@
 {
   "version": 1,
-  "generated_at": "2026-08-07T11:47:22.067628+08:00",
+  "generated_at": "2026-08-09T11:00:20.149531+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-07T11:47:22.067628+08:00",
+      "observed_at": "2026-08-08T10:52:51.549920+08:00",
       "jobs": [
+        {
+          "id": "744000142204054",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000142204054/senior-software-engineer-backend/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142084940",
+          "title": "Data Scientist (Analytics)",
+          "url": "https://www.grab.careers/en/jobs/744000142084940/data-scientist-analytics/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142082180",
+          "title": "Operations Solution Specialist, BIOS",
+          "url": "https://www.grab.careers/en/jobs/744000142082180/operations-solution-specialist-bios/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000142069129",
+          "title": "Senior Testing Engineer",
+          "url": "https://www.grab.careers/en/jobs/744000142069129/senior-testing-engineer/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142061639",
+          "title": "Marketing Specialist",
+          "url": "https://www.grab.careers/en/jobs/744000142061639/marketing-specialist/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142054879",
+          "title": "Senior Software Engineer, Planning",
+          "url": "https://www.grab.careers/en/jobs/744000142054879/senior-software-engineer-planning/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142054639",
+          "title": "Senior Mechanical Engineer, DFM",
+          "url": "https://www.grab.careers/en/jobs/744000142054639/senior-mechanical-engineer-dfm/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142050569",
+          "title": "Lead Product Marketing Manager",
+          "url": "https://www.grab.careers/en/jobs/744000142050569/lead-product-marketing-manager/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142046259",
+          "title": "Senior Data Scientist (Country and Marketing Analytics)",
+          "url": "https://www.grab.careers/en/jobs/744000142046259/senior-data-scientist-country-and-marketing-analytics/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142045609",
+          "title": "Lead Software Engineer, Backend - Service Mesh",
+          "url": "https://www.grab.careers/en/jobs/744000142045609/lead-software-engineer-backend-service-mesh/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142045030",
+          "title": "Lead Software Engineer, Managed Kubernetes Platform",
+          "url": "https://www.grab.careers/en/jobs/744000142045030/lead-software-engineer-managed-kubernetes-platform/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000141888699",
           "title": "2W Partner Acquisition and Engagement Associate",
@@ -33,12 +113,6 @@
           "function_tags": []
         },
         {
-          "id": "744000141862641",
-          "title": "Data Scientist (Analytics)",
-          "url": "https://www.grab.careers/en/jobs/744000141862641/data-scientist-analytics/",
-          "function_tags": []
-        },
-        {
           "id": "744000141860199",
           "title": "Senior Data Scientist (Integrity)",
           "url": "https://www.grab.careers/en/jobs/744000141860199/senior-data-scientist-integrity/",
@@ -57,80 +131,12 @@
           "title": "Senior Solution Specialist, Finance Systems",
           "url": "https://www.grab.careers/en/jobs/744000141850676/senior-solution-specialist-finance-systems/",
           "function_tags": []
-        },
-        {
-          "id": "744000141834989",
-          "title": "Lead Software Engineer, Backend - Service Mesh",
-          "url": "https://www.grab.careers/en/jobs/744000141834989/lead-software-engineer-backend-service-mesh/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000141831739",
-          "title": "Principal Product Manager, AI Enablement",
-          "url": "https://www.grab.careers/en/jobs/744000141831739/principal-product-manager-ai-enablement/",
-          "function_tags": [
-            "ai"
-          ]
-        },
-        {
-          "id": "744000141678821",
-          "title": "Assistant Manager, Merchant Core Operations - Onboarding",
-          "url": "https://www.grab.careers/en/jobs/744000141678821/assistant-manager-merchant-core-operations-onboarding/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000141662639",
-          "title": "Intern, Occupational Health & Safety",
-          "url": "https://www.grab.careers/en/jobs/744000141662639/intern-occupational-health-safety/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141658109",
-          "title": "Lead Product Marketing Manager",
-          "url": "https://www.grab.careers/en/jobs/744000141658109/lead-product-marketing-manager/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141656189",
-          "title": "Assistant Manager - Performance Marketing & Paid Media",
-          "url": "https://www.grab.careers/en/jobs/744000141656189/assistant-manager-performance-marketing-paid-media/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141647849",
-          "title": "Lead Technical Program Manager",
-          "url": "https://www.grab.careers/en/jobs/744000141647849/lead-technical-program-manager/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141645040",
-          "title": "Assistant Marketing Manager, Mobility",
-          "url": "https://www.grab.careers/en/jobs/744000141645040/assistant-marketing-manager-mobility/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141644625",
-          "title": "Manager, Driver Core Operations",
-          "url": "https://www.grab.careers/en/jobs/744000141644625/manager-driver-core-operations/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000141643594",
-          "title": "Assistant Marketing Manager",
-          "url": "https://www.grab.careers/en/jobs/744000141643594/assistant-marketing-manager/",
-          "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-07T11:47:22.067628+08:00",
+      "observed_at": "2026-08-09T11:00:20.149531+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -216,17 +222,33 @@
           "function_tags": [
             "sales"
           ]
+        },
+        {
+          "id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7893199",
+          "title": "Account Executive, Cross Border China",
+          "url": "https://stripe.com/careers/listing/account-executive-cross-border-china/7893199",
+          "function_tags": [
+            "sales"
+          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-07T11:47:22.067628+08:00",
+      "observed_at": "2026-08-09T11:00:20.149531+08:00",
       "jobs": [
         {
-          "id": "a4b8357e-2849-4ef4-80da-459e232f9f16",
-          "title": "Senior Lead, UK Public Affairs Remote - United Kingdom",
-          "url": "https://www.shopify.com/careers/senior-lead-uk-public-affairs_a4b8357e-2849-4ef4-80da-459e232f9f16",
+          "id": "e00d6002-7069-41cd-bf85-f3ef7119bba7",
+          "title": "Senior Event Producer New York City",
+          "url": "https://www.shopify.com/careers/senior-event-producer_e00d6002-7069-41cd-bf85-f3ef7119bba7",
           "function_tags": []
         },
         {
@@ -371,8 +393,8 @@
         },
         {
           "id": "6738f2e2-3da3-4dd5-a6b2-ccbe2ecd3863",
-          "title": "Senior Project Manager, Real Estate (18-month Contract) Toronto",
-          "url": "https://www.shopify.com/careers/senior-project-manager-real-estate-18-month-contract_6738f2e2-3da3-4dd5-a6b2-ccbe2ecd3863",
+          "title": "Senior Project Manager, Real Estate Toronto",
+          "url": "https://www.shopify.com/careers/senior-project-manager-real-estate_6738f2e2-3da3-4dd5-a6b2-ccbe2ecd3863",
           "function_tags": []
         },
         {
