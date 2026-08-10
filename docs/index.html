@@ -106,16 +106,6 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
 /* ===================== 今日事件：平铺卡 + 右上角标签 ===================== */
 .f-grid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:28px; margin-top:8px; align-items:start; }
-.cf-strip { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; padding:12px 14px; border:1px solid rgba(31,58,95,0.09);
-  border-radius:var(--radius); background:rgba(255,255,255,0.5); }
-.cf-strip .cf-label { font-size:11.5px; font-weight:700; color:var(--navy); letter-spacing:0.03em; padding-top:5px; white-space:nowrap; }
-.cf-chip { display:inline-flex; align-items:center; gap:7px; font-size:12.5px; background:rgba(255,255,255,0.9);
-  border:1px solid rgba(31,58,95,0.12); border-radius:999px; padding:5px 12px; color:var(--ink);
-  text-decoration:none; transition:border-color 160ms ease-out, transform 160ms var(--ease); }
-.cf-chip:hover { border-color:var(--copper); transform:translateY(-1px); }
-.cf-chip .cf-co { font-weight:700; color:var(--navy); }
-.cf-chip .cf-title { max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.cf-chip .cf-sig { font-size:10.5px; font-weight:600; color:var(--copper); }
 .f-list { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
 .f-card { position:relative; display:grid; grid-template-columns:44px minmax(0,1fr) auto; gap:6px 18px;
   background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius); padding:16px 18px;
@@ -244,7 +234,6 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 .c-card:hover { transform:translateY(-2px); border-color:rgba(31,58,95,0.22);
   box-shadow:0 2px 4px rgba(20,40,70,0.05), 0 16px 34px rgba(20,40,70,0.1); }
 .c-card:active { transform:scale(0.985); }
-.c-card.cf-flash { border-color:var(--copper); box-shadow:0 0 0 3px rgba(164,113,58,0.35), 0 16px 34px rgba(20,40,70,0.1); transition:none; }
 .c-card > strong { font-size:15px; font-weight:700; }
 .c-card .c-tier { font-size:10.5px; font-weight:600; letter-spacing:0.04em; padding:2px 8px; border-radius:999px;
   background:rgba(31,58,95,0.08); color:var(--navy); margin-left:6px; vertical-align:1px; white-space:nowrap; }
@@ -444,28 +433,6 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <span class="m-head-meta">共 3 条合格事件 · 精选 2 · 重点 1 · 待确认 3</span>
         </div>
       </div>
-
-      <div class="cf-strip">
-        <span class="cf-label">基本盘变化</span>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="MercadoLibre"><span class="cf-co">MercadoLibre</span><span class="cf-title">MercadoLibre Quarterly Revenue Just Topped $10 Billion for the First Time. Is the Post-Earnings Sell-Off a Gift for Long-Term Investors? - AOL.com</span><span class="cf-sig">资金流向</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Careem"><span class="cf-co">Careem</span><span class="cf-title">Careem Financial Results: Revenue Up 20%, Losses Widen - tbreak.com</span><span class="cf-sig">警示信号</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Naver"><span class="cf-co">Naver</span><span class="cf-title">Naver begins monetizing AI as Kakao prioritizes ecosystem over near-term revenue - Aju Press</span><span class="cf-sig">资金流向</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Kakao"><span class="cf-co">Kakao</span><span class="cf-title">Naver begins monetizing AI as Kakao prioritizes ecosystem over near-term revenue - Aju Press</span><span class="cf-sig">资金流向</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Cloudflare"><span class="cf-co">Cloudflare</span><span class="cf-title">Cloudflare: Workers AI and AI Gateway unify model access and billing</span><span class="cf-sig">合作机会</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Stripe"><span class="cf-co">Stripe</span><span class="cf-title">Stripe: Checkout Prebuilt payment UIs</span><span class="cf-sig">合作机会</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Shopify"><span class="cf-co">Shopify</span><span class="cf-title">Collect WhatsApp marketing consent on Shopify Forms</span><span class="cf-sig">合作机会</span></a>
-
-        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="Adyen"><span class="cf-co">Adyen</span><span class="cf-title">Adyen earnings: an investor&#39;s options playbook - Saxo</span><span class="cf-sig">警示信号</span></a>
-
-      </div>
-
       <div class="f-grid">
         <section class="f-list">
 
@@ -626,9 +593,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-08-03 至 2026-08-09</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI资本狂潮重塑全球科技版图</p>
+              <p class="p-editorial">AI资本洪流重塑全球科技版图</p>
               <h2>2026年第32周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>AI基础设施投资进入杠杆扩张期，Citadel预测2028年AI芯片债务发行达5000亿美元，SK海力士豪掷380亿美元扩产。同时，支付与电商巨头业绩分化，Visa收购BioCatch应对AI诈骗，MercadoLibre营收破百亿但股价承压，行业正从增长叙事转向效率与安全并重。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>AI基础设施投资进入杠杆扩张期，SK海力士380亿美元加码内存芯片，Naver洽谈90亿美元数据中心融资，Citadel预测2028年AI芯片债务发行达5000亿美元。与此同时，支付与电商巨头业绩分化，Visa以24亿美元收购BioCatch应对AI诈骗，行业加速整合。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>84</strong><span>重要事件</span></div>
@@ -639,25 +606,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W32-ai_infra"><span class="toc-num">01</span>AI芯片债务融资激增，亚太算力军备竞赛升级<em>49 条</em></a>
+              <a href="#wt-2026-W32-ai_infra"><span class="toc-num">01</span>AI芯片债务融资将达5000亿美元，亚太算力投资杠杆化<em>49 条</em></a>
 
-              <a href="#wt-2026-W32-payments"><span class="toc-num">02</span>支付巨头业绩分化，AI反欺诈成并购焦点<em>26 条</em></a>
+              <a href="#wt-2026-W32-payments"><span class="toc-num">02</span>支付巨头业绩分化，Visa24亿美元收购BioCatch强化反欺诈<em>26 条</em></a>
 
-              <a href="#wt-2026-W32-operations"><span class="toc-num">03</span>拉美电商巨头破百亿营收，盈利质量遭市场质疑<em>18 条</em></a>
+              <a href="#wt-2026-W32-operations"><span class="toc-num">03</span>MercadoLibre营收破百亿但股价承压，拉美电商盈利质量受审视<em>18 条</em></a>
 
-              <a href="#wt-2026-W32-developer"><span class="toc-num">04</span>游戏与开发者生态洗牌，专网市场成新增长极<em>15 条</em></a>
+              <a href="#wt-2026-W32-developer"><span class="toc-num">04</span>沙特550亿收购EA落地，游戏与专网生态加速整合<em>15 条</em></a>
 
-              <a href="#wt-2026-W32-commerce"><span class="toc-num">05</span>电商平台资本注入后收缩，直播电商逆势融资<em>9 条</em></a>
+              <a href="#wt-2026-W32-commerce"><span class="toc-num">05</span>Etsy获14亿注资后裁员，电商平台从扩张转向效率<em>9 条</em></a>
 
-              <a href="#wt-2026-W32-expansion"><span class="toc-num">06</span>平台生态密集更新，AI商业化路径分化<em>6 条</em></a>
+              <a href="#wt-2026-W32-expansion"><span class="toc-num">06</span>Naver启动AI商业化，Kakao优先生态而非短期营收<em>6 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W32-ai_infra">
-                <h3>AI芯片债务融资激增，亚太算力军备竞赛升级</h3>
-                <p class="p-narrative">Citadel预测AI芯片债务发行将达5000亿美元，SK海力士随即宣布380亿美元投资，显示资本正以前所未有的杠杆规模涌入AI基础设施。Naver与Brookfield洽谈90亿美元数据中心融资，进一步印证亚太地区算力投资进入加速期，企业级AI代理公司HappyRobot获1.5亿美元融资，表明资金正从芯片向应用层蔓延。</p>
+                <h3>AI芯片债务融资将达5000亿美元，亚太算力投资杠杆化</h3>
+                <p class="p-narrative">Citadel的预测将AI基础设施投资推至金融杠杆前沿，SK海力士380亿美元投入内存芯片，Naver与Brookfield洽谈90亿美元数据中心融资，显示亚太正成为AI算力资本开支的核心战场，债务市场成为主要弹药库。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -683,8 +650,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W32-payments">
-                <h3>支付巨头业绩分化，AI反欺诈成并购焦点</h3>
-                <p class="p-narrative">汇丰利润增长23%至195亿美元，为金融科技采购提供弹药；Grab金融业务营收达1.34亿美元，Kakao Pay营收增长40.6%，显示东南亚与韩国支付市场持续扩张。Visa以24亿美元收购BioCatch，凸显AI驱动的欺诈检测成为支付安全的核心战场，行业正从规模竞争转向安全与效率的平衡。</p>
+                <h3>支付巨头业绩分化，Visa24亿美元收购BioCatch强化反欺诈</h3>
+                <p class="p-narrative">汇丰利润增长23%为金融科技采购提供资金池，Grab和Kakao Pay营收高增长印证东南亚与韩国支付市场活力，而Visa收购BioCatch则凸显AI诈骗威胁下，支付网络正将安全能力内化为核心竞争力。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -710,8 +677,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W32-operations">
-                <h3>拉美电商巨头破百亿营收，盈利质量遭市场质疑</h3>
-                <p class="p-narrative">MercadoLibre季度营收首次突破100亿美元，但股价下跌引发买入讨论，市场对其利润率与竞争压力存疑。Netmarble与Freshworks分别凭借IP和SaaS模式实现增长，显示不同赛道企业均在追求盈利确定性，投资者正从增长故事转向现金流与运营效率的审视。</p>
+                <h3>MercadoLibre营收破百亿但股价承压，拉美电商盈利质量受审视</h3>
+                <p class="p-narrative">MercadoLibre季度营收首破100亿美元，但净利润率仅4.6%，市场用脚投票引发买入讨论，Netmarble和Freshworks的盈利改善则显示，在增长与利润的平衡中，运营效率成为投资者新的估值锚点。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -737,8 +704,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W32-developer">
-                <h3>游戏与开发者生态洗牌，专网市场成新增长极</h3>
-                <p class="p-narrative">沙特PIF主导的EA 550亿美元收购完成，Tripledot以4000万美元从Unity收购Supersonic，游戏行业整合加速。全球专网收入预计2030年达220亿美元，为网络设备商与集成商打开长期合作窗口，开发者平台正从工具竞争转向垂直场景深耕。</p>
+                <h3>沙特550亿收购EA落地，游戏与专网生态加速整合</h3>
+                <p class="p-narrative">沙特PIF主导的EA收购完成，Tripledot从Unity收购Supersonic，全球专网收入预计2030年达220亿美元，资本正同时涌入游戏内容与专用网络基础设施，平台型玩家通过并购扩大生态半径。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -764,8 +731,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W32-commerce">
-                <h3>电商平台资本注入后收缩，直播电商逆势融资</h3>
-                <p class="p-narrative">Etsy获14亿美元注资后仍宣布裁员，亚马逊收紧商品标题政策，显示传统电商平台在增长放缓下转向效率优化。美国直播电商Whatnot获5.45亿美元G轮融资，eBay营收与GMV均增长14%，表明直播与二手电商成为少数高增长赛道，行业分化加剧。</p>
+                <h3>Etsy获14亿注资后裁员，电商平台从扩张转向效率</h3>
+                <p class="p-narrative">Etsy在获得14亿美元注资后宣布裁员，亚马逊收紧商品标题政策，而Whatnot获5.45亿美元融资、eBay营收增长14%，显示电商行业正分化：资本向直播等新形态集中，传统平台则聚焦运营优化。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -791,8 +758,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W32-expansion">
-                <h3>平台生态密集更新，AI商业化路径分化</h3>
-                <p class="p-narrative">Shopify与Stripe同步发布产品更新，平台能力持续迭代；Naver启动AI商业化，Kakao则优先生态而非短期营收，显示韩国科技巨头AI变现策略分歧。新加坡Grab上调全年营收预测，区域龙头正通过扩张与效率提升巩固市场地位。</p>
+                <h3>Naver启动AI商业化，Kakao优先生态而非短期营收</h3>
+                <p class="p-narrative">Naver正式启动AI商业化，Kakao明确生态优先于营收，Shopify和Stripe同步发布产品更新，Grab上调全年预测，平台巨头正从用户增长转向AI变现，但路径分化：有的追求直接收入，有的押注生态粘性。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -830,7 +797,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </div>
               <p class="p-editorial">资本涌向AI基建，支付巨头押注稳定币</p>
               <h2>2026年第31周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周，欧洲顶级风投Index Ventures募资20亿美元，数据中心贷款规模攀升至数十亿美元，显示AI基础设施仍是资本最密集的赛道。同时，Visa稳定币卡交易量突破37亿美元，覆盖200个市场，支付与区块链的融合正在加速，为出海企业带来新的合作窗口。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周，全球资本加速流向AI基础设施与支付科技。Index Ventures募资20亿美元，数据中心贷款需求激增，显示AI算力投资热度不减。同时，Visa稳定币卡交易量达37亿美元，覆盖200个市场，标志稳定币支付进入主流，为出海企业提供新支付通道。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>20</strong><span>重要事件</span></div>
@@ -841,25 +808,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W31-ai_infra"><span class="toc-num">01</span>数据中心融资潮涌，AI基建资本密度再上台阶<em>34 条</em></a>
+              <a href="#wt-2026-W31-ai_infra"><span class="toc-num">01</span>AI与云基础设施<em>34 条</em></a>
 
-              <a href="#wt-2026-W31-payments"><span class="toc-num">02</span>稳定币支付落地，Visa交易量破37亿美元<em>18 条</em></a>
+              <a href="#wt-2026-W31-payments"><span class="toc-num">02</span>支付与金融科技<em>18 条</em></a>
 
-              <a href="#wt-2026-W31-developer"><span class="toc-num">03</span>API经济升温，OpenRouter估值或达百亿<em>11 条</em></a>
+              <a href="#wt-2026-W31-developer"><span class="toc-num">03</span>开发者与平台生态<em>11 条</em></a>
 
-              <a href="#wt-2026-W31-operations"><span class="toc-num">04</span>消费品牌业绩亮眼，AI提升运营效率成刚需<em>11 条</em></a>
+              <a href="#wt-2026-W31-operations"><span class="toc-num">04</span>经营与组织变化<em>11 条</em></a>
 
-              <a href="#wt-2026-W31-compliance"><span class="toc-num">05</span>合规科技受资本青睐，AI治理成新焦点<em>6 条</em></a>
+              <a href="#wt-2026-W31-compliance"><span class="toc-num">05</span>合规与安全<em>6 条</em></a>
 
-              <a href="#wt-2026-W31-commerce"><span class="toc-num">06</span>印尼电商盈利拐点，物流与SaaS需求激增<em>2 条</em></a>
+              <a href="#wt-2026-W31-commerce"><span class="toc-num">06</span>电商、商户与物流<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W31-ai_infra">
-                <h3>数据中心融资潮涌，AI基建资本密度再上台阶</h3>
-                <p class="p-narrative">Index Ventures新募20亿美元基金，True IDC和Stack分别寻求20亿和59亿美元贷款建设数据中心，思科投资的Eliyan估值达10亿美元。资金正大规模涌入AI基础设施，从芯片互联到数据中心，资本密度显著提升，预示该领域将迎来更激烈的竞争和整合。</p>
+                <h3>AI与云基础设施</h3>
+                <p class="p-narrative">Index Ventures新募20亿美元瞄准AI与网络安全初创，True IDC和Stack分别寻求20亿和59亿美元贷款建设数据中心，思科投资的Eliyan估值达10亿美元。资金从风投到债务市场全面涌入，AI基础设施成为资本最密集赛道。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -885,8 +852,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W31-payments">
-                <h3>稳定币支付落地，Visa交易量破37亿美元</h3>
-                <p class="p-narrative">Visa稳定币卡交易量达37亿美元，覆盖200个市场，标志着稳定币支付从概念走向规模化应用。同时，CAIS融资1.7亿美元，Atome Financial营收增长80%，BNPL公司Cashea获1亿美元融资，支付金融科技领域资本活跃，合规与技术创新成为关键。</p>
+                <h3>支付与金融科技</h3>
+                <p class="p-narrative">Visa稳定币卡交易量达37亿美元，覆盖200个市场，标志稳定币支付从边缘走向主流。同时，CAIS估值达20亿美元，Atome Financial营收增长80%，BNPL公司Cashea获1亿美元融资，支付科技赛道资本活跃。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -912,8 +879,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W31-developer">
-                <h3>API经济升温，OpenRouter估值或达百亿</h3>
-                <p class="p-narrative">OpenRouter与Stripe洽谈收购，估值或达100亿美元，凸显API分发平台的价值。Xsight Labs融资超3亿美元，Spur获2亿美元，印度Table Space拟IPO，开发者工具和云基础设施领域资本涌动，平台生态竞争加剧。</p>
+                <h3>开发者与平台生态</h3>
+                <p class="p-narrative">OpenRouter与Stripe洽谈收购，估值或达100亿美元，显示API分发与支付生态的融合趋势。Xsight Labs融资超3亿美元扩展AI网络平台，印度Table Space拟IPO，开发者基础设施赛道资本热度不减。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -939,8 +906,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W31-operations">
-                <h3>消费品牌业绩亮眼，AI提升运营效率成刚需</h3>
-                <p class="p-narrative">Crocs季度营收首破10亿美元，LinkedIn营收稳健增长，TBO Tek利润增32%，显示消费和企业服务市场强劲。COR获3000万美元融资，专注提升代理与咨询公司的AI盈利能力，运营效率优化成为企业投资重点。</p>
+                <h3>经营与组织变化</h3>
+                <p class="p-narrative">Crocs季度营收首破10亿美元，LinkedIn营收稳健增长，TBO Tek利润增32%，显示消费与企业服务需求强劲。COR获3000万美元融资，帮助代理与咨询公司用AI提升盈利，AI应用正从技术走向商业落地。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -966,8 +933,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W31-compliance">
-                <h3>合规科技受资本青睐，AI治理成新焦点</h3>
-                <p class="p-narrative">ProphetX获3500万美元扩展联邦监管体育预测市场，Inforcer获5000万美元帮助中小企业应对AI风险，Hush Security获3000万美元专注AI Agent治理。合规与安全领域融资活跃，AI治理成为新兴赛道，Meta广告增长但AI担忧上升，警示风险与机遇并存。</p>
+                <h3>合规与安全</h3>
+                <p class="p-narrative">ProphetX获3500万美元扩展联邦监管体育预测市场，Inforcer获5000万美元帮助中小企业应对AI风险，Hush Security获3000万美元专注AI Agent治理。AI安全与合规成为资本新宠，Meta广告增长但AI担忧上升。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -993,8 +960,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W31-commerce">
-                <h3>印尼电商盈利拐点，物流与SaaS需求激增</h3>
-                <p class="p-narrative">Bukalapak营收增29%，调整后EBITDA转正，标志印尼电商平台盈利模式成熟。印度Q-Comm人才争夺战白热化，Table Space计划IPO，电商与物流技术投入加大，为SaaS和物流技术供应商带来新机遇。</p>
+                <h3>电商、商户与物流</h3>
+                <p class="p-narrative">Bukalapak营收增29%，调整后EBITDA转正，显示印尼电商盈利模式成熟。印度Q-Comm人才争夺战加剧，Table Space计划IPO，电商与物流技术投入需求上升。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1026,9 +993,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-07-20 至 2026-07-26</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">资本重注AI基建，防务科技估值飙升</p>
+              <p class="p-editorial">资本重注AI基建，防务与支付赛道估值飙升</p>
               <h2>2026年第30周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>科技巨头资本开支再上调，AI数据中心投资从美国扩散至印度、韩国。同时，防务科技独角兽以千亿估值融资，显示地缘政治紧张正重塑科技投资逻辑。资本流向硬科技与安全领域，市场风险偏好显著上升。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本期全球科技资本流向高度集中：Alphabet上调资本支出至2050亿美元，英伟达加码数据中心投资，AI基础设施军备竞赛白热化。同时，防务科技独角兽Anduril估值达千亿美元，拉美BNPL平台Cashea获亿元融资，显示资本正从传统互联网转向硬科技与新兴市场支付。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>12</strong><span>重要事件</span></div>
@@ -1039,25 +1006,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W30-ai_infra"><span class="toc-num">01</span>AI与云基础设施<em>23 条</em></a>
+              <a href="#wt-2026-W30-ai_infra"><span class="toc-num">01</span>全球AI基建投资激增，巨头资本开支竞赛白热化<em>23 条</em></a>
 
-              <a href="#wt-2026-W30-payments"><span class="toc-num">02</span>支付与金融科技<em>15 条</em></a>
+              <a href="#wt-2026-W30-payments"><span class="toc-num">02</span>拉美BNPL与数字信贷吸金，国际资本加码新兴市场金融<em>15 条</em></a>
 
-              <a href="#wt-2026-W30-developer"><span class="toc-num">03</span>开发者与平台生态<em>14 条</em></a>
+              <a href="#wt-2026-W30-developer"><span class="toc-num">03</span>防务与生物科技独角兽估值飙升，资本追逐硬核创新<em>14 条</em></a>
 
-              <a href="#wt-2026-W30-expansion"><span class="toc-num">04</span>区域扩张与合作<em>9 条</em></a>
+              <a href="#wt-2026-W30-expansion"><span class="toc-num">04</span>媒体巨头合并受阻，代币融资与AI机器人成新热点<em>9 条</em></a>
 
-              <a href="#wt-2026-W30-commerce"><span class="toc-num">05</span>电商、商户与物流<em>8 条</em></a>
+              <a href="#wt-2026-W30-commerce"><span class="toc-num">05</span>欧洲电商加码AI仓储，Shein亏损与Meesho减亏折射行业分化<em>8 条</em></a>
 
-              <a href="#wt-2026-W30-operations"><span class="toc-num">06</span>经营与组织变化<em>7 条</em></a>
+              <a href="#wt-2026-W30-operations"><span class="toc-num">06</span>游戏与AI芯片业绩亮眼，英特尔数据中心营收大增<em>7 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W30-ai_infra">
-                <h3>AI与云基础设施</h3>
-                <p class="p-narrative">Alphabet上调资本开支至2050亿美元，英伟达投资Naver数据中心，HCLTech与Sarvam在印度建AI数据中心。AI基础设施投资从超大规模云厂商向区域玩家扩散，亚洲成为新战场。</p>
+                <h3>全球AI基建投资激增，巨头资本开支竞赛白热化</h3>
+                <p class="p-narrative">Alphabet将2026年资本支出预测上调至2050亿美元，英伟达向Naver数据中心注资10亿美元，HCLTech与Sarvam联手在印度砸下15亿美元建AI数据中心。与此同时，Uber创始人旗下机器人公司Atoms获17亿美元融资，显示AI基础设施从云服务向物理世界延伸，资本正以前所未有的密度涌入算力与机器人赛道。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1083,8 +1050,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W30-payments">
-                <h3>支付与金融科技</h3>
-                <p class="p-narrative">Cashea获1亿美元B轮融资，Revolut估值达1150亿美元。IFC向印度和斯里兰卡金融机构注资，显示国际资本正同时押注消费金融科技与传统信贷市场，新兴市场支付赛道热度不减。</p>
+                <h3>拉美BNPL与数字信贷吸金，国际资本加码新兴市场金融</h3>
+                <p class="p-narrative">委内瑞拉BNPL平台Cashea完成1亿美元B轮融资，Revolut二次售股估值达1150亿美元，显示支付赛道估值持续攀升。IFC向印度L&amp;T Finance投资1亿美元、拟向锡兰商业银行提供2亿美元贷款，国际开发金融机构正系统性扩大新兴市场小额信贷供给，拉美与南亚的金融科技渗透率将加速提升。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1110,8 +1077,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W30-developer">
-                <h3>开发者与平台生态</h3>
-                <p class="p-narrative">Anduril以1000亿美元估值融资，较去年翻三倍。Colossal Biosciences和Boring Company也获高估值，资本涌向防务、生物科技和基础设施，安全与硬科技成为投资焦点。</p>
+                <h3>防务与生物科技独角兽估值飙升，资本追逐硬核创新</h3>
+                <p class="p-narrative">Anduril以1000亿美元估值融资，较去年翻三倍，防务科技成为资本新宠。Colossal Biosciences洽谈200-300亿美元融资，Boring Company估值达200亿美元，Prentis AI实验室拟融资1亿美元。资本正从软件应用层转向具有物理世界影响力的硬核科技，防务、生物与基础设施领域成为估值高地。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1137,8 +1104,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W30-expansion">
-                <h3>区域扩张与合作</h3>
-                <p class="p-narrative">派拉蒙-华纳兄弟合并被法官暂停，媒体格局生变。World Foundation代币融资5200万美元，Gritt用AI机器人改造建筑设备，资本转向新兴领域，传统行业整合面临阻力。</p>
+                <h3>媒体巨头合并受阻，代币融资与AI机器人成新热点</h3>
+                <p class="p-narrative">法官叫停派拉蒙-华纳兄弟1100亿美元合并案，传统媒体整合路径遇阻。World Foundation通过代币销售筹资5200万美元，Gritt获3200万美元用AI机器人改造建筑设备加速太阳能农场建设。IndiaMART股价跌至52周新低，显示传统B2B平台承压，而区块链与AI机器人正开辟新的扩张方向。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1164,8 +1131,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W30-commerce">
-                <h3>电商、商户与物流</h3>
-                <p class="p-narrative">Zalando投资Sereact B轮，推动AI仓库自动化。Shein IPO披露亏损，Meesho亏损收窄，电商竞争加剧，物流效率成为关键，机器人公司获大额融资。</p>
+                <h3>欧洲电商加码AI仓储，Shein亏损与Meesho减亏折射行业分化</h3>
+                <p class="p-narrative">Zalando参与Sereact 1.16亿美元B轮融资，加速AI仓库自动化布局。英国机器人公司Humanoid获1.52亿美元A轮融资，估值达13.5亿美元。Shein香港IPO招股书显示Q1净亏损9900万美元，而印度Meesho亏损收窄54%、营收增48%，显示电商行业在自动化投入与盈利压力间分化。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1191,8 +1158,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W30-operations">
-                <h3>经营与组织变化</h3>
-                <p class="p-narrative">Ludus游戏营收超5000万美元，英特尔Q2盈利超预期，AI数据中心业务强劲。Fractal和Thyrocare利润大增，科技与医疗领域业绩分化，AI驱动增长明显。</p>
+                <h3>游戏与AI芯片业绩亮眼，英特尔数据中心营收大增</h3>
+                <p class="p-narrative">Ludus: Merge Arena净营收超5000万美元，游戏赛道持续造血。英特尔Q2盈利超预期，AI数据中心营收大增，显示传统芯片巨头在AI浪潮中复苏。印度IT服务公司Fractal利润同比增92%，Thyrocare利润增34%，亚太科技企业业绩普遍向好，AI与数字化需求正转化为实际利润。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1228,9 +1195,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-07-13 至 2026-07-19</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">支付并购战火起，AI商业化提速</p>
+              <p class="p-editorial">支付并购重塑全球基础设施版图</p>
               <h2>2026年第29周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>Stripe联手Advent竞购PayPal遭拒，全球支付格局酝酿剧变；中国AI公司智谱年收入破10亿美元，亚太AI商业化进入兑现期。资本在基础设施与平台层密集下注，行业整合与扩张同步加速。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>Stripe联合Advent拟以530亿美元收购PayPal，遭董事会拒绝，支付巨头整合进入博弈深水区。与此同时，中国AI公司智谱年收入破10亿美元，亚太AI商业化提速，资本正密集涌入AI与支付基础设施，预示全球科技底层架构加速重构。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>5</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>16</strong><span>重要事件</span></div>
@@ -1241,23 +1208,23 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W29-ai_infra"><span class="toc-num">01</span>中国AI商业化破10亿美元，全球算力资本密集涌入<em>23 条</em></a>
+              <a href="#wt-2026-W29-ai_infra"><span class="toc-num">01</span>中国AI商业化破局，全球算力资本涌入<em>23 条</em></a>
 
-              <a href="#wt-2026-W29-developer"><span class="toc-num">02</span>Stripe联手Advent竞购PayPal，支付平台整合大幕拉开<em>21 条</em></a>
+              <a href="#wt-2026-W29-developer"><span class="toc-num">02</span>支付巨头整合在即，游戏与加密平台获资本加注<em>21 条</em></a>
 
-              <a href="#wt-2026-W29-payments"><span class="toc-num">03</span>PayPal拒绝低价收购，支付巨头博弈进入深水区<em>12 条</em></a>
+              <a href="#wt-2026-W29-payments"><span class="toc-num">03</span>支付并购博弈升级，新兴市场信贷扩张<em>12 条</em></a>
 
-              <a href="#wt-2026-W29-commerce"><span class="toc-num">04</span>Meesho零佣金模式验证，社交电商卖家生态生变<em>2 条</em></a>
+              <a href="#wt-2026-W29-commerce"><span class="toc-num">04</span>印度零佣金模式崛起，社交电商数据共享成趋势<em>2 条</em></a>
 
-              <a href="#wt-2026-W29-expansion"><span class="toc-num">05</span>印度本地生活获投，中东初创被收购，区域扩张加速<em>2 条</em></a>
+              <a href="#wt-2026-W29-expansion"><span class="toc-num">05</span>印度本地服务获投，中东初创被收购加速全球化<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W29-ai_infra">
-                <h3>中国AI商业化破10亿美元，全球算力资本密集涌入</h3>
-                <p class="p-narrative">智谱年收入达10亿美元，标志着中国大模型公司从技术验证转向规模化营收。与此同时，Eoptolink拟赴港募资50亿美元、Csquare IPO募资10亿美元、Databricks估值升至1880亿美元，资金正加速涌入AI基础设施与数据平台，算力军备竞赛进入资本化阶段。</p>
+                <h3>中国AI商业化破局，全球算力资本涌入</h3>
+                <p class="p-narrative">智谱年收入达10亿美元，标志着中国大模型公司首次跨过商业化里程碑。Eoptolink拟赴港募资50亿美元，Csquare IPO募资10亿美元，Databricks估值升至1880亿美元，显示资本正全力押注AI算力与数据基础设施，全球AI军备竞赛从模型转向商业化落地。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1283,8 +1250,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W29-developer">
-                <h3>Stripe联手Advent竞购PayPal，支付平台整合大幕拉开</h3>
-                <p class="p-narrative">Stripe与Advent联合出价530亿美元收购PayPal，虽遭董事会拒绝，但已点燃支付行业整合预期。Vgames推出5亿美元游戏融资平台、Crypto.com获Citadel Securities 4亿美元投资，平台生态的资本运作与跨界整合同步升温。</p>
+                <h3>支付巨头整合在即，游戏与加密平台获资本加注</h3>
+                <p class="p-narrative">Stripe与Advent联合收购PayPal的报价遭董事会拒绝，交易博弈升温，若成行将重塑全球支付格局。同时，Vgames融资5亿美元推出游戏增长融资平台，Crypto.com获Citadel Securities 4亿美元投资，资本正加速涌入游戏与加密支付赛道，开发者生态迎来新机遇。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1310,8 +1277,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W29-payments">
-                <h3>PayPal拒绝低价收购，支付巨头博弈进入深水区</h3>
-                <p class="p-narrative">PayPal董事会认为530亿美元报价过低，拒绝交易，但Stripe的野心已暴露。GXS贷款组合突破10亿新元、Lumin Digital估值达16亿美元，支付与金融科技领域的资本活动频繁，行业洗牌在即。</p>
+                <h3>支付并购博弈升级，新兴市场信贷扩张</h3>
+                <p class="p-narrative">PayPal董事会认为Stripe-Advent报价过低，拒绝后谈判或进入拉锯，全球支付基础设施整合面临变数。GXS贷款组合突破10亿新元，Lumin Digital融资1.15亿美元，显示新兴市场数字信贷与银行技术平台正吸引资本，支付生态向多元化扩张。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1337,8 +1304,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W29-commerce">
-                <h3>Meesho零佣金模式验证，社交电商卖家生态生变</h3>
-                <p class="p-narrative">Meesho通过零佣金模式吸引卖家，转而以卖家中心服务作为收入引擎，这一模式在印度跑通后，可能被东南亚社交电商效仿。Snapchat与Dick&#39;s Sporting Goods共享数据，则显示零售数据合作正在深化。</p>
+                <h3>印度零佣金模式崛起，社交电商数据共享成趋势</h3>
+                <p class="p-narrative">Meesho零佣金模式与卖家中心收入引擎解析显示，印度电商正通过创新佣金结构重构卖家生态，为东南亚社交电商提供新范本。Snapchat与Dick&#39;s Sporting Goods共享数据，标志社交平台与零售商的合作从流量转向深度数据协同，电商竞争进入精细化运营阶段。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1360,8 +1327,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W29-expansion">
-                <h3>印度本地生活获投，中东初创被收购，区域扩张加速</h3>
-                <p class="p-narrative">印度洗衣初创Quick Clean获1400万美元融资，显示本地生活服务赛道持续吸金；埃及DevOps初创Stakpak被Vercel收购，则表明中东技术人才与产品正成为全球巨头整合的目标。</p>
+                <h3>印度本地服务获投，中东初创被收购加速全球化</h3>
+                <p class="p-narrative">印度洗衣初创Quick Clean获1400万美元融资，显示本地生活服务赛道持续吸金，O2O平台技术集成与物流系统存在合作空间。埃及DevOps初创Stakpak被Vercel收购，中东技术人才与产品正加速融入全球开发者生态，区域扩张从市场进入转向能力整合。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1393,9 +1360,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-07-06 至 2026-07-12</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI资本涌入，游戏与支付基建成新焦点</p>
+              <p class="p-editorial">AI资本重注算力，支付SaaS跨过盈利门槛</p>
               <h2>2026年第28周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周，AI基础设施领域迎来巨额融资与投资，SambaNova获11亿美元估值，Meta加码加拿大数据中心。同时，游戏与支付赛道在亚太、欧洲多点开花，印度手游市场高增长，欧洲B2B支付SaaS规模化，显示AI与垂直行业深度融合的趋势。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周，AI基础设施领域迎来巨额融资与新建数据中心，同时欧洲企业支出管理SaaS实现规模化盈利，显示资本正从概念验证转向实际部署与商业化验证。这预示着AI与金融科技赛道进入整合期，具备真实收入与场景的公司将获得更多青睐。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>13</strong><span>重要事件</span></div>
@@ -1406,25 +1373,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W28-ai_infra"><span class="toc-num">01</span>AI算力投资升温，SambaNova估值达110亿美元<em>31 条</em></a>
+              <a href="#wt-2026-W28-ai_infra"><span class="toc-num">01</span>AI算力投资升温，SambaNova获11B估值<em>31 条</em></a>
 
-              <a href="#wt-2026-W28-payments"><span class="toc-num">02</span>欧洲B2B支付SaaS规模化，Payhawk年收入破亿<em>13 条</em></a>
+              <a href="#wt-2026-W28-payments"><span class="toc-num">02</span>欧洲B2B支付SaaS规模化盈利，Payhawk年收入破亿<em>13 条</em></a>
 
-              <a href="#wt-2026-W28-developer"><span class="toc-num">03</span>AR游戏与AI语音平台营收创新高，开发者生态变现加速<em>13 条</em></a>
+              <a href="#wt-2026-W28-developer"><span class="toc-num">03</span>AR游戏与AI语音商业化验证，开发者生态变现加速<em>13 条</em></a>
 
-              <a href="#wt-2026-W28-commerce"><span class="toc-num">04</span>欧洲B2B平台BIZAY融资5500万美元，进军美国市场<em>3 条</em></a>
+              <a href="#wt-2026-W28-commerce"><span class="toc-num">04</span>欧洲B2B平台BIZAY获投，跨大西洋电商整合提速<em>3 条</em></a>
 
-              <a href="#wt-2026-W28-operations"><span class="toc-num">05</span>银行SaaS与安全服务营收里程碑，云化转型需求释放<em>2 条</em></a>
+              <a href="#wt-2026-W28-operations"><span class="toc-num">05</span>银行云化SaaS营收破亿，核心系统替换需求释放<em>2 条</em></a>
 
-              <a href="#wt-2026-W28-expansion"><span class="toc-num">06</span>土耳其游戏工作室获600万美元融资，中东游戏市场扩张<em>2 条</em></a>
+              <a href="#wt-2026-W28-expansion"><span class="toc-num">06</span>土耳其游戏工作室获投，中东市场外包合作机会显现<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W28-ai_infra">
-                <h3>AI算力投资升温，SambaNova估值达110亿美元</h3>
-                <p class="p-narrative">SambaNova完成10亿美元融资，估值升至110亿美元，General Atlantic领投，凸显AI芯片与云基础设施赛道吸金能力。Meta宣布在加拿大投资90亿美元建设AI数据中心，进一步扩大其AI算力版图。印度手游市场预计2029年达24亿美元，为AI渲染与云游戏提供增长土壤。</p>
+                <h3>AI算力投资升温，SambaNova获11B估值</h3>
+                <p class="p-narrative">General Atlantic领投SambaNova 10亿美元，估值达110亿，同时Meta宣布在加拿大投建90亿美元数据中心。资金集中流向AI算力层，表明市场对推理与训练基础设施的需求仍处高位，头部玩家正通过资本绑定锁定长期算力供给。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1450,8 +1417,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W28-payments">
-                <h3>欧洲B2B支付SaaS规模化，Payhawk年收入破亿</h3>
-                <p class="p-narrative">Payhawk年收入超1亿美元，成为Centaur，验证欧洲企业支出管理SaaS的盈利能力。越南F88寻求6.6亿美元IPO估值，Nexu获汇丰1.43亿美元信贷额度，Addi完成8600万美元D轮融资，支付与金融科技在区域市场加速扩张，资本持续加码。</p>
+                <h3>欧洲B2B支付SaaS规模化盈利，Payhawk年收入破亿</h3>
+                <p class="p-narrative">Payhawk年收入超1亿美元，成为Centaur，验证了欧洲企业支出管理SaaS的盈利能力。同期，越南F88寻求6.6亿美元IPO，Nexu获汇丰1.43亿美元信贷，显示支付与金融科技在不同区域均进入资本化与扩张阶段。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1477,8 +1444,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W28-developer">
-                <h3>AR游戏与AI语音平台营收创新高，开发者生态变现加速</h3>
-                <p class="p-narrative">Pokémon Go十周年累计收入超90亿美元，验证LBS+AR商业模式的长青。ElevenLabs CEO透露营收约6亿美元，AI语音平台商业化提速。Oxylabs获1.3亿美元融资，扩展AI数据基础设施，越南手游市场5月下载量1.21亿次，显示新兴市场开发者生态活跃。</p>
+                <h3>AR游戏与AI语音商业化验证，开发者生态变现加速</h3>
+                <p class="p-narrative">Pokémon Go十周年累计收入超90亿美元，ElevenLabs营收约6亿美元，Oxylabs获1.3亿美元融资。AR游戏与AI语音工具均实现可观收入，表明开发者平台正从用户积累转向深度变现，数据基础设施成为新投资热点。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1504,8 +1471,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W28-commerce">
-                <h3>欧洲B2B平台BIZAY融资5500万美元，进军美国市场</h3>
-                <p class="p-narrative">BIZAY获5500万美元融资，用于美国扩张与行业整合，跨大西洋电商供应链机会显现。Fleek获2500万美元推动二手时尚数字化，Nykaa预计Q1营收增长近30%，时尚业务领涨，电商细分领域资本与增长并进。</p>
+                <h3>欧洲B2B平台BIZAY获投，跨大西洋电商整合提速</h3>
+                <p class="p-narrative">BIZAY获5500万美元融资用于美国扩张与行业整合，Fleek获2500万美元推动二手时尚数字化，Nykaa时尚业务领涨。欧洲B2B与二手电商平台正借资本跨海扩张，供应链与品类整合成为竞争关键。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1529,8 +1496,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W28-operations">
-                <h3>银行SaaS与安全服务营收里程碑，云化转型需求释放</h3>
-                <p class="p-narrative">Thought Machine 2025年营收突破1亿美元，核心银行SaaS供应商规模化，银行云化转型需求持续释放。TAC Infosec Q1利润同比增137%，安全服务在亚太市场高增长，显示金融科技基础设施与安全赛道景气度上行。</p>
+                <h3>银行云化SaaS营收破亿，核心系统替换需求释放</h3>
+                <p class="p-narrative">Thought Machine 2025年营收突破1亿美元，TAC Infosec利润同比增137%。银行核心系统云化供应商收入里程碑，显示金融机构对云原生核心的接受度提升，安全与合规服务需求同步增长。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1552,8 +1519,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W28-expansion">
-                <h3>土耳其游戏工作室获600万美元融资，中东游戏市场扩张</h3>
-                <p class="p-narrative">Bold Games获600万美元融资，土耳其游戏开发赛道获资本注入，中东游戏市场扩张带来外包与发行合作机会。移动应用吸引新一代投资者进入非洲股市，金融科技与游戏在区域市场交叉渗透，新兴市场数字生态加速成型。</p>
+                <h3>土耳其游戏工作室获投，中东市场外包合作机会显现</h3>
+                <p class="p-narrative">Bold Games获600万美元融资，同时移动应用吸引新一代投资者进入非洲股市。土耳其游戏开发能力获资本认可，中东与非洲市场成为游戏发行与金融科技应用的新增长极，区域合作与外包需求上升。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1585,9 +1552,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-06-29 至 2026-07-05</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI资本涌入，东南亚支付IPO潮起</p>
+              <p class="p-editorial">AI资本重注，支付IPO潮起</p>
               <h2>2026年第27周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周，AI基础设施领域吸金超40亿美元，微软、Together AI等加码企业级部署；同时，菲律宾支付巨头Mynt启动15亿美元IPO，东南亚数字支付资本化加速，显示AI与支付成为全球科技投资双主线。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周全球科技资本加速流向AI基础设施与企业级部署，微软、Together AI等大额融资落地；同时东南亚支付巨头Mynt启动15亿美元IPO，拉美BNPL平台Addi获D轮融资，支付赛道资本化进程显著提速。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>18</strong><span>重要事件</span></div>
@@ -1598,25 +1565,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W27-ai_infra"><span class="toc-num">01</span>AI算力资本狂潮，企业部署成新战场<em>26 条</em></a>
+              <a href="#wt-2026-W27-ai_infra"><span class="toc-num">01</span>AI基础设施融资热，企业部署成新焦点<em>26 条</em></a>
 
-              <a href="#wt-2026-W27-developer"><span class="toc-num">02</span>东南亚科技IPO前夜，基石投资抢筹<em>11 条</em></a>
+              <a href="#wt-2026-W27-developer"><span class="toc-num">02</span>东南亚健康科技IPO引基石投资，平台生态加速变现<em>11 条</em></a>
 
-              <a href="#wt-2026-W27-payments"><span class="toc-num">03</span>菲律宾支付巨头冲刺IPO，拉美BNPL再融资<em>12 条</em></a>
+              <a href="#wt-2026-W27-payments"><span class="toc-num">03</span>菲律宾支付巨头启动15亿美元IPO，拉美BNPL获新融资<em>12 条</em></a>
 
-              <a href="#wt-2026-W27-operations"><span class="toc-num">04</span>Prosus营收猛增57%，游戏与电商资产增值<em>5 条</em></a>
+              <a href="#wt-2026-W27-operations"><span class="toc-num">04</span>Prosus营收大增57%，游戏与社交资产价值凸显<em>5 条</em></a>
 
-              <a href="#wt-2026-W27-expansion"><span class="toc-num">05</span>东南亚AI平台获1亿美元，区域扩张提速<em>4 条</em></a>
+              <a href="#wt-2026-W27-expansion"><span class="toc-num">05</span>东南亚AI平台获1亿美元融资，区域扩张与并购活跃<em>4 条</em></a>
 
-              <a href="#wt-2026-W27-compliance"><span class="toc-num">06</span>AI风险情报吸金2亿美元，非洲合规需求爆发<em>2 条</em></a>
+              <a href="#wt-2026-W27-compliance"><span class="toc-num">06</span>AI风险情报融资2亿美元，合规科技赛道升温<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W27-ai_infra">
-                <h3>AI算力资本狂潮，企业部署成新战场</h3>
-                <p class="p-narrative">Dell&#39;Oro预测AI-RAN市场2030年达350亿美元，Crusoe寻求30亿美元估值融资，微软设立25亿美元Frontier专注企业AI，Together AI获8亿美元C轮。资本正从通用大模型转向垂直部署与算力基建。</p>
+                <h3>AI基础设施融资热，企业部署成新焦点</h3>
+                <p class="p-narrative">Dell&#39;Oro预测AI-RAN市场2030年将达350亿美元，Crusoe寻求30亿美元估值融资，微软新设25亿美元Frontier公司专攻企业AI部署，Together AI获8亿美元C轮。资本正从模型训练转向推理与行业落地。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1642,8 +1609,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W27-developer">
-                <h3>东南亚科技IPO前夜，基石投资抢筹</h3>
-                <p class="p-narrative">新加坡健康科技获9100万美元基石投资拟IPO，印度Ninjacart获600万美元并计划两年内上市，StirlingX与Aligned分别完成A轮和B轮融资。区域科技公司正密集融资为上市铺路。</p>
+                <h3>东南亚健康科技IPO引基石投资，平台生态加速变现</h3>
+                <p class="p-narrative">新加坡健康科技公司获9100万美元基石投资拟IPO，Aligned获6000万美元B轮巩固B2B销售系统，StirlingX获2000万美元扩展主权情报平台，Ninjacart获600万美元并计划两年内上市。平台型公司正密集融资冲刺资本市场。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1669,8 +1636,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W27-payments">
-                <h3>菲律宾支付巨头冲刺IPO，拉美BNPL再融资</h3>
-                <p class="p-narrative">Mynt计划募资15亿美元，成为菲律宾最大IPO之一；拉美Jota获3000万美元A轮，Addi获8600万美元D轮。支付赛道在东南亚与拉美同步升温，资本加速涌入。</p>
+                <h3>菲律宾支付巨头启动15亿美元IPO，拉美BNPL获新融资</h3>
+                <p class="p-narrative">Mynt（GCash母公司）计划在菲律宾IPO募资15亿美元，拉美Jota获3000万美元A轮、Addi获8600万美元D轮。支付赛道资本化加速，区域龙头通过上市和融资巩固市场地位。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1696,8 +1663,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W27-operations">
-                <h3>Prosus营收猛增57%，游戏与电商资产增值</h3>
-                <p class="p-narrative">Prosus FY26营收达97亿美元，同比增长57%，凸显其投资组合价值；SuperCity营收破亿，Pikmin Bloom在台湾用户支出激增902%，显示区域市场消费力强劲。</p>
+                <h3>Prosus营收大增57%，游戏与社交资产价值凸显</h3>
+                <p class="p-narrative">Prosus FY26营收达97亿美元，同比增长57%；SuperCity营收破亿，Pikmin Bloom在台湾用户支出激增902%。全球互联网巨头与游戏公司业绩亮眼，区域市场增长潜力释放。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1723,8 +1690,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W27-expansion">
-                <h3>东南亚AI平台获1亿美元，区域扩张提速</h3>
-                <p class="p-narrative">Amity获1亿美元D轮并设新加坡AI中心，Igloo收购Eazy Digital拓展保险科技，StockX扩展二手交易。企业通过融资与并购加速区域布局，AI与电商成扩张核心。</p>
+                <h3>东南亚AI平台获1亿美元融资，区域扩张与并购活跃</h3>
+                <p class="p-narrative">Amity获1亿美元D轮并设立新加坡AI中心，Igloo收购Eazy Digital拓展区域业务，Griffin Gaming Partners入股TinyBuild。东南亚企业级AI与保险科技通过融资和并购加速区域布局。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1750,8 +1717,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W27-compliance">
-                <h3>AI风险情报吸金2亿美元，非洲合规需求爆发</h3>
-                <p class="p-narrative">Quantifind获2亿美元扩展AI风险情报，Venice AI获6500万美元A轮晋级独角兽。全球合规与反欺诈需求激增，非洲金融科技与监管科技集成商成受益方。</p>
+                <h3>AI风险情报融资2亿美元，合规科技赛道升温</h3>
+                <p class="p-narrative">Quantifind获2亿美元扩展AI风险情报，Venice AI获6500万美元A轮晋级独角兽。全球合规与反欺诈需求激增，AI驱动的风险情报成为资本新宠。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1783,9 +1750,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-06-22 至 2026-06-28</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">主权AI进场，支付基建重排</p>
+              <p class="p-editorial">主权AI与支付脱钩：资本重塑全球数字基建</p>
               <h2>2026年第26周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>印度政府拟入股本土AI创企，主权AI从口号走向股权操作；全球支付与游戏D2C赛道资本密集涌入，Airwallex、CRED等独角兽估值飙升。AI算力与支付基础设施成为本轮扩张的双引擎，区域合规压力同步上升。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>印度政府入股本土AI初创，标志主权AI从战略走向股权实操；移动游戏D2C收入突破170亿美元，发行商加速脱离应用商店，支付与用户获取技术成为新战场。资本正同时流向主权算力与去中心化分发，全球数字基础设施的权属与通道正在被重新定义。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>10</strong><span>重要事件</span></div>
@@ -1796,25 +1763,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W26-ai_infra"><span class="toc-num">01</span>AI与云基础设施<em>17 条</em></a>
+              <a href="#wt-2026-W26-ai_infra"><span class="toc-num">01</span>印度主权AI落地，政府直接入股Sarvam<em>17 条</em></a>
 
-              <a href="#wt-2026-W26-payments"><span class="toc-num">02</span>支付与金融科技<em>11 条</em></a>
+              <a href="#wt-2026-W26-payments"><span class="toc-num">02</span>游戏D2C收入激增，支付商加速去商店化<em>11 条</em></a>
 
-              <a href="#wt-2026-W26-developer"><span class="toc-num">03</span>开发者与平台生态<em>10 条</em></a>
+              <a href="#wt-2026-W26-developer"><span class="toc-num">03</span>印度电动两轮车Zypp冲刺IPO，充电网络先行<em>10 条</em></a>
 
-              <a href="#wt-2026-W26-expansion"><span class="toc-num">04</span>区域扩张与合作<em>4 条</em></a>
+              <a href="#wt-2026-W26-expansion"><span class="toc-num">04</span>AppsFlyer获巨头超10亿投资，营销科技整合加速<em>4 条</em></a>
 
-              <a href="#wt-2026-W26-operations"><span class="toc-num">05</span>经营与组织变化<em>2 条</em></a>
+              <a href="#wt-2026-W26-operations"><span class="toc-num">05</span>Trip.com增速放缓至17%，在线旅游面临监管与竞争双压<em>2 条</em></a>
 
-              <a href="#wt-2026-W26-compliance"><span class="toc-num">06</span>合规与安全<em>2 条</em></a>
+              <a href="#wt-2026-W26-compliance"><span class="toc-num">06</span>Bybit退出新加坡市场，亚太加密合规门槛再抬高<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W26-ai_infra">
-                <h3>AI与云基础设施</h3>
-                <p class="p-narrative">印度政府拟收购Sarvam 1-2%股份，标志主权AI战略从政策宣示转向资本介入。同期Runpod估值破十亿美元，AI算力需求持续推高，基础设施投资热度不减。</p>
+                <h3>印度主权AI落地，政府直接入股Sarvam</h3>
+                <p class="p-narrative">印度政府拟收购Sarvam 1-2%股份，将主权AI从政策口号转为资本绑定。同期Runpod估值破10亿美元、Upscale AI获1.9亿美元，显示算力层投资热度未减，但主权玩家的入场正在改变AI基础设施的竞争格局。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1840,8 +1807,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W26-payments">
-                <h3>支付与金融科技</h3>
-                <p class="p-narrative">移动游戏D2C收入达170亿美元，发行商加速脱离应用商店，支付需求激增。Airwallex完成3.2亿美元H轮融资，估值110亿美元，Meta领投印度CRED 9亿美元，支付赛道资本热度空前。</p>
+                <h3>游戏D2C收入激增，支付商加速去商店化</h3>
+                <p class="p-narrative">移动游戏D2C年收入达170亿美元，发行商绕过应用商店的意愿转化为实际流水。Airwallex以110亿美元估值完成H轮融资，Meta领投印度Cred 9亿美元，支付基础设施正成为游戏与金融科技脱钩的核心管道。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1867,8 +1834,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W26-developer">
-                <h3>开发者与平台生态</h3>
-                <p class="p-narrative">Zypp Electric计划2亿美元IPO，目标FY28上市，将加速充电基础设施和电池更换网络建设。同期法国健康保险Alan获4.8亿欧元融资，区块链平台Allium获4000万美元B轮，资金流向多元。</p>
+                <h3>印度电动两轮车Zypp冲刺IPO，充电网络先行</h3>
+                <p class="p-narrative">Zypp Electric计划2亿美元IPO并瞄准FY28上市，将加速充电与换电网络铺设。同期法国健康险Alan获4.8亿欧元、区块链数据平台Allium获4000万美元，资本在出行、保险与链上数据三条赛道同步加注。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1894,8 +1861,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W26-expansion">
-                <h3>区域扩张与合作</h3>
-                <p class="p-narrative">Airwallex估值达110亿美元，新获3.2亿美元融资，持续扩张东南亚市场。AppsFlyer获Moloco、Google、Meta、Unity超10亿美元投资，Bending Spoons IPO定价16.2亿美元，区域扩张与合作活跃。</p>
+                <h3>AppsFlyer获巨头超10亿投资，营销科技整合加速</h3>
+                <p class="p-narrative">AppsFlyer获Moloco、Google、Meta、Unity联合超10亿美元投资，营销科技成为平台巨头争夺的入口。Bending Spoons IPO定价16.2亿美元、Airwallex估值达110亿美元，区域扩张与资本运作同步提速。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1921,8 +1888,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W26-operations">
-                <h3>经营与组织变化</h3>
-                <p class="p-narrative">Trip.com Q1营收增17%但增速放缓，面临反垄断调查，算法定价监管压力上升。StashAway营收增44%但现金消耗减少，经营策略趋于保守，合规与数据治理需求凸显。</p>
+                <h3>Trip.com增速放缓至17%，在线旅游面临监管与竞争双压</h3>
+                <p class="p-narrative">Trip.com一季度营收同比增17%但增速放缓，在反垄断与算法定价监管趋严下，增长天花板显现。StashAway营收增44%且现金消耗减少，资管效率提升成为行业应对不确定性的共同选择。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1944,8 +1911,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W26-compliance">
-                <h3>合规与安全</h3>
-                <p class="p-narrative">Bybit声明不为新加坡用户服务，此前被MAS列入警示名单，合规压力加剧。网络安全保险初创Mitigata获1500万美元融资，合规科技和托管服务需求上升。</p>
+                <h3>Bybit退出新加坡市场，亚太加密合规门槛再抬高</h3>
+                <p class="p-narrative">Bybit声明不为新加坡用户服务，此前已被MAS列入警示名单，合规压力迫使交易所收缩区域。网络安全保险初创Mitigata获1500万美元融资，合规与安全成本正转化为新的商业机会。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -1977,9 +1944,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-06-15 至 2026-06-21</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI资本狂潮与支付并购共振</p>
+              <p class="p-editorial">AI资本涌入，支付并购重塑全球格局</p>
               <h2>2026年第25周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周全球科技投资热度不减，AI基础设施与网络安全领域大额融资频现，支付行业并购整合加速。同时，新兴市场如非洲、印度的金融科技与出行平台表现活跃，资本正加速流向高增长区域，行业格局面临重塑。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周，AI基础设施与网络安全领域迎来巨额融资，Sharon AI、Ent等公司获数亿美元投资，显示资本正加速布局AI算力与安全。同时，支付行业并购活跃，Nuvei收购Payoneer，Flutterwave获E轮融资，全球支付版图正在重塑。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>21</strong><span>重要事件</span></div>
@@ -1990,25 +1957,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W25-ai_infra"><span class="toc-num">01</span>AI工厂融资升温，游戏市场破2000亿美元<em>22 条</em></a>
+              <a href="#wt-2026-W25-ai_infra"><span class="toc-num">01</span>AI工厂融资潮起，算力基建成资本焦点<em>22 条</em></a>
 
-              <a href="#wt-2026-W25-payments"><span class="toc-num">02</span>支付并购潮起，非洲信贷缺口成焦点<em>18 条</em></a>
+              <a href="#wt-2026-W25-payments"><span class="toc-num">02</span>支付并购整合加速，非洲信贷缺口引资本<em>18 条</em></a>
 
-              <a href="#wt-2026-W25-developer"><span class="toc-num">03</span>平台生态洗牌，早期投资者套现离场<em>11 条</em></a>
+              <a href="#wt-2026-W25-developer"><span class="toc-num">03</span>平台生态分化，Rapido估值调整引关注<em>11 条</em></a>
 
-              <a href="#wt-2026-W25-expansion"><span class="toc-num">04</span>日本出行IPO募资，亚太科技扩张提速<em>6 条</em></a>
+              <a href="#wt-2026-W25-expansion"><span class="toc-num">04</span>日本出行IPO募资，亚太科技资本活跃<em>6 条</em></a>
 
               <a href="#wt-2026-W25-operations"><span class="toc-num">05</span>HR科技获投，一线劳动力管理数字化升温<em>4 条</em></a>
 
-              <a href="#wt-2026-W25-compliance"><span class="toc-num">06</span>AI安全融资爆发，监管规则收紧<em>4 条</em></a>
+              <a href="#wt-2026-W25-compliance"><span class="toc-num">06</span>AI安全与合规融资激增，监管规则趋严<em>4 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W25-ai_infra">
-                <h3>AI工厂融资升温，游戏市场破2000亿美元</h3>
-                <p class="p-narrative">全球游戏收入首破2000亿美元，移动端贡献过半，推动云游戏与AI基础设施需求激增。Sharon AI获16亿美元扩建AI工厂，印度Sarvam获2.34亿美元融资，资本正大举涌入AI算力与游戏技术赛道。</p>
+                <h3>AI工厂融资潮起，算力基建成资本焦点</h3>
+                <p class="p-narrative">Sharon AI获16亿美元扩建AI工厂，Twenty估值达10亿美元，印度Sarvam获2.34亿美元B轮融资，全球游戏收入突破2000亿美元，移动端主导，AI基础设施需求从云端向边缘和垂直场景扩散。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2034,8 +2001,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W25-payments">
-                <h3>支付并购潮起，非洲信贷缺口成焦点</h3>
-                <p class="p-narrative">Nuvei以27.5亿美元收购Payoneer，支付行业整合加速。尼日利亚快消品市场信贷缺口巨大，仅18%零售商获正规信贷，Flutterwave获2.5亿美元融资，数字信贷平台迎来扩张机遇。</p>
+                <h3>支付并购整合加速，非洲信贷缺口引资本</h3>
+                <p class="p-narrative">Nuvei以27.5亿美元收购Payoneer，Flutterwave获2.5亿美元E轮融资，Meta拟投CRED，尼日利亚快消品市场信贷缺口巨大，支付与信贷融合成为新兴市场增长点。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2061,8 +2028,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W25-developer">
-                <h3>平台生态洗牌，早期投资者套现离场</h3>
-                <p class="p-narrative">印度出行平台Rapido在7.3亿美元融资中，早期投资者出售股份，估值调整引发关注。Salesforce以36亿美元收购AI客服平台Fin，平台生态正经历整合与价值重估。</p>
+                <h3>平台生态分化，Rapido估值调整引关注</h3>
+                <p class="p-narrative">Rapido在7.3亿美元融资中早期投资者套现，估值承压；Salesforce以36亿美元收购AI客服平台Fin，I Squared与DFC启动30亿美元亚洲能源基建，平台型公司通过并购和资本运作巩固生态。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2088,8 +2055,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W25-expansion">
-                <h3>日本出行IPO募资，亚太科技扩张提速</h3>
-                <p class="p-narrative">日本打车应用Go Inc. IPO募资5.53亿美元，亚太出行赛道资金充裕。Monday.com设立2亿美元基金投资AI初创，Kraken旗下NinjaTrader获海湾公司1亿美元贷款，区域扩张与合作加速。</p>
+                <h3>日本出行IPO募资，亚太科技资本活跃</h3>
+                <p class="p-narrative">日本Go Inc. IPO募资5.53亿美元，Monday.com设立2亿美元AI基金，NinjaTrader获海湾公司1亿美元贷款，Vetic获4000万美元扩张，亚太科技企业通过IPO和战略投资加速区域扩张。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2116,7 +2083,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W25-operations">
                 <h3>HR科技获投，一线劳动力管理数字化升温</h3>
-                <p class="p-narrative">Orbio获2100万美元融资，自动化一线员工招聘与入职，HR科技赛道持续获投。Veefin任命前Backbase高管为首席营收官，Zetwerk营收增长24%，运营效率提升成焦点。</p>
+                <p class="p-narrative">Orbio获2100万美元融资，自动化一线员工招聘；Veefin任命前Backbase高管为首席营收官，Zetwerk营收增长24%，Vridhi利润翻倍，运营效率提升成为企业关注重点。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2142,8 +2109,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W25-compliance">
-                <h3>AI安全融资爆发，监管规则收紧</h3>
-                <p class="p-narrative">Ent获1亿美元种子轮融资，重塑AI时代网络安全，Behavox获1.75亿美元扩展AI合规平台。新加坡金管局收紧并购规则，合规与安全领域资本与监管双轮驱动。</p>
+                <h3>AI安全与合规融资激增，监管规则趋严</h3>
+                <p class="p-narrative">Ent获1亿美元种子轮，Behavox获1.75亿美元，Flagright获1250万美元，AI合规平台成资本热点；新加坡金管局收紧并购规则，全球监管环境对科技并购提出更高要求。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2179,9 +2146,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-06-08 至 2026-06-14</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">资本重注AI基建，支付并购潮起</p>
+              <p class="p-editorial">资本重注AI，支付并购潮起</p>
               <h2>2026年第24周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周全球资本加速流向AI基础设施与支付整合：Moonshot AI估值冲至300亿美元，Prometheus获120亿美元融资；支付巨头Nuvei与Payoneer洽谈27亿美元收购，市场格局面临重塑。资本用真金白银投票，AI与支付赛道进入整合深水区。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周全球科技资本加速流向AI基础设施与支付整合。Moonshot AI估值飙升至300亿美元，Prometheus获120亿美元巨额融资，显示AI赛道吸金力不减。同时，Nuvei与Payoneer的27亿美元收购谈判，预示支付行业整合加速，市场格局面临重塑。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>5</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>14</strong><span>重要事件</span></div>
@@ -2208,7 +2175,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W24-ai_infra">
                 <h3>AI与云基础设施</h3>
-                <p class="p-narrative">Moonshot AI估值飙升至300亿美元，中国AI赛道吸金力不减；Prometheus以120亿美元融资押注物理世界通用工程师，SK Telecom与NTT联手推出5亿美元基金，TensorWave获3.5亿美元扩建基础设施。资金正从模型层向应用与基建全面渗透。</p>
+                <p class="p-narrative">Moonshot AI估值翻倍至300亿美元，Prometheus以120亿美元融资押注物理世界AI，SK Telecom与NTT联手设立5亿美元基金，TensorWave获3.5亿美元扩建基础设施。资金正从单一模型训练转向多元应用与底层设施，AI投资进入全链条爆发期。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2235,7 +2202,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W24-developer">
                 <h3>开发者与平台生态</h3>
-                <p class="p-narrative">Hunter Point Capital获43亿美元扩展GP融资平台，NEURA Robotics完成14亿美元C轮，CameraMatics与Vinyl Equity分别获得4900万欧元和2000万美元。欧洲科技投资热度不减，从金融基础设施到AI机器人，资本正加速布局。</p>
+                <p class="p-narrative">Hunter Point Capital获43亿美元扩展GP融资平台，NEURA Robotics完成14亿美元C轮，CameraMatics与Vinyl Equity分别融资4900万欧元和2000万美元。资本正涌入提升另类资产管理与资本市场基础设施效率的科技平台，行业数字化进程显著加快。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2262,7 +2229,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W24-expansion">
                 <h3>区域扩张与合作</h3>
-                <p class="p-narrative">Databricks估值或达1750亿美元，数据湖仓生态价值凸显；NTT数据中心寻求10亿美元用于美国扩张，CeQur获1亿美元扩展糖尿病护理，非洲投资平台获巨额机构融资。全球数字化基础设施与医疗科技成为资本新宠。</p>
+                <p class="p-narrative">Databricks估值或达1750亿美元，NTT数据中心寻求10亿美元用于美国扩张，CeQur获1亿美元拓展糖尿病护理，非洲投资平台获巨额机构融资。数据湖仓与基础设施的全球布局加速，亚太与美国成为资本扩张的核心战场。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2289,7 +2256,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W24-payments">
                 <h3>支付与金融科技</h3>
-                <p class="p-narrative">Nuvei与Payoneer就27亿美元收购进入高级谈判，全球支付格局面临重塑；墨西哥Clip获5亿美元并推数字钱包，Grab洽谈超1亿美元融资，埃及Blnk获3700万美元。支付巨头整合与新兴市场创新并行，行业洗牌加速。</p>
+                <p class="p-narrative">Nuvei与Payoneer就27亿美元收购进入高级谈判，墨西哥Clip获5亿美元并推数字钱包，Grab参与其贷款部门超1亿美元融资，埃及Blnk获3700万美元。支付巨头通过并购整合巩固地位，新兴市场本地钱包与信贷服务同步扩张，全球支付版图正在重构。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2316,7 +2283,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W24-commerce">
                 <h3>电商、商户与物流</h3>
-                <p class="p-narrative">Zepto亏损扩大26%至5905亿卢比，收入翻倍难掩隐忧；富达出售Meesho股份套现988亿卢比，IvyCap等减持BlueStone。印度电商烧钱模式遭遇资本冷静，非洲网红营销与购买行为脱节，行业进入理性调整期。</p>
+                <p class="p-narrative">Zepto亏损扩大26%至59亿卢比，富达出售Meesho股份，IvyCap等减持BlueStone，非洲网红营销被指与实际购买脱节。印度电商平台在收入翻倍的同时亏损恶化，早期投资者开始套现离场，市场对烧钱模式的可持续性疑虑加深。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2352,9 +2319,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-06-01 至 2026-06-07</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">资本重注AI基建，游戏与支付赛道升温</p>
+              <p class="p-editorial">资本重注AI基建，中东游戏与印度数据中心成焦点</p>
               <h2>2026年第23周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周资本密集涌入AI基础设施，从印度5GW数据中心到韩国运营商斩获大单，算力军备竞赛向亚太纵深推进。同时，游戏与支付领域估值飙升，Revolut冲击2000亿美元，Suno获4亿美元融资，显示内容生成与金融科技正成为AI落地的高价值场景。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周资本加速涌入AI基础设施，印度5GW数据中心与中东游戏市场成为热点。同时，金融科技估值飙升，Revolut或达2000亿美元，显示全球科技投资热度不减，但需警惕部分市场减持信号。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>22</strong><span>重要事件</span></div>
@@ -2365,25 +2332,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W23-ai_infra"><span class="toc-num">01</span>亚太数据中心投资激增，印度成新焦点<em>37 条</em></a>
+              <a href="#wt-2026-W23-ai_infra"><span class="toc-num">01</span>印度数据中心投资激增，中东游戏市场成新蓝海<em>37 条</em></a>
 
-              <a href="#wt-2026-W23-developer"><span class="toc-num">02</span>AI内容平台获巨额融资，量子计算商业化提速<em>16 条</em></a>
+              <a href="#wt-2026-W23-developer"><span class="toc-num">02</span>AI音乐与量子计算获巨额融资，平台生态竞争加剧<em>16 条</em></a>
 
-              <a href="#wt-2026-W23-payments"><span class="toc-num">03</span>金融科技估值飙升，Revolut冲击2000亿美元<em>9 条</em></a>
+              <a href="#wt-2026-W23-payments"><span class="toc-num">03</span>Revolut估值或达2000亿美元，金融科技二级市场火热<em>9 条</em></a>
 
-              <a href="#wt-2026-W23-expansion"><span class="toc-num">04</span>印度安全与自动化初创获融资，Marvell入标普<em>5 条</em></a>
+              <a href="#wt-2026-W23-expansion"><span class="toc-num">04</span>印度网络安全融资活跃，Marvell入标普500<em>5 条</em></a>
 
               <a href="#wt-2026-W23-operations"><span class="toc-num">05</span>新西兰游戏业破10亿美元，印度消费品牌分化<em>4 条</em></a>
 
-              <a href="#wt-2026-W23-commerce"><span class="toc-num">06</span>中东无人驾驶物流获2.5亿美元，奢侈品营销整合<em>2 条</em></a>
+              <a href="#wt-2026-W23-commerce"><span class="toc-num">06</span>中东无人驾驶物流获2.5亿美元，奢侈品营销整合加速<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W23-ai_infra">
-                <h3>亚太数据中心投资激增，印度成新焦点</h3>
-                <p class="p-narrative">AirTrunk宣布300亿美元押注印度5GW数据中心，LG Uplus则瞄准32亿美元AI订单，STMicroelectronics上调数据中心预测至10亿美元。资本正从云巨头向区域运营商和芯片供应商扩散，印度与韩国成为算力扩张的核心战场。</p>
+                <h3>印度数据中心投资激增，中东游戏市场成新蓝海</h3>
+                <p class="p-narrative">AirTrunk承诺300亿美元在印度建设5GW数据中心，LG Uplus瞄准32亿美元AI订单，STMicroelectronics上调数据中心预测，显示亚太AI基建投资加速。中东游戏收入预计2030年超千亿美元，推动本地化发行与云游戏需求。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2409,8 +2376,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W23-developer">
-                <h3>AI内容平台获巨额融资，量子计算商业化提速</h3>
-                <p class="p-narrative">Suno以4亿美元D轮巩固AI音乐生成地位，Oxford Quantum Circuits获3亿欧元建设量子AI数据中心，Apoha的液态智能技术也获3600万美元。同时Atari收购Hipster Whale，显示传统游戏商正通过并购切入AI与新兴内容形态。</p>
+                <h3>AI音乐与量子计算获巨额融资，平台生态竞争加剧</h3>
+                <p class="p-narrative">Suno获4亿美元D轮扩展AI音乐平台，Oxford Quantum Circuits融资3.01亿欧元建设量子AI数据中心，Apoha获3600万美元开发液态智能，Atari收购Hipster Whale，显示AI与量子技术商业化加速，平台生态竞争白热化。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2436,8 +2403,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W23-payments">
-                <h3>金融科技估值飙升，Revolut冲击2000亿美元</h3>
-                <p class="p-narrative">Revolut考虑1150亿美元二级市场出售，估值或达2000亿，GIC参与Ramp 7.5亿美元融资，显示资本对支付与支出管理赛道热情高涨。同时印度Groww遭减持、保加利亚Paypercut获500万欧元，市场分化中头部效应加剧。</p>
+                <h3>Revolut估值或达2000亿美元，金融科技二级市场火热</h3>
+                <p class="p-narrative">Revolut考虑1150亿美元二级市场出售，估值或翻倍，GIC参与Ramp 7.5亿美元融资，保加利亚Paypercut获500万欧元，显示欧洲金融科技估值飙升，但Friale出售Groww股份套现，提示部分投资者获利离场。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2463,8 +2430,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W23-expansion">
-                <h3>印度安全与自动化初创获融资，Marvell入标普</h3>
-                <p class="p-narrative">Innefu Labs获3000万美元强化网络安全，Lassie获3500万美元推中小企业AI自动化，Marvell加入标普500标志半导体重要性提升。但Peak XV减持Go Digit，显示部分赛道估值回调，资本在安全与自动化领域更趋集中。</p>
+                <h3>印度网络安全融资活跃，Marvell入标普500</h3>
+                <p class="p-narrative">Innefu Labs获3000万美元融资，Lassie获3500万美元推AI自动化，Marvell加入标普500，显示印度企业安全需求旺盛，但Peak XV减持Go Digit股份，反映部分早期投资者开始退出。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2491,7 +2458,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W23-operations">
                 <h3>新西兰游戏业破10亿美元，印度消费品牌分化</h3>
-                <p class="p-narrative">新西兰游戏行业营收突破10亿美元，提前达标，显示亚太游戏开发与云服务需求强劲。印度市场RENEE Cosmetics亏损收窄46%，BlueStone预计FY30营收达120亿卢比，但Legend Internet营收下滑19%，消费品牌增长分化明显。</p>
+                <p class="p-narrative">新西兰游戏行业营收突破10亿美元，提前达标，显示亚太游戏开发外包需求强劲。印度RENEE Cosmetics营收超4亿卢比且亏损降46%，BlueStone预计FY30营收1200亿卢比，但Legend Internet营收下降19%，成本激增，行业分化明显。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2517,8 +2484,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W23-commerce">
-                <h3>中东无人驾驶物流获2.5亿美元，奢侈品营销整合</h3>
-                <p class="p-narrative">CargoX获2.5亿美元融资加速无人驾驶物流扩张，海湾地区物流自动化基建提速。Interluxe Group收购adMixt整合奢侈品活动与效果营销，显示中东电商与高端消费市场正通过技术整合提升运营效率。</p>
+                <h3>中东无人驾驶物流获2.5亿美元，奢侈品营销整合加速</h3>
+                <p class="p-narrative">CargoX获2.5亿美元融资扩张无人驾驶物流，Interluxe Group收购adMixt整合奢侈品营销，显示中东物流自动化与高端消费领域投资活跃，为ICT集成和车队管理带来机会。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2550,9 +2517,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-05-25 至 2026-05-31</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI基建热钱涌入，支付与数据中心双线重构</p>
+              <p class="p-editorial">AI资本狂潮重塑全球基建版图</p>
               <h2>2026年第22周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周，AI数据中心与支付基础设施成为资本焦点：Edged US获20亿美元建设AI数据中心，三星4.08亿美元入股Upbit运营商，显示资金正从模型层向算力与合规支付层迁移。同时，欧洲数据中心与非洲软件工程获大额融资，新兴市场基建加速，预示全球数字化底层竞争加剧。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周，AI基础设施投资持续升温，Edged US获20亿美元建设数据中心，Cognition融资10亿美元推动自主软件工程，同时三星入股Upbit标志传统巨头加速布局加密支付。资本正从单一技术转向全链条布局，新兴市场与垂直场景成为焦点。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>5</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>9</strong><span>重要事件</span></div>
@@ -2563,23 +2530,23 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W22-ai_infra"><span class="toc-num">01</span>AI数据中心融资潮涌向新兴市场<em>24 条</em></a>
+              <a href="#wt-2026-W22-ai_infra"><span class="toc-num">01</span>AI数据中心投资热潮涌向新兴市场<em>24 条</em></a>
 
-              <a href="#wt-2026-W22-payments"><span class="toc-num">02</span>支付与加密资产融合加速，稳定币网络扩张<em>10 条</em></a>
+              <a href="#wt-2026-W22-payments"><span class="toc-num">02</span>三星入股Upbit，加密支付获主流认可<em>10 条</em></a>
 
-              <a href="#wt-2026-W22-operations"><span class="toc-num">03</span>数据与金融科技公司业绩分化，IPO窗口开启<em>8 条</em></a>
+              <a href="#wt-2026-W22-operations"><span class="toc-num">03</span>数据库独角兽冲刺IPO，行业分化加剧<em>8 条</em></a>
 
-              <a href="#wt-2026-W22-developer"><span class="toc-num">04</span>税务科技整合加速，平台化服务成新战场<em>7 条</em></a>
+              <a href="#wt-2026-W22-developer"><span class="toc-num">04</span>税务科技整合加速，平台化竞争升级<em>7 条</em></a>
 
-              <a href="#wt-2026-W22-expansion"><span class="toc-num">05</span>欧洲数据中心扩张，非洲软件工程获资本加持<em>5 条</em></a>
+              <a href="#wt-2026-W22-expansion"><span class="toc-num">05</span>欧洲数据中心扩张，主权AI竞赛升温<em>5 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W22-ai_infra">
-                <h3>AI数据中心融资潮涌向新兴市场</h3>
-                <p class="p-narrative">Edged US的20亿美元融资与Cognition的10亿美元估值，显示AI基础设施投资从美国蔓延至非洲及新兴市场。OpenRouter估值一年翻倍，反映AI推理层价值重估，资本正从模型训练转向部署与边缘计算。</p>
+                <h3>AI数据中心投资热潮涌向新兴市场</h3>
+                <p class="p-narrative">Edged US的20亿美元融资与Cognition的10亿美元注入，显示AI基础设施投资正从传统科技中心向非洲等新兴市场扩散。OpenRouter估值一年翻倍，Transition Ventures新基金成立，表明资本正加速涌入AI全产业链，从底层算力到应用层均获追捧。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2605,8 +2572,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W22-payments">
-                <h3>支付与加密资产融合加速，稳定币网络扩张</h3>
-                <p class="p-narrative">三星入股Upbit运营商，标志传统科技巨头深度介入加密支付。dLocal收购AZA Finance强化非洲跨境支付，Nala获5000万美元信贷扩展稳定币网络，支付基础设施正从单一法币向多资产、多区域整合。</p>
+                <h3>三星入股Upbit，加密支付获主流认可</h3>
+                <p class="p-narrative">三星斥资4.08亿美元入股Upbit运营商，标志传统科技巨头正式涉足加密资产交易。dLocal收购AZA Finance强化新兴市场支付网络，Nala获5000万美元信贷扩展稳定币支付，支付赛道正经历从法币到加密的范式转移。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2632,8 +2599,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W22-operations">
-                <h3>数据与金融科技公司业绩分化，IPO窗口开启</h3>
-                <p class="p-narrative">ClickHouse年化营收达2.5亿美元并计划IPO，显示数据基础设施商业化成熟。而Navi Finserv利润暴跌46%，与AvenuesAI利润增长63%形成对比，金融科技赛道内部分化加剧，盈利模式成为分水岭。</p>
+                <h3>数据库独角兽冲刺IPO，行业分化加剧</h3>
+                <p class="p-narrative">ClickHouse年化营收达2.5亿美元并计划IPO，印证云原生数据库商业化成熟。但印度Navi Finserv利润暴跌46%，与AvenuesAI利润增长63%形成鲜明对比，显示金融科技领域赢者通吃，运营效率成为分水岭。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2659,8 +2626,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W22-developer">
-                <h3>税务科技整合加速，平台化服务成新战场</h3>
-                <p class="p-narrative">Fonoa获9440万欧元C轮并收购PwC税务平台，标志税务SaaS从单一工具向全栈平台演进。Airwallex推出全球计费平台，与H1获CVS投资，显示垂直领域平台化整合成为资本与市场共同选择。</p>
+                <h3>税务科技整合加速，平台化竞争升级</h3>
+                <p class="p-narrative">Fonoa获9440万欧元C轮并收购PwC税务平台，财税SaaS进入整合期。Airwallex推出全球计费平台，H1获CVS投资，显示垂直领域平台正通过并购与产品扩展构建生态壁垒，集成商面临重新洗牌。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2686,8 +2653,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W22-expansion">
-                <h3>欧洲数据中心扩张，非洲软件工程获资本加持</h3>
-                <p class="p-narrative">Pure DC获27亿美元、AtlasEdge获12亿美元债务融资，欧洲数据中心规模加速扩张。非洲Cognition获10亿美元用于自主软件工程，显示新兴市场在AI应用层获得全球资本认可，区域数字基建竞赛升温。</p>
+                <h3>欧洲数据中心扩张，主权AI竞赛升温</h3>
+                <p class="p-narrative">Pure DC获27亿美元融资，AtlasEdge获12亿美元债务，欧洲数据中心建设进入爆发期。非洲Cognition获10亿美元扩展自主软件工程，显示AI能力建设正从硬件向软件延伸，区域数字主权争夺加剧。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2723,9 +2690,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-05-18 至 2026-05-24</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI资本狂潮重塑全球科技版图</p>
+              <p class="p-editorial">AI基建狂潮与支付牌照争夺战</p>
               <h2>2026年第21周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周，亚马逊、Meta等巨头加码AI基建，东南亚成投资热土；非洲金融科技通过收购银行牌照扩张，数字银行基础设施需求上升。资本流向显示，AI与金融科技正成为驱动全球市场变革的双引擎。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周资本集中涌向AI基础设施与金融科技牌照：亚马逊加码东南亚，Meta裁员押注AI；非洲支付公司通过收购银行牌照扩张。同时，印度游戏业因监管减值承压，而即时配送平台Zepto启动IPO，显示区域市场分化加剧。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>5</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>7</strong><span>重要事件</span></div>
@@ -2736,23 +2703,23 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W21-ai_infra"><span class="toc-num">01</span>东南亚AI基建升温，亚马逊领投超330亿美元<em>21 条</em></a>
+              <a href="#wt-2026-W21-ai_infra"><span class="toc-num">01</span>亚马逊领投东南亚AI基建，Meta裁员押注算力<em>21 条</em></a>
 
-              <a href="#wt-2026-W21-payments"><span class="toc-num">02</span>非洲金融科技并购潮起，银行牌照成扩张关键<em>15 条</em></a>
+              <a href="#wt-2026-W21-payments"><span class="toc-num">02</span>非洲支付公司收购银行牌照，数字银行基建需求上升<em>15 条</em></a>
 
-              <a href="#wt-2026-W21-operations"><span class="toc-num">03</span>印度游戏业营收增长，监管减值风险凸显<em>11 条</em></a>
+              <a href="#wt-2026-W21-operations"><span class="toc-num">03</span>印度游戏业监管减值，旅游平台利润分化<em>11 条</em></a>
 
-              <a href="#wt-2026-W21-expansion"><span class="toc-num">04</span>印度即时配送平台Zepto启动11亿美元IPO<em>8 条</em></a>
+              <a href="#wt-2026-W21-expansion"><span class="toc-num">04</span>Zepto启动11亿美元IPO，印度即时配送扩张提速<em>8 条</em></a>
 
-              <a href="#wt-2026-W21-developer"><span class="toc-num">05</span>欧洲SaaS垂直平台受追捧，Fresha成新独角兽<em>3 条</em></a>
+              <a href="#wt-2026-W21-developer"><span class="toc-num">05</span>Fresha成英国新独角兽，SaaS+垂直行业模式受追捧<em>3 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W21-ai_infra">
-                <h3>东南亚AI基建升温，亚马逊领投超330亿美元</h3>
-                <p class="p-narrative">亚马逊宣布至2039年在东南亚投资超330亿美元，Meta裁员8000人并押注1450亿美元AI基建，Modal获3.55亿美元融资。巨头加码与初创融资共振，AI基础设施需求持续爆发。</p>
+                <h3>亚马逊领投东南亚AI基建，Meta裁员押注算力</h3>
+                <p class="p-narrative">亚马逊宣布到2039年在东南亚投资超330亿美元，Meta则裁员8000人并押注1450亿美元AI基建，Modal获3.55亿美元融资，显示超大规模资本正加速流向AI基础设施，东南亚成为关键战场。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2778,8 +2745,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W21-payments">
-                <h3>非洲金融科技并购潮起，银行牌照成扩张关键</h3>
-                <p class="p-narrative">尼日利亚Sycamore收购MFB后寻求2900万美元存款，Farther获1.5亿美元D轮融资，Mercury获2亿美元。非洲金融科技通过获取银行牌照实现业务扩张，合规技术需求随之上升。</p>
+                <h3>非洲支付公司收购银行牌照，数字银行基建需求上升</h3>
+                <p class="p-narrative">尼日利亚Sycamore收购MFB后寻求2900万美元存款，同时Farther、Mercury等获大额融资，表明支付公司正通过获取银行牌照向存款业务延伸，合规与数字银行基础设施成为新增长点。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2805,8 +2772,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W21-operations">
-                <h3>印度游戏业营收增长，监管减值风险凸显</h3>
-                <p class="p-narrative">Nazara年营收增13%至1.9亿美元，但受游戏法案影响计提9500万美元减值；Yatra利润暴跌46%，而ixigo利润翻倍。印度游戏与旅游科技企业业绩分化，政策风险成为关键变量。</p>
+                <h3>印度游戏业监管减值，旅游平台利润分化</h3>
+                <p class="p-narrative">Nazara营收增长13%但因游戏法案计提9500万美元减值，Yatra利润暴跌46%，而ixigo利润翻倍，显示印度游戏与旅游行业在监管与竞争下业绩分化，政策风险成为关键变量。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2832,8 +2799,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W21-expansion">
-                <h3>印度即时配送平台Zepto启动11亿美元IPO</h3>
-                <p class="p-narrative">Zepto计划7月进行11亿美元IPO，Pivot获4000万美元融资扩展AI采购平台，Findd获2100万美元用于AI劳动力管理。印度及欧洲的科技企业加速扩张，物流与AI技术成投资热点。</p>
+                <h3>Zepto启动11亿美元IPO，印度即时配送扩张提速</h3>
+                <p class="p-narrative">Zepto计划7月IPO募资11亿美元，同时Pivot、Findd等获融资扩展AI采购与劳动力管理，显示印度即时配送与AI企业服务正进入资本密集扩张期，供应链合作商将受益。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2859,8 +2826,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W21-developer">
-                <h3>欧洲SaaS垂直平台受追捧，Fresha成新独角兽</h3>
-                <p class="p-narrative">Fresha获6890万欧元融资成为英国新独角兽，StreamElements确认收购谈判但面临关闭传闻。欧洲垂直SaaS平台吸引资本关注，行业整合与并购趋势明显。</p>
+                <h3>Fresha成英国新独角兽，SaaS+垂直行业模式受追捧</h3>
+                <p class="p-narrative">Fresha获6890万欧元融资成为英国新独角兽，而StreamElements确认收购谈判，显示资本正青睐SaaS+垂直行业模式，同时直播工具领域整合加剧。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2894,9 +2861,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-05-11 至 2026-05-17</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">资本重注基建，支付与物流暗流涌动</p>
+              <p class="p-editorial">资本重仓非洲与欧洲，AI与支付双线加速</p>
               <h2>2026年第20周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>本周，大额融资集中流向AI基础设施与新兴市场支付，同时传统银行裁员与电商合规风险暴露，暗示行业正从扩张转向效率与合规竞争。资本在基础设施与支付领域的加码，预示下一阶段增长将依赖底层能力而非单纯规模扩张。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>本周资本密集流向AI基础设施与新兴市场支付，Mind Robotics获4亿美元、Nscale获7.9亿美元，显示AI算力向欧洲和非洲扩张。同时，华尔街银行裁员与新兴支付公司IPO并行，金融科技正从边缘走向主流，重塑全球支付格局。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>5</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>6</strong><span>重要事件</span></div>
@@ -2907,23 +2874,23 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W20-ai_infra"><span class="toc-num">01</span>非洲AI工业机器人获4亿美元，数据中心建设加速<em>20 条</em></a>
+              <a href="#wt-2026-W20-ai_infra"><span class="toc-num">01</span>非洲AI工业机器人获巨额融资，欧洲数据中心建设提速<em>20 条</em></a>
 
-              <a href="#wt-2026-W20-payments"><span class="toc-num">02</span>传统银行裁员1.5万，新兴支付玩家乘势融资扩张<em>9 条</em></a>
+              <a href="#wt-2026-W20-payments"><span class="toc-num">02</span>华尔街银行裁员与新兴支付IPO并行，金融科技重塑格局<em>9 条</em></a>
 
               <a href="#wt-2026-W20-operations"><span class="toc-num">03</span>非洲电商与肯尼亚手机融资创纪录，新兴市场消费力释放<em>8 条</em></a>
 
-              <a href="#wt-2026-W20-expansion"><span class="toc-num">04</span>欧洲教育科技与游戏融资活跃，跨界合作成新趋势<em>6 条</em></a>
+              <a href="#wt-2026-W20-expansion"><span class="toc-num">04</span>欧洲教育科技与游戏融资活跃，跨界资本涌入<em>6 条</em></a>
 
-              <a href="#wt-2026-W20-commerce"><span class="toc-num">05</span>Temu卖家造假USPS标签，跨境物流合规风险凸显<em>2 条</em></a>
+              <a href="#wt-2026-W20-commerce"><span class="toc-num">05</span>Temu假USPS标签事件暴露跨境物流合规风险<em>2 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W20-ai_infra">
-                <h3>非洲AI工业机器人获4亿美元，数据中心建设加速</h3>
-                <p class="p-narrative">Mind Robotics的4亿美元融资与Nscale的7.9亿美元数据中心投资，显示资本正重仓AI底层设施。CloudWalk通过FIDC融资11亿美元，进一步印证资金流向基础设施领域。欧洲火箭短缺问题则凸显太空基础设施的瓶颈，AI与太空基建成为资本竞逐的新高地。</p>
+                <h3>非洲AI工业机器人获巨额融资，欧洲数据中心建设提速</h3>
+                <p class="p-narrative">Mind Robotics的4亿美元融资不仅用于扩展AI工业机器人平台，更标志着非洲在AI硬件领域开始吸引全球资本。Nscale的7.9亿美元融资则聚焦挪威数据中心，欧洲正加速补齐算力基础设施短板，为AI推理和训练提供本地化支持。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2949,8 +2916,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W20-payments">
-                <h3>传统银行裁员1.5万，新兴支付玩家乘势融资扩张</h3>
-                <p class="p-narrative">华尔街六大银行裁员1.5万人，而菲律宾Mynt拟IPO融资10亿美元，非洲Stitch获2500万美元A轮，支付领域新旧势力此消彼长。Enter获1亿美元融资晋级独角兽，显示金融科技正加速抢占传统银行让出的市场份额。</p>
+                <h3>华尔街银行裁员与新兴支付IPO并行，金融科技重塑格局</h3>
+                <p class="p-narrative">六大银行裁员1.5万人，传统金融收缩战线，而菲律宾Mynt拟IPO融资10亿美元，非洲Stitch获2500万美元A轮，新兴支付公司正以轻资产模式抢占市场。此消彼长之间，支付行业的主导权正在向科技公司倾斜。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -2977,7 +2944,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
               <article class="pwin" id="wt-2026-W20-operations">
                 <h3>非洲电商与肯尼亚手机融资创纪录，新兴市场消费力释放</h3>
-                <p class="p-narrative">Jumia一季度营收同比增长39%，肯尼亚Watu因手机融资激增创利润纪录，显示非洲数字消费与信贷需求强劲。印度Delhivery营收增长30%，新兴市场物流与电商同步扩张，但利润持平暗示成本压力犹存。</p>
+                <p class="p-narrative">Jumia一季度营收同比增长39%，肯尼亚Watu因手机融资需求激增创下3700万美元利润纪录，显示非洲数字消费和信贷渗透率正在快速提升。Delhivery营收增长30%但利润持平，说明规模扩张与盈利平衡仍是挑战。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -3003,8 +2970,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W20-expansion">
-                <h3>欧洲教育科技与游戏融资活跃，跨界合作成新趋势</h3>
-                <p class="p-narrative">Multiverse获7000万美元融资估值达21亿美元，Grand Games获7000万美元B轮，欧洲科技投资热度不减。Addi获J.P. Morgan领投1.5亿美元信贷额度，Rivian分拆公司Mind Robotics获4亿美元，显示跨界资本与技术融合加速。</p>
+                <h3>欧洲教育科技与游戏融资活跃，跨界资本涌入</h3>
+                <p class="p-narrative">Multiverse获7000万美元融资，估值达21亿美元，教育科技在欧洲持续升温。Addi获摩根大通领投1.5亿美元信贷额度，Rivian分拆的Mind Robotics再获4亿美元，资本正跨行业寻找高增长标的，游戏公司Grand Games也获7000万美元B轮。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -3030,8 +2997,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </article>
 
               <article class="pwin" id="wt-2026-W20-commerce">
-                <h3>Temu卖家造假USPS标签，跨境物流合规风险凸显</h3>
-                <p class="p-narrative">Temu卖家使用假USPS标签降低成本，暴露跨境物流监管漏洞，可能引发更严格的合规审查。黑石收购希腊电商公司，显示资本仍看好欧洲电商潜力，但合规问题或成跨境业务扩张的绊脚石。</p>
+                <h3>Temu假USPS标签事件暴露跨境物流合规风险</h3>
+                <p class="p-narrative">Temu卖家使用假USPS标签降低成本，这一事件凸显跨境电商在物流成本压力下的灰色操作，可能引发美国邮政和海关的严格审查。黑石收购希腊电商公司，则显示资本正抄底欧洲电商资产，行业整合加速。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -3063,9 +3030,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-05-04 至 2026-05-10</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">AI代理重塑云服务，裁员与扩张并行</p>
+              <p class="p-editorial">AI代理上岗，云厂商裁员潮起</p>
               <h2>2026年第19周关注主题周报</h2>
-              <div class="p-mainline"><strong>本期主线</strong><p>AI代理正从工具演变为劳动力替代者，Cloudflare盈利却裁员1100人，股价暴跌，揭示效率与就业的尖锐矛盾。同时，AI交易机器人和基础设施数据平台获资本青睐，指向自动化与数据智能的新增长点。</p></div>
+              <div class="p-mainline"><strong>本期主线</strong><p>AI代理开始替代云基础设施的运维岗位，Cloudflare盈利却裁员1100人，股价暴跌四分之一。与此同时，AI交易机器人和基础设施数据平台获得资本青睐，行业正从人力密集型向自动化加速转型。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>1</strong><span>本周主题</span></div>
                 <div class="pcover-stat"><strong>0</strong><span>重要事件</span></div>
@@ -3076,15 +3043,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
 
-              <a href="#wt-2026-W19-ai_infra"><span class="toc-num">01</span>AI代理引发云服务商裁员潮，基础设施数据平台逆势融资<em>3 条</em></a>
+              <a href="#wt-2026-W19-ai_infra"><span class="toc-num">01</span>AI代理上岗，云厂商裁员潮起<em>3 条</em></a>
 
             </nav>
             <section class="pblock">
               <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
 
               <article class="pwin" id="wt-2026-W19-ai_infra">
-                <h3>AI代理引发云服务商裁员潮，基础设施数据平台逆势融资</h3>
-                <p class="p-narrative">Cloudflare在盈利背景下裁员1100人，直接归因于AI代理替代人工，市场以股价暴跌回应，凸显AI对科技就业的冲击已从概念变为现实。与此同时，OpsMill获1400万美元A轮融资，专注基础设施数据平台，显示资本正流向AI驱动的运维自动化，行业在裁员与投资中加速重构。</p>
+                <h3>AI代理上岗，云厂商裁员潮起</h3>
+                <p class="p-narrative">Cloudflare在盈利的同时宣布裁员1100人，理由是AI代理已能承担部分人工运维工作，市场以股价暴跌回应这一转型阵痛。同期，AI交易机器人平台和基础设施数据平台OpsMill分别获得资本注入，显示自动化工具正加速渗透云基础设施的各个层面。</p>
                 <details class="pwin-details">
                   <summary>判断依据</summary>
                   <div class="pwin-meta">
@@ -3378,7 +3345,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </div>
               <p class="p-editorial">基础设施军备竞赛与支付并购潮</p>
               <h2>2026-07 月报趋势与结构月报</h2>
-              <div class="p-mainline"><strong>本月主线</strong><p>本月全球科技互联网的核心变化是AI基础设施投入的持续加码与支付领域的大规模整合。Alphabet上调资本支出至2050亿美元，表明头部玩家正将AI竞赛的重心转向算力军备。与此同时，支付行业迎来历史性并购，Stripe与Advent联合收购PayPal，估值超530亿美元，而OpenRouter也传出与Stripe的收购洽谈，显示资本正在加速整合支付与开发者生态，以争夺AI时代的交易入口。</p></div>
+              <div class="p-mainline"><strong>本月主线</strong><p>本月全球科技互联网呈现两条主线：一是AI基础设施投资持续加码，Alphabet上调资本支出至2050亿美元，数据中心融资规模扩大，显示头部玩家正加速锁定算力资源；二是支付与开发者生态并购整合加速，Stripe拟收购OpenRouter、联合Advent收购PayPal，Visa稳定币卡交易量激增，支付基础设施正经历结构性重塑。上月已现端倪，本月趋势强化，指向行业集中度提升与AI商业化落地加速。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>结构趋势</span></div>
                 <div class="pcover-stat"><strong>334</strong><span>合格事实</span></div>
@@ -3389,17 +3356,17 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本月看点">
               <strong>本月看点</strong>
 
-              <a href="#mt-2026-07-ai_infra"><span class="toc-num">01</span>AI与云基础设施延续<em>延续 · 125 个独立事实</em></a>
+              <a href="#mt-2026-07-ai_infra"><span class="toc-num">01</span>Alphabet上调资本支出，数据中心融资激增<em>延续 · 125 个独立事实</em></a>
 
-              <a href="#mt-2026-07-developer"><span class="toc-num">02</span>开发者与平台生态升温<em>升温 · 67 个独立事实</em></a>
+              <a href="#mt-2026-07-developer"><span class="toc-num">02</span>Stripe拟收购OpenRouter，开发者生态并购加速<em>升温 · 67 个独立事实</em></a>
 
-              <a href="#mt-2026-07-payments"><span class="toc-num">03</span>支付与金融科技升温<em>升温 · 64 个独立事实</em></a>
+              <a href="#mt-2026-07-payments"><span class="toc-num">03</span>Visa稳定币卡交易量激增，支付基础设施重塑<em>升温 · 64 个独立事实</em></a>
 
-              <a href="#mt-2026-07-operations"><span class="toc-num">04</span>经营与组织变化升温<em>升温 · 23 个独立事实</em></a>
+              <a href="#mt-2026-07-operations"><span class="toc-num">04</span>Royal Kingdom营收超7.5亿美元，游戏公司业绩亮眼<em>升温 · 23 个独立事实</em></a>
 
-              <a href="#mt-2026-07-commerce"><span class="toc-num">05</span>电商、商户与物流升温<em>升温 · 15 个独立事实</em></a>
+              <a href="#mt-2026-07-commerce"><span class="toc-num">05</span>Zalando投资AI仓库自动化，欧洲电商物流升级<em>升温 · 15 个独立事实</em></a>
 
-              <a href="#mt-2026-07-expansion"><span class="toc-num">06</span>区域扩张与合作降温<em>降温 · 15 个独立事实</em></a>
+              <a href="#mt-2026-07-expansion"><span class="toc-num">06</span>派拉蒙-华纳合并被叫停，区域扩张遇阻<em>降温 · 15 个独立事实</em></a>
 
             </nav>
             <section class="pblock">
@@ -3410,15 +3377,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">延续</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>AI与云基础设施延续</h3>
-                <p class="p-narrative">AI基础设施投入不减反增，Alphabet将2026年资本支出预测上调至2050亿美元，远超市场预期。同时，数据中心融资市场活跃，Blue Owl支持的Stack寻求59亿美元贷款，思科支持的Eliyan获1.45亿美元融资，显示资金正大规模涌入算力底层。</p>
+                <h3>Alphabet上调资本支出，数据中心融资激增</h3>
+                <p class="p-narrative">AI基础设施投资持续升温，Alphabet将2026年资本支出预测上调至2050亿美元，同时Blue Owl支持的Stack寻求59亿美元数据中心贷款，思科支持的Eliyan获1.45亿美元融资，显示资金正大规模涌入算力与网络基础设施。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 125 个独立事实；较前一周期 +10 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 125 个独立事实（前一周期 115 个）</p>
-                  <p>驱动因素：Alphabet上调2026年资本支出预测至$205B；Blue Owl支持的Stack寻求59亿美元数据中心贷款；思科支持的Eliyan获1.45亿美元融资，估值达10亿美元</p>
-                  <p>不确定性：巨额资本支出能否转化为实际收入增长，以及中小云厂商是否跟进，仍待观察。</p>
-                  <p>下月验证：关注下月其他云巨头（如微软、亚马逊）的资本开支指引是否同步上调。</p>
+                  <p>驱动因素：Alphabet上调资本支出预测至2050亿美元；Stack寻求59亿美元数据中心贷款；Eliyan获1.45亿美元融资，估值达10亿美元</p>
+                  <p>不确定性：资本支出激增可能面临回报周期拉长风险，且部分融资尚在谈判阶段。</p>
+                  <p>下月验证：下月需观察Alphabet实际支出节奏及数据中心贷款是否落地，以确认投资持续性。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3439,15 +3406,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>开发者与平台生态升温</h3>
-                <p class="p-narrative">支付与开发者生态的整合加速，Stripe与Advent联合以超530亿美元收购PayPal，同时被曝与OpenRouter洽谈收购（估值或达100亿美元）。这一系列动作表明，Stripe正试图通过并购打通支付、AI模型分发与开发者工具链，构建更完整的商业闭环。</p>
+                <h3>Stripe拟收购OpenRouter，开发者生态并购加速</h3>
+                <p class="p-narrative">开发者平台生态并购升温，OpenRouter与Stripe洽谈收购，估值或达100亿美元；同时PayPal被Stripe和Advent联合收购，估值超530亿美元，显示支付巨头正通过并购整合开发者工具与支付入口。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 67 个独立事实；较前一周期 +17 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 67 个独立事实（前一周期 50 个）</p>
-                  <p>驱动因素：PayPal被Stripe和Advent联合收购估值超$530亿；OpenRouter与Stripe洽谈收购，估值或达100亿美元</p>
-                  <p>不确定性：PayPal董事会认为530亿美元报价过低，交易可能面临提价或竞购。</p>
-                  <p>下月验证：验证Stripe与OpenRouter的收购谈判是否落地，以及PayPal收购案的最终成交价。</p>
+                  <p>驱动因素：OpenRouter与Stripe洽谈收购，估值或达100亿美元；PayPal被Stripe和Advent联合收购，估值超530亿美元；Xsight Labs融资超3亿美元，扩展AI网络平台</p>
+                  <p>不确定性：收购谈判可能因反垄断审查或价格分歧而失败，PayPal董事会已认为报价过低。</p>
+                  <p>下月验证：下月需关注Stripe与OpenRouter交易是否达成，以及PayPal收购案是否提高报价。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3468,15 +3435,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>支付与金融科技升温</h3>
-                <p class="p-narrative">支付基础设施的稳定币化趋势加速，Visa稳定币卡交易量已达37亿美元，覆盖200个市场。同时，财富管理平台CAIS获1.7亿美元融资，新加坡GXS银行贷款组合突破10亿新元，显示支付与金融科技在B端和新兴市场的渗透正在加深。</p>
+                <h3>Visa稳定币卡交易量激增，支付基础设施重塑</h3>
+                <p class="p-narrative">支付与金融科技领域升温，Visa稳定币卡交易量达37亿美元，覆盖200个市场；CAIS获1.7亿美元融资，GXS贷款组合突破10亿新元，显示稳定币支付和另类资产平台正快速扩张。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 64 个独立事实；较前一周期 +15 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 64 个独立事实（前一周期 49 个）</p>
-                  <p>驱动因素：Visa稳定币卡交易量达$3.7B，覆盖200市场；CAIS获1.7亿美元融资，估值达20亿美元；GXS贷款组合突破10亿新元</p>
-                  <p>不确定性：稳定币监管政策的不确定性可能影响Visa该业务的扩张速度。</p>
-                  <p>下月验证：关注Visa稳定币卡交易量的月度环比增速，以及是否有更多主流银行接入。</p>
+                  <p>驱动因素：Visa稳定币卡交易量达37亿美元，覆盖200市场；CAIS获1.7亿美元融资，估值达20亿美元；GXS贷款组合突破10亿新元</p>
+                  <p>不确定性：稳定币监管政策尚不明朗，可能影响交易量增长持续性。</p>
+                  <p>下月验证：下月需观察Visa稳定币卡交易量是否继续增长，以及监管动态。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3497,15 +3464,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>经营与组织变化升温</h3>
-                <p class="p-narrative">经营层面的好消息增多，多公司披露强劲业绩。Royal Kingdom累计营收超7.5亿美元，2026年上半年占比达42%；Crocs季度营收首次突破10亿美元；Thought Machine年营收破亿。这表明在宏观压力下，部分细分赛道仍具高增长韧性。</p>
+                <h3>Royal Kingdom营收超7.5亿美元，游戏公司业绩亮眼</h3>
+                <p class="p-narrative">经营与组织变化升温，Royal Kingdom累计营收超7.5亿美元，2026年上半年占比42%；Thought Machine营收突破1亿美元，Crocs季度营收首次突破10亿美元，显示多行业公司业绩增长强劲。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 23 个独立事实；较前一周期 +10 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 23 个独立事实（前一周期 13 个）</p>
-                  <p>驱动因素：Royal Kingdom营收超$750m，2026年上半年占比42%；Crocs季度营收首次突破10亿美元；Thought Machine 2025年营收突破1亿美元</p>
-                  <p>不确定性：这些高增长是否可持续，或仅为季节性/一次性因素驱动。</p>
-                  <p>下月验证：下月验证Royal Kingdom和Crocs的下一季度营收指引是否维持增长。</p>
+                  <p>驱动因素：Royal Kingdom营收超7.5亿美元，2026年上半年占比42%；Thought Machine 2025年营收突破1亿美元；Crocs季度营收首次突破10亿美元</p>
+                  <p>不确定性：部分公司营收增长可能依赖一次性因素，如新游戏发布或季节性需求。</p>
+                  <p>下月验证：下月需关注这些公司是否维持增长势头，以及是否有新业务驱动。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3526,15 +3493,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">欧洲</span>
                 </div>
-                <h3>电商、商户与物流升温</h3>
-                <p class="p-narrative">欧洲电商与物流自动化投资活跃，Zalando参与Sereact 1.16亿美元B轮融资，押注AI仓库自动化；英国机器人公司Humanoid获1.52亿美元A轮融资。与此同时，Shein香港IPO招股书披露Q1净亏损9900万美元，显示高增长与盈利压力并存。</p>
+                <h3>Zalando投资AI仓库自动化，欧洲电商物流升级</h3>
+                <p class="p-narrative">欧洲电商与物流领域升温，Zalando参与Sereact 1.16亿美元B轮融资，加速AI仓库自动化；英国机器人公司Humanoid获1.52亿美元融资，估值达13.5亿美元，显示欧洲正加大自动化投入以提升效率。</p>
                 <p class="p-narrative">本月在 4 个周次持续出现，共 15 个独立事实；较前一周期 +4 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：4 周 · 15 个独立事实（前一周期 11 个）</p>
-                  <p>驱动因素：Zalando参与Sereact $116M B轮融资，加速AI仓库自动化；英国机器人公司Humanoid获1.52亿美元A轮融资，估值达13.5亿美元；Shein香港IPO招股书显示Q1净亏损$99M</p>
-                  <p>不确定性：Shein的亏损是否会拖累其IPO估值，以及欧洲物流自动化投资热潮能否持续。</p>
-                  <p>下月验证：关注Shein IPO定价及Sereact后续商业化落地进展。</p>
+                  <p>驱动因素：Zalando参与Sereact 1.16亿美元B轮融资；Humanoid获1.52亿美元融资，估值达13.5亿美元；BIZAY获5500万美元融资，用于美国扩张</p>
+                  <p>不确定性：Shein香港IPO招股书显示Q1净亏损9900万美元，可能影响电商板块整体情绪。</p>
+                  <p>下月验证：下月需关注Sereact和Humanoid的融资后进展，以及Shein IPO是否推进。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3555,15 +3522,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">降温</span>
                   <span class="p-lbl">欧洲</span>
                 </div>
-                <h3>区域扩张与合作降温</h3>
-                <p class="p-narrative">区域扩张与合作出现降温信号，美国法官暂停了1100亿美元的派拉蒙-华纳兄弟合并案，为传媒业整合蒙上阴影。同时，World Foundation通过代币销售仅筹集5200万美元，显示新兴领域的融资热度有所回落。</p>
+                <h3>派拉蒙-华纳合并被叫停，区域扩张遇阻</h3>
+                <p class="p-narrative">区域扩张与合作降温，法官暂停1100亿美元派拉蒙-华纳兄弟合并案，显示监管阻力加大；World Foundation通过代币销售筹资5200万美元，但整体扩张活动减少，区域合作面临不确定性。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 15 个独立事实；较前一周期 -12 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 15 个独立事实（前一周期 27 个）</p>
-                  <p>驱动因素：法官暂停$1100亿派拉蒙-华纳兄弟合并案；World Foundation通过代币销售筹集5200万美元</p>
-                  <p>不确定性：合并案被暂停是暂时性法律障碍还是根本性否决，尚不明朗。</p>
-                  <p>下月验证：下月关注派拉蒙-华纳合并案的上诉进展或最终裁决。</p>
+                  <p>驱动因素：法官暂停1100亿美元派拉蒙-华纳兄弟合并案；World Foundation通过代币销售筹集5200万美元；Gritt获3200万美元用于AI机器人改造建筑设备</p>
+                  <p>不确定性：合并案暂停可能只是暂时，后续可能调整条款后继续推进。</p>
+                  <p>下月验证：下月需关注合并案是否重新启动，以及区域扩张活动是否回暖。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3590,9 +3557,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <span class="p-ptag">2026-06-01 至 2026-06-30</span>
                 <span class="p-ptag p-ptag-green">已封存</span>
               </div>
-              <p class="p-editorial">基础设施军备竞赛与平台生态重构</p>
+              <p class="p-editorial">AI基建与平台并购主导全球扩张</p>
               <h2>2026-06 月报趋势与结构月报</h2>
-              <div class="p-mainline"><strong>本月主线</strong><p>本月全球科技投资主线从应用层转向基础设施层：AI与云基础设施事实量环比激增68%，开发者平台生态事实量环比增长超3倍，显示资本正加速涌入底层能力建设。与此同时，支付与金融科技在东南亚和非洲市场升温，区域扩张聚焦新兴市场。经营与组织变化类事实量下降，表明市场从内部调整转向外部扩张。</p></div>
+              <div class="p-mainline"><strong>本月主线</strong><p>本月全球科技投资主线从分散的初创融资转向AI基础设施与平台级并购。AI与云基础设施事实数环比增长68%，开发者生态事实数激增近4倍，Salesforce以36亿美元收购AI客服平台Fin成为标志性事件。支付与金融科技持续升温，菲律宾Mynt计划15亿美元IPO。区域扩张聚焦亚洲，Airwallex估值达110亿美元。经营类事实数下降，显示市场更关注增长而非内部调整。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>结构趋势</span></div>
                 <div class="pcover-stat"><strong>284</strong><span>合格事实</span></div>
@@ -3603,17 +3570,17 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本月看点">
               <strong>本月看点</strong>
 
-              <a href="#mt-2026-06-ai_infra"><span class="toc-num">01</span>AI基础设施投资激增，数据中心与RAN成焦点<em>升温 · 114 个独立事实</em></a>
+              <a href="#mt-2026-06-ai_infra"><span class="toc-num">01</span>AI基础设施投资加速，数据中心与游戏收入预测上调<em>升温 · 114 个独立事实</em></a>
 
-              <a href="#mt-2026-06-developer"><span class="toc-num">02</span>开发者平台并购活跃，垂直AI客服成热点<em>升温 · 50 个独立事实</em></a>
+              <a href="#mt-2026-06-developer"><span class="toc-num">02</span>平台并购与GP融资平台扩张，开发者生态资本化加速<em>升温 · 50 个独立事实</em></a>
 
-              <a href="#mt-2026-06-payments"><span class="toc-num">03</span>东南亚支付IPO潮，移动支付估值飙升<em>升温 · 49 个独立事实</em></a>
+              <a href="#mt-2026-06-payments"><span class="toc-num">03</span>菲律宾支付平台IPO与移动游戏D2C收入增长，支付场景多元化<em>升温 · 49 个独立事实</em></a>
 
-              <a href="#mt-2026-06-expansion"><span class="toc-num">04</span>跨境支付与云服务商加速全球扩张<em>升温 · 27 个独立事实</em></a>
+              <a href="#mt-2026-06-expansion"><span class="toc-num">04</span>亚洲区域扩张活跃，Airwallex与Go Inc.融资/IPO落地<em>升温 · 27 个独立事实</em></a>
 
-              <a href="#mt-2026-06-operations"><span class="toc-num">05</span>经营数据分化，盈利与亏损并存<em>降温 · 13 个独立事实</em></a>
+              <a href="#mt-2026-06-operations"><span class="toc-num">05</span>经营数据分化，Prosus高增长与PayU盈利并存<em>降温 · 13 个独立事实</em></a>
 
-              <a href="#mt-2026-06-commerce"><span class="toc-num">06</span>亚太电商物流融资活跃，无人驾驶成新方向<em>升温 · 11 个独立事实</em></a>
+              <a href="#mt-2026-06-commerce"><span class="toc-num">06</span>亚太电商物流融资活跃，Zepto亏损扩大但收入翻倍<em>升温 · 11 个独立事实</em></a>
 
             </nav>
             <section class="pblock">
@@ -3624,15 +3591,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>AI基础设施投资激增，数据中心与RAN成焦点</h3>
-                <p class="p-narrative">AI与云基础设施领域事实量环比增长68%，STMicroelectronics上调2026年数据中心预测至$1B，Dell&#39;Oro预测AI-RAN收入2030年达$35B，显示硬件与网络层投资加速。</p>
+                <h3>AI基础设施投资加速，数据中心与游戏收入预测上调</h3>
+                <p class="p-narrative">本月AI基础设施领域事实数环比增长68%，显示投资与预测集中上调。STMicroelectronics上调2026年数据中心预测至10亿美元，Dell&#39;Oro预测AI-RAN收入2030年达350亿美元，全球游戏收入首超2000亿美元，亚洲和中东游戏收入2030年将超1000亿美元。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 114 个独立事实；较前一周期 +46 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 114 个独立事实（前一周期 68 个）</p>
-                  <p>驱动因素：STMicroelectronics上调数据中心预测；Dell&#39;Oro对AI-RAN收入的乐观预测；全球游戏收入增长带动云需求</p>
-                  <p>不确定性：AI-RAN商业化时间表可能延迟，硬件投资回报周期长。</p>
-                  <p>下月验证：关注下月是否有更多芯片厂商上调数据中心营收指引。</p>
+                  <p>驱动因素：STMicroelectronics上调2026年数据中心预测至$1B；Dell&#39;Oro预测AI-RAN收入2030年达$35B；全球游戏收入首超$200B，移动端贡献$113B</p>
+                  <p>不确定性：AI-RAN收入预测依赖运营商部署进度，实际落地可能滞后。</p>
+                  <p>下月验证：下月关注是否有更多芯片厂商上调数据中心预测，以及AI-RAN商用案例是否增加。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3653,15 +3620,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>开发者平台并购活跃，垂直AI客服成热点</h3>
-                <p class="p-narrative">开发者与平台生态事实量环比增长超3倍，Salesforce以$3.6B收购AI客服平台Fin，Hunter Point Capital获$4.3B扩展GP融资平台，显示平台层整合加速。</p>
+                <h3>平台并购与GP融资平台扩张，开发者生态资本化加速</h3>
+                <p class="p-narrative">开发者生态领域事实数从11增至50，主要受Salesforce以36亿美元收购AI客服平台Fin驱动，同时Hunter Point Capital获43亿美元扩展GP融资平台，I Squared与DFC启动30亿美元亚洲能源基础设施平台，显示资本向平台型资产集中。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 50 个独立事实；较前一周期 +39 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 50 个独立事实（前一周期 11 个）</p>
-                  <p>驱动因素：Salesforce收购Fin强化AI客服能力；Hunter Point Capital扩展融资平台；I Squared与DFC启动$3B能源基础设施平台</p>
-                  <p>不确定性：高估值并购可能面临整合风险，平台生态竞争加剧。</p>
-                  <p>下月验证：观察Salesforce收购后Fin的客户留存率及新客户获取情况。</p>
+                  <p>驱动因素：Salesforce以$3.6B收购AI客服平台Fin；Hunter Point Capital获$4.3B扩展GP融资平台；I Squared与DFC启动$3B亚洲能源基础设施平台</p>
+                  <p>不确定性：收购后整合效果未知，可能影响后续平台估值。</p>
+                  <p>下月验证：观察Salesforce收购Fin后是否推出集成产品，以及GP融资平台是否吸引更多LP。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3682,15 +3649,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>东南亚支付IPO潮，移动支付估值飙升</h3>
-                <p class="p-narrative">支付与金融科技事实量环比增长44%，菲律宾Mynt计划$1.5B IPO，移动游戏D2C收入达$170亿，显示支付公司寻求资本市场扩张。</p>
+                <h3>菲律宾支付平台IPO与移动游戏D2C收入增长，支付场景多元化</h3>
+                <p class="p-narrative">支付与金融科技领域事实数增长44%，Mynt计划15亿美元IPO成为焦点，同时移动游戏D2C收入达170亿美元，发行商加速脱离应用商店，尼日利亚快消品市场信贷缺口显现，支付向新兴市场与垂直场景渗透。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 49 个独立事实；较前一周期 +15 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 49 个独立事实（前一周期 34 个）</p>
-                  <p>驱动因素：Mynt计划IPO募资$1.5B；移动游戏D2C收入增长；尼日利亚快消品市场信贷缺口</p>
-                  <p>不确定性：IPO市场波动可能影响估值，新兴市场监管风险。</p>
-                  <p>下月验证：关注Mynt IPO定价及首日表现，以及D2C支付渗透率变化。</p>
+                  <p>驱动因素：Mynt拟菲律宾IPO募资$1.5B；移动游戏D2C收入达$170亿，发行商加速脱离应用商店；尼日利亚快消品市场达$250亿，仅18%零售商有正规信贷</p>
+                  <p>不确定性：Mynt IPO定价与市场反应未定，D2C模式可能受应用商店政策反制。</p>
+                  <p>下月验证：关注Mynt IPO定价与认购情况，以及D2C收入是否持续增长。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3711,15 +3678,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>跨境支付与云服务商加速全球扩张</h3>
-                <p class="p-narrative">区域扩张与合作事实量环比增长29%，Airwallex估值达$11B，NTT全球数据中心寻求$1B用于美国扩张，显示基础设施服务商全球化布局。</p>
+                <h3>亚洲区域扩张活跃，Airwallex与Go Inc.融资/IPO落地</h3>
+                <p class="p-narrative">区域扩张领域事实数增长29%，Airwallex估值达110亿美元并新获3.2亿美元融资，日本打车应用Go Inc. IPO募资5.53亿美元，NTT全球数据中心寻求10亿美元用于美国扩张，显示亚洲企业加速全球化布局。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 27 个独立事实；较前一周期 +6 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 27 个独立事实（前一周期 21 个）</p>
-                  <p>驱动因素：Airwallex获$320M融资；NTT数据中心美国扩张计划；Databricks估值或达$175B</p>
-                  <p>不确定性：地缘政治风险可能影响跨境扩张，数据中心建设周期长。</p>
-                  <p>下月验证：跟踪Airwallex新市场落地情况，以及NTT数据中心项目进展。</p>
+                  <p>驱动因素：Airwallex估值达$11B，新获$320M融资；日本打车应用Go Inc. IPO募资$553M；NTT全球数据中心寻求$1B用于美国扩张</p>
+                  <p>不确定性：Airwallex高估值依赖跨境支付增长，可能受监管影响。</p>
+                  <p>下月验证：下月观察Airwallex是否进入新市场，以及Go Inc.上市后股价表现。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3740,15 +3707,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">降温</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>经营数据分化，盈利与亏损并存</h3>
-                <p class="p-narrative">经营与组织变化事实量环比下降52%，Prosus FY26营收同比+57%，但Zepto亏损扩大，显示企业盈利分化。</p>
+                <h3>经营数据分化，Prosus高增长与PayU盈利并存</h3>
+                <p class="p-narrative">经营与组织变化领域事实数下降52%，但Prosus FY26营收同比增长57%至97亿美元，PayU印度实现调整后EBITDA盈利，营收增长13%，显示部分企业运营效率提升，而整体关注度下降。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 13 个独立事实；较前一周期 -14 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 13 个独立事实（前一周期 27 个）</p>
-                  <p>驱动因素：Prosus营收增长57%；Zepto亏损扩大26%；PayU印度实现EBITDA盈利</p>
-                  <p>不确定性：单一公司数据可能不具代表性，行业整体趋势需更多样本。</p>
-                  <p>下月验证：关注下月更多公司财报，验证盈利改善是否普遍。</p>
+                  <p>驱动因素：Prosus FY26营收$9.7B同比+57%；PayU印度FY26调整后EBITDA盈利，营收同比增长13%；新西兰游戏行业营收突破$1B</p>
+                  <p>不确定性：Prosus增长可能依赖一次性因素，PayU盈利可持续性待观察。</p>
+                  <p>下月验证：关注Prosus下一季度营收增速是否维持，以及PayU印度盈利是否持续。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3769,15 +3736,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">升温</span>
                   <span class="p-lbl">亚太</span>
                 </div>
-                <h3>亚太电商物流融资活跃，无人驾驶成新方向</h3>
-                <p class="p-narrative">电商、商户与物流事实量环比增长175%，CargoX获$250M融资用于无人驾驶物流，Nua寻求$25M融资，显示物流自动化投资升温。</p>
+                <h3>亚太电商物流融资活跃，Zepto亏损扩大但收入翻倍</h3>
+                <p class="p-narrative">电商与物流领域事实数增长175%，CargoX获2.5亿美元融资用于无人驾驶物流扩张，电商物流公司Nua寻求2500万美元融资，Zepto FY26亏损扩大26%至5905千万卢比但收入翻倍，显示资本投入与亏损并存。</p>
                 <p class="p-narrative">本月在 5 个周次持续出现，共 11 个独立事实；较前一周期 +7 个事实。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：5 周 · 11 个独立事实（前一周期 4 个）</p>
-                  <p>驱动因素：CargoX获$250M融资；Nua寻求$25M融资；Zepto收入翻倍但亏损扩大</p>
-                  <p>不确定性：无人驾驶物流监管未明，盈利模式待验证。</p>
-                  <p>下月验证：观察CargoX无人驾驶物流试点进展及监管动态。</p>
+                  <p>驱动因素：CargoX获$250M融资，用于无人驾驶物流扩张；电商物流公司Nua寻求$25M融资；Zepto FY26亏损扩大26%至₹5905Cr，收入翻倍</p>
+                  <p>不确定性：Zepto亏损扩大可能影响后续融资，无人驾驶物流商业化尚早。</p>
+                  <p>下月验证：下月观察Zepto是否获得新融资，以及CargoX无人驾驶物流试点进展。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3806,7 +3773,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               </div>
               <p class="p-editorial">AI基建狂潮重塑全球资本流向</p>
               <h2>2026-05 月报趋势与结构月报</h2>
-              <div class="p-mainline"><strong>本月主线</strong><p>本月AI基础设施投资激增，Meta裁员8000人并押注1450亿美元AI基建，Edged US获20亿美元扩展数据中心。同时，支付与金融科技领域出现结构性调整，华尔街六大银行裁员15000人，三星入股Upbit运营商。资本正从传统金融和劳动密集型业务转向AI算力与新兴市场支付基础设施，预示全球科技投资重心加速迁移。</p></div>
+              <div class="p-mainline"><strong>本月主线</strong><p>本月全球科技投资主线从分散布局转向AI基础设施的集中押注。Edged US获20亿美元、Meta裁员8000人并押注1450亿美元AI基建，显示资本与人力正大规模向AI算力倾斜。同时，支付与金融科技领域出现结构性调整，华尔街六大银行裁员15000人，而三星入股Upbit、dLocal收购AZA Finance，表明传统金融与新兴支付在重新洗牌。这一变化指向AI基础设施成为新基建核心，而支付领域则进入整合期。</p></div>
               <div class="pcover-stats">
                 <div class="pcover-stat"><strong>6</strong><span>结构趋势</span></div>
                 <div class="pcover-stat"><strong>189</strong><span>合格事实</span></div>
@@ -3817,17 +3784,17 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             <nav class="ptoc" aria-label="本月看点">
               <strong>本月看点</strong>
 
-              <a href="#mt-2026-05-ai_infra"><span class="toc-num">01</span>AI基建投资激增，Meta裁员押注1450亿美元<em>新增 · 68 个独立事实</em></a>
+              <a href="#mt-2026-05-ai_infra"><span class="toc-num">01</span>全球AI基建投资激增，Meta裁员押注1450亿美元<em>新增 · 68 个独立事实</em></a>
 
-              <a href="#mt-2026-05-payments"><span class="toc-num">02</span>支付领域大洗牌：银行裁员，三星入股Upbit<em>新增 · 34 个独立事实</em></a>
+              <a href="#mt-2026-05-payments"><span class="toc-num">02</span>支付与金融科技新增<em>新增 · 34 个独立事实</em></a>
 
-              <a href="#mt-2026-05-operations"><span class="toc-num">03</span>非洲科技公司业绩分化，Jumia营收增39%<em>新增 · 27 个独立事实</em></a>
+              <a href="#mt-2026-05-operations"><span class="toc-num">03</span>经营与组织变化新增<em>新增 · 27 个独立事实</em></a>
 
-              <a href="#mt-2026-05-expansion"><span class="toc-num">04</span>数据中心扩张潮：Pure DC获27亿美元融资<em>新增 · 21 个独立事实</em></a>
+              <a href="#mt-2026-05-expansion"><span class="toc-num">04</span>区域扩张与合作新增<em>新增 · 21 个独立事实</em></a>
 
-              <a href="#mt-2026-05-developer"><span class="toc-num">05</span>开发者平台融资活跃，Fonoa获9440万欧元<em>新增 · 11 个独立事实</em></a>
+              <a href="#mt-2026-05-developer"><span class="toc-num">05</span>开发者与平台生态新增<em>新增 · 11 个独立事实</em></a>
 
-              <a href="#mt-2026-05-commerce"><span class="toc-num">06</span>电商物流融资活跃，Stord估值达30亿美元<em>新增 · 4 个独立事实</em></a>
+              <a href="#mt-2026-05-commerce"><span class="toc-num">06</span>电商、商户与物流新增<em>新增 · 4 个独立事实</em></a>
 
             </nav>
             <section class="pblock">
@@ -3838,15 +3805,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">新增</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>AI基建投资激增，Meta裁员押注1450亿美元</h3>
-                <p class="p-narrative">本月AI基础设施领域新增68个事实，Meta裁员8000人并宣布1450亿美元AI基建投资，Edged US获20亿美元扩展数据中心，亚马逊计划在东南亚投资超330亿美元。资本正大规模涌入AI算力与数据中心，传统科技巨头加速转型。</p>
+                <h3>全球AI基建投资激增，Meta裁员押注1450亿美元</h3>
+                <p class="p-narrative">本月AI基础设施领域出现爆发式增长，共68个独立事实，覆盖4个周次。Edged US获20亿美元扩展AI数据中心，亚马逊计划在东南亚投资超330亿美元，Meta裁员8000人并押注1450亿美元AI基建，AI编程初创Cognition获10亿美元融资。资本正以前所未有的规模涌入AI算力与数据中心，同时伴随传统业务的结构性调整。</p>
                 <p class="p-narrative">本月在 4 个周次持续出现，共 68 个独立事实；前一周期未形成同类证据。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：4 周 · 68 个独立事实</p>
-                  <p>驱动因素：Meta裁员8000人并押注1450亿美元AI基建；Edged US获20亿美元扩展AI就绪数据中心；亚马逊计划到2039年在东南亚投资超330亿美元</p>
-                  <p>不确定性：AI基建投资回报周期长，且可能面临监管审查，需关注后续盈利模式。</p>
-                  <p>下月验证：下月验证Meta AI基建投资是否带来营收增长，以及数据中心利用率是否提升。</p>
+                  <p>驱动因素：Edged US获20亿美元扩展AI就绪数据中心基础设施；Meta裁员8000人，押注$145B AI基建；亚马逊计划到2039年在东南亚投资超$33B</p>
+                  <p>不确定性：AI基建投资是否可持续，需观察后续融资与项目落地情况，以及Meta裁员是否影响其核心业务。</p>
+                  <p>下月验证：下月需验证是否有更多大型AI基建项目获得融资，以及Meta的AI投资是否产生实际业务回报。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3867,15 +3834,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">新增</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>支付领域大洗牌：银行裁员，三星入股Upbit</h3>
-                <p class="p-narrative">支付与金融科技领域新增34个事实，华尔街六大银行裁员15000人但盈利470亿美元，三星斥资4.08亿美元入股Upbit运营商，dLocal收购AZA Finance。传统金融机构收缩，科技巨头和新兴支付公司扩张，行业格局加速重构。</p>
+                <h3>支付与金融科技新增</h3>
+                <p class="p-narrative">支付与金融科技领域本月出现显著整合趋势，共34个独立事实。华尔街六大银行裁员15000人，同时三星斥资4.08亿美元入股Upbit运营商，dLocal以2370万美元收购AZA Finance，尼日利亚Sycamore收购MFB。传统金融机构收缩，而科技公司和新锐支付企业则通过并购扩张，行业格局正在重塑。</p>
                 <p class="p-narrative">本月在 3 个周次持续出现，共 34 个独立事实；前一周期未形成同类证据。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：3 周 · 34 个独立事实</p>
-                  <p>驱动因素：华尔街六大银行裁员15000人，盈利470亿美元；三星公司斥资4.08亿美元入股Upbit运营商；dLocal以2370万美元资产交易收购AZA Finance</p>
-                  <p>不确定性：银行裁员可能影响支付服务稳定性，三星入股Upbit的监管审批存在变数。</p>
-                  <p>下月验证：下月观察Upbit交易是否完成，以及dLocal整合AZA Finance后的营收变化。</p>
+                  <p>驱动因素：华尔街六大银行裁员15000人，盈利$470亿；三星公司斥资4.08亿美元入股Upbit运营商；dLocal以$23.7M资产交易收购AZA Finance</p>
+                  <p>不确定性：支付整合是否会导致市场集中度提升，以及传统银行裁员是否影响金融稳定，需进一步观察。</p>
+                  <p>下月验证：下月需关注是否有更多支付并购案例，以及传统银行裁员是否引发监管关注。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3896,15 +3863,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">新增</span>
                   <span class="p-lbl">非洲</span>
                 </div>
-                <h3>非洲科技公司业绩分化，Jumia营收增39%</h3>
-                <p class="p-narrative">非洲经营与组织变化新增27个事实，ClickHouse年化营收增至2.5亿美元并计划IPO，Jumia Q1营收达5060万美元同比增39%，肯尼亚Watu因手机融资创利润记录。但Nazara受印度游戏法案和减值影响，营收增速放缓。</p>
+                <h3>经营与组织变化新增</h3>
+                <p class="p-narrative">非洲科技公司经营表现分化明显，共27个独立事实。Jumia 2026年Q1营收达5060万美元，同比增长39%，而Nazara年营收增长13%至1.9亿美元，但受印度游戏法案和9500万美元减值影响。肯尼亚Watu因手机融资激增创3700万美元利润记录，ClickHouse年化营收增至2.5亿美元并计划IPO。</p>
                 <p class="p-narrative">本月在 3 个周次持续出现，共 27 个独立事实；前一周期未形成同类证据。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：3 周 · 27 个独立事实</p>
-                  <p>驱动因素：ClickHouse年化营收增至2.5亿美元，计划IPO；Jumia 2026年Q1营收达5060万美元，同比增39%；肯尼亚Watu因手机融资激增创3700万美元利润记录</p>
-                  <p>不确定性：Nazara受印度游戏法案影响，未来营收可能持续承压。</p>
-                  <p>下月验证：下月验证ClickHouse IPO进展，以及Jumia能否保持高增长。</p>
+                  <p>驱动因素：Jumia 2026年Q1营收达$50.6M，同比增39%；Nazara年营收增13%至$190M，受印度游戏法案和$95M减值影响；肯尼亚Watu因手机融资激增创$3700万利润记录</p>
+                  <p>不确定性：非洲科技公司盈利能力是否可持续，以及Nazara的减值问题是否影响其长期增长，需观察。</p>
+                  <p>下月验证：下月需验证Jumia的营收增长是否持续，以及Nazara能否改善其财务状况。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3925,15 +3892,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">新增</span>
                   <span class="p-lbl">非洲</span>
                 </div>
-                <h3>数据中心扩张潮：Pure DC获27亿美元融资</h3>
-                <p class="p-narrative">区域扩张与合作新增21个事实，Pure DC获27亿美元融资扩张欧洲和中东数据中心，AtlasEdge获12亿美元债务融资，Cognition获10亿美元融资扩展自主软件工程。全球数据中心建设加速，资本密集涌入。</p>
+                <h3>区域扩张与合作新增</h3>
+                <p class="p-narrative">区域扩张与合作领域本月活跃，共21个独立事实。Pure DC获27亿美元融资，扩张欧洲和中东数据中心，AtlasEdge获12亿美元债务融资扩大欧洲数据中心规模。非洲Cognition获10亿美元融资用于扩展自主软件工程，Zepto计划7月11亿美元IPO。科技公司正加速全球布局，尤其聚焦数据中心和新兴市场。</p>
                 <p class="p-narrative">本月在 4 个周次持续出现，共 21 个独立事实；前一周期未形成同类证据。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：4 周 · 21 个独立事实</p>
-                  <p>驱动因素：Pure DC获27亿美元融资，扩张欧洲和中东数据中心；AtlasEdge获12亿美元债务融资，扩大欧洲数据中心规模；非洲Cognition获10亿美元融资用于扩展自主软件工程</p>
-                  <p>不确定性：数据中心扩张可能面临电力供应和环保限制，需关注当地政策。</p>
-                  <p>下月验证：下月关注Pure DC和AtlasEdge的项目建设进度，以及Cognition的扩展计划落地情况。</p>
+                  <p>驱动因素：Pure DC获$27亿融资，扩张欧洲和中东数据中心；AtlasEdge获12亿美元债务融资，扩大欧洲数据中心规模；非洲Cognition获$10亿融资用于扩展自主软件工程</p>
+                  <p>不确定性：全球扩张是否面临地缘政治风险，以及数据中心建设是否出现过剩，需关注。</p>
+                  <p>下月验证：下月需观察Pure DC和AtlasEdge的融资后项目进展，以及Zepto IPO是否成功。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3954,15 +3921,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">新增</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>开发者平台融资活跃，Fonoa获9440万欧元</h3>
-                <p class="p-narrative">开发者与平台生态新增11个事实，Fonoa获9440万欧元C轮并收购PwC税务平台，H1获CVS 4000万美元投资，Fresha获6890万欧元融资成英国新独角兽。开发者工具和平台成为投资热点。</p>
+                <h3>开发者与平台生态新增</h3>
+                <p class="p-narrative">开发者与平台生态领域出现多起融资与收购，共11个独立事实。Fonoa获9440万欧元C轮并收购PwC税务平台，H1获CVS 4000万美元投资，Airbnb投资的WeRoad获5800万美元融资进军美国，Fresha获6890万欧元融资成英国新独角兽。开发者工具和平台正吸引资本关注，并通过并购扩展能力。</p>
                 <p class="p-narrative">本月在 3 个周次持续出现，共 11 个独立事实；前一周期未形成同类证据。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：3 周 · 11 个独立事实</p>
-                  <p>驱动因素：Fonoa获9440万欧元C轮并收购PwC税务平台；H1获CVS 4000万美元投资；Fresha获6890万欧元融资成英国新独角兽</p>
-                  <p>不确定性：开发者平台竞争激烈，部分融资可能无法转化为可持续增长。</p>
-                  <p>下月验证：下月验证Fonoa收购整合效果，以及Fresha能否保持估值。</p>
+                  <p>驱动因素：Fonoa获9440万欧元C轮并收购PwC税务平台；H1获CVS 4000万美元投资；Fresha获€68.9M融资成英国新独角兽</p>
+                  <p>不确定性：开发者平台融资热潮是否可持续，以及收购后整合是否顺利，需观察。</p>
+                  <p>下月验证：下月需验证Fonoa收购后的产品整合，以及Fresha能否维持其独角兽估值。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -3983,15 +3950,15 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                   <span class="p-lbl p-lbl-green">新增</span>
                   <span class="p-lbl">全球</span>
                 </div>
-                <h3>电商物流融资活跃，Stord估值达30亿美元</h3>
-                <p class="p-narrative">电商、商户与物流新增4个事实，Stord获2.5亿美元融资估值达30亿美元，Zepto计划7月IPO，黑石集团收购希腊电商公司。电商物流领域资本运作频繁，但Temu卖家使用假USPS标签引发合规风险。</p>
+                <h3>电商、商户与物流新增</h3>
+                <p class="p-narrative">电商、商户与物流领域本月出现4个独立事实，但变化显著。Stord获2.5亿美元融资，估值达30亿美元，Zepto计划7月1100亿卢比IPO，黑石集团收购希腊电商公司多数股权。同时，Temu卖家使用假USPS标签降低成本，显示行业竞争激烈与合规风险。</p>
                 <p class="p-narrative">本月在 3 个周次持续出现，共 4 个独立事实；前一周期未形成同类证据。</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
                   <p>跨周：3 周 · 4 个独立事实</p>
-                  <p>驱动因素：Stord获2.5亿美元融资，估值达30亿美元；Zepto计划7月110亿卢比IPO；黑石集团收购希腊电商公司多数股权</p>
-                  <p>不确定性：Temu假标签事件可能引发监管打击，影响平台运营。</p>
-                  <p>下月验证：下月关注Zepto IPO进展，以及Stord融资后的扩张计划。</p>
+                  <p>驱动因素：Stord获$250M融资，估值达$3B；Zepto计划7月₹11,000 Cr IPO；Temu卖家使用假USPS标签降低成本</p>
+                  <p>不确定性：电商物流行业融资活跃，但Temu的灰色操作可能引发监管风险，需关注。</p>
+                  <p>下月验证：下月需验证Stord的融资后业务扩展，以及Zepto IPO的进展和Temu的合规问题是否发酵。</p>
                   <h4 class="p-evidence-title">代表证据</h4>
                   <ul class="pwin-evidence">
 
@@ -4069,7 +4036,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">云/AI 基础设施</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Cloudflare: Workers AI and AI Gateway unify model access and billing</span>
+                <span class="c-feat-title">Cloudflare发布产品更新，可验证其产品、平台或生态能力发生变化</span>
                 <span class="c-feat-overview">Cloudflare宣布其Workers AI和AI Gateway产品统一模型访问和计费，简化开发者使用流程。</span>
                 <span class="c-feat-meta"><span class="c-signal">合作机会</span><span class="c-feat-time">2026-08-07</span></span>
               </span>
@@ -4082,7 +4049,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商 SaaS</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Collect WhatsApp marketing consent on Shopify Forms</span>
+                <span class="c-feat-title">Shopify发布产品更新，可验证其产品、平台或生态能力发生变化</span>
 
                 <span class="c-feat-meta"><span class="c-signal">合作机会</span><span class="c-feat-time">2026-08-06</span></span>
               </span>
@@ -4095,7 +4062,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">支付开发者平台</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Stripe: Checkout Prebuilt payment UIs</span>
+                <span class="c-feat-title">Stripe发布产品更新，可验证其产品、平台或生态能力发生变化</span>
 
                 <span class="c-feat-meta"><span class="c-signal">合作机会</span><span class="c-feat-time">2026-08-07</span></span>
               </span>
@@ -4108,7 +4075,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">数据/AI 平台</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Databricks hits $188B valuation, extending its run as AI’s favorite second act</span>
+                <span class="c-feat-title">Databricks估值达$188B</span>
 
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-07-17</span></span>
               </span>
@@ -4157,7 +4124,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">搜索/AI/云</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Naver begins monetizing AI as Kakao prioritizes ecosystem over near-term revenue - Aju Press</span>
+                <span class="c-feat-title">Naver启动AI商业化，Kakao优先生态而非短期营收</span>
                 <span class="c-feat-overview">Naver开始将AI商业化，而Kakao优先考虑生态系统而非短期收入。</span>
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-08-08</span></span>
               </span>
@@ -4170,7 +4137,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">社交+支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Naver begins monetizing AI as Kakao prioritizes ecosystem over near-term revenue - Aju Press</span>
+                <span class="c-feat-title">Naver启动AI商业化，Kakao优先生态而非短期营收</span>
                 <span class="c-feat-overview">Naver开始将AI商业化，而Kakao优先考虑生态系统而非短期收入。</span>
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-08-08</span></span>
               </span>
@@ -4183,7 +4150,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">出行+支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">GrabAcademy celebrates pioneer cohort of certified AV operators as Grab prepares for on-demand Punggol rollout</span>
+                <span class="c-feat-title">GrabAcademy首批自动驾驶车辆认证操作员毕业，为Punggol按需服务做准备</span>
 
                 <span class="c-feat-meta"><span class="c-signal">合作机会</span><span class="c-feat-time">2026-08-06</span></span>
               </span>
@@ -4196,7 +4163,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">游戏</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Square Enix Teases Return of a Fan-Favorite RPG Series - ComicBook.com</span>
+                <span class="c-feat-title">Square Enix暗示重启经典RPG系列</span>
 
                 <span class="c-feat-meta"><span class="c-signal">合作机会</span><span class="c-feat-time">2026-08-07</span></span>
               </span>
@@ -4209,7 +4176,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商+金融科技</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">[Official] Samsung Makes Decision: Miyaji Team Departs! Acquires Right-Handed Pitcher Satoshi Miyamori, Former Rakuten Player - starnewskorea.com</span>
+                <span class="c-feat-title">三星签下前乐天投手宫森智</span>
 
                 <span class="c-feat-meta"><span class="c-signal">观察</span><span class="c-feat-time">2026-08-07</span></span>
               </span>
@@ -4222,7 +4189,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">超级应用+金融科技</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">GoTo&#39;s profit streak faces an early test from Indonesia&#39;s commission cap</span>
+                <span class="c-feat-title">GoTo盈利面临印尼佣金上限政策考验</span>
 
                 <span class="c-feat-meta"><span class="c-signal">警示信号</span><span class="c-feat-time">2026-07-30</span></span>
               </span>
@@ -4235,7 +4202,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">社交/支付/游戏</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Vietnam&#39;s tech giant VNG posts 86% profit jump in Q2/2026 to $18M as Zalo AI users hit 24M - TNGlobal</span>
+                <span class="c-feat-title">越南VNG Q2利润暴涨86%至$18M，Zalo AI用户达2400万</span>
                 <span class="c-feat-overview">越南科技巨头VNG公布2026年第二季度利润同比增长86%至1800万美元，Zalo AI用户达2400万。</span>
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-08-03</span></span>
               </span>
@@ -4248,7 +4215,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商/游戏/金融科技</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Singapore dominates SEA’s $9.3b AI funding</span>
+                <span class="c-feat-title">新加坡主导东南亚$9.3B AI融资</span>
 
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-08-05</span></span>
               </span>
@@ -4261,7 +4228,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">流媒体</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">U-NEXT Acquires GoHands in Japan&#39;s First Streamer-Studio Deal | Outlook Respawn - Outlook Respawn</span>
+                <span class="c-feat-title">U-NEXT收购GoHands，日本首例流媒体收购动画工作室</span>
 
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-05-28</span></span>
               </span>
@@ -4274,7 +4241,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商+物流</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Hong Kong Technology Venture Company (1137) H1 2025 earnings summary - Quartr</span>
+                <span class="c-feat-title">香港科技探索公司(1137)发布2025上半年财报</span>
 
                 <span class="c-feat-meta"><span class="c-signal">观察</span><span class="c-feat-time">2026-07-19</span></span>
               </span>
@@ -4349,7 +4316,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Adyen earnings: an investor&#39;s options playbook - Saxo</span>
+                <span class="c-feat-title">Adyen财报引发投资者期权策略讨论</span>
                 <span class="c-feat-overview">投资机构Saxo发布关于Adyen财报的期权交易策略分析。</span>
                 <span class="c-feat-meta"><span class="c-signal">警示信号</span><span class="c-feat-time">2026-08-06</span></span>
               </span>
@@ -4411,7 +4378,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">出行超级应用</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Careem Financial Results: Revenue Up 20%, Losses Widen - tbreak.com</span>
+                <span class="c-feat-title">Careem营收增20%，亏损扩大</span>
                 <span class="c-feat-overview">中东出行平台Careem公布财务业绩，营收同比增长20%，但亏损幅度扩大。</span>
                 <span class="c-feat-meta"><span class="c-signal">警示信号</span><span class="c-feat-time">2026-08-09</span></span>
               </span>
@@ -4424,7 +4391,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">UAE tourists can claim VAT refunds at 19,340 stores and on Noon purchases - Gulf News</span>
+                <span class="c-feat-title">UAE游客可在19,340家商店及Noon平台申请VAT退税</span>
 
                 <span class="c-feat-meta"><span class="c-signal">合作机会</span><span class="c-feat-time">2026-08-05</span></span>
               </span>
@@ -4499,7 +4466,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商+支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">MercadoLibre Quarterly Revenue Just Topped $10 Billion for the First Time. Is the Post-Earnings Sell-Off a Gift for Long-Term Investors? - AOL.com</span>
+                <span class="c-feat-title">MercadoLibre季度营收首破$100亿，股价下跌引买入讨论</span>
                 <span class="c-feat-overview">MercadoLibre季度营收首次突破100亿美元，但财报后股价下跌，文章讨论这是否为长期投资者的买入机会。</span>
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-08-09</span></span>
               </span>
@@ -4512,7 +4479,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">配送+金融科技</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Rappi Earned US$64.8M in Its Second Consecutive Profit Year - ColombiaOne.com</span>
+                <span class="c-feat-title">Rappi连续第二年盈利，赚取6480万美元</span>
 
                 <span class="c-feat-meta"><span class="c-signal">观察</span><span class="c-feat-time">2026-07-19</span></span>
               </span>
@@ -4525,7 +4492,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">跨境支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">How dLocal’s planned AZA Finance acquisition became a $23.7 million asset deal</span>
+                <span class="c-feat-title">dLocal以$23.7M资产交易收购AZA Finance</span>
 
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-05-26</span></span>
               </span>
@@ -4561,7 +4528,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">电商+支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Francis Dufay on BloombergTV shares why Jumia remains confident in Africa&#39;s long-term e-commerce opportunity</span>
+                <span class="c-feat-title">Jumia CEO重申对非洲电商长期信心</span>
 
                 <span class="c-feat-meta"><span class="c-signal">中资出海</span><span class="c-feat-time">2026-05-20</span></span>
               </span>
@@ -4574,7 +4541,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               <span class="c-direction">支付</span>
 
               <span class="c-feat">
-                <span class="c-feat-title">Flutterwave Raises $250M Series E at $3.2B Valuation with Ripple Strategic Backing</span>
+                <span class="c-feat-title">Flutterwave获$250M E轮融资，估值$3.2B</span>
 
                 <span class="c-feat-meta"><span class="c-signal">资金流向</span><span class="c-feat-time">2026-06-17</span></span>
               </span>
@@ -13702,7 +13669,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
         <div class="m-overline">更新日志</div>
         <div class="m-headline-row">
           <h2 class="m-title-sec">产品变更记录</h2>
-          <span class="m-head-meta">37 条记录</span>
+          <span class="m-head-meta">38 条记录</span>
         </div>
       </div>
       <div class="u-layout">
@@ -13710,6 +13677,26 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <div class="u-list">
 
             <div class="u-card open">
+              <button class="u-head" type="button">
+                <span class="u-copy">
+                  <h3>公司索引升级为业务雷达</h3>
+                  <small>2026-08-10 · 功能与界面 · 已完成</small>
+                </span>
+                <span class="u-ver">V3.8<span class="u-caret">›</span></span>
+              </button>
+              <div class="u-body">
+                <div class="u-tags">
+                  <span class="p-lbl p-lbl-green">功能与界面</span>
+                  <span class="p-lbl">已完成</span>
+                </div>
+                <p>公司索引从状态列表升级为企业级情报雷达：卡片按「公司身份→值得关注的变化→情报意义→可信度提示」三层重组，新增今日页基本盘变化流，标题日期改为实时显示。</p>
+
+                <ul><li>公司索引卡片三层化：分层标签+观察方向｜最近值得关注动态（标题/摘要/信号/日期）｜近30天条数+采集角标</li><li>动态选择算法：attention_score × 公司权重(must/strategic加权) × 时间衰减，选出每家公司最近值得关注事件</li><li>今日页新增「基本盘变化」流：核心战略公司近2天重要动态，点击跳转公司索引并高亮定位</li><li>采集状态归一三态（正常/部分/无数据），异常角标仅采集失效时显示，避免大面积误报</li><li>首页日期标题改为实时显示（当天日期），不再回退显示成熟批次日期</li></ul>
+
+              </div>
+            </div>
+
+            <div class="u-card">
               <button class="u-head" type="button">
                 <span class="u-copy">
                   <h3>全新界面设计语言上线</h3>
@@ -14552,25 +14539,6 @@ document.querySelectorAll('[data-goto]').forEach(function(a){
     e.preventDefault();
     var tab = document.querySelector('.m-tab[data-panel="' + a.dataset.goto + '"]');
     if (tab) tab.click();
-  });
-});
-
-/* 基本盘变化 chip → 切公司索引并高亮该公司卡片 */
-document.querySelectorAll('[data-cf-chip]').forEach(function(a){
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    var tab = document.querySelector('.m-tab[data-panel="companies"]');
-    if (tab) tab.click();
-    var co = (a.getAttribute('data-company') || '').toLowerCase();
-    var card = null;
-    document.querySelectorAll('.c-card[data-company]').forEach(function(c){
-      if ((c.getAttribute('data-company') || '').toLowerCase() === co) card = c;
-    });
-    if (card) {
-      card.classList.add('cf-flash');
-      setTimeout(function(){ card.classList.remove('cf-flash'); }, 1800);
-      card.scrollIntoView({behavior:'smooth', block:'center'});
-    }
   });
 });
 

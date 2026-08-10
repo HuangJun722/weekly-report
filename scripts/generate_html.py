@@ -1947,10 +1947,14 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         worthy = [e for e in recent_30 if _signal_worth(e)]
         featured = max(worthy, key=_attention_sort_key) if worthy else None
         latest = featured or (events[0] if events else {})
-        # 公司索引标题优先原始 title（信息完整），避免 enrich 的 reason 泛化兜底
-        _featured_title = (latest.get('title') or '').strip()
-        if not _featured_title or _featured_title == '暂无近期事件':
-            _featured_title = (latest.get('summary_short') or latest.get('display_title') or '').strip()
+        # 公司索引标题用中文：优先中文 summary_short，其次 content_overview，再次 reason，最后英文 title
+        def _pick_cn_title(event):
+            for key in ('summary_short', 'content_overview', 'reason'):
+                text = (event.get(key) or '').strip()
+                if text and _has_cjk(text) and text != '未知' and text != '科技动态':
+                    return text
+            return (event.get('title') or '').strip()
+        _featured_title = _pick_cn_title(latest)
         latest_title = clean_display_title(_featured_title or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
         if signal in {'背景补充', '其他'}:
@@ -2391,29 +2395,6 @@ def generate_html(force=False, preview_mode=False):
     weekly['company_count'] = len(company_events_filtered)
     weekly['company_list'] = preset_company_list
 
-    # 今日基本盘变化流：核心战略公司最近值得关注的动态，点击进入公司索引
-    company_feed = []
-    _feed_cutoff = (datetime.strptime(main_date, '%Y-%m-%d') - timedelta(days=2)).strftime('%Y-%m-%d')
-    for _c in preset_company_list:
-        if _c.get('portfolio_tier') not in {'must', 'strategic'}:
-            continue
-        if not _c.get('featured_title') or not _c.get('signal'):
-            continue
-        if _c.get('signal') in {'观察', '背景补充'}:
-            continue
-        if not _c.get('featured_date'):
-            continue
-        if (_c.get('featured_date') or '') < _feed_cutoff:
-            continue
-        company_feed.append({
-            'name': _c.get('name') or '',
-            'title': _c.get('featured_title') or '',
-            'signal': _c.get('signal') or '',
-            'date': _c.get('featured_date') or '',
-        })
-    company_feed.sort(key=lambda x: x.get('date') or '', reverse=True)
-    company_feed = company_feed[:8]
-
     trend_groups = build_trend_groups(today_events)
     repair_events = build_review_events(raw_today_events)
     daily_trend_signals = weekly.get('top3', [])
@@ -2496,7 +2477,6 @@ def generate_html(force=False, preview_mode=False):
         company_events=company_events,
         company_list=preset_company_list,
         company_groups=company_groups,
-        company_feed=company_feed,
         update_time=update_time,
         trend_groups=trend_groups,
         repair_events=repair_events,

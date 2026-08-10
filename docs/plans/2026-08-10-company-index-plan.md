@@ -110,7 +110,8 @@ Google  Gemini 商业化动作
 ## 9. 决策记录（2026-08-10 实施时定案）
 
 - **观察方向**：从 sector 自动映射中文标签（`_sector_label` 字典），未用人工维护。后续个别不准可人工补。
-- **今日页变化流**：本次一并做了（`company_feed`，近2天动态 + 8条上限，点击高亮公司卡片）。
+- **今日页变化流**：~~本次一并做了（`company_feed`，近2天动态 + 8条上限，点击高亮公司卡片）~~ **已撤回（2026-08-10 用户判定画蛇添足，从今日页移除，相关代码/样式/JS 全清）**。今日页保持聚焦事件流，公司动态统一由公司索引承载。
+- **动态标题语言**：**一律中文**（用户明确要求，不用英文增加理解难度）。选取优先级：中文 `summary_short` → `content_overview` → `reason` → 英文 title 兜底。曾误用英文 title（信息完整但增加理解负担），已改回。
 - **attention_score 权重系数**：must=1.3 / strategic=1.2 / experiment·mention·watch=1.0；时间衰减 `0.7 ** 天数`。
 - **异常角标弱化**：由"非 NORMAL 即显示"改为**仅采集失效(failed)时显示** `coverage_degraded`。
   原因：台账大面积 pending/partial，若全部显示会误导读者"系统全坏"。pending/partial 属过渡态，
