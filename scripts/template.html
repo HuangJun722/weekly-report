@@ -106,6 +106,16 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 
 /* ===================== 今日事件：平铺卡 + 右上角标签 ===================== */
 .f-grid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:28px; margin-top:8px; align-items:start; }
+.cf-strip { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; padding:12px 14px; border:1px solid rgba(31,58,95,0.09);
+  border-radius:var(--radius); background:rgba(255,255,255,0.5); }
+.cf-strip .cf-label { font-size:11.5px; font-weight:700; color:var(--navy); letter-spacing:0.03em; padding-top:5px; white-space:nowrap; }
+.cf-chip { display:inline-flex; align-items:center; gap:7px; font-size:12.5px; background:rgba(255,255,255,0.9);
+  border:1px solid rgba(31,58,95,0.12); border-radius:999px; padding:5px 12px; color:var(--ink);
+  text-decoration:none; transition:border-color 160ms ease-out, transform 160ms var(--ease); }
+.cf-chip:hover { border-color:var(--copper); transform:translateY(-1px); }
+.cf-chip .cf-co { font-weight:700; color:var(--navy); }
+.cf-chip .cf-title { max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.cf-chip .cf-sig { font-size:10.5px; font-weight:600; color:var(--copper); }
 .f-list { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
 .f-card { position:relative; display:grid; grid-template-columns:44px minmax(0,1fr) auto; gap:6px 18px;
   background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius); padding:16px 18px;
@@ -234,12 +244,24 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 .c-card:hover { transform:translateY(-2px); border-color:rgba(31,58,95,0.22);
   box-shadow:0 2px 4px rgba(20,40,70,0.05), 0 16px 34px rgba(20,40,70,0.1); }
 .c-card:active { transform:scale(0.985); }
+.c-card.cf-flash { border-color:var(--copper); box-shadow:0 0 0 3px rgba(164,113,58,0.35), 0 16px 34px rgba(20,40,70,0.1); transition:none; }
 .c-card > strong { font-size:15px; font-weight:700; }
+.c-card .c-tier { font-size:10.5px; font-weight:600; letter-spacing:0.04em; padding:2px 8px; border-radius:999px;
+  background:rgba(31,58,95,0.08); color:var(--navy); margin-left:6px; vertical-align:1px; white-space:nowrap; }
+.c-card .c-direction { font-size:12px; color:var(--quiet); margin-top:-2px; }
+.c-feat { display:flex; flex-direction:column; gap:4px; margin:2px 0 4px; }
+.c-feat .c-feat-title { font-size:13.5px; font-weight:600; line-height:1.5; color:var(--ink); }
+.c-feat .c-feat-overview { font-size:12.5px; color:var(--muted); line-height:1.6; }
+.c-feat-meta { display:flex; align-items:center; gap:8px; margin-top:2px; }
+.c-feat-meta .c-signal { font-size:11px; font-weight:600; color:var(--copper); }
+.c-feat-meta .c-feat-time { font-size:11px; color:var(--quiet); }
+.c-badge-warn { display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:600;
+  color:#9a5b00; background:rgba(180,83,9,0.1); padding:2px 8px; border-radius:999px; }
 .c-status { font-size:12px; color:var(--muted); }
 .c-status::before { content:""; display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:7px; vertical-align:1px; }
-.c-coverage-active .c-status::before { background:var(--green); box-shadow:0 0 0 3px rgba(31,102,88,0.14); }
-.c-coverage-failed .c-status::before { background:var(--amber); box-shadow:0 0 0 3px rgba(180,83,9,0.14); }
-.c-coverage-partial .c-status::before { background:var(--copper); box-shadow:0 0 0 3px rgba(164,113,58,0.14); }
+.c-coverage-NORMAL .c-status::before { background:var(--green); box-shadow:0 0 0 3px rgba(31,102,88,0.14); }
+.c-coverage-NO_DATA .c-status::before { background:var(--amber); box-shadow:0 0 0 3px rgba(180,83,9,0.14); }
+.c-coverage-PARTIAL_DATA .c-status::before { background:var(--copper); box-shadow:0 0 0 3px rgba(164,113,58,0.14); }
 .c-card .c-detail { font-size:12.5px; color:var(--muted); line-height:1.6; }
 .c-card small { font-size:11px; color:var(--quiet); line-height:1.6; }
 
@@ -422,6 +444,14 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <span class="m-head-meta">共 {{ total_stories }} 条合格事件{% if summary_counts %} · {{ summary_counts }}{% endif %}</span>
         </div>
       </div>
+      {% if company_feed %}
+      <div class="cf-strip">
+        <span class="cf-label">基本盘变化</span>
+        {% for cf in company_feed %}
+        <a class="cf-chip" href="#tab-companies" data-cf-chip data-company="{{ cf.name }}"><span class="cf-co">{{ cf.name }}</span><span class="cf-title">{{ cf.title }}</span>{% if cf.signal %}<span class="cf-sig">{{ cf.signal }}</span>{% endif %}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="f-grid">
         <section class="f-list">
           {% for item in merged_events %}
@@ -654,10 +684,16 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <div class="c-grid">
             {% for c in group.companies %}
             <button class="c-card c-coverage-{{ c.coverage_status }}{% if c.count == 0 %} c-empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
-              <strong>{{ c.name }}</strong>
-              <span class="c-status">{{ c.activity_label }}｜{{ c.coverage_label }}</span>
-              <span class="c-detail">{{ c.observation_detail }}</span>
-              <small>{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '关注中' if c.portfolio_tier == 'mention' else '实验对象' }}｜近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
+              <strong>{{ c.name }}<span class="c-tier">{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '关注中' if c.portfolio_tier == 'mention' else '实验对象' }}</span></strong>
+              {% if c.direction %}<span class="c-direction">{{ c.direction }}</span>{% endif %}
+              {% if c.featured_title %}
+              <span class="c-feat">
+                <span class="c-feat-title">{{ c.featured_title }}</span>
+                {% if c.featured_overview %}<span class="c-feat-overview">{{ c.featured_overview }}</span>{% endif %}
+                <span class="c-feat-meta">{% if c.signal %}<span class="c-signal">{{ c.signal }}</span>{% endif %}{% if c.featured_date %}<span class="c-feat-time">{{ c.featured_date }}</span>{% endif %}</span>
+              </span>
+              {% endif %}
+              <small>近 30 天 {{ c.recent_30 }} 条{% if c.coverage_degraded %}｜<span class="c-badge-warn">⚠ 数据可能不完整</span>{% endif %}</small>
             </button>
             {% endfor %}
           </div>
@@ -840,6 +876,25 @@ document.querySelectorAll('[data-goto]').forEach(function(a){
     e.preventDefault();
     var tab = document.querySelector('.m-tab[data-panel="' + a.dataset.goto + '"]');
     if (tab) tab.click();
+  });
+});
+
+/* 基本盘变化 chip → 切公司索引并高亮该公司卡片 */
+document.querySelectorAll('[data-cf-chip]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var tab = document.querySelector('.m-tab[data-panel="companies"]');
+    if (tab) tab.click();
+    var co = (a.getAttribute('data-company') || '').toLowerCase();
+    var card = null;
+    document.querySelectorAll('.c-card[data-company]').forEach(function(c){
+      if ((c.getAttribute('data-company') || '').toLowerCase() === co) card = c;
+    });
+    if (card) {
+      card.classList.add('cf-flash');
+      setTimeout(function(){ card.classList.remove('cf-flash'); }, 1800);
+      card.scrollIntoView({behavior:'smooth', block:'center'});
+    }
   });
 });
 

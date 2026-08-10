@@ -1896,14 +1896,62 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         for row in (observation_ledger or {}).get('entities') or []
         if row.get('entity')
     }
+    # sector 英文码 → 中文观察方向
+    _sector_label = {
+        'ai_platform': 'AI 平台', 'cloud_ai_infra': '云/AI 基础设施', 'data_ai_platform': '数据/AI 平台',
+        'search_ai_cloud': '搜索/AI/云', 'payment': '支付', 'payment_developer_platform': '支付开发者平台',
+        'payment_wallet': '支付钱包', 'cross_border_payment': '跨境支付', 'bnpl_payment': 'BNPL 支付',
+        'digital_bank': '数字银行', 'commerce': '电商', 'commerce_fintech': '电商+金融科技',
+        'commerce_gaming_fintech': '电商/游戏/金融科技', 'commerce_logistics': '电商+物流',
+        'commerce_payment': '电商+支付', 'commerce_saas': '电商 SaaS',
+        'delivery_fintech': '配送+金融科技', 'mobility_payment': '出行+支付',
+        'mobility_super_app': '出行超级应用', 'super_app_fintech': '超级应用+金融科技',
+        'gaming': '游戏', 'streaming_media': '流媒体', 'social_payment': '社交+支付',
+        'social_payment_gaming': '社交/支付/游戏', 'telco_digital_infra': '电信数字基础设施',
+        'travel_local_services': '旅游本地服务',
+    }
+    now = datetime.strptime(now_date, '%Y-%m-%d')
+    # 公司权重：核心战略公司（must/strategic）的信号比普通观察对象更值得关注
+    _company_weight = {
+        'must': 1.3,
+        'strategic': 1.2,
+        'experiment': 1.0,
+        'mention': 1.0,
+        'watch': 1.0,
+    }
     for company in company_list:
         events = company.get('events') or []
         events = sorted(events, key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
         recent_7 = [e for e in events if (e.get('date') or '')[:10] >= start_7]
         recent_30 = [e for e in events if (e.get('date') or '')[:10] >= start_30]
         quality_events = [event for event in recent_30 if is_main_view_event(event) or is_company_quality_signal(event)]
-        latest = events[0] if events else {}
-        latest_title = clean_display_title(latest.get('display_title') or latest.get('summary_short') or latest.get('title') or '暂无近期事件')
+
+        def _signal_worth(event):
+            """一条事件是否值得作为「最近值得关注动态」展示（排除平凡信号）。"""
+            signal = event.get('insight_label') or '观察'
+            return signal not in {'观察', '背景补充', '其他'}
+
+        def _attention_sort_key(event):
+            """按 事件重要性 × 公司权重 × 时间衰减 排序，取值得关注的那条。"""
+            attention = float(event.get('attention_score') or 0)
+            weight = _company_weight.get(company.get('portfolio_tier'), 1.0)
+            date_str = (event.get('date') or '')[:10]
+            try:
+                days_old = (now - datetime.strptime(date_str, '%Y-%m-%d')).days
+            except ValueError:
+                days_old = 30
+            decay = 0.7 ** max(days_old, 0)  # 今天=1.0，每过约2天衰减到半
+            return (attention / 100.0) * weight * decay
+
+        # 核心动态：近30天内信号值得关注且综合分最高的一条；否则回退到最新一条
+        worthy = [e for e in recent_30 if _signal_worth(e)]
+        featured = max(worthy, key=_attention_sort_key) if worthy else None
+        latest = featured or (events[0] if events else {})
+        # 公司索引标题优先原始 title（信息完整），避免 enrich 的 reason 泛化兜底
+        _featured_title = (latest.get('title') or '').strip()
+        if not _featured_title or _featured_title == '暂无近期事件':
+            _featured_title = (latest.get('summary_short') or latest.get('display_title') or '').strip()
+        latest_title = clean_display_title(_featured_title or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
         if signal in {'背景补充', '其他'}:
             signal = '观察'
@@ -1918,7 +1966,11 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         activity_status = observation.get('activity_status') or (
             'active' if observation_status == 'active' else 'unknown'
         )
+        # 覆盖状态以 status 为主：采集闭环(active/quiet)即视为正常，
+        # coverage_status 仅在其明确表示降级(failed/partial)时才覆盖。
         coverage_status = observation.get('coverage_status') or observation_status
+        if observation_status in {'active', 'quiet', 'changed_below_threshold'} and coverage_status in {'pending', 'unverified'}:
+            coverage_status = observation_status
         observation_label = observation.get('status_label') or '状态待确认'
         if observation_status == 'active':
             observation_detail = f"近30天形成 {observation.get('qualified_event_count_30d', 0)} 条合格事件"
@@ -1956,13 +2008,37 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
             observation_detail = company.get('decision_use')
         else:
             observation_detail = '历史运行记录不足，等待下一次采集确认'
+        # 三态归一：NORMAL 正常 / PARTIAL_DATA 部分覆盖 / NO_DATA 无数据。
+        # coverage_degraded 仅记录原始采集失效(failed)，用于前台"数据可能不完整"角标；
+        # pending/partial 属过渡态不打扰读者，线下由运维侧报告跟踪。
+        _raw_coverage = coverage_status
+        coverage_status = {
+            'active': 'NORMAL',
+            'quiet': 'NORMAL',
+            'changed_below_threshold': 'NORMAL',
+            'partial': 'PARTIAL_DATA',
+            'pending': 'NO_DATA',
+            'unverified': 'NO_DATA',
+            'failed': 'NO_DATA',
+        }.get(coverage_status, 'NORMAL')
+        featured_overview = ''
+        if latest:
+            _title = latest.get('display_title') or latest.get('summary_short') or latest.get('title') or ''
+            _summary = latest.get('summary_short') or ''
+            _reason = latest.get('reason') or ''
+            featured_overview = _front_overview(latest, _title, _summary, _reason, _title)
         result.append({
             **company,
+            'direction': _sector_label.get(company.get('sector') or '', ''),
             'recent_7': len(recent_7),
             'recent_30': len(recent_30),
             'quality_30': len(quality_events),
             'latest_title': latest_title,
             'latest_date': (latest.get('date') or '')[:10],
+            'featured_title': latest_title,
+            'featured_overview': featured_overview,
+            'featured_date': (latest.get('date') or '')[:10],
+            'attention_score': float(latest.get('attention_score') or 0),
             'signal': signal,
             'observation_status': observation_status,
             'observation_label': observation_label,
@@ -1975,16 +2051,13 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
                 'unknown': '活动未知',
             }.get(activity_status, '活动未知'),
             'coverage_label': {
-                'active': '完整覆盖',
-                'quiet': '有效覆盖',
-                'changed_below_threshold': '有效覆盖',
-                'partial': '部分覆盖',
-                'failed': '接入失效',
-                'pending': '待接入',
-                'unverified': '待确认',
-            }.get(coverage_status, '待确认'),
+                'NORMAL': '正常',
+                'PARTIAL_DATA': '部分覆盖',
+                'NO_DATA': '数据存疑',
+            }.get(coverage_status, '正常'),
             'observation_detail': observation_detail,
             'coverage_status': coverage_status,
+            'coverage_degraded': _raw_coverage == 'failed',
             'last_checked_at': (observation.get('last_checked_at') or '')[:10],
             'connected_points': connected_points,
             'total_points': total_points,
@@ -2318,6 +2391,29 @@ def generate_html(force=False, preview_mode=False):
     weekly['company_count'] = len(company_events_filtered)
     weekly['company_list'] = preset_company_list
 
+    # 今日基本盘变化流：核心战略公司最近值得关注的动态，点击进入公司索引
+    company_feed = []
+    _feed_cutoff = (datetime.strptime(main_date, '%Y-%m-%d') - timedelta(days=2)).strftime('%Y-%m-%d')
+    for _c in preset_company_list:
+        if _c.get('portfolio_tier') not in {'must', 'strategic'}:
+            continue
+        if not _c.get('featured_title') or not _c.get('signal'):
+            continue
+        if _c.get('signal') in {'观察', '背景补充'}:
+            continue
+        if not _c.get('featured_date'):
+            continue
+        if (_c.get('featured_date') or '') < _feed_cutoff:
+            continue
+        company_feed.append({
+            'name': _c.get('name') or '',
+            'title': _c.get('featured_title') or '',
+            'signal': _c.get('signal') or '',
+            'date': _c.get('featured_date') or '',
+        })
+    company_feed.sort(key=lambda x: x.get('date') or '', reverse=True)
+    company_feed = company_feed[:8]
+
     trend_groups = build_trend_groups(today_events)
     repair_events = build_review_events(raw_today_events)
     daily_trend_signals = weekly.get('top3', [])
@@ -2331,8 +2427,8 @@ def generate_html(force=False, preview_mode=False):
     daily_headline, daily_lead = build_daily_navigation_copy(daily_event_groups)
     daily_trend_judgment = daily_lead
     total_stories = len(today_events)
-    dt = datetime.strptime(main_date, '%Y-%m-%d')
-    vol_label = f"VOL.{main_date}"
+    dt = datetime.strptime(today_str, '%Y-%m-%d')
+    vol_label = f"VOL.{today_str}"
     cn_date = f"{dt.year}年{dt.month}月{dt.day}日 星期{CHINESE_WEEKDAYS[dt.weekday()]}"
 
     # 全部事件按日期分组
@@ -2400,6 +2496,7 @@ def generate_html(force=False, preview_mode=False):
         company_events=company_events,
         company_list=preset_company_list,
         company_groups=company_groups,
+        company_feed=company_feed,
         update_time=update_time,
         trend_groups=trend_groups,
         repair_events=repair_events,
