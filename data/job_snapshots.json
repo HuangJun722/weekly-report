@@ -1,11 +1,55 @@
 {
   "version": 1,
-  "generated_at": "2026-08-10T17:26:05.122301+08:00",
+  "generated_at": "2026-08-11T03:07:09.469484+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-10T17:26:05.122301+08:00",
+      "observed_at": "2026-08-11T03:07:09.469484+08:00",
       "jobs": [
+        {
+          "id": "744000142671244",
+          "title": "Assistant Marketing Manager, Mobility",
+          "url": "https://www.grab.careers/en/jobs/744000142671244/assistant-marketing-manager-mobility/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142657394",
+          "title": "Software Engineer, iOS",
+          "url": "https://www.grab.careers/en/jobs/744000142657394/software-engineer-ios/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142617219",
+          "title": "Assistant Finance Manager (Controllership)",
+          "url": "https://www.grab.careers/en/jobs/744000142617219/assistant-finance-manager-controllership/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142613869",
+          "title": "Head, Grab Support Customer Operations",
+          "url": "https://www.grab.careers/en/jobs/744000142613869/head-grab-support-customer-operations/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000142613532",
+          "title": "Head, Grab Support Customer Excellence",
+          "url": "https://www.grab.careers/en/jobs/744000142613532/head-grab-support-customer-excellence/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000142594006",
+          "title": "Assistant Marketing Manager, Financial Services",
+          "url": "https://www.grab.careers/en/jobs/744000142594006/assistant-marketing-manager-financial-services/",
+          "function_tags": [
+            "payments"
+          ]
+        },
         {
           "id": "744000142566409",
           "title": "Software Engineer, Backend",
@@ -105,54 +149,12 @@
           "title": "Senior Data Scientist (Country and Marketing Analytics)",
           "url": "https://www.grab.careers/en/jobs/744000142046259/senior-data-scientist-country-and-marketing-analytics/",
           "function_tags": []
-        },
-        {
-          "id": "744000142045609",
-          "title": "Lead Software Engineer, Backend - Service Mesh",
-          "url": "https://www.grab.careers/en/jobs/744000142045609/lead-software-engineer-backend-service-mesh/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000142045030",
-          "title": "Lead Software Engineer, Managed Kubernetes Platform",
-          "url": "https://www.grab.careers/en/jobs/744000142045030/lead-software-engineer-managed-kubernetes-platform/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000141888699",
-          "title": "2W Partner Acquisition and Engagement Associate",
-          "url": "https://www.grab.careers/en/jobs/744000141888699/2w-partner-acquisition-and-engagement-associate/",
-          "function_tags": [
-            "partnerships"
-          ]
-        },
-        {
-          "id": "744000141887339",
-          "title": "Product Owner, GrabAds Solutions",
-          "url": "https://www.grab.careers/en/jobs/744000141887339/product-owner-grabads-solutions/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141887064",
-          "title": "Associate, OmniCommerce",
-          "url": "https://www.grab.careers/en/jobs/744000141887064/associate-omnicommerce/",
-          "function_tags": []
-        },
-        {
-          "id": "744000141866829",
-          "title": "FP&A Lead",
-          "url": "https://www.grab.careers/en/jobs/744000141866829/fpa-lead/",
-          "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-10T17:26:05.122301+08:00",
+      "observed_at": "2026-08-11T03:07:09.469484+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -194,6 +196,14 @@
           "function_tags": []
         },
         {
+          "id": "8113337",
+          "title": "ARG Engineering Manager",
+          "url": "https://stripe.com/careers/listing/arg-engineering-manager/8113337",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
           "id": "8078126",
           "title": "AV Events Manager",
           "url": "https://stripe.com/careers/listing/av-events-manager/8078126",
@@ -232,6 +242,14 @@
           ]
         },
         {
+          "id": "8023928",
+          "title": "Account Executive, Bridge (Stripe Crypto and Stablecoins)",
+          "url": "https://stripe.com/careers/listing/account-executive-bridge-stripe-crypto-and-stablecoins/8023928",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
           "id": "8042978",
           "title": "Account Executive, Commercial Grower (Japanese Fluency)",
           "url": "https://stripe.com/careers/listing/account-executive-commercial-grower-japanese-fluency/8042978",
@@ -246,20 +264,12 @@
           "function_tags": [
             "sales"
           ]
-        },
-        {
-          "id": "7893199",
-          "title": "Account Executive, Cross Border China",
-          "url": "https://stripe.com/careers/listing/account-executive-cross-border-china/7893199",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-10T17:26:05.122301+08:00",
+      "observed_at": "2026-08-11T03:07:09.469484+08:00",
       "jobs": [
         {
           "id": "e00d6002-7069-41cd-bf85-f3ef7119bba7",
@@ -451,14 +461,6 @@
           "title": "Manager, AML Transaction Monitoring FCC Remote - Americas",
           "url": "https://www.shopify.com/careers/manager-aml-transaction-monitoring-fcc_f46db5ed-331d-417e-8d5d-593b76bff8a0",
           "function_tags": []
-        },
-        {
-          "id": "663c880c-ba78-464a-a48b-10d4a256c2f9",
-          "title": "Merchant Support Advisor, Singapore Remote - Singapore",
-          "url": "https://www.shopify.com/careers/merchant-support-advisor-singapore_663c880c-ba78-464a-a48b-10d4a256c2f9",
-          "function_tags": [
-            "operations"
-          ]
         },
         {
           "id": "8c9a75bc-2919-45da-a980-ff38453e6472",
