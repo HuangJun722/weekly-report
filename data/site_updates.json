@@ -1,6 +1,20 @@
 [
  {
   "date": "2026-08-10",
+  "version": "V3.9",
+  "type": "功能与界面",
+  "status": "已完成",
+  "title": "新增模型榜 tab",
+  "summary": "新增「模型榜」tab，复刻 AIHOT 大模型排行榜：主榜前 30 共识分排名 + 12 家官方评测榜单明细，数据手动刷新。",
+  "changes": [
+   "新增「模型榜」导航 tab：AIHOT 共识分前 30 名表格（排名/模型/上线日期/评测完整度/输入输出成本/共识分），点击模型名可到原站查看各榜详情",
+   "官方榜单明细：12 家独立来源折叠展开（AA Index、Epoch ECI、LiveBench、LMArena、EQ-Bench、Vals、APEX-Agents、DeepSWE 等），每家含原榜名次与原始分数",
+   "新增抓取脚本 scripts/fetch_model_leaderboard.py，手动运行即可刷新 data/model_leaderboard.json",
+   "页脚标注数据来源与共识分说明，链接回 AIHOT 原站并遵守其公开使用规则"
+  ]
+ },
+ {
+  "date": "2026-08-10",
   "version": "V3.8",
   "type": "功能与界面",
   "status": "已完成",

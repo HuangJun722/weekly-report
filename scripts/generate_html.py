@@ -2135,6 +2135,17 @@ def load_entity_observation_ledger():
     except (OSError, json.JSONDecodeError):
         return {}
 
+
+def load_model_leaderboard():
+    """读取 AIHOT 模型榜数据（由 scripts/fetch_model_leaderboard.py 生成）。"""
+    path = os.path.join('data', 'model_leaderboard.json')
+    try:
+        with open(path, 'r', encoding='utf-8') as handle:
+            data = json.load(handle)
+        return data if isinstance(data, dict) else None
+    except (OSError, json.JSONDecodeError):
+        return None
+
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
 
@@ -2459,6 +2470,7 @@ def generate_html(force=False, preview_mode=False):
     weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], period_reference_date, period_reference_date, '本周', 'empty', 'open')
     monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], period_reference_date, period_reference_date, '本月', 'empty', 'open')
     site_updates = load_site_updates()
+    model_leaderboard = load_model_leaderboard()
     update_time = f"最新采集 {period_reference_date}｜展示 {main_date} 成熟批次"
 
     env = Environment(autoescape=select_autoescape(['html', 'htm', 'xml']))
@@ -2503,6 +2515,7 @@ def generate_html(force=False, preview_mode=False):
         latest_visible_count=latest_visible_count,
         batch_notice=batch_notice,
         site_updates=site_updates,
+        model_leaderboard=model_leaderboard,
         feedback_endpoint=os.getenv('FEEDBACK_ENDPOINT', ''),
     )
     html = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'

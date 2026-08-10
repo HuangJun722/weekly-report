@@ -254,6 +254,41 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 .c-card .c-detail { font-size:12.5px; color:var(--muted); line-height:1.6; }
 .c-card small { font-size:11px; color:var(--quiet); line-height:1.6; }
 
+/* ===================== 模型榜 ===================== */
+.mb-head { padding:24px 0 6px; }
+.mb-board { margin-top:8px; }
+.mb-card { background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius);
+  box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05); overflow:hidden; }
+.mb-card + .mb-card { margin-top:12px; }
+.mb-card-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; padding:14px 18px; border-bottom:1px solid var(--line); }
+.mb-card-head h3 { font-size:15px; margin:0; font-weight:700; }
+.mb-card-head span { font-size:12px; color:var(--quiet); }
+.mb-table-wrap { overflow-x:auto; }
+.mb-table { width:100%; border-collapse:collapse; font-size:13px; }
+.mb-table th { text-align:left; font-weight:600; color:var(--quiet); font-size:11.5px; padding:10px 14px;
+  border-bottom:1px solid var(--line); letter-spacing:0.02em; white-space:nowrap; }
+.mb-table td { padding:10px 14px; border-bottom:1px solid rgba(31,58,95,0.05); vertical-align:middle; }
+.mb-table tbody tr:last-child td { border-bottom:0; }
+.mb-table tbody tr:hover { background:rgba(31,58,95,0.03); }
+.mb-rank { font-weight:700; color:var(--copper); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.mb-model { font-weight:600; }
+.mb-model a { color:inherit; text-decoration:none; }
+.mb-model a:hover { color:var(--navy); text-decoration:underline; }
+.mb-provider { font-size:11.5px; color:var(--quiet); }
+.mb-score { font-weight:700; color:var(--green); font-variant-numeric:tabular-nums; }
+.mb-num { font-variant-numeric:tabular-nums; color:var(--muted); }
+.mb-muted { color:var(--quiet); }
+.mb-note { font-size:11.5px; color:var(--quiet); padding:10px 18px; border-top:1px solid var(--line); line-height:1.6; }
+.mb-src { border-top:1px solid var(--line); }
+.mb-src summary { cursor:pointer; padding:12px 18px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; list-style:none; }
+.mb-src summary::-webkit-details-marker { display:none; }
+.mb-src summary::before { content:"▸"; color:var(--copper); margin-right:2px; transition:transform 180ms var(--ease); }
+.mb-src[open] summary::before { transform:rotate(90deg); }
+.mb-src summary:hover { background:rgba(31,58,95,0.03); }
+.mb-src summary strong { font-size:13.5px; }
+.mb-src summary span { font-size:11.5px; color:var(--quiet); }
+.mb-src-note { font-size:12px; color:var(--muted); padding:0 18px 8px; line-height:1.6; }
+
 /* ===================== 全部事件 ===================== */
 .h-list { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
 .h-card { background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius);
@@ -383,6 +418,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
       <button class="m-tab" data-panel="weekly">周报</button>
       <button class="m-tab" data-panel="monthly">月报</button>
       <button class="m-tab" data-panel="companies">公司索引</button>
+      <button class="m-tab" data-panel="models">模型榜</button>
       <button class="m-tab" data-panel="all">全部事件</button>
       <button class="m-tab" data-panel="updates">更新日志</button>
       <button class="m-tab" data-panel="feedback">反馈</button>
@@ -762,6 +798,101 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <div class="u-side-note"><strong>下一步</strong><span>反馈稳定后，可把有效建议沉淀为待办清单或 GitHub Issue。</span></div>
         </aside>
       </div>
+    </section>
+
+    <!-- ============ 模型榜 ============ -->
+    <section class="proto-panel" data-panel="models">
+      <div class="mb-head">
+        <div class="m-overline">模型榜</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">AI 模型排行榜</h2>
+          {% if model_leaderboard %}
+          <span class="m-head-meta">数据来源：{{ model_leaderboard.source.name }} · 抓取于 {{ model_leaderboard.fetched_date }}</span>
+          {% endif %}
+        </div>
+        {% if model_leaderboard %}
+        <p class="m-lead">{{ model_leaderboard.source.note }}</p>
+        {% endif %}
+      </div>
+      {% if model_leaderboard %}
+      <div class="mb-board">
+        <div class="mb-card">
+          <div class="mb-card-head">
+            <h3>AIHOT 共识分 · 前 {{ model_leaderboard.ranking|length }} 名</h3>
+            <span>综合多家公开评测榜单</span>
+          </div>
+          <div class="mb-table-wrap">
+            <table class="mb-table">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>模型</th>
+                  <th>上线日期</th>
+                  <th>评测完整度</th>
+                  <th>输入成本</th>
+                  <th>输出成本</th>
+                  <th>共识分</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in model_leaderboard.ranking %}
+                <tr>
+                  <td class="mb-rank">{{ "%02d"|format(row.rank) }}</td>
+                  <td class="mb-model"><a href="{{ row.detail_url }}" target="_blank" rel="noopener">{{ row.name }}</a><span class="mb-provider"> · {{ row.provider }}</span></td>
+                  <td class="mb-num">{{ row.release_date }}</td>
+                  <td class="mb-muted">{{ row.completeness }}</td>
+                  <td class="mb-num">{{ row.input_price }}</td>
+                  <td class="mb-num">{{ row.output_price }}</td>
+                  <td class="mb-score">{{ "%.1f"|format(row.consensus_score) if row.consensus_score is not none else "—" }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="mb-note">共识分为 AIHOT 统一算法结果（基于多家公开评测榜单），本页复制其展示结果。点击模型名可到原站查看它在各官方榜单的原始名次与分数。成本为 OpenRouter 参考价，美元 / 百万 Token，可能含平台折扣。</div>
+        </div>
+
+        <div class="mb-card">
+          <div class="mb-card-head">
+            <h3>官方榜单明细</h3>
+            <span>共 {{ model_leaderboard.official_sources|length }} 家独立来源</span>
+          </div>
+          {% for src in model_leaderboard.official_sources %}
+          <details class="mb-src" {% if loop.first %}open{% endif %}>
+            <summary>
+              <strong>{{ src.short_name }}</strong>
+              <span>{{ src.metric_name }}{% if src.total_count %} · 共 {{ src.total_count }} 名{% endif %}</span>
+            </summary>
+            {% if src.note %}<div class="mb-src-note">{{ src.note }}</div>{% endif %}
+            <div class="mb-table-wrap">
+              <table class="mb-table">
+                <thead>
+                  <tr>
+                    <th>名次</th>
+                    <th>模型</th>
+                    <th>厂商</th>
+                    <th>原始分数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for m in src.models %}
+                  <tr>
+                    <td class="mb-rank">{{ m.rank }}</td>
+                    <td class="mb-model">{{ m.name }}</td>
+                    <td class="mb-provider">{{ m.provider }}</td>
+                    <td class="mb-num">{{ m.score if m.score is not none else "—" }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+      {% else %}
+      <div class="pempty">暂无模型榜数据。运行 <code>scripts/fetch_model_leaderboard.py</code> 抓取后重新生成页面。</div>
+      {% endif %}
     </section>
 
     <!-- ============ 反馈 ============ -->
