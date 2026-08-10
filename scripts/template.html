@@ -1,807 +1,765 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>全球互联网百晓生</title>
 <style>
-:root {
-  --ink: #121820;
-  --muted: #66727f;
-  --quiet: #919aa4;
-  --paper: #f4f1ea;
-  --paper-deep: #ebe6da;
-  --surface: #fbfaf6;
-  --surface-cool: #eef2f3;
-  --line: #d9d1c4;
-  --line-cool: #cbd5db;
-  --navy: #172b3a;
-  --green: #1f6658;
-  --copper: #9a6330;
-  --red: #8f3e3a;
-  --radius: 8px;
-  --shadow: 0 18px 50px rgba(28, 35, 42, 0.11);
-}
 * { box-sizing: border-box; }
-body {
-  margin: 0;
-  color: var(--ink);
-  background:
-    linear-gradient(90deg, rgba(23,43,58,0.035) 1px, transparent 1px),
-    linear-gradient(180deg, var(--paper), #f7f5ef 42%, #eef2f3 100%);
-  background-size: 72px 72px, auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-  line-height: 1.55;
+html, body { margin: 0; padding: 0; }
+button, input, select, textarea { font: inherit; }
+a { -webkit-tap-highlight-color: transparent; }
+
+/* ===================== 设计令牌（Fluid 质感 + 编排点缀） ===================== */
+:root {
+  --bg1:#f6f8fa; --bg2:#eef1f5; --ink:#1b2b3a; --muted:#5f7186; --quiet:#8a98a8;
+  --navy:#1f3a5f; --copper:#a4713a; --green:#1f6658; --amber:#b45309;
+  --line:rgba(31,58,95,0.10); --glass:rgba(255,255,255,0.72);
+  --ease:cubic-bezier(0.23,1,0.32,1);
+  --radius:14px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
 }
-a { color: inherit; text-decoration: none; }
-button, input, select { font: inherit; }
-.page { width: min(1280px, calc(100vw - 36px)); margin: 0 auto; padding: 26px 0 48px; }
-.topbar { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
-.identity { display: flex; align-items: center; gap: 15px; min-width: 0; }
-.seal {
-  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--navy); color: var(--paper); font-weight: 800; font-size: 18px;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+
+/* ===================== 报头（编排感） ===================== */
+.m-wrap { width:min(1200px,calc(100vw - 36px)); margin:0 auto; padding:20px 0 48px; }
+.m-masthead { padding-bottom:16px; border-bottom:3px solid var(--ink); position:relative; }
+.m-masthead::after { content:""; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--ink); opacity:0.16; }
+.m-mast-top { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; }
+.m-brand { display:flex; gap:15px; align-items:center; }
+.m-seal { width:46px; height:46px; border-radius:11px; background:var(--navy); color:#f6f8fa;
+  display:grid; place-items:center; font-size:19px; font-weight:700;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16), 0 2px 8px rgba(31,58,95,0.18); }
+.m-brand h1 { font-size:23px; margin:0; letter-spacing:0.01em; font-weight:700; }
+.m-brand p { margin:2px 0 0; font-size:12.5px; color:var(--muted); }
+.m-issue { text-align:right; line-height:1.8; }
+.m-vol { font-size:14px; font-weight:700; color:var(--copper); letter-spacing:0.12em; }
+.m-issue .m-line { font-size:12px; color:var(--muted); }
+.m-live { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--green);
+  box-shadow:0 0 0 3px rgba(31,102,88,0.14); margin-right:6px; vertical-align:1px; }
+
+/* ===================== 玻璃导航 + 面板切换 ===================== */
+.m-glassnav { position:sticky; top:0; z-index:30; background:var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4); backdrop-filter:blur(18px) saturate(1.4);
+  border-bottom:1px solid var(--line); }
+.m-nav { width:min(1200px,calc(100vw - 36px)); margin:0 auto; display:flex; align-items:center; gap:2px; padding:10px 0; }
+.m-tab { border:0; background:none; font:inherit; font-size:13.5px; color:var(--muted); padding:8px 14px;
+  border-radius:9px; cursor:pointer; transition:color 180ms ease-out, background 180ms ease-out; }
+.m-tab:hover { color:var(--ink); background:rgba(255,255,255,0.65); }
+.m-tab.active { color:var(--navy); font-weight:600; background:#fff;
+  box-shadow:0 1px 3px rgba(20,40,70,0.10), 0 0 0 1px rgba(31,58,95,0.06); }
+.m-actions { display:flex; align-items:center; gap:10px; margin-left:auto; }
+.m-search { display:flex; align-items:center; gap:7px; background:rgba(255,255,255,0.8); border:1px solid var(--line);
+  border-radius:10px; padding:8px 12px; font-size:13px; color:var(--muted); transition:border-color 180ms ease-out, box-shadow 180ms ease-out; }
+.m-search:focus-within { border-color:rgba(31,58,95,0.35); box-shadow:0 0 0 3px rgba(31,58,95,0.08); }
+.m-search input { border:0; background:none; outline:none; font:inherit; color:var(--ink); width:170px; }
+.m-feed { display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); background:rgba(255,255,255,0.75);
+  border-radius:10px; padding:8px 13px; font:inherit; font-size:13px; cursor:pointer;
+  transition:transform 180ms var(--ease), border-color 180ms ease-out, box-shadow 180ms ease-out; }
+.m-feed:hover { border-color:rgba(31,58,95,0.3); transform:translateY(-1px); box-shadow:0 4px 10px rgba(20,40,70,0.08); }
+.m-feed:active { transform:scale(0.97); }
+.m-feed span { font-weight:700; color:var(--navy); }
+.m-feed em { font-style:normal; }
+.m-select { border:1px solid var(--line); background:rgba(255,255,255,0.8); border-radius:10px; padding:8px 10px;
+  font-size:13px; color:var(--ink); outline:none; cursor:pointer; transition:border-color 180ms ease-out, box-shadow 180ms ease-out; }
+.m-select:focus { border-color:rgba(31,58,95,0.35); box-shadow:0 0 0 3px rgba(31,58,95,0.08); }
+.m-feedwrap { position:relative; }
+.m-pop { position:absolute; right:0; top:calc(100% + 8px); width:min(340px,calc(100vw - 32px)); z-index:40;
+  background:var(--glass); -webkit-backdrop-filter:blur(16px) saturate(1.4); backdrop-filter:blur(16px) saturate(1.4);
+  border:1px solid rgba(255,255,255,0.7); border-radius:14px; box-shadow:0 8px 24px rgba(20,40,70,0.14);
+  padding:16px 18px; display:none; }
+.m-pop.open { display:block; animation:panelIn 200ms var(--ease) both; }
+.m-pop strong { display:block; font-size:13.5px; color:var(--navy); margin-bottom:6px; }
+.m-pop p { font-size:12px; color:var(--muted); margin:0 0 10px; }
+.m-pop-addr { display:flex; gap:8px; align-items:center; background:rgba(255,255,255,0.6); border:1px solid var(--line);
+  border-radius:9px; padding:8px 10px; }
+.m-pop-addr code { flex:1; font-size:11px; color:var(--muted); word-break:break-all; font-family:ui-monospace,Consolas,monospace; }
+.m-pop-addr button { border:0; background:var(--navy); color:#fff; font-size:12px; font-weight:600; border-radius:7px;
+  padding:5px 11px; cursor:pointer; transition:transform 180ms var(--ease); }
+.m-pop-addr button:active { transform:scale(0.97); }
+.m-pop-note { font-size:11px; color:var(--quiet); margin-top:8px; }
+.m-filterstate { display:none; align-items:center; gap:12px; width:min(1200px,calc(100vw - 36px)); margin:14px auto 0;
+  background:rgba(255,255,255,0.85); border:1px solid rgba(31,58,95,0.14); border-radius:12px; padding:10px 16px;
+  box-shadow:0 2px 8px rgba(20,40,70,0.06); }
+.m-filterstate.active { display:flex; animation:panelIn 200ms var(--ease) both; }
+.m-fsm { width:10px; height:10px; border-radius:50%; background:var(--copper); box-shadow:0 0 0 4px rgba(164,113,58,0.14); flex:0 0 auto; }
+.m-fs-main { min-width:0; }
+.m-fs-main strong { display:block; font-size:13px; color:var(--ink); }
+.m-fs-main small { display:block; margin-top:2px; color:var(--muted); font-size:12px; }
+.m-fs-clear { margin-left:auto; border:1px solid var(--line); background:rgba(255,255,255,0.6); border-radius:9px;
+  padding:6px 12px; font-size:12.5px; color:var(--navy); cursor:pointer; font-weight:600; transition:background 180ms ease-out; }
+.m-fs-clear:hover { background:rgba(31,58,95,0.06); }
+.f-date.active { background:rgba(31,58,95,0.05); color:var(--ink); font-weight:600; }
+
+.proto-panel { display:none; }
+.proto-panel.active { display:block; animation:panelIn 220ms var(--ease) both; }
+@keyframes panelIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce) { .proto-panel.active { animation:none; } }
+
+/* ===================== 页头小节（弱化非关键信息） ===================== */
+.m-head { padding:24px 0 4px; }
+.m-overline { font-size:11px; letter-spacing:0.2em; color:var(--copper); font-weight:600; margin-bottom:6px; }
+.m-headline-row { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+.m-title-sec { font-size:20px; margin:0; font-weight:700; letter-spacing:-0.01em; }
+.m-head-meta { font-size:12.5px; color:var(--quiet); }
+.m-lead { font-size:13.5px; color:var(--muted); margin:8px 0 0; max-width:70ch; }
+
+/* ===================== 今日事件：平铺卡 + 右上角标签 ===================== */
+.f-grid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:28px; margin-top:8px; align-items:start; }
+.f-list { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
+.f-card { position:relative; display:grid; grid-template-columns:44px minmax(0,1fr) auto; gap:6px 18px;
+  background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius); padding:16px 18px;
+  box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05);
+  text-decoration:none; color:inherit;
+  transition:transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms ease-out; }
+.f-card:hover { transform:translateY(-2px); border-color:rgba(31,58,95,0.2);
+  box-shadow:0 2px 4px rgba(20,40,70,0.05), 0 18px 40px rgba(20,40,70,0.11); }
+.f-card:active { transform:scale(0.985); }
+.f-card:focus-visible { outline:2px solid rgba(31,58,95,0.35); outline-offset:2px; }
+.f-num { grid-column:1; font-size:13px; font-weight:600; color:var(--copper); opacity:0.85; padding-top:4px; font-variant-numeric:tabular-nums; }
+.f-body { grid-column:2; display:flex; flex-direction:column; gap:5px; min-width:0; }
+.f-meta { display:flex; align-items:center; gap:7px; font-size:11px; color:var(--muted); }
+.f-co { font-weight:600; color:var(--navy); background:rgba(31,58,95,0.06); border:1px solid rgba(31,58,95,0.1);
+  padding:2px 9px; border-radius:999px; }
+.f-title { font-size:16px; line-height:1.45; font-weight:600; transition:color 200ms ease-out; }
+.f-card:hover .f-title { color:var(--navy); }
+.f-overview { font-size:13px; color:var(--muted); line-height:1.7; }
+.f-reason { font-size:13px; color:var(--navy); line-height:1.7; }
+.f-right { grid-column:3; display:flex; flex-direction:column; align-items:flex-end; gap:9px; padding-top:2px; }
+.f-tag { font-size:11px; font-weight:600; padding:3px 10px; border-radius:999px; border:1px solid; white-space:nowrap; }
+.f-tag-selected { color:#1f6658; border-color:rgba(31,102,88,0.32); background:rgba(31,102,88,0.07); }
+.f-tag-important { color:#1e3550; border-color:rgba(30,53,80,0.28); background:rgba(30,53,80,0.06); }
+.f-tag-watch { color:#5d6b76; border-color:rgba(93,107,118,0.3); background:rgba(93,107,118,0.06); }
+.f-tag-review { color:var(--amber); border-color:rgba(180,83,9,0.32); background:rgba(180,83,9,0.07); }
+.f-amount { font-size:14px; font-weight:700; color:var(--copper); font-variant-numeric:tabular-nums; }
+.f-card-review { opacity:0.72; }
+.f-card-review .f-title { color:var(--muted); }
+
+/* 玻璃侧栏 */
+.f-rail { display:grid; gap:16px; position:sticky; top:64px; }
+.f-glass { background:var(--glass); -webkit-backdrop-filter:blur(16px) saturate(1.3);
+  backdrop-filter:blur(16px) saturate(1.3); border:1px solid rgba(255,255,255,0.6); border-radius:16px;
+  box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 12px 28px rgba(20,40,70,0.08); padding:16px 18px; }
+.f-glass h3 { font-size:13px; margin:0 0 12px; color:var(--navy); letter-spacing:0.02em; border-bottom:1px solid var(--line); padding-bottom:9px; }
+.f-scoreboard { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.f-score { display:flex; flex-direction:column; gap:2px; background:rgba(255,255,255,0.5); border-radius:10px; padding:10px 12px; }
+.f-score strong { font-size:22px; font-weight:700; font-variant-numeric:tabular-nums; }
+.f-score span { font-size:11px; color:var(--muted); }
+.f-notice { font-size:12px; color:var(--copper); margin-bottom:10px; }
+.f-report { display:block; text-decoration:none; color:inherit; padding:10px 0; }
+.f-report + .f-report { border-top:1px solid var(--line); }
+.f-report strong { display:block; font-size:14px; }
+.f-report span { font-size:12px; color:var(--muted); }
+.f-report:hover strong { color:var(--navy); }
+.f-date { display:flex; justify-content:space-between; width:100%; border:0; background:none; font:inherit; font-size:13px;
+  color:var(--muted); padding:9px 0; cursor:pointer; border-radius:8px; }
+.f-date:hover { background:rgba(31,58,95,0.05); color:var(--ink); }
+
+/* ===================== 周报 / 月报 ===================== */
+.pshell { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:28px; margin-top:8px; align-items:start; }
+.pcover { background:linear-gradient(135deg,#1e3550,#24455c); border-radius:var(--radius); color:#f2f5f8;
+  padding:30px 32px; box-shadow:0 1px 2px rgba(20,40,70,0.06), 0 18px 44px rgba(20,40,70,0.18); }
+.pcover .p-tags { display:flex; gap:8px; margin-bottom:18px; }
+.p-ptag { font-size:11px; padding:4px 11px; border-radius:999px; border:1px solid rgba(255,255,255,0.22);
+  background:rgba(255,255,255,0.06); color:rgba(242,245,248,0.85); }
+.p-ptag-green { color:#7fd6bd; border-color:rgba(127,214,189,0.4); background:rgba(127,214,189,0.1); }
+.p-editorial { font-size:15px; color:#cfe0ee; margin:0 0 10px; letter-spacing:0.01em; }
+.pcover h2 { font-size:30px; line-height:1.22; margin:0 0 16px; font-weight:700; }
+.p-mainline { border-top:1px solid rgba(255,255,255,0.14); padding-top:14px; }
+.p-mainline strong { display:block; font-size:12px; letter-spacing:0.1em; color:#9fc0d6; margin-bottom:6px; }
+.p-mainline p { margin:0; font-size:14px; line-height:1.75; color:rgba(242,245,248,0.9); }
+.pcover-stats { display:flex; gap:10px; margin-top:20px; }
+.pcover-stat { flex:1; border:1px solid rgba(255,255,255,0.16); border-radius:11px; padding:11px 13px; }
+.pcover-stat strong { display:block; font-size:22px; font-weight:700; font-variant-numeric:tabular-nums; }
+.pcover-stat span { font-size:11px; color:#a8c4d8; }
+.ptoc { background:rgba(255,255,255,0.72); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius); padding:8px 6px; margin-top:16px; }
+.ptoc > strong { display:block; font-size:11px; letter-spacing:0.14em; color:var(--quiet); padding:8px 12px 6px; }
+.ptoc a { display:grid; grid-template-columns:30px 1fr auto; align-items:baseline; gap:8px; text-decoration:none; color:inherit;
+  padding:9px 12px; border-radius:9px; font-size:13.5px; transition:background 180ms ease-out; }
+.ptoc a:hover { background:rgba(31,58,95,0.05); }
+.ptoc .toc-num { font-size:12px; font-weight:700; color:var(--copper); font-variant-numeric:tabular-nums; }
+.ptoc em { font-style:normal; font-size:12px; color:var(--quiet); }
+.pblock { margin-top:16px; }
+.pblock-head { display:flex; align-items:baseline; gap:12px; margin-bottom:12px; }
+.pblock-head h2 { font-size:17px; margin:0; font-weight:700; }
+.pblock-head span { font-size:12px; color:var(--quiet); }
+.pwin { background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius);
+  padding:18px 20px; margin-bottom:12px; box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05);
+  border-left:3px solid var(--navy); }
+.pwin h3 { font-size:16px; margin:0 0 8px; font-weight:700; }
+.pwin .p-narrative { font-size:13.5px; color:var(--muted); line-height:1.75; margin:0 0 10px; }
+.pwin summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--navy); padding:8px 0; list-style:none; }
+.pwin summary::-webkit-details-marker { display:none; }
+.pwin summary::before { content:"▸ "; color:var(--copper); transition:transform 180ms var(--ease); display:inline-block; }
+.pwin details[open] summary::before { transform:rotate(90deg); }
+.pwin-meta { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:10px; }
+.p-lbl { font-size:11px; padding:3px 9px; border-radius:999px; border:1px solid rgba(31,58,95,0.2); color:var(--muted); background:rgba(31,58,95,0.04); }
+.p-lbl-green { color:#1f6658; border-color:rgba(31,102,88,0.3); background:rgba(31,102,88,0.06); }
+.p-lbl-copper { color:var(--copper); border-color:rgba(164,113,58,0.3); background:rgba(164,113,58,0.06); }
+.pwin-meta p { font-size:13px; color:var(--muted); margin:6px 0 8px; }
+.p-evidence-title { font-size:12px; letter-spacing:0.08em; color:var(--quiet); margin:12px 0 6px; }
+.pwin-evidence { margin:0; padding:0; list-style:none; }
+.pwin-evidence li { padding:7px 0; border-bottom:1px solid var(--line); }
+.pwin-evidence a { color:var(--ink); text-decoration:none; font-size:13px; font-weight:600; }
+.pwin-evidence a:hover { color:var(--navy); }
+.pwin-evidence li span { display:block; font-size:11.5px; color:var(--quiet); margin-top:2px; }
+.pwin-action { margin-top:12px; font-size:13px; color:var(--navy); }
+.pwin-action strong { color:var(--quiet); font-size:12px; letter-spacing:0.08em; margin-right:8px; }
+.parchive { display:grid; gap:16px; position:sticky; top:64px; }
+.parchive .f-glass h3 { font-size:13px; }
+.pbtn { display:block; width:100%; text-align:left; border:0; background:none; font:inherit; padding:10px 12px;
+  border-radius:9px; cursor:pointer; transition:background 180ms ease-out; }
+.pbtn:hover { background:rgba(31,58,95,0.05); }
+.pbtn strong { display:block; font-size:13.5px; color:var(--ink); }
+.pbtn span { display:block; font-size:11.5px; color:var(--quiet); }
+.pbtn em { display:inline-block; font-style:normal; font-size:10.5px; color:#1f6658; font-weight:600; margin-top:4px; }
+.pbtn.active { background:#fff; box-shadow:0 0 0 1px rgba(31,58,95,0.12), 0 2px 6px rgba(20,40,70,0.06); }
+.pbtn.active strong { color:var(--navy); }
+.pempty { background:rgba(255,255,255,0.7); border:1px dashed rgba(31,58,95,0.2); border-radius:var(--radius);
+  padding:26px; text-align:center; color:var(--muted); font-size:13px; margin-top:16px; }
+.period-panel { display:none; }
+.period-panel.active { display:block; }
+
+/* ===================== 公司索引 ===================== */
+.c-head { padding:24px 0 6px; }
+.c-region { margin-bottom:26px; }
+.c-region-head { display:flex; align-items:baseline; gap:12px; margin-bottom:12px; }
+.c-region-head h3 { font-size:16px; margin:0; font-weight:700; }
+.c-region-head span { font-size:12px; color:var(--quiet); }
+.c-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; }
+.c-card { text-align:left; display:flex; flex-direction:column; gap:6px; background:rgba(255,255,255,0.82);
+  border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius); padding:16px 18px; cursor:pointer;
+  box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05);
+  transition:transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms ease-out; }
+.c-card:hover { transform:translateY(-2px); border-color:rgba(31,58,95,0.22);
+  box-shadow:0 2px 4px rgba(20,40,70,0.05), 0 16px 34px rgba(20,40,70,0.1); }
+.c-card:active { transform:scale(0.985); }
+.c-card > strong { font-size:15px; font-weight:700; }
+.c-status { font-size:12px; color:var(--muted); }
+.c-status::before { content:""; display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:7px; vertical-align:1px; }
+.c-coverage-active .c-status::before { background:var(--green); box-shadow:0 0 0 3px rgba(31,102,88,0.14); }
+.c-coverage-failed .c-status::before { background:var(--amber); box-shadow:0 0 0 3px rgba(180,83,9,0.14); }
+.c-coverage-partial .c-status::before { background:var(--copper); box-shadow:0 0 0 3px rgba(164,113,58,0.14); }
+.c-card .c-detail { font-size:12.5px; color:var(--muted); line-height:1.6; }
+.c-card small { font-size:11px; color:var(--quiet); line-height:1.6; }
+
+/* ===================== 全部事件 ===================== */
+.h-list { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
+.h-card { background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius);
+  overflow:hidden; box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05); }
+.h-head { display:flex; justify-content:space-between; align-items:center; width:100%; border:0; background:none; font:inherit;
+  padding:14px 18px; cursor:pointer; color:var(--ink); }
+.h-head:hover { background:rgba(31,58,95,0.03); }
+.h-head .h-date { font-size:14.5px; font-weight:700; }
+.h-head .h-meta { font-size:12.5px; color:var(--quiet); }
+.h-caret { display:inline-block; margin-left:6px; color:var(--copper); transition:transform 180ms var(--ease); }
+.h-card.open .h-caret { transform:rotate(90deg); }
+.h-body { display:none; border-top:1px solid var(--line); }
+.h-card.open .h-body { display:block; }
+.h-event { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:18px; padding:13px 18px; text-decoration:none; color:inherit; }
+.h-event + .h-event { border-top:1px solid var(--line); }
+.h-event:hover .h-title { color:var(--navy); }
+.h-event .h-title { font-size:14px; font-weight:600; line-height:1.45; transition:color 180ms ease-out; }
+.h-event .h-sub { font-size:12px; color:var(--muted); margin-top:3px; line-height:1.6; }
+.h-event .h-side { font-size:12.5px; font-weight:600; color:var(--copper); align-self:start; white-space:nowrap; }
+
+/* ===================== 更新日志 ===================== */
+.u-layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:28px; margin-top:8px; align-items:start; }
+.u-list { display:flex; flex-direction:column; gap:12px; margin-top:16px; }
+.u-card { background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius);
+  overflow:hidden; box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05); }
+.u-head { display:flex; justify-content:space-between; align-items:center; width:100%; border:0; background:none; font:inherit;
+  padding:14px 18px; cursor:pointer; color:var(--ink); text-align:left; }
+.u-head:hover { background:rgba(31,58,95,0.03); }
+.u-copy h3 { font-size:14.5px; margin:0; font-weight:700; }
+.u-copy small { display:block; font-size:11.5px; color:var(--quiet); margin-top:3px; }
+.u-ver { font-size:12.5px; font-weight:700; color:var(--copper); white-space:nowrap; }
+.u-caret { display:inline-block; margin-left:6px; color:var(--copper); transition:transform 180ms var(--ease); }
+.u-card.open .u-caret { transform:rotate(90deg); }
+.u-body { display:none; border-top:1px solid var(--line); padding:14px 18px; }
+.u-card.open .u-body { display:block; }
+.u-body .u-tags { display:flex; gap:7px; margin-bottom:10px; }
+.u-body p { font-size:13px; color:var(--muted); margin:0 0 10px; line-height:1.7; }
+.u-body ul { margin:0; padding:0; list-style:none; }
+.u-body li { font-size:13px; color:var(--ink); padding:6px 0; border-bottom:1px solid var(--line); line-height:1.6; }
+.u-body li:last-child { border-bottom:0; }
+.u-side { display:grid; gap:12px; position:sticky; top:64px; }
+.u-side-note { background:var(--glass); border:1px solid rgba(255,255,255,0.6); border-radius:14px; padding:16px 18px;
+  box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 12px 28px rgba(20,40,70,0.08); }
+.u-side-note strong { display:block; font-size:13px; color:var(--navy); margin-bottom:6px; }
+.u-side-note span { font-size:12.5px; color:var(--muted); line-height:1.7; }
+
+/* ===================== 反馈 ===================== */
+.fb-layout { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(280px,0.95fr); gap:28px; margin-top:8px; align-items:start; }
+.fb-form { background:rgba(255,255,255,0.82); border:1px solid rgba(31,58,95,0.09); border-radius:var(--radius);
+  padding:22px; box-shadow:0 1px 2px rgba(20,40,70,0.04), 0 10px 26px rgba(20,40,70,0.05); }
+.fb-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.fb-field { display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.fb-field > span { font-size:12px; font-weight:600; color:var(--navy); }
+.fb-field select, .fb-field input, .fb-field textarea { border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,0.6);
+  padding:9px 12px; font-size:13px; color:var(--ink); outline:none; transition:border-color 180ms ease-out, box-shadow 180ms ease-out; }
+.fb-field select:focus, .fb-field input:focus, .fb-field textarea:focus { border-color:rgba(31,58,95,0.35); box-shadow:0 0 0 3px rgba(31,58,95,0.08); }
+.fb-sync { font-size:12px; color:#8a4b1d; background:#fff7ed; border:1px solid rgba(178,94,55,0.26); border-radius:10px; padding:9px 12px; margin-bottom:14px; }
+.fb-actions { display:flex; gap:10px; }
+.fb-btn { border:0; border-radius:10px; padding:9px 16px; font-size:13px; font-weight:600; cursor:pointer; background:var(--navy); color:#fff;
+  transition:transform 180ms var(--ease), box-shadow 180ms ease-out, opacity 180ms ease-out; }
+.fb-btn:hover { box-shadow:0 4px 12px rgba(31,58,95,0.22); transform:translateY(-1px); }
+.fb-btn:active { transform:scale(0.97); }
+.fb-btn:disabled { opacity:0.6; cursor:default; transform:none; box-shadow:none; }
+.fb-btn.secondary { background:transparent; color:var(--navy); border:1px solid var(--line); box-shadow:none; }
+.fb-btn.secondary:hover { background:rgba(31,58,95,0.05); box-shadow:none; }
+.fb-status { font-size:12px; color:var(--copper); margin:10px 0; min-height:18px; line-height:1.6; }
+.fb-output { width:100%; margin-top:14px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,0.5);
+  padding:10px 12px; font-size:12px; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; color:var(--muted); min-height:60px; resize:vertical; }
+.fb-records { display:flex; flex-direction:column; gap:14px; }
+.fb-records .fb-form h3 { font-size:15px; margin:0 0 4px; font-weight:700; }
+.fb-records .fb-form p { font-size:12px; color:var(--quiet); margin:0 0 12px; }
+.fb-empty { font-size:12.5px; color:var(--quiet); text-align:center; padding:18px 0; }
+.feedback-item { padding:12px 0; border-bottom:1px solid var(--line); }
+.feedback-item:last-child { border-bottom:0; }
+.feedback-item h3 { font-size:14px; margin:6px 0 4px; font-weight:600; }
+.feedback-item p { font-size:12.5px; color:var(--muted); margin:2px 0; line-height:1.6; }
+.feedback-meta { display:flex; gap:7px; flex-wrap:wrap; }
+
+/* 页脚 */
+.m-footer { text-align:center; font-size:12px; color:var(--quiet); border-top:1px solid var(--line); margin-top:52px; padding-top:16px; letter-spacing:0.08em; }
+
+/* ===================== 响应式 ===================== */
+@media (max-width:1000px) {
+  .f-grid, .pshell, .u-layout, .fb-layout { grid-template-columns:1fr; }
+  .f-rail, .parchive, .u-side { position:static; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
 }
-.brand-copy { min-width: 0; }
-.identity h1 { margin: 0; font-size: 26px; letter-spacing: 0; line-height: 1.12; font-weight: 820; }
-.identity p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
-.slogan {
-  margin-top: 9px; display: flex; align-items: center; gap: 9px;
-  color: #33414a; font-size: 13px; line-height: 1.5; font-weight: 620;
-}
-.slogan::before { content: ""; width: 30px; height: 1px; background: var(--green); opacity: 0.75; }
-.timestamp { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; white-space: nowrap; }
-.timestamp-wrap { position: relative; display: flex; align-items: center; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
-.subscribe-link {
-  display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px;
-  border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.78);
-  color: var(--ink); font-size: 12px; white-space: nowrap;
-  cursor: pointer;
-}
-.subscribe-link:hover { border-color: var(--navy); background: var(--surface); }
-.subscribe-link span { color: var(--green); font-weight: 700; }
-.feed-popover { display: none; position: absolute; right: 0; top: 42px; width: min(420px, calc(100vw - 32px)); padding: 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); z-index: 40; }
-.feed-popover.open { display: grid; gap: 10px; }
-.feed-popover strong { font-size: 13px; }
-.feed-popover p { margin: 0; color: var(--muted); font-size: 12px; }
-.feed-address { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
-.feed-address code { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); color: var(--ink); font-size: 12px; }
-.feed-address button { border: 0; border-radius: 8px; padding: 9px 11px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; }
-.feed-note { color: var(--quiet); font-size: 11px; }
-.live-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 4px rgba(31,102,88,0.11); }
-.nav-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; }
-.nav { display: flex; gap: 2px; border-bottom: 1px solid var(--line); }
-.tab-btn {
-  border: 0; background: transparent; padding: 10px 16px 11px; color: var(--muted);
-  cursor: pointer; border-bottom: 2px solid transparent; transform: translateY(1px);
-}
-.tab-btn:hover { color: var(--ink); }
-.tab-btn.active { color: var(--ink); border-bottom-color: var(--navy); }
-.nav-more { display: none; position: relative; }
-.controls { display: flex; align-items: center; gap: 8px; }
-.search, .select { border: 1px solid var(--line); background: rgba(251,250,246,0.82); color: var(--ink); border-radius: 8px; }
-.search { width: 280px; display: flex; align-items: center; gap: 8px; padding: 8px 11px; }
-.search span { color: var(--quiet); }
-.search input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 13px; }
-.select { padding: 8px 10px; min-width: 112px; }
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
-.issue-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 26px; align-items: start; margin-top: 28px; }
-.headline-area { padding: 34px 0 28px; border-bottom: 1px solid var(--line); }
-.label {
-  display: inline-flex; align-items: center; min-height: 24px; padding: 3px 9px;
-  border: 1px solid var(--line); border-radius: 999px; color: var(--muted);
-  background: rgba(251,250,246,0.7); font-size: 11px; white-space: nowrap;
-}
-.label.dark { border-color: var(--navy); background: var(--navy); color: var(--paper); }
-.label.green { border-color: rgba(31,102,88,0.24); background: rgba(31,102,88,0.09); color: var(--green); }
-.label.copper { border-color: rgba(154,99,48,0.24); background: rgba(154,99,48,0.09); color: var(--copper); }
-.label.red { border-color: rgba(143,62,58,0.24); background: rgba(143,62,58,0.08); color: var(--red); }
-.label-row { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-.kicker { margin-bottom: 14px; }
-.main-title { max-width: 840px; margin: 0; font-size: 44px; line-height: 1.13; letter-spacing: 0; font-weight: 780; }
-.lead { max-width: 760px; margin: 18px 0 0; color: #38434d; font-size: 17px; line-height: 1.8; }
-.brief-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
-.brief { padding: 14px 0 0; border-top: 2px solid var(--navy); }
-.brief h3 { margin: 0; font-size: 14px; }
-.brief p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
-.cluster-list { display: grid; gap: 12px; margin-top: 24px; }
-.cluster-card {
-  display: grid; gap: 12px; padding: 18px; border: 1px solid var(--line);
-  border-left: 4px solid var(--green); border-radius: var(--radius);
-  background: rgba(251,250,246,0.86); box-shadow: 0 12px 34px rgba(28,35,42,0.08);
-}
-.cluster-card h3 { margin: 0; font-size: 18px; line-height: 1.38; }
-.cluster-card p { margin: 0; color: #38434d; font-size: 13px; line-height: 1.65; }
-.cluster-meta, .cluster-tags { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-.cluster-evidence { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
-.cluster-evidence li { display: grid; gap: 2px; padding-top: 7px; border-top: 1px solid rgba(217,209,196,0.72); }
-.cluster-evidence li:first-child { padding-top: 0; border-top: 0; }
-.cluster-evidence a { font-size: 13px; line-height: 1.45; }
-.cluster-evidence span { color: var(--quiet); font-size: 11px; }
-.cluster-action { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 2px; }
-.cluster-action strong { color: var(--green); font-size: 13px; }
-.cluster-action span { color: var(--muted); font-size: 12px; text-align: right; }
-.rail { display: grid; gap: 14px; position: sticky; top: 18px; }
-.rail-card { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.78); box-shadow: var(--shadow); }
-.rail-title { margin: 0 0 12px; font-size: 13px; }
-.notice-line { margin: -4px 0 12px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-.scoreboard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.score { padding: 12px; border-radius: 8px; background: rgba(238,242,243,0.82); border: 1px solid var(--line-cool); }
-.score strong { display: block; font-size: 22px; line-height: 1; }
-.score span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
-.report-entry { display: block; padding: 13px 0; border-top: 1px solid var(--line); }
-.report-entry:first-of-type { border-top: 0; padding-top: 0; }
-.report-entry strong { display: block; font-size: 14px; }
-.report-entry span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
-.content-block { margin-top: 24px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.9); box-shadow: var(--shadow); }
-.block-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
-.block-head h2 { margin: 0; font-size: 17px; }
-.block-head span { color: var(--muted); font-size: 12px; }
-.daily-groups { display: grid; gap: 18px; }
-.daily-group { display: grid; gap: 8px; }
-.daily-group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-top: 2px; }
-.daily-group-title { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.daily-group-title h3 { margin: 0; font-size: 16px; line-height: 1.35; }
-.daily-group-title span { color: var(--muted); font-size: 12px; }
-.intelligence-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
-.intel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-.intel:hover h3 { color: var(--navy); }
-.company-chip { display: inline-block; margin-right: 8px; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; background: rgba(238,242,243,0.7); color: var(--quiet); font-size: 11px; font-weight: 600; vertical-align: 2px; white-space: nowrap; }
-.intel h3 { margin: 0; font-size: 16px; line-height: 1.42; }
-.intel p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
-.intel-impact { margin-top: 8px; color: var(--quiet); font-size: 12px; }
-.source-title { margin-top: 7px; color: var(--quiet); font-size: 12px; }
-.amount { align-self: start; justify-self: end; color: var(--copper); font-size: 15px; font-weight: 720; text-align: right; }
-.related-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
-.related-link, .related-more { color: var(--muted); background: var(--surface-cool); border-radius: 6px; padding: 2px 7px; font-size: 11px; }
-.intel.low { opacity: 0.72; }
-.review-list { margin-top: 12px; border-color: var(--line); }
-.history-list { display: grid; gap: 7px; }
-.date-row { width: 100%; display: flex; justify-content: space-between; gap: 12px; border: 0; border-radius: 8px; padding: 9px 10px; background: transparent; color: var(--muted); cursor: pointer; }
-.date-row:hover, .date-row.active { background: var(--surface-cool); color: var(--ink); }
-.history-card { margin-bottom: 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(251,250,246,0.72); overflow: hidden; }
-.history-head { width: 100%; display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 13px 16px; border: 0; background: transparent; cursor: pointer; color: var(--ink); }
-.history-head h3 { margin: 0; font-size: 16px; line-height: 1.35; text-align: left; }
-.history-head small { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; font-weight: 500; }
-.history-body { padding: 0 16px 16px; display: none; }
-.history-card.open .history-body { display: block; }
-.history-card.open .toggle-icon { transform: rotate(90deg); }
-.report-cover {
-  margin-top: 28px; padding: 34px; min-height: 360px; border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(23,43,58,0.96), rgba(25,55,66,0.9)), var(--navy);
-  color: var(--paper); box-shadow: var(--shadow); display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; align-items: end;
-}
-.report-cover .label { border-color: rgba(244,241,234,0.28); color: rgba(244,241,234,0.82); background: rgba(244,241,234,0.08); }
-.report-cover h2 { margin: 18px 0 0; max-width: 760px; font-size: 38px; line-height: 1.17; }
-.report-cover p { max-width: 650px; color: rgba(244,241,234,0.72); font-size: 15px; }
-.report-mainline { margin-top: 16px; max-width: 700px; }
-.report-mainline strong { color: rgba(244,241,234,0.92); font-size: 12px; }
-.report-mainline p { margin: 5px 0 0; }
-.cover-stats { display: grid; gap: 10px; }
-.cover-stat { padding: 14px; border: 1px solid rgba(244,241,234,0.22); border-radius: 8px; }
-.period-shell { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 26px; align-items: start; margin-top: 28px; }
-.period-nav { position: sticky; top: 18px; display: grid; gap: 8px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.86); box-shadow: var(--shadow); }
-.period-nav h3 { margin: 0 0 6px; font-size: 14px; }
-.period-btn { width: 100%; display: grid; gap: 3px; text-align: left; border: 1px solid transparent; border-radius: 8px; padding: 10px; background: transparent; color: var(--ink); cursor: pointer; }
-.period-btn:hover { background: var(--surface-cool); }
-.period-btn.active { border-color: rgba(23,43,58,0.28); background: rgba(23,43,58,0.08); }
-.period-btn strong { font-size: 13px; }
-.period-btn span { color: var(--muted); font-size: 12px; }
-.period-status { color: var(--green); font-size: 11px; font-weight: 720; }
-.period-panel { display: none; }
-.period-panel.active { display: block; }
-.period-panel .report-cover { margin-top: 0; }
-.cover-stat strong { display: block; font-size: 24px; }
-.cover-stat span { color: rgba(244,241,234,0.68); font-size: 12px; }
-.weekly-window-list { display: grid; gap: 14px; margin-top: 12px; }
-.weekly-window {
-  display: grid; gap: 12px; padding: 18px; border: 1px solid var(--line);
-  border-left: 4px solid var(--navy); border-radius: 8px; background: rgba(238,242,243,0.52);
-}
-.weekly-window h3 { margin: 0; font-size: 18px; line-height: 1.35; }
-.weekly-window p { margin: 0; color: #38434d; font-size: 13px; line-height: 1.62; }
-.window-meta, .window-actions { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-.window-evidence { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
-.window-evidence li { display: grid; gap: 2px; padding-top: 6px; border-top: 1px solid rgba(217,209,196,0.72); }
-.window-evidence li:first-child { padding-top: 0; border-top: 0; }
-.window-evidence a { font-size: 13px; line-height: 1.42; }
-.window-evidence span { color: var(--quiet); font-size: 11px; }
-.evidence-title { margin: 2px 0 0; color: var(--ink); font-size: 12px; }
-.window-actions strong { color: var(--green); font-size: 13px; }
-.window-actions span { color: var(--muted); font-size: 12px; }
-.editorial-title { margin: 14px 0 0; color: rgba(244,241,234,0.95); font-size: 26px; line-height: 1.3; letter-spacing: 0.01em; }
-.report-cover h2 { margin-top: 6px; }
-.theme-narrative { color: #38434d; font-size: 13.5px; line-height: 1.7; }
-.window-details { margin: 2px 0 0; padding: 12px 14px; border: 1px solid rgba(217,209,196,0.72); border-radius: 8px; background: rgba(238,242,243,0.4); }
-.window-details summary { cursor: pointer; color: var(--navy); font-size: 13px; font-weight: 600; }
-.window-details p { margin: 0; }
-.window-details .evidence-title { margin-top: 10px; }
-.window-details .window-actions { margin-top: 10px; }
-.period-toc { display: grid; gap: 6px; margin: 16px 0 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: rgba(238,242,243,0.4); }
-.period-toc strong { font-size: 12px; color: var(--muted); }
-.period-toc a { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 5px 0; border-bottom: 1px solid rgba(217,209,196,0.5); text-decoration: none; color: var(--ink); }
-.period-toc a:last-child { border-bottom: 0; }
-.period-toc a:hover { color: var(--green); }
-.period-toc .toc-num { font-size: 12px; color: var(--navy); font-weight: 700; }
-.period-toc em { font-style: normal; color: var(--quiet); font-size: 11px; }
-.trend-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
-.trend { padding-top: 16px; border-top: 2px solid var(--navy); }
-.trend h3 { margin: 0; font-size: 15px; }
-.trend p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
-.opportunity-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr); gap: 18px; align-items: start; }
-.opportunity-list { display: grid; gap: 12px; }
-.opportunity { display: grid; gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.opportunity:first-child { padding-top: 0; }
-.opportunity:last-child { border-bottom: 0; padding-bottom: 0; }
-.opportunity h3 { margin: 0; font-size: 15px; line-height: 1.4; }
-.opportunity p { margin: 0; color: var(--muted); font-size: 13px; }
-.opportunity-meta { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-.mini-stack { display: grid; gap: 10px; }
-.mini-panel { padding: 13px; border: 1px solid var(--line); border-radius: 8px; background: rgba(238,242,243,0.6); }
-.mini-panel strong { display: block; font-size: 13px; }
-.mini-panel span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
-.action-list { display: grid; gap: 10px; margin-top: 14px; }
-.action-row { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
-.action-row:first-child { border-top: 0; padding-top: 0; }
-.action-window { color: var(--green); font-size: 13px; font-weight: 720; }
-.action-row strong { display: block; font-size: 14px; }
-.action-row span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
-.company-region-list { display: grid; gap: 22px; }
-.company-region { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
-.company-region:first-child { padding-top: 0; border-top: 0; }
-.company-region-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
-.company-region-head h3 { margin: 0; font-size: 18px; line-height: 1.25; }
-.company-region-head span { color: var(--muted); font-size: 12px; }
-.company-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.company { min-height: 128px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.82); text-align: left; cursor: pointer; }
-.company:hover { border-color: var(--navy); background: var(--surface); }
-.company.active { border-color: var(--navy); background: rgba(23,43,58,0.08); box-shadow: inset 0 0 0 1px rgba(23,43,58,0.16); }
-.company.empty { cursor: default; }
-.company strong { display: block; margin-bottom: 9px; font-size: 17px; }
-.company span { color: var(--muted); font-size: 13px; }
-.company small { display: block; margin-top: 9px; color: var(--quiet); font-size: 12px; line-height: 1.5; }
-.company-status { display: inline-flex; width: fit-content; margin-bottom: 8px; padding-bottom: 3px; border-bottom: 2px solid var(--line); color: var(--ink) !important; font-size: 12px !important; font-weight: 720; }
-.company.status-active .company-status { border-color: var(--green); }
-.company.status-failed .company-status { border-color: var(--rust); }
-.ops-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; margin-top: 24px; align-items: start; }
-.release-head { display: block; text-align: left; }
-.release-copy { min-width: 0; }
-.release-badge { display: flex; align-items: center; justify-content: flex-start; gap: 8px; margin-top: 8px; min-width: 0; }
-.release-version { display: block; margin: 0; color: var(--ink); font-size: 13px; font-weight: 760; line-height: 1; text-align: left; font-variant-numeric: tabular-nums; }
-.history-body p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
-.release-list { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; color: #38434d; font-size: 13px; }
-.release-list li { position: relative; padding-left: 16px; }
-.release-list li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
-.release-side { display: grid; gap: 12px; }
-.side-panel { padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.78); }
-.side-panel strong { display: block; font-size: 13px; }
-.side-panel span { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; }
-.feedback-layout { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr); gap: 22px; margin-top: 24px; align-items: start; }
-.feedback-form, .feedback-records { border: 1px solid var(--line); border-radius: var(--radius); background: rgba(251,250,246,0.88); box-shadow: var(--shadow); padding: 20px; }
-.field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.field { display: grid; gap: 6px; margin-bottom: 12px; }
-.field span { color: var(--muted); font-size: 12px; }
-.field input, .field select, .field textarea {
-  width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
-  color: var(--ink); padding: 10px 11px; outline: 0; resize: vertical;
-}
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(23,43,58,0.1); }
-.feedback-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
-.action-btn { border: 0; border-radius: 8px; padding: 10px 13px; background: var(--navy); color: var(--paper); cursor: pointer; }
-.action-btn.secondary { border: 1px solid var(--line); background: transparent; color: var(--ink); }
-.action-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.feedback-list { display: grid; gap: 10px; margin-top: 14px; }
-.feedback-item { padding: 13px 0; border-top: 1px solid var(--line); }
-.feedback-item:first-child { border-top: 0; }
-.feedback-item h3 { margin: 0; font-size: 15px; line-height: 1.4; }
-.feedback-item p { margin: 7px 0 0; color: var(--muted); font-size: 12px; }
-.feedback-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 7px; }
-.feedback-output { margin-top: 14px; width: 100%; min-height: 160px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-cool); padding: 12px; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; resize: vertical; }
-.feedback-sync-note { margin-top: 12px; padding: 11px 12px; border: 1px solid rgba(178, 94, 55, 0.26); border-radius: 8px; background: #fff7ed; color: #8a4b1d; font-size: 12px; line-height: 1.6; }
-.feedback-status { min-height: 18px; margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-.filter-state {
-  display: none; position: sticky; top: 0; z-index: 20; align-items: center; justify-content: space-between;
-  gap: 14px; margin-top: 12px; padding: 12px 14px; border: 1px solid rgba(23,43,58,0.28);
-  border-radius: 8px; background: rgba(250,247,238,0.98); color: var(--ink); font-size: 13px;
-  box-shadow: 0 12px 28px rgba(23,43,58,0.12);
-}
-.filter-state.active { display: flex; }
-.filter-state strong { font-size: 13px; }
-.filter-state small { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
-.filter-state-marker { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; background: var(--copper); box-shadow: 0 0 0 4px rgba(154,99,48,0.14); }
-.filter-state-main { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.clear-filter { border: 0; border-radius: 6px; padding: 7px 11px; background: var(--navy); color: var(--paper); cursor: pointer; font-size: 12px; white-space: nowrap; }
-.empty-state { padding: 32px; text-align: center; color: var(--muted); }
-.footer-note { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
-@media (max-width: 1040px) {
-  .issue-layout { grid-template-columns: 1fr; }
-  .rail { position: static; grid-template-columns: repeat(3, 1fr); }
-  .rail-card:first-child { grid-column: span 2; }
-  .main-title { font-size: 38px; }
-  .report-cover { grid-template-columns: 1fr; }
-  .period-shell { grid-template-columns: 1fr; }
-  .period-nav { position: static; }
-  .ops-layout, .feedback-layout { grid-template-columns: 1fr; }
-  .opportunity-layout { grid-template-columns: 1fr; }
-}
-@media (max-width: 760px) {
-  .page { width: min(100% - 22px, 1280px); padding-top: 18px; }
-  .topbar, .nav-strip, .controls { flex-direction: column; align-items: stretch; }
-  .timestamp { white-space: normal; }
-  .timestamp-wrap { justify-content: flex-start; }
-  .identity h1 { font-size: 24px; }
-  .seal { width: 42px; height: 42px; }
-  .nav { overflow-x: visible; flex-wrap: wrap; }
-  .tab-btn { flex: 0 0 auto; }
-  .tab-secondary { display: none; }
-  .nav-more { display: inline-flex; align-items: center; }
-  .nav-more-panel {
-    display: none; position: absolute; top: 100%; right: 0; z-index: 30;
-    min-width: 172px; margin-top: 2px; padding: 6px;
-    border: 1px solid var(--line); border-radius: 8px;
-    background: var(--surface); box-shadow: var(--shadow);
-  }
-  .nav-more-panel.open { display: grid; gap: 2px; }
-  .nav-more-panel .tab-btn {
-    display: block; width: 100%; text-align: left;
-    padding: 11px 12px; border-bottom: 0; border-radius: 6px;
-  }
-  .nav-more-panel .tab-btn:hover { background: var(--surface-cool); }
-  .search, .select { width: 100%; }
-  .main-title { font-size: 30px; }
-  .slogan { align-items: flex-start; line-height: 1.5; }
-  .lead { font-size: 15px; }
-  .brief-grid, .rail, .trend-columns, .company-grid { grid-template-columns: 1fr; }
-  .cluster-action { align-items: flex-start; flex-direction: column; }
-  .cluster-action span { text-align: left; }
-  .opportunity-layout { grid-template-columns: 1fr; }
-  .action-row { grid-template-columns: 1fr; gap: 6px; }
-  .company-region-head, .filter-state { align-items: stretch; flex-direction: column; }
-  .filter-state-main { align-items: flex-start; }
-  .field-grid { grid-template-columns: 1fr; }
-  .rail-card:first-child { grid-column: auto; }
-  .content-block { padding: 18px; }
-  .intel { display: flex; flex-direction: column; gap: 8px; }
-  .amount { order: 2; align-self: flex-start; text-align: left; }
-  .source-title { display: none; }
-  .intel h3 { font-size: 17px; line-height: 1.45; }
-  .intel p, .intel-impact { font-size: 15px; }
-  .report-cover { padding: 24px; }
-  .report-cover h2 { font-size: 28px; }
+@media (max-width:760px) {
+  .m-mast-top { flex-direction:column; align-items:flex-start; }
+  .m-issue { text-align:left; }
+  .m-nav { flex-wrap:wrap; }
+  .m-actions { margin-left:0; width:100%; }
+  .m-search { flex:1; }
+  .m-search input { width:100%; }
+  .m-title-sec { font-size:18px; }
+  .f-card { grid-template-columns:28px minmax(0,1fr); }
+  .f-right { grid-column:2; flex-direction:row; align-items:center; justify-content:space-between; }
+  .fb-grid { grid-template-columns:1fr; }
+  .pcover { padding:22px 20px; }
+  .pcover h2 { font-size:24px; }
+  .pcover-stats { flex-wrap:wrap; }
 }
 </style>
 </head>
 <body>
-<div class="page">
-  <header>
-    <div class="topbar">
-      <div class="identity">
-        <div class="seal">百</div>
-        <div class="brand-copy">
+<div class="m-wrap">
+
+  <header class="m-masthead">
+    <div class="m-mast-top">
+      <div class="m-brand">
+        <div class="m-seal">百</div>
+        <div>
           <h1>全球互联网百晓生</h1>
           <p>非中美互联网情报简报与趋势跟踪</p>
-          <div class="slogan">见微知著，从微小变化中发现产业趋势和机会</div>
         </div>
       </div>
-      <div class="timestamp-wrap">
-        <button class="subscribe-link" id="feedToggle" type="button" aria-expanded="false" aria-controls="feedPopover">
-          <span>RSS</span><em>订阅</em>
-        </button>
-        <div class="feed-popover" id="feedPopover" role="dialog" aria-label="RSS 订阅地址">
-          <strong>RSS 订阅地址</strong>
-          <p>在阅读器里添加这个地址即可。</p>
-          <div class="feed-address">
-            <code id="feedUrl">https://huangjun722.github.io/weekly-report/feed.xml</code>
-            <button type="button" id="copyFeedUrl">复制</button>
-          </div>
-          <div class="feed-note" id="feedCopyState">不在页面内展开订阅内容。</div>
-        </div>
-        <div class="timestamp"><span class="live-dot"></span><span>{{ update_time }}</span></div>
+      <div class="m-issue">
+        <div class="m-vol">{{ vol_label }}</div>
+        <div class="m-line">{{ cn_date }}</div>
+        <div class="m-line"><span class="m-live"></span>{{ update_time }}</div>
       </div>
     </div>
-    <div class="nav-strip">
-      <nav class="nav" aria-label="主导航">
-        <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">今日情报</button>
-        <button class="tab-btn" data-tab="weekly" onclick="switchTab('weekly')">周报</button>
-        <button class="tab-btn tab-secondary" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
-        <button class="tab-btn" data-tab="companies" onclick="switchTab('companies')">公司索引</button>
-        <button class="tab-btn tab-secondary" data-tab="all" onclick="switchTab('all')">全部事件</button>
-        <button class="tab-btn tab-secondary" data-tab="updates" onclick="switchTab('updates')">更新日志</button>
-        <button class="tab-btn tab-secondary" data-tab="feedback" onclick="switchTab('feedback')">反馈</button>
-        <div class="nav-more">
-          <button class="tab-btn nav-more-btn" type="button" aria-haspopup="true" aria-expanded="false">更多<span class="nav-more-caret" aria-hidden="true"> ▾</span></button>
-          <div class="nav-more-panel" id="navMorePanel">
-            <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">月报</button>
-            <button class="tab-btn" data-tab="all" onclick="switchTab('all')">全部事件</button>
-            <button class="tab-btn" data-tab="updates" onclick="switchTab('updates')">更新日志</button>
-            <button class="tab-btn" data-tab="feedback" onclick="switchTab('feedback')">反馈</button>
-          </div>
-        </div>
-      </nav>
-      <div class="controls">
-        <label class="search"><span>⌕</span><input type="text" id="searchBox" placeholder="搜索公司、地区、关键词" autocomplete="off"></label>
-        <select class="select" id="regionSelect" aria-label="地区筛选">
+  </header>
+
+  <nav class="m-glassnav" aria-label="主导航">
+    <div class="m-nav">
+      <button class="m-tab active" data-panel="today">今日情报</button>
+      <button class="m-tab" data-panel="weekly">周报</button>
+      <button class="m-tab" data-panel="monthly">月报</button>
+      <button class="m-tab" data-panel="companies">公司索引</button>
+      <button class="m-tab" data-panel="all">全部事件</button>
+      <button class="m-tab" data-panel="updates">更新日志</button>
+      <button class="m-tab" data-panel="feedback">反馈</button>
+      <div class="m-actions">
+        <label class="m-search"><span>⌕</span><input id="searchBox" placeholder="搜索公司、地区、关键词"></label>
+        <select class="m-select" id="regionSelect" aria-label="地区筛选">
           <option value="all">全部地区</option>
           <option value="亚太">亚太</option>
           <option value="欧洲">欧洲</option>
           <option value="中东">中东</option>
           <option value="非洲">非洲</option>
           <option value="拉美">拉美</option>
-          <option value="中资">中资出海</option>
+          <option value="全球">全球</option>
         </select>
-      </div>
-    </div>
-    <div class="filter-state" id="filterState">
-      <div class="filter-state-main">
-        <span class="filter-state-marker" aria-hidden="true"></span>
-        <div>
-          <strong id="filterStateTitle">正在查看筛选结果</strong>
-          <small id="filterStateText">当前筛选：全部情报</small>
+        <div class="m-feedwrap">
+          <button class="m-feed" id="feedToggle" type="button" aria-expanded="false" aria-controls="feedPopover"><span>RSS</span><em>订阅</em></button>
+          <div class="m-pop" id="feedPopover" role="dialog" aria-label="RSS 订阅地址">
+            <strong>RSS 订阅地址</strong>
+            <p>在阅读器里添加这个地址即可。</p>
+            <div class="m-pop-addr">
+              <code id="feedUrl">https://huangjun722.github.io/weekly-report/feed.xml</code>
+              <button type="button" id="copyFeedUrl">复制</button>
+            </div>
+            <div class="m-pop-note" id="feedCopyState">不在页面内展开订阅内容。</div>
+          </div>
         </div>
       </div>
-      <button class="clear-filter" id="clearFilter" type="button">清除筛选</button>
     </div>
-  </header>
+  </nav>
+
+  <div class="m-filterstate" id="filterState">
+    <span class="m-fsm" aria-hidden="true"></span>
+    <div class="m-fs-main">
+      <strong id="filterStateTitle">当前筛选：全部情报</strong>
+      <small id="filterStateText">共 0 条</small>
+    </div>
+    <button class="m-fs-clear" id="clearFilter" type="button">清除筛选</button>
+  </div>
 
   <main>
-    <section class="tab-panel active" id="tab-today">
-      {% if trend_groups %}
-      <div class="issue-layout">
-        <div>
-          <section class="headline-area">
-            <div class="label-row kicker">
-              <span class="label dark">今日观察</span>
-              <span class="label">{{ vol_label }}</span>
-              <span class="label green">AI 解析</span>
-            </div>
-            <h2 class="main-title">{{ daily_headline }}</h2>
-            {% if daily_lead or weekly.headline %}<p class="lead">{{ daily_lead or weekly.headline }}</p>{% endif %}
-          </section>
 
-          <section class="content-block">
-            <div class="block-head">
-              <h2>今日事件</h2>
-              <span>合格事件全部展示，按精选、重点、观察排序</span>
-            </div>
-            <div class="daily-groups" id="dailyEventGroups">
-              {% for group in daily_event_groups %}
-              <section class="daily-group" data-daily-group="{{ group.key }}">
-                <div class="daily-group-head">
-                  <div class="daily-group-title">
-                    <h3>{{ group.label }}</h3>
-                    <span>{{ group.description }}</span>
-                  </div>
-                  <span class="label">{{ group.events|length }} 条</span>
-                </div>
-                <div class="intelligence-list">
-                  {% for ev in group.events %}
-                  <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
-                    <div>
-                      <h3>{% if ev.is_company and ev.company_name %}<span class="company-chip">{{ ev.company_name }}</span>{% endif %}{{ ev.display_title or ev.title }}</h3>
-                      {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
-                      {% if ev.front_overview %}<div class="intel-impact">内容概要：{{ ev.front_overview }}</div>{% endif %}
-                      {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
-                      {% if ev.related_links %}
-                      <div class="related-links">
-                        {% for rl in ev.related_links[:3] %}<span class="related-link">{{ rl|truncate(40, True) }}</span>{% endfor %}
-                        {% if ev.related_links|length > 3 %}<span class="related-more">+{{ ev.related_links|length - 3 }}</span>{% endif %}
-                      </div>
-                      {% endif %}
-                    </div>
-                    {% set ev_amount = ev.display_amount or (ev.display_source if ev.source == 'Google News' else '') %}{% if ev_amount %}<div class="amount">{{ ev_amount }}</div>{% endif %}
-                  </a>
-                  {% endfor %}
-                </div>
-              </section>
-              {% endfor %}
-            </div>
-            <div class="intelligence-list review-list" id="qualityList"{% if not repair_events %} style="display:none"{% endif %}>
-              {% for ev in repair_events %}
-              <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
-                <div>
-                  <h3>{% if ev.is_company and ev.company_name %}<span class="company-chip">{{ ev.company_name }}</span>{% endif %}{{ ev.display_title or ev.title }}</h3>
-                  {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
-                  {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
-                </div>
-                {% set ev_amount = ev.display_amount or ev.display_source or ev.source %}{% if ev_amount %}<div class="amount">{{ ev_amount }}</div>{% endif %}
-              </a>
-              {% endfor %}
-            </div>
-          </section>
+    <!-- ============ 今日情报 ============ -->
+    <section class="proto-panel active" data-panel="today">
+      <div class="m-head">
+        <div class="m-overline">今日情报</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">今日事件</h2>
+          <span class="m-head-meta">共 {{ total_stories }} 条合格事件{% if summary_counts %} · {{ summary_counts }}{% endif %}</span>
         </div>
-
-        <aside class="rail">
-          <section class="rail-card">
-            <h2 class="rail-title">今日摘要</h2>
-            {% if batch_notice %}<div class="notice-line">{{ batch_notice }}</div>{% endif %}
-            <div class="scoreboard">
-              <div class="score"><strong id="statStories">{{ total_stories }}</strong><span>合格事件</span></div>
-              <div class="score"><strong id="statRegions">{{ weekly.regions }}</strong><span>覆盖地区</span></div>
-              <div class="score"><strong id="statFunding">{{ weekly.funding }}</strong><span>融资</span></div>
-              <div class="score"><strong id="statMa">{{ weekly.ma + weekly.earnings }}</strong><span>并购/财报</span></div>
+      </div>
+      <div class="f-grid">
+        <section class="f-list">
+          {% for item in merged_events %}
+          <a class="f-card{% if item.pri == 'review' %} f-card-review{% endif %}" href="{{ item.ev.url }}" target="_blank" data-filterable data-region="{{ item.ev.region }}" data-company="{{ item.ev.company_name if item.ev.is_company else '' }}" data-text="{{ item.ev.title }} {{ item.ev.reason }} {{ item.ev.front_overview }} {{ item.ev.region }} {{ item.ev.source }} {{ item.ev.company_name if item.ev.is_company else '' }}">
+            <span class="f-num">{{ "%02d"|format(loop.index) }}</span>
+            <span class="f-body">
+              <span class="f-meta">
+                {% if item.ev.is_company and item.ev.company_name %}<span class="f-co">{{ item.ev.company_name }}</span>{% endif %}
+                <span>{{ item.ev.region }}{% if item.ev.insight_label %} · {{ item.ev.insight_label }}{% endif %}</span>
+              </span>
+              <span class="f-title">{{ item.ev.display_title or item.ev.title }}</span>
+              {% if item.ev.front_overview %}<span class="f-overview">{{ item.ev.front_overview }}</span>{% endif %}
+              {% if item.ev.reason %}<span class="f-reason">点评：{{ item.ev.reason }}</span>{% endif %}
+            </span>
+            <span class="f-right">
+              {% if item.pri != 'review' %}<span class="f-tag f-tag-{{ item.pri }}">{{ item.tag }}</span>{% endif %}
+              {% if item.ev.display_amount %}<span class="f-amount">{{ item.ev.display_amount }}</span>{% endif %}
+            </span>
+          </a>
+          {% endfor %}
+        </section>
+        <aside class="f-rail">
+          <section class="f-glass">
+            <h3>今日摘要</h3>
+            {% if batch_notice %}<div class="f-notice">{{ batch_notice }}</div>{% endif %}
+            <div class="f-scoreboard">
+              <div class="f-score"><strong>{{ total_stories }}</strong><span>合格事件</span></div>
+              <div class="f-score"><strong>{{ weekly.regions }}</strong><span>覆盖地区</span></div>
+              <div class="f-score"><strong>{{ weekly.funding }}</strong><span>融资</span></div>
+              <div class="f-score"><strong>{{ weekly.ma + weekly.earnings }}</strong><span>并购/财报</span></div>
             </div>
           </section>
-          <section class="rail-card">
-            <h2 class="rail-title">报告入口</h2>
-            <a class="report-entry" href="#" onclick="switchTab('weekly');return false;"><strong>本周报告</strong><span>{{ weekly_report.total }} 条事件，{{ weekly_report.companies }} 家重点公司</span></a>
-            <a class="report-entry" href="#" onclick="switchTab('monthly');return false;"><strong>本月报告</strong><span>{{ monthly_report.total }} 条事件，{{ monthly_report.companies }} 家重点公司</span></a>
+          <section class="f-glass">
+            <h3>报告入口</h3>
+            <a class="f-report" href="#tab-weekly" data-goto="weekly"><strong>本周报告</strong><span>{{ weekly_report.total }} 条事件，{{ weekly_report.companies }} 家重点公司</span></a>
+            <a class="f-report" href="#tab-monthly" data-goto="monthly"><strong>本月报告</strong><span>{{ monthly_report.total }} 条事件，{{ monthly_report.companies }} 家重点公司</span></a>
           </section>
-          <section class="rail-card history-nav">
-            <h2 class="rail-title">历史导航</h2>
-            <div class="history-list">
-              {% for d in available_dates[:5] %}
-              <button class="date-row{% if d == main_date %} active{% endif %}" onclick="navigateToDate('{{ d }}')"><span>{{ d }}</span><span>{{ date_panels[d].total_stories }} 条</span></button>
-              {% endfor %}
-              <button class="date-row" onclick="switchTab('all')"><span>全部历史</span><span>{{ history|length }} 天</span></button>
-            </div>
+          <section class="f-glass">
+            <h3>历史导航</h3>
+            {% for d in history_dates %}
+            <button class="f-date hisdate" data-date="{{ d }}" type="button"><span>{{ d }}</span><span>{{ history_counts[d] }} 条</span></button>
+            {% endfor %}
+            <button class="f-date" id="goAll" type="button"><span>全部历史</span><span>{{ history_total }} 天</span></button>
           </section>
         </aside>
       </div>
-      {% else %}
-      <div class="empty-state">暂无今日数据</div>
-      {% endif %}
     </section>
 
-    <section class="tab-panel" id="tab-weekly">
-      <div class="period-shell">
+    <!-- ============ 周报 ============ -->
+    <section class="proto-panel" data-panel="weekly">
+      <div class="m-head">
+        <div class="m-overline">周报</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">本周报告</h2>
+          <span class="m-head-meta">先读主线，再回到独立事实</span>
+        </div>
+      </div>
+      <div class="pshell">
         <div>
           {% for report in weekly_archives %}
-          <div class="period-panel{% if loop.first %} active{% endif %}" id="weekly-{{ report.id }}">
-            <article class="report-cover">
-              <div>
-                <div class="label-row"><span class="label">周报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ report.status_label }}</span></div>
-                {% if report.editorial_title %}<p class="editorial-title">{{ report.editorial_title }}</p>{% endif %}
-                <h2>{{ report.title }}</h2>
-                <div class="report-mainline"><strong>本期主线</strong><p>{{ report.summary }}</p></div>
+          <div class="period-panel{% if loop.first %} active{% endif %}" id="wp-{{ report.id }}">
+            <article class="pcover">
+              <div class="p-tags">
+                <span class="p-ptag">周报</span>
+                <span class="p-ptag">{{ report.date_label }}</span>
+                <span class="p-ptag p-ptag-green">{{ report.status_label }}</span>
               </div>
-              <div class="cover-stats">
-                <div class="cover-stat"><strong>{{ report.focus_windows|length }}</strong><span>本周主题</span></div>
-                <div class="cover-stat"><strong>{{ report.high_priority }}</strong><span>重要事件</span></div>
-                <div class="cover-stat"><strong>{{ report.total }}</strong><span>合格事实</span></div>
+              {% if report.editorial_title %}<p class="p-editorial">{{ report.editorial_title }}</p>{% endif %}
+              <h2>{{ report.title }}</h2>
+              <div class="p-mainline"><strong>本期主线</strong><p>{{ report.summary }}</p></div>
+              <div class="pcover-stats">
+                <div class="pcover-stat"><strong>{{ report.focus_windows|length }}</strong><span>本周主题</span></div>
+                <div class="pcover-stat"><strong>{{ report.high_priority }}</strong><span>重要事件</span></div>
+                <div class="pcover-stat"><strong>{{ report.total }}</strong><span>合格事实</span></div>
               </div>
             </article>
             {% if report.focus_windows %}
-            <nav class="period-toc" aria-label="本期看点">
+            <nav class="ptoc" aria-label="本期看点">
               <strong>本期看点</strong>
               {% for window in report.focus_windows %}
-              <a href="#weekly-theme-{{ report.id }}-{{ window.key }}"><span class="toc-num">{{ '%02d'|format(loop.index) }}</span>{{ window.title }}<em>{{ window.evidence_count }} 条</em></a>
+              <a href="#wt-{{ report.id }}-{{ window.key }}"><span class="toc-num">{{ '%02d'|format(loop.index) }}</span>{{ window.title }}<em>{{ window.evidence_count }} 条</em></a>
               {% endfor %}
             </nav>
-            <section class="content-block">
-              <div class="block-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
-              <div class="weekly-window-list">
-                {% for window in report.focus_windows %}
-                <article class="weekly-window" id="weekly-theme-{{ report.id }}-{{ window.key }}">
-                  <h3>{{ window.title }}</h3>
-                  {% if window.narrative %}<p class="theme-narrative">{{ window.narrative }}</p>{% elif window.why %}<p>{{ window.why }}</p>{% endif %}
-                  <details class="window-details">
-                    <summary>判断依据</summary>
-                    <div class="window-meta">
-                      <span class="label green">{{ window.confidence }}</span>
-                      <span class="label">{{ window.region }}</span>
-                      <span class="label copper">{{ window.evidence_count }} 条证据</span>
-                    </div>
-                    <p>对象：{{ window.objects }}｜主要区域：{{ window.region }}</p>
-                    {% if window.why %}<p>{{ window.why }}</p>{% endif %}
-                    <h4 class="evidence-title">证据事件</h4>
-                    <ul class="window-evidence">
-                      {% for ev in window.evidence %}
-                      <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
-                      {% endfor %}
-                    </ul>
-                    <div class="window-actions"><strong>后续观察</strong><span>{{ window.action }}</span></div>
-                  </details>
-                </article>
-                {% endfor %}
-              </div>
+            <section class="pblock">
+              <div class="pblock-head"><h2>本周主题</h2><span>先读主线，再回到独立事实</span></div>
+              {% for window in report.focus_windows %}
+              <article class="pwin" id="wt-{{ report.id }}-{{ window.key }}">
+                <h3>{{ window.title }}</h3>
+                {% if window.narrative %}<p class="p-narrative">{{ window.narrative }}</p>{% elif window.why %}<p class="p-narrative">{{ window.why }}</p>{% endif %}
+                <details class="pwin-details">
+                  <summary>判断依据</summary>
+                  <div class="pwin-meta">
+                    <span class="p-lbl p-lbl-green">{{ window.confidence }}</span>
+                    <span class="p-lbl">{{ window.region }}</span>
+                    <span class="p-lbl p-lbl-copper">{{ window.evidence_count }} 条证据</span>
+                  </div>
+                  {% if window.why %}<p>对象：{{ window.objects }}｜主要区域：{{ window.region }}</p>{% endif %}
+                  <h4 class="p-evidence-title">证据事件</h4>
+                  <ul class="pwin-evidence">
+                    {% for ev in window.evidence %}
+                    <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                    {% endfor %}
+                  </ul>
+                  <div class="pwin-action"><strong>后续观察</strong>{{ window.action }}</div>
+                </details>
+              </article>
+              {% endfor %}
             </section>
+            {% else %}
+            <div class="pempty">本周尚未形成满足独立证据门槛的主题，先查看日报事实。</div>
             {% endif %}
-            {% if not report.focus_windows %}<div class="empty-state">本周尚未形成满足独立证据门槛的主题，先查看日报事实。</div>{% endif %}
           </div>
           {% endfor %}
         </div>
-        <aside class="period-nav" aria-label="周报档案">
-          <h3>周报档案</h3>
-          {% for report in weekly_archives %}
-          <button class="period-btn{% if loop.first %} active{% endif %}" data-period-target="weekly-{{ report.id }}" type="button">
-            <strong>{{ report.label }}</strong>
-            <span>{{ report.date_label }}</span>
-            <em class="period-status">{{ report.status_label }}</em>
-          </button>
-          {% endfor %}
+        <aside class="parchive">
+          <section class="f-glass">
+            <h3>周报档案</h3>
+            {% for report in weekly_archives %}
+            <button class="pbtn{% if loop.first %} active{% endif %}" data-period-target="wp-{{ report.id }}" type="button">
+              <strong>{{ report.label }}</strong>
+              <span>{{ report.date_label }}</span>
+              <em>{{ report.status_label }}</em>
+            </button>
+            {% endfor %}
+          </section>
         </aside>
       </div>
     </section>
 
-    <section class="tab-panel" id="tab-monthly">
-      <div class="period-shell">
+    <!-- ============ 月报 ============ -->
+    <section class="proto-panel" data-panel="monthly">
+      <div class="m-head">
+        <div class="m-overline">月报</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">本月报告</h2>
+          <span class="m-head-meta">至少跨两个周次，并与前一周期比较</span>
+        </div>
+      </div>
+      <div class="pshell">
         <div>
           {% for report in monthly_archives %}
-          <div class="period-panel{% if loop.first %} active{% endif %}" id="monthly-{{ report.id }}">
-            <article class="report-cover">
-              <div>
-                <div class="label-row"><span class="label">月报</span><span class="label">{{ report.date_label }}</span><span class="label green">{{ report.status_label }}</span></div>
-                {% if report.editorial_title %}<p class="editorial-title">{{ report.editorial_title }}</p>{% endif %}
-                <h2>{{ report.title }}</h2>
-                <div class="report-mainline"><strong>本月主线</strong><p>{{ report.summary }}</p></div>
+          <div class="period-panel{% if loop.first %} active{% endif %}" id="mp-{{ report.id }}">
+            <article class="pcover">
+              <div class="p-tags">
+                <span class="p-ptag">月报</span>
+                <span class="p-ptag">{{ report.date_label }}</span>
+                <span class="p-ptag p-ptag-green">{{ report.status_label }}</span>
               </div>
-              <div class="cover-stats">
-                <div class="cover-stat"><strong>{{ report.period_themes|length }}</strong><span>结构趋势</span></div>
-                <div class="cover-stat"><strong>{{ report.total }}</strong><span>合格事实</span></div>
-                <div class="cover-stat"><strong>{{ report.companies }}</strong><span>涉及对象</span></div>
+              {% if report.editorial_title %}<p class="p-editorial">{{ report.editorial_title }}</p>{% endif %}
+              <h2>{{ report.title }}</h2>
+              <div class="p-mainline"><strong>本月主线</strong><p>{{ report.summary }}</p></div>
+              <div class="pcover-stats">
+                <div class="pcover-stat"><strong>{{ report.period_themes|length }}</strong><span>结构趋势</span></div>
+                <div class="pcover-stat"><strong>{{ report.total }}</strong><span>合格事实</span></div>
+                <div class="pcover-stat"><strong>{{ report.companies }}</strong><span>涉及对象</span></div>
               </div>
             </article>
             {% if report.period_themes %}
-            <nav class="period-toc" aria-label="本月看点">
+            <nav class="ptoc" aria-label="本月看点">
               <strong>本月看点</strong>
               {% for theme in report.period_themes %}
-              <a href="#monthly-theme-{{ report.id }}-{{ theme.key }}"><span class="toc-num">{{ '%02d'|format(loop.index) }}</span>{{ theme.title }}<em>{{ theme.change }} · {{ theme.count }} 个独立事实</em></a>
+              <a href="#mt-{{ report.id }}-{{ theme.key }}"><span class="toc-num">{{ '%02d'|format(loop.index) }}</span>{{ theme.title }}<em>{{ theme.change }} · {{ theme.count }} 个独立事实</em></a>
               {% endfor %}
             </nav>
-            <section class="content-block">
-              <div class="block-head"><h2>本月结构变化</h2><span>至少跨两个周次，并与前一周期比较</span></div>
-              <div class="weekly-window-list">
-                {% for theme in report.period_themes %}
-                <article class="weekly-window" id="monthly-theme-{{ report.id }}-{{ theme.key }}">
-                  <div class="window-meta">
-                    <span class="label green">{{ theme.change }}</span>
-                    <span class="label">{{ theme.region }}</span>
-                  </div>
-                  <h3>{{ theme.title }}</h3>
-                  {% if theme.narrative %}<p class="theme-narrative">{{ theme.narrative }}</p>{% endif %}
-                  <p>{{ theme.summary }}</p>
-                  <details class="window-details">
-                    <summary>变化详情</summary>
-                    <p><strong>跨周</strong>：{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实{% if theme.previous_count %}（前一周期 {{ theme.previous_count }} 个）{% endif %}</p>
-                    {% if theme.drivers %}<p><strong>驱动因素</strong>：{{ theme.drivers|join('；') }}</p>{% endif %}
-                    {% if theme.uncertainty %}<p><strong>不确定性</strong>：{{ theme.uncertainty }}</p>{% endif %}
-                    {% if theme.next_validation %}<p><strong>下月验证</strong>：{{ theme.next_validation }}</p>{% endif %}
-                    <h4 class="evidence-title">代表证据</h4>
-                    <ul class="window-evidence">
-                      {% for ev in theme.evidence %}
-                      <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
-                      {% endfor %}
-                    </ul>
-                  </details>
-                </article>
-                {% endfor %}
-              </div>
+            <section class="pblock">
+              <div class="pblock-head"><h2>本月结构变化</h2><span>至少跨两个周次，并与前一周期比较</span></div>
+              {% for theme in report.period_themes %}
+              <article class="pwin" id="mt-{{ report.id }}-{{ theme.key }}">
+                <div class="pwin-meta">
+                  <span class="p-lbl p-lbl-green">{{ theme.change }}</span>
+                  <span class="p-lbl">{{ theme.region }}</span>
+                </div>
+                <h3>{{ theme.title }}</h3>
+                {% if theme.narrative %}<p class="p-narrative">{{ theme.narrative }}</p>{% endif %}
+                <p class="p-narrative">{{ theme.summary }}</p>
+                <details class="pwin-details">
+                  <summary>变化详情</summary>
+                  <p>跨周：{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实{% if theme.previous_count %}（前一周期 {{ theme.previous_count }} 个）{% endif %}</p>
+                  {% if theme.drivers %}<p>驱动因素：{{ theme.drivers|join('；') }}</p>{% endif %}
+                  {% if theme.uncertainty %}<p>不确定性：{{ theme.uncertainty }}</p>{% endif %}
+                  {% if theme.next_validation %}<p>下月验证：{{ theme.next_validation }}</p>{% endif %}
+                  <h4 class="p-evidence-title">代表证据</h4>
+                  <ul class="pwin-evidence">
+                    {% for ev in theme.evidence %}
+                    <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </details>
+              </article>
+              {% endfor %}
             </section>
-            {% else %}<div class="empty-state">本月尚未形成跨周且可比较的结构趋势，先保留事实。</div>{% endif %}
+            {% else %}
+            <div class="pempty">本月尚未形成跨周且可比较的结构趋势，先保留事实。</div>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
-        <aside class="period-nav" aria-label="月报档案">
-          <h3>月报档案</h3>
-          {% for report in monthly_archives %}
-          <button class="period-btn{% if loop.first %} active{% endif %}" data-period-target="monthly-{{ report.id }}" type="button">
-            <strong>{{ report.label }}</strong>
-            <span>{{ report.date_label }}</span>
-            <em class="period-status">{{ report.status_label }}</em>
-          </button>
-          {% endfor %}
+        <aside class="parchive">
+          <section class="f-glass">
+            <h3>月报档案</h3>
+            {% for report in monthly_archives %}
+            <button class="pbtn{% if loop.first %} active{% endif %}" data-period-target="mp-{{ report.id }}" type="button">
+              <strong>{{ report.label }}</strong>
+              <span>{{ report.date_label }}</span>
+              <em>{{ report.status_label }}</em>
+            </button>
+            {% endfor %}
+          </section>
         </aside>
       </div>
     </section>
 
-    <section class="tab-panel" id="tab-companies">
-      <section class="headline-area">
-        <div class="label-row kicker"><span class="label dark">公司索引</span><span class="label">从快链升级为跟踪对象</span></div>
-        <p class="lead">每家公司会关联到每日事件、周报趋势和月度变化，形成轻量情报库。</p>
-      </section>
+    <!-- ============ 公司索引 ============ -->
+    <section class="proto-panel" data-panel="companies">
+      <div class="c-head">
+        <div class="m-overline">公司索引</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">跟踪对象</h2>
+          <span class="m-head-meta">每家公司关联到每日事件、周报趋势和月度变化</span>
+        </div>
+      </div>
       {% if company_groups %}
-      <section class="content-block">
-        <div class="company-region-list">
-          {% for group in company_groups %}
-          <section class="company-region">
-            <div class="company-region-head">
-              <h3>{{ group.region }}</h3>
-              <span>{{ group.active }}/{{ group.total }} 家近期有动作，{{ group.observed }}/{{ group.total }} 家已有可解释状态</span>
-            </div>
-            <div class="company-grid">
-              {% for c in group.companies %}
-              <button class="company company-nav-btn status-{{ c.coverage_status }}{% if c.count == 0 %} empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
-                <strong>{{ c.name }}</strong>
-                <span class="company-status">活动：{{ c.activity_label }}｜覆盖：{{ c.coverage_label }}</span>
-                <span>{{ c.observation_detail }}</span>
-                <small>{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '关注中' if c.portfolio_tier == 'mention' else '实验对象' }}｜近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
-              </button>
-              {% endfor %}
-            </div>
-          </section>
-          {% endfor %}
-        </div>
-      </section>
-      {% endif %}
-    </section>
-
-    <section class="tab-panel" id="tab-all">
-      {% if date_grouped_events %}
-      <section class="content-block">
-        <div class="block-head"><h2>全部事件库</h2><span>按日期折叠，支持搜索和地区/公司筛选</span></div>
-        <div id="feed-list">
-          {% for group in date_grouped_events %}
-          <div class="history-card" data-date="{{ group.date }}">
-            <button class="history-head" onclick="toggleDate(this)">
-              <span>{{ group.date }}</span>
-              <span>{{ group.events|length }} 条 <span class="toggle-icon">›</span></span>
-            </button>
-            <div class="history-body">
-              <div class="intelligence-list">
-                {% for ev in group.events %}
-                <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
-                  <div>
-                    <h3>{% if ev.is_company and ev.company_name %}<span class="company-chip">{{ ev.company_name }}</span>{% endif %}{{ ev.display_title or ev.title }}</h3>
-                    {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
-                    {% if ev.front_overview %}<div class="intel-impact">内容概要：{{ ev.front_overview }}</div>{% endif %}
-                    {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
-                  </div>
-                  {% set ev_amount = ev.display_amount or ev.display_source or ev.source %}{% if ev_amount %}<div class="amount">{{ ev_amount }}</div>{% endif %}
-                </a>
-                {% endfor %}
-              </div>
-            </div>
+      <div class="c-region">
+        {% for group in company_groups %}
+        <section class="c-region">
+          <div class="c-region-head">
+            <h3>{{ group.region }}</h3>
+            <span>{{ group.active }}/{{ group.total }} 家近期有动作，{{ group.observed }}/{{ group.total }} 家已有可解释状态</span>
           </div>
-          {% endfor %}
-        </div>
-        <div id="no-results" class="empty-state" style="display:none">当前筛选条件下没有内容，换个关键词试试</div>
-      </section>
-      {% endif %}
-    </section>
-
-    <section class="tab-panel" id="tab-updates">
-      <section class="headline-area">
-        <div class="label-row kicker"><span class="label dark">更新日志</span><span class="label">产品变更记录</span></div>
-        <p class="lead">这里记录信息架构、数据质量、自动化流程和展示体验的主要变化。</p>
-      </section>
-      <div class="ops-layout">
-        <section class="content-block">
-          <div class="block-head"><h2>全部更新日志</h2><span>{{ site_updates|length }} 条记录，默认折叠</span></div>
-          <div class="history-list">
-            {% for update in site_updates %}
-            <article class="history-card">
-              <button class="history-head release-head" onclick="toggleDate(this)">
-                <span class="release-copy">
-                  <h3>{{ update.title }}</h3>
-                  <small>{{ update.date }} · {{ update.type }} · {{ update.status }}</small>
-                </span>
-                <span>{{ update.version }} <span class="toggle-icon">›</span></span>
-              </button>
-              <div class="history-body">
-                <div class="label-row">
-                  <span class="label green">{{ update.type }}</span>
-                  <span class="label">{{ update.status }}</span>
-                </div>
-                {% if update.summary %}<p>{{ update.summary }}</p>{% endif %}
-                {% if update.changes %}
-                <ul class="release-list">
-                  {% for change in update.changes %}<li>{{ change }}</li>{% endfor %}
-                </ul>
-                {% endif %}
-              </div>
-            </article>
+          <div class="c-grid">
+            {% for c in group.companies %}
+            <button class="c-card c-coverage-{{ c.coverage_status }}{% if c.count == 0 %} c-empty{% endif %}" data-company="{{ c.name }}" data-count="{{ c.count }}">
+              <strong>{{ c.name }}</strong>
+              <span class="c-status">{{ c.activity_label }}｜{{ c.coverage_label }}</span>
+              <span class="c-detail">{{ c.observation_detail }}</span>
+              <small>{{ '必须覆盖' if c.portfolio_tier == 'must' else '战略观察' if c.portfolio_tier == 'strategic' else '关注中' if c.portfolio_tier == 'mention' else '实验对象' }}｜近 7 天 {{ c.recent_7 }} 条，近 30 天 {{ c.recent_30 }} 条，优质 {{ c.quality_30 }} 条{% if c.last_checked_at %}｜最近检查 {{ c.last_checked_at }}{% endif %}</small>
+            </button>
             {% endfor %}
           </div>
         </section>
-        <aside class="release-side">
-          <div class="side-panel"><strong>记录范围</strong><span>页面结构、分析质量、自动任务、用户体验和线上发布。</span></div>
-          <div class="side-panel"><strong>维护方式</strong><span>更新内容保存在 data/site_updates.json，随网站生成一起发布。</span></div>
-          <div class="side-panel"><strong>下一步</strong><span>反馈稳定后，可把有效建议沉淀为待办清单或 GitHub Issue。</span></div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="pempty">暂无公司跟踪对象。</div>
+      {% endif %}
+    </section>
+
+    <!-- ============ 全部事件 ============ -->
+    <section class="proto-panel" data-panel="all">
+      <div class="m-head">
+        <div class="m-overline">全部事件</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">事件库</h2>
+          <span class="m-head-meta">按日期折叠，共 {{ date_grouped_events|length }} 天</span>
+        </div>
+      </div>
+      {% if date_grouped_events %}
+      <section class="h-list">
+        {% for group in date_grouped_events %}
+        <div class="h-card{% if loop.first %} open{% endif %}" data-date="{{ group.date }}">
+          <button class="h-head" type="button">
+            <span class="h-date">{{ group.date }}</span>
+            <span class="h-meta">{{ group.events|length }} 条<span class="h-caret">›</span></span>
+          </button>
+          <div class="h-body">
+            {% for ev in group.events %}
+            <a class="h-event" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.front_overview }} {{ ev.region }} {{ ev.source }} {{ ev.company_name if ev.is_company else '' }}">
+              <span>
+                <span class="h-title">{% if ev.is_company and ev.company_name %}{{ ev.company_name }} · {% endif %}{{ ev.display_title or ev.title }}</span>
+                {% if ev.reason %}<span class="h-sub">点评：{{ ev.reason }}</span>{% endif %}
+              </span>
+              {% set ev_side = ev.display_amount or ev.display_source or ev.source %}{% if ev_side %}<span class="h-side">{{ ev_side }}</span>{% endif %}
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+      <div class="pempty" id="no-results" style="display:none">当前筛选条件下没有内容，换个关键词试试</div>
+      {% endif %}
+    </section>
+
+    <!-- ============ 更新日志 ============ -->
+    <section class="proto-panel" data-panel="updates">
+      <div class="m-head">
+        <div class="m-overline">更新日志</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">产品变更记录</h2>
+          <span class="m-head-meta">{{ site_updates|length }} 条记录</span>
+        </div>
+      </div>
+      <div class="u-layout">
+        <section>
+          <div class="u-list">
+            {% for update in site_updates %}
+            <div class="u-card{% if loop.first %} open{% endif %}">
+              <button class="u-head" type="button">
+                <span class="u-copy">
+                  <h3>{{ update.title }}</h3>
+                  <small>{{ update.date }} · {{ update.type }} · {{ update.status }}</small>
+                </span>
+                <span class="u-ver">{{ update.version }}<span class="u-caret">›</span></span>
+              </button>
+              <div class="u-body">
+                <div class="u-tags">
+                  <span class="p-lbl p-lbl-green">{{ update.type }}</span>
+                  <span class="p-lbl">{{ update.status }}</span>
+                </div>
+                {% if update.summary %}<p>{{ update.summary }}</p>{% endif %}
+                {% if update.changes %}
+                <ul>{% for change in update.changes %}<li>{{ change }}</li>{% endfor %}</ul>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        <aside class="u-side">
+          <div class="u-side-note"><strong>记录范围</strong><span>页面结构、分析质量、自动任务、用户体验和线上发布。</span></div>
+          <div class="u-side-note"><strong>维护方式</strong><span>更新内容保存在 data/site_updates.json，随网站生成一起发布。</span></div>
+          <div class="u-side-note"><strong>下一步</strong><span>反馈稳定后，可把有效建议沉淀为待办清单或 GitHub Issue。</span></div>
         </aside>
       </div>
     </section>
 
-    <section class="tab-panel" id="tab-feedback">
-      <section class="headline-area">
-        <div class="label-row kicker"><span class="label dark">反馈</span><span class="label">想法与问题记录</span></div>
-        <p class="lead">提交后应自动进入线上记录；本机只保留草稿和失败兜底。</p>
-      </section>
-      <div class="feedback-layout">
-        <form class="feedback-form" id="feedbackForm">
-          <div class="field-grid">
-            <label class="field"><span>类型</span>
+    <!-- ============ 反馈 ============ -->
+    <section class="proto-panel" data-panel="feedback">
+      <div class="m-head">
+        <div class="m-overline">反馈</div>
+        <div class="m-headline-row">
+          <h2 class="m-title-sec">想法与问题</h2>
+          <span class="m-head-meta">提交后应自动进入线上记录；本机只保留草稿和失败兜底</span>
+        </div>
+      </div>
+      <div class="fb-layout">
+        <form class="fb-form" id="feedbackForm">
+          <div class="fb-grid">
+            <label class="fb-field"><span>类型</span>
               <select id="feedbackType">
                 <option value="想法">想法</option>
                 <option value="Bug">Bug</option>
@@ -809,7 +767,7 @@ button, input, select { font: inherit; }
                 <option value="体验建议">体验建议</option>
               </select>
             </label>
-            <label class="field"><span>优先级</span>
+            <label class="fb-field"><span>优先级</span>
               <select id="feedbackPriority">
                 <option value="P2">常规</option>
                 <option value="P1">重要</option>
@@ -818,146 +776,99 @@ button, input, select { font: inherit; }
               </select>
             </label>
           </div>
-          <label class="field"><span>标题</span><input id="feedbackTitle" type="text" maxlength="80" placeholder="一句话说明问题或想法" required></label>
-          <label class="field"><span>详情</span><textarea id="feedbackDetail" rows="7" placeholder="看到的位置、期望结果、实际情况、相关事件或链接" required></textarea></label>
-          <label class="field"><span>联系方式</span><input id="feedbackContact" type="text" maxlength="80" placeholder="可选"></label>
-          <div class="feedback-sync-note">提交失败时会先保留本机草稿，避免内容丢失；草稿不等于线上记录。</div>
-          <div class="feedback-actions">
-            <button class="action-btn" id="submitFeedback" type="submit">提交反馈</button>
-            <button class="action-btn secondary" id="saveDraftFeedback" type="button">保存草稿</button>
-            <button class="action-btn secondary" id="copyFeedback" type="button">复制文本</button>
+          <label class="fb-field"><span>标题</span><input id="feedbackTitle" type="text" maxlength="80" placeholder="一句话说明问题或想法" required></label>
+          <label class="fb-field"><span>详情</span><textarea id="feedbackDetail" rows="7" placeholder="看到的位置、期望结果、实际情况、相关事件或链接" required></textarea></label>
+          <label class="fb-field"><span>联系方式</span><input id="feedbackContact" type="text" maxlength="80" placeholder="可选"></label>
+          <div class="fb-sync">提交失败时会先保留本机草稿，避免内容丢失；草稿不等于线上记录。</div>
+          <div class="fb-actions">
+            <button class="fb-btn" id="submitFeedback" type="submit">提交反馈</button>
+            <button class="fb-btn secondary" id="saveDraftFeedback" type="button">保存草稿</button>
+            <button class="fb-btn secondary" id="copyFeedback" type="button">复制文本</button>
           </div>
-          <div class="feedback-status" id="feedbackStatus" aria-live="polite"></div>
-          <textarea class="feedback-output" id="feedbackOutput" readonly placeholder="提交或保存草稿后会生成标准反馈文本"></textarea>
+          <div class="fb-status" id="feedbackStatus" aria-live="polite"></div>
+          <textarea class="fb-output" id="feedbackOutput" readonly placeholder="提交或保存草稿后会生成标准反馈文本"></textarea>
         </form>
-        <section class="feedback-records">
-          <div class="block-head"><h2>草稿与提交记录</h2><span id="feedbackCount">0 条</span></div>
-          <div class="feedback-sync-note">这里用于恢复本机内容；线上是否记录成功，以提交状态为准。</div>
-          <div id="feedbackList" class="feedback-list"></div>
-          <div class="feedback-actions">
-            <button class="action-btn secondary" id="clearFeedback" type="button">清空记录</button>
+        <section class="fb-records">
+          <div class="fb-form">
+            <h3>草稿与提交记录 <span id="feedbackCount">0 条</span></h3>
+            <p>这里用于恢复本机内容；线上是否记录成功，以提交状态为准。</p>
+            <div id="feedbackList" class="feedback-list"></div>
+            <div class="fb-actions">
+              <button class="fb-btn secondary" id="clearFeedback" type="button">清空记录</button>
+            </div>
           </div>
         </section>
       </div>
     </section>
+
   </main>
 
-  <div class="footer-note">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</div>
+  <footer class="m-footer">全球互联网百晓生 · 非中美 · 融资/并购/财报/战略信号 · AI 驱动</footer>
 </div>
 
 <script>
-function activateTab(name) {
-  document.querySelectorAll('.tab-btn').forEach(function(b){
-    b.classList.toggle('active', b.getAttribute('data-tab') === name);
-  });
-  document.querySelectorAll('.tab-panel').forEach(function(p){
-    p.classList.toggle('active', p.id === 'tab-' + name);
-  });
-}
+/* 主导航 tab 切换（带 hash 路由，兼容旧链接 #tab-xxx） */
 function tabNameFromHash(hash) {
   var m = (hash || '').match(/^#tab-(today|weekly|monthly|companies|all|updates|feedback)$/);
   return m ? m[1] : null;
 }
-function switchTab(name) {
-  var target = '#tab-' + name;
-  if (location.hash === target) {
-    activateTab(name);
-    window.scrollTo(0, 0);
-  } else {
-    location.hash = target;
-  }
+function showTab(t) {
+  tabs.forEach(function(x){ x.classList.toggle('active', x === t); });
+  panels.forEach(function(p){ p.classList.toggle('active', p.dataset.panel === t.dataset.panel); });
+  try { history.replaceState(null, '', '#tab-' + t.dataset.panel); } catch (e) {}
+  window.scrollTo({top:0});
 }
+var tabs = document.querySelectorAll('.m-tab[data-panel]');
+var panels = document.querySelectorAll('.proto-panel');
+tabs.forEach(function(t){ t.addEventListener('click', function(){ showTab(t); }); });
 window.addEventListener('hashchange', function(){
-  var h = location.hash || '';
-  var name = tabNameFromHash(h);
+  var name = tabNameFromHash(location.hash);
   if (name) {
-    activateTab(name);
-    window.scrollTo(0, 0);
-    return;
-  }
-  if (!h) {
-    activateTab('today');
-    window.scrollTo(0, 0);
-    return;
-  }
-  if (h.indexOf('#weekly-theme-') === 0) {
-    activateTab('weekly');
-  } else if (h.indexOf('#monthly-theme-') === 0) {
-    activateTab('monthly');
-  }
-  var target = document.getElementById(h.replace(/^#/, ''));
-  if (target) {
-    setTimeout(function(){ try { target.scrollIntoView(); } catch (e) {} }, 0);
+    var tab = document.querySelector('.m-tab[data-panel="' + name + '"]');
+    if (tab) showTab(tab);
   }
 });
-(function initTabRoute(){
-  var h = location.hash || '#tab-today';
-  var name = tabNameFromHash(h);
-  if (name) { activateTab(name); return; }
-  if (h.indexOf('#weekly-theme-') === 0) {
-    activateTab('weekly');
-  } else if (h.indexOf('#monthly-theme-') === 0) {
-    activateTab('monthly');
-  }
+(function initTab(){
+  var name = tabNameFromHash(location.hash);
+  var tab = name ? document.querySelector('.m-tab[data-panel="' + name + '"]') : null;
+  if (tab) showTab(tab);
 })();
-var navMoreBtn = document.querySelector('.nav-more-btn');
-var navMorePanel = document.getElementById('navMorePanel');
-if (navMoreBtn && navMorePanel) {
-  navMoreBtn.addEventListener('click', function(e){
-    e.stopPropagation();
-    var open = !navMorePanel.classList.contains('open');
-    navMorePanel.classList.toggle('open', open);
-    navMoreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  document.addEventListener('click', function(e){
-    if (navMorePanel.classList.contains('open') && !navMorePanel.contains(e.target) && e.target !== navMoreBtn) {
-      navMorePanel.classList.remove('open');
-      navMoreBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
-  navMorePanel.addEventListener('click', function(){
-    navMorePanel.classList.remove('open');
-    navMoreBtn.setAttribute('aria-expanded', 'false');
-  });
-}
-var historyNavCard = document.querySelector('.issue-layout .rail .history-nav');
-var issueContentCol = document.querySelector('.issue-layout > div:first-child');
-var issueRail = document.querySelector('.issue-layout .rail');
-function arrangeMobileRail() {
-  if (!historyNavCard || !issueContentCol || !issueRail) return;
-  var isMobile = window.matchMedia('(max-width: 760px)').matches;
-  if (isMobile) {
-    if (historyNavCard.parentNode !== issueContentCol) {
-      issueContentCol.insertBefore(historyNavCard, issueContentCol.firstChild);
-    }
-  } else if (historyNavCard.parentNode === issueContentCol) {
-    issueRail.appendChild(historyNavCard);
-  }
-}
-if (window.matchMedia) {
-  arrangeMobileRail();
-  window.addEventListener('resize', arrangeMobileRail);
-}
-document.querySelectorAll('.period-btn').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var target = btn.getAttribute('data-period-target');
-    var shell = btn.closest('.period-shell');
-    if (!shell || !target) return;
-    shell.querySelectorAll('.period-btn').forEach(function(item){ item.classList.toggle('active', item === btn); });
-    shell.querySelectorAll('.period-panel').forEach(function(panel){ panel.classList.toggle('active', panel.id === target); });
+
+/* 报告入口 → 切换 tab */
+document.querySelectorAll('[data-goto]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var tab = document.querySelector('.m-tab[data-panel="' + a.dataset.goto + '"]');
+    if (tab) tab.click();
   });
 });
+
+/* 周报/月报档案切换 */
+document.querySelectorAll('.pbtn[data-period-target]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var scope = btn.closest('.proto-panel');
+    scope.querySelectorAll('.pbtn').forEach(function(b){ b.classList.toggle('active', b === btn); });
+    scope.querySelectorAll('.period-panel').forEach(function(p){ p.classList.toggle('active', p.id === btn.dataset.periodTarget); });
+  });
+});
+
+/* 全部事件 / 更新日志折叠 */
+document.querySelectorAll('.h-head, .u-head').forEach(function(head){
+  head.addEventListener('click', function(){ head.closest('.h-card, .u-card').classList.toggle('open'); });
+});
+
+/* RSS 订阅 popover：开合 + 复制 + 点击外部关闭 */
 var feedToggle = document.getElementById('feedToggle');
 var feedPopover = document.getElementById('feedPopover');
 if (feedToggle && feedPopover) {
-  feedToggle.addEventListener('click', function(event){
-    event.stopPropagation();
+  feedToggle.addEventListener('click', function(e){
+    e.stopPropagation();
     var open = !feedPopover.classList.contains('open');
     feedPopover.classList.toggle('open', open);
     feedToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  document.addEventListener('click', function(event){
-    if (!feedPopover.contains(event.target) && event.target !== feedToggle) {
+  document.addEventListener('click', function(e){
+    if (!feedPopover.contains(e.target) && e.target !== feedToggle) {
       feedPopover.classList.remove('open');
       feedToggle.setAttribute('aria-expanded', 'false');
     }
@@ -965,201 +876,134 @@ if (feedToggle && feedPopover) {
 }
 var copyFeedUrl = document.getElementById('copyFeedUrl');
 if (copyFeedUrl) {
-  copyFeedUrl.addEventListener('click', function(event){
-    event.stopPropagation();
-    var feedUrl = document.getElementById('feedUrl');
+  copyFeedUrl.addEventListener('click', function(e){
+    e.stopPropagation();
     var stateText = document.getElementById('feedCopyState');
+    var feedUrl = document.getElementById('feedUrl');
     var text = feedUrl ? feedUrl.textContent.trim() : '';
-    if (!text) return;
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function(){
         if (stateText) stateText.textContent = '已复制订阅地址。';
-      }).catch(function(){
-        if (stateText) stateText.textContent = text;
       });
     } else if (stateText) {
       stateText.textContent = text;
     }
   });
 }
-function toggleDate(header) {
-  var card = header.closest('.history-card');
-  if (card) card.classList.toggle('open');
-}
-var state = { region:'all', q:'', company:'all' };
-document.getElementById('searchBox').addEventListener('input', function(e){
-  state.q = e.target.value.trim().toLowerCase();
-  applyFilters();
-});
-document.getElementById('regionSelect').addEventListener('change', function(e){
-  state.region = e.target.value;
-  applyFilters();
-});
-document.querySelectorAll('.company-nav-btn').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    if (btn.classList.contains('empty')) return;
-    var company = btn.getAttribute('data-company');
-    var isActive = btn.classList.contains('active');
-    document.querySelectorAll('.company-nav-btn').forEach(function(b){ b.classList.remove('active'); });
-    state.company = isActive ? 'all' : company.toLowerCase();
-    if (!isActive) btn.classList.add('active');
-    switchTab('all');
-    applyFilters();
-  });
-});
+
+/* 搜索 / 地区 / 公司 筛选 */
+var fState = { region: 'all', q: '', company: 'all' };
 function applyFilters(){
   var visible = 0;
   document.querySelectorAll('[data-filterable]').forEach(function(el){
     var er = el.getAttribute('data-region') || '';
     var ecn = (el.getAttribute('data-company') || '').toLowerCase();
     var text = (el.getAttribute('data-text') || '').toLowerCase();
-    var mr = state.region === 'all' || er === state.region;
-    var mq = !state.q || text.indexOf(state.q) > -1;
-    var mc = state.company === 'all' || ecn === state.company || text.indexOf(state.company) > -1;
+    var mr = fState.region === 'all' || er === fState.region;
+    var mq = !fState.q || text.indexOf(fState.q) > -1;
+    var mc = fState.company === 'all' || ecn === fState.company || text.indexOf(fState.company) > -1;
     var show = mr && mq && mc;
     el.style.display = show ? '' : 'none';
     if (show) visible++;
   });
-  document.querySelectorAll('.history-card[data-date]').forEach(function(card){
+  document.querySelectorAll('.h-card[data-date]').forEach(function(card){
     var items = card.querySelectorAll('[data-filterable]');
     var hidden = card.querySelectorAll('[data-filterable][style*="display: none"]');
     card.style.display = hidden.length < items.length ? '' : 'none';
   });
-  var noResults = document.getElementById('no-results');
-  if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+  var noR = document.getElementById('no-results');
+  if (noR) noR.style.display = visible === 0 ? 'block' : 'none';
   updateFilterState(visible);
 }
-function updateFilterState(visible) {
+function updateFilterState(visible){
   var bar = document.getElementById('filterState');
   var title = document.getElementById('filterStateTitle');
   var text = document.getElementById('filterStateText');
   if (!bar || !text) return;
   var parts = [];
-  if (state.region !== 'all') parts.push(state.region);
-  if (state.company !== 'all') parts.push(state.company);
-  if (state.q) parts.push('关键词：' + state.q);
+  if (fState.region !== 'all') parts.push('地区：' + fState.region);
+  if (fState.company !== 'all') parts.push('公司：' + fState.company);
+  if (fState.q) parts.push('关键词：' + fState.q);
   var active = parts.length > 0;
   bar.classList.toggle('active', active);
-  if (title) title.textContent = active ? '正在查看筛选结果' : '全部情报';
-  text.textContent = active ? (parts.join(' / ') + '，当前显示 ' + visible + ' 条结果') : '当前筛选：全部情报';
+  title.textContent = active ? '正在查看筛选结果' : '当前筛选：全部情报';
+  text.textContent = active ? parts.join('，') + '（' + visible + ' 条命中）' : '共 ' + visible + ' 条';
 }
-var availableDates = {{ available_dates|tojson }};
-var datePanels = {{ date_panels|tojson }};
-var currentDateIndex = availableDates.indexOf({{ main_date|tojson }});
-function escHtml(s) {
-  if (!s) return '';
+var searchBox = document.getElementById('searchBox');
+if (searchBox) {
+  searchBox.addEventListener('input', function(e){
+    fState.q = e.target.value.trim().toLowerCase();
+    applyFilters();
+  });
+}
+var regionSelect = document.getElementById('regionSelect');
+if (regionSelect) {
+  regionSelect.addEventListener('change', function(e){
+    fState.region = e.target.value;
+    applyFilters();
+  });
+}
+var clearFilter = document.getElementById('clearFilter');
+if (clearFilter) {
+  clearFilter.addEventListener('click', function(){
+    fState.region = 'all'; fState.q = ''; fState.company = 'all';
+    if (searchBox) searchBox.value = '';
+    if (regionSelect) regionSelect.value = 'all';
+    document.querySelectorAll('.c-card').forEach(function(c){ c.classList.remove('active'); });
+    applyFilters();
+  });
+}
+
+/* 公司卡 → 切全部事件 + 筛选该公司 */
+document.querySelectorAll('.c-card').forEach(function(card){
+  card.addEventListener('click', function(){
+    if (card.classList.contains('c-empty')) return;
+    var co = card.getAttribute('data-company') || '';
+    var isActive = card.classList.contains('active');
+    document.querySelectorAll('.c-card').forEach(function(c){ c.classList.remove('active'); });
+    fState.company = isActive ? 'all' : co.toLowerCase();
+    if (!isActive) card.classList.add('active');
+    var tab = document.querySelector('.m-tab[data-panel="all"]');
+    if (tab) tab.click();
+    applyFilters();
+  });
+});
+
+/* 历史导航 → 切全部事件并展开该日期 */
+document.querySelectorAll('.hisdate').forEach(function(b){
+  b.addEventListener('click', function(){
+    var d = b.getAttribute('data-date');
+    var tab = document.querySelector('.m-tab[data-panel="all"]');
+    if (tab) tab.click();
+    document.querySelectorAll('.hisdate').forEach(function(x){ x.classList.remove('active'); });
+    b.classList.add('active');
+    var card = document.querySelector('.h-card[data-date="' + d + '"]');
+    if (card) {
+      card.classList.add('open');
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+var goAll = document.getElementById('goAll');
+if (goAll) {
+  goAll.addEventListener('click', function(){
+    var tab = document.querySelector('.m-tab[data-panel="all"]');
+    if (tab) tab.click();
+  });
+}
+
+/* 反馈：真实提交 + 本机草稿兜底 */
+function escHtml(s){
+  if (s == null) return '';
   var d = document.createElement('div');
-  d.textContent = s;
+  d.textContent = String(s);
   return d.innerHTML;
 }
 function labelHtml(text, cls) {
   if (!text) return '';
-  return '<span class="label ' + (cls || '') + '">' + escHtml(text) + '</span>';
+  var klass = 'p-lbl' + (cls === 'green' ? ' p-lbl-green' : '');
+  return '<span class="' + klass + '">' + escHtml(text) + '</span>';
 }
-function eventCardHtml(ev) {
-  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'') + ' ' + ((ev.matched_entities||[]).join(' '));
-  var displayTitle = ev.display_title || ev.summary_short || ev.title || '';
-  var company = ev.company_name ? '<span class="company-chip">' + escHtml(ev.company_name) + '</span>' : '';
-  var original = ev.original_title ? '<div class="source-title">原题：' + escHtml(ev.original_title) + '</div>' : '';
-  var overview = ev.front_overview ? '<div class="intel-impact">内容概要：' + escHtml(ev.front_overview) + '</div>' : '';
-  var reason = ev.reason ? '<div class="intel-impact">点评：' + escHtml(ev.reason) + '</div>' : '';
-  var amount = ev.display_amount || (ev.source === 'Google News' ? (ev.display_source || ev.source) : '');
-  return '<a class="intel event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
-    '<div><h3>' + company + escHtml(displayTitle) + '</h3>' + original + overview + reason + '</div>' +
-    (amount ? '<div class="amount">' + escHtml(amount) + '</div>' : '') + '</a>';
-}
-function dailyGroupHtml(group) {
-  var events = group.events || [];
-  if (!events.length) return '';
-  return '<section class="daily-group" data-daily-group="' + escHtml(group.key || '') + '">' +
-    '<div class="daily-group-head"><div class="daily-group-title"><h3>' + escHtml(group.label || '') + '</h3>' +
-    '<span>' + escHtml(group.description || '') + '</span></div>' +
-    '<span class="label">' + events.length + ' 条</span></div>' +
-    '<div class="intelligence-list">' + events.map(function(ev){ return eventCardHtml(ev); }).join('') + '</div>' +
-    '</section>';
-}
-function reviewEventCardHtml(ev) {
-  var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'');
-  var company = ev.company_name ? '<span class="company-chip">' + escHtml(ev.company_name) + '</span>' : '';
-  var original = ev.original_title ? '<div class="source-title">原题：' + escHtml(ev.original_title) + '</div>' : '';
-  var reason = ev.reason ? '<div class="intel-impact">点评：' + escHtml(ev.reason) + '</div>' : '';
-  var amount = ev.display_amount || ev.display_source || ev.source || '';
-  return '<a class="intel low event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
-    '<div><h3>' + company + escHtml(ev.display_title || ev.title || '') + '</h3>' + original + reason + '</div>' +
-    (amount ? '<div class="amount">' + escHtml(amount) + '</div>' : '') + '</a>';
-}
-function signalClusterHtml(cluster) {
-  var companies = cluster.companies || [];
-  var signals = cluster.signals || [];
-  var evidence = cluster.evidence || [];
-  var text = [cluster.title, cluster.region, cluster.type_label, cluster.why, cluster.action].concat(companies).concat(signals).join(' ');
-  var tags = companies.slice(0, 4).map(function(c){ return labelHtml(c, ''); })
-    .concat(signals.slice(0, 3).map(function(s){ return labelHtml(s, ''); })).join('');
-  var evidenceHtml = evidence.map(function(ev){
-    return '<li><a href="' + escHtml(ev.url) + '" target="_blank">' + escHtml(ev.title) + '</a><span>' +
-      escHtml(ev.date || '') + '｜' + escHtml(ev.type || '') + '｜' + escHtml(ev.source || '') + '</span></li>';
-  }).join('');
-  var eligibility = (cluster.eligibility || []).join(' / ');
-  return '<article class="cluster-card" data-filterable data-region="' + escHtml(cluster.region) + '" data-company="' + escHtml(companies.join(' ')) + '" data-text="' + escHtml(text) + '">' +
-    '<div class="cluster-meta"><span class="label dark">关注窗口</span>' + labelHtml(cluster.region, 'green') + labelHtml(cluster.type_label, '') + '<span class="label copper">信心：' + escHtml(cluster.confidence || '观察') + '</span></div>' +
-    '<h3>' + escHtml(cluster.title || '') + '</h3>' +
-    (cluster.why ? '<p>' + escHtml(cluster.why) + '</p>' : '') +
-    '<div class="cluster-tags">' + tags + '</div>' +
-    '<ul class="cluster-evidence">' + evidenceHtml + '</ul>' +
-    '<div class="cluster-action"><strong>' + escHtml(cluster.action || '加入观察名单') + '</strong><span>' + escHtml((cluster.watch_window || '') + (eligibility ? '｜' + eligibility : '')) + '</span></div>' +
-    '</article>';
-}
-function eventKey(ev) {
-  return ev && (ev.url || ((ev.date || '') + '|' + (ev.title || '')));
-}
-function renderQualityBox(events) {
-  var list = document.getElementById('qualityList');
-  if (!list) return;
-  var has = events && events.length;
-  list.style.display = has ? '' : 'none';
-  list.innerHTML = has ? events.map(reviewEventCardHtml).join('') : '';
-}
-function navigateToDate(date) {
-  var idx = availableDates.indexOf(date);
-  if (idx >= 0) navigateDay(idx - currentDateIndex);
-}
-function navigateDay(dir) {
-  var ni = currentDateIndex + dir;
-  if (ni < 0 || ni >= availableDates.length) return;
-  var date = availableDates[ni];
-  var panel = datePanels[date];
-  if (!panel) return;
-  currentDateIndex = ni;
-  var title = document.querySelector('#tab-today .main-title');
-  if (title) title.textContent = panel.headline || panel.judgment || '今日非中美互联网动态更新';
-  var lead = document.querySelector('#tab-today .lead');
-  if (lead) lead.textContent = panel.judgment || '';
-  var briefs = document.querySelector('#tab-today .judgment-signals');
-  if (briefs && panel.top3) {
-    briefs.innerHTML = panel.top3.map(function(ev) {
-      return '<a href="' + escHtml(ev.url) + '" target="_blank" class="brief event-item signal-card" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml((ev.title||'') + ' ' + (ev.reason||'')) + '">' +
-        '<h3>' + escHtml(ev.region) + ' · ' + escHtml(ev.insight_label || '重点信号') + '</h3><p class="signal-title">' + escHtml(ev.title) + '</p></a>';
-    }).join('');
-  }
-  var dailyGroups = document.getElementById('dailyEventGroups');
-  if (dailyGroups) dailyGroups.innerHTML = (panel.daily_event_groups || []).map(dailyGroupHtml).join('');
-  renderQualityBox(panel.repair_events || []);
-  document.getElementById('statStories').textContent = panel.total_stories || 0;
-  document.getElementById('statRegions').textContent = panel.regions || 0;
-  document.getElementById('statFunding').textContent = panel.funding || 0;
-  document.getElementById('statMa').textContent = (panel.ma || 0) + (panel.earnings || 0);
-  document.querySelectorAll('.date-row').forEach(function(btn){ btn.classList.remove('active'); });
-  var active = Array.from(document.querySelectorAll('.date-row')).find(function(btn){ return btn.textContent.indexOf(date) > -1; });
-  if (active) active.classList.add('active');
-  applyFilters();
-}
-document.getElementById('clearFilter').addEventListener('click', function(){
-  state = { region:'all', q:'', company:'all' };
-  document.getElementById('searchBox').value = '';
-  document.getElementById('regionSelect').value = 'all';
-  document.querySelectorAll('.company-nav-btn').forEach(function(b){ b.classList.remove('active'); });
-  applyFilters();
-});
 var feedbackStorageKey = 'weekly-report-feedback-v1';
 var feedbackEndpoint = {{ feedback_endpoint|tojson }};
 if (!feedbackEndpoint) {
@@ -1206,13 +1050,13 @@ function renderFeedbackList() {
   var items = safeReadFeedback();
   count.textContent = items.length + ' 条';
   if (!items.length) {
-    list.innerHTML = '<div class="empty-state">暂无反馈记录</div>';
+    list.innerHTML = '<div class="fb-empty">暂无反馈记录</div>';
     return;
   }
   list.innerHTML = items.map(function(item){
     var status = item.submissionStatus || '草稿';
     var statusColor = status === '已提交' ? 'green' : '';
-    return '<article class="feedback-item" data-id="' + escHtml(item.id) + '">' +
+    return '<article class="feedback-item">' +
       '<div class="feedback-meta">' + labelHtml(item.type, 'green') + labelHtml(item.priority, '') + labelHtml(status, statusColor) + '</div>' +
       '<h3>' + escHtml(item.title) + '</h3>' +
       '<p>' + escHtml(item.detail) + '</p>' +
@@ -1241,7 +1085,6 @@ function setFeedbackOutput(item) {
   var output = document.getElementById('feedbackOutput');
   if (output) {
     output.value = feedbackMarkdown(item);
-    output.dataset.feedbackTitle = item && item.title ? item.title : '';
   }
 }
 function setFeedbackStatus(text) {
@@ -1336,6 +1179,9 @@ if (clearFeedback) {
   });
 }
 renderFeedbackList();
+
+/* 初始化：加载时统计一次，让筛选状态栏显示真实计数 */
+applyFilters();
 </script>
 </body>
 </html>

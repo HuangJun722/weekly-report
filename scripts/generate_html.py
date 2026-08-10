@@ -2356,6 +2356,27 @@ def generate_html(force=False, preview_mode=False):
             cluster_events=all_events_for_list,
         )
         date_panels[d]['event_list_count'] = date_event_counts.get(d, len(raw_day_evs))
+
+    # 今日页平铺事件：精选→重点→观察→待确认（新界面语言）
+    merged_events = []
+    for group in daily_event_groups:
+        for ev in group['events']:
+            merged_events.append({'ev': ev, 'tag': group['label'], 'pri': group['key']})
+    for ev in repair_events:
+        merged_events.append({'ev': ev, 'tag': '待确认', 'pri': 'review'})
+    summary_parts = [f"{g['label']} {len(g['events'])}" for g in daily_event_groups if g['events']]
+    if repair_events:
+        summary_parts.append(f"待确认 {len(repair_events)}")
+    summary_counts = ' · '.join(summary_parts)
+
+    # 历史导航：天数 + 当日全部事件数（与"全部事件"面板展开后一致）
+    history_dates = [d for d in available_dates if d != main_date][:5]
+    history_counts = {
+        d: len([e for e in all_events_for_list if (e.get('date') or '')[:10] == d])
+        for d in history_dates
+    }
+    history_total = max(0, len(available_dates) - 1)
+
     weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date)
     monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date)
     weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], period_reference_date, period_reference_date, '本周', 'empty', 'open')
@@ -2389,6 +2410,11 @@ def generate_html(force=False, preview_mode=False):
         signal_clusters=signal_clusters,
         evidence_events=evidence_events,
         daily_event_groups=daily_event_groups,
+        merged_events=merged_events,
+        summary_counts=summary_counts,
+        history_dates=history_dates,
+        history_counts=history_counts,
+        history_total=history_total,
         narrative=narrative,
         total_stories=total_stories,
         vol_label=vol_label,
