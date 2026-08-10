@@ -146,9 +146,9 @@ button, input, select { font: inherit; }
 .daily-group-title h3 { margin: 0; font-size: 16px; line-height: 1.35; }
 .daily-group-title span { color: var(--muted); font-size: 12px; }
 .intelligence-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
-.intel { display: grid; grid-template-columns: 118px minmax(0, 1fr) 88px; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.intel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .intel:hover h3 { color: var(--navy); }
-.intel-meta { display: flex; flex-direction: column; gap: 7px; align-items: flex-start; }
+.company-chip { display: inline-block; margin-right: 8px; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; background: rgba(238,242,243,0.7); color: var(--quiet); font-size: 11px; font-weight: 600; vertical-align: 2px; white-space: nowrap; }
 .intel h3 { margin: 0; font-size: 16px; line-height: 1.42; }
 .intel p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
 .intel-impact { margin-top: 8px; color: var(--quiet); font-size: 12px; }
@@ -156,11 +156,8 @@ button, input, select { font: inherit; }
 .amount { align-self: start; justify-self: end; color: var(--copper); font-size: 15px; font-weight: 720; text-align: right; }
 .related-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
 .related-link, .related-more { color: var(--muted); background: var(--surface-cool); border-radius: 6px; padding: 2px 7px; font-size: 11px; }
-.quality-toggle { margin-top: 14px; width: 100%; padding: 12px 14px; border: 1px dashed var(--line); border-radius: 8px; background: rgba(251,250,246,0.72); color: var(--muted); cursor: pointer; text-align: left; }
-.quality-toggle:hover { border-style: solid; color: var(--ink); }
-.quality-box { display: none; }
-.quality-box.open { display: block; }
 .intel.low { opacity: 0.72; }
+.review-list { margin-top: 12px; border-color: var(--line); }
 .history-list { display: grid; gap: 7px; }
 .date-row { width: 100%; display: flex; justify-content: space-between; gap: 12px; border: 0; border-radius: 8px; padding: 9px 10px; background: transparent; color: var(--muted); cursor: pointer; }
 .date-row:hover, .date-row.active { background: var(--surface-cool); color: var(--ink); }
@@ -367,8 +364,6 @@ button, input, select { font: inherit; }
   .rail-card:first-child { grid-column: auto; }
   .content-block { padding: 18px; }
   .intel { display: flex; flex-direction: column; gap: 8px; }
-  .intel-meta { flex-direction: row; flex-wrap: wrap; }
-  .intel > div:nth-child(2) { order: 1; }
   .amount { order: 2; align-self: flex-start; text-align: left; }
   .source-title { display: none; }
   .intel h3 { font-size: 17px; line-height: 1.45; }
@@ -483,12 +478,8 @@ button, input, select { font: inherit; }
                 <div class="intelligence-list">
                   {% for ev in group.events %}
                   <a class="intel event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
-                    <div class="intel-meta">
-                      <span class="label dark">{{ group.label }}</span>
-                      {% if ev.is_company and ev.company_name %}<span class="label">{{ ev.company_name }}</span>{% endif %}
-                    </div>
                     <div>
-                      <h3>{{ ev.display_title or ev.title }}</h3>
+                      <h3>{% if ev.is_company and ev.company_name %}<span class="company-chip">{{ ev.company_name }}</span>{% endif %}{{ ev.display_title or ev.title }}</h3>
                       {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
                       {% if ev.front_overview %}<div class="intel-impact">内容概要：{{ ev.front_overview }}</div>{% endif %}
                       {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
@@ -499,28 +490,24 @@ button, input, select { font: inherit; }
                       </div>
                       {% endif %}
                     </div>
-                    <div class="amount">{{ ev.display_amount or ev.display_source or ev.source }}</div>
+                    {% set ev_amount = ev.display_amount or (ev.display_source if ev.source == 'Google News' else '') %}{% if ev_amount %}<div class="amount">{{ ev_amount }}</div>{% endif %}
                   </a>
                   {% endfor %}
                 </div>
               </section>
               {% endfor %}
             </div>
-            <button class="quality-toggle" id="qualityToggle"{% if not repair_events %} style="display:none"{% endif %}>显示 {{ repair_events|length }} 条原始候选/需复核事件</button>
-            <div class="quality-box" id="qualityBox">
-              <div class="intelligence-list" id="qualityList">
-                {% for ev in repair_events %}
-                <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
-                  <div class="intel-meta"><span class="label red">需复核</span><span class="label">{{ ev.region }}</span></div>
-                  <div>
-                    <h3>{{ ev.display_title or ev.title }}</h3>
-                    {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
-                    {% if ev.reason %}<p>{{ ev.reason }}</p>{% endif %}
-                  </div>
-                  <div class="amount">候选</div>
-                </a>
-                {% endfor %}
-              </div>
+            <div class="intelligence-list review-list" id="qualityList"{% if not repair_events %} style="display:none"{% endif %}>
+              {% for ev in repair_events %}
+              <a class="intel low event-item" href="{{ ev.url }}" target="_blank" data-filterable data-region="{{ ev.region }}" data-company="{{ ev.company_name if ev.is_company else '' }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }}">
+                <div>
+                  <h3>{% if ev.is_company and ev.company_name %}<span class="company-chip">{{ ev.company_name }}</span>{% endif %}{{ ev.display_title or ev.title }}</h3>
+                  {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
+                  {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
+                </div>
+                {% set ev_amount = ev.display_amount or ev.display_source or ev.source %}{% if ev_amount %}<div class="amount">{{ ev_amount }}</div>{% endif %}
+              </a>
+              {% endfor %}
             </div>
           </section>
         </div>
@@ -745,16 +732,13 @@ button, input, select { font: inherit; }
               <div class="intelligence-list">
                 {% for ev in group.events %}
                 <a class="intel event-item{% if ev.is_company %} company-item{% endif %}" href="{{ ev.url }}" target="_blank" data-filterable data-company="{{ ev.company_name if ev.is_company else '' }}" data-region="{{ ev.region }}" data-type="{{ ev.event_types|join(',') }}" data-text="{{ ev.title }} {{ ev.reason }} {{ ev.summary_short }} {{ ev.display_impact }} {{ ev.region }} {{ ev.source }} {{ ev.display_source }} {{ ev.company_name if ev.is_company else '' }} {{ ev.matched_entities|join(' ') }}">
-                  <div class="intel-meta">
-                    {% if ev.is_company and ev.company_name %}<span class="label">{{ ev.company_name }}</span>{% endif %}
-                  </div>
                   <div>
-                    <h3>{{ ev.display_title or ev.title }}</h3>
+                    <h3>{% if ev.is_company and ev.company_name %}<span class="company-chip">{{ ev.company_name }}</span>{% endif %}{{ ev.display_title or ev.title }}</h3>
                     {% if ev.original_title %}<div class="source-title">原题：{{ ev.original_title }}</div>{% endif %}
                     {% if ev.front_overview %}<div class="intel-impact">内容概要：{{ ev.front_overview }}</div>{% endif %}
                     {% if ev.reason %}<div class="intel-impact">点评：{{ ev.reason }}</div>{% endif %}
                   </div>
-                  <div class="amount">{{ ev.display_amount or ev.display_source or ev.source }}</div>
+                  {% set ev_amount = ev.display_amount or ev.display_source or ev.source %}{% if ev_amount %}<div class="amount">{{ ev_amount }}</div>{% endif %}
                 </a>
                 {% endfor %}
               </div>
@@ -1072,16 +1056,17 @@ function labelHtml(text, cls) {
   if (!text) return '';
   return '<span class="label ' + (cls || '') + '">' + escHtml(text) + '</span>';
 }
-function eventCardHtml(ev, groupLabel) {
+function eventCardHtml(ev) {
   var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'') + ' ' + ((ev.matched_entities||[]).join(' '));
   var displayTitle = ev.display_title || ev.summary_short || ev.title || '';
+  var company = ev.company_name ? '<span class="company-chip">' + escHtml(ev.company_name) + '</span>' : '';
   var original = ev.original_title ? '<div class="source-title">原题：' + escHtml(ev.original_title) + '</div>' : '';
   var overview = ev.front_overview ? '<div class="intel-impact">内容概要：' + escHtml(ev.front_overview) + '</div>' : '';
   var reason = ev.reason ? '<div class="intel-impact">点评：' + escHtml(ev.reason) + '</div>' : '';
+  var amount = ev.display_amount || (ev.source === 'Google News' ? (ev.display_source || ev.source) : '');
   return '<a class="intel event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
-    '<div class="intel-meta">' + labelHtml(groupLabel, 'dark') + (ev.company_name ? labelHtml(ev.company_name, '') : '') + '</div>' +
-    '<div><h3>' + escHtml(displayTitle) + '</h3>' + original + overview + reason + '</div>' +
-    '<div class="amount">' + escHtml(ev.display_amount || ev.display_source || ev.source || '') + '</div></a>';
+    '<div><h3>' + company + escHtml(displayTitle) + '</h3>' + original + overview + reason + '</div>' +
+    (amount ? '<div class="amount">' + escHtml(amount) + '</div>' : '') + '</a>';
 }
 function dailyGroupHtml(group) {
   var events = group.events || [];
@@ -1090,17 +1075,18 @@ function dailyGroupHtml(group) {
     '<div class="daily-group-head"><div class="daily-group-title"><h3>' + escHtml(group.label || '') + '</h3>' +
     '<span>' + escHtml(group.description || '') + '</span></div>' +
     '<span class="label">' + events.length + ' 条</span></div>' +
-    '<div class="intelligence-list">' + events.map(function(ev){ return eventCardHtml(ev, group.label || ''); }).join('') + '</div>' +
+    '<div class="intelligence-list">' + events.map(function(ev){ return eventCardHtml(ev); }).join('') + '</div>' +
     '</section>';
 }
 function reviewEventCardHtml(ev) {
   var text = (ev.title||'') + ' ' + (ev.reason||'') + ' ' + (ev.summary_short||'') + ' ' + (ev.impact||'') + ' ' + (ev.region||'') + ' ' + (ev.source||'') + ' ' + (ev.display_source||'') + ' ' + (ev.company_name||'');
+  var company = ev.company_name ? '<span class="company-chip">' + escHtml(ev.company_name) + '</span>' : '';
   var original = ev.original_title ? '<div class="source-title">原题：' + escHtml(ev.original_title) + '</div>' : '';
-  var reason = ev.reason ? '<p>' + escHtml(ev.reason) + '</p>' : '';
+  var reason = ev.reason ? '<div class="intel-impact">点评：' + escHtml(ev.reason) + '</div>' : '';
+  var amount = ev.display_amount || ev.display_source || ev.source || '';
   return '<a class="intel low event-item" href="' + escHtml(ev.url) + '" target="_blank" data-filterable data-region="' + escHtml(ev.region) + '" data-company="' + escHtml(ev.company_name) + '" data-text="' + escHtml(text) + '">' +
-    '<div class="intel-meta"><span class="label red">需复核</span>' + labelHtml(ev.region, '') + '</div>' +
-    '<div><h3>' + escHtml(ev.display_title || ev.title || '') + '</h3>' + original + reason + '</div>' +
-    '<div class="amount">候选</div></a>';
+    '<div><h3>' + company + escHtml(ev.display_title || ev.title || '') + '</h3>' + original + reason + '</div>' +
+    (amount ? '<div class="amount">' + escHtml(amount) + '</div>' : '') + '</a>';
 }
 function signalClusterHtml(cluster) {
   var companies = cluster.companies || [];
@@ -1127,15 +1113,11 @@ function eventKey(ev) {
   return ev && (ev.url || ((ev.date || '') + '|' + (ev.title || '')));
 }
 function renderQualityBox(events) {
-  var toggle = document.getElementById('qualityToggle');
-  var box = document.getElementById('qualityBox');
   var list = document.getElementById('qualityList');
-  var count = events ? events.length : 0;
-  if (!toggle || !box || !list) return;
-  toggle.style.display = count ? '' : 'none';
-  toggle.textContent = count ? ('显示 ' + count + ' 条原始候选/需复核事件') : '显示 0 条原始候选/需复核事件';
-  box.classList.remove('open');
-  list.innerHTML = count ? events.map(reviewEventCardHtml).join('') : '';
+  if (!list) return;
+  var has = events && events.length;
+  list.style.display = has ? '' : 'none';
+  list.innerHTML = has ? events.map(reviewEventCardHtml).join('') : '';
 }
 function navigateToDate(date) {
   var idx = availableDates.indexOf(date);
@@ -1170,15 +1152,6 @@ function navigateDay(dir) {
   var active = Array.from(document.querySelectorAll('.date-row')).find(function(btn){ return btn.textContent.indexOf(date) > -1; });
   if (active) active.classList.add('active');
   applyFilters();
-}
-var qualityToggle = document.getElementById('qualityToggle');
-if (qualityToggle) {
-  qualityToggle.addEventListener('click', function(){
-    var box = document.getElementById('qualityBox');
-    if (!box) return;
-    box.classList.toggle('open');
-    qualityToggle.textContent = box.classList.contains('open') ? '收起原始候选/需复核事件' : qualityToggle.textContent.replace('收起', '显示');
-  });
 }
 document.getElementById('clearFilter').addEventListener('click', function(){
   state = { region:'all', q:'', company:'all' };
