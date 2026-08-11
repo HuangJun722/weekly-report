@@ -305,6 +305,11 @@
       "anti_bot_risk": "low",
       "company_name": "MercadoLibre",
       "is_company": true,
+      "scope_industries": [
+        "commerce",
+        "payments",
+        "marketplace"
+      ],
       "priority": 3,
       "max": 4
     },
@@ -542,7 +547,9 @@
       "id": "mercadolibre-ir",
       "name": "MercadoLibre IR",
       "url": "https://investor.mercadolibre.com/news-and-events",
-      "status": "active",
+      "status": "paused",
+      "pause_reason": "页面仅 PDF 财务文件，无新闻文章可解析，连续 25 次空结果",
+      "tier": "L1",
       "tier": "L1",
       "source_type": "ir",
       "access_method": "html",

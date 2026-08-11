@@ -213,7 +213,7 @@ def _source_contract_can_confirm(event):
     role = event.get('source_role') or ''
     tier = event.get('source_tier') or ''
     return (
-        role in {'industry_vertical', 'official_ir', 'developer_change'}
+        role in {'official_ir', 'developer_change'}
         or tier in {'L1 官方/IR源', 'L4 垂直赛道精品源'}
         or bool(event.get('is_company'))
     )
@@ -243,7 +243,7 @@ def assess_scope(event):
         not direct_industries
         and bool(contracted_industries)
         and _source_contract_can_confirm(event)
-        and (has_action or has_industry_change)
+        and (has_action or has_industry_change or bool(event.get('is_company')))
     )
 
     industries = direct_industries or (contracted_industries if source_confirmed else [])

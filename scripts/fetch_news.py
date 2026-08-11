@@ -185,6 +185,7 @@ COMPANY_SOURCES = [
     {'name': 'Trendyol', 'query': 'Trendyol', 'region': '欧洲', 'priority': 1},
     # 拉美
     {'name': 'MercadoLibre', 'query': 'MercadoLibre', 'region': '拉美', 'priority': 3},
+    {'name': 'Nubank', 'query': 'Nubank', 'region': '拉美', 'priority': 2},
     {'name': 'Rappi', 'query': 'Rappi', 'region': '拉美', 'priority': 1},
     # 中东
     {'name': 'Noon', 'query': 'Noon ecommerce UAE Dubai', 'region': '中东', 'priority': 2},
@@ -478,7 +479,7 @@ def detect_event_types(title):
     if any(k in t for k in ['revenue', 'earnings', 'profit', 'quarterly results',
                        'fiscal year', 'ipo ', 'listing', 'goes public',
                        'files to go public', 'quarterly profit', 'quarterly loss',
-                       'Q1 ', 'Q2 ', 'Q3 ', 'Q4 ', 'financial results',
+                       'q1 ', 'q2 ', 'q3 ', 'q4 ', 'financial results',
                        'goes live', 'stock ']):
         types.append('earnings')
     # 精品研报/行业数据：先单独标记，避免被普通 strategy 吞掉。
