@@ -1171,6 +1171,85 @@
       "anti_bot_risk": "low",
       "max": 4,
       "quality_note": "已验证可达(60条)，越南本土科技信号，弥补越南媒体发现层。"
+    },
+    {
+      "id": "the-bridge",
+      "name": "The Bridge",
+      "url": "https://thebridge.jp/feed/",
+      "status": "active",
+      "tier": "L3",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "region": "日本",
+      "track": "日本创业与融资",
+      "signal_types": [
+        "regional_ecosystem",
+        "funding_deal"
+      ],
+      "scope_industries": [
+        "commerce",
+        "fintech",
+        "ai"
+      ],
+      "scope_regions": [
+        "日本",
+        "亚太"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "regional_ecosystem",
+      "credibility_score": 7,
+      "signal_density": "high",
+      "noise_level": "medium",
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "low",
+      "max": 4,
+      "quality_note": "已验证可达，日本创投/融资信号密度高，弥补日本媒体发现层缺口。"
+    },
+    {
+      "id": "36kr-japan",
+      "name": "36Kr Japan",
+      "url": "https://36kr.jp/feed/",
+      "status": "active",
+      "tier": "L3",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "region": "亚太",
+      "track": "中国科技与产业（日文视角）",
+      "signal_types": [
+        "regional_ecosystem",
+        "industry_analysis",
+        "funding_deal"
+      ],
+      "scope_industries": [
+        "commerce",
+        "fintech",
+        "ai"
+      ],
+      "scope_regions": [
+        "中国",
+        "亚太"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "regional_ecosystem",
+      "credibility_score": 7,
+      "signal_density": "medium",
+      "noise_level": "medium",
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "low",
+      "max": 4,
+      "quality_note": "已验证可达，日文中国科技报道，弥补助中国科技生态的日文媒体缺口。"
     }
   ],
   "active_sources": [

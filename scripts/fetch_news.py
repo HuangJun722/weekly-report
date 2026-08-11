@@ -468,19 +468,27 @@ def detect_event_types(title):
                        'funding round', 'raises in ', 'closes $', 'm series',
                        'attracts gulf',  # WAMDA 常见格式
                        # 估值相关
-                       'valuation', 'valued at', 'eyes $', '$b valuation']):
+                       'valuation', 'valued at', 'eyes $', '$b valuation',
+                       # 日文融资信号（日本创投媒体：The Bridge 等）
+                       '調達', 'シード', 'シリーズ', '出資', 'ラウンド',
+                       '億円', '億ドル', 'ファンド', '融資']):
         types.append('funding')
     # 并购/收购
     if any(k in t for k in ['acquires', 'acquired', 'acquisition', 'merger', 'merges',
                        'takeover', 'takes control', 'stake in', 'buys', 'purchases',
-                       'buyout', 'sold to']):
+                       'buyout', 'sold to',
+                       # 日文并购
+                       '買収', '合併', '過半数', '公開買付']):
         types.append('ma')
     # 财报/IPO
     if any(k in t for k in ['revenue', 'earnings', 'profit', 'quarterly results',
                        'fiscal year', 'ipo ', 'listing', 'goes public',
                        'files to go public', 'quarterly profit', 'quarterly loss',
                        'q1 ', 'q2 ', 'q3 ', 'q4 ', 'financial results',
-                       'goes live', 'stock ']):
+                       'goes live', 'stock ',
+                       # 日文财报/上市
+                       '決算', '上場', 'IPO', '営業利益', '増収', '減益',
+                       '純利益', '黒字', '赤字', '四半期']):
         types.append('earnings')
     # 精品研报/行业数据：先单独标记，避免被普通 strategy 吞掉。
     is_report = any(k in t for k in [
@@ -490,6 +498,9 @@ def detect_event_types(title):
         'gross merchandise', 'payment volume', 'gaming market',
         'mobile games market', 'games market', '行业报告', '市场预测',
         '市场规模', '市场份额', '基准测试',
+        # 日文行业数据
+        '調査', 'レポート', 'ランキング', '市場規模', '市場シェア',
+        '予測', '導入率', 'アンケート',
     ])
     if is_report:
         types.append('industry_report')
@@ -500,10 +511,12 @@ def detect_event_types(title):
             'foundation model', 'language model', 'large language model',
             'multimodal model', 'ai model', 'open-source model',
             'open source model', '模型发布', '大模型', '多模态模型', '开源模型',
+            'aiモデル', '言語モデル', 'マルチモーダル',
         ])
         and any(k in t for k in [
             'launch', 'launches', 'launched', 'release', 'released', 'unveils',
             'available', '推出', '发布', '上线', '开放',
+            '発表', 'リリース', '公開', 'ローンチ',
         ])
     )
     if is_model_release:
@@ -536,7 +549,10 @@ def detect_event_types(title):
                        'consumer spending', 'downloads', 'monthly active users',
                        'subscribers', 'gmv', 'gross merchandise', 'payment volume',
                         'digital payments', 'mobile wallet', 'social commerce',
-                        'gaming market', 'mobile games market', 'games market']):
+                        'gaming market', 'mobile games market', 'games market',
+                        # 日文战略/市场动作
+                        '提携', 'パートナー', '進出', '撤退', '上場申請',
+                        '提供開始', '新規事業', '販売開始', '事業拡大', '参入']):
         if not is_report and not is_model_release:
             types.append('strategy')
     return types if types else ['other']
