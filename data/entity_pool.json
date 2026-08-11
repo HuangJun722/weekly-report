@@ -80,7 +80,7 @@
       "observation_points": [
         {"type": "ir", "url": "https://www.grab.com/sg/press/feed/", "source_id": "grab-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
         {"type": "jobs", "url": "https://www.grab.careers/en/jobs/", "source_id": "grab-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "expansion", "org_change"]},
-        {"type": "product_update", "url": "https://www.grab.com/sg/press/", "status": "active", "instrumented": true, "expected_signals": ["partnership", "merchant_product", "payment"]}
+        {"type": "product_update", "url": "https://www.grab.com/sg/press/", "source_id": "grab-newsroom", "status": "active", "instrumented": true, "expected_signals": ["partnership", "merchant_product", "payment"]}
       ]
     },
     {
@@ -130,7 +130,7 @@
       "sector": "payment_wallet",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://momo.vn/tin-tuc", "status": "candidate", "instrumented": false, "expected_signals": ["payment", "partnership"]},
+        {"type": "newsroom", "url": "https://www.momo.vn/tin-tuc", "source_id": "momo-newsroom", "status": "active", "instrumented": true, "expected_signals": ["payment", "partnership"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["wallet", "merchant_product"]}
       ]
@@ -143,7 +143,7 @@
       "sector": "social_payment_gaming",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["official_disclosure", "payment", "gaming"]},
+        {"type": "newsroom", "url": "https://vng.com.vn/news/list.1.html", "source_id": "vng-newsroom", "status": "active", "instrumented": true, "expected_signals": ["official_disclosure", "payment", "gaming"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai", "expansion"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["social", "payment"]}
       ]
@@ -169,7 +169,7 @@
       "sector": "social_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.kakaocorp.com/page/detail/pr?lang=en", "status": "active", "instrumented": false, "expected_signals": ["payment", "social", "ai"]},
+        {"type": "newsroom", "url": "https://www.kakaocorp.com/page/detail/pr?lang=en", "source_id": "kakao-press", "status": "active", "instrumented": false, "expected_signals": ["payment", "social", "ai"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "org_change"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["platform_policy", "payment"]}
       ]
@@ -182,7 +182,7 @@
       "sector": "commerce_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://global.rakuten.com/corp/news/press/?category=ir", "status": "active", "instrumented": false, "expected_signals": ["earnings", "commerce", "fintech"]},
+        {"type": "ir", "url": "https://global.rakuten.com/corp/news/press/?category=ir", "source_id": "rakuten-ir", "status": "active", "instrumented": false, "expected_signals": ["earnings", "commerce", "fintech"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["marketplace_policy", "payment"]}
       ]
@@ -247,7 +247,7 @@
       "sector": "commerce",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.noon.com/uae-en/newsroom/", "status": "candidate", "instrumented": false, "expected_signals": ["commerce", "logistics"]},
+        {"type": "newsroom", "url": "https://www.noon.com/uae-en/newsroom/", "source_id": "noon-newsroom", "status": "active", "instrumented": true, "expected_signals": ["commerce", "logistics"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "fulfillment"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["seller", "ads", "payment"]}
       ]
@@ -273,7 +273,7 @@
       "sector": "bnpl_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://tamara.co/en/blog/", "status": "candidate", "instrumented": false, "expected_signals": ["payment", "merchant_product"]},
+        {"type": "newsroom", "url": "https://tamara.co/en-sa/media-center", "source_id": "tamara-media", "status": "active", "instrumented": true, "expected_signals": ["payment", "merchant_product"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["bnpl", "risk"]}
       ]
@@ -286,7 +286,7 @@
       "sector": "telco_digital_infra",
       "priority": "watch",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.stc.com.sa/content/stc/public/en/news.html", "status": "candidate", "instrumented": false, "expected_signals": ["cloud", "digital_infra", "partnership"]},
+        {"type": "newsroom", "url": "https://www.stc.com/en/media-center.html", "source_id": "stc-media", "status": "active", "instrumented": true, "expected_signals": ["cloud", "digital_infra", "partnership"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "cloud"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["enterprise_software", "cloud"]}
       ]
@@ -300,7 +300,7 @@
       "priority": "core",
       "observation_points": [
         {"type": "ir", "url": "https://investor.mercadolibre.com/news-and-events", "source_id": "mercadolibre-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "commerce", "payment"]},
-        {"type": "newsroom", "url": "https://news.mercadolibre.com/", "status": "active", "instrumented": false, "expected_signals": ["commerce", "payment", "logistics"]},
+        {"type": "newsroom", "url": "https://news.mercadolibre.com/", "source_id": "mercadolibre-news", "status": "active", "instrumented": false, "expected_signals": ["commerce", "payment", "logistics"]},
         {"type": "jobs", "url": "https://mercadolibre.eightfold.ai/careers", "status": "candidate", "instrumented": false, "adapter_status": "pending_dynamic_adapter", "expected_signals": ["hiring", "regional_launch"]}
       ]
     },
@@ -312,7 +312,7 @@
       "sector": "digital_bank",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://blog.nubank.com.br/", "status": "candidate", "instrumented": false, "expected_signals": ["banking_app", "payment", "compliance"]},
+        {"type": "newsroom", "url": "https://blog.nubank.com.br/", "source_id": "nubank-blog", "status": "active", "instrumented": true, "expected_signals": ["banking_app", "payment", "compliance"]},
         {"type": "ir", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["earnings", "regional_launch"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]}
       ]
@@ -325,7 +325,7 @@
       "sector": "delivery_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://about.rappi.com/newsroom", "status": "candidate", "instrumented": false, "expected_signals": ["delivery", "payment", "partnership"]},
+        {"type": "newsroom", "url": "https://about.rappi.com/press-room", "source_id": "rappi-press", "status": "active", "instrumented": true, "expected_signals": ["delivery", "payment", "partnership"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["merchant_product", "wallet"]}
       ]
@@ -377,7 +377,7 @@
       "sector": "payment_wallet",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://blog.opaycheckout.com/", "status": "candidate", "instrumented": false, "expected_signals": ["payment", "wallet", "merchant_product"]},
+        {"type": "newsroom", "url": "https://opay.ng/newsroom/", "source_id": "opay-newsroom", "status": "active", "instrumented": true, "expected_signals": ["payment", "wallet", "merchant_product"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["wallet", "agent_network"]}
       ]
@@ -390,7 +390,7 @@
       "sector": "payment_wallet",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.safaricom.co.ke/media-center", "status": "candidate", "instrumented": false, "expected_signals": ["payment", "compliance", "partnership"]},
+        {"type": "newsroom", "url": "https://www.safaricom.co.ke/media-center", "source_id": "mpesa-media", "status": "active", "instrumented": true, "expected_signals": ["payment", "compliance", "partnership"]},
         {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "financial_infra"]},
         {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["wallet", "merchant_product"]}
       ]
@@ -403,7 +403,7 @@
       "sector": "payment_developer_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "changelog", "url": "https://stripe.com/changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "checkout", "payment"]},
+        {"type": "changelog", "url": "https://stripe.com/changelog", "source_id": "stripe-changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "checkout", "payment"]},
         {"type": "jobs", "url": "https://stripe.com/careers/search", "source_id": "stripe-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "regional_launch"]},
         {"type": "developer_docs", "url": "https://docs.stripe.com/", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "platform_policy"]}
       ]
@@ -417,7 +417,7 @@
       "priority": "core",
       "observation_points": [
         {"type": "product_update", "url": "https://www.shopify.com/editions", "status": "candidate", "instrumented": false, "expected_signals": ["commerce", "seller", "developer_change"]},
-        {"type": "changelog", "url": "https://changelog.shopify.com/", "status": "active", "instrumented": true, "expected_signals": ["api", "marketplace_policy"]},
+        {"type": "changelog", "url": "https://changelog.shopify.com/", "source_id": "shopify-changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "marketplace_policy"]},
         {"type": "jobs", "url": "https://www.shopify.com/careers", "source_id": "shopify-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "ai", "commerce"]}
       ]
     },
@@ -429,8 +429,8 @@
       "sector": "cloud_ai_infra",
       "priority": "core",
       "observation_points": [
-        {"type": "changelog", "url": "https://developers.cloudflare.com/changelog/", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "ai_infra", "edge"]},
-        {"type": "newsroom", "url": "https://blog.cloudflare.com/", "status": "candidate", "instrumented": false, "expected_signals": ["cloud", "ai_infra", "security"]},
+        {"type": "changelog", "url": "https://developers.cloudflare.com/changelog/", "source_id": "cloudflare-changelog", "status": "active", "instrumented": true, "expected_signals": ["developer_change", "ai_infra", "edge"]},
+        {"type": "newsroom", "url": "https://blog.cloudflare.com/", "source_id": "cloudflare-blog", "status": "active", "instrumented": true, "expected_signals": ["cloud", "ai_infra", "security"]},
         {"type": "jobs", "url": "https://www.cloudflare.com/careers/jobs/", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "datacenter"]}
       ]
     },
@@ -442,7 +442,7 @@
       "sector": "ai_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://openai.com/news/", "status": "candidate", "instrumented": false, "expected_signals": ["model", "agent", "enterprise_ai"]},
+        {"type": "newsroom", "url": "https://openai.com/news/", "source_id": "openai-news", "status": "active", "instrumented": true, "expected_signals": ["model", "agent", "enterprise_ai"]},
         {"type": "changelog", "url": "https://platform.openai.com/docs/changelog", "status": "candidate", "instrumented": false, "expected_signals": ["api", "developer_change"]},
         {"type": "jobs", "url": "https://openai.com/careers/", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai_infra", "enterprise"]}
       ]
@@ -455,7 +455,7 @@
       "sector": "ai_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.anthropic.com/news", "status": "candidate", "instrumented": false, "expected_signals": ["model", "enterprise_ai", "partnership"]},
+        {"type": "newsroom", "url": "https://www.anthropic.com/news", "source_id": "anthropic-news", "status": "active", "instrumented": true, "expected_signals": ["model", "enterprise_ai", "partnership"]},
         {"type": "changelog", "url": "https://docs.anthropic.com/en/release-notes/api", "status": "candidate", "instrumented": false, "expected_signals": ["api", "developer_change"]},
         {"type": "jobs", "url": "https://www.anthropic.com/careers", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "enterprise", "ai_safety"]}
       ]
@@ -468,7 +468,7 @@
       "sector": "data_ai_platform",
       "priority": "watch",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.databricks.com/blog", "status": "candidate", "instrumented": false, "expected_signals": ["data_ai", "enterprise_ai"]},
+        {"type": "newsroom", "url": "https://www.databricks.com/blog", "source_id": "databricks-blog", "status": "active", "instrumented": true, "expected_signals": ["data_ai", "enterprise_ai"]},
         {"type": "jobs", "url": "https://www.databricks.com/company/careers", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "enterprise"]},
         {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "data_platform"]}
       ]

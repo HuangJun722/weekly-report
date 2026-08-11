@@ -237,6 +237,15 @@ COMPANY_ALIASES = {
     'Kaspi.kz': ['Kaspi.kz', 'Kaspi'],
     'Jumia': ['Jumia'],
     'Konga': ['Konga'],
+    'MoMo': ['MoMo', 'Momo', 'Momo Vietnam'],
+    'Tamara': ['Tamara', 'Tamara.co'],
+    'stc': ['stc', 'stc Group', 'Saudi Telecom', 'STC'],
+    'Nubank': ['Nubank', 'Nu Holdings'],
+    'OPay': ['OPay', 'OPay Nigeria', 'OPay Digital Services'],
+    'M-Pesa': ['M-Pesa', 'Safaricom', 'M-PESA', 'MPESA'],
+    'OpenAI': ['OpenAI', 'ChatGPT', 'OpenAI API'],
+    'Anthropic': ['Anthropic', 'Claude', 'Anthropic API'],
+    'Databricks': ['Databricks', 'MosaicML'],
 }
 
 # Google News RSS 关键词黑名单（公司新闻噪音）
@@ -790,7 +799,11 @@ BLACKLIST_COMPANIES = [
 ]
 BLACKLIST_PATTERNS = [re.compile(r'\b' + re.escape(c) + r'\b', re.IGNORECASE) for c in BLACKLIST_COMPANIES]
 
-def is_blacklisted(title):
+def is_blacklisted(title, official=False):
+    # 官方源豁免：黑名单用于压制媒体对非监控中美公司的噪声，
+    # 监控对象自己的官方披露标题含公司名（如 OpenAI/Anthropic）不得被误杀。
+    if official:
+        return False
     t = title
     for pat in BLACKLIST_PATTERNS:
         if pat.search(t):
@@ -1274,7 +1287,7 @@ def _parse_rss_text(cfg, text):
 
         # 标题
         title = (entry.get('title') or '').strip()
-        if len(title) < 15 or is_blacklisted(title):
+        if len(title) < 15 or is_blacklisted(title, official=_is_official_cfg(cfg) or bool(cfg.get('is_company'))):
             continue
 
         # 链接：优先主链接；若 guid/id 与标题明显更匹配则自动修复。
@@ -1508,7 +1521,10 @@ def _select_official_articles(soup, cfg):
                 continue
             if not _official_link_allowed(absolute, cfg):
                 continue
-            text_value = ' '.join(node.get_text(' ', strip=True).split())
+            # 优先取节点内嵌标题元素（卡片式整卡链接会带摘要文本超长），
+            # 选择器与 fetch_html 循环标题提取保持一致，无标题元素时回退整卡文本
+            title_el = node.select_one('h2,h3,h4,h5,.title,.entry-title,.post-title,.article-title')
+            text_value = ' '.join((title_el or node).get_text(' ', strip=True).split())
             if not _official_title_allowed(text_value, cfg):
                 continue
             if absolute in seen:
@@ -1660,7 +1676,7 @@ def _select_changelog_items(soup, cfg):
             continue
 
         title = link_el.get_text(' ', strip=True).lstrip('•·-–— ').strip()
-        if not _official_title_allowed(title, cfg) or is_blacklisted(title):
+        if not _official_title_allowed(title, cfg) or is_blacklisted(title, official=True):
             continue
 
         node_text = ''
@@ -1885,7 +1901,7 @@ def fetch_html(cfg):
         # 提取标题和链接
         title_el = art.select_one('h2,h3,h4,h5,.title,.entry-title,.post-title,.article-title') or art
         title = title_el.get_text(' ', strip=True).lstrip('•·-–— ').strip()
-        if len(title) < 15 or is_blacklisted(title): continue
+        if len(title) < 15 or is_blacklisted(title, official=_is_official_cfg(cfg) or bool(cfg.get('is_company'))): continue
 
         link_el = art.select_one('a') or (title_el if isinstance(title_el, object) else None)
         link = ''
