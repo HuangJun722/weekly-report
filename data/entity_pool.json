@@ -13,7 +13,9 @@
     "region": "主要观察区域",
     "sector": "主赛道",
     "priority": "core / watch",
-    "observation_points": "该对象的长期观察点"
+    "observation_points": "该对象的长期观察点",
+    "hq_country": "总部国家",
+    "primary_markets": "主要市场（可多值）"
   },
   "observation_point_schema": {
     "type": "newsroom / ir / jobs / changelog / developer_docs / product_update",
@@ -31,459 +33,1748 @@
   },
   "portfolio": {
     "must": [
-      {"entity_id": "stripe", "decision_use": "全球支付、API与合规能力"},
-      {"entity_id": "shopify", "decision_use": "全球电商、商家与开发者生态"},
-      {"entity_id": "cloudflare", "decision_use": "云、安全与开发者基础设施"},
-      {"entity_id": "grab", "decision_use": "东南亚本地生活、支付与运营扩张"},
-      {"entity_id": "sea", "decision_use": "东南亚电商、物流、游戏与支付"},
-      {"entity_id": "mercadolibre", "decision_use": "拉美电商、物流与金融科技"},
-      {"entity_id": "nubank", "decision_use": "拉美数字金融、产品与监管"},
-      {"entity_id": "careem", "decision_use": "中东本地生活与区域扩张"},
-      {"entity_id": "noon", "decision_use": "中东电商、商家与物流"},
-      {"entity_id": "naver", "decision_use": "东亚AI、云与平台生态"},
-      {"entity_id": "adyen", "decision_use": "欧洲支付、企业产品与合规"},
-      {"entity_id": "jumia", "decision_use": "非洲电商、支付与物流"}
+      {
+        "entity_id": "stripe",
+        "decision_use": "全球支付、API与合规能力"
+      },
+      {
+        "entity_id": "shopify",
+        "decision_use": "全球电商、商家与开发者生态"
+      },
+      {
+        "entity_id": "cloudflare",
+        "decision_use": "云、安全与开发者基础设施"
+      },
+      {
+        "entity_id": "grab",
+        "decision_use": "东南亚本地生活、支付与运营扩张"
+      },
+      {
+        "entity_id": "sea",
+        "decision_use": "东南亚电商、物流、游戏与支付"
+      },
+      {
+        "entity_id": "mercadolibre",
+        "decision_use": "拉美电商、物流与金融科技"
+      },
+      {
+        "entity_id": "nubank",
+        "decision_use": "拉美数字金融、产品与监管"
+      },
+      {
+        "entity_id": "careem",
+        "decision_use": "中东本地生活与区域扩张"
+      },
+      {
+        "entity_id": "noon",
+        "decision_use": "中东电商、商家与物流"
+      },
+      {
+        "entity_id": "naver",
+        "decision_use": "东亚AI、云与平台生态"
+      },
+      {
+        "entity_id": "adyen",
+        "decision_use": "欧洲支付、企业产品与合规"
+      },
+      {
+        "entity_id": "jumia",
+        "decision_use": "非洲电商、支付与物流"
+      }
     ],
     "strategic": [
-      {"entity_id": "goto", "decision_use": "东南亚超级应用与金融科技"},
-      {"entity_id": "momo", "decision_use": "越南钱包与商户生态"},
-      {"entity_id": "vng", "decision_use": "越南社交、游戏与支付"},
-      {"entity_id": "kakao", "decision_use": "韩国社交与支付平台"},
-      {"entity_id": "rakuten", "decision_use": "日本电商与金融科技"},
-      {"entity_id": "tabby", "decision_use": "中东BNPL与支付"},
-      {"entity_id": "tamara", "decision_use": "中东BNPL与风控"},
-      {"entity_id": "rappi", "decision_use": "拉美配送与金融科技"},
-      {"entity_id": "dlocal", "decision_use": "拉美跨境支付"},
-      {"entity_id": "flutterwave", "decision_use": "非洲支付基础设施"},
-      {"entity_id": "opay", "decision_use": "非洲钱包与代理网络"},
-      {"entity_id": "mpesa_safaricom", "decision_use": "非洲移动支付基本盘"},
-      {"entity_id": "openai", "decision_use": "全球AI平台与开发者生态"},
-      {"entity_id": "anthropic", "decision_use": "全球企业AI与安全治理"}
+      {
+        "entity_id": "goto",
+        "decision_use": "东南亚超级应用与金融科技"
+      },
+      {
+        "entity_id": "momo",
+        "decision_use": "越南钱包与商户生态"
+      },
+      {
+        "entity_id": "vng",
+        "decision_use": "越南社交、游戏与支付"
+      },
+      {
+        "entity_id": "kakao",
+        "decision_use": "韩国社交与支付平台"
+      },
+      {
+        "entity_id": "rakuten",
+        "decision_use": "日本电商与金融科技"
+      },
+      {
+        "entity_id": "tabby",
+        "decision_use": "中东BNPL与支付"
+      },
+      {
+        "entity_id": "tamara",
+        "decision_use": "中东BNPL与风控"
+      },
+      {
+        "entity_id": "rappi",
+        "decision_use": "拉美配送与金融科技"
+      },
+      {
+        "entity_id": "dlocal",
+        "decision_use": "拉美跨境支付"
+      },
+      {
+        "entity_id": "flutterwave",
+        "decision_use": "非洲支付基础设施"
+      },
+      {
+        "entity_id": "opay",
+        "decision_use": "非洲钱包与代理网络"
+      },
+      {
+        "entity_id": "mpesa_safaricom",
+        "decision_use": "非洲移动支付基本盘"
+      },
+      {
+        "entity_id": "openai",
+        "decision_use": "全球AI平台与开发者生态"
+      },
+      {
+        "entity_id": "anthropic",
+        "decision_use": "全球企业AI与安全治理"
+      }
     ],
     "experiment": [
-      {"entity_id": "traveloka", "decision_use": "验证旅游平台观察模板"},
-      {"entity_id": "unext", "decision_use": "验证流媒体产品观察点"},
-      {"entity_id": "square_enix", "decision_use": "验证游戏IR与产品信号"},
-      {"entity_id": "hktvmall", "decision_use": "验证区域电商IR信号"},
-      {"entity_id": "stc", "decision_use": "验证数字基础设施观察点"},
-      {"entity_id": "databricks", "decision_use": "验证开发者文档与企业AI信号"}
+      {
+        "entity_id": "traveloka",
+        "decision_use": "验证旅游平台观察模板"
+      },
+      {
+        "entity_id": "unext",
+        "decision_use": "验证流媒体产品观察点"
+      },
+      {
+        "entity_id": "square_enix",
+        "decision_use": "验证游戏IR与产品信号"
+      },
+      {
+        "entity_id": "hktvmall",
+        "decision_use": "验证区域电商IR信号"
+      },
+      {
+        "entity_id": "stc",
+        "decision_use": "验证数字基础设施观察点"
+      },
+      {
+        "entity_id": "databricks",
+        "decision_use": "验证开发者文档与企业AI信号"
+      }
     ]
   },
   "entities": [
     {
       "id": "grab",
       "name": "Grab",
-      "aliases": ["Grab Holdings", "GrabPay"],
+      "aliases": [
+        "Grab Holdings",
+        "GrabPay"
+      ],
       "region": "亚太",
       "sector": "mobility_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://www.grab.com/sg/press/feed/", "source_id": "grab-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "partnership", "payment"]},
-        {"type": "jobs", "url": "https://www.grab.careers/en/jobs/", "source_id": "grab-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "expansion", "org_change"]},
-        {"type": "product_update", "url": "https://www.grab.com/sg/press/", "source_id": "grab-newsroom", "status": "active", "instrumented": true, "expected_signals": ["partnership", "merchant_product", "payment"]}
+        {
+          "type": "ir",
+          "url": "https://www.grab.com/sg/press/feed/",
+          "source_id": "grab-ir",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "earnings",
+            "partnership",
+            "payment"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://www.grab.careers/en/jobs/",
+          "source_id": "grab-jobs",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "hiring",
+            "expansion",
+            "org_change"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "https://www.grab.com/sg/press/",
+          "source_id": "grab-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "partnership",
+            "merchant_product",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "新加坡",
+      "primary_markets": [
+        "新加坡",
+        "印尼",
+        "马来西亚",
+        "泰国",
+        "越南",
+        "菲律宾"
       ]
     },
     {
       "id": "goto",
       "name": "GoTo",
-      "aliases": ["Gojek", "Tokopedia", "GoPay"],
+      "aliases": [
+        "Gojek",
+        "Tokopedia",
+        "GoPay"
+      ],
       "region": "亚太",
       "sector": "super_app_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.gotocompany.com/newsroom", "status": "active", "instrumented": false, "expected_signals": ["partnership", "payment", "commerce"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["merchant_product", "payment"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.gotocompany.com/newsroom",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "partnership",
+            "payment",
+            "commerce"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "merchant_product",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "印尼",
+      "primary_markets": [
+        "印尼",
+        "新加坡"
       ]
     },
     {
       "id": "sea",
       "name": "Sea Limited",
-      "aliases": ["Sea", "Shopee", "Garena", "SeaMoney"],
+      "aliases": [
+        "Sea",
+        "Shopee",
+        "Garena",
+        "SeaMoney"
+      ],
       "region": "亚太",
       "sector": "commerce_gaming_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.sea.com/media/news", "source_id": "sea-newsroom", "status": "active", "instrumented": true, "expected_signals": ["earnings", "commerce", "gaming"]},
-        {"type": "product_update", "url": "https://newsroom.shopee.com/", "status": "paused", "instrumented": false, "expected_signals": ["commerce", "logistics", "ads"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.sea.com/media/news",
+          "source_id": "sea-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "earnings",
+            "commerce",
+            "gaming"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "https://newsroom.shopee.com/",
+          "status": "paused",
+          "instrumented": false,
+          "expected_signals": [
+            "commerce",
+            "logistics",
+            "ads"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        }
+      ],
+      "hq_country": "新加坡",
+      "primary_markets": [
+        "新加坡",
+        "东南亚",
+        "台湾",
+        "巴西"
       ]
     },
     {
       "id": "traveloka",
       "name": "Traveloka",
-      "aliases": ["Traveloka Group"],
+      "aliases": [
+        "Traveloka Group"
+      ],
       "region": "亚太",
       "sector": "travel_local_services",
       "priority": "watch",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.traveloka.com/en-id/newsroom", "status": "active", "instrumented": false, "expected_signals": ["partnership", "regional_launch"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["merchant_product"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.traveloka.com/en-id/newsroom",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "partnership",
+            "regional_launch"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "merchant_product"
+          ]
+        }
+      ],
+      "hq_country": "印尼",
+      "primary_markets": [
+        "印尼",
+        "泰国",
+        "越南",
+        "马来西亚",
+        "新加坡",
+        "菲律宾"
       ]
     },
     {
       "id": "momo",
       "name": "MoMo",
-      "aliases": ["Momo Vietnam", "MoMo Vietnam"],
+      "aliases": [
+        "Momo Vietnam",
+        "MoMo Vietnam"
+      ],
       "region": "亚太",
       "sector": "payment_wallet",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.momo.vn/tin-tuc", "source_id": "momo-newsroom", "status": "active", "instrumented": true, "expected_signals": ["payment", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["wallet", "merchant_product"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.momo.vn/tin-tuc",
+          "source_id": "momo-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "payment",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "compliance"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "wallet",
+            "merchant_product"
+          ]
+        }
+      ],
+      "hq_country": "越南",
+      "primary_markets": [
+        "越南"
       ]
     },
     {
       "id": "vng",
       "name": "VNG Group",
-      "aliases": ["VNG", "Zalo", "ZaloPay"],
+      "aliases": [
+        "VNG",
+        "Zalo",
+        "ZaloPay"
+      ],
       "region": "亚太",
       "sector": "social_payment_gaming",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://vng.com.vn/news/list.1.html", "source_id": "vng-newsroom", "status": "active", "instrumented": true, "expected_signals": ["official_disclosure", "payment", "gaming"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["social", "payment"]}
+        {
+          "type": "newsroom",
+          "url": "https://vng.com.vn/news/list.1.html",
+          "source_id": "vng-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "official_disclosure",
+            "payment",
+            "gaming"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "ai",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "social",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "越南",
+      "primary_markets": [
+        "越南"
       ]
     },
     {
       "id": "naver",
       "name": "Naver",
-      "aliases": ["NAVER", "Naver Corp"],
+      "aliases": [
+        "NAVER",
+        "Naver Corp"
+      ],
       "region": "亚太",
       "sector": "search_ai_cloud",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.navercorp.com/en/media/pressReleases", "source_id": "naver-press", "status": "active", "instrumented": true, "expected_signals": ["ai", "cloud", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai_infra"]},
-        {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["api", "developer_change"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.navercorp.com/en/media/pressReleases",
+          "source_id": "naver-press",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "ai",
+            "cloud",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "ai_infra"
+          ]
+        },
+        {
+          "type": "developer_docs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "api",
+            "developer_change"
+          ]
+        }
+      ],
+      "hq_country": "韩国",
+      "primary_markets": [
+        "韩国",
+        "日本"
       ]
     },
     {
       "id": "kakao",
       "name": "Kakao",
-      "aliases": ["Kakao Corp", "KakaoPay", "KakaoTalk"],
+      "aliases": [
+        "Kakao Corp",
+        "KakaoPay",
+        "KakaoTalk"
+      ],
       "region": "亚太",
       "sector": "social_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.kakaocorp.com/page/detail/pr?lang=en", "source_id": "kakao-press", "status": "active", "instrumented": false, "expected_signals": ["payment", "social", "ai"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "org_change"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["platform_policy", "payment"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.kakaocorp.com/page/detail/pr?lang=en",
+          "source_id": "kakao-press",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "payment",
+            "social",
+            "ai"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "org_change"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "platform_policy",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "韩国",
+      "primary_markets": [
+        "韩国"
       ]
     },
     {
       "id": "rakuten",
       "name": "Rakuten",
-      "aliases": ["Rakuten Group", "Rakuten Securities"],
+      "aliases": [
+        "Rakuten Group",
+        "Rakuten Securities"
+      ],
       "region": "亚太",
       "sector": "commerce_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://global.rakuten.com/corp/news/press/?category=ir", "source_id": "rakuten-ir", "status": "active", "instrumented": false, "expected_signals": ["earnings", "commerce", "fintech"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["marketplace_policy", "payment"]}
+        {
+          "type": "ir",
+          "url": "https://global.rakuten.com/corp/news/press/?category=ir",
+          "source_id": "rakuten-ir",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "earnings",
+            "commerce",
+            "fintech"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "marketplace_policy",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "日本",
+      "primary_markets": [
+        "日本"
       ]
     },
     {
       "id": "unext",
       "name": "U-NEXT",
-      "aliases": ["U-NEXT Holdings", "U-NEXT HOLDINGS"],
+      "aliases": [
+        "U-NEXT Holdings",
+        "U-NEXT HOLDINGS"
+      ],
       "region": "亚太",
       "sector": "streaming_media",
       "priority": "watch",
       "observation_points": [
-        {"type": "newsroom", "url": "https://unext-hd.co.jp/newsrelease/", "status": "active", "instrumented": false, "expected_signals": ["streaming", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "content"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["product_update"]}
+        {
+          "type": "newsroom",
+          "url": "https://unext-hd.co.jp/newsrelease/",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "streaming",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "content"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "product_update"
+          ]
+        }
+      ],
+      "hq_country": "日本",
+      "primary_markets": [
+        "日本"
       ]
     },
     {
       "id": "square_enix",
       "name": "Square Enix",
-      "aliases": ["Square Enix Holdings", "SQUARE ENIX"],
+      "aliases": [
+        "Square Enix Holdings",
+        "SQUARE ENIX"
+      ],
       "region": "亚太",
       "sector": "gaming",
       "priority": "watch",
       "observation_points": [
-        {"type": "ir", "url": "https://www.hd.square-enix.com/eng/ir/irnews/", "status": "active", "instrumented": false, "expected_signals": ["earnings", "gaming", "strategy"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "game_production"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["game_launch", "platform"]}
+        {
+          "type": "ir",
+          "url": "https://www.hd.square-enix.com/eng/ir/irnews/",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "earnings",
+            "gaming",
+            "strategy"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "game_production"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "game_launch",
+            "platform"
+          ]
+        }
+      ],
+      "hq_country": "日本",
+      "primary_markets": [
+        "日本",
+        "全球"
       ]
     },
     {
       "id": "hktvmall",
       "name": "HKTVmall",
-      "aliases": ["Hong Kong Technology Venture", "HKTV"],
+      "aliases": [
+        "Hong Kong Technology Venture",
+        "HKTV"
+      ],
       "region": "亚太",
       "sector": "commerce_logistics",
       "priority": "watch",
       "observation_points": [
-        {"type": "ir", "url": "https://ir.hktv.com.hk/media-news", "status": "active", "instrumented": false, "expected_signals": ["commerce", "logistics", "earnings"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "fulfillment"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["merchant_product"]}
+        {
+          "type": "ir",
+          "url": "https://ir.hktv.com.hk/media-news",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "commerce",
+            "logistics",
+            "earnings"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "fulfillment"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "merchant_product"
+          ]
+        }
+      ],
+      "hq_country": "香港",
+      "primary_markets": [
+        "香港"
       ]
     },
     {
       "id": "careem",
       "name": "Careem",
-      "aliases": ["Careem Pay", "Careem Plus"],
+      "aliases": [
+        "Careem Pay",
+        "Careem Plus"
+      ],
       "region": "中东",
       "sector": "mobility_super_app",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.careem.com/newsroom/", "status": "paused", "instrumented": false, "expected_signals": ["partnership", "payment", "merchant_product"]},
-        {"type": "jobs", "url": "https://jobs.careem.com/", "status": "candidate", "instrumented": false, "adapter_status": "pending_dynamic_adapter", "expected_signals": ["hiring", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["super_app", "payment"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.careem.com/newsroom/",
+          "status": "paused",
+          "instrumented": false,
+          "expected_signals": [
+            "partnership",
+            "payment",
+            "merchant_product"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://jobs.careem.com/",
+          "status": "candidate",
+          "instrumented": false,
+          "adapter_status": "pending_dynamic_adapter",
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "super_app",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "阿联酋",
+      "primary_markets": [
+        "阿联酋",
+        "沙特",
+        "巴基斯坦",
+        "埃及"
       ]
     },
     {
       "id": "noon",
       "name": "Noon",
-      "aliases": ["Noon.com", "noon payments"],
+      "aliases": [
+        "Noon.com",
+        "noon payments"
+      ],
       "region": "中东",
       "sector": "commerce",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.noon.com/uae-en/newsroom/", "source_id": "noon-newsroom", "status": "active", "instrumented": true, "expected_signals": ["commerce", "logistics"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "fulfillment"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["seller", "ads", "payment"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.noon.com/uae-en/newsroom/",
+          "source_id": "noon-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "commerce",
+            "logistics"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "fulfillment"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "seller",
+            "ads",
+            "payment"
+          ]
+        }
+      ],
+      "hq_country": "阿联酋",
+      "primary_markets": [
+        "阿联酋",
+        "沙特",
+        "埃及"
       ]
     },
     {
       "id": "tabby",
       "name": "Tabby",
-      "aliases": ["Tabby.ai", "Tabby UAE"],
+      "aliases": [
+        "Tabby.ai",
+        "Tabby UAE"
+      ],
       "region": "中东",
       "sector": "bnpl_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://tabby.ai/en-AE/blog/", "status": "active", "instrumented": false, "expected_signals": ["payment", "merchant_product"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["bnpl", "risk"]}
+        {
+          "type": "newsroom",
+          "url": "https://tabby.ai/en-AE/blog/",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "payment",
+            "merchant_product"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "compliance"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "bnpl",
+            "risk"
+          ]
+        }
+      ],
+      "hq_country": "阿联酋",
+      "primary_markets": [
+        "阿联酋",
+        "沙特"
       ]
     },
     {
       "id": "tamara",
       "name": "Tamara",
-      "aliases": ["Tamara.co"],
+      "aliases": [
+        "Tamara.co"
+      ],
       "region": "中东",
       "sector": "bnpl_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://tamara.co/en-sa/media-center", "source_id": "tamara-media", "status": "active", "instrumented": true, "expected_signals": ["payment", "merchant_product"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["bnpl", "risk"]}
+        {
+          "type": "newsroom",
+          "url": "https://tamara.co/en-sa/media-center",
+          "source_id": "tamara-media",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "payment",
+            "merchant_product"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "compliance"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "bnpl",
+            "risk"
+          ]
+        }
+      ],
+      "hq_country": "沙特",
+      "primary_markets": [
+        "沙特",
+        "阿联酋"
       ]
     },
     {
       "id": "stc",
       "name": "stc",
-      "aliases": ["Saudi Telecom", "stc Group"],
+      "aliases": [
+        "Saudi Telecom",
+        "stc Group"
+      ],
       "region": "中东",
       "sector": "telco_digital_infra",
       "priority": "watch",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.stc.com/en/media-center.html", "source_id": "stc-media", "status": "active", "instrumented": true, "expected_signals": ["cloud", "digital_infra", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "cloud"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["enterprise_software", "cloud"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.stc.com/en/media-center.html",
+          "source_id": "stc-media",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "cloud",
+            "digital_infra",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "cloud"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "enterprise_software",
+            "cloud"
+          ]
+        }
+      ],
+      "hq_country": "沙特",
+      "primary_markets": [
+        "沙特"
       ]
     },
     {
       "id": "mercadolibre",
       "name": "MercadoLibre",
-      "aliases": ["Mercado Libre", "Mercado Pago", "MELI"],
+      "aliases": [
+        "Mercado Libre",
+        "Mercado Pago",
+        "MELI"
+      ],
       "region": "拉美",
       "sector": "commerce_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://investor.mercadolibre.com/news-and-events", "source_id": "mercadolibre-ir", "status": "active", "instrumented": true, "expected_signals": ["earnings", "commerce", "payment"]},
-        {"type": "newsroom", "url": "https://news.mercadolibre.com/", "source_id": "mercadolibre-news", "status": "active", "instrumented": false, "expected_signals": ["commerce", "payment", "logistics"]},
-        {"type": "jobs", "url": "https://mercadolibre.eightfold.ai/careers", "status": "candidate", "instrumented": false, "adapter_status": "pending_dynamic_adapter", "expected_signals": ["hiring", "regional_launch"]}
+        {
+          "type": "ir",
+          "url": "https://investor.mercadolibre.com/news-and-events",
+          "source_id": "mercadolibre-ir",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "earnings",
+            "commerce",
+            "payment"
+          ]
+        },
+        {
+          "type": "newsroom",
+          "url": "https://news.mercadolibre.com/",
+          "source_id": "mercadolibre-news",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "commerce",
+            "payment",
+            "logistics"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://mercadolibre.eightfold.ai/careers",
+          "status": "candidate",
+          "instrumented": false,
+          "adapter_status": "pending_dynamic_adapter",
+          "expected_signals": [
+            "hiring",
+            "regional_launch"
+          ]
+        }
+      ],
+      "hq_country": "阿根廷",
+      "primary_markets": [
+        "巴西",
+        "墨西哥",
+        "阿根廷",
+        "哥伦比亚",
+        "智利"
       ]
     },
     {
       "id": "nubank",
       "name": "Nubank",
-      "aliases": ["Nu Holdings", "NuBank"],
+      "aliases": [
+        "Nu Holdings",
+        "NuBank"
+      ],
       "region": "拉美",
       "sector": "digital_bank",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://blog.nubank.com.br/", "source_id": "nubank-blog", "status": "active", "instrumented": true, "expected_signals": ["banking_app", "payment", "compliance"]},
-        {"type": "ir", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["earnings", "regional_launch"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]}
+        {
+          "type": "newsroom",
+          "url": "https://blog.nubank.com.br/",
+          "source_id": "nubank-blog",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "banking_app",
+            "payment",
+            "compliance"
+          ]
+        },
+        {
+          "type": "ir",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "earnings",
+            "regional_launch"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        }
+      ],
+      "hq_country": "巴西",
+      "primary_markets": [
+        "巴西",
+        "墨西哥",
+        "哥伦比亚"
       ]
     },
     {
       "id": "rappi",
       "name": "Rappi",
-      "aliases": ["RappiCard", "RappiPay"],
+      "aliases": [
+        "RappiCard",
+        "RappiPay"
+      ],
       "region": "拉美",
       "sector": "delivery_fintech",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://about.rappi.com/press-room", "source_id": "rappi-press", "status": "active", "instrumented": true, "expected_signals": ["delivery", "payment", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["merchant_product", "wallet"]}
+        {
+          "type": "newsroom",
+          "url": "https://about.rappi.com/press-room",
+          "source_id": "rappi-press",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "delivery",
+            "payment",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "merchant_product",
+            "wallet"
+          ]
+        }
+      ],
+      "hq_country": "哥伦比亚",
+      "primary_markets": [
+        "哥伦比亚",
+        "墨西哥",
+        "巴西",
+        "智利"
       ]
     },
     {
       "id": "dlocal",
       "name": "dLocal",
-      "aliases": ["DLocal"],
+      "aliases": [
+        "DLocal"
+      ],
       "region": "拉美",
       "sector": "cross_border_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://dlocal.com/news/", "status": "active", "instrumented": false, "expected_signals": ["payment", "partnership", "compliance"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "regional_launch"]},
-        {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["api", "checkout"]}
+        {
+          "type": "newsroom",
+          "url": "https://dlocal.com/news/",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "payment",
+            "partnership",
+            "compliance"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "regional_launch"
+          ]
+        },
+        {
+          "type": "developer_docs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "api",
+            "checkout"
+          ]
+        }
+      ],
+      "hq_country": "乌拉圭",
+      "primary_markets": [
+        "拉美各国",
+        "全球"
       ]
     },
     {
       "id": "jumia",
       "name": "Jumia",
-      "aliases": ["Jumia Group", "JumiaPay"],
+      "aliases": [
+        "Jumia Group",
+        "JumiaPay"
+      ],
       "region": "非洲",
       "sector": "commerce_payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://group.jumia.com/news", "source_id": "jumia-newsroom", "status": "active", "instrumented": true, "expected_signals": ["commerce", "payment", "logistics"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "market_exit", "expansion"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["seller", "fulfillment"]}
+        {
+          "type": "newsroom",
+          "url": "https://group.jumia.com/news",
+          "source_id": "jumia-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "commerce",
+            "payment",
+            "logistics"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "market_exit",
+            "expansion"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "seller",
+            "fulfillment"
+          ]
+        }
+      ],
+      "hq_country": "尼日利亚",
+      "primary_markets": [
+        "尼日利亚",
+        "埃及",
+        "肯尼亚",
+        "非洲多国"
       ]
     },
     {
       "id": "flutterwave",
       "name": "Flutterwave",
-      "aliases": ["Flutterwave Payments"],
+      "aliases": [
+        "Flutterwave Payments"
+      ],
       "region": "非洲",
       "sector": "payment",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://flutterwave.com/us/blog", "status": "active", "instrumented": false, "expected_signals": ["payment", "merchant_product", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
-        {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["api", "checkout"]}
+        {
+          "type": "newsroom",
+          "url": "https://flutterwave.com/us/blog",
+          "status": "active",
+          "instrumented": false,
+          "expected_signals": [
+            "payment",
+            "merchant_product",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "compliance"
+          ]
+        },
+        {
+          "type": "developer_docs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "api",
+            "checkout"
+          ]
+        }
+      ],
+      "hq_country": "尼日利亚",
+      "primary_markets": [
+        "尼日利亚",
+        "非洲"
       ]
     },
     {
       "id": "opay",
       "name": "OPay",
-      "aliases": ["OPay Nigeria", "OPay Digital Services"],
+      "aliases": [
+        "OPay Nigeria",
+        "OPay Digital Services"
+      ],
       "region": "非洲",
       "sector": "payment_wallet",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://opay.ng/newsroom/", "source_id": "opay-newsroom", "status": "active", "instrumented": true, "expected_signals": ["payment", "wallet", "merchant_product"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "compliance"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["wallet", "agent_network"]}
+        {
+          "type": "newsroom",
+          "url": "https://opay.ng/newsroom/",
+          "source_id": "opay-newsroom",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "payment",
+            "wallet",
+            "merchant_product"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "compliance"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "wallet",
+            "agent_network"
+          ]
+        }
+      ],
+      "hq_country": "尼日利亚",
+      "primary_markets": [
+        "尼日利亚",
+        "埃及"
       ]
     },
     {
       "id": "mpesa_safaricom",
       "name": "M-Pesa",
-      "aliases": ["Safaricom", "M-PESA"],
+      "aliases": [
+        "Safaricom",
+        "M-PESA"
+      ],
       "region": "非洲",
       "sector": "payment_wallet",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.safaricom.co.ke/media-center", "source_id": "mpesa-media", "status": "active", "instrumented": true, "expected_signals": ["payment", "compliance", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "financial_infra"]},
-        {"type": "product_update", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["wallet", "merchant_product"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.safaricom.co.ke/media-center",
+          "source_id": "mpesa-media",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "payment",
+            "compliance",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "financial_infra"
+          ]
+        },
+        {
+          "type": "product_update",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "wallet",
+            "merchant_product"
+          ]
+        }
+      ],
+      "hq_country": "肯尼亚",
+      "primary_markets": [
+        "肯尼亚",
+        "坦桑尼亚",
+        "埃塞俄比亚"
       ]
     },
     {
       "id": "stripe",
       "name": "Stripe",
-      "aliases": ["Stripe Payments"],
+      "aliases": [
+        "Stripe Payments"
+      ],
       "region": "全球",
       "sector": "payment_developer_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "changelog", "url": "https://stripe.com/changelog", "source_id": "stripe-changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "checkout", "payment"]},
-        {"type": "jobs", "url": "https://stripe.com/careers/search", "source_id": "stripe-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "regional_launch"]},
-        {"type": "developer_docs", "url": "https://docs.stripe.com/", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "platform_policy"]}
+        {
+          "type": "changelog",
+          "url": "https://stripe.com/changelog",
+          "source_id": "stripe-changelog",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "api",
+            "checkout",
+            "payment"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://stripe.com/careers/search",
+          "source_id": "stripe-jobs",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "hiring",
+            "regional_launch"
+          ]
+        },
+        {
+          "type": "developer_docs",
+          "url": "https://docs.stripe.com/",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "developer_change",
+            "platform_policy"
+          ]
+        }
+      ],
+      "hq_country": "美国",
+      "primary_markets": [
+        "全球"
       ]
     },
     {
       "id": "shopify",
       "name": "Shopify",
-      "aliases": ["Shopify Editions", "Shopify Plus"],
+      "aliases": [
+        "Shopify Editions",
+        "Shopify Plus"
+      ],
       "region": "全球",
       "sector": "commerce_saas",
       "priority": "core",
       "observation_points": [
-        {"type": "product_update", "url": "https://www.shopify.com/editions", "status": "candidate", "instrumented": false, "expected_signals": ["commerce", "seller", "developer_change"]},
-        {"type": "changelog", "url": "https://changelog.shopify.com/", "source_id": "shopify-changelog", "status": "active", "instrumented": true, "expected_signals": ["api", "marketplace_policy"]},
-        {"type": "jobs", "url": "https://www.shopify.com/careers", "source_id": "shopify-jobs", "status": "active", "instrumented": true, "expected_signals": ["hiring", "ai", "commerce"]}
+        {
+          "type": "product_update",
+          "url": "https://www.shopify.com/editions",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "commerce",
+            "seller",
+            "developer_change"
+          ]
+        },
+        {
+          "type": "changelog",
+          "url": "https://changelog.shopify.com/",
+          "source_id": "shopify-changelog",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "api",
+            "marketplace_policy"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://www.shopify.com/careers",
+          "source_id": "shopify-jobs",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "hiring",
+            "ai",
+            "commerce"
+          ]
+        }
+      ],
+      "hq_country": "加拿大",
+      "primary_markets": [
+        "全球"
       ]
     },
     {
       "id": "cloudflare",
       "name": "Cloudflare",
-      "aliases": ["Cloudflare Workers", "Cloudflare AI"],
+      "aliases": [
+        "Cloudflare Workers",
+        "Cloudflare AI"
+      ],
       "region": "全球",
       "sector": "cloud_ai_infra",
       "priority": "core",
       "observation_points": [
-        {"type": "changelog", "url": "https://developers.cloudflare.com/changelog/", "source_id": "cloudflare-changelog", "status": "active", "instrumented": true, "expected_signals": ["developer_change", "ai_infra", "edge"]},
-        {"type": "newsroom", "url": "https://blog.cloudflare.com/", "source_id": "cloudflare-blog", "status": "active", "instrumented": true, "expected_signals": ["cloud", "ai_infra", "security"]},
-        {"type": "jobs", "url": "https://www.cloudflare.com/careers/jobs/", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "datacenter"]}
+        {
+          "type": "changelog",
+          "url": "https://developers.cloudflare.com/changelog/",
+          "source_id": "cloudflare-changelog",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "developer_change",
+            "ai_infra",
+            "edge"
+          ]
+        },
+        {
+          "type": "newsroom",
+          "url": "https://blog.cloudflare.com/",
+          "source_id": "cloudflare-blog",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "cloud",
+            "ai_infra",
+            "security"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://www.cloudflare.com/careers/jobs/",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "datacenter"
+          ]
+        }
+      ],
+      "hq_country": "美国",
+      "primary_markets": [
+        "全球"
       ]
     },
     {
       "id": "openai",
       "name": "OpenAI",
-      "aliases": ["ChatGPT", "OpenAI API"],
+      "aliases": [
+        "ChatGPT",
+        "OpenAI API"
+      ],
       "region": "全球",
       "sector": "ai_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://openai.com/news/", "source_id": "openai-news", "status": "active", "instrumented": true, "expected_signals": ["model", "agent", "enterprise_ai"]},
-        {"type": "changelog", "url": "https://platform.openai.com/docs/changelog", "status": "candidate", "instrumented": false, "expected_signals": ["api", "developer_change"]},
-        {"type": "jobs", "url": "https://openai.com/careers/", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "ai_infra", "enterprise"]}
+        {
+          "type": "newsroom",
+          "url": "https://openai.com/news/",
+          "source_id": "openai-news",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "model",
+            "agent",
+            "enterprise_ai"
+          ]
+        },
+        {
+          "type": "changelog",
+          "url": "https://platform.openai.com/docs/changelog",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "api",
+            "developer_change"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://openai.com/careers/",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "ai_infra",
+            "enterprise"
+          ]
+        }
+      ],
+      "hq_country": "美国",
+      "primary_markets": [
+        "全球"
       ]
     },
     {
       "id": "anthropic",
       "name": "Anthropic",
-      "aliases": ["Claude", "Anthropic API"],
+      "aliases": [
+        "Claude",
+        "Anthropic API"
+      ],
       "region": "全球",
       "sector": "ai_platform",
       "priority": "core",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.anthropic.com/news", "source_id": "anthropic-news", "status": "active", "instrumented": true, "expected_signals": ["model", "enterprise_ai", "partnership"]},
-        {"type": "changelog", "url": "https://docs.anthropic.com/en/release-notes/api", "status": "candidate", "instrumented": false, "expected_signals": ["api", "developer_change"]},
-        {"type": "jobs", "url": "https://www.anthropic.com/careers", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "enterprise", "ai_safety"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.anthropic.com/news",
+          "source_id": "anthropic-news",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "model",
+            "enterprise_ai",
+            "partnership"
+          ]
+        },
+        {
+          "type": "changelog",
+          "url": "https://docs.anthropic.com/en/release-notes/api",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "api",
+            "developer_change"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://www.anthropic.com/careers",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "enterprise",
+            "ai_safety"
+          ]
+        }
+      ],
+      "hq_country": "美国",
+      "primary_markets": [
+        "全球"
       ]
     },
     {
       "id": "databricks",
       "name": "Databricks",
-      "aliases": ["Databricks SQL", "MosaicML"],
+      "aliases": [
+        "Databricks SQL",
+        "MosaicML"
+      ],
       "region": "全球",
       "sector": "data_ai_platform",
       "priority": "watch",
       "observation_points": [
-        {"type": "newsroom", "url": "https://www.databricks.com/blog", "source_id": "databricks-blog", "status": "active", "instrumented": true, "expected_signals": ["data_ai", "enterprise_ai"]},
-        {"type": "jobs", "url": "https://www.databricks.com/company/careers", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "enterprise"]},
-        {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["developer_change", "data_platform"]}
+        {
+          "type": "newsroom",
+          "url": "https://www.databricks.com/blog",
+          "source_id": "databricks-blog",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "data_ai",
+            "enterprise_ai"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "https://www.databricks.com/company/careers",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "enterprise"
+          ]
+        },
+        {
+          "type": "developer_docs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "developer_change",
+            "data_platform"
+          ]
+        }
+      ],
+      "hq_country": "美国",
+      "primary_markets": [
+        "全球"
       ]
     },
     {
       "id": "adyen",
       "name": "Adyen",
-      "aliases": ["Adyen Payments"],
+      "aliases": [
+        "Adyen Payments"
+      ],
       "region": "欧洲",
       "sector": "payment",
       "priority": "core",
       "observation_points": [
-        {"type": "ir", "url": "https://www.adyen.com/press-and-media", "source_id": "adyen-press", "status": "active", "instrumented": true, "expected_signals": ["earnings", "payment", "partnership"]},
-        {"type": "jobs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["hiring", "regional_launch"]},
-        {"type": "developer_docs", "url": "", "status": "candidate", "instrumented": false, "expected_signals": ["api", "checkout"]}
+        {
+          "type": "ir",
+          "url": "https://www.adyen.com/press-and-media",
+          "source_id": "adyen-press",
+          "status": "active",
+          "instrumented": true,
+          "expected_signals": [
+            "earnings",
+            "payment",
+            "partnership"
+          ]
+        },
+        {
+          "type": "jobs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "hiring",
+            "regional_launch"
+          ]
+        },
+        {
+          "type": "developer_docs",
+          "url": "",
+          "status": "candidate",
+          "instrumented": false,
+          "expected_signals": [
+            "api",
+            "checkout"
+          ]
+        }
+      ],
+      "hq_country": "荷兰",
+      "primary_markets": [
+        "全球",
+        "欧洲"
       ]
     }
   ]

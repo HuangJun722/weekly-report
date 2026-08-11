@@ -1008,6 +1008,162 @@
         "cloud"
       ],
       "company_name": "Cloudflare"
+    },
+    {
+      "id": "koreatechdesk",
+      "name": "KoreaTechDesk",
+      "url": "https://koreatechdesk.com/feed/",
+      "status": "active",
+      "tier": "L3",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "region": "韩国",
+      "track": "韩国科技与AI",
+      "signal_types": [
+        "regional_ecosystem",
+        "industry_analysis",
+        "funding_deal"
+      ],
+      "scope_industries": [
+        "ai",
+        "commerce",
+        "fintech"
+      ],
+      "scope_regions": [
+        "韩国",
+        "亚太"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "regional_ecosystem",
+      "credibility_score": 7,
+      "signal_density": "high",
+      "noise_level": "medium",
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "low",
+      "max": 4,
+      "quality_note": "已验证可达(705条)，韩国创业/政策/AI 信号密度高，弥补韩国媒体发现层缺口。"
+    },
+    {
+      "id": "dailysocial-id",
+      "name": "DailySocial Indonesia",
+      "url": "https://dailysocial.id/feed",
+      "status": "active",
+      "tier": "L3",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "region": "印尼",
+      "track": "印尼创业与融资",
+      "signal_types": [
+        "regional_ecosystem",
+        "funding_deal"
+      ],
+      "scope_industries": [
+        "commerce",
+        "fintech"
+      ],
+      "scope_regions": [
+        "印尼",
+        "东南亚"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "regional_ecosystem",
+      "credibility_score": 7,
+      "signal_density": "medium",
+      "noise_level": "medium",
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "low",
+      "max": 4,
+      "quality_note": "已验证可达，印尼创业融资信号（如 McEasy Series B），弥补印尼媒体发现层。"
+    },
+    {
+      "id": "braziljournal",
+      "name": "Brazil Journal",
+      "url": "https://braziljournal.com/feed/",
+      "status": "active",
+      "tier": "L3",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "region": "巴西",
+      "track": "巴西商业与AI",
+      "signal_types": [
+        "regional_ecosystem",
+        "industry_analysis"
+      ],
+      "scope_industries": [
+        "commerce",
+        "fintech",
+        "ai"
+      ],
+      "scope_regions": [
+        "巴西",
+        "拉美"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "regional_ecosystem",
+      "credibility_score": 7,
+      "signal_density": "medium",
+      "noise_level": "medium",
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "low",
+      "max": 4,
+      "quality_note": "已验证可达，葡语商业/AI 分析，弥补巴西媒体发现层（巴西此前仅 1 条 stored）。"
+    },
+    {
+      "id": "vnexpress-tech",
+      "name": "VnExpress Tech",
+      "url": "https://e.vnexpress.net/rss/tech.rss",
+      "status": "active",
+      "tier": "L3",
+      "source_type": "industry_media",
+      "access_method": "rss",
+      "region": "越南",
+      "track": "越南科技与产业",
+      "signal_types": [
+        "regional_ecosystem",
+        "industry_analysis"
+      ],
+      "scope_industries": [
+        "commerce",
+        "fintech",
+        "ai"
+      ],
+      "scope_regions": [
+        "越南",
+        "东南亚"
+      ],
+      "allowed_scope_layers": [
+        "regional_policy",
+        "industry_change",
+        "company_action"
+      ],
+      "publisher_type": "regional_ecosystem",
+      "credibility_score": 7,
+      "signal_density": "medium",
+      "noise_level": "medium",
+      "freshness_speed": "same_day",
+      "dedupe_strategy": "semantic",
+      "crawl_cost": "low",
+      "anti_bot_risk": "low",
+      "max": 4,
+      "quality_note": "已验证可达(60条)，越南本土科技信号，弥补越南媒体发现层。"
     }
   ],
   "active_sources": [
@@ -1357,29 +1513,6 @@
       ],
       "status": "candidate",
       "next_check": "验证官方 blog/feed 和地区覆盖"
-    },
-    {
-      "name": "KoreaTechDesk",
-      "url": "https://koreatechdesk.com/feed/",
-      "track": "韩国科技与AI",
-      "signal_types": [
-        "regional_ecosystem",
-        "industry_analysis",
-        "funding_deal"
-      ],
-      "status": "candidate",
-      "next_check": "feed 可达(200)已验证；确认近10条样本信号密度"
-    },
-    {
-      "name": "TheScoop",
-      "url": "https://thescoop.co/feed/",
-      "track": "韩国创业生态",
-      "signal_types": [
-        "regional_ecosystem",
-        "funding_deal"
-      ],
-      "status": "candidate",
-      "next_check": "feed 可达(200)已验证；确认近10条样本信号密度"
     }
   ],
   "promotion_rules": [
