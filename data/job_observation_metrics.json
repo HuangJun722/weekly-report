@@ -1,22 +1,25 @@
 {
-  "observed_at": "2026-08-11T11:02:26.384812+08:00",
+  "observed_at": "2026-08-11T17:09:39.811008+08:00",
   "source_count": 3,
-  "raw_count": 64,
+  "raw_count": 62,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
-      "inventory_count": 20,
-      "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 1,
+      "count": 12,
+      "inventory_count": 18,
+      "signal_count": 1,
+      "added_count": 5,
+      "removed_count": 7,
       "clusters": {
+        "compliance": 1,
         "engineering": 1
       },
-      "removed_clusters": {}
+      "removed_clusters": {
+        "engineering": 5
+      }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
@@ -45,6 +48,109 @@
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [],
+  "candidate_signals": [
+    {
+      "candidate_id": "jobs-441d4184ca18bd2a",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "compliance",
+      "window": "2026-W33",
+      "window_start": "2026-08-11",
+      "window_end": "2026-08-11",
+      "detected_at": "2026-08-11T17:09:39.811008+08:00",
+      "baseline_count": 20,
+      "current_count": 18,
+      "added_count": 5,
+      "removed_count": 7,
+      "clusters": {
+        "compliance": 1,
+        "engineering": 1
+      },
+      "removed_clusters": {
+        "engineering": 5
+      },
+      "evidence_refs": [
+        {
+          "job_id": "744000142805839",
+          "title": "Ethic & Compliance Associate Grab Rental",
+          "url": "https://www.grab.careers/en/jobs/744000142805839/ethic-compliance-associate-grab-rental/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000142803899",
+          "title": "Strategic Account Management Specialist",
+          "url": "https://www.grab.careers/en/jobs/744000142803899/strategic-account-management-specialist/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000142800280",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000142800280/senior-software-engineer-backend/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000142793579",
+          "title": "Manager, Deliveries Marketplace Strategy",
+          "url": "https://www.grab.careers/en/jobs/744000142793579/manager-deliveries-marketplace-strategy/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000142784079",
+          "title": "Associate, Mobility & Deliveries Audit",
+          "url": "https://www.grab.careers/en/jobs/744000142784079/associate-mobility-deliveries-audit/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000142657394",
+          "title": "Software Engineer, iOS",
+          "url": "https://www.grab.careers/en/jobs/744000142657394/software-engineer-ios/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000142204054",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000142204054/senior-software-engineer-backend/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000142054879",
+          "title": "Senior Software Engineer, Planning",
+          "url": "https://www.grab.careers/en/jobs/744000142054879/senior-software-engineer-planning/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000142054639",
+          "title": "Senior Mechanical Engineer, DFM",
+          "url": "https://www.grab.careers/en/jobs/744000142054639/senior-mechanical-engineer-dfm/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000142050569",
+          "title": "Lead Product Marketing Manager",
+          "url": "https://www.grab.careers/en/jobs/744000142050569/lead-product-marketing-manager/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000142046259",
+          "title": "Senior Data Scientist (Country and Marketing Analytics)",
+          "url": "https://www.grab.careers/en/jobs/744000142046259/senior-data-scientist-country-and-marketing-analytics/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000142045609",
+          "title": "Lead Software Engineer, Backend - Service Mesh",
+          "url": "https://www.grab.careers/en/jobs/744000142045609/lead-software-engineer-backend-service-mesh/",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    }
+  ],
   "promoted_count": 0
 }
