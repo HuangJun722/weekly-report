@@ -134,6 +134,74 @@ def _source_stats_from_runs(metrics):
     return rows, records
 
 
+def _source_run_series(metrics):
+    """按时间正序返回每个源的采集记录 [(run_date, count, status), ...]。
+
+    run_metrics.json 是正序列表（索引 0 最老），直接遍历即可保持时间序。
+    """
+    series = defaultdict(list)
+    records = metrics if isinstance(metrics, list) else ([metrics] if metrics else [])
+    for run in records:
+        run_date = (run.get('date') or run.get('started_at') or '')[:10]
+        for group in ('rss', 'html', 'company'):
+            for name, stats in ((run.get(group) or {}).get('source_stats') or {}).items():
+                series[name].append((run_date, stats.get('count') or 0, stats.get('status') or 'unknown'))
+    return series
+
+
+def build_source_alerts(rows, run_series, registry_sources, silent_window=5):
+    """新增失明源告警：曾经出活，最近连续 silent_window 次 run 无产出。
+
+    这是"源死亡"的告警半——lifecycle 已识别死源（zero-hit/failed），
+    但没有区分"从来不出活"和"以前出活、最近失明"。后者是感知能力退化信号：
+    可能被反爬、改版、断流，需要人工及时处理。
+
+    两类告警（低频源正常空窗不算失明）：
+    - fetch_failure：最近窗口内抓取失败 ≥2 次 → 源被阻断，高置信故障
+    - supply_drop：稳定入库源（30 天 stored≥5）最近连续无产出 → 可能改版/断流
+    """
+    registry_status = {s.get('name'): s.get('status') for s in registry_sources}
+    alerts = []
+    for row in rows:
+        name = row['source']
+        seq = run_series.get(name)
+        if not seq:
+            continue
+        # 曾经出活才算"新增失明"；从未出活归 zero-hit，不算失明
+        ever_alive = any(count > 0 for _, count, _ in seq)
+        if not ever_alive:
+            continue
+        # 已暂停源不告警（主动停用，不是意外失明）
+        if registry_status.get(name) == 'paused':
+            continue
+        recent = seq[-silent_window:]
+        if not recent:
+            continue
+        recent_counts = [count for _, count, _ in recent]
+        recent_statuses = [status for _, _, status in recent]
+        if not all(c == 0 for c in recent_counts):
+            continue
+        failed_count = recent_statuses.count('failed')
+        if failed_count >= 2:
+            alert_type = 'fetch_failure'
+        elif row['stored'] >= 5:
+            alert_type = 'supply_drop'
+        else:
+            # 低频源正常空窗，不算失明
+            continue
+        last_alive = next((run_date for run_date, count, _ in reversed(seq) if count > 0), '')
+        alerts.append({
+            'type': alert_type,
+            'source': name,
+            'tier': row['tier'] or '',
+            'silent_runs': len(recent),
+            'last_alive_run': last_alive,
+            'recent_statuses': _format_statuses(Counter(recent_statuses)),
+        })
+    alerts.sort(key=lambda a: (a.get('last_alive_run') or ''), reverse=True)
+    return alerts
+
+
 def _source_stats_from_events(events, selected_dates, aliases=None):
     rows = defaultdict(lambda: {
         'stored': 0,
@@ -297,6 +365,8 @@ def build_source_health_report(days=30, git_ref=None):
 
     lifecycle_counts = Counter(row['lifecycle'] for row in rows)
     action_counts = Counter(row['action'] for row in rows)
+    run_series = _source_run_series(metrics)
+    alerts = build_source_alerts(rows, run_series, registry_sources)
     rows.sort(
         key=lambda row: (
             {'stable': 4, 'partial': 3, 'failed': 2, 'zero-hit': 1}.get(row['lifecycle'], 0),
@@ -315,6 +385,7 @@ def build_source_health_report(days=30, git_ref=None):
         'run_dates': sorted({(run.get('date') or '') for run in runs if run.get('date')}),
         'lifecycle_counts': dict(lifecycle_counts),
         'action_counts': dict(action_counts),
+        'alerts': alerts,
         'rows': rows,
     }
 
@@ -331,6 +402,14 @@ def print_report(report, limit=80):
         f"end_date={report['end_date']} days={report['days']} runs={report['run_count']} "
         f"run_dates={','.join(report['run_dates'])}"
     )
+    alerts = report.get('alerts') or []
+    _safe_print(f"alerts | {len(alerts)}")
+    if alerts:
+        for alert in alerts:
+            _safe_print(
+                f"  ⚠ [{alert['type']}] {alert['source']} | 最近 {alert['silent_runs']} 次无产出 | "
+                f"最后产出 {alert['last_alive_run'] or '?'} | 状态 {alert['recent_statuses']} | tier={alert['tier']}"
+            )
     _safe_print(f"lifecycle | {json.dumps(report['lifecycle_counts'], ensure_ascii=False)}")
     _safe_print(f"actions | {json.dumps(report['action_counts'], ensure_ascii=False)}")
     _safe_print("source | lifecycle | action | recent_raw | recent_signals | stored | high | zero_reason | status | tier | type | method")
