@@ -72,8 +72,24 @@ def event_date(event):
     return (event.get('date') or '')[:10]
 
 
+def _signal_change_score(event):
+    try:
+        return float(event.get('signal_change_score') or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def signal_sort_key(event):
+    """按 日期 → 变化重要性(signal_change_score) → 事件分 排序。
+
+    signal_change_score 回答"这个变化对行业/区域有多重要"，是产品定位
+    （变化发现）的核心排序轴；event_score 只回答"公司发生了什么"，降为次级。
+    """
+    return (event.get('date', ''), _signal_change_score(event), event_score(event))
+
+
 def _sort_events(events):
-    return sorted(events, key=lambda x: (x.get('date', ''), event_score(x)), reverse=True)
+    return sorted(events, key=signal_sort_key, reverse=True)
 
 
 def select_company_events(events_by_date, week_ago):
@@ -150,7 +166,7 @@ def select_review_events(events, limit=12):
         event for event in events
         if is_review_candidate(event) and is_review_view_event(event)
     ]
-    review_events.sort(key=lambda x: (event_score(x), x.get('date', '')), reverse=True)
+    review_events.sort(key=signal_sort_key, reverse=True)
     if limit is None:
         return review_events
     return review_events[:limit]

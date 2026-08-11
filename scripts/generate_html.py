@@ -35,6 +35,7 @@ try:
         select_mature_main_date,
         select_period_high_value_events,
         select_review_events,
+        signal_sort_key,
     )
 except ImportError:
     from scripts.event_dates import is_display_date
@@ -62,6 +63,7 @@ except ImportError:
         select_mature_main_date,
         select_period_high_value_events,
         select_review_events,
+        signal_sort_key,
     )
 
 try:
@@ -2164,7 +2166,7 @@ def _quality_main_events(main_events):
 
         deduped.append(e)
 
-    deduped.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
+    deduped.sort(key=signal_sort_key, reverse=True)
     return deduped
 
 
@@ -2172,7 +2174,7 @@ def build_review_events(today_events, limit=12):
     """Build a deduped review list from the same display batch as high-value events."""
     review_events = select_review_events(today_events, limit=None)
     review_events = dedupe_display_events(review_events)
-    review_events.sort(key=lambda x: (x.get('score', 0), x.get('date', '')), reverse=True)
+    review_events.sort(key=signal_sort_key, reverse=True)
     return review_events[:limit]
 
 
@@ -2329,7 +2331,7 @@ def build_display_context():
     # 全部事件 = 通用热点 + 公司动态（筛选后），统一按时间排序
     company_events_filtered = [e for evs in company_by_company.values() for e in evs]
     all_events_for_list = list(generic_events) + company_events_filtered
-    all_events_for_list.sort(key=lambda x: (x.get('date', ''), x.get('score', 0)), reverse=True)
+    all_events_for_list.sort(key=signal_sort_key, reverse=True)
     enrich_frontend_fields(all_events_for_list)
     all_events_for_list = dedupe_display_events(all_events_for_list)
     mature_main_date, latest_data_date, latest_visible_count, batch_notice = select_mature_main_date(sorted_dates, all_events_for_list, events)
