@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-08-12T15:17:37.821318+08:00",
+  "observed_at": "2026-08-13T03:12:34.567720+08:00",
   "source_count": 3,
-  "raw_count": 46,
+  "raw_count": 47,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
@@ -21,90 +21,28 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 4,
+      "count": 0,
       "inventory_count": 14,
-      "signal_count": 1,
-      "added_count": 2,
-      "removed_count": 2,
-      "clusters": {
-        "engineering": 1,
-        "sales": 2
-      },
-      "removed_clusters": {
-        "sales": 2
-      }
+      "signal_count": 0,
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
-      "inventory_count": 32,
+      "count": 1,
+      "inventory_count": 33,
       "signal_count": 0,
-      "added_count": 2,
+      "added_count": 1,
       "removed_count": 0,
-      "clusters": {
-        "operations": 1
-      },
+      "clusters": {},
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [
-    {
-      "candidate_id": "jobs-ae850f9a46b4c864",
-      "entity_id": "stripe",
-      "entity": "Stripe",
-      "region": "全球",
-      "sector": "payment_developer_platform",
-      "source_type": "jobs_snapshot",
-      "signal_type": "function_buildout",
-      "cluster": "sales",
-      "window": "2026-W33",
-      "window_start": "2026-08-12",
-      "window_end": "2026-08-12",
-      "detected_at": "2026-08-12T15:17:37.821318+08:00",
-      "baseline_count": 14,
-      "current_count": 14,
-      "added_count": 2,
-      "removed_count": 2,
-      "clusters": {
-        "engineering": 1,
-        "sales": 2
-      },
-      "removed_clusters": {
-        "sales": 2
-      },
-      "evidence_refs": [
-        {
-          "job_id": "8108891",
-          "title": "Account Executive - SEA, Platforms (Grower)",
-          "url": "https://stripe.com/careers/listing/account-executive-sea-platforms-grower/8108891",
-          "change": "added"
-        },
-        {
-          "job_id": "8123027",
-          "title": "Account Executive, Commercial (Grower)",
-          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
-          "change": "added"
-        },
-        {
-          "job_id": "8042978",
-          "title": "Account Executive, Commercial Grower (Japanese Fluency)",
-          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower-japanese-fluency/8042978",
-          "change": "removed"
-        },
-        {
-          "job_id": "7789539",
-          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
-          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
-          "change": "removed"
-        }
-      ],
-      "status": "accumulating",
-      "rejection_reason": "insufficient_cluster_strength",
-      "promoted_event_id": ""
-    }
-  ],
+  "candidate_signals": [],
   "promoted_count": 0
 }
