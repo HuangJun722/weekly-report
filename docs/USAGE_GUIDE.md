@@ -1,8 +1,8 @@
 # 全球互联网动态情报站使用指南
 
 > 面向全球互联网项目拓展、战略、投资和产业研究场景，把非中美互联网动态整理成“客户拓展机会报告”。
-> 在线访问：[https://huangjun722.github.io/weekly-report/](https://huangjun722.github.io/weekly-report/)
-> 订阅地址：[https://huangjun722.github.io/weekly-report/feed.xml](https://huangjun722.github.io/weekly-report/feed.xml)
+> 在线访问：[https://bxs1024.github.io/weekly-report/](https://bxs1024.github.io/weekly-report/)
+> 订阅地址：[https://bxs1024.github.io/weekly-report/feed.xml](https://bxs1024.github.io/weekly-report/feed.xml)
 
 RSS 是每日摘要：推送当天全部合格事件，并在摘要中标明实际日报日期；完整分层展示仍以首页为准。
 

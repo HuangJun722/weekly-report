@@ -11,7 +11,7 @@
 - **Feed 生成**：`generate_feed.py` — 复用 `generate_html.build_display_context()` 的看板最终事件卡片，只推高价值且解释完整事件 → `docs/feed.xml`（Atom XML），供外部 CLI 订阅
 - **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
 - **部署**：GitHub Actions + GitHub Pages（`docs/` 目录）
-- **Feed 地址**：https://huangjun722.github.io/weekly-report/feed.xml
+- **Feed 地址**：https://bxs1024.github.io/weekly-report/feed.xml
 
 ## AI 分析输出格式
 

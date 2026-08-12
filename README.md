@@ -8,7 +8,7 @@
 
 ## 在线访问
 
-**https://huangjun722.github.io/weekly-report/**
+**https://bxs1024.github.io/weekly-report/**
 
 每天北京时间 02:00 早采、09:00 补采。02:00 覆盖亚太/欧洲和已有更新，09:00 补欧美晚发内容；采集时点只代表 workflow 运行时间，页面展示仍按事件日期和成熟批次计算。
 
@@ -27,7 +27,7 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/HuangJun722/weekly-report.git
+git clone https://github.com/bxs1024/weekly-report.git
 cd weekly-report
 ```
 

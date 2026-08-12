@@ -10,7 +10,7 @@ from view_selectors import select_feed_events
 
 context = build_display_context()
 feed_date = context['main_date']
-SITE_URL = 'https://huangjun722.github.io/weekly-report/'
+SITE_URL = 'https://bxs1024.github.io/weekly-report/'
 
 
 def text_value(value):

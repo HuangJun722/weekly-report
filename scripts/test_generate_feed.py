@@ -12,7 +12,7 @@ def test_generated_feed_is_valid_atom():
     assert entries
     alternate = root.find("{http://www.w3.org/2005/Atom}link[@rel='alternate']")
     assert alternate is not None
-    assert alternate.get('href') == 'https://huangjun722.github.io/weekly-report/'
+    assert alternate.get('href') == 'https://bxs1024.github.io/weekly-report/'
     for entry in entries:
         link = entry.find('{http://www.w3.org/2005/Atom}link')
         assert link is not None

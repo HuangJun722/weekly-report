@@ -1,6 +1,6 @@
-const REPO_OWNER = 'HuangJun722';
+const REPO_OWNER = 'bxs1024';
 const REPO_NAME = 'weekly-report';
-const DEFAULT_ALLOWED_ORIGINS = ['https://huangjun722.github.io'];
+const DEFAULT_ALLOWED_ORIGINS = ['https://bxs1024.github.io'];
 const MAX_BODY_BYTES = 8192;
 const MAX_PER_HOUR = 5;
 
