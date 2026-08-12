@@ -1,149 +1,103 @@
 {
-  "observed_at": "2026-08-11T17:09:39.811008+08:00",
+  "observed_at": "2026-08-12T15:17:37.821318+08:00",
   "source_count": 3,
-  "raw_count": 62,
+  "raw_count": 46,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
-      "status": "ok",
-      "fetch_status": "success",
-      "count": 12,
-      "inventory_count": 18,
-      "signal_count": 1,
-      "added_count": 5,
-      "removed_count": 7,
-      "clusters": {
-        "compliance": 1,
-        "engineering": 1
-      },
-      "removed_clusters": {
-        "engineering": 5
-      }
+      "status": "failed",
+      "fetch_status": "failed",
+      "count": 0,
+      "inventory_count": 0,
+      "signal_count": 0,
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
+      "count": 4,
       "inventory_count": 14,
-      "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
-      "clusters": {},
-      "removed_clusters": {}
+      "signal_count": 1,
+      "added_count": 2,
+      "removed_count": 2,
+      "clusters": {
+        "engineering": 1,
+        "sales": 2
+      },
+      "removed_clusters": {
+        "sales": 2
+      }
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
-      "inventory_count": 30,
+      "count": 2,
+      "inventory_count": 32,
       "signal_count": 0,
-      "added_count": 0,
+      "added_count": 2,
       "removed_count": 0,
-      "clusters": {},
+      "clusters": {
+        "operations": 1
+      },
       "removed_clusters": {}
     }
   },
   "candidate_signals": [
     {
-      "candidate_id": "jobs-441d4184ca18bd2a",
-      "entity_id": "grab",
-      "entity": "Grab",
-      "region": "亚太",
-      "sector": "mobility_payment",
+      "candidate_id": "jobs-ae850f9a46b4c864",
+      "entity_id": "stripe",
+      "entity": "Stripe",
+      "region": "全球",
+      "sector": "payment_developer_platform",
       "source_type": "jobs_snapshot",
       "signal_type": "function_buildout",
-      "cluster": "compliance",
+      "cluster": "sales",
       "window": "2026-W33",
-      "window_start": "2026-08-11",
-      "window_end": "2026-08-11",
-      "detected_at": "2026-08-11T17:09:39.811008+08:00",
-      "baseline_count": 20,
-      "current_count": 18,
-      "added_count": 5,
-      "removed_count": 7,
+      "window_start": "2026-08-12",
+      "window_end": "2026-08-12",
+      "detected_at": "2026-08-12T15:17:37.821318+08:00",
+      "baseline_count": 14,
+      "current_count": 14,
+      "added_count": 2,
+      "removed_count": 2,
       "clusters": {
-        "compliance": 1,
-        "engineering": 1
+        "engineering": 1,
+        "sales": 2
       },
       "removed_clusters": {
-        "engineering": 5
+        "sales": 2
       },
       "evidence_refs": [
         {
-          "job_id": "744000142805839",
-          "title": "Ethic & Compliance Associate Grab Rental",
-          "url": "https://www.grab.careers/en/jobs/744000142805839/ethic-compliance-associate-grab-rental/",
+          "job_id": "8108891",
+          "title": "Account Executive - SEA, Platforms (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-sea-platforms-grower/8108891",
           "change": "added"
         },
         {
-          "job_id": "744000142803899",
-          "title": "Strategic Account Management Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000142803899/strategic-account-management-specialist/",
+          "job_id": "8123027",
+          "title": "Account Executive, Commercial (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
           "change": "added"
         },
         {
-          "job_id": "744000142800280",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000142800280/senior-software-engineer-backend/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000142793579",
-          "title": "Manager, Deliveries Marketplace Strategy",
-          "url": "https://www.grab.careers/en/jobs/744000142793579/manager-deliveries-marketplace-strategy/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000142784079",
-          "title": "Associate, Mobility & Deliveries Audit",
-          "url": "https://www.grab.careers/en/jobs/744000142784079/associate-mobility-deliveries-audit/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000142657394",
-          "title": "Software Engineer, iOS",
-          "url": "https://www.grab.careers/en/jobs/744000142657394/software-engineer-ios/",
+          "job_id": "8042978",
+          "title": "Account Executive, Commercial Grower (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower-japanese-fluency/8042978",
           "change": "removed"
         },
         {
-          "job_id": "744000142204054",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000142204054/senior-software-engineer-backend/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142054879",
-          "title": "Senior Software Engineer, Planning",
-          "url": "https://www.grab.careers/en/jobs/744000142054879/senior-software-engineer-planning/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142054639",
-          "title": "Senior Mechanical Engineer, DFM",
-          "url": "https://www.grab.careers/en/jobs/744000142054639/senior-mechanical-engineer-dfm/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142050569",
-          "title": "Lead Product Marketing Manager",
-          "url": "https://www.grab.careers/en/jobs/744000142050569/lead-product-marketing-manager/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142046259",
-          "title": "Senior Data Scientist (Country and Marketing Analytics)",
-          "url": "https://www.grab.careers/en/jobs/744000142046259/senior-data-scientist-country-and-marketing-analytics/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142045609",
-          "title": "Lead Software Engineer, Backend - Service Mesh",
-          "url": "https://www.grab.careers/en/jobs/744000142045609/lead-software-engineer-backend-service-mesh/",
+          "job_id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
           "change": "removed"
         }
       ],

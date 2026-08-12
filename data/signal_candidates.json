@@ -1,7 +1,61 @@
 {
   "version": 1,
-  "generated_at": "2026-08-11T17:09:39.811008+08:00",
+  "generated_at": "2026-08-12T15:17:37.821318+08:00",
   "candidates": [
+    {
+      "candidate_id": "jobs-ae850f9a46b4c864",
+      "entity_id": "stripe",
+      "entity": "Stripe",
+      "region": "全球",
+      "sector": "payment_developer_platform",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "sales",
+      "window": "2026-W33",
+      "window_start": "2026-08-12",
+      "window_end": "2026-08-12",
+      "detected_at": "2026-08-12T15:17:37.821318+08:00",
+      "baseline_count": 14,
+      "current_count": 14,
+      "added_count": 2,
+      "removed_count": 2,
+      "clusters": {
+        "engineering": 1,
+        "sales": 2
+      },
+      "removed_clusters": {
+        "sales": 2
+      },
+      "evidence_refs": [
+        {
+          "job_id": "8108891",
+          "title": "Account Executive - SEA, Platforms (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-sea-platforms-grower/8108891",
+          "change": "added"
+        },
+        {
+          "job_id": "8123027",
+          "title": "Account Executive, Commercial (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
+          "change": "added"
+        },
+        {
+          "job_id": "8042978",
+          "title": "Account Executive, Commercial Grower (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower-japanese-fluency/8042978",
+          "change": "removed"
+        },
+        {
+          "job_id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    },
     {
       "candidate_id": "jobs-441d4184ca18bd2a",
       "entity_id": "grab",
