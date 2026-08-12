@@ -405,8 +405,8 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
         </div>
       </div>
       <div class="m-issue">
-        <div class="m-vol">{{ vol_label }}</div>
-        <div class="m-line">{{ cn_date }}</div>
+        <div class="m-vol" id="volLabel">{{ vol_label }}</div>
+        <div class="m-line" id="cnDate">{{ cn_date }}</div>
         <div class="m-line"><span class="m-live"></span>{{ update_time }}</div>
       </div>
     </div>
@@ -955,6 +955,26 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
 </div>
 
 <script>
+/* 顶部日期实时化：打开页面时显示当天日期（北京时间），
+   与「最新采集/成熟批次」解耦，避免静态页面日期滞后造成误解 */
+(function(){
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  var weeks = ['日','一','二','三','四','五','六'];
+  function render(){
+    var now = new Date();
+    var bj = new Date(now.getTime() + (now.getTimezoneOffset() + 480) * 60000);
+    var y = bj.getFullYear(), mo = bj.getMonth() + 1, d = bj.getDate();
+    var vol = document.getElementById('volLabel');
+    if (vol) vol.textContent = 'VOL.' + y + '-' + pad(mo) + '-' + pad(d);
+    var cn = document.getElementById('cnDate');
+    if (cn) cn.textContent = y + '年' + mo + '月' + d + '日 星期' + weeks[bj.getDay()];
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
 /* 主导航 tab 切换（带 hash 路由，兼容旧链接 #tab-xxx） */
 function tabNameFromHash(hash) {
   var m = (hash || '').match(/^#tab-(today|weekly|monthly|companies|all|updates|feedback)$/);

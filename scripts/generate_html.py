@@ -1064,6 +1064,11 @@ def _title_subject_key(title):
 
 
 def _display_subject_key(event):
+    # 优先从标题提取主体：company_name 粒度粗（Kakao Pay 与 Kakao Bank 都标为 Kakao），
+    # 标题能区分到子公司/具体实体，避免展示层误合并不同事件。
+    key = _title_subject_key(event.get('title', ''))
+    if key:
+        return key
     key = _normalize_display_subject(event.get('company_name') or '')
     if key:
         return key
@@ -1072,18 +1077,45 @@ def _display_subject_key(event):
         key = _normalize_display_subject(str(companies[0]))
         if key:
             return key
-    return _title_subject_key(event.get('title', ''))
+    return ''
 
 
 def _normalized_title_key(title):
     return re.sub(r'[^a-z0-9\u4e00-\u9fff]+', '', (title or '').lower())
 
 
+def _nearby_days(date_a, date_b, window=3):
+    if not date_a or not date_b:
+        return date_a == date_b
+    try:
+        gap = abs((datetime.strptime(date_a, '%Y-%m-%d')
+                   - datetime.strptime(date_b, '%Y-%m-%d')).days)
+    except ValueError:
+        return False
+    return gap <= window
+
+
+def _title_similarity(a, b):
+    ta = _title_tokens(a or '')
+    tb = _title_tokens(b or '')
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+def _title_tokens(title):
+    words = re.findall(r'[a-z0-9]+', (title or '').lower())
+    return set(w for w in words if len(w) > 2)
+
+
 def dedupe_display_events(events):
-    """展示前按同日、同主体、同类型兜底去重，避免跨来源改写重复占据首页。"""
+    """展示前按同日、同主体、同类型兜底去重；财报/并购/融资类事件相邻 3 天内
+    且标题相似度 ≥0.3 时合并，避免同一事件被多家媒体在相邻日期反复占据列表。
+    strategy 仅同日合并，防止误删连续战略动作。低相似度（标题 token 差异大的同事件
+    多源报道，如 Square Enix 财报）由采集层跨天去重负责，此处不做。"""
     kept = []
     seen_titles = set()
-    seen_events = set()
+    seen_semantic = []  # [(date, event_type, subject_key, title)]
     for event in events:
         title_key = _normalized_title_key(event.get('title', ''))
         if title_key and title_key in seen_titles:
@@ -1094,11 +1126,21 @@ def dedupe_display_events(events):
         date_key = (event.get('date') or '')[:10]
         event_type = (event.get('event_types') or ['other'])[0]
         subject_key = _display_subject_key(event)
-        semantic_key = (date_key, event_type, subject_key)
         if subject_key and event_type in {'funding', 'ma', 'earnings', 'strategy'}:
-            if semantic_key in seen_events:
+            dup = False
+            for seen_date, seen_type, seen_subject, seen_title in seen_semantic:
+                if seen_type != event_type or seen_subject != subject_key:
+                    continue
+                if event_type == 'strategy':
+                    same_window = (seen_date == date_key)
+                else:
+                    same_window = _nearby_days(seen_date, date_key, window=3)
+                if same_window and _title_similarity(event.get('title', ''), seen_title) >= 0.3:
+                    dup = True
+                    break
+            if dup:
                 continue
-            seen_events.add(semantic_key)
+            seen_semantic.append((date_key, event_type, subject_key, event.get('title', '')))
         kept.append(event)
     return kept
 

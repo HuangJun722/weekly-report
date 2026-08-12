@@ -5,6 +5,7 @@ It verifies the collection metrics -> stored-data -> selector -> display contrac
 
 import argparse
 import json
+import os
 import re
 import sys
 from collections import Counter
@@ -488,6 +489,28 @@ def collect_quick_failures(report, args):
     return failures
 
 
+def check_updates_log_sync():
+    """防更新日志断档：site_updates.json 最新版本若未出现在 docs/index.html，说明页面未重新生成。"""
+    failures = []
+    try:
+        if not os.path.exists('data/site_updates.json') or not os.path.exists('docs/index.html'):
+            return failures
+        with open('data/site_updates.json', encoding='utf-8') as f:
+            updates = json.load(f)
+        if not updates:
+            return failures
+        latest_version = updates[0].get('version', '')
+        if latest_version:
+            with open('docs/index.html', encoding='utf-8') as f:
+                if latest_version not in f.read():
+                    failures.append(
+                        f"更新日志断档：site_updates.json 最新版本 {latest_version} 未出现在 docs/index.html，页面未重新生成"
+                    )
+    except Exception as e:  # noqa: BLE001
+        failures.append(f"更新日志一致性检查失败: {e}")
+    return failures
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--quick', action='store_true', help='Read persisted health facts without rebuilding reports')
@@ -514,6 +537,7 @@ def main():
         report = build_health_report(args.days)
         print_report(report)
         failures = collect_failures(report, args)
+    failures += check_updates_log_sync()
     for failure in failures:
         print(f"WARNING: {failure}")
     if args.strict and failures:

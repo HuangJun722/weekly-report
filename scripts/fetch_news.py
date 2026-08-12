@@ -938,10 +938,88 @@ def _event_subject_key(item):
 
 def _has_funding_signal(title):
     t = (title or '').lower()
+    # 融资轮次只认 Series A-E，避免 "RPG Series"、"TV series" 等非融资语境误触发
+    if re.search(r'\bseries\s+[a-e]\b', t):
+        return True
     return any(k in t for k in [
-        'raise', 'raises', 'raised', 'funding', 'series ', 'seed', 'valuation',
+        'raise', 'raises', 'raised', 'funding', 'seed', 'valuation',
         'valued', 'investment', 'secures', 'closes', 'bags', 'lands', '$', '€',
     ])
+
+
+_EARNINGS_LEAD_VERBS = {
+    'sees', 'reports', 'reported', 'posts', 'posted', 'logs', 'records',
+    'announces', 'announced', 'releases', 'released', 'delivers', 'delivered',
+    'tops', 'beats', 'beat', 'misses', 'missed', 'flags', 'flagships',
+    'soars', 'soared', 'rises', 'rose', 'risen', 'rises', 'jumps', 'jumped',
+    'surges', 'surged', 'sinks', 'sank', 'slides', 'slid', 'slips', 'slumped',
+    'falls', 'fell', 'falls', 'drops', 'dropped', 'declines', 'declined',
+    'slashes', 'slashed', 'cuts', 'cut', 'backs', 'backed', 'raises', 'raised',
+    'ups', 'updates', 'lifts', 'lifted', 'gains', 'gained', 'extends', 'extended',
+}
+
+_EARNINGS_LEAD_QUARTER = {
+    'q1', 'q2', 'q3', 'q4', 'quarter', 'quarterly', 'annual', 'first',
+    'second', 'third', 'fourth', 'fiscal', 'fy',
+}
+
+
+def _earnings_lead_token(title, company):
+    """标题若以公司名开头，返回紧跟其后的首个 token；否则返回 None。
+    用于识别「公司 + 财报动词/季度词」的标准财报报道标题，
+    避免把子公司名（Kakao Pay）、公司后缀（Inc.）或前置词误当财报主体。"""
+    t = re.sub(r'[^a-z0-9一-鿿]+', ' ', (title or '').lower())
+    co = (company or '').lower().strip()
+    if not co or not t.startswith(co):
+        return None
+    rest = t[len(co):].strip()
+    if not rest:
+        return None
+    return rest.split()[0]
+
+
+def _is_report_lead_token(token):
+    if token in _EARNINGS_LEAD_VERBS:
+        return True
+    if token in _EARNINGS_LEAD_QUARTER:
+        return True
+    return False
+
+
+def _title_contains_company(ev):
+    """标题中明确提到公司名，防止 company_name 误标（如 ASTS 新闻被记到 Rakuten 名下）。"""
+    co = ev.get('company_name', '')
+    title = (ev.get('title', '') or '').lower()
+    if not co or not title:
+        return False
+    return co.lower() in title
+
+
+_FINANCIAL_WORDS = (
+    'profit', 'earnings', 'revenue', 'quarter', 'result', 'financial',
+    'fiscal', 'income', 'operating', '财报', '营收', '净利', '净亏',
+)
+
+
+def _has_financial_word(title):
+    t = (title or '').lower()
+    return any(w in t for w in _FINANCIAL_WORDS)
+
+
+_FINANCIAL_NEGATIVE_WORDS = (
+    'down', 'drop', 'falls', 'fall', 'fell', 'loss', 'losses', 'miss',
+    'misses', 'decline', 'declines', 'plunge', 'plunges', 'slump', '下滑', '下降', '亏损',
+)
+
+
+def _has_negative_financial_word(title):
+    t = (title or '').lower()
+    return any(w in t for w in _FINANCIAL_NEGATIVE_WORDS)
+
+
+def _financial_direction_consistent(a, b):
+    """财报方向一致才判同：一条「利润创新高」一条「净利大跌」方向相反，是不同事件。"""
+    return _has_negative_financial_word(a.get('title', '')) == _has_negative_financial_word(b.get('title', ''))
 
 
 def _get_company_aliases(cfg_or_name):
@@ -1050,12 +1128,20 @@ def _is_same_event(candidate, existing):
 
     date_a = candidate.get('article_date') or candidate.get('date') or ''
     date_b = existing.get('article_date') or existing.get('date') or ''
-    if date_a and date_b and date_a != date_b:
+    adjacent = True
+    if date_a and date_b:
+        try:
+            gap = abs((datetime.strptime(date_a[:10], '%Y-%m-%d')
+                       - datetime.strptime(date_b[:10], '%Y-%m-%d')).days)
+        except ValueError:
+            gap = 999
+        adjacent = gap <= 3
+    if not adjacent:
         return False
 
     company_a = candidate.get('company_name', '')
     company_b = existing.get('company_name', '')
-    if company_a and company_b and company_a != company_b:
+    if company_a and company_b and company_a.lower() != company_b.lower():
         return False
 
     sim = _event_similarity(candidate, existing)
@@ -1064,10 +1150,27 @@ def _is_same_event(candidate, existing):
     subject_a = _event_subject_key(candidate)
     subject_b = _event_subject_key(existing)
     if subject_a and subject_a == subject_b and event_type_a == event_type_b:
-        if event_type_a == 'funding' and _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', '')):
-            return True
+        if event_type_a == 'funding':
+            # 有明确公司名时低相似度即可并；无公司名时 subject 靠标题提取不可靠（如
+            # "Hush Security" 与 "Onyx Security" 都提成 "security"），须更高相似度防误并。
+            if company_a and company_b:
+                return sim >= 0.25 and _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', ''))
+            return sim >= 0.5 and _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', ''))
         if event_type_a in {'ma', 'earnings'}:
-            return sim >= 0.18
+            # 财报/并购类跨天重复：标题必须以公司名开头且紧跟财报报道动词或季度词
+            # （"Square Enix sees.../reports.../Q1..."），排除子公司名（Kakao Pay/Bank）、
+            # 公司后缀（Inc.）和前置词（Does Amazon or MercadoLibre...）导致的误并。
+            lead_a = _earnings_lead_token(candidate.get('title', ''), company_a)
+            lead_b = _earnings_lead_token(existing.get('title', ''), company_b)
+            if not (lead_a and lead_b):
+                return False
+            if not (_is_report_lead_token(lead_a) and _is_report_lead_token(lead_b)):
+                return False
+            if not (_has_financial_word(candidate.get('title', '')) and _has_financial_word(existing.get('title', ''))):
+                return False
+            if not _financial_direction_consistent(candidate, existing):
+                return False
+            return True
         if event_type_a == 'strategy':
             return sim >= 0.42
 
@@ -1075,9 +1178,37 @@ def _is_same_event(candidate, existing):
         return sim >= 0.5
     return sim >= 0.72
 
-# ============================================================
-# HTTP
-# ============================================================
+
+def _event_info_score(event):
+    """估算事件信息完整度：标题越具体、解释字段越全，越值得保留展示。"""
+    score = len(_title_tokens(event.get('title', ''))) * 2
+    if event.get('content_overview'):
+        score += max(0, len(str(event['content_overview'])) // 20)
+    if event.get('summary_short'):
+        score += 1
+    if event.get('reason'):
+        score += 1
+    if event.get('insight_label'):
+        score += 1
+    return score
+
+
+def _is_more_complete(candidate, existing):
+    """candidate 比已入库事件信息更完整时返回 True，用于跨批次合并时升级旧事件。"""
+    return _event_info_score(candidate) > _event_info_score(existing)
+
+
+def _upgrade_event(existing, new):
+    """跨天合并时，用信息更完整的新事件覆盖已入库事件的可展示字段，保留原日期归属。"""
+    for field in ('title', 'url', 'content_overview', 'summary_short', 'reason',
+                  'impact', 'insight_label', 'trend_topic'):
+        if new.get(field):
+            existing[field] = new[field]
+    existing.setdefault('merged_from', [])
+    if new.get('url') and new['url'] not in existing['merged_from']:
+        existing['merged_from'].append(new['url'])
+
+
 
 # --- 缓存（仅用于单次运行内去重，不跨天保留）---
 CACHE_DIR = Path('data/.cache')
@@ -1440,6 +1571,7 @@ OFFICIAL_SOURCE_SKIP_URL_PATTERNS = [
     'category=', '/about', '/products/', '/investor$', '/investors/$',
     '/quarterlyresults', '/annualreports', '/financial-information',
     '/corporategovernance', '/current-reports', '#results-center',
+    '/sustainability/', '/financial-reports', '/presentations', '/reports/',
 ]
 
 OFFICIAL_SOURCE_NAV_TITLES = {
@@ -1447,7 +1579,8 @@ OFFICIAL_SOURCE_NAV_TITLES = {
     'financial information', 'current reports', 'main/about kaspi.kz',
     'kaspi.kz ecosystem', 'annual reports', 'corporate governance',
     'all stories business consumers & drivers people social impact & safety',
-    'download grab media content',
+    'download grab media content', 'sustainability reports',
+    'presentations and reports', 'sustainability',
 }
 
 OFFICIAL_SOURCE_NAV_PREFIXES = (
@@ -3549,15 +3682,17 @@ def main():
     # 同一批次抓到的文章可能有不同的发布日期
     # 全局去重：按事件级指纹 + URL 双重控制，避免多次运行重复追加
     existing_events = [e for events in all_events.values() for e in events]
-    existing_urls = {e['url'] for e in existing_events if e.get('url')}
     pubdate_ok, pubdate_fallback = 0, 0
     added_events = []
     for event in today_events:
         apply_event_date_metadata(event, fallback_observed_at=run_started)
-        if event['url'] in existing_urls or any(_is_same_event(event, existing) for existing in existing_events):
-            continue  # 跨批次去重
-        if event['url']:
-            existing_urls.add(event['url'])  # 同批次内也去重
+        dup = next((e for e in existing_events
+                    if (event.get('url') and e.get('url') == event['url']) or _is_same_event(event, e)), None)
+        if dup is not None:
+            # 跨批次去重：重复事件按信息完整度合并，新报道更具体时升级已入库事件
+            if _is_more_complete(event, dup):
+                _upgrade_event(dup, event)
+            continue
         existing_events.append(event)
         date_key = event.get('date') or today
         if event.get('published_at'):
