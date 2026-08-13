@@ -1973,7 +1973,7 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         def _signal_worth(event):
             """一条事件是否值得作为「最近值得关注动态」展示（排除平凡信号）。"""
             signal = event.get('insight_label') or '观察'
-            return signal not in {'观察', '背景补充', '其他'}
+            return signal not in {'观察', '背景补充', '其他', '待分析'}
 
         def _attention_sort_key(event):
             """按 事件重要性 × 公司权重 × 时间衰减 排序，取值得关注的那条。"""
@@ -2001,7 +2001,7 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         _featured_title = _pick_cn_title(latest)
         latest_title = clean_display_title(_featured_title or '暂无近期事件')
         signal = latest.get('insight_label') or '观察'
-        if signal in {'背景补充', '其他'}:
+        if signal in {'背景补充', '其他', '待分析'}:
             signal = '观察'
         observation = ledger_by_entity.get(company.get('name')) or {}
         point_rows = observation.get('observation_points') or []

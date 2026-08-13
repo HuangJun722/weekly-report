@@ -502,6 +502,12 @@ def detect_event_types(title):
         '調査', 'レポート', 'ランキング', '市場規模', '市場シェア',
         '予測', '導入率', 'アンケート',
     ])
+    # 排除"据报道"语境：report/reported/reporter 或 "X: Report" 结尾是媒体报道/记者手记，
+    # 不是行业研报本体（如 "Cursor...: Report"、"Reporter's Notebook"、"Nvidia reportedly..."）。
+    reported_ctx = bool(re.search(r'\b(reportedly|reported|reporter)\b', t)) \
+        or bool(re.search(r'(:\s*report|\|\s*report|-\s*report)\b', t))
+    if is_report and reported_ctx:
+        is_report = False
     if is_report:
         types.append('industry_report')
 
@@ -877,16 +883,6 @@ def _title_tokens(title):
     return tokens
 
 
-def _title_fingerprint(title):
-    core = _normalize_text(title)
-    if not core:
-        return ''
-    tokens = _title_tokens(title)
-    if not tokens:
-        return core
-    return ' '.join(tokens[:10])
-
-
 def _normalize_event_subject(subject):
     tokens = []
     for token in _normalize_text(subject).split():
@@ -934,76 +930,6 @@ def _event_subject_key(item):
         if key:
             return key
     return _title_subject_key(item.get('title', ''))
-
-
-def _has_funding_signal(title):
-    t = (title or '').lower()
-    # 融资轮次只认 Series A-E，避免 "RPG Series"、"TV series" 等非融资语境误触发
-    if re.search(r'\bseries\s+[a-e]\b', t):
-        return True
-    return any(k in t for k in [
-        'raise', 'raises', 'raised', 'funding', 'seed', 'valuation',
-        'valued', 'investment', 'secures', 'closes', 'bags', 'lands', '$', '€',
-    ])
-
-
-_EARNINGS_LEAD_VERBS = {
-    'sees', 'reports', 'reported', 'posts', 'posted', 'logs', 'records',
-    'announces', 'announced', 'releases', 'released', 'delivers', 'delivered',
-    'tops', 'beats', 'beat', 'misses', 'missed', 'flags', 'flagships',
-    'soars', 'soared', 'rises', 'rose', 'risen', 'rises', 'jumps', 'jumped',
-    'surges', 'surged', 'sinks', 'sank', 'slides', 'slid', 'slips', 'slumped',
-    'falls', 'fell', 'falls', 'drops', 'dropped', 'declines', 'declined',
-    'slashes', 'slashed', 'cuts', 'cut', 'backs', 'backed', 'raises', 'raised',
-    'ups', 'updates', 'lifts', 'lifted', 'gains', 'gained', 'extends', 'extended',
-}
-
-_EARNINGS_LEAD_QUARTER = {
-    'q1', 'q2', 'q3', 'q4', 'quarter', 'quarterly', 'annual', 'first',
-    'second', 'third', 'fourth', 'fiscal', 'fy',
-}
-
-
-def _earnings_lead_token(title, company):
-    """标题若以公司名开头，返回紧跟其后的首个 token；否则返回 None。
-    用于识别「公司 + 财报动词/季度词」的标准财报报道标题，
-    避免把子公司名（Kakao Pay）、公司后缀（Inc.）或前置词误当财报主体。"""
-    t = re.sub(r'[^a-z0-9一-鿿]+', ' ', (title or '').lower())
-    co = (company or '').lower().strip()
-    if not co or not t.startswith(co):
-        return None
-    rest = t[len(co):].strip()
-    if not rest:
-        return None
-    return rest.split()[0]
-
-
-def _is_report_lead_token(token):
-    if token in _EARNINGS_LEAD_VERBS:
-        return True
-    if token in _EARNINGS_LEAD_QUARTER:
-        return True
-    return False
-
-
-def _title_contains_company(ev):
-    """标题中明确提到公司名，防止 company_name 误标（如 ASTS 新闻被记到 Rakuten 名下）。"""
-    co = ev.get('company_name', '')
-    title = (ev.get('title', '') or '').lower()
-    if not co or not title:
-        return False
-    return co.lower() in title
-
-
-_FINANCIAL_WORDS = (
-    'profit', 'earnings', 'revenue', 'quarter', 'result', 'financial',
-    'fiscal', 'income', 'operating', '财报', '营收', '净利', '净亏',
-)
-
-
-def _has_financial_word(title):
-    t = (title or '').lower()
-    return any(w in t for w in _FINANCIAL_WORDS)
 
 
 _FINANCIAL_NEGATIVE_WORDS = (
@@ -1107,76 +1033,170 @@ def _event_similarity(a, b):
     return len(ta & tb) / len(ta | tb)
 
 
-def _event_signature(item):
+# 公司名后缀归一：Sea Limited → sea、Square Enix Holdings → square enix
+_COMPANY_KEY_SUFFIXES = (
+    'inc', 'incorporated', 'limited', 'ltd', 'corporation', 'corp',
+    'holdings', 'technologies', 'technology', 'plc', 'ag',
+)
+
+# 与常见英文词冲突的公司别名：子串/词边界匹配会把 "credit line"、"SeABank"、
+# "to grab share" 等普通词误判为公司，禁止用它们做别名对齐（公司名来源不受影响）。
+_GENERIC_ALIAS_TOKENS = {
+    'line', 'sea', 'noon', 'grab', 'stc', 'jd', 'mo', 'tab', 'tabby', 'allegro',
+}
+
+# 事实性事件类型：同一实体同日只可能有一件，直接以实体键合并。
+# strategy/industry_report 等允许一实体一日多事，仍走标题相似度，避免误并。
+_SINGULAR_EVENT_TYPES = {'funding', 'ma', 'earnings'}
+
+_EVENT_TYPE_PRIORITY = (
+    'funding', 'ma', 'earnings', 'industry_report', 'model_release',
+    'regional_policy', 'strategy', 'other',
+)
+
+
+def _normalize_company_key(name):
+    """公司实体键：去公司后缀、归一为小写词序列，用于跨报道对齐。"""
+    if not name:
+        return ''
+    norm = _normalize_text(str(name))
+    if not norm:
+        return ''
+    tokens = norm.split()
+    while tokens and tokens[-1] in _COMPANY_KEY_SUFFIXES:
+        tokens.pop()
+    if not tokens:
+        tokens = norm.split()[:1]
+    return ' '.join(tokens[:4])
+
+
+def _entity_key_info(item):
     """
-    生成事件级指纹，优先对齐“同公司/同日期/同主题”的跨媒体报道，
-    不再依赖 Google News 跳转 URL。
+    提取事件实体键，返回 (entity_key, source)。
+    source 标识键的可靠度：
+      'company' — company_name 权威（监控公司）
+      'alias'   — 标题命中已知公司别名（补 company_name 缺失的缺口，如 Jumia 融资第二条）
+      'title'   — 标题动词提取（弱信号，合并时需相似度防误并）
     """
-    title_fp = _title_fingerprint(item.get('title', ''))
-    company = _normalize_text(item.get('company_name', ''))
-    date_key = item.get('article_date') or item.get('date') or ''
-    event_type = (item.get('event_types') or ['other'])[0]
-    return '|'.join([date_key, company, event_type, title_fp])
+    company = item.get('company_name') or ''
+    key = _normalize_company_key(company)
+    if key:
+        return key, 'company'
+    title_lower = (item.get('title') or '').lower()
+    best_alias = ''
+    for aliases in COMPANY_ALIASES.values():
+        for alias in aliases:
+            a = str(alias).lower()
+            if len(a) < 3 or a in _GENERIC_ALIAS_TOKENS:
+                continue
+            if len(a) > len(best_alias) and re.search(r'\b' + re.escape(a) + r'\b', title_lower):
+                best_alias = a
+    if best_alias:
+        return _normalize_company_key(best_alias), 'alias'
+    subj = _event_subject_key(item)
+    if subj:
+        return subj, 'title'
+    return '', 'none'
+
+
+def _primary_event_type(item):
+    """事件类型主键：多类型归一为优先级最高的那个（Jumia funding+earnings → funding）。"""
+    types = item.get('event_types') or ['other']
+    for t in _EVENT_TYPE_PRIORITY:
+        if t in types:
+            return t
+    return types[0] if types else 'other'
+
+
+# 事件锚点词：同公司同日不同文章是否指向同一事件（财报/融资/并购）
+_FINANCIAL_ANCHOR_WORDS = (
+    'revenue', 'earnings', 'profit', 'quarter', 'quarterly', 'result',
+    'financial', 'fiscal', 'income', 'operating', 'net income',
+    '财报', '营收', '净利', '净亏', '決算', '営業利益', '純利益', '増収', '減益',
+)
+_FUNDING_SIGNAL_WORDS = (
+    'raise', 'raises', 'raised', 'funding', 'seed', 'valuation', 'valued',
+    'investment', 'secures', 'secured', 'closes', 'closed', 'bags', 'landed',
+    '$', '€', '£', 'series ', 'unicorn', '融资', '調達', '出資', '億円',
+)
+_MA_SIGNAL_WORDS = (
+    'acquires', 'acquired', 'acquisition', 'merger', 'merges', 'merging',
+    'buys', 'buying', 'purchase', 'takeover', '收购', '并购', '買収', '合併',
+)
+
+
+def _has_financial_anchor(title):
+    t = (title or '').lower()
+    if re.search(r'\bq[1-4]\b', t):
+        return True
+    return any(w in t for w in _FINANCIAL_ANCHOR_WORDS)
+
+
+def _has_funding_signal(title):
+    t = (title or '').lower()
+    if re.search(r'\bseries\s+[a-e]\b', t):
+        return True
+    return any(w in t for w in _FUNDING_SIGNAL_WORDS)
+
+
+def _has_ma_signal(title):
+    t = (title or '').lower()
+    return any(w in t for w in _MA_SIGNAL_WORDS)
+
+
+def _dates_adjacent(a, b, window_days=3):
+    date_a = a.get('article_date') or a.get('date') or ''
+    date_b = b.get('article_date') or b.get('date') or ''
+    if not date_a or not date_b:
+        return True
+    try:
+        gap = abs((datetime.strptime(date_a[:10], '%Y-%m-%d')
+                   - datetime.strptime(date_b[:10], '%Y-%m-%d')).days)
+    except ValueError:
+        return False
+    return gap <= window_days
 
 
 def _is_same_event(candidate, existing):
     if candidate.get('url') and candidate.get('url') == existing.get('url'):
         return True
 
-    if _event_signature(candidate) == _event_signature(existing):
-        return True
-
-    date_a = candidate.get('article_date') or candidate.get('date') or ''
-    date_b = existing.get('article_date') or existing.get('date') or ''
-    adjacent = True
-    if date_a and date_b:
-        try:
-            gap = abs((datetime.strptime(date_a[:10], '%Y-%m-%d')
-                       - datetime.strptime(date_b[:10], '%Y-%m-%d')).days)
-        except ValueError:
-            gap = 999
-        adjacent = gap <= 3
-    if not adjacent:
+    if not _dates_adjacent(candidate, existing):
         return False
 
-    company_a = candidate.get('company_name', '')
-    company_b = existing.get('company_name', '')
-    if company_a and company_b and company_a.lower() != company_b.lower():
-        return False
+    type_a = _primary_event_type(candidate)
+    type_b = _primary_event_type(existing)
+    key_a, src_a = _entity_key_info(candidate)
+    key_b, src_b = _entity_key_info(existing)
 
-    sim = _event_similarity(candidate, existing)
-    event_type_a = (candidate.get('event_types') or ['other'])[0]
-    event_type_b = (existing.get('event_types') or ['other'])[0]
-    subject_a = _event_subject_key(candidate)
-    subject_b = _event_subject_key(existing)
-    if subject_a and subject_a == subject_b and event_type_a == event_type_b:
-        if event_type_a == 'funding':
-            # 有明确公司名时低相似度即可并；无公司名时 subject 靠标题提取不可靠（如
-            # "Hush Security" 与 "Onyx Security" 都提成 "security"），须更高相似度防误并。
-            if company_a and company_b:
-                return sim >= 0.25 and _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', ''))
-            return sim >= 0.5 and _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', ''))
-        if event_type_a in {'ma', 'earnings'}:
-            # 财报/并购类跨天重复：标题必须以公司名开头且紧跟财报报道动词或季度词
-            # （"Square Enix sees.../reports.../Q1..."），排除子公司名（Kakao Pay/Bank）、
-            # 公司后缀（Inc.）和前置词（Does Amazon or MercadoLibre...）导致的误并。
-            lead_a = _earnings_lead_token(candidate.get('title', ''), company_a)
-            lead_b = _earnings_lead_token(existing.get('title', ''), company_b)
-            if not (lead_a and lead_b):
+    # 实体键 + 类型主键一致时，按类型决定合并强度
+    if type_a == type_b and key_a and key_a == key_b:
+        if type_a in _SINGULAR_EVENT_TYPES:
+            if src_a == 'title' or src_b == 'title':
+                # 标题提取的实体是弱信号，需相似度防误并（如两个同名小公司同日出融资）
+                if _event_similarity(candidate, existing) < 0.4:
+                    return False
+            # 事件锚点守卫：两条都必须明确指向同一事件锚（财报/融资/并购词）。
+            # 同公司同日可有多条不同类型文章（MercadoLibre 同日多条股票评论、
+            # Kakao 财报日发布游戏新闻），没有共同锚点就不是同一事件，不合并。
+            anchor_ok = {
+                'earnings': _has_financial_anchor(candidate.get('title', '')) and _has_financial_anchor(existing.get('title', '')),
+                'funding': _has_funding_signal(candidate.get('title', '')) and _has_funding_signal(existing.get('title', '')),
+                'ma': _has_ma_signal(candidate.get('title', '')) and _has_ma_signal(existing.get('title', '')),
+            }.get(type_a, True)
+            if not anchor_ok:
                 return False
-            if not (_is_report_lead_token(lead_a) and _is_report_lead_token(lead_b)):
+            if type_a == 'earnings' and not _financial_direction_consistent(candidate, existing):
+                # 财报方向相反是不同事件（「利润创新高」vs「净利大跌/财报不及预期」），不合并
                 return False
-            if not (_has_financial_word(candidate.get('title', '')) and _has_financial_word(existing.get('title', ''))):
-                return False
-            if not _financial_direction_consistent(candidate, existing):
-                return False
+            # company/alias 来源可靠：同实体同日同类且锚点一致即同一事件
             return True
-        if event_type_a == 'strategy':
-            return sim >= 0.42
+        if type_a == 'strategy':
+            # 一实体一日可有多个策略事件，仍以标题相似度防误并
+            return _event_similarity(candidate, existing) >= 0.42
 
-    if company_a and company_b:
-        return sim >= 0.5
-    return sim >= 0.72
+    # 兜底：无实体键或实体不同时，仅高标题相似度合并
+    return _event_similarity(candidate, existing) >= 0.72
 
 
 def _event_info_score(event):
@@ -2205,6 +2225,11 @@ def dedupe_events_by_day(all_events):
                 reasons['low_signal_company_title'] += 1
                 continue
             if any(_is_same_event(event, existing) for existing in kept):
+                # 记录被合并来源，保留可追溯性（原 URL 不丢失）
+                match = next(existing for existing in kept if _is_same_event(event, existing))
+                match.setdefault('merged_from', [])
+                if event.get('url') and event['url'] not in match['merged_from']:
+                    match['merged_from'].append(event['url'])
                 removed += 1
                 reasons['same_day_duplicate'] += 1
                 continue
@@ -2468,7 +2493,16 @@ def analyze_events_deepseek(items):
 # ============================================================
 
 AI_SYSTEM_PROMPT = """你是全球互联网科技情报分析师。受众是ICT从业者，关注：合作机会、供应链变化、预算流向。
-每条事件输出6个字段：content_overview（内容概要，1-2句客观复述事件本身发生了什么）、summary_short（一句话事实摘要）、reason（点评/为什么重要，ICT视角）、impact（影响谁）、insight_label（资金流向/合作机会/警示信号/背景补充）、trend_topic（所属趋势主题，如"中东FinTech赛道升温""拉美电商基建加速""欧洲AI融资热潮""东南亚新能源布局"等，15字以内）。
+每条事件输出7个字段：event_types（事件类型，见下）、content_overview（内容概要，1-2句客观复述事件本身发生了什么）、summary_short（一句话事实摘要）、reason（点评/为什么重要，ICT视角）、impact（影响谁）、insight_label（资金流向/合作机会/警示信号/背景补充）、trend_topic（所属趋势主题，如"中东FinTech赛道升温""拉美电商基建加速""欧洲AI融资热潮""东南亚新能源布局"等，15字以内）。
+
+event_types 判定规则（从事件实质判断，不要被标题里的英文单词误导）：
+- funding：融资/投资/估值
+- ma：并购/收购/入股
+- earnings：财报/营收/利润/股价对财报的反应
+- strategy：战略/合作/扩张/产品发布/运营/人事/监管
+- industry_report：真正的行业研究报告/市场数据/榜单/趋势调查（如"2026东南亚数字银行报告"）。公司新闻里出现"report"表示"据报道"（如"Cursor...: Report"），归为 strategy，不要误判成研究报告
+- other：以上都不符合
+只能选一个，返回字符串。
 
 content_overview 要求：用1-2句话客观描述事件本身——谁、做了什么、金额/数据、进展，必须从标题提炼事实，禁止写成价值判断或"为什么重要"式的话。比 summary_short 更完整，可含背景或后续进展，两者不得相同。
 reason 要求：必须从标题提取公司名/产品名/技术名，组合地区+行业+具体机会描述，格式固定为"[地区][行业]具体描述"。禁止出现"无法判断""无法确定""待确认""相关"等模糊词。
@@ -2479,31 +2513,35 @@ impact 要求：指明具体受益方或受损方，如"东南亚电商平台""�
 AI_EXAMPLES = """
 示例1（融资大额）：
 标题: "Mistral raises $830M, 9fin hits unicorn status"
-输出: {"url":"","content_overview":"法国AI公司Mistral完成8.3亿美元融资，金融科技公司9fin同期晋级独角兽","summary_short":"Mistral获$830M融资，9fin晋级独角兽","reason":"欧洲AI独角兽获顶级融资，后续可能开放生态合作和API采购","impact":"AI基础设施供应商、云服务商、API集成商","insight_label":"资金流向","trend_topic":"欧洲AI融资热潮","score":9}
+输出: {"url":"","event_types":"funding","content_overview":"法国AI公司Mistral完成8.3亿美元融资，金融科技公司9fin同期晋级独角兽","summary_short":"Mistral获$830M融资，9fin晋级独角兽","reason":"欧洲AI独角兽获顶级融资，后续可能开放生态合作和API采购","impact":"AI基础设施供应商、云服务商、API集成商","insight_label":"资金流向","trend_topic":"欧洲AI融资热潮","score":9}
 
 示例2（融资中等）：
 标题: "Wearable Robotics closes €5M Series A"
-输出: {"url":"","content_overview":"可穿戴机器人公司Wearable Robotics完成500万欧元A轮融资","summary_short":"可穿戴机器人公司获€5M A轮","reason":"欧洲硬科技早期融资，B2B机器人赛道持续有资金流入","impact":"机器人供应链、工业软件合作方","insight_label":"资金流向","trend_topic":"欧洲硬科技投资活跃","score":6}
+输出: {"url":"","event_types":"funding","content_overview":"可穿戴机器人公司Wearable Robotics完成500万欧元A轮融资","summary_short":"可穿戴机器人公司获€5M A轮","reason":"欧洲硬科技早期融资，B2B机器人赛道持续有资金流入","impact":"机器人供应链、工业软件合作方","insight_label":"资金流向","trend_topic":"欧洲硬科技投资活跃","score":6}
 
 示例3（并购）：
 标题: "Cafeyn acquires Readly non-Nordic operations"
-输出: {"url":"","content_overview":"数字出版平台Cafeyn收购Readly的北欧以外业务，整合全球发行版图","summary_short":"Cafeyn收购Readly非北欧业务","reason":"欧洲数字出版整合加速，中小媒体可能面临挤压或被整合","impact":"数字媒体公司、内容分发合作方","insight_label":"资金流向","trend_topic":"欧洲数字出版整合","score":7}
+输出: {"url":"","event_types":"ma","content_overview":"数字出版平台Cafeyn收购Readly的北欧以外业务，整合全球发行版图","summary_short":"Cafeyn收购Readly非北欧业务","reason":"欧洲数字出版整合加速，中小媒体可能面临挤压或被整合","impact":"数字媒体公司、内容分发合作方","insight_label":"资金流向","trend_topic":"欧洲数字出版整合","score":7}
 
 示例4（战略合作）：
 标题: "Arabic.AI partners with Qistas to deliver sovereign Arabic legal AI"
-输出: {"url":"","content_overview":"Arabic.AI与Qistas达成合作，推出面向主权客户的法语系AI产品","summary_short":"Arabic.AI与Qistas合作推阿拉伯语法务AI","reason":"中东主权AI战略落地，法律科技出现新的ICT集成机会","impact":"法律科技集成商、中东政府IT合作方","insight_label":"合作机会","trend_topic":"中东主权AI落地","score":6}
+输出: {"url":"","event_types":"strategy","content_overview":"Arabic.AI与Qistas达成合作，推出面向主权客户的法语系AI产品","summary_short":"Arabic.AI与Qistas合作推阿拉伯语法务AI","reason":"中东主权AI战略落地，法律科技出现新的ICT集成机会","impact":"法律科技集成商、中东政府IT合作方","insight_label":"合作机会","trend_topic":"中东主权AI落地","score":6}
 
 示例5（战略裁员）：
 标题: "Telecom Italia cuts 2000 jobs amid network upgrade"
-输出: {"url":"","content_overview":"意大利电信在推进网络升级的同时宣布裁员2000人","summary_short":"意大利电信裁员2000人","reason":"传统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","trend_topic":"欧洲电信转型","score":7}
+输出: {"url":"","event_types":"strategy","content_overview":"意大利电信在推进网络升级的同时宣布裁员2000人","summary_short":"意大利电信裁员2000人","reason":"传统运营商压缩成本，转向网络外包，ICT服务商机会增加","impact":"IT外包商、网络设备供应商","insight_label":"警示信号","trend_topic":"欧洲电信转型","score":7}
 
 示例6（财报盈利）：
 标题: "Nubank Q1 revenue up 34% to $2.8B"
-输出: {"url":"","content_overview":"巴西数字银行Nubank一季度营收28亿美元，同比增长34%","summary_short":"Nubank营收$2.8B，同比+34%","reason":"拉美数字银行持续高增长，东南亚复制模式具有参考价值","impact":"拉美金融科技合作方、银行科技供应商","insight_label":"背景补充","trend_topic":"拉美FinTech高增长","score":6}
+输出: {"url":"","event_types":"earnings","content_overview":"巴西数字银行Nubank一季度营收28亿美元，同比增长34%","summary_short":"Nubank营收$2.8B，同比+34%","reason":"拉美数字银行持续高增长，东南亚复制模式具有参考价值","impact":"拉美金融科技合作方、银行科技供应商","insight_label":"背景补充","trend_topic":"拉美FinTech高增长","score":6}
 
 示例7（财报亏损）：
 标题: "Gorillas files for insolvency amid funding crunch"
-输出: {"url":"","content_overview":"欧洲即时配送平台Gorillas在融资困境中申请破产保护","summary_short":"欧洲快送平台Gorillas申请破产保护","reason":"即时配送赛道资金耗尽，同类公司需警惕融资环境恶化信号","impact":"同类快送平台、物流技术供应商","insight_label":"警示信号","trend_topic":"欧洲即时配送洗牌","score":8}
+输出: {"url":"","event_types":"earnings","content_overview":"欧洲即时配送平台Gorillas在融资困境中申请破产保护","summary_short":"欧洲快送平台Gorillas申请破产保护","reason":"即时配送赛道资金耗尽，同类公司需警惕融资环境恶化信号","impact":"同类快送平台、物流技术供应商","insight_label":"警示信号","trend_topic":"欧洲即时配送洗牌","score":8}
+
+示例8（"Report"是"据报道"而非研报）：
+标题: "Cursor To Open First India Office By 2026 End: Report"
+输出: {"url":"","event_types":"strategy","content_overview":"AI编程公司Cursor计划在2026年底前开设印度首个办公室","summary_short":"Cursor计划2026年底开印度办公室","reason":"AI编程工具公司加速全球化布局，亚太开发者市场战略地位上升","impact":"印度开发者生态、AI工具渠道合作方","insight_label":"合作机会","trend_topic":"AI编程工具全球化","score":5}
 """
 
 def analyze_events_doubao(items):
@@ -3136,6 +3174,22 @@ def attach_date_context(event, item):
     return apply_event_date_metadata(event, fallback_observed_at=_cn_now())
 
 
+_VALID_EVENT_TYPES = {
+    'funding', 'ma', 'earnings', 'strategy', 'industry_report',
+    'model_release', 'regional_policy', 'other',
+}
+
+
+def _ai_event_types(analysis_types, fallback_types):
+    """AI 判定的事件类型：合法单值才采用，否则用采集侧类型兜底（防模型幻觉输出垃圾）。"""
+    t = analysis_types
+    if isinstance(t, str):
+        t = [t]
+    if isinstance(t, list) and t and all(x in _VALID_EVENT_TYPES for x in t):
+        return t
+    return fallback_types or ['other']
+
+
 def build_event(item, analysis=None, analysis_source=None, analysis_status=None):
     """构建事件对象：程序评分始终生效，AI 只补充 reason/impact/insight_label"""
     # 程序评分（确定性，始终运行）
@@ -3148,7 +3202,7 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             'url': item['url'],
             'source': item['source'],
             'region': item['region'],
-            'event_types': item['event_types'],
+            'event_types': _ai_event_types(analysis.get('event_types'), item.get('event_types') or ['other']),
             'level': level,
             'score': score,
             'summary_short': analysis.get('summary_short', item['title'][:25]),
@@ -3173,26 +3227,9 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             source=analysis_source or 'ai',
             status=analysis_status,
         ))
-    # 无 AI 分析时的 fallback
-    ev_type = item.get('event_types', ['other'])[0]
-    default_label = {
-        'funding': '资金流向',
-        'ma': '资金流向',
-        'earnings': '背景补充',
-        'strategy': '合作机会',
-        'industry_report': '趋势信号',
-        'model_release': '产品能力',
-        'regional_policy': '政策变化',
-    }.get(ev_type, '背景补充')
-    why_fallback = {
-        'funding': f"{item['region']}科技公司融资事件，金额待确认",
-        'ma': f"{item['region']}科技公司并购/收购",
-        'earnings': f"{item['region']}科技公司财报披露",
-        'strategy': f"{item['region']}科技公司战略动态",
-        'industry_report': f"{item['region']}行业研究报告发布，观点待交叉验证",
-        'model_release': f"{item['region']}AI模型发布，发布事实与性能自述分开观察",
-        'regional_policy': f"{item['region']}AI/互联网相关政策变化",
-    }.get(ev_type, f"{item['region']}科技行业动态")
+    # 无 AI 分析时的 fallback：不再按类型拼断言式文案（类型是关键词猜的，AI 未读过原文，
+    # 拼出的「行业研究报告发布」「财报披露」可能失真），改中性表述，由用户打开原文核实。
+    neutral_reason = f"{item['region']}媒体报道，AI 分析暂不可用，请以原文为准"
     event = {
         'title': item['title'],
         'url': item['url'],
@@ -3203,10 +3240,10 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'score': score,
         'summary_short': item['title'][:25],
         'content_overview': '',
-        'reason': why_fallback,
+        'reason': neutral_reason,
         'impact': '未知',
-        'insight_label': default_label,
-        'trend_topic': default_label + ' — ' + item['region'],
+        'insight_label': '待分析',
+        'trend_topic': '',
         'companies': [],
         'is_company': item.get('is_company', False),
         'company_name': item.get('company_name', ''),
