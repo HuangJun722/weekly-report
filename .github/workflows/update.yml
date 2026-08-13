@@ -226,6 +226,12 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      # update job 刚提交并推送了新页面，这里同步到最新 main，否则读的是触发时的旧页面
+      # 会造成「更新日志 V4.x 未出现在页面」的误报
+      - name: Sync to latest main
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
       - name: Run health check
         run: |
           echo "=== 数据健康检查（strict）==="
