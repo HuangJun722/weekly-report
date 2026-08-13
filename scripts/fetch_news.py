@@ -3610,6 +3610,7 @@ def main():
     }
 
     # AI深度分析（所有合格事件先送 AI，失败才程序兜底）
+    today_events = []
     if ai_tier:
         fill_event_images(ai_tier)
         use_deepseek = configure_deepseek()
