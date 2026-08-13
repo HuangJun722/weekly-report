@@ -1743,7 +1743,7 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
     }
 
 
-def build_weekly_archives(events, reference_date):
+def build_weekly_archives(events, reference_date, require_editorial=True):
     """按自然周生成独立周报档案，已结束周固定封存，当前周更新至最新日期。"""
     grouped = {}
     reference_dt = datetime.strptime(reference_date, '%Y-%m-%d')
@@ -1774,13 +1774,13 @@ def build_weekly_archives(events, reference_date):
         label = item['label'] if status == 'closed' else f"{item['label']}（更新中）"
         archives.append(build_period_report(
             events, item['start'], item['end'], label, item['id'], status,
-            focus_windows_enabled=True, require_editorial=True,
+            focus_windows_enabled=True, require_editorial=require_editorial,
         ))
     archives.sort(key=lambda x: x['start'], reverse=True)
     return archives
 
 
-def build_monthly_archives(events, reference_date):
+def build_monthly_archives(events, reference_date, require_editorial=True):
     """按自然月生成独立月报档案，已结束月份固定封存，当前月更新至最新日期。"""
     months = sorted({(e.get('date') or '')[:7] for e in events if (e.get('date') or '')[:7]}, reverse=True)
     archives = []
@@ -1805,7 +1805,7 @@ def build_monthly_archives(events, reference_date):
             label = f"{month} 月报"
         archives.append(build_period_report(
             events, start_date, end_date, label, month, status,
-            require_editorial=True,
+            require_editorial=require_editorial,
         ))
     return archives
 
@@ -2190,6 +2190,29 @@ def load_model_leaderboard():
     except (OSError, json.JSONDecodeError):
         return None
 
+
+def load_aihot_hot():
+    """读取 AIHOT 热点榜数据（由 scripts/fetch_aihot_hot.py 生成）。"""
+    path = os.path.join('data', 'aihot_hot.json')
+    try:
+        with open(path, 'r', encoding='utf-8') as handle:
+            data = json.load(handle)
+        if not isinstance(data, dict) or not data.get('items'):
+            return None
+        return data
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def _clean_hot_title(item, max_len=60):
+    """AIHOT 标题去时间戳/序号残留，取干净的主标题。"""
+    title = (item.get('title') or item.get('list_title') or '').strip()
+    if not title:
+        return ''
+    if len(title) > max_len:
+        title = title[:max_len] + '…'
+    return title
+
 CHINESE_WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 
 
@@ -2509,12 +2532,15 @@ def generate_html(force=False, preview_mode=False):
     }
     history_total = max(0, len(available_dates) - 1)
 
-    weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date)
-    monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date)
+    weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date,
+                                            require_editorial=not preview_mode)
+    monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date,
+                                              require_editorial=not preview_mode)
     weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], period_reference_date, period_reference_date, '本周', 'empty', 'open')
     monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], period_reference_date, period_reference_date, '本月', 'empty', 'open')
     site_updates = load_site_updates()
     model_leaderboard = load_model_leaderboard()
+    aihot_hot = load_aihot_hot()
     update_time = f"最新采集 {period_reference_date}｜展示 {main_date} 成熟批次"
 
     env = Environment(autoescape=select_autoescape(['html', 'htm', 'xml']))
@@ -2560,6 +2586,7 @@ def generate_html(force=False, preview_mode=False):
         batch_notice=batch_notice,
         site_updates=site_updates,
         model_leaderboard=model_leaderboard,
+        aihot_hot=aihot_hot,
         feedback_endpoint=os.getenv('FEEDBACK_ENDPOINT', ''),
     )
     html = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'

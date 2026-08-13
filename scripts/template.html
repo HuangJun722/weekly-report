@@ -155,6 +155,26 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
   color:var(--muted); padding:9px 0; cursor:pointer; border-radius:8px; }
 .f-date:hover { background:rgba(31,58,95,0.05); color:var(--ink); }
 
+/* ===================== 今日热点（AIHOT 形态 · 紧凑配菜） ===================== */
+.f-hot { margin:0 0 14px; padding:12px 14px 8px; border:1px solid var(--line); border-radius:12px;
+  background:var(--card); }
+.f-hot-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px; }
+.f-hot-head h3 { font-size:14px; margin:0; color:var(--navy); font-weight:700; }
+.f-hot-more { font-size:12px; color:var(--muted); font-weight:600; text-decoration:none; }
+.f-hot-more:hover { color:var(--accent); }
+.f-hot-list { list-style:none; margin:0; padding:0; display:grid; }
+.f-hot-row { border-radius:8px; overflow:hidden; }
+.f-hot-row:hover { background:rgba(31,58,95,0.04); }
+.f-hot-main { display:flex; align-items:baseline; gap:10px; text-decoration:none; color:inherit; padding:6px 6px; }
+.f-hot-rank { flex:none; width:18px; font-size:13px; font-weight:700; color:var(--muted); font-variant-numeric:tabular-nums; }
+.f-hot-row:nth-child(1) .f-hot-rank { color:#c05621; }
+.f-hot-row:nth-child(2) .f-hot-rank { color:#b7791f; }
+.f-hot-row:nth-child(3) .f-hot-rank { color:#b8860b; }
+.f-hot-title { flex:1 1; min-width:0; font-size:13px; font-weight:500; line-height:1.5; color:var(--ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.f-hot-row:hover .f-hot-title { color:var(--navy); }
+.f-hot-heat { flex:none; font-size:12px; font-weight:600; color:var(--muted); font-variant-numeric:tabular-nums; }
+
 /* ===================== 周报 / 月报 ===================== */
 .pshell { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:28px; margin-top:8px; align-items:start; }
 .pcover { background:linear-gradient(135deg,#1e3550,#24455c); border-radius:var(--radius); color:#f2f5f8;
@@ -469,6 +489,25 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <span class="m-head-meta">共 {{ total_stories }} 条合格事件{% if summary_counts %} · {{ summary_counts }}{% endif %}</span>
         </div>
       </div>
+      {% if aihot_hot %}
+      <section class="f-hot">
+        <div class="f-hot-head">
+          <h3>今日热点</h3>
+          <a class="f-hot-more" href="https://aihot.virxact.com/hot" target="_blank" rel="noopener">查看全部 ›</a>
+        </div>
+        <ol class="f-hot-list">
+          {% for item in aihot_hot['items'][:5] %}
+          <li class="f-hot-row">
+            <a href="{{ item.original_links[0].url if item.original_links else item.story_url }}" target="_blank" rel="noopener" class="f-hot-main">
+              <span class="f-hot-rank">{{ item.rank }}</span>
+              <span class="f-hot-title">{{ item.title }}</span>
+              <span class="f-hot-heat">{{ item.heat }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+      {% endif %}
       <div class="f-grid">
         <section class="f-list">
           {% for item in merged_events %}
