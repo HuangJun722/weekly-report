@@ -154,6 +154,12 @@ jobs:
       - name: Fetch AIHOT hot topics
         run: python scripts/fetch_aihot_hot.py || echo "⚠️ AIHOT 热点抓取失败，页面将隐藏该卡片（本次跳过）"
 
+      # 修复历史「问题事件」（reason 为空/含"暂不可用"），只针对有问题的，非全量重跑
+      - name: Repair stale analysis
+        run: python scripts/repair_stale_analysis.py || echo "⚠️ 问题事件修复失败，本次跳过（不影响采集）"
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
       - name: Generate HTML
         run: python scripts/generate_html.py --force
         env:
