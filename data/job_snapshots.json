@@ -1,11 +1,25 @@
 {
   "version": 1,
-  "generated_at": "2026-08-13T21:13:37.873366+08:00",
+  "generated_at": "2026-08-14T03:13:11.703498+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-13T21:13:37.873366+08:00",
+      "observed_at": "2026-08-14T03:13:11.703498+08:00",
       "jobs": [
+        {
+          "id": "744000143357414",
+          "title": "Senior Software Engineer, Mobile (iOS)",
+          "url": "https://www.grab.careers/en/jobs/744000143357414/senior-software-engineer-mobile-ios/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143316959",
+          "title": "Strategic & Planning Southern Sumatera, Associate",
+          "url": "https://www.grab.careers/en/jobs/744000143316959/strategic-planning-southern-sumatera-associate/",
+          "function_tags": []
+        },
         {
           "id": "744000143278985",
           "title": "Principal Data Scientist (User Understanding Platformisation)",
@@ -139,28 +153,12 @@
           "title": "Business Strategy & Planning Manager",
           "url": "https://www.grab.careers/en/jobs/744000143222519/business-strategy-planning-manager/",
           "function_tags": []
-        },
-        {
-          "id": "744000143221939",
-          "title": "Senior Software Engineer, Fullstack",
-          "url": "https://www.grab.careers/en/jobs/744000143221939/senior-software-engineer-fullstack/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000143142779",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000143142779/senior-software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-13T21:13:37.873366+08:00",
+      "observed_at": "2026-08-14T03:13:11.703498+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -276,7 +274,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-13T21:13:37.873366+08:00",
+      "observed_at": "2026-08-14T03:13:11.703498+08:00",
       "jobs": [
         {
           "id": "23139158-81cb-4924-a080-5d38e490d687",
@@ -443,14 +441,6 @@
           "title": "Senior Project Manager, Real Estate Toronto",
           "url": "https://www.shopify.com/careers/senior-project-manager-real-estate_6738f2e2-3da3-4dd5-a6b2-ccbe2ecd3863",
           "function_tags": []
-        },
-        {
-          "id": "8d702014-1023-4e7f-9d68-08c4a8659aa6",
-          "title": "Product Partner Manager, Cross Border Remote - Americas",
-          "url": "https://www.shopify.com/careers/product-partner-manager-cross-border_8d702014-1023-4e7f-9d68-08c4a8659aa6",
-          "function_tags": [
-            "partnerships"
-          ]
         },
         {
           "id": "d5eeed11-7711-42d2-a2fd-1abd8865d012",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-13T21:13:37.873366+08:00",
+  "generated_at": "2026-08-14T03:13:11.703498+08:00",
   "candidates": [
     {
       "candidate_id": "jobs-8fb1b7c481f11152",
@@ -13,21 +13,17 @@
       "cluster": "engineering",
       "window": "2026-W33",
       "window_start": "2026-08-13",
-      "window_end": "2026-08-13",
-      "detected_at": "2026-08-13T17:36:00.842300+08:00",
-      "baseline_count": 15,
+      "window_end": "2026-08-14",
+      "detected_at": "2026-08-14T03:13:11.703498+08:00",
+      "baseline_count": 20,
       "current_count": 20,
-      "added_count": 15,
-      "removed_count": 10,
+      "added_count": 2,
+      "removed_count": 2,
       "clusters": {
-        "operations": 2,
-        "engineering": 5,
-        "partnerships": 1,
-        "sales": 3
+        "engineering": 1
       },
       "removed_clusters": {
-        "engineering": 2,
-        "operations": 1
+        "engineering": 2
       },
       "evidence_refs": [
         {
@@ -353,10 +349,34 @@
           "title": "Manager, Deliveries Marketplace Strategy",
           "url": "https://www.grab.careers/en/jobs/744000142793579/manager-deliveries-marketplace-strategy/",
           "change": "removed"
+        },
+        {
+          "job_id": "744000143357414",
+          "title": "Senior Software Engineer, Mobile (iOS)",
+          "url": "https://www.grab.careers/en/jobs/744000143357414/senior-software-engineer-mobile-ios/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000143316959",
+          "title": "Strategic & Planning Southern Sumatera, Associate",
+          "url": "https://www.grab.careers/en/jobs/744000143316959/strategic-planning-southern-sumatera-associate/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000143221939",
+          "title": "Senior Software Engineer, Fullstack",
+          "url": "https://www.grab.careers/en/jobs/744000143221939/senior-software-engineer-fullstack/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000143142779",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000143142779/senior-software-engineer-backend/",
+          "change": "removed"
         }
       ],
-      "status": "rejected",
-      "rejection_reason": "source_reset_suspected",
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
       "promoted_event_id": ""
     },
     {

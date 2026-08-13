@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-13T21:19:51+08:00",
-  "fetched_date": "2026-08-13",
+  "generated_at": "2026-08-14T03:18:32+08:00",
+  "fetched_date": "2026-08-14",
   "source": {
     "name": "AIHOT 热点榜",
     "url": "https://aihot.virxact.com/hot",
@@ -11,13 +11,11 @@
       "rank": 1,
       "title": "DeepSeek 发布 DeepSeek V4 Pro",
       "list_title": "DeepSeek-V4-Pro 正式版上线，Agent 能力大幅增强",
-      "heat": 245,
+      "heat": 195,
       "sources": [
         "X：X.PIN (@thexpin)",
         "IT之家（RSS）",
-        "Hacker News 热门（buzzing.cc 中文翻译）",
         "X：SemiAnalysis (@SemiAnalysis_)",
-        "公众号：数字生命卡兹克",
         "Simon Willison 博客",
         "X：Rohan Paul (@rohanpaul_ai)",
         "DeepSeek：API 更新日志",
@@ -25,12 +23,18 @@
         "X：DeepSeek (@deepseek_ai)",
         "X：Kim (@kimmonismus)",
         "X：Testing Catalog (@testingcatalog)",
-        "另有 31 组氛围票"
+        "X：阿易 AI Notes (@AYi_AInotes)",
+        "The Decoder：AI News（RSS）",
+        "另有 24 组氛围票"
       ],
       "summary": "DeepSeek 于 2026 年 8 月 12 日发布 DeepSeek V4 Pro 正式版（模型版本号 DeepSeek-V4-Pro-0813），同步在 APP、网页端和 API 上线，用户可在 APP 或网页端选择“专家模式”使用。该版本增强 Agent 能力，API 原生支持 OpenAI Responses API 格式并适配 Codex。定价为百万 tokens 输入（缓存命中）0.025 元、输入（缓存未命中）3 元、输出 6 元。\n在基准测试中，DeepSeek V4 Pro 表现突出：HLE (wo/w tools) 达 42.7/60.0，Terminal Bench ",
       "original_links": [
         {
-          "url": "https://x.com/testingcatalog/status/2087880384381952150",
+          "url": "https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://x.com/AYi_AInotes/status/2087882208044253406",
           "domain": "x.com"
         },
         {
@@ -50,9 +54,74 @@
     },
     {
       "rank": 2,
+      "title": "Google 发布 Gemini 3.7 Flash",
+      "list_title": "Google DeepMind 推出 Gemini 3.7 Flash：面向编程与智能体的最强工作模型",
+      "heat": 186,
+      "sources": [
+        "X：Google DeepMind (@GoogleDeepMind)",
+        "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+        "Google DeepMind：Blog（RSS）",
+        "X：fofr (@fofrAI)",
+        "X：Logan Kilpatrick (@OfficialLoganK)",
+        "Ars Technica：AI（RSS）",
+        "X：Sundar Pichai (@sundarpichai)",
+        "X：Google AI for Developers (@googleaidevs)",
+        "X：Google AI (@GoogleAI)",
+        "X：Demis Hassabis (@demishassabis)",
+        "MarkTechPost（RSS）",
+        "The Decoder：AI News（RSS）",
+        "另有 1 组氛围票"
+      ],
+      "summary": "Google 于 2026 年 8 月 13 日发布 Gemini 3.7 Flash，距上一代 3.6 Flash 仅三周。该模型在编程、知识工作和网页开发方面显著提升，尤其擅长长周期软件工程任务、PDF 理解和智能体任务。官方演示展示了其构建复杂 3D 网页游戏的能力，涵盖 Three.js 引擎逻辑、素材生成与程序化音频集成。\n价格方面，Gemini 3.7 Flash 入门价仅为 3.6 Flash 原价的一半，年底前提供优惠：输入 $0.75/1M tokens，输出 $3.75/1M tokens。模型已上线 Gemini API、AI Studio、Antigravity、Gem",
+      "original_links": [
+        {
+          "url": "https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash",
+          "domain": "www.marktechpost.com"
+        },
+        {
+          "url": "https://x.com/demishassabis/status/2087950102455271765",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-7-flash-just-three-weeks-after-previous-release",
+          "domain": "arstechnica.com"
+        },
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash",
+          "domain": "deepmind.google"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/2dc37050-6375-45a7-8668-26d97fc0c333"
+    },
+    {
+      "rank": 3,
+      "title": "DeepSeek 发布 Harness v0.1 开发者预览版",
+      "list_title": "DeepSeek Harness v0.1 开发者预览版发布",
+      "heat": 101,
+      "sources": [
+        "IT之家（RSS）",
+        "X：Tianyi Cui（@tianyi）",
+        "X：DeepSeek (@deepseek_ai)",
+        "另有 14 组氛围票"
+      ],
+      "summary": "DeepSeek 于 2026 年 8 月 13 日发布开源代码智能体框架 Harness v0.1 开发者预览版，采用 MIT 许可证。该框架基于 Cordis 元框架构建，核心设计为“一切皆插件”，模型、工具、技能、会话、沙箱、文件系统、循环、编排及 UI 均可自由组合、替换和扩展。\nHarness 对标 OpenAI Codex 与 Anthropic Claude Cowork，并开放插件生态。官方及开发者均表示当前版本为开发者预览版，可能仍有许多不完善之处，欢迎社区反馈。",
+      "original_links": [
+        {
+          "url": "https://x.com/deepseek_ai/status/2087887408440164663",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/989/446.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/2187bbdf-9658-475f-9871-1a389677483a"
+    },
+    {
+      "rank": 4,
       "title": "xAI 发布 Grok 4.6",
       "list_title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
-      "heat": 100,
+      "heat": 85,
       "sources": [
         "X：cb_doge (@cb_doge)",
         "X：Elon Musk (@elonmusk, xAI)",
@@ -87,10 +156,10 @@
       "story_url": "https://aihot.virxact.com/story/5fe3ff3d-4e3d-43d1-959b-4aad7e6d239c"
     },
     {
-      "rank": 3,
+      "rank": 5,
       "title": "Grok 4.6 在多项基准测试中登顶",
       "list_title": "Cursor 与 SpaceXAI 联合发布 Grok 4.6",
-      "heat": 92,
+      "heat": 78,
       "sources": [
         "X：Artificial Analysis (@ArtificialAnlys)",
         "X：cb_doge (@cb_doge)",
@@ -124,16 +193,96 @@
       "story_url": "https://aihot.virxact.com/story/33140bc7-aa76-4593-b76f-eb73d454644a"
     },
     {
-      "rank": 4,
+      "rank": 6,
+      "title": "Qwen 在 Hugging Face 上线 Qwen3.8-2.4T-A95B",
+      "list_title": "Qwen3.8-2.4T-A95B 开源，硅基流动即日上线",
+      "heat": 45,
+      "sources": [
+        "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+        "IT之家（RSS）",
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+        "另有 3 组氛围票"
+      ],
+      "summary": "阿里 Qwen 团队在 Hugging Face 上线 Qwen3.8-2.4T-A95B 模型权重，这是 Qwen-Max 级别模型首次开源。模型总参数 2.4T，每个 Token 激活 95B，原生支持 262,144 Token 上下文，并可扩展至 1,010,000 Token。\nHugging Face CEO Clément Delangue 在 X 平台转发并评论“走起！”。随后 IT之家报道确认模型权重开放，并强调其为 Qwen-Max 级别模型首次开源。\n8 月 13 日，AI 领域人士 Rohan Paul 在 X 平台再次提及该模型已上线 HuggingFace，确认其开",
+      "original_links": [
+        {
+          "url": "https://x.com/SiliconFlowAI/status/2087911506113683756",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/989/001.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/5829f929-b678-424c-995f-f9047b2f7833"
+    },
+    {
+      "rank": 7,
+      "title": "xAI 发布 Grok 4.6",
+      "list_title": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
+      "heat": 24,
+      "sources": [
+        "公众号：数字生命卡兹克",
+        "另有 4 组氛围票"
+      ],
+      "summary": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
+      "original_links": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685175&idx=1&sn=64c383b5b757945397894270c5f38301",
+          "domain": "mp.weixin.qq.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/97341836-95fd-4603-8770-4c67b8318dc7"
+    },
+    {
+      "rank": 8,
+      "title": "Anthropic 将 Claude in Chrome 侧边栏升级为 Claude Cowork 会话",
+      "list_title": "Claude in Chrome 侧边栏升级为 Claude Cowork 会话",
+      "heat": 23,
+      "sources": [
+        "Claude：Blog（网页）",
+        "The Decoder：AI News（RSS）"
+      ],
+      "summary": "Anthropic 将 Chrome 浏览器扩展中的 Claude 侧边栏升级为 Claude Cowork 会话。升级后，对话会保存至历史记录，技能和连接器可在浏览器中直接工作，任务可在桌面、网页和移动端应用间无缝切换。\nClaude Cowork 首次在浏览器中支持技能、插件和连接器，无需额外设置。Claude 负责研究，Cowork 可将其转化为 Excel 文件、PowerPoint 幻灯片或报告。",
+      "original_links": [
+        {
+          "url": "https://the-decoder.com/anthropic-brings-claude-cowork-to-its-chrome-extension-adding-skills-and-plugins-to-the-browser",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://claude.com/blog/cowork-chrome-side-panel",
+          "domain": "claude.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/138babd3-b1fe-4683-bc17-8354285297b5"
+    },
+    {
+      "rank": 9,
+      "title": "小红书开源 dots.tts 语音合成模型",
+      "list_title": "小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座",
+      "heat": 22,
+      "sources": [
+        "公众号：小红书技术（dots.llm）",
+        "另有 2 组氛围票"
+      ],
+      "summary": "小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座",
+      "original_links": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496062&idx=1&sn=d4c48926c5d7607f129dfea03699a6c0",
+          "domain": "mp.weixin.qq.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/ab7ebeaf-0f4b-4f84-a7c6-754318ae4316"
+    },
+    {
+      "rank": 10,
       "title": "Google 宣布 Gemini 月活突破 10 亿",
       "list_title": "Gemini月活10亿，Gemma下载破10亿",
-      "heat": 40,
+      "heat": 22,
       "sources": [
-        "X：Josh Woodward (@joshwoodward, Google Labs VP)",
-        "X：Sundar Pichai (@sundarpichai)",
-        "X：Gemini (@GeminiApp)",
-        "X：Demis Hassabis (@demishassabis)",
         "TechCrunch：AI（RSS）",
+        "X：Demis Hassabis (@demishassabis)",
         "X：Logan Kilpatrick (@OfficialLoganK)",
         "Ars Technica：AI（RSS）",
         "IT之家（RSS）",
@@ -159,146 +308,6 @@
         }
       ],
       "story_url": "https://aihot.virxact.com/story/badb65b5-cafb-4337-8002-626ad8d42c1d"
-    },
-    {
-      "rank": 5,
-      "title": "xAI 发布 Grok 4.6",
-      "list_title": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
-      "heat": 36,
-      "sources": [
-        "公众号：数字生命卡兹克",
-        "另有 6 组氛围票"
-      ],
-      "summary": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
-      "original_links": [
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685175&idx=1&sn=64c383b5b757945397894270c5f38301",
-          "domain": "mp.weixin.qq.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/97341836-95fd-4603-8770-4c67b8318dc7"
-    },
-    {
-      "rank": 6,
-      "title": "Qwen 在 Hugging Face 上线 Qwen3.8-2.4T-A95B",
-      "list_title": "阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文",
-      "heat": 35,
-      "sources": [
-        "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
-        "IT之家（RSS）",
-        "X：Rohan Paul (@rohanpaul_ai)",
-        "另有 3 组氛围票"
-      ],
-      "summary": "阿里 Qwen 团队在 Hugging Face 上线 Qwen3.8-2.4T-A95B 模型权重，这是 Qwen-Max 级别模型首次开源。模型总参数 2.4T，每个 Token 激活 95B，原生支持 262,144 Token 上下文，并可扩展至 1,010,000 Token。\nHugging Face CEO Clément Delangue 在 X 平台转发并评论“走起！”。随后 IT之家报道确认模型权重开放，并强调其为 Qwen-Max 级别模型首次开源。\n8 月 13 日，AI 领域人士 Rohan Paul 在 X 平台再次提及该模型已上线 HuggingFace，确认其开",
-      "original_links": [
-        {
-          "url": "https://x.com/rohanpaul_ai/status/2087781790400545261",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/989/001.htm",
-          "domain": "www.ithome.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/5829f929-b678-424c-995f-f9047b2f7833"
-    },
-    {
-      "rank": 7,
-      "title": "NVIDIA 发布 Nemotron 3.5 Lightning",
-      "list_title": "NVIDIA 发布 Nemotron 3.5 Lightning：30B 开源 MoE 模型与 NeMo Switchyard 模型路由器",
-      "heat": 34,
-      "sources": [
-        "X：Artificial Analysis (@ArtificialAnlys)",
-        "The Decoder：AI News（RSS）",
-        "X：Testing Catalog (@testingcatalog)",
-        "X：阿易 AI Notes (@AYi_AInotes)",
-        "X：洪明 (@hongming731)",
-        "IT之家（RSS）",
-        "MarkTechPost（RSS）",
-        "另有 7 组氛围票"
-      ],
-      "summary": "NVIDIA 于 2026 年 8 月 11 日发布 Nemotron 3.5 Lightning，一款开源混合专家（MoE）模型，总参数量约 300 亿（31.6B），激活参数 3.6B，采用 OpenMDW-1.1 商用许可。该模型专为本地智能体任务设计，可在 RTX PC、DGX Spark 及 Jetson 等设备上运行，支持 1M token 上下文窗口。\n性能方面，Nemotron 3.5 Lightning 输出速度近 670 tokens/秒，相比同类开源模型最高提升 4 倍，智能体任务完成时间缩短 30%。在 Artificial Analysis 智能指数上得 24 分，较",
-      "original_links": [
-        {
-          "url": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard",
-          "domain": "www.marktechpost.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/988/609.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://x.com/hongming731/status/2087325587614666918",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://the-decoder.com/nvidias-open-weight-nemotron-3-5-lightning-prioritizes-speed-over-maximum-intelligence",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
-          "domain": "blogs.nvidia.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/9be57839-b305-48e0-b1b2-04e2a835c22c"
-    },
-    {
-      "rank": 8,
-      "title": "Anthropic 将 Claude in Chrome 侧边栏升级为 Claude Cowork 会话",
-      "list_title": "Claude in Chrome 侧边栏升级为 Claude Cowork 会话",
-      "heat": 28,
-      "sources": [
-        "Claude：Blog（网页）",
-        "The Decoder：AI News（RSS）"
-      ],
-      "summary": "Anthropic 将 Chrome 浏览器扩展中的 Claude 侧边栏升级为 Claude Cowork 会话。升级后，对话会保存至历史记录，技能和连接器可在浏览器中直接工作，任务可在桌面、网页和移动端应用间无缝切换。\nClaude Cowork 首次在浏览器中支持技能、插件和连接器，无需额外设置。Claude 负责研究，Cowork 可将其转化为 Excel 文件、PowerPoint 幻灯片或报告。",
-      "original_links": [
-        {
-          "url": "https://the-decoder.com/anthropic-brings-claude-cowork-to-its-chrome-extension-adding-skills-and-plugins-to-the-browser",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://claude.com/blog/cowork-chrome-side-panel",
-          "domain": "claude.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/138babd3-b1fe-4683-bc17-8354285297b5"
-    },
-    {
-      "rank": 9,
-      "title": "小红书开源 dots.tts 语音合成模型",
-      "list_title": "小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座",
-      "heat": 26,
-      "sources": [
-        "公众号：小红书技术（dots.llm）",
-        "另有 2 组氛围票"
-      ],
-      "summary": "小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座",
-      "original_links": [
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496062&idx=1&sn=d4c48926c5d7607f129dfea03699a6c0",
-          "domain": "mp.weixin.qq.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/ab7ebeaf-0f4b-4f84-a7c6-754318ae4316"
-    },
-    {
-      "rank": 10,
-      "title": "WorkBuddy 上线远程控制功能",
-      "list_title": "WorkBuddy上线远程控制，国内也有了最丝滑的Agent工作方式",
-      "heat": 24,
-      "sources": [
-        "公众号：数字生命卡兹克",
-        "另有 2 组氛围票"
-      ],
-      "summary": "WorkBuddy上线远程控制，国内也有了最丝滑的Agent工作方式",
-      "original_links": [
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685179&idx=1&sn=4cbee32b677b57a9dc6ec2a79d6f72c7",
-          "domain": "mp.weixin.qq.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/07dd0a31-ce82-43df-8f45-5dc417921e84"
     }
   ]
 }
