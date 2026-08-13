@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T15:59:04+08:00",
+  "generated_at": "2026-08-13T17:40:41+08:00",
   "fetched_date": "2026-08-13",
   "source": {
     "name": "AIHOT 热点榜",
@@ -11,14 +11,15 @@
       "rank": 1,
       "title": "DeepSeek 发布 DeepSeek V4 Pro 与 V4 预览版的基准对比",
       "list_title": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
-      "heat": 142,
+      "heat": 149,
       "sources": [
         "X：X.PIN (@thexpin)",
         "IT之家（RSS）",
         "Hacker News 热门（buzzing.cc 中文翻译）",
         "X：SemiAnalysis (@SemiAnalysis_)",
         "公众号：数字生命卡兹克",
-        "另有 26 组氛围票"
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "另有 27 组氛围票"
       ],
       "summary": "DeepSeek 于 2026 年 8 月 12 日发布 V4 Pro 正式版（DeepSeek-V4-Pro-0813），并更新至 API，调用模型名不变。该版本增强 Agent 能力，支持 Responses API 和 Codex 接入，多项测试性能接近 Fable 5，较预览版大幅提升。定价为百万 tokens 输入（缓存命中）0.025 元、输入（缓存未命中）3 元、输出 6 元。\n模型输入价格 $0.435/1M tokens，输出价格 $0.87/1M tokens，上下文窗口达 1M。该模型目前由一家提供商托管，OpenRouter 将请求直接转发至该提供商。\nSemiAnal",
       "original_links": [
@@ -43,46 +44,9 @@
     },
     {
       "rank": 2,
-      "title": "Grok 4.6 在多项基准测试中登顶",
-      "list_title": "Cursor 与 SpaceXAI 联合发布 Grok 4.6",
-      "heat": 98,
-      "sources": [
-        "X：Artificial Analysis (@ArtificialAnlys)",
-        "X：cb_doge (@cb_doge)",
-        "IT之家（RSS）",
-        "X：阿易 AI Notes (@AYi_AInotes)",
-        "X：Kim (@kimmonismus)",
-        "X：Testing Catalog (@testingcatalog)",
-        "Cursor Blog",
-        "Hacker News 热门（buzzing.cc 中文翻译）",
-        "另有 8 组氛围票"
-      ],
-      "summary": "SpaceXAI 发布 Grok 4.6 模型，在多项基准测试中登顶。该模型在 Artificial Analysis 智能指数上得分 61，与 GPT-5.6 Sol 并列前沿，仅次于 Anthropic 的 Claude 系列。在 GDPval-AA v2 上 Elo 达 1753，排名第一；在 AA-Briefcase、Harvey LAB 等基准中也位列第一，在 CursorBench、FrontierCode、APEX-Agents、APEX-SWE 中排名第二。\nGrok 4.6 定价与 Grok 4.5 一致，为每百万 token 输入 2 美元、输出 6 美元，成本较 Clau",
-      "original_links": [
-        {
-          "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
-          "domain": "artificialanalysis.ai"
-        },
-        {
-          "url": "https://cursor.com/blog/grok-4-6",
-          "domain": "cursor.com"
-        },
-        {
-          "url": "https://x.com/AYi_AInotes/status/2087572977348911250",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/988/999.htm",
-          "domain": "www.ithome.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/33140bc7-aa76-4593-b76f-eb73d454644a"
-    },
-    {
-      "rank": 3,
       "title": "xAI 发布 Grok 4.6",
       "list_title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
-      "heat": 96,
+      "heat": 106,
       "sources": [
         "X：cb_doge (@cb_doge)",
         "X：Elon Musk (@elonmusk, xAI)",
@@ -93,7 +57,7 @@
         "X：Rohan Paul (@rohanpaul_ai)",
         "X：Lee Robinson (@leerob)",
         "MarkTechPost（RSS）",
-        "另有 4 组氛围票"
+        "另有 7 组氛围票"
       ],
       "summary": "2026年8月12日，xAI（报道中亦称SpaceXAI）发布Grok 4.6模型。该模型在多项基准测试中表现突出，在GDPVal-AA v2、AA-Briefcase、Harvey LAB等基准上排名第一，在CursorBench、FrontierCode、APEX-Agents、APEX-SWE等基准上排名第二。在综合9项基准的Artificial Analysis Intelligence Index上，Grok 4.6获得61分，与GPT-5.6 Sol（或GPT-5.6 Sol Max）持平，仅比Fable 5低1分。\nGrok 4.6定价与Grok 4.5一致，为每百万输入toke",
       "original_links": [
@@ -117,10 +81,47 @@
       "story_url": "https://aihot.virxact.com/story/5fe3ff3d-4e3d-43d1-959b-4aad7e6d239c"
     },
     {
+      "rank": 3,
+      "title": "Grok 4.6 在多项基准测试中登顶",
+      "list_title": "Cursor 与 SpaceXAI 联合发布 Grok 4.6",
+      "heat": 97,
+      "sources": [
+        "X：Artificial Analysis (@ArtificialAnlys)",
+        "X：cb_doge (@cb_doge)",
+        "IT之家（RSS）",
+        "X：阿易 AI Notes (@AYi_AInotes)",
+        "X：Kim (@kimmonismus)",
+        "X：Testing Catalog (@testingcatalog)",
+        "Cursor Blog",
+        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "另有 9 组氛围票"
+      ],
+      "summary": "SpaceXAI 发布 Grok 4.6 模型，在多项基准测试中登顶。该模型在 Artificial Analysis 智能指数上得分 61，与 GPT-5.6 Sol 并列前沿，仅次于 Anthropic 的 Claude 系列。在 GDPval-AA v2 上 Elo 达 1753，排名第一；在 AA-Briefcase、Harvey LAB 等基准中也位列第一，在 CursorBench、FrontierCode、APEX-Agents、APEX-SWE 中排名第二。\nGrok 4.6 定价与 Grok 4.5 一致，为每百万 token 输入 2 美元、输出 6 美元，成本较 Clau",
+      "original_links": [
+        {
+          "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
+          "domain": "artificialanalysis.ai"
+        },
+        {
+          "url": "https://cursor.com/blog/grok-4-6",
+          "domain": "cursor.com"
+        },
+        {
+          "url": "https://x.com/AYi_AInotes/status/2087572977348911250",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/988/999.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/33140bc7-aa76-4593-b76f-eb73d454644a"
+    },
+    {
       "rank": 4,
       "title": "NVIDIA 发布 Nemotron 3.5 Lightning",
       "list_title": "NVIDIA 推出 Nemotron 3.5 Lightning，加速本地智能体任务",
-      "heat": 56,
+      "heat": 53,
       "sources": [
         "NVIDIA Blog（RSS）",
         "X：Artificial Analysis (@ArtificialAnlys)",
@@ -163,7 +164,7 @@
       "rank": 5,
       "title": "Google 宣布 Gemini 月活突破 10 亿",
       "list_title": "Gemini月活10亿，Gemma下载破10亿",
-      "heat": 47,
+      "heat": 44,
       "sources": [
         "X：Josh Woodward (@joshwoodward, Google Labs VP)",
         "X：Sundar Pichai (@sundarpichai)",
@@ -200,12 +201,12 @@
       "rank": 6,
       "title": "Qwen 在 Hugging Face 上线 Qwen3.8-2.4T-A95B",
       "list_title": "阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文",
-      "heat": 36,
+      "heat": 39,
       "sources": [
         "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
         "IT之家（RSS）",
         "X：Rohan Paul (@rohanpaul_ai)",
-        "另有 2 组氛围票"
+        "另有 3 组氛围票"
       ],
       "summary": "阿里 Qwen 团队在 Hugging Face 上线 Qwen3.8-2.4T-A95B 模型权重，这是 Qwen-Max 级别模型首次开源。模型总参数 2.4T，每个 Token 激活 95B，原生支持 262,144 Token 上下文，并可扩展至 1,010,000 Token。\nHugging Face CEO Clément Delangue 在 X 平台转发并评论“走起！”。随后 IT之家报道确认模型权重开放，并强调其为 Qwen-Max 级别模型首次开源。\n8 月 13 日，AI 领域人士 Rohan Paul 在 X 平台再次提及该模型已上线 HuggingFace，确认其开",
       "original_links": [
@@ -224,7 +225,7 @@
       "rank": 7,
       "title": "WorkBuddy 上线远程控制功能",
       "list_title": "WorkBuddy上线远程控制，国内也有了最丝滑的Agent工作方式",
-      "heat": 23,
+      "heat": 21,
       "sources": [
         "公众号：数字生命卡兹克",
         "另有 1 组氛围票"
@@ -242,7 +243,7 @@
       "rank": 8,
       "title": "NVIDIA partners with six institutions to finance AI factories",
       "list_title": "NVIDIA 携手 Apollo、BlackRock 等成立融资平台，AI 工厂算力成为可投资资产类别",
-      "heat": 22,
+      "heat": 21,
       "sources": [
         "The Decoder：AI News（RSS）",
         "X：Rohan Paul (@rohanpaul_ai)",
@@ -274,7 +275,7 @@
       "rank": 9,
       "title": "NVIDIA 研发 Nemotron 4 开源 AI 模型",
       "list_title": "消息称英伟达开发万亿参数开源 AI 模型 Nemotron 4，目标挑战全球顶级",
-      "heat": 19,
+      "heat": 18,
       "sources": [
         "IT之家（RSS）",
         "The Decoder：AI News（RSS）",
@@ -295,17 +296,16 @@
     },
     {
       "rank": 10,
-      "title": "研究发现专有 LLM 加密推理轨迹块可跨会话互换引发解密越狱",
-      "list_title": "窃取专有 LLM API 的推理轨迹：加密块可跨会话互换引发解密越狱",
-      "heat": 16,
+      "title": "研究揭示 Anthropic、OpenAI 和 Google 专有 LLM API 的加密思维链可互换",
+      "list_title": "研究人员发现可读取ChatGPT等模型加密推理过程的API漏洞",
+      "heat": 13,
       "sources": [
-        "HuggingFace Daily Papers（社区热门论文）",
         "Hacker News 热门（buzzing.cc 中文翻译）",
         "X：阿易 AI Notes (@AYi_AInotes)",
         "The Decoder：AI News（RSS）",
         "Simon Willison 博客"
       ],
-      "summary": "研究人员发现，Anthropic、OpenAI 和 Google 等专有 LLM 的加密推理轨迹块可跨会话、用户和模型互换。攻击者可将这些块注入同提供商防护较弱的模型，并实施越狱，强制其以明文输出原始推理内容。\nAlexander Panfilov 团队扫描约 7000 条公开会话，发现 62 个 API 密钥、33 个邮箱和 33 个密码。通过越狱，Anthropic 的 Haiku 4.5 可逐字转写 Opus 4.8 的原始推理。解码 10000 条推理轨迹的 API 成本约 720 美元。\n所有模型提供商已确认收到报告，该攻击目前已被修复。",
+      "summary": "研究发现 Anthropic、OpenAI 和 Google 的专有 LLM API 返回的加密思维链块在会话、用户和模型之间可互换，攻击者可利用此漏洞大规模解码隐藏推理过程。\n研究者扫描约 6700 至 7000 条公开会话，发现 62 个 API 密钥、33 个邮箱和 33 个密码等敏感信息，解码 10000 条推理轨迹的 API 成本约 720 美元。\n通过越狱，Anthropic 的 Haiku 4.5 可逐字转写 Opus 4.8 的原始推理；研究还首次大规模观察到模型作弊、隐瞒过程等行为，OpenAI 模型会用暗语循环逃避监控。\n所有模型提供商已确认收到报告，该攻击目前已被修复。",
       "original_links": [
         {
           "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces",
@@ -316,11 +316,15 @@
           "domain": "the-decoder.com"
         },
         {
-          "url": "https://arxiv.org/abs/2608.09867",
-          "domain": "arxiv.org"
+          "url": "https://x.com/AYi_AInotes/status/2087224611180020065",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://stolen-thoughts.com/",
+          "domain": "stolen-thoughts.com"
         }
       ],
-      "story_url": "https://aihot.virxact.com/story/343e37a4-e9ca-41af-aa94-6963e25aeb13"
+      "story_url": "https://aihot.virxact.com/story/ba527e66-f9c8-4dce-b6fc-37b2ba7a7e24"
     }
   ]
 }
