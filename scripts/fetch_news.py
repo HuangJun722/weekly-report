@@ -3227,9 +3227,8 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
             source=analysis_source or 'ai',
             status=analysis_status,
         ))
-    # 无 AI 分析时的 fallback：不再按类型拼断言式文案（类型是关键词猜的，AI 未读过原文，
-    # 拼出的「行业研究报告发布」「财报披露」可能失真），改中性表述，由用户打开原文核实。
-    neutral_reason = f"{item['region']}媒体报道，AI 分析暂不可用，请以原文为准"
+    # 无 AI 分析时的 fallback：reason 留空，模板不显示点评行。
+    # 不编造类型化文案，也不显示"AI 分析暂不可用"这类吓人的提示。
     event = {
         'title': item['title'],
         'url': item['url'],
@@ -3240,9 +3239,9 @@ def build_event(item, analysis=None, analysis_source=None, analysis_status=None)
         'score': score,
         'summary_short': item['title'][:25],
         'content_overview': '',
-        'reason': neutral_reason,
+        'reason': '',
         'impact': '未知',
-        'insight_label': '待分析',
+        'insight_label': '背景补充',
         'trend_topic': '',
         'companies': [],
         'is_company': item.get('is_company', False),
@@ -3588,35 +3587,29 @@ def main():
     for it in filtered:
         it['_prescore'] = _calc_score(it)
 
-    # 三层：AI深度分析 / 程序生成（零API成本） / 丢弃
+    # 分层：所有合格事件一律先送 AI 分析（2026-08-13 用户决策），
+    # 丢弃仍按分数（<4 且非公司视为无价值边缘事件，不送 AI 省成本）。
     ai_tier, prog_tier = [], []
     drop_count = 0
     for it in filtered:
         score = it['_prescore']
-        ev_type = (it.get('event_types') or ['other'])[0]
-        if score >= 7 or ev_type in ('funding', 'ma', 'earnings'):
-            ai_tier.append(it)
-        elif score >= 4 or it.get('is_company'):
-            prog_tier.append(it)
-        else:
+        if score < 4 and not it.get('is_company'):
             drop_count += 1
+        else:
+            ai_tier.append(it)
     _merge_source_funnel(source_funnel, _source_funnel_stage(ai_tier, 'score_ai_tier'))
-    _merge_source_funnel(source_funnel, _source_funnel_stage(prog_tier, 'score_program_tier'))
-    kept_score_ids = {id(it) for it in ai_tier + prog_tier}
+    kept_score_ids = {id(it) for it in ai_tier}
     dropped_items = [it for it in filtered if id(it) not in kept_score_ids]
     _merge_source_funnel(source_funnel, _source_funnel_stage(dropped_items, 'score_dropped'))
 
-    print(f"    AI深度分析：{len(ai_tier)} 条 | 程序生成：{len(prog_tier)} 条 | 丢弃：{drop_count} 条")
+    print(f"    AI深度分析：{len(ai_tier)} 条 | 丢弃：{drop_count} 条")
     run_metrics['scoring'] = {
         'ai_tier_count': len(ai_tier),
-        'program_tier_count': len(prog_tier),
+        'program_tier_count': 0,
         'dropped_count': drop_count,
     }
 
-    # 程序生成（中分事件 + 低分公司事件，零API成本）
-    today_events = [build_event(item, analysis_source='program', analysis_status='fallback') for item in prog_tier]
-
-    # AI深度分析（高分/强信号事件）
+    # AI深度分析（所有合格事件先送 AI，失败才程序兜底）
     if ai_tier:
         fill_event_images(ai_tier)
         use_deepseek = configure_deepseek()

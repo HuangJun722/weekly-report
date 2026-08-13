@@ -490,26 +490,26 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <span class="m-head-meta">共 {{ total_stories }} 条合格事件{% if summary_counts %} · {{ summary_counts }}{% endif %}</span>
         </div>
       </div>
+      {% if aihot_hot %}
+      <section class="f-hot">
+        <div class="f-hot-head">
+          <h3>近期AI热点</h3>
+          <a class="f-hot-more" href="https://aihot.virxact.com/hot" target="_blank" rel="noopener">查看全部 ›</a>
+        </div>
+        <ol class="f-hot-list">
+          {% for item in aihot_hot['items'][:5] %}
+          <li class="f-hot-row">
+            <a href="{{ item.original_links[0].url if item.original_links else item.story_url }}" target="_blank" rel="noopener" class="f-hot-main">
+              <span class="f-hot-rank">{{ item.rank }}</span>
+              <span class="f-hot-title">{{ item.title }}</span>
+              <span class="f-hot-heat">{{ item.heat }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+      {% endif %}
       <div class="f-grid">
-        {% if aihot_hot %}
-        <section class="f-hot">
-          <div class="f-hot-head">
-            <h3>近期AI热点</h3>
-            <a class="f-hot-more" href="https://aihot.virxact.com/hot" target="_blank" rel="noopener">查看全部 ›</a>
-          </div>
-          <ol class="f-hot-list">
-            {% for item in aihot_hot['items'][:5] %}
-            <li class="f-hot-row">
-              <a href="{{ item.original_links[0].url if item.original_links else item.story_url }}" target="_blank" rel="noopener" class="f-hot-main">
-                <span class="f-hot-rank">{{ item.rank }}</span>
-                <span class="f-hot-title">{{ item.title }}</span>
-                <span class="f-hot-heat">{{ item.heat }}</span>
-              </a>
-            </li>
-            {% endfor %}
-          </ol>
-        </section>
-        {% endif %}
         <section class="f-list">
           {% for item in merged_events %}
           <a class="f-card{% if item.pri == 'review' %} f-card-review{% endif %}" href="{{ item.ev.url }}" target="_blank" data-filterable data-region="{{ item.ev.region }}" data-company="{{ item.ev.company_name if item.ev.is_company else '' }}" data-text="{{ item.ev.title }} {{ item.ev.reason }} {{ item.ev.front_overview }} {{ item.ev.region }} {{ item.ev.source }} {{ item.ev.company_name if item.ev.is_company else '' }}">
