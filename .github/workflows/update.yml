@@ -98,7 +98,8 @@ jobs:
           )
           ACCESSIBLE=0
           for src in "${SOURCES[@]}"; do
-            CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 8 "$src")
+            # 单个源 403/超时只打警告，不中断流程（curl 失败 exit 非零，用 || true 容错）
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 8 "$src" || true)
             if [ "$CODE" = "200" ] || [ "$CODE" = "301" ] || [ "$CODE" = "302" ]; then
               echo "✅ $CODE $src"
               ACCESSIBLE=$((ACCESSIBLE+1))
