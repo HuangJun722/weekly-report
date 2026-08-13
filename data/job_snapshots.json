@@ -1,18 +1,100 @@
 {
   "version": 1,
-  "generated_at": "2026-08-13T03:12:34.567720+08:00",
+  "generated_at": "2026-08-13T11:24:38.363810+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-11T17:09:39.811008+08:00",
+      "observed_at": "2026-08-13T11:24:38.363810+08:00",
       "jobs": [
         {
-          "id": "744000142805839",
-          "title": "Ethic & Compliance Associate Grab Rental",
-          "url": "https://www.grab.careers/en/jobs/744000142805839/ethic-compliance-associate-grab-rental/",
+          "id": "744000143222519",
+          "title": "Business Strategy & Planning Manager",
+          "url": "https://www.grab.careers/en/jobs/744000143222519/business-strategy-planning-manager/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143221939",
+          "title": "Senior Software Engineer, Fullstack",
+          "url": "https://www.grab.careers/en/jobs/744000143221939/senior-software-engineer-fullstack/",
           "function_tags": [
-            "compliance"
+            "engineering"
           ]
+        },
+        {
+          "id": "744000143142779",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000143142779/senior-software-engineer-backend/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143110599",
+          "title": "Manager, Omnicommerce Strategy",
+          "url": "https://www.grab.careers/en/jobs/744000143110599/manager-omnicommerce-strategy/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143109129",
+          "title": "Intern - Commercial GFB - Acceleration & Account Growth",
+          "url": "https://www.grab.careers/en/jobs/744000143109129/intern-commercial-gfb-acceleration-account-growth/",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "744000143042449",
+          "title": "Head, Order-To-Cash (OTC)",
+          "url": "https://www.grab.careers/en/jobs/744000143042449/head-order-to-cash-otc/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143038390",
+          "title": "Lead Product Manager, Transaction Platform",
+          "url": "https://www.grab.careers/en/jobs/744000143038390/lead-product-manager-transaction-platform/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143031739",
+          "title": "Support Manager, People Systems",
+          "url": "https://www.grab.careers/en/jobs/744000143031739/support-manager-people-systems/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000143030369",
+          "title": "Assistant Manager, Regional Business Finance – B2B",
+          "url": "https://www.grab.careers/en/jobs/744000143030369/assistant-manager-regional-business-finance-b2b/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143029439",
+          "title": "Senior Manager, Strategic Initiatives and PMI",
+          "url": "https://www.grab.careers/en/jobs/744000143029439/senior-manager-strategic-initiatives-and-pmi/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143021049",
+          "title": "Assistant Marketing Manager, Mobility",
+          "url": "https://www.grab.careers/en/jobs/744000143021049/assistant-marketing-manager-mobility/",
+          "function_tags": []
+        },
+        {
+          "id": "744000142848879",
+          "title": "Software Engineering Manager II",
+          "url": "https://www.grab.careers/en/jobs/744000142848879/software-engineering-manager-ii/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000142822715",
+          "title": "Associate, Campaign and Monetization - GrabFood [Non Self-Serve Business]",
+          "url": "https://www.grab.careers/en/jobs/744000142822715/associate-campaign-and-monetization-grabfood-non-self-serve-business/",
+          "function_tags": []
         },
         {
           "id": "744000142803899",
@@ -21,124 +103,16 @@
           "function_tags": []
         },
         {
-          "id": "744000142800280",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000142800280/senior-software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
           "id": "744000142793579",
           "title": "Manager, Deliveries Marketplace Strategy",
           "url": "https://www.grab.careers/en/jobs/744000142793579/manager-deliveries-marketplace-strategy/",
-          "function_tags": []
-        },
-        {
-          "id": "744000142784079",
-          "title": "Associate, Mobility & Deliveries Audit",
-          "url": "https://www.grab.careers/en/jobs/744000142784079/associate-mobility-deliveries-audit/",
-          "function_tags": []
-        },
-        {
-          "id": "744000142671244",
-          "title": "Assistant Marketing Manager, Mobility",
-          "url": "https://www.grab.careers/en/jobs/744000142671244/assistant-marketing-manager-mobility/",
-          "function_tags": []
-        },
-        {
-          "id": "744000142617219",
-          "title": "Assistant Finance Manager (Controllership)",
-          "url": "https://www.grab.careers/en/jobs/744000142617219/assistant-finance-manager-controllership/",
-          "function_tags": []
-        },
-        {
-          "id": "744000142613869",
-          "title": "Head, Grab Support Customer Operations",
-          "url": "https://www.grab.careers/en/jobs/744000142613869/head-grab-support-customer-operations/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000142613532",
-          "title": "Head, Grab Support Customer Excellence",
-          "url": "https://www.grab.careers/en/jobs/744000142613532/head-grab-support-customer-excellence/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000142594006",
-          "title": "Assistant Marketing Manager, Financial Services",
-          "url": "https://www.grab.careers/en/jobs/744000142594006/assistant-marketing-manager-financial-services/",
-          "function_tags": [
-            "payments"
-          ]
-        },
-        {
-          "id": "744000142566409",
-          "title": "Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000142566409/software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000142555869",
-          "title": "Marketplace Manager (Deliveries)",
-          "url": "https://www.grab.careers/en/jobs/744000142555869/marketplace-manager-deliveries/",
-          "function_tags": []
-        },
-        {
-          "id": "744000142514809",
-          "title": "Principal Engineer, FundsCore",
-          "url": "https://www.grab.careers/en/jobs/744000142514809/principal-engineer-fundscore/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000142514669",
-          "title": "Senior Data Scientist, People Science",
-          "url": "https://www.grab.careers/en/jobs/744000142514669/senior-data-scientist-people-science/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000142084940",
-          "title": "Data Scientist (Analytics)",
-          "url": "https://www.grab.careers/en/jobs/744000142084940/data-scientist-analytics/",
-          "function_tags": []
-        },
-        {
-          "id": "744000142082180",
-          "title": "Operations Solution Specialist, BIOS",
-          "url": "https://www.grab.careers/en/jobs/744000142082180/operations-solution-specialist-bios/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000142069129",
-          "title": "Senior Testing Engineer",
-          "url": "https://www.grab.careers/en/jobs/744000142069129/senior-testing-engineer/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000142061639",
-          "title": "Marketing Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000142061639/marketing-specialist/",
           "function_tags": []
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-13T03:12:34.567720+08:00",
+      "observed_at": "2026-08-13T11:24:38.363810+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -254,7 +228,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-13T03:12:34.567720+08:00",
+      "observed_at": "2026-08-13T11:24:38.363810+08:00",
       "jobs": [
         {
           "id": "23139158-81cb-4924-a080-5d38e490d687",
@@ -350,8 +324,8 @@
         },
         {
           "id": "5de9add2-829e-4307-8d9e-20ee3353d237",
-          "title": "Associate General Council, Partnerships Remote - Americas",
-          "url": "https://www.shopify.com/careers/associate-general-council-partnerships_5de9add2-829e-4307-8d9e-20ee3353d237",
+          "title": "Associate General Counsel, Partnerships Remote - Americas",
+          "url": "https://www.shopify.com/careers/associate-general-counsel-partnerships_5de9add2-829e-4307-8d9e-20ee3353d237",
           "function_tags": [
             "partnerships"
           ]
@@ -380,15 +354,15 @@
           ]
         },
         {
-          "id": "32132c55-3c8c-4695-b117-477fe97629aa",
-          "title": "Professional Services Delivery Manager Remote - Americas",
-          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
-          "function_tags": []
-        },
-        {
           "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
           "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
           "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
+          "function_tags": []
+        },
+        {
+          "id": "32132c55-3c8c-4695-b117-477fe97629aa",
+          "title": "Professional Services Delivery Manager Remote - Americas",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
           "function_tags": []
         },
         {
@@ -482,9 +456,21 @@
           "function_tags": []
         },
         {
+          "id": "1ccc66fe-bdc6-442a-94d6-6327fe8c7784",
+          "title": "Technical Account Manager, EMEA Remote - EMEA, United Kingdom, Ireland",
+          "url": "https://www.shopify.com/careers/technical-account-manager-emea_1ccc66fe-bdc6-442a-94d6-6327fe8c7784",
+          "function_tags": []
+        },
+        {
           "id": "059c7d72-aed5-43a3-ab5b-1129adeef356",
           "title": "Technical Account Manager, Enterprise East Remote - Americas",
           "url": "https://www.shopify.com/careers/technical-account-manager-enterprise-east_059c7d72-aed5-43a3-ab5b-1129adeef356",
+          "function_tags": []
+        },
+        {
+          "id": "5ad7b193-2d97-46ab-b173-5e83e0a4a660",
+          "title": "Technical Account Manager, Enterprise West Remote - Americas",
+          "url": "https://www.shopify.com/careers/technical-account-manager-enterprise-west_5ad7b193-2d97-46ab-b173-5e83e0a4a660",
           "function_tags": []
         }
       ]
