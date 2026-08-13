@@ -1,11 +1,27 @@
 {
   "version": 1,
-  "generated_at": "2026-08-13T17:36:00.842300+08:00",
+  "generated_at": "2026-08-13T21:13:37.873366+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-13T17:36:00.842300+08:00",
+      "observed_at": "2026-08-13T21:13:37.873366+08:00",
       "jobs": [
+        {
+          "id": "744000143278985",
+          "title": "Principal Data Scientist (User Understanding Platformisation)",
+          "url": "https://www.grab.careers/en/jobs/744000143278985/principal-data-scientist-user-understanding-platformisation/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143271450",
+          "title": "Driver Partner Engagement Specialist",
+          "url": "https://www.grab.careers/en/jobs/744000143271450/driver-partner-engagement-specialist/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
         {
           "id": "744000143262519",
           "title": "Operations Automation Specialist",
@@ -139,26 +155,12 @@
           "function_tags": [
             "engineering"
           ]
-        },
-        {
-          "id": "744000143110599",
-          "title": "Manager, Omnicommerce Strategy",
-          "url": "https://www.grab.careers/en/jobs/744000143110599/manager-omnicommerce-strategy/",
-          "function_tags": []
-        },
-        {
-          "id": "744000143109129",
-          "title": "Intern - Commercial GFB - Acceleration & Account Growth",
-          "url": "https://www.grab.careers/en/jobs/744000143109129/intern-commercial-gfb-acceleration-account-growth/",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-13T17:36:00.842300+08:00",
+      "observed_at": "2026-08-13T21:13:37.873366+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -274,7 +276,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-13T17:36:00.842300+08:00",
+      "observed_at": "2026-08-13T21:13:37.873366+08:00",
       "jobs": [
         {
           "id": "23139158-81cb-4924-a080-5d38e490d687",

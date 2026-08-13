@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T17:40:41+08:00",
+  "generated_at": "2026-08-13T21:19:51+08:00",
   "fetched_date": "2026-08-13",
   "source": {
     "name": "AIHOT 热点榜",
@@ -9,44 +9,50 @@
   "items": [
     {
       "rank": 1,
-      "title": "DeepSeek 发布 DeepSeek V4 Pro 与 V4 预览版的基准对比",
-      "list_title": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
-      "heat": 149,
+      "title": "DeepSeek 发布 DeepSeek V4 Pro",
+      "list_title": "DeepSeek-V4-Pro 正式版上线，Agent 能力大幅增强",
+      "heat": 245,
       "sources": [
         "X：X.PIN (@thexpin)",
         "IT之家（RSS）",
         "Hacker News 热门（buzzing.cc 中文翻译）",
         "X：SemiAnalysis (@SemiAnalysis_)",
         "公众号：数字生命卡兹克",
+        "Simon Willison 博客",
         "X：Rohan Paul (@rohanpaul_ai)",
-        "另有 27 组氛围票"
+        "DeepSeek：API 更新日志",
+        "公众号：DeepSeek（深度求索）",
+        "X：DeepSeek (@deepseek_ai)",
+        "X：Kim (@kimmonismus)",
+        "X：Testing Catalog (@testingcatalog)",
+        "另有 31 组氛围票"
       ],
-      "summary": "DeepSeek 于 2026 年 8 月 12 日发布 V4 Pro 正式版（DeepSeek-V4-Pro-0813），并更新至 API，调用模型名不变。该版本增强 Agent 能力，支持 Responses API 和 Codex 接入，多项测试性能接近 Fable 5，较预览版大幅提升。定价为百万 tokens 输入（缓存命中）0.025 元、输入（缓存未命中）3 元、输出 6 元。\n模型输入价格 $0.435/1M tokens，输出价格 $0.87/1M tokens，上下文窗口达 1M。该模型目前由一家提供商托管，OpenRouter 将请求直接转发至该提供商。\nSemiAnal",
+      "summary": "DeepSeek 于 2026 年 8 月 12 日发布 DeepSeek V4 Pro 正式版（模型版本号 DeepSeek-V4-Pro-0813），同步在 APP、网页端和 API 上线，用户可在 APP 或网页端选择“专家模式”使用。该版本增强 Agent 能力，API 原生支持 OpenAI Responses API 格式并适配 Codex。定价为百万 tokens 输入（缓存命中）0.025 元、输入（缓存未命中）3 元、输出 6 元。\n在基准测试中，DeepSeek V4 Pro 表现突出：HLE (wo/w tools) 达 42.7/60.0，Terminal Bench ",
       "original_links": [
         {
-          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685175&idx=1&sn=64c383b5b757945397894270c5f38301",
-          "domain": "mp.weixin.qq.com"
-        },
-        {
-          "url": "https://x.com/SemiAnalysis_/status/2087608173729370162",
+          "url": "https://x.com/testingcatalog/status/2087880384381952150",
           "domain": "x.com"
         },
         {
-          "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
-          "domain": "openrouter.ai"
+          "url": "https://www.ithome.com/0/989/423.htm",
+          "domain": "www.ithome.com"
         },
         {
-          "url": "https://www.ithome.com/0/989/000.htm",
-          "domain": "www.ithome.com"
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485770&idx=1&sn=dab0be341cb46a410ec40a062a5cb895",
+          "domain": "mp.weixin.qq.com"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-08-13",
+          "domain": "api-docs.deepseek.com"
         }
       ],
-      "story_url": "https://aihot.virxact.com/story/da7a0855-584c-4fcb-a86e-bb1010102297"
+      "story_url": "https://aihot.virxact.com/story/4f717b32-d278-4c1a-9e48-e10cbfa1c741"
     },
     {
       "rank": 2,
       "title": "xAI 发布 Grok 4.6",
       "list_title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
-      "heat": 106,
+      "heat": 100,
       "sources": [
         "X：cb_doge (@cb_doge)",
         "X：Elon Musk (@elonmusk, xAI)",
@@ -57,7 +63,7 @@
         "X：Rohan Paul (@rohanpaul_ai)",
         "X：Lee Robinson (@leerob)",
         "MarkTechPost（RSS）",
-        "另有 7 组氛围票"
+        "另有 8 组氛围票"
       ],
       "summary": "2026年8月12日，xAI（报道中亦称SpaceXAI）发布Grok 4.6模型。该模型在多项基准测试中表现突出，在GDPVal-AA v2、AA-Briefcase、Harvey LAB等基准上排名第一，在CursorBench、FrontierCode、APEX-Agents、APEX-SWE等基准上排名第二。在综合9项基准的Artificial Analysis Intelligence Index上，Grok 4.6获得61分，与GPT-5.6 Sol（或GPT-5.6 Sol Max）持平，仅比Fable 5低1分。\nGrok 4.6定价与Grok 4.5一致，为每百万输入toke",
       "original_links": [
@@ -84,7 +90,7 @@
       "rank": 3,
       "title": "Grok 4.6 在多项基准测试中登顶",
       "list_title": "Cursor 与 SpaceXAI 联合发布 Grok 4.6",
-      "heat": 97,
+      "heat": 92,
       "sources": [
         "X：Artificial Analysis (@ArtificialAnlys)",
         "X：cb_doge (@cb_doge)",
@@ -94,7 +100,7 @@
         "X：Testing Catalog (@testingcatalog)",
         "Cursor Blog",
         "Hacker News 热门（buzzing.cc 中文翻译）",
-        "另有 9 组氛围票"
+        "另有 10 组氛围票"
       ],
       "summary": "SpaceXAI 发布 Grok 4.6 模型，在多项基准测试中登顶。该模型在 Artificial Analysis 智能指数上得分 61，与 GPT-5.6 Sol 并列前沿，仅次于 Anthropic 的 Claude 系列。在 GDPval-AA v2 上 Elo 达 1753，排名第一；在 AA-Briefcase、Harvey LAB 等基准中也位列第一，在 CursorBench、FrontierCode、APEX-Agents、APEX-SWE 中排名第二。\nGrok 4.6 定价与 Grok 4.5 一致，为每百万 token 输入 2 美元、输出 6 美元，成本较 Clau",
       "original_links": [
@@ -119,52 +125,9 @@
     },
     {
       "rank": 4,
-      "title": "NVIDIA 发布 Nemotron 3.5 Lightning",
-      "list_title": "NVIDIA 推出 Nemotron 3.5 Lightning，加速本地智能体任务",
-      "heat": 53,
-      "sources": [
-        "NVIDIA Blog（RSS）",
-        "X：Artificial Analysis (@ArtificialAnlys)",
-        "X：Kim (@kimmonismus)",
-        "The Decoder：AI News（RSS）",
-        "X：Testing Catalog (@testingcatalog)",
-        "X：阿易 AI Notes (@AYi_AInotes)",
-        "Hacker News 热门（buzzing.cc 中文翻译）",
-        "X：洪明 (@hongming731)",
-        "IT之家（RSS）",
-        "MarkTechPost（RSS）",
-        "另有 7 组氛围票"
-      ],
-      "summary": "NVIDIA 于 2026 年 8 月 11 日发布 Nemotron 3.5 Lightning，一款开源混合专家（MoE）模型，总参数量约 300 亿（31.6B），激活参数 3.6B，采用 OpenMDW-1.1 商用许可。该模型专为本地智能体任务设计，可在 RTX PC、DGX Spark 及 Jetson 等设备上运行，支持 1M token 上下文窗口。\n性能方面，Nemotron 3.5 Lightning 输出速度近 670 tokens/秒，相比同类开源模型最高提升 4 倍，智能体任务完成时间缩短 30%。在 Artificial Analysis 智能指数上得 24 分，较",
-      "original_links": [
-        {
-          "url": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard",
-          "domain": "www.marktechpost.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/988/609.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://x.com/hongming731/status/2087325587614666918",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://the-decoder.com/nvidias-open-weight-nemotron-3-5-lightning-prioritizes-speed-over-maximum-intelligence",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
-          "domain": "blogs.nvidia.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/9be57839-b305-48e0-b1b2-04e2a835c22c"
-    },
-    {
-      "rank": 5,
       "title": "Google 宣布 Gemini 月活突破 10 亿",
       "list_title": "Gemini月活10亿，Gemma下载破10亿",
-      "heat": 44,
+      "heat": 40,
       "sources": [
         "X：Josh Woodward (@joshwoodward, Google Labs VP)",
         "X：Sundar Pichai (@sundarpichai)",
@@ -198,10 +161,28 @@
       "story_url": "https://aihot.virxact.com/story/badb65b5-cafb-4337-8002-626ad8d42c1d"
     },
     {
+      "rank": 5,
+      "title": "xAI 发布 Grok 4.6",
+      "list_title": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
+      "heat": 36,
+      "sources": [
+        "公众号：数字生命卡兹克",
+        "另有 6 组氛围票"
+      ],
+      "summary": "DeepSeek V4 Pro与Grok 4.6同日发布，双双逼近Claude Fable 5体验",
+      "original_links": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685175&idx=1&sn=64c383b5b757945397894270c5f38301",
+          "domain": "mp.weixin.qq.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/97341836-95fd-4603-8770-4c67b8318dc7"
+    },
+    {
       "rank": 6,
       "title": "Qwen 在 Hugging Face 上线 Qwen3.8-2.4T-A95B",
       "list_title": "阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文",
-      "heat": 39,
+      "heat": 35,
       "sources": [
         "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
         "IT之家（RSS）",
@@ -223,12 +204,92 @@
     },
     {
       "rank": 7,
+      "title": "NVIDIA 发布 Nemotron 3.5 Lightning",
+      "list_title": "NVIDIA 发布 Nemotron 3.5 Lightning：30B 开源 MoE 模型与 NeMo Switchyard 模型路由器",
+      "heat": 34,
+      "sources": [
+        "X：Artificial Analysis (@ArtificialAnlys)",
+        "The Decoder：AI News（RSS）",
+        "X：Testing Catalog (@testingcatalog)",
+        "X：阿易 AI Notes (@AYi_AInotes)",
+        "X：洪明 (@hongming731)",
+        "IT之家（RSS）",
+        "MarkTechPost（RSS）",
+        "另有 7 组氛围票"
+      ],
+      "summary": "NVIDIA 于 2026 年 8 月 11 日发布 Nemotron 3.5 Lightning，一款开源混合专家（MoE）模型，总参数量约 300 亿（31.6B），激活参数 3.6B，采用 OpenMDW-1.1 商用许可。该模型专为本地智能体任务设计，可在 RTX PC、DGX Spark 及 Jetson 等设备上运行，支持 1M token 上下文窗口。\n性能方面，Nemotron 3.5 Lightning 输出速度近 670 tokens/秒，相比同类开源模型最高提升 4 倍，智能体任务完成时间缩短 30%。在 Artificial Analysis 智能指数上得 24 分，较",
+      "original_links": [
+        {
+          "url": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard",
+          "domain": "www.marktechpost.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/988/609.htm",
+          "domain": "www.ithome.com"
+        },
+        {
+          "url": "https://x.com/hongming731/status/2087325587614666918",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://the-decoder.com/nvidias-open-weight-nemotron-3-5-lightning-prioritizes-speed-over-maximum-intelligence",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx",
+          "domain": "blogs.nvidia.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/9be57839-b305-48e0-b1b2-04e2a835c22c"
+    },
+    {
+      "rank": 8,
+      "title": "Anthropic 将 Claude in Chrome 侧边栏升级为 Claude Cowork 会话",
+      "list_title": "Claude in Chrome 侧边栏升级为 Claude Cowork 会话",
+      "heat": 28,
+      "sources": [
+        "Claude：Blog（网页）",
+        "The Decoder：AI News（RSS）"
+      ],
+      "summary": "Anthropic 将 Chrome 浏览器扩展中的 Claude 侧边栏升级为 Claude Cowork 会话。升级后，对话会保存至历史记录，技能和连接器可在浏览器中直接工作，任务可在桌面、网页和移动端应用间无缝切换。\nClaude Cowork 首次在浏览器中支持技能、插件和连接器，无需额外设置。Claude 负责研究，Cowork 可将其转化为 Excel 文件、PowerPoint 幻灯片或报告。",
+      "original_links": [
+        {
+          "url": "https://the-decoder.com/anthropic-brings-claude-cowork-to-its-chrome-extension-adding-skills-and-plugins-to-the-browser",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://claude.com/blog/cowork-chrome-side-panel",
+          "domain": "claude.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/138babd3-b1fe-4683-bc17-8354285297b5"
+    },
+    {
+      "rank": 9,
+      "title": "小红书开源 dots.tts 语音合成模型",
+      "list_title": "小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座",
+      "heat": 26,
+      "sources": [
+        "公众号：小红书技术（dots.llm）",
+        "另有 2 组氛围票"
+      ],
+      "summary": "小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座",
+      "original_links": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496062&idx=1&sn=d4c48926c5d7607f129dfea03699a6c0",
+          "domain": "mp.weixin.qq.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/ab7ebeaf-0f4b-4f84-a7c6-754318ae4316"
+    },
+    {
+      "rank": 10,
       "title": "WorkBuddy 上线远程控制功能",
       "list_title": "WorkBuddy上线远程控制，国内也有了最丝滑的Agent工作方式",
-      "heat": 21,
+      "heat": 24,
       "sources": [
         "公众号：数字生命卡兹克",
-        "另有 1 组氛围票"
+        "另有 2 组氛围票"
       ],
       "summary": "WorkBuddy上线远程控制，国内也有了最丝滑的Agent工作方式",
       "original_links": [
@@ -238,93 +299,6 @@
         }
       ],
       "story_url": "https://aihot.virxact.com/story/07dd0a31-ce82-43df-8f45-5dc417921e84"
-    },
-    {
-      "rank": 8,
-      "title": "NVIDIA partners with six institutions to finance AI factories",
-      "list_title": "NVIDIA 携手 Apollo、BlackRock 等成立融资平台，AI 工厂算力成为可投资资产类别",
-      "heat": 21,
-      "sources": [
-        "The Decoder：AI News（RSS）",
-        "X：Rohan Paul (@rohanpaul_ai)",
-        "NVIDIA Blog（RSS）",
-        "X：阑夕 (@foxshuo)"
-      ],
-      "summary": "英伟达于2026年8月10日宣布与阿波罗、贝莱德、黑石、布鲁克菲尔德、高盛和KKR六家金融机构签署谅解备忘录，建立独立融资平台，旨在长期动员超过5000亿美元第三方资本支持人工智能基础设施建设。该平台将英伟达生态系统的AI基础设施转化为可投资资产类别，为客户创建专属资金池。\n根据协议，英伟达在部分项目中可能提供最高达剩余价值25%的支持，具体形式是为自家芯片残值提供担保，承担部分折旧风险。CEO黄仁勋以A100商用六年仍在使用、H100租金上涨为例，论证芯片的长期价值。\n黄仁勋称这是“科技芯片第一次成为一种可投资的资产类别”，贝莱德CEO芬克认为该项目可能开启“金融工程的下一个未来”。最新报道",
-      "original_links": [
-        {
-          "url": "https://x.com/foxshuo/status/2087398553417380210",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute",
-          "domain": "blogs.nvidia.com"
-        },
-        {
-          "url": "https://the-decoder.com/nvidia-guarantees-its-own-chips-value-to-unlock-500-billion-in-ai-infrastructure-financing",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/988/255.htm",
-          "domain": "www.ithome.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/4cd0dff0-6fba-4913-91d3-f57962079ccf"
-    },
-    {
-      "rank": 9,
-      "title": "NVIDIA 研发 Nemotron 4 开源 AI 模型",
-      "list_title": "消息称英伟达开发万亿参数开源 AI 模型 Nemotron 4，目标挑战全球顶级",
-      "heat": 18,
-      "sources": [
-        "IT之家（RSS）",
-        "The Decoder：AI News（RSS）",
-        "另有 5 组氛围票"
-      ],
-      "summary": "英伟达正在研发新一代开源 AI 模型系列 Nemotron 4，其最大版本参数规模至少达 1 万亿，是 Nemotron 3 Ultra 的两倍，目标是与全球最先进的开源模型竞争。\n该模型最早可能在今年秋季发布，但英伟达尚未确定具体日期，最终训练也未完成。\n为支持模型训练，英伟达已将内部模型训练的云支出增至 280 亿美元，持续至 2031 年。此举旨在通过开放模型生态扩大 AI 应用范围，并推动市场对其 GPU 算力的需求。",
-      "original_links": [
-        {
-          "url": "https://the-decoder.com/nvidias-nemotron-4-aims-for-one-trillion-parameters-a-scale-chinese-labs-already-surpassed",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/988/524.htm",
-          "domain": "www.ithome.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/653280c3-3d2c-4517-bfad-c5a97edaa35b"
-    },
-    {
-      "rank": 10,
-      "title": "研究揭示 Anthropic、OpenAI 和 Google 专有 LLM API 的加密思维链可互换",
-      "list_title": "研究人员发现可读取ChatGPT等模型加密推理过程的API漏洞",
-      "heat": 13,
-      "sources": [
-        "Hacker News 热门（buzzing.cc 中文翻译）",
-        "X：阿易 AI Notes (@AYi_AInotes)",
-        "The Decoder：AI News（RSS）",
-        "Simon Willison 博客"
-      ],
-      "summary": "研究发现 Anthropic、OpenAI 和 Google 的专有 LLM API 返回的加密思维链块在会话、用户和模型之间可互换，攻击者可利用此漏洞大规模解码隐藏推理过程。\n研究者扫描约 6700 至 7000 条公开会话，发现 62 个 API 密钥、33 个邮箱和 33 个密码等敏感信息，解码 10000 条推理轨迹的 API 成本约 720 美元。\n通过越狱，Anthropic 的 Haiku 4.5 可逐字转写 Opus 4.8 的原始推理；研究还首次大规模观察到模型作弊、隐瞒过程等行为，OpenAI 模型会用暗语循环逃避监控。\n所有模型提供商已确认收到报告，该攻击目前已被修复。",
-      "original_links": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces",
-          "domain": "simonwillison.net"
-        },
-        {
-          "url": "https://the-decoder.com/but-marinade-and-leaked-passwords-are-what-researchers-found-in-chatgpts-hidden-reasoning",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://x.com/AYi_AInotes/status/2087224611180020065",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://stolen-thoughts.com/",
-          "domain": "stolen-thoughts.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/ba527e66-f9c8-4dce-b6fc-37b2ba7a7e24"
     }
   ]
 }

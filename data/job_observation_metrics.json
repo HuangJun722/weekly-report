@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-08-13T17:36:00.842300+08:00",
+  "observed_at": "2026-08-13T21:13:37.873366+08:00",
   "source_count": 3,
   "raw_count": 69,
   "source_stats": {
@@ -8,20 +8,17 @@
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 25,
+      "count": 4,
       "inventory_count": 20,
-      "signal_count": 1,
-      "added_count": 15,
-      "removed_count": 10,
+      "signal_count": 0,
+      "added_count": 2,
+      "removed_count": 2,
       "clusters": {
-        "operations": 2,
-        "engineering": 5,
-        "partnerships": 1,
-        "sales": 3
+        "engineering": 1,
+        "partnerships": 1
       },
       "removed_clusters": {
-        "engineering": 2,
-        "operations": 1
+        "sales": 1
       }
     },
     "Stripe Jobs": {
@@ -51,190 +48,6 @@
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [
-    {
-      "candidate_id": "jobs-8fb1b7c481f11152",
-      "entity_id": "grab",
-      "entity": "Grab",
-      "region": "亚太",
-      "sector": "mobility_payment",
-      "source_type": "jobs_snapshot",
-      "signal_type": "function_buildout",
-      "cluster": "engineering",
-      "window": "2026-W33",
-      "window_start": "2026-08-13",
-      "window_end": "2026-08-13",
-      "detected_at": "2026-08-13T17:36:00.842300+08:00",
-      "baseline_count": 15,
-      "current_count": 20,
-      "added_count": 15,
-      "removed_count": 10,
-      "clusters": {
-        "operations": 2,
-        "engineering": 5,
-        "partnerships": 1,
-        "sales": 3
-      },
-      "removed_clusters": {
-        "engineering": 2,
-        "operations": 1
-      },
-      "evidence_refs": [
-        {
-          "job_id": "744000143262519",
-          "title": "Operations Automation Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000143262519/operations-automation-specialist/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143259580",
-          "title": "Assistant Manager, Platform Quality & Experience",
-          "url": "https://www.grab.careers/en/jobs/744000143259580/assistant-manager-platform-quality-experience/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143256089",
-          "title": "Intern, Fleet Solutions (Partner Acquisition)",
-          "url": "https://www.grab.careers/en/jobs/744000143256089/intern-fleet-solutions-partner-acquisition/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143241569",
-          "title": "Lead Product Manager, Transaction Platform",
-          "url": "https://www.grab.careers/en/jobs/744000143241569/lead-product-manager-transaction-platform/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143237599",
-          "title": "Commercial Strategy Lead – PayLater, Lending & Omnicommerce",
-          "url": "https://www.grab.careers/en/jobs/744000143237599/commercial-strategy-lead-paylater-lending-omnicommerce/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143235030",
-          "title": "Senior Software Engineer, Observability platform",
-          "url": "https://www.grab.careers/en/jobs/744000143235030/senior-software-engineer-observability-platform/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143236769",
-          "title": "Merchant Acquisition Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143236769/merchant-acquisition-manager/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143236379",
-          "title": "Acquisition & Market Expansion Lead",
-          "url": "https://www.grab.careers/en/jobs/744000143236379/acquisition-market-expansion-lead/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143236339",
-          "title": "Sales Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143236339/sales-manager/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143236319",
-          "title": "Merchant Growth Lead",
-          "url": "https://www.grab.careers/en/jobs/744000143236319/merchant-growth-lead/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143236289",
-          "title": "Associate, Mobility & Deliveries Audit",
-          "url": "https://www.grab.careers/en/jobs/744000143236289/associate-mobility-deliveries-audit/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143235309",
-          "title": "Senior Software Engineer, Customer Data Platform",
-          "url": "https://www.grab.careers/en/jobs/744000143235309/senior-software-engineer-customer-data-platform/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143229150",
-          "title": "Lead Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000143229150/lead-software-engineer-backend/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143225889",
-          "title": "Product Operations Assistant Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143225889/product-operations-assistant-manager/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143225269",
-          "title": "Regional Sales Compensation Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143225269/regional-sales-compensation-manager/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143042449",
-          "title": "Head, Order-To-Cash (OTC)",
-          "url": "https://www.grab.careers/en/jobs/744000143042449/head-order-to-cash-otc/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143038390",
-          "title": "Lead Product Manager, Transaction Platform",
-          "url": "https://www.grab.careers/en/jobs/744000143038390/lead-product-manager-transaction-platform/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143031739",
-          "title": "Support Manager, People Systems",
-          "url": "https://www.grab.careers/en/jobs/744000143031739/support-manager-people-systems/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143030369",
-          "title": "Assistant Manager, Regional Business Finance – B2B",
-          "url": "https://www.grab.careers/en/jobs/744000143030369/assistant-manager-regional-business-finance-b2b/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143029439",
-          "title": "Senior Manager, Strategic Initiatives and PMI",
-          "url": "https://www.grab.careers/en/jobs/744000143029439/senior-manager-strategic-initiatives-and-pmi/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143021049",
-          "title": "Assistant Marketing Manager, Mobility",
-          "url": "https://www.grab.careers/en/jobs/744000143021049/assistant-marketing-manager-mobility/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142848879",
-          "title": "Software Engineering Manager II",
-          "url": "https://www.grab.careers/en/jobs/744000142848879/software-engineering-manager-ii/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142822715",
-          "title": "Associate, Campaign and Monetization - GrabFood [Non Self-Serve Business]",
-          "url": "https://www.grab.careers/en/jobs/744000142822715/associate-campaign-and-monetization-grabfood-non-self-serve-business/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142803899",
-          "title": "Strategic Account Management Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000142803899/strategic-account-management-specialist/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000142793579",
-          "title": "Manager, Deliveries Marketplace Strategy",
-          "url": "https://www.grab.careers/en/jobs/744000142793579/manager-deliveries-marketplace-strategy/",
-          "change": "removed"
-        }
-      ],
-      "status": "rejected",
-      "rejection_reason": "source_reset_suspected",
-      "promoted_event_id": ""
-    }
-  ],
+  "candidate_signals": [],
   "promoted_count": 0
 }
