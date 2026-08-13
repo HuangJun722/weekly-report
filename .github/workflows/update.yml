@@ -149,6 +149,10 @@ jobs:
           python -c "import sys; print(sys.path)"
           cat data/events.json | head -c 1000
 
+      # AIHOT 热点数据：抓取后供今日情报页「今日热点」卡片使用，失败不阻断（页面有兜底）
+      - name: Fetch AIHOT hot topics
+        run: python scripts/fetch_aihot_hot.py || echo "⚠️ AIHOT 热点抓取失败，页面将隐藏该卡片（本次跳过）"
+
       - name: Generate HTML
         run: python scripts/generate_html.py --force
         env:
