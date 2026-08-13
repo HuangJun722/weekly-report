@@ -1,6 +1,20 @@
 [
  {
   "date": "2026-08-13",
+  "version": "V4.4",
+  "type": "数据质量与展示",
+  "status": "已完成",
+  "title": "全量事件先 AI 分析 + fallback 文案中性化 + 问题事件自动修复",
+  "summary": "所有合格事件一律先送 AI 深度分析（仅低价值边缘事件丢弃），AI 失败才程序兜底；fallback 不再显示「AI 分析暂不可用」类吓人文案，点评行留空；新增问题事件自动修复脚本；并修复全量 AI 分层引入的 today_events 崩溃，恢复自动采集。",
+  "changes": [
+   "分层重构：所有合格事件一律先进 AI（仅 score<4 且非公司丢弃），替代原「高分走 AI、中分程序生成」两级分流——低分合格事件也获得 AI 分析",
+   "fallback 文案中性化：AI 失败事件 reason 留空（页面不显示点评行），不再出现「AI 分析暂不可用」类提示",
+   "新增 scripts/repair_stale_analysis.py：自动扫描 reason 为空/含旧文案的问题事件重新 AI 分析，接入 GHA 每日自动执行",
+   "修复全量 AI 分层引入的 today_events 未初始化崩溃（ai_tier 为空时 append 失败），自动采集流水线恢复运行"
+  ]
+ },
+ {
+  "date": "2026-08-13",
   "version": "V4.3",
   "type": "信源与界面",
   "status": "已完成",
