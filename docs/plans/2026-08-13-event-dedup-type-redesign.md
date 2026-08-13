@@ -99,6 +99,15 @@
 
 阶段 1 → 阶段 2 → 阶段 3，每阶段独立可验证。改动集中在 `scripts/fetch_news.py`（去重+类型）与 `scripts/template.html`+`generate_html.py`（fallback 展示），不触碰 workflow 与数据 schema 结构。
 
+## 八、实施后调整（对照本方案的偏差，已落地于 commit b40e5af）
+
+1. **SEA 验证标准 3→1 实际为 3→2**：`"Sea Limited Stock Jumped 15%"` 属独立的股价反应信号，事件锚点守卫下不再并入财报卡片，单独保留。
+2. **company_daily_cap 维持 3 不降为 2**：实测 cap=2 会误删真实事件（Naver-Dunamu 合并审查、Adyen-Toast 合作、TEAM NAVER AI 协作），去重已先合并真重复，cap 无需收紧。
+3. **新增事件锚点守卫**：singular 类型合并要求两条标题都含财报/融资/并购锚词，防止同公司同日不同故事（MercadoLibre 多条股票评论、Kakao 财报日游戏新闻）被误并；财报方向相反（利润创新高 vs 净利大跌）不合并。
+4. **别名对齐加词边界 + 泛化词黑名单**：`credit line`、`SeABank`、`to grab` 等普通词不再被误当公司别名，杜绝跨公司误并（审计发现 Addi/Elephant、Orbio/Qorelo、Nous/OPEC 等 4 组误并已修复）。
+5. **存量清理结果 3065→3045**（方案预估的 3065→3021 是去掉误并后的值）。
+6. **已知局限**：同母公司不同子公司财报（Rakuten Bank vs Rakuten Securities）仍可能并入父公司条目，发生率低（99 天 1 例）暂不处理。
+
 ## 附录 A：为什么不引入向量 embedding
 
 调研到的工业方案（SimHash+SBERT）面向亿级报道的规模。本项目每日采集约 60 条、标题短、且已具备姓名/类型/时间结构化字段——该规模下结构化事件键是精度与成本的最优解。引入 SBERT 类依赖会带来模型下载、CPU 推理延迟与维护成本，收益（对 60 条/日）可忽略。若未来日采规模上千且跨语种相似判定成为瓶颈，再评估 embedding 方案。
