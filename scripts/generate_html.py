@@ -1596,6 +1596,55 @@ def build_monthly_editorial(trends, period_id):
     return None
 
 
+def _load_aihot_archive(start_date, end_date, weekly=False):
+    """读取周期内 AIHOT 归档热点（data/aihot_hot/YYYY-MM-DD.json），按标题去重。
+
+    AIHOT 是实时外部数据，归属按自然周期（周报=自然周、月报=自然月）判定，
+    不受站内事件截止日（end_date）限制——否则当天的实时热点会被挡在周期外。
+    """
+    import calendar
+    start_dt = datetime.strptime(start_date, '%Y-%m-%d')
+    if weekly:
+        natural_end_dt = start_dt + timedelta(days=(6 - start_dt.weekday()))
+    else:
+        last_day = calendar.monthrange(start_dt.year, start_dt.month)[1]
+        natural_end_dt = datetime(start_dt.year, start_dt.month, last_day)
+    end = max(end_date, natural_end_dt.strftime('%Y-%m-%d'))
+
+    archive_dir = os.path.join('data', 'aihot_hot')
+    if not os.path.isdir(archive_dir):
+        return []
+    items = []
+    seen_titles = set()
+    for filename in sorted(os.listdir(archive_dir)):
+        date_key = filename[:-5]
+        if not (start_date <= date_key <= end):
+            continue
+        try:
+            with open(os.path.join(archive_dir, filename), 'r', encoding='utf-8') as handle:
+                data = json.load(handle)
+        except (OSError, json.JSONDecodeError):
+            continue
+        for item in data.get('items') or []:
+            title = (item.get('title') or item.get('list_title') or '').strip()
+            if not title or title in seen_titles:
+                continue
+            seen_titles.add(title)
+            url = ''
+            if item.get('original_links'):
+                url = item['original_links'][0].get('url') or ''
+            if not url:
+                url = item.get('story_url') or ''
+            items.append({
+                'rank': len(items) + 1,
+                'title': title,
+                'heat': item.get('heat'),
+                'url': url,
+                'date': date_key,
+            })
+    return items[:10]
+
+
 def build_period_report(events, start_date, end_date, label, period_id=None, status='closed',
                         focus_windows_enabled=False, require_editorial=False):
     """按 BD 机会视角聚合周报/月报；生产档案可要求 AI 编辑成功后才输出。"""
@@ -1740,6 +1789,7 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         'themes': themes,
         'period_themes': themes,
         'high_priority': high_count,
+        'aihot_hot': _load_aihot_archive(start_date, end_date, weekly=focus_windows_enabled),
     }
 
 

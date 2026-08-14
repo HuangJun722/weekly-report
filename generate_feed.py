@@ -1,4 +1,4 @@
-import datetime, html, hashlib, os, sys
+import datetime, html, hashlib, json, os, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -116,6 +116,44 @@ for ev in feed_events:
     <summary type="html">{summary}</summary>
   </entry>'''
     feed += entry
+
+# AIHOT 全球AI视野：当前快照 Top5 汇总为一条独立 entry（与站内事件流分开）
+try:
+    with open(ROOT / 'data' / 'aihot_hot.json', 'r', encoding='utf-8') as f:
+        aihot_data = json.load(f)
+except (OSError, json.JSONDecodeError):
+    aihot_data = None
+
+if aihot_data and aihot_data.get('items'):
+    top_items = aihot_data['items'][:5]
+    lines = []
+    for i, item in enumerate(top_items, 1):
+        title = text_value(item.get('title') or item.get('list_title') or '')
+        heat = item.get('heat')
+        url = ''
+        if item.get('original_links'):
+            url = item['original_links'][0].get('url') or ''
+        if not url:
+            url = item.get('story_url') or ''
+        heat_part = f"（热度 {heat}）" if heat else ''
+        if url:
+            lines.append(f'<li><a href="{xml_attr(url)}">{html.escape(title)}{html.escape(heat_part)}</a></li>')
+        else:
+            lines.append(f'<li>{html.escape(title)}{html.escape(heat_part)}</li>')
+    aihot_updated = text_value(aihot_data.get('generated_at'))[:16]
+    aihot_summary = f'<p>全球 AI 视野 · 数据截至 {html.escape(aihot_updated)}</p><ol>' + ''.join(lines) + '</ol>'
+    aihot_date = text_value(aihot_data.get('fetched_date'))[:10] or feed_date or ''
+    aihot_uid = hashlib.sha1(('aihot-top5-' + aihot_date).encode('utf-8')).hexdigest()[:8]
+    aihot_entry = f'''
+  <entry>
+    <title>全球AI视野 Top5 · {aihot_date}</title>
+    <link href="https://aihot.virxact.com/hot"/>
+    <id>tag:weekly-report,2026:aihot-{aihot_uid}</id>
+    <published>{aihot_date}T00:00:00Z</published>
+    <updated>{aihot_date}T00:00:00Z</updated>
+    <summary type="html">{html.escape(aihot_summary, quote=False)}</summary>
+  </entry>'''
+    feed += aihot_entry
 
 feed += '\n</feed>\n'
 

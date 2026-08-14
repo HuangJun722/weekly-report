@@ -213,12 +213,20 @@ def main():
         "items": items,
     }
 
-    out_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                            "data", "aihot_hot.json")
+    base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+
+    out_path = os.path.join(base_dir, "aihot_hot.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
+    archive_dir = os.path.join(base_dir, "aihot_hot")
+    os.makedirs(archive_dir, exist_ok=True)
+    archive_path = os.path.join(archive_dir, f"{payload['fetched_date']}.json")
+    with open(archive_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
     print(f"OK | AIHOT 热点 {len(items)} 条 | 有原始链接 {sum(1 for i in items if i['original_links'])} 条 | {out_path}")
+    print(f"OK | 已归档 {archive_path}")
 
 
 if __name__ == "__main__":

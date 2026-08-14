@@ -620,6 +620,24 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             {% else %}
             <div class="pempty">本周尚未形成满足独立证据门槛的主题，先查看日报事实。</div>
             {% endif %}
+          {% if report.aihot_hot %}
+          <section class="f-hot p-hot">
+            <div class="f-hot-head">
+              <h3>本周 AI 热点</h3>
+            </div>
+            <ol class="f-hot-list">
+              {% for item in report.aihot_hot %}
+              <li class="f-hot-row">
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="f-hot-main">
+                  <span class="f-hot-rank">{{ item.rank }}</span>
+                  <span class="f-hot-title">{{ item.title }}</span>
+                  {% if item.heat %}<span class="f-hot-heat">{{ item.heat }}</span>{% endif %}
+                </a>
+              </li>
+              {% endfor %}
+            </ol>
+          </section>
+          {% endif %}
           </div>
           {% endfor %}
         </div>
@@ -703,6 +721,24 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             {% else %}
             <div class="pempty">本月尚未形成跨周且可比较的结构趋势，先保留事实。</div>
             {% endif %}
+          {% if report.aihot_hot %}
+          <section class="f-hot p-hot">
+            <div class="f-hot-head">
+              <h3>本月 AI 热点</h3>
+            </div>
+            <ol class="f-hot-list">
+              {% for item in report.aihot_hot %}
+              <li class="f-hot-row">
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="f-hot-main">
+                  <span class="f-hot-rank">{{ item.rank }}</span>
+                  <span class="f-hot-title">{{ item.title }}</span>
+                  {% if item.heat %}<span class="f-hot-heat">{{ item.heat }}</span>{% endif %}
+                </a>
+              </li>
+              {% endfor %}
+            </ol>
+          </section>
+          {% endif %}
           </div>
           {% endfor %}
         </div>
