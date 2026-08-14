@@ -28,7 +28,7 @@ def test_report_is_a_first_class_content_type():
     assert result['subject_type'] == 'report'
     assert result['claim_type'] == 'institutional_assessment'
     assert result['confidence_score'] >= 65
-    assert result['trend_weight'] >= 50
+    assert result['attention_score'] >= 70
 
 
 def test_model_release_has_model_profile():

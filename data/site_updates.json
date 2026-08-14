@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-08-14",
+    "version": "V4.7",
+    "type": "评分重构",
+    "status": "已上线",
+    "title": "砍掉趋势循环：单条 Signal 不再评分趋势，趋势判断交给聚合层",
+    "summary": "移除单条 Signal 的 trend_weight 字段与 signal_change_score 的趋势潜力分量，解决单条先预测趋势、聚合又乘一次的循环计算。周报/月报趋势分改由多事件/跨时间的证据决定（事实数/周次数/环比增量），不再依赖单条事件自我预测。",
+    "changes": [
+      "signal_scoring.py：删除 score_signal 的 trend_weight 输出与 signal_change_score 的 trend_potential 分量（单条 Signal 不评分趋势潜力）",
+      "period_themes.py：周报/月报趋势分去掉 _avg_trend_weight，改用 atom_count/weeks/delta 等聚合证据；代表事件排序键从 trend_weight 换成 attention_score",
+      "signal_funnel_report.py：删除 trend_sum/main_trend_sum 死统计",
+      "测试同步：test_signal_scoring、test_contract_backfill、test_event_value 清理 trend_weight 相关断言"
+    ]
+  },
+  {
+    "date": "2026-08-14",
     "version": "V4.6",
     "type": "公司索引扩充",
     "status": "已上线",

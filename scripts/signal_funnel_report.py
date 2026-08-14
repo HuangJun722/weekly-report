@@ -145,7 +145,7 @@ def build_signal_funnel_report(
 
     rows = defaultdict(lambda: {
         'pool': 0, 'signal': 0, 'scope_explicit': 0, 'main': 0, 'review': 0,
-        'trend_sum': 0.0, 'main_trend_sum': 0.0, 'drop_reasons': Counter(),
+        'drop_reasons': Counter(),
     })
     for event in window_events:
         row = rows[_content_type(event)]
@@ -154,10 +154,8 @@ def build_signal_funnel_report(
             row['signal'] += 1
         if _is_scope_explicit_signal(event):
             row['scope_explicit'] += 1
-        row['trend_sum'] += float(event.get('trend_weight') or 0)
         if should_show_in_main_list(event):
             row['main'] += 1
-            row['main_trend_sum'] += float(event.get('trend_weight') or 0)
         elif should_show_in_review(event):
             row['review'] += 1
         else:
@@ -184,19 +182,14 @@ def build_signal_funnel_report(
             'drop': pool - row['main'] - row['review'],
             'signal_rate': row['signal'] / pool if pool else 0,
             'main_rate': row['main'] / pool if pool else 0,
-            'trend_sum': row['trend_sum'],
-            'trend_avg': row['trend_sum'] / pool if pool else 0,
-            'main_trend_sum': row['main_trend_sum'],
             'top_drop_reason': row['drop_reasons'].most_common(1)[0][0] if row['drop_reasons'] else '',
             'drop_reasons': dict(row['drop_reasons']),
         })
 
     totals = {
         key: sum(row[key] for row in finished)
-        for key in ('pool', 'signal', 'scope_explicit', 'main', 'review', 'drop', 'main_trend_sum')
+        for key in ('pool', 'signal', 'scope_explicit', 'main', 'review', 'drop')
     }
-    totals['trend_sum'] = sum(row['trend_sum'] for row in finished)
-    totals['trend_avg'] = totals['trend_sum'] / totals['pool'] if totals['pool'] else 0
     totals['main_rate'] = totals['main'] / totals['pool'] if totals['pool'] else 0
 
     return {
@@ -234,19 +227,17 @@ def print_report(report):
     )
     _safe_print(
         "content_type | pool | signal | scope_explicit | main | review | drop | "
-        "signal_rate | main_rate | trend_sum | trend_avg | main_trend_sum | top_drop"
+        "signal_rate | main_rate | top_drop"
     )
     for row in report['rows']:
         _safe_print(
             "{content_type} | {pool} | {signal} | {scope_explicit} | {main} | "
             "{review} | {drop} | {signal_rate:.0%} | {main_rate:.0%} | "
-            "{trend_sum:.0f} | {trend_avg:.1f} | {main_trend_sum:.0f} | "
             "{top_drop_reason}".format(**row)
         )
     _safe_print(
         "totals | pool={pool} signal={signal} scope_explicit={scope_explicit} "
-        "main={main} review={review} drop={drop} main_rate={main_rate:.0%} "
-        "trend_sum={trend_sum:.0f} trend_avg={trend_avg:.1f}".format(**totals)
+        "main={main} review={review} drop={drop} main_rate={main_rate:.0%}".format(**totals)
     )
 
 

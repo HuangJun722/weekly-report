@@ -316,11 +316,8 @@ def signal_change_score(event, content_type=None):
     }[signal_type]
     scope_fit = 20 if event.get('scope_industries') else 12
     region_specific = 10 if (event.get('region') or '').strip() not in ('', '全球', 'global') else 5
-    trend_potential = 15 if signal_type in {'policy', 'technology', 'market'} else 8
-    if event.get('scope_regions') and len(event.get('scope_regions')) > 1:
-        trend_potential = min(20, trend_potential + 5)
 
-    total = min(100, change_explicit + type_weight + scope_fit + region_specific + trend_potential)
+    total = min(100, change_explicit + type_weight + scope_fit + region_specific)
     return {
         'signal_type': signal_type,
         'signal_change_score': total,
@@ -330,7 +327,6 @@ def signal_change_score(event, content_type=None):
             'signal_type_weight': type_weight,
             'scope_fit': scope_fit,
             'region_specific': region_specific,
-            'trend_potential': trend_potential,
         },
     }
 
@@ -420,23 +416,12 @@ def score_signal(event):
     urgency = 10 if event.get('published_at') or event.get('scheduled_at') else 5
     attention = min(100, materiality + decision_relevance + scope_fit + novelty + urgency)
 
-    trend = 20 if content_type in {'industry_report', 'regional_policy', 'model_release'} else 12
-    if _has(_text(event), QUANTIFIED_TERMS):
-        trend += 20
-    if event.get('scope_industries') or event.get('scope_regions'):
-        trend += 20
-    if event.get('evidence_refs') and len(event.get('evidence_refs')) > 1:
-        trend += 20
-    if event.get('published_at') or event.get('article_date'):
-        trend += 10
-
     return {
         'content_type': content_type,
         'subject_type': infer_subject_type(event, content_type),
         'claim_type': infer_claim_type(event, content_type),
         'confidence_score': min(100, confidence),
         'attention_score': min(100, attention),
-        'trend_weight': min(100, trend),
         'score_breakdown': {
             'source_authority': round(_source_authority(event)),
             'materiality': materiality,

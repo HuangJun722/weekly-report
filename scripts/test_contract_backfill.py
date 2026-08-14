@@ -11,8 +11,8 @@ Known deviations (documented, NOT fixed this round):
    signal_scoring.score_signal computes scope_fit = 20 when scope_status is
    'qualified', 0 when 'filtered', else 8. A legacy event re-scored today has
    no scope_status, so it gets scope_fit=8; a frozen qualified twin gets 20.
-   The delta (attention +12, capped at 100) changes attention_score and hence
-   trend_weight ordering, but under current view thresholds no first-class
+   The delta (attention +12, capped at 100) changes attention_score ordering,
+   but under current view thresholds no first-class
    typed event crosses the main/review gates because of it (probe on the live
    corpus: 0 view flips). The test asserts the delta is exactly scope_fit and
    that view_status/view_priority stay consistent.
@@ -136,9 +136,10 @@ def test_frozen_twin_differs_only_by_scope_fit():
     assert frozen_breakdown['scope_fit'] == legacy_breakdown['scope_fit'] + 12
     assert legacy_breakdown['scope_fit'] == 8, 'legacy scope_fit should be 8 (no scope_status)'
     assert frozen_breakdown['scope_fit'] == 20, 'frozen qualified scope_fit should be 20'
-    # confidence/trend must not change; only attention (derived from scope_fit).
+    # confidence must not change; only attention (derived from scope_fit).
     assert frozen.get('confidence_score') == legacy.get('confidence_score')
-    assert frozen.get('trend_weight') == legacy.get('trend_weight')
+    # trend_weight 已移除：单条 Signal 不再评分趋势（趋势判断留给聚合层）
+    assert 'trend_weight' not in frozen and 'trend_weight' not in legacy
     assert frozen.get('attention_score') == min(100, legacy.get('attention_score') + 12)
     # And the view decision must not flip (documented deviation #1).
     assert _view_signature(frozen) == _view_signature(legacy), (
@@ -170,7 +171,7 @@ def test_scope_fit_vintage_gap_is_mechanism_only():
         'scope_fit 8-vs-20：legacy 重评分按 scope_fit=8，冻结 qualified 按 20，'
         f'attention 最多 +12（本例 {legacy.get("attention_score")}->{frozen.get("attention_score")}，'
         '受 100 封顶）。当前阈值下该增量不翻转 view_status'
-        '（一等内容类型在 legacy 下已越过门槛），但影响 attention 排序和 trend_weight。'
+        '（一等内容类型在 legacy 下已越过门槛），但影响 attention 排序。'
     )
 
 
@@ -197,8 +198,6 @@ def test_corpus_legacy_and_frozen_share_view():
             unexplained.append((event.get('title'), sorted(divergent)))
         elif frozen.get('confidence_score') != legacy.get('confidence_score'):
             unexplained.append((event.get('title'), ['confidence_score']))
-        elif frozen.get('trend_weight') != legacy.get('trend_weight'):
-            unexplained.append((event.get('title'), ['trend_weight']))
     assert not unexplained, f'unexplained frozen-vs-legacy diffs: {unexplained[:5]}'
     _note(
         f'corpus | {len(events)} events | frozen-vs-legacy view flips: {len(view_flips)} '

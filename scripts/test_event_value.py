@@ -156,7 +156,6 @@ def test_research_report_can_enter_main_with_signal_scores():
         content_type='industry_report',
         confidence_score=88,
         attention_score=82,
-        trend_weight=78,
     )
     assert classify_bd_priority(event) == '高'
     assert is_high_value_event(event)
@@ -181,7 +180,6 @@ def test_model_release_is_separate_from_performance_claim():
         claim_type='release_fact',
         confidence_score=90,
         attention_score=80,
-        trend_weight=75,
     )
     assert classify_bd_priority(event) == '高'
     assert should_show_in_main_list(event)
