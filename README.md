@@ -10,7 +10,7 @@
 
 **https://bxs1024.github.io/weekly-report/**
 
-每天北京时间 02:00 早采、09:00 补采。02:00 覆盖亚太/欧洲和已有更新，09:00 补欧美晚发内容；采集时点只代表 workflow 运行时间，页面展示仍按事件日期和成熟批次计算。
+每天北京时间 02:00 早采、09:00 补采。02:00 覆盖亚太/欧洲和已有更新，09:00 补欧美晚发内容；采集时点只代表 workflow 运行时间，页面展示仍按事件日期和成熟批次计算。AIHOT 热点与模型榜独立自动更新（每天北京 08:00 / 20:00），周报/月报含「AI 热点」小节，RSS 含「全球AI视野 Top5」。
 
 ---
 
@@ -135,13 +135,19 @@ python scripts/generate_html.py --force
 ```
 weekly-report/
 ├── .github/
-│   └── workflows/update.yml      # 自动更新工作流（北京时间 02:00 / 09:00）
+│   ├── workflows/update.yml      # 自动更新工作流（北京时间 02:00 / 09:00）
+│   └── workflows/aihot.yml       # AIHOT 热点+模型榜独立工作流（北京时间 08:00 / 20:00）
 ├── data/
 │   ├── events.json               # 完整结构化事件历史
+│   ├── aihot_hot/                # AIHOT 热点按天归档（供周报/月报 AI 热点小节）
+│   ├── aihot_hot.json            # AIHOT 热点当前快照
+│   ├── model_leaderboard.json    # AIHOT 模型榜
 │   ├── source_registry.json      # 信源注册中心
 │   └── entity_pool.json          # 重点对象池与观察点
 ├── scripts/
 │   ├── fetch_news.py             # 爬取 + AI 分析
+│   ├── fetch_aihot_hot.py        # AIHOT 热点抓取（按天归档）
+│   ├── fetch_model_leaderboard.py # AIHOT 模型榜抓取
 │   ├── generate_html.py          # 生成 HTML
 │   ├── source_conversion_report.py # 信源转化漏斗
 │   ├── entity_signal_conversion_report.py # 对象/观察点转化治理
@@ -181,4 +187,4 @@ weekly-report/
 6. **AI 模型**：模型发布、开放方式、API、价格和开发者可获得性
 7. **区域政策**：与既定行业/AI相关的法规、牌照、监管和生效变化
 
-事件先过范围门槛和信源质量筛选，再分别计算 `confidence_score`、`attention_score` 和 `trend_weight`。日报展示合格事件并按“精选 / 重点 / 观察”排序；周报、月报需要独立证据积累后才形成窗口和趋势。研报没有全文时只依据公开摘要、目录、新闻稿或公开二次解读，并保留解读依据。
+事件先过范围门槛和信源质量筛选，再分别计算 `confidence_score`、`attention_score` 和 `signal_change_score`（主排序轴）。单条 Signal 不评分趋势潜力；趋势只在聚合层由多事件/跨时间窗口判断，月报趋势与历史基线均值比较并做覆盖率校正。日报展示合格事件并按“精选 / 重点 / 观察”排序；周报、月报需要独立证据积累后才形成窗口和趋势。研报没有全文时只依据公开摘要、目录、新闻稿或公开二次解读，并保留解读依据。

@@ -1,6 +1,6 @@
 # 全球互联网情报站：整体设计与架构
 
-> 更新基线：2026-08-05。本文是理解项目的第一入口；具体展示规则见 [VIEW_CONTRACT.md](VIEW_CONTRACT.md)，详细使用说明见 [USAGE_GUIDE.md](USAGE_GUIDE.md)。
+> 更新基线：2026-08-14。本文是理解项目的第一入口；具体展示规则见 [VIEW_CONTRACT.md](VIEW_CONTRACT.md)，详细使用说明见 [USAGE_GUIDE.md](USAGE_GUIDE.md)。
 
 ## 1. 产品目标
 
@@ -74,7 +74,7 @@ flowchart TD
 
 ### Entity Pool
 
-对象池记录重点公司及其观察点，并按决策用途分为 `must` 12 家、`strategic` 14 家、`experiment` 6 家。公司索引只由对象池生成，不再维护另一套公司名单。
+对象池记录重点公司及其观察点，并按决策用途分为 `must` 12 家、`strategic` 14 家、`experiment` 26 家。公司索引只由对象池生成，不再维护另一套公司名单。2026-08-14 从 32 家扩到 52 家，纳入美国 7 姐妹、超大云厂商与中国模型厂商/头部互联网（美国大厂 region=全球、中国大厂 region=中资，均进 experiment 层）。
 
 当前 Jobs 试点：
 
@@ -83,6 +83,15 @@ flowchart TD
 - 候选保留快照窗口、变化数量、职能簇、职位证据、状态和拒绝原因；来源重置不会晋级事件。
 - 同一快照内按标准化职位标题保守去重；缺少地点等结构字段时，不把不同 ID 的同名职位重复计为扩张信号。
 - MercadoLibre Eightfold、Careem 动态职位站仍待专用适配器。
+
+### AIHOT 全球 AI 视野（2026-08-14 起独立自动化）
+
+AIHOT 热点榜与模型榜作为"全球 AI 视野"补充，独立于主采集管线：
+
+- **独立 workflow** `.github/workflows/aihot.yml`：每日北京 08:00 / 20:00 自动抓取热点+模型榜，刷新页面与 feed，与主采集错开并用 git-auto-commit 处理撞车。
+- **按天归档** `data/aihot_hot/YYYY-MM-DD.json`（同一天多次抓取覆盖为当天最新）+ 当前快照 `data/aihot_hot.json`。
+- **融入报告**：周报/月报含「本周/本月 AI 热点」小节，按自然周/自然月读取归档（不受站内事件截止日限制）；RSS 含「全球AI视野 Top5」汇总条。
+- 主采集 `update.yml` 已移除 AIHOT 抓取步骤，AIHOT 文件只归独立 action 写。
 
 ## 5. 四道核心闸门
 
@@ -158,15 +167,22 @@ Observation -> Snapshot -> Diff Fact -> Candidate Signal
 范围门槛：是否纳入
 证据可信度：能信多少
 注意力分：日报先看什么
-趋势权重：周报/月报贡献多少
+变化重要性：signal_change_score，主排序轴
 ```
 
-事件保存 `content_type`、`subject_type`、`claim_type`、`confidence_score`、`attention_score`、`trend_weight` 和 `score_breakdown`。支持研报、AI 模型发布、公司动作、区域政策、融资和一般行业变化。
+事件保存 `content_type`、`subject_type`、`action_type`、`domain`、`claim_type`、`confidence_score`、`attention_score`、`signal_change_score` 和 `score_breakdown`。支持研报、AI 模型发布、公司动作、区域政策、融资和一般行业变化。
+
+评分底层（2026-08-14 校准）：
+- **action_type/domain 正交字段**：主体（company/regulator/industry）与动作（product_release/policy_change/funding/expansion/hiring）分开。类型权重由 action_type 驱动，公司产品发布不因"公司"主体天然低分。
+- **market_impact 分量**：受市场影响范围（读侧 signal_geo 从实体池 primary_markets 或标题关键词标注）+ 置信度，权重从低不拍 25%。
+- **趋势判断不留单条 Signal**：`trend_weight` 已移除；趋势只在聚合层（周报主题/月报趋势簇）由多事件、跨时间窗口判断。
+- **变化检测基线化**：月报趋势簇与当前窗口之前 3 个同长度窗口的基线均值比较，覆盖率校正防新增信源误判为升温。
 
 - 研报发布是日报事实；公开摘要、新闻稿或公开二次解读不可替代付费全文，事件必须记录 `interpretation_basis` 和 `report_access_level`。
 - AI 模型的发布事实与厂商性能自述分开，后者标记 `performance_claim`，不直接当作客观 benchmark。
 - 中国公司重大 AI/互联网动作可以进入；普通国内经营、营销和泛宣传不进入。中国只记录 `origin_region`，海外影响另记 `impact_regions`，不自动加分。
 - 评分只改变 `精选 / 重点 / 观察` 排序，不能救回 `scope_status=filtered` 或质量不合格事件。
+- **核心原则：评分只排序，不过滤**。不能因低分就不分析/不展示/不进统计。
 
 ## 10. 治理与健康检查
 
