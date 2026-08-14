@@ -248,6 +248,53 @@ def test_monthly_trend_requires_min_absolute_delta():
     assert trend['change'] == '延续'
 
 
+def test_monthly_trend_coverage_correction_suppresses_false_heat():
+    """新增信源虚增当前窗口总量时，覆盖率校正应把"假升温"压回延续。
+
+    5月/6月基线各 2 条 AI 事实（总事件 5），7月 4 条 AI 事实但总事件涨到 8
+    （疑似新信源加入）。若不校正，4 vs 2 会误判升温；校正后应判延续。
+    """
+    def ai(name, url, date):
+        return event(url=url, company_name=name, companies=[name],
+                     title=f'{name} expands AI inference capacity',
+                     display_title=f'{name} expands AI inference capacity', date=date)
+
+    def pay(name, url, date):
+        return event(url=url, company_name=name, companies=[name],
+                     title=f'{name} expands payment wallet in Southeast Asia',
+                     display_title=f'{name} expands payment wallet in Southeast Asia', date=date)
+
+    may = [
+        ai('Alpha', 'https://example.com/m1', '2026-05-04'),
+        ai('Beta', 'https://example.com/m2', '2026-05-18'),
+        pay('G', 'https://example.com/m3', '2026-05-06'),
+        pay('H', 'https://example.com/m4', '2026-05-13'),
+        pay('I', 'https://example.com/m5', '2026-05-20'),
+    ]
+    jun = [
+        ai('Gamma', 'https://example.com/j1', '2026-06-01'),
+        ai('Delta', 'https://example.com/j2', '2026-06-15'),
+        pay('J', 'https://example.com/j3', '2026-06-03'),
+        pay('K', 'https://example.com/j4', '2026-06-10'),
+        pay('L', 'https://example.com/j5', '2026-06-17'),
+    ]
+    jul = [
+        ai('E', 'https://example.com/v1', '2026-07-01'),
+        ai('Z', 'https://example.com/v2', '2026-07-08'),
+        ai('K', 'https://example.com/v3', '2026-07-15'),
+        ai('M', 'https://example.com/v4', '2026-07-22'),
+        pay('N', 'https://example.com/v5', '2026-07-05'),
+        pay('O', 'https://example.com/v6', '2026-07-12'),
+        pay('P', 'https://example.com/v7', '2026-07-19'),
+        pay('Q', 'https://example.com/v8', '2026-07-26'),
+    ]
+    report = build_period_report(may + jun + jul, '2026-07-01', '2026-07-31', '7 月报', '2026-07', 'mature')
+    trend = next(t for t in report['period_themes'] if t['key'] == 'ai_infra')
+    assert trend['baseline_count'] == 2
+    assert trend['coverage_ratio'] >= 1.5          # 总量明显涨了
+    assert trend['change'] == '延续'               # 校正后不误判升温
+
+
 def test_monthly_preview_outputs_observation_summary():
     events = [
         event(url='https://example.com/c1', company_name='ExampleAI', companies=['ExampleAI'], date='2026-07-03'),

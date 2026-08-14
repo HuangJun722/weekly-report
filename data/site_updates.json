@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-08-14",
+    "version": "V4.8",
+    "type": "评分重构",
+    "status": "已上线",
+    "title": "评分底层校准：拆动作/行业正交字段、补市场影响范围、建历史基线与覆盖率校正",
+    "summary": "落实评分与变化聚合三份方案的评审：拆出 action_type/domain 正交字段，类型权重改由动作驱动消除公司低分；补市场影响范围分量（含置信度，权重从低不拍25%）；月报变化检测升级为当前窗口 vs 历史基线均值 + 覆盖率校正。",
+    "changes": [
+      "signal_scoring：新增 action_type（product_release/policy_change/funding/expansion/hiring）与 domain（ai/payment/ecommerce/cloud_saas/telecom）推断，写入事件契约",
+      "signal_change_score：类型权重从 signal_type 改 action_type 驱动（产品发布22/政策25/融资22/扩张18/招聘12），公司产品发布不再天然低分",
+      "signal_change_score：region_specific 换成 market_impact 分量（读侧 signal_geo 标注，含市场影响置信度），权重从低",
+      "period_themes 月报：变化检测从单一前窗口改为当前窗口 vs 前3窗口基线均值，新增 baseline_count/coverage_ratio，覆盖率校正防新增信源误判升温",
+      "月报模板：前一周期口径改基线均值"
+    ]
+  },
+  {
+    "date": "2026-08-14",
     "version": "V4.7",
     "type": "评分重构",
     "status": "已上线",

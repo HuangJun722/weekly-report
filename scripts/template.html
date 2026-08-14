@@ -662,7 +662,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
         <div class="m-overline">月报</div>
         <div class="m-headline-row">
           <h2 class="m-title-sec">本月报告</h2>
-          <span class="m-head-meta">至少跨两个周次，并与前一周期比较</span>
+          <span class="m-head-meta">至少跨两个周次，并与历史基线比较</span>
         </div>
       </div>
       <div class="pshell">
@@ -692,7 +692,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
               {% endfor %}
             </nav>
             <section class="pblock">
-              <div class="pblock-head"><h2>本月结构变化</h2><span>至少跨两个周次，并与前一周期比较</span></div>
+              <div class="pblock-head"><h2>本月结构变化</h2><span>至少跨两个周次，并与历史基线比较</span></div>
               {% for theme in report.period_themes %}
               <article class="pwin" id="mt-{{ report.id }}-{{ theme.key }}">
                 <div class="pwin-meta">
@@ -704,7 +704,7 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
                 <p class="p-narrative">{{ theme.summary }}</p>
                 <details class="pwin-details">
                   <summary>变化详情</summary>
-                  <p>跨周：{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实{% if theme.previous_count %}（前一周期 {{ theme.previous_count }} 个）{% endif %}</p>
+                  <p>跨周：{{ theme.week_count }} 周 · {{ theme.count }} 个独立事实{% if theme.previous_count %}（基线均值 {{ theme.previous_count }} 个）{% endif %}</p>
                   {% if theme.drivers %}<p>驱动因素：{{ theme.drivers|join('；') }}</p>{% endif %}
                   {% if theme.uncertainty %}<p>不确定性：{{ theme.uncertainty }}</p>{% endif %}
                   {% if theme.next_validation %}<p>下月验证：{{ theme.next_validation }}</p>{% endif %}

@@ -164,24 +164,47 @@ def _week_key(event):
     return f'{year}-W{week:02d}'
 
 
+def _window_stats(all_events, start, end, key):
+    """窗口内某主题的 Evidence Atom 数与合格事件总数（覆盖率代理）。
+
+    total_eligible 反映该窗口采集/覆盖了多少合格事实：窗口间总事件数差异
+    主要来自信源增减或采集波动，用它做覆盖率校正，避免"新增信源"被误判为
+    行业升温，也避免"信源失效"掩盖真实增长。
+    """
+    in_window = [
+        event for event in _eligible(all_events)
+        if start <= (event.get('date') or '')[:10] <= end
+    ]
+    total_eligible = len(in_window)
+    if total_eligible == 0:
+        return 0, 0
+    theme_events = [event for event in in_window if theme_key(event) == key]
+    atoms = build_evidence_atoms(theme_events)
+    return len(atoms), total_eligible
+
+
 def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, limit=6):
     start = datetime.strptime(start_date, '%Y-%m-%d')
     end = datetime.strptime(end_date, '%Y-%m-%d')
     span = (end - start).days + 1
-    previous_start = (start - timedelta(days=span)).strftime('%Y-%m-%d')
-    previous_end = (start - timedelta(days=1)).strftime('%Y-%m-%d')
-    current = [event for event in _eligible(all_events) if start_date <= (event.get('date') or '')[:10] <= end_date]
-    previous = [event for event in _eligible(all_events) if previous_start <= (event.get('date') or '')[:10] <= previous_end]
+    # 基线 = 当前窗口之前 3 个同长度窗口（足够判断"相对过去是否真的变化"）
+    prior_windows = []
+    window_end = start - timedelta(days=1)
+    for _ in range(3):
+        wstart = window_end - timedelta(days=span - 1)
+        prior_windows.append((wstart.strftime('%Y-%m-%d'), window_end.strftime('%Y-%m-%d')))
+        window_end = wstart - timedelta(days=1)
+
     current_groups = {}
-    previous_groups = {}
-    for event in current:
+    current_eligible = [
+        event for event in _eligible(all_events)
+        if start_date <= (event.get('date') or '')[:10] <= end_date
+    ]
+    current_total = len(current_eligible)
+    for event in current_eligible:
         key = theme_key(event)
         if key:
             current_groups.setdefault(key, []).append(event)
-    for event in previous:
-        key = theme_key(event)
-        if key:
-            previous_groups.setdefault(key, []).append(event)
     trends = []
     for key, grouped_events in current_groups.items():
         weeks = {_week_key(event) for event in grouped_events if _week_key(event)}
@@ -189,24 +212,43 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
         if len(weeks) < 2 or len(atoms) < 3 or not can_promote_to_narrative(atoms):
             continue
         current_count = len(atoms)
-        # 前一周期也按 Evidence Atom 去重，与当前周期同口径，避免原始条数虚增比较
-        previous_atoms = build_evidence_atoms(previous_groups.get(key, []))
-        previous_count = len(previous_atoms)
-        ratio = current_count / max(previous_count, 1)
-        if previous_count == 0:
-            change = '新增'
-        elif current_count >= previous_count + 2 and ratio >= 1.25:
-            change = '升温'
-        elif current_count <= previous_count - 2 and ratio <= 0.75:
-            change = '降温'
+
+        # 基线：有数据的先前窗口均值（覆盖率为 0 的窗口跳过，无法归一化）
+        base_entries = [
+            _window_stats(all_events, ws, we, key)
+            for ws, we in prior_windows
+        ]
+        base_entries = [(c, t) for c, t in base_entries if t > 0]
+        has_baseline = bool(base_entries)
+        if has_baseline:
+            avg_total = sum(t for _, t in base_entries) / len(base_entries)
+            baseline_count = sum(c for c, _ in base_entries) / len(base_entries)
+            coverage_ratio = current_total / avg_total if avg_total else 1.0
+            # 覆盖率校正：只在当前窗口总事件量相对基线明显变化（信源增减/采集波动）
+            # 时校正，并钳制修正幅度，避免小样本被过度放大。
+            if coverage_ratio < 0.8 or coverage_ratio > 1.25:
+                correction = min(max(avg_total / current_total, 0.75), 1.30) if current_total else 1.0
+            else:
+                correction = 1.0
+            current_adj = current_count * correction
+            if current_adj >= baseline_count + 2 and (current_adj / baseline_count if baseline_count else 2) >= 1.25:
+                change = '升温'
+            elif current_adj <= baseline_count - 2 and (current_adj / baseline_count if baseline_count else 0) <= 0.75:
+                change = '降温'
+            else:
+                change = '延续'
         else:
-            change = '延续'
+            baseline_count = 0
+            coverage_ratio = 1.0
+            current_adj = current_count
+            change = '新增'
+
         representatives = _representative_events(atoms)
         regions = Counter(resolved_region(event, entity_regions) for event in representatives)
         region = regions.most_common(1)[0][0] if regions else '全球'
         label = THEMES[key][0]
-        delta = current_count - previous_count
-        comparison = f'较前一周期 {delta:+d} 个事实' if previous_count else '前一周期未形成同类证据'
+        delta = round(current_adj - baseline_count, 1)
+        comparison = f'较基线 {delta:+.1f} 个事实' if has_baseline else '前一周期未形成同类证据'
         trends.append({
             'key': key,
             'name': f'{label}{change}',
@@ -215,10 +257,12 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
             'change': change,
             'count': current_count,
             'week_count': len(weeks),
-            'previous_count': previous_count,
+            'previous_count': round(baseline_count, 1),
+            'baseline_count': round(baseline_count, 1),
+            'coverage_ratio': round(coverage_ratio, 3),
             'summary': f'本月在 {len(weeks)} 个周次持续出现，共 {current_count} 个独立事实；{comparison}。',
             'evidence': [_evidence(event) for event in representatives[:4]],
-            'score': current_count * 4 + len(weeks) * 3 + max(delta, 0),
+            'score': current_count * 4 + len(weeks) * 3 + max(round(current_adj - baseline_count), 0),
         })
     trends.sort(key=lambda row: row['score'], reverse=True)
     return trends[:limit]

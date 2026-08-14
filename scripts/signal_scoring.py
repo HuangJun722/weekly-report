@@ -135,6 +135,67 @@ def infer_claim_type(event, content_type=None):
     return 'industry_change'
 
 
+# ─── 正交动作/行业维度 ──────────────────────────────────────
+# signal_type 混了主体（company）与动作（market/tech/capital...），不可比。
+# 拆出 action_type（做什么变化）与 domain（哪个行业）作为正交字段：
+# 评分看 action_type，主体/行业作上下文，不再给"公司"天然低分。
+ACTION_TYPES = ('product_release', 'policy_change', 'funding', 'expansion', 'hiring', 'other')
+
+PRODUCT_RELEASE_TERMS = {
+    'launch', 'launches', 'launched', 'released', 'releases', 'release', 'unveils',
+    'unveil', 'debuts', 'available in', 'rolls out', '推出', '发布', '上线', '开放',
+}
+EXPANSION_TERMS = {
+    'expands', 'expansion', 'enters', 'partnership', 'partners', 'new market',
+    'regional', '扩张', '进入', '合作', '生态',
+}
+HIRING_TERMS = {
+    'hiring', 'hires', 'appoints', 'layoff', 'layoffs', 'restructures',
+    '招聘', '任命', '裁员', '重组',
+}
+
+DOMAIN_TERMS = {
+    'ai': ('ai', 'agent', 'model', 'gpu', 'llm', 'inference', '人工智能', '大模型', '智能体', '算力', '模型'),
+    'payment': ('payment', 'payments', 'fintech', 'wallet', 'bnpl', 'pay', '支付', '金融科技', '钱包'),
+    'ecommerce': ('commerce', 'ecommerce', 'marketplace', 'merchant', 'seller', '电商', '商户', '零售'),
+    'cloud_saas': ('cloud', 'saas', 'infrastructure', 'datacenter', 'data center', 'api', 'developer', '云', '数据中心', '开发者'),
+    'telecom': ('telecom', 'telco', '5g', 'mobile network', '电信', '运营商'),
+}
+
+
+def infer_action_type(event, content_type=None):
+    content_type = content_type or infer_content_type(event)
+    explicit = event.get('action_type')
+    if explicit in ACTION_TYPES:
+        return explicit
+    ev_type = _event_type(event)
+    text = _text(event)
+    if content_type == 'regional_policy' or _has(text, POLICY_SIGNAL_TERMS):
+        return 'policy_change'
+    if ev_type in {'funding', 'ma', 'earnings'} or content_type == 'capital_event':
+        return 'funding'
+    if content_type == 'model_release' or _has(text, PRODUCT_RELEASE_TERMS):
+        return 'product_release'
+    if _has(text, HIRING_TERMS):
+        return 'hiring'
+    if ev_type in {'strategy', 'partnership'} or _has(text, EXPANSION_TERMS):
+        return 'expansion'
+    return 'other'
+
+
+def infer_domain(event):
+    explicit = event.get('domain')
+    if explicit in DOMAIN_TERMS:
+        return explicit
+    text = _text(event)
+    scores = {
+        key: sum(1 for term in terms if term in text)
+        for key, terms in DOMAIN_TERMS.items()
+    }
+    best, count = max(scores.items(), key=lambda item: item[1])
+    return best if count else 'other'
+
+
 # ─── 阶段3：信号维度 ──────────────────────────────────────
 # content_type 回答"这是什么内容"，signal_type 回答"这代表哪类变化"；
 # Event Score（现有 score）回答"公司发生了什么"，signal_change_score 回答
@@ -232,6 +293,42 @@ def infer_signal_type(event, content_type=None):
     return 'market'
 
 
+_ENTITY_MAP_CACHE = None
+
+
+def _entity_map():
+    global _ENTITY_MAP_CACHE
+    if _ENTITY_MAP_CACHE is None:
+        try:
+            from signal_geo import entity_country_map
+            _ENTITY_MAP_CACHE = entity_country_map()
+        except Exception:
+            _ENTITY_MAP_CACHE = {}
+    return _ENTITY_MAP_CACHE
+
+
+def _market_impact(event):
+    """受影响市场分 + 置信度（读侧标注，不写回事件）。
+
+    国家/市场字段不存事件里，用 signal_geo 从实体池 primary_markets 或标题关键词
+    现场标注。置信度：公司市场标注（权威）> 标题关键词（线索）> 无标注。
+    权重从低，不拍 25%——用户确认"不急着给市场范围 25% 权重"。
+    """
+    try:
+        from signal_geo import tag_event_country
+        geo = tag_event_country(event, _entity_map())
+    except Exception:
+        return 0, 5
+    countries = geo.get('countries') or []
+    n = len(countries)
+    method = geo.get('tag_method') or ''
+    if n == 0:
+        return 0, 5
+    confidence = 20 if method == 'company_market' else 12 if method == 'title_keyword' else 5
+    impact = 8 if n == 1 else 11 if n == 2 else 14
+    return impact, confidence
+
+
 def signal_change_score(event, content_type=None):
     """Score how significant the CHANGE an event represents is (0-100).
 
@@ -239,9 +336,11 @@ def signal_change_score(event, content_type=None):
     - 不在目标行业内（scope_status 非 qualified、无 scope_industries）→ 0 分。
     - 在行业内但无明确变化证据（无变化词/量化）→ 0 分。
     只有"行业内 + 有变化"的事件才进入分量打分。
+    类型权重看 action_type（做什么变化），不因"公司"主体天然低分。
     """
     content_type = content_type or infer_content_type(event)
     signal_type = infer_signal_type(event, content_type)
+    action_type = infer_action_type(event, content_type)
     scope_status = event.get('scope_status')
     in_scope = (
         scope_status == 'qualified'
@@ -251,6 +350,7 @@ def signal_change_score(event, content_type=None):
     if not in_scope:
         return {
             'signal_type': signal_type,
+            'action_type': action_type,
             'signal_change_score': 0,
             'signal_change_blocked': 'out_of_target_industry',
             'signal_change_breakdown': {},
@@ -296,6 +396,7 @@ def signal_change_score(event, content_type=None):
     if not has_explicit_change:
         return {
             'signal_type': signal_type,
+            'action_type': action_type,
             'signal_change_score': 0,
             'signal_change_blocked': 'no_explicit_change',
             'signal_change_breakdown': {},
@@ -310,23 +411,25 @@ def signal_change_score(event, content_type=None):
     )
     change_explicit = 35 if quantified else 20
 
-    type_weight = {
-        'policy': 25, 'technology': 22, 'market': 20,
-        'capital': 18, 'consumer': 16, 'company': 12,
-    }[signal_type]
+    action_type_weight = {
+        'policy_change': 25, 'product_release': 22, 'funding': 22,
+        'expansion': 18, 'hiring': 12, 'other': 15,
+    }[action_type]
     scope_fit = 20 if event.get('scope_industries') else 12
-    region_specific = 10 if (event.get('region') or '').strip() not in ('', '全球', 'global') else 5
+    market_impact, market_confidence = _market_impact(event)
 
-    total = min(100, change_explicit + type_weight + scope_fit + region_specific)
+    total = min(100, change_explicit + action_type_weight + scope_fit + market_impact)
     return {
         'signal_type': signal_type,
+        'action_type': action_type,
         'signal_change_score': total,
         'signal_change_blocked': '',
         'signal_change_breakdown': {
             'change_explicit': change_explicit,
-            'signal_type_weight': type_weight,
+            'action_type_weight': action_type_weight,
             'scope_fit': scope_fit,
-            'region_specific': region_specific,
+            'market_impact': market_impact,
+            'market_impact_confidence': market_confidence,
         },
     }
 
@@ -442,8 +545,12 @@ def apply_signal_contract(event):
         'C' if result['confidence_score'] >= 50 else 'D'
     )
     # 阶段3：信号维度（变化轴）。signal_type 分类 + signal_change_score 打分。
+    # 正交字段 action_type/domain 一并写入契约。
+    event['action_type'] = infer_action_type(event, result['content_type'])
+    event['domain'] = infer_domain(event)
     signal = signal_change_score(event, result['content_type'])
     event['signal_type'] = signal['signal_type']
+    event['action_type'] = signal['action_type']
     event['signal_change_score'] = signal['signal_change_score']
     event['signal_change_blocked'] = signal['signal_change_blocked']
     event['signal_change_breakdown'] = signal['signal_change_breakdown']
