@@ -1,7 +1,90 @@
 {
   "version": 1,
-  "generated_at": "2026-08-14T11:36:55.898739+08:00",
+  "generated_at": "2026-08-15T03:04:16.324701+08:00",
   "candidates": [
+    {
+      "candidate_id": "jobs-b8bcd2f5c447d620",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "mixed",
+      "window": "2026-W33",
+      "window_start": "2026-08-15",
+      "window_end": "2026-08-15",
+      "detected_at": "2026-08-15T03:04:16.324701+08:00",
+      "baseline_count": 20,
+      "current_count": 19,
+      "added_count": 4,
+      "removed_count": 5,
+      "clusters": {},
+      "removed_clusters": {
+        "engineering": 2,
+        "operations": 1,
+        "sales": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "744000143509332",
+          "title": "Project Manager, GrabAds Solutions",
+          "url": "https://www.grab.careers/en/jobs/744000143509332/project-manager-grabads-solutions/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000143439019",
+          "title": "Associate, Key Account Management - GrabMart",
+          "url": "https://www.grab.careers/en/jobs/744000143439019/associate-key-account-management-grabmart/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000143438714",
+          "title": "Content Manager",
+          "url": "https://www.grab.careers/en/jobs/744000143438714/content-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000143438539",
+          "title": "Communications Senior Manager (Product)",
+          "url": "https://www.grab.careers/en/jobs/744000143438539/communications-senior-manager-product/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000143236289",
+          "title": "Associate, Mobility & Deliveries Audit",
+          "url": "https://www.grab.careers/en/jobs/744000143236289/associate-mobility-deliveries-audit/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000143235309",
+          "title": "Senior Software Engineer, Customer Data Platform",
+          "url": "https://www.grab.careers/en/jobs/744000143235309/senior-software-engineer-customer-data-platform/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000143229150",
+          "title": "Lead Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000143229150/lead-software-engineer-backend/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000143225889",
+          "title": "Product Operations Assistant Manager",
+          "url": "https://www.grab.careers/en/jobs/744000143225889/product-operations-assistant-manager/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000143225269",
+          "title": "Regional Sales Compensation Manager",
+          "url": "https://www.grab.careers/en/jobs/744000143225269/regional-sales-compensation-manager/",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    },
     {
       "candidate_id": "jobs-8fb1b7c481f11152",
       "entity_id": "grab",

@@ -1,11 +1,35 @@
 {
   "version": 1,
-  "generated_at": "2026-08-14T11:36:55.898739+08:00",
+  "generated_at": "2026-08-15T03:04:16.324701+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-14T11:22:06.014202+08:00",
+      "observed_at": "2026-08-15T03:04:16.324701+08:00",
       "jobs": [
+        {
+          "id": "744000143509332",
+          "title": "Project Manager, GrabAds Solutions",
+          "url": "https://www.grab.careers/en/jobs/744000143509332/project-manager-grabads-solutions/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143439019",
+          "title": "Associate, Key Account Management - GrabMart",
+          "url": "https://www.grab.careers/en/jobs/744000143439019/associate-key-account-management-grabmart/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143438714",
+          "title": "Content Manager",
+          "url": "https://www.grab.careers/en/jobs/744000143438714/content-manager/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143438539",
+          "title": "Communications Senior Manager (Product)",
+          "url": "https://www.grab.careers/en/jobs/744000143438539/communications-senior-manager-product/",
+          "function_tags": []
+        },
         {
           "id": "744000143433549",
           "title": "Senior Product Designer, Omnicommerce",
@@ -115,50 +139,12 @@
           "function_tags": [
             "sales"
           ]
-        },
-        {
-          "id": "744000143236289",
-          "title": "Associate, Mobility & Deliveries Audit",
-          "url": "https://www.grab.careers/en/jobs/744000143236289/associate-mobility-deliveries-audit/",
-          "function_tags": []
-        },
-        {
-          "id": "744000143235309",
-          "title": "Senior Software Engineer, Customer Data Platform",
-          "url": "https://www.grab.careers/en/jobs/744000143235309/senior-software-engineer-customer-data-platform/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000143229150",
-          "title": "Lead Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000143229150/lead-software-engineer-backend/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000143225889",
-          "title": "Product Operations Assistant Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143225889/product-operations-assistant-manager/",
-          "function_tags": [
-            "operations"
-          ]
-        },
-        {
-          "id": "744000143225269",
-          "title": "Regional Sales Compensation Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143225269/regional-sales-compensation-manager/",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-14T11:36:55.898739+08:00",
+      "observed_at": "2026-08-15T03:04:16.324701+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -274,7 +260,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-14T11:36:55.898739+08:00",
+      "observed_at": "2026-08-15T03:04:16.324701+08:00",
       "jobs": [
         {
           "id": "7d3f4fe7-7a8c-4919-b181-74f2f6f3c6d8",
@@ -414,15 +400,15 @@
           ]
         },
         {
-          "id": "32132c55-3c8c-4695-b117-477fe97629aa",
-          "title": "Professional Services Delivery Manager Remote - Americas",
-          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
-          "function_tags": []
-        },
-        {
           "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
           "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
           "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
+          "function_tags": []
+        },
+        {
+          "id": "32132c55-3c8c-4695-b117-477fe97629aa",
+          "title": "Professional Services Delivery Manager Remote - Americas",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
           "function_tags": []
         },
         {
