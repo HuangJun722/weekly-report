@@ -1,18 +1,18 @@
 {
-  "observed_at": "2026-08-14T11:22:06.014202+08:00",
+  "observed_at": "2026-08-14T11:36:55.898739+08:00",
   "source_count": 3,
-  "raw_count": 70,
+  "raw_count": 50,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
-      "status": "ok",
-      "fetch_status": "success",
-      "count": 2,
-      "inventory_count": 20,
+      "status": "failed",
+      "fetch_status": "failed",
+      "count": 0,
+      "inventory_count": 0,
       "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 1,
+      "added_count": 0,
+      "removed_count": 0,
       "clusters": {},
       "removed_clusters": {}
     },
@@ -34,14 +34,12 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
+      "count": 0,
       "inventory_count": 36,
       "signal_count": 0,
-      "added_count": 2,
+      "added_count": 0,
       "removed_count": 0,
-      "clusters": {
-        "partnerships": 1
-      },
+      "clusters": {},
       "removed_clusters": {}
     }
   },
