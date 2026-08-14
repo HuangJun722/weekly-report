@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-08-14",
+    "version": "V4.6",
+    "type": "公司索引扩充",
+    "status": "已上线",
+    "title": "公司索引新增美国 7 姐妹、超大云厂商与中国模型厂商/头部互联网共 20 家",
+    "summary": "定位调整为全球变化雷达后，将美国 7 姐妹（Microsoft/Apple/NVIDIA/Amazon/Meta/Alphabet/Tesla）、超大云厂商（Oracle/IBM）及中国 6 大模型厂商与头部互联网（字节/阿里/腾讯/百度/智谱/月之暗面/DeepSeek/MiniMax/京东/拼多多/美团）纳入公司索引实体池。",
+    "changes": [
+      "entity_pool 从 32 家扩到 52 家，新增 20 家实体（美国大厂 region=全球、中国大厂 region=中资）",
+      "新增实体全部进入 portfolio experiment 层，公司索引页按现有标准展示",
+      "sector 中文映射与采集 scope 契约同步补全（generate_html 与 fetch_news）"
+    ]
+  },
+  {
+    "date": "2026-08-14",
     "version": "V4.5",
     "type": "AI热点自动化",
     "status": "已上线",

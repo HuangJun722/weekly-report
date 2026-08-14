@@ -2003,6 +2003,11 @@ def build_company_cards(company_list, now_date, observation_ledger=None):
         'gaming': '游戏', 'streaming_media': '流媒体', 'social_payment': '社交+支付',
         'social_payment_gaming': '社交/支付/游戏', 'telco_digital_infra': '电信数字基础设施',
         'travel_local_services': '旅游本地服务',
+        'consumer_ai_hardware': '消费电子/端侧 AI', 'ai_hardware_infra': 'AI 硬件基础设施',
+        'cloud_commerce': '云+电商', 'social_ai': '社交/AI', 'cloud_ai_search': '云/AI/搜索',
+        'ev_ai_autonomy': '新能源车/自动驾驶', 'ai_platform_content': 'AI 平台+内容',
+        'cloud_ai_commerce': '云/AI/电商', 'social_ai_gaming': '社交/AI/游戏',
+        'ai_search_cloud': 'AI/搜索/云', 'local_services': '本地服务',
     }
     now = datetime.strptime(now_date, '%Y-%m-%d')
     # 公司权重：核心战略公司（must/strategic）的信号比普通观察对象更值得关注

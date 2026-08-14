@@ -403,6 +403,18 @@ SECTOR_SCOPE_MAP = {
     'super_app_fintech': ['local_services_logistics', 'payments'],
     'delivery_fintech': ['local_services_logistics', 'payments'],
     'travel_local_services': ['local_services_logistics'],
+    # 2026-08-14 新增：美国 7 姐妹/云厂商 + 中国模型厂商/头部互联网
+    'consumer_ai_hardware': ['ai_infra'],
+    'ai_hardware_infra': ['ai_infra'],
+    'cloud_commerce': ['commerce', 'cloud_saas_developer'],
+    'social_ai': ['ads_social', 'ai_infra'],
+    'cloud_ai_search': ['ai_infra', 'cloud_saas_developer'],
+    'ev_ai_autonomy': ['ai_infra'],
+    'ai_platform_content': ['ai_infra', 'ads_social'],
+    'cloud_ai_commerce': ['commerce', 'cloud_saas_developer', 'ai_infra'],
+    'social_ai_gaming': ['ads_social', 'gaming_content', 'ai_infra'],
+    'ai_search_cloud': ['ai_infra', 'cloud_saas_developer'],
+    'local_services': ['local_services_logistics'],
 }
 
 
