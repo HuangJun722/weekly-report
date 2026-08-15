@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T08:29:31+08:00",
+  "generated_at": "2026-08-15T20:35:11+08:00",
   "fetched_date": "2026-08-15",
   "source": {
     "name": "AIHOT 热点榜",
@@ -11,7 +11,7 @@
       "rank": 1,
       "title": "智谱发布 GLM-5.3",
       "list_title": "GLM-5.3 发布：编程能力开源第一，并涌现网络安全能力",
-      "heat": 159,
+      "heat": 112,
       "sources": [
         "X：智谱 Z.ai (@Zai_org)",
         "公众号：智谱（GLM）",
@@ -58,7 +58,7 @@
       "rank": 2,
       "title": "Google 发布 Gemini 3.7 Flash",
       "list_title": "Google DeepMind 推出 Gemini 3.7 Flash：面向编程与智能体的最强工作模型",
-      "heat": 154,
+      "heat": 108,
       "sources": [
         "X：Google DeepMind (@GoogleDeepMind)",
         "X：Elvis Saravia (@omarsar0, DAIR.AI)",
@@ -113,7 +113,7 @@
       "rank": 3,
       "title": "SpaceX 收购 Cursor",
       "list_title": "Cursor 正式被 SpaceX 收购",
-      "heat": 121,
+      "heat": 85,
       "sources": [
         "X：SpaceXAI (@SpaceXAI)",
         "X：Kim (@kimmonismus)",
@@ -151,54 +151,9 @@
     },
     {
       "rank": 4,
-      "title": "DeepSeek 发布 DeepSeek V4 Pro",
-      "list_title": "DeepSeek-V4-Pro 正式版上线，Agent 能力大幅增强",
-      "heat": 102,
-      "sources": [
-        "Simon Willison 博客",
-        "X：Rohan Paul (@rohanpaul_ai)",
-        "DeepSeek：API 更新日志",
-        "公众号：DeepSeek（深度求索）",
-        "X：DeepSeek (@deepseek_ai)",
-        "IT之家（RSS）",
-        "X：Kim (@kimmonismus)",
-        "X：Testing Catalog (@testingcatalog)",
-        "X：阿易 AI Notes (@AYi_AInotes)",
-        "The Decoder：AI News（RSS）",
-        "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
-        "Hacker News 热门（buzzing.cc 中文翻译）",
-        "另有 22 组氛围票"
-      ],
-      "summary": "DeepSeek 于 2026 年 8 月 12 日发布 DeepSeek V4 Pro 正式版（模型版本号 DeepSeek-V4-Pro-0813），同步在 APP、网页端和 API 上线，用户可在 APP 或网页端选择“专家模式”使用。该版本增强 Agent 能力，API 原生支持 OpenAI Responses API 格式并适配 Codex。定价为百万 tokens 输入（缓存命中）0.025 元、输入（缓存未命中）3 元、输出 6 元。\n在基准测试中，DeepSeek V4 Pro 表现突出：HLE (wo/w tools) 达 42.7/60.0，Terminal Bench ",
-      "original_links": [
-        {
-          "url": "https://api-docs.deepseek.com/news/news260813",
-          "domain": "api-docs.deepseek.com"
-        },
-        {
-          "url": "https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://x.com/AYi_AInotes/status/2087882208044253406",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/989/423.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485770&idx=1&sn=dab0be341cb46a410ec40a062a5cb895",
-          "domain": "mp.weixin.qq.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/4f717b32-d278-4c1a-9e48-e10cbfa1c741"
-    },
-    {
-      "rank": 5,
       "title": "阿里通义千问发布 Qwen3.8-27B",
       "list_title": "通义千问开源 Qwen3.8 系列模型",
-      "heat": 86,
+      "heat": 76,
       "sources": [
         "IT之家（RSS）",
         "X：Kim (@kimmonismus)",
@@ -208,12 +163,13 @@
         "Hacker News 热门（buzzing.cc 中文翻译）",
         "X：Rohan Paul (@rohanpaul_ai)",
         "The Decoder：AI News（RSS）",
-        "另有 4 组氛围票"
+        "X：阿易 AI Notes (@AYi_AInotes)",
+        "另有 6 组氛围票"
       ],
       "summary": "2026年8月14日，阿里巴巴通义千问团队正式开源Qwen3.8系列模型，包括Qwen3.8-27B和Max级Qwen3.8-2.4T-A95B。Qwen3.8-27B为原生多模态稠密模型，仅27B参数，采用Apache 2.0许可，所有开发者、科研机构和企业均可自由下载、部署和使用。\n该模型原生支持262K上下文窗口，可通过YaRN技术外推至1M tokens。官方宣称其整体性能超越Qwen3.7-Plus，在编程和办公场景表现突出，并新增reasoning_effort功能以按任务难度控制思考深度。\n第三方报道称该模型在智能体编程、计算机使用、浏览器任务及长周期专业工作中达到SOTA，多项",
       "original_links": [
         {
-          "url": "https://x.com/rohanpaul_ai/status/2088303843876704508",
+          "url": "https://x.com/AYi_AInotes/status/2088458347339026591",
           "domain": "x.com"
         },
         {
@@ -228,10 +184,10 @@
       "story_url": "https://aihot.virxact.com/story/c04016a7-8d58-4237-b9ea-ad27431cbc5b"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "title": "DeepSeek 发布 Harness v0.1 开发者预览版",
       "list_title": "DeepSeek Harness v0.1 开发者预览版发布",
-      "heat": 61,
+      "heat": 43,
       "sources": [
         "IT之家（RSS）",
         "X：Tianyi Cui（@tianyi）",
@@ -252,14 +208,47 @@
       "story_url": "https://aihot.virxact.com/story/2187bbdf-9658-475f-9871-1a389677483a"
     },
     {
+      "rank": 6,
+      "title": "DeepSeek 发布 DeepSeek v4 Pro 0813 1.5T",
+      "list_title": "DeepSeek V4 Pro 登陆硅基流动，1M 上下文",
+      "heat": 34,
+      "sources": [
+        "X：Testing Catalog (@testingcatalog)",
+        "X：阿易 AI Notes (@AYi_AInotes)",
+        "The Decoder：AI News（RSS）",
+        "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "另有 9 组氛围票"
+      ],
+      "summary": "DeepSeek 于 2026 年 8 月 13 日发布 DeepSeek-V4-Pro 正式版，模型已在 APP、网页端和 API 同步上线，用户可在 APP 或网页端选择“专家模式”使用。正式版增强了 Agent 能力，API 原生支持 OpenAI Responses API 格式并适配 Codex，思考模式支持 low/high/max 三档强度。API 采用“峰谷定价”，闲时价格为高峰一半，新价格于 2026 年 8 月 17 日生效。\n此前在 8 月 12 日，SemiAnalysis 在 X 上祝贺 DeepSeek 发布 DeepSeekv4 Pro 0813 1.5T，称其在",
+      "original_links": [
+        {
+          "url": "https://x.com/SiliconFlowAI/status/2088127458558271885",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/989/423.htm",
+          "domain": "www.ithome.com"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485770&idx=1&sn=dab0be341cb46a410ec40a062a5cb895",
+          "domain": "mp.weixin.qq.com"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813",
+          "domain": "simonwillison.net"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/87bb3819-cb05-45fa-85d0-9588adf7dffd"
+    },
+    {
       "rank": 7,
       "title": "Anthropic 发布 Claude 文本水印 FAQ",
       "list_title": "Claude 文本水印机制如何运作",
-      "heat": 45,
+      "heat": 30,
       "sources": [
         "X：Anthropic (@AnthropicAI)",
-        "Anthropic：Newsroom（网页）",
-        "另有 1 组氛围票"
+        "Anthropic：Newsroom（网页）"
       ],
       "summary": "Anthropic 发布 FAQ，说明为遵守欧盟《AI 法案》而实施文本水印，其他主要模型开发商也已签署同一实践准则。\n未来 Claude 模型生成的文本将包含水印，用于判断文本由 Claude 撰写的可能性。该方法基于 Google DeepMind 的 SynthID-Text 技术，对输出质量、创造力和可读性无实际影响，读者无法区分水印文本与普通文本，且不增加额外 token 或成本。\n水印不影响 Claude 输出质量、不增加 token 成本、无隐藏字符，且无法追溯到具体个人或组织。",
       "original_links": [
@@ -278,10 +267,10 @@
       "rank": 8,
       "title": "DeepSeek 发布 DeepSeek Harness",
       "list_title": "从0到1带你速通DeepSeek Harness。",
-      "heat": 34,
+      "heat": 28,
       "sources": [
         "公众号：数字生命卡兹克",
-        "另有 11 组氛围票"
+        "另有 12 组氛围票"
       ],
       "summary": "从0到1带你速通DeepSeek Harness。",
       "original_links": [
@@ -296,9 +285,8 @@
       "rank": 9,
       "title": "Qwen 在 Hugging Face 上线 Qwen3.8-2.4T-A95B",
       "list_title": "Qwen3.8-2.4T-A95B 开源，硅基流动即日上线",
-      "heat": 27,
+      "heat": 17,
       "sources": [
-        "X：Rohan Paul (@rohanpaul_ai)",
         "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
         "X：通义千问 / Qwen (@Alibaba_Qwen)"
       ],
@@ -319,7 +307,7 @@
       "rank": 10,
       "title": "RedNote 发布 dots3-note Preview",
       "list_title": "dots3-note Preview 开源：280B 参数轻量模型，主打长程智能体与多模态推理",
-      "heat": 20,
+      "heat": 14,
       "sources": [
         "X：Kim (@kimmonismus)",
         "公众号：小红书技术（dots.llm）"
