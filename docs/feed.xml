@@ -1,181 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>全球互联网百晓生 · 事件流</title>
-  <subtitle>高价值事件推送，日报日期：2026-08-14</subtitle>
+  <subtitle>高价值事件推送，日报日期：2026-08-15</subtitle>
   <id>tag:weekly-report,2026:main</id>
-  <updated>2026-08-15T12:38:05Z</updated>
+  <updated>2026-08-15T18:46:16Z</updated>
   <link href="https://bxs1024.github.io/weekly-report/" rel="alternate"/>
   <link href="feed.xml" rel="self" type="application/atom+xml"/>
   <author><name>Global Internet Intelligence Station</name></author>
   <rights>CC BY-NC 4.0</rights>
 
   <entry>
-    <title>滴滴Q2净利润$128M，扭亏为盈</title>
-    <link href="https://www.techinasia.com/news/didi-returns-profit-128m-q2-net-income"/>
-    <id>tag:weekly-report,2026:event-fa0c77a1</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Didi returns to profit with $128m Q2 net income&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;滴滴出行第二季度净利润达1.28亿美元，实现扭亏为盈。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国出行平台盈利拐点确认，网约车市场格局稳定，出行科技供应链需求回暖&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：earnings | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
+    <title>播客聚焦云游戏争议、Pokémon Go收入及土耳其40亿美元游戏产业</title>
+    <link href="https://www.pocketgamer.biz/the-cloud-gaming-debate-pokemon-gos-revenue-surge-and-trkiyes-4bn-industry-week-in-mobile-games-podcast/"/>
+    <id>tag:weekly-report,2026:event-3cbaac2e</id>
+    <published>2026-08-15T00:00:00Z</published>
+    <updated>2026-08-15T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;The cloud gaming debate, Pokémon Go&amp;#x27;s revenue surge and Türkiye&amp;#x27;s $4bn industry | Week in Mobile Games podcast&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;PocketGamer.biz播客讨论了云游戏争议、Pokémon Go收入激增以及土耳其移动游戏产业规模达40亿美元等话题。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球移动游戏市场讨论云游戏模式与区域市场增长，土耳其游戏产业规模达40亿美元，为中东及欧洲游戏发行商提供市场拓展参考。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：industry_report | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Oracle智利$165B数据中心项目延期</title>
-    <link href="https://thenextweb.com/news/oracle-project-jupiter-green-chile-pipeline-delay"/>
-    <id>tag:weekly-report,2026:event-e3017091</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Pipeline for $165 Billion Oracle Data Center Delayed to Next Year&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Oracle在智利的165亿美元数据中心项目因管道问题推迟至明年。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;拉美数据中心建设受基础设施瓶颈制约，Oracle项目延期为当地能源和网络服务商带来新的合作窗口。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Bitazza采用Sumsub方案应对泰国旅行规则</title>
-    <link href="https://fintechnews.sg/135817/thailand/sumsub-bitazza-thailand-travel-rule/"/>
-    <id>tag:weekly-report,2026:event-aacb5a38</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Bitazza Taps Sumsub Solution Ahead of Thailand Travel Rule Rollout&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;泰国加密货币交易所Bitazza采用Sumsub的解决方案，以应对即将实施的泰国旅行规则。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;泰国加密合规监管趋严，KYC/AML技术供应商在东南亚获得落地机会&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>法国社交媒体禁令被判违宪</title>
-    <link href="https://www.mobileworldlive.com/europe/french-social-media-ban-deemed-unconstitutional/"/>
-    <id>tag:weekly-report,2026:event-e567429d</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;French social media ban deemed unconstitutional&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;法国一项针对社交媒体的禁令被裁定违宪，该禁令原计划限制部分社交平台的使用。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲数字监管受挫，社交平台和内容审核技术供应商需重新评估合规策略。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：欧洲 | 来源：Mobile World Live&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>两家银行用同一AI模型面临不同监管难题</title>
-    <link href="https://www.therecursive.com/two-banks-one-ai-model-two-entirely-different-regulatory-headaches/"/>
-    <id>tag:weekly-report,2026:event-eb3c60fd</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Two Banks, One AI Model, Two Entirely Different Regulatory Headaches?&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;文章探讨了两家银行在使用同一AI模型时面临的不同监管挑战，凸显了欧洲金融监管的复杂性。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲金融AI监管碎片化，银行和AI供应商需应对差异化合规要求，合规科技和本地化AI方案需求上升。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：欧洲 | 来源：The Recursive&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>京东提交20-F年报</title>
-    <link href="https://ir.jd.com/news-releases/news-release-details/jdcom-files-its-annual-report-form-20-f-1"/>
-    <id>tag:weekly-report,2026:event-7f017ac4</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;JD.com Files Its Annual Report on Form 20-F&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;京东已向美国证券交易委员会提交20-F年度报告，披露2025年全年财务及经营数据。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国电商巨头年报披露，为全球投资者提供其最新财务健康度与战略方向的关键数据，影响跨境资本配置。&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：earnings | 地区：中资 | 公司：JD.com | 来源：JD.com&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Cashflows投资Tap &amp; Go，英国FinTech联合</title>
-    <link href="https://www.eu-startups.com/2026/08/two-female-led-uk-fintechs-join-forces-as-cashflows-invests-in-blackpools-tap-go/"/>
-    <id>tag:weekly-report,2026:event-b90b59a8</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Two female-led UK FinTechs join forces as Cashflows invests in Blackpool’s Tap &amp;amp; Go&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;英国金融科技公司Cashflows投资了位于布莱克浦的Tap &amp;amp; Go，两家女性领导的英国金融科技公司实现联合。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;英国支付科技赛道整合，中小型支付服务商面临被并购或合作的机会&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：funding | 地区：欧洲 | 来源：EU-Startups&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Syfe推出Cash+ Enhanced，预期收益3.0%</title>
-    <link href="https://fintechnews.sg/135809/wealthtech/syfe-cash-enhanced/"/>
-    <id>tag:weekly-report,2026:event-62890dc6</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Syfe Launches Cash+ Enhanced With Up to 3.0% Projected Yield&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;新加坡财富管理平台Syfe推出Cash+ Enhanced产品，提供最高3.0%的预期收益率。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;东南亚财富管理竞争加剧，现金管理类产品成为吸引资金的新抓手&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Sand.ai获超160亿日元融资</title>
-    <link href="https://36kr.jp/499992/"/>
-    <id>tag:weekly-report,2026:event-130fdeef</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;中国発Sand.ai、160億円超調達　動画生成AIの商用化を加速&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;中国AI视频生成公司Sand.ai完成超160亿日元（约合1.1亿美元）融资，加速视频生成AI商业化。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国AI视频生成赛道获大额融资，为亚太地区内容生成工具和算力服务商带来合作机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：亚太 | 来源：36Kr Japan&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>预测称超大规模云商或后悔用天然气</title>
-    <link href="https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/"/>
-    <id>tag:weekly-report,2026:event-82fcf201</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Hyperscalers might regret embracing natural gas if new forecast proves correct&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;有预测称，如果新的能源预测准确，超大规模云服务商（Hyperscalers）可能会后悔采用天然气作为数据中心能源。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球数据中心能源策略面临不确定性，可再生能源和储能技术供应商将获得更多关注&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：全球 | 来源：TechCrunch&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>苹果提议15%链接外跳转费寻求和解</title>
-    <link href="https://www.pocketgamer.biz/apple-proposes-15-us-link-out-fee-as-it-seeks-settlement-talks-with-epic-games/"/>
-    <id>tag:weekly-report,2026:event-9b08155d</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Apple proposes 15% US link-out fee as it seeks settlement talks with Epic Games&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;苹果提议对US链接外跳转收取15%费用，寻求与Epic Games达成和解谈判。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;北美应用商店政策调整，苹果让步但保留抽成，游戏开发商和支付服务商需评估新费率影响。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：北美 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>多个品牌优化合作伙伴策略</title>
-    <link href="https://www.modernretail.co/marketing/how-hm-chobani-urbanstems-and-teleties-are-refining-their-partnership-strategies/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss"/>
-    <id>tag:weekly-report,2026:event-74730561</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;How H&amp;amp;M, Chobani, UrbanStems and Teleties are refining their partnership strategies&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;H&amp;amp;M、Chobani、UrbanStems和Teleties等品牌正在优化其合作伙伴策略。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球零售品牌合作策略调整，为营销科技和数据分析服务商带来新需求。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：Modern Retail&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>苹果拟对App Store外购买抽成15%</title>
-    <link href="https://techcrunch.com/2026/08/14/apple-proposes-to-take-a-15-cut-of-purchases-made-outside-the-app-store/"/>
-    <id>tag:weekly-report,2026:event-21a9d385</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Apple proposes to take a 15% cut of purchases made outside the App Store&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;苹果提议对App Store之外发生的购买交易抽取15%的佣金，此举可能改变应用内支付和外部链接的规则。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球应用商店分成模式面临重构，数字支付和电商应用需调整商业策略&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：全球 | 来源：TechCrunch&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Dell'Oro预测AI将改变前端网络架构</title>
-    <link href="https://www.mobileworldlive.com/ai-cloud/delloro-predicts-ai-fuelled-front-end-network-changes/"/>
-    <id>tag:weekly-report,2026:event-ae501099</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Dell’Oro predicts AI-fuelled front-end network changes&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Dell&amp;#x27;Oro预测AI将推动前端网络（front-end network）架构发生重大变化，包括新的接口和传输需求。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球网络设备市场将因AI负载而重构，光模块、交换机和数据中心互联供应商将迎来升级周期。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：industry_report | 地区：全球 | 来源：Mobile World Live&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>多款新游戏集中发布</title>
-    <link href="https://www.pocketgamer.biz/new-release-roundup-the-division-resurgence-dynasty-warriors-overlord-pigeon-a-love-story-and-more/"/>
-    <id>tag:weekly-report,2026:event-6c25b0b3</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;New release roundup: The Division Resurgence, Dynasty Warriors: Overlord, Pigeon: A Love Story, and more&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;多款新游戏发布，包括《全境封锁： resurgence》、《真三国无双：霸主》等，覆盖移动和主机平台。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球游戏市场新品密集上线，移动端和IP改编游戏仍是主流，发行和营销服务需求增加。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Michaels在3家门店测试新店型</title>
-    <link href="https://www.retaildive.com/news/michaels-debuts-store-format-knit-sew-party-shops/827904/"/>
-    <id>tag:weekly-report,2026:event-a89e0771</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Michaels debuts new store format at 3 locations&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Michaels在3个门店推出新店型，融合编织、缝纫和派对用品等品类，测试新的零售业态。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球零售巨头探索细分品类店型，供应链和门店数字化服务商将获得新订单机会。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：Retail Dive&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Etiqa新加坡任命Claudia Soh为CEO</title>
-    <link href="https://fintechnews.sg/135814/insurtech/etiqa-singapore-ceo/"/>
-    <id>tag:weekly-report,2026:event-a2cd9fdc</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Etiqa Insurance Singapore Appoints Claudia Soh as CEO&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;新加坡Etiqa保险任命Claudia Soh为新任CEO。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;新加坡保险科技市场高管变动，可能带来新的数字化战略和合作方向&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>苹果与阿里合作开发中国AI模型</title>
-    <link href="https://www.mobileworldlive.com/apple/apple-develops-chinese-ai-model-with-alibaba/"/>
-    <id>tag:weekly-report,2026:event-9a4f6778</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Apple develops Chinese AI model with Alibaba&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;苹果与阿里巴巴合作开发面向中国市场的AI模型，以适配本地用户需求和监管要求。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球科技巨头与中国云厂商深度绑定，中国AI算力、数据合规和模型本地化服务将迎来大单。&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：strategy | 地区：全球 | 来源：Mobile World Live&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Supercell称Mo.co不会取消但将大改</title>
-    <link href="https://www.pocketgamer.biz/supercell-says-moco-unlikely-to-be-cancelled-despite-major-changes-ahead-5401392/"/>
-    <id>tag:weekly-report,2026:event-a3fde727</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Supercell says Mo.co unlikely to be cancelled despite major changes ahead&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Supercell表示其新游戏Mo.co不太可能被取消，尽管未来将有重大调整。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球游戏巨头调整产品线，Mo.co的改动可能影响其测试和发行节奏，相关外包和测试服务需求或变化。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>BofA聘请前华平高管领导巴西科技业务</title>
-    <link href="https://braziljournal.com/bofa-recruta-greg-reider-ex-warburg-pincus-para-liderar-tech-no-brasil/"/>
-    <id>tag:weekly-report,2026:event-7c3d7fa6</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;BofA recruta ex-Warburg Pincus para liderar tech na América Latina&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;美银美林（BofA）聘请前华平投资高管Greg Reider领导其在巴西的科技业务。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;美银美林加强巴西科技投资布局，为当地金融科技初创企业带来更多融资机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：strategy | 地区：巴西 | 来源：Brazil Journal&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Testronic任命Sonia Kerr为CEO</title>
-    <link href="https://www.pocketgamer.biz/testronic-appoints-sonia-kerr-as-ceo-amid-executive-shakeup/"/>
-    <id>tag:weekly-report,2026:event-017157fa</id>
-    <published>2026-08-14T00:00:00Z</published>
-    <updated>2026-08-14T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Testronic appoints Sonia Kerr as CEO amid executive shakeup&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;游戏测试服务公司Testronic在管理层改组中任命Sonia Kerr为新任CEO。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球游戏测试服务商管理层变动，可能调整外包策略和供应商合作方向&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
+    <title>Nvidia缩减数据中心保证计划</title>
+    <link href="https://www.techinasia.com/news/nvidia-scales-data-center-guarantee-plans"/>
+    <id>tag:weekly-report,2026:event-4172bc4f</id>
+    <published>2026-08-15T00:00:00Z</published>
+    <updated>2026-08-15T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Nvidia scales back data center guarantee plans: report&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;据报道，Nvidia缩减了数据中心保证计划，调整了其对数据中心投资的承诺力度。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球AI算力投资出现调整信号，Nvidia收缩保证计划可能影响数据中心运营商的融资预期，云服务商需重新评估采购策略。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>全球AI视野 Top5 · 2026-08-15</title>
