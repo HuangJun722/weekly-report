@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T08:30:55+08:00",
+  "generated_at": "2026-08-16T20:36:31+08:00",
   "fetched_date": "2026-08-16",
   "source": {
     "name": "AIHOT 热点榜",
@@ -9,56 +9,9 @@
   "items": [
     {
       "rank": 1,
-      "title": "智谱发布 GLM-5.3",
-      "list_title": "GLM-5.3 发布：编程能力开源第一，并涌现网络安全能力",
-      "heat": 83,
-      "sources": [
-        "X：智谱 Z.ai (@Zai_org)",
-        "公众号：智谱（GLM）",
-        "X：Testing Catalog (@testingcatalog)",
-        "IT之家（RSS）",
-        "X：Kim (@kimmonismus)",
-        "MarkTechPost（RSS）",
-        "The Decoder：AI News（RSS）",
-        "X：Rohan Paul (@rohanpaul_ai)",
-        "X：SemiAnalysis (@SemiAnalysis_)",
-        "Nathan Lambert：Interconnects（RSS）",
-        "另有 20 组氛围票"
-      ],
-      "summary": "智谱于2026年8月14日发布GLM-5.3模型，主打编码与网络安全能力。该模型基于与GLM-5.2相同的743B参数基础模型，通过扩展后训练实现提升，编程能力较前代提升50%，在Terminal Bench 3.0、Agents' Last Exam (CLI)等公开基准中取得开源第一，并接近Claude Fable 5。\n在网络安全方面，GLM-5.3在白盒代码审查等安全任务中表现持平Mythos 5，在CyberGym测试中得分84.5%，高于Mythos 5（83.8%）和GPT-5.6 Sol（83.6%）。具体基准得分：Terminal-Bench 3.0从4.6升至28.3，Cy",
-      "original_links": [
-        {
-          "url": "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride",
-          "domain": "www.interconnects.ai"
-        },
-        {
-          "url": "https://x.com/SemiAnalysis_/status/2088355003106828291",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://the-decoder.com/zhipu-ai-releases-glm-5-3-claims-its-the-strongest-open-weights-coding-model",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks",
-          "domain": "www.marktechpost.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/989/689.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494084&idx=1&sn=a2e5cd9a534a4825feb3633ea1b6d492",
-          "domain": "mp.weixin.qq.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/377f652d-2a7e-4376-bbf9-429cf111d5ed"
-    },
-    {
-      "rank": 2,
       "title": "SpaceX 收购 Cursor",
       "list_title": "Cursor 正式被 SpaceX 收购",
-      "heat": 80,
+      "heat": 56,
       "sources": [
         "X：SpaceXAI (@SpaceXAI)",
         "X：Kim (@kimmonismus)",
@@ -101,10 +54,10 @@
       "story_url": "https://aihot.virxact.com/story/a7a923c7-cace-4c44-a481-24bae2566e1f"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "title": "阿里通义千问发布 Qwen3.8-27B",
       "list_title": "通义千问开源 Qwen3.8 系列模型",
-      "heat": 54,
+      "heat": 43,
       "sources": [
         "IT之家（RSS）",
         "X：Kim (@kimmonismus)",
@@ -115,7 +68,7 @@
         "X：Rohan Paul (@rohanpaul_ai)",
         "The Decoder：AI News（RSS）",
         "X：阿易 AI Notes (@AYi_AInotes)",
-        "另有 6 组氛围票"
+        "另有 7 组氛围票"
       ],
       "summary": "2026年8月14日，阿里巴巴通义千问团队正式开源Qwen3.8系列模型，包括Qwen3.8-27B和Max级Qwen3.8-2.4T-A95B。Qwen3.8-27B为原生多模态稠密模型，仅27B参数，采用Apache 2.0许可，所有开发者、科研机构和企业均可自由下载、部署和使用。\n该模型原生支持262K上下文窗口，可通过YaRN技术外推至1M tokens。官方宣称其整体性能超越Qwen3.7-Plus，在编程和办公场景表现突出，并新增reasoning_effort功能以按任务难度控制思考深度。\n第三方报道称该模型在智能体编程、计算机使用、浏览器任务及长周期专业工作中达到SOTA，多项",
       "original_links": [
@@ -135,13 +88,14 @@
       "story_url": "https://aihot.virxact.com/story/c04016a7-8d58-4237-b9ea-ad27431cbc5b"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "title": "Anthropic 发布 Claude 文本水印 FAQ",
       "list_title": "Claude 文本水印机制如何运作",
-      "heat": 22,
+      "heat": 23,
       "sources": [
         "X：Anthropic (@AnthropicAI)",
-        "Anthropic：Newsroom（网页）"
+        "Anthropic：Newsroom（网页）",
+        "另有 2 组氛围票"
       ],
       "summary": "Anthropic 发布 FAQ，说明为遵守欧盟《AI 法案》而实施文本水印，其他主要模型开发商也已签署同一实践准则。\n水印不影响 Claude 输出质量、不增加 token 成本、无隐藏字符，且无法追溯到具体个人或组织。\n未来 Claude 模型生成的文本将包含水印，用于判断文本由 Claude 撰写的可能性，该方法基于 Google DeepMind 的 SynthID-Text 技术，对输出质量、创造力和可读性无实际影响，读者无法区分水印文本与普通文本。",
       "original_links": [
@@ -157,95 +111,44 @@
       "story_url": "https://aihot.virxact.com/story/b72cac2d-548f-4c66-ba59-80ef3c74d02e"
     },
     {
-      "rank": 5,
-      "title": "DeepSeek 发布 DeepSeek v4 Pro 0813 1.5T",
-      "list_title": "DeepSeek V4 Pro 登陆硅基流动，1M 上下文",
-      "heat": 14,
+      "rank": 4,
+      "title": "智谱发布 GLM-5.3",
+      "list_title": "GLM-5.3 开放前安全评估：网络防御能力显著提升",
+      "heat": 22,
       "sources": [
-        "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
-        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "X：智谱 Z.ai (@Zai_org)",
+        "X：SemiAnalysis (@SemiAnalysis_)",
+        "Nathan Lambert：Interconnects（RSS）",
         "另有 2 组氛围票"
       ],
-      "summary": "DeepSeek 于 2026 年 8 月 13 日发布 DeepSeek-V4-Pro 正式版，模型已在 APP、网页端和 API 同步上线，用户可在 APP 或网页端选择“专家模式”使用。正式版增强了 Agent 能力，API 原生支持 OpenAI Responses API 格式并适配 Codex，思考模式支持 low/high/max 三档强度。API 采用“峰谷定价”，闲时价格为高峰一半，新价格于 2026 年 8 月 17 日生效。\n此前在 8 月 12 日，SemiAnalysis 在 X 上祝贺 DeepSeek 发布 DeepSeekv4 Pro 0813 1.5T，称其在",
+      "summary": "智谱于2026年8月14日发布GLM-5.3模型，主打编码与网络安全能力。该模型基于与GLM-5.2相同的743B参数基础模型，通过扩展后训练实现提升，编程能力较前代提升50%，在Terminal Bench 3.0、Agents' Last Exam (CLI)等公开基准中取得开源第一，并接近Claude Fable 5。\n在网络安全方面，GLM-5.3在白盒代码审查等安全任务中表现持平Mythos 5，在CyberGym测试中得分84.5%，高于Mythos 5（83.8%）和GPT-5.6 Sol（83.6%）。具体基准得分：Terminal-Bench 3.0从4.6升至28.3，Cy",
       "original_links": [
         {
-          "url": "https://x.com/SiliconFlowAI/status/2088127458558271885",
+          "url": "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride",
+          "domain": "www.interconnects.ai"
+        },
+        {
+          "url": "https://x.com/SemiAnalysis_/status/2088355003106828291",
           "domain": "x.com"
         },
         {
-          "url": "https://www.ithome.com/0/989/423.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485770&idx=1&sn=dab0be341cb46a410ec40a062a5cb895",
-          "domain": "mp.weixin.qq.com"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813",
-          "domain": "simonwillison.net"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/87bb3819-cb05-45fa-85d0-9588adf7dffd"
-    },
-    {
-      "rank": 6,
-      "title": "Google 发布 Gemini 3.7 Flash",
-      "list_title": "Gemini 3.7 Flash 全面上线 Pro 与 Ultra 用户",
-      "heat": 12,
-      "sources": [
-        "X：Gemini (@GeminiApp)",
-        "另有 3 组氛围票"
-      ],
-      "summary": "Google 于 2026 年 8 月 13 日发布 Gemini 3.7 Flash，距上一代 3.6 Flash 仅三周。该模型在编程、知识工作和网页开发方面显著提升，尤其擅长长周期软件工程任务、PDF 理解和智能体任务。官方演示展示了其构建复杂 3D 网页游戏的能力，涵盖 Three.js 引擎逻辑、素材生成与程序化音频集成。\n价格方面，Gemini 3.7 Flash 入门价仅为 3.6 Flash 原价的一半，年底前提供优惠：输入 $0.75/1M tokens，输出 $3.75/1M tokens。模型已上线 Gemini API、AI Studio、Antigravity、Gem",
-      "original_links": [
-        {
-          "url": "https://x.com/GeminiApp/status/2088326407730692538",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/989/497.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://the-decoder.com/gemini-3-7-flash-lands-with-coding-gains-and-undercuts-its-three-week-old-predecessors-price-by-50",
+          "url": "https://the-decoder.com/zhipu-ai-releases-glm-5-3-claims-its-the-strongest-open-weights-coding-model",
           "domain": "the-decoder.com"
         },
         {
-          "url": "https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash",
+          "url": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks",
           "domain": "www.marktechpost.com"
         },
         {
-          "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-7-flash-just-three-weeks-after-previous-release",
-          "domain": "arstechnica.com"
+          "url": "https://www.ithome.com/0/989/689.htm",
+          "domain": "www.ithome.com"
         },
         {
-          "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash",
-          "domain": "deepmind.google"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/2dc37050-6375-45a7-8668-26d97fc0c333"
-    },
-    {
-      "rank": 7,
-      "title": "RedNote 发布 dots3-note Preview",
-      "list_title": "dots3-note Preview 开源：280B 参数轻量模型，主打长程智能体与多模态推理",
-      "heat": 10,
-      "sources": [
-        "X：Kim (@kimmonismus)",
-        "公众号：小红书技术（dots.llm）"
-      ],
-      "summary": "RedNote 于 2026 年 8 月 14 日开源 dots3-note Preview，这是一款 280B 参数的 MoE 多模态智能体模型，仅 16B 参数同时激活，支持 512K 上下文，可处理文本、图像、视频和音频。\n该模型是 dots3 系列最轻量版本，针对复杂推理和长程 Agent 任务优化，具备文本、视觉、语音多模态理解能力。\n官方公众号与 X 平台消息均确认了模型参数与能力，无冲突信息。",
-      "original_links": [
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496140&idx=1&sn=5239a5fbb115c58d2ae0056bb32789ff",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494084&idx=1&sn=a2e5cd9a534a4825feb3633ea1b6d492",
           "domain": "mp.weixin.qq.com"
-        },
-        {
-          "url": "https://x.com/kimmonismus/status/2088194805654323617",
-          "domain": "x.com"
         }
       ],
-      "story_url": "https://aihot.virxact.com/story/b31a1eef-6eb9-4bf4-85bc-4a1d1109d465"
+      "story_url": "https://aihot.virxact.com/story/377f652d-2a7e-4376-bbf9-429cf111d5ed"
     }
   ]
 }
