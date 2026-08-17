@@ -79,13 +79,53 @@ def _signal_change_score(event):
         return 0
 
 
+# 信号类型质量加分：行动性信号（扩张/合作/开发者/AI基建）> 资本与支付 > 组织/合规/无分类。
+# 与 signal_change_score 的 action_type 权重互补：后者按动作定值，这里按信号分类在
+# 同分事件里再区分"更可能对应商业行动"的，避免只靠单一轴。
+TAXONOMY_BONUS = {
+    'expansion': 2,
+    'partnership': 2,
+    'developer_change': 2,
+    'ai_infra': 2,
+    'payment': 1,
+    'commerce': 1,
+    'capital': 1,
+    'org_change': 0,
+    'compliance': 0,
+    'general': 0,
+}
+
+TIER_BONUS = {
+    'L1 官方/IR源': 2,
+    'L2 垂直交易源': 1,
+    'L3 区域生态源': 1,
+    'L4 垂直赛道精品源': 1,
+    'L4 深度趋势源': 1,
+    'L5 Google News 补漏源': 0,
+}
+
+
+def _signal_quality_bonus(event):
+    """来源与信号类型的质量加分，作为同变化分事件内的次级排序。"""
+    taxonomies = event.get('signal_taxonomy') or []
+    tax_bonus = max((TAXONOMY_BONUS.get(t, 0) for t in taxonomies), default=0)
+    tier_bonus = TIER_BONUS.get(event.get('source_tier') or '', 0)
+    return tax_bonus + tier_bonus
+
+
 def signal_sort_key(event):
-    """按 日期 → 变化重要性(signal_change_score) → 事件分 排序。
+    """按 日期 → 变化重要性(signal_change_score) → 信号质量 → 事件分 排序。
 
     signal_change_score 回答"这个变化对行业/区域有多重要"，是产品定位
-    （变化发现）的核心排序轴；event_score 只回答"公司发生了什么"，降为次级。
+    （变化发现）的核心排序轴；信号质量加分只在同变化分内区分来源可信度与
+    信号行动性；event_score 只回答"公司发生了什么"，降为最次级。
     """
-    return (event.get('date', ''), _signal_change_score(event), event_score(event))
+    return (
+        event.get('date', ''),
+        _signal_change_score(event),
+        _signal_quality_bonus(event),
+        event_score(event),
+    )
 
 
 def _sort_events(events):

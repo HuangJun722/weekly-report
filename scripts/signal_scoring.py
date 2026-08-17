@@ -139,7 +139,7 @@ def infer_claim_type(event, content_type=None):
 # signal_type 混了主体（company）与动作（market/tech/capital...），不可比。
 # 拆出 action_type（做什么变化）与 domain（哪个行业）作为正交字段：
 # 评分看 action_type，主体/行业作上下文，不再给"公司"天然低分。
-ACTION_TYPES = ('product_release', 'policy_change', 'funding', 'expansion', 'hiring', 'other')
+ACTION_TYPES = ('product_release', 'policy_change', 'funding', 'earnings', 'expansion', 'hiring', 'other')
 
 PRODUCT_RELEASE_TERMS = {
     'launch', 'launches', 'launched', 'released', 'releases', 'release', 'unveils',
@@ -172,7 +172,9 @@ def infer_action_type(event, content_type=None):
     text = _text(event)
     if content_type == 'regional_policy' or _has(text, POLICY_SIGNAL_TERMS):
         return 'policy_change'
-    if ev_type in {'funding', 'ma', 'earnings'} or content_type == 'capital_event':
+    if ev_type == 'earnings' or content_type == 'earnings':
+        return 'earnings'
+    if ev_type in {'funding', 'ma'} or content_type == 'capital_event':
         return 'funding'
     if content_type == 'model_release' or _has(text, PRODUCT_RELEASE_TERMS):
         return 'product_release'
@@ -412,8 +414,8 @@ def signal_change_score(event, content_type=None):
     change_explicit = 35 if quantified else 20
 
     action_type_weight = {
-        'policy_change': 25, 'product_release': 22, 'funding': 22,
-        'expansion': 18, 'hiring': 12, 'other': 15,
+        'policy_change': 25, 'product_release': 24, 'funding': 22,
+        'earnings': 18, 'expansion': 18, 'hiring': 12, 'other': 15,
     }[action_type]
     scope_fit = 20 if event.get('scope_industries') else 12
     market_impact, market_confidence = _market_impact(event)

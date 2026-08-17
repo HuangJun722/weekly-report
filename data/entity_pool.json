@@ -424,7 +424,7 @@
         {
           "type": "newsroom",
           "url": "https://www.traveloka.com/en-id/newsroom",
-          "status": "active",
+          "status": "paused",
           "instrumented": false,
           "expected_signals": [
             "partnership",
@@ -918,8 +918,8 @@
           "type": "newsroom",
           "url": "https://www.noon.com/uae-en/newsroom/",
           "source_id": "noon-newsroom",
-          "status": "active",
-          "instrumented": true,
+          "status": "paused",
+          "instrumented": false,
           "expected_signals": [
             "commerce",
             "logistics"
@@ -968,7 +968,7 @@
         {
           "type": "newsroom",
           "url": "https://tabby.ai/en-AE/blog/",
-          "status": "active",
+          "status": "paused",
           "instrumented": false,
           "expected_signals": [
             "payment",
@@ -1272,7 +1272,7 @@
         {
           "type": "newsroom",
           "url": "https://dlocal.com/news/",
-          "status": "active",
+          "status": "paused",
           "instrumented": false,
           "expected_signals": [
             "payment",

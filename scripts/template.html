@@ -721,6 +721,62 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
             {% else %}
             <div class="pempty">本月尚未形成跨周且可比较的结构趋势，先保留事实。</div>
             {% endif %}
+          <section class="pblock">
+            <div class="pblock-head"><h2>公司变化</h2><span>按公司聚合，跨周与历史基线比较</span></div>
+            {% if report.company_changes %}
+            {% for item in report.company_changes %}
+            <article class="pwin">
+              <div class="pwin-meta">
+                <span class="p-lbl p-lbl-green">{{ item.change }}</span>
+                <span class="p-lbl">{{ item.region }}</span>
+              </div>
+              <h3>{{ item.title }}</h3>
+              {% if item.narrative %}<p class="p-narrative">{{ item.narrative }}</p>{% endif %}
+              <p class="p-narrative">{{ item.summary }}</p>
+              <details class="pwin-details">
+                <summary>变化详情</summary>
+                <p>跨周：{{ item.week_count }} 周 · {{ item.count }} 个独立事实{% if item.previous_count %}（基线均值 {{ item.previous_count }} 个）{% endif %}</p>
+                <h4 class="p-evidence-title">代表证据</h4>
+                <ul class="pwin-evidence">
+                  {% for ev in item.evidence %}
+                  <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                  {% endfor %}
+                </ul>
+              </details>
+            </article>
+            {% endfor %}
+            {% else %}
+            <div class="pempty">本月暂无达到跨周门槛的公司变化，先保留事实。</div>
+            {% endif %}
+          </section>
+          <section class="pblock">
+            <div class="pblock-head"><h2>行业变化</h2><span>按行业聚合，跨周与历史基线比较</span></div>
+            {% if report.industry_changes %}
+            {% for item in report.industry_changes %}
+            <article class="pwin">
+              <div class="pwin-meta">
+                <span class="p-lbl p-lbl-green">{{ item.change }}</span>
+                <span class="p-lbl">{{ item.region }}</span>
+              </div>
+              <h3>{{ item.title }}</h3>
+              {% if item.narrative %}<p class="p-narrative">{{ item.narrative }}</p>{% endif %}
+              <p class="p-narrative">{{ item.summary }}</p>
+              <details class="pwin-details">
+                <summary>变化详情</summary>
+                <p>跨周：{{ item.week_count }} 周 · {{ item.count }} 个独立事实{% if item.previous_count %}（基线均值 {{ item.previous_count }} 个）{% endif %}</p>
+                <h4 class="p-evidence-title">代表证据</h4>
+                <ul class="pwin-evidence">
+                  {% for ev in item.evidence %}
+                  <li><a href="{{ ev.url }}" target="_blank">{{ ev.title }}</a><span>{{ ev.date }} · {{ ev.source }} · {{ ev.type }}</span></li>
+                  {% endfor %}
+                </ul>
+              </details>
+            </article>
+            {% endfor %}
+            {% else %}
+            <div class="pempty">本月暂无达到跨周门槛的行业变化，先保留事实。</div>
+            {% endif %}
+          </section>
           {% if report.aihot_hot %}
           <section class="f-hot p-hot">
             <div class="f-hot-head">

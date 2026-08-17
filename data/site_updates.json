@@ -1,6 +1,25 @@
 [
   {
     "date": "2026-08-17",
+    "version": "V5.0",
+    "type": "变化聚合+评分校准",
+    "status": "已上线",
+    "title": "变化聚合 MVP（公司+行业）、评分权重用真实数据校准、失效观察点清理、信源登记补全",
+    "summary": "完成 8-12 定案的变化聚合层第一阶段：月报新增「公司变化」「行业变化」区块，复用主题趋势的跨周门槛+基线+覆盖率校正，回答「最近哪些公司/行业在起变化」。评分权重用真实历史事件离线校准：财报从融资中拆出独立 earnings 档，避免财报垄断高分，Top10 从清一色财报变为产品/政策/财报/扩张多样。同时清理 4 个持续失效的观察点源（noon.com 等连接超时，暂停采集）、补全 43 个硬编码信源登记进 Source Registry、signal_taxonomy 接入排序。",
+    "changes": [
+      "period_themes 泛化：新增 build_company_changes / build_industry_changes，公司/行业/主题三轴共用跨周基线+覆盖率校正，输出结构一致",
+      "月报模板新增「公司变化」「行业变化」区块，与「本月结构变化」并列；区域聚合按方案后置未做",
+      "周报/月报聚合改用全量事件（修复展示管线过滤导致公司跨周证据不足、区块为空的问题）",
+      "signal_scoring：新增 earnings 独立 action_type，财报/融资分档；权重按真实数据定案（政策25/产品24/融资22/财报18/扩张18/招聘12）",
+      "calibrate_weights.py：离线权重校准脚本，对比各配置分数分布与 Top 事件构成",
+      "view_selectors：signal_sort_key 增加信号类型+来源 tier 质量加分（同变化分内区分可信度与行动性）",
+      "修复失效观察点：noon-newsroom/traveloka-newsroom/tabby-blog/dlocal-news 持续连接超时，registry+pool 标记 paused 暂停采集，must 覆盖失败点 1→0",
+      "source_registry 补全 43 个硬编码信源登记（含 signal_only 显式字段），采集行为不变，为后续切换加载铺路",
+      "新增 test_change_aggregation（6 个）、test_signal_scoring 补 earnings 拆分测试"
+    ]
+  },
+  {
+    "date": "2026-08-17",
     "version": "V4.9",
     "type": "展示层",
     "status": "已上线",

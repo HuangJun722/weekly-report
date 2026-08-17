@@ -164,8 +164,28 @@ def _week_key(event):
     return f'{year}-W{week:02d}'
 
 
-def _window_stats(all_events, start, end, key):
-    """窗口内某主题的 Evidence Atom 数与合格事件总数（覆盖率代理）。
+def company_key(event):
+    """变化聚合的公司键：优先 company_name，其次 companies 列表首位。"""
+    if event.get('company_name'):
+        return event['company_name']
+    companies = event.get('companies') or []
+    return companies[0] if companies else ''
+
+
+def industry_key(event):
+    """变化聚合的行业键：domain → scope_industries[0] → vertical → 主题键。"""
+    if event.get('domain'):
+        return event['domain']
+    industries = event.get('scope_industries') or []
+    if industries:
+        return industries[0]
+    if event.get('vertical'):
+        return event['vertical']
+    return theme_key(event)
+
+
+def _window_stats(all_events, start, end, key, keyer=theme_key):
+    """窗口内某分组键的 Evidence Atom 数与合格事件总数（覆盖率代理）。
 
     total_eligible 反映该窗口采集/覆盖了多少合格事实：窗口间总事件数差异
     主要来自信源增减或采集波动，用它做覆盖率校正，避免"新增信源"被误判为
@@ -178,16 +198,21 @@ def _window_stats(all_events, start, end, key):
     total_eligible = len(in_window)
     if total_eligible == 0:
         return 0, 0
-    theme_events = [event for event in in_window if theme_key(event) == key]
+    theme_events = [event for event in in_window if keyer(event) == key]
     atoms = build_evidence_atoms(theme_events)
     return len(atoms), total_eligible
 
 
-def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, limit=6):
+def _build_dimension_changes(all_events, start_date, end_date, keyer, label_fn,
+                             entity_regions=None, limit=6):
+    """跨周变化检测的通用实现：按 keyer 分组，对比前 3 窗口基线并做覆盖率校正。
+
+    主题、公司、行业三个维度共用同一套"是否真实变化"的判断逻辑，
+    区别只在分组键与展示名。
+    """
     start = datetime.strptime(start_date, '%Y-%m-%d')
     end = datetime.strptime(end_date, '%Y-%m-%d')
     span = (end - start).days + 1
-    # 基线 = 当前窗口之前 3 个同长度窗口（足够判断"相对过去是否真的变化"）
     prior_windows = []
     window_end = start - timedelta(days=1)
     for _ in range(3):
@@ -202,7 +227,7 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
     ]
     current_total = len(current_eligible)
     for event in current_eligible:
-        key = theme_key(event)
+        key = keyer(event)
         if key:
             current_groups.setdefault(key, []).append(event)
     trends = []
@@ -213,9 +238,8 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
             continue
         current_count = len(atoms)
 
-        # 基线：有数据的先前窗口均值（覆盖率为 0 的窗口跳过，无法归一化）
         base_entries = [
-            _window_stats(all_events, ws, we, key)
+            _window_stats(all_events, ws, we, key, keyer)
             for ws, we in prior_windows
         ]
         base_entries = [(c, t) for c, t in base_entries if t > 0]
@@ -224,8 +248,6 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
             avg_total = sum(t for _, t in base_entries) / len(base_entries)
             baseline_count = sum(c for c, _ in base_entries) / len(base_entries)
             coverage_ratio = current_total / avg_total if avg_total else 1.0
-            # 覆盖率校正：只在当前窗口总事件量相对基线明显变化（信源增减/采集波动）
-            # 时校正，并钳制修正幅度，避免小样本被过度放大。
             if coverage_ratio < 0.8 or coverage_ratio > 1.25:
                 correction = min(max(avg_total / current_total, 0.75), 1.30) if current_total else 1.0
             else:
@@ -246,7 +268,7 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
         representatives = _representative_events(atoms)
         regions = Counter(resolved_region(event, entity_regions) for event in representatives)
         region = regions.most_common(1)[0][0] if regions else '全球'
-        label = THEMES[key][0]
+        label = label_fn(key)
         delta = round(current_adj - baseline_count, 1)
         comparison = f'较基线 {delta:+.1f} 个事实' if has_baseline else '前一周期未形成同类证据'
         trends.append({
@@ -266,4 +288,59 @@ def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, 
         })
     trends.sort(key=lambda row: row['score'], reverse=True)
     return trends[:limit]
+
+
+def build_monthly_trends(all_events, start_date, end_date, entity_regions=None, limit=6):
+    """主题维度的跨周趋势：按行业主题分组，对比前 3 窗口基线。"""
+    return _build_dimension_changes(all_events, start_date, end_date, theme_key,
+                                    lambda key: THEMES[key][0], entity_regions, limit)
+
+
+def build_company_changes(all_events, start_date, end_date, entity_regions=None, limit=6):
+    """公司维度的变化聚合：某公司近期是否在集中加码某方向。
+
+    复用主题趋势的跨周门槛与基线校正，区别只在按公司分组。输出结构同
+    period_themes（change/region/narrative/summary/evidence/...），加 dimension 标记。
+    """
+    rows = _build_dimension_changes(all_events, start_date, end_date, company_key,
+                                    lambda key: f'{key}公司', entity_regions, limit)
+    for row in rows:
+        row['dimension'] = 'company'
+    return rows
+
+
+def _domain_label(key):
+    """行业变化展示名：优先 THEMES 中文标签，补充常见 domain/scope_industries。"""
+    if key in THEMES:
+        return THEMES[key][0]
+    return {
+        'fintech': '金融科技',
+        'cloud_saas': '云与SaaS',
+        'gaming': '游戏',
+        'telecom': '电信',
+        'ecommerce': '电商',
+        'logistics': '物流',
+        'ai': 'AI',
+        'payments': '支付',
+        'payment': '支付',
+        'ai_infra': 'AI与云基础设施',
+        'gaming_content': '游戏内容',
+        'cloud_saas_developer': '云SaaS与开发者',
+        'commerce': '电商与商户',
+        'ads_social': '社交与广告',
+        'travel_local_services': '旅游与本地服务',
+        'other': '综合科技',
+    }.get(key, key)
+
+
+def build_industry_changes(all_events, start_date, end_date, entity_regions=None, limit=6):
+    """行业维度的变化聚合：某行业近期 Signal 数/公司数/事件类型是否在变化。
+
+    按 domain/scope_industries/vertical 分组，同主题趋势门槛与基线校正。
+    """
+    rows = _build_dimension_changes(all_events, start_date, end_date, industry_key,
+                                    _domain_label, entity_regions, limit)
+    for row in rows:
+        row['dimension'] = 'industry'
+    return rows
 

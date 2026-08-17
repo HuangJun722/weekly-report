@@ -22,7 +22,7 @@ try:
     )
     from signal_clusters import build_signal_clusters
     from narratives import build_narrative
-    from period_themes import build_monthly_trends, build_weekly_themes
+    from period_themes import build_monthly_trends, build_weekly_themes, build_company_changes, build_industry_changes
     from entity_signal_conversion_report import event_matches_entity
     from internet_relevance import is_mainline_internet_event
     from view_selectors import (
@@ -50,7 +50,7 @@ except ImportError:
     )
     from scripts.signal_clusters import build_signal_clusters
     from scripts.narratives import build_narrative
-    from scripts.period_themes import build_monthly_trends, build_weekly_themes
+    from scripts.period_themes import build_monthly_trends, build_weekly_themes, build_company_changes, build_industry_changes
     from scripts.entity_signal_conversion_report import event_matches_entity
     from scripts.internet_relevance import is_mainline_internet_event
     from scripts.view_selectors import (
@@ -1736,6 +1736,14 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         if not focus_windows_enabled else []
     )
     themes = focus_windows if focus_windows_enabled else monthly_trends
+    company_changes = (
+        build_company_changes(events, start_date, end_date, _entity_region_map(), limit=5)
+        if not focus_windows_enabled else []
+    )
+    industry_changes = (
+        build_industry_changes(events, start_date, end_date, _entity_region_map(), limit=5)
+        if not focus_windows_enabled else []
+    )
     high_count = len(select_period_high_value_events(period_events))
 
     # AI 编辑层：生产档案要求成功生成；单元测试可显式允许模板降级
@@ -1841,6 +1849,8 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         'customer_tiers': customer_tiers,
         'themes': themes,
         'period_themes': themes,
+        'company_changes': company_changes,
+        'industry_changes': industry_changes,
         'high_priority': high_count,
         'aihot_hot': _load_aihot_archive(start_date, end_date, weekly=focus_windows_enabled)
                     or _latest_aihot_items(),
@@ -2641,9 +2651,15 @@ def generate_html(force=False, preview_mode=False):
     }
     history_total = max(0, len(available_dates) - 1)
 
-    weekly_archives = build_weekly_archives(all_events_for_list, period_reference_date,
+    # 周报/月报聚合用全量事件（含所有历史批次），不用展示管线的过滤视图——
+    # 展示视图只保留主日期附近窗口，跨周证据会被砍到不足以判断变化。
+    full_events_for_period = [
+        e for date_key, evs in events.items()
+        for e in (evs if isinstance(evs, list) else [])
+    ]
+    weekly_archives = build_weekly_archives(full_events_for_period, period_reference_date,
                                             require_editorial=not preview_mode)
-    monthly_archives = build_monthly_archives(all_events_for_list, period_reference_date,
+    monthly_archives = build_monthly_archives(full_events_for_period, period_reference_date,
                                               require_editorial=not preview_mode)
     weekly_report = weekly_archives[0] if weekly_archives else build_period_report([], period_reference_date, period_reference_date, '本周', 'empty', 'open')
     monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], period_reference_date, period_reference_date, '本月', 'empty', 'open')

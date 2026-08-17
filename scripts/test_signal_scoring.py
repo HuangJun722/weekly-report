@@ -122,6 +122,29 @@ def test_market_impact_uses_company_market_with_confidence():
     assert r['signal_change_breakdown']['market_impact'] > 0
 
 
+def test_earnings_is_own_action_type_not_funding():
+    """财报（earnings）是独立 action_type，不与融资同档，避免财报垄断高分。"""
+    def clean(title, et):
+        ev = dict(base_event(
+            title=title, display_title=title,
+            summary_short='', source_excerpt='', impact='',
+            source_type='newsroom', source_tier='L1 官方/IR源',
+            is_company=True, company_name='ExampleAI', companies=['ExampleAI'],
+            scope_status='qualified', scope_industries=['ai_infra'],
+            event_types=[et],
+        ))
+        return apply_signal_contract(ev)
+    earnings = clean('ExampleAI quarterly revenue beats forecasts, profit up 20%', 'earnings')
+    funding = clean('ExampleAI raises $50M Series B', 'funding')
+    r_earn = signal_change_score(earnings)
+    r_fund = signal_change_score(funding)
+    assert r_earn['action_type'] == 'earnings'
+    assert r_fund['action_type'] == 'funding'
+    # 财报权重低于融资，但仍是强信号（经营拐点）
+    assert r_earn['signal_change_breakdown']['action_type_weight'] == 18
+    assert r_fund['signal_change_breakdown']['action_type_weight'] == 22
+
+
 if __name__ == '__main__':
     test_report_is_a_first_class_content_type()
     test_model_release_has_model_profile()
@@ -130,4 +153,5 @@ if __name__ == '__main__':
     test_action_type_and_domain_are_orthogonal_fields()
     test_company_action_not_penalized_by_subject()
     test_market_impact_uses_company_market_with_confidence()
+    test_earnings_is_own_action_type_not_funding()
     print('signal scoring tests passed')
