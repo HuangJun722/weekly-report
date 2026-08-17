@@ -196,9 +196,14 @@ RSS 另有独立「全球AI视野 Top5」汇总条：读 `data/aihot_hot.json` �
 - 同一对象同一动作的转载只算一个事实；来源所在地不能直接当作事件地域。
 - 月报采用“本月结构变化 -> 跨周统计 -> 历史基线比较 -> 代表证据”。
 - 月报趋势至少跨两个周次、三个独立事实，并与当前窗口之前 3 个同长度窗口的基线均值比较；覆盖率校正避免新增信源被误判为升温。
+- 月报含三个维度的变化聚合，共用同一套跨周门槛+基线+覆盖率校正（`scripts/period_themes.py` 的 `_build_dimension_changes`）：
+  - **主题结构变化**（`period_themes`）：按行业主题分组；
+  - **公司变化**（`company_changes`）：按 `company_name` 分组，看某公司是否集中加码某方向；
+  - **行业变化**（`industry_changes`）：按 `domain`/`scope_industries`/`vertical` 分组，看赛道信号增减。
+  三者在月报页面并列展示，只做变化检测不做观点；区域聚合按方案后置未做。
 - 不再用默认机会方向填充月报主题；证据不足时宁可不生成趋势。
 - 月报已接入 AI 编辑层：`generate_html.build_monthly_editorial()` 用 AI 把结构趋势写成月度标题与导读；失败时回退模板。
-- 周报/月报含「本周/本月 AI 热点」小节：按自然周期读取 `data/aihot_hot/YYYY-MM-DD.json` 归档（AIHOT 全球 AI 视野，不标来源），空则隐藏。
+- 周报/月报含「本周/本月 AI 热点」小节：按自然周期读取 `data/aihot_hot/YYYY-MM-DD.json` 归档（AIHOT 全球 AI 视野，不标来源），当期为空则回退最近一期非空归档。
 
 ## Jobs 候选信号
 

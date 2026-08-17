@@ -149,6 +149,9 @@ weekly-report/
 │   ├── fetch_aihot_hot.py        # AIHOT 热点抓取（按天归档）
 │   ├── fetch_model_leaderboard.py # AIHOT 模型榜抓取
 │   ├── generate_html.py          # 生成 HTML
+│   ├── period_themes.py          # 周/月主题 + 公司/行业变化聚合
+│   ├── signal_scoring.py         # 评分（signal_change_score 主排序轴）
+│   ├── calibrate_weights.py      # 评分权重离线校准（只读）
 │   ├── source_conversion_report.py # 信源转化漏斗
 │   ├── entity_signal_conversion_report.py # 对象/观察点转化治理
 │   ├── template.html             # HTML 模板（设计 SSOT）
@@ -187,4 +190,4 @@ weekly-report/
 6. **AI 模型**：模型发布、开放方式、API、价格和开发者可获得性
 7. **区域政策**：与既定行业/AI相关的法规、牌照、监管和生效变化
 
-事件先过范围门槛和信源质量筛选，再分别计算 `confidence_score`、`attention_score` 和 `signal_change_score`（主排序轴）。单条 Signal 不评分趋势潜力；趋势只在聚合层由多事件/跨时间窗口判断，月报趋势与历史基线均值比较并做覆盖率校正。日报展示合格事件并按“精选 / 重点 / 观察”排序；周报、月报需要独立证据积累后才形成窗口和趋势。研报没有全文时只依据公开摘要、目录、新闻稿或公开二次解读，并保留解读依据。
+事件先过范围门槛和信源质量筛选，再分别计算 `confidence_score`、`attention_score` 和 `signal_change_score`（主排序轴）。单条 Signal 不评分趋势潜力；趋势只在聚合层由多事件/跨时间窗口判断。月报含三层变化聚合：**主题结构变化**（按行业主题）、**公司变化**（按公司聚合，看集中加码方向）、**行业变化**（按行业聚合，看赛道信号增减），三者共用"跨周门槛 + 前 3 窗口基线均值 + 覆盖率校正"，只做变化检测不做观点；月报历史趋势与基线均值比较并做覆盖率校正。日报展示合格事件并按“精选 / 重点 / 观察”排序；周报、月报需要独立证据积累后才形成窗口和趋势。研报没有全文时只依据公开摘要、目录、新闻稿或公开二次解读，并保留解读依据。评分权重（action_type 分档：政策25/产品24/融资22/财报18/扩张18/招聘12）可用 `scripts/calibrate_weights.py` 用真实数据离线校准。

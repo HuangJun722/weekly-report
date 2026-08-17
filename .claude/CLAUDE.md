@@ -5,8 +5,9 @@
 ## 核心架构
 
 - **数据采集**：`scripts/fetch_news.py` — RSS 并行采集 + HTML 降级 + 31 家公司监控
-- **AI 分析管线**：DeepSeek 主力（GHA 已可达）→ 豆包降级 → 程序降级；本周实际 68% 由 DeepSeek 完成
-- **评分前置分流**：`_calc_score()` 评分后，高分（≥7 或 funding/ma/earnings）走 AI，中分（≥4 或 is_company）程序生成，低分（<4）丢弃
+- **AI 分析管线**：DeepSeek 主力（GHA 已可达）→ 豆包降级 → 程序降级；所有事件一律先 AI 分析，失败才程序兜底（all-events-ai-first）
+- **评分**：`signal_scoring.py` — `confidence_score`/`attention_score`/`signal_change_score`（主排序轴）；`action_type`（政策25/产品24/融资22/财报18/扩张18/招聘12）+ `domain` 正交字段；评分只排序不过滤，权重可用 `calibrate_weights.py` 离线校准
+- **变化聚合**：`period_themes.py` — 月报「本月结构变化/公司变化/行业变化」三轴共用跨周门槛+前3窗口基线+覆盖率校正；区域聚合后置未做
 - **P0 Agent**：`build_daily_ai_summary()` 生成「今日判断」AI 趋势分析 → `data/summary.json` → HTML 读取；`rewrite_titles_for_display()` 改写程序层泛化描述；`ai_quality_judge()` 过滤低价值 other 事件
 - **Feed 生成**：`generate_feed.py` — 复用 `generate_html.build_display_context()` 的看板最终事件卡片，只推高价值且解释完整事件 → `docs/feed.xml`（Atom XML），供外部 CLI 订阅
 - **页面生成**：`scripts/generate_html.py` + `scripts/template.html` → 静态 HTML
