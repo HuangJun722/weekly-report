@@ -257,12 +257,14 @@ def test_monthly_trend_coverage_correction_suppresses_false_heat():
     def ai(name, url, date):
         return event(url=url, company_name=name, companies=[name],
                      title=f'{name} expands AI inference capacity',
-                     display_title=f'{name} expands AI inference capacity', date=date)
+                     display_title=f'{name} expands AI inference capacity',
+                     reason='AI 推理能力扩张', date=date)
 
     def pay(name, url, date):
         return event(url=url, company_name=name, companies=[name],
                      title=f'{name} expands payment wallet in Southeast Asia',
-                     display_title=f'{name} expands payment wallet in Southeast Asia', date=date)
+                     display_title=f'{name} expands payment wallet in Southeast Asia',
+                     reason='东南亚支付扩展', date=date)
 
     may = [
         ai('Alpha', 'https://example.com/m1', '2026-05-04'),

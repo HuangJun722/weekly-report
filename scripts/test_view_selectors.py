@@ -41,7 +41,9 @@ def test_view_contract_does_not_change_after_presentation_enrichment():
         impact='投资机构',
     )
     apply_view_contract(event)
-    assert event['view_status'] == 'filtered'
+    # all-events-ai-first 决策下：低行动性融资进复核层（review）而非直接过滤，
+    # 冻结后不因 enrich 改变
+    assert event['view_status'] == 'review'
     event['reason'] = '融资将用于扩张云平台、开发者生态和新市场。'
     event['score'] = 10
     assert select_homepage_events([event], '2026-05-31') == []
