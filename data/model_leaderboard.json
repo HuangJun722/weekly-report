@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T08:29:11+08:00",
+  "generated_at": "2026-08-17T20:41:38+08:00",
   "fetched_date": "2026-08-17",
   "source": {
     "name": "AIHOT 大模型排行榜",
@@ -17,7 +17,7 @@
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 90.2,
+      "consensus_score": 90.3,
       "detail_url": "https://aihot.virxact.com/leaderboard/claude-fable-5"
     },
     {
@@ -39,7 +39,7 @@
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 83.5,
+      "consensus_score": 83.6,
       "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-6-sol"
     },
     {
@@ -50,7 +50,7 @@
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 82.1,
+      "consensus_score": 82.4,
       "detail_url": "https://aihot.virxact.com/leaderboard/kimi-k-3"
     },
     {
@@ -61,7 +61,7 @@
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 76.6,
+      "consensus_score": 76.9,
       "detail_url": "https://aihot.virxact.com/leaderboard/grok-4-6"
     },
     {
@@ -72,7 +72,7 @@
       "completeness": "64.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 76.4,
+      "consensus_score": 76.7,
       "detail_url": "https://aihot.virxact.com/leaderboard/gemini-3-7-flash"
     },
     {
@@ -83,7 +83,7 @@
       "completeness": "73.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 74.0,
+      "consensus_score": 74.5,
       "detail_url": "https://aihot.virxact.com/leaderboard/qwen-3-8-max"
     },
     {
@@ -94,7 +94,7 @@
       "completeness": "73.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 73.7,
+      "consensus_score": 73.9,
       "detail_url": "https://aihot.virxact.com/leaderboard/muse-spark-1-2"
     },
     {
@@ -105,7 +105,7 @@
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 72.1,
+      "consensus_score": 72.5,
       "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-5"
     },
     {
@@ -127,7 +127,7 @@
       "completeness": "73.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 66.8,
+      "consensus_score": 67.4,
       "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-6-terra"
     },
     {
@@ -138,7 +138,7 @@
       "completeness": "68.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 64.2,
+      "consensus_score": 64.5,
       "detail_url": "https://aihot.virxact.com/leaderboard/claude-opus-4-7"
     },
     {
@@ -149,121 +149,132 @@
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 61.0,
+      "consensus_score": 60.9,
       "detail_url": "https://aihot.virxact.com/leaderboard/muse-spark-1-1"
     },
     {
       "rank": 14,
+      "name": "DeepSeek V4 Pro 0813",
+      "provider": "DeepSeek",
+      "release_date": "2026-08-13",
+      "completeness": "56.0%",
+      "input_price": "",
+      "output_price": "",
+      "consensus_score": 59.6,
+      "detail_url": "https://aihot.virxact.com/leaderboard/deepseek-v-4-pro-20260813"
+    },
+    {
+      "rank": 15,
       "name": "Claude Sonnet 5",
       "provider": "Anthropic",
       "release_date": "2026-06-30",
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 56.9,
+      "consensus_score": 57.2,
       "detail_url": "https://aihot.virxact.com/leaderboard/claude-sonnet-5"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "name": "GPT-5.4",
       "provider": "OpenAI",
       "release_date": "2026-03-05",
       "completeness": "69.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 55.5,
+      "consensus_score": 55.3,
       "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-4"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "name": "Grok 4.5",
       "provider": "xAI",
       "release_date": "2026-07-08",
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 55.1,
+      "consensus_score": 55.3,
       "detail_url": "https://aihot.virxact.com/leaderboard/grok-4-5"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "name": "GPT-5.6 Luna",
       "provider": "OpenAI",
       "release_date": "2026-07-09",
       "completeness": "73.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 49.9,
+      "consensus_score": 49.6,
       "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-6-luna"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "name": "Gemini 3.5 Flash",
       "provider": "Google",
       "release_date": "2026-05-19",
       "completeness": "73.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 49.3,
+      "consensus_score": 49.0,
       "detail_url": "https://aihot.virxact.com/leaderboard/gemini-3-5-flash"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "name": "Gemini 3.6 Flash",
       "provider": "Google",
       "release_date": "2026-07-21",
       "completeness": "73.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 48.7,
+      "consensus_score": 48.4,
       "detail_url": "https://aihot.virxact.com/leaderboard/gemini-3-6-flash"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "name": "GLM-5.2",
       "provider": "Z.ai",
       "release_date": "2026-06-16",
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 46.7,
+      "consensus_score": 46.3,
       "detail_url": "https://aihot.virxact.com/leaderboard/glm-5-2"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "name": "Claude Opus 4.6",
       "provider": "Anthropic",
       "release_date": "2026-02-05",
       "completeness": "61.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 42.0,
+      "consensus_score": 41.8,
       "detail_url": "https://aihot.virxact.com/leaderboard/claude-opus-4-6"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "name": "DeepSeek V4 Flash 0731",
       "provider": "DeepSeek",
       "release_date": "2026-07-31",
       "completeness": "68.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 41.2,
+      "consensus_score": 40.8,
       "detail_url": "https://aihot.virxact.com/leaderboard/deepseek-v-4-flash-20260731"
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "Gemini 3.1 Pro Preview",
       "provider": "Google",
       "release_date": "2026-02-19",
       "completeness": "76.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 40.2,
+      "consensus_score": 40.0,
       "detail_url": "https://aihot.virxact.com/leaderboard/gemini-3-1-pro-preview"
     },
     {
-      "rank": 24,
+      "rank": 25,
       "name": "Claude Sonnet 4.6",
       "provider": "Anthropic",
       "release_date": "2026-02-17",
@@ -274,7 +285,7 @@
       "detail_url": "https://aihot.virxact.com/leaderboard/claude-sonnet-4-6"
     },
     {
-      "rank": 25,
+      "rank": 26,
       "name": "DeepSeek V4 Pro Preview",
       "provider": "DeepSeek",
       "release_date": "2026-04-24",
@@ -285,40 +296,40 @@
       "detail_url": "https://aihot.virxact.com/leaderboard/deepseek-v-4-pro-preview"
     },
     {
-      "rank": 26,
+      "rank": 27,
       "name": "GPT-5.2 2025 12 11",
       "provider": "OpenAI",
       "release_date": "2025-12-11",
       "completeness": "61.5%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 25.6,
+      "consensus_score": 25.5,
       "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-2-2025-12-11"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "name": "Kimi K2.6",
       "provider": "Moonshot AI",
       "release_date": "2026-04-20",
       "completeness": "65.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 25.3,
+      "consensus_score": 25.2,
       "detail_url": "https://aihot.virxact.com/leaderboard/kimi-k-2-6"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "name": "MiniMax M 3",
       "provider": "MiniMax",
       "release_date": "2026-06-01",
       "completeness": "65.0%",
       "input_price": "",
       "output_price": "",
-      "consensus_score": 23.8,
+      "consensus_score": 23.6,
       "detail_url": "https://aihot.virxact.com/leaderboard/minimax-m-3"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "name": "Claude Opus 4.5 20251101",
       "provider": "Anthropic",
       "release_date": "2025-11-24",
@@ -327,17 +338,6 @@
       "output_price": "",
       "consensus_score": 20.9,
       "detail_url": "https://aihot.virxact.com/leaderboard/claude-opus-4-5-20251101"
-    },
-    {
-      "rank": 30,
-      "name": "GPT-5.2 Codex",
-      "provider": "OpenAI",
-      "release_date": "2025-12-11",
-      "completeness": "52.5%",
-      "input_price": "",
-      "output_price": "",
-      "consensus_score": 18.5,
-      "detail_url": "https://aihot.virxact.com/leaderboard/gpt-5-2-codex"
     }
   ],
   "official_sources": [
@@ -347,7 +347,7 @@
       "short_name": "AA Index",
       "operator": "Artificial Analysis",
       "note": "只使用以统一环境复跑多项当前评测形成的 Intelligence Index；价格只作背景信息。",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "Artificial Analysis Intelligence Index",
       "total_count": 608,
       "models": [
@@ -850,7 +850,7 @@
       "short_name": "LiveBench",
       "operator": "LiveBench",
       "note": "以持续更新、答案可验证的七类任务衡量当前模型。",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "LiveBench Global Average",
       "total_count": 43,
       "models": [
@@ -1120,7 +1120,7 @@
       "short_name": "Arena Text",
       "operator": "LMArena",
       "note": "用匿名两两盲选补充客观题库无法覆盖的整体回答体验。",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "Arena Text Style-Controlled",
       "total_count": 389,
       "models": [
@@ -1612,7 +1612,7 @@
       "short_name": "Arena WebDev",
       "operator": "LMArena",
       "note": "用匿名两两盲选衡量 Web 开发实战能力。",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "Arena WebDev",
       "total_count": 114,
       "models": [
@@ -2104,7 +2104,7 @@
       "short_name": "APEX-Agents",
       "operator": "Mercor",
       "note": "衡量投行、咨询和法律长任务；配置明细保留，但成绩归到基础模型。",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "APEX-Agents Mean Score · Loop",
       "total_count": 26,
       "models": [
@@ -2272,7 +2272,7 @@
       "short_name": "Vals Finance Agent",
       "operator": "Vals AI",
       "note": "",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "Vals Finance Agent",
       "total_count": 49,
       "models": [
@@ -2578,7 +2578,7 @@
       "short_name": "DeepSWE v1.1",
       "operator": "DataCurve",
       "note": "在统一 mini-swe-agent harness 下比较代码模型；成绩按基础模型归并。",
-      "fetched_at": "2026-08-16T22:00:00.211Z",
+      "fetched_at": "2026-08-17T12:00:00.242Z",
       "metric_name": "DeepSWE v1.1",
       "total_count": 61,
       "models": [
