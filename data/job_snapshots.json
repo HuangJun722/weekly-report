@@ -1,11 +1,65 @@
 {
   "version": 1,
-  "generated_at": "2026-08-17T10:17:49.975750+08:00",
+  "generated_at": "2026-08-17T16:37:19.458336+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-17T10:17:49.975750+08:00",
+      "observed_at": "2026-08-17T16:37:19.458336+08:00",
       "jobs": [
+        {
+          "id": "744000143764411",
+          "title": "Head of Platform & Autonomous Fleet Operations",
+          "url": "https://www.grab.careers/en/jobs/744000143764411/head-of-platform-autonomous-fleet-operations/",
+          "function_tags": [
+            "engineering",
+            "operations"
+          ]
+        },
+        {
+          "id": "744000143762290",
+          "title": "Assistant Manager, CRM",
+          "url": "https://www.grab.careers/en/jobs/744000143762290/assistant-manager-crm/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143753539",
+          "title": "Senior Software Engineer, CSADE",
+          "url": "https://www.grab.careers/en/jobs/744000143753539/senior-software-engineer-csade/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143751469",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000143751469/senior-software-engineer-backend/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143743405",
+          "title": "Senior Machine Learning Engineer, MLE",
+          "url": "https://www.grab.careers/en/jobs/744000143743405/senior-machine-learning-engineer-mle/",
+          "function_tags": [
+            "ai",
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000143742259",
+          "title": "Senior Analytics Manager (Geo and IoT)",
+          "url": "https://www.grab.careers/en/jobs/744000143742259/senior-analytics-manager-geo-and-iot/",
+          "function_tags": []
+        },
+        {
+          "id": "744000143739299",
+          "title": "Associate, Merchant Operations & Assortment Strategy",
+          "url": "https://www.grab.careers/en/jobs/744000143739299/associate-merchant-operations-assortment-strategy/",
+          "function_tags": [
+            "operations"
+          ]
+        },
         {
           "id": "744000143637779",
           "title": "Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS)",
@@ -81,70 +135,12 @@
           "function_tags": [
             "operations"
           ]
-        },
-        {
-          "id": "744000143259580",
-          "title": "Assistant Manager, Platform Quality & Experience",
-          "url": "https://www.grab.careers/en/jobs/744000143259580/assistant-manager-platform-quality-experience/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000143256089",
-          "title": "Intern, Fleet Solutions (Partner Acquisition)",
-          "url": "https://www.grab.careers/en/jobs/744000143256089/intern-fleet-solutions-partner-acquisition/",
-          "function_tags": [
-            "partnerships"
-          ]
-        },
-        {
-          "id": "744000143241569",
-          "title": "Lead Product Manager, Transaction Platform",
-          "url": "https://www.grab.careers/en/jobs/744000143241569/lead-product-manager-transaction-platform/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000143237599",
-          "title": "Commercial Strategy Lead – PayLater, Lending & Omnicommerce",
-          "url": "https://www.grab.careers/en/jobs/744000143237599/commercial-strategy-lead-paylater-lending-omnicommerce/",
-          "function_tags": []
-        },
-        {
-          "id": "744000143235030",
-          "title": "Senior Software Engineer, Observability platform",
-          "url": "https://www.grab.careers/en/jobs/744000143235030/senior-software-engineer-observability-platform/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000143236769",
-          "title": "Merchant Acquisition Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143236769/merchant-acquisition-manager/",
-          "function_tags": []
-        },
-        {
-          "id": "744000143236379",
-          "title": "Acquisition & Market Expansion Lead",
-          "url": "https://www.grab.careers/en/jobs/744000143236379/acquisition-market-expansion-lead/",
-          "function_tags": []
-        },
-        {
-          "id": "744000143236339",
-          "title": "Sales Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143236339/sales-manager/",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-17T10:17:49.975750+08:00",
+      "observed_at": "2026-08-17T16:37:19.458336+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -260,7 +256,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-17T10:17:49.975750+08:00",
+      "observed_at": "2026-08-17T16:37:19.458336+08:00",
       "jobs": [
         {
           "id": "7d3f4fe7-7a8c-4919-b181-74f2f6f3c6d8",

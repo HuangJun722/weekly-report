@@ -1,28 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>全球互联网百晓生 · 事件流</title>
-  <subtitle>高价值事件推送，日报日期：2026-08-15</subtitle>
+  <subtitle>高价值事件推送，日报日期：2026-08-17</subtitle>
   <id>tag:weekly-report,2026:main</id>
-  <updated>2026-08-17T07:17:56Z</updated>
+  <updated>2026-08-17T08:43:59Z</updated>
   <link href="https://bxs1024.github.io/weekly-report/" rel="alternate"/>
   <link href="feed.xml" rel="self" type="application/atom+xml"/>
   <author><name>Global Internet Intelligence Station</name></author>
   <rights>CC BY-NC 4.0</rights>
 
   <entry>
-    <title>播客聚焦云游戏争议、Pokémon Go收入及土耳其40亿美元游戏产业</title>
-    <link href="https://www.pocketgamer.biz/the-cloud-gaming-debate-pokemon-gos-revenue-surge-and-trkiyes-4bn-industry-week-in-mobile-games-podcast/"/>
-    <id>tag:weekly-report,2026:event-3cbaac2e</id>
-    <published>2026-08-15T00:00:00Z</published>
-    <updated>2026-08-15T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;The cloud gaming debate, Pokémon Go&amp;#x27;s revenue surge and Türkiye&amp;#x27;s $4bn industry | Week in Mobile Games podcast&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;PocketGamer.biz播客讨论了云游戏争议、Pokémon Go收入激增以及土耳其移动游戏产业规模达40亿美元等话题。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球移动游戏市场讨论云游戏模式与区域市场增长，土耳其游戏产业规模达40亿美元，为中东及欧洲游戏发行商提供市场拓展参考。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：industry_report | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
+    <title>Stripe收购AI路由器OpenRouter</title>
+    <link href="https://thenextweb.com/news/stripe-openrouter-7bn-acquisition"/>
+    <id>tag:weekly-report,2026:event-d2fa0164</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Stripe reportedly acquires OpenRouter, the AI model router, for over $7bn&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;据报道，Stripe以超过70亿美元的价格收购AI模型路由器OpenRouter。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲视角看，Stripe收购OpenRouter将重塑AI模型分发和计费格局，欧洲AI开发者将受益于更便捷的支付集成。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：ma | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Nvidia缩减数据中心保证计划</title>
-    <link href="https://www.techinasia.com/news/nvidia-scales-data-center-guarantee-plans"/>
-    <id>tag:weekly-report,2026:event-4172bc4f</id>
-    <published>2026-08-15T00:00:00Z</published>
-    <updated>2026-08-15T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Nvidia scales back data center guarantee plans: report&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;据报道，Nvidia缩减了数据中心保证计划，调整了其对数据中心投资的承诺力度。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球AI算力投资出现调整信号，Nvidia收缩保证计划可能影响数据中心运营商的融资预期，云服务商需重新评估采购策略。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
+    <title>Western Union收购Intermax获纽约批准</title>
+    <link href="https://www.finextra.com/newsarticle/48252/western-union-gets-new-york-nod-for-intermax-acquisition-still-face-california-hurdles?utm_medium=rssfinextra&amp;utm_source=finextrafeed"/>
+    <id>tag:weekly-report,2026:event-49f90656</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Western Union gets New York nod for Intermax acquisition; still face California hurdles&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Western Union收购Intermax的交易获得纽约州批准，但仍需通过加州监管审批。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;北美跨境支付行业整合加速，Western Union通过收购扩大市场份额，监管审批进展影响交易完成时间，支付技术供应商需关注整合带来的合作机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：ma | 地区：全球 | 来源：Finextra&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Grab在本周新增7个工程与平台相关职位</title>
+    <link href="https://www.grab.careers/en/jobs/744000143764411/head-of-platform-autonomous-fleet-operations/"/>
+    <id>tag:weekly-report,2026:event-e712a137</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Grab集中新增7个工程与平台岗位&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;集中招聘显示Grab正在加强工程与平台能力建设，形成可核验的组织投入信号&lt;/p&gt;&lt;p&gt;标签：组织变化 | 类型：strategy | 地区：亚太 | 公司：Grab | 来源：Grab Jobs&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>amber获€7M融资扩展平台</title>
+    <link href="https://tech.eu/2026/08/17/amber-raises-eur7m-to-expand-its-ai-powered-business-knowledge-platform/"/>
+    <id>tag:weekly-report,2026:event-7bf1f05b</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;amber raises €7M to expand its AI-powered business knowledge platform&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;德国AI商业知识平台amber完成700万欧元融资，用于扩展其平台。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲AI知识管理赛道持续获投，企业知识自动化需求增长，为数据集成和NLP技术供应商带来机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：Tech.eu&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>amber完成€7M A轮融资</title>
+    <link href="https://www.eu-startups.com/2026/08/aachen-based-amber-raises-e7-million-series-a-to-build-the-infrastructure-for-autonomous-business-ai/"/>
+    <id>tag:weekly-report,2026:event-03248c57</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Aachen-based amber raises €7 million Series A to build the infrastructure for autonomous business AI&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;总部位于亚琛的amber公司完成700万欧元A轮融资，旨在构建自主商业AI的基础设施。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲AI基础设施初创获A轮融资，自主AI代理赛道升温，为云服务和数据平台带来合作可能。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：EU-Startups&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Zaggle Q1利润下滑，股价暴跌20%</title>
+    <link href="https://inc42.com/buzz/zaggle-plunges-20-to-hit-lower-circuit-after-q1-profit-slump/"/>
+    <id>tag:weekly-report,2026:event-e2c48dc4</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Zaggle Plunges 20% To Hit Lower Circuit After Q1 Profit Slump&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;印度金融科技公司Zaggle股价暴跌20%至跌停板，此前该公司公布的第一季度利润大幅下滑。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;印度金融科技SaaS公司盈利不及预期，市场对高估值成长股信心受挫，投资者需关注同类公司财报风险。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：earnings | 地区：亚太 | 来源：Inc42&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>X平台新增视频叠加功能</title>
+    <link href="https://www.socialmediatoday.com/news/x-adds-video-overlays/827979/"/>
+    <id>tag:weekly-report,2026:event-582cb969</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;X adds video overlays&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;社交媒体平台X（原推特）新增了视频叠加功能。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球社交平台X持续增强视频功能，为视频创作者和品牌营销提供新工具，可能吸引更多视频广告预算。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：Social Media Today&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Thunes新增欧元稳定币EURC支持24/7结算</title>
+    <link href="https://fintechnews.sg/135879/digitalassets/thunes-eurc/"/>
+    <id>tag:weekly-report,2026:event-b0408d95</id>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Thunes Adds 24/7 Funding With Euro-Backed Stablecoin EURC&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;全球支付基础设施公司Thunes新增了由欧元支持的稳定币EURC，提供24/7全天候资金结算服务。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;东南亚跨境支付基础设施接入欧元稳定币，为跨境电商和汇款公司提供更高效的结算通道，稳定币支付场景持续扩展。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
   </entry>
 </feed>
