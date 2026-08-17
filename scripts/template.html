@@ -497,9 +497,9 @@ body { background:linear-gradient(180deg,var(--bg1),var(--bg2) 520px); color:var
           <a class="f-hot-more" href="https://aihot.virxact.com/hot" target="_blank" rel="noopener">查看全部 ›</a>
         </div>
         <ol class="f-hot-list">
-          {% for item in aihot_hot['items'][:5] %}
+          {% for item in aihot_hot[:5] %}
           <li class="f-hot-row">
-            <a href="{{ item.original_links[0].url if item.original_links else item.story_url }}" target="_blank" rel="noopener" class="f-hot-main">
+            <a href="{{ item.url }}" target="_blank" rel="noopener" class="f-hot-main">
               <span class="f-hot-rank">{{ item.rank }}</span>
               <span class="f-hot-title">{{ item.title }}</span>
               <span class="f-hot-heat">{{ item.heat }}</span>

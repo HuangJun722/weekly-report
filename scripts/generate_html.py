@@ -1645,6 +1645,59 @@ def _load_aihot_archive(start_date, end_date, weekly=False):
     return items[:10]
 
 
+def _aihot_items_to_list(data, limit=10, date_key=None):
+    """把 AIHOT 热点数据（当前快照或单日归档的 dict）转为统一列表结构。
+
+    统一结构 [{rank,title,heat,url,date}]：今日 tab 与周报/月报共用同一份数据，
+    展示层回退逻辑也以这份结构为锚。数据为空或结构异常返回 []。
+    """
+    if not data or not isinstance(data, dict):
+        return []
+    items = data.get('items') or []
+    if not items:
+        return []
+    if date_key is None:
+        date_key = (data.get('fetched_date') or '')[:10]
+    out = []
+    for idx, it in enumerate(items[:limit], 1):
+        url = ''
+        if it.get('original_links'):
+            url = it['original_links'][0].get('url') or ''
+        if not url:
+            url = it.get('story_url') or ''
+        out.append({
+            'rank': idx,
+            'title': it.get('title') or it.get('list_title') or '',
+            'heat': it.get('heat'),
+            'url': url,
+            'date': date_key,
+        })
+    return out
+
+
+def _latest_aihot_items(limit=10):
+    """取最近一期有数据的 AIHOT 热点（按归档日期倒序），统一列表结构。
+
+    当前/当期快照为空时用它兜底展示：宁可用最近一期有效数据，也不让区块消失。
+    """
+    archive_dir = os.path.join('data', 'aihot_hot')
+    if not os.path.isdir(archive_dir):
+        return []
+    for filename in sorted(os.listdir(archive_dir), reverse=True):
+        if not filename.endswith('.json'):
+            continue
+        date_key = filename[:-5]
+        try:
+            with open(os.path.join(archive_dir, filename), 'r', encoding='utf-8') as handle:
+                data = json.load(handle)
+        except (OSError, json.JSONDecodeError):
+            continue
+        items = _aihot_items_to_list(data, limit, date_key=date_key)
+        if items:
+            return items
+    return []
+
+
 def build_period_report(events, start_date, end_date, label, period_id=None, status='closed',
                         focus_windows_enabled=False, require_editorial=False):
     """按 BD 机会视角聚合周报/月报；生产档案可要求 AI 编辑成功后才输出。"""
@@ -1789,7 +1842,8 @@ def build_period_report(events, start_date, end_date, label, period_id=None, sta
         'themes': themes,
         'period_themes': themes,
         'high_priority': high_count,
-        'aihot_hot': _load_aihot_archive(start_date, end_date, weekly=focus_windows_enabled),
+        'aihot_hot': _load_aihot_archive(start_date, end_date, weekly=focus_windows_enabled)
+                    or _latest_aihot_items(),
     }
 
 
@@ -2595,7 +2649,7 @@ def generate_html(force=False, preview_mode=False):
     monthly_report = monthly_archives[0] if monthly_archives else build_period_report([], period_reference_date, period_reference_date, '本月', 'empty', 'open')
     site_updates = load_site_updates()
     model_leaderboard = load_model_leaderboard()
-    aihot_hot = load_aihot_hot()
+    aihot_hot = _aihot_items_to_list(load_aihot_hot()) or _latest_aihot_items()
     update_time = f"最新采集 {period_reference_date}｜展示 {main_date} 成熟批次"
 
     env = Environment(autoescape=select_autoescape(['html', 'htm', 'xml']))

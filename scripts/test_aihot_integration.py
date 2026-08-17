@@ -3,7 +3,8 @@ import json
 import os
 import unittest.mock as mock
 
-from generate_html import build_period_report, _load_aihot_archive
+from generate_html import (build_period_report, _load_aihot_archive,
+                           _aihot_items_to_list, _latest_aihot_items)
 
 # 归档数据：不同日期文件内容（basename -> 文件内容 JSON 字符串）
 ARCHIVE_FILES = {
@@ -126,3 +127,82 @@ def test_build_period_report_carries_aihot_hot():
     assert 'Google 发布 Gemini 3.7 Flash' in titles
     # 最多 10 条
     assert len(report['aihot_hot']) <= 10
+
+
+def test_aihot_items_to_list_normalizes_snapshot():
+    """当前快照 dict 转为统一列表结构，url 优先 original_links，date 用 fetched_date。"""
+    snapshot = {
+        'fetched_date': '2026-08-16',
+        'items': [
+            {'rank': 1, 'title': 'SpaceX 收购 Cursor', 'heat': 56,
+             'original_links': [{'url': 'https://example.com/spacex'}], 'story_url': 'https://example.com/sx'},
+            {'rank': 2, 'list_title': '无标题回退', 'heat': None,
+             'original_links': [], 'story_url': 'https://example.com/fallback'},
+        ],
+    }
+    items = _aihot_items_to_list(snapshot)
+    assert len(items) == 2
+    assert items[0]['url'] == 'https://example.com/spacex'
+    assert items[0]['date'] == '2026-08-16'
+    assert items[1]['title'] == '无标题回退'
+    assert items[1]['url'] == 'https://example.com/fallback'
+
+
+def test_latest_aihot_items_skips_empty_latest_and_uses_previous():
+    """最近一期为空时，_latest_aihot_items 跳过它，回退到更早的非空一期。"""
+    files = {
+        '2026-08-17.json': json.dumps({'items': []}, ensure_ascii=False),
+        '2026-08-16.json': json.dumps({
+            'items': [
+                {'rank': 1, 'title': 'SpaceX 收购 Cursor', 'heat': 56,
+                 'original_links': [{'url': 'https://example.com/spacex'}], 'story_url': 'https://example.com/sx'},
+            ]
+        }, ensure_ascii=False),
+    }
+    patches = _patch_archive(files)
+    for p in patches:
+        p.start()
+    try:
+        items = _latest_aihot_items()
+    finally:
+        for p in reversed(patches):
+            p.stop()
+    assert len(items) == 1
+    assert items[0]['title'] == 'SpaceX 收购 Cursor'
+    assert items[0]['url'] == 'https://example.com/spacex'
+    assert items[0]['date'] == '2026-08-16'
+
+
+def test_latest_aihot_items_empty_when_no_valid_archive():
+    """没有非空归档时返回空列表，页面隐藏小节。"""
+    patches = _patch_archive({'2026-08-17.json': json.dumps({'items': []}, ensure_ascii=False)})
+    for p in patches:
+        p.start()
+    try:
+        assert _latest_aihot_items() == []
+    finally:
+        for p in reversed(patches):
+            p.stop()
+
+
+def test_build_period_report_falls_back_to_latest_archive():
+    """当期无归档时，周报/月报的 aihot_hot 回退到最近一期非空归档。"""
+    files = {
+        '2026-08-14.json': json.dumps({
+            'items': [
+                {'rank': 1, 'title': 'Google 发布 Gemini 3.7 Flash', 'heat': 211,
+                 'original_links': [{'url': 'https://example.com/gemini'}], 'story_url': 'https://example.com/s2'},
+            ]
+        }, ensure_ascii=False),
+    }
+    patches = _patch_archive(files)
+    for p in patches:
+        p.start()
+    try:
+        report = build_period_report([], '2026-08-21', '2026-08-27', '2026年8月', '2026-08', 'mature')
+    finally:
+        for p in reversed(patches):
+            p.stop()
+    assert report['aihot_hot'], '当期无归档应回退到最近一期'
+    assert report['aihot_hot'][0]['title'] == 'Google 发布 Gemini 3.7 Flash'
+    assert report['aihot_hot'][0]['date'] == '2026-08-14'
