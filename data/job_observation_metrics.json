@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-08-18T02:50:18.646366+08:00",
+  "observed_at": "2026-08-18T10:13:48.663417+08:00",
   "source_count": 3,
   "raw_count": 68,
   "source_stats": {
@@ -8,21 +8,13 @@
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 12,
+      "count": 0,
       "inventory_count": 18,
-      "signal_count": 1,
-      "added_count": 6,
-      "removed_count": 6,
-      "clusters": {
-        "engineering": 3,
-        "compliance": 1,
-        "payments": 1
-      },
-      "removed_clusters": {
-        "engineering": 2,
-        "partnerships": 1,
-        "operations": 1
-      }
+      "signal_count": 0,
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
@@ -42,121 +34,15 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 1,
+      "count": 0,
       "inventory_count": 36,
       "signal_count": 0,
-      "added_count": 1,
+      "added_count": 0,
       "removed_count": 0,
       "clusters": {},
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [
-    {
-      "candidate_id": "jobs-0d561f903c3b9954",
-      "entity_id": "grab",
-      "entity": "Grab",
-      "region": "亚太",
-      "sector": "mobility_payment",
-      "source_type": "jobs_snapshot",
-      "signal_type": "function_buildout",
-      "cluster": "engineering",
-      "window": "2026-W34",
-      "window_start": "2026-08-18",
-      "window_end": "2026-08-18",
-      "detected_at": "2026-08-18T02:50:18.646366+08:00",
-      "baseline_count": 18,
-      "current_count": 18,
-      "added_count": 6,
-      "removed_count": 6,
-      "clusters": {
-        "engineering": 3,
-        "compliance": 1,
-        "payments": 1
-      },
-      "removed_clusters": {
-        "engineering": 2,
-        "partnerships": 1,
-        "operations": 1
-      },
-      "evidence_refs": [
-        {
-          "job_id": "744000143887729",
-          "title": "Senior Systems Engineer (Mobile Device Management)",
-          "url": "https://www.grab.careers/en/jobs/744000143887729/senior-systems-engineer-mobile-device-management/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143828139",
-          "title": "Principal Engineer, FundsCore",
-          "url": "https://www.grab.careers/en/jobs/744000143828139/principal-engineer-fundscore/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143800399",
-          "title": "Assistant Manager, Regional Credit Risk, Consumer Lending",
-          "url": "https://www.grab.careers/en/jobs/744000143800399/assistant-manager-regional-credit-risk-consumer-lending/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143797560",
-          "title": "Senior Analytics Manager (Payments)",
-          "url": "https://www.grab.careers/en/jobs/744000143797560/senior-analytics-manager-payments/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143797040",
-          "title": "Specialist, Driver Enforcement",
-          "url": "https://www.grab.careers/en/jobs/744000143797040/specialist-driver-enforcement/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143777771",
-          "title": "Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000143777771/software-engineer-backend/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143433549",
-          "title": "Senior Product Designer, Omnicommerce",
-          "url": "https://www.grab.careers/en/jobs/744000143433549/senior-product-designer-omnicommerce/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143357414",
-          "title": "Senior Software Engineer, Mobile (iOS)",
-          "url": "https://www.grab.careers/en/jobs/744000143357414/senior-software-engineer-mobile-ios/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143316959",
-          "title": "Strategic & Planning Southern Sumatera, Associate",
-          "url": "https://www.grab.careers/en/jobs/744000143316959/strategic-planning-southern-sumatera-associate/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143278985",
-          "title": "Principal Data Scientist (User Understanding Platformisation)",
-          "url": "https://www.grab.careers/en/jobs/744000143278985/principal-data-scientist-user-understanding-platformisation/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143271450",
-          "title": "Driver Partner Engagement Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000143271450/driver-partner-engagement-specialist/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143262519",
-          "title": "Operations Automation Specialist",
-          "url": "https://www.grab.careers/en/jobs/744000143262519/operations-automation-specialist/",
-          "change": "removed"
-        }
-      ],
-      "status": "qualified",
-      "rejection_reason": "",
-      "promoted_event_id": ""
-    }
-  ],
+  "candidate_signals": [],
   "promoted_count": 0
 }
