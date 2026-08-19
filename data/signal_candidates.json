@@ -1,7 +1,61 @@
 {
   "version": 1,
-  "generated_at": "2026-08-19T10:16:16.004956+08:00",
+  "generated_at": "2026-08-20T02:45:28.556811+08:00",
   "candidates": [
+    {
+      "candidate_id": "jobs-a5d3b323f3e94434",
+      "entity_id": "stripe",
+      "entity": "Stripe",
+      "region": "全球",
+      "sector": "payment_developer_platform",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "sales",
+      "window": "2026-W34",
+      "window_start": "2026-08-20",
+      "window_end": "2026-08-20",
+      "detected_at": "2026-08-20T02:45:28.556811+08:00",
+      "baseline_count": 14,
+      "current_count": 14,
+      "added_count": 2,
+      "removed_count": 2,
+      "clusters": {
+        "sales": 2,
+        "ai": 1
+      },
+      "removed_clusters": {
+        "sales": 2
+      },
+      "evidence_refs": [
+        {
+          "job_id": "8138662",
+          "title": "Account Executive , Grower - Iberia Market",
+          "url": "https://stripe.com/careers/listing/account-executive-grower-iberia-market/8138662",
+          "change": "added"
+        },
+        {
+          "job_id": "8130725",
+          "title": "Account Executive, AI Startups (Hunter)",
+          "url": "https://stripe.com/careers/listing/account-executive-ai-startups-hunter/8130725",
+          "change": "added"
+        },
+        {
+          "job_id": "8023928",
+          "title": "Account Executive, Bridge (Stripe Crypto and Stablecoins)",
+          "url": "https://stripe.com/careers/listing/account-executive-bridge-stripe-crypto-and-stablecoins/8023928",
+          "change": "removed"
+        },
+        {
+          "job_id": "8123027",
+          "title": "Account Executive, Commercial (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_cluster_strength",
+      "promoted_event_id": ""
+    },
     {
       "candidate_id": "jobs-0d561f903c3b9954",
       "entity_id": "grab",
