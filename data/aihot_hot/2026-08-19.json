@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T08:28:58+08:00",
+  "generated_at": "2026-08-19T20:43:55+08:00",
   "fetched_date": "2026-08-19",
   "source": {
     "name": "AIHOT 热点榜",
@@ -11,7 +11,7 @@
       "rank": 1,
       "title": "OpenAI 暂停 Astra 强化学习训练",
       "list_title": "OpenAI 在“关键网络能力”时代放缓模型开发节奏",
-      "heat": 155,
+      "heat": 128,
       "sources": [
         "TechCrunch：AI（RSS）",
         "X：OpenAI (@OpenAI)",
@@ -24,12 +24,14 @@
         "X：Rohan Paul (@rohanpaul_ai)",
         "X：Testing Catalog (@testingcatalog)",
         "The Verge：AI（RSS）",
-        "X：Peter Steinberger (@steipete)"
+        "X：Peter Steinberger (@steipete)",
+        "X：Gabriel (@gabriel1)",
+        "另有 3 组氛围票"
       ],
       "summary": "OpenAI 因即将推出的 Astra 模型可能触及《预备框架》下的“关键网络安全能力”阈值，以及 OpenAI–Hugging Face 事件，暂时放缓了模型开发节奏。公司暂停了最新部署模型的强化学习训练两周，其最大规模前沿 RL 运行仍处于搁置状态，仅进行小规模训练与评估。\nOpenAI 已加强研究环境安全，要求对 Astra 及网络相关负载实施最严格防护，并扩展思维链监控，采用多阶段激活分类器检测机制。首席科学家 Jakub Pachocki 和 CEO Sam Altman 均表示，安全信心将日益决定 AI 发展节奏，并呼吁实验室和国家间加强协调。\nOpenAI 计划扩展其 Prepa",
       "original_links": [
         {
-          "url": "https://x.com/steipete/status/2089801681014043122",
+          "url": "https://x.com/gabriel1/status/2089960210815422519",
           "domain": "x.com"
         },
         {
@@ -49,18 +51,50 @@
     },
     {
       "rank": 2,
+      "title": "Z.ai 发布 GLM-5.3 API",
+      "list_title": "GLM-5.3上线：AA智能指数60分并列开源第一，成本更低",
+      "heat": 69,
+      "sources": [
+        "X：智谱 Z.ai (@Zai_org)",
+        "X：Artificial Analysis (@ArtificialAnlys)",
+        "公众号：智谱（GLM）",
+        "IT之家（RSS）",
+        "X：X.PIN (@thexpin)",
+        "另有 5 组氛围票"
+      ],
+      "summary": "智谱 Z.ai 于 2026 年 8 月 18 日发布 GLM-5.3 API，定价与 GLM-5.2 持平，可通过官方 API 及合作伙伴模型网关使用。该模型专为编程、防御性网络安全及长周期智能体任务打造。\n在 Artificial Analysis 智能指数上，GLM-5.3 获得 60 分，追平 Kimi K3，成为最强开源权重模型，并与 Claude Fable 5、GPT-5.6 Sol 等闭源旗舰同级。模型保持 753B 总参数/40B 激活的 MoE 架构，上下文 1M tokens，MIT 许可。\nGLM-5.3 每任务成本 $0.68，较 Kimi K3 便宜 19%，但 t",
+      "original_links": [
+        {
+          "url": "https://x.com/thexpin/status/2089977175693005029",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/991/417.htm",
+          "domain": "www.ithome.com"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494105&idx=1&sn=8d7409e0fb846a3c7803c142b5d1a8e7",
+          "domain": "mp.weixin.qq.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/7f3cbcf6-3c01-4e1a-a296-45ffd92f099a"
+    },
+    {
+      "rank": 3,
       "title": "Anthropic 公布 Claude 蛋白质设计实验",
       "list_title": "Claude 如何加速蛋白质设计与分析化学研究",
-      "heat": 57,
+      "heat": 52,
       "sources": [
         "Anthropic：Research（发表成果 · 网页）",
         "X：Anthropic (@AnthropicAI)",
-        "X：Rohan Paul (@rohanpaul_ai)"
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "X：小北 (@frxiaobei)",
+        "另有 1 组氛围票"
       ],
       "summary": "Anthropic 公布了两项 Claude 参与蛋白质设计的实验。在实验中，Claude（Mythos Preview 和 Opus 4.8）针对 15 个靶点设计蛋白质结合剂，成功 14 个，命中率达 22.6%-35.1%。\n在人类专家编写的蛋白设计提示词下，Claude 自主完成了针对 15 个靶点中 14 个的设计。随后 Adaptyv Bio 与 Twist Bioscience 独立构建并测试了这些蛋白，验证了其可行性。\n在另一项实验中，Claude 自主完成计算蛋白质设计全流程，无需人类专家逐项决策。在 1,320 个设计中，354 个成功结合靶标（命中率 26.8%），并为 ",
       "original_links": [
         {
-          "url": "https://x.com/rohanpaul_ai/status/2089850167302500483",
+          "url": "https://x.com/frxiaobei/status/2089930103128019287",
           "domain": "x.com"
         },
         {
@@ -71,10 +105,10 @@
       "story_url": "https://aihot.virxact.com/story/6ed4b694-76eb-4642-8e0e-e1d26ddd0b44"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "OpenAI 与 SB Energy、NVIDIA 及美国能源部达成协议参与 PORTS-Pike 项目",
       "list_title": "NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻",
-      "heat": 37,
+      "heat": 26,
       "sources": [
         "OpenAI：官网动态（RSS · 排除企业/客户案例）",
         "NVIDIA Blog（RSS）",
@@ -105,10 +139,10 @@
       "story_url": "https://aihot.virxact.com/story/fdc2b29b-0377-40f1-a044-5c1a667d18fd"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "sentence-transformers 发布多向量（后期交互）嵌入模型",
       "list_title": "Sentence Transformers v6.0 新增 MultiVectorEncoder，支持 ColBERT 风格多向量模型",
-      "heat": 26,
+      "heat": 18,
       "sources": [
         "Hugging Face：Blog（RSS）",
         "另有 1 组氛围票"
@@ -123,10 +157,28 @@
       "story_url": "https://aihot.virxact.com/story/411a1a5a-e329-4eeb-83d0-34d48dbb7214"
     },
     {
-      "rank": 5,
+      "rank": 6,
+      "title": "Adaptyv Bio 与 Twist Bioscience 独立构建并测试 Claude 设计的蛋白",
+      "list_title": "Claude 从头设计蛋白结合剂命中 14/15 靶点",
+      "heat": 18,
+      "sources": [
+        "X：Anthropic (@AnthropicAI)",
+        "另有 1 组氛围票"
+      ],
+      "summary": "Claude 从头设计蛋白结合剂命中 14/15 靶点",
+      "original_links": [
+        {
+          "url": "https://x.com/AnthropicAI/status/2089842387845804246",
+          "domain": "x.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/cb930439-f805-43d0-b823-6336c920d785"
+    },
+    {
+      "rank": 7,
       "title": "Origin 上线",
       "list_title": "Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案",
-      "heat": 23,
+      "heat": 16,
       "sources": [
         "X：Eric Zakariasson (@ericzakariasson)",
         "Hacker News 热门（buzzing.cc 中文翻译）",
@@ -151,10 +203,10 @@
       "story_url": "https://aihot.virxact.com/story/a0b46a26-95de-4cae-b75e-54c1f123937c"
     },
     {
-      "rank": 6,
+      "rank": 8,
       "title": "Modular 开源 Mojo 语言",
       "list_title": "Mojo 语言正式开源，编译器与工具链全面开放",
-      "heat": 19,
+      "heat": 13,
       "sources": [
         "Hacker News 热门（buzzing.cc 中文翻译）",
         "Simon Willison 博客"
@@ -173,10 +225,10 @@
       "story_url": "https://aihot.virxact.com/story/4b339413-0f68-410d-8a56-720f603e1eaf"
     },
     {
-      "rank": 7,
+      "rank": 9,
       "title": "亚马逊在拉斯维加斯仓库切掉书脊扫描书籍并销毁原书",
       "list_title": "404 Media 追踪珍本图书流向：亚马逊批量购书扫描用于 AI 训练后销毁",
-      "heat": 16,
+      "heat": 11,
       "sources": [
         "IT之家（RSS）",
         "TechCrunch：AI（RSS）",
