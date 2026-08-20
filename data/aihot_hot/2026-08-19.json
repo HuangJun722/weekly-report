@@ -1,0 +1,260 @@
+{
+  "generated_at": "2026-08-19T20:43:55+08:00",
+  "fetched_date": "2026-08-19",
+  "source": {
+    "name": "AIHOT 热点榜",
+    "url": "https://aihot.virxact.com/hot",
+    "note": "过去 48 小时最热的 AI 事件，按精选报道与讨论热度实时排序。本页为全球 AI 视野补充，点击跳转原始来源。"
+  },
+  "items": [
+    {
+      "rank": 1,
+      "title": "OpenAI 暂停 Astra 强化学习训练",
+      "list_title": "OpenAI 在“关键网络能力”时代放缓模型开发节奏",
+      "heat": 128,
+      "sources": [
+        "TechCrunch：AI（RSS）",
+        "X：OpenAI (@OpenAI)",
+        "X：Kim (@kimmonismus)",
+        "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "X：Jakub Pachocki（OpenAI 首席科学家，@merettm）",
+        "X：Greg Brockman (@gdb)",
+        "The Decoder：AI News（RSS）",
+        "X：Sam Altman (@sama)",
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "X：Testing Catalog (@testingcatalog)",
+        "The Verge：AI（RSS）",
+        "X：Peter Steinberger (@steipete)",
+        "X：Gabriel (@gabriel1)",
+        "另有 3 组氛围票"
+      ],
+      "summary": "OpenAI 因即将推出的 Astra 模型可能触及《预备框架》下的“关键网络安全能力”阈值，以及 OpenAI–Hugging Face 事件，暂时放缓了模型开发节奏。公司暂停了最新部署模型的强化学习训练两周，其最大规模前沿 RL 运行仍处于搁置状态，仅进行小规模训练与评估。\nOpenAI 已加强研究环境安全，要求对 Astra 及网络相关负载实施最严格防护，并扩展思维链监控，采用多阶段激活分类器检测机制。首席科学家 Jakub Pachocki 和 CEO Sam Altman 均表示，安全信心将日益决定 AI 发展节奏，并呼吁实验室和国家间加强协调。\nOpenAI 计划扩展其 Prepa",
+      "original_links": [
+        {
+          "url": "https://x.com/gabriel1/status/2089960210815422519",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
+          "domain": "www.theverge.com"
+        },
+        {
+          "url": "https://the-decoder.com/openai-says-its-pacing-model-development-as-ai-cybersecurity-risks-grow-too-dangerous",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
+          "domain": "openai.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/1c28288a-22d7-4d4e-9bf1-a384527b1454"
+    },
+    {
+      "rank": 2,
+      "title": "Z.ai 发布 GLM-5.3 API",
+      "list_title": "GLM-5.3上线：AA智能指数60分并列开源第一，成本更低",
+      "heat": 69,
+      "sources": [
+        "X：智谱 Z.ai (@Zai_org)",
+        "X：Artificial Analysis (@ArtificialAnlys)",
+        "公众号：智谱（GLM）",
+        "IT之家（RSS）",
+        "X：X.PIN (@thexpin)",
+        "另有 5 组氛围票"
+      ],
+      "summary": "智谱 Z.ai 于 2026 年 8 月 18 日发布 GLM-5.3 API，定价与 GLM-5.2 持平，可通过官方 API 及合作伙伴模型网关使用。该模型专为编程、防御性网络安全及长周期智能体任务打造。\n在 Artificial Analysis 智能指数上，GLM-5.3 获得 60 分，追平 Kimi K3，成为最强开源权重模型，并与 Claude Fable 5、GPT-5.6 Sol 等闭源旗舰同级。模型保持 753B 总参数/40B 激活的 MoE 架构，上下文 1M tokens，MIT 许可。\nGLM-5.3 每任务成本 $0.68，较 Kimi K3 便宜 19%，但 t",
+      "original_links": [
+        {
+          "url": "https://x.com/thexpin/status/2089977175693005029",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/991/417.htm",
+          "domain": "www.ithome.com"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494105&idx=1&sn=8d7409e0fb846a3c7803c142b5d1a8e7",
+          "domain": "mp.weixin.qq.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/7f3cbcf6-3c01-4e1a-a296-45ffd92f099a"
+    },
+    {
+      "rank": 3,
+      "title": "Anthropic 公布 Claude 蛋白质设计实验",
+      "list_title": "Claude 如何加速蛋白质设计与分析化学研究",
+      "heat": 52,
+      "sources": [
+        "Anthropic：Research（发表成果 · 网页）",
+        "X：Anthropic (@AnthropicAI)",
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "X：小北 (@frxiaobei)",
+        "另有 1 组氛围票"
+      ],
+      "summary": "Anthropic 公布了两项 Claude 参与蛋白质设计的实验。在实验中，Claude（Mythos Preview 和 Opus 4.8）针对 15 个靶点设计蛋白质结合剂，成功 14 个，命中率达 22.6%-35.1%。\n在人类专家编写的蛋白设计提示词下，Claude 自主完成了针对 15 个靶点中 14 个的设计。随后 Adaptyv Bio 与 Twist Bioscience 独立构建并测试了这些蛋白，验证了其可行性。\n在另一项实验中，Claude 自主完成计算蛋白质设计全流程，无需人类专家逐项决策。在 1,320 个设计中，354 个成功结合靶标（命中率 26.8%），并为 ",
+      "original_links": [
+        {
+          "url": "https://x.com/frxiaobei/status/2089930103128019287",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+          "domain": "www.anthropic.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/6ed4b694-76eb-4642-8e0e-e1d26ddd0b44"
+    },
+    {
+      "rank": 4,
+      "title": "OpenAI 与 SB Energy、NVIDIA 及美国能源部达成协议参与 PORTS-Pike 项目",
+      "list_title": "NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻",
+      "heat": 26,
+      "sources": [
+        "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "NVIDIA Blog（RSS）",
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "IT之家（RSS）",
+        "The Decoder：AI News（RSS）",
+        "X：Kim (@kimmonismus)"
+      ],
+      "summary": "OpenAI 与 SB Energy、NVIDIA 及美国能源部达成协议，在俄亥俄州派克县 PORTS-Pike 科技园区获取约 8 吉瓦电力容量。项目预计在 2032 年前六年建设期内创造 35,000 个建筑岗位和 2,500 个长期运营岗位。\nNVIDIA 与 SB Energy 合作锁定该园区电力容量，以独家部署 NVIDIA 算力，OpenAI 将成为租户。NVIDIA 将投资 15 亿美元并提供信贷支持，通过担保园区残值（潜在支付高达 1050 亿美元）降低 SB Energy 融资成本，以拉动自身芯片销售。\nOpenAI 与 SB Energy 签署 20 年租约，获得约 8 吉",
+      "original_links": [
+        {
+          "url": "https://x.com/kimmonismus/status/2089371190276092299",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://the-decoder.com/openai-signs-record-ohio-data-center-lease-with-nvidia-backing-up-to-105-billion",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence",
+          "domain": "blogs.nvidia.com"
+        },
+        {
+          "url": "https://openai.com/index/openai-joins-ports-pike-project",
+          "domain": "openai.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/fdc2b29b-0377-40f1-a044-5c1a667d18fd"
+    },
+    {
+      "rank": 5,
+      "title": "sentence-transformers 发布多向量（后期交互）嵌入模型",
+      "list_title": "Sentence Transformers v6.0 新增 MultiVectorEncoder，支持 ColBERT 风格多向量模型",
+      "heat": 18,
+      "sources": [
+        "Hugging Face：Blog（RSS）",
+        "另有 1 组氛围票"
+      ],
+      "summary": "Sentence Transformers v6.0 新增 MultiVectorEncoder，支持 ColBERT 风格多向量模型",
+      "original_links": [
+        {
+          "url": "https://huggingface.co/blog/multi-vector-encoder",
+          "domain": "huggingface.co"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/411a1a5a-e329-4eeb-83d0-34d48dbb7214"
+    },
+    {
+      "rank": 6,
+      "title": "Adaptyv Bio 与 Twist Bioscience 独立构建并测试 Claude 设计的蛋白",
+      "list_title": "Claude 从头设计蛋白结合剂命中 14/15 靶点",
+      "heat": 18,
+      "sources": [
+        "X：Anthropic (@AnthropicAI)",
+        "另有 1 组氛围票"
+      ],
+      "summary": "Claude 从头设计蛋白结合剂命中 14/15 靶点",
+      "original_links": [
+        {
+          "url": "https://x.com/AnthropicAI/status/2089842387845804246",
+          "domain": "x.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/cb930439-f805-43d0-b823-6336c920d785"
+    },
+    {
+      "rank": 7,
+      "title": "Origin 上线",
+      "list_title": "Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案",
+      "heat": 16,
+      "sources": [
+        "X：Eric Zakariasson (@ericzakariasson)",
+        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "TechCrunch：AI（RSS）",
+        "另有 2 组氛围票"
+      ],
+      "summary": "Cursor 于 2026 年 8 月 17 日上线 Origin 代码托管服务，作为 GitHub 的替代方案。该服务向所有付费计划用户开放早期测试版，提供仓库、拉取请求、代码浏览及 GitHub 同步功能。用户可创建以 cursor.com/codebase/ 为前缀的仓库，或将 GitHub 仓库同步至 Origin，双向同步评论与审查。\nVercel、Depot 和 Buildkite 集成已可用，智能体功能即将推出。\nTechCrunch 报道指出，Cursor 借 GitHub 服务不稳之机推出 Origin，支持协作开发、浏览编辑、处理 pull-requests 及仓库存储，并",
+      "original_links": [
+        {
+          "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform",
+          "domain": "techcrunch.com"
+        },
+        {
+          "url": "https://cursor.com/changelog/origin-code-hosting",
+          "domain": "cursor.com"
+        },
+        {
+          "url": "https://x.com/ericzakariasson/status/2089466749943152806",
+          "domain": "x.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/a0b46a26-95de-4cae-b75e-54c1f123937c"
+    },
+    {
+      "rank": 8,
+      "title": "Modular 开源 Mojo 语言",
+      "list_title": "Mojo 语言正式开源，编译器与工具链全面开放",
+      "heat": 13,
+      "sources": [
+        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "Simon Willison 博客"
+      ],
+      "summary": "Mojo 语言于 2026 年 8 月 18 日正式开源，采用 Apache 2.0 许可证（含 LLVM 例外），编译器、工具链及全部源码已发布至 modular GitHub 仓库。此前 Mojo 于上周达成 1.0 版本，源码稳定。目前暂不接受编译器相关贡献，计划年底前开放，标准库自 2024 年起已接受社区贡献。\nMojo 自 2023 年 5 月起承诺开源，此次兑现承诺。该语言已不再追求成为 Python 的超集，而是定位为独立语言，旨在用类 Python 语法简化 GPU 编程，即便与现有代码并非 100% 兼容。",
+      "original_links": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source",
+          "domain": "simonwillison.net"
+        },
+        {
+          "url": "https://www.modular.com/blog/mojo-open-source",
+          "domain": "www.modular.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/4b339413-0f68-410d-8a56-720f603e1eaf"
+    },
+    {
+      "rank": 9,
+      "title": "亚马逊在拉斯维加斯仓库切掉书脊扫描书籍并销毁原书",
+      "list_title": "404 Media 追踪珍本图书流向：亚马逊批量购书扫描用于 AI 训练后销毁",
+      "heat": 11,
+      "sources": [
+        "IT之家（RSS）",
+        "TechCrunch：AI（RSS）",
+        "Ars Technica：AI（RSS）",
+        "Hacker News 热门（buzzing.cc 中文翻译）"
+      ],
+      "summary": "404 Media 通过在珍本图书中植入 AirTag 追踪发现，亚马逊在拉斯维加斯的 VGT3 设施批量处理书籍，先切掉书脊以提高扫描效率，原书在过程中被销毁，扫描数据用于训练其 Nova 模型。\n亚马逊回应称通过商业渠道购书以改进客户使用的产品与服务，但拒绝就销毁书籍的具体做法置评。调查还证实了书商的理论：AI 公司按 ISBN 清单系统扫描图书，且亚马逊曾因图书供应短缺而担忧仓库关闭。\nAnthropic 此前也开展过类似的“巴拿马计划”，相关诉讼中法官裁定此类扫描属合理使用，不构成版权侵权。",
+      "original_links": [
+        {
+          "url": "https://arstechnica.com/tech-policy/2026/08/hidden-airtag-reveals-amazon-is-trashing-rare-books-to-train-ai",
+          "domain": "arstechnica.com"
+        },
+        {
+          "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility",
+          "domain": "www.404media.co"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models",
+          "domain": "techcrunch.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/990/845.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/c1ee9c7d-7701-4167-9d8a-e378568c4960"
+    }
+  ]
+}

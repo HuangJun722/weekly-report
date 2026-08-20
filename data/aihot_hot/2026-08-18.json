@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-08-18T20:42:55+08:00",
+  "fetched_date": "2026-08-18",
+  "source": {
+    "name": "AIHOT 热点榜",
+    "url": "https://aihot.virxact.com/hot",
+    "note": "过去 48 小时最热的 AI 事件，按精选报道与讨论热度实时排序。本页为全球 AI 视野补充，点击跳转原始来源。"
+  },
+  "items": [
+    {
+      "rank": 1,
+      "title": "OpenAI 与 SB Energy、NVIDIA 及美国能源部达成协议参与 PORTS-Pike 项目",
+      "list_title": "NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻",
+      "heat": 52,
+      "sources": [
+        "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "NVIDIA Blog（RSS）",
+        "X：Rohan Paul (@rohanpaul_ai)",
+        "IT之家（RSS）",
+        "The Decoder：AI News（RSS）",
+        "X：Kim (@kimmonismus)"
+      ],
+      "summary": "OpenAI 与 SB Energy、NVIDIA 及美国能源部达成协议，在俄亥俄州派克县 PORTS-Pike 科技园区获取约 8 吉瓦电力容量。项目预计在 2032 年前六年建设期内创造 35,000 个建筑岗位和 2,500 个长期运营岗位。\nNVIDIA 与 SB Energy 合作锁定该园区电力容量，以独家部署 NVIDIA 算力，OpenAI 将成为租户。NVIDIA 将投资 15 亿美元并提供信贷支持，通过担保园区残值（潜在支付高达 1050 亿美元）降低 SB Energy 融资成本，以拉动自身芯片销售。\nOpenAI 与 SB Energy 签署 20 年租约，获得约 8 吉",
+      "original_links": [
+        {
+          "url": "https://x.com/kimmonismus/status/2089371190276092299",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://the-decoder.com/openai-signs-record-ohio-data-center-lease-with-nvidia-backing-up-to-105-billion",
+          "domain": "the-decoder.com"
+        },
+        {
+          "url": "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence",
+          "domain": "blogs.nvidia.com"
+        },
+        {
+          "url": "https://openai.com/index/openai-joins-ports-pike-project",
+          "domain": "openai.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/fdc2b29b-0377-40f1-a044-5c1a667d18fd"
+    },
+    {
+      "rank": 2,
+      "title": "亚马逊在拉斯维加斯仓库切掉书脊扫描书籍并销毁原书",
+      "list_title": "404 Media 追踪珍本图书流向：亚马逊批量购书扫描用于 AI 训练后销毁",
+      "heat": 23,
+      "sources": [
+        "IT之家（RSS）",
+        "TechCrunch：AI（RSS）",
+        "Ars Technica：AI（RSS）",
+        "Hacker News 热门（buzzing.cc 中文翻译）"
+      ],
+      "summary": "404 Media 通过在珍本图书中植入 AirTag 追踪发现，亚马逊在拉斯维加斯的 VGT3 设施批量处理书籍，先切掉书脊以提高扫描效率，原书在过程中被销毁，扫描数据用于训练其 Nova 模型。\n亚马逊回应称通过商业渠道购书以改进客户使用的产品与服务，但拒绝就销毁书籍的具体做法置评。调查还证实了书商的理论：AI 公司按 ISBN 清单系统扫描图书，且亚马逊曾因图书供应短缺而担忧仓库关闭。\nAnthropic 此前也开展过类似的“巴拿马计划”，相关诉讼中法官裁定此类扫描属合理使用，不构成版权侵权。",
+      "original_links": [
+        {
+          "url": "https://arstechnica.com/tech-policy/2026/08/hidden-airtag-reveals-amazon-is-trashing-rare-books-to-train-ai",
+          "domain": "arstechnica.com"
+        },
+        {
+          "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility",
+          "domain": "www.404media.co"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models",
+          "domain": "techcrunch.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/990/845.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/c1ee9c7d-7701-4167-9d8a-e378568c4960"
+    },
+    {
+      "rank": 3,
+      "title": "Origin 上线",
+      "list_title": "Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案",
+      "heat": 20,
+      "sources": [
+        "X：Eric Zakariasson (@ericzakariasson)",
+        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "另有 2 组氛围票"
+      ],
+      "summary": "Cursor 于 2026 年 8 月 17 日上线 Origin 代码托管服务，作为 GitHub 的替代方案。该服务向所有付费计划用户开放早期测试版，提供仓库、拉取请求、代码浏览及 GitHub 同步功能。用户可创建以 cursor.com/codebase/ 为前缀的仓库，或将 GitHub 仓库同步至 Origin，双向同步评论与审查。\nVercel、Depot 和 Buildkite 集成已可用，智能体功能即将推出。",
+      "original_links": [
+        {
+          "url": "https://cursor.com/changelog/origin-code-hosting",
+          "domain": "cursor.com"
+        },
+        {
+          "url": "https://x.com/ericzakariasson/status/2089466749943152806",
+          "domain": "x.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/a0b46a26-95de-4cae-b75e-54c1f123937c"
+    },
+    {
+      "rank": 4,
+      "title": "Unitree Robotics to list on STAR Market on August 19, 2026",
+      "list_title": "A 股迎来“人形机器人第一股”，宇树科技官宣 8 月 19 日科创板上市",
+      "heat": 12,
+      "sources": [
+        "IT之家（RSS）",
+        "另有 2 组氛围票"
+      ],
+      "summary": "A 股迎来“人形机器人第一股”，宇树科技官宣 8 月 19 日科创板上市",
+      "original_links": [
+        {
+          "url": "https://www.ithome.com/0/990/812.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/1a6febe1-053d-4dab-ad21-d1ab648da020"
+    }
+  ]
+}

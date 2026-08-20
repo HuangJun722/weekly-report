@@ -1,10 +1,46 @@
 {
-  "generated_at": "2026-08-17T08:29:08+08:00",
+  "generated_at": "2026-08-17T20:41:33+08:00",
   "fetched_date": "2026-08-17",
   "source": {
     "name": "AIHOT 热点榜",
     "url": "https://aihot.virxact.com/hot",
     "note": "过去 48 小时最热的 AI 事件，按精选报道与讨论热度实时排序。本页为全球 AI 视野补充，点击跳转原始来源。"
   },
-  "items": []
+  "items": [
+    {
+      "rank": 1,
+      "title": "SpaceX 收购 Cursor",
+      "list_title": "Cursor 正式被 SpaceX 收购",
+      "heat": 11,
+      "sources": [
+        "TechCrunch：AI（RSS）",
+        "Hacker News 热门（buzzing.cc 中文翻译）",
+        "另有 1 组氛围票"
+      ],
+      "summary": "SpaceX 于 2026 年 8 月 14 日正式完成对 AI 编程工具 Cursor 的收购，交易金额为 600 亿美元（约合 4,054.22 亿元人民币），成为科技行业史上最大收购之一。收购流程自 4 月启动，8 月 14 日交割生效。Cursor 团队将整体加入 SpaceXAI，共同致力于将 Grok 打造为全球最实用的 AI，并改进 Grok Build、Grok Bot、Grok API 及 Cursor 等产品。\nCursor 母公司 Anysphere 是史上最快达到 1 亿美元年度经常性收入（ARR）的软件公司，创始人 Michael Truell 与 MIT 联创最初尝",
+      "original_links": [
+        {
+          "url": "https://cursor.com/blog/joining-spacex",
+          "domain": "cursor.com"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition",
+          "domain": "techcrunch.com"
+        },
+        {
+          "url": "https://x.com/ericzakariasson/status/2088283972069728634",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/989/944.htm",
+          "domain": "www.ithome.com"
+        },
+        {
+          "url": "https://www.a16z.news/p/cursor-spacexai-fastest-iterating-team",
+          "domain": "www.a16z.news"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/a7a923c7-cace-4c44-a481-24bae2566e1f"
+    }
+  ]
 }

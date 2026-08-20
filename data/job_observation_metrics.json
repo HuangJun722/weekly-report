@@ -1,28 +1,20 @@
 {
-  "observed_at": "2026-08-17T16:37:19.458336+08:00",
+  "observed_at": "2026-08-20T10:15:07.248896+08:00",
   "source_count": 3,
-  "raw_count": 67,
+  "raw_count": 65,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 15,
-      "inventory_count": 18,
-      "signal_count": 1,
-      "added_count": 7,
-      "removed_count": 8,
-      "clusters": {
-        "engineering": 4,
-        "operations": 2,
-        "ai": 1
-      },
-      "removed_clusters": {
-        "engineering": 3,
-        "partnerships": 1,
-        "sales": 1
-      }
+      "count": 0,
+      "inventory_count": 19,
+      "signal_count": 0,
+      "added_count": 0,
+      "removed_count": 0,
+      "clusters": {},
+      "removed_clusters": {}
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
@@ -42,139 +34,15 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
-      "inventory_count": 35,
+      "count": 2,
+      "inventory_count": 32,
       "signal_count": 0,
       "added_count": 0,
-      "removed_count": 0,
+      "removed_count": 2,
       "clusters": {},
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [
-    {
-      "candidate_id": "jobs-0d561f903c3b9954",
-      "entity_id": "grab",
-      "entity": "Grab",
-      "region": "亚太",
-      "sector": "mobility_payment",
-      "source_type": "jobs_snapshot",
-      "signal_type": "function_buildout",
-      "cluster": "engineering",
-      "window": "2026-W34",
-      "window_start": "2026-08-17",
-      "window_end": "2026-08-17",
-      "detected_at": "2026-08-17T16:37:19.458336+08:00",
-      "baseline_count": 19,
-      "current_count": 18,
-      "added_count": 7,
-      "removed_count": 8,
-      "clusters": {
-        "engineering": 4,
-        "operations": 2,
-        "ai": 1
-      },
-      "removed_clusters": {
-        "engineering": 3,
-        "partnerships": 1,
-        "sales": 1
-      },
-      "evidence_refs": [
-        {
-          "job_id": "744000143764411",
-          "title": "Head of Platform & Autonomous Fleet Operations",
-          "url": "https://www.grab.careers/en/jobs/744000143764411/head-of-platform-autonomous-fleet-operations/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143762290",
-          "title": "Assistant Manager, CRM",
-          "url": "https://www.grab.careers/en/jobs/744000143762290/assistant-manager-crm/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143753539",
-          "title": "Senior Software Engineer, CSADE",
-          "url": "https://www.grab.careers/en/jobs/744000143753539/senior-software-engineer-csade/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143751469",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000143751469/senior-software-engineer-backend/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143743405",
-          "title": "Senior Machine Learning Engineer, MLE",
-          "url": "https://www.grab.careers/en/jobs/744000143743405/senior-machine-learning-engineer-mle/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143742259",
-          "title": "Senior Analytics Manager (Geo and IoT)",
-          "url": "https://www.grab.careers/en/jobs/744000143742259/senior-analytics-manager-geo-and-iot/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143739299",
-          "title": "Associate, Merchant Operations & Assortment Strategy",
-          "url": "https://www.grab.careers/en/jobs/744000143739299/associate-merchant-operations-assortment-strategy/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000143259580",
-          "title": "Assistant Manager, Platform Quality & Experience",
-          "url": "https://www.grab.careers/en/jobs/744000143259580/assistant-manager-platform-quality-experience/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143256089",
-          "title": "Intern, Fleet Solutions (Partner Acquisition)",
-          "url": "https://www.grab.careers/en/jobs/744000143256089/intern-fleet-solutions-partner-acquisition/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143241569",
-          "title": "Lead Product Manager, Transaction Platform",
-          "url": "https://www.grab.careers/en/jobs/744000143241569/lead-product-manager-transaction-platform/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143237599",
-          "title": "Commercial Strategy Lead – PayLater, Lending & Omnicommerce",
-          "url": "https://www.grab.careers/en/jobs/744000143237599/commercial-strategy-lead-paylater-lending-omnicommerce/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143235030",
-          "title": "Senior Software Engineer, Observability platform",
-          "url": "https://www.grab.careers/en/jobs/744000143235030/senior-software-engineer-observability-platform/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143236769",
-          "title": "Merchant Acquisition Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143236769/merchant-acquisition-manager/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143236379",
-          "title": "Acquisition & Market Expansion Lead",
-          "url": "https://www.grab.careers/en/jobs/744000143236379/acquisition-market-expansion-lead/",
-          "change": "removed"
-        },
-        {
-          "job_id": "744000143236339",
-          "title": "Sales Manager",
-          "url": "https://www.grab.careers/en/jobs/744000143236339/sales-manager/",
-          "change": "removed"
-        }
-      ],
-      "status": "qualified",
-      "rejection_reason": "",
-      "promoted_event_id": ""
-    }
-  ],
-  "promoted_count": 1
+  "candidate_signals": [],
+  "promoted_count": 0
 }
