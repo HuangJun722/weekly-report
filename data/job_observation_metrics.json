@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-08-20T10:15:07.248896+08:00",
+  "observed_at": "2026-08-20T16:52:52.956882+08:00",
   "source_count": 3,
   "raw_count": 65,
   "source_stats": {
@@ -8,13 +8,19 @@
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
+      "count": 14,
       "inventory_count": 19,
-      "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
-      "clusters": {},
-      "removed_clusters": {}
+      "signal_count": 1,
+      "added_count": 7,
+      "removed_count": 7,
+      "clusters": {
+        "engineering": 2,
+        "sales": 2
+      },
+      "removed_clusters": {
+        "engineering": 3,
+        "operations": 1
+      }
     },
     "Stripe Jobs": {
       "method": "jobs_snapshot",
@@ -34,15 +40,131 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 2,
+      "count": 0,
       "inventory_count": 32,
       "signal_count": 0,
       "added_count": 0,
-      "removed_count": 2,
+      "removed_count": 0,
       "clusters": {},
       "removed_clusters": {}
     }
   },
-  "candidate_signals": [],
+  "candidate_signals": [
+    {
+      "candidate_id": "jobs-0d561f903c3b9954",
+      "entity_id": "grab",
+      "entity": "Grab",
+      "region": "亚太",
+      "sector": "mobility_payment",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "engineering",
+      "window": "2026-W34",
+      "window_start": "2026-08-20",
+      "window_end": "2026-08-20",
+      "detected_at": "2026-08-20T16:52:52.956882+08:00",
+      "baseline_count": 19,
+      "current_count": 19,
+      "added_count": 7,
+      "removed_count": 7,
+      "clusters": {
+        "engineering": 2,
+        "sales": 2
+      },
+      "removed_clusters": {
+        "engineering": 3,
+        "operations": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "744000144465639",
+          "title": "Lead Software Engineer, FundsCore",
+          "url": "https://www.grab.careers/en/jobs/744000144465639/lead-software-engineer-fundscore/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144463940",
+          "title": "Sales Manager",
+          "url": "https://www.grab.careers/en/jobs/744000144463940/sales-manager/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144463549",
+          "title": "Merchant Growth Lead",
+          "url": "https://www.grab.careers/en/jobs/744000144463549/merchant-growth-lead/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144452594",
+          "title": "Associate, Merchant Acquisition",
+          "url": "https://www.grab.careers/en/jobs/744000144452594/associate-merchant-acquisition/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144452589",
+          "title": "Associate, Key Account Management - Expansion",
+          "url": "https://www.grab.careers/en/jobs/744000144452589/associate-key-account-management-expansion/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144451279",
+          "title": "Online Community Manager (Driver Engagement)",
+          "url": "https://www.grab.careers/en/jobs/744000144451279/online-community-manager-driver-engagement/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144449640",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000144449640/senior-software-engineer-backend/",
+          "change": "added"
+        },
+        {
+          "job_id": "744000144226510",
+          "title": "Senior Software Engineer, Backend",
+          "url": "https://www.grab.careers/en/jobs/744000144226510/senior-software-engineer-backend/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000144225389",
+          "title": "Lead Product Manager - Wallet",
+          "url": "https://www.grab.careers/en/jobs/744000144225389/lead-product-manager-wallet/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000144213882",
+          "title": "Senior Executive, Operations Excellence & Governance",
+          "url": "https://www.grab.careers/en/jobs/744000144213882/senior-executive-operations-excellence-governance/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000144121154",
+          "title": "Senior Software Engineer, Mobile (iOS)",
+          "url": "https://www.grab.careers/en/jobs/744000144121154/senior-software-engineer-mobile-ios/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000144083739",
+          "title": "Senior Software Engineer, Planning (Robotics)",
+          "url": "https://www.grab.careers/en/jobs/744000144083739/senior-software-engineer-planning-robotics/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000144044969",
+          "title": "Lead Product Manager, Business Applications",
+          "url": "https://www.grab.careers/en/jobs/744000144044969/lead-product-manager-business-applications/",
+          "change": "removed"
+        },
+        {
+          "job_id": "744000144035849",
+          "title": "Specialist, Account Management - GrabFood",
+          "url": "https://www.grab.careers/en/jobs/744000144035849/specialist-account-management-grabfood/",
+          "change": "removed"
+        }
+      ],
+      "status": "qualified",
+      "rejection_reason": "",
+      "promoted_event_id": ""
+    }
+  ],
   "promoted_count": 0
 }
