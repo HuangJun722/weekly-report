@@ -1,11 +1,51 @@
 {
   "version": 1,
-  "generated_at": "2026-08-20T16:52:52.956882+08:00",
+  "generated_at": "2026-08-21T02:51:07.530764+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-20T16:52:52.956882+08:00",
+      "observed_at": "2026-08-21T02:51:07.530764+08:00",
       "jobs": [
+        {
+          "id": "744000144517077",
+          "title": "Senior Software Engineer, Perception (Robotics)",
+          "url": "https://www.grab.careers/en/jobs/744000144517077/senior-software-engineer-perception-robotics/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000144513679",
+          "title": "Senior Software Engineer, Backend (Fulfillment)",
+          "url": "https://www.grab.careers/en/jobs/744000144513679/senior-software-engineer-backend-fulfillment/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000144511679",
+          "title": "Software Engineering Manager",
+          "url": "https://www.grab.careers/en/jobs/744000144511679/software-engineering-manager/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000144489490",
+          "title": "Team Lead, Partner Social Engagement",
+          "url": "https://www.grab.careers/en/jobs/744000144489490/team-lead-partner-social-engagement/",
+          "function_tags": [
+            "partnerships"
+          ]
+        },
+        {
+          "id": "744000144492599",
+          "title": "Senior Principal Engineer– Consumer Experience & Integrity",
+          "url": "https://www.grab.careers/en/jobs/744000144492599/senior-principal-engineer-consumer-experience-integrity/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000144465639",
           "title": "Lead Software Engineer, FundsCore",
@@ -108,63 +148,18 @@
           "title": "Account Management Associate, GrabMart",
           "url": "https://www.grab.careers/en/jobs/744000144238594/account-management-associate-grabmart/",
           "function_tags": []
-        },
-        {
-          "id": "744000144236179",
-          "title": "OmniCommerce Manager",
-          "url": "https://www.grab.careers/en/jobs/744000144236179/omnicommerce-manager/",
-          "function_tags": []
-        },
-        {
-          "id": "744000144227409",
-          "title": "Lead Software Engineer, Backend - Consumer Experience",
-          "url": "https://www.grab.careers/en/jobs/744000144227409/lead-software-engineer-backend-consumer-experience/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144227389",
-          "title": "Engineering Manager II, Data Platform",
-          "url": "https://www.grab.careers/en/jobs/744000144227389/engineering-manager-ii-data-platform/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144226639",
-          "title": "Senior Data Scientist (Analytics)",
-          "url": "https://www.grab.careers/en/jobs/744000144226639/senior-data-scientist-analytics/",
-          "function_tags": []
-        },
-        {
-          "id": "744000144225729",
-          "title": "Senior Software Engineer, Mobile (iOS) - Consumer Experience",
-          "url": "https://www.grab.careers/en/jobs/744000144225729/senior-software-engineer-mobile-ios-consumer-experience/",
-          "function_tags": [
-            "engineering"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-20T16:52:52.956882+08:00",
+      "observed_at": "2026-08-21T02:51:07.530764+08:00",
       "jobs": [
         {
           "id": "7844214",
           "title": "AEO and GEO Marketing Manager",
           "url": "https://stripe.com/careers/listing/aeo-and-geo-marketing-manager/7844214",
           "function_tags": []
-        },
-        {
-          "id": "8044460",
-          "title": "AI Engineer",
-          "url": "https://stripe.com/careers/listing/ai-engineer/8044460",
-          "function_tags": [
-            "ai",
-            "engineering"
-          ]
         },
         {
           "id": "8064526",
@@ -261,12 +256,36 @@
           "function_tags": [
             "sales"
           ]
+        },
+        {
+          "id": "8023928",
+          "title": "Account Executive, Bridge (Stripe Crypto and Stablecoins)",
+          "url": "https://stripe.com/careers/listing/account-executive-bridge-stripe-crypto-and-stablecoins/8023928",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "8123027",
+          "title": "Account Executive, Commercial (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "function_tags": [
+            "sales"
+          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-20T16:52:52.956882+08:00",
+      "observed_at": "2026-08-21T02:51:07.530764+08:00",
       "jobs": [
         {
           "id": "7d3f4fe7-7a8c-4919-b181-74f2f6f3c6d8",

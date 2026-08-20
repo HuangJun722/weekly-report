@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-20T16:52:52.956882+08:00",
+  "generated_at": "2026-08-21T02:51:07.530764+08:00",
   "candidates": [
     {
       "candidate_id": "jobs-a5d3b323f3e94434",
@@ -13,18 +13,18 @@
       "cluster": "sales",
       "window": "2026-W34",
       "window_start": "2026-08-20",
-      "window_end": "2026-08-20",
-      "detected_at": "2026-08-20T02:45:28.556811+08:00",
+      "window_end": "2026-08-21",
+      "detected_at": "2026-08-21T02:51:07.530764+08:00",
       "baseline_count": 14,
-      "current_count": 14,
-      "added_count": 2,
-      "removed_count": 2,
+      "current_count": 16,
+      "added_count": 3,
+      "removed_count": 1,
       "clusters": {
-        "sales": 2,
-        "ai": 1
+        "sales": 3
       },
       "removed_clusters": {
-        "sales": 2
+        "ai": 1,
+        "engineering": 1
       },
       "evidence_refs": [
         {
@@ -50,11 +50,35 @@
           "title": "Account Executive, Commercial (Grower)",
           "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
           "change": "removed"
+        },
+        {
+          "job_id": "8023928",
+          "title": "Account Executive, Bridge (Stripe Crypto and Stablecoins)",
+          "url": "https://stripe.com/careers/listing/account-executive-bridge-stripe-crypto-and-stablecoins/8023928",
+          "change": "added"
+        },
+        {
+          "job_id": "8123027",
+          "title": "Account Executive, Commercial (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
+          "change": "added"
+        },
+        {
+          "job_id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "change": "added"
+        },
+        {
+          "job_id": "8044460",
+          "title": "AI Engineer",
+          "url": "https://stripe.com/careers/listing/ai-engineer/8044460",
+          "change": "removed"
         }
       ],
-      "status": "accumulating",
-      "rejection_reason": "insufficient_cluster_strength",
-      "promoted_event_id": ""
+      "status": "promoted",
+      "rejection_reason": "",
+      "promoted_event_id": "event-jobs-a5d3b323f3e94434"
     },
     {
       "candidate_id": "jobs-0d561f903c3b9954",

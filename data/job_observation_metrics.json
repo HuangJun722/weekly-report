@@ -1,25 +1,24 @@
 {
-  "observed_at": "2026-08-20T16:52:52.956882+08:00",
+  "observed_at": "2026-08-21T02:51:07.530764+08:00",
   "source_count": 3,
-  "raw_count": 65,
+  "raw_count": 67,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
       "region": "亚太",
       "status": "ok",
       "fetch_status": "success",
-      "count": 14,
+      "count": 10,
       "inventory_count": 19,
       "signal_count": 1,
-      "added_count": 7,
-      "removed_count": 7,
+      "added_count": 5,
+      "removed_count": 5,
       "clusters": {
-        "engineering": 2,
-        "sales": 2
+        "engineering": 4,
+        "partnerships": 1
       },
       "removed_clusters": {
-        "engineering": 3,
-        "operations": 1
+        "engineering": 3
       }
     },
     "Stripe Jobs": {
@@ -27,13 +26,18 @@
       "region": "全球",
       "status": "ok",
       "fetch_status": "success",
-      "count": 0,
-      "inventory_count": 14,
-      "signal_count": 0,
-      "added_count": 0,
-      "removed_count": 0,
-      "clusters": {},
-      "removed_clusters": {}
+      "count": 4,
+      "inventory_count": 16,
+      "signal_count": 1,
+      "added_count": 3,
+      "removed_count": 1,
+      "clusters": {
+        "sales": 3
+      },
+      "removed_clusters": {
+        "ai": 1,
+        "engineering": 1
+      }
     },
     "Shopify Jobs": {
       "method": "jobs_snapshot",
@@ -60,104 +64,133 @@
       "signal_type": "function_buildout",
       "cluster": "engineering",
       "window": "2026-W34",
-      "window_start": "2026-08-20",
-      "window_end": "2026-08-20",
-      "detected_at": "2026-08-20T16:52:52.956882+08:00",
+      "window_start": "2026-08-21",
+      "window_end": "2026-08-21",
+      "detected_at": "2026-08-21T02:51:07.530764+08:00",
       "baseline_count": 19,
       "current_count": 19,
-      "added_count": 7,
-      "removed_count": 7,
+      "added_count": 5,
+      "removed_count": 5,
       "clusters": {
-        "engineering": 2,
-        "sales": 2
+        "engineering": 4,
+        "partnerships": 1
       },
       "removed_clusters": {
-        "engineering": 3,
-        "operations": 1
+        "engineering": 3
       },
       "evidence_refs": [
         {
-          "job_id": "744000144465639",
-          "title": "Lead Software Engineer, FundsCore",
-          "url": "https://www.grab.careers/en/jobs/744000144465639/lead-software-engineer-fundscore/",
+          "job_id": "744000144517077",
+          "title": "Senior Software Engineer, Perception (Robotics)",
+          "url": "https://www.grab.careers/en/jobs/744000144517077/senior-software-engineer-perception-robotics/",
           "change": "added"
         },
         {
-          "job_id": "744000144463940",
-          "title": "Sales Manager",
-          "url": "https://www.grab.careers/en/jobs/744000144463940/sales-manager/",
+          "job_id": "744000144513679",
+          "title": "Senior Software Engineer, Backend (Fulfillment)",
+          "url": "https://www.grab.careers/en/jobs/744000144513679/senior-software-engineer-backend-fulfillment/",
           "change": "added"
         },
         {
-          "job_id": "744000144463549",
-          "title": "Merchant Growth Lead",
-          "url": "https://www.grab.careers/en/jobs/744000144463549/merchant-growth-lead/",
+          "job_id": "744000144511679",
+          "title": "Software Engineering Manager",
+          "url": "https://www.grab.careers/en/jobs/744000144511679/software-engineering-manager/",
           "change": "added"
         },
         {
-          "job_id": "744000144452594",
-          "title": "Associate, Merchant Acquisition",
-          "url": "https://www.grab.careers/en/jobs/744000144452594/associate-merchant-acquisition/",
+          "job_id": "744000144489490",
+          "title": "Team Lead, Partner Social Engagement",
+          "url": "https://www.grab.careers/en/jobs/744000144489490/team-lead-partner-social-engagement/",
           "change": "added"
         },
         {
-          "job_id": "744000144452589",
-          "title": "Associate, Key Account Management - Expansion",
-          "url": "https://www.grab.careers/en/jobs/744000144452589/associate-key-account-management-expansion/",
+          "job_id": "744000144492599",
+          "title": "Senior Principal Engineer– Consumer Experience & Integrity",
+          "url": "https://www.grab.careers/en/jobs/744000144492599/senior-principal-engineer-consumer-experience-integrity/",
           "change": "added"
         },
         {
-          "job_id": "744000144451279",
-          "title": "Online Community Manager (Driver Engagement)",
-          "url": "https://www.grab.careers/en/jobs/744000144451279/online-community-manager-driver-engagement/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000144449640",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000144449640/senior-software-engineer-backend/",
-          "change": "added"
-        },
-        {
-          "job_id": "744000144226510",
-          "title": "Senior Software Engineer, Backend",
-          "url": "https://www.grab.careers/en/jobs/744000144226510/senior-software-engineer-backend/",
+          "job_id": "744000144236179",
+          "title": "OmniCommerce Manager",
+          "url": "https://www.grab.careers/en/jobs/744000144236179/omnicommerce-manager/",
           "change": "removed"
         },
         {
-          "job_id": "744000144225389",
-          "title": "Lead Product Manager - Wallet",
-          "url": "https://www.grab.careers/en/jobs/744000144225389/lead-product-manager-wallet/",
+          "job_id": "744000144227409",
+          "title": "Lead Software Engineer, Backend - Consumer Experience",
+          "url": "https://www.grab.careers/en/jobs/744000144227409/lead-software-engineer-backend-consumer-experience/",
           "change": "removed"
         },
         {
-          "job_id": "744000144213882",
-          "title": "Senior Executive, Operations Excellence & Governance",
-          "url": "https://www.grab.careers/en/jobs/744000144213882/senior-executive-operations-excellence-governance/",
+          "job_id": "744000144227389",
+          "title": "Engineering Manager II, Data Platform",
+          "url": "https://www.grab.careers/en/jobs/744000144227389/engineering-manager-ii-data-platform/",
           "change": "removed"
         },
         {
-          "job_id": "744000144121154",
-          "title": "Senior Software Engineer, Mobile (iOS)",
-          "url": "https://www.grab.careers/en/jobs/744000144121154/senior-software-engineer-mobile-ios/",
+          "job_id": "744000144226639",
+          "title": "Senior Data Scientist (Analytics)",
+          "url": "https://www.grab.careers/en/jobs/744000144226639/senior-data-scientist-analytics/",
           "change": "removed"
         },
         {
-          "job_id": "744000144083739",
-          "title": "Senior Software Engineer, Planning (Robotics)",
-          "url": "https://www.grab.careers/en/jobs/744000144083739/senior-software-engineer-planning-robotics/",
+          "job_id": "744000144225729",
+          "title": "Senior Software Engineer, Mobile (iOS) - Consumer Experience",
+          "url": "https://www.grab.careers/en/jobs/744000144225729/senior-software-engineer-mobile-ios-consumer-experience/",
           "change": "removed"
+        }
+      ],
+      "status": "qualified",
+      "rejection_reason": "",
+      "promoted_event_id": ""
+    },
+    {
+      "candidate_id": "jobs-a5d3b323f3e94434",
+      "entity_id": "stripe",
+      "entity": "Stripe",
+      "region": "全球",
+      "sector": "payment_developer_platform",
+      "source_type": "jobs_snapshot",
+      "signal_type": "function_buildout",
+      "cluster": "sales",
+      "window": "2026-W34",
+      "window_start": "2026-08-21",
+      "window_end": "2026-08-21",
+      "detected_at": "2026-08-21T02:51:07.530764+08:00",
+      "baseline_count": 14,
+      "current_count": 16,
+      "added_count": 3,
+      "removed_count": 1,
+      "clusters": {
+        "sales": 3
+      },
+      "removed_clusters": {
+        "ai": 1,
+        "engineering": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "8023928",
+          "title": "Account Executive, Bridge (Stripe Crypto and Stablecoins)",
+          "url": "https://stripe.com/careers/listing/account-executive-bridge-stripe-crypto-and-stablecoins/8023928",
+          "change": "added"
         },
         {
-          "job_id": "744000144044969",
-          "title": "Lead Product Manager, Business Applications",
-          "url": "https://www.grab.careers/en/jobs/744000144044969/lead-product-manager-business-applications/",
-          "change": "removed"
+          "job_id": "8123027",
+          "title": "Account Executive, Commercial (Grower)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
+          "change": "added"
         },
         {
-          "job_id": "744000144035849",
-          "title": "Specialist, Account Management - GrabFood",
-          "url": "https://www.grab.careers/en/jobs/744000144035849/specialist-account-management-grabfood/",
+          "job_id": "7789539",
+          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
+          "change": "added"
+        },
+        {
+          "job_id": "8044460",
+          "title": "AI Engineer",
+          "url": "https://stripe.com/careers/listing/ai-engineer/8044460",
           "change": "removed"
         }
       ],
@@ -166,5 +199,5 @@
       "promoted_event_id": ""
     }
   ],
-  "promoted_count": 0
+  "promoted_count": 1
 }
