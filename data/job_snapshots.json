@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-08-20T02:45:28.556811+08:00",
+  "generated_at": "2026-08-20T10:15:07.248896+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-20T02:45:28.556811+08:00",
+      "observed_at": "2026-08-20T10:15:07.248896+08:00",
       "jobs": [
         {
           "id": "744000144333905",
@@ -149,7 +149,7 @@
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-20T02:45:28.556811+08:00",
+      "observed_at": "2026-08-20T10:15:07.248896+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -266,7 +266,7 @@
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-20T02:45:28.556811+08:00",
+      "observed_at": "2026-08-20T10:15:07.248896+08:00",
       "jobs": [
         {
           "id": "7d3f4fe7-7a8c-4919-b181-74f2f6f3c6d8",
@@ -327,12 +327,6 @@
           "function_tags": []
         },
         {
-          "id": "c49bee91-d6d8-405c-8367-2fa7c42ecf3d",
-          "title": "Senior Indirect Tax Analyst Remote - Americas",
-          "url": "https://www.shopify.com/careers/senior-indirect-tax-analyst_c49bee91-d6d8-405c-8367-2fa7c42ecf3d",
-          "function_tags": []
-        },
-        {
           "id": "b83d465d-45d0-444c-99a6-419de5a8b944",
           "title": "Treasury Manager, Payments Remote - Americas",
           "url": "https://www.shopify.com/careers/treasury-manager-payments_b83d465d-45d0-444c-99a6-419de5a8b944",
@@ -353,12 +347,6 @@
           "function_tags": [
             "partnerships"
           ]
-        },
-        {
-          "id": "b7099239-aecb-4cdb-a7da-dd49f0a34342",
-          "title": "Lead Editor, Content Performance Remote - Americas",
-          "url": "https://www.shopify.com/careers/lead-editor-content-performance_b7099239-aecb-4cdb-a7da-dd49f0a34342",
-          "function_tags": []
         },
         {
           "id": "c63835a4-3b4b-4591-8b88-7417339bb03d",
@@ -406,15 +394,15 @@
           "function_tags": []
         },
         {
-          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
-          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
-          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
-          "function_tags": []
-        },
-        {
           "id": "32132c55-3c8c-4695-b117-477fe97629aa",
           "title": "Professional Services Delivery Manager Remote - Americas",
           "url": "https://www.shopify.com/careers/professional-services-delivery-manager_32132c55-3c8c-4695-b117-477fe97629aa",
+          "function_tags": []
+        },
+        {
+          "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
+          "title": "Professional Services Delivery Manager Remote - United Kingdom, Ireland",
+          "url": "https://www.shopify.com/careers/professional-services-delivery-manager_dcc73211-bed4-478d-bdf7-831ce6d73b09",
           "function_tags": []
         },
         {
