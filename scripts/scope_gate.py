@@ -239,6 +239,12 @@ def assess_scope(event):
         or bool(re.search(r'\b\d+(?:\.\d+)?%\b', title_text))
         or bool(re.search(r'[$€£]\s?\d', title_text))
     )
+    # 信源合约不做数字产业词复核：对 L4 泛行业源（如 Retail Dive）的防御
+    # 在登记层（source_tier 背书 + scope_industries 必须真实垂直），不在闸门叠
+    # 词表——实测 digital 词表复核一周误杀 46 条（Grab/SEA/Adyen 财报、Kakao
+    # IPO 等合法信号标题无 digital 词），宽词表同样漏（'spending''retail' 会让
+    # 传统零售混入）。混入的泛行业源由周度审计扫出（contract 放行 + 内容与
+    # 数字产业无关 → 告警），登记纪律 + 事后审计优于闸门猜词。
     source_confirmed = (
         not direct_industries
         and bool(contracted_industries)

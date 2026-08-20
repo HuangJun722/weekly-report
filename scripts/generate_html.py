@@ -218,14 +218,53 @@ def _has_top_investor(title_lower):
     ]
     return any(inv in title_lower for inv in investors)
 
+# 对比语境动词：关键词出现在这些词近旁时，是被比较对象而不是事件主体
+COMPARISON_VERBS = (
+    'top', 'tops', 'topped', 'beats', 'beat', 'surpasses', 'surpassed',
+    'outperforms', 'outperformed', 'overtakes', 'overtook', 'exceeds', 'exceeded',
+    'leads', 'led', 'edges', 'edged', '超过', '超越', '高于', '领先', '击败',
+    '胜于', '跑赢',
+)
+
+def _chinese_entity_hit(name):
+    """实体名匹配中资名单，词边界匹配防误伤（'byd' 不命中共名品牌）"""
+    n = name.lower()
+    for kw in CHINESE_CAPITAL_COMPANIES:
+        k = kw.lower()
+        if re.search(rf'(?<![a-z0-9]){re.escape(k)}(?![a-z0-9])', n):
+            return True
+    return False
+
+
+def _in_comparison_context(text, pos):
+    """关键词位置往前 30 字符内出现对比动词 → 关键词是被比较对象而非事件主体"""
+    window = text[max(0, pos - 30):pos]
+    return any(v in window for v in COMPARISON_VERBS)
+
+
 def _is_chinese_capital(event):
-    """检测事件是否涉及中资出海公司"""
-    title_lower = event.get('title', '').lower()
-    reason_lower = event.get('why_important', '').lower()
-    company_lower = (event.get('company_name') or '').lower()
-    companies_lower = [c.lower() for c in event.get('companies', [])]
-    combined = ' '.join([title_lower, reason_lower, company_lower] + companies_lower)
-    return any(kw.lower() in combined for kw in CHINESE_CAPITAL_COMPANIES)
+    """检测事件是否涉及中资出海公司。
+
+    两级判定：
+    1. 实体级——company_name / companies 命中中资名单 → 中资（实体是主角）
+    2. 文本级——标题/点评含名单词，但若处于对比语境（被超越/领先的对手），
+       不算中资（Kakao Kanana-2 标题里的 Alibaba 是对比对象不是主角）
+    """
+    company = (event.get('company_name') or '').lower()
+    if company and _chinese_entity_hit(company):
+        return True
+    for c in event.get('companies') or []:
+        if c and _chinese_entity_hit(str(c)):
+            return True
+    title = (event.get('title') or '').lower()
+    reason = (event.get('reason') or event.get('why_important') or '').lower()
+    for text in (title, reason):
+        for kw in CHINESE_CAPITAL_COMPANIES:
+            k = kw.lower()
+            for match in re.finditer(re.escape(k), text):
+                if not _in_comparison_context(text, match.start()):
+                    return True
+    return False
 
 def calculate_score(event):
     """多因子评分，clamp(1-10)，全部从数据推导"""

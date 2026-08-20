@@ -127,7 +127,7 @@ RSS_SOURCES = [
     {'name': 'Finextra Payments', 'url': 'https://www.finextra.com/rss/channel.aspx?channel=payments', 'source': 'Finextra', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'scope_industries': ['payments'], 'max_scan': 20, 'max': 4, 'signal_only': True},
     {'name': 'Payments Dive', 'url': 'https://www.paymentsdive.com/feeds/news/',         'source': 'Payments Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': 'Fintech/支付', 'scope_industries': ['payments'], 'max_scan': 12, 'max': 3, 'signal_only': True},
     {'name': 'EcommerceBytes',    'url': 'https://www.ecommercebytes.com/feed/',         'source': 'EcommerceBytes', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'scope_industries': ['commerce'], 'max_scan': 16, 'max': 4, 'signal_only': True},
-    {'name': 'Retail Dive', 'url': 'https://www.retaildive.com/feeds/news/',             'source': 'Retail Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '电商', 'scope_industries': ['commerce'], 'max_scan': 12, 'max': 3, 'signal_only': True},
+    {'name': 'Retail Dive', 'url': 'https://www.retaildive.com/feeds/news/',             'source': 'Retail Dive', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '零售', 'scope_industries': [], 'max_scan': 12, 'max': 3, 'signal_only': True},
     {'name': 'Mobile World Live', 'url': 'https://www.mobileworldlive.com/feed/',         'source': 'Mobile World Live', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '文娱社交/移动生态', 'scope_industries': ['ads_social', 'cloud_saas_developer'], 'max_scan': 16, 'max': 4, 'signal_only': True},
     {'name': 'Social Media Today', 'url': 'https://www.socialmediatoday.com/feeds/news/', 'source': 'Social Media Today', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '社交平台', 'scope_industries': ['ads_social'], 'max_scan': 12, 'max': 3, 'signal_only': True},
     {'name': 'Mobile Marketing Magazine', 'url': 'https://mobilemarketingmagazine.com/feed/', 'source': 'Mobile Marketing Magazine', 'region': '全球', 'priority': 2, 'source_tier': 'L4 垂直赛道精品源', 'source_role': 'industry_vertical', 'vertical': '移动生态/广告', 'scope_industries': ['ads_social'], 'max_scan': 12, 'max': 3, 'signal_only': True},
@@ -1130,6 +1130,7 @@ _FUNDING_SIGNAL_WORDS = (
     'raise', 'raises', 'raised', 'funding', 'seed', 'valuation', 'valued',
     'investment', 'secures', 'secured', 'closes', 'closed', 'bags', 'landed',
     '$', '€', '£', 'series ', 'unicorn', '融资', '調達', '出資', '億円',
+    'ipo', 'listing', 'filing', 'registration', '上市', '上場',
 )
 _MA_SIGNAL_WORDS = (
     'acquires', 'acquired', 'acquisition', 'merger', 'merges', 'merging',

@@ -13,17 +13,22 @@ CORE_INTERNET_TERMS = {
     'payment', 'payments', 'fintech', 'wallet', 'bnpl', 'remittance',
     'acquiring', 'banking app', 'digital bank', 'checkout',
     'saas', 'software-as-a-service', 'enterprise software', 'crm', 'erp',
-    'cloud', 'ai infrastructure', 'ai infra', 'data center', 'datacenter',
+    'cloud', 'ai', 'ai infrastructure', 'ai infra', 'data center', 'datacenter',
     'gpu', 'openai', 'anthropic', 'nvidia', 'developer', 'api', 'changelog', 'serverless', 'database',
     'cybersecurity', 'security platform', 'identity', 'ads', 'advertising',
     'adtech', 'marketing automation', 'social media', 'creator platform',
     'gaming', 'game', 'games', 'streaming', 'app store', 'super app',
     'ride-hailing', 'mobility platform', 'delivery platform', 'food delivery',
     'logistics platform', 'fulfillment', 'last-mile',
+    'semiconductor', 'chip', 'chips', 'foundry', 'quantum', 'quantum computing',
+    'telecom', 'telecommunications', '5g', 'network equipment', 'smartphone',
+    'robotaxi', 'autonomous driving', 'self-driving', 'pc',
     '电商', '支付', '金融科技', '钱包', '跨境汇款', '商户', '收单',
     '云', '云服务', '数据中心', '算力', '开发者', '接口', '数据库',
     '网络安全', '身份认证', '广告', '营销自动化', '游戏', '流媒体',
     '超级app', '本地生活', '外卖', '出行平台', '物流平台', '履约',
+    '半导体', '芯片', '晶圆', '代工', '量子', '电信', '通信', '5g',
+    '手机', '自动驾驶', '机器人出租车', 'pc', '个人电脑',
 }
 
 ADJACENT_INTERNET_TERMS = {

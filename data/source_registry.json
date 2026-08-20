@@ -1,2533 +1,2529 @@
 {
-  "version": "2026-08-05",
-  "principles": [
-    "信源优先解决质量，而不是靠过滤弥补泛新闻噪声。",
-    "每个自动接入源都要标注赛道、信号类型、质量层级、抓取方式和风险。",
-    "官方、开发者、商户、广告、支付、市场政策类源优先于泛科技新闻流。",
-    "候选源先进入观察池，样本质量稳定后再进入自动采集。",
-    "研报源只承载可核验的发布事实和有归属的机构判断，不因来源名称自动放宽范围门槛。"
+ "version": "2026-08-05",
+ "principles": [
+  "信源优先解决质量，而不是靠过滤弥补泛新闻噪声。",
+  "每个自动接入源都要标注赛道、信号类型、质量层级、抓取方式和风险。",
+  "官方、开发者、商户、广告、支付、市场政策类源优先于泛科技新闻流。",
+  "候选源先进入观察池，样本质量稳定后再进入自动采集。",
+  "研报源只承载可核验的发布事实和有归属的机构判断，不因来源名称自动放宽范围门槛。"
+ ],
+ "source_schema": {
+  "id": "稳定唯一标识",
+  "name": "信源名称",
+  "url": "公开入口地址",
+  "status": "active / candidate / paused",
+  "tier": "L1 / L2 / L3 / L4 / L5",
+  "source_type": "newsroom / ir / changelog / jobs / engineering_blog / research_report / industry_media / media",
+  "access_method": "rss / atom / html / api / sitemap",
+  "region": "主要地区",
+  "track": "赛道",
+  "signal_types": "该源天然更容易产出的信号类型",
+  "entity_focus": "company / infra / fintech / ai / commerce / capital",
+  "credibility_score": "1-10，越高越可信",
+  "signal_density": "high / medium / low",
+  "noise_level": "low / medium / high",
+  "scope_industries": "允许进入范围判断的既定行业编码；只能来自站点固定行业清单",
+  "scope_regions": "该源允许覆盖的目标区域；事件实际影响区域仍需单独判断",
+  "allowed_scope_layers": "regional_policy / industry_change / company_action",
+  "freshness_speed": "early / same_day / lagging",
+  "dedupe_strategy": "url / title / semantic / entity-time",
+  "crawl_cost": "low / medium / expensive",
+  "anti_bot_risk": "low / medium / high",
+  "publisher_type": "official / research_institution / industry_vertical / venture_media / regional_ecosystem / aggregator",
+  "authority_domains": "该源可直接支持的主题域，例如市场规模、政策、产品发布",
+  "claim_roles": "release_fact / institutional_assessment / performance_claim / policy_change / company_action",
+  "access_level": "open / abstract_only / paid / restricted",
+  "methodology_visibility": "visible / partial / hidden"
+ },
+ "signal_types": {
+  "official_disclosure": "公司官方披露、新闻稿、IR 公告",
+  "developer_change": "开发者平台、API、SDK、政策和能力变更",
+  "merchant_product": "商户、卖家、店铺、履约和本地服务产品变化",
+  "ads_monetization": "广告商业化、创作者变现、流量分发规则变化",
+  "payment_infra": "支付、收单、风控、清结算、钱包和 BNPL",
+  "marketplace_policy": "电商、平台、应用商店和市场规则变化",
+  "funding_deal": "融资、并购、IPO、战略投资",
+  "regional_ecosystem": "区域生态、政策、创业和投资环境",
+  "industry_analysis": "产业分析、市场地图、数据报告",
+  "weekly_digest": "周报、简报、newsletter、二次沉淀"
+ },
+ "signal_taxonomy": {
+  "expansion": [
+   "country",
+   "partner",
+   "localization",
+   "regional_launch"
   ],
-  "source_schema": {
-    "id": "稳定唯一标识",
-    "name": "信源名称",
-    "url": "公开入口地址",
-    "status": "active / candidate / paused",
-    "tier": "L1 / L2 / L3 / L4 / L5",
-    "source_type": "newsroom / ir / changelog / jobs / engineering_blog / research_report / industry_media / media",
-    "access_method": "rss / atom / html / api / sitemap",
-    "region": "主要地区",
-    "track": "赛道",
-    "signal_types": "该源天然更容易产出的信号类型",
-    "entity_focus": "company / infra / fintech / ai / commerce / capital",
-    "credibility_score": "1-10，越高越可信",
-    "signal_density": "high / medium / low",
-    "noise_level": "low / medium / high",
-    "scope_industries": "允许进入范围判断的既定行业编码；只能来自站点固定行业清单",
-    "scope_regions": "该源允许覆盖的目标区域；事件实际影响区域仍需单独判断",
-    "allowed_scope_layers": "regional_policy / industry_change / company_action",
-    "freshness_speed": "early / same_day / lagging",
-    "dedupe_strategy": "url / title / semantic / entity-time",
-    "crawl_cost": "low / medium / expensive",
-    "anti_bot_risk": "low / medium / high",
-    "publisher_type": "official / research_institution / industry_vertical / venture_media / regional_ecosystem / aggregator",
-    "authority_domains": "该源可直接支持的主题域，例如市场规模、政策、产品发布",
-    "claim_roles": "release_fact / institutional_assessment / performance_claim / policy_change / company_action",
-    "access_level": "open / abstract_only / paid / restricted",
-    "methodology_visibility": "visible / partial / hidden"
-  },
-  "signal_types": {
-    "official_disclosure": "公司官方披露、新闻稿、IR 公告",
-    "developer_change": "开发者平台、API、SDK、政策和能力变更",
-    "merchant_product": "商户、卖家、店铺、履约和本地服务产品变化",
-    "ads_monetization": "广告商业化、创作者变现、流量分发规则变化",
-    "payment_infra": "支付、收单、风控、清结算、钱包和 BNPL",
-    "marketplace_policy": "电商、平台、应用商店和市场规则变化",
-    "funding_deal": "融资、并购、IPO、战略投资",
-    "regional_ecosystem": "区域生态、政策、创业和投资环境",
-    "industry_analysis": "产业分析、市场地图、数据报告",
-    "weekly_digest": "周报、简报、newsletter、二次沉淀"
-  },
-  "signal_taxonomy": {
-    "expansion": [
-      "country",
-      "partner",
-      "localization",
-      "regional_launch"
-    ],
-    "partnership": [
-      "strategic_partner",
-      "ecosystem",
-      "channel",
-      "joint_solution"
-    ],
-    "payment": [
-      "acquiring",
-      "wallet",
-      "remittance",
-      "bnpl",
-      "checkout",
-      "risk"
-    ],
-    "commerce": [
-      "seller",
-      "merchant",
-      "logistics",
-      "fulfillment",
-      "ads",
-      "marketplace"
-    ],
-    "ai_infra": [
-      "agent",
-      "model",
-      "inference",
-      "gpu",
-      "cloud",
-      "datacenter"
-    ],
-    "developer_change": [
-      "api",
-      "sdk",
-      "release_note",
-      "platform_policy"
-    ],
-    "capital": [
-      "funding",
-      "ma",
-      "earnings",
-      "ipo",
-      "strategic_investment"
-    ],
-    "org_change": [
-      "hiring",
-      "layoffs",
-      "executive",
-      "reorg"
-    ],
-    "compliance": [
-      "license",
-      "regulation",
-      "policy",
-      "antitrust"
-    ]
-  },
-  "sources": [
-    {
-      "id": "grab-newsroom",
-      "name": "Grab Newsroom",
-      "url": "https://www.grab.com/sg/press/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "东南亚本地生活/支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "entity_focus": "company",
-      "credibility_score": 9,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Grab",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "goto-newsroom",
-      "name": "GoTo Newsroom",
-      "url": "https://www.gotocompany.com/newsroom",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "印尼平台生态/金融",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "entity_focus": "company",
-      "credibility_score": 9,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Gojek",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "shopee-newsroom",
-      "name": "Shopee Newsroom",
-      "url": "https://newsroom.shopee.com/",
-      "status": "paused",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "东南亚电商/物流",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "entity_focus": "commerce",
-      "credibility_score": 9,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Sea Limited",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "traveloka-newsroom",
-      "name": "Traveloka Newsroom",
-      "url": "https://www.traveloka.com/en-id/newsroom",
-      "status": "paused",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "OTA/本地消费",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "regional_ecosystem"
-      ],
-      "entity_focus": "company",
-      "credibility_score": 9,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Traveloka",
-      "is_company": true,
-      "priority": 2,
-      "max": 3
-    },
-    {
-      "id": "careem-newsroom",
-      "name": "Careem Newsroom",
-      "url": "https://www.careem.com/newsroom/",
-      "status": "paused",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "中东",
-      "track": "中东本地服务/支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "entity_focus": "company",
-      "credibility_score": 9,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Careem",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "tabby-blog",
-      "name": "Tabby Blog",
-      "url": "https://tabby.ai/en-AE/blog/",
-      "status": "paused",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "中东",
-      "track": "BNPL/支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "entity_focus": "fintech",
-      "credibility_score": 8,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Tabby",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "mercadolibre-news",
-      "name": "Mercado Libre News",
-      "url": "https://news.mercadolibre.com/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "拉美",
-      "track": "拉美电商/支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "entity_focus": "commerce",
-      "credibility_score": 9,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "MercadoLibre",
-      "is_company": true,
-      "scope_industries": [
-        "commerce",
-        "payments",
-        "marketplace"
-      ],
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "dlocal-news",
-      "name": "dLocal News",
-      "url": "https://dlocal.com/news/",
-      "status": "paused",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "拉美",
-      "track": "跨境支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "funding_deal"
-      ],
-      "entity_focus": "fintech",
-      "credibility_score": 9,
-      "signal_density": "high",
-      "noise_level": "low",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "dLocal",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "flutterwave-blog",
-      "name": "Flutterwave Blog",
-      "url": "https://flutterwave.com/us/blog",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "非洲",
-      "track": "非洲支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "entity_focus": "fintech",
-      "credibility_score": 8,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "company_name": "Flutterwave",
-      "is_company": true,
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "stripe-changelog",
-      "name": "Stripe Changelog",
-      "url": "https://stripe.com/changelog",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "changelog",
-      "access_method": "html",
-      "region": "全球",
-      "track": "支付开发者生态",
-      "signal_types": [
-        "developer_change",
-        "payment_infra"
-      ],
-      "entity_focus": "fintech",
-      "credibility_score": 10,
-      "signal_density": "high",
-      "noise_level": "low",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "cloudflare-changelog",
-      "name": "Cloudflare Changelog",
-      "url": "https://developers.cloudflare.com/changelog/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "changelog",
-      "access_method": "html",
-      "region": "全球",
-      "track": "AI infra/边缘云",
-      "signal_types": [
-        "developer_change",
-        "payment_infra"
-      ],
-      "entity_focus": "infra",
-      "credibility_score": 10,
-      "signal_density": "high",
-      "noise_level": "low",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "shopify-changelog",
-      "name": "Shopify Changelog",
-      "url": "https://changelog.shopify.com/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "changelog",
-      "access_method": "html",
-      "region": "全球",
-      "track": "电商开发者生态",
-      "signal_types": [
-        "developer_change",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "entity_focus": "commerce",
-      "credibility_score": 10,
-      "signal_density": "high",
-      "noise_level": "low",
-      "freshness_speed": "early",
-      "dedupe_strategy": "entity-time",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "priority": 3,
-      "max": 4
-    },
-    {
-      "id": "modern-retail",
-      "name": "Modern Retail",
-      "url": "https://www.modernretail.co/feed/",
-      "status": "active",
-      "tier": "L4",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "全球",
-      "track": "电商/零售",
-      "signal_types": [
-        "merchant_product",
-        "marketplace_policy",
-        "industry_analysis"
-      ],
-      "entity_focus": "commerce",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "scope_industries": [
-        "commerce"
-      ],
-      "scope_regions": [
-        "全球"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "priority": 2,
-      "max": 3
-    },
-    {
-      "id": "grab-ir",
-      "name": "Grab IR",
-      "url": "https://www.grab.com/sg/press/feed/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "ir",
-      "access_method": "rss",
-      "region": "亚太",
-      "track": "东南亚本地生活与支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "payments",
-        "local_services_logistics"
-      ],
-      "company_name": "Grab"
-    },
-    {
-      "id": "sea-newsroom",
-      "name": "Sea Newsroom",
-      "url": "https://www.sea.com/media/news",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "东南亚电商、支付与游戏",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product"
-      ],
-      "scope_industries": [
-        "commerce",
-        "payments",
-        "gaming_content"
-      ],
-      "company_name": "Sea Limited"
-    },
-    {
-      "id": "naver-press",
-      "name": "Naver Press",
-      "url": "https://www.navercorp.com/en/media/pressReleases",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "东亚 AI、云与平台生态",
-      "signal_types": [
-        "official_disclosure",
-        "developer_change"
-      ],
-      "scope_industries": [
-        "ai_infra",
-        "cloud_saas_developer"
-      ],
-      "company_name": "Naver"
-    },
-    {
-      "id": "mercadolibre-ir",
-      "name": "MercadoLibre IR",
-      "url": "https://investor.mercadolibre.com/news-and-events",
-      "status": "paused",
-      "pause_reason": "页面仅 PDF 财务文件，无新闻文章可解析，连续 25 次空结果",
-      "tier": "L1",
-      "source_type": "ir",
-      "access_method": "html",
-      "region": "拉美",
-      "track": "拉美电商、物流与支付",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "commerce",
-        "payments"
-      ],
-      "company_name": "MercadoLibre"
-    },
-    {
-      "id": "adyen-press",
-      "name": "Adyen IR",
-      "url": "https://www.adyen.com/press-and-media",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "欧洲",
-      "track": "欧洲企业支付与合规",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "payments"
-      ],
-      "company_name": "Adyen"
-    },
-    {
-      "id": "jumia-newsroom",
-      "name": "Jumia Newsroom",
-      "url": "https://group.jumia.com/news",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "非洲",
-      "track": "非洲电商、支付与物流",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "commerce",
-        "payments",
-        "local_services_logistics"
-      ],
-      "company_name": "Jumia"
-    },
-    {
-      "id": "the-paypers",
-      "name": "The Paypers",
-      "url": "https://thepaypers.com/rss",
-      "status": "active",
-      "tier": "L4",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "全球",
-      "track": "支付",
-      "signal_types": [
-        "payment_infra",
-        "industry_analysis"
-      ],
-      "entity_focus": "fintech",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "scope_industries": [
-        "payments"
-      ],
-      "scope_regions": [
-        "全球"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "priority": 2,
-      "max": 3
-    },
-    {
-      "id": "e27-research",
-      "name": "e27 东南亚科技产业分析",
-      "url": "https://e27.co/feed/",
-      "status": "active",
-      "tier": "L4",
-      "source_type": "research_report",
-      "access_method": "rss",
-      "region": "东南亚",
-      "track": "区域科技与AI",
-      "signal_types": [
-        "industry_analysis",
-        "regional_ecosystem",
-        "funding_deal"
-      ],
-      "entity_focus": "ai",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "scope_industries": [
-        "ai",
-        "fintech",
-        "commerce"
-      ],
-      "scope_regions": [
-        "东南亚",
-        "亚太"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "research_institution",
-      "authority_domains": [
-        "市场规模",
-        "产业分析",
-        "区域趋势"
-      ],
-      "claim_roles": [
-        "institutional_assessment"
-      ],
-      "access_level": "open",
-      "methodology_visibility": "visible",
-      "report_methodology_visible": true,
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "medium",
-      "priority": 2,
-      "max": 4
-    },
-    {
-      "id": "rakuten-ir",
-      "name": "Rakuten IR",
-      "url": "https://global.rakuten.com/corp/news/press/?category=ir",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "ir",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "日本电商与金融科技",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "commerce",
-        "payments"
-      ],
-      "company_name": "Rakuten"
-    },
-    {
-      "id": "kakao-press",
-      "name": "Kakao Press",
-      "url": "https://www.kakaocorp.com/page/detail/pr?lang=en",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "韩国社交与支付平台",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "payments"
-      ],
-      "company_name": "Kakao"
-    },
-    {
-      "id": "vng-newsroom",
-      "name": "VNG Newsroom",
-      "url": "https://vng.com.vn/news/list.1.html",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "越南社交、游戏与支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "funding_deal"
-      ],
-      "scope_industries": [
-        "payments",
-        "gaming_content",
-        "social_content"
-      ],
-      "company_name": "VNG Group"
-    },
-    {
-      "id": "momo-newsroom",
-      "name": "MoMo Newsroom",
-      "url": "https://www.momo.vn/tin-tuc",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "亚太",
-      "track": "越南钱包与商户生态",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "scope_industries": [
-        "payments",
-        "local_services"
-      ],
-      "include_url_patterns": [
-        "/tin-tuc"
-      ],
-      "company_name": "MoMo"
-    },
-    {
-      "id": "noon-newsroom",
-      "name": "Noon Newsroom",
-      "url": "https://www.noon.com/uae-en/newsroom/",
-      "status": "paused",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "中东",
-      "track": "中东电商、商家与物流",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "scope_industries": [
-        "commerce",
-        "logistics"
-      ],
-      "anti_bot_risk": "high",
-      "company_name": "Noon"
-    },
-    {
-      "id": "tamara-media",
-      "name": "Tamara Media Center",
-      "url": "https://tamara.co/en-sa/media-center",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "中东",
-      "track": "中东BNPL与支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "scope_industries": [
-        "payments"
-      ],
-      "company_name": "Tamara"
-    },
-    {
-      "id": "stc-media",
-      "name": "stc Media Center",
-      "url": "https://www.stc.com/en/media-center.html",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "中东",
-      "track": "沙特数字基础设施",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "cloud",
-        "telco_digital_infra"
-      ],
-      "company_name": "stc"
-    },
-    {
-      "id": "nubank-blog",
-      "name": "Nubank Blog",
-      "url": "https://blog.nubank.com.br/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "engineering_blog",
-      "access_method": "html",
-      "region": "拉美",
-      "track": "拉美数字金融、产品与监管",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "payments",
-        "digital_banking"
-      ],
-      "include_url_patterns": [
-        "blog.nubank.com.br"
-      ],
-      "anti_bot_risk": "high",
-      "company_name": "Nubank"
-    },
-    {
-      "id": "rappi-press",
-      "name": "Rappi Press Room",
-      "url": "https://about.rappi.com/press-room",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "拉美",
-      "track": "拉美配送与金融科技",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "payment_infra"
-      ],
-      "scope_industries": [
-        "local_services_logistics",
-        "payments"
-      ],
-      "company_name": "Rappi"
-    },
-    {
-      "id": "opay-newsroom",
-      "name": "OPay Newsroom",
-      "url": "https://opay.ng/newsroom/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "非洲",
-      "track": "非洲钱包与代理网络",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "scope_industries": [
-        "payments",
-        "financial_infra"
-      ],
-      "company_name": "OPay"
-    },
-    {
-      "id": "mpesa-media",
-      "name": "Safaricom Media Center",
-      "url": "https://www.safaricom.co.ke/media-center",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "非洲",
-      "track": "非洲移动支付基本盘",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "scope_industries": [
-        "payments",
-        "telco_digital_infra"
-      ],
-      "anti_bot_risk": "high",
-      "company_name": "M-Pesa"
-    },
-    {
-      "id": "openai-news",
-      "name": "OpenAI News",
-      "url": "https://openai.com/news/rss.xml",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "rss",
-      "region": "全球",
-      "track": "全球AI平台与开发者生态",
-      "signal_types": [
-        "official_disclosure",
-        "developer_change",
-        "industry_analysis"
-      ],
-      "scope_industries": [
-        "ai",
-        "ai_infra"
-      ],
-      "company_name": "OpenAI"
-    },
-    {
-      "id": "anthropic-news",
-      "name": "Anthropic Newsroom",
-      "url": "https://www.anthropic.com/news",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "newsroom",
-      "access_method": "html",
-      "region": "全球",
-      "track": "全球企业AI与安全治理",
-      "signal_types": [
-        "official_disclosure",
-        "developer_change",
-        "industry_analysis"
-      ],
-      "scope_industries": [
-        "ai",
-        "ai_infra"
-      ],
-      "company_name": "Anthropic"
-    },
-    {
-      "id": "databricks-blog",
-      "name": "Databricks Blog",
-      "url": "https://www.databricks.com/feed",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "engineering_blog",
-      "access_method": "rss",
-      "region": "全球",
-      "track": "数据与AI平台",
-      "signal_types": [
-        "official_disclosure",
-        "developer_change",
-        "industry_analysis"
-      ],
-      "scope_industries": [
-        "ai",
-        "data_platform"
-      ],
-      "company_name": "Databricks"
-    },
-    {
-      "id": "cloudflare-blog",
-      "name": "Cloudflare Blog",
-      "url": "https://blog.cloudflare.com/rss/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "engineering_blog",
-      "access_method": "rss",
-      "region": "全球",
-      "track": "云、安全与开发者基础设施",
-      "signal_types": [
-        "official_disclosure",
-        "developer_change",
-        "industry_analysis"
-      ],
-      "scope_industries": [
-        "ai",
-        "ai_infra",
-        "cloud"
-      ],
-      "company_name": "Cloudflare"
-    },
-    {
-      "id": "koreatechdesk",
-      "name": "KoreaTechDesk",
-      "url": "https://koreatechdesk.com/feed/",
-      "status": "active",
-      "tier": "L3",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "韩国",
-      "track": "韩国科技与AI",
-      "signal_types": [
-        "regional_ecosystem",
-        "industry_analysis",
-        "funding_deal"
-      ],
-      "scope_industries": [
-        "ai",
-        "commerce",
-        "fintech"
-      ],
-      "scope_regions": [
-        "韩国",
-        "亚太"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "regional_ecosystem",
-      "credibility_score": 7,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "max": 4,
-      "quality_note": "已验证可达(705条)，韩国创业/政策/AI 信号密度高，弥补韩国媒体发现层缺口。"
-    },
-    {
-      "id": "dailysocial-id",
-      "name": "DailySocial Indonesia",
-      "url": "https://dailysocial.id/feed",
-      "status": "active",
-      "tier": "L3",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "印尼",
-      "track": "印尼创业与融资",
-      "signal_types": [
-        "regional_ecosystem",
-        "funding_deal"
-      ],
-      "scope_industries": [
-        "commerce",
-        "fintech"
-      ],
-      "scope_regions": [
-        "印尼",
-        "东南亚"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "regional_ecosystem",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "max": 4,
-      "quality_note": "已验证可达，印尼创业融资信号（如 McEasy Series B），弥补印尼媒体发现层。"
-    },
-    {
-      "id": "braziljournal",
-      "name": "Brazil Journal",
-      "url": "https://braziljournal.com/feed/",
-      "status": "active",
-      "tier": "L3",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "巴西",
-      "track": "巴西商业与AI",
-      "signal_types": [
-        "regional_ecosystem",
-        "industry_analysis"
-      ],
-      "scope_industries": [
-        "commerce",
-        "fintech",
-        "ai"
-      ],
-      "scope_regions": [
-        "巴西",
-        "拉美"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "regional_ecosystem",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "max": 4,
-      "quality_note": "已验证可达，葡语商业/AI 分析，弥补巴西媒体发现层（巴西此前仅 1 条 stored）。"
-    },
-    {
-      "id": "vnexpress-tech",
-      "name": "VnExpress Tech",
-      "url": "https://e.vnexpress.net/rss/tech.rss",
-      "status": "active",
-      "tier": "L3",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "越南",
-      "track": "越南科技与产业",
-      "signal_types": [
-        "regional_ecosystem",
-        "industry_analysis"
-      ],
-      "scope_industries": [
-        "commerce",
-        "fintech",
-        "ai"
-      ],
-      "scope_regions": [
-        "越南",
-        "东南亚"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "regional_ecosystem",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "max": 4,
-      "quality_note": "已验证可达(60条)，越南本土科技信号，弥补越南媒体发现层。"
-    },
-    {
-      "id": "the-bridge",
-      "name": "The Bridge",
-      "url": "https://thebridge.jp/feed/",
-      "status": "active",
-      "tier": "L3",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "日本",
-      "track": "日本创业与融资",
-      "signal_types": [
-        "regional_ecosystem",
-        "funding_deal"
-      ],
-      "scope_industries": [
-        "commerce",
-        "fintech",
-        "ai"
-      ],
-      "scope_regions": [
-        "日本",
-        "亚太"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "regional_ecosystem",
-      "credibility_score": 7,
-      "signal_density": "high",
-      "noise_level": "medium",
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "max": 4,
-      "quality_note": "已验证可达，日本创投/融资信号密度高，弥补日本媒体发现层缺口。"
-    },
-    {
-      "id": "36kr-japan",
-      "name": "36Kr Japan",
-      "url": "https://36kr.jp/feed/",
-      "status": "active",
-      "tier": "L3",
-      "source_type": "industry_media",
-      "access_method": "rss",
-      "region": "亚太",
-      "track": "中国科技与产业（日文视角）",
-      "signal_types": [
-        "regional_ecosystem",
-        "industry_analysis",
-        "funding_deal"
-      ],
-      "scope_industries": [
-        "commerce",
-        "fintech",
-        "ai"
-      ],
-      "scope_regions": [
-        "中国",
-        "亚太"
-      ],
-      "allowed_scope_layers": [
-        "regional_policy",
-        "industry_change",
-        "company_action"
-      ],
-      "publisher_type": "regional_ecosystem",
-      "credibility_score": 7,
-      "signal_density": "medium",
-      "noise_level": "medium",
-      "freshness_speed": "same_day",
-      "dedupe_strategy": "semantic",
-      "crawl_cost": "low",
-      "anti_bot_risk": "low",
-      "max": 4,
-      "quality_note": "已验证可达，日文中国科技报道，弥补助中国科技生态的日文媒体缺口。"
-    },
-    {
-      "id": "legacy-techcrunch",
-      "name": "TechCrunch",
-      "url": "https://techcrunch.com/feed/",
-      "source": "TechCrunch",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-techcrunch-vc",
-      "name": "TechCrunch VC",
-      "url": "https://techcrunch.com/category/venture/feed/",
-      "source": "TechCrunch",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-tech-eu",
-      "name": "Tech.eu",
-      "url": "https://tech.eu/feed/",
-      "source": "Tech.eu",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "欧洲",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-uktn",
-      "name": "UKTN",
-      "url": "https://www.uktech.news/feed",
-      "source": "UKTN",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "欧洲",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-eu-startups",
-      "name": "EU-Startups",
-      "url": "https://www.eu-startups.com/feed/",
-      "source": "EU-Startups",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "欧洲",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-the-recursive",
-      "name": "The Recursive",
-      "url": "https://therecursive.com/feed/",
-      "source": "The Recursive",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "欧洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-the-next-web",
-      "name": "The Next Web",
-      "url": "https://thenextweb.com/feed/",
-      "source": "The Next Web",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "欧洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-tech-in-asia",
-      "name": "Tech in Asia",
-      "url": "https://www.techinasia.com/feed/",
-      "source": "Tech in Asia",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "亚太",
-      "priority": 3,
-      "track": "",
-      "max_scan": 24,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-inc42",
-      "name": "Inc42",
-      "url": "https://inc42.com/feed/",
-      "source": "Inc42",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "亚太",
-      "priority": 3,
-      "track": "",
-      "max_scan": 24,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-techwire-asia",
-      "name": "TechWire Asia",
-      "url": "https://techwireasia.com/feed/",
-      "source": "TechWire Asia",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "亚太",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-gamesindustry-biz",
-      "name": "GamesIndustry.biz",
-      "url": "https://www.gamesindustry.biz/rss",
-      "source": "GamesIndustry.biz",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "游戏",
-      "max_scan": 16,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [
-        "gaming_content"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-pocketgamer-biz",
-      "name": "PocketGamer.biz",
-      "url": "https://www.pocketgamer.biz/rss/",
-      "source": "PocketGamer.biz",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "游戏",
-      "max_scan": 16,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [
-        "gaming_content"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-fintech-news-singapore",
-      "name": "Fintech News Singapore",
-      "url": "https://fintechnews.sg/feed/",
-      "source": "Fintech News Singapore",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "亚太",
-      "priority": 2,
-      "track": "Fintech/支付",
-      "max_scan": 16,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [
-        "payments"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-finextra-payments",
-      "name": "Finextra Payments",
-      "url": "https://www.finextra.com/rss/channel.aspx?channel=payments",
-      "source": "Finextra",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "Fintech/支付",
-      "max_scan": 20,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [
-        "payments"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-payments-dive",
-      "name": "Payments Dive",
-      "url": "https://www.paymentsdive.com/feeds/news/",
-      "source": "Payments Dive",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "Fintech/支付",
-      "max_scan": 12,
-      "max": 3,
-      "signal_only": true,
-      "scope_industries": [
-        "payments"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-ecommercebytes",
-      "name": "EcommerceBytes",
-      "url": "https://www.ecommercebytes.com/feed/",
-      "source": "EcommerceBytes",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "电商",
-      "max_scan": 16,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [
-        "commerce"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-retail-dive",
-      "name": "Retail Dive",
-      "url": "https://www.retaildive.com/feeds/news/",
-      "source": "Retail Dive",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "电商",
-      "max_scan": 12,
-      "max": 3,
-      "signal_only": true,
-      "scope_industries": [
-        "commerce"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-mobile-world-live",
-      "name": "Mobile World Live",
-      "url": "https://www.mobileworldlive.com/feed/",
-      "source": "Mobile World Live",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "文娱社交/移动生态",
-      "max_scan": 16,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [
-        "ads_social",
-        "cloud_saas_developer"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-social-media-today",
-      "name": "Social Media Today",
-      "url": "https://www.socialmediatoday.com/feeds/news/",
-      "source": "Social Media Today",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "社交平台",
-      "max_scan": 12,
-      "max": 3,
-      "signal_only": true,
-      "scope_industries": [
-        "ads_social"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-mobile-marketing-magazine",
-      "name": "Mobile Marketing Magazine",
-      "url": "https://mobilemarketingmagazine.com/feed/",
-      "source": "Mobile Marketing Magazine",
-      "status": "active",
-      "tier": "L4 垂直赛道精品源",
-      "source_tier": "L4 垂直赛道精品源",
-      "source_role": "industry_vertical",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "移动生态/广告",
-      "max_scan": 12,
-      "max": 3,
-      "signal_only": true,
-      "scope_industries": [
-        "ads_social"
-      ],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-wamda",
-      "name": "WAMDA",
-      "url": "https://www.wamda.com/feed",
-      "source": "WAMDA",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "中东",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-menabytes",
-      "name": "MENAbytes",
-      "url": "https://www.menabytes.com/feed/",
-      "source": "MENAbytes",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "中东",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-techcabal",
-      "name": "TechCabal",
-      "url": "https://techcabal.com/feed",
-      "source": "TechCabal",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "非洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-disrupt-africa",
-      "name": "Disrupt Africa",
-      "url": "https://disrupt-africa.com/feed/",
-      "source": "Disrupt Africa",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "非洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-techpoint",
-      "name": "Techpoint",
-      "url": "https://techpoint.africa/feed/",
-      "source": "Techpoint",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "非洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-ventureburn",
-      "name": "Ventureburn",
-      "url": "https://ventureburn.com/feed/",
-      "source": "Ventureburn",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "非洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-weetracker",
-      "name": "WeeTracker",
-      "url": "https://weetracker.com/feed/",
-      "source": "WeeTracker",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "非洲",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-latamlist",
-      "name": "LatamList",
-      "url": "https://latamlist.com/feed/",
-      "source": "LatamList",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "拉美",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-lavca",
-      "name": "LAVCA",
-      "url": "https://lavca.org/feed/",
-      "source": "LAVCA",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "拉美",
-      "priority": 3,
-      "track": "",
-      "max_scan": 20,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-contxto",
-      "name": "Contxto",
-      "url": "https://contxto.com/en/feed/",
-      "source": "Contxto",
-      "status": "active",
-      "tier": "L3 区域生态源",
-      "source_tier": "L3 区域生态源",
-      "source_role": "regional_ecosystem",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "拉美",
-      "priority": 2,
-      "track": "",
-      "max_scan": 24,
-      "max": 6,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-rest-of-world-money",
-      "name": "Rest of World Money",
-      "url": "https://restofworld.org/feed/money/",
-      "source": "Rest of World",
-      "status": "active",
-      "tier": "L4 深度趋势源",
-      "source_tier": "L4 深度趋势源",
-      "source_role": "deep_trend",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-rest-of-world-ecommerce",
-      "name": "Rest of World Ecommerce",
-      "url": "https://restofworld.org/feed/e-commerce/",
-      "source": "Rest of World",
-      "status": "active",
-      "tier": "L4 深度趋势源",
-      "source_tier": "L4 深度趋势源",
-      "source_role": "deep_trend",
-      "source_type": "media",
-      "access_method": "rss",
-      "region": "全球",
-      "priority": 2,
-      "track": "",
-      "max_scan": 20,
-      "max": 4,
-      "signal_only": true,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-cyberagent-news",
-      "name": "Cyberagent News",
-      "url": "https://www.cyberagent.co.jp/en/news/rss/data_format=xml",
-      "source": "Cyberagent",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "rss",
-      "region": "亚太",
-      "priority": 1,
-      "track": "",
-      "max_scan": 20,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Cyberagent",
-      "is_company": true
-    },
-    {
-      "id": "legacy-dealstreetasia",
-      "name": "DealStreetAsia",
-      "url": "https://dealstreetasia.com/",
-      "source": "DealStreetAsia",
-      "status": "active",
-      "tier": "L2 垂直交易源",
-      "source_tier": "L2 垂直交易源",
-      "source_role": "venture_media",
-      "source_type": "media",
-      "access_method": "html",
-      "region": "亚太",
-      "priority": 1,
-      "track": "",
-      "max_scan": 15,
-      "max": 8,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": null,
-      "is_company": false
-    },
-    {
-      "id": "legacy-zalando-ir",
-      "name": "Zalando IR",
-      "url": "https://www.zalando.com/en/investor-relations/news-stories/",
-      "source": "Zalando",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "欧洲",
-      "priority": 3,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Zalando",
-      "is_company": true
-    },
-    {
-      "id": "legacy-allegro-newsroom",
-      "name": "Allegro Newsroom",
-      "url": "https://allegro.eu/newsroom",
-      "source": "Allegro",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "欧洲",
-      "priority": 3,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Allegro",
-      "is_company": true
-    },
-    {
-      "id": "legacy-kaspi-kz-ir",
-      "name": "Kaspi.kz IR",
-      "url": "https://ir.kaspi.kz/news-releases/",
-      "source": "Kaspi.kz",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "中东",
-      "priority": 3,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Kaspi.kz",
-      "is_company": true
-    },
-    {
-      "id": "legacy-hktvmall-ir-news",
-      "name": "HKTVmall IR News",
-      "url": "https://ir.hktv.com.hk/media-news",
-      "source": "HKTVmall",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "亚太",
-      "priority": 3,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "HKTVmall",
-      "is_company": true
-    },
-    {
-      "id": "legacy-u-next-news",
-      "name": "U-NEXT News",
-      "url": "https://unext-hd.co.jp/newsrelease/",
-      "source": "U-NEXT",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "亚太",
-      "priority": 3,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "U-NEXT",
-      "is_company": true
-    },
-    {
-      "id": "legacy-square-enix-ir-news",
-      "name": "Square Enix IR News",
-      "url": "https://www.hd.square-enix.com/eng/ir/irnews/",
-      "source": "Square Enix",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "亚太",
-      "priority": 3,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Square Enix",
-      "is_company": true
-    },
-    {
-      "id": "legacy-jd-com-ir",
-      "name": "JD.com IR",
-      "url": "https://ir.jd.com/news-releases",
-      "source": "JD.com",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "中资",
-      "priority": 2,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "JD.com",
-      "is_company": true
-    },
-    {
-      "id": "legacy-yahoo-press",
-      "name": "Yahoo Press",
-      "url": "https://www.yahooinc.com/press/",
-      "source": "Yahoo",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "亚太",
-      "priority": 1,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Yahoo",
-      "is_company": true
-    },
-    {
-      "id": "legacy-tabby-press",
-      "name": "Tabby Press",
-      "url": "https://www.tabby.ai/press/",
-      "source": "Tabby",
-      "status": "active",
-      "tier": "L1 官方/IR源",
-      "source_tier": "L1 官方/IR源",
-      "source_role": "official_ir",
-      "source_type": "company",
-      "access_method": "html",
-      "region": "中东",
-      "priority": 2,
-      "track": "",
-      "max_scan": 15,
-      "max": 4,
-      "signal_only": false,
-      "scope_industries": [],
-      "company_name": "Tabby",
-      "is_company": true
-    }
+  "partnership": [
+   "strategic_partner",
+   "ecosystem",
+   "channel",
+   "joint_solution"
   ],
-  "active_sources": [
-    {
-      "name": "TechCrunch VC",
-      "url": "https://techcrunch.com/category/venture/feed/",
-      "status": "active",
-      "tier": "L2",
-      "track": "全球融资",
-      "signal_types": [
-        "funding_deal"
-      ],
-      "quality_note": "融资密度高，但泛创业噪声仍需按金额、赛道和区域筛选。"
-    },
-    {
-      "name": "Tech.eu",
-      "url": "https://tech.eu/feed/",
-      "status": "active",
-      "tier": "L2",
-      "track": "欧洲融资与科技生态",
-      "signal_types": [
-        "funding_deal",
-        "regional_ecosystem"
-      ],
-      "quality_note": "欧洲交易和政策信号较稳定。"
-    },
-    {
-      "name": "Inc42",
-      "url": "https://inc42.com/feed/",
-      "status": "active",
-      "tier": "L2",
-      "track": "印度互联网与创业生态",
-      "signal_types": [
-        "funding_deal",
-        "regional_ecosystem"
-      ],
-      "quality_note": "印度公司财报、融资和监管信号密集，但上市公司短线行情需过滤。"
-    },
-    {
-      "name": "Finextra Payments",
-      "url": "https://www.finextra.com/rss/channel.aspx?channel=payments",
-      "status": "active",
-      "tier": "L4",
-      "track": "支付",
-      "signal_types": [
-        "payment_infra",
-        "industry_analysis"
-      ],
-      "quality_note": "支付基础设施和银行科技信号较强。"
-    },
-    {
-      "name": "Payments Dive",
-      "url": "https://www.paymentsdive.com/feeds/news/",
-      "status": "active",
-      "tier": "L4",
-      "track": "支付",
-      "signal_types": [
-        "payment_infra",
-        "merchant_product"
-      ],
-      "quality_note": "适合观察支付网络、收单和监管变化。"
-    },
-    {
-      "name": "Retail Dive",
-      "url": "https://www.retaildive.com/feeds/news/",
-      "status": "active",
-      "tier": "L4",
-      "track": "零售与电商",
-      "signal_types": [
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "quality_note": "零售行业动作较多，需避免传统零售财务噪声。"
-    },
-    {
-      "name": "Social Media Today",
-      "url": "https://www.socialmediatoday.com/feeds/news/",
-      "status": "active",
-      "tier": "L4",
-      "track": "社交平台与广告",
-      "signal_types": [
-        "ads_monetization",
-        "marketplace_policy"
-      ],
-      "quality_note": "适合替代直接抓 X/Twitter 的二次沉淀源。"
-    },
-    {
-      "name": "HKTVmall IR News",
-      "url": "https://ir.hktv.com.hk/media-news",
-      "status": "active",
-      "tier": "L1",
-      "track": "香港电商与本地零售",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "quality_note": "官方披露入口，适合跟踪 HKTVmall 与 Hong Kong Technology Venture 的业务调整。"
-    },
-    {
-      "name": "U-NEXT Holdings News",
-      "url": "https://unext-hd.co.jp/newsrelease/",
-      "status": "active",
-      "tier": "L1",
-      "track": "日本流媒体与数字内容",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "ads_monetization"
-      ],
-      "quality_note": "官方新闻入口，日文页面需靠标题信号过滤，避免普通活动公告。"
-    },
-    {
-      "name": "Square Enix IR News",
-      "url": "https://www.hd.square-enix.com/eng/ir/irnews/",
-      "status": "active",
-      "tier": "L1",
-      "track": "日本游戏与数字娱乐",
-      "signal_types": [
-        "official_disclosure",
-        "funding_deal",
-        "marketplace_policy"
-      ],
-      "quality_note": "英文 IR 入口，适合跟踪财报、资本动作和全球发行战略。"
-    },
-    {
-      "id": "grab-jobs",
-      "name": "Grab Jobs",
-      "url": "https://www.grab.careers/en/jobs/",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "jobs",
-      "access_method": "html_snapshot",
-      "region": "亚太",
-      "track": "东南亚本地生活与支付组织投入",
-      "signal_types": [
-        "hiring",
-        "expansion",
-        "org_change"
-      ],
-      "company_name": "Grab",
-      "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
-    },
-    {
-      "id": "stripe-jobs",
-      "name": "Stripe Jobs",
-      "url": "https://stripe.com/careers/search",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "jobs",
-      "access_method": "html_snapshot",
-      "region": "全球",
-      "track": "支付开发者平台组织投入",
-      "signal_types": [
-        "hiring",
-        "regional_launch",
-        "org_change"
-      ],
-      "company_name": "Stripe",
-      "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
-    },
-    {
-      "id": "shopify-jobs",
-      "name": "Shopify Jobs",
-      "url": "https://www.shopify.com/careers",
-      "status": "active",
-      "tier": "L1",
-      "source_type": "jobs",
-      "access_method": "html_snapshot",
-      "region": "全球",
-      "track": "电商平台、支付与合作伙伴生态组织投入",
-      "signal_types": [
-        "hiring",
-        "ai",
-        "commerce",
-        "partnership"
-      ],
-      "company_name": "Shopify",
-      "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
-    },
-    {
-      "name": "Zalando IR",
-      "url": "https://www.zalando.com/en/investor-relations/news-stories/",
-      "status": "active",
-      "tier": "L1",
-      "track": "欧洲时尚电商",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "quality_note": "官方 IR 入口，英文页面，适合跟踪财报与平台政策。"
-    },
-    {
-      "name": "Allegro Newsroom",
-      "url": "https://allegro.eu/newsroom",
-      "status": "active",
-      "tier": "L1",
-      "track": "中东欧电商",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "quality_note": "官方 newsroom，适合跟踪财报、卖家政策与市场进入。"
-    },
-    {
-      "name": "Kaspi.kz IR",
-      "url": "https://ir.kaspi.kz/news-releases/",
-      "status": "active",
-      "tier": "L1",
-      "track": "哈萨克斯坦支付与电商",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "funding_deal"
-      ],
-      "quality_note": "官方 IR 新闻稿，跟踪财报与资本动作。"
-    },
-    {
-      "name": "JD.com IR",
-      "url": "https://ir.jd.com/news-releases",
-      "status": "active",
-      "tier": "L1",
-      "track": "中资电商",
-      "signal_types": [
-        "official_disclosure",
-        "merchant_product",
-        "marketplace_policy"
-      ],
-      "quality_note": "官方 IR 新闻稿，跟踪财报与海外业务动作。"
-    },
-    {
-      "name": "Yahoo Press",
-      "url": "https://www.yahooinc.com/press/",
-      "status": "active",
-      "tier": "L1",
-      "track": "全球媒体与广告科技",
-      "signal_types": [
-        "official_disclosure",
-        "ads_monetization"
-      ],
-      "quality_note": "官方新闻稿，适合跟踪并购、产品与广告业务变化。"
-    },
-    {
-      "name": "Tabby Press",
-      "url": "https://www.tabby.ai/press/",
-      "status": "active",
-      "tier": "L1",
-      "track": "中东BNPL与支付",
-      "signal_types": [
-        "official_disclosure",
-        "payment_infra",
-        "merchant_product"
-      ],
-      "quality_note": "官方新闻稿，与 registry tabby-blog 互补。"
-    }
+  "payment": [
+   "acquiring",
+   "wallet",
+   "remittance",
+   "bnpl",
+   "checkout",
+   "risk"
   ],
-  "candidate_sources": [
-    {
-      "name": "The Paypers",
-      "track": "支付",
-      "signal_types": [
-        "payment_infra",
-        "industry_analysis"
-      ],
-      "status": "candidate",
-      "next_check": "验证 RSS/页面可抓取性和近 10 条样本质量"
-    },
-    {
-      "name": "PYMNTS",
-      "track": "支付与商户",
-      "signal_types": [
-        "payment_infra",
-        "merchant_product"
-      ],
-      "status": "candidate",
-      "next_check": "验证是否有稳定 RSS，评估广告/赞助稿噪声"
-    },
-    {
-      "name": "Marketplace Pulse",
-      "track": "电商与 marketplace",
-      "signal_types": [
-        "marketplace_policy",
-        "industry_analysis"
-      ],
-      "status": "candidate",
-      "next_check": "验证公开文章更新频率和抓取稳定性"
-    },
-    {
-      "name": "Mobile Dev Memo",
-      "track": "移动广告与 app economy",
-      "signal_types": [
-        "ads_monetization",
-        "industry_analysis",
-        "weekly_digest"
-      ],
-      "status": "candidate",
-      "next_check": "验证 newsletter/RSS 可抓取性"
-    },
-    {
-      "name": "AdExchanger",
-      "track": "广告技术",
-      "signal_types": [
-        "ads_monetization",
-        "industry_analysis"
-      ],
-      "status": "candidate",
-      "next_check": "评估广告技术信号和非互联网客户噪声"
-    },
-    {
-      "name": "GameDiscoverCo",
-      "track": "游戏与发行",
-      "signal_types": [
-        "industry_analysis",
-        "weekly_digest"
-      ],
-      "status": "candidate",
-      "next_check": "验证 newsletter 摘要是否适合低频采集"
-    },
-    {
-      "name": "CB Insights Research",
-      "track": "市场地图与产业分析",
-      "signal_types": [
-        "industry_analysis"
-      ],
-      "status": "candidate",
-      "next_check": "只取免费公开内容，避免付费墙"
-    },
-    {
-      "name": "Stripe Newsroom / Docs changelog",
-      "track": "支付与开发者生态",
-      "signal_types": [
-        "official_disclosure",
-        "developer_change",
-        "payment_infra"
-      ],
-      "status": "candidate",
-      "next_check": "验证官方 changelog/feed"
-    },
-    {
-      "name": "TikTok for Business",
-      "track": "广告商业化",
-      "signal_types": [
-        "ads_monetization",
-        "merchant_product"
-      ],
-      "status": "candidate",
-      "next_check": "验证官方 blog/feed 和地区覆盖"
-    }
+  "commerce": [
+   "seller",
+   "merchant",
+   "logistics",
+   "fulfillment",
+   "ads",
+   "marketplace"
   ],
-  "promotion_rules": [
-    "近 10 条样本中，至少 4 条能对应明确业务信号。",
-    "可稳定抓取，不依赖登录态。",
-    "噪声类型可通过规则解释，而不是靠大模型猜。",
-    "能补足现有赛道缺口：支付、电商、广告商业化、开发者生态、区域生态。"
+  "ai_infra": [
+   "agent",
+   "model",
+   "inference",
+   "gpu",
+   "cloud",
+   "datacenter"
+  ],
+  "developer_change": [
+   "api",
+   "sdk",
+   "release_note",
+   "platform_policy"
+  ],
+  "capital": [
+   "funding",
+   "ma",
+   "earnings",
+   "ipo",
+   "strategic_investment"
+  ],
+  "org_change": [
+   "hiring",
+   "layoffs",
+   "executive",
+   "reorg"
+  ],
+  "compliance": [
+   "license",
+   "regulation",
+   "policy",
+   "antitrust"
   ]
+ },
+ "sources": [
+  {
+   "id": "grab-newsroom",
+   "name": "Grab Newsroom",
+   "url": "https://www.grab.com/sg/press/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "东南亚本地生活/支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "entity_focus": "company",
+   "credibility_score": 9,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Grab",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "goto-newsroom",
+   "name": "GoTo Newsroom",
+   "url": "https://www.gotocompany.com/newsroom",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "印尼平台生态/金融",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "entity_focus": "company",
+   "credibility_score": 9,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Gojek",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "shopee-newsroom",
+   "name": "Shopee Newsroom",
+   "url": "https://newsroom.shopee.com/",
+   "status": "paused",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "东南亚电商/物流",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "entity_focus": "commerce",
+   "credibility_score": 9,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Sea Limited",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "traveloka-newsroom",
+   "name": "Traveloka Newsroom",
+   "url": "https://www.traveloka.com/en-id/newsroom",
+   "status": "paused",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "OTA/本地消费",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "regional_ecosystem"
+   ],
+   "entity_focus": "company",
+   "credibility_score": 9,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Traveloka",
+   "is_company": true,
+   "priority": 2,
+   "max": 3
+  },
+  {
+   "id": "careem-newsroom",
+   "name": "Careem Newsroom",
+   "url": "https://www.careem.com/newsroom/",
+   "status": "paused",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "中东",
+   "track": "中东本地服务/支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "entity_focus": "company",
+   "credibility_score": 9,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Careem",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "tabby-blog",
+   "name": "Tabby Blog",
+   "url": "https://tabby.ai/en-AE/blog/",
+   "status": "paused",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "中东",
+   "track": "BNPL/支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "entity_focus": "fintech",
+   "credibility_score": 8,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Tabby",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "mercadolibre-news",
+   "name": "Mercado Libre News",
+   "url": "https://news.mercadolibre.com/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "拉美",
+   "track": "拉美电商/支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "entity_focus": "commerce",
+   "credibility_score": 9,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "MercadoLibre",
+   "is_company": true,
+   "scope_industries": [
+    "commerce",
+    "payments",
+    "marketplace"
+   ],
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "dlocal-news",
+   "name": "dLocal News",
+   "url": "https://dlocal.com/news/",
+   "status": "paused",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "拉美",
+   "track": "跨境支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "funding_deal"
+   ],
+   "entity_focus": "fintech",
+   "credibility_score": 9,
+   "signal_density": "high",
+   "noise_level": "low",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "dLocal",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "flutterwave-blog",
+   "name": "Flutterwave Blog",
+   "url": "https://flutterwave.com/us/blog",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "非洲",
+   "track": "非洲支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "entity_focus": "fintech",
+   "credibility_score": 8,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "company_name": "Flutterwave",
+   "is_company": true,
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "stripe-changelog",
+   "name": "Stripe Changelog",
+   "url": "https://stripe.com/changelog",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "changelog",
+   "access_method": "html",
+   "region": "全球",
+   "track": "支付开发者生态",
+   "signal_types": [
+    "developer_change",
+    "payment_infra"
+   ],
+   "entity_focus": "fintech",
+   "credibility_score": 10,
+   "signal_density": "high",
+   "noise_level": "low",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "cloudflare-changelog",
+   "name": "Cloudflare Changelog",
+   "url": "https://developers.cloudflare.com/changelog/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "changelog",
+   "access_method": "html",
+   "region": "全球",
+   "track": "AI infra/边缘云",
+   "signal_types": [
+    "developer_change",
+    "payment_infra"
+   ],
+   "entity_focus": "infra",
+   "credibility_score": 10,
+   "signal_density": "high",
+   "noise_level": "low",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "shopify-changelog",
+   "name": "Shopify Changelog",
+   "url": "https://changelog.shopify.com/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "changelog",
+   "access_method": "html",
+   "region": "全球",
+   "track": "电商开发者生态",
+   "signal_types": [
+    "developer_change",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "entity_focus": "commerce",
+   "credibility_score": 10,
+   "signal_density": "high",
+   "noise_level": "low",
+   "freshness_speed": "early",
+   "dedupe_strategy": "entity-time",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "priority": 3,
+   "max": 4
+  },
+  {
+   "id": "modern-retail",
+   "name": "Modern Retail",
+   "url": "https://www.modernretail.co/feed/",
+   "status": "active",
+   "tier": "L4",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "全球",
+   "track": "零售",
+   "signal_types": [
+    "merchant_product",
+    "marketplace_policy",
+    "industry_analysis"
+   ],
+   "entity_focus": "",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "scope_industries": [],
+   "scope_regions": [
+    "全球"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "priority": 2,
+   "max": 3
+  },
+  {
+   "id": "grab-ir",
+   "name": "Grab IR",
+   "url": "https://www.grab.com/sg/press/feed/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "ir",
+   "access_method": "rss",
+   "region": "亚太",
+   "track": "东南亚本地生活与支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "payments",
+    "local_services_logistics"
+   ],
+   "company_name": "Grab"
+  },
+  {
+   "id": "sea-newsroom",
+   "name": "Sea Newsroom",
+   "url": "https://www.sea.com/media/news",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "东南亚电商、支付与游戏",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product"
+   ],
+   "scope_industries": [
+    "commerce",
+    "payments",
+    "gaming_content"
+   ],
+   "company_name": "Sea Limited"
+  },
+  {
+   "id": "naver-press",
+   "name": "Naver Press",
+   "url": "https://www.navercorp.com/en/media/pressReleases",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "东亚 AI、云与平台生态",
+   "signal_types": [
+    "official_disclosure",
+    "developer_change"
+   ],
+   "scope_industries": [
+    "ai_infra",
+    "cloud_saas_developer"
+   ],
+   "company_name": "Naver"
+  },
+  {
+   "id": "mercadolibre-ir",
+   "name": "MercadoLibre IR",
+   "url": "https://investor.mercadolibre.com/news-and-events",
+   "status": "paused",
+   "pause_reason": "页面仅 PDF 财务文件，无新闻文章可解析，连续 25 次空结果",
+   "tier": "L1",
+   "source_type": "ir",
+   "access_method": "html",
+   "region": "拉美",
+   "track": "拉美电商、物流与支付",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "commerce",
+    "payments"
+   ],
+   "company_name": "MercadoLibre"
+  },
+  {
+   "id": "adyen-press",
+   "name": "Adyen IR",
+   "url": "https://www.adyen.com/press-and-media",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "欧洲",
+   "track": "欧洲企业支付与合规",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "payments"
+   ],
+   "company_name": "Adyen"
+  },
+  {
+   "id": "jumia-newsroom",
+   "name": "Jumia Newsroom",
+   "url": "https://group.jumia.com/news",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "非洲",
+   "track": "非洲电商、支付与物流",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "commerce",
+    "payments",
+    "local_services_logistics"
+   ],
+   "company_name": "Jumia"
+  },
+  {
+   "id": "the-paypers",
+   "name": "The Paypers",
+   "url": "https://thepaypers.com/rss",
+   "status": "active",
+   "tier": "L4",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "全球",
+   "track": "支付",
+   "signal_types": [
+    "payment_infra",
+    "industry_analysis"
+   ],
+   "entity_focus": "fintech",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "scope_industries": [
+    "payments"
+   ],
+   "scope_regions": [
+    "全球"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "priority": 2,
+   "max": 3
+  },
+  {
+   "id": "e27-research",
+   "name": "e27 东南亚科技产业分析",
+   "url": "https://e27.co/feed/",
+   "status": "active",
+   "tier": "L4",
+   "source_type": "research_report",
+   "access_method": "rss",
+   "region": "东南亚",
+   "track": "区域科技与AI",
+   "signal_types": [
+    "industry_analysis",
+    "regional_ecosystem",
+    "funding_deal"
+   ],
+   "entity_focus": "ai",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "scope_industries": [
+    "ai",
+    "fintech",
+    "commerce"
+   ],
+   "scope_regions": [
+    "东南亚",
+    "亚太"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "research_institution",
+   "authority_domains": [
+    "市场规模",
+    "产业分析",
+    "区域趋势"
+   ],
+   "claim_roles": [
+    "institutional_assessment"
+   ],
+   "access_level": "open",
+   "methodology_visibility": "visible",
+   "report_methodology_visible": true,
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "medium",
+   "priority": 2,
+   "max": 4
+  },
+  {
+   "id": "rakuten-ir",
+   "name": "Rakuten IR",
+   "url": "https://global.rakuten.com/corp/news/press/?category=ir",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "ir",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "日本电商与金融科技",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "commerce",
+    "payments"
+   ],
+   "company_name": "Rakuten"
+  },
+  {
+   "id": "kakao-press",
+   "name": "Kakao Press",
+   "url": "https://www.kakaocorp.com/page/detail/pr?lang=en",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "韩国社交与支付平台",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "payments"
+   ],
+   "company_name": "Kakao"
+  },
+  {
+   "id": "vng-newsroom",
+   "name": "VNG Newsroom",
+   "url": "https://vng.com.vn/news/list.1.html",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "越南社交、游戏与支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "funding_deal"
+   ],
+   "scope_industries": [
+    "payments",
+    "gaming_content",
+    "social_content"
+   ],
+   "company_name": "VNG Group"
+  },
+  {
+   "id": "momo-newsroom",
+   "name": "MoMo Newsroom",
+   "url": "https://www.momo.vn/tin-tuc",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "亚太",
+   "track": "越南钱包与商户生态",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "scope_industries": [
+    "payments",
+    "local_services"
+   ],
+   "include_url_patterns": [
+    "/tin-tuc"
+   ],
+   "company_name": "MoMo"
+  },
+  {
+   "id": "noon-newsroom",
+   "name": "Noon Newsroom",
+   "url": "https://www.noon.com/uae-en/newsroom/",
+   "status": "paused",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "中东",
+   "track": "中东电商、商家与物流",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "scope_industries": [
+    "commerce",
+    "logistics"
+   ],
+   "anti_bot_risk": "high",
+   "company_name": "Noon"
+  },
+  {
+   "id": "tamara-media",
+   "name": "Tamara Media Center",
+   "url": "https://tamara.co/en-sa/media-center",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "中东",
+   "track": "中东BNPL与支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "scope_industries": [
+    "payments"
+   ],
+   "company_name": "Tamara"
+  },
+  {
+   "id": "stc-media",
+   "name": "stc Media Center",
+   "url": "https://www.stc.com/en/media-center.html",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "中东",
+   "track": "沙特数字基础设施",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "cloud",
+    "telco_digital_infra"
+   ],
+   "company_name": "stc"
+  },
+  {
+   "id": "nubank-blog",
+   "name": "Nubank Blog",
+   "url": "https://blog.nubank.com.br/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "engineering_blog",
+   "access_method": "html",
+   "region": "拉美",
+   "track": "拉美数字金融、产品与监管",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "payments",
+    "digital_banking"
+   ],
+   "include_url_patterns": [
+    "blog.nubank.com.br"
+   ],
+   "anti_bot_risk": "high",
+   "company_name": "Nubank"
+  },
+  {
+   "id": "rappi-press",
+   "name": "Rappi Press Room",
+   "url": "https://about.rappi.com/press-room",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "拉美",
+   "track": "拉美配送与金融科技",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "payment_infra"
+   ],
+   "scope_industries": [
+    "local_services_logistics",
+    "payments"
+   ],
+   "company_name": "Rappi"
+  },
+  {
+   "id": "opay-newsroom",
+   "name": "OPay Newsroom",
+   "url": "https://opay.ng/newsroom/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "非洲",
+   "track": "非洲钱包与代理网络",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "scope_industries": [
+    "payments",
+    "financial_infra"
+   ],
+   "company_name": "OPay"
+  },
+  {
+   "id": "mpesa-media",
+   "name": "Safaricom Media Center",
+   "url": "https://www.safaricom.co.ke/media-center",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "非洲",
+   "track": "非洲移动支付基本盘",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "scope_industries": [
+    "payments",
+    "telco_digital_infra"
+   ],
+   "anti_bot_risk": "high",
+   "company_name": "M-Pesa"
+  },
+  {
+   "id": "openai-news",
+   "name": "OpenAI News",
+   "url": "https://openai.com/news/rss.xml",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "rss",
+   "region": "全球",
+   "track": "全球AI平台与开发者生态",
+   "signal_types": [
+    "official_disclosure",
+    "developer_change",
+    "industry_analysis"
+   ],
+   "scope_industries": [
+    "ai",
+    "ai_infra"
+   ],
+   "company_name": "OpenAI"
+  },
+  {
+   "id": "anthropic-news",
+   "name": "Anthropic Newsroom",
+   "url": "https://www.anthropic.com/news",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "newsroom",
+   "access_method": "html",
+   "region": "全球",
+   "track": "全球企业AI与安全治理",
+   "signal_types": [
+    "official_disclosure",
+    "developer_change",
+    "industry_analysis"
+   ],
+   "scope_industries": [
+    "ai",
+    "ai_infra"
+   ],
+   "company_name": "Anthropic"
+  },
+  {
+   "id": "databricks-blog",
+   "name": "Databricks Blog",
+   "url": "https://www.databricks.com/feed",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "engineering_blog",
+   "access_method": "rss",
+   "region": "全球",
+   "track": "数据与AI平台",
+   "signal_types": [
+    "official_disclosure",
+    "developer_change",
+    "industry_analysis"
+   ],
+   "scope_industries": [
+    "ai",
+    "data_platform"
+   ],
+   "company_name": "Databricks"
+  },
+  {
+   "id": "cloudflare-blog",
+   "name": "Cloudflare Blog",
+   "url": "https://blog.cloudflare.com/rss/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "engineering_blog",
+   "access_method": "rss",
+   "region": "全球",
+   "track": "云、安全与开发者基础设施",
+   "signal_types": [
+    "official_disclosure",
+    "developer_change",
+    "industry_analysis"
+   ],
+   "scope_industries": [
+    "ai",
+    "ai_infra",
+    "cloud"
+   ],
+   "company_name": "Cloudflare"
+  },
+  {
+   "id": "koreatechdesk",
+   "name": "KoreaTechDesk",
+   "url": "https://koreatechdesk.com/feed/",
+   "status": "active",
+   "tier": "L3",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "韩国",
+   "track": "韩国科技与AI",
+   "signal_types": [
+    "regional_ecosystem",
+    "industry_analysis",
+    "funding_deal"
+   ],
+   "scope_industries": [
+    "ai",
+    "commerce",
+    "fintech"
+   ],
+   "scope_regions": [
+    "韩国",
+    "亚太"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "regional_ecosystem",
+   "credibility_score": 7,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "max": 4,
+   "quality_note": "已验证可达(705条)，韩国创业/政策/AI 信号密度高，弥补韩国媒体发现层缺口。"
+  },
+  {
+   "id": "dailysocial-id",
+   "name": "DailySocial Indonesia",
+   "url": "https://dailysocial.id/feed",
+   "status": "active",
+   "tier": "L3",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "印尼",
+   "track": "印尼创业与融资",
+   "signal_types": [
+    "regional_ecosystem",
+    "funding_deal"
+   ],
+   "scope_industries": [
+    "commerce",
+    "fintech"
+   ],
+   "scope_regions": [
+    "印尼",
+    "东南亚"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "regional_ecosystem",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "max": 4,
+   "quality_note": "已验证可达，印尼创业融资信号（如 McEasy Series B），弥补印尼媒体发现层。"
+  },
+  {
+   "id": "braziljournal",
+   "name": "Brazil Journal",
+   "url": "https://braziljournal.com/feed/",
+   "status": "active",
+   "tier": "L3",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "巴西",
+   "track": "巴西商业与AI",
+   "signal_types": [
+    "regional_ecosystem",
+    "industry_analysis"
+   ],
+   "scope_industries": [
+    "commerce",
+    "fintech",
+    "ai"
+   ],
+   "scope_regions": [
+    "巴西",
+    "拉美"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "regional_ecosystem",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "max": 4,
+   "quality_note": "已验证可达，葡语商业/AI 分析，弥补巴西媒体发现层（巴西此前仅 1 条 stored）。"
+  },
+  {
+   "id": "vnexpress-tech",
+   "name": "VnExpress Tech",
+   "url": "https://e.vnexpress.net/rss/tech.rss",
+   "status": "active",
+   "tier": "L3",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "越南",
+   "track": "越南科技与产业",
+   "signal_types": [
+    "regional_ecosystem",
+    "industry_analysis"
+   ],
+   "scope_industries": [
+    "commerce",
+    "fintech",
+    "ai"
+   ],
+   "scope_regions": [
+    "越南",
+    "东南亚"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "regional_ecosystem",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "max": 4,
+   "quality_note": "已验证可达(60条)，越南本土科技信号，弥补越南媒体发现层。"
+  },
+  {
+   "id": "the-bridge",
+   "name": "The Bridge",
+   "url": "https://thebridge.jp/feed/",
+   "status": "active",
+   "tier": "L3",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "日本",
+   "track": "日本创业与融资",
+   "signal_types": [
+    "regional_ecosystem",
+    "funding_deal"
+   ],
+   "scope_industries": [
+    "commerce",
+    "fintech",
+    "ai"
+   ],
+   "scope_regions": [
+    "日本",
+    "亚太"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "regional_ecosystem",
+   "credibility_score": 7,
+   "signal_density": "high",
+   "noise_level": "medium",
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "max": 4,
+   "quality_note": "已验证可达，日本创投/融资信号密度高，弥补日本媒体发现层缺口。"
+  },
+  {
+   "id": "36kr-japan",
+   "name": "36Kr Japan",
+   "url": "https://36kr.jp/feed/",
+   "status": "active",
+   "tier": "L3",
+   "source_type": "industry_media",
+   "access_method": "rss",
+   "region": "亚太",
+   "track": "中国科技与产业（日文视角）",
+   "signal_types": [
+    "regional_ecosystem",
+    "industry_analysis",
+    "funding_deal"
+   ],
+   "scope_industries": [
+    "commerce",
+    "fintech",
+    "ai"
+   ],
+   "scope_regions": [
+    "中国",
+    "亚太"
+   ],
+   "allowed_scope_layers": [
+    "regional_policy",
+    "industry_change",
+    "company_action"
+   ],
+   "publisher_type": "regional_ecosystem",
+   "credibility_score": 7,
+   "signal_density": "medium",
+   "noise_level": "medium",
+   "freshness_speed": "same_day",
+   "dedupe_strategy": "semantic",
+   "crawl_cost": "low",
+   "anti_bot_risk": "low",
+   "max": 4,
+   "quality_note": "已验证可达，日文中国科技报道，弥补助中国科技生态的日文媒体缺口。"
+  },
+  {
+   "id": "legacy-techcrunch",
+   "name": "TechCrunch",
+   "url": "https://techcrunch.com/feed/",
+   "source": "TechCrunch",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-techcrunch-vc",
+   "name": "TechCrunch VC",
+   "url": "https://techcrunch.com/category/venture/feed/",
+   "source": "TechCrunch",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-tech-eu",
+   "name": "Tech.eu",
+   "url": "https://tech.eu/feed/",
+   "source": "Tech.eu",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "欧洲",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-uktn",
+   "name": "UKTN",
+   "url": "https://www.uktech.news/feed",
+   "source": "UKTN",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "欧洲",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-eu-startups",
+   "name": "EU-Startups",
+   "url": "https://www.eu-startups.com/feed/",
+   "source": "EU-Startups",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "欧洲",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-the-recursive",
+   "name": "The Recursive",
+   "url": "https://therecursive.com/feed/",
+   "source": "The Recursive",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "欧洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-the-next-web",
+   "name": "The Next Web",
+   "url": "https://thenextweb.com/feed/",
+   "source": "The Next Web",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "欧洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-tech-in-asia",
+   "name": "Tech in Asia",
+   "url": "https://www.techinasia.com/feed/",
+   "source": "Tech in Asia",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "亚太",
+   "priority": 3,
+   "track": "",
+   "max_scan": 24,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-inc42",
+   "name": "Inc42",
+   "url": "https://inc42.com/feed/",
+   "source": "Inc42",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "亚太",
+   "priority": 3,
+   "track": "",
+   "max_scan": 24,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-techwire-asia",
+   "name": "TechWire Asia",
+   "url": "https://techwireasia.com/feed/",
+   "source": "TechWire Asia",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "亚太",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-gamesindustry-biz",
+   "name": "GamesIndustry.biz",
+   "url": "https://www.gamesindustry.biz/rss",
+   "source": "GamesIndustry.biz",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "游戏",
+   "max_scan": 16,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [
+    "gaming_content"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-pocketgamer-biz",
+   "name": "PocketGamer.biz",
+   "url": "https://www.pocketgamer.biz/rss/",
+   "source": "PocketGamer.biz",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "游戏",
+   "max_scan": 16,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [
+    "gaming_content"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-fintech-news-singapore",
+   "name": "Fintech News Singapore",
+   "url": "https://fintechnews.sg/feed/",
+   "source": "Fintech News Singapore",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "亚太",
+   "priority": 2,
+   "track": "Fintech/支付",
+   "max_scan": 16,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [
+    "payments"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-finextra-payments",
+   "name": "Finextra Payments",
+   "url": "https://www.finextra.com/rss/channel.aspx?channel=payments",
+   "source": "Finextra",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "Fintech/支付",
+   "max_scan": 20,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [
+    "payments"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-payments-dive",
+   "name": "Payments Dive",
+   "url": "https://www.paymentsdive.com/feeds/news/",
+   "source": "Payments Dive",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "Fintech/支付",
+   "max_scan": 12,
+   "max": 3,
+   "signal_only": true,
+   "scope_industries": [
+    "payments"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-ecommercebytes",
+   "name": "EcommerceBytes",
+   "url": "https://www.ecommercebytes.com/feed/",
+   "source": "EcommerceBytes",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "电商",
+   "max_scan": 16,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [
+    "commerce"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-retail-dive",
+   "name": "Retail Dive",
+   "url": "https://www.retaildive.com/feeds/news/",
+   "source": "Retail Dive",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "零售",
+   "max_scan": 12,
+   "max": 3,
+   "signal_only": true,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-mobile-world-live",
+   "name": "Mobile World Live",
+   "url": "https://www.mobileworldlive.com/feed/",
+   "source": "Mobile World Live",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "文娱社交/移动生态",
+   "max_scan": 16,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [
+    "ads_social",
+    "cloud_saas_developer"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-social-media-today",
+   "name": "Social Media Today",
+   "url": "https://www.socialmediatoday.com/feeds/news/",
+   "source": "Social Media Today",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "社交平台",
+   "max_scan": 12,
+   "max": 3,
+   "signal_only": true,
+   "scope_industries": [
+    "ads_social"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-mobile-marketing-magazine",
+   "name": "Mobile Marketing Magazine",
+   "url": "https://mobilemarketingmagazine.com/feed/",
+   "source": "Mobile Marketing Magazine",
+   "status": "active",
+   "tier": "L4 垂直赛道精品源",
+   "source_tier": "L4 垂直赛道精品源",
+   "source_role": "industry_vertical",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "移动生态/广告",
+   "max_scan": 12,
+   "max": 3,
+   "signal_only": true,
+   "scope_industries": [
+    "ads_social"
+   ],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-wamda",
+   "name": "WAMDA",
+   "url": "https://www.wamda.com/feed",
+   "source": "WAMDA",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "中东",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-menabytes",
+   "name": "MENAbytes",
+   "url": "https://www.menabytes.com/feed/",
+   "source": "MENAbytes",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "中东",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-techcabal",
+   "name": "TechCabal",
+   "url": "https://techcabal.com/feed",
+   "source": "TechCabal",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "非洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-disrupt-africa",
+   "name": "Disrupt Africa",
+   "url": "https://disrupt-africa.com/feed/",
+   "source": "Disrupt Africa",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "非洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-techpoint",
+   "name": "Techpoint",
+   "url": "https://techpoint.africa/feed/",
+   "source": "Techpoint",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "非洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-ventureburn",
+   "name": "Ventureburn",
+   "url": "https://ventureburn.com/feed/",
+   "source": "Ventureburn",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "非洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-weetracker",
+   "name": "WeeTracker",
+   "url": "https://weetracker.com/feed/",
+   "source": "WeeTracker",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "非洲",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-latamlist",
+   "name": "LatamList",
+   "url": "https://latamlist.com/feed/",
+   "source": "LatamList",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "拉美",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-lavca",
+   "name": "LAVCA",
+   "url": "https://lavca.org/feed/",
+   "source": "LAVCA",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "拉美",
+   "priority": 3,
+   "track": "",
+   "max_scan": 20,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-contxto",
+   "name": "Contxto",
+   "url": "https://contxto.com/en/feed/",
+   "source": "Contxto",
+   "status": "active",
+   "tier": "L3 区域生态源",
+   "source_tier": "L3 区域生态源",
+   "source_role": "regional_ecosystem",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "拉美",
+   "priority": 2,
+   "track": "",
+   "max_scan": 24,
+   "max": 6,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-rest-of-world-money",
+   "name": "Rest of World Money",
+   "url": "https://restofworld.org/feed/money/",
+   "source": "Rest of World",
+   "status": "active",
+   "tier": "L4 深度趋势源",
+   "source_tier": "L4 深度趋势源",
+   "source_role": "deep_trend",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-rest-of-world-ecommerce",
+   "name": "Rest of World Ecommerce",
+   "url": "https://restofworld.org/feed/e-commerce/",
+   "source": "Rest of World",
+   "status": "active",
+   "tier": "L4 深度趋势源",
+   "source_tier": "L4 深度趋势源",
+   "source_role": "deep_trend",
+   "source_type": "media",
+   "access_method": "rss",
+   "region": "全球",
+   "priority": 2,
+   "track": "",
+   "max_scan": 20,
+   "max": 4,
+   "signal_only": true,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-cyberagent-news",
+   "name": "Cyberagent News",
+   "url": "https://www.cyberagent.co.jp/en/news/rss/data_format=xml",
+   "source": "Cyberagent",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "rss",
+   "region": "亚太",
+   "priority": 1,
+   "track": "",
+   "max_scan": 20,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Cyberagent",
+   "is_company": true
+  },
+  {
+   "id": "legacy-dealstreetasia",
+   "name": "DealStreetAsia",
+   "url": "https://dealstreetasia.com/",
+   "source": "DealStreetAsia",
+   "status": "active",
+   "tier": "L2 垂直交易源",
+   "source_tier": "L2 垂直交易源",
+   "source_role": "venture_media",
+   "source_type": "media",
+   "access_method": "html",
+   "region": "亚太",
+   "priority": 1,
+   "track": "",
+   "max_scan": 15,
+   "max": 8,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": null,
+   "is_company": false
+  },
+  {
+   "id": "legacy-zalando-ir",
+   "name": "Zalando IR",
+   "url": "https://www.zalando.com/en/investor-relations/news-stories/",
+   "source": "Zalando",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "欧洲",
+   "priority": 3,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Zalando",
+   "is_company": true
+  },
+  {
+   "id": "legacy-allegro-newsroom",
+   "name": "Allegro Newsroom",
+   "url": "https://allegro.eu/newsroom",
+   "source": "Allegro",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "欧洲",
+   "priority": 3,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Allegro",
+   "is_company": true
+  },
+  {
+   "id": "legacy-kaspi-kz-ir",
+   "name": "Kaspi.kz IR",
+   "url": "https://ir.kaspi.kz/news-releases/",
+   "source": "Kaspi.kz",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "中东",
+   "priority": 3,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Kaspi.kz",
+   "is_company": true
+  },
+  {
+   "id": "legacy-hktvmall-ir-news",
+   "name": "HKTVmall IR News",
+   "url": "https://ir.hktv.com.hk/media-news",
+   "source": "HKTVmall",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "亚太",
+   "priority": 3,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "HKTVmall",
+   "is_company": true
+  },
+  {
+   "id": "legacy-u-next-news",
+   "name": "U-NEXT News",
+   "url": "https://unext-hd.co.jp/newsrelease/",
+   "source": "U-NEXT",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "亚太",
+   "priority": 3,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "U-NEXT",
+   "is_company": true
+  },
+  {
+   "id": "legacy-square-enix-ir-news",
+   "name": "Square Enix IR News",
+   "url": "https://www.hd.square-enix.com/eng/ir/irnews/",
+   "source": "Square Enix",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "亚太",
+   "priority": 3,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Square Enix",
+   "is_company": true
+  },
+  {
+   "id": "legacy-jd-com-ir",
+   "name": "JD.com IR",
+   "url": "https://ir.jd.com/news-releases",
+   "source": "JD.com",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "中资",
+   "priority": 2,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "JD.com",
+   "is_company": true
+  },
+  {
+   "id": "legacy-yahoo-press",
+   "name": "Yahoo Press",
+   "url": "https://www.yahooinc.com/press/",
+   "source": "Yahoo",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "亚太",
+   "priority": 1,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Yahoo",
+   "is_company": true
+  },
+  {
+   "id": "legacy-tabby-press",
+   "name": "Tabby Press",
+   "url": "https://www.tabby.ai/press/",
+   "source": "Tabby",
+   "status": "active",
+   "tier": "L1 官方/IR源",
+   "source_tier": "L1 官方/IR源",
+   "source_role": "official_ir",
+   "source_type": "company",
+   "access_method": "html",
+   "region": "中东",
+   "priority": 2,
+   "track": "",
+   "max_scan": 15,
+   "max": 4,
+   "signal_only": false,
+   "scope_industries": [],
+   "company_name": "Tabby",
+   "is_company": true
+  }
+ ],
+ "active_sources": [
+  {
+   "name": "TechCrunch VC",
+   "url": "https://techcrunch.com/category/venture/feed/",
+   "status": "active",
+   "tier": "L2",
+   "track": "全球融资",
+   "signal_types": [
+    "funding_deal"
+   ],
+   "quality_note": "融资密度高，但泛创业噪声仍需按金额、赛道和区域筛选。"
+  },
+  {
+   "name": "Tech.eu",
+   "url": "https://tech.eu/feed/",
+   "status": "active",
+   "tier": "L2",
+   "track": "欧洲融资与科技生态",
+   "signal_types": [
+    "funding_deal",
+    "regional_ecosystem"
+   ],
+   "quality_note": "欧洲交易和政策信号较稳定。"
+  },
+  {
+   "name": "Inc42",
+   "url": "https://inc42.com/feed/",
+   "status": "active",
+   "tier": "L2",
+   "track": "印度互联网与创业生态",
+   "signal_types": [
+    "funding_deal",
+    "regional_ecosystem"
+   ],
+   "quality_note": "印度公司财报、融资和监管信号密集，但上市公司短线行情需过滤。"
+  },
+  {
+   "name": "Finextra Payments",
+   "url": "https://www.finextra.com/rss/channel.aspx?channel=payments",
+   "status": "active",
+   "tier": "L4",
+   "track": "支付",
+   "signal_types": [
+    "payment_infra",
+    "industry_analysis"
+   ],
+   "quality_note": "支付基础设施和银行科技信号较强。"
+  },
+  {
+   "name": "Payments Dive",
+   "url": "https://www.paymentsdive.com/feeds/news/",
+   "status": "active",
+   "tier": "L4",
+   "track": "支付",
+   "signal_types": [
+    "payment_infra",
+    "merchant_product"
+   ],
+   "quality_note": "适合观察支付网络、收单和监管变化。"
+  },
+  {
+   "name": "Retail Dive",
+   "url": "https://www.retaildive.com/feeds/news/",
+   "status": "active",
+   "tier": "L4",
+   "track": "零售",
+   "signal_types": [
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "quality_note": "零售行业动作较多，需避免传统零售财务噪声。"
+  },
+  {
+   "name": "Social Media Today",
+   "url": "https://www.socialmediatoday.com/feeds/news/",
+   "status": "active",
+   "tier": "L4",
+   "track": "社交平台与广告",
+   "signal_types": [
+    "ads_monetization",
+    "marketplace_policy"
+   ],
+   "quality_note": "适合替代直接抓 X/Twitter 的二次沉淀源。"
+  },
+  {
+   "name": "HKTVmall IR News",
+   "url": "https://ir.hktv.com.hk/media-news",
+   "status": "active",
+   "tier": "L1",
+   "track": "香港电商与本地零售",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "quality_note": "官方披露入口，适合跟踪 HKTVmall 与 Hong Kong Technology Venture 的业务调整。"
+  },
+  {
+   "name": "U-NEXT Holdings News",
+   "url": "https://unext-hd.co.jp/newsrelease/",
+   "status": "active",
+   "tier": "L1",
+   "track": "日本流媒体与数字内容",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "ads_monetization"
+   ],
+   "quality_note": "官方新闻入口，日文页面需靠标题信号过滤，避免普通活动公告。"
+  },
+  {
+   "name": "Square Enix IR News",
+   "url": "https://www.hd.square-enix.com/eng/ir/irnews/",
+   "status": "active",
+   "tier": "L1",
+   "track": "日本游戏与数字娱乐",
+   "signal_types": [
+    "official_disclosure",
+    "funding_deal",
+    "marketplace_policy"
+   ],
+   "quality_note": "英文 IR 入口，适合跟踪财报、资本动作和全球发行战略。"
+  },
+  {
+   "id": "grab-jobs",
+   "name": "Grab Jobs",
+   "url": "https://www.grab.careers/en/jobs/",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "jobs",
+   "access_method": "html_snapshot",
+   "region": "亚太",
+   "track": "东南亚本地生活与支付组织投入",
+   "signal_types": [
+    "hiring",
+    "expansion",
+    "org_change"
+   ],
+   "company_name": "Grab",
+   "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
+  },
+  {
+   "id": "stripe-jobs",
+   "name": "Stripe Jobs",
+   "url": "https://stripe.com/careers/search",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "jobs",
+   "access_method": "html_snapshot",
+   "region": "全球",
+   "track": "支付开发者平台组织投入",
+   "signal_types": [
+    "hiring",
+    "regional_launch",
+    "org_change"
+   ],
+   "company_name": "Stripe",
+   "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
+  },
+  {
+   "id": "shopify-jobs",
+   "name": "Shopify Jobs",
+   "url": "https://www.shopify.com/careers",
+   "status": "active",
+   "tier": "L1",
+   "source_type": "jobs",
+   "access_method": "html_snapshot",
+   "region": "全球",
+   "track": "电商平台、支付与合作伙伴生态组织投入",
+   "signal_types": [
+    "hiring",
+    "ai",
+    "commerce",
+    "partnership"
+   ],
+   "company_name": "Shopify",
+   "quality_note": "只将招聘结构变化作为候选信号，不将单个职位写入事件库。"
+  },
+  {
+   "name": "Zalando IR",
+   "url": "https://www.zalando.com/en/investor-relations/news-stories/",
+   "status": "active",
+   "tier": "L1",
+   "track": "欧洲时尚电商",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "quality_note": "官方 IR 入口，英文页面，适合跟踪财报与平台政策。"
+  },
+  {
+   "name": "Allegro Newsroom",
+   "url": "https://allegro.eu/newsroom",
+   "status": "active",
+   "tier": "L1",
+   "track": "中东欧电商",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "quality_note": "官方 newsroom，适合跟踪财报、卖家政策与市场进入。"
+  },
+  {
+   "name": "Kaspi.kz IR",
+   "url": "https://ir.kaspi.kz/news-releases/",
+   "status": "active",
+   "tier": "L1",
+   "track": "哈萨克斯坦支付与电商",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "funding_deal"
+   ],
+   "quality_note": "官方 IR 新闻稿，跟踪财报与资本动作。"
+  },
+  {
+   "name": "JD.com IR",
+   "url": "https://ir.jd.com/news-releases",
+   "status": "active",
+   "tier": "L1",
+   "track": "中资电商",
+   "signal_types": [
+    "official_disclosure",
+    "merchant_product",
+    "marketplace_policy"
+   ],
+   "quality_note": "官方 IR 新闻稿，跟踪财报与海外业务动作。"
+  },
+  {
+   "name": "Yahoo Press",
+   "url": "https://www.yahooinc.com/press/",
+   "status": "active",
+   "tier": "L1",
+   "track": "全球媒体与广告科技",
+   "signal_types": [
+    "official_disclosure",
+    "ads_monetization"
+   ],
+   "quality_note": "官方新闻稿，适合跟踪并购、产品与广告业务变化。"
+  },
+  {
+   "name": "Tabby Press",
+   "url": "https://www.tabby.ai/press/",
+   "status": "active",
+   "tier": "L1",
+   "track": "中东BNPL与支付",
+   "signal_types": [
+    "official_disclosure",
+    "payment_infra",
+    "merchant_product"
+   ],
+   "quality_note": "官方新闻稿，与 registry tabby-blog 互补。"
+  }
+ ],
+ "candidate_sources": [
+  {
+   "name": "The Paypers",
+   "track": "支付",
+   "signal_types": [
+    "payment_infra",
+    "industry_analysis"
+   ],
+   "status": "candidate",
+   "next_check": "验证 RSS/页面可抓取性和近 10 条样本质量"
+  },
+  {
+   "name": "PYMNTS",
+   "track": "支付与商户",
+   "signal_types": [
+    "payment_infra",
+    "merchant_product"
+   ],
+   "status": "candidate",
+   "next_check": "验证是否有稳定 RSS，评估广告/赞助稿噪声"
+  },
+  {
+   "name": "Marketplace Pulse",
+   "track": "电商与 marketplace",
+   "signal_types": [
+    "marketplace_policy",
+    "industry_analysis"
+   ],
+   "status": "candidate",
+   "next_check": "验证公开文章更新频率和抓取稳定性"
+  },
+  {
+   "name": "Mobile Dev Memo",
+   "track": "移动广告与 app economy",
+   "signal_types": [
+    "ads_monetization",
+    "industry_analysis",
+    "weekly_digest"
+   ],
+   "status": "candidate",
+   "next_check": "验证 newsletter/RSS 可抓取性"
+  },
+  {
+   "name": "AdExchanger",
+   "track": "广告技术",
+   "signal_types": [
+    "ads_monetization",
+    "industry_analysis"
+   ],
+   "status": "candidate",
+   "next_check": "评估广告技术信号和非互联网客户噪声"
+  },
+  {
+   "name": "GameDiscoverCo",
+   "track": "游戏与发行",
+   "signal_types": [
+    "industry_analysis",
+    "weekly_digest"
+   ],
+   "status": "candidate",
+   "next_check": "验证 newsletter 摘要是否适合低频采集"
+  },
+  {
+   "name": "CB Insights Research",
+   "track": "市场地图与产业分析",
+   "signal_types": [
+    "industry_analysis"
+   ],
+   "status": "candidate",
+   "next_check": "只取免费公开内容，避免付费墙"
+  },
+  {
+   "name": "Stripe Newsroom / Docs changelog",
+   "track": "支付与开发者生态",
+   "signal_types": [
+    "official_disclosure",
+    "developer_change",
+    "payment_infra"
+   ],
+   "status": "candidate",
+   "next_check": "验证官方 changelog/feed"
+  },
+  {
+   "name": "TikTok for Business",
+   "track": "广告商业化",
+   "signal_types": [
+    "ads_monetization",
+    "merchant_product"
+   ],
+   "status": "candidate",
+   "next_check": "验证官方 blog/feed 和地区覆盖"
+  }
+ ],
+ "promotion_rules": [
+  "近 10 条样本中，至少 4 条能对应明确业务信号。",
+  "可稳定抓取，不依赖登录态。",
+  "噪声类型可通过规则解释，而不是靠大模型猜。",
+  "能补足现有赛道缺口：支付、电商、广告商业化、开发者生态、区域生态。"
+ ]
 }
