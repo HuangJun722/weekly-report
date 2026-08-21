@@ -1,7 +1,53 @@
 {
   "version": 1,
-  "generated_at": "2026-08-21T10:21:38.873701+08:00",
+  "generated_at": "2026-08-22T02:48:17.350928+08:00",
   "candidates": [
+    {
+      "candidate_id": "jobs-16204df9aa05c77f",
+      "entity_id": "shopify",
+      "entity": "Shopify",
+      "region": "全球",
+      "sector": "commerce_saas",
+      "source_type": "jobs_snapshot",
+      "signal_type": "organizational_contraction",
+      "cluster": "partnerships",
+      "window": "2026-W34",
+      "window_start": "2026-08-22",
+      "window_end": "2026-08-22",
+      "detected_at": "2026-08-22T02:48:17.350928+08:00",
+      "baseline_count": 33,
+      "current_count": 30,
+      "added_count": 0,
+      "removed_count": 3,
+      "clusters": {},
+      "removed_clusters": {
+        "partnerships": 1,
+        "engineering": 1
+      },
+      "evidence_refs": [
+        {
+          "job_id": "5767c7bf-9d1b-4cfc-82db-481301cc39b0",
+          "title": "Director, Brand Partnerships Remote - Americas",
+          "url": "https://www.shopify.com/careers/director-brand-partnerships_5767c7bf-9d1b-4cfc-82db-481301cc39b0",
+          "change": "removed"
+        },
+        {
+          "job_id": "ae4a3af7-a254-4a14-8e2d-e493ca8d1c6a",
+          "title": "Social Lead - Developer Remote - Americas",
+          "url": "https://www.shopify.com/careers/social-lead-developer_ae4a3af7-a254-4a14-8e2d-e493ca8d1c6a",
+          "change": "removed"
+        },
+        {
+          "job_id": "d5256102-c163-428a-ac7f-4e6b6dd95389",
+          "title": "Executive Assistant Remote - Canada",
+          "url": "https://www.shopify.com/careers/executive-assistant_d5256102-c163-428a-ac7f-4e6b6dd95389",
+          "change": "removed"
+        }
+      ],
+      "status": "accumulating",
+      "rejection_reason": "insufficient_persistence",
+      "promoted_event_id": ""
+    },
     {
       "candidate_id": "jobs-a5d3b323f3e94434",
       "entity_id": "stripe",

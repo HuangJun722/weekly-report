@@ -1,341 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>全球互联网百晓生 · 事件流</title>
-  <subtitle>高价值事件推送，日报日期：2026-08-20</subtitle>
+  <subtitle>高价值事件推送，日报日期：2026-08-21</subtitle>
   <id>tag:weekly-report,2026:main</id>
-  <updated>2026-08-21T12:47:30Z</updated>
+  <updated>2026-08-21T19:01:38Z</updated>
   <link href="https://bxs1024.github.io/weekly-report/" rel="alternate"/>
   <link href="feed.xml" rel="self" type="application/atom+xml"/>
   <author><name>Global Internet Intelligence Station</name></author>
   <rights>CC BY-NC 4.0</rights>
 
   <entry>
-    <title>Cloudflare推出任务级OAuth授权机制</title>
-    <link href="https://blog.cloudflare.com/task-based-oauth-consent/"/>
-    <id>tag:weekly-report,2026:event-1b499c36</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;From all-or-nothing to task-based OAuth consent&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Cloudflare推出基于任务的OAuth同意机制，替代传统的全有或全无授权模式，提升API访问安全性。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球CDN与安全巨头改进API授权模型，为身份管理和安全合规服务商带来新的集成与优化机会。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 公司：Cloudflare | 来源：Cloudflare Blog&lt;/p&gt;</summary>
+    <title>新加坡为律师提供AI培训机会</title>
+    <link href="https://fintechnews.sg/136088/ai/singapore-lawyer-ai-training/"/>
+    <id>tag:weekly-report,2026:event-6c18c2ec</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Singapore Lawyers Can Now Get AI Training as 2,000 Tech Opportunities Open&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;新加坡为律师提供2000个科技相关机会进行AI培训&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;亚太法律行业引入AI培训，提升法律科技应用能力&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Callosum获€85.4M种子轮，Atomico领投</title>
-    <link href="https://www.eu-startups.com/2026/08/london-based-callosum-raises-e85-4-million-in-atomico-led-seed-round-to-unify-ai-models-and-chips/"/>
-    <id>tag:weekly-report,2026:event-8b4672fd</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;London-based Callosum raises €85.4 million in Atomico-led Seed round to unify AI models and chips&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;伦敦初创公司Callosum在Atomico领投的种子轮中筹集8540万欧元，用于统一AI模型和芯片。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲AI基础设施领域出现巨额种子轮，芯片与模型协同优化成为投资热点，为芯片设计工具和AI框架开发者带来机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：EU-Startups&lt;/p&gt;</summary>
+    <title>中国游客可在柬埔寨全境用微信支付</title>
+    <link href="https://fintechnews.sg/136082/cambodia/china-cambodia-qr/"/>
+    <id>tag:weekly-report,2026:event-6d8336a6</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;China Tourists Can Now Use Weixin Pay Across Cambodia&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;中国游客现在可以在柬埔寨全境使用微信支付&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;亚太跨境支付拓展，提升中国游客境外消费便利度&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Prosus投资Navi 1亿美元</title>
-    <link href="https://www.finextra.com/newsarticle/48275/prosus-invests-100m-in-indian-fintech-navi?utm_medium=rssfinextra&amp;utm_source=finextrafeed"/>
-    <id>tag:weekly-report,2026:event-764d1f95</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Prosus invests $100m in Indian fintech Navi&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Prosus向印度金融科技公司Navi投资1亿美元，支持其数字贷款和保险业务扩展。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;印度金融科技市场吸引国际资本，Navi获得资金将推动其产品创新和市场扩张，为印度金融科技生态带来合作机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：亚太 | 来源：Finextra&lt;/p&gt;</summary>
+    <title>Razorpay推出英伟达和AWS构建的支付AI模型</title>
+    <link href="https://fintechnews.sg/136094/fintech-india/razorpay-ai/"/>
+    <id>tag:weekly-report,2026:event-3e940d14</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Razorpay Launches AI Model for Payments Built With NVIDIA and AWS&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;印度支付公司Razorpay推出基于英伟达和AWS构建的支付AI模型&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;亚太支付科技集成英伟达和AWS技术，提升支付智能化水平&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>美光投资$100B建美国内存研究枢纽</title>
-    <link href="https://www.mobileworldlive.com/ai-cloud/micron-to-invest-10b-in-us-memory-research-hub/"/>
-    <id>tag:weekly-report,2026:event-92b30af0</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Micron to invest $10B in US memory research hub&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;美光科技宣布将在美国投资100亿美元建设内存研究枢纽，聚焦下一代存储技术研发。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;北美半导体巨头加码本土研发，存储技术迭代将带动上游设备和材料供应链需求。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：strategy | 地区：北美 | 来源：Mobile World Live&lt;/p&gt;</summary>
+    <title>可浏览Cloudflare API文档</title>
+    <link href="https://developers.cloudflare.com/api/"/>
+    <id>tag:weekly-report,2026:event-b472fe50</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Browse the Cloudflare API documentation&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;Cloudflare发布产品更新，可验证其产品、平台或生态能力发生变化&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 公司：Cloudflare | 来源：Cloudflare Changelog&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Navi获Prosus 1亿美元融资</title>
-    <link href="https://fintechnews.sg/136054/fintech-india/navi-prosus-investment/"/>
-    <id>tag:weekly-report,2026:event-892df1bd</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Flipkart Co-Founder Sachin Bansal’s Navi Raises US$100 Million From Prosus&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Flipkart联合创始人Sachin Bansal旗下的印度金融科技公司Navi从Prosus获得1亿美元融资。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;印度金融科技赛道持续吸金，Prosus加码印度市场，Navi将加速信贷和保险业务扩张。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：北美 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
+    <title>Cloudflare发布产品更新，可验证其产品、平台或生态能力发生变化</title>
+    <link href="https://developers.cloudflare.com/changelog/post/2026-08-21-improved-soft-navigation-measurement-for-single-page-applications/"/>
+    <id>tag:weekly-report,2026:event-f3826d4a</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Cloudflare: Web Analytics improves soft navigation measurement for Single Page Applications (SPAs)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;Cloudflare发布产品更新，可验证其产品、平台或生态能力发生变化&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：strategy | 地区：全球 | 公司：Cloudflare | 来源：Cloudflare Changelog&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Revolut拟允许创始人质押股份借款$250M</title>
-    <link href="https://thenextweb.com/news/revolut-storonsky-250mn-share-pledge-project-shasta"/>
-    <id>tag:weekly-report,2026:event-f721367c</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Revolut wants to let Nik Storonsky borrow $250mn against his own shares&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Revolut计划允许其创始人Nik Storonsky以自有股份为抵押借款2.5亿美元，该项目代号为Project Shasta。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲金融科技巨头股权质押融资引发治理关注，银行与监管机构需评估风险&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
+    <title>Shopify发布产品更新，可验证其产品、平台或生态能力发生变化</title>
+    <link href="https://changelog.shopify.com/posts/bulk-staff-setup-with-csv-import"/>
+    <id>tag:weekly-report,2026:event-4fed2087</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Shopify: Bulk staff setup with CSV import&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;Shopify发布产品更新，可验证其产品、平台或生态能力发生变化&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：strategy | 地区：全球 | 公司：Shopify | 来源：Shopify Changelog&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>EnJoyPay以支付服务助力全球游戏增长</title>
-    <link href="https://www.pocketgamer.biz/enjoypay-powers-global-game-growth-through-payments/"/>
-    <id>tag:weekly-report,2026:event-b453c988</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;EnJoyPay powers global game growth through payments&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;EnJoyPay通过支付解决方案支持全球游戏业务增长，提供跨境支付和本地化支付服务。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球游戏市场支付需求增长，支付服务商为游戏公司提供本地化支付解决方案，拓展新兴市场。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>沃尔玛称门店随电商增长而进化</title>
-    <link href="https://www.retaildive.com/news/walmarts-stores-omnichannel-tariffs-drug-pricing-regulation/828387/"/>
-    <id>tag:weekly-report,2026:event-a2c08887</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Walmart’s stores have ‘evolved’ as e-commerce grows&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;沃尔玛表示其门店已随电商增长而“进化”，并提及关税、药品定价和监管等挑战。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;美国零售巨头加速全渠道转型，门店角色从销售点转向履约中心，零售科技和供应链管理解决方案需求将上升。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：strategy | 地区：全球 | 来源：Retail Dive&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Domyn融资超$10亿，成欧洲最大AI轮</title>
-    <link href="https://thenextweb.com/news/domyn-raises-1bn-debt-colosseum-italy"/>
-    <id>tag:weekly-report,2026:event-ae78bd53</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Milan’s Domyn raises over $1bn Europe’s largest AI round, mostly in debt&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;米兰AI公司Domyn筹集超过10亿美元资金，其中大部分为债务融资，成为欧洲最大规模的AI融资轮次。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲AI公司获巨额债务融资，数据中心基础设施与算力服务需求将显著增长，为ICT供应商带来大型项目机会&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Muon Space获$250M融资，扩大卫星量产</title>
-    <link href="https://ventureburn.com/muon-space-raises-250-million-to-mass-produce-satellites/"/>
-    <id>tag:weekly-report,2026:event-1a0ba506</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Muon Space Raises $250 Million To Mass-Produce Satellites&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;卫星制造商Muon Space完成2.5亿美元融资，用于大规模生产卫星。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球卫星制造产能扩张，非洲及新兴市场对卫星通信和遥感数据的需求将获得更充足的供应&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Callosum获$100M融资，优化AI芯片路由</title>
-    <link href="https://ventureburn.com/callosum-raises-100m-ai-costs-specialized-chips-uk/"/>
-    <id>tag:weekly-report,2026:event-e18122e6</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Callosum Raises $100M To Cut AI Costs By Routing Workloads To Specialized Chips&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;英国公司Callosum完成1亿美元融资，通过将AI工作负载路由到专用芯片来降低AI成本。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;英国AI基础设施优化赛道获大额融资，AI算力成本优化方案对全球云服务商和AI企业具有吸引力&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Callosum完成$100M种子轮</title>
-    <link href="https://tech.eu/2026/08/20/callosum-raises-100m-seed-round/"/>
-    <id>tag:weekly-report,2026:event-ecd0dd00</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Callosum raises $100M seed round&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Callosum完成了1亿美元的种子轮融资。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲初创公司种子轮即获巨额融资，显示资本对特定技术赛道的高度热情，可能涉及AI或生物科技。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：Tech.eu&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Twin1 AI获$20M融资，扩展AI数字孪生业务</title>
-    <link href="https://ventureburn.com/twin1-ai-raises-20m-ai-digital-twins/"/>
-    <id>tag:weekly-report,2026:event-4d3ffdb2</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Twin1 AI Raises $20M to Scale AI Digital Twins for Professionals&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Twin1 AI完成2000万美元融资，用于扩展面向专业人士的AI数字孪生服务。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;非洲AI数字孪生赛道获早期融资，企业级数字孪生应用场景有望在非洲市场加速落地&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：非洲 | 来源：Ventureburn&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>昆仑万维H1营收同比+43.6%</title>
-    <link href="https://www.techinasia.com/news/chinese-ai-firm-kunlun-tech-revenue-jumps-436-h1"/>
-    <id>tag:weekly-report,2026:event-936d4441</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Chinese AI firm Kunlun Tech revenue jumps 43.6% in H1&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;中国AI公司昆仑万维上半年营收同比增长43.6%，显示其AI业务商业化进展顺利。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国AI公司营收高增长，验证AI应用商业化路径，为国内AI模型服务商和行业解决方案提供商提供市场信心。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：earnings | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>《Love and Deepspace》消费额暴跌68%</title>
-    <link href="https://www.pocketgamer.biz/love-and-deepspace-hits-record-low-with-68-spending-decline-after-valko-controversy/"/>
-    <id>tag:weekly-report,2026:event-b7e4baed</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Love and Deepspace hits record low with 68% spending decline after Valko controversy&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;游戏《Love and Deepspace》在Valko争议后，玩家消费额下降68%，创下历史新低。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球游戏行业因内容争议导致收入大幅下滑，警示游戏公司需加强内容审核和社区管理，避免品牌损失。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：earnings | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>品牌正在制定客户内容AI应用规则</title>
-    <link href="https://www.modernretail.co/marketing/the-new-ai-playbook-the-rules-brands-are-setting-around-customer-facing-content/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss"/>
-    <id>tag:weekly-report,2026:event-9c47541a</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;The new AI playbook: The rules brands are setting around customer-facing content&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Modern Retail发布报告，梳理了品牌在客户面向内容中应用AI的规则和策略，包括内容生成、审核和发布流程的AI治理框架。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球零售业AI内容治理标准初现，为内容管理平台和AI合规工具带来新的集成需求。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：industry_report | 地区：全球 | 来源：Modern Retail&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>越南湄公河三角洲成立首个机器人AI研究所</title>
-    <link href="https://e.vnexpress.net/news/tech/vietnam-innovation/mekong-delta-launches-first-robotics-ai-research-institute-5110687.html"/>
-    <id>tag:weekly-report,2026:event-b5cd0130</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Mekong Delta launches first robotics, AI research institute&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;越南湄公河三角洲地区成立首个机器人与AI研究机构，旨在推动当地科技创新和产业升级。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;越南区域AI研究基建启动，为国际科研合作和本地技术人才培养提供新平台。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：越南 | 来源：VnExpress Tech&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>阿里巴巴重回中国科技股市值第一</title>
-    <link href="https://ventureburn.com/alibaba-reclaims-crown-as-top-chinese-tech-stock-on-ai-momentum/"/>
-    <id>tag:weekly-report,2026:event-28798372</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Alibaba Reclaims Crown as Top Chinese Tech Stock on AI Momentum&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;阿里巴巴凭借AI业务势头，重新成为市值最高的中国科技股。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国科技巨头AI战略获资本市场认可，全球投资者对中国AI资产信心增强，可能带动相关产业链估值提升&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：earnings | 地区：非洲 | 来源：Ventureburn&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Meta在美国推出Pocket应用</title>
-    <link href="https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/"/>
-    <id>tag:weekly-report,2026:event-f2af1d52</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Meta brings Pocket, an app that lets you vibe-code and share games, to US users&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Meta向美国用户推出Pocket应用，该应用允许用户通过vibe-coding方式创建和分享游戏。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;美国科技巨头布局低代码游戏创作，AI辅助编程工具在游戏领域的应用场景扩大。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：北美 | 来源：TechCrunch&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Starling银行开放自定义工具构建功能</title>
-    <link href="https://www.uktech.news/fintech/starling-to-let-users-to-build-custom-tools-as-part-of-ai-integration-20260820"/>
-    <id>tag:weekly-report,2026:event-b20e4db5</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Starling to let users to build custom tools as part of AI integration&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;英国数字银行Starling将允许用户构建自定义工具，作为其AI集成计划的一部分。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;英国数字银行开放AI平台能力，为金融科技开发者提供新的API和工具集成机会。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：欧洲 | 来源：UKTN&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Kraken在美国推出加密借记卡</title>
-    <link href="https://www.finextra.com/newsarticle/48271/kraken-launches-crypto-debit-card-in-the-us?utm_medium=rssfinextra&amp;utm_source=finextrafeed"/>
-    <id>tag:weekly-report,2026:event-ea0e6a65</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Kraken launches crypto debit card in the US&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;加密货币交易所Kraken在美国推出加密借记卡，用户可直接使用加密货币进行日常消费。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;美国加密支付场景扩展，Kraken卡产品将推动加密资产与法币支付融合，支付处理商和发卡行迎来新合作机会&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：北美 | 来源：Finextra&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Velatir获€5M种子轮，加速欧洲AI基建扩张</title>
-    <link href="https://tech.eu/2026/08/20/velatir-secures-eur5m-seed-funding-to-expand-its-ai-infrastructure-across-europe/"/>
-    <id>tag:weekly-report,2026:event-ee59093a</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Velatir secures €5M seed funding to expand its AI infrastructure across Europe&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;丹麦AI基础设施初创公司Velatir获得500万欧元种子轮融资，用于在欧洲扩展其AI基础设施业务。该公司在六个月前刚完成pre-Seed轮融资并正式启动。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲AI基础设施赛道早期融资活跃，丹麦初创公司获得资金支持，为数据中心、算力调度等细分领域带来合作机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：Tech.eu&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>丹麦AI基建公司Velatir获€5M融资</title>
-    <link href="https://www.eu-startups.com/2026/08/danish-ai-infrastructure-startup-velatir-secures-e5-million-six-months-after-its-pre-seed-round-and-official-launch/"/>
-    <id>tag:weekly-report,2026:event-9419e894</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Danish AI infrastructure startup Velatir secures €5 million six months after its pre-Seed round and official launch&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;丹麦AI基础设施初创公司Velatir在正式推出并完成pre-Seed轮融资仅6个月后，又获得500万欧元融资。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;北欧AI基础设施赛道早期融资活跃，算力优化与部署工具需求随AI普及上升&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：EU-Startups&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Velatir获€5M种子轮，主打欧洲企业AI自主可控</title>
-    <link href="https://thenextweb.com/news/velatir-5m-seed-european-ai-control"/>
-    <id>tag:weekly-report,2026:event-d0d775b3</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Velatir raises €5m to sell European companies control over their own AI&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;荷兰AI初创公司Velatir完成500万欧元种子轮融资，旨在帮助欧洲企业自主掌控AI系统，减少对外部AI供应商的依赖。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲企业级AI治理与本地化部署需求上升，Velatir的融资表明主权AI赛道获得资本关注，为欧洲ICT服务商提供AI合规与集成合作机会。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>EIB在波兰启动金融科技基金</title>
-    <link href="https://www.finextra.com/newsarticle/48274/eib-launches-fintech-fund-in-poland?utm_medium=rssfinextra&amp;utm_source=finextrafeed"/>
-    <id>tag:weekly-report,2026:event-dd30f370</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;EIB launches fintech fund in Poland&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;欧洲投资银行（EIB）在波兰启动一项金融科技基金，旨在支持当地金融科技初创企业的发展。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲政策性资金进入中东欧金融科技市场，波兰本地金融科技初创企业将获得新的融资渠道，相关技术服务和合规解决方案需求将上升。&lt;/p&gt;&lt;p&gt;标签：资金流向 | 类型：funding | 地区：全球 | 来源：Finextra&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>阿里Q2营收+9%，AI云需求驱动</title>
-    <link href="https://www.techinasia.com/news/alibaba-q2-revenue-rises-9-ai-cloud-demand-grows"/>
-    <id>tag:weekly-report,2026:event-624dadfa</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Alibaba Q2 revenue rises 9% as AI cloud demand grows&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;阿里巴巴第二季度营收同比增长9%，主要受AI云服务需求增长的推动。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国云巨头AI云业务增长强劲，亚太地区企业级AI算力采购与云迁移需求持续扩大，为云生态伙伴带来增量市场&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：earnings | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>谷歌扩大与Marvell合作开发定制AI芯片</title>
-    <link href="https://techwireasia.com/2026/08/google-marvell-custom-ai-chips/"/>
-    <id>tag:weekly-report,2026:event-edd34022</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Google expands Marvell partnership for custom AI chips&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;谷歌扩大与Marvell的合作，共同开发定制AI芯片，以增强其数据中心AI计算能力并减少对英伟达的依赖。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;谷歌强化自研AI芯片供应链，Marvell成为关键伙伴，亚太半导体代工和封装测试企业可能获得新增订单。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：TechWire Asia&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>ShopeePay用户可在中国扫码支付</title>
-    <link href="https://fintechnews.sg/136020/payments/shopeepay-china-payments/"/>
-    <id>tag:weekly-report,2026:event-36cb350a</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;ShopeePay Users Can Now Make QR Payments in China&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;ShopeePay用户现在可以在中国通过二维码进行支付，实现了跨境支付互联互通。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;东南亚支付巨头打通中国二维码支付网络，跨境支付互联互通加速，为东南亚商户和用户提供新支付通道。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Flipkart广告推动沃尔玛Q2广告增长</title>
-    <link href="https://inc42.com/buzz/flipkart-ads-drive-walmarts-advertising-business-growth-in-q2/"/>
-    <id>tag:weekly-report,2026:event-5e4108a1</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Flipkart Ads Drive Walmart’s Advertising Business Growth In Q2&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;沃尔玛第二季度广告业务增长主要由其印度电商平台Flipkart的广告业务驱动。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;印度电商广告业务成为全球零售巨头增长引擎，东南亚及南亚电商广告技术平台与营销SaaS供应商迎来合作窗口&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：earnings | 地区：亚太 | 来源：Inc42&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>资深开发者打造面向Gen Alpha的新游戏Imagine Island</title>
-    <link href="https://www.pocketgamer.biz/gen-alpha-plays-very-differently-club-penguin-and-fortnite-veterans-build-imagine-island/"/>
-    <id>tag:weekly-report,2026:event-4f184bc2</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;&amp;quot;Gen Alpha plays very differently&amp;quot;: Club Penguin and Fortnite veterans build Imagine Island&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Club Penguin和Fortnite的资深开发者正在开发新游戏Imagine Island，针对Gen Alpha玩家群体，强调其独特的游戏行为模式。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球游戏行业针对新一代玩家群体（Gen Alpha）的产品创新，为游戏开发工具、云服务和用户分析平台带来合作机会。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：PocketGamer.biz&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>报告称多数行业未准备好迎接AI增长</title>
-    <link href="https://www.uktech.news/ai/is-your-sector-positioned-for-ai-growth-probably-not-20260820"/>
-    <id>tag:weekly-report,2026:event-a06ac7ee</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Is your sector positioned for AI growth? Probably not&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;文章指出多数行业尚未为AI增长做好准备，分析了各行业在AI应用方面的差距和挑战。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲各行业AI渗透率不均，为ICT服务商提供咨询、集成和培训的增量市场机会。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：industry_report | 地区：欧洲 | 来源：UKTN&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>盘点10家欧洲AI合规初创公司</title>
-    <link href="https://www.eu-startups.com/2026/08/10-european-compliance-startups-to-watch-as-ai-act-enforcement-kicks-in/"/>
-    <id>tag:weekly-report,2026:event-5af9a6cf</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;10 European compliance startups to watch as AI Act enforcement kicks in&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;文章列出了10家值得关注的欧洲合规初创公司，随着AI法案执法开始，这些公司提供合规解决方案。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧盟AI法案落地催生合规科技需求，为审计、风险管理、数据治理等领域的ICT服务商带来新市场。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：industry_report | 地区：欧洲 | 来源：EU-Startups&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>CCPA因假冒商品列表罚款亚马逊</title>
-    <link href="https://inc42.com/buzz/ccpa-fines-amazon-over-fake-shree-ram-mandir-ayodhya-prasad-listing/"/>
-    <id>tag:weekly-report,2026:event-681b3a39</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;CCPA Fines Amazon Over Fake ‘Shree Ram Mandir Ayodhya Prasad’ Listing&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;印度中央消费者保护局（CCPA）因亚马逊平台上出现假冒的‘Shree Ram Mandir Ayodhya Prasad’商品列表而对其处以罚款。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;印度市场监管趋严，电商平台合规成本上升，第三方合规科技与商品溯源服务商在印度市场出现新需求&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：strategy | 地区：亚太 | 来源：Inc42&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>蚂蚁国际FalconTST 2.0落地四家全球银行</title>
-    <link href="https://fintechnews.sg/136018/ai/ant-international-falcontst-2-0-banks-fx-hedging/"/>
-    <id>tag:weekly-report,2026:event-7e0b11d0</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Ant International’s FalconTST 2.0 Now Powers FX at Four Global Banks&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;蚂蚁国际的FalconTST 2.0系统已部署于四家全球银行，用于外汇对冲和风险管理。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;中国金融科技出海加速，蚂蚁国际的AI外汇解决方案获国际银行采用，为全球银行IT系统升级提供新选择。&lt;/p&gt;&lt;p&gt;标签：中资出海 | 类型：strategy | 地区：亚太 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>EE推出商用5G网络切片服务</title>
-    <link href="https://www.mobileworldlive.com/bt/ee-touts-commercial-5g-network-slicing/"/>
-    <id>tag:weekly-report,2026:event-522c98d6</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;EE touts commercial 5G network slicing&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;英国电信运营商EE宣布推出商用5G网络切片服务，面向企业客户提供定制化网络能力。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;欧洲5G商业化进入新阶段，网络切片为垂直行业提供差异化服务，运营商B2B收入模式创新。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：Mobile World Live&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>亚马逊计划扩大无人机配送六倍</title>
-    <link href="https://www.retaildive.com/news/amazon-expand-drone-delivery-reach-sixfold/828281/"/>
-    <id>tag:weekly-report,2026:event-d7f9a1b6</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Amazon to expand drone delivery reach sixfold this year&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;亚马逊计划今年将无人机配送范围扩大六倍，以提升物流效率。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;美国电商巨头加速无人机物流布局，无人机硬件、空域管理系统和最后一公里配送技术将迎来新的合作与投资机会。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：Retail Dive&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Zayo锁定康宁光纤供应支撑AI扩张</title>
-    <link href="https://www.mobileworldlive.com/network-tech/zayo-secures-corning-fibre-supply-for-ai-expansion/"/>
-    <id>tag:weekly-report,2026:event-5084872e</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Zayo secures Corning fibre supply for AI expansion&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Zayo与康宁达成光纤供应协议，以支撑其AI驱动的网络扩张计划。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球AI算力需求激增，光纤基础设施成为关键瓶颈，供应链锁定保障网络扩容。&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：全球 | 来源：Mobile World Live&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Taco Bell扩大语音AI在得来速的应用</title>
-    <link href="https://thenextweb.com/news/taco-bell-voice-ai-drive-thru-expansion"/>
-    <id>tag:weekly-report,2026:event-6fa24df3</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Taco Bell’s voice AI expansion shows the drive-thru has entered a new phase&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Taco Bell正在扩大其得来速（drive-thru）语音AI的应用范围，标志着快餐行业语音点餐进入新阶段。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;美国快餐巨头扩大语音AI部署，欧洲餐饮科技与语音识别技术供应商面临新的集成与本地化合作机会&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：欧洲 | 来源：The Next Web&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>露得清争议揭示品牌忠诚度长期影响</title>
-    <link href="https://www.modernretail.co/marketing/beyond-the-backlash-what-the-neutrogena-controversy-says-about-long-term-brand-loyalty/?utm_campaign=modernretaildis&amp;utm_medium=rss&amp;utm_source=general-rss"/>
-    <id>tag:weekly-report,2026:event-2738b7fc</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Beyond the backlash: What the Neutrogena controversy says about long-term brand loyalty&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Modern Retail分析露得清（Neutrogena）争议事件，探讨品牌长期忠诚度在公关危机中的影响机制。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球消费品品牌危机公关案例研究，为品牌监测和舆情分析工具提供市场参考。&lt;/p&gt;&lt;p&gt;标签：背景补充 | 类型：industry_report | 地区：全球 | 来源：Modern Retail&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>AI公司最大风险是现金耗尽</title>
-    <link href="https://www.techinasia.com/the-real-risk-for-ai-companies-is-running-out-of-cash"/>
-    <id>tag:weekly-report,2026:event-54c5fccb</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;The real risk for AI companies is running out of cash&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;Tech in Asia发布分析文章，指出AI公司面临的主要风险是资金耗尽，而非技术或市场竞争，强调融资环境收紧对AI初创企业的威胁。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;亚太AI初创企业融资难度加大，现金流管理成为生存关键，投资者和合作伙伴需关注AI公司的财务健康度。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：industry_report | 地区：亚太 | 来源：Tech in Asia&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>报告称青少年成诈骗主要目标</title>
-    <link href="https://www.paymentsdive.com/news/teens-targeted-for-scams/828390/"/>
-    <id>tag:weekly-report,2026:event-a41519a2</id>
-    <published>2026-08-20T00:00:00Z</published>
-    <updated>2026-08-20T00:00:00Z</updated>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;Teens targeted for scams&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;报告指出青少年正成为诈骗分子的主要目标，相关诈骗案件数量呈上升趋势。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;全球青少年金融诈骗风险上升，针对青少年群体的金融素养教育和反欺诈技术解决方案将获得更多关注和投入。&lt;/p&gt;&lt;p&gt;标签：警示信号 | 类型：industry_report | 地区：全球 | 来源：Payments Dive&lt;/p&gt;</summary>
+    <title>巴西RoamQR钱包支持二维码支付</title>
+    <link href="https://fintechnews.sg/136114/payments/liquid-group-pagbrasil-roamqr-pix-brazil/"/>
+    <id>tag:weekly-report,2026:event-6ddf5500</id>
+    <published>2026-08-21T00:00:00Z</published>
+    <updated>2026-08-21T00:00:00Z</updated>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;原题：&lt;/strong&gt;RoamQR Wallet Users Can Now Pay With QR Codes in Brazil&lt;/p&gt;&lt;p&gt;&lt;strong&gt;内容概要：&lt;/strong&gt;巴西RoamQR钱包用户现在可以使用二维码支付&lt;/p&gt;&lt;p&gt;&lt;strong&gt;点评：&lt;/strong&gt;拉美移动支付拓展新功能，推动支付场景多元化&lt;/p&gt;&lt;p&gt;标签：合作机会 | 类型：strategy | 地区：拉美 | 来源：Fintech News Singapore&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>全球AI视野 Top5 · 2026-08-21</title>

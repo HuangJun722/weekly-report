@@ -1,11 +1,102 @@
 {
   "version": 1,
-  "generated_at": "2026-08-21T10:21:38.873701+08:00",
+  "generated_at": "2026-08-22T02:48:17.350928+08:00",
   "entities": {
     "grab": {
       "entity": "Grab",
-      "observed_at": "2026-08-21T10:21:38.873701+08:00",
+      "observed_at": "2026-08-22T02:48:17.350928+08:00",
       "jobs": [
+        {
+          "id": "744000144751689",
+          "title": "Senior Database Engineer",
+          "url": "https://www.grab.careers/en/jobs/744000144751689/senior-database-engineer/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000144744280",
+          "title": "Strategy & Planning Food, Associate",
+          "url": "https://www.grab.careers/en/jobs/744000144744280/strategy-planning-food-associate/",
+          "function_tags": []
+        },
+        {
+          "id": "744000144745319",
+          "title": "Solution Specialist, Finance Systems",
+          "url": "https://www.grab.careers/en/jobs/744000144745319/solution-specialist-finance-systems/",
+          "function_tags": []
+        },
+        {
+          "id": "744000144737309",
+          "title": "Associate, Strategy & BizOps - Mobility",
+          "url": "https://www.grab.careers/en/jobs/744000144737309/associate-strategy-bizops-mobility/",
+          "function_tags": [
+            "operations"
+          ]
+        },
+        {
+          "id": "744000144728059",
+          "title": "Merchant Sales Executive, GrabMart & GrabPay",
+          "url": "https://www.grab.careers/en/jobs/744000144728059/merchant-sales-executive-grabmart-grabpay/",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "744000144727279",
+          "title": "Merchant Sales Executive, Payments",
+          "url": "https://www.grab.careers/en/jobs/744000144727279/merchant-sales-executive-payments/",
+          "function_tags": [
+            "payments",
+            "sales"
+          ]
+        },
+        {
+          "id": "744000144721390",
+          "title": "Team Lead, Merchant Acquisition",
+          "url": "https://www.grab.careers/en/jobs/744000144721390/team-lead-merchant-acquisition/",
+          "function_tags": []
+        },
+        {
+          "id": "744000144716819",
+          "title": "Merchant Sales Executive (F&B)",
+          "url": "https://www.grab.careers/en/jobs/744000144716819/merchant-sales-executive-fb/",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "744000144711829",
+          "title": "Account Executive Senior Associate",
+          "url": "https://www.grab.careers/en/jobs/744000144711829/account-executive-senior-associate/",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
+          "id": "744000144704209",
+          "title": "Senior Software Engineer, Backend - Business Platform",
+          "url": "https://www.grab.careers/en/jobs/744000144704209/senior-software-engineer-backend-business-platform/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000144702774",
+          "title": "Software Engineer, Backend - Business Platform",
+          "url": "https://www.grab.careers/en/jobs/744000144702774/software-engineer-backend-business-platform/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
+        {
+          "id": "744000144696089",
+          "title": "Senior Software Engineer, Fullstack",
+          "url": "https://www.grab.careers/en/jobs/744000144696089/senior-software-engineer-fullstack/",
+          "function_tags": [
+            "engineering"
+          ]
+        },
         {
           "id": "744000144675669",
           "title": "Senior Software Engineer, Fullstack - Web Platform",
@@ -31,124 +122,12 @@
           "title": "Merchant Account Manager (F&B)",
           "url": "https://www.grab.careers/en/jobs/744000144673869/merchant-account-manager-fb/",
           "function_tags": []
-        },
-        {
-          "id": "744000144517077",
-          "title": "Senior Software Engineer, Perception (Robotics)",
-          "url": "https://www.grab.careers/en/jobs/744000144517077/senior-software-engineer-perception-robotics/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144513679",
-          "title": "Senior Software Engineer, Backend (Fulfillment)",
-          "url": "https://www.grab.careers/en/jobs/744000144513679/senior-software-engineer-backend-fulfillment/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144511679",
-          "title": "Software Engineering Manager",
-          "url": "https://www.grab.careers/en/jobs/744000144511679/software-engineering-manager/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144489490",
-          "title": "Team Lead, Partner Social Engagement",
-          "url": "https://www.grab.careers/en/jobs/744000144489490/team-lead-partner-social-engagement/",
-          "function_tags": [
-            "partnerships"
-          ]
-        },
-        {
-          "id": "744000144492599",
-          "title": "Senior Principal Engineer– Consumer Experience & Integrity",
-          "url": "https://www.grab.careers/en/jobs/744000144492599/senior-principal-engineer-consumer-experience-integrity/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144465639",
-          "title": "Lead Software Engineer, FundsCore",
-          "url": "https://www.grab.careers/en/jobs/744000144465639/lead-software-engineer-fundscore/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144463940",
-          "title": "Sales Manager",
-          "url": "https://www.grab.careers/en/jobs/744000144463940/sales-manager/",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "744000144463549",
-          "title": "Merchant Growth Lead",
-          "url": "https://www.grab.careers/en/jobs/744000144463549/merchant-growth-lead/",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "744000144452594",
-          "title": "Associate, Merchant Acquisition",
-          "url": "https://www.grab.careers/en/jobs/744000144452594/associate-merchant-acquisition/",
-          "function_tags": []
-        },
-        {
-          "id": "744000144452589",
-          "title": "Associate, Key Account Management - Expansion",
-          "url": "https://www.grab.careers/en/jobs/744000144452589/associate-key-account-management-expansion/",
-          "function_tags": []
-        },
-        {
-          "id": "744000144451279",
-          "title": "Online Community Manager (Driver Engagement)",
-          "url": "https://www.grab.careers/en/jobs/744000144451279/online-community-manager-driver-engagement/",
-          "function_tags": []
-        },
-        {
-          "id": "744000144333905",
-          "title": "Senior Data Engineer",
-          "url": "https://www.grab.careers/en/jobs/744000144333905/senior-data-engineer/",
-          "function_tags": [
-            "engineering"
-          ]
-        },
-        {
-          "id": "744000144297219",
-          "title": "Associate, Account Management – Omni",
-          "url": "https://www.grab.careers/en/jobs/744000144297219/associate-account-management-omni/",
-          "function_tags": []
-        },
-        {
-          "id": "744000144294728",
-          "title": "Associate, Business Development - Omni",
-          "url": "https://www.grab.careers/en/jobs/744000144294728/associate-business-development-omni/",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "744000144292930",
-          "title": "Support Manager II, Finance Systems",
-          "url": "https://www.grab.careers/en/jobs/744000144292930/support-manager-ii-finance-systems/",
-          "function_tags": [
-            "operations"
-          ]
         }
       ]
     },
     "stripe": {
       "entity": "Stripe",
-      "observed_at": "2026-08-21T10:21:38.873701+08:00",
+      "observed_at": "2026-08-22T02:48:17.350928+08:00",
       "jobs": [
         {
           "id": "7844214",
@@ -173,6 +152,12 @@
             "payments",
             "operations"
           ]
+        },
+        {
+          "id": "8146159",
+          "title": "AMER Analytical Lead",
+          "url": "https://stripe.com/careers/listing/amer-analytical-lead/8146159",
+          "function_tags": []
         },
         {
           "id": "7764914",
@@ -219,6 +204,14 @@
           ]
         },
         {
+          "id": "8122192",
+          "title": "Account Executive - LATAM",
+          "url": "https://stripe.com/careers/listing/account-executive-latam/8122192",
+          "function_tags": [
+            "sales"
+          ]
+        },
+        {
           "id": "8108891",
           "title": "Account Executive - SEA, Platforms (Grower)",
           "url": "https://stripe.com/careers/listing/account-executive-sea-platforms-grower/8108891",
@@ -259,42 +252,18 @@
           "function_tags": [
             "sales"
           ]
-        },
-        {
-          "id": "8123027",
-          "title": "Account Executive, Commercial (Grower)",
-          "url": "https://stripe.com/careers/listing/account-executive-commercial-grower/8123027",
-          "function_tags": [
-            "sales"
-          ]
-        },
-        {
-          "id": "7789539",
-          "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
-          "url": "https://stripe.com/careers/listing/account-executive-commercial-hunter-japanese-fluency/7789539",
-          "function_tags": [
-            "sales"
-          ]
         }
       ]
     },
     "shopify": {
       "entity": "Shopify",
-      "observed_at": "2026-08-21T10:21:38.873701+08:00",
+      "observed_at": "2026-08-22T02:48:17.350928+08:00",
       "jobs": [
         {
           "id": "7d3f4fe7-7a8c-4919-b181-74f2f6f3c6d8",
           "title": "Senior Lead, Federal Government Affairs (US) Remote - Americas",
           "url": "https://www.shopify.com/careers/senior-lead-federal-government-affairs-us_7d3f4fe7-7a8c-4919-b181-74f2f6f3c6d8",
           "function_tags": []
-        },
-        {
-          "id": "5767c7bf-9d1b-4cfc-82db-481301cc39b0",
-          "title": "Director, Brand Partnerships Remote - Americas",
-          "url": "https://www.shopify.com/careers/director-brand-partnerships_5767c7bf-9d1b-4cfc-82db-481301cc39b0",
-          "function_tags": [
-            "partnerships"
-          ]
         },
         {
           "id": "11a67059-84b1-406e-a5b9-11e509f3d52c",
@@ -307,14 +276,6 @@
           "title": "Revenue Event Marketing Lead Remote - APAC, Singapore, Hong Kong",
           "url": "https://www.shopify.com/careers/revenue-event-marketing-lead_23139158-81cb-4924-a080-5d38e490d687",
           "function_tags": []
-        },
-        {
-          "id": "ae4a3af7-a254-4a14-8e2d-e493ca8d1c6a",
-          "title": "Social Lead - Developer Remote - Americas",
-          "url": "https://www.shopify.com/careers/social-lead-developer_ae4a3af7-a254-4a14-8e2d-e493ca8d1c6a",
-          "function_tags": [
-            "engineering"
-          ]
         },
         {
           "id": "103b3bdf-35f7-4199-8a61-195d1eeed88d",
@@ -406,12 +367,6 @@
             "payments",
             "compliance"
           ]
-        },
-        {
-          "id": "d5256102-c163-428a-ac7f-4e6b6dd95389",
-          "title": "Executive Assistant Remote - Canada",
-          "url": "https://www.shopify.com/careers/executive-assistant_d5256102-c163-428a-ac7f-4e6b6dd95389",
-          "function_tags": []
         },
         {
           "id": "dcc73211-bed4-478d-bdf7-831ce6d73b09",
