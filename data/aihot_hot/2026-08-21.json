@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T08:31:35+08:00",
+  "generated_at": "2026-08-21T20:43:47+08:00",
   "fetched_date": "2026-08-21",
   "source": {
     "name": "AIHOT 热点榜",
@@ -9,9 +9,38 @@
   "items": [
     {
       "rank": 1,
+      "title": "DeepSeek 发布 DeepSeek-V4-Flash-Vision-Exp",
+      "list_title": "DeepSeek-V4-Flash-Vision-Exp 发布",
+      "heat": 101,
+      "sources": [
+        "IT之家（RSS）",
+        "DeepSeek：API 更新日志",
+        "X：DeepSeek (@deepseek_ai)",
+        "X：阿易 AI Notes (@AYi_AInotes)",
+        "另有 8 组氛围票"
+      ],
+      "summary": "深度求索于2026年8月21日发布实验性多模态视觉理解模型 DeepSeek-V4-Flash-Vision-Exp，并上线 API 平台。该模型纯文本能力与 V4-Flash 正式版持平，视觉理解 Agent Benchmark 表现大幅跃升，接近 Opus-4.8。\nAPI 按 token 计费，单张图片最多占 384 tokens，价格与 V4-Flash 一致，支持三种调用格式及三种图片传入方式。用户可通过设置 model='deepseek-v4-flash-vision-exp' 访问。\n官方 X 账号补充说明，该模型文本能力涵盖智能体、推理与世界知识。第三方评测显示，多模态 Ag",
+      "original_links": [
+        {
+          "url": "https://x.com/AYi_AInotes/status/2090744882499395685",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-08-21",
+          "domain": "api-docs.deepseek.com"
+        },
+        {
+          "url": "https://www.ithome.com/0/992/755.htm",
+          "domain": "www.ithome.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/65baa744-d848-42a6-a194-495e34f1391d"
+    },
+    {
+      "rank": 2,
       "title": "Stripe 收购 OpenRouter",
       "list_title": "OpenRouter 宣布加入 Stripe",
-      "heat": 80,
+      "heat": 63,
       "sources": [
         "OpenRouter：Announcements（RSS）",
         "X：Deedy Das (@deedydas)",
@@ -23,10 +52,15 @@
         "TechCrunch：AI（RSS）",
         "IT之家（RSS）",
         "Artificial Intelligence News（RSS）",
-        "另有 9 组氛围票"
+        "X：小北 (@frxiaobei)",
+        "另有 7 组氛围票"
       ],
       "summary": "支付巨头 Stripe 已敲定收购 AI 模型路由平台 OpenRouter 的交易，金额超过 70 亿美元，最新报道称约 75 亿美元。该价格是 OpenRouter 今年 5 月完成 1.13 亿美元 B 轮融资时 13 亿美元估值的 5 倍以上。此前《华尔街日报》曾报道谈判价约为 100 亿美元，最终成交价低于该传闻。\nOpenRouter 提供统一入口，帮助用户按需求和预算选择不同 AI 模型。平台拥有超过 1000 万用户，接入 400 至 500 多个模型，每日处理超过 10 万亿 token，推理量自成立以来每年至少增长 10 倍。其流量数据被认为比 API 更难复制。\nOpen",
       "original_links": [
+        {
+          "url": "https://x.com/frxiaobei/status/2090748735966040441",
+          "domain": "x.com"
+        },
         {
           "url": "https://www.artificialintelligence-news.com/news/stripe-openrouter-acquisition-ai-model-routing",
           "domain": "www.artificialintelligence-news.com"
@@ -38,10 +72,6 @@
         {
           "url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity",
           "domain": "techcrunch.com"
-        },
-        {
-          "url": "https://x.com/rohanpaul_ai/status/2090154779515510855",
-          "domain": "x.com"
         },
         {
           "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe",
@@ -63,10 +93,10 @@
       "story_url": "https://aihot.virxact.com/story/bca5db53-0103-4fbd-85c6-05d34c5deb4f"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "title": "Anthropic 发布 Claude Academy",
       "list_title": "Anthropic 如何开展 AI 教学",
-      "heat": 42,
+      "heat": 30,
       "sources": [
         "Claude：Blog（网页）",
         "X：Claude (@claudeai)"
@@ -85,10 +115,10 @@
       "story_url": "https://aihot.virxact.com/story/36b3d0dc-1d86-4fdb-aa96-1390e2cb6e4a"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "xAI 全面开放 Grok 应用构建功能",
       "list_title": "Grok Build 全面上线网页与移动端，所有套餐可用",
-      "heat": 35,
+      "heat": 24,
       "sources": [
         "X：Andrew Milich (@milichab)",
         "xAI：News（网页）"
@@ -105,57 +135,6 @@
         }
       ],
       "story_url": "https://aihot.virxact.com/story/909ed9ae-ebef-478f-b801-67bd70f5c6e6"
-    },
-    {
-      "rank": 4,
-      "title": "Z.ai 发布 GLM-5.3 API",
-      "list_title": "GLM-5.3上线：AA智能指数60分并列开源第一，成本更低",
-      "heat": 22,
-      "sources": [
-        "公众号：智谱（GLM）",
-        "IT之家（RSS）",
-        "X：X.PIN (@thexpin)",
-        "The Decoder：AI News（RSS）",
-        "另有 5 组氛围票"
-      ],
-      "summary": "智谱 Z.ai 于 2026 年 8 月 18 日发布 GLM-5.3 API，定价与 GLM-5.2 持平，可通过官方 API 及合作伙伴模型网关使用。该模型专为编程、防御性网络安全及长周期智能体任务打造。\n在 Artificial Analysis 智能指数上，GLM-5.3 获得 60 分，追平 Kimi K3，成为最强开源权重模型，并与 Claude Fable 5、GPT-5.6 Sol 等闭源旗舰同级。模型保持 753B 总参数/40B 激活的 MoE 架构，上下文 1M tokens，MIT 许可。\nGLM-5.3 每任务成本 $0.68，较 Kimi K3 便宜 19%，但 t",
-      "original_links": [
-        {
-          "url": "https://the-decoder.com/glm-5-3-tops-the-open-model-rankings-and-undercuts-rivals-on-price-but-its-release-is-delayed",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://x.com/thexpin/status/2089977175693005029",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/991/417.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494105&idx=1&sn=8d7409e0fb846a3c7803c142b5d1a8e7",
-          "domain": "mp.weixin.qq.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/7f3cbcf6-3c01-4e1a-a296-45ffd92f099a"
-    },
-    {
-      "rank": 5,
-      "title": "Alibaba releases Qwen-UI-Agent",
-      "list_title": "阿里发布 Qwen-UI-Agent，主打让模型真正“会用”每一块屏幕",
-      "heat": 10,
-      "sources": [
-        "IT之家（RSS）",
-        "另有 1 组氛围票"
-      ],
-      "summary": "阿里发布 Qwen-UI-Agent，主打让模型真正“会用”每一块屏幕",
-      "original_links": [
-        {
-          "url": "https://www.ithome.com/0/992/239.htm",
-          "domain": "www.ithome.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/90675a00-7c7b-45d6-8c95-5414643b86e4"
     }
   ]
 }
