@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T08:28:39+08:00",
+  "generated_at": "2026-08-22T20:36:39+08:00",
   "fetched_date": "2026-08-22",
   "source": {
     "name": "AIHOT 热点榜",
@@ -11,7 +11,7 @@
       "rank": 1,
       "title": "DeepSeek 发布 DeepSeek-V4-Flash-Vision-Exp",
       "list_title": "DeepSeek-V4-Flash-Vision-Exp 发布",
-      "heat": 95,
+      "heat": 67,
       "sources": [
         "IT之家（RSS）",
         "DeepSeek：API 更新日志",
@@ -43,9 +43,49 @@
     },
     {
       "rank": 2,
+      "title": "SGLang 推出 Weight Cache Daemon",
+      "list_title": "蚂蚁百灵为SGLang推出权重缓存守护进程",
+      "heat": 34,
+      "sources": [
+        "LMSYS：Blog（Chatbot Arena 团队）",
+        "X：蚂蚁百灵 (@AntLingAGI)"
+      ],
+      "summary": "SGLang 团队推出 Weight Cache Daemon，通过 CUDA IPC 零拷贝映射将模型权重加载时间从约 495 秒降至约 0.63 秒，加速约 785 倍，端到端启动时间减少 93.9%。\n该守护进程在 GPU 内存中持久化后量化权重，支持多实例共享和亚秒级主备切换，是 Fast Engine Recovery Framework 的第一阶段。\n蚂蚁百灵于 2026 年 8 月 22 日宣布为 SGLang 推出该守护进程，在 Ling-2.6-1T FP8 上权重加载时间约 0.63 秒，比磁盘加载快约 780 倍，引擎总启动时间从 8.8 分钟缩短至约 0.53 分钟。",
+      "original_links": [
+        {
+          "url": "https://x.com/AntLingAGI/status/2091021795373855124",
+          "domain": "x.com"
+        },
+        {
+          "url": "https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery",
+          "domain": "www.lmsys.org"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/d45274fb-e883-4618-9a67-286e48802868"
+    },
+    {
+      "rank": 3,
+      "title": "面壁智能 OpenBMB 发布 MathForm",
+      "list_title": "面壁智能 OpenBMB 推出 MathForm，面向 Lean 4 数学自动形式化的开源框架、数据集与模型",
+      "heat": 15,
+      "sources": [
+        "X：面壁智能 OpenBMB (@OpenBMB)",
+        "另有 1 组氛围票"
+      ],
+      "summary": "面壁智能 OpenBMB 推出 MathForm，面向 Lean 4 数学自动形式化的开源框架、数据集与模型",
+      "original_links": [
+        {
+          "url": "https://x.com/OpenBMB/status/2090786300194590816",
+          "domain": "x.com"
+        }
+      ],
+      "story_url": "https://aihot.virxact.com/story/df908885-7913-4ab3-add4-53b111e28d80"
+    },
+    {
+      "rank": 4,
       "title": "Anthropic 发布 Claude Academy",
       "list_title": "Anthropic 如何开展 AI 教学",
-      "heat": 21,
+      "heat": 15,
       "sources": [
         "Claude：Blog（网页）",
         "X：Claude (@claudeai)"
@@ -64,58 +104,10 @@
       "story_url": "https://aihot.virxact.com/story/36b3d0dc-1d86-4fdb-aa96-1390e2cb6e4a"
     },
     {
-      "rank": 3,
-      "title": "Stripe 收购 OpenRouter",
-      "list_title": "Stripe 确认 75 亿美元收购 AI 路由平台 OpenRouter",
-      "heat": 20,
-      "sources": [
-        "IT之家（RSS）",
-        "Artificial Intelligence News（RSS）",
-        "X：小北 (@frxiaobei)",
-        "另有 5 组氛围票"
-      ],
-      "summary": "支付巨头 Stripe 已敲定收购 AI 模型路由平台 OpenRouter 的交易，金额超过 70 亿美元，最新报道称约 75 亿美元。该价格是 OpenRouter 今年 5 月完成 1.13 亿美元 B 轮融资时 13 亿美元估值的 5 倍以上。此前《华尔街日报》曾报道谈判价约为 100 亿美元，最终成交价低于该传闻。\nOpenRouter 提供统一入口，帮助用户按需求和预算选择不同 AI 模型。平台拥有超过 1000 万用户，接入 400 至 500 多个模型，每日处理超过 10 万亿 token，推理量自成立以来每年至少增长 10 倍。其流量数据被认为比 API 更难复制。\nOpen",
-      "original_links": [
-        {
-          "url": "https://x.com/frxiaobei/status/2090748735966040441",
-          "domain": "x.com"
-        },
-        {
-          "url": "https://www.artificialintelligence-news.com/news/stripe-openrouter-acquisition-ai-model-routing",
-          "domain": "www.artificialintelligence-news.com"
-        },
-        {
-          "url": "https://www.ithome.com/0/991/918.htm",
-          "domain": "www.ithome.com"
-        },
-        {
-          "url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity",
-          "domain": "techcrunch.com"
-        },
-        {
-          "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe",
-          "domain": "openrouter.ai"
-        },
-        {
-          "url": "https://www.a16z.news/p/openrouter-and-stripe-the-intelligence",
-          "domain": "www.a16z.news"
-        },
-        {
-          "url": "https://the-decoder.com/stripe-is-reportedly-acquiring-ai-startup-openrouter-for-more-than-7-billion",
-          "domain": "the-decoder.com"
-        },
-        {
-          "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
-          "domain": "www.bloomberg.com"
-        }
-      ],
-      "story_url": "https://aihot.virxact.com/story/bca5db53-0103-4fbd-85c6-05d34c5deb4f"
-    },
-    {
-      "rank": 4,
+      "rank": 5,
       "title": "xAI 全面开放 Grok 应用构建功能",
       "list_title": "Grok Build 全面上线网页与移动端，所有套餐可用",
-      "heat": 17,
+      "heat": 12,
       "sources": [
         "X：Andrew Milich (@milichab)",
         "xAI：News（网页）"
