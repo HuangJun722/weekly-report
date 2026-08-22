@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-08-22T10:14:10.790285+08:00",
+  "observed_at": "2026-08-23T02:40:38.217413+08:00",
   "source_count": 3,
-  "raw_count": 63,
+  "raw_count": 62,
   "source_stats": {
     "Grab Jobs": {
       "method": "jobs_snapshot",
@@ -35,14 +35,11 @@
       "status": "ok",
       "fetch_status": "success",
       "count": 1,
-      "inventory_count": 31,
+      "inventory_count": 30,
       "signal_count": 0,
-      "added_count": 1,
-      "removed_count": 0,
-      "clusters": {
-        "sales": 1,
-        "operations": 1
-      },
+      "added_count": 0,
+      "removed_count": 1,
+      "clusters": {},
       "removed_clusters": {}
     }
   },
